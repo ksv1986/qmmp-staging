@@ -1,5 +1,6 @@
+include(../../qmmp.pri)
 
-TARGET = qmmpui
+TARGET = ../../lib/qmmpui
 CONFIG += release \
 warn_on \
 qt \

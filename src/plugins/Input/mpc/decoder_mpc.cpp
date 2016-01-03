@@ -205,7 +205,7 @@ qint64 DecoderMPC::read(unsigned char *audio, qint64 maxSize)
     MPC_SAMPLE_FORMAT buffer[MPC_DECODER_BUFFER_LENGTH];
     m_len = mpc_decoder_decode (&data()->decoder, buffer, &vbrAcc, &vbrUpd);
     m_len *= data()->info.channels;
-    memcpy(audio, buffer, qMin((qint64)m_len * sizeof(float), maxSize));
+    memcpy(audio, buffer, qMin(qint64(m_len * sizeof(float)), maxSize));
     m_bitrate = vbrUpd * data()->info.sample_freq / 1152000;
 #else
     mpc_frame_info frame;
@@ -225,7 +225,7 @@ qint64 DecoderMPC::read(unsigned char *audio, qint64 maxSize)
         else
         {
             m_len = frame.samples * data()->info.channels;
-            memcpy(audio, buffer, qMin((qint64)m_len * sizeof(float), maxSize));
+            memcpy(audio, buffer, qMin(qint64(m_len * sizeof(float)), maxSize));
         }
     }
     m_bitrate = frame.bits * data()->info.sample_freq / 1152000;

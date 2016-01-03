@@ -40,10 +40,9 @@ class LADSPAPlugin
 {
 public:
     QString name;
-    QString fileName;
     long id;
     long unique_id;
-    bool stereo;
+    const LADSPA_Descriptor *desc;
 };
 
 class LADSPAControl
@@ -58,21 +57,18 @@ public:
     double min;
     double max;
     double step;
-    LADSPA_Data *value;
+    LADSPA_Data value;
     int type;
+    int port;
     QString name;
 };
 
 class LADSPAEffect
 {
 public:
-    void *library;
-    QString fileName;
-    bool stereo;
-    const LADSPA_Descriptor *descriptor;
-    LADSPA_Handle handle;	/* left or mono */
-    LADSPA_Handle handle2;	/* right stereo */
-    LADSPA_Data knobs[MAX_KNOBS];
+    LADSPAPlugin *plugin;
+    QList<int> in_ports, out_ports;
+    QList <LADSPA_Handle> handles;
     QList <LADSPAControl*> controls;
 };
 
@@ -89,26 +85,27 @@ public:
     void configure(quint32 freq, int chan);
     QList <LADSPAPlugin *> plugins();
     QList <LADSPAEffect *> effects();
-    LADSPAEffect *addPlugin(LADSPAPlugin * plugin);
-    void unload(LADSPAEffect *instance);
+    void load(LADSPAPlugin *plugin);
+    void unload(LADSPAEffect *effect);
+
     static LADSPAHost* instance();
 
 private:
-    void bootPlugin(LADSPAEffect *instance);
-    void findAllPlugins();
-    void findPlugins(const QString &path);
-    LADSPAEffect *load(const QString &path, long num);
-    void portAssign(LADSPAEffect *instance);
-    void initialize(LADSPAEffect *instance);
-
+    void loadModules();
+    void findModules(const QString &path);
+    void unloadModules();
+    LADSPAEffect *createEffect(LADSPAPlugin *plugin);
+    LADSPAControl *createControl(const LADSPA_Descriptor *desc, unsigned long port);
+    void activateEffect(LADSPAEffect *e);
+    void deactivateEffect(LADSPAEffect *e);
     QList <LADSPAPlugin *> m_plugins;
     QList <LADSPAEffect *> m_effects;
-
-    LADSPA_Data m_left[MAX_SAMPLES], m_right[MAX_SAMPLES], m_trash[MAX_SAMPLES];
 
     static LADSPAHost *m_instance;
     int m_chan;
     quint32 m_freq;
+    QList<void *> m_modules;
+    LADSPA_Data m_buf[9][MAX_SAMPLES];
 };
 
 #endif

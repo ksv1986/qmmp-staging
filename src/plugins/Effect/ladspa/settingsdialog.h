@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008 by Ilya Kotov                                      *
+ *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,12 +21,15 @@
 #define SETTINGSDIALOG_H
 
 #include <QDialog>
-#include "ui_settingsdialog.h"
 
 class QStandardItemModel;
 
+namespace Ui {
+class SettingsDialog;
+}
+
 /**
-	@author Ilya Kotov <forkotov02@hotmail.ru>
+    @author Ilya Kotov <forkotov02@hotmail.ru>
 */
 class SettingsDialog : public QDialog
 {
@@ -46,7 +49,7 @@ private slots:
 
 private:
     void updateRunningPlugins();
-    Ui::SettingsDialog ui;
+    Ui::SettingsDialog *m_ui;
     QStandardItemModel *m_model;
 };
 

@@ -186,7 +186,7 @@ void LADSPAHost::findModules(const QString &path)
                 continue;
             }
             LADSPAPlugin *plugin = new LADSPAPlugin;
-            plugin->name = strdup(descriptor->Name);
+            plugin->name = descriptor->Name;
             plugin->id = k;
             plugin->unique_id = descriptor->UniqueID;
             plugin->desc = descriptor;
@@ -369,7 +369,6 @@ void LADSPAHost::activateEffect(LADSPAEffect *e)
         }
         foreach (int port, e->out_ports)
         {
-            qDebug("connect: %d", port);
             desc->connect_port(handle, port, m_buf[out_at++]);
         }
 

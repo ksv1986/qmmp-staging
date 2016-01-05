@@ -94,8 +94,8 @@ const DecoderProperties DecoderFFmpegFactory::properties() const
     filters << "*.wma" << "*.ape" << "*.tta" << "*.m4a" << "*.ra" << "*.shn" << "*.vqf" << "*.ac3";
     filters = settings.value("FFMPEG/filters", filters).toStringList();
 
-    //removed unsupported filters
-#if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav 10
+    //remove unsupported filters
+#if (LIBAVCODEC_VERSION_INT >= ((54<<16) + (51<<8) + 100)) //libav 10
     if(!avcodec_find_decoder(AV_CODEC_ID_WMAV1))
         filters.removeAll("*.wma");
     if(!avcodec_find_decoder(AV_CODEC_ID_APE))

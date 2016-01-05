@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,6 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <stdint.h>
 #include "ffmpegmetadatamodel.h"
 
 FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
@@ -47,10 +48,10 @@ QHash<QString, QString> FFmpegMetaDataModel::audioProperties()
     ap.insert(tr("Bitrate"), QString("%1 "+tr("kbps")).arg(m_in->bit_rate/1000));
 
     AVCodecContext *c = 0;
-    uint wma_idx;
-    for (wma_idx = 0; wma_idx < m_in->nb_streams; wma_idx++)
+    uint idx;
+    for (idx = 0; idx < m_in->nb_streams; idx++)
     {
-        c = m_in->streams[wma_idx]->codec;
+        c = m_in->streams[idx]->codec;
         if (c->codec_type == AVMEDIA_TYPE_AUDIO)
             break;
     }
@@ -60,4 +61,24 @@ QHash<QString, QString> FFmpegMetaDataModel::audioProperties()
         ap.insert(tr("Channels"), QString("%1").arg(c->channels));
     }
     return ap;
+}
+
+QPixmap FFmpegMetaDataModel::cover()
+{
+    AVCodecContext *c = 0;
+    for (uint idx = 0; idx < m_in->nb_streams; idx++)
+    {
+        c = m_in->streams[idx]->codec;
+        if (c->codec_type == AVMEDIA_TYPE_VIDEO && c->codec_id == AV_CODEC_ID_MJPEG)
+            break;
+    }
+    if (c)
+    {
+        AVPacket pkt;
+        av_read_frame(m_in, &pkt);
+        QPixmap pix;
+        pix.loadFromData(QByteArray((const char*)pkt.data, pkt.size));
+        return pix;
+    }
+    return QPixmap();
 }

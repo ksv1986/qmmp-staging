@@ -39,8 +39,6 @@ public:
 
 private:
     Qmmp::AudioFormat m_format;
-    bool m_swap;
-
 };
 
 #endif // AUDIOCONVERTER_H

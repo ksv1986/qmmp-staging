@@ -421,10 +421,9 @@ int LADSPAHost::applyEffect(float *data, size_t samples)
 
     size_t frames = samples / m_chan;
 
-    for(size_t i = 0; i < frames; ++i)
+    for(size_t i = 0; i < samples; ++i)
     {
-        for(int c = 0; c < m_chan; c++)
-            m_buf[c][i] = data[i*m_chan + c];
+        m_buf[i % m_chan][i / m_chan] = data[i];
     }
 
     for(int i = 0; i < m_effects.count(); ++i)
@@ -435,10 +434,9 @@ int LADSPAHost::applyEffect(float *data, size_t samples)
         }
     }
 
-    for(size_t i = 0; i < frames; ++i)
+    for(size_t i = 0; i < samples; ++i)
     {
-        for(int c = 0; c < m_chan; c++)
-            data[i*m_chan + c] = m_buf[c][i];
+        data[i] = m_buf[i % m_chan][i / m_chan];
     }
     return samples;
 }

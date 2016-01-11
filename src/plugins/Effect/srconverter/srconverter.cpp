@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,7 +30,6 @@ SRConverter::SRConverter() : Effect()
                                   SRC_ZERO_ORDER_HOLD,  SRC_LINEAR};
     m_src_state = 0;
     m_srcError = 0;
-    m_sz = 0;
     m_src_data.data_in = 0;
     m_src_data.data_out = 0;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
@@ -41,7 +40,6 @@ SRConverter::SRConverter() : Effect()
 SRConverter::~SRConverter()
 {
     freeSRC();
-    m_sz = 0;
 }
 
 void SRConverter::applyEffect(Buffer *b)
@@ -87,7 +85,6 @@ void SRConverter::configure(quint32 freq, ChannelMap map)
         else
             qDebug("SRConverter: src_new(): %s", src_strerror(m_srcError));
 
-        m_sz = audioParameters().sampleSize();
         m_src_data.data_out = new float[int(m_src_data.src_ratio * QMMP_BLOCK_FRAMES * map.count() * 2 + 2)];
     }
     Effect::configure(m_overSamplingFs, map);

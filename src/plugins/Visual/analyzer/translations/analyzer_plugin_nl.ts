@@ -9,82 +9,82 @@
         <translation>Qmmp Analysator</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="364"/>
+        <location filename="../analyzer.cpp" line="356"/>
         <source>Peaks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="367"/>
+        <location filename="../analyzer.cpp" line="359"/>
         <source>Refresh Rate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="370"/>
+        <location filename="../analyzer.cpp" line="362"/>
         <source>50 fps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="371"/>
+        <location filename="../analyzer.cpp" line="363"/>
         <source>25 fps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="372"/>
+        <location filename="../analyzer.cpp" line="364"/>
         <source>10 fps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="373"/>
+        <location filename="../analyzer.cpp" line="365"/>
         <source>5 fps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="380"/>
+        <location filename="../analyzer.cpp" line="372"/>
         <source>Analyzer Falloff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="383"/>
-        <location filename="../analyzer.cpp" line="397"/>
+        <location filename="../analyzer.cpp" line="375"/>
+        <location filename="../analyzer.cpp" line="389"/>
         <source>Slowest</source>
         <translation type="unfinished">Traagst</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="384"/>
-        <location filename="../analyzer.cpp" line="398"/>
+        <location filename="../analyzer.cpp" line="376"/>
+        <location filename="../analyzer.cpp" line="390"/>
         <source>Slow</source>
         <translation type="unfinished">Traag</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="385"/>
-        <location filename="../analyzer.cpp" line="399"/>
+        <location filename="../analyzer.cpp" line="377"/>
+        <location filename="../analyzer.cpp" line="391"/>
         <source>Medium</source>
         <translation type="unfinished">Normaal</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="386"/>
-        <location filename="../analyzer.cpp" line="400"/>
+        <location filename="../analyzer.cpp" line="378"/>
+        <location filename="../analyzer.cpp" line="392"/>
         <source>Fast</source>
         <translation type="unfinished">Snel</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="387"/>
-        <location filename="../analyzer.cpp" line="401"/>
+        <location filename="../analyzer.cpp" line="379"/>
+        <location filename="../analyzer.cpp" line="393"/>
         <source>Fastest</source>
         <translation type="unfinished">Snelst</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="394"/>
+        <location filename="../analyzer.cpp" line="386"/>
         <source>Peaks Falloff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="408"/>
+        <location filename="../analyzer.cpp" line="400"/>
         <source>F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="408"/>
+        <location filename="../analyzer.cpp" line="400"/>
         <source>&amp;Full Screen</source>
         <translation type="unfinished"></translation>
     </message>

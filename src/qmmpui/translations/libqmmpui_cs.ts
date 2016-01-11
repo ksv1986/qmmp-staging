@@ -87,12 +87,12 @@
         <translation>Vložte URL, které se má přidat</translation>
     </message>
     <message>
-        <location filename="../forms/addurldialog.ui" line="43"/>
+        <location filename="../forms/addurldialog.ui" line="46"/>
         <source>&amp;Add</source>
         <translation>Přid&amp;at</translation>
     </message>
     <message>
-        <location filename="../forms/addurldialog.ui" line="50"/>
+        <location filename="../forms/addurldialog.ui" line="53"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Zrušit</translation>
     </message>

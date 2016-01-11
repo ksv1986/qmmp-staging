@@ -37,42 +37,42 @@
 <context>
     <name>FFmpegMetaDataModel</name>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="45"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="46"/>
         <source>Length</source>
         <translation>Длительность</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="46"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="47"/>
         <source>File size</source>
         <translation>Размер файла</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="46"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="47"/>
         <source>KB</source>
         <translation>КБ</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="47"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="48"/>
         <source>Bitrate</source>
         <translation>Битовая частота</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="47"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="48"/>
         <source>kbps</source>
         <translation>Кб/с</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="59"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="60"/>
         <source>Sample rate</source>
         <translation>Дискретизация</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="59"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="60"/>
         <source>Hz</source>
         <translation>Гц</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="60"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="61"/>
         <source>Channels</source>
         <translation>Каналов</translation>
     </message>

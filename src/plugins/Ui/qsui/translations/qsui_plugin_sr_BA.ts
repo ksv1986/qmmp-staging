@@ -1445,77 +1445,77 @@
 <context>
     <name>QSUiAnalyzer</name>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="280"/>
+        <location filename="../qsuianalyzer.cpp" line="274"/>
         <source>Cover</source>
         <translation>Омот</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="283"/>
+        <location filename="../qsuianalyzer.cpp" line="277"/>
         <source>Peaks</source>
         <translation>Врхови</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="286"/>
+        <location filename="../qsuianalyzer.cpp" line="280"/>
         <source>Refresh Rate</source>
         <translation>Фреквенција</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="289"/>
+        <location filename="../qsuianalyzer.cpp" line="283"/>
         <source>50 fps</source>
         <translation>50 fps</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="290"/>
+        <location filename="../qsuianalyzer.cpp" line="284"/>
         <source>25 fps</source>
         <translation>25 fps</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="291"/>
+        <location filename="../qsuianalyzer.cpp" line="285"/>
         <source>10 fps</source>
         <translation>10 fps</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="292"/>
+        <location filename="../qsuianalyzer.cpp" line="286"/>
         <source>5 fps</source>
         <translation>5 fps</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="299"/>
+        <location filename="../qsuianalyzer.cpp" line="293"/>
         <source>Analyzer Falloff</source>
         <translation>Падање анализатора</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="302"/>
-        <location filename="../qsuianalyzer.cpp" line="316"/>
+        <location filename="../qsuianalyzer.cpp" line="296"/>
+        <location filename="../qsuianalyzer.cpp" line="310"/>
         <source>Slowest</source>
         <translation>Најспорије</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="303"/>
-        <location filename="../qsuianalyzer.cpp" line="317"/>
+        <location filename="../qsuianalyzer.cpp" line="297"/>
+        <location filename="../qsuianalyzer.cpp" line="311"/>
         <source>Slow</source>
         <translation>Споро</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="304"/>
-        <location filename="../qsuianalyzer.cpp" line="318"/>
+        <location filename="../qsuianalyzer.cpp" line="298"/>
+        <location filename="../qsuianalyzer.cpp" line="312"/>
         <source>Medium</source>
         <translation>Умјерено</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="305"/>
-        <location filename="../qsuianalyzer.cpp" line="319"/>
+        <location filename="../qsuianalyzer.cpp" line="299"/>
+        <location filename="../qsuianalyzer.cpp" line="313"/>
         <source>Fast</source>
         <translation>Брзо</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="306"/>
-        <location filename="../qsuianalyzer.cpp" line="320"/>
+        <location filename="../qsuianalyzer.cpp" line="300"/>
+        <location filename="../qsuianalyzer.cpp" line="314"/>
         <source>Fastest</source>
         <translation>Најбрже</translation>
     </message>
     <message>
-        <location filename="../qsuianalyzer.cpp" line="313"/>
+        <location filename="../qsuianalyzer.cpp" line="307"/>
         <source>Peaks Falloff</source>
         <translation>Падање врхова</translation>
     </message>

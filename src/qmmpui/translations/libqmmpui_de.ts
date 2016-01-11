@@ -87,12 +87,12 @@
         <translation>Zu hinzufügende URL eingeben</translation>
     </message>
     <message>
-        <location filename="../forms/addurldialog.ui" line="43"/>
+        <location filename="../forms/addurldialog.ui" line="46"/>
         <source>&amp;Add</source>
         <translation>&amp;Hinzufügen</translation>
     </message>
     <message>
-        <location filename="../forms/addurldialog.ui" line="50"/>
+        <location filename="../forms/addurldialog.ui" line="53"/>
         <source>&amp;Cancel</source>
         <translation>Abbre&amp;chen</translation>
     </message>

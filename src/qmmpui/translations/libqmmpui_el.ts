@@ -87,12 +87,12 @@
         <translation>Εισαγάγετε το URL προς προσθήκη</translation>
     </message>
     <message>
-        <location filename="../forms/addurldialog.ui" line="43"/>
+        <location filename="../forms/addurldialog.ui" line="46"/>
         <source>&amp;Add</source>
         <translation>&amp;Προσθήκη</translation>
     </message>
     <message>
-        <location filename="../forms/addurldialog.ui" line="50"/>
+        <location filename="../forms/addurldialog.ui" line="53"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Ακύρωση</translation>
     </message>

@@ -87,12 +87,12 @@
         <translation>追加したい URL をここに記入</translation>
     </message>
     <message>
-        <location filename="../forms/addurldialog.ui" line="43"/>
+        <location filename="../forms/addurldialog.ui" line="46"/>
         <source>&amp;Add</source>
         <translation>追加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../forms/addurldialog.ui" line="50"/>
+        <location filename="../forms/addurldialog.ui" line="53"/>
         <source>&amp;Cancel</source>
         <translation>キャンセル(&amp;C)</translation>
     </message>

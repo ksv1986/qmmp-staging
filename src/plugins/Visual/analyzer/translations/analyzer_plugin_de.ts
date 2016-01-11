@@ -9,82 +9,82 @@
         <translation>Qmmp Analysator</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="364"/>
+        <location filename="../analyzer.cpp" line="356"/>
         <source>Peaks</source>
         <translation>Spitzen</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="367"/>
+        <location filename="../analyzer.cpp" line="359"/>
         <source>Refresh Rate</source>
         <translation>Wiederholfrequenz</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="370"/>
+        <location filename="../analyzer.cpp" line="362"/>
         <source>50 fps</source>
         <translation>50 fps</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="371"/>
+        <location filename="../analyzer.cpp" line="363"/>
         <source>25 fps</source>
         <translation>25 fps</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="372"/>
+        <location filename="../analyzer.cpp" line="364"/>
         <source>10 fps</source>
         <translation>10 fps</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="373"/>
+        <location filename="../analyzer.cpp" line="365"/>
         <source>5 fps</source>
         <translation>5 fps</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="380"/>
+        <location filename="../analyzer.cpp" line="372"/>
         <source>Analyzer Falloff</source>
         <translation>Analysator-Abfall</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="383"/>
-        <location filename="../analyzer.cpp" line="397"/>
+        <location filename="../analyzer.cpp" line="375"/>
+        <location filename="../analyzer.cpp" line="389"/>
         <source>Slowest</source>
         <translation>Langsamste</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="384"/>
-        <location filename="../analyzer.cpp" line="398"/>
+        <location filename="../analyzer.cpp" line="376"/>
+        <location filename="../analyzer.cpp" line="390"/>
         <source>Slow</source>
         <translation>Langsam</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="385"/>
-        <location filename="../analyzer.cpp" line="399"/>
+        <location filename="../analyzer.cpp" line="377"/>
+        <location filename="../analyzer.cpp" line="391"/>
         <source>Medium</source>
         <translation>Mittel</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="386"/>
-        <location filename="../analyzer.cpp" line="400"/>
+        <location filename="../analyzer.cpp" line="378"/>
+        <location filename="../analyzer.cpp" line="392"/>
         <source>Fast</source>
         <translation>Schnell</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="387"/>
-        <location filename="../analyzer.cpp" line="401"/>
+        <location filename="../analyzer.cpp" line="379"/>
+        <location filename="../analyzer.cpp" line="393"/>
         <source>Fastest</source>
         <translation>Schnellste</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="394"/>
+        <location filename="../analyzer.cpp" line="386"/>
         <source>Peaks Falloff</source>
         <translation>Abfallen der Spitzenwerte</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="408"/>
+        <location filename="../analyzer.cpp" line="400"/>
         <source>&amp;Full Screen</source>
         <translation>&amp;Vollbild</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="408"/>
+        <location filename="../analyzer.cpp" line="400"/>
         <source>F</source>
         <translation>F</translation>
     </message>

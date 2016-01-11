@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -33,6 +33,7 @@
 #include "audioconverter.h"
 #include "qmmpaudioengine_p.h"
 #include "channelconverter_p.h"
+#include "dithering_p.h"
 #include "metadatamanager.h"
 
 #define TRANSPORT_TIMEOUT 5000 //ms
@@ -54,6 +55,8 @@ QmmpAudioEngine::QmmpAudioEngine(QObject *parent)
     connect(m_settings, SIGNAL(eqSettingsChanged()), SLOT(updateEqSettings()));
     reset();
     m_instance = this;
+
+    Dithering d;
 }
 
 QmmpAudioEngine::~QmmpAudioEngine()

@@ -39,7 +39,8 @@ HEADERS += \
     qmmpplugincache_p.h \
     channelmap.h \
     channelconverter_p.h \
-    audioconverter.h
+    audioconverter.h \
+    dithering_p.h
 SOURCES += recycler.cpp \
     decoder.cpp \
     output.cpp \
@@ -71,7 +72,8 @@ SOURCES += recycler.cpp \
     qmmpplugincache.cpp \
     channelmap.cpp \
     channelconverter.cpp \
-    volume.cpp
+    volume.cpp \
+    dithering.cpp
 FORMS +=
 unix:TARGET = ../../lib/qmmp
 win32:TARGET = ../../../bin/qmmp

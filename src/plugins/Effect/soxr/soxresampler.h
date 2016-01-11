@@ -40,6 +40,7 @@ private:
     void freeSoXR();
     quint32 m_overSamplingFs;
     float *m_out;
+    size_t m_out_samples;
     soxr_quality_spec_t m_quality;
     soxr_t m_soxr;
 

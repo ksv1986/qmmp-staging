@@ -1,3 +1,4 @@
+SET(USE_SOXR TRUE CACHE BOOL "enable/disable SoX resampler plugin")
 SET(USE_SRC TRUE CACHE BOOL "enable/disable SRC plugin")
 SET(USE_BS2B TRUE CACHE BOOL "enable/disable bs2b plugin")
 SET(USE_LADSPA TRUE CACHE BOOL "enable/disable ladspa plugin")
@@ -7,6 +8,10 @@ SET(USE_STEREO TRUE CACHE BOOL "enable/disable extra stereo plugin")
 IF(USE_SRC)
 add_subdirectory(srconverter)
 ENDIF(USE_SRC)
+
+IF(USE_SOXR)
+add_subdirectory(soxr)
+ENDIF(USE_SOXR)
 
 IF(USE_BS2B)
 add_subdirectory(bs2b)

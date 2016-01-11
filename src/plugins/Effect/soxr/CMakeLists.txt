@@ -1,4 +1,4 @@
-project(libsrconverter)
+project(libsoxr)
 
 cmake_minimum_required(VERSION 2.4.7)
 
@@ -25,42 +25,40 @@ SET(QT_INCLUDES
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
 link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
-pkg_check_modules(SAMPLERATE samplerate)
+pkg_check_modules(SOXR soxr)
 
-include_directories(${SAMPLERATE_INCLUDE_DIRS})
-link_directories(${SAMPLERATE_LIBRARY_DIRS})
-ADD_DEFINITIONS(${SAMPLERATE_CFLAGS})
+include_directories(${SOXR_INCLUDE_DIRS})
+link_directories(${SOXR_LIBRARY_DIRS})
+ADD_DEFINITIONS(${SOXR_CFLAGS})
 
-SET(libsrconverter_SRCS
-    srconverter.cpp
+SET(libsoxr_SRCS
+    soxresampler.cpp
     settingsdialog.cpp
-    effectsrconverterfactory.cpp
+    effectsoxrfactory.cpp
 )
 
-SET(libsrconverter_HDRS
-    srconverter.h
+SET(libsoxr_HDRS
+    soxresampler.h
 )
 
-SET(libsrconverter_RCCS translations/translations.qrc)
+SET(libsoxr_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libsrconverter_RCC_SRCS ${libsrconverter_RCCS})
+QT4_ADD_RESOURCES(libsoxr_RCC_SRCS ${libsoxr_RCCS})
 
 # user interface
 
-
-SET(libsrconverter_UIS
+SET(libsoxr_UIS
     settingsdialog.ui
 )
 
-QT4_WRAP_UI(libsrconverter_UIS_H ${libsrconverter_UIS})
+QT4_WRAP_UI(libsoxr_UIS_H ${libsoxr_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-IF(SAMPLERATE_FOUND)
-ADD_LIBRARY(srconverter MODULE ${libsrconverter_SRCS} ${libsrconverter_UIS_H}
-  ${libsrconverter_RCC_SRCS} ${libsrconverter_HDRS})
-add_dependencies(srconverter qmmp)
-target_link_libraries(srconverter ${QT_LIBRARIES} libqmmp ${SAMPLERATE_LDFLAGS})
-install(TARGETS srconverter DESTINATION ${LIB_DIR}/qmmp/Effect)
-ENDIF(SAMPLERATE_FOUND)
+IF(SOXR_FOUND)
+ADD_LIBRARY(soxr MODULE ${libsoxr_SRCS} ${libsoxr_UIS_H} ${libsoxr_RCC_SRCS} ${libsoxr_HDRS})
+add_dependencies(soxr qmmp)
+target_link_libraries(soxr ${QT_LIBRARIES} libqmmp ${SOXR_LDFLAGS})
+install(TARGETS soxr DESTINATION ${LIB_DIR}/qmmp/Effect)
+ENDIF(SOXR_FOUND)

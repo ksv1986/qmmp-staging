@@ -50,6 +50,6 @@ void SettingsDialog::accept()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("SOXR/sample_rate",m_ui.srSpinBox->value());
-    //settings.setValue("SOXR/quality", m_ui.engineComboBox->currentIndex());
+    settings.setValue("SOXR/quality", m_ui.qualityComboBox->itemData(m_ui.qualityComboBox->currentIndex()).toInt());
     QDialog::accept();
 }

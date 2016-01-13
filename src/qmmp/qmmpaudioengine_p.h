@@ -37,6 +37,7 @@ class EffectFactory;
 class ReplayGain;
 class QmmpSettings;
 class AudioConverter;
+class Dithering;
 
 /*! @internal
  * @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -62,6 +63,7 @@ public:
 private slots:
     void finish();
     void updateReplayGainSettings();
+    void updateAudioSettings();
     void updateEqSettings();
 
 private:
@@ -96,6 +98,7 @@ private:
     ReplayGain *m_replayGain;
     QmmpSettings *m_settings;
     AudioConverter *m_converter;
+    Dithering *m_dithering;
 };
 
 #endif // QMMPAUDIOENGINE_P_H

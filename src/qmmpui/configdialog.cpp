@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -151,6 +151,7 @@ void ConfigDialog::readSettings()
     //audio
     m_ui->softVolumeCheckBox->setChecked(gs->useSoftVolume());
     m_ui->use16BitCheckBox->setChecked(gs->use16BitOutput());
+    m_ui->ditheringCheckBox->setChecked(gs->useDithering());
     m_ui->bufferSizeSpinBox->setValue(gs->bufferSize());
     //geometry
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
@@ -408,7 +409,8 @@ void ConfigDialog::saveSettings()
                               m_ui->preampDoubleSpinBox->value(),
                               m_ui->defaultGainDoubleSpinBox->value(),
                               m_ui->clippingCheckBox->isChecked());
-    gs->setAudioSettings(m_ui->softVolumeCheckBox->isChecked(), m_ui->use16BitCheckBox->isChecked());
+    gs->setAudioSettings(m_ui->softVolumeCheckBox->isChecked(), m_ui->use16BitCheckBox->isChecked(),
+                         m_ui->ditheringCheckBox->isChecked());
     gs->setBufferSize(m_ui->bufferSizeSpinBox->value());
     gs->setDetermineFileTypeByContent(m_ui->byContentCheckBox->isChecked());
     QList<QVariant> var_sizes;

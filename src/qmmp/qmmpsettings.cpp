@@ -38,11 +38,12 @@ QmmpSettings::QmmpSettings(QObject *parent) : QObject(parent)
     m_rg_mode = (ReplayGainMode) settings.value("mode", REPLAYGAIN_DISABLED).toInt();
     m_rg_preamp = settings.value("preamp", 0.0).toDouble();
     m_rg_defaut_gain = settings.value("default_gain", 0.0).toDouble();
-    m_rg_prevent_clipping = settings.value("prevent_clipping", false).toBool();
+    m_rg_prevent_clipping = settings.value("prevent_clipping", true).toBool();
     settings.endGroup();
     //audio settings
     m_aud_software_volume = settings.value("Output/software_volume", false).toBool();
     m_aud_16bit = settings.value("Output/use_16bit", false).toBool();
+    m_aud_dithering = settings.value("Output/dithering", true).toBool();
     //cover settings
     settings.beginGroup("Cover");
     m_cover_inc = settings.value("include", (QStringList() << "*.jpg" << "*.png")).toStringList();
@@ -111,10 +112,16 @@ bool QmmpSettings::use16BitOutput() const
     return m_aud_16bit;
 }
 
-void QmmpSettings::setAudioSettings(bool soft_volume, bool use_16bit)
+bool QmmpSettings::useDithering() const
+{
+    return m_aud_dithering;
+}
+
+void QmmpSettings::setAudioSettings(bool soft_volume, bool use_16bit, bool use_dithering)
 {
     m_aud_software_volume = soft_volume;
     m_aud_16bit = use_16bit;
+    m_aud_dithering = use_dithering;
     m_timer->start();
     emit audioSettingsChanged();
 }
@@ -218,6 +225,7 @@ void QmmpSettings::sync()
     //audio settings
     settings.setValue("Output/software_volume", m_aud_software_volume);
     settings.setValue("Output/use_16bit", m_aud_16bit);
+    settings.setValue("Output/dithering", m_aud_dithering);
     //cover settings
     settings.beginGroup("Cover");
     settings.setValue("include", m_cover_inc);

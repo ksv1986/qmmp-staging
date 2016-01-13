@@ -2,7 +2,7 @@
  *  Based on madplay project                                               *
  *                                                                         *
  * Copyright (C) 2000-2004 Robert Leslie <rob@mars.org>                    *
- * Copyright (C) 2015 Ilya Kotov forkotov02@hotmail.ru                     *
+ * Copyright (C) 2016 Ilya Kotov forkotov02@hotmail.ru                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -35,7 +35,9 @@ public:
     Dithering();
 
     void configure(quint32 srate, ChannelMap map);
+    void setFormats(Qmmp::AudioFormat in, Qmmp::AudioFormat out);
     void applyEffect(Buffer *b);
+    void setEnabled(bool enabled);
 
 private:
     int m_chan;
@@ -48,6 +50,9 @@ private:
     } AudioDither;
 
     AudioDither m_dither[9];
+    float m_lsb;
+    bool m_required, m_enabled;
+
 
     quint32 prng(quint32 state);
     float audioLinearDither(float sample, AudioDither *dither);

@@ -820,6 +820,13 @@
              </property>
             </widget>
            </item>
+           <item row="3" column="0" colspan="3">
+            <widget class="QCheckBox" name="ditheringCheckBox">
+             <property name="text">
+              <string>Use dithering</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>

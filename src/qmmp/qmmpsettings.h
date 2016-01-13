@@ -87,11 +87,16 @@ public:
      */
     bool use16BitOutput() const;
     /*!
+     * Returns \b true if dithering is enabled; otherwise returns \b false.
+     */
+    bool useDithering() const;
+    /*!
      * Sets audio settings.
      * @param soft_volume State of software volume.
      * @param use_16bit State of the 16-bit audio converter.
+     * @param use_dithering Enable/Disable audio dithering.
      */
-    void setAudioSettings(bool soft_volume, bool use_16bit);
+    void setAudioSettings(bool soft_volume, bool use_16bit, bool use_dithering);
     /*!
      * If \b include is \b true, this function returns include cover file name filters,
      * otherwise returns exclude filters.
@@ -208,6 +213,7 @@ private:
     //audio settings
     bool m_aud_software_volume;
     bool m_aud_16bit;
+    bool m_aud_dithering;
     //cover settings
     QStringList m_cover_inc;
     QStringList m_cover_exclude;

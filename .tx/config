@@ -37,12 +37,6 @@ source_lang = en
 source_file = src/plugins/Effect/soxr/translations/soxr_plugin_en.ts
 type = QT
 
-[qmmp.srconverter]
-file_filter = src/plugins/Effect/srconverter/translations/srconverter_plugin_<lang>.ts
-source_lang = en
-source_file = src/plugins/Effect/srconverter/translations/srconverter_plugin_en.ts
-type = QT
-
 [qmmp.crossfade]
 file_filter = src/plugins/Effect/crossfade/translations/crossfade_plugin_<lang>.ts
 source_lang = en

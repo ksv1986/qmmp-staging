@@ -505,7 +505,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="826"/>
         <source>Use dithering</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать дитеринг</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="69"/>

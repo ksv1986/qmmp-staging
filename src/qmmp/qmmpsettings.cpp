@@ -42,7 +42,7 @@ QmmpSettings::QmmpSettings(QObject *parent) : QObject(parent)
     settings.endGroup();
     //audio settings
     m_aud_software_volume = settings.value("Output/software_volume", false).toBool();
-    m_aud_16bit = settings.value("Output/use_16bit", false).toBool();
+    m_aud_format = (Qmmp::AudioFormat) settings.value("Output/format", Qmmp::PCM_S16LE).toInt();
     m_aud_dithering = settings.value("Output/dithering", true).toBool();
     //cover settings
     settings.beginGroup("Cover");
@@ -107,9 +107,9 @@ bool QmmpSettings::useSoftVolume() const
     return m_aud_software_volume;
 }
 
-bool QmmpSettings::use16BitOutput() const
+Qmmp::AudioFormat QmmpSettings::outputFormat() const
 {
-    return m_aud_16bit;
+    return m_aud_format;
 }
 
 bool QmmpSettings::useDithering() const
@@ -117,10 +117,10 @@ bool QmmpSettings::useDithering() const
     return m_aud_dithering;
 }
 
-void QmmpSettings::setAudioSettings(bool soft_volume, bool use_16bit, bool use_dithering)
+void QmmpSettings::setAudioSettings(bool soft_volume, Qmmp::AudioFormat format, bool use_dithering)
 {
     m_aud_software_volume = soft_volume;
-    m_aud_16bit = use_16bit;
+    m_aud_format = format;
     m_aud_dithering = use_dithering;
     m_timer->start();
     emit audioSettingsChanged();
@@ -224,7 +224,7 @@ void QmmpSettings::sync()
     settings.endGroup();
     //audio settings
     settings.setValue("Output/software_volume", m_aud_software_volume);
-    settings.setValue("Output/use_16bit", m_aud_16bit);
+    settings.setValue("Output/format", m_aud_format);
     settings.setValue("Output/dithering", m_aud_dithering);
     //cover settings
     settings.beginGroup("Cover");

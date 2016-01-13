@@ -69,6 +69,9 @@ ConfigDialog::ConfigDialog (QWidget *parent) : QDialog (parent)
     m_ui->replayGainModeComboBox->addItem (tr("Track"), QmmpSettings::REPLAYGAIN_TRACK);
     m_ui->replayGainModeComboBox->addItem (tr("Album"), QmmpSettings::REPLAYGAIN_ALBUM);
     m_ui->replayGainModeComboBox->addItem (tr("Disabled"), QmmpSettings::REPLAYGAIN_DISABLED);
+    m_ui->bitDepthComboBox->addItem("16", Qmmp::PCM_S16LE);
+    m_ui->bitDepthComboBox->addItem("24", Qmmp::PCM_S24LE);
+    m_ui->bitDepthComboBox->addItem("32", Qmmp::PCM_S32LE);
     readSettings();
     loadPluginsInfo();
     loadLanguages();
@@ -150,7 +153,7 @@ void ConfigDialog::readSettings()
     m_ui->defaultGainDoubleSpinBox->setValue(gs->replayGainDefaultGain());
     //audio
     m_ui->softVolumeCheckBox->setChecked(gs->useSoftVolume());
-    m_ui->use16BitCheckBox->setChecked(gs->use16BitOutput());
+    m_ui->bitDepthComboBox->setCurrentIndex(m_ui->bitDepthComboBox->findData(gs->outputFormat()));
     m_ui->ditheringCheckBox->setChecked(gs->useDithering());
     m_ui->bufferSizeSpinBox->setValue(gs->bufferSize());
     //geometry
@@ -409,7 +412,9 @@ void ConfigDialog::saveSettings()
                               m_ui->preampDoubleSpinBox->value(),
                               m_ui->defaultGainDoubleSpinBox->value(),
                               m_ui->clippingCheckBox->isChecked());
-    gs->setAudioSettings(m_ui->softVolumeCheckBox->isChecked(), m_ui->use16BitCheckBox->isChecked(),
+    i = m_ui->bitDepthComboBox->currentIndex();
+    gs->setAudioSettings(m_ui->softVolumeCheckBox->isChecked(),
+                         (Qmmp::AudioFormat)m_ui->bitDepthComboBox->itemData(i).toInt(),
                          m_ui->ditheringCheckBox->isChecked());
     gs->setBufferSize(m_ui->bufferSizeSpinBox->value());
     gs->setDetermineFileTypeByContent(m_ui->byContentCheckBox->isChecked());

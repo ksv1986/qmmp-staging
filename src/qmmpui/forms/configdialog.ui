@@ -758,6 +758,13 @@
            <string>Audio</string>
           </property>
           <layout class="QGridLayout" name="gridLayout3">
+           <item row="3" column="0" colspan="3">
+            <widget class="QCheckBox" name="ditheringCheckBox">
+             <property name="text">
+              <string>Use dithering</string>
+             </property>
+            </widget>
+           </item>
            <item row="0" column="0">
             <widget class="QLabel" name="label_20">
              <property name="text">
@@ -793,7 +800,24 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="2">
+           <item row="2" column="0" colspan="3">
+            <widget class="QCheckBox" name="softVolumeCheckBox">
+             <property name="text">
+              <string>Use software volume control</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Output bit depth:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="bitDepthComboBox"/>
+           </item>
+           <item row="0" column="2" rowspan="2">
             <spacer name="horizontalSpacer_6">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -805,27 +829,6 @@
               </size>
              </property>
             </spacer>
-           </item>
-           <item row="1" column="0" colspan="3">
-            <widget class="QCheckBox" name="softVolumeCheckBox">
-             <property name="text">
-              <string>Use software volume control</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0" colspan="3">
-            <widget class="QCheckBox" name="use16BitCheckBox">
-             <property name="text">
-              <string>16-bit output</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0" colspan="3">
-            <widget class="QCheckBox" name="ditheringCheckBox">
-             <property name="text">
-              <string>Use dithering</string>
-             </property>
-            </widget>
            </item>
           </layout>
          </widget>

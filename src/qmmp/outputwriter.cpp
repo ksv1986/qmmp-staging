@@ -78,7 +78,7 @@ bool OutputWriter::initialize(quint32 freq, ChannelMap map)
         return false;
     }
 
-    if (!m_output->initialize(freq, map, Qmmp::PCM_S16LE))
+    if (!m_output->initialize(freq, map, m_settings->outputFormat()))
     {
         qWarning("OutputWriter: unable to initialize output");
         delete m_output;

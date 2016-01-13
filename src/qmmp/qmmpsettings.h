@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,6 +24,7 @@
 #include <QObject>
 #include <QUrl>
 #include <QStringList>
+#include "qmmp.h"
 #include "eqsettings.h"
 
 class QTimer;
@@ -83,9 +84,9 @@ public:
      */
     bool useSoftVolume() const;
     /*!
-     * Returns \b true if 16-bit converter is enabled; otherwise returns \b false.
+     * Returns preferd output format.
      */
-    bool use16BitOutput() const;
+    Qmmp::AudioFormat outputFormat() const;
     /*!
      * Returns \b true if dithering is enabled; otherwise returns \b false.
      */
@@ -93,10 +94,10 @@ public:
     /*!
      * Sets audio settings.
      * @param soft_volume State of software volume.
-     * @param use_16bit State of the 16-bit audio converter.
+     * @param format Preferd output format. Supported values: Qmmp::PCM_S16LE, Qmmp::PCM_S24LE, Qmmp::PCM_S32LE.
      * @param use_dithering Enable/Disable audio dithering.
      */
-    void setAudioSettings(bool soft_volume, bool use_16bit, bool use_dithering);
+    void setAudioSettings(bool soft_volume, Qmmp::AudioFormat format, bool use_dithering);
     /*!
      * If \b include is \b true, this function returns include cover file name filters,
      * otherwise returns exclude filters.
@@ -212,8 +213,8 @@ private:
     bool m_rg_prevent_clipping;
     //audio settings
     bool m_aud_software_volume;
-    bool m_aud_16bit;
     bool m_aud_dithering;
+    Qmmp::AudioFormat m_aud_format;
     //cover settings
     QStringList m_cover_inc;
     QStringList m_cover_exclude;

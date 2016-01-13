@@ -8,7 +8,6 @@ SUBDIRS += bs2b
 }
 
 unix {
-    SUBDIRS += srconverter
     contains(CONFIG, SOXR_PLUGIN):SUBDIRS += soxr
     contains(CONFIG, LADSPA_PLUGIN):SUBDIRS += ladspa
 }

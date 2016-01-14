@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -91,9 +91,9 @@ PlayListHeader::PlayListHeader(QWidget *parent) :
     m_autoResizeAction->setCheckable(true);
 
     m_alignmentMenu = m_menu->addMenu(tr("Alignment"));
-    m_alignmentMenu->addAction(tr("Left"))->setData(ListWidgetRow::ALIGN_LEFT);
-    m_alignmentMenu->addAction(tr("Right"))->setData(ListWidgetRow::ALIGN_RIGHT);
-    m_alignmentMenu->addAction(tr("Center"))->setData(ListWidgetRow::ALIGN_CENTER);
+    m_alignmentMenu->addAction(tr("Left", "alignment"))->setData(ListWidgetRow::ALIGN_LEFT);
+    m_alignmentMenu->addAction(tr("Right", "alignment"))->setData(ListWidgetRow::ALIGN_RIGHT);
+    m_alignmentMenu->addAction(tr("Center", "alignment"))->setData(ListWidgetRow::ALIGN_CENTER);
     connect(m_alignmentMenu, SIGNAL(triggered(QAction*)), SLOT(setAlignment(QAction*)));
     QActionGroup *alignmentGroup = new QActionGroup(this);
     foreach (QAction *a, m_alignmentMenu->actions())

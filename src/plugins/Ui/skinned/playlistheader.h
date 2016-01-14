@@ -48,6 +48,7 @@ public:
     void setNumberWidth(int width);
     int requiredHeight() const;
     QList<int> sizes() const;
+    QList<int> alignment() const;
     int trackStateColumn() const;
     int maxScrollValue() const;
     int offset() const;
@@ -66,6 +67,7 @@ private slots:
     void removeColumn();
     void setAutoResize(bool on);
     void showTrackState(bool on);
+    void setAlignment(QAction *action);
     void onColumnAdded(int index);
     void onColumnRemoved();
 
@@ -92,12 +94,13 @@ private:
         SIZE,
         RECT, //geometry
         AUTO_RESIZE,
-        TRACK_STATE
+        TRACK_STATE,
+        ALIGNMENT
     };
 
     Skin *m_skin;
     QFontMetrics *m_metrics;
-    QMenu *m_menu;
+    QMenu *m_menu, *m_alignmentMenu;
     QFont m_font;
     QColor m_normal, m_normal_bg, m_current;
     QPoint m_pressed_pos;

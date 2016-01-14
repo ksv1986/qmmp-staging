@@ -378,6 +378,7 @@ void ListWidget::updateList(int flags)
         }
         row->titles = items[i]->formattedTitles();
         row->sizes = m_header->sizes();
+        row->alignment = m_header->alignment();
 
         (m_first + i) == m_model->currentIndex() ? row->flags |= ListWidgetRow::CURRENT :
                 row->flags &= ~ListWidgetRow::CURRENT;

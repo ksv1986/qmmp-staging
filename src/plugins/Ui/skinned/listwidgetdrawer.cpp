@@ -341,7 +341,17 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
             for(int i = 0; i < row->sizes.count(); i++)
             {
                 painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);
-                painter->drawText(sx + m_padding, sy, row->titles[i]);
+                if(row->alignment[i] == ListWidgetRow::ALIGN_LEFT)
+                    painter->drawText(sx + m_padding, sy, row->titles[i]);
+                else if(row->alignment[i] == ListWidgetRow::ALIGN_RIGHT)
+                    painter->drawText(sx + row->sizes[i] - m_padding - m_metrics->width(row->titles[i]), sy, row->titles[i]);
+                else
+                    painter->drawText(sx + row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2, sy, row->titles[i]);
+
+
+                //painter->drawText(sx + m_padding, sy, row->titles[i]);
+                //painter->drawText(sx + row->sizes[i] - m_padding - m_metrics->width(row->titles[i]), sy, row->titles[i]);
+                //painter->drawText(sx + row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2, sy, row->titles[i]);
                 sx += row->sizes[i];
 
                 if(i == row->trackStateColumn && !row->extraString.isEmpty())

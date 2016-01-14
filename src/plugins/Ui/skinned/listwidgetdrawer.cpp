@@ -242,6 +242,8 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
 {
     int sy = row->rect.y() + m_metrics->overlinePos() - 1;
     int sx = rtl ? row->rect.right() : row->rect.x();
+    int title_x = 0, extra_x = 0;
+    bool draw_extra = false;
 
     painter->setFont(m_font);
 
@@ -284,15 +286,35 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
             for(int i = 0; i < row->sizes.count(); i++)
             {
                 painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);
-                painter->drawText(sx - m_padding - m_metrics->width(row->titles[i]), sy, row->titles[i]);
-                sx -= row->sizes[i];
+                draw_extra = (i == row->trackStateColumn && !row->extraString.isEmpty());
 
-                if(i == row->trackStateColumn && !row->extraString.isEmpty())
+                if(row->alignment[i] == ListWidgetRow::ALIGN_LEFT)
+                {
+                    title_x = sx - row->sizes[i] + m_padding;
+                    extra_x = draw_extra ? sx - m_padding - m_extra_metrics->width(row->extraString) : 0;
+                }
+                else if(row->alignment[i] == ListWidgetRow::ALIGN_RIGHT)
+                {
+                    title_x = sx - m_padding - m_metrics->width(row->titles[i]);
+                    extra_x = draw_extra ? sx - row->sizes[i] + m_padding : 0;
+                }
+                else
+                {
+                    title_x = sx - row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2 +
+                            (draw_extra ? (m_extra_metrics->width(row->extraString) + m_padding) / 2 : 0);
+                    extra_x = draw_extra ? title_x - m_metrics->width(row->extraString) - m_padding : 0;
+                }
+
+                painter->drawText(title_x, sy, row->titles[i]);
+
+                if(draw_extra)
                 {
                     painter->setFont(m_extra_font);
-                    painter->drawText(sx + m_padding, sy, row->extraString);
+                    painter->drawText(extra_x, sy, row->extraString);
                     painter->setFont(m_font);
                 }
+
+                sx -= row->sizes[i];
 
                 painter->setPen(m_normal);
                 if(!row->autoResize || i < row->sizes.count() - 1) //do not draw last vertical line
@@ -341,26 +363,35 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
             for(int i = 0; i < row->sizes.count(); i++)
             {
                 painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);
+                draw_extra = (i == row->trackStateColumn && !row->extraString.isEmpty());
+
                 if(row->alignment[i] == ListWidgetRow::ALIGN_LEFT)
-                    painter->drawText(sx + m_padding, sy, row->titles[i]);
+                {
+                    title_x = sx + m_padding;
+                    extra_x = draw_extra ? sx + row->sizes[i] - m_padding - m_extra_metrics->width(row->extraString) : 0;
+                }
                 else if(row->alignment[i] == ListWidgetRow::ALIGN_RIGHT)
-                    painter->drawText(sx + row->sizes[i] - m_padding - m_metrics->width(row->titles[i]), sy, row->titles[i]);
+                {
+                    title_x = sx + row->sizes[i] - m_padding - m_metrics->width(row->titles[i]);
+                    extra_x = draw_extra ? sx + m_padding : 0;
+                }
                 else
-                    painter->drawText(sx + row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2, sy, row->titles[i]);
+                {
+                    title_x = sx + row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2 -
+                            (draw_extra ? (m_extra_metrics->width(row->extraString) + m_padding) / 2 : 0);
+                    extra_x = draw_extra ? title_x + m_metrics->width(row->titles[i]) + m_padding : 0;
+                }
 
+                painter->drawText(title_x, sy, row->titles[i]);
 
-                //painter->drawText(sx + m_padding, sy, row->titles[i]);
-                //painter->drawText(sx + row->sizes[i] - m_padding - m_metrics->width(row->titles[i]), sy, row->titles[i]);
-                //painter->drawText(sx + row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2, sy, row->titles[i]);
-                sx += row->sizes[i];
-
-                if(i == row->trackStateColumn && !row->extraString.isEmpty())
+                if(draw_extra)
                 {
                     painter->setFont(m_extra_font);
-                    painter->drawText(sx - m_padding - m_extra_metrics->width(row->extraString),
-                                      sy, row->extraString);
+                    painter->drawText(extra_x, sy, row->extraString);
                     painter->setFont(m_font);
                 }
+
+                sx += row->sizes[i];
 
                 painter->setPen(m_normal);
                 if(!row->autoResize || i < row->sizes.count() - 1) //do not draw last vertical line

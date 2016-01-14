@@ -999,16 +999,19 @@
     <message>
         <location filename="../playlistheader.cpp" line="94"/>
         <source>Left</source>
+        <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="95"/>
         <source>Right</source>
+        <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="96"/>
         <source>Center</source>
+        <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>

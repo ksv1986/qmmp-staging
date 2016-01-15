@@ -978,27 +978,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="61"/>
+        <location filename="../playlistheader.cpp" line="65"/>
         <source>Add Column</source>
         <translation>Προσθήκη στήλης</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="62"/>
+        <location filename="../playlistheader.cpp" line="66"/>
         <source>Edit Column</source>
         <translation>Επεξεργασία στήλης</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="63"/>
+        <location filename="../playlistheader.cpp" line="67"/>
         <source>Show Queue/Protocol</source>
         <translation>Εμφάνιση Ουράς αναμονής/πρωτοκόλλου</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="65"/>
+        <location filename="../playlistheader.cpp" line="69"/>
         <source>Auto-resize</source>
         <translation>Αυτόματη κλιμάκωση</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="68"/>
+        <location filename="../playlistheader.cpp" line="72"/>
+        <source>Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistheader.cpp" line="73"/>
+        <source>Left</source>
+        <comment>alignment</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistheader.cpp" line="74"/>
+        <source>Right</source>
+        <comment>alignment</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistheader.cpp" line="75"/>
+        <source>Center</source>
+        <comment>alignment</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistheader.cpp" line="85"/>
         <source>Remove Column</source>
         <translation>Αφαίρεση στήλης</translation>
     </message>

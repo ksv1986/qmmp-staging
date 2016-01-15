@@ -978,27 +978,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="61"/>
+        <location filename="../playlistheader.cpp" line="65"/>
         <source>Add Column</source>
         <translation>Spalte hinzufügen</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="62"/>
+        <location filename="../playlistheader.cpp" line="66"/>
         <source>Edit Column</source>
         <translation>Spalte bearbeiten</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="63"/>
+        <location filename="../playlistheader.cpp" line="67"/>
         <source>Show Queue/Protocol</source>
         <translation>Warteschlange/Protokoll anzeigen</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="65"/>
+        <location filename="../playlistheader.cpp" line="69"/>
         <source>Auto-resize</source>
         <translation>Automatische Größenänderung</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="68"/>
+        <location filename="../playlistheader.cpp" line="72"/>
+        <source>Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistheader.cpp" line="73"/>
+        <source>Left</source>
+        <comment>alignment</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistheader.cpp" line="74"/>
+        <source>Right</source>
+        <comment>alignment</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistheader.cpp" line="75"/>
+        <source>Center</source>
+        <comment>alignment</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistheader.cpp" line="85"/>
         <source>Remove Column</source>
         <translation>Spalte entfernen</translation>
     </message>

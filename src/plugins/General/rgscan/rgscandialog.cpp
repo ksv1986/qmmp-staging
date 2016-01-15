@@ -429,10 +429,11 @@ void RGScanDialog::on_writeButton_clicked()
             writeAPETag(file.APETag(true), item);
             file.save();
         }
-        else if(ext == "m4a")
+        else if(ext == "m4a") //MPEG-4 Part 14
         {
             TagLib::MP4::File file(qPrintable(item->url));
             writeMP4Tag(file.tag(), item);
+            file.save();
         }
     }
 }

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -400,7 +400,17 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
         {
             for(int i = 0; i < row->sizes.count(); i++)
             {
-                painter->drawText(sx + m_padding, sy, row->titles[i]);
+                if(row->alignment[i] == ListWidgetRow::ALIGN_LEFT)
+                    painter->drawText(sx + m_padding, sy, row->titles[i]);
+                else if(row->alignment[i] == ListWidgetRow::ALIGN_RIGHT)
+                    painter->drawText(sx + row->sizes[i] - m_padding - m_metrics->width(row->titles[i]), sy, row->titles[i]);
+                else
+                    painter->drawText(sx + row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2, sy, row->titles[i]);
+
+
+                //painter->drawText(sx + m_padding, sy, row->titles[i]);
+                //painter->drawText(sx + row->sizes[i] - m_padding - m_metrics->width(row->titles[i]), sy, row->titles[i]);
+                //painter->drawText(sx + row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2, sy, row->titles[i]);
                 sx += row->sizes[i];
 
                 if(i == row->trackStateColumn && !row->extraString.isEmpty())

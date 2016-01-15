@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -48,6 +48,7 @@ public:
     void setScrollBarWidth(int width);
     int requiredHeight() const;
     QList<int> sizes() const;
+    QList<int> alignment() const;
     int trackStateColumn() const;
     int maxScrollValue() const;
     int offset() const;
@@ -65,6 +66,7 @@ private slots:
     void removeColumn();
     void setAutoResize(bool on);
     void showTrackState(bool yes);
+    void setAlignment(QAction *action);
     void onColumnAdded(int index);
     void onColumnRemoved();
 
@@ -92,12 +94,13 @@ private:
         SIZE,
         RECT, //geometry
         AUTO_RESIZE,
-        TRACK_STATE
+        TRACK_STATE,
+        ALIGNMENT
     };
 
     QSize m_size_hint;
     QFontMetrics *m_metrics;
-    QMenu *m_menu;
+    QMenu *m_menu, *m_alignmentMenu;
     QPoint m_pressed_pos;
     QPoint m_mouse_pos;
     PlayListHeaderModel *m_model;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -43,6 +43,7 @@ struct ListWidgetRow
     }
     QStringList titles;
     QList<int> sizes;
+    QList<int> alignment;
     QString length;
     QString extraString;
     int number;
@@ -56,6 +57,13 @@ struct ListWidgetRow
         SELECTED = 0x02,
         CURRENT = 0x04,
         ANCHOR = 0x08
+    };
+
+    enum
+    {
+        ALIGN_LEFT = 0,
+        ALIGN_CENTER,
+        ALIGN_RIGHT,
     };
 
     int flags;

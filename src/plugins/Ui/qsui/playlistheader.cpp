@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,11 +31,13 @@
 #include <QInputDialog>
 #include <QIcon>
 #include <QStyleOptionHeader>
+#include <QActionGroup>
 #include <qmmp/qmmp.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/playlistheadermodel.h>
 #include <qmmpui/playlistmanager.h>
 #include "playlistheader.h"
+#include "listwidgetdrawer.h"
 
 #define INITAL_SIZE 150
 #define MIN_SIZE 30
@@ -57,6 +59,8 @@ PlayListHeader::PlayListHeader(QWidget *parent) :
     m_task = NO_TASK;
 
     m_model = PlayListManager::instance()->headerModel();
+
+    //menus
     m_menu = new QMenu(this);
     m_menu->addAction(QIcon::fromTheme("list-add"), tr("Add Column"), this, SLOT(addColumn()));
     m_menu->addAction(QIcon::fromTheme("configure"), tr("Edit Column"), this, SLOT(editColumn()));
@@ -64,6 +68,19 @@ PlayListHeader::PlayListHeader(QWidget *parent) :
     m_trackStateAction->setCheckable(true);
     m_autoResizeAction = m_menu->addAction(tr("Auto-resize"), this, SLOT(setAutoResize(bool)));
     m_autoResizeAction->setCheckable(true);
+
+    m_alignmentMenu = m_menu->addMenu(tr("Alignment"));
+    m_alignmentMenu->addAction(tr("Left", "alignment"))->setData(ListWidgetRow::ALIGN_LEFT);
+    m_alignmentMenu->addAction(tr("Right", "alignment"))->setData(ListWidgetRow::ALIGN_RIGHT);
+    m_alignmentMenu->addAction(tr("Center", "alignment"))->setData(ListWidgetRow::ALIGN_CENTER);
+    connect(m_alignmentMenu, SIGNAL(triggered(QAction*)), SLOT(setAlignment(QAction*)));
+    QActionGroup *alignmentGroup = new QActionGroup(this);
+    foreach (QAction *a, m_alignmentMenu->actions())
+    {
+        a->setCheckable(true);
+        alignmentGroup->addAction(a);
+    }
+
     m_menu->addSeparator();
     m_menu->addAction(QIcon::fromTheme("list-remove"), tr("Remove Column"), this, SLOT(removeColumn()));
 
@@ -113,14 +130,19 @@ void PlayListHeader::readSettings()
     {
         m_model->restoreSettings(&settings);
         QList<QVariant> sizes = settings.value("pl_column_sizes").toList();
+        QList<QVariant> alignment = settings.value("pl_column_alignment").toList();
         int autoResizeColumn = settings.value("pl_autoresize_column", -1).toInt();
         int trackStateColumn = settings.value("pl_track_state_column", -1).toInt();
         for(int i = 0; i < m_model->count(); ++i)
         {
             m_model->setData(i, SIZE, INITAL_SIZE);
+            m_model->setData(i, ALIGNMENT, (layoutDirection() == Qt::RightToLeft) ?
+                                 ListWidgetRow::ALIGN_LEFT : ListWidgetRow::ALIGN_LEFT);
 
             if(i < sizes.count())
                 m_model->setData(i, SIZE, sizes.at(i).toInt());
+            if(i < alignment.count())
+                m_model->setData(i, ALIGNMENT, alignment.at(i).toInt());
             if(i == autoResizeColumn)
             {
                 m_model->setData(i, AUTO_RESIZE, true);
@@ -221,6 +243,14 @@ QList<int> PlayListHeader::sizes() const
     for(int i = 0; i < m_model->count(); ++i)
         sizeList.append(m_model->data(i, SIZE).toInt());
     return sizeList;
+}
+
+QList<int> PlayListHeader::alignment() const
+{
+    QList<int> alignmentList;
+    for(int i = 0; i < m_model->count(); ++i)
+        alignmentList.append(m_model->data(i, ALIGNMENT).toInt());
+    return alignmentList;
 }
 
 int PlayListHeader::trackStateColumn() const
@@ -359,9 +389,21 @@ void PlayListHeader::showTrackState(bool yes)
     PlayListManager::instance()->selectedPlayList()->updateMetaData();
 }
 
+void PlayListHeader::setAlignment(QAction *action)
+{
+    if(m_pressed_column < 0)
+         return;
+
+    m_model->setData(m_pressed_column, ALIGNMENT, action->data().toInt());
+    PlayListManager::instance()->selectedPlayList()->updateMetaData();
+}
+
 void PlayListHeader::onColumnAdded(int index)
 {
     m_model->setData(index, SIZE, INITAL_SIZE);
+    m_model->setData(index, ALIGNMENT, (layoutDirection() == Qt::RightToLeft) ?
+                         ListWidgetRow::ALIGN_RIGHT : ListWidgetRow::ALIGN_LEFT);
+
     if(m_auto_resize && isVisible())
     {
         adjustColumn(autoResizeColumn());
@@ -586,6 +628,16 @@ void PlayListHeader::contextMenuEvent(QContextMenuEvent *e)
         m_trackStateAction->setChecked(m_model->data(m_pressed_column, TRACK_STATE).toBool());
         m_autoResizeAction->setChecked(m_model->data(m_pressed_column, AUTO_RESIZE).toBool());
 
+        int alignment = m_model->data(m_pressed_column, ALIGNMENT).toInt();
+        foreach (QAction *action, m_alignmentMenu->actions())
+        {
+            if(action->data().toInt() == alignment)
+            {
+                action->setChecked(true);
+                break;
+            }
+        }
+
         //hide unused actions
         foreach (QAction *action, m_menu->actions())
         {
@@ -723,18 +775,20 @@ void PlayListHeader::writeSettings()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
     m_model->saveSettings(&settings);
-    QList<QVariant> sizes;
+    QList<QVariant> sizes, alignment;
     int autoResizeColumn = -1;
     int trackStateColumn = -1;
     for(int i = 0; i < m_model->count(); ++i)
     {
         sizes << m_model->data(i, SIZE).toInt();
+        alignment << m_model->data(i, ALIGNMENT).toInt();
         if(m_model->data(i, AUTO_RESIZE).toBool())
             autoResizeColumn = i;
         if(m_model->data(i, TRACK_STATE).toBool())
             trackStateColumn = i;
     }
     settings.setValue("pl_column_sizes", sizes);
+    settings.setValue("pl_column_alignment", alignment);
     settings.setValue("pl_autoresize_column", autoResizeColumn);
     settings.setValue("pl_track_state_column", trackStateColumn);
     settings.endGroup();

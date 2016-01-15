@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -419,6 +419,7 @@ void ListWidget::updateList(int flags)
 
         row->titles = items[i]->formattedTitles();
         row->sizes = m_header->sizes();
+        row->alignment = m_header->alignment();
 
         (m_first + i) == m_model->currentIndex() ? row->flags |= ListWidgetRow::CURRENT :
                 row->flags &= ~ListWidgetRow::CURRENT;

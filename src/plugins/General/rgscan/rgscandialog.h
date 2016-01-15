@@ -47,6 +47,10 @@ namespace TagLib
     {
         class XiphComment;
     }
+    namespace MP4
+    {
+        class Tag;
+    }
 }
 
 /**
@@ -71,9 +75,12 @@ private:
     QString getAlbumName(const QString &url);
     TagLib::String gainToString(double value);
     TagLib::String peakToString(double value);
+    TagLib::StringList gainToStringList(double value);
+    TagLib::StringList peakToStringList(double value);
     void writeAPETag(TagLib::APE::Tag *tag, ReplayGainInfoItem *item);
     void writeID3v2Tag(TagLib::ID3v2::Tag *tag, ReplayGainInfoItem *item);
     void writeVorbisComment(TagLib::Ogg::XiphComment *tag, ReplayGainInfoItem *item);
+    void writeMP4Tag(TagLib::MP4::Tag *tag, ReplayGainInfoItem *item);
     Ui::RGScanDialog m_ui;
     QList<RGScanner *> m_scanners;
     QList<ReplayGainInfoItem*> m_replayGainItemList;

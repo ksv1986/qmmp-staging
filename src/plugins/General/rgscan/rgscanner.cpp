@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -98,7 +98,7 @@ bool RGScanner::prepare(const QString &url)
     }
     if(decoder->audioParameters().channels() > 2)
     {
-        qWarning("RGScanner: [%s] unsupported channel count: %d",
+        qWarning("RGScanner: [%s] unsupported channel number: %d",
                  qPrintable(name),
                  decoder->audioParameters().channels());
         delete source;
@@ -182,8 +182,8 @@ void RGScanner::run()
     //buffers
     double out_left[BUFFER_FRAMES], out_right[BUFFER_FRAMES]; //replay gain buffers
     float float_buf[BUFFER_FRAMES*ap.channels()]; //float buffer
-    qint64 char_buf_size = BUFFER_FRAMES*ap.channels()*ap.sampleSize();
-    unsigned char char_buf[char_buf_size]; //char buffer
+    qint64 buf_size = BUFFER_FRAMES*ap.channels()*ap.sampleSize();
+    unsigned char char_buf[buf_size]; //char buffer
 
 
     //counters
@@ -198,7 +198,7 @@ void RGScanner::run()
 
     forever
     {
-        len = m_decoder->read(char_buf, char_buf_size);
+        len = m_decoder->read(char_buf, buf_size);
 
         if(len < 0)
         {

@@ -41,10 +41,12 @@ SET(libffmpeg_SRCS
   decoderffmpegfactory.cpp
   ffmpegmetadatamodel.cpp
   settingsdialog.cpp
+  replaygain.cpp
 )
 
 SET(libffmpeg_HDRS
   decoder_ffmpeg.h
+  replaygain.h
 )
 
 SET(libffmpeg_RCCS translations/translations.qrc)

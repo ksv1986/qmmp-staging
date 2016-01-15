@@ -3,11 +3,13 @@ FORMS += settingsdialog.ui
 HEADERS += decoderffmpegfactory.h \
     decoder_ffmpeg.h \
     settingsdialog.h \
-    ffmpegmetadatamodel.h
+    ffmpegmetadatamodel.h \
+    replaygainreader.h
 SOURCES += decoder_ffmpeg.cpp \
     decoderffmpegfactory.cpp \
     settingsdialog.cpp \
-    ffmpegmetadatamodel.cpp
+    ffmpegmetadatamodel.cpp \
+    replaygainreader.cpp
 
 INCLUDEPATH += ../../../
 

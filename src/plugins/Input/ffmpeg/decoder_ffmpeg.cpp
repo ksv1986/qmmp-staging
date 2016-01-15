@@ -20,6 +20,7 @@
 
 #include <QObject>
 #include <QFile>
+#include "replaygainreader.h"
 #include "decoder_ffmpeg.h"
 #if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav-10: 55.34.1; ffmpeg-2.1: 55.39.100
 extern "C"{
@@ -190,6 +191,11 @@ bool DecoderFFmpeg::initialize()
         metaData.insert(Qmmp::URL, m_path);
         addMetaData(metaData);
     }
+
+    //replay gain
+    ReplayGainReader rg(ic);
+    setReplayGainInfo(rg.replayGainInfo());
+
 
     ic->flags |= AVFMT_FLAG_GENPTS;
     av_read_play(ic);

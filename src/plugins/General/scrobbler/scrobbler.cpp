@@ -417,7 +417,7 @@ void ScrobblerAuth::getToken()
     url.addQueryItem("api_key", API_KEY);
 
     QByteArray data;
-    data.append("api_key"API_KEY);
+    data.append("api_key" API_KEY);
     data.append("methodauth.getToken");
     data.append(SECRET);
     url.addQueryItem("api_sig", QCryptographicHash::hash(data,QCryptographicHash::Md5).toHex());
@@ -439,7 +439,7 @@ void ScrobblerAuth::getSession()
     url.addQueryItem("token", m_token);
 
     QByteArray data;
-    data.append("api_key"API_KEY);
+    data.append("api_key" API_KEY);
     data.append("methodauth.getSession");
     data.append("token" + m_token.toUtf8());
     data.append(SECRET);
@@ -521,7 +521,7 @@ void ScrobblerAuth::processResponse(QNetworkReply *reply)
         {
             m_token = response.token;
             qDebug("ScrobblerAuth[%s]: token: %s", qPrintable(m_name), qPrintable(m_token));
-            QDesktopServices::openUrl(m_authUrl + "?api_key="API_KEY"&token="+m_token);
+            QDesktopServices::openUrl(m_authUrl + "?api_key=" API_KEY "&token="+m_token);
             emit(tokenRequestFinished(NO_ERROR));
         }
         else if(error_code.isEmpty())

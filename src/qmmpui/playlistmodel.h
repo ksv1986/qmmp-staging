@@ -495,13 +495,17 @@ public slots:
      */
     void setQueued(PlayListTrack* item);
     /*!
-     * Removes invalid items from playlist
+     * Removes invalid tracks from playlist
      */
     void removeInvalidTracks();
     /*!
-     * Removes duplicate items by URL.
+     * Removes duplicate tracks by URL.
      */
     void removeDuplicates();
+    /*!
+     * Removes invalid tracks and scans parent directories for the new files
+     */
+    void refresh();
     /*!
      * Removes all items from queue.
      */

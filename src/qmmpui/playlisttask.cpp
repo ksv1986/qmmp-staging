@@ -247,6 +247,27 @@ void PlayListTask::removeDuplicates(QList<PlayListTrack *> tracks, PlayListTrack
     start();
 }
 
+void PlayListTask::refresh(QList<PlayListTrack *> tracks, PlayListTrack *current_track)
+{
+    if(isRunning())
+        return;
+    clear();
+    m_task = REFRESH;
+    m_input_tracks = tracks;
+    m_tracks = tracks;
+    m_current_track = current_track;
+
+    for(int i = 0; i < tracks.count(); ++i)
+    {
+        TrackField *f = new TrackField;
+        f->track = tracks[i];
+        f->value = f->track->value(Qmmp::URL);
+        m_fields.append(f);
+    }
+    MetaDataManager::instance()->prepareForAnotherThread();
+    start();
+}
+
 void PlayListTask::run()
 {
     qDebug("PlayListTask: started");
@@ -358,6 +379,23 @@ void PlayListTask::run()
            {
                urls.append(f->value);
            }
+        }
+    }
+    else if(m_task == REFRESH)
+    {
+        TrackField *f = 0;
+        bool ok = false;
+        for(int i = 0; i < m_fields.count(); ++i)
+        {
+            f = m_fields.at(i);
+
+            if(f->value.contains("://"))
+                ok = MetaDataManager::instance()->protocols().contains(f->value.section("://",0,0)); //url
+            else
+                ok = MetaDataManager::instance()->supports(f->value); //local file
+
+            if(!ok)
+                m_indexes << i;
         }
     }
     qDebug("PlayListTask: finished");

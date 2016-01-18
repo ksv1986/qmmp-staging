@@ -977,6 +977,11 @@ void PlayListModel::removeDuplicates()
     m_task->removeDuplicates(m_container->tracks(), m_current_track);
 }
 
+void PlayListModel::refresh()
+{
+    m_task->refresh(m_container->tracks(), m_current_track);
+}
+
 void PlayListModel::clearQueue()
 {
      m_queued_songs.clear();

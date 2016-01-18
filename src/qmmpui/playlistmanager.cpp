@@ -470,6 +470,11 @@ void PlayListManager::removeDuplicates()
     m_selected->removeDuplicates();
 }
 
+void PlayListManager::refresh()
+{
+    m_selected->refresh();
+}
+
 void PlayListManager::clearQueue()
 {
     m_selected->clearQueue();

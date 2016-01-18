@@ -233,6 +233,10 @@ public slots:
      */
     void removeDuplicates();
     /*!
+     * This is a convenience function and is the same as calling \b selectedPlayList()->refresh()
+     */
+    void refresh();
+    /*!
      * This is a convenience function and is the same as calling \b selectedPlayList()->clearQueue()
      */
     void clearQueue();

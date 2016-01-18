@@ -64,16 +64,16 @@
         <translation>Écrire gain et pic et l&apos;album</translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="117"/>
-        <location filename="../rgscandialog.cpp" line="228"/>
+        <location filename="../rgscandialog.cpp" line="123"/>
+        <location filename="../rgscandialog.cpp" line="234"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="127"/>
-        <location filename="../rgscandialog.cpp" line="128"/>
-        <location filename="../rgscandialog.cpp" line="152"/>
-        <location filename="../rgscandialog.cpp" line="223"/>
+        <location filename="../rgscandialog.cpp" line="133"/>
+        <location filename="../rgscandialog.cpp" line="134"/>
+        <location filename="../rgscandialog.cpp" line="158"/>
+        <location filename="../rgscandialog.cpp" line="229"/>
         <source>%1 dB</source>
         <translation>%1 dB</translation>
     </message>

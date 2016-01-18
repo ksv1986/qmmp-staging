@@ -28,16 +28,16 @@
     <name>SettingsDialog</name>
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
-        <source>Sample Rate Converter Plugin Settings</source>
-        <translation>Nastavení modulu SRC</translation>
+        <source>SoX Resampler Settings</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="20"/>
+        <location filename="../settingsdialog.ui" line="29"/>
         <source>Sample Rate (Hz):</source>
         <translation>Vzorkovací frekvence (Hz):</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="40"/>
+        <location filename="../settingsdialog.ui" line="49"/>
         <source>Quality:</source>
         <translation type="unfinished"></translation>
     </message>

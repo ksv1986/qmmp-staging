@@ -299,7 +299,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="82"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновить</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="83"/>

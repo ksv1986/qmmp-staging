@@ -437,7 +437,8 @@ void PlayListTask::run()
 
             if(!contains)
             {
-                foreach (FileInfo *info, mm->createPlayList(f.canonicalFilePath()))
+                foreach (FileInfo *info, mm->createPlayList(f.canonicalFilePath(),
+                                                            QmmpUiSettings::instance()->useMetadata()))
                 {
                     m_new_tracks << new PlayListTrack(info);
                 }

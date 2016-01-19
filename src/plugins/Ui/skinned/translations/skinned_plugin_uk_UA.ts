@@ -270,171 +270,176 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
+        <source>Refresh</source>
+        <translation type="unfinished">Поновити</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="79"/>
         <source>&amp;Queue Toggle</source>
         <translation>&amp;В чергу</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="78"/>
+        <location filename="../actionmanager.cpp" line="79"/>
         <source>Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="79"/>
+        <location filename="../actionmanager.cpp" line="80"/>
         <source>Invert Selection</source>
         <translation>Інвертувати вибране</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="80"/>
+        <location filename="../actionmanager.cpp" line="81"/>
         <source>&amp;Select None</source>
         <translation>&amp;Зняти виділення</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="81"/>
+        <location filename="../actionmanager.cpp" line="82"/>
         <source>&amp;Select All</source>
         <translation>&amp;Вибрати все</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="82"/>
+        <location filename="../actionmanager.cpp" line="83"/>
         <source>Ctrl+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="83"/>
+        <location filename="../actionmanager.cpp" line="84"/>
         <source>&amp;View Track Details</source>
         <translation>&amp;Інформація</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="83"/>
+        <location filename="../actionmanager.cpp" line="84"/>
         <source>Alt+I</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="85"/>
+        <location filename="../actionmanager.cpp" line="86"/>
         <source>&amp;New List</source>
         <translation>&amp;Новий список</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="85"/>
+        <location filename="../actionmanager.cpp" line="86"/>
         <source>Ctrl+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="86"/>
+        <location filename="../actionmanager.cpp" line="87"/>
         <source>&amp;Delete List</source>
         <translation>&amp;Видалити список</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="86"/>
+        <location filename="../actionmanager.cpp" line="87"/>
         <source>Ctrl+W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="87"/>
+        <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;Load List</source>
         <translation>&amp;Завантажити список</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="87"/>
+        <location filename="../actionmanager.cpp" line="88"/>
         <source>O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="88"/>
+        <location filename="../actionmanager.cpp" line="89"/>
         <source>&amp;Save List</source>
         <translation>&amp;Зберегти список</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="88"/>
+        <location filename="../actionmanager.cpp" line="89"/>
         <source>Shift+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="89"/>
+        <location filename="../actionmanager.cpp" line="90"/>
         <source>&amp;Rename List</source>
         <translation>&amp;Переіменувати список</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="89"/>
+        <location filename="../actionmanager.cpp" line="90"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>&amp;Select Next Playlist</source>
         <translation>Вибрати &amp;наступний список</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="92"/>
         <source>Ctrl+PgDown</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="92"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>&amp;Select Previous Playlist</source>
         <translation>Вибрати &amp;попередній список</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Ctrl+PgUp</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>&amp;Show Playlists</source>
         <translation>Показати &amp;всі списки</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="95"/>
+        <location filename="../actionmanager.cpp" line="96"/>
         <source>P</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>&amp;Group Tracks</source>
         <translation>&amp;Групувати треки</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Ctrl+G</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Ctrl+H</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>&amp;Show Column Headers</source>
         <translation>&amp;Показувати назви стовпців</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="99"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>&amp;Settings</source>
         <translation>&amp;Налаштування</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="99"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>Ctrl+P</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="100"/>
+        <location filename="../actionmanager.cpp" line="101"/>
         <source>&amp;About</source>
         <translation>&amp;Про програму</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="101"/>
+        <location filename="../actionmanager.cpp" line="102"/>
         <source>&amp;About Qt</source>
         <translation>&amp;Про Qt</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="102"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>&amp;Exit</source>
         <translation>&amp;Вихід</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="102"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
@@ -818,108 +823,108 @@
         <translation>&amp;Копіювати вибране в</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="214"/>
+        <location filename="../playlist.cpp" line="216"/>
         <source>Sort List</source>
         <translation>Сортувати</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="217"/>
-        <location filename="../playlist.cpp" line="272"/>
+        <location filename="../playlist.cpp" line="219"/>
+        <location filename="../playlist.cpp" line="274"/>
         <source>By Title</source>
         <translation>За назвою</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="221"/>
-        <location filename="../playlist.cpp" line="276"/>
+        <location filename="../playlist.cpp" line="223"/>
+        <location filename="../playlist.cpp" line="278"/>
         <source>By Album</source>
         <translation>За альбомом</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="225"/>
-        <location filename="../playlist.cpp" line="280"/>
+        <location filename="../playlist.cpp" line="227"/>
+        <location filename="../playlist.cpp" line="282"/>
         <source>By Disc Number</source>
         <translation>За номером диску</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="229"/>
-        <location filename="../playlist.cpp" line="284"/>
+        <location filename="../playlist.cpp" line="231"/>
+        <location filename="../playlist.cpp" line="286"/>
         <source>By Artist</source>
         <translation>За виконавцем</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="233"/>
-        <location filename="../playlist.cpp" line="288"/>
+        <location filename="../playlist.cpp" line="235"/>
+        <location filename="../playlist.cpp" line="290"/>
         <source>By Album Artist</source>
         <translation>За альбомом виконавця</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="237"/>
-        <location filename="../playlist.cpp" line="292"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Filename</source>
         <translation>За ім&apos;ям файлу</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="241"/>
-        <location filename="../playlist.cpp" line="296"/>
+        <location filename="../playlist.cpp" line="243"/>
+        <location filename="../playlist.cpp" line="298"/>
         <source>By Path + Filename</source>
         <translation>За шляхом та файлом</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="245"/>
-        <location filename="../playlist.cpp" line="300"/>
+        <location filename="../playlist.cpp" line="247"/>
+        <location filename="../playlist.cpp" line="302"/>
         <source>By Date</source>
         <translation>За датою</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="253"/>
-        <location filename="../playlist.cpp" line="308"/>
+        <location filename="../playlist.cpp" line="255"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>By File Creation Date</source>
         <translation>За датою створення файлу</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="257"/>
-        <location filename="../playlist.cpp" line="312"/>
+        <location filename="../playlist.cpp" line="259"/>
+        <location filename="../playlist.cpp" line="314"/>
         <source>By File Modification Date</source>
         <translation>За датою модифікації файлу</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="261"/>
+        <location filename="../playlist.cpp" line="263"/>
         <source>By Group</source>
         <translation>За групою</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="269"/>
+        <location filename="../playlist.cpp" line="271"/>
         <source>Sort Selection</source>
         <translation>Сортувати вибране</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="320"/>
+        <location filename="../playlist.cpp" line="322"/>
         <source>Randomize List</source>
         <translation>Перемішати</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="322"/>
+        <location filename="../playlist.cpp" line="324"/>
         <source>Reverse List</source>
         <translation>Перевернути</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="584"/>
+        <location filename="../playlist.cpp" line="586"/>
         <source>Rename Playlist</source>
         <translation>Переіменувати список</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="584"/>
+        <location filename="../playlist.cpp" line="586"/>
         <source>Playlist name:</source>
         <translation>Ім&apos;я списка:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="605"/>
+        <location filename="../playlist.cpp" line="607"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Новий список</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="249"/>
-        <location filename="../playlist.cpp" line="304"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="306"/>
         <source>By Track Number</source>
         <translation></translation>
     </message>
@@ -929,7 +934,7 @@
         <translation>Список</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="333"/>
+        <location filename="../playlist.cpp" line="335"/>
         <source>Actions</source>
         <translation>Дії</translation>
     </message>

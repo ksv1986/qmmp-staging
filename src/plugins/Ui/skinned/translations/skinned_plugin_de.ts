@@ -270,171 +270,176 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
+        <source>Refresh</source>
+        <translation type="unfinished">Aktualisieren</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="79"/>
         <source>&amp;Queue Toggle</source>
         <translation>Zur &amp;Warteschlange hinzufügen/Aus der Warteschlange entfernen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="78"/>
+        <location filename="../actionmanager.cpp" line="79"/>
         <source>Q</source>
         <translation>Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="79"/>
+        <location filename="../actionmanager.cpp" line="80"/>
         <source>Invert Selection</source>
         <translation>Auswahl umkehren</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="80"/>
+        <location filename="../actionmanager.cpp" line="81"/>
         <source>&amp;Select None</source>
         <translation>&amp;Auswahl aufheben</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="81"/>
+        <location filename="../actionmanager.cpp" line="82"/>
         <source>&amp;Select All</source>
         <translation>Alle aus&amp;wählen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="82"/>
+        <location filename="../actionmanager.cpp" line="83"/>
         <source>Ctrl+A</source>
         <translation>Strg+A</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="83"/>
+        <location filename="../actionmanager.cpp" line="84"/>
         <source>&amp;View Track Details</source>
         <translation>&amp;Titeldetails anzeigen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="83"/>
+        <location filename="../actionmanager.cpp" line="84"/>
         <source>Alt+I</source>
         <translation>Alt+I</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="85"/>
+        <location filename="../actionmanager.cpp" line="86"/>
         <source>&amp;New List</source>
         <translation>&amp;Neue Wiedergabeliste</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="85"/>
+        <location filename="../actionmanager.cpp" line="86"/>
         <source>Ctrl+T</source>
         <translation>Strg+T</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="86"/>
+        <location filename="../actionmanager.cpp" line="87"/>
         <source>&amp;Delete List</source>
         <translation>Wie&amp;dergabeliste löschen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="86"/>
+        <location filename="../actionmanager.cpp" line="87"/>
         <source>Ctrl+W</source>
         <translation>Strg+W</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="87"/>
+        <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;Load List</source>
         <translation>Wiedergabeliste &amp;laden</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="87"/>
+        <location filename="../actionmanager.cpp" line="88"/>
         <source>O</source>
         <translation>O</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="88"/>
+        <location filename="../actionmanager.cpp" line="89"/>
         <source>&amp;Save List</source>
         <translation>Wiedergabeliste &amp;speichern</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="88"/>
+        <location filename="../actionmanager.cpp" line="89"/>
         <source>Shift+S</source>
         <translation>Umschalt+S</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="89"/>
+        <location filename="../actionmanager.cpp" line="90"/>
         <source>&amp;Rename List</source>
         <translation>Liste &amp;umbenennen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="89"/>
+        <location filename="../actionmanager.cpp" line="90"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>&amp;Select Next Playlist</source>
         <translation>Näch&amp;ste Wiedergabeliste auswählen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="92"/>
         <source>Ctrl+PgDown</source>
         <translation>Strg+Bild ab</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="92"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>&amp;Select Previous Playlist</source>
         <translation>Vorherige Wiedergabeli&amp;ste auswählen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Ctrl+PgUp</source>
         <translation>Strg+Bild auf</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>&amp;Show Playlists</source>
         <translation>Wiedergabeli&amp;sten anzeigen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="95"/>
+        <location filename="../actionmanager.cpp" line="96"/>
         <source>P</source>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>&amp;Group Tracks</source>
         <translation>Titel &amp;gruppieren</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Ctrl+G</source>
         <translation>Strg+G</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Ctrl+H</source>
         <translation>Strg+H</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>&amp;Show Column Headers</source>
         <translation>&amp;Spaltenüberschriften anzeigen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="99"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>&amp;Settings</source>
         <translation>Ein&amp;stellungen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="99"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>Ctrl+P</source>
         <translation>Strg+P</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="100"/>
+        <location filename="../actionmanager.cpp" line="101"/>
         <source>&amp;About</source>
         <translation>Ü&amp;ber</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="101"/>
+        <location filename="../actionmanager.cpp" line="102"/>
         <source>&amp;About Qt</source>
         <translation>Übe&amp;r Qt</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="102"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>&amp;Exit</source>
         <translation>Be&amp;enden</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="102"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Ctrl+Q</source>
         <translation>Strg+Q</translation>
     </message>
@@ -823,113 +828,113 @@
         <translation>Auswahl kopieren na&amp;ch</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="214"/>
+        <location filename="../playlist.cpp" line="216"/>
         <source>Sort List</source>
         <translation>Wiedergabeliste sortieren</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="217"/>
-        <location filename="../playlist.cpp" line="272"/>
+        <location filename="../playlist.cpp" line="219"/>
+        <location filename="../playlist.cpp" line="274"/>
         <source>By Title</source>
         <translation>Nach Titel</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="221"/>
-        <location filename="../playlist.cpp" line="276"/>
+        <location filename="../playlist.cpp" line="223"/>
+        <location filename="../playlist.cpp" line="278"/>
         <source>By Album</source>
         <translation>Nach Album</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="225"/>
-        <location filename="../playlist.cpp" line="280"/>
+        <location filename="../playlist.cpp" line="227"/>
+        <location filename="../playlist.cpp" line="282"/>
         <source>By Disc Number</source>
         <translation>Nach CD-Nummer</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="229"/>
-        <location filename="../playlist.cpp" line="284"/>
+        <location filename="../playlist.cpp" line="231"/>
+        <location filename="../playlist.cpp" line="286"/>
         <source>By Artist</source>
         <translation>Nach Interpret</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="233"/>
-        <location filename="../playlist.cpp" line="288"/>
+        <location filename="../playlist.cpp" line="235"/>
+        <location filename="../playlist.cpp" line="290"/>
         <source>By Album Artist</source>
         <translation>Nach Albuminterpret</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="237"/>
-        <location filename="../playlist.cpp" line="292"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Filename</source>
         <translation>Nach Dateinamen</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="241"/>
-        <location filename="../playlist.cpp" line="296"/>
+        <location filename="../playlist.cpp" line="243"/>
+        <location filename="../playlist.cpp" line="298"/>
         <source>By Path + Filename</source>
         <translation>Nach Pfad + Dateinamen</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="245"/>
-        <location filename="../playlist.cpp" line="300"/>
+        <location filename="../playlist.cpp" line="247"/>
+        <location filename="../playlist.cpp" line="302"/>
         <source>By Date</source>
         <translation>Nach Datum</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="249"/>
-        <location filename="../playlist.cpp" line="304"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="306"/>
         <source>By Track Number</source>
         <translation>Nach Titelnummer</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="253"/>
-        <location filename="../playlist.cpp" line="308"/>
+        <location filename="../playlist.cpp" line="255"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>By File Creation Date</source>
         <translation>Nach Dateierstellungsdatum</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="257"/>
-        <location filename="../playlist.cpp" line="312"/>
+        <location filename="../playlist.cpp" line="259"/>
+        <location filename="../playlist.cpp" line="314"/>
         <source>By File Modification Date</source>
         <translation>Nach Dateiänderungsdatum</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="261"/>
+        <location filename="../playlist.cpp" line="263"/>
         <source>By Group</source>
         <translation>Nach Gruppe</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="269"/>
+        <location filename="../playlist.cpp" line="271"/>
         <source>Sort Selection</source>
         <translation>Auswahl sortieren</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="320"/>
+        <location filename="../playlist.cpp" line="322"/>
         <source>Randomize List</source>
         <translation>Wiedergabeliste mischen</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="322"/>
+        <location filename="../playlist.cpp" line="324"/>
         <source>Reverse List</source>
         <translation>Wiedergabeliste umkehren</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="333"/>
+        <location filename="../playlist.cpp" line="335"/>
         <source>Actions</source>
         <translation>Aktionen</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="584"/>
+        <location filename="../playlist.cpp" line="586"/>
         <source>Rename Playlist</source>
         <translation>Wiedergabeliste umbenennen</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="584"/>
+        <location filename="../playlist.cpp" line="586"/>
         <source>Playlist name:</source>
         <translation>Wiedergabelistenname:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="605"/>
+        <location filename="../playlist.cpp" line="607"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Neue Wiedergabeliste</translation>
     </message>

@@ -270,171 +270,176 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
+        <source>Refresh</source>
+        <translation type="unfinished">Ανανέωση</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="79"/>
         <source>&amp;Queue Toggle</source>
         <translation>&amp;Εναλλαγή ουράς αναμονής</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="78"/>
+        <location filename="../actionmanager.cpp" line="79"/>
         <source>Q</source>
         <translation>Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="79"/>
+        <location filename="../actionmanager.cpp" line="80"/>
         <source>Invert Selection</source>
         <translation>Αντιστροφή επιλογής</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="80"/>
+        <location filename="../actionmanager.cpp" line="81"/>
         <source>&amp;Select None</source>
         <translation>&amp;Επιλογή κανενός</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="81"/>
+        <location filename="../actionmanager.cpp" line="82"/>
         <source>&amp;Select All</source>
         <translation>&amp;Επιλογή όλων</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="82"/>
+        <location filename="../actionmanager.cpp" line="83"/>
         <source>Ctrl+A</source>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="83"/>
+        <location filename="../actionmanager.cpp" line="84"/>
         <source>&amp;View Track Details</source>
         <translation>&amp;Προβολή λεπτομερειών κομματιού</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="83"/>
+        <location filename="../actionmanager.cpp" line="84"/>
         <source>Alt+I</source>
         <translation>Alt+I</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="85"/>
+        <location filename="../actionmanager.cpp" line="86"/>
         <source>&amp;New List</source>
         <translation>&amp;Νέα λίστα</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="85"/>
+        <location filename="../actionmanager.cpp" line="86"/>
         <source>Ctrl+T</source>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="86"/>
+        <location filename="../actionmanager.cpp" line="87"/>
         <source>&amp;Delete List</source>
         <translation>&amp;Διαγραφή λίστας</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="86"/>
+        <location filename="../actionmanager.cpp" line="87"/>
         <source>Ctrl+W</source>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="87"/>
+        <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;Load List</source>
         <translation>&amp;Φόρτωση λίστας</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="87"/>
+        <location filename="../actionmanager.cpp" line="88"/>
         <source>O</source>
         <translation>O</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="88"/>
+        <location filename="../actionmanager.cpp" line="89"/>
         <source>&amp;Save List</source>
         <translation>&amp;Αποθήκευση λίστας</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="88"/>
+        <location filename="../actionmanager.cpp" line="89"/>
         <source>Shift+S</source>
         <translation>Shift+S</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="89"/>
+        <location filename="../actionmanager.cpp" line="90"/>
         <source>&amp;Rename List</source>
         <translation>&amp;Μετονομασία λίστας</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="89"/>
+        <location filename="../actionmanager.cpp" line="90"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>&amp;Select Next Playlist</source>
         <translation>&amp;Επιλογή επόμενης λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="92"/>
         <source>Ctrl+PgDown</source>
         <translation>Ctrl+PgDown</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="92"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>&amp;Select Previous Playlist</source>
         <translation>&amp;Επιλογή προηγούμενης λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Ctrl+PgUp</source>
         <translation>Ctrl+PgUp</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>&amp;Show Playlists</source>
         <translation>&amp;Εμφάνιση λιστών αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="95"/>
+        <location filename="../actionmanager.cpp" line="96"/>
         <source>P</source>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>&amp;Group Tracks</source>
         <translation>&amp;Ομαδοποίηση κομματιών</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Ctrl+G</source>
         <translation>Ctrl+G</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Ctrl+H</source>
         <translation>Ctrl+H</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>&amp;Show Column Headers</source>
         <translation>&amp;Εμφάνιση επικεφαλίδων στηλών</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="99"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>&amp;Settings</source>
         <translation>&amp;Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="99"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="100"/>
+        <location filename="../actionmanager.cpp" line="101"/>
         <source>&amp;About</source>
         <translation>&amp;Σχετικά</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="101"/>
+        <location filename="../actionmanager.cpp" line="102"/>
         <source>&amp;About Qt</source>
         <translation>&amp;Σχετικά με την Qt</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="102"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>&amp;Exit</source>
         <translation>&amp;Έξοδος</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="102"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
@@ -823,113 +828,113 @@
         <translation>&amp;Αντιγραφή επιλογής σε</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="214"/>
+        <location filename="../playlist.cpp" line="216"/>
         <source>Sort List</source>
         <translation>Ταξινόμηση λίστας</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="217"/>
-        <location filename="../playlist.cpp" line="272"/>
+        <location filename="../playlist.cpp" line="219"/>
+        <location filename="../playlist.cpp" line="274"/>
         <source>By Title</source>
         <translation>Ανά τίτλο</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="221"/>
-        <location filename="../playlist.cpp" line="276"/>
+        <location filename="../playlist.cpp" line="223"/>
+        <location filename="../playlist.cpp" line="278"/>
         <source>By Album</source>
         <translation>Ανά άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="225"/>
-        <location filename="../playlist.cpp" line="280"/>
+        <location filename="../playlist.cpp" line="227"/>
+        <location filename="../playlist.cpp" line="282"/>
         <source>By Disc Number</source>
         <translation>Ανά αριθμό δίσκου</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="229"/>
-        <location filename="../playlist.cpp" line="284"/>
+        <location filename="../playlist.cpp" line="231"/>
+        <location filename="../playlist.cpp" line="286"/>
         <source>By Artist</source>
         <translation>Ανά καλλιτέχνη</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="233"/>
-        <location filename="../playlist.cpp" line="288"/>
+        <location filename="../playlist.cpp" line="235"/>
+        <location filename="../playlist.cpp" line="290"/>
         <source>By Album Artist</source>
         <translation>Ανά καλλιτέχνη άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="237"/>
-        <location filename="../playlist.cpp" line="292"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Filename</source>
         <translation>Ανά όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="241"/>
-        <location filename="../playlist.cpp" line="296"/>
+        <location filename="../playlist.cpp" line="243"/>
+        <location filename="../playlist.cpp" line="298"/>
         <source>By Path + Filename</source>
         <translation>Ανά διαδρομή + όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="245"/>
-        <location filename="../playlist.cpp" line="300"/>
+        <location filename="../playlist.cpp" line="247"/>
+        <location filename="../playlist.cpp" line="302"/>
         <source>By Date</source>
         <translation>Ανά ημερομηνία</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="249"/>
-        <location filename="../playlist.cpp" line="304"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="306"/>
         <source>By Track Number</source>
         <translation>Ανά αριθμό κομματιού</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="253"/>
-        <location filename="../playlist.cpp" line="308"/>
+        <location filename="../playlist.cpp" line="255"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>By File Creation Date</source>
         <translation>Ανά ημερομηνία δημιουργίας του αρχείου </translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="257"/>
-        <location filename="../playlist.cpp" line="312"/>
+        <location filename="../playlist.cpp" line="259"/>
+        <location filename="../playlist.cpp" line="314"/>
         <source>By File Modification Date</source>
         <translation>Ανά ημερομηνία τροποποίησης του αρχείου </translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="261"/>
+        <location filename="../playlist.cpp" line="263"/>
         <source>By Group</source>
         <translation>Ανά ομάδα</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="269"/>
+        <location filename="../playlist.cpp" line="271"/>
         <source>Sort Selection</source>
         <translation>Ταξινόμηση επιλογής</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="320"/>
+        <location filename="../playlist.cpp" line="322"/>
         <source>Randomize List</source>
         <translation>Τυχαία ταξινόμηση της λίστας</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="322"/>
+        <location filename="../playlist.cpp" line="324"/>
         <source>Reverse List</source>
         <translation>Αντιστροφή ταξινόμησης της λίστας</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="333"/>
+        <location filename="../playlist.cpp" line="335"/>
         <source>Actions</source>
         <translation>Ενέργειες</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="584"/>
+        <location filename="../playlist.cpp" line="586"/>
         <source>Rename Playlist</source>
         <translation>Μετονομασία της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="584"/>
+        <location filename="../playlist.cpp" line="586"/>
         <source>Playlist name:</source>
         <translation>Όνομα λίστας αναπαραγωγής:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="605"/>
+        <location filename="../playlist.cpp" line="607"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Νέα λίστα αναπαραγωγής</translation>
     </message>

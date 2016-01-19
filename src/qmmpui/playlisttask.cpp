@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2014-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -384,18 +384,64 @@ void PlayListTask::run()
     else if(m_task == REFRESH)
     {
         TrackField *f = 0;
+        MetaDataManager *mm = MetaDataManager::instance();
         bool ok = false;
+        //find invalid files
         for(int i = 0; i < m_fields.count(); ++i)
         {
             f = m_fields.at(i);
 
             if(f->value.contains("://"))
-                ok = MetaDataManager::instance()->protocols().contains(f->value.section("://",0,0)); //url
+                ok = mm->protocols().contains(f->value.section("://",0,0)); //url
             else
-                ok = MetaDataManager::instance()->supports(f->value); //local file
+                ok = mm->supports(f->value); //local file
 
             if(!ok)
                 m_indexes << i;
+        }
+        //find new files
+        QStringList dirs; QString path;
+        for(int i = 0; i < m_fields.count(); ++i)
+        {
+            f = m_fields.at(i);
+
+            if(f->value.contains("://")) //skip urls
+                continue;
+
+            path = QFileInfo(f->value).canonicalPath();
+
+            if(!dirs.contains(path))
+                dirs << path;
+        }
+
+        QFileInfoList l;
+        foreach (QString p, dirs)
+        {
+            QDir dir(p);
+            dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+            dir.setSorting(QDir::Name);
+            l << dir.entryInfoList(mm->nameFilters());
+        }
+
+        foreach (QFileInfo f, l)
+        {
+            bool contains = false;
+            foreach (TrackField *t, m_fields)
+            {
+                if(f.canonicalFilePath() == t->value)
+                {
+                    contains = true;
+                    break;
+                }
+            }
+
+            if(!contains)
+            {
+                foreach (FileInfo *info, mm->createPlayList(f.canonicalFilePath()))
+                {
+                    m_new_tracks << new PlayListTrack(info);
+                }
+            }
         }
     }
     qDebug("PlayListTask: finished");
@@ -426,7 +472,7 @@ QList<PlayListTrack *> PlayListTask::takeResults(PlayListTrack **current_track)
         for (int i = 0; i < m_indexes.count(); i++)
             m_tracks.replace(m_indexes[i], m_fields[i]->track);
     }
-    else if(m_task == REMOVE_INVALID || m_task == REMOVE_DUPLICATES)
+    else if(m_task == REMOVE_INVALID || m_task == REMOVE_DUPLICATES || m_task == REFRESH)
     {
         int index = 0;
         PlayListTrack *t = 0;
@@ -449,6 +495,12 @@ QList<PlayListTrack *> PlayListTask::takeResults(PlayListTrack **current_track)
             else
                 delete t;
         }
+
+        if(m_task == REFRESH)
+        {
+            m_tracks.append(m_new_tracks);
+            m_new_tracks.clear();
+        }
     }
     return m_tracks;
 }
@@ -467,6 +519,8 @@ void PlayListTask::clear()
 {
     qDeleteAll(m_fields);
     m_fields.clear();
+    qDeleteAll(m_new_tracks);
+    m_new_tracks.clear();
     m_align_groups = false;
     m_indexes.clear();
     m_input_tracks.clear();

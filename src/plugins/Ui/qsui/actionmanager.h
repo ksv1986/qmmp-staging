@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -81,6 +81,7 @@ public:
         PL_REMOVE_UNSELECTED,
         PL_REMOVE_INVALID,
         PL_REMOVE_DUPLICATES,
+        PL_REFRESH,
         PL_ENQUEUE,
         PL_INVERT_SELECTION,
         PL_CLEAR_SELECTION,

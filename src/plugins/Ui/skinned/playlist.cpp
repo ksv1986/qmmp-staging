@@ -207,6 +207,8 @@ void PlayList::createActions()
                                 SLOT(removeInvalidTracks())));
     m_subMenu->addAction(SET_ACTION(ActionManager::PL_REMOVE_DUPLICATES, m_pl_manager,
                                 SLOT(removeDuplicates())));
+    m_subMenu->addAction(SET_ACTION(ActionManager::PL_REFRESH, m_pl_manager,
+                                SLOT(refresh())));
     //sort menu
     m_sortMenu->addAction(SET_ACTION(ActionManager::PL_SHOW_INFO, m_pl_manager, SLOT (showDetails ())));
     m_sortMenu->addSeparator();

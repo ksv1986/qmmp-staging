@@ -473,6 +473,8 @@ void MainWindow::createActions()
                                         SLOT(removeInvalidTracks())));
     m_ui.menuEdit->addAction(SET_ACTION(ActionManager::PL_REMOVE_DUPLICATES, m_pl_manager,
                                         SLOT(removeDuplicates())));
+    m_ui.menuEdit->addAction(SET_ACTION(ActionManager::PL_REFRESH, m_pl_manager,
+                                        SLOT(refresh())));
     m_ui.menuEdit->addSeparator();
     //view menu
     m_ui.menuView->addAction(SET_ACTION(ActionManager::WM_ALLWAYS_ON_TOP, this, SLOT(readSettings())));

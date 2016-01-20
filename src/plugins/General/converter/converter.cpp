@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,6 +24,8 @@
 #include <qmmp/inputsourcefactory.h>
 #include <qmmp/decoderfactory.h>
 #include <qmmp/metadatamanager.h>
+#include <qmmp/audioconverter.h>
+#include <qmmp/buffer.h>
 #include <qmmpui/metadataformatter.h>
 #include <QtEndian>
 #include <taglib/fileref.h>
@@ -32,28 +34,6 @@
 #include "converter.h"
 
 #define QStringToTString_qt4(s) TagLib::String(s.toUtf8().constData(), TagLib::String::UTF8)
-
-//static functions
-static inline void s8_to_s16_2(qint8 *in, qint16 *out, qint64 samples)
-{
-    for(qint64 i = 0; i < samples; ++i)
-        out[i] = in[i] << 8;
-    return;
-}
-
-static inline void s24_to_s16_2(qint32 *in, qint16 *out, qint64 samples)
-{
-    for(qint64 i = 0; i < samples; ++i)
-        out[i] = in[i] >> 8;
-    return;
-}
-
-static inline void s32_to_s16_2(qint32 *in, qint16 *out, qint64 samples)
-{
-    for(qint64 i = 0; i < samples; ++i)
-        out[i] = in[i] >> 16;
-    return;
-}
 
 Converter::Converter(QObject *parent) : QThread(parent)
 {}
@@ -305,55 +285,62 @@ void Converter::run()
 
 bool Converter::convert(Decoder *decoder, FILE *file, bool use16bit)
 {
-    const int buf_size = 8192;
     AudioParameters ap = decoder->audioParameters();
-    Qmmp::AudioFormat format = ap.format();
-    unsigned char output_buf[(use16bit && format == Qmmp::PCM_S8) ? buf_size : buf_size * 2];
-    qint64 output_at = 0;
-    qint64 total = 0;
-    quint64 len = 0;
-    qint64 totalSize = decoder->totalTime() * ap.sampleRate() * ap.channels() * ap.sampleSize() / 1000;
-
+    AudioConverter inConverter, outConverter;
+    qint64 len, total = 0;
+    Qmmp::AudioFormat outFormat = Qmmp::PCM_S16LE;
     int percent = 0;
     int prev_percent = 0;
+    int samples = 0, output_at = 0;
+
+    qint64 totalSize = decoder->totalTime() * ap.sampleRate() * ap.channels() * ap.sampleSize() / 1000;
+
+    inConverter.configure(ap.format());
+
+    if(use16bit)
+        outFormat = Qmmp::PCM_S16LE;
+    else if(ap.sampleSize() == 1)
+        outFormat = Qmmp::PCM_S8;
+    else if(ap.sampleSize() == 2)
+        outFormat = Qmmp::PCM_S16LE;
+    else if(ap.sampleSize()  == 4)
+        outFormat = Qmmp::PCM_S32LE;
+
+        outConverter.configure(outFormat);
+
+    int outSampleSize = AudioParameters::sampleSize(outFormat);
+
+    unsigned char input_buffer[QMMP_BLOCK_FRAMES * ap.sampleSize() * ap.channels() * 4];
+    float converter_buffer[QMMP_BLOCK_FRAMES * ap.channels() * 4];
+    unsigned char output_buffer[QMMP_BLOCK_FRAMES * outSampleSize * ap.channels() * 4];
+
+    emit progress(0);
+
     forever
     {
         // decode
-        len = decoder->read((output_buf + output_at), buf_size - output_at);
+        len = decoder->read(input_buffer, sizeof(input_buffer));
 
         if (len > 0)
         {
-            output_at += len;
             total += len;
 
-            if(use16bit) //TODO dithering support
-            {
-                if(format == Qmmp::PCM_S8)
-                {
-                    s8_to_s16_2((qint8 *)output_buf, (qint16 *)output_buf, output_at);
-                    output_at <<= 1;
-                }
-                else if(format == Qmmp::PCM_S24LE)
-                {
-                    s24_to_s16_2((qint32 *)output_buf, (qint16 *)output_buf, output_at >> 2);
-                    output_at >>= 1;
-                }
-                else if(format == Qmmp::PCM_S32LE)
-                {
-                    s32_to_s16_2((qint32 *)output_buf, (qint16 *)output_buf, output_at >> 2);
-                    output_at >>= 1;
-                }
-            }
+            samples = len / ap.sampleSize();
+
+            inConverter.toFloat(input_buffer, converter_buffer, samples);
+            outConverter.fromFloat(converter_buffer, output_buffer, samples);
+            output_at = samples * outSampleSize;
+
             while(output_at > 0)
             {
-                len = fwrite(output_buf, 1, output_at, file);
+                len = fwrite(output_buffer, 1, output_at, file);
                 if(len == 0)
                 {
                     qWarning("Converter: error");
                     return false;
                 }
                 output_at -= len;
-                memmove(output_buf, output_buf + len, output_at);
+                memmove(output_buffer, output_buffer + len, output_at);
             }
             percent = 100 * total / totalSize;
             if(percent != prev_percent)

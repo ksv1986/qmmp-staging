@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011 by Ilya Kotov                                      *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,13 +20,11 @@
 
 #include <QAction>
 #include <QApplication>
-#include <QProgressDialog>
 #include <qmmp/soundcore.h>
 #include <qmmpui/uihelper.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/playlistitem.h>
 #include <qmmpui/mediaplayer.h>
-#include "converter.h"
 #include "converterdialog.h"
 #include "converterhelper.h"
 
@@ -36,21 +34,11 @@ ConverterHelper::ConverterHelper(QObject *parent) : QObject(parent)
     m_action->setShortcut(tr("Meta+C"));
     UiHelper::instance()->addAction(m_action, UiHelper::PLAYLIST_MENU);
     connect (m_action, SIGNAL(triggered ()), SLOT(openConverter()));
-    m_converter = new Converter(this);
-    m_progress = new QProgressDialog();
-    m_progress->setRange(0,100);
-    m_progress->setWindowTitle(tr("Converting..."));
-    m_progress->setCancelButtonText(tr("Cancel"));
-    connect(m_converter,SIGNAL(progress(int)),m_progress,SLOT(setValue(int)));
-    connect(m_converter, SIGNAL(finished()), m_progress, SLOT(reset()));
-    connect(m_converter, SIGNAL(desriptionChanged(QString)), m_progress, SLOT(setLabelText(QString)));
-    connect(m_progress, SIGNAL(canceled()), m_converter, SLOT(stop()));
+
 }
 
 ConverterHelper::~ConverterHelper()
-{
-    delete m_progress;
-}
+{}
 
 void ConverterHelper::openConverter()
 {
@@ -59,20 +47,6 @@ void ConverterHelper::openConverter()
     if (tracks.isEmpty())
         return;
 
-    ConverterDialog *d = new ConverterDialog(tracks, qApp->activeWindow ());
-    if(d->exec() == QDialog::Accepted)
-    {
-        QStringList urls = d->selectedUrls();
-        QVariantMap preset = d->preset();
-        if(preset.isEmpty())
-        {
-            d->deleteLater();
-            return;
-        }
-        m_converter->add(urls, preset);
-        if(!m_converter->isRunning())
-            m_converter->start();
-
-    }
-    d->deleteLater();
+    ConverterDialog d(tracks, qApp->activeWindow ());
+    d.exec();
 }

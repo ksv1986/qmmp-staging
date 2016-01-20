@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>433</width>
-    <height>428</height>
+    <width>598</width>
+    <height>430</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Converter Settings</string>
+   <string>Converter</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
+  <layout class="QGridLayout" name="gridLayout_2">
    <property name="leftMargin">
     <number>6</number>
    </property>
@@ -23,82 +23,114 @@
    <property name="bottomMargin">
     <number>6</number>
    </property>
-   <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Select tracks to convert:</string>
+   <item row="0" column="0" colspan="3">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
      </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="rowCount">
+      <number>0</number>
+     </property>
+     <column>
+      <property name="text">
+       <string>Title</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Progress</string>
+      </property>
+     </column>
     </widget>
    </item>
    <item row="1" column="0" colspan="3">
-    <widget class="QListWidget" name="itemsListWidget">
-     <property name="alternatingRowColors">
-      <bool>true</bool>
-     </property>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Output directory:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="outDirEdit"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QToolButton" name="dirButton">
+        <property name="text">
+         <string notr="true">...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Output file name:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="outFileEdit"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QToolButton" name="fileNameButton">
+        <property name="text">
+         <string notr="true">...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Preset:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="presetComboBox"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QToolButton" name="presetButton">
+        <property name="text">
+         <string notr="true">...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="3">
+       <widget class="QCheckBox" name="overwriteCheckBox">
+        <property name="text">
+         <string>Overwrite existing files</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
    <item row="2" column="0">
-    <widget class="QLabel" name="label_2">
+    <widget class="QPushButton" name="convertButton">
      <property name="text">
-      <string>Output directory:</string>
+      <string>Convert</string>
      </property>
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="QLineEdit" name="outDirEdit"/>
-   </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="label_3">
+    <widget class="QPushButton" name="stopButton">
      <property name="text">
-      <string>Output file name:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
-    <widget class="QLineEdit" name="outFileEdit"/>
-   </item>
-   <item row="4" column="0">
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>Preset:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="1">
-    <widget class="QComboBox" name="presetComboBox"/>
-   </item>
-   <item row="5" column="0" colspan="3">
-    <widget class="QCheckBox" name="overwriteCheckBox">
-     <property name="text">
-      <string>Overwrite existing files</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0" colspan="3">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      <string>Stop</string>
      </property>
     </widget>
    </item>
    <item row="2" column="2">
-    <widget class="QToolButton" name="dirButton">
-     <property name="text">
-      <string notr="true">...</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="2">
-    <widget class="QToolButton" name="fileNameButton">
-     <property name="text">
-      <string notr="true">...</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="2">
-    <widget class="QToolButton" name="presetButton">
-     <property name="text">
-      <string notr="true">...</string>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
      </property>
     </widget>
    </item>
@@ -108,33 +140,17 @@
  <connections>
   <connection>
    <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>ConverterDialog</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>330</x>
-     <y>408</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>112</x>
-     <y>425</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBox</sender>
    <signal>rejected()</signal>
    <receiver>ConverterDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>393</x>
-     <y>407</y>
+     <x>591</x>
+     <y>423</y>
     </hint>
     <hint type="destinationlabel">
-     <x>383</x>
-     <y>425</y>
+     <x>399</x>
+     <y>104</y>
     </hint>
    </hints>
   </connection>

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011 by Ilya Kotov                                      *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,7 +21,8 @@
 #ifndef CONVERTER_H
 #define CONVERTER_H
 
-#include <QThread>
+#include <QRunnable>
+#include <QObject>
 #include <QQueue>
 #include <QHash>
 #include <QVariantMap>
@@ -33,30 +34,31 @@
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
 */
-class Converter : public QThread
+class Converter : public QObject, public QRunnable
 {
     Q_OBJECT
 public:
     explicit Converter(QObject *parent = 0);
     virtual ~Converter();
 
-    void add(const QStringList &urls, const QVariantMap &preset);
-    void add(const QString &url, const QVariantMap &preset);
+    bool prepare(const QString &url, const QVariantMap &preset);
 
 public slots:
     void stop();
 
 signals:
     void progress(int percent);
-    void desriptionChanged(QString text);
-    void error(QString text);
+    void finished(Converter *converter);
 
 private:
     void run();
     bool convert(Decoder *decoder, FILE *file, bool use16bit);
-    QQueue <Decoder*> m_decoders;
-    QHash <Decoder*, InputSource*> m_inputs;
-    QHash <Decoder*, QVariantMap> m_presets;
+    //QQueue <Decoder*> m_decoders;
+    //QHash <Decoder*, InputSource*> m_inputs;
+    //QHash <Decoder*, QVariantMap> m_presets;
+    Decoder *m_decoder;
+    InputSource *m_input;
+    QVariantMap m_preset;
     QMutex m_mutex;
     bool m_user_stop;
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -28,6 +28,7 @@
 class QAction;
 class PlayListTrack;
 class ConverterPreset;
+class Converter;
 
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -39,14 +40,14 @@ public:
     explicit ConverterDialog(QList <PlayListTrack *> items,  QWidget *parent = 0);
     virtual ~ConverterDialog();
 
-    QStringList selectedUrls() const;
-    QVariantMap preset() const;
-
 public slots:
     virtual void accept();
 
 private slots:
     void on_dirButton_clicked();
+    void on_convertButton_clicked();
+    void on_stopButton_clicked();
+    void onConvertFinished(Converter *c);
     void addTitleString(QAction *a);
     void createPreset();
     void editPreset();
@@ -57,10 +58,12 @@ private:
     void createMenus();
     void readPresets(const QString &path);
     void savePresets();
+    QVariantMap preset() const;
     QString uniqueName(const QString &name);
 
     Ui::ConverterDialog m_ui;
     QList <ConverterPreset* > m_presets;
+    QList <Converter *> m_converters;
 
 };
 

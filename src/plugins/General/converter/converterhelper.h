@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011 by Ilya Kotov                                      *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,14 +20,11 @@
 #ifndef CONVERTERHELPER_H
 #define CONVERTERHELPER_H
 
-#include <QPointer>
-
 #include <qmmpui/general.h>
 #include <qmmp/qmmp.h>
 
 class QAction;
 class QProgressDialog;
-class Converter;
 
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -45,9 +42,6 @@ private slots:
 
 private:
     QAction *m_action;
-    Converter *m_converter;
-    QProgressDialog *m_progress;
-
 };
 
 #endif

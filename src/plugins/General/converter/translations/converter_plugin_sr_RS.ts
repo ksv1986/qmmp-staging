@@ -4,152 +4,202 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../converter.cpp" line="169"/>
-        <source>Track: %1</source>
-        <translation>Нумера: %1</translation>
+        <location filename="../converter.cpp" line="130"/>
+        <location filename="../converter.cpp" line="230"/>
+        <source>Cancelled</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="171"/>
-        <source>Preset: %1</source>
-        <translation>Поставка: %1</translation>
+        <location filename="../converter.cpp" line="145"/>
+        <location filename="../converter.cpp" line="212"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="266"/>
-        <source>Encoding...</source>
-        <translation>Кодирам...</translation>
+        <location filename="../converter.cpp" line="177"/>
+        <source>Converting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../converter.cpp" line="241"/>
+        <source>Encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../converter.cpp" line="279"/>
+        <source>Finished</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ConverterDialog</name>
     <message>
         <location filename="../converterdialog.ui" line="14"/>
-        <source>Converter Settings</source>
-        <translation>Поставке Претварача</translation>
+        <source>Audio Converter</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.ui" line="29"/>
-        <source>Select tracks to convert:</source>
-        <translation>Нумере за претварање:</translation>
+        <location filename="../converterdialog.ui" line="44"/>
+        <source>Progress</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.ui" line="43"/>
+        <location filename="../converterdialog.ui" line="49"/>
+        <source>State</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../converterdialog.ui" line="63"/>
         <source>Output directory:</source>
         <translation>Излазна фасцикла:</translation>
     </message>
     <message>
-        <location filename="../converterdialog.ui" line="53"/>
+        <location filename="../converterdialog.ui" line="80"/>
         <source>Output file name:</source>
         <translation>Име излазног фајла:</translation>
     </message>
     <message>
-        <location filename="../converterdialog.ui" line="63"/>
+        <location filename="../converterdialog.ui" line="97"/>
         <source>Preset:</source>
         <translation>Поставка:</translation>
     </message>
     <message>
-        <location filename="../converterdialog.ui" line="73"/>
+        <location filename="../converterdialog.ui" line="114"/>
         <source>Overwrite existing files</source>
         <translation>Пребриши постојеће фајлове</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="90"/>
+        <location filename="../converterdialog.ui" line="124"/>
+        <source>Convert</source>
+        <translation type="unfinished">Претвори</translation>
+    </message>
+    <message>
+        <location filename="../converterdialog.ui" line="131"/>
+        <source>Stop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../converterdialog.cpp" line="107"/>
         <source>Choose a directory</source>
         <translation>Изаберите фасциклу</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="110"/>
+        <location filename="../converterdialog.cpp" line="190"/>
         <source>Artist</source>
         <translation>извођач</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="111"/>
+        <location filename="../converterdialog.cpp" line="191"/>
         <source>Album</source>
         <translation>албум</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="112"/>
+        <location filename="../converterdialog.cpp" line="192"/>
         <source>Album Artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="113"/>
+        <location filename="../converterdialog.ui" line="39"/>
+        <location filename="../converterdialog.cpp" line="193"/>
         <source>Title</source>
         <translation>наслов</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="114"/>
+        <location filename="../converterdialog.cpp" line="194"/>
         <source>Track Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="115"/>
+        <location filename="../converterdialog.cpp" line="195"/>
         <source>Two-digit Track Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="120"/>
+        <location filename="../converterdialog.cpp" line="200"/>
         <source>Disc Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="121"/>
+        <location filename="../converterdialog.cpp" line="201"/>
         <source>File Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="122"/>
+        <location filename="../converterdialog.cpp" line="202"/>
         <source>File Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="132"/>
+        <location filename="../converterdialog.cpp" line="212"/>
         <source>Create a Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="116"/>
+        <location filename="../converterdialog.cpp" line="196"/>
         <source>Genre</source>
         <translation>жанр</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="117"/>
+        <location filename="../converterdialog.cpp" line="128"/>
+        <location filename="../converterdialog.cpp" line="367"/>
+        <location filename="../converterdialog.cpp" line="373"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../converterdialog.cpp" line="133"/>
+        <source>Waiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../converterdialog.cpp" line="197"/>
         <source>Comment</source>
         <translation>коментар</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="118"/>
+        <location filename="../converterdialog.cpp" line="198"/>
         <source>Composer</source>
         <translation>композитор</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="119"/>
+        <location filename="../converterdialog.cpp" line="199"/>
         <source>Duration</source>
         <translation>дужина</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="123"/>
+        <location filename="../converterdialog.cpp" line="203"/>
         <source>Year</source>
         <translation>година</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="124"/>
+        <location filename="../converterdialog.cpp" line="204"/>
         <source>Condition</source>
         <translation>услов</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="130"/>
+        <location filename="../converterdialog.cpp" line="210"/>
         <source>Create</source>
         <translation>Направи</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="131"/>
+        <location filename="../converterdialog.cpp" line="211"/>
         <source>Edit</source>
         <translation>Уреди</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="133"/>
+        <location filename="../converterdialog.cpp" line="213"/>
         <source>Delete</source>
         <translation>Обриши</translation>
+    </message>
+    <message>
+        <location filename="../converterdialog.cpp" line="367"/>
+        <source>Unable to execute &quot;%1&quot;. Program not found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../converterdialog.cpp" line="373"/>
+        <source>Process &quot;%1&quot; finished with error.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -183,24 +233,14 @@
 <context>
     <name>ConverterHelper</name>
     <message>
-        <location filename="../converterhelper.cpp" line="35"/>
+        <location filename="../converterhelper.cpp" line="33"/>
         <source>Convert</source>
         <translation>Претвори</translation>
     </message>
     <message>
-        <location filename="../converterhelper.cpp" line="36"/>
+        <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
         <translation>Meta+C</translation>
-    </message>
-    <message>
-        <location filename="../converterhelper.cpp" line="42"/>
-        <source>Converting...</source>
-        <translation>Кодирам...</translation>
-    </message>
-    <message>
-        <location filename="../converterhelper.cpp" line="43"/>
-        <source>Cancel</source>
-        <translation>Одустани</translation>
     </message>
 </context>
 <context>

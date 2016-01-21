@@ -60,9 +60,9 @@ private:
     void savePresets();
     QVariantMap preset() const;
     QString uniqueName(const QString &name);
+    bool checkPreset(const QVariantMap &preset);
 
     Ui::ConverterDialog m_ui;
-    QList <ConverterPreset* > m_presets;
     QList <Converter *> m_converters;
 
 };

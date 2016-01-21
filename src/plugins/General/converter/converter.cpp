@@ -110,6 +110,7 @@ bool Converter::prepare(const QString &url, const QVariantMap &preset)
     m_preset = preset;
     if(!decoder->totalTime())
         source->setOffset(-1);
+    m_user_stop = false;
     return true;
 }
 
@@ -123,7 +124,11 @@ void Converter::stop()
 void Converter::run()
 {
     qDebug("Converter: staring thread");
-    m_user_stop = false;
+    if(m_user_stop)
+    {
+        emit finished(this);
+        return;
+    }
 
     AudioParameters ap = m_decoder->audioParameters();
     QString url = m_input->url();

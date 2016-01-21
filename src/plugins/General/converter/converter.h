@@ -53,9 +53,6 @@ signals:
 private:
     void run();
     bool convert(Decoder *decoder, FILE *file, bool use16bit);
-    //QQueue <Decoder*> m_decoders;
-    //QHash <Decoder*, InputSource*> m_inputs;
-    //QHash <Decoder*, QVariantMap> m_presets;
     Decoder *m_decoder;
     InputSource *m_input;
     QVariantMap m_preset;

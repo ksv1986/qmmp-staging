@@ -25,6 +25,8 @@
 #include <QDir>
 #include <QProgressBar>
 #include <QThreadPool>
+#include <QProcess>
+#include <QMessageBox>
 #include <qmmpui/playlistitem.h>
 #include <qmmpui/metadataformatter.h>
 #include <qmmpui/filedialog.h>
@@ -109,6 +111,9 @@ void ConverterDialog::on_dirButton_clicked()
 
 void ConverterDialog::on_convertButton_clicked()
 {
+    if(!checkPreset(preset()))
+        return;
+
     m_ui.convertButton->setEnabled(false);
     m_converters.clear();
     for(int i = 0; i < m_ui.tableWidget->rowCount(); ++i)
@@ -142,12 +147,16 @@ void ConverterDialog::on_stopButton_clicked()
     QThreadPool::globalInstance()->waitForDone();
     qDeleteAll(m_converters);
     m_converters.clear();
+    m_ui.convertButton->setEnabled(true);
 }
 
 void ConverterDialog::onConvertFinished(Converter *c)
 {
-    m_converters.removeAll(c);
-    delete c;
+    if(m_converters.contains(c))
+    {
+        m_converters.removeAll(c);
+        delete c;
+    }
     if(m_converters.isEmpty())
         m_ui.convertButton->setEnabled(true);
 }
@@ -329,4 +338,29 @@ QString ConverterDialog::uniqueName(const QString &name)
         unique_name = name + QString("_%1").arg(++i);
     }
     return unique_name;
+}
+
+bool ConverterDialog::checkPreset(const QVariantMap &preset)
+{
+    QStringList programAndArgs = preset["command"].toString().split(" ", QString::SkipEmptyParts);
+    if(programAndArgs.isEmpty())
+        return false;
+
+    QString program = programAndArgs.first();
+
+    int result = QProcess::execute(program);
+
+    if(result == -2)
+    {
+        QMessageBox::warning(this, tr("Error"), tr("Unable to execute \"%1\". Program not found.")
+                             .arg(program));
+        return false;
+    }
+    else if(result < 0)
+    {
+        QMessageBox::warning(this, tr("Error"), tr("Process \"%1\" finished with error.")
+                             .arg(program));
+        return false;
+    }
+    return true;
 }

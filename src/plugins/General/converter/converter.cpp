@@ -57,8 +57,9 @@ Converter::~Converter()
     }
 }
 
-bool Converter::prepare(const QString &url, const QVariantMap &preset)
+bool Converter::prepare(const QString &url, int row, const QVariantMap &preset)
 {
+    m_row = row;
     InputSource *source = InputSource::create(url, this);
     if(!source->initialize())
     {
@@ -126,6 +127,7 @@ void Converter::run()
     qDebug("Converter: staring thread");
     if(m_user_stop)
     {
+        emit message(m_row, tr("Cancelled"));
         emit finished(this);
         return;
     }
@@ -140,6 +142,7 @@ void Converter::run()
     if(list.isEmpty() || out_path.isEmpty() || pattern.isEmpty())
     {
         qWarning("Converter: invalid parameters");
+        emit message(m_row, tr("Error"));
         return;
     }
 
@@ -171,6 +174,7 @@ void Converter::run()
     command.replace("%i", "\"" + tmp_path + "\"");
 
     qDebug("Converter: starting task '%s'", qPrintable(m_preset["name"].toString()));
+    emit message(m_row, tr("Converting"));
 
     qDeleteAll(list);
     list.clear();
@@ -205,6 +209,7 @@ void Converter::run()
     if(!enc_pipe)
     {
         qWarning("Converter: unable to open pipe");
+        emit message(m_row, tr("Error"));
         return;
 
     }
@@ -222,6 +227,7 @@ void Converter::run()
     if(m_user_stop)
     {
         qDebug("Converter: task '%s' aborted", qPrintable(m_preset["name"].toString()));
+        emit message(m_row, tr("Cancelled"));
         m_mutex.unlock();
         return;
     }
@@ -232,7 +238,7 @@ void Converter::run()
     if(use_file)
     {
         qDebug("Converter: starting file encoding...");
-        //emit desriptionChanged(tr("Encoding..."));
+        emit message(m_row, tr("Encoding"));
         enc_pipe = popen(qPrintable(command), "w");
         if(!enc_pipe)
         {
@@ -270,6 +276,7 @@ void Converter::run()
     }
 
     qDebug("Converter: thread finished");
+    emit message(m_row, tr("Finished"));
     emit finished(this);
 }
 

@@ -65,7 +65,7 @@ ConverterDialog::ConverterDialog(QList <PlayListTrack *> tracks,  QWidget *paren
         QProgressBar *progressBar = new QProgressBar(this);
         progressBar->setRange(0, 100);
         m_ui.tableWidget->setCellWidget(m_ui.tableWidget->rowCount() - 1, 1, progressBar);
-
+        m_ui.tableWidget->setItem(m_ui.tableWidget->rowCount() - 1, 2, new QTableWidgetItem());
     }
     m_ui.tableWidget->resizeColumnsToContents();
 
@@ -75,6 +75,7 @@ ConverterDialog::ConverterDialog(QList <PlayListTrack *> tracks,  QWidget *paren
     m_ui.outDirEdit->setText(settings.value("out_dir", music_path).toString());
     m_ui.outFileEdit->setText(settings.value("file_name","%p - %t").toString());
     m_ui.overwriteCheckBox->setChecked(settings.value("overwrite",false).toBool());
+    restoreGeometry(settings.value("geometry").toByteArray());
     settings.endGroup();
     createMenus();
 
@@ -122,19 +123,23 @@ void ConverterDialog::on_convertButton_clicked()
         Converter *converter = new Converter();
 
 
-        if(!converter->prepare(url, preset()))
+        if(!converter->prepare(url, i, preset()))
         {
-            //m_ui.tableWidget->setItem(i, 2, new QTableWidgetItem(tr("Error")));
+            m_ui.tableWidget->item(i, 2)->setText(tr("Error"));
             delete converter;
             continue;
         }
+        else
+            m_ui.tableWidget->item(i, 2)->setText(tr("Waiting"));
 
         converter->setAutoDelete(false);
         m_converters.append(converter);
         connect(converter, SIGNAL(progress(int)), m_ui.tableWidget->cellWidget(i, 1), SLOT(setValue(int)));
         connect(converter, SIGNAL(finished(Converter *)), SLOT(onConvertFinished(Converter *)));
+        connect(converter, SIGNAL(message(int, QString)), SLOT(onStateChanged(int, QString)));
         QThreadPool::globalInstance()->start(converter);
     }
+    m_ui.tableWidget->resizeColumnsToContents();
 }
 
 void ConverterDialog::on_stopButton_clicked()
@@ -150,6 +155,12 @@ void ConverterDialog::on_stopButton_clicked()
     m_ui.convertButton->setEnabled(true);
 }
 
+void ConverterDialog::onStateChanged(int row, QString message)
+{
+    m_ui.tableWidget->item(row, 2)->setText(message);
+    m_ui.tableWidget->resizeColumnsToContents();
+}
+
 void ConverterDialog::onConvertFinished(Converter *c)
 {
     if(m_converters.contains(c))
@@ -161,15 +172,16 @@ void ConverterDialog::onConvertFinished(Converter *c)
         m_ui.convertButton->setEnabled(true);
 }
 
-void ConverterDialog::accept()
+void ConverterDialog::reject()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Converter");
     settings.setValue("out_dir", m_ui.outDirEdit->text());
     settings.value("file_name", m_ui.outFileEdit->text());
     settings.setValue("overwrite", m_ui.overwriteCheckBox->isChecked());
+    settings.setValue("geometry", saveGeometry());
     settings.endGroup();
-    QDialog::accept();
+    QDialog::reject();
 }
 
 void ConverterDialog::createMenus()

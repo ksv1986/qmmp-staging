@@ -23,6 +23,7 @@
 
 #include <QDialog>
 #include <QStringList>
+#include <QCloseEvent>
 #include "ui_converterdialog.h"
 
 class QAction;
@@ -41,12 +42,13 @@ public:
     virtual ~ConverterDialog();
 
 public slots:
-    virtual void accept();
+    virtual void reject();
 
 private slots:
     void on_dirButton_clicked();
     void on_convertButton_clicked();
     void on_stopButton_clicked();
+    void onStateChanged(int row, QString message);
     void onConvertFinished(Converter *c);
     void addTitleString(QAction *a);
     void createPreset();

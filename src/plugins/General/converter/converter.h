@@ -41,7 +41,7 @@ public:
     explicit Converter(QObject *parent = 0);
     virtual ~Converter();
 
-    bool prepare(const QString &url, const QVariantMap &preset);
+    bool prepare(const QString &url, int row, const QVariantMap &preset);
 
 public slots:
     void stop();
@@ -49,6 +49,7 @@ public slots:
 signals:
     void progress(int percent);
     void finished(Converter *converter);
+    void message(int row, QString message);
 
 private:
     void run();
@@ -58,6 +59,7 @@ private:
     QVariantMap m_preset;
     QMutex m_mutex;
     bool m_user_stop;
+    int m_row;
 
 };
 

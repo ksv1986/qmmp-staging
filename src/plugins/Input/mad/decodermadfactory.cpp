@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -143,8 +143,8 @@ QList<FileInfo *> DecoderMADFactory::createPlayList(const QString &fileName, boo
 
         uint tag_array[3];
         tag_array[0] = settings.value("tag_1", SettingsDialog::ID3v2).toInt();
-        tag_array[1] = settings.value("tag_2", SettingsDialog::Disabled).toInt();
-        tag_array[2] = settings.value("tag_3", SettingsDialog::Disabled).toInt();
+        tag_array[1] = settings.value("tag_2", SettingsDialog::APE).toInt();
+        tag_array[2] = settings.value("tag_3", SettingsDialog::ID3v1).toInt();
 
         QByteArray name;
         for (int i = 0; i < 3; ++i)

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -44,8 +44,8 @@ SettingsDialog::SettingsDialog(bool using_rusxmms, QWidget *parent)
     m_ui.id3v2EncComboBox->setCurrentIndex(pos);
 
     m_ui.firstTagComboBox->setCurrentIndex(settings.value("tag_1", ID3v2).toInt());
-    m_ui.secondTagComboBox->setCurrentIndex(settings.value("tag_2", Disabled).toInt());
-    m_ui.thirdTagComboBox->setCurrentIndex(settings.value("tag_3", Disabled).toInt());
+    m_ui.secondTagComboBox->setCurrentIndex(settings.value("tag_2", APE).toInt());
+    m_ui.thirdTagComboBox->setCurrentIndex(settings.value("tag_3", ID3v1).toInt());
 
     settings.endGroup();
     connect(m_ui.buttonBox, SIGNAL(accepted()), SLOT(writeSettings()));

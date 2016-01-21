@@ -36,7 +36,7 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation>Аудио-конвертер</translation>
+        <translation>Преобразователь аудио-форматов</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>

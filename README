@@ -132,6 +132,7 @@ Available options:
 - USE_SKINNED (standard skinned UI);
 - USE_QSUI (simple UI);
 - USE_DIR_ASSOC (inode/directory mime type association);
+- QMMP_DEFAULT_OUTPUT (default output plugin, example: -DQMMP_DEFAULT_OUTPUT=pulse).
 
 Also you can use ccmake for changing plugins configuration.
 By default program will be installed in /usr/local. You can change default path by running:

@@ -143,7 +143,11 @@ void Output::setCurrentFactory(OutputFactory* factory)
 OutputFactory *Output::currentFactory()
 {
     loadPlugins();
+
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
+#ifdef QMMP_DEFAULT_OUTPUT
+    QString name = settings.value("Output/current_plugin", QMMP_DEFAULT_OUTPUT).toString();
+#else
 #ifdef Q_OS_LINUX
     QString name = settings.value("Output/current_plugin", "alsa").toString();
 #elif defined Q_WS_WIN
@@ -153,6 +157,7 @@ OutputFactory *Output::currentFactory()
 #else
     QString name = settings.value("Output/current_plugin", "oss4").toString();
 #endif
+#endif //QMMP_DEFAULT_OUTPUT
     foreach(QmmpPluginCache *item, *m_cache)
     {
         if (item->shortName() == name && item->outputFactory())

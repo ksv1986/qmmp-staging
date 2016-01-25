@@ -9,6 +9,7 @@
 Китайский упрощённый:
     lon <lon83129@126.com>
     mabier
+    Mingye Wang
 
 Чешский:
     Karel Volný <kvolny@redhat.com>

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,6 +23,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QProcess>
+#include <QPushButton>
 #include <qmmp/metadatamanager.h>
 #include <qmmp/metadatamodel.h>
 #include <qmmp/tagmodel.h>
@@ -46,6 +47,7 @@ DetailsDialog::DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent)
     m_page = 0;
     m_tracks = tracks;
     updatePage();
+    on_tabWidget_currentChanged(0);
 }
 
 DetailsDialog::~DetailsDialog()
@@ -85,6 +87,12 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
     }
     else
         reject();
+}
+
+void DetailsDialog::on_tabWidget_currentChanged(int index)
+{
+    TagEditor *tab = qobject_cast<TagEditor *> (m_ui->tabWidget->widget(index));
+    m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(tab != 0);
 }
 
 void DetailsDialog::on_prevButton_clicked()
@@ -134,12 +142,16 @@ void DetailsDialog::updatePage()
     else
         m_metaData = *m_track;
     qDeleteAll(flist);
+
     m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_path, this);
 
     if(m_metaDataModel)
     {
-        foreach(TagModel *tagModel, m_metaDataModel->tags())
-            m_ui->tabWidget->addTab(new TagEditor(tagModel, this), tagModel->name());
+        if(QFile::exists(m_path) && QFileInfo(m_path).isWritable())
+        {
+            foreach(TagModel *tagModel, m_metaDataModel->tags())
+                m_ui->tabWidget->addTab(new TagEditor(tagModel, this), tagModel->name());
+        }
 
         foreach(QString title, m_metaDataModel->descriptions().keys())
         {

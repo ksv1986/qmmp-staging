@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+*   Copyright (C) 2008-2016 by Ilya Kotov                                 *
 *   forkotov02@hotmail.ru                                                 *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -55,8 +55,6 @@ static QStringList qt_clean_filter_list(const QString &filter)
     return f.split(QLatin1Char(' '), QString::SkipEmptyParts);
 }
 
-
-
 QmmpFileDialogImpl::QmmpFileDialogImpl(QWidget * parent, Qt::WindowFlags f) : QDialog(parent,f)
 {
     setupUi(this);
@@ -77,11 +75,9 @@ QmmpFileDialogImpl::QmmpFileDialogImpl(QWidget * parent, Qt::WindowFlags f) : QD
     closeOnAddToolButton->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOkButton));
     detailsToolButton->setIcon(qApp->style()->standardIcon(QStyle::SP_FileDialogDetailedView));
     connect(fileListView->selectionModel(),
-            SIGNAL(selectionChanged (const QItemSelection&, const QItemSelection&)),
-            SLOT(updateSelection ()));
+            SIGNAL(selectionChanged (QItemSelection, QItemSelection)), SLOT(updateSelection ()));
     connect(treeView->selectionModel(),
-            SIGNAL(selectionChanged (const QItemSelection&, const QItemSelection&)),
-            SLOT(updateSelection ()));
+            SIGNAL(selectionChanged (QItemSelection, QItemSelection)), SLOT(updateSelection ()));
     PathCompleter* completer = new PathCompleter (m_model, fileListView, this);
     fileNameLineEdit->setCompleter (completer);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);

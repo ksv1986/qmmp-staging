@@ -18,10 +18,10 @@
 *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
 ***************************************************************************/
 
-#ifndef CLASSICFILEDIALOGIMPL_H
-#define CLASSICFILEDIALOGIMPL_H
+#ifndef TWOPANELFILEDIALOGIMPL_H
+#define TWOPANELFILEDIALOGIMPL_H
 
-#include "ui_classicfiledialog.h"
+#include "ui_twopanelfiledialog.h"
 #include <QDialog>
 #include <QCompleter>
 #include <QAbstractItemView>
@@ -29,13 +29,13 @@
 #include <QFileSystemModel>
 
 
-class ClassicFileDialogImpl : public QDialog
+class TwoPanelFileDialogImpl : public QDialog
 {
     Q_OBJECT
 public:
-    ClassicFileDialogImpl(QWidget *parent = 0);
+    TwoPanelFileDialogImpl(QWidget *parent = 0);
 
-    ~ClassicFileDialogImpl();
+    ~TwoPanelFileDialogImpl();
 
     void setModeAndMask(const QString &path, FileDialog::Mode m, const QStringList& mask = QStringList());
     QStringList selectedFiles ();
@@ -63,7 +63,7 @@ private:
     int m_mode;
     QFileSystemModel* m_dirModel;
 
-    Ui::ClassicFileDialog m_ui;
+    Ui::TwoPanelFileDialog m_ui;
 
     void addToHistory(const QString &path);
     void addFiles(const QStringList &list);
@@ -113,4 +113,4 @@ private:
 };
 
 
-#endif //CLASSICFILEDIALOGIMPL_H
+#endif //TWOPANELFILEDIALOGIMPL_H

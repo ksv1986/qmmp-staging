@@ -2,17 +2,17 @@ include(../../plugins.pri)
 
 INCLUDEPATH += ../../../../src
 
-TARGET =$$PLUGINS_PREFIX/FileDialogs/classicfiledialog
+TARGET =$$PLUGINS_PREFIX/FileDialogs/twopanelfiledialog
 
 
-HEADERS += classicfiledialog.h \
-           classicfiledialogimpl.h
+HEADERS += twopanelfiledialog.h \
+           twopanelfiledialogimpl.h
 
-SOURCES += classicfiledialog.cpp \
-           classicfiledialogimpl.cpp
+SOURCES += twopanelfiledialog.cpp \
+           twopanelfiledialogimpl.cpp
 
 
-FORMS += classicfiledialog.ui
+FORMS += twopanelfiledialog.ui
 
 CONFIG += warn_on plugin
 
@@ -26,10 +26,10 @@ unix {
     isEmpty(LIB_DIR){
         LIB_DIR = /lib
     }
-    target.path = $$LIB_DIR/classic/FileDialogs
+    target.path = $$LIB_DIR/twopanel/FileDialogs
     INSTALLS += target
 
-    QMAKE_CLEAN =$$PLUGINS_PREFIX/FileDialogs/libclassicfiledialog.so
+    QMAKE_CLEAN =$$PLUGINS_PREFIX/FileDialogs/libtwopanelfiledialog.so
     LIBS += -lqmmpui -lqmmp
 }
 

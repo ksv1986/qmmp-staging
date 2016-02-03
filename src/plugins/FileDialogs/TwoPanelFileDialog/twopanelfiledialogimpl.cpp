@@ -18,7 +18,7 @@
 *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
 ***************************************************************************/
 
-#include "classicfiledialogimpl.h"
+#include "twopanelfiledialogimpl.h"
 
 #include <QDirModel>
 #include <QApplication>
@@ -55,7 +55,7 @@ static QStringList qt_clean_filter_list(const QString &filter)
     return f.split(QLatin1Char(' '), QString::SkipEmptyParts);
 }
 
-ClassicFileDialogImpl::ClassicFileDialogImpl(QWidget * parent) : QDialog(parent)
+TwoPanelFileDialogImpl::TwoPanelFileDialogImpl(QWidget * parent) : QDialog(parent)
 {
     m_ui.setupUi(this);
     setAttribute(Qt::WA_QuitOnClose, false);
@@ -77,9 +77,9 @@ ClassicFileDialogImpl::ClassicFileDialogImpl(QWidget * parent) : QDialog(parent)
     //PathCompleter* fileCompleter = new PathCompleter (m_fileModel, m_ui.fileListView, this);
     //m_ui.fileNameLineEdit->setCompleter (fileCompleter);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    //closeOnAddToolButton->setChecked(settings.value("ClassicFileDialog/close_on_add", false).toBool());
-    restoreGeometry(settings.value("ClassicFileDialog/geometry").toByteArray());
-    m_history = settings.value("ClassicFileDialog/history").toStringList();
+    //closeOnAddToolButton->setChecked(settings.value("TwoPanelFileDialog/close_on_add", false).toBool());
+    restoreGeometry(settings.value("TwoPanelFileDialog/geometry").toByteArray());
+    m_history = settings.value("TwoPanelFileDialog/history").toStringList();
     m_ui.lookInComboBox->addItems(m_history);
     m_ui.lookInComboBox->setMaxCount(HISTORY_SIZE);
     QCompleter* dirCompleter = new QCompleter (m_dirModel, this);
@@ -93,11 +93,11 @@ ClassicFileDialogImpl::ClassicFileDialogImpl(QWidget * parent) : QDialog(parent)
     }
 }
 
-ClassicFileDialogImpl::~ClassicFileDialogImpl()
+TwoPanelFileDialogImpl::~TwoPanelFileDialogImpl()
 {
 }
 
-QStringList ClassicFileDialogImpl::selectedFiles ()
+QStringList TwoPanelFileDialogImpl::selectedFiles ()
 {
     QStringList l;
     if (m_mode == FileDialog::SaveFile)
@@ -128,7 +128,7 @@ QStringList ClassicFileDialogImpl::selectedFiles ()
     return l;
 }
 
-void ClassicFileDialogImpl::updateDirSelection(const QItemSelection &s, const QItemSelection &)
+void TwoPanelFileDialogImpl::updateDirSelection(const QItemSelection &s, const QItemSelection &)
 {
     m_ui.fileListWidget->clear();
 
@@ -147,7 +147,7 @@ void ClassicFileDialogImpl::updateDirSelection(const QItemSelection &s, const QI
         updateFileList(m_dirModel->filePath(index));
 }
 
-void ClassicFileDialogImpl::updateFileSelection ()
+void TwoPanelFileDialogImpl::updateFileSelection ()
 {
     QStringList l;
     QStringList files;
@@ -195,7 +195,7 @@ void ClassicFileDialogImpl::updateFileSelection ()
     }
 }
 
-void ClassicFileDialogImpl::on_dirListView_doubleClicked(const QModelIndex &ind)
+void TwoPanelFileDialogImpl::on_dirListView_doubleClicked(const QModelIndex &ind)
 {
     if (!ind.isValid())
         return;
@@ -230,7 +230,7 @@ void ClassicFileDialogImpl::on_dirListView_doubleClicked(const QModelIndex &ind)
     }*/
 }
 
-void ClassicFileDialogImpl::on_lookInComboBox_activated(const QString &path)
+void TwoPanelFileDialogImpl::on_lookInComboBox_activated(const QString &path)
 {
     /*if (QDir(path).exists ())
     {
@@ -240,7 +240,7 @@ void ClassicFileDialogImpl::on_lookInComboBox_activated(const QString &path)
     }*/
 }
 
-void ClassicFileDialogImpl::on_upToolButton_clicked()
+void TwoPanelFileDialogImpl::on_upToolButton_clicked()
 {
 /*#ifndef Q_OS_WIN
     if (!m_model->parent(fileListView->rootIndex()).isValid())
@@ -253,7 +253,7 @@ void ClassicFileDialogImpl::on_upToolButton_clicked()
     //m_model->setRootPath(m_model->filePath(treeView->rootIndex()));*/
 }
 
-void ClassicFileDialogImpl::on_treeView_doubleClicked(const QModelIndex& ind)
+void TwoPanelFileDialogImpl::on_treeView_doubleClicked(const QModelIndex& ind)
 {
     /*if (ind.isValid())
     {
@@ -277,7 +277,7 @@ void ClassicFileDialogImpl::on_treeView_doubleClicked(const QModelIndex& ind)
     }*/
 }
 
-void ClassicFileDialogImpl::on_fileListView_doubleClicked(const QModelIndex& ind)
+void TwoPanelFileDialogImpl::on_fileListView_doubleClicked(const QModelIndex& ind)
 {
     /*if (ind.isValid())
     {
@@ -301,7 +301,7 @@ void ClassicFileDialogImpl::on_fileListView_doubleClicked(const QModelIndex& ind
     }*/
 }
 
-void ClassicFileDialogImpl::on_fileNameLineEdit_textChanged (const QString &text)
+void TwoPanelFileDialogImpl::on_fileNameLineEdit_textChanged (const QString &text)
 {
     /*if (m_mode == FileDialog::SaveFile)
     {
@@ -319,7 +319,7 @@ void ClassicFileDialogImpl::on_fileNameLineEdit_textChanged (const QString &text
     fileListView->selectionModel()->select(index, QItemSelectionModel::Select);*/
 }
 
-void ClassicFileDialogImpl::on_addButton_clicked()
+void TwoPanelFileDialogImpl::on_addButton_clicked()
 {
     QStringList l = selectedFiles();
 
@@ -330,7 +330,7 @@ void ClassicFileDialogImpl::on_addButton_clicked()
     }
 }
 
-void ClassicFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode m, const QStringList& mask)
+void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode m, const QStringList& mask)
 {
     m_mode = m;
     m_ui.dirListView->clearSelection();
@@ -416,7 +416,7 @@ void ClassicFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode
     }
 }
 
-void ClassicFileDialogImpl::on_fileTypeComboBox_activated(int index)
+void TwoPanelFileDialogImpl::on_fileTypeComboBox_activated(int index)
 {
     m_filters = qt_clean_filter_list(m_ui.fileTypeComboBox->itemText(index));
 
@@ -428,7 +428,7 @@ void ClassicFileDialogImpl::on_fileTypeComboBox_activated(int index)
         updateFileList(m_dirModel->filePath(indexes.first()));
 }
 
-void ClassicFileDialogImpl::updateFileList(const QString &path)
+void TwoPanelFileDialogImpl::updateFileList(const QString &path)
 {
     m_ui.fileListWidget->clear();
     QDir dir(path);
@@ -444,16 +444,16 @@ void ClassicFileDialogImpl::updateFileList(const QString &path)
     }
 }
 
-void ClassicFileDialogImpl::hideEvent (QHideEvent *event)
+void TwoPanelFileDialogImpl::hideEvent (QHideEvent *event)
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    //settings.setValue("ClassicFileDialog/close_on_add", closeOnAddToolButton->isChecked());
-    settings.setValue("ClassicFileDialog/geometry", saveGeometry());
-    settings.setValue("ClassicFileDialog/history", m_history);
+    //settings.setValue("TwoPanelFileDialog/close_on_add", closeOnAddToolButton->isChecked());
+    settings.setValue("TwoPanelFileDialog/geometry", saveGeometry());
+    settings.setValue("TwoPanelFileDialog/history", m_history);
     QWidget::hideEvent(event);
 }
 
-void ClassicFileDialogImpl::addToHistory(const QString &path)
+void TwoPanelFileDialogImpl::addToHistory(const QString &path)
 {
     QString path_copy = path;
     if (path_copy.endsWith('/'))
@@ -470,7 +470,7 @@ void ClassicFileDialogImpl::addToHistory(const QString &path)
     m_ui.lookInComboBox->addItems(m_history);
 }
 
-void ClassicFileDialogImpl::addFiles(const QStringList &list)
+void TwoPanelFileDialogImpl::addFiles(const QStringList &list)
 {
     if (!isModal())
     {
@@ -500,7 +500,7 @@ void ClassicFileDialogImpl::addFiles(const QStringList &list)
             if (!ext.isEmpty() && ext != ".")
             {
                 f_name.append(ext);
-                qDebug("ClassicFileDialogImpl: added file extension");
+                qDebug("TwoPanelFileDialogImpl: added file extension");
                 m_ui.fileNameLineEdit->setText(f_name);
                 return;
             }

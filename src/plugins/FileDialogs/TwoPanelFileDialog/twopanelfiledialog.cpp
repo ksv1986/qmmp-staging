@@ -22,25 +22,21 @@
 #include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
-#include "classicfiledialogimpl.h"
-#include "classicfiledialog.h"
+#include "twopanelfiledialogimpl.h"
+#include "twopanelfiledialog.h"
 
-ClassicFileDialog::ClassicFileDialog()
+TwoPanelFileDialog::TwoPanelFileDialog()
 {
-    m_dialog = new ClassicFileDialogImpl();
-    connect(m_dialog,SIGNAL(filesAdded(const QStringList&)),this,SIGNAL(filesAdded(const QStringList&)));
+    m_dialog = new TwoPanelFileDialogImpl();
+    connect(m_dialog, SIGNAL(filesAdded(QStringList)),this, SIGNAL(filesAdded(QStringList)));
 }
 
-void ClassicFileDialog::handleSelected(/*const QStringList& s */)
+TwoPanelFileDialog::~TwoPanelFileDialog()
 {
-}
-
-ClassicFileDialog::~ClassicFileDialog()
-{
-    qWarning("ClassicFileDialog::~ClassicFileDialog()");
+    qWarning("%s", Q_FUNC_INFO);
     delete m_dialog;
 }
-void ClassicFileDialog::raise(const QString &dir, Mode mode, const QString &caption,
+void TwoPanelFileDialog::raise(const QString &dir, Mode mode, const QString &caption,
                            const QStringList &mask)
 {
     m_dialog->setModeAndMask(dir, mode, mask);
@@ -49,9 +45,9 @@ void ClassicFileDialog::raise(const QString &dir, Mode mode, const QString &capt
     m_dialog->raise();
 }
 
-QString ClassicFileDialog::existingDirectory(QWidget *parent, const QString &caption, const QString &dir)
+QString TwoPanelFileDialog::existingDirectory(QWidget *parent, const QString &caption, const QString &dir)
 {
-    ClassicFileDialogImpl *dialog = new ClassicFileDialogImpl(parent);
+    TwoPanelFileDialogImpl *dialog = new TwoPanelFileDialogImpl(parent);
     dialog->setWindowTitle(caption);
     dialog->setModeAndMask(dir, FileDialog::AddDir);
     QStringList l;
@@ -61,10 +57,10 @@ QString ClassicFileDialog::existingDirectory(QWidget *parent, const QString &cap
     return l.isEmpty() ? QString() : l.at(0);
 }
 
-QString ClassicFileDialog::openFileName(QWidget *parent, const QString &caption,
+QString TwoPanelFileDialog::openFileName(QWidget *parent, const QString &caption,
                                      const QString &dir, const QString &filter, QString*)
 {
-    ClassicFileDialogImpl *dialog = new ClassicFileDialogImpl(parent);
+    TwoPanelFileDialogImpl *dialog = new TwoPanelFileDialogImpl(parent);
     dialog->setWindowTitle(caption);
     dialog->setModeAndMask(dir, FileDialog::AddFile, filter.split(";;"));
     QStringList l;
@@ -74,10 +70,10 @@ QString ClassicFileDialog::openFileName(QWidget *parent, const QString &caption,
     return l.isEmpty() ? QString() : l.at(0);
 }
 
-QStringList ClassicFileDialog::openFileNames(QWidget *parent, const QString &caption,
+QStringList TwoPanelFileDialog::openFileNames(QWidget *parent, const QString &caption,
         const QString &dir, const QString &filter, QString *)
 {
-    ClassicFileDialogImpl *dialog = new ClassicFileDialogImpl(parent);
+    TwoPanelFileDialogImpl *dialog = new TwoPanelFileDialogImpl(parent);
     dialog->setWindowTitle(caption);
     dialog->setModeAndMask(dir, FileDialog::AddFiles, filter.split(";;"));
     QStringList l;
@@ -87,10 +83,10 @@ QStringList ClassicFileDialog::openFileNames(QWidget *parent, const QString &cap
     return l;
 }
 
-QString ClassicFileDialog::saveFileName (QWidget *parent, const QString &caption,
+QString TwoPanelFileDialog::saveFileName (QWidget *parent, const QString &caption,
                                       const QString &dir, const QString &filter, QString*)
 {
-    ClassicFileDialogImpl *dialog = new ClassicFileDialogImpl(parent);
+    TwoPanelFileDialogImpl *dialog = new TwoPanelFileDialogImpl(parent);
     dialog->setWindowTitle(caption);
     dialog->setModeAndMask(dir, FileDialog::SaveFile, filter.split(";;"));
     QStringList l;
@@ -103,38 +99,35 @@ QString ClassicFileDialog::saveFileName (QWidget *parent, const QString &caption
         return l.at(0);
 }
 
-FileDialog* ClassicFileDialogFactory::create()
+FileDialog* TwoPanelFileDialogFactory::create()
 {
-    return new ClassicFileDialog();
+    return new TwoPanelFileDialog();
 }
 
-const FileDialogProperties ClassicFileDialogFactory::properties() const
+const FileDialogProperties TwoPanelFileDialogFactory::properties() const
 {
     FileDialogProperties properties;
-    properties.name = tr("Classic File Dialog");
-    properties.shortName = "classic_dialog";
+    properties.name = tr("Two-panel File Dialog");
+    properties.shortName = "twopanel_dialog";
     properties.hasAbout = true;
     properties.modal = false;
     return properties;
 }
 
-void ClassicFileDialogFactory::showAbout(QWidget *parent)
+void TwoPanelFileDialogFactory::showAbout(QWidget *parent)
 {
-    QMessageBox::about (parent, tr("About Qmmp File Dialog"),
-                        tr("Qmmp File Dialog")+"\n"+
-                        tr("Written by:\n"
-                           "Vladimir Kuznetsov <vovanec@gmail.com>\n"
-                           "Ilya Kotov <forkotov02@hotmail.ru>")+"\n"+
-                        tr("Some code is copied from the Qt library"));
-
+    QMessageBox::about (parent, tr("About Two-panel File Dialog"),
+                        tr("Two-panel File Dialog") + "\n" +
+                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>") + "\n" +
+                        tr("Based on code from the Qt library"));
 }
 
-QTranslator *ClassicFileDialogFactory::createTranslator(QObject *parent)
+QTranslator *TwoPanelFileDialogFactory::createTranslator(QObject *parent)
 {
     QTranslator *translator = new QTranslator(parent);
     QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/classic_file_dialog_plugin_") + locale);
+    translator->load(QString(":/twopanel_file_dialog_plugin_") + locale);
     return translator;
 }
 
-Q_EXPORT_PLUGIN2(ClassicFileDialog, ClassicFileDialogFactory)
+Q_EXPORT_PLUGIN2(TwoPanelFileDialog, TwoPanelFileDialogFactory)

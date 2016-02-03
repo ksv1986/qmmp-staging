@@ -19,19 +19,19 @@
 ***************************************************************************/
 
 
-#ifndef ClassicFileDialog_H
-#define ClassicFileDialog_H
+#ifndef TWOPANELFILEDIALOG_H
+#define TWOPANELFILEDIALOG_H
 
 #include <qmmpui/filedialog.h>
 
-class ClassicFileDialogImpl;
+class TwoPanelFileDialogImpl;
 
-class ClassicFileDialog : public FileDialog
+class TwoPanelFileDialog : public FileDialog
 {
     Q_OBJECT
 public:
-    ClassicFileDialog();
-    virtual ~ClassicFileDialog();
+    TwoPanelFileDialog();
+    virtual ~TwoPanelFileDialog();
 
     void raise(const QString &dir = QString(),
                Mode mode = AddFiles,
@@ -60,17 +60,14 @@ public:
                           const QString &filter   = QString(),
                           QString *selectedFilter = 0);
 
-public slots:
-    void handleSelected();
-
 private:
-    ClassicFileDialogImpl *m_dialog;
+    TwoPanelFileDialogImpl *m_dialog;
 };
 
 
 
 
-class ClassicFileDialogFactory : public QObject, public FileDialogFactory
+class TwoPanelFileDialogFactory : public QObject, public FileDialogFactory
 {
     Q_OBJECT
     Q_INTERFACES(FileDialogFactory)
@@ -79,7 +76,7 @@ public:
     virtual const FileDialogProperties properties() const;
     virtual void showAbout(QWidget*);
     virtual QTranslator *createTranslator(QObject *parent);
-    virtual ~ClassicFileDialogFactory()
+    virtual ~TwoPanelFileDialogFactory()
     {
         ;
     }

@@ -29,7 +29,6 @@ TwoPanelFileDialog::TwoPanelFileDialog()
 {
     m_dialog = new TwoPanelFileDialogImpl();
     connect(m_dialog, SIGNAL(filesAdded(QStringList)), SIGNAL(filesAdded(QStringList)));
-    connect(m_dialog, SIGNAL(playRequest(QString)), SIGNAL(playRequest(QString)));
 }
 
 TwoPanelFileDialog::~TwoPanelFileDialog()
@@ -63,7 +62,7 @@ QString TwoPanelFileDialog::openFileName(QWidget *parent, const QString &caption
 {
     TwoPanelFileDialogImpl *dialog = new TwoPanelFileDialogImpl(parent);
     dialog->setWindowTitle(caption);
-    dialog->setModeAndMask(dir, FileDialog::AddFile, filter.split(";;"), showPlayButton());
+    dialog->setModeAndMask(dir, FileDialog::AddFile, filter.split(";;"));
     QStringList l;
     if (dialog->exec() == QDialog::Accepted)
         l = dialog->selectedFiles();
@@ -76,7 +75,7 @@ QStringList TwoPanelFileDialog::openFileNames(QWidget *parent, const QString &ca
 {
     TwoPanelFileDialogImpl *dialog = new TwoPanelFileDialogImpl(parent);
     dialog->setWindowTitle(caption);
-    dialog->setModeAndMask(dir, FileDialog::AddFiles, filter.split(";;"), showPlayButton());
+    dialog->setModeAndMask(dir, FileDialog::AddFiles, filter.split(";;"));
     QStringList l;
     if (dialog->exec() == QDialog::Accepted)
         l = dialog->selectedFiles();

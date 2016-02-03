@@ -149,49 +149,51 @@ void TwoPanelFileDialogImpl::updateDirSelection(const QItemSelection &s, const Q
 
 void TwoPanelFileDialogImpl::updateFileSelection ()
 {
-    QStringList l;
-    QStringList files;
-    foreach(QListWidgetItem *item, m_ui.fileListWidget->selectedItems())
-    {
-        if (!l.contains(item->text()))
-        {
-            files << item->data(Qt::UserRole).toString();
-            l << item->text();
-        }
-    }
+    QStringList paths = selectedFiles();
 
-    if (!l.isEmpty())
-    {
-        QString str;
-        if (l.size() == 1)
-            str = l.at(0);
-        else
-        {
-            str = l.join ("\" \"");
-            str.append("\"");
-            str.prepend("\"");
-        }
-        if (!m_ui.fileNameLineEdit->hasFocus())
-            m_ui.fileNameLineEdit->setText(str);
-        if (m_mode == FileDialog::AddFiles || m_mode == FileDialog::AddFile/* || FileDialog::SaveFile*/)
-        {
-            m_ui.addButton->setEnabled(true);
-            foreach(str, files)
-            {
-                if (QFileInfo(str).isDir())
-                {
-                    m_ui.addButton->setEnabled(false);
-                    break;
-                }
-            }
-        }
-        else
-            m_ui.addButton->setEnabled(true);
-    }
-    else
+    if(paths.isEmpty())
     {
         m_ui.fileNameLineEdit->clear();
         m_ui.addButton->setEnabled(false);
+        m_ui.playButton->setEnabled(false);
+        return;
+    }
+
+    QStringList names;
+
+    foreach(QString path, paths)
+    {
+        QString name = QFileInfo(path).fileName();
+        if (!names.contains(name))
+            names << name;
+    }
+
+    QString str;
+    if (names.size() == 1)
+        str = names.at(0);
+    else
+    {
+        str = names.join ("\" \"");
+        str.append("\"");
+        str.prepend("\"");
+    }
+    if (!m_ui.fileNameLineEdit->hasFocus())
+        m_ui.fileNameLineEdit->setText(str);
+
+
+    m_ui.addButton->setEnabled(true);
+    m_ui.playButton->setEnabled(false);
+
+    if(m_mode == FileDialog::AddFiles || m_mode == FileDialog::AddDirsFiles || m_mode == FileDialog::AddFile)
+    {
+        foreach(str, paths)
+        {
+            if(QFileInfo(str).isFile())
+            {
+                m_ui.playButton->setEnabled(true);
+                break;
+            }
+        }
     }
 }
 
@@ -202,10 +204,12 @@ void TwoPanelFileDialogImpl::on_dirListView_doubleClicked(const QModelIndex &ind
 
     QFileInfo info = m_dirModel->fileInfo(ind);
     QModelIndex rootIndex = m_dirModel->setRootPath(info.canonicalFilePath());
-    qDebug("+%s+", qPrintable(info.canonicalFilePath()));
+
     if(rootIndex.isValid())
+    {
         m_ui.dirListView->setRootIndex(rootIndex);
-    m_ui.lookInComboBox->setEditText(m_dirModel->filePath(rootIndex));
+        m_ui.lookInComboBox->setEditText(m_dirModel->filePath(rootIndex));
+    }
 
 
 
@@ -237,43 +241,6 @@ void TwoPanelFileDialogImpl::on_lookInComboBox_activated(const QString &path)
         fileListView->setRootIndex(m_model->index(path));
         treeView->setRootIndex(m_model->index(path));
         m_model->setRootPath(path);
-    }*/
-}
-
-void TwoPanelFileDialogImpl::on_upToolButton_clicked()
-{
-/*#ifndef Q_OS_WIN
-    if (!m_model->parent(fileListView->rootIndex()).isValid())
-        return;
-#endif
-    fileListView->setRootIndex(m_model->parent(fileListView->rootIndex()));
-    //treeView->setRootIndex(fileListView->rootIndex());
-    lookInComboBox->setEditText(m_model->filePath(fileListView->rootIndex()));
-    fileListView->selectionModel()->clear ();
-    //m_model->setRootPath(m_model->filePath(treeView->rootIndex()));*/
-}
-
-void TwoPanelFileDialogImpl::on_treeView_doubleClicked(const QModelIndex& ind)
-{
-    /*if (ind.isValid())
-    {
-        QFileInfo info = m_model->fileInfo(ind);
-        if (info.isDir())
-        {
-            //treeView->setRootIndex(ind);
-            lookInComboBox->setEditText(m_model->filePath(ind));
-            //treeView->selectionModel()->clear ();
-            fileListView->setRootIndex(ind);
-            fileListView->selectionModel()->clear ();
-            //m_model->setRootPath(m_model->filePath(ind));
-        }
-        else
-        {
-            QStringList l;
-            l << m_model->filePath(ind);
-            addToHistory(l[0]);
-            addFiles(l);
-        }
     }*/
 }
 
@@ -330,7 +297,20 @@ void TwoPanelFileDialogImpl::on_addButton_clicked()
     }
 }
 
-void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode m, const QStringList& mask)
+void TwoPanelFileDialogImpl::on_playButton_clicked()
+{
+    foreach (QString path, selectedFiles())
+    {
+        if(QFileInfo(path).isFile())
+        {
+            emit playRequest(path);
+            return;
+        }
+    }
+}
+
+void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode m, const QStringList& mask,
+                                            bool showPlayButton)
 {
     m_mode = m;
     m_ui.dirListView->clearSelection();
@@ -362,6 +342,7 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
 
     m_ui.fileNameLineEdit->setText(fileName);
     m_ui.addButton->setEnabled(!fileName.isEmpty());
+    m_ui.playButton->setVisible(showPlayButton);
 
     switch (m)
     {
@@ -370,7 +351,6 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
     case FileDialog::AddDirsFiles:
     {
         m_ui.fileListWidget->setVisible(true);
-        m_ui.playButton->setVisible(true);
         m_ui.addButton->setText(tr("Add"));
         m_ui.fileTypeComboBox->clear();
         m_ui.fileTypeComboBox->addItems(mask);
@@ -387,7 +367,6 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
     case FileDialog::AddDirs:
     {
         m_ui.fileListWidget->setVisible(false);
-        m_ui.playButton->setVisible(false);
         m_ui.addButton->setText(tr("Add"));
         m_ui.fileTypeComboBox->clear();
         m_ui.fileTypeComboBox->addItem(tr("Directories"));
@@ -401,7 +380,6 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
     case FileDialog::SaveFile:
     {
         m_ui.fileListWidget->setVisible(false);
-        m_ui.playButton->setVisible(false);
         m_ui.addButton->setText(tr("Save"));
         m_ui.fileTypeComboBox->clear();
         m_ui.fileTypeComboBox->addItems(mask);

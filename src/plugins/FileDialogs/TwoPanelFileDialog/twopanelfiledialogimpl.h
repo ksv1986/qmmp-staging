@@ -37,11 +37,13 @@ public:
 
     ~TwoPanelFileDialogImpl();
 
-    void setModeAndMask(const QString &path, FileDialog::Mode m, const QStringList& mask = QStringList());
+    void setModeAndMask(const QString &path, FileDialog::Mode m, const QStringList& mask = QStringList(),
+                        bool showPlayButton = false);
     QStringList selectedFiles ();
 
 signals:
     void filesAdded(const QStringList&);
+    void playRequest(const QString&);
 
 private slots:
     void updateDirSelection(const QItemSelection&s, const QItemSelection&);
@@ -49,11 +51,11 @@ private slots:
     void on_dirListView_doubleClicked(const QModelIndex&ind);
 
     void on_lookInComboBox_activated(const QString&);
-    void on_upToolButton_clicked();
+
     void on_fileListView_doubleClicked(const QModelIndex&);
-    void on_treeView_doubleClicked(const QModelIndex&);
     void on_fileNameLineEdit_textChanged (const QString &text);
     void on_addButton_clicked();
+    void on_playButton_clicked();
     void on_fileTypeComboBox_activated(int);
 
 

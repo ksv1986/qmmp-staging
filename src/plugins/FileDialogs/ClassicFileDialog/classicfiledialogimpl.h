@@ -52,9 +52,8 @@ private slots:
     void on_upToolButton_clicked();
     void on_fileListView_doubleClicked(const QModelIndex&);
     void on_treeView_doubleClicked(const QModelIndex&);
-    void on_fileNameLineEdit_returnPressed();
     void on_fileNameLineEdit_textChanged (const QString &text);
-    void on_addPushButton_clicked();
+    void on_addButton_clicked();
     void on_fileTypeComboBox_activated(int);
 
 

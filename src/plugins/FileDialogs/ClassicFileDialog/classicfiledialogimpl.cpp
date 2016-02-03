@@ -99,24 +99,44 @@ ClassicFileDialogImpl::~ClassicFileDialogImpl()
 
 QStringList ClassicFileDialogImpl::selectedFiles ()
 {
-    /*QStringList l;
+    QStringList l;
     if (m_mode == FileDialog::SaveFile)
     {
-        l << m_model->filePath(fileListView->rootIndex()) + "/" + fileNameLineEdit->text();
-        qDebug("%s",qPrintable(l[0]));
+        QModelIndexList indexes = m_ui.dirListView->selectionModel()->selectedRows(0);
+        if(!indexes.isEmpty() && indexes.first().isValid())
+        {
+            l << m_dirModel->filePath(indexes.first()) + "/" + m_ui.fileNameLineEdit->text();
+        }
+    }
+    else if(m_mode == FileDialog::AddDir || m_mode == FileDialog::AddDirs)
+    {
+        foreach (QModelIndex index, m_ui.dirListView->selectionModel()->selectedRows(0))
+        {
+            if(index.isValid() && (m_dirModel->fileName(index) != ".."))
+            {
+                l << m_dirModel->filePath(index);
+            }
+        }
     }
     else
     {
-        QModelIndexList ml = fileListView->selectionModel()->selectedIndexes();
-        foreach(QModelIndex i,ml)
-        l << m_model->filePath(i);
+        foreach (QListWidgetItem *item, m_ui.fileListWidget->selectedItems())
+        {
+            l << item->data(Qt::UserRole).toString();
+        }
     }
-    return l;*/
+    return l;
 }
 
 void ClassicFileDialogImpl::updateDirSelection(const QItemSelection &s, const QItemSelection &)
 {
     m_ui.fileListWidget->clear();
+
+    if(m_mode == FileDialog::AddDir || m_mode == FileDialog::AddDirs)
+    {
+        m_ui.addButton->setEnabled(!selectedFiles().isEmpty());
+        return;
+    }
 
     if(s.indexes().isEmpty())
         return;
@@ -281,11 +301,6 @@ void ClassicFileDialogImpl::on_fileListView_doubleClicked(const QModelIndex& ind
     }*/
 }
 
-void ClassicFileDialogImpl::on_fileNameLineEdit_returnPressed()
-{
-    qWarning("TODO: %s    %d", __FILE__, __LINE__);
-}
-
 void ClassicFileDialogImpl::on_fileNameLineEdit_textChanged (const QString &text)
 {
     /*if (m_mode == FileDialog::SaveFile)
@@ -304,33 +319,15 @@ void ClassicFileDialogImpl::on_fileNameLineEdit_textChanged (const QString &text
     fileListView->selectionModel()->select(index, QItemSelectionModel::Select);*/
 }
 
-void ClassicFileDialogImpl::on_addPushButton_clicked()
+void ClassicFileDialogImpl::on_addButton_clicked()
 {
-    /*QStringList l;
-    if (m_mode != FileDialog::SaveFile)
+    QStringList l = selectedFiles();
+
+    if(!l.isEmpty())
     {
-        QModelIndexList ml;
-        /*if (stackedWidget->currentIndex() == 0)
-            ml = fileListView->selectionModel()->selectedIndexes();
-        else
-            ml = treeView->selectionModel()->selectedIndexes();*/
-        /*foreach(QModelIndex i,ml)
-        {
-            if (!l.contains(m_model->filePath(i)))
-                l << m_model->filePath(i);
-        }
-        if (!l.isEmpty())
-        {
-            addToHistory(l[0]);
-            addFiles(l);
-            return;
-        }
-    }
-    else
-    {
-        l << m_model->filePath(fileListView->rootIndex()) + "/" + fileNameLineEdit->text();
+        addToHistory(l.first());
         addFiles(l);
-    }*/
+    }
 }
 
 void ClassicFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode m, const QStringList& mask)
@@ -379,6 +376,7 @@ void ClassicFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode
         m_ui.fileTypeComboBox->addItems(mask);
         m_ui.fileTypeComboBox->setEnabled(true);
         on_fileTypeComboBox_activated(0);
+        m_ui.dirListView->setSelectionMode(QAbstractItemView::SingleSelection);
         if(m == FileDialog::AddFile)
             m_ui.fileListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
         else
@@ -400,61 +398,22 @@ void ClassicFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode
             m_ui.dirListView->setSelectionMode (QAbstractItemView::ExtendedSelection);
         break;
     }
-    //case FileDialog::AddFiles:
-    //case FileDialog::AddDirs:
-    //case FileDialog::AddDirsFiles:
-    //case FileDialog::SaveFile:
+    case FileDialog::SaveFile:
+    {
+        m_ui.fileListWidget->setVisible(false);
+        m_ui.playButton->setVisible(false);
+        m_ui.addButton->setText(tr("Save"));
+        m_ui.fileTypeComboBox->clear();
+        m_ui.fileTypeComboBox->addItems(mask);
+        m_ui.fileTypeComboBox->setEnabled(true);
+        on_fileTypeComboBox_activated(0);
+        m_ui.dirListView->setSelectionMode(QAbstractItemView::SingleSelection);
+        m_ui.fileListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
+        break;
+    }
     default:
         ;
     }
-
-
-    /*if (m == FileDialog::SaveFile)
-    {
-        if (path.endsWith('/'))
-            path.remove(path.size()-1, 1);
-        path = path.left(path.lastIndexOf ('/'));
-        fileName = d.section('/', -1);
-        m_ui.fileNameLineEdit->setText(fileName);
-        m_ui.addButton->setEnabled(!fileName.isEmpty());
-        m_ui.addButton->setText(tr("Save"));
-    }
-    if (!QFile::exists(path))
-        path = QDir::home ().path ();
-    if (m_dirModel->filePath(m_ui.dirListView->rootIndex()) != path)
-    {
-        //m_ui.fileListView->setRootIndex(m_fileModel->index(path));
-        m_ui.dirListView->setRootIndex(m_dirModel->index(path));
-        m_dirModel->setRootPath(path);
-    }
-
-    if (m == FileDialog::AddDirs || m == FileDialog::AddDir)
-    {
-        //m_model->setFilter(QDir::AllDirs | QDir::NoDotAndDotDot); //dirs only
-        //fileTypeComboBox->addItem(tr("Directories"));
-        //fileTypeComboBox->setEnabled(false);
-    }
-    else
-    {
-        //m_model->setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot);
-        //fileTypeComboBox->setEnabled(true);
-        //fileTypeComboBox->addItems(mask);
-        //on_fileTypeComboBox_activated(0);
-    }
-
-    //set selection mode
-    if (m == FileDialog::AddDir ||  m == FileDialog::AddFile || m == FileDialog::SaveFile)
-    {
-        m_ui.fileListView->setSelectionMode (QAbstractItemView::SingleSelection);
-        //treeView->setSelectionMode (QAbstractItemView::SingleSelection);
-    }
-    else
-    {
-        m_ui.fileListView->setSelectionMode (QAbstractItemView::ExtendedSelection);
-        //treeView->setSelectionMode (QAbstractItemView::ExtendedSelection);
-    }*/
-
-    //m_ui.lookInComboBox->setEditText(QDir::cleanPath(path));
 }
 
 void ClassicFileDialogImpl::on_fileTypeComboBox_activated(int index)
@@ -463,13 +422,10 @@ void ClassicFileDialogImpl::on_fileTypeComboBox_activated(int index)
 
     m_ui.fileListWidget->clear();
 
-    QModelIndexList indexes = m_ui.dirListView->selectionModel()->selectedIndexes();
+    QModelIndexList indexes = m_ui.dirListView->selectionModel()->selectedRows(0);
 
-    QModelIndex modelIndex = indexes.first();
-
-    if(modelIndex.isValid())
-        updateFileList(m_dirModel->filePath(modelIndex));
-
+    if(!indexes.isEmpty() && indexes.first().isValid())
+        updateFileList(m_dirModel->filePath(indexes.first()));
 }
 
 void ClassicFileDialogImpl::updateFileList(const QString &path)
@@ -516,20 +472,17 @@ void ClassicFileDialogImpl::addToHistory(const QString &path)
 
 void ClassicFileDialogImpl::addFiles(const QStringList &list)
 {
-    /*if (list.isEmpty())
-        return;
     if (!isModal())
     {
         emit filesAdded(list);
-        //if (closeOnAddToolButton->isChecked())
-        //    reject();
+        accept();
     }
     else if (m_mode == FileDialog::SaveFile)
     {
         //check file extension
-        QString f_name = fileNameLineEdit->text();
+        QString f_name = m_ui.fileNameLineEdit->text();
         bool contains = false;
-        foreach(QString str, qt_clean_filter_list(fileTypeComboBox->currentText()))
+        foreach(QString str, qt_clean_filter_list(m_ui.fileTypeComboBox->currentText()))
         {
             QRegExp regExp(str);
             regExp.setPatternSyntax(QRegExp::Wildcard);
@@ -542,13 +495,13 @@ void ClassicFileDialogImpl::addFiles(const QStringList &list)
         //add extensio to file name
         if (!contains)
         {
-            QString ext = qt_clean_filter_list(fileTypeComboBox->currentText())[0];
+            QString ext = qt_clean_filter_list(m_ui.fileTypeComboBox->currentText())[0];
             ext.remove("*");
             if (!ext.isEmpty() && ext != ".")
             {
                 f_name.append(ext);
                 qDebug("ClassicFileDialogImpl: added file extension");
-                fileNameLineEdit->setText(f_name);
+                m_ui.fileNameLineEdit->setText(f_name);
                 return;
             }
         }
@@ -558,7 +511,7 @@ void ClassicFileDialogImpl::addFiles(const QStringList &list)
         {
             if (QMessageBox::question (this, windowTitle (),
                                        tr("%1 already exists.\nDo you want to replace it?")
-                                       .arg(fileNameLineEdit->text()),
+                                       .arg(m_ui.fileNameLineEdit->text()),
                                        QMessageBox::Ok | QMessageBox::Cancel) == QMessageBox::Ok)
                 accept();
             else
@@ -568,5 +521,5 @@ void ClassicFileDialogImpl::addFiles(const QStringList &list)
         accept();
     }
     else
-        accept();*/
+        accept();
 }

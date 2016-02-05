@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+*   Copyright (C) 2008-2016 by Ilya Kotov                                 *
 *   forkotov02@hotmail.ru                                                 *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -133,7 +133,7 @@ public:
      * (example: "Audio (*.mp3 *.ogg);;Text files (*.txt);;XML files (*.xml)").
      *
      * Usage: FileDialog::popup(this, FileDialog::AddDirs, &m_lastDir,
-     *                 m_playListModel, SLOT(addFileList(const QStringList&)),
+     *                 m_playListModel, SLOT(addFileList(QStringList)),
      *                 tr("Choose a directory"));
      */
     static void popup(QWidget *parent = 0,

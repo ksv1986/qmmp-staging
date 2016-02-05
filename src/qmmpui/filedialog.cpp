@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+*   Copyright (C) 2008-2016 by Ilya Kotov                                 *
 *   forkotov02@hotmail.ru                                                 *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -258,8 +258,8 @@ void FileDialog::init(QObject* receiver, const char* member, QString *dir)
         disconnect();
     if (receiver &&  member)
     {
-        connect(this,SIGNAL(filesAdded(const QStringList&)), receiver, member);
-        connect(this,SIGNAL(filesAdded(const QStringList&)), SLOT(updateLastDir(const QStringList&)));
+        connect(this,SIGNAL(filesAdded(QStringList)), receiver, member);
+        connect(this,SIGNAL(filesAdded(QStringList)), SLOT(updateLastDir(QStringList)));
         m_initialized = true;
     }
 }

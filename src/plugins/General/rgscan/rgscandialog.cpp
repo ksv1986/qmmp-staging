@@ -35,7 +35,10 @@
 #include <taglib/wavpackfile.h>
 #include <taglib/id3v2tag.h>
 #include <taglib/textidentificationframe.h>
+#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
 #include <taglib/mp4file.h>
+#endif
+#include <taglib/taglib.h>
 #include "rgscanner.h"
 #include "gain_analysis.h"
 #include "rgscandialog.h"
@@ -76,8 +79,12 @@ RGScanDialog::RGScanDialog(QList <PlayListTrack *> tracks,  QWidget *parent) : Q
                 ext == "flac" || //native flac
                 ext == "oga" || //ogg flac
                 ext == "ogg" ||  //ogg vorbis
-                ext == "wv" || //wavpack
-                ext == "m4a") //aac (mp4 container)
+                ext == "wv"  //wavpack
+#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
+                || ext == "m4a") //aac (mp4 container)
+#else
+                )
+#endif
         {
             paths.append(track->url());
             QString name = formatter.format(track);
@@ -369,8 +376,10 @@ void RGScanDialog::writeVorbisComment(TagLib::Ogg::XiphComment *tag, ReplayGainI
     }
 }
 
+#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
 void RGScanDialog::writeMP4Tag(TagLib::MP4::Tag *tag, ReplayGainInfoItem *item)
 {
+
     if(m_ui.trackCheckBox->isChecked())
     {
         tag->setItem("----:com.apple.iTunes:replaygain_track_gain",
@@ -386,6 +395,7 @@ void RGScanDialog::writeMP4Tag(TagLib::MP4::Tag *tag, ReplayGainInfoItem *item)
                      gainToStringList(item->info[Qmmp::REPLAYGAIN_ALBUM_PEAK]));
     }
 }
+#endif
 
 void RGScanDialog::on_writeButton_clicked()
 {
@@ -429,11 +439,13 @@ void RGScanDialog::on_writeButton_clicked()
             writeAPETag(file.APETag(true), item);
             file.save();
         }
+#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
         else if(ext == "m4a") //MPEG-4 Part 14
         {
             TagLib::MP4::File file(qPrintable(item->url));
             writeMP4Tag(file.tag(), item);
             file.save();
         }
+#endif
     }
 }

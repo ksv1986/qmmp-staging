@@ -500,12 +500,12 @@
     <message>
         <location filename="../forms/configdialog.ui" line="813"/>
         <source>Output bit depth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Розрядність виведення:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="764"/>
         <source>Use dithering</source>
-        <translation type="unfinished"></translation>
+        <translation>Використовувати згладжування</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="69"/>

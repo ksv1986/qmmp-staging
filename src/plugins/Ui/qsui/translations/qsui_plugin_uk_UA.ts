@@ -299,7 +299,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="82"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Оновити</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
@@ -1006,25 +1006,25 @@
     <message>
         <location filename="../playlistheader.cpp" line="72"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Вирівнювання</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="73"/>
         <source>Left</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>За лівим краєм</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="74"/>
         <source>Right</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>За правим краєм</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="75"/>
         <source>Center</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>По центру</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="85"/>

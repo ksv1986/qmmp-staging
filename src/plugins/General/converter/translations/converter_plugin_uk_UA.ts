@@ -7,28 +7,28 @@
         <location filename="../converter.cpp" line="130"/>
         <location filename="../converter.cpp" line="230"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Скасовано</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="145"/>
         <location filename="../converter.cpp" line="212"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="177"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Конвертування</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="241"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Кодування</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="279"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Завершено</translation>
     </message>
 </context>
 <context>
@@ -36,17 +36,17 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>Конвертер аудіо</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Виконано</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Стан</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
@@ -71,12 +71,12 @@
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished">Конвертувати</translation>
+        <translation>Конвертувати</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Стоп</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="107"/>
@@ -139,12 +139,12 @@
         <location filename="../converterdialog.cpp" line="367"/>
         <location filename="../converterdialog.cpp" line="373"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="133"/>
         <source>Waiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Очікування</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="197"/>
@@ -194,12 +194,12 @@
     <message>
         <location filename="../converterdialog.cpp" line="367"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Неможливо запустити &quot;%1&quot;. Програму не найдено.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="373"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Процес &quot;%1&quot; завершено з помилкою.</translation>
     </message>
 </context>
 <context>

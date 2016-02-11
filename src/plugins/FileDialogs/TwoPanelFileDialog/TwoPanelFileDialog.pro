@@ -26,7 +26,7 @@ unix {
     isEmpty(LIB_DIR){
         LIB_DIR = /lib
     }
-    target.path = $$LIB_DIR/twopanel/FileDialogs
+    target.path = $$LIB_DIR/qmmp/FileDialogs
     INSTALLS += target
 
     QMAKE_CLEAN =$$PLUGINS_PREFIX/FileDialogs/libtwopanelfiledialog.so

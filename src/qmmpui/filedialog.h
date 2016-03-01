@@ -193,7 +193,6 @@ private slots:
 private:
     static void loadPlugins();
     static FileDialog* instance();
-    static FileDialog* createDefault();
     static FileDialogFactory *m_currentFactory;
     static FileDialog* m_instance;
     static QList<QmmpUiPluginCache*> *m_cache;

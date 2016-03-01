@@ -198,11 +198,6 @@ FileDialog* FileDialog::instance()
     return m_instance;
 }
 
-FileDialog* FileDialog::createDefault()
-{
-    return m_cache->at(0)->fileDialogFactory()->create();
-}
-
 //base implementation
 FileDialog::FileDialog() : QObject(), m_initialized(false)
 {

@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+*   Copyright (C) 2008-2016 by Ilya Kotov                                 *
 *   forkotov02@hotmail.ru                                                 *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -18,7 +18,6 @@
 *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
 ***************************************************************************/
 
-
 #ifndef QMMPFILEDIALOG_H
 #define QMMPFILEDIALOG_H
 
@@ -33,41 +32,16 @@ public:
     QmmpFileDialog();
     virtual ~QmmpFileDialog();
 
-    void raise(const QString &dir = QString(),
-               Mode mode = AddFiles,
-               const QString &caption = QString(),
-               const QStringList &mask = QStringList());
+protected:
+    void raise(const QString &dir, Mode mode, const QString &caption,
+               const QStringList &mask);
 
-    QString existingDirectory(QWidget *parent = 0,
-                              const QString &caption = QString(),
-                              const QString &dir = QString());
-
-    QString openFileName(QWidget *parent = 0,
-                         const QString &caption  = QString(),
-                         const QString &dir  = QString(),
-                         const QString &filter  = QString(),
-                         QString *selectedFilter = 0);
-
-    QStringList openFileNames(QWidget *parent = 0,
-                              const QString &caption  = QString(),
-                              const QString &dir  = QString(),
-                              const QString &filter  = QString(),
-                              QString *selectedFilter = 0);
-
-    QString saveFileName (QWidget *parent = 0,
-                          const QString &caption  = QString(),
-                          const QString &dir  = QString(),
-                          const QString &filter   = QString(),
-                          QString *selectedFilter = 0);
-
-public slots:
-    void handleSelected();
+    QStringList exec(QWidget *parent, const QString &dir, Mode mode,
+                     const QString &caption, const QString &filter, QString *);
 
 private:
     QmmpFileDialogImpl *m_dialog;
 };
-
-
 
 
 class QmmpFileDialogFactory : public QObject, public FileDialogFactory

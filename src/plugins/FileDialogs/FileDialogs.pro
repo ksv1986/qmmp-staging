@@ -1,2 +1,2 @@
 TEMPLATE = subdirs
-#SUBDIRS += QmmpFileDialog TwoPanelFileDialog
+SUBDIRS += QmmpFileDialog #TwoPanelFileDialog

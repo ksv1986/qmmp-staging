@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+*   Copyright (C) 2008-2016 by Ilya Kotov                                 *
 *   forkotov02@hotmail.ru                                                 *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -31,10 +31,6 @@ QmmpFileDialog::QmmpFileDialog()
     connect(m_dialog,SIGNAL(filesAdded(const QStringList&)),this,SIGNAL(filesAdded(const QStringList&)));
 }
 
-void QmmpFileDialog::handleSelected(/*const QStringList& s */)
-{
-}
-
 QmmpFileDialog::~QmmpFileDialog()
 {
     qWarning("QmmpFileDialog::~QmmpFileDialog()");
@@ -49,58 +45,17 @@ void QmmpFileDialog::raise(const QString &dir, Mode mode, const QString &caption
     m_dialog->raise();
 }
 
-QString QmmpFileDialog::existingDirectory(QWidget *parent, const QString &caption, const QString &dir)
+QStringList QmmpFileDialog::exec(QWidget *parent, const QString &dir, FileDialog::Mode mode,
+                                 const QString &caption, const QString &filter, QString *)
 {
     QmmpFileDialogImpl *dialog = new QmmpFileDialogImpl(parent);
     dialog->setWindowTitle(caption);
-    dialog->setModeAndMask(dir, FileDialog::AddDir);
-    QStringList l;
-    if (dialog->exec() == QDialog::Accepted)
-        l = dialog->selectedFiles();
-    dialog->deleteLater();
-    return l.isEmpty() ? QString() : l.at(0);
-}
-
-QString QmmpFileDialog::openFileName(QWidget *parent, const QString &caption,
-                                     const QString &dir, const QString &filter, QString*)
-{
-    QmmpFileDialogImpl *dialog = new QmmpFileDialogImpl(parent);
-    dialog->setWindowTitle(caption);
-    dialog->setModeAndMask(dir, FileDialog::AddFile, filter.split(";;"));
-    QStringList l;
-    if (dialog->exec() == QDialog::Accepted)
-        l = dialog->selectedFiles();
-    dialog->deleteLater();
-    return l.isEmpty() ? QString() : l.at(0);
-}
-
-QStringList QmmpFileDialog::openFileNames(QWidget *parent, const QString &caption,
-        const QString &dir, const QString &filter, QString *)
-{
-    QmmpFileDialogImpl *dialog = new QmmpFileDialogImpl(parent);
-    dialog->setWindowTitle(caption);
-    dialog->setModeAndMask(dir, FileDialog::AddFiles, filter.split(";;"));
+    dialog->setModeAndMask(dir, mode, filter.split(";;", QString::SkipEmptyParts));
     QStringList l;
     if (dialog->exec() == QDialog::Accepted)
         l = dialog->selectedFiles();
     dialog->deleteLater();
     return l;
-}
-
-QString QmmpFileDialog::saveFileName (QWidget *parent, const QString &caption,
-                                      const QString &dir, const QString &filter, QString*)
-{
-    QmmpFileDialogImpl *dialog = new QmmpFileDialogImpl(parent);
-    dialog->setWindowTitle(caption);
-    dialog->setModeAndMask(dir, FileDialog::SaveFile, filter.split(";;"));
-    QStringList l;
-    if (dialog->exec() == QDialog::Accepted)
-        l = dialog->selectedFiles();
-    dialog->deleteLater();
-    if (l.isEmpty())
-        return QString();
-    else
-        return l.at(0);
 }
 
 FileDialog* QmmpFileDialogFactory::create()

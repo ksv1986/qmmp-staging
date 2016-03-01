@@ -55,19 +55,19 @@ QStringList QtFileDialog::exec(QWidget *parent, const QString &dir, FileDialog::
                                const QString &caption, const QString &filter, QString *selectedFilter)
 {
     QStringList list;
-    if(mode == FileDialog::AddFile)
+    if(mode == AddFile)
     {
         list << QFileDialog::getOpenFileName(parent,caption,dir,filter,selectedFilter);
     }
-    else if(mode == FileDialog::AddDir || mode == FileDialog::AddDirs)
+    else if(mode == AddDir || mode == AddDirs)
     {
         list << QFileDialog::getExistingDirectory(parent,caption,dir, QFileDialog::ShowDirsOnly);
     }
-    else if(mode == FileDialog::AddFiles || mode == FileDialog::AddDirsFiles || mode == FileDialog::PlayDirsFiles)
+    else if(mode == AddFiles || mode == AddDirsFiles || mode == PlayDirsFiles)
     {
         list << QFileDialog::getOpenFileNames(parent,caption,dir,filter,selectedFilter);
     }
-    else if(mode == FileDialog::SaveFile)
+    else if(mode == SaveFile)
     {
         list << QFileDialog::getSaveFileName(parent,caption,dir,filter,selectedFilter);
     }

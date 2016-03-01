@@ -50,9 +50,10 @@ class QtFileDialog : public FileDialog
 public:
     virtual ~QtFileDialog();
 
-    virtual QStringList exec(QWidget *parent, const QString &dir, Mode mode,
-                             const QString &caption, const QString &filter,
-                             QString *selectedFilter);
+protected:
+    QStringList exec(QWidget *parent, const QString &dir, Mode mode,
+                     const QString &caption, const QString &filter,
+                     QString *selectedFilter);
 };
 
 #endif

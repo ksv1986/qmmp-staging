@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+*   Copyright (C) 2016 by Ilya Kotov                                      *
 *   forkotov02@hotmail.ru                                                 *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -26,6 +26,9 @@
 
 class TwoPanelFileDialogImpl;
 
+/*!
+ *  @author Ilya Kotov <forkotov02@hotmail.ru>
+ */
 class TwoPanelFileDialog : public FileDialog
 {
     Q_OBJECT
@@ -33,32 +36,13 @@ public:
     TwoPanelFileDialog();
     virtual ~TwoPanelFileDialog();
 
-    void raise(const QString &dir = QString(),
-               Mode mode = AddFiles,
-               const QString &caption = QString(),
-               const QStringList &mask = QStringList());
+protected:
+    void raise(const QString &dir, Mode mode, const QString &caption,
+               const QStringList &mask);
 
-    QString existingDirectory(QWidget *parent = 0,
-                              const QString &caption = QString(),
-                              const QString &dir = QString());
+    QStringList exec(QWidget *parent, const QString &dir, Mode mode,
+                     const QString &caption, const QString &filter, QString *);
 
-    QString openFileName(QWidget *parent = 0,
-                         const QString &caption  = QString(),
-                         const QString &dir  = QString(),
-                         const QString &filter  = QString(),
-                         QString *selectedFilter = 0);
-
-    QStringList openFileNames(QWidget *parent = 0,
-                              const QString &caption  = QString(),
-                              const QString &dir  = QString(),
-                              const QString &filter  = QString(),
-                              QString *selectedFilter = 0);
-
-    QString saveFileName (QWidget *parent = 0,
-                          const QString &caption  = QString(),
-                          const QString &dir  = QString(),
-                          const QString &filter   = QString(),
-                          QString *selectedFilter = 0);
 
 private:
     TwoPanelFileDialogImpl *m_dialog;
@@ -72,14 +56,10 @@ class TwoPanelFileDialogFactory : public QObject, public FileDialogFactory
     Q_OBJECT
     Q_INTERFACES(FileDialogFactory)
 public:
-    virtual FileDialog* create();
-    virtual const FileDialogProperties properties() const;
-    virtual void showAbout(QWidget*);
-    virtual QTranslator *createTranslator(QObject *parent);
-    virtual ~TwoPanelFileDialogFactory()
-    {
-        ;
-    }
+    FileDialog* create();
+    const FileDialogProperties properties() const;
+    void showAbout(QWidget*);
+    QTranslator *createTranslator(QObject *parent);
 };
 
 

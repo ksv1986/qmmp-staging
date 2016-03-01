@@ -160,7 +160,7 @@ void UiHelper::playFiles(QWidget *parent, PlayListModel *model)
 void UiHelper::addDirectory(QWidget *parent, PlayListModel *model)
 {
     FileDialog::popup(parent, FileDialog::AddDirs, &m_lastDir,
-                      model, SLOT(add(const QStringList&)),
+                      model, SLOT(add(QStringList)),
                       tr("Choose a directory"));
 }
 
@@ -303,7 +303,7 @@ void UiHelper::playSelectedFiles(const QStringList &files)
     m_model->clear();
     PlayListManager::instance()->activatePlayList(m_model);
     connect(m_model, SIGNAL(trackAdded(PlayListTrack*)), MediaPlayer::instance(), SLOT(play()));
-    connect(m_model, SIGNAL(loaderFinished()), SLOT(disconnectPl()));
+    connect(m_model, SIGNAL(trackAdded(PlayListTrack*)), SLOT(disconnectPl()));
     m_model->add(files);
 }
 
@@ -313,6 +313,6 @@ void UiHelper::disconnectPl()
     if(model)
     {
         disconnect(model, SIGNAL(trackAdded(PlayListTrack*)), MediaPlayer::instance(), SLOT(play()));
-        disconnect(model, SIGNAL(loaderFinished()), this, SLOT(disconnectPl()));
+        disconnect(model, SIGNAL(trackAdded(PlayListTrack*)), this, SLOT(disconnectPl()));
     }
 }

@@ -18,7 +18,6 @@
 *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
 ***************************************************************************/
 
-#include "twopanelfiledialogimpl.h"
 
 #include <QDirModel>
 #include <QApplication>
@@ -27,8 +26,8 @@
 #include <QSettings>
 #include <QMessageBox>
 #include <QHeaderView>
-
 #include <qmmp/qmmp.h>
+#include "twopanelfiledialogimpl.h"
 
 #define HISTORY_SIZE 8
 
@@ -74,10 +73,7 @@ TwoPanelFileDialogImpl::TwoPanelFileDialogImpl(QWidget * parent) : QDialog(paren
 
     connect(m_ui.fileListWidget, SIGNAL(itemSelectionChanged()), SLOT(updateFileSelection ()));
 
-    //PathCompleter* fileCompleter = new PathCompleter (m_fileModel, m_ui.fileListView, this);
-    //m_ui.fileNameLineEdit->setCompleter (fileCompleter);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    //closeOnAddToolButton->setChecked(settings.value("TwoPanelFileDialog/close_on_add", false).toBool());
     restoreGeometry(settings.value("TwoPanelFileDialog/geometry").toByteArray());
     m_history = settings.value("TwoPanelFileDialog/history").toStringList();
     m_ui.lookInComboBox->addItems(m_history);
@@ -97,7 +93,7 @@ TwoPanelFileDialogImpl::~TwoPanelFileDialogImpl()
 {
 }
 
-QStringList TwoPanelFileDialogImpl::selectedFiles ()
+QStringList TwoPanelFileDialogImpl::selectedFiles() const
 {
     QStringList l;
     if (m_mode == FileDialog::SaveFile)
@@ -184,7 +180,8 @@ void TwoPanelFileDialogImpl::updateFileSelection ()
     m_ui.addButton->setEnabled(true);
     m_ui.playButton->setEnabled(false);
 
-    if(m_mode == FileDialog::AddFiles || m_mode == FileDialog::AddDirsFiles || m_mode == FileDialog::AddFile)
+    if(m_mode == FileDialog::AddFiles || m_mode == FileDialog::AddDirsFiles || m_mode == FileDialog::AddFile
+            || m_mode == FileDialog::PlayDirsFiles)
     {
         foreach(str, paths)
         {
@@ -244,9 +241,9 @@ void TwoPanelFileDialogImpl::on_lookInComboBox_activated(const QString &path)
     }*/
 }
 
-void TwoPanelFileDialogImpl::on_fileListView_doubleClicked(const QModelIndex& ind)
+/*void TwoPanelFileDialogImpl::on_fileListView_doubleClicked(const QModelIndex& ind)
 {
-    /*if (ind.isValid())
+    if (ind.isValid())
     {
         QFileInfo info = m_model->fileInfo(ind);
         if (info.isDir())
@@ -265,8 +262,8 @@ void TwoPanelFileDialogImpl::on_fileListView_doubleClicked(const QModelIndex& in
             addToHistory(l[0]);
             addFiles(l);
         }
-    }*/
-}
+    }
+}*/
 
 void TwoPanelFileDialogImpl::on_fileNameLineEdit_textChanged (const QString &text)
 {
@@ -293,24 +290,22 @@ void TwoPanelFileDialogImpl::on_addButton_clicked()
     if(!l.isEmpty())
     {
         addToHistory(l.first());
-        addFiles(l);
+        addFiles(l, false);
     }
 }
 
 void TwoPanelFileDialogImpl::on_playButton_clicked()
 {
-    foreach (QString path, selectedFiles())
+    QStringList l = selectedFiles();
+
+    if(!l.isEmpty())
     {
-        if(QFileInfo(path).isFile())
-        {
-            emit playRequest(path);
-            return;
-        }
+        addToHistory(l.first());
+        addFiles(l, true);
     }
 }
 
-void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode m, const QStringList& mask,
-                                            bool showPlayButton)
+void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode m, const QStringList& mask)
 {
     m_mode = m;
     m_ui.dirListView->clearSelection();
@@ -342,13 +337,15 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
 
     m_ui.fileNameLineEdit->setText(fileName);
     m_ui.addButton->setEnabled(!fileName.isEmpty());
-    m_ui.playButton->setVisible(showPlayButton);
+    m_ui.playButton->setVisible(m == FileDialog::PlayDirsFiles);
+
 
     switch (m)
     {
     case FileDialog::AddFile:
     case FileDialog::AddFiles:
     case FileDialog::AddDirsFiles:
+    case FileDialog::PlayDirsFiles:
     {
         m_ui.fileListWidget->setVisible(true);
         m_ui.addButton->setText(tr("Add"));
@@ -425,7 +422,6 @@ void TwoPanelFileDialogImpl::updateFileList(const QString &path)
 void TwoPanelFileDialogImpl::hideEvent (QHideEvent *event)
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    //settings.setValue("TwoPanelFileDialog/close_on_add", closeOnAddToolButton->isChecked());
     settings.setValue("TwoPanelFileDialog/geometry", saveGeometry());
     settings.setValue("TwoPanelFileDialog/history", m_history);
     QWidget::hideEvent(event);
@@ -448,11 +444,11 @@ void TwoPanelFileDialogImpl::addToHistory(const QString &path)
     m_ui.lookInComboBox->addItems(m_history);
 }
 
-void TwoPanelFileDialogImpl::addFiles(const QStringList &list)
+void TwoPanelFileDialogImpl::addFiles(const QStringList &list, bool play)
 {
     if (!isModal())
     {
-        emit filesAdded(list);
+        emit filesSelected(list, play);
         accept();
     }
     else if (m_mode == FileDialog::SaveFile)

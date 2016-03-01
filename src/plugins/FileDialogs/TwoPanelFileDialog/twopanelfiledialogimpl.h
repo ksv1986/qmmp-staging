@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 20016 by Ilya Kotov                                     *
+*   Copyright (C) 2016 by Ilya Kotov                                      *
 *   forkotov02@hotmail.ru                                                 *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -28,7 +28,9 @@
 #include <qmmpui/filedialog.h>
 #include <QFileSystemModel>
 
-
+/*!
+ *  @author Ilya Kotov <forkotov02@hotmail.ru>
+ */
 class TwoPanelFileDialogImpl : public QDialog
 {
     Q_OBJECT
@@ -37,41 +39,34 @@ public:
 
     ~TwoPanelFileDialogImpl();
 
-    void setModeAndMask(const QString &path, FileDialog::Mode m, const QStringList& mask = QStringList(),
-                        bool showPlayButton = false);
-    QStringList selectedFiles ();
+    void setModeAndMask(const QString &path, FileDialog::Mode m, const QStringList& mask);
+    QStringList selectedFiles() const;
 
 signals:
-    void filesAdded(const QStringList&);
-    void playRequest(const QString&);
+    void filesSelected(const QStringList &selected, bool play);
 
 private slots:
     void updateDirSelection(const QItemSelection&s, const QItemSelection&);
     void updateFileSelection();
     void on_dirListView_doubleClicked(const QModelIndex&ind);
-
     void on_lookInComboBox_activated(const QString&);
-
-    void on_fileListView_doubleClicked(const QModelIndex&);
+    //void on_fileListView_doubleClicked(const QModelIndex&);
     void on_fileNameLineEdit_textChanged (const QString &text);
     void on_addButton_clicked();
     void on_playButton_clicked();
     void on_fileTypeComboBox_activated(int);
 
-
 private:
     void updateFileList(const QString &path);
     void hideEvent (QHideEvent *event);
+    void addToHistory(const QString &path);
+    void addFiles(const QStringList &list, bool play);
+
     int m_mode;
     QFileSystemModel* m_dirModel;
-
     Ui::TwoPanelFileDialog m_ui;
-
-    void addToHistory(const QString &path);
-    void addFiles(const QStringList &list);
     QStringList m_history;
     QStringList m_filters;
-
 };
 
 class PathCompleter : public QCompleter

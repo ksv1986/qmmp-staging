@@ -147,9 +147,9 @@ public:
 
 signals:
     /*!
-     * Emitted when the add button has pressed. Subclass should emit this signal.
+     * Emitted when the add/open button has pressed. Subclass should emit this signal.
      */
-    void filesAdded(const QStringList&);
+    void filesSelected(const QStringList &selected, bool play = false);
 
 protected:
     /*!

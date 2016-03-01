@@ -53,7 +53,7 @@ protected slots:
     void on_fileTypeComboBox_activated(int);
 
 signals:
-    void filesAdded(const QStringList&);
+    void filesSelected(const QStringList&, bool play = false);
 
 protected:
     virtual void hideEvent (QHideEvent *event);

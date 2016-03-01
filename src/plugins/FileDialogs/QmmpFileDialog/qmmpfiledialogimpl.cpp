@@ -406,7 +406,7 @@ void QmmpFileDialogImpl::addFiles(const QStringList &list)
         return;
     if (!isModal())
     {
-        emit filesAdded(list);
+        emit filesSelected(list);
         if (closeOnAddToolButton->isChecked())
             reject();
     }

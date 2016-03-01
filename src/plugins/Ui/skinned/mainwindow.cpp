@@ -220,7 +220,7 @@ void MainWindow::addDir()
 
 void MainWindow::addFile()
 {
-    m_uiHelper->addFile(this);
+    m_uiHelper->addFiles(this);
 }
 
 void MainWindow::playFiles()

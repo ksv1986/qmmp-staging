@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -88,11 +88,11 @@ public:
      */
     QMenu *createMenu(MenuType type, const QString &title = QString(), QWidget *parent = 0);
     /*!
-     * Opens 'Add File' dialog
+     * Opens 'Add Files' dialog
      * @param parent Parent widget
      * @param model Destination playlist model
      */
-    void addFile(QWidget *parent = qApp->activeWindow(),
+    void addFiles(QWidget *parent = qApp->activeWindow(),
                  PlayListModel *model = PlayListManager::instance()->selectedPlayList());
     /*!
      * Opens 'Play Files' dialog

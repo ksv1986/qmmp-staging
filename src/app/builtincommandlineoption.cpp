@@ -202,7 +202,7 @@ void BuiltinCommandLineOption::executeCommand(const QString &option_string,
     }
     else if (option_string == "--add-file")
     {
-        UiHelper::instance()->addFile();
+        UiHelper::instance()->addFiles();
     }
     else if (option_string == "--add-dir")
     {

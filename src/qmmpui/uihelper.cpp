@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -132,7 +132,7 @@ QMenu *UiHelper::createMenu(MenuType type, const QString &title, QWidget *parent
     return 0;
 }
 
-void UiHelper::addFile(QWidget *parent, PlayListModel *model)
+void UiHelper::addFiles(QWidget *parent, PlayListModel *model)
 {
     QStringList filters;
     filters << tr("All Supported Bitstreams")+" (" +

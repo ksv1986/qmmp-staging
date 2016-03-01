@@ -147,7 +147,7 @@ void FileDialog::popup(QWidget *parent,
     else
     {
         QStringList files;
-        if (m == AddFiles || m == AddFile || m == AddDirsFiles)
+        if (m == AddFiles || m == AddFile || m == AddDirsFiles || m == PlayDirsFiles)
         {
             QString selectedFilter;
             files = getOpenFileNames(parent, caption, *dir, filters, &selectedFilter);

@@ -63,6 +63,7 @@ public:
         AddFiles,      /*!< Get existing files */
         AddDirs,       /*!< Get existing directories */
         AddDirsFiles,  /*!< Get existing files and directories */
+        PlayDirsFiles, /*!< Get existing files and directories with play button (if supported) */
         SaveFile       /*!< Get existing or non-existing file */
     };
     /*!

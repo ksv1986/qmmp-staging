@@ -102,7 +102,8 @@ QString FileDialog::getExistingDirectory(QWidget *parent,
         const QString &caption,
         const QString &dir)
 {
-    return instance()->existingDirectory(parent,caption,dir);
+    QStringList l = instance()->exec(parent, dir, FileDialog::AddDir, caption);
+    return l.isEmpty() ? QString() : l.at(0);
 }
 
 QString FileDialog::getOpenFileName(QWidget *parent,
@@ -111,21 +112,23 @@ QString FileDialog::getOpenFileName(QWidget *parent,
                                     const QString &filter,
                                     QString *selectedFilter)
 {
-    return instance()->openFileName(parent,caption,dir,filter,selectedFilter);
+   QStringList l = instance()->exec(parent, dir, FileDialog::AddFile, caption, filter, selectedFilter);
+   return l.isEmpty() ? QString() : l.at(0);
 }
 
 QStringList FileDialog::getOpenFileNames(QWidget *parent, const QString &caption,
         const QString &dir,const QString &filter,
         QString *selectedFilter)
 {
-    return  instance()->openFileNames(parent,caption,dir,filter,selectedFilter);
+    return instance()->exec(parent, dir, FileDialog::AddFiles, caption, filter, selectedFilter);
 }
 
 QString FileDialog::getSaveFileName (QWidget *parent, const QString &caption,
                                      const QString& dir, const QString &filter,
                                      QString *selectedFilter)
 {
-    return instance()->saveFileName(parent,caption,dir,filter,selectedFilter);
+    QStringList l = instance()->exec(parent, dir, FileDialog::SaveFile, caption, filter, selectedFilter);
+    return l.isEmpty() ? QString() : l.at(0);
 }
 
 void FileDialog::popup(QWidget *parent,
@@ -214,41 +217,6 @@ void FileDialog::raise(const QString &dir, Mode mode, const QString &caption, co
     Q_UNUSED(mode);
     Q_UNUSED(caption);
     Q_UNUSED(mask);
-}
-
-QString FileDialog::existingDirectory(QWidget *parent, const QString &caption, const QString &dir)
-{
-    FileDialog *instance = FileDialog::createDefault();
-    QString dir_path = instance->existingDirectory(parent, caption, dir);
-    delete instance;
-    return dir_path;
-}
-
-QString FileDialog::openFileName(QWidget *parent, const QString &caption, const QString &dir,
-                                 const QString &filter, QString *selectedFilter)
-{
-    FileDialog *instance = FileDialog::createDefault();
-    QString file_path = instance->openFileName(parent, caption, dir, filter, selectedFilter);
-    delete instance;
-    return file_path;
-}
-
-QStringList FileDialog::openFileNames(QWidget *parent, const QString &caption, const QString &dir,
-                                      const QString &filter, QString *selectedFilter)
-{
-    FileDialog *instance = FileDialog::createDefault();
-    QStringList list = instance->openFileNames(parent, caption, dir, filter, selectedFilter);
-    delete instance;
-    return list;
-}
-
-QString FileDialog::saveFileName(QWidget *parent, const QString &caption, const QString &dir,
-                                 const QString &filter, QString *selectedFilter)
-{
-    FileDialog *instance = FileDialog::createDefault();
-    QString file_path = instance->saveFileName(parent, caption, dir, filter, selectedFilter);
-    delete instance;
-    return file_path;
 }
 
 void FileDialog::init(QObject* receiver, const char* member, QString *dir)

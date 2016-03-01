@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -51,36 +51,25 @@ QtFileDialog::~QtFileDialog()
     qDebug("QtFileDialog::~QtFileDialog()");
 }
 
-QString QtFileDialog::existingDirectory(QWidget *parent,
-                                        const QString &caption,
-                                        const QString &dir)
+QStringList QtFileDialog::exec(QWidget *parent, const QString &dir, FileDialog::Mode mode,
+                               const QString &caption, const QString &filter, QString *selectedFilter)
 {
-    return QFileDialog::getExistingDirectory(parent,caption,dir, QFileDialog::ShowDirsOnly);
-}
-
-QString QtFileDialog::openFileName(QWidget *parent,
-                                   const QString &caption,
-                                   const QString &dir,const QString &filter,
-                                   QString *selectedFilter)
-{
-    Q_UNUSED(selectedFilter);
-    return QFileDialog::getOpenFileName(parent,caption,dir,filter);
-}
-
-QStringList QtFileDialog::openFileNames(QWidget *parent,
-                                        const QString &caption,
-                                        const QString &dir,
-                                        const QString &filter,
-                                        QString *selectedFilter)
-{
-    return QFileDialog::getOpenFileNames(parent,caption,dir,filter,selectedFilter);
-}
-
-QString QtFileDialog::saveFileName (QWidget *parent,
-                                    const QString &caption,
-                                    const QString &dir,
-                                    const QString &filter,
-                                    QString *selectedFilter)
-{
-    return QFileDialog::getSaveFileName(parent,caption,dir,filter,selectedFilter);
+    QStringList list;
+    if(mode == FileDialog::AddFile)
+    {
+        list << QFileDialog::getOpenFileName(parent,caption,dir,filter,selectedFilter);
+    }
+    else if(mode == FileDialog::AddDir || mode == FileDialog::AddDirs)
+    {
+        list << QFileDialog::getExistingDirectory(parent,caption,dir, QFileDialog::ShowDirsOnly);
+    }
+    else if(mode == FileDialog::AddFiles || mode == FileDialog::AddDirsFiles || mode == FileDialog::PlayDirsFiles)
+    {
+        list << QFileDialog::getOpenFileNames(parent,caption,dir,filter,selectedFilter);
+    }
+    else if(mode == FileDialog::SaveFile)
+    {
+        list << QFileDialog::getSaveFileName(parent,caption,dir,filter,selectedFilter);
+    }
+    return list;
 }

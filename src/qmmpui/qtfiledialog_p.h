@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,7 +21,6 @@
 #define QTFILEDIALOG_H
 
 #include <QObject>
-
 #include "filedialog.h"
 
 class QTranslator;
@@ -50,26 +49,10 @@ class QtFileDialog : public FileDialog
 {
 public:
     virtual ~QtFileDialog();
-    QString existingDirectory(QWidget *parent ,
-                              const QString & ,
-                              const QString &dir);
 
-    QString openFileName(QWidget *parent,
-                         const QString &caption,
-                         const QString &dir,
-                         const QString &filter,
-                         QString *selectedFilter);
-
-    QStringList openFileNames(QWidget *parent,
-                              const QString &caption,
-                              const QString &dir,
-                              const QString &filter, QString *selectedFilter);
-
-    QString saveFileName (QWidget *parent,
-                          const QString &caption,
-                          const QString & dir,
-                          const QString &filter,
-                          QString *selectedFilter);
+    virtual QStringList exec(QWidget *parent, const QString &dir, Mode mode,
+                             const QString &caption, const QString &filter,
+                             QString *selectedFilter);
 };
 
 #endif

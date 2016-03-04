@@ -367,6 +367,12 @@ source_lang = en
 source_file = src/plugins/FileDialogs/QmmpFileDialog/translations/qmmp_file_dialog_plugin_en.ts
 type = QT
 
+[qmmp.two_panel_file_dialog]
+file_filter = src/plugins/FileDialogs/TwoPanelFileDialog/translations/two_panel_file_dialog_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/FileDialogs/TwoPanelFileDialog/translations/two_panel_file_dialog_plugin_en.ts
+type = QT
+
 [qmmp.mms]
 file_filter = src/plugins/Transports/mms/translations/mms_plugin_<lang>.ts
 source_lang = en

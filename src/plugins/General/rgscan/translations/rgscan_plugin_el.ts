@@ -64,16 +64,16 @@
         <translation>Εγγραφή ενίσχυσης/κορυφής άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="123"/>
-        <location filename="../rgscandialog.cpp" line="234"/>
+        <location filename="../rgscandialog.cpp" line="130"/>
+        <location filename="../rgscandialog.cpp" line="241"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="133"/>
-        <location filename="../rgscandialog.cpp" line="134"/>
-        <location filename="../rgscandialog.cpp" line="158"/>
-        <location filename="../rgscandialog.cpp" line="229"/>
+        <location filename="../rgscandialog.cpp" line="140"/>
+        <location filename="../rgscandialog.cpp" line="141"/>
+        <location filename="../rgscandialog.cpp" line="165"/>
+        <location filename="../rgscandialog.cpp" line="236"/>
         <source>%1 dB</source>
         <translation>%1 dB</translation>
     </message>

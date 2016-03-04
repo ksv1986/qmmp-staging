@@ -60,25 +60,25 @@
 <context>
     <name>QmmpFileDialogFactory</name>
     <message>
-        <location filename="../qmmpfiledialog.cpp" line="114"/>
-        <location filename="../qmmpfiledialog.cpp" line="124"/>
+        <location filename="../qmmpfiledialog.cpp" line="69"/>
+        <location filename="../qmmpfiledialog.cpp" line="79"/>
         <source>Qmmp File Dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.cpp" line="123"/>
+        <location filename="../qmmpfiledialog.cpp" line="78"/>
         <source>About Qmmp File Dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.cpp" line="125"/>
+        <location filename="../qmmpfiledialog.cpp" line="80"/>
         <source>Written by:
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
 Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.cpp" line="128"/>
+        <location filename="../qmmpfiledialog.cpp" line="83"/>
         <source>Some code is copied from the Qt library</source>
         <translation type="unfinished"></translation>
     </message>
@@ -86,22 +86,22 @@ Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
 <context>
     <name>QmmpFileDialogImpl</name>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="254"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="250"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="267"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="263"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="281"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="277"/>
         <source>Directories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="450"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="446"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation type="unfinished"></translation>

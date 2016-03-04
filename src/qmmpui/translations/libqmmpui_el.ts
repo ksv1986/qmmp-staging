@@ -772,57 +772,57 @@
         <translation>Σύνοψη</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="124"/>
+        <location filename="../detailsdialog.cpp" line="132"/>
         <source>%1/%2</source>
         <translation>%1/%2</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="165"/>
+        <location filename="../detailsdialog.cpp" line="177"/>
         <source>Title</source>
         <translation>Τίτλος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="166"/>
+        <location filename="../detailsdialog.cpp" line="178"/>
         <source>Artist</source>
         <translation>Καλλιτέχνης</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="167"/>
+        <location filename="../detailsdialog.cpp" line="179"/>
         <source>Album artist</source>
         <translation>Καλλιτέχνης άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="168"/>
+        <location filename="../detailsdialog.cpp" line="180"/>
         <source>Album</source>
         <translation>Άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="169"/>
+        <location filename="../detailsdialog.cpp" line="181"/>
         <source>Comment</source>
         <translation>Σχόλιο</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="170"/>
+        <location filename="../detailsdialog.cpp" line="182"/>
         <source>Genre</source>
         <translation>Είδος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="171"/>
+        <location filename="../detailsdialog.cpp" line="183"/>
         <source>Composer</source>
         <translation>Συνθέτης</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="173"/>
+        <location filename="../detailsdialog.cpp" line="185"/>
         <source>Year</source>
         <translation>Έτος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="175"/>
+        <location filename="../detailsdialog.cpp" line="187"/>
         <source>Track</source>
         <translation>Κομμάτι</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="177"/>
+        <location filename="../detailsdialog.cpp" line="189"/>
         <source>Disc number</source>
         <translation>Αριθμός δίσκου</translation>
     </message>
@@ -1117,38 +1117,38 @@
     <name>UiHelper</name>
     <message>
         <location filename="../uihelper.cpp" line="138"/>
-        <location filename="../uihelper.cpp" line="149"/>
+        <location filename="../uihelper.cpp" line="150"/>
         <source>All Supported Bitstreams</source>
         <translation>Όλα τα υποστηριζόμενα δυφιορρεύματα</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="143"/>
+        <location filename="../uihelper.cpp" line="144"/>
         <source>Select one or more files to open</source>
         <translation>Επιλογή ανοίγματος ενός ή περισσοτέρων αρχείων</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="155"/>
+        <location filename="../uihelper.cpp" line="156"/>
         <source>Select one or more files to play</source>
         <translation>Επιλογή αναπαραγωγής ενός ή περισσοτέρων αρχείων</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="163"/>
+        <location filename="../uihelper.cpp" line="164"/>
         <source>Choose a directory</source>
         <translation>Επιλογή ενός καταλόγου</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="179"/>
-        <location filename="../uihelper.cpp" line="203"/>
+        <location filename="../uihelper.cpp" line="180"/>
+        <location filename="../uihelper.cpp" line="204"/>
         <source>Playlist Files</source>
         <translation>Αρχεία της λίστα αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="181"/>
+        <location filename="../uihelper.cpp" line="182"/>
         <source>Open Playlist</source>
         <translation>Άνοιγμα λίστα αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="204"/>
+        <location filename="../uihelper.cpp" line="205"/>
         <source>Save Playlist</source>
         <translation>Αποθήκευση της λίστας αναπαραγωγής</translation>
     </message>

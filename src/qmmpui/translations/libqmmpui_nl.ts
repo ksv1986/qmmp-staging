@@ -772,57 +772,57 @@
         <translation>Samenvatting</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="124"/>
+        <location filename="../detailsdialog.cpp" line="132"/>
         <source>%1/%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="165"/>
+        <location filename="../detailsdialog.cpp" line="177"/>
         <source>Title</source>
         <translation>Naam</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="166"/>
+        <location filename="../detailsdialog.cpp" line="178"/>
         <source>Artist</source>
         <translation>Artiest</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="167"/>
+        <location filename="../detailsdialog.cpp" line="179"/>
         <source>Album artist</source>
         <translation>Album Artiest</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="168"/>
+        <location filename="../detailsdialog.cpp" line="180"/>
         <source>Album</source>
         <translation>Album</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="169"/>
+        <location filename="../detailsdialog.cpp" line="181"/>
         <source>Comment</source>
         <translation>Commentaar</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="170"/>
+        <location filename="../detailsdialog.cpp" line="182"/>
         <source>Genre</source>
         <translation type="unfinished">Genre</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="171"/>
+        <location filename="../detailsdialog.cpp" line="183"/>
         <source>Composer</source>
         <translation>Componist</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="173"/>
+        <location filename="../detailsdialog.cpp" line="185"/>
         <source>Year</source>
         <translation>Jaar</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="175"/>
+        <location filename="../detailsdialog.cpp" line="187"/>
         <source>Track</source>
         <translation>Nummer</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="177"/>
+        <location filename="../detailsdialog.cpp" line="189"/>
         <source>Disc number</source>
         <translation>CD nummer</translation>
     </message>
@@ -1117,38 +1117,38 @@
     <name>UiHelper</name>
     <message>
         <location filename="../uihelper.cpp" line="138"/>
-        <location filename="../uihelper.cpp" line="149"/>
+        <location filename="../uihelper.cpp" line="150"/>
         <source>All Supported Bitstreams</source>
         <translation>Alle Ondersteunde Bitstromen</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="143"/>
+        <location filename="../uihelper.cpp" line="144"/>
         <source>Select one or more files to open</source>
         <translation>Kies één of meerdere bestanden om te openen</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="155"/>
+        <location filename="../uihelper.cpp" line="156"/>
         <source>Select one or more files to play</source>
         <translation type="unfinished">Kies één of meerdere bestanden om af te spelen</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="163"/>
+        <location filename="../uihelper.cpp" line="164"/>
         <source>Choose a directory</source>
         <translation>Kies een map</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="179"/>
-        <location filename="../uihelper.cpp" line="203"/>
+        <location filename="../uihelper.cpp" line="180"/>
+        <location filename="../uihelper.cpp" line="204"/>
         <source>Playlist Files</source>
         <translation>Afspeellijst Bestanden</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="181"/>
+        <location filename="../uihelper.cpp" line="182"/>
         <source>Open Playlist</source>
         <translation>Open Afspeellijst</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="204"/>
+        <location filename="../uihelper.cpp" line="205"/>
         <source>Save Playlist</source>
         <translation>Bewaar Afspeellijst</translation>
     </message>

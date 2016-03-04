@@ -50,7 +50,7 @@ private slots:
     void updateFileSelection();
     void on_dirListView_doubleClicked(const QModelIndex&ind);
     void on_lookInComboBox_activated(const QString&);
-    //void on_fileListView_doubleClicked(const QModelIndex&);
+    void on_fileListWidget_itemDoubleClicked(QListWidgetItem *item);
     void on_fileNameLineEdit_textChanged (const QString &text);
     void on_addButton_clicked();
     void on_playButton_clicked();

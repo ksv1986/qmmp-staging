@@ -18,7 +18,6 @@
 *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
 ***************************************************************************/
 
-
 #include <QDirModel>
 #include <QApplication>
 #include <QFileInfo>
@@ -206,81 +205,53 @@ void TwoPanelFileDialogImpl::on_dirListView_doubleClicked(const QModelIndex &ind
     {
         m_ui.dirListView->setRootIndex(rootIndex);
         m_ui.lookInComboBox->setEditText(m_dirModel->filePath(rootIndex));
+        m_ui.fileListWidget->clear();
     }
-
-
-
-    /*{
-        QFileInfo info = m_model->fileInfo(ind);
-        if (info.isDir())
-        {
-            fileListView->setRootIndex(ind);
-            lookInComboBox->setEditText(m_model->filePath(ind));
-            fileListView->selectionModel()->clear ();
-            //treeView->setRootIndex(ind);
-            //treeView->selectionModel()->clear ();
-            //m_model->setRootPath(m_model->filePath(ind));
-        }
-        else
-        {
-            QStringList l;
-            l << m_model->filePath(ind);
-            addToHistory(l[0]);
-            addFiles(l);
-        }
-    }*/
 }
 
 void TwoPanelFileDialogImpl::on_lookInComboBox_activated(const QString &path)
 {
-    /*if (QDir(path).exists ())
+    if (QDir(path).exists ())
     {
-        fileListView->setRootIndex(m_model->index(path));
-        treeView->setRootIndex(m_model->index(path));
-        m_model->setRootPath(path);
-    }*/
+        m_ui.dirListView->setRootIndex(m_dirModel->index(path));
+        m_dirModel->setRootPath(path);
+        m_ui.fileListWidget->clear();
+    }
 }
 
-/*void TwoPanelFileDialogImpl::on_fileListView_doubleClicked(const QModelIndex& ind)
+void TwoPanelFileDialogImpl::on_fileListWidget_itemDoubleClicked(QListWidgetItem *item)
 {
-    if (ind.isValid())
-    {
-        QFileInfo info = m_model->fileInfo(ind);
-        if (info.isDir())
-        {
-            fileListView->setRootIndex(ind);
-            lookInComboBox->setEditText(m_model->filePath(ind));
-            fileListView->selectionModel()->clear ();
-            //treeView->setRootIndex(ind);
-            //treeView->selectionModel()->clear ();
-            //m_model->setRootPath(m_model->filePath(ind));
-        }
-        else
-        {
-            QStringList l;
-            l << m_model->filePath(ind);
-            addToHistory(l[0]);
-            addFiles(l);
-        }
-    }
-}*/
+    QStringList l;
+    l << item->data(Qt::UserRole).toString();
+    addToHistory(l[0]);
+    addFiles(l, false);
+}
 
-void TwoPanelFileDialogImpl::on_fileNameLineEdit_textChanged (const QString &text)
+void TwoPanelFileDialogImpl::on_fileNameLineEdit_textChanged(const QString &text)
 {
-    /*if (m_mode == FileDialog::SaveFile)
+    if (m_mode == FileDialog::SaveFile)
     {
-        addPushButton->setEnabled(!text.isEmpty());
+        m_ui.addButton->setEnabled(!text.isEmpty());
+        m_ui.playButton->setEnabled(!text.isEmpty());
         return;
     }
-    QModelIndex index;
+    QString path;
     if (text.startsWith("/"))
-        index = m_model->index(text);
+        path = text;
     else
-        index = m_model->index(m_model->filePath(fileListView->rootIndex()) + "/" + text);
-    if (!index.isValid() || !fileNameLineEdit->hasFocus())
+        path = m_dirModel->filePath(m_ui.dirListView->currentIndex()) + "/" + text;
+
+    if (!QFileInfo(path).exists())
         return;
-    fileListView->selectionModel()->clear();
-    fileListView->selectionModel()->select(index, QItemSelectionModel::Select);*/
+
+    for(int i = 0; i < m_ui.fileListWidget->count(); ++i)
+    {
+        if(path == m_ui.fileListWidget->item(i)->data(Qt::UserRole).toString())
+        {
+            m_ui.fileListWidget->setCurrentRow(i, QItemSelectionModel::Select);
+            break;
+        }
+    }
 }
 
 void TwoPanelFileDialogImpl::on_addButton_clicked()
@@ -333,7 +304,7 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
         m_ui.dirListView->setCurrentIndex(m_dirModel->index(info.absoluteFilePath()));
         m_ui.dirListView->selectionModel()->selectedRows(m_ui.dirListView->currentIndex().row());
     }
-    m_ui.lookInComboBox->setEditText(info.canonicalFilePath());
+    m_ui.lookInComboBox->setEditText(info.absolutePath());
 
     m_ui.fileNameLineEdit->setText(fileName);
     m_ui.addButton->setEnabled(!fileName.isEmpty());

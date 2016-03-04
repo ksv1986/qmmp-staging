@@ -84,7 +84,7 @@ QTranslator *TwoPanelFileDialogFactory::createTranslator(QObject *parent)
 {
     QTranslator *translator = new QTranslator(parent);
     QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/twopanel_file_dialog_plugin_") + locale);
+    translator->load(QString(":/two_panel_file_dialog_plugin_") + locale);
     return translator;
 }
 

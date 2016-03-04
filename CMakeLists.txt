@@ -209,6 +209,7 @@ PRINT_SUMMARY ("Copy/Paste ........................" USE_COPYPASTE 1)
 MESSAGE("")
 MESSAGE("File Dialogs:")
 PRINT_SUMMARY ("QMMP File Dialog .................." USE_QMMP_DIALOG 1)
+PRINT_SUMMARY ("Two-panel File File Dialog ........" USE_TWO_PANEL_DIALOG 1)
 
 MESSAGE("")
 MESSAGE("Advanced:")

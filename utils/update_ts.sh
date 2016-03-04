@@ -34,6 +34,9 @@ do
         QmmpFileDialog)
             plug_name="qmmp_file_dialog"
         ;;
+        TwoPanelFileDialog)
+            plug_name="two_panel_file_dialog"
+        ;;
         qmmpui)
             plug_name="libqmmpui"
         ;;

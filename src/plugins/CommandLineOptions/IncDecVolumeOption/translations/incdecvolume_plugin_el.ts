@@ -5,12 +5,12 @@
     <name>IncDecVolumeCommandLineOption</name>
     <message>
         <location filename="../incdecvolumeoption.cpp" line="44"/>
-        <source>Increase volume with step 5</source>
+        <source>Increase volume by 5 steps</source>
         <translation>Αύξηση της έντασης με βηματισμό 5</translation>
     </message>
     <message>
         <location filename="../incdecvolumeoption.cpp" line="45"/>
-        <source>Decrease volume with step 5</source>
+        <source>Decrease volume by 5 steps</source>
         <translation>Μείωση της έντασης με βηματισμό 5</translation>
     </message>
 </context>

@@ -351,7 +351,6 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
         {
             for(int i = 0; i < row->sizes.count(); i++)
             {
-                painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);
                 draw_extra = (i == row->trackStateColumn && !row->extraString.isEmpty());
 
                 if(row->alignment[i] == ListWidgetRow::ALIGN_LEFT)
@@ -382,7 +381,6 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 }
 
                 sx -= row->sizes[i];
-                painter->setPen(m_normal);
 
                 if(!row->autoResize || i < row->sizes.count() - 1) //do not draw last vertical line
                 {
@@ -455,7 +453,6 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 }
 
                 sx += row->sizes[i];
-                painter->setPen(m_normal);
 
                 if(!row->autoResize || i < row->sizes.count() - 1) //do not draw last vertical line
                 {

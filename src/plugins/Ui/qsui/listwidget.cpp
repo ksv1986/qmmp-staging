@@ -319,6 +319,9 @@ bool ListWidget::event (QEvent *e)
         else if(e->type() == QEvent::Leave)
             m_popupWidget->deactivate();
     }
+    if(e->type() == QEvent::StyleChange)
+        readSettings();
+
     return QWidget::event(e);
 }
 

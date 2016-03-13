@@ -301,13 +301,13 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
     {
         m_dirModel->setRootPath(info.path());
         m_ui.dirListView->setRootIndex(m_dirModel->index(info.absolutePath()));
-        m_ui.dirListView->setCurrentIndex(m_dirModel->index(info.absoluteFilePath()));
-        m_ui.dirListView->selectionModel()->selectedRows(m_ui.dirListView->currentIndex().row());
     }
+    m_ui.dirListView->setCurrentIndex(m_dirModel->index(info.absoluteFilePath()));
     m_ui.lookInComboBox->setEditText(info.absolutePath());
 
     m_ui.fileNameLineEdit->setText(fileName);
     m_ui.addButton->setEnabled(!fileName.isEmpty());
+    m_ui.playButton->setEnabled(false);
     m_ui.playButton->setVisible(m == FileDialog::PlayDirsFiles);
 
 
@@ -343,6 +343,7 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
             m_ui.dirListView->setSelectionMode(QAbstractItemView::SingleSelection);
         else
             m_ui.dirListView->setSelectionMode (QAbstractItemView::ExtendedSelection);
+        m_ui.addButton->setEnabled(!m_ui.dirListView->selectionModel()->selectedRows().isEmpty());
         break;
     }
     case FileDialog::SaveFile:

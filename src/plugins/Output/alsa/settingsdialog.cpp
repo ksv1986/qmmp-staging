@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -236,10 +236,8 @@ void SettingsDialog::accept()
 
 int SettingsDialog::getMixer(snd_mixer_t **mixer, QString card)
 {
-    char *dev;
     int err;
 
-    dev = strdup(QString(card).toAscii().data());
     if ((err = snd_mixer_open(mixer, 0)) < 0)
     {
         qWarning("SettingsDialog (ALSA): alsa_get_mixer(): "
@@ -247,10 +245,10 @@ int SettingsDialog::getMixer(snd_mixer_t **mixer, QString card)
         mixer = NULL;
         return -1;
     }
-    if ((err = snd_mixer_attach(*mixer, dev)) < 0)
+    if ((err = snd_mixer_attach(*mixer, card.toAscii().constData())) < 0)
     {
         qWarning("SettingsDialog (ALSA): alsa_get_mixer(): "
-                 "Attaching to mixer %s failed: %s", dev, snd_strerror(-err));
+                 "Attaching to mixer %s failed: %s", qPrintable(card), snd_strerror(-err));
         return -1;
     }
     if ((err = snd_mixer_selem_register(*mixer, NULL, NULL)) < 0)
@@ -265,8 +263,6 @@ int SettingsDialog::getMixer(snd_mixer_t **mixer, QString card)
                  snd_strerror(-err));
         return -1;
     }
-
-    free (dev);
 
     return (*mixer != NULL);
 }

@@ -763,6 +763,21 @@ void MainWindow::readSettings()
     names = settings.value("toolbar_actions", names).toStringList();
     foreach (QString name, names)
     {
+        if(name == "position_slider")
+        {
+            m_ui.buttonsToolBar->addWidget(m_slider)->setVisible(true);
+            continue;
+        }
+        if(name == "volume_slider")
+        {
+            m_ui.buttonsToolBar->addWidget(m_volumeSlider)->setVisible(true);
+            continue;
+        }
+        if(name == "volume_icon")
+        {
+            m_ui.buttonsToolBar->addAction(m_volumeAction);
+            continue;
+        }
         if(name == "separator")
         {
             m_ui.buttonsToolBar->addSeparator();

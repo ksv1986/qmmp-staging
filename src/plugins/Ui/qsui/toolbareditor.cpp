@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -78,12 +78,13 @@ void ToolBarEditor::populateActionList(bool reset)
             m_ui->actionsListWidget->addItem(item);
     }
 
-    {
-        QListWidgetItem *item = new QListWidgetItem();
-        item->setText("-- " + tr("Separator") + " --");
-        item->setData(Qt::UserRole, "separator");
-        m_ui->actionsListWidget->addItem(item);
-    }
+    if(!names.contains("position_slider"))
+        m_ui->actionsListWidget->addItem(createExtraItem(tr("Position Slider"), "position_slider"));
+    if(!names.contains("volume_slider"))
+        m_ui->actionsListWidget->addItem(createExtraItem(tr("Volume Slider"), "volume_slider"));
+    if(!names.contains("volume_icon"))
+        m_ui->actionsListWidget->addItem(createExtraItem(tr("Volume Icon"), "volume_icon"));
+    m_ui->actionsListWidget->addItem(createExtraItem("-- " + tr("Separator") + " --", "separator"));
 
     foreach (QString name, names)
     {
@@ -96,14 +97,32 @@ void ToolBarEditor::populateActionList(bool reset)
             item->setData(Qt::UserRole, action->objectName());
             m_ui->activeActionsListWidget->addItem(item);
         }
+        else if(name == "position_slider")
+        {
+            m_ui->activeActionsListWidget->addItem(createExtraItem(tr("Position Slider"), name));
+        }
+        else if(name == "volume_slider")
+        {
+            m_ui->activeActionsListWidget->addItem(createExtraItem(tr("Volume Slider"), name));
+        }
+        else if(name == "volume_icon")
+        {
+            m_ui->activeActionsListWidget->addItem(createExtraItem(tr("Volume Icon"), name));
+        }
         else if(name == "separator")
         {
-            QListWidgetItem *item = new QListWidgetItem();
-            item->setText("-- " + tr("Separator") + " --");
-            item->setData(Qt::UserRole, "separator");
-            m_ui->activeActionsListWidget->addItem(item);
+            m_ui->activeActionsListWidget->addItem(createExtraItem("-- " + tr("Separator") + " --", name));
         }
     }
+}
+
+QListWidgetItem *ToolBarEditor::createExtraItem(const QString &name, const QString &shortName, const QIcon &icon)
+{
+    QListWidgetItem *item = new QListWidgetItem();
+    item->setText(name);
+    item->setData(Qt::UserRole, shortName);
+    item->setIcon(icon);
+    return item;
 }
 
 void ToolBarEditor::on_addToolButton_clicked()

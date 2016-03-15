@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,11 +23,14 @@
 
 #include <QDialog>
 #include <QModelIndex>
+#include <QIcon>
 #include "actionmanager.h"
 
 namespace Ui {
 class ToolBarEditor;
 }
+
+class QListWidgetItem;
 
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -53,6 +56,7 @@ private slots:
 
 private:
     void populateActionList(bool reset = false);
+    QListWidgetItem *createExtraItem(const QString &name, const QString &shortName, const QIcon &icon = QIcon());
     Ui::ToolBarEditor *m_ui;
 };
 

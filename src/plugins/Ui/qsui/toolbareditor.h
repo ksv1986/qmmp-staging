@@ -40,7 +40,7 @@ class ToolBarEditor : public QDialog
     Q_OBJECT
 
 public:
-    explicit ToolBarEditor(QWidget *parent = 0);
+    explicit ToolBarEditor(QWidget *parent);
     ~ToolBarEditor();
 
 public slots:

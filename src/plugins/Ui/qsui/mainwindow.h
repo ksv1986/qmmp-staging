@@ -91,16 +91,16 @@ private slots:
 private:
     void closeEvent(QCloseEvent *);
     void hideEvent(QHideEvent *);
-    bool m_wasMaximized;
     void createActions();
     void createButtons();
     void writeSettings();
+    bool m_wasMaximized;
     QString m_lastDir;
     PlayListManager *m_pl_manager;
     Ui::MainWindow m_ui;
     MediaPlayer *m_player;
     QmmpUiSettings *m_ui_settings;
-    PositionSlider *m_slider;
+    PositionSlider *m_positionSlider;
     QLabel *m_timeLabel;
     SoundCore *m_core;
     QLabel *m_statusLabel;
@@ -109,7 +109,6 @@ private:
     QMenu *m_pl_menu;
     QMenu *m_tab_menu;
     QSlider *m_volumeSlider;
-    QAction *m_volumeAction;
     KeyboardManager *m_key_manager;
     QSUiAnalyzer *m_analyzer;
     QToolButton *m_addListButton, *m_tabListMenuButton;

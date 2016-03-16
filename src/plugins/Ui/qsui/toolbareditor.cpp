@@ -20,6 +20,8 @@
 
 #include <QApplication>
 #include <QSettings>
+#include <QToolBar>
+#include <QWidgetAction>
 #include <qmmp/qmmp.h>
 #include "toolbareditor.h"
 #include "ui_toolbareditor.h"
@@ -47,46 +49,46 @@ ToolBarEditor::~ToolBarEditor()
 
 void ToolBarEditor::accept()
 {
-    QStringList names;
+    /*QStringList names;
     for(int row = 0; row < m_ui->activeActionsListWidget->count(); ++row)
         names.append(m_ui->activeActionsListWidget->item(row)->data(Qt::UserRole).toString());
 
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    settings.setValue("Simple/toolbar_actions", names);
+    settings.setValue("Simple/toolbar_actions", names);*/
     QDialog::accept();
 }
 
 void ToolBarEditor::populateActionList(bool reset)
 {
-    QStringList names = ActionManager::instance()->toolBarActionNames();
-    if(!reset)
+    m_ui->toolbarNameComboBox->clear();
+    m_ui->actionsListWidget->clear();
+    m_ui->activeActionsListWidget->clear();
+
+    QStringList actionNames;
+    foreach (ActionManager::ToolBarInfo info, ActionManager::instance()->readToolBarSettings())
     {
-        QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-        names = settings.value("Simple/toolbar_actions", names).toStringList();
+        actionNames << info.actionNames;
+        m_ui->toolbarNameComboBox->addItem(info.title);
     }
 
-    for(int id = ActionManager::PLAY; id <= ActionManager::QUIT; ++id)
+    for(int id = ActionManager::PLAY; id <= ActionManager::UI_VOL_SLIDER; ++id)
     {
         QAction *action = ACTION(id);
-        if(action->icon().isNull())
+        if(!action || actionNames.contains(action->objectName()))
             continue;
+        if(!qobject_cast<QWidgetAction *>(action) && action->icon().isNull())
+            continue;
+
         QListWidgetItem *item = new QListWidgetItem();
         item->setIcon(action->icon());
         item->setText(action->text().replace("&", ""));
         item->setData(Qt::UserRole, action->objectName());
-        if(!names.contains(action->objectName()))
-            m_ui->actionsListWidget->addItem(item);
+        m_ui->actionsListWidget->addItem(item);
     }
 
-    if(!names.contains("position_slider"))
-        m_ui->actionsListWidget->addItem(createExtraItem(tr("Position Slider"), "position_slider"));
-    if(!names.contains("volume_slider"))
-        m_ui->actionsListWidget->addItem(createExtraItem(tr("Volume Slider"), "volume_slider"));
-    if(!names.contains("volume_icon"))
-        m_ui->actionsListWidget->addItem(createExtraItem(tr("Volume Icon"), "volume_icon"));
     m_ui->actionsListWidget->addItem(createExtraItem("-- " + tr("Separator") + " --", "separator"));
 
-    foreach (QString name, names)
+    /*foreach (QString name, names)
     {
         QAction *action = ActionManager::instance()->findChild<QAction *>(name);
         if(action)
@@ -113,7 +115,7 @@ void ToolBarEditor::populateActionList(bool reset)
         {
             m_ui->activeActionsListWidget->addItem(createExtraItem("-- " + tr("Separator") + " --", name));
         }
-    }
+    }*/
 }
 
 QListWidgetItem *ToolBarEditor::createExtraItem(const QString &name, const QString &shortName, const QIcon &icon)

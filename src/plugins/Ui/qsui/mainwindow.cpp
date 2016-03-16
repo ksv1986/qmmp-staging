@@ -103,14 +103,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
         }
         connect(model, SIGNAL(nameChanged(QString)), SLOT(updateTabs()));
     }
-    m_slider = new PositionSlider(this);
-    m_slider->setFocusPolicy(Qt::NoFocus);
-    m_slider->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-    m_ui.progressToolBar->addWidget(m_slider);
+    m_positionSlider = new PositionSlider(this);
+    m_positionSlider->setFocusPolicy(Qt::NoFocus);
+    m_positionSlider->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
     //prepare visualization
     Visual::initialize(this, m_visMenu, SLOT(updateActions()));
     //playlist manager
-    connect(m_slider, SIGNAL(sliderReleased()), SLOT(seek()));
+    connect(m_positionSlider, SIGNAL(sliderReleased()), SLOT(seek()));
     connect(m_pl_manager, SIGNAL(currentPlayListChanged(PlayListModel*,PlayListModel*)),
             SLOT(updateTabs()));
     connect(m_pl_manager, SIGNAL(selectedPlayListChanged(PlayListModel*,PlayListModel*)),
@@ -131,23 +130,18 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_ui.statusbar->addPermanentWidget(m_statusLabel, 0);
     m_ui.statusbar->addPermanentWidget(m_timeLabel, 1);
     //volume
-    m_ui.progressToolBar->addSeparator();
     m_volumeSlider = new QSlider(Qt::Horizontal, this);
     m_volumeSlider->setFocusPolicy(Qt::NoFocus);
     m_volumeSlider->setFixedWidth(100);
     m_volumeSlider->setRange(0,100);
-    QIcon volumeIcon = QIcon::fromTheme("audio-volume-high", QIcon(":/qsui/audio-volume-high.png"));
-    m_volumeAction = m_ui.progressToolBar->addAction(volumeIcon, tr("Volume"));
-    m_volumeAction->setCheckable(true);
-    connect(m_volumeAction, SIGNAL(triggered(bool)), m_core, SLOT(setMuted(bool)));
+    SET_ACTION(ActionManager::VOL_MUTE, m_core, SLOT(setMuted(bool)));
     connect(m_volumeSlider, SIGNAL(valueChanged(int)), m_core, SLOT(setVolume(int)));
     connect(m_core, SIGNAL(volumeChanged(int)), m_volumeSlider, SLOT(setValue(int)));
     connect(m_core, SIGNAL(volumeChanged(int)), SLOT(updateVolumeIcon()));
     connect(m_core, SIGNAL(mutedChanged(bool)), SLOT(updateVolumeIcon()));
-    connect(m_core, SIGNAL(mutedChanged(bool)), m_volumeAction, SLOT(setChecked(bool)));
+    connect(m_core, SIGNAL(mutedChanged(bool)), ACTION(ActionManager::VOL_MUTE), SLOT(setChecked(bool)));
     m_volumeSlider->setValue(m_core->volume());
     updateVolumeIcon();
-    m_ui.progressToolBar->addWidget(m_volumeSlider);
     //visualization
     m_analyzer = new QSUiAnalyzer(this);
     m_ui.analyzerDockWidget->setWidget(m_analyzer);
@@ -191,9 +185,9 @@ void MainWindow::addUrl()
 
 void MainWindow::updatePosition(qint64 pos)
 {
-    m_slider->setMaximum(m_core->totalTime()/1000);
-    if(!m_slider->isSliderDown())
-        m_slider->setValue(pos/1000);
+    m_positionSlider->setMaximum(m_core->totalTime()/1000);
+    if(!m_positionSlider->isSliderDown())
+        m_positionSlider->setValue(pos/1000);
 
     QString text = MetaDataFormatter::formatLength(pos/1000, false);
     if(m_core->totalTime() > 1000)
@@ -206,7 +200,7 @@ void MainWindow::updatePosition(qint64 pos)
 
 void MainWindow::seek()
 {
-    m_core->seek(m_slider->value()*1000);
+    m_core->seek(m_positionSlider->value()*1000);
 }
 
 void MainWindow::showState(Qmmp::State state)
@@ -229,7 +223,7 @@ void MainWindow::showState(Qmmp::State state)
         updateStatus();
         m_analyzer->stop();
         m_timeLabel->clear();
-        m_slider->setValue(0);
+        m_positionSlider->setValue(0);
         m_analyzer->clearCover();
         qobject_cast<CoverWidget *>(m_ui.coverDockWidget->widget())->clearCover();
         setWindowTitle("Qmmp");
@@ -351,7 +345,8 @@ void MainWindow::updateVolumeIcon()
     else if(maxVol >= 30 && maxVol < 60)
         iconName = "audio-volume-medium";
 
-    m_volumeAction->setIcon(QIcon::fromTheme(iconName, QIcon(QString(":/qsui/") + iconName + ".png")));
+    ACTION(ActionManager::VOL_MUTE)->setIcon(QIcon::fromTheme(iconName, QIcon(QString(":/qsui/") + iconName + ".png")));
+    //m_volumeAction->setIcon(QIcon::fromTheme(iconName, QIcon(QString(":/qsui/") + iconName + ".png")));
 }
 
 void MainWindow::jumpTo()
@@ -436,6 +431,10 @@ void MainWindow::createActions()
     ActionManager::instance()->registerAction(ActionManager::UI_PLAYLISTBROWSER,
                                               m_ui.playlistsDockWidget->toggleViewAction(),
                                               "playlist_browser", tr("P"));
+    ActionManager::instance()->registerWidget(ActionManager::UI_POS_SLIDER, m_positionSlider,
+                                              tr("Position"), "position_slider");
+    ActionManager::instance()->registerWidget(ActionManager::UI_VOL_SLIDER, m_volumeSlider,
+                                              tr("Volume"), "volume_slider");
     //playback
     SET_ACTION(ActionManager::PREVIOUS, m_player, SLOT(previous()));
     SET_ACTION(ActionManager::PLAY, m_player, SLOT(play()));
@@ -698,7 +697,7 @@ void MainWindow::createButtons()
 
 void MainWindow::readSettings()
 {
-    QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
     m_titleFormatter.setPattern(settings.value("window_title_format","%if(%p,%p - %t,%t)").toString());
     if(m_update)
@@ -723,6 +722,12 @@ void MainWindow::readSettings()
     }
     else
     {
+        foreach (ActionManager::ToolBarInfo info, ActionManager::instance()->readToolBarSettings())
+        {
+            QToolBar *toolBar = ActionManager::instance()->createToolBar(info, this);
+            toolBar->setIconSize(QSize(16,16));
+            addToolBar(toolBar);
+        }
         restoreGeometry(settings.value("mw_geometry").toByteArray());
         QByteArray wstate = settings.value("mw_state").toByteArray();
         if(wstate.isEmpty())
@@ -757,9 +762,17 @@ void MainWindow::readSettings()
 
         m_update = true;
     }
+
+
+
+
+
     //load toolbar actions
-    m_ui.buttonsToolBar->clear();
-    QStringList names = ActionManager::instance()->toolBarActionNames();
+    //m_ui.buttonsToolBar->clear();
+
+
+
+    /*QStringList names = ActionManager::instance()->toolBarActionNames();
     names = settings.value("toolbar_actions", names).toStringList();
     foreach (QString name, names)
     {
@@ -786,7 +799,7 @@ void MainWindow::readSettings()
         QAction *action = ActionManager::instance()->findChild<QAction *>(name);
         if(action)
             m_ui.buttonsToolBar->addAction(action);
-    }
+    }*/
 
     m_hideOnClose = settings.value("hide_on_close", false).toBool();
     m_ui.tabWidget->setTabsClosable(settings.value("pl_tabs_closable", false).toBool());
@@ -930,8 +943,8 @@ void MainWindow::setTitleBarsVisible(bool visible)
 
 void MainWindow::setToolBarsBlocked(bool blocked)
 {
-    m_ui.buttonsToolBar->setMovable(!blocked);
-    m_ui.progressToolBar->setMovable(!blocked);
+    //m_ui.buttonsToolBar->setMovable(!blocked);
+    //m_ui.progressToolBar->setMovable(!blocked);
 }
 
 void MainWindow::editToolBar()

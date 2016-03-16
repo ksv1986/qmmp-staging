@@ -24,6 +24,8 @@
 #include <QObject>
 #include <QString>
 #include <QHash>
+#include <QList>
+#include <QToolBar>
 
 class QAction;
 class QSettings;
@@ -61,10 +63,10 @@ public:
 
         WM_ALLWAYS_ON_TOP,
         WM_STICKY,
-        UI_ANALYZER,
-        UI_FILEBROWSER,
-        UI_COVER,
-        UI_PLAYLISTBROWSER,
+        UI_ANALYZER,              //external
+        UI_FILEBROWSER,           //external
+        UI_COVER,                 //external
+        UI_PLAYLISTBROWSER,       //external
         UI_SHOW_TABS,
         UI_SHOW_TITLEBARS,
         UI_BLOCK_TOOLBARS,
@@ -102,7 +104,18 @@ public:
         ABOUT_UI,
         ABOUT,
         ABOUT_QT,
-        QUIT
+        QUIT,
+
+        //widgets
+        UI_POS_SLIDER,            //external
+        UI_VOL_SLIDER,            //external
+        UI_SEPARATOR,
+    };
+
+    struct ToolBarInfo
+    {
+        QString title;
+        QStringList actionNames;
     };
 
     QAction *action(int type);
@@ -111,7 +124,13 @@ public:
     void saveActions();
     void resetShortcuts();
     void registerAction(int id, QAction *action, QString confKey, QString key);
-    QStringList toolBarActionNames() const;
+    void registerWidget(int id, QWidget *w, QString text, QString name);
+    QToolBar *createToolBar(ToolBarInfo info, QWidget *parent);
+    void updateToolBar(QToolBar *toolBar, ToolBarInfo info);
+    ActionManager::ToolBarInfo defaultToolBar() const;
+    QList<ToolBarInfo> readToolBarSettings() const;
+    void writeToolBarSettings(QList<ToolBarInfo> l);
+
     static ActionManager* instance();
 
 private:

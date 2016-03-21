@@ -115,6 +115,7 @@ public:
     struct ToolBarInfo
     {
         QString title;
+        QString uid;
         QStringList actionNames;
     };
 

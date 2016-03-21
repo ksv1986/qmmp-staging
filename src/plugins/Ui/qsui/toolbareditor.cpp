@@ -35,10 +35,14 @@ ToolBarEditor::ToolBarEditor(QWidget *parent) :
     m_ui->downToolButton->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
     m_ui->addToolButton->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowRight));
     m_ui->removeToolButton->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowLeft));
+
     connect(m_ui->actionsListWidget->model(), SIGNAL(rowsAboutToBeRemoved(const QModelIndex &,int,int)),
             SLOT(onRowsAboutToBeRemoved(const QModelIndex &, int, int)));
     connect(m_ui->activeActionsListWidget->model(), SIGNAL(rowsAboutToBeRemoved(const QModelIndex &,int,int)),
             SLOT(onRowsAboutToBeRemoved(const QModelIndex &, int, int)));
+
+    m_toolBarInfoList = ActionManager::instance()->readToolBarSettings();
+
     populateActionList();
 }
 
@@ -49,12 +53,7 @@ ToolBarEditor::~ToolBarEditor()
 
 void ToolBarEditor::accept()
 {
-    /*QStringList names;
-    for(int row = 0; row < m_ui->activeActionsListWidget->count(); ++row)
-        names.append(m_ui->activeActionsListWidget->item(row)->data(Qt::UserRole).toString());
-
-    QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    settings.setValue("Simple/toolbar_actions", names);*/
+    ActionManager::instance()->writeToolBarSettings(m_toolBarInfoList);
     QDialog::accept();
 }
 
@@ -65,7 +64,7 @@ void ToolBarEditor::populateActionList(bool reset)
     m_ui->activeActionsListWidget->clear();
 
     QStringList actionNames;
-    foreach (ActionManager::ToolBarInfo info, ActionManager::instance()->readToolBarSettings())
+    foreach (ActionManager::ToolBarInfo info, m_toolBarInfoList)
     {
         actionNames << info.actionNames;
         m_ui->toolbarNameComboBox->addItem(info.title);
@@ -87,35 +86,7 @@ void ToolBarEditor::populateActionList(bool reset)
     }
 
     m_ui->actionsListWidget->addItem(createExtraItem("-- " + tr("Separator") + " --", "separator"));
-
-    /*foreach (QString name, names)
-    {
-        QAction *action = ActionManager::instance()->findChild<QAction *>(name);
-        if(action)
-        {
-            QListWidgetItem *item = new QListWidgetItem();
-            item->setIcon(action->icon());
-            item->setText(action->text().replace("&", ""));
-            item->setData(Qt::UserRole, action->objectName());
-            m_ui->activeActionsListWidget->addItem(item);
-        }
-        else if(name == "position_slider")
-        {
-            m_ui->activeActionsListWidget->addItem(createExtraItem(tr("Position Slider"), name));
-        }
-        else if(name == "volume_slider")
-        {
-            m_ui->activeActionsListWidget->addItem(createExtraItem(tr("Volume Slider"), name));
-        }
-        else if(name == "volume_icon")
-        {
-            m_ui->activeActionsListWidget->addItem(createExtraItem(tr("Volume Icon"), name));
-        }
-        else if(name == "separator")
-        {
-            m_ui->activeActionsListWidget->addItem(createExtraItem("-- " + tr("Separator") + " --", name));
-        }
-    }*/
+    on_toolbarNameComboBox_activated(m_ui->toolbarNameComboBox->currentIndex());
 }
 
 QListWidgetItem *ToolBarEditor::createExtraItem(const QString &name, const QString &shortName, const QIcon &icon)
@@ -129,51 +100,98 @@ QListWidgetItem *ToolBarEditor::createExtraItem(const QString &name, const QStri
 
 void ToolBarEditor::on_addToolButton_clicked()
 {
+    int index = m_ui->toolbarNameComboBox->currentIndex();
+    if(index < 0)
+        return;
+
     int row = m_ui->actionsListWidget->currentRow();
     if(row > -1)
     {
         QListWidgetItem *item = m_ui->actionsListWidget->takeItem(row);
         m_ui->activeActionsListWidget->addItem(item);
+        m_toolBarInfoList[index].actionNames.append(item->data(Qt::UserRole).toString());
     }
 }
 
 void ToolBarEditor::on_removeToolButton_clicked()
 {
+    int index = m_ui->toolbarNameComboBox->currentIndex();
+    if(index < 0)
+        return;
+
     int row = m_ui->activeActionsListWidget->currentRow();
     if(row > -1)
     {
         QListWidgetItem *item = m_ui->activeActionsListWidget->takeItem(row);
         m_ui->actionsListWidget->addItem(item);
+        m_toolBarInfoList[index].actionNames.removeAt(row);
     }
 }
 
 void ToolBarEditor::on_upToolButton_clicked()
 {
+    int index = m_ui->toolbarNameComboBox->currentIndex();
+    if(index < 0)
+        return;
+
     int row = m_ui->activeActionsListWidget->currentRow();
     if(row > 0)
     {
         QListWidgetItem *item = m_ui->activeActionsListWidget->takeItem(row);
         m_ui->activeActionsListWidget->insertItem(row - 1, item);
         m_ui->activeActionsListWidget->setCurrentItem(item);
+        m_toolBarInfoList[index].actionNames.move(row, row - 1);
     }
 }
 
 void ToolBarEditor::on_downToolButton_clicked()
 {
+    int index = m_ui->toolbarNameComboBox->currentIndex();
+    if(index < 0)
+        return;
+
     int row = m_ui->activeActionsListWidget->currentRow();
     if(row > -1 && row < m_ui->activeActionsListWidget->count())
     {
         QListWidgetItem *item = m_ui->activeActionsListWidget->takeItem(row);
         m_ui->activeActionsListWidget->insertItem(row + 1, item);
         m_ui->activeActionsListWidget->setCurrentItem(item);
+        m_toolBarInfoList[index].actionNames.move(row, row + 1);
     }
 }
 
 void ToolBarEditor::on_resetPushButton_clicked()
 {
-    m_ui->actionsListWidget->clear();
+    /*m_ui->actionsListWidget->clear();
     m_ui->activeActionsListWidget->clear();
-    populateActionList(true);
+    populateActionList(true);*/
+}
+
+void ToolBarEditor::on_toolbarNameComboBox_activated(int index)
+{
+    m_ui->activeActionsListWidget->clear();
+    if(index < 0)
+        return;
+    ActionManager::ToolBarInfo info = m_toolBarInfoList.at(index);
+
+    foreach (QString name, info.actionNames)
+    {
+        if(name == "separator")
+        {
+            m_ui->activeActionsListWidget->addItem(createExtraItem("-- " + tr("Separator") + " --", name));
+            continue;
+        }
+
+        QAction *action = ActionManager::instance()->findChild<QAction *>(name);
+        if(action)
+        {
+            QListWidgetItem *item = new QListWidgetItem();
+            item->setIcon(action->icon());
+            item->setText(action->text().replace("&", ""));
+            item->setData(Qt::UserRole, action->objectName());
+            m_ui->activeActionsListWidget->addItem(item);
+        }
+    }
 }
 
 void ToolBarEditor::onRowsAboutToBeRemoved(const QModelIndex &, int start, int)

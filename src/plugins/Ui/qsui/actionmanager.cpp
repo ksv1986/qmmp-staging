@@ -236,6 +236,8 @@ QToolBar *ActionManager::createToolBar(ActionManager::ToolBarInfo info, QWidget 
 {
     QToolBar *toolBar = new QToolBar(info.title, parent);
     updateToolBar(toolBar, info);
+    toolBar->setProperty("uid", info.uid);
+    toolBar->setIconSize(QSize(16,16));
     return toolBar;
 }
 
@@ -273,6 +275,7 @@ ActionManager::ToolBarInfo ActionManager::defaultToolBar() const
     ActionManager::ToolBarInfo info;
     info.title = tr("Toolbar");
     info.actionNames = names;
+    info.uid = "{68363a0b-f2cd-462a-87ca-e3089db21561}";
     return info;
 }
 
@@ -287,6 +290,7 @@ QList<ActionManager::ToolBarInfo> ActionManager::readToolBarSettings() const
         settings.setArrayIndex(i);
         info.title = settings.value("title").toString();
         info.actionNames = settings.value("actions").toStringList();
+        info.uid = settings.value("uid").toString();
         list.append(info);
     }
     settings.endArray();
@@ -297,5 +301,14 @@ QList<ActionManager::ToolBarInfo> ActionManager::readToolBarSettings() const
 
 void ActionManager::writeToolBarSettings(QList<ActionManager::ToolBarInfo> l)
 {
-
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginWriteArray("SimpleUiToolbars");
+    for(int i = 0; i < l.size(); ++i)
+    {
+        settings.setArrayIndex(i);
+        settings.setValue("title", l[i].title);
+        settings.setValue("actions", l[i].actionNames);
+        settings.setValue("uid", l[i].uid);
+    }
+    settings.endArray();
 }

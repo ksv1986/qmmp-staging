@@ -700,6 +700,35 @@ void MainWindow::readSettings()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
     m_titleFormatter.setPattern(settings.value("window_title_format","%if(%p,%p - %t,%t)").toString());
+
+    //update toolbars
+    QList<ActionManager::ToolBarInfo> toolBarInfoList = ActionManager::instance()->readToolBarSettings();
+    QList<QToolBar *> toolBars = findChildren<QToolBar*>();
+
+    foreach (ActionManager::ToolBarInfo info, toolBarInfoList)
+    {
+        bool found = false;
+        foreach (QToolBar *toolBar, toolBars)
+        {
+            if(toolBar->property("uid").toString() == info.uid)
+            {
+                found = true;
+                toolBars.removeAll(toolBar);
+                ActionManager::instance()->updateToolBar(toolBar, info);
+                break;
+            }
+        }
+
+        if(!found)
+        {
+            addToolBar(ActionManager::instance()->createToolBar(info, this));
+        }
+    }
+
+    foreach (QToolBar *toolBar, toolBars)
+        toolBar->deleteLater();
+    toolBars.clear();
+
     if(m_update)
     {
         for(int i = 0; i < m_ui.tabWidget->count(); ++i)
@@ -722,12 +751,6 @@ void MainWindow::readSettings()
     }
     else
     {
-        foreach (ActionManager::ToolBarInfo info, ActionManager::instance()->readToolBarSettings())
-        {
-            QToolBar *toolBar = ActionManager::instance()->createToolBar(info, this);
-            toolBar->setIconSize(QSize(16,16));
-            addToolBar(toolBar);
-        }
         restoreGeometry(settings.value("mw_geometry").toByteArray());
         QByteArray wstate = settings.value("mw_state").toByteArray();
         if(wstate.isEmpty())
@@ -762,44 +785,6 @@ void MainWindow::readSettings()
 
         m_update = true;
     }
-
-
-
-
-
-    //load toolbar actions
-    //m_ui.buttonsToolBar->clear();
-
-
-
-    /*QStringList names = ActionManager::instance()->toolBarActionNames();
-    names = settings.value("toolbar_actions", names).toStringList();
-    foreach (QString name, names)
-    {
-        if(name == "position_slider")
-        {
-            m_ui.buttonsToolBar->addWidget(m_slider)->setVisible(true);
-            continue;
-        }
-        if(name == "volume_slider")
-        {
-            m_ui.buttonsToolBar->addWidget(m_volumeSlider)->setVisible(true);
-            continue;
-        }
-        if(name == "volume_icon")
-        {
-            m_ui.buttonsToolBar->addAction(m_volumeAction);
-            continue;
-        }
-        if(name == "separator")
-        {
-            m_ui.buttonsToolBar->addSeparator();
-            continue;
-        }
-        QAction *action = ActionManager::instance()->findChild<QAction *>(name);
-        if(action)
-            m_ui.buttonsToolBar->addAction(action);
-    }*/
 
     m_hideOnClose = settings.value("hide_on_close", false).toBool();
     m_ui.tabWidget->setTabsClosable(settings.value("pl_tabs_closable", false).toBool());

@@ -54,12 +54,16 @@ private slots:
     void on_resetPushButton_clicked();
     void on_toolbarNameComboBox_activated(int index);
     void onRowsAboutToBeRemoved(const QModelIndex &, int start, int);
+    void createToolBar();
+    void renameToolBar();
+    void removeToolBar();
 
 private:
     void populateActionList(bool reset = false);
     QListWidgetItem *createExtraItem(const QString &name, const QString &shortName, const QIcon &icon = QIcon());
     Ui::ToolBarEditor *m_ui;
     QList<ActionManager::ToolBarInfo> m_toolBarInfoList;
+    int m_previousIndex;
 };
 
 #endif // TOOLBAREDITOR_H

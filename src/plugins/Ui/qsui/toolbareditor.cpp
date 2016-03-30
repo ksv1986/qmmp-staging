@@ -21,7 +21,10 @@
 #include <QApplication>
 #include <QSettings>
 #include <QToolBar>
+#include <QMenu>
 #include <QWidgetAction>
+#include <QUuid>
+#include <QInputDialog>
 #include <qmmp/qmmp.h>
 #include "toolbareditor.h"
 #include "ui_toolbareditor.h"
@@ -43,7 +46,15 @@ ToolBarEditor::ToolBarEditor(QWidget *parent) :
 
     m_toolBarInfoList = ActionManager::instance()->readToolBarSettings();
 
+    m_previousIndex = -1;
     populateActionList();
+
+    QMenu *menu = new QMenu(this);
+    menu->addAction(tr("Create"), this, SLOT(createToolBar()));
+    menu->addAction(tr("Rename"), this, SLOT(renameToolBar()));
+    menu->addSeparator();
+    menu->addAction(tr("Remove"), this, SLOT(removeToolBar()));
+    m_ui->toolBarMenuButton->setMenu(menu);
 }
 
 ToolBarEditor::~ToolBarEditor()
@@ -53,6 +64,7 @@ ToolBarEditor::~ToolBarEditor()
 
 void ToolBarEditor::accept()
 {
+    on_toolbarNameComboBox_activated(m_ui->toolbarNameComboBox->currentIndex());
     ActionManager::instance()->writeToolBarSettings(m_toolBarInfoList);
     QDialog::accept();
 }
@@ -109,7 +121,6 @@ void ToolBarEditor::on_addToolButton_clicked()
     {
         QListWidgetItem *item = m_ui->actionsListWidget->takeItem(row);
         m_ui->activeActionsListWidget->addItem(item);
-        m_toolBarInfoList[index].actionNames.append(item->data(Qt::UserRole).toString());
     }
 }
 
@@ -124,7 +135,6 @@ void ToolBarEditor::on_removeToolButton_clicked()
     {
         QListWidgetItem *item = m_ui->activeActionsListWidget->takeItem(row);
         m_ui->actionsListWidget->addItem(item);
-        m_toolBarInfoList[index].actionNames.removeAt(row);
     }
 }
 
@@ -140,7 +150,6 @@ void ToolBarEditor::on_upToolButton_clicked()
         QListWidgetItem *item = m_ui->activeActionsListWidget->takeItem(row);
         m_ui->activeActionsListWidget->insertItem(row - 1, item);
         m_ui->activeActionsListWidget->setCurrentItem(item);
-        m_toolBarInfoList[index].actionNames.move(row, row - 1);
     }
 }
 
@@ -156,7 +165,6 @@ void ToolBarEditor::on_downToolButton_clicked()
         QListWidgetItem *item = m_ui->activeActionsListWidget->takeItem(row);
         m_ui->activeActionsListWidget->insertItem(row + 1, item);
         m_ui->activeActionsListWidget->setCurrentItem(item);
-        m_toolBarInfoList[index].actionNames.move(row, row + 1);
     }
 }
 
@@ -169,7 +177,18 @@ void ToolBarEditor::on_resetPushButton_clicked()
 
 void ToolBarEditor::on_toolbarNameComboBox_activated(int index)
 {
+    if(m_previousIndex >= 0 && m_previousIndex < m_toolBarInfoList.count())
+    {
+        m_toolBarInfoList[m_previousIndex].actionNames.clear();
+        for(int i = 0; i < m_ui->activeActionsListWidget->count(); ++i)
+        {
+            QListWidgetItem *item = m_ui->activeActionsListWidget->item(i);
+            m_toolBarInfoList[m_previousIndex].actionNames << item->data(Qt::UserRole).toString();
+        }
+    }
     m_ui->activeActionsListWidget->clear();
+    m_previousIndex = index;
+
     if(index < 0)
         return;
     ActionManager::ToolBarInfo info = m_toolBarInfoList.at(index);
@@ -221,4 +240,50 @@ void ToolBarEditor::onRowsAboutToBeRemoved(const QModelIndex &, int start, int)
             }
         }
     }
+}
+
+void ToolBarEditor::createToolBar()
+{
+    ActionManager::ToolBarInfo info;
+    int i = 0;
+    //generate unique toolbar name
+    QString title = tr("Toolbar");
+    while (m_ui->toolbarNameComboBox->findText(title) >= 0)
+        title = tr("Toolbar %1").arg(++i);
+
+    info.title = title;
+    info.uid = QUuid::createUuid().toString();
+    m_toolBarInfoList.append(info);
+    m_ui->toolbarNameComboBox->addItem(info.title);
+}
+
+void ToolBarEditor::renameToolBar()
+{
+    int index = m_ui->toolbarNameComboBox->currentIndex();
+    if(index >= 0)
+    {
+        QString title = m_toolBarInfoList[index].title;
+        title = QInputDialog::getText(this, tr("Rename Toolbar"), tr("Toolbar name:"),
+                                      QLineEdit::Normal, title);
+        if(!title.isEmpty())
+        {
+            m_toolBarInfoList[index].title = title;
+            m_ui->toolbarNameComboBox->setItemText(index, title);
+        }
+    }
+}
+
+void ToolBarEditor::removeToolBar()
+{
+    if(m_ui->toolbarNameComboBox->count() == 1)
+        return;
+
+    int index = m_ui->toolbarNameComboBox->currentIndex();
+    if(index >= 0)
+    {
+        m_ui->toolbarNameComboBox->removeItem(index);
+        m_toolBarInfoList.removeAt(index);
+    }
+
+    populateActionList();
 }

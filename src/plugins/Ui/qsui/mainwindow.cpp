@@ -488,7 +488,7 @@ void MainWindow::createActions()
     m_ui.menuView->addAction(ACTION(ActionManager::PL_SHOW_HEADER));
     m_ui.menuView->addSeparator();
     m_ui.menuView->addAction(SET_ACTION(ActionManager::UI_BLOCK_TOOLBARS, this, SLOT(setToolBarsBlocked(bool))));
-    m_ui.menuView->addAction(tr("Edit Toolbar"), this, SLOT(editToolBar()));
+    m_ui.menuView->addAction(tr("Edit Toolbars"), this, SLOT(editToolBar()));
 
     QMenu* sort_mode_menu = new QMenu (tr("Sort List"), this);
     sort_mode_menu->setIcon(QIcon::fromTheme("view-sort-ascending"));

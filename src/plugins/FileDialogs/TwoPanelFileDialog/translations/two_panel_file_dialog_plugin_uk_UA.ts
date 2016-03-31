@@ -9,27 +9,27 @@
         <translation>Додати файли</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.ui" line="73"/>
+        <location filename="../twopanelfiledialog.ui" line="70"/>
         <source>File name:</source>
         <translation>Ім&apos;я файлу:</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.ui" line="83"/>
+        <location filename="../twopanelfiledialog.ui" line="80"/>
         <source>Files of type:</source>
         <translation>Тип файлу:</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.ui" line="120"/>
+        <location filename="../twopanelfiledialog.ui" line="117"/>
         <source>Play</source>
         <translation>Відтворити</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.ui" line="133"/>
+        <location filename="../twopanelfiledialog.ui" line="130"/>
         <source>Add</source>
         <translation>Додати</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.ui" line="146"/>
+        <location filename="../twopanelfiledialog.ui" line="143"/>
         <source>Close</source>
         <translation>Закрити</translation>
     </message>
@@ -72,12 +72,12 @@
         <translation>Теки</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="351"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="352"/>
         <source>Save</source>
         <translation>Зберегти</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="458"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="459"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 вже існує.

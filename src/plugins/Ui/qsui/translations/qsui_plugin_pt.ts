@@ -864,8 +864,8 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="491"/>
-        <source>Edit Toolbar</source>
-        <translation>Editar barra de ferramentas</translation>
+        <source>Edit Toolbars</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="493"/>

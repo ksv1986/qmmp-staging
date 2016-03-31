@@ -714,7 +714,7 @@ Afspeellijst</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="491"/>
-        <source>Edit Toolbar</source>
+        <source>Edit Toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

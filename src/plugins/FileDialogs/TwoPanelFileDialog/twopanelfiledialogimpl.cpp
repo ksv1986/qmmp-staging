@@ -63,7 +63,11 @@ TwoPanelFileDialogImpl::TwoPanelFileDialogImpl(QWidget * parent) : QDialog(paren
     m_dirModel->setReadOnly(true);
     m_ui.dirListView->setModel(m_dirModel);
     m_dirModel->setRootPath("");
+#if (QT_VERSION >= 0x040700)
     m_dirModel->setFilter(QDir::AllDirs | QDir::NoDot);
+#else
+    m_dirModel->setFilter(QDir::AllDirs);
+#endif
     m_dirModel->setNameFilterDisables (false);
 
     connect(m_ui.dirListView->selectionModel(),

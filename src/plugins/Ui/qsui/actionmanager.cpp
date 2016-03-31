@@ -238,6 +238,7 @@ QToolBar *ActionManager::createToolBar(ActionManager::ToolBarInfo info, QWidget 
     updateToolBar(toolBar, info);
     toolBar->setProperty("uid", info.uid);
     toolBar->setIconSize(QSize(16,16));
+    toolBar->setObjectName("Toolbar" + info.uid);
     return toolBar;
 }
 

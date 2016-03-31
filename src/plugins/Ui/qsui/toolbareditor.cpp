@@ -48,13 +48,6 @@ ToolBarEditor::ToolBarEditor(QWidget *parent) :
 
     m_previousIndex = -1;
     populateActionList();
-
-    QMenu *menu = new QMenu(this);
-    menu->addAction(tr("Create"), this, SLOT(createToolBar()));
-    menu->addAction(tr("Rename"), this, SLOT(renameToolBar()));
-    menu->addSeparator();
-    menu->addAction(tr("Remove"), this, SLOT(removeToolBar()));
-    m_ui->toolBarMenuButton->setMenu(menu);
 }
 
 ToolBarEditor::~ToolBarEditor()
@@ -74,6 +67,13 @@ void ToolBarEditor::populateActionList(bool reset)
     m_ui->toolbarNameComboBox->clear();
     m_ui->actionsListWidget->clear();
     m_ui->activeActionsListWidget->clear();
+
+    if(reset)
+    {
+        m_toolBarInfoList.clear();
+        m_toolBarInfoList.append(ActionManager::instance()->defaultToolBar());
+        m_previousIndex = -1;
+    }
 
     QStringList actionNames;
     foreach (ActionManager::ToolBarInfo info, m_toolBarInfoList)
@@ -170,9 +170,7 @@ void ToolBarEditor::on_downToolButton_clicked()
 
 void ToolBarEditor::on_resetPushButton_clicked()
 {
-    /*m_ui->actionsListWidget->clear();
-    m_ui->activeActionsListWidget->clear();
-    populateActionList(true);*/
+    populateActionList(true);
 }
 
 void ToolBarEditor::on_toolbarNameComboBox_activated(int index)
@@ -242,7 +240,7 @@ void ToolBarEditor::onRowsAboutToBeRemoved(const QModelIndex &, int start, int)
     }
 }
 
-void ToolBarEditor::createToolBar()
+void ToolBarEditor::on_createButton_clicked()
 {
     ActionManager::ToolBarInfo info;
     int i = 0;
@@ -257,7 +255,7 @@ void ToolBarEditor::createToolBar()
     m_ui->toolbarNameComboBox->addItem(info.title);
 }
 
-void ToolBarEditor::renameToolBar()
+void ToolBarEditor::on_renameButton_clicked()
 {
     int index = m_ui->toolbarNameComboBox->currentIndex();
     if(index >= 0)
@@ -273,7 +271,7 @@ void ToolBarEditor::renameToolBar()
     }
 }
 
-void ToolBarEditor::removeToolBar()
+void ToolBarEditor::on_removeButton_clicked()
 {
     if(m_ui->toolbarNameComboBox->count() == 1)
         return;

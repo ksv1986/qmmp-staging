@@ -54,9 +54,9 @@ private slots:
     void on_resetPushButton_clicked();
     void on_toolbarNameComboBox_activated(int index);
     void onRowsAboutToBeRemoved(const QModelIndex &, int start, int);
-    void createToolBar();
-    void renameToolBar();
-    void removeToolBar();
+    void on_createButton_clicked();
+    void on_renameButton_clicked();
+    void on_removeButton_clicked();
 
 private:
     void populateActionList(bool reset = false);

@@ -346,7 +346,6 @@ void MainWindow::updateVolumeIcon()
         iconName = "audio-volume-medium";
 
     ACTION(ActionManager::VOL_MUTE)->setIcon(QIcon::fromTheme(iconName, QIcon(QString(":/qsui/") + iconName + ".png")));
-    //m_volumeAction->setIcon(QIcon::fromTheme(iconName, QIcon(QString(":/qsui/") + iconName + ".png")));
 }
 
 void MainWindow::jumpTo()
@@ -728,6 +727,7 @@ void MainWindow::readSettings()
     foreach (QToolBar *toolBar, toolBars)
         toolBar->deleteLater();
     toolBars.clear();
+    setToolBarsBlocked(ACTION(ActionManager::UI_BLOCK_TOOLBARS)->isChecked());
 
     if(m_update)
     {
@@ -928,8 +928,10 @@ void MainWindow::setTitleBarsVisible(bool visible)
 
 void MainWindow::setToolBarsBlocked(bool blocked)
 {
-    //m_ui.buttonsToolBar->setMovable(!blocked);
-    //m_ui.progressToolBar->setMovable(!blocked);
+    foreach (QToolBar *t, findChildren<QToolBar *>())
+    {
+        t->setMovable(!blocked);
+    }
 }
 
 void MainWindow::editToolBar()

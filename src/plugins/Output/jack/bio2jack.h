@@ -58,11 +58,9 @@ enum pos_enum    { BYTES, MILLISECONDS };
 void JACK_Init(void); /* call this before any other bio2jack calls */
 void JACK_DoSampleRateConversion(bool value); /* whether the next device that's Open()d should do
                                                  sample rate conversion if necessary */
-void JACK_SetSampleRateConversionFunction(int converter); /* which SRC converter function should be used
-                                                             for the next Open()d device */
 int  JACK_Open(int *deviceID, unsigned int bits_per_sample, unsigned long *rate, int channels); /* Note: defaults to 0 input channels
-												   if you need input (record) use OpenEx
-												   instead */
+                                                   if you need input (record) use OpenEx
+                                                   instead */
 int  JACK_OpenEx(int *deviceID, unsigned int bits_per_channel,
                  unsigned long *rate,
                  unsigned int input_channels, unsigned int output_channels,
@@ -135,7 +133,7 @@ enum JACK_PORT_CONNECTION_MODE
 };
 
 /* set the mode for port connections */
-/* defaults to CONNECT_ALL */ 
+/* defaults to CONNECT_ALL */
 void JACK_SetPortConnectionMode(enum JACK_PORT_CONNECTION_MODE mode);
 
 #ifdef __cplusplus

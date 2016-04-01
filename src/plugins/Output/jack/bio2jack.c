@@ -31,7 +31,7 @@
 #include <jack/ringbuffer.h>
 #include <pthread.h>
 #include <sys/time.h>
-#include <samplerate.h>
+#include <soxr.h>
 
 #include "bio2jack.h"
 
@@ -167,8 +167,8 @@ typedef struct jack_driver_s
   jack_ringbuffer_t *pPlayPtr;  /* the playback ringbuffer */
   jack_ringbuffer_t *pRecPtr;   /* the recording ringbuffer */
 
-  SRC_STATE *output_src;        /* SRC object for the output stream */
-  SRC_STATE *input_src;         /* SRC object for the output stream */
+  soxr_t output_src;        /* resampler object for the output stream */
+  soxr_t input_src;         /* resampler object for the input stream */
 
   enum status_enum state;       /* one of PLAYING, PAUSED, STOPPED, CLOSED, RESET etc */
 
@@ -200,7 +200,7 @@ static bool do_sample_rate_conversion;  /* whether the client has requested samp
   Which SRC converter function we should use when doing sample rate conversion.
   Default to the fastest of the 'good quality' set.
  */
-static int preferred_src_converter = SRC_SINC_FASTEST;
+//static int preferred_src_converter = SRC_SINC_FASTEST;
 
 static bool init_done = 0;      /* just to prevent clients from calling JACK_Init twice, that would be very bad */
 
@@ -505,7 +505,7 @@ JACK_callback(nframes_t nframes, void *arg)
   jack_driver_t *drv = (jack_driver_t *) arg;
 
   unsigned int i;
-  int src_error = 0;
+  soxr_error_t src_error = 0;
 
   TIMER("start\n");
   gettimeofday(&drv->previousTime, 0);  /* record the current time */
@@ -606,31 +606,22 @@ JACK_callback(nframes_t nframes, void *arg)
           jack_ringbuffer_peek(drv->pPlayPtr, drv->callback_buffer1,
                                bytes_needed_read);
 
-          SRC_DATA srcdata;
-          srcdata.data_in = (sample_t *) drv->callback_buffer1;
-          srcdata.input_frames = bytes_needed_read / drv->bytes_per_jack_output_frame;
-          srcdata.src_ratio = drv->output_sample_rate_ratio;
-          srcdata.data_out = (sample_t *) drv->callback_buffer2;
-          srcdata.output_frames = nframes;
-          srcdata.end_of_input = 0;     // it's a stream, it never ends
-          DEBUG("input_frames = %ld, output_frames = %ld\n",
-                srcdata.input_frames, srcdata.output_frames);
-          /* convert the sample rate */
-          src_error = src_process(drv->output_src, &srcdata);
-          DEBUG("used = %ld, generated = %ld, error = %d: %s.\n",
-                srcdata.input_frames_used, srcdata.output_frames_gen,
-                src_error, src_strerror(src_error));
+          size_t o_done = 0, i_done = 0;
+
+          src_error = soxr_process(drv->output_src,
+                                   drv->callback_buffer1,
+                                   bytes_needed_read / drv->bytes_per_jack_output_frame, &i_done,
+                                   drv->callback_buffer2, nframes, &o_done);
 
           if(src_error == 0)
           {
             /* now we can move the read pointer */
             jack_ringbuffer_read_advance(drv->pPlayPtr,
-                                         srcdata.
-                                         input_frames_used *
+                                         i_done *
                                          drv->bytes_per_jack_output_frame);
             /* add on what we wrote */
-            read = srcdata.input_frames_used * drv->bytes_per_output_frame;
-            jackFramesAvailable -= srcdata.output_frames_gen;   /* take away what was used */
+            read = i_done * drv->bytes_per_output_frame;
+            jackFramesAvailable -= o_done;   /* take away what was used */
           }
         }
       }
@@ -737,25 +728,18 @@ JACK_callback(nframes_t nframes, void *arg)
           return 1;
         }
 
-        SRC_DATA srcdata;
-        srcdata.data_in = (sample_t *) drv->callback_buffer1;
-        srcdata.input_frames = nframes;
-        srcdata.src_ratio = drv->input_sample_rate_ratio;
-        srcdata.data_out = (sample_t *) drv->callback_buffer2;
-        srcdata.output_frames = drv->callback_buffer2_size / drv->bytes_per_jack_input_frame;
-        srcdata.end_of_input = 0;       // it's a stream, it never ends
-        DEBUG("input_frames = %ld, output_frames = %ld\n",
-              srcdata.input_frames, srcdata.output_frames);
-        /* convert the sample rate */
-        src_error = src_process(drv->input_src, &srcdata);
-        DEBUG("used = %ld, generated = %ld, error = %d: %s.\n",
-              srcdata.input_frames_used, srcdata.output_frames_gen,
-              src_error, src_strerror(src_error));
+        size_t o_done = 0, i_done = 0;
+
+        src_error = soxr_process(drv->input_src,
+                                 drv->callback_buffer1,
+                                 nframes, &i_done,
+                                 drv->callback_buffer2,
+                                 drv->callback_buffer2_size / drv->bytes_per_jack_input_frame, &o_done);
 
         if(src_error == 0)
         {
           long write_space = jack_ringbuffer_write_space(drv->pRecPtr);
-          long bytes_used =  srcdata.output_frames_gen * drv->bytes_per_jack_input_frame;
+          long bytes_used =  o_done * drv->bytes_per_jack_input_frame;
           /* if there isn't enough room, make some.  sure this discards data, but when dealing with input sources
              it seems like it's better to throw away old data than new */
           if(write_space < bytes_used)
@@ -881,12 +865,17 @@ JACK_srate(nframes_t nframes, void *arg)
 
   drv->jack_sample_rate = (long) nframes;
 
-  /* make sure to recalculate the ratios needed for proper sample rate conversion */
-  drv->output_sample_rate_ratio = (double) drv->jack_sample_rate / (double) drv->client_sample_rate;
-  if(drv->output_src) src_set_ratio(drv->output_src, drv->output_sample_rate_ratio);
+  if(drv->output_src)
+  {
+      soxr_delete(drv->output_src);
+      drv->output_src = soxr_create(drv->client_sample_rate, drv->jack_sample_rate, drv->num_output_channels, 0, 0, 0, 0);
+  }
 
-  drv->input_sample_rate_ratio = (double) drv->client_sample_rate / (double) drv->jack_sample_rate;
-  if(drv->input_src) src_set_ratio(drv->input_src, drv->input_sample_rate_ratio);
+  if(drv->input_src)
+  {
+      soxr_delete(drv->input_src);
+      drv->input_src =soxr_create(drv->jack_sample_rate, drv->client_sample_rate, drv->num_input_channels, 0, 0, 0, 0);
+  }
 
   TRACE("the sample rate is now %lu/sec\n", (long) nframes);
   return 0;
@@ -1609,27 +1598,28 @@ JACK_OpenEx(int *deviceID, unsigned int bits_per_channel,
   /* setup SRC objects just in case they'll be needed but only if requested */
   if(do_sample_rate_conversion)
   {
-    int error;
+    soxr_error_t error;
     if(drv->num_output_channels > 0)
     {
-      drv->output_src = src_new(preferred_src_converter, drv->num_output_channels, &error);
+      drv->output_src = soxr_create(drv->client_sample_rate, drv->jack_sample_rate, drv->num_output_channels, &error, 0, 0, 0);
+
       if(error != 0)
       {
-        src_delete(drv->output_src);
+        soxr_delete(drv->output_src);
         drv->output_src = 0;
-        ERR("Could not created SRC object for output stream %d: %s\n",
-            error, src_strerror(error));
+        //ERR("Could not created SRC object for output stream %d: %s\n",
+        //    error, src_strerror(error));
       }
     }
     if(drv->num_input_channels > 0)
     {
-      drv->input_src = src_new(preferred_src_converter, drv->num_input_channels, &error);
+      drv->input_src = soxr_create(drv->jack_sample_rate, drv->client_sample_rate, drv->num_input_channels, &error, 0, 0, 0);
       if(error != 0)
       {
-        src_delete(drv->input_src);
+        soxr_delete(drv->input_src);
         drv->input_src = 0;
-        ERR("Could not created SRC object for input stream %d: %s\n",
-            error, src_strerror(error));
+        //ERR("Could not created SRC object for input stream %d: %s\n",
+        //    error, src_strerror(error));
       }
     }
   }
@@ -1732,10 +1722,10 @@ JACK_Close(int deviceID)
   drv->pRecPtr = 0;
 
   /* free the SRC objects */
-  if(drv->output_src) src_delete(drv->output_src);
+  if(drv->output_src) soxr_delete(drv->output_src);
   drv->output_src = 0;
 
-  if(drv->input_src) src_delete(drv->input_src);
+  if(drv->input_src) soxr_delete(drv->input_src);
   drv->input_src = 0;
 
   drv->allocated = FALSE;       /* release this device */
@@ -2631,15 +2621,6 @@ void
 JACK_DoSampleRateConversion(bool value)
 {
   do_sample_rate_conversion = value;
-}
-
-/* FIXME: put the filename of the resample library header file with the decoders in here */
-/* consider mapping them in the bio2jack.h header file since its useless to the user unless */
-/* they can figure out wtf the settings on */
-void
-JACK_SetSampleRateConversionFunction(int converter)
-{
-  preferred_src_converter = converter;
 }
 
 /* set the client name that will be reported to jack when we open a */

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,10 +22,14 @@
 #include <QWheelEvent>
 #include <QStyleOptionSlider>
 #include <QStyle>
+#include <QToolTip>
+#include <qmmpui/metadataformatter.h>
 #include "positionslider.h"
 
 PositionSlider::PositionSlider(QWidget *parent) : QSlider(Qt::Horizontal, parent)
-{}
+{
+    connect(this, SIGNAL(sliderMoved(int)), SLOT(onSliderMoved(int)));
+}
 
 void PositionSlider::mousePressEvent (QMouseEvent *event)
 {
@@ -45,9 +49,15 @@ void PositionSlider::mousePressEvent (QMouseEvent *event)
             val = minimum() + ((maximum() - minimum()) * event->x()) / width();
 
         if (invertedAppearance() == true)
+        {
             setValue(maximum() - val);
+            onSliderMoved(maximum() - val);
+        }
         else
+        {
             setValue(val);
+            onSliderMoved(val);
+        }
 
         setSliderDown (true);
         event->accept();
@@ -65,4 +75,13 @@ void PositionSlider::wheelEvent(QWheelEvent *event)
 {
     setValue(value() + event->delta() / 20);
     sliderReleased();
+}
+
+void PositionSlider::onSliderMoved(int pos)
+{
+    QStyleOptionSlider opt;
+    initStyleOption(&opt);
+    QRect rect = style()->subControlRect(QStyle::CC_Slider, &opt, QStyle::SC_SliderHandle, this);
+    rect.moveTo(rect.x() - 10 , rect.y() - 45);
+    QToolTip::showText(mapToGlobal(rect.topLeft()), MetaDataFormatter::formatLength(pos), this, QRect());
 }

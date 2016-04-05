@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -36,11 +36,13 @@ public:
     explicit PositionSlider(QWidget *parent = 0);
     virtual ~PositionSlider(){}
 
-
 protected:
     virtual void mousePressEvent (QMouseEvent *event);
     virtual void mouseReleaseEvent (QMouseEvent *event);
     virtual void wheelEvent(QWheelEvent *event);
+
+private slots:
+    void onSliderMoved(int pos);
 
 };
 

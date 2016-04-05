@@ -19,7 +19,6 @@
  ***************************************************************************/
 #include <QPushButton>
 #include <QHBoxLayout>
-#include <QSlider>
 #include <QLabel>
 #include <QTreeView>
 #include <QMessageBox>
@@ -53,6 +52,7 @@
 #include "keyboardmanager.h"
 #include "coverwidget.h"
 #include "playlistbrowser.h"
+#include "volumeslider.h"
 #include "equalizer.h"
 
 #define KEY_OFFSET 10000
@@ -132,7 +132,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_ui.statusbar->setMinimumWidth(2);
     m_statusLabel->setMinimumWidth(2);
     //volume
-    m_volumeSlider = new QSlider(Qt::Horizontal, this);
+    m_volumeSlider = new VolumeSlider(this);
     m_volumeSlider->setFocusPolicy(Qt::NoFocus);
     m_volumeSlider->setFixedWidth(100);
     m_volumeSlider->setRange(0,100);

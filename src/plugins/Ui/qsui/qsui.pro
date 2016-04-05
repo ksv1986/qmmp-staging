@@ -36,7 +36,8 @@ SOURCES += \
     toolbareditor.cpp \
     listwidgetdrawer.cpp \
     playlistheader.cpp \
-    hotkeyeditor.cpp
+    hotkeyeditor.cpp \
+    volumeslider.cpp
 HEADERS += mainwindow.h \
     listwidget.h \
     visualmenu.h \
@@ -66,7 +67,8 @@ HEADERS += mainwindow.h \
     toolbareditor.h \
     listwidgetdrawer.h \
     playlistheader.h \
-    hotkeyeditor.h
+    hotkeyeditor.h \
+    volumeslider.h
 
 FORMS += forms/mainwindow.ui \
     forms/shortcutdialog.ui \

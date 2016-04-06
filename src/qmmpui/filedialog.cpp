@@ -161,7 +161,7 @@ void FileDialog::popup(QWidget *parent,
             if (!path.isEmpty())
                 files << path;
         }
-        QMetaObject::invokeMethod(inst, "filesAdded", Q_ARG(QStringList, files));
+        QMetaObject::invokeMethod(inst, "filesSelected", Q_ARG(QStringList, files));
     }
 }
 

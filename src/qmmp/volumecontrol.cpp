@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -54,10 +54,7 @@ void VolumeControl::setVolume(int left, int right)
 
 void VolumeControl::changeVolume(int delta)
 {
-    int v = qMax(m_left, m_right);
-    int balance = v > 0 ? (m_right - m_left)*100/v : 0;
-    v = delta > 0 ? qMin(100, v + 5) : qMax(0, v - 5);
-    setVolume(v-qMax(balance,0)*v/100, v+qMin(balance,0)*v/100);
+    setVolume(qBound(0, volume() + delta, 100));
 }
 
 void VolumeControl::setVolume(int volume)

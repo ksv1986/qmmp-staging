@@ -706,6 +706,10 @@ void MainWindow::readSettings()
     QList<ActionManager::ToolBarInfo> toolBarInfoList = ActionManager::instance()->readToolBarSettings();
     QList<QToolBar *> toolBars = findChildren<QToolBar*>();
 
+    //clear toolbars to avoid conflicts
+    foreach (QToolBar *toolBar, toolBars)
+        toolBar->clear();
+
     foreach (ActionManager::ToolBarInfo info, toolBarInfoList)
     {
         bool found = false;

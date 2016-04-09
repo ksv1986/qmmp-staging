@@ -405,7 +405,7 @@ void MainWindow::hideEvent(QHideEvent *)
 
 void MainWindow::createActions()
 {
-    //preprare cheackable actions
+    //prepare cheackable actions
     ACTION(ActionManager::REPEAT_ALL)->setChecked(m_ui_settings->isRepeatableList());
     ACTION(ActionManager::REPEAT_TRACK)->setChecked(m_ui_settings->isRepeatableTrack());
     ACTION(ActionManager::SHUFFLE)->setChecked(m_ui_settings->isShuffle());

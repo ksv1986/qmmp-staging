@@ -48,6 +48,8 @@ void VolumeSlider::mousePressEvent (QMouseEvent *event)
         else
             val = minimum() + ((maximum() - minimum()) * event->x()) / width();
 
+        setSliderDown (true);
+
         if (invertedAppearance() == true)
         {
             setValue(maximum() - val);
@@ -58,8 +60,6 @@ void VolumeSlider::mousePressEvent (QMouseEvent *event)
             setValue(val);
             onSliderMoved(val);
         }
-
-        setSliderDown (true);
         event->accept();
     }
     QSlider::mousePressEvent(event);
@@ -73,8 +73,9 @@ void VolumeSlider::mouseReleaseEvent (QMouseEvent *event)
 
 void VolumeSlider::wheelEvent(QWheelEvent *event)
 {
+    setSliderDown(true);
     setValue(value() + event->delta() / 20);
-    sliderReleased();
+    setSliderDown(false);
 }
 
 void VolumeSlider::onSliderMoved(int pos)

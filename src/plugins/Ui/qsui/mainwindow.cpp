@@ -137,7 +137,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_volumeSlider->setFixedWidth(100);
     m_volumeSlider->setRange(0,100);
     SET_ACTION(ActionManager::VOL_MUTE, m_core, SLOT(setMuted(bool)));
-    connect(m_volumeSlider, SIGNAL(valueChanged(int)), m_core, SLOT(setVolume(int)));
+    connect(m_volumeSlider, SIGNAL(sliderMoved(int)), m_core, SLOT(setVolume(int)));
     connect(m_core, SIGNAL(volumeChanged(int)), m_volumeSlider, SLOT(setValue(int)));
     connect(m_core, SIGNAL(volumeChanged(int)), SLOT(updateVolumeIcon()));
     connect(m_core, SIGNAL(mutedChanged(bool)), SLOT(updateVolumeIcon()));

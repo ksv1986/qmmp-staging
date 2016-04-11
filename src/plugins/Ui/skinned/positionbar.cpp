@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,6 +20,7 @@
 
 #include <QMouseEvent>
 #include <QPainter>
+#include <QTimer>
 #include <math.h>
 #include "skin.h"
 #include "button.h"
@@ -81,6 +82,21 @@ void PositionBar::mouseMoveEvent (QMouseEvent *e)
             emit sliderMoved(m_value);
         }
     }
+}
+
+void PositionBar::wheelEvent(QWheelEvent *e)
+{
+    if(m_max == 0)
+        return;
+
+    if(e->delta() > 0)
+        m_value += 5000;
+    else
+        m_value -= 5000;
+
+    m_value = qBound(qint64(0), m_value, m_max);
+    draw();
+    emit sliderReleased();
 }
 
 void PositionBar::mouseReleaseEvent(QMouseEvent*)

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,6 +23,7 @@
 #include "pixmapwidget.h"
 
 class QMouseEvent;
+class QWheelEvent;
 class Skin;
 
 /**
@@ -53,6 +54,7 @@ private:
     void mousePressEvent(QMouseEvent*);
     void mouseReleaseEvent(QMouseEvent*);
     void mouseMoveEvent(QMouseEvent*);
+    void wheelEvent(QWheelEvent *e);
     Skin *m_skin;
     bool m_moving;
     qint64 press_pos;

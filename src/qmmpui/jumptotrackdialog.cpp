@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -45,15 +45,13 @@ JumpToTrackDialog::JumpToTrackDialog(PlayListModel *model, QWidget* parent)
     m_proxyModel->setDynamicSortFilter(true);
     m_proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     m_proxyModel->setSourceModel(m_listModel);
+    m_proxyModel->setSortLocaleAware(true);
     songsListView->setModel(m_proxyModel);
 
-    connect(songsListView,SIGNAL(doubleClicked(const QModelIndex &)),
-            this,SLOT(jumpTo(const QModelIndex&)));
-    connect(songsListView,SIGNAL(activated(const QModelIndex &)),
-            this,SLOT(accept()));
-    connect(songsListView->selectionModel(),
-            SIGNAL(currentRowChanged(const QModelIndex&,const QModelIndex&)),
-            this,SLOT(queueUnqueue(const QModelIndex&,const QModelIndex&)));
+    connect(songsListView,SIGNAL(doubleClicked(QModelIndex)),SLOT(jumpTo(QModelIndex)));
+    connect(songsListView,SIGNAL(activated(QModelIndex)),SLOT(accept()));
+    connect(songsListView->selectionModel(),SIGNAL(currentRowChanged(QModelIndex, QModelIndex)),
+            SLOT(queueUnqueue(QModelIndex, QModelIndex)));
 
     connect(m_model, SIGNAL(destroyed()), SLOT(close()));
 

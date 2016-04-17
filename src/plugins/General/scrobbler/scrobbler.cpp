@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -459,8 +459,7 @@ void ScrobblerAuth::checkSession(const QString &session)
     QMap <QString, QString> params;
     params.insert("api_key", API_KEY);
     params.insert("sk", session);
-    params.insert("method", "user.getRecommendedArtists");
-    params.insert("limit", "1");
+    params.insert("method", "user.getInfo");
 
     QUrl url(m_scrobblerUrl);
     url.setPort(m_scrobblerUrl.startsWith("https") ? 443 : 80);

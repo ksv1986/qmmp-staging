@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -111,7 +111,7 @@ ulong OpusMetaDataModel::readPictureBlockField(QByteArray data, int offset)
 
 VorbisCommentModel::VorbisCommentModel(const QString &path) : TagModel(TagModel::Save)
 {
-    m_file = new TagLib::Ogg::Opus::File (path.toLocal8Bit().constData());
+    m_file = new TagLib::Ogg::Opus::File (QStringToFileName(path));
     m_tag = m_file->tag();
 }
 

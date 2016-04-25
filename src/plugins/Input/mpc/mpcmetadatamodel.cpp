@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,7 +26,7 @@
 
 MPCMetaDataModel::MPCMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
 {
-    m_file = new TagLib::MPC::File (path.toLocal8Bit().constData());
+    m_file = new TagLib::MPC::File (QStringToFileName(path));
     m_tags << new MPCFileTagModel(m_file, TagLib::MPC::File::ID3v1);
     m_tags << new MPCFileTagModel(m_file, TagLib::MPC::File::APE);
 }

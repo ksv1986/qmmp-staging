@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -43,7 +43,7 @@ VorbisMetaDataModel::~VorbisMetaDataModel()
 QHash<QString, QString> VorbisMetaDataModel::audioProperties()
 {
     QHash<QString, QString> ap;
-    TagLib::Ogg::Vorbis::File f (m_path.toLocal8Bit().constData());
+    TagLib::Ogg::Vorbis::File f (QStringToFileName(m_path));
     if(f.audioProperties())
     {
         QString text = QString("%1").arg(f.audioProperties()->length()/60);
@@ -64,7 +64,7 @@ QList<TagModel* > VorbisMetaDataModel::tags()
 
 QPixmap VorbisMetaDataModel::cover()
 {
-    TagLib::Ogg::Vorbis::File file(m_path.toLocal8Bit().constData());
+    TagLib::Ogg::Vorbis::File file(QStringToFileName(m_path));
     TagLib::Ogg::XiphComment *tag = file.tag();
     if(!tag)
         return QPixmap();
@@ -111,7 +111,7 @@ ulong VorbisMetaDataModel::readPictureBlockField(QByteArray data, int offset)
 
 VorbisCommentModel::VorbisCommentModel(const QString &path) : TagModel(TagModel::Save)
 {
-    m_file = new TagLib::Ogg::Vorbis::File (path.toLocal8Bit().constData());
+    m_file = new TagLib::Ogg::Vorbis::File (QStringToFileName(path));
     m_tag = m_file->tag();
 }
 
@@ -212,8 +212,12 @@ void VorbisCommentModel::save()
     if(m_tag)
         m_file->save();
     //taglib bug workarround
+#ifdef Q_OS_WIN
+    QString path = QString::fromStdWString(m_file->name().wstr());
+#else
     QString path = QString::fromLocal8Bit(m_file->name());
+#endif
     delete m_file;
-    m_file = new TagLib::Ogg::Vorbis::File(path.toLocal8Bit().constData());
+    m_file = new TagLib::Ogg::Vorbis::File(QStringToFileName(path));
     m_tag = m_file->tag();
 }

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -127,7 +127,7 @@ VorbisCommentModel::VorbisCommentModel(const QString &path) : TagModel(TagModel:
     m_tag = 0;
     if(path.endsWith(".flac"))
     {
-        m_file = new TagLib::FLAC::File (path.toLocal8Bit().constData());
+        m_file = new TagLib::FLAC::File (QStringToFileName(path));
         m_tag = m_file->xiphComment();
     }
     else if (path.endsWith(".oga"))

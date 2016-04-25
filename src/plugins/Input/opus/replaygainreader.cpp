@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,7 +26,7 @@
 
 ReplayGainReader::ReplayGainReader(const QString &path)
 {
-    TagLib::Ogg::Opus::File fileRef(path.toLocal8Bit ().constData());
+    TagLib::Ogg::Opus::File fileRef(QStringToFileName(path));
     if(fileRef.tag())
         readVorbisComment(fileRef.tag());
 }

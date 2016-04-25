@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,7 +37,7 @@
 
 MPEGMetaDataModel::MPEGMetaDataModel(bool using_rusxmms, const QString &path, QObject *parent) : MetaDataModel(parent)
 {
-    m_file = new TagLib::MPEG::File(path.toLocal8Bit().constData());
+    m_file = new TagLib::MPEG::File(QStringToFileName(path));
     m_tags << new MpegFileTagModel(using_rusxmms, m_file, TagLib::MPEG::File::ID3v1);
     m_tags << new MpegFileTagModel(using_rusxmms, m_file, TagLib::MPEG::File::ID3v2);
     m_tags << new MpegFileTagModel(using_rusxmms, m_file, TagLib::MPEG::File::APE);

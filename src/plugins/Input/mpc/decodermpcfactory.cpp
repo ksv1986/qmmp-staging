@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,18 +30,10 @@
 #include "decoder_mpc.h"
 #include "decodermpcfactory.h"
 
-#ifdef Q_OS_WIN
-#define QStringToFileName(s) TagLib::FileName(reinterpret_cast<const wchar_t *>(s.utf16()))
-#else
-#define QStringToFileName(s) s.toLocal8Bit().constData()
-#endif
-
-
 // DecoderMPCFactory
 
 bool DecoderMPCFactory::supports(const QString &source) const
 {
-
     return (source.right(4).toLower() == ".mpc");
 }
 

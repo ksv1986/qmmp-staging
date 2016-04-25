@@ -43,7 +43,7 @@ OpusMetaDataModel::~OpusMetaDataModel()
 QHash<QString, QString> OpusMetaDataModel::audioProperties()
 {
     QHash<QString, QString> ap;
-    TagLib::Ogg::Opus::File f (m_path.toLocal8Bit().constData());
+    TagLib::Ogg::Opus::File f (QStringToFileName(m_path));
     if(f.audioProperties())
     {
         QString text = QString("%1").arg(f.audioProperties()->length()/60);
@@ -64,7 +64,7 @@ QList<TagModel* > OpusMetaDataModel::tags()
 
 QPixmap OpusMetaDataModel::cover()
 {
-    TagLib::Ogg::Opus::File file(m_path.toLocal8Bit().constData());
+    TagLib::Ogg::Opus::File file(QStringToFileName(m_path));
     TagLib::Ogg::XiphComment *tag = file.tag();
     if(!tag)
         return QPixmap();
@@ -212,8 +212,12 @@ void VorbisCommentModel::save()
     if(m_tag)
         m_file->save();
     //taglib bug workarround
+#ifdef Q_OS_WIN
+    QString path = QString::fromStdWString(m_file->name().wstr());
+#else
     QString path = QString::fromLocal8Bit(m_file->name());
+#endif
     delete m_file;
-    m_file = new TagLib::Ogg::Opus::File(path.toLocal8Bit().constData());
+    m_file = new TagLib::Ogg::Opus::File(QStringToFileName(path));
     m_tag = m_file->tag();
 }

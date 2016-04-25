@@ -60,13 +60,13 @@ QHash<QString, QString> FLACMetaDataModel::audioProperties()
     qint64 size = 0;
     if(m_path.endsWith(".flac", Qt::CaseInsensitive))
     {
-        flacFile = new TagLib::FLAC::File(m_path.toLocal8Bit().constData());
+        flacFile = new TagLib::FLAC::File(QStringToFileName(m_path));
         taglib_ap = flacFile->audioProperties();
         size = flacFile->length();
     }
     else if(m_path.endsWith(".oga", Qt::CaseInsensitive))
     {
-        oggFlacFile = new TagLib::Ogg::FLAC::File(m_path.toLocal8Bit().constData());
+        oggFlacFile = new TagLib::Ogg::FLAC::File(QStringToFileName(m_path));
         taglib_ap = oggFlacFile->audioProperties();
         size = oggFlacFile->length();
     }
@@ -132,7 +132,7 @@ VorbisCommentModel::VorbisCommentModel(const QString &path) : TagModel(TagModel:
     }
     else if (path.endsWith(".oga"))
     {
-        m_ogg_file = new TagLib::Ogg::FLAC::File(path.toLocal8Bit().constData());
+        m_ogg_file = new TagLib::Ogg::FLAC::File(QStringToFileName(path));
         m_tag = m_ogg_file->tag();
     }
 }

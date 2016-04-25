@@ -268,7 +268,7 @@ bool DecoderFLAC::initialize()
             QString p = m_path;
             p.remove("flac://");
             p.remove(QRegExp("#\\d+$"));
-            TagLib::FLAC::File fileRef(p.toLocal8Bit().constData());
+            TagLib::FLAC::File fileRef(QStringToFileName(p));
             //looking for cuesheet comment
             TagLib::Ogg::XiphComment *xiph_comment = fileRef.xiphComment();
 

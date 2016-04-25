@@ -31,7 +31,7 @@
 #include "decodermpcfactory.h"
 
 #ifdef Q_OS_WIN
-#define QStringToFileName(s) TagLib::FileName(reinterpret_cast<const wchar_t *>(s.utf16())
+#define QStringToFileName(s) TagLib::FileName(reinterpret_cast<const wchar_t *>(s.utf16()))
 #else
 #define QStringToFileName(s) s.toLocal8Bit().constData()
 #endif

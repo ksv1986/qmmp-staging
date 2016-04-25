@@ -39,6 +39,12 @@
 #include "decoder_mad.h"
 #include "decodermadfactory.h"
 
+#ifdef Q_OS_WIN
+#define QStringToFileName(s) TagLib::FileName(reinterpret_cast<const wchar_t *>(s.utf16())
+#else
+#define QStringToFileName(s) s.toLocal8Bit().constData()
+#endif
+
 // DecoderMADFactory
 
 DecoderMADFactory::DecoderMADFactory()
@@ -128,7 +134,7 @@ QList<FileInfo *> DecoderMADFactory::createPlayList(const QString &fileName, boo
     TagLib::Tag *tag = 0;
 
 #if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
-    TagLib::FileStream stream(fileName.toLocal8Bit().constData(), true);
+    TagLib::FileStream stream(QStringToFileName(fileName), true);
     TagLib::MPEG::File fileRef(&stream, TagLib::ID3v2::FrameFactory::instance());
 #else
     TagLib::MPEG::File fileRef(fileName.toLocal8Bit ().constData());

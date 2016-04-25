@@ -30,6 +30,12 @@
 #include "decoder_mpc.h"
 #include "decodermpcfactory.h"
 
+#ifdef Q_OS_WIN
+#define QStringToFileName(s) TagLib::FileName(reinterpret_cast<const wchar_t *>(s.utf16())
+#else
+#define QStringToFileName(s) s.toLocal8Bit().constData()
+#endif
+
 
 // DecoderMPCFactory
 
@@ -79,10 +85,10 @@ QList<FileInfo *> DecoderMPCFactory::createPlayList(const QString &fileName, boo
     FileInfo *info = new FileInfo(fileName);
 
 #if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
-    TagLib::FileStream stream(fileName.toLocal8Bit().constData(), true);
+    TagLib::FileStream stream(QStringToFileName(fileName), true);
     TagLib::MPC::File fileRef(&stream);
 #else
-    TagLib::MPC::File fileRef(fileName.toLocal8Bit().constData());
+    TagLib::MPC::File fileRef(QStringToFileName(fileName));
 #endif
 
     TagLib::APE::Tag *tag = useMetaData ? fileRef.APETag() : 0;

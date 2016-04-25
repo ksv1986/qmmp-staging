@@ -29,6 +29,12 @@
 #include "vorbismetadatamodel.h"
 #include "decodervorbisfactory.h"
 
+#ifdef Q_OS_WIN
+#define QStringToFileName(s) TagLib::FileName(reinterpret_cast<const wchar_t *>(s.utf16())
+#else
+#define QStringToFileName(s) s.toLocal8Bit().constData()
+#endif
+
 
 // DecoderOggFactory
 
@@ -82,10 +88,10 @@ QList<FileInfo *> DecoderVorbisFactory::createPlayList(const QString &fileName, 
     FileInfo *info = new FileInfo(fileName);
 
 #if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
-    TagLib::FileStream stream(fileName.toLocal8Bit().constData(), true);
+    TagLib::FileStream stream(QStringToFileName(fileName), true);
     TagLib::Ogg::Vorbis::File fileRef(&stream);
 #else
-    TagLib::Ogg::Vorbis::File fileRef(fileName.toLocal8Bit().constData());
+    TagLib::Ogg::Vorbis::File fileRef(QStringToFileName(fileName));
 #endif
     TagLib::Ogg::XiphComment *tag = useMetaData ? fileRef.tag() : 0;
 

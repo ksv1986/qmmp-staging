@@ -26,6 +26,12 @@
 #include "opusmetadatamodel.h"
 #include "decoderopusfactory.h"
 
+#ifdef Q_OS_WIN
+#define QStringToFileName(s) TagLib::FileName(reinterpret_cast<const wchar_t *>(s.utf16())
+#else
+#define QStringToFileName(s) s.toLocal8Bit().constData()
+#endif
+
 
 // DecoderOpusFactory
 bool DecoderOpusFactory::supports(const QString &source) const
@@ -76,7 +82,7 @@ QList<FileInfo *> DecoderOpusFactory::createPlayList(const QString &fileName, bo
 {
     FileInfo *info = new FileInfo(fileName);
 
-    TagLib::Ogg::Opus::File fileRef(fileName.toLocal8Bit().constData());
+    TagLib::Ogg::Opus::File fileRef(QStringToFileName(fileName));
     TagLib::Ogg::XiphComment *tag = useMetaData ? fileRef.tag() : 0;
 
     if (tag && !tag->isEmpty())

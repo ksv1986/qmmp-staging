@@ -126,7 +126,7 @@ QList<FileInfo *> DecoderFLACFactory::createPlayList(const QString &fileName, bo
 #if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
         oggFlacFile = new TagLib::Ogg::FLAC::File(&stream);
 #else
-        oggFlacFile = new TagLib::Ogg::FLAC::File(fileName.toLocal8Bit().constData());
+        oggFlacFile = new TagLib::Ogg::FLAC::File(QStringToFileName(fileName));
 #endif
         tag = useMetaData ? oggFlacFile->tag() : 0;
         ap = oggFlacFile->audioProperties();

@@ -34,6 +34,12 @@
 #include "flacmetadatamodel.h"
 #include "decoderflacfactory.h"
 
+#ifdef Q_OS_WIN
+#define QStringToFileName(s) TagLib::FileName(reinterpret_cast<const wchar_t *>(s.utf16())
+#else
+#define QStringToFileName(s) s.toLocal8Bit().constData()
+#endif
+
 
 // DecoderFLACFactory
 
@@ -102,7 +108,7 @@ QList<FileInfo *> DecoderFLACFactory::createPlayList(const QString &fileName, bo
     }
 
 #if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
-    TagLib::FileStream stream(fileName.toLocal8Bit().constData(), true);
+    TagLib::FileStream stream(QStringToFileName(fileName), true);
 #endif
 
     if(fileName.endsWith(".flac", Qt::CaseInsensitive))
@@ -110,7 +116,7 @@ QList<FileInfo *> DecoderFLACFactory::createPlayList(const QString &fileName, bo
 #if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
         flacFile = new TagLib::FLAC::File(&stream, TagLib::ID3v2::FrameFactory::instance());
 #else
-        flacFile = new TagLib::FLAC::File(fileName.toLocal8Bit().constData());
+        flacFile = new TagLib::FLAC::File(QStringToFileName(fileName));
 #endif
         tag = useMetaData ? flacFile->xiphComment() : 0;
         ap = flacFile->audioProperties();

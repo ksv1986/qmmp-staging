@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -190,7 +190,11 @@ QList<FileInfo *> DecoderFFmpegFactory::createPlayList(const QString &fileName, 
     QList <FileInfo*> list;
     AVFormatContext *in = 0;
 
+#ifdef Q_OS_WIN
+    if (avformat_open_input(&in,fileName.toUtf8().constData(), 0, 0) < 0)
+#else
     if (avformat_open_input(&in,fileName.toLocal8Bit().constData(), 0, 0) < 0)
+#endif
     {
         qDebug("DecoderFFmpegFactory: unable to open file");
         return list;

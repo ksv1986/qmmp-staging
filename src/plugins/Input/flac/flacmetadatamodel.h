@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,12 +40,13 @@ public:
 private:
     QString m_path;
     QList<TagModel* > m_tags;
+    TagLib::File *m_file;
 };
 
 class VorbisCommentModel : public TagModel
 {
 public:
-    VorbisCommentModel(const QString &path);
+    VorbisCommentModel(TagLib::Ogg::XiphComment *tag, TagLib::File *file);
     ~VorbisCommentModel();
     const QString name();
     const QString value(Qmmp::MetaData key);
@@ -53,8 +54,7 @@ public:
     void save();
 
 private:
-    TagLib::FLAC::File *m_file;
-    TagLib::Ogg::FLAC::File *m_ogg_file;
+    TagLib::File *m_file;
     TagLib::Ogg::XiphComment *m_tag;
 };
 

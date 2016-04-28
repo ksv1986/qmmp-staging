@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,13 +38,14 @@ public:
 private:
     QString m_path;
     QList<TagModel* > m_tags;
+    TagLib::Ogg::Opus::File *m_file;
     ulong readPictureBlockField(QByteArray data, int offset);
 };
 
 class VorbisCommentModel : public TagModel
 {
 public:
-    VorbisCommentModel(const QString &path);
+    VorbisCommentModel(TagLib::Ogg::Opus::File *file);
     ~VorbisCommentModel();
     const QString name();
     const QString value(Qmmp::MetaData key);

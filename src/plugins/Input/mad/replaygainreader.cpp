@@ -25,11 +25,20 @@
 #include <taglib/id3v1tag.h>
 #include <taglib/id3v2header.h>
 #include <taglib/textidentificationframe.h>
+#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
+#include <taglib/tfilestream.h>
+#include <taglib/id3v2framefactory.h>
+#endif
 #include "replaygainreader.h"
 
 ReplayGainReader::ReplayGainReader(const QString &path)
 {
+#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
+    TagLib::FileStream stream(QStringToFileName(path), true);
+    TagLib::MPEG::File fileRef(&stream, TagLib::ID3v2::FrameFactory::instance());
+#else
     TagLib::MPEG::File fileRef(QStringToFileName(path));
+#endif
     if(fileRef.ID3v2Tag())
         readID3v2(fileRef.ID3v2Tag());
     if(m_values.isEmpty() && fileRef.APETag())

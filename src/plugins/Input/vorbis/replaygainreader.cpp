@@ -22,11 +22,21 @@
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/vorbisfile.h>
+#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
+#include <taglib/tfilestream.h>
+#include <taglib/id3v2framefactory.h>
+#endif
 #include "replaygainreader.h"
 
 ReplayGainReader::ReplayGainReader(const QString &path)
 {
+#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
+    TagLib::FileStream stream(QStringToFileName(path), true);
+    TagLib::Ogg::Vorbis::File fileRef(&stream);
+#else
     TagLib::Ogg::Vorbis::File fileRef(QStringToFileName(path));
+#endif
+
     if(fileRef.tag())
         readVorbisComment(fileRef.tag());
 }

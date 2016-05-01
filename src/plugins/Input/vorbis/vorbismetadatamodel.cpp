@@ -31,28 +31,35 @@
 VorbisMetaDataModel::VorbisMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
 {
     m_path = path;
-    m_tags << new VorbisCommentModel(path);
+    m_file = new TagLib::Ogg::Vorbis::File(QStringToFileName(path));
+    m_tag = m_file->tag();
+    m_tags << new VorbisCommentModel(this);
 }
 
 VorbisMetaDataModel::~VorbisMetaDataModel()
 {
     while(!m_tags.isEmpty())
         delete m_tags.takeFirst();
+
+    if(m_file)
+    {
+        delete m_file;
+        m_file = 0;
+    }
 }
 
 QHash<QString, QString> VorbisMetaDataModel::audioProperties()
 {
     QHash<QString, QString> ap;
-    TagLib::Ogg::Vorbis::File f (QStringToFileName(m_path));
-    if(f.audioProperties())
+    if(m_file->audioProperties())
     {
-        QString text = QString("%1").arg(f.audioProperties()->length()/60);
-        text +=":"+QString("%1").arg(f.audioProperties()->length()%60,2,10,QChar('0'));
+        QString text = QString("%1").arg(m_file->audioProperties()->length()/60);
+        text +=":"+QString("%1").arg(m_file->audioProperties()->length()%60,2,10,QChar('0'));
         ap.insert(tr("Length"), text);
-        ap.insert(tr("Sample rate"), QString("%1 " + tr("Hz")).arg(f.audioProperties()->sampleRate()));
-        ap.insert(tr("Channels"), QString("%1").arg(f.audioProperties()->channels()));
-        ap.insert(tr("Bitrate"), QString("%1 " + tr("kbps")).arg(f.audioProperties()->bitrate()));
-        ap.insert(tr("File size"), QString("%1 "+tr("KB")).arg(f.length()/1024));
+        ap.insert(tr("Sample rate"), QString("%1 " + tr("Hz")).arg(m_file->audioProperties()->sampleRate()));
+        ap.insert(tr("Channels"), QString("%1").arg(m_file->audioProperties()->channels()));
+        ap.insert(tr("Bitrate"), QString("%1 " + tr("kbps")).arg(m_file->audioProperties()->bitrate()));
+        ap.insert(tr("File size"), QString("%1 "+tr("KB")).arg(m_file->length()/1024));
     }
     return ap;
 }
@@ -64,11 +71,9 @@ QList<TagModel* > VorbisMetaDataModel::tags()
 
 QPixmap VorbisMetaDataModel::cover()
 {
-    TagLib::Ogg::Vorbis::File file(QStringToFileName(m_path));
-    TagLib::Ogg::XiphComment *tag = file.tag();
-    if(!tag)
+    if(!m_tag || m_tag->isEmpty())
         return QPixmap();
-    TagLib::StringList list = tag->fieldListMap()["METADATA_BLOCK_PICTURE"];
+    TagLib::StringList list = m_tag->fieldListMap()["METADATA_BLOCK_PICTURE"];
     if(list.isEmpty())
         return QPixmap();
     for(uint i = 0; i < list.size(); ++i)
@@ -109,16 +114,13 @@ ulong VorbisMetaDataModel::readPictureBlockField(QByteArray data, int offset)
 
 }
 
-VorbisCommentModel::VorbisCommentModel(const QString &path) : TagModel(TagModel::Save)
+VorbisCommentModel::VorbisCommentModel(VorbisMetaDataModel *model) : TagModel(TagModel::Save)
 {
-    m_file = new TagLib::Ogg::Vorbis::File (QStringToFileName(path));
-    m_tag = m_file->tag();
+    m_model = model;
 }
 
 VorbisCommentModel::~VorbisCommentModel()
-{
-    delete m_file;
-}
+{}
 
 const QString VorbisCommentModel::name()
 {
@@ -127,97 +129,99 @@ const QString VorbisCommentModel::name()
 
 const QString VorbisCommentModel::value(Qmmp::MetaData key)
 {
-    if(!m_tag)
+    if(!m_model->m_tag || m_model->m_tag->isEmpty())
         return QString();
+
+    TagLib::Ogg::XiphComment *tag  = m_model->m_tag;
     switch((int) key)
     {
     case Qmmp::TITLE:
-        return TStringToQString_qt4(m_tag->title());
+        return TStringToQString_qt4(tag->title());
     case Qmmp::ARTIST:
-        return TStringToQString_qt4(m_tag->artist());
+        return TStringToQString_qt4(tag->artist());
     case Qmmp::ALBUMARTIST:
-        if(m_tag->fieldListMap()["ALBUMARTIST"].isEmpty())
+        if(tag->fieldListMap()["ALBUMARTIST"].isEmpty())
             return QString();
         else
-            return TStringToQString_qt4(m_tag->fieldListMap()["ALBUMARTIST"].front());
+            return TStringToQString_qt4(tag->fieldListMap()["ALBUMARTIST"].front());
     case Qmmp::ALBUM:
-        return TStringToQString_qt4(m_tag->album());
+        return TStringToQString_qt4(tag->album());
     case Qmmp::COMMENT:
-        return TStringToQString_qt4(m_tag->comment());
+        return TStringToQString_qt4(tag->comment());
     case Qmmp::GENRE:
-        return TStringToQString_qt4(m_tag->genre());
+        return TStringToQString_qt4(tag->genre());
     case Qmmp::COMPOSER:
-        if(m_tag->fieldListMap()["COMPOSER"].isEmpty())
+        if(tag->fieldListMap()["COMPOSER"].isEmpty())
             return QString();
         else
-            return TStringToQString_qt4(m_tag->fieldListMap()["COMPOSER"].front());
+            return TStringToQString_qt4(tag->fieldListMap()["COMPOSER"].front());
     case Qmmp::YEAR:
-        return QString::number(m_tag->year());
+        return QString::number(tag->year());
     case Qmmp::TRACK:
-        return QString::number(m_tag->track());
+        return QString::number(tag->track());
     case  Qmmp::DISCNUMBER:
-        if(m_tag->fieldListMap()["DISCNUMBER"].isEmpty())
+        if(tag->fieldListMap()["DISCNUMBER"].isEmpty())
             return QString();
         else
-            return TStringToQString_qt4(m_tag->fieldListMap()["DISCNUMBER"].front());
+            return TStringToQString_qt4(tag->fieldListMap()["DISCNUMBER"].front());
     }
     return QString();
 }
 
 void VorbisCommentModel::setValue(Qmmp::MetaData key, const QString &value)
 {
-    if(!m_tag)
+    if(!m_model->m_tag || m_model->m_tag->isEmpty())
         return;
+
+    TagLib::Ogg::XiphComment *tag = m_model->m_tag;
 
     TagLib::String str = QStringToTString_qt4(value);
 
     switch((int) key)
     {
     case Qmmp::TITLE:
-        m_tag->setTitle(str);
+        tag->setTitle(str);
         return;
     case Qmmp::ARTIST:
-        m_tag->setArtist(str);
+        tag->setArtist(str);
         return;
     case Qmmp::ALBUM:
-        m_tag->setAlbum(str);
+        tag->setAlbum(str);
         return;
     case Qmmp::ALBUMARTIST:
-        m_tag->addField("ALBUMARTIST", str, true);
+        tag->addField("ALBUMARTIST", str, true);
         return;
     case Qmmp::COMMENT:
-        m_tag->setComment(str);
+        tag->setComment(str);
         return;
     case Qmmp::GENRE:
-        m_tag->setGenre(str);
+        tag->setGenre(str);
         return;
     case Qmmp::COMPOSER:
-        m_tag->addField("COMPOSER", str, true);
+        tag->addField("COMPOSER", str, true);
         return;
     case Qmmp::TRACK:
-        m_tag->setTrack(value.toInt());
+        tag->setTrack(value.toInt());
         return;
     case Qmmp::YEAR:
-        m_tag->setYear(value.toInt());
+        tag->setYear(value.toInt());
         return;
     case Qmmp::DISCNUMBER:
         value == "0" ?
-        m_tag->removeField("DISCNUMBER"):
-        m_tag->addField("DISCNUMBER", str, true);
+        tag->removeField("DISCNUMBER"):
+        tag->addField("DISCNUMBER", str, true);
     }
 }
 
 void VorbisCommentModel::save()
 {
-    if(m_tag)
-        m_file->save();
+    if(m_model->m_tag)
+        m_model->m_file->save();
+
+#if ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION <= 10))
     //taglib bug workarround
-#ifdef Q_OS_WIN
-    QString path = QString::fromStdWString(m_file->name().wstr());
-#else
-    QString path = QString::fromLocal8Bit(m_file->name());
+    delete m_model->m_file;
+    m_model->m_file = new TagLib::Ogg::Vorbis::File(QStringToFileName(m_model->m_path));
+    m_model->m_tag = m_model->m_file->tag();
 #endif
-    delete m_file;
-    m_file = new TagLib::Ogg::Vorbis::File(QStringToFileName(path));
-    m_tag = m_file->tag();
 }

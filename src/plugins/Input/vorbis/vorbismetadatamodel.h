@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,18 +25,24 @@
 #include <taglib/xiphcomment.h>
 #include <qmmp/metadatamodel.h>
 
+class VorbisCommentModel;
+
 class VorbisMetaDataModel : public MetaDataModel
 {
 Q_OBJECT
 public:
     VorbisMetaDataModel(const QString &path, QObject *parent);
     ~VorbisMetaDataModel();
+    friend class VorbisCommentModel;
+
     QHash<QString, QString> audioProperties();
     QList<TagModel* > tags();
     QPixmap cover();
 
 private:
     QString m_path;
+    TagLib::Ogg::Vorbis::File *m_file;
+    TagLib::Ogg::XiphComment *m_tag;
     QList<TagModel* > m_tags;
     ulong readPictureBlockField(QByteArray data, int offset);
 };
@@ -44,7 +50,7 @@ private:
 class VorbisCommentModel : public TagModel
 {
 public:
-    VorbisCommentModel(const QString &path);
+    VorbisCommentModel(VorbisMetaDataModel *model);
     ~VorbisCommentModel();
     const QString name();
     const QString value(Qmmp::MetaData key);
@@ -52,8 +58,7 @@ public:
     void save();
 
 private:
-    TagLib::Ogg::Vorbis::File *m_file;
-    TagLib::Ogg::XiphComment *m_tag;
+    VorbisMetaDataModel *m_model;
 };
 
 #endif // VORBISMETADATAMODEL_H

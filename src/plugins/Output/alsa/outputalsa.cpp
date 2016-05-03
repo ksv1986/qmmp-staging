@@ -536,16 +536,12 @@ int VolumeALSA::getMixer(snd_mixer_t **mixer, QString card)
         return -1;
     }
 
-    char *dev = strdup(card.toAscii().data());
-
-    if ((err = snd_mixer_attach(*mixer, dev)) < 0)
+    if ((err = snd_mixer_attach(*mixer, card.toAscii().constData())) < 0)
     {
         qWarning("OutputALSA: Attaching to mixer %s failed: %s",
-                 dev, snd_strerror(-err));
-        free(dev);
+                 qPrintable(card), snd_strerror(-err));
         return -1;
     }
-    free(dev);
     if ((err = snd_mixer_selem_register(*mixer, NULL, NULL)) < 0)
     {
         qWarning("OutputALSA: Failed to register mixer: %s",

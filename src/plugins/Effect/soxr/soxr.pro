@@ -12,21 +12,28 @@ TARGET=$$PLUGINS_PREFIX/Effect/soxr
 QMAKE_CLEAN =$$PLUGINS_PREFIX/Effect/libsoxr.so
 INCLUDEPATH += ../../../
 CONFIG += warn_on \
-plugin \
-link_pkgconfig
+plugin
 
-PKGCONFIG += soxr
 TEMPLATE = lib
-QMAKE_LIBDIR += ../../../../lib
-LIBS += -lqmmp -L/usr/lib -I/usr/include
 
 RESOURCES = translations/translations.qrc
 
-isEmpty(LIB_DIR){
-    LIB_DIR = /lib
+unix {
+    isEmpty(LIB_DIR){
+        LIB_DIR = /lib
+    }
+    target.path = $$LIB_DIR/qmmp/Effect
+    INSTALLS += target
+    CONFIG += link_pkgconfig
+    PKGCONFIG += soxr
+    QMAKE_LIBDIR += ../../../../lib
+    LIBS += -lqmmp -L/usr/lib -I/usr/include
 }
-target.path = $$LIB_DIR/qmmp/Effect
-INSTALLS += target
+
+win32 {
+    QMAKE_LIBDIR += ../../../../bin
+    LIBS += -lqmmp0 -lsoxr
+}
 
 FORMS += settingsdialog.ui
 

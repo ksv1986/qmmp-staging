@@ -810,7 +810,7 @@
         <translation>Dźwięk</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="446"/>
+        <location filename="../mainwindow.cpp" line="442"/>
         <source>Tools</source>
         <translation>Narzędzia</translation>
     </message>

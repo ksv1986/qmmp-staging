@@ -960,22 +960,22 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="608"/>
-        <location filename="../mainwindow.cpp" line="653"/>
+        <location filename="../mainwindow.cpp" line="649"/>
         <source>Actions</source>
         <translation>Actions</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="686"/>
+        <location filename="../mainwindow.cpp" line="682"/>
         <source>Add new playlist</source>
         <translation>Ajouter une nouvelle liste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="692"/>
+        <location filename="../mainwindow.cpp" line="688"/>
         <source>Show all tabs</source>
         <translation>Montrer tous les onglets</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="864"/>
+        <location filename="../mainwindow.cpp" line="860"/>
         <source>Buffering: %1%</source>
         <translation>Mise en tampon : %1 %</translation>
     </message>

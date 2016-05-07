@@ -960,22 +960,22 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="608"/>
-        <location filename="../mainwindow.cpp" line="653"/>
+        <location filename="../mainwindow.cpp" line="649"/>
         <source>Actions</source>
         <translation>Ações</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="686"/>
+        <location filename="../mainwindow.cpp" line="682"/>
         <source>Add new playlist</source>
         <translation>Adicionar nova lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="692"/>
+        <location filename="../mainwindow.cpp" line="688"/>
         <source>Show all tabs</source>
         <translation>Mostrar todos separadores</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="864"/>
+        <location filename="../mainwindow.cpp" line="860"/>
         <source>Buffering: %1%</source>
         <translation>Processamento: %1%</translation>
     </message>

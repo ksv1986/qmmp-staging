@@ -500,7 +500,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="823"/>
         <source>Volume adjustment step:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шаг регулировки громкости:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="764"/>

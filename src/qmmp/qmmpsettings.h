@@ -162,8 +162,11 @@ public:
      * @param msec Buffer size in milliseconds
      */
     void setBufferSize(int msec);
+
+    void setVolumeStep(int step);
+    int volumeStep() const;
     /*!
-     * Enables/Desables file type determination by content
+     * Enables/Disables file type determination by content
      * @param enabled State of the content based type determination
      * (\b true - enabled, \b false - disabled)
      */
@@ -215,6 +218,7 @@ private:
     bool m_aud_software_volume;
     bool m_aud_dithering;
     Qmmp::AudioFormat m_aud_format;
+    int m_volume_step;
     //cover settings
     QStringList m_cover_inc;
     QStringList m_cover_exclude;

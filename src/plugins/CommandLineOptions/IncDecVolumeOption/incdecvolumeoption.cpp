@@ -51,9 +51,9 @@ QString IncDecVolumeCommandLineOption::executeCommand(const QString& opt_str, co
     Q_UNUSED(args);
 
     if (opt_str == "--volume-inc")
-        SoundCore::instance()->changeVolume(5);
+        SoundCore::instance()->volumeUp();
     else if (opt_str == "--volume-dec")
-        SoundCore::instance()->changeVolume(-5);
+        SoundCore::instance()->volumeDown();
 
     return QString();
 }

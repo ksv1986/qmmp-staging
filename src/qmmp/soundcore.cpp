@@ -181,6 +181,16 @@ void SoundCore::setVolume(int volume)
     m_volumeControl->setVolume(volume);
 }
 
+void SoundCore::volumeUp()
+{
+    changeVolume(QmmpSettings::instance()->volumeStep());
+}
+
+void SoundCore::volumeDown()
+{
+    changeVolume(-QmmpSettings::instance()->volumeStep());
+}
+
 void SoundCore::setBalance(int balance)
 {
     setMuted(false);

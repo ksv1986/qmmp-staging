@@ -152,6 +152,7 @@ void ConfigDialog::readSettings()
     m_ui->preampDoubleSpinBox->setValue(gs->replayGainPreamp());
     m_ui->defaultGainDoubleSpinBox->setValue(gs->replayGainDefaultGain());
     //audio
+    m_ui->volumeStepSpinBox->setValue(gs->volumeStep());
     m_ui->softVolumeCheckBox->setChecked(gs->useSoftVolume());
     m_ui->bitDepthComboBox->setCurrentIndex(m_ui->bitDepthComboBox->findData(gs->outputFormat()));
     m_ui->ditheringCheckBox->setChecked(gs->useDithering());
@@ -418,6 +419,7 @@ void ConfigDialog::saveSettings()
                          m_ui->ditheringCheckBox->isChecked());
     gs->setBufferSize(m_ui->bufferSizeSpinBox->value());
     gs->setDetermineFileTypeByContent(m_ui->byContentCheckBox->isChecked());
+    gs->setVolumeStep(m_ui->volumeStepSpinBox->value());
     QList<QVariant> var_sizes;
     var_sizes << m_ui->splitter->sizes().first() << m_ui->splitter->sizes().last();
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);

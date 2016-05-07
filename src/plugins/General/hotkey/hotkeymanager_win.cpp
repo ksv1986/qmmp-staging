@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -168,10 +168,10 @@ public:
                 UiHelper::instance()->toggleVisibility();
                 break;
             case Hotkey::VOLUME_UP:
-                core->changeVolume(+5);
+                core->volumeUp();
                 break;
             case Hotkey::VOLUME_DOWN:
-                core->changeVolume(-5);
+                core->volumeDown();
                 break;
             case Hotkey::FORWARD:
                 core->seek(core->elapsed() + 5000);

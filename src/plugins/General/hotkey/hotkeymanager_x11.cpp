@@ -179,10 +179,10 @@ bool HotkeyManager::eventFilter(QObject* o, QEvent* e)
                 UiHelper::instance()->toggleVisibility();
                 break;
             case Hotkey::VOLUME_UP:
-                core->changeVolume(+5);
+                core->volumeUp();
                 break;
             case Hotkey::VOLUME_DOWN:
-                core->changeVolume(-5);
+                core->volumeDown();
                 break;
             case Hotkey::FORWARD:
                 core->seek(core->elapsed() + 5000);

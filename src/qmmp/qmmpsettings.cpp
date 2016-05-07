@@ -44,6 +44,7 @@ QmmpSettings::QmmpSettings(QObject *parent) : QObject(parent)
     m_aud_software_volume = settings.value("Output/software_volume", false).toBool();
     m_aud_format = (Qmmp::AudioFormat) settings.value("Output/format", Qmmp::PCM_S16LE).toInt();
     m_aud_dithering = settings.value("Output/dithering", true).toBool();
+    m_volume_step = settings.value("Output/volume_step", 5).toInt();
     //cover settings
     settings.beginGroup("Cover");
     m_cover_inc = settings.value("include", (QStringList() << "*.jpg" << "*.png")).toStringList();
@@ -211,6 +212,16 @@ void QmmpSettings::setBufferSize(int msec)
     m_buffer_size = msec;
 }
 
+void QmmpSettings::setVolumeStep(int step)
+{
+    m_volume_step = qBound(1, step, 20);
+}
+
+int QmmpSettings::volumeStep() const
+{
+    return m_volume_step;
+}
+
 void QmmpSettings::sync()
 {
     qDebug("%s", Q_FUNC_INFO);
@@ -226,6 +237,7 @@ void QmmpSettings::sync()
     settings.setValue("Output/software_volume", m_aud_software_volume);
     settings.setValue("Output/format", m_aud_format);
     settings.setValue("Output/dithering", m_aud_dithering);
+    settings.setValue("Output/volume_step", m_volume_step);
     //cover settings
     settings.beginGroup("Cover");
     settings.setValue("include", m_cover_inc);

@@ -432,12 +432,8 @@ void MainWindow::createActions()
             ACTION(ActionManager::SHUFFLE), SLOT(setChecked(bool)));
 
     QMenu *audioMenu = m_mainMenu->addMenu(tr("Audio"));
-    QSignalMapper *mapper = new QSignalMapper(this);
-    mapper->setMapping(ACTION(ActionManager::VOL_ENC), 5);
-    mapper->setMapping(ACTION(ActionManager::VOL_DEC), -5);
-    connect(mapper, SIGNAL(mapped(int)), m_core, SLOT(changeVolume(int)));
-    audioMenu->addAction(SET_ACTION(ActionManager::VOL_ENC, mapper, SLOT(map())));
-    audioMenu->addAction(SET_ACTION(ActionManager::VOL_DEC, mapper, SLOT(map())));
+    audioMenu->addAction(SET_ACTION(ActionManager::VOL_ENC, m_core, SLOT(volumeUp())));
+    audioMenu->addAction(SET_ACTION(ActionManager::VOL_DEC, m_core, SLOT(volumeDown())));
     audioMenu->addAction(SET_ACTION(ActionManager::VOL_MUTE, m_core, SLOT(setMuted(bool))));
     connect(m_core, SIGNAL(mutedChanged(bool)), ACTION(ActionManager::VOL_MUTE), SLOT(setChecked(bool)));
 

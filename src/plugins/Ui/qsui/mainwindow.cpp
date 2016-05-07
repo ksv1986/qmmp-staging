@@ -630,12 +630,8 @@ void MainWindow::createActions()
     m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::STOP_AFTER_SELECTED, m_pl_manager,
                                             SLOT(stopAfterSelected())));
     m_ui.menuPlayback->addSeparator();
-    signalMapper = new QSignalMapper(this);
-    signalMapper->setMapping(ACTION(ActionManager::VOL_ENC), 5);
-    signalMapper->setMapping(ACTION(ActionManager::VOL_DEC), -5);
-    connect(signalMapper, SIGNAL(mapped(int)), m_core, SLOT(changeVolume(int)));
-    m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::VOL_ENC, signalMapper, SLOT(map())));
-    m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::VOL_DEC, signalMapper, SLOT(map())));
+    m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::VOL_ENC, m_core, SLOT(volumeUp())));
+    m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::VOL_DEC, m_core, SLOT(volumeDown())));
     m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::VOL_MUTE, m_core, SLOT(setMuted(bool))));
     connect(m_core, SIGNAL(mutedChanged(bool)), ACTION(ActionManager::VOL_MUTE), SLOT(setChecked(bool)));
 

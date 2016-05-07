@@ -61,23 +61,23 @@
 <context>
     <name>TwoPanelFileDialogImpl</name>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="322"/>
-        <location filename="../twopanelfiledialogimpl.cpp" line="338"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="326"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="342"/>
         <source>Add</source>
         <translation>Додати</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="340"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="344"/>
         <source>Directories</source>
         <translation>Теки</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="352"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="356"/>
         <source>Save</source>
         <translation>Зберегти</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="459"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="463"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 вже існує.

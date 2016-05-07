@@ -4,32 +4,32 @@
 <context>
     <name>DecoderVorbisFactory</name>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="53"/>
+        <location filename="../decodervorbisfactory.cpp" line="52"/>
         <source>Ogg Vorbis Plugin</source>
         <translation>Πρόσθετο Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="56"/>
+        <location filename="../decodervorbisfactory.cpp" line="55"/>
         <source>Ogg Vorbis Files</source>
         <translation>Αρχεία Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="135"/>
+        <location filename="../decodervorbisfactory.cpp" line="134"/>
         <source>About Ogg Vorbis Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="136"/>
+        <location filename="../decodervorbisfactory.cpp" line="135"/>
         <source>Qmmp Ogg Vorbis Audio Plugin</source>
         <translation>Qmmp πρόσθετο ήχου Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="137"/>
+        <location filename="../decodervorbisfactory.cpp" line="136"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="138"/>
+        <location filename="../decodervorbisfactory.cpp" line="137"/>
         <source>Source code based on mq3 project</source>
         <translation>Ο πηγαίος κώδικας έχει βασιστεί στο έργο mq3</translation>
     </message>
@@ -37,42 +37,42 @@
 <context>
     <name>VorbisMetaDataModel</name>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="51"/>
+        <location filename="../vorbismetadatamodel.cpp" line="58"/>
         <source>Length</source>
         <translation>Διάρκεια</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="52"/>
+        <location filename="../vorbismetadatamodel.cpp" line="59"/>
         <source>Sample rate</source>
         <translation>Ρυθμός δειγματοληψίας</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="52"/>
+        <location filename="../vorbismetadatamodel.cpp" line="59"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="53"/>
+        <location filename="../vorbismetadatamodel.cpp" line="60"/>
         <source>Channels</source>
         <translation>Κανάλια</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="54"/>
+        <location filename="../vorbismetadatamodel.cpp" line="61"/>
         <source>Bitrate</source>
         <translation>Ρυθμός bit</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="54"/>
+        <location filename="../vorbismetadatamodel.cpp" line="61"/>
         <source>kbps</source>
         <translation>kbps</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="55"/>
+        <location filename="../vorbismetadatamodel.cpp" line="62"/>
         <source>File size</source>
         <translation>Μέγεθος αρχείου</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="55"/>
+        <location filename="../vorbismetadatamodel.cpp" line="62"/>
         <source>KB</source>
         <translation>KB</translation>
     </message>

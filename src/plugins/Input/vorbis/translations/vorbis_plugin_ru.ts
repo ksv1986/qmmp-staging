@@ -4,32 +4,32 @@
 <context>
     <name>DecoderVorbisFactory</name>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="53"/>
+        <location filename="../decodervorbisfactory.cpp" line="52"/>
         <source>Ogg Vorbis Plugin</source>
         <translation>Модуль Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="56"/>
+        <location filename="../decodervorbisfactory.cpp" line="55"/>
         <source>Ogg Vorbis Files</source>
         <translation>Файлы Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="135"/>
+        <location filename="../decodervorbisfactory.cpp" line="134"/>
         <source>About Ogg Vorbis Audio Plugin</source>
         <translation>Об аудио-модуле Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="136"/>
+        <location filename="../decodervorbisfactory.cpp" line="135"/>
         <source>Qmmp Ogg Vorbis Audio Plugin</source>
         <translation>Аудио-модуль Ogg Vorbis для Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="137"/>
+        <location filename="../decodervorbisfactory.cpp" line="136"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Разработчик: Илья Котов &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="138"/>
+        <location filename="../decodervorbisfactory.cpp" line="137"/>
         <source>Source code based on mq3 project</source>
         <translation>Исходный код основан на проекте mq3</translation>
     </message>
@@ -37,42 +37,42 @@
 <context>
     <name>VorbisMetaDataModel</name>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="51"/>
+        <location filename="../vorbismetadatamodel.cpp" line="58"/>
         <source>Length</source>
         <translation>Длительность</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="52"/>
+        <location filename="../vorbismetadatamodel.cpp" line="59"/>
         <source>Sample rate</source>
         <translation>Дискретизация</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="52"/>
+        <location filename="../vorbismetadatamodel.cpp" line="59"/>
         <source>Hz</source>
         <translation>Гц</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="53"/>
+        <location filename="../vorbismetadatamodel.cpp" line="60"/>
         <source>Channels</source>
         <translation>Каналов</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="54"/>
+        <location filename="../vorbismetadatamodel.cpp" line="61"/>
         <source>Bitrate</source>
         <translation>Битовая частота</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="54"/>
+        <location filename="../vorbismetadatamodel.cpp" line="61"/>
         <source>kbps</source>
         <translation>Кб/с</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="55"/>
+        <location filename="../vorbismetadatamodel.cpp" line="62"/>
         <source>File size</source>
         <translation>Размер файла</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="55"/>
+        <location filename="../vorbismetadatamodel.cpp" line="62"/>
         <source>KB</source>
         <translation>КБ</translation>
     </message>

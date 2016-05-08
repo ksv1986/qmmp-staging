@@ -48,6 +48,7 @@
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
 
 フランス語:
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
     Sébastien Aperghis-Tramoni (maddingue)
     Stanislas Zeller <uncensored.assault@gmail.com>
 
@@ -69,6 +70,8 @@
 
 簡体字中国語:
     李红昆 (lon) <lon83129@126.com>
+    mabier
+    Mingye Wang
 
 繁体字中国語:
     李红昆 (lon) <lon83129@126.com>

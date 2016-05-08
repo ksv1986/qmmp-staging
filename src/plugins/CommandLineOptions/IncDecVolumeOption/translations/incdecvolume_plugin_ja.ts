@@ -6,12 +6,12 @@
     <message>
         <location filename="../incdecvolumeoption.cpp" line="44"/>
         <source>Increase volume by 5 steps</source>
-        <translation>音量を100分の5つづつ増大</translation>
+        <translation>音量を100分の5ずつ増大</translation>
     </message>
     <message>
         <location filename="../incdecvolumeoption.cpp" line="45"/>
         <source>Decrease volume by 5 steps</source>
-        <translation>音量を100分の5つづつ減少</translation>
+        <translation>音量を100分の5ずつ減少</translation>
     </message>
 </context>
 </TS>

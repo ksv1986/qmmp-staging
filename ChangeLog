@@ -1077,8 +1077,15 @@ Version 0.10.0
 * removed libsamplerate dependency from the jack plugin (using soxr instead)
 * changed default settings in the mpeg plugin
 * updated Russian translation
-* updated Japanese translation (RyoTa SimaMoto)
 * updated Ukrainian translation (Gennadi Motsyo)
+* updated Japanese translation (RyoTa SimaMoto)
 * updated Greek translation (Dimitrios Glentadakis)
 * updated Portuguese translation (Sérgio Marques)
 * updated German translation (Ettore Atalan)
+* updated Portuguese translation (Sérgio Marques)
+* updated French translation (Adrien Vigneron and Sébastien Aperghis-Tramoni)
+* updated German translation (Ettore Atalan)
+* updated Hebrew translation (Genghis Khan)
+* updated Chinese Traditional translation (Jeff Huang)
+* updated Chinese Simplified translation (Mingcong Bai and Mingye Wang)
+* updated Bulgarian translation (Kiril Kirilov)

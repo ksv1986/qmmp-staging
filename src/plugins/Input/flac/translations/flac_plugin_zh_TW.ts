@@ -6,7 +6,7 @@
     <message>
         <location filename="../decoderflacfactory.cpp" line="59"/>
         <source>FLAC Plugin</source>
-        <translation>FLAC 插件</translation>
+        <translation>FLAC 外掛</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="61"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../flacmetadatamodel.cpp" line="93"/>
         <source>Hz</source>
-        <translation type="unfinished">Hz</translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../flacmetadatamodel.cpp" line="94"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../flacmetadatamodel.cpp" line="96"/>
         <source>KB</source>
-        <translation type="unfinished">KB</translation>
+        <translation>KB</translation>
     </message>
 </context>
 </TS>

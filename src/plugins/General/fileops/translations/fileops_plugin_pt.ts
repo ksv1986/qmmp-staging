@@ -174,7 +174,7 @@
         <location filename="../settingsdialog.cpp" line="52"/>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>Rename</source>
-        <translation>Mudar nome</translation>
+        <translation>Renomear</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>

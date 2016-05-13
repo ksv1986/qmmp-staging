@@ -13,7 +13,7 @@
         <location filename="../converter.cpp" line="145"/>
         <location filename="../converter.cpp" line="212"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Σφάλμα</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="177"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../converterdialog.ui" line="44"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Πρόοδος</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="49"/>
@@ -71,12 +71,12 @@
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished">Μετατροπή</translation>
+        <translation>Μετατροπή</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Διακοπή</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="107"/>
@@ -144,7 +144,7 @@
         <location filename="../converterdialog.cpp" line="367"/>
         <location filename="../converterdialog.cpp" line="373"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Σφάλμα</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="133"/>

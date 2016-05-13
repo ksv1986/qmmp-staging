@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodercuefactory.cpp" line="44"/>
         <source>CUE Plugin</source>
-        <translation>CUE 插件</translation>
+        <translation>CUE 外掛</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="47"/>

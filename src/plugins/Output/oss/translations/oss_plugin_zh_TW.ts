@@ -6,7 +6,7 @@
     <message>
         <location filename="../outputossfactory.cpp" line="36"/>
         <source>OSS Plugin</source>
-        <translation>OSS 插件</translation>
+        <translation>OSS 外掛</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="56"/>

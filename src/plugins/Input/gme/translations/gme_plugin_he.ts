@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="49"/>
         <source>GME Plugin</source>
-        <translation>תוספת GME</translation>
+        <translation>תוסף GME</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="52"/>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="116"/>
         <source>About GME Audio Plugin</source>
-        <translation>אודות תוספת שמע GME</translation>
+        <translation>אודות תוסף שמע GME</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="117"/>
         <source>Qmmp GME Audio Plugin</source>
-        <translation>תוספת שמע GME של Qmmp</translation>
+        <translation>תוסף שמע GME של Qmmp</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="118"/>
         <source>This plugin uses Game_Music_Emu library to play game music files</source>
-        <translation>תוספת זו משתמשת בספריית Game_Music_Emu לשם הנגנת קבצי מוזיקה של משחק</translation>
+        <translation>תוסף זה משתמש בספריית Game_Music_Emu לצורך ניגון קבצי מוזיקה של משחק וידאו</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="119"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -39,22 +39,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>GME Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>הגדרות תוסף GME</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Fadeout length:</source>
-        <translation type="unfinished"></translation>
+        <translation>אריכות Fadeout:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="44"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>מ״ש</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="57"/>
         <source>Enable fadeout</source>
-        <translation type="unfinished"></translation>
+        <translation>אפשר fadeout</translation>
     </message>
 </context>
 </TS>

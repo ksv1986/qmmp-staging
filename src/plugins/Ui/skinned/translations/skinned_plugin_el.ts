@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished">Ανανέωση</translation>
+        <translation>Ανανέωση</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>

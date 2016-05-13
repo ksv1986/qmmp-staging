@@ -6,7 +6,7 @@
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="29"/>
         <source>WaveOut Plugin</source>
-        <translation>WaveOut 插件</translation>
+        <translation>WaveOut 外掛</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="60"/>

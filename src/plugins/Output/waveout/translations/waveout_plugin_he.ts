@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="29"/>
         <source>WaveOut Plugin</source>
-        <translation>תוספת WaveOut</translation>
+        <translation>תוסף WaveOut</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="60"/>
         <source>About WaveOut Output Plugin</source>
-        <translation>אודות תוספת WaveOut</translation>
+        <translation>אודות תוסף WaveOut</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="61"/>
         <source>Qmmp WaveOut Output Plugin</source>
-        <translation>תוספת פלט WaveOut של Qmmp</translation>
+        <translation>תוסף פלט WaveOut של Qmmp</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="62"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="63"/>

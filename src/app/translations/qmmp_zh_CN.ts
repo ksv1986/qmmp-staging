@@ -4,24 +4,14 @@
 <context>
     <name>BuiltinCommandLineOption</name>
     <message>
-        <location filename="../builtincommandlineoption.cpp" line="80"/>
-        <source>Skip forward in playlist</source>
-        <translation>跳到播放列表中的下一曲</translation>
-    </message>
-    <message>
-        <location filename="../builtincommandlineoption.cpp" line="81"/>
-        <source>Skip backwards in playlist</source>
-        <translation>跳到播放列表中的上一曲</translation>
+        <location filename="../builtincommandlineoption.cpp" line="71"/>
+        <source>Don&apos;t clear the playlist</source>
+        <translation>不要清除这个播放列表</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="72"/>
         <source>Start playing current song</source>
         <translation>开始播放当前曲目</translation>
-    </message>
-    <message>
-        <location filename="../builtincommandlineoption.cpp" line="71"/>
-        <source>Don&apos;t clear the playlist</source>
-        <translation>不要清除这个播放列表</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="73"/>
@@ -46,7 +36,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="77"/>
         <source>Quit application</source>
-        <translation type="unfinished"></translation>
+        <translation>退出程序</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="78"/>
@@ -56,7 +46,17 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>
         <source>Mute/Restore volume</source>
-        <translation type="unfinished"></translation>
+        <translation>静音/回复音量</translation>
+    </message>
+    <message>
+        <location filename="../builtincommandlineoption.cpp" line="80"/>
+        <source>Skip forward in playlist</source>
+        <translation>跳到播放列表中的下一曲</translation>
+    </message>
+    <message>
+        <location filename="../builtincommandlineoption.cpp" line="81"/>
+        <source>Skip backwards in playlist</source>
+        <translation>跳到播放列表中的上一曲</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="82"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="83"/>
         <source>Show main window</source>
-        <translation type="unfinished"></translation>
+        <translation>显示主窗口</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="84"/>
@@ -81,6 +81,11 @@
 </context>
 <context>
     <name>QMMPStarter</name>
+    <message>
+        <location filename="../qmmpstarter.cpp" line="90"/>
+        <source>Unknown command</source>
+        <translation>未知指令</translation>
+    </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="317"/>
         <source>Usage: qmmp [options] [files]</source>
@@ -97,6 +102,11 @@
         <translation>无法启动此程序</translation>
     </message>
     <message>
+        <location filename="../qmmpstarter.cpp" line="323"/>
+        <source>Display this text and exit</source>
+        <translation>显示这些文本并退出</translation>
+    </message>
+    <message>
         <location filename="../qmmpstarter.cpp" line="324"/>
         <source>Print version number and exit</source>
         <translation>显示版本并退出</translation>
@@ -109,37 +119,27 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="328"/>
         <source>Command Line Help</source>
-        <translation type="unfinished"></translation>
+        <translation>命令行帮助</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="341"/>
         <source>QMMP version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>QMMP版本：%1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="342"/>
         <source>Compiled with Qt version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>用于编译的QT版本：%1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="343"/>
         <source>Using Qt version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>使用的Qt版本：%1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="346"/>
         <source>Qmmp Version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qmmpstarter.cpp" line="323"/>
-        <source>Display this text and exit</source>
-        <translation>显示这些文本并退出</translation>
-    </message>
-    <message>
-        <location filename="../qmmpstarter.cpp" line="90"/>
-        <source>Unknown command</source>
-        <translation>未知指令</translation>
+        <translation>Qmmp播放器版本</translation>
     </message>
 </context>
 </TS>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="30"/>
         <source>Crossfade Plugin</source>
-        <translation>תוספת עמעום</translation>
+        <translation>תוסף עמעום</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="51"/>
         <source>About Crossfade Plugin</source>
-        <translation>אודות תוספת עמעום</translation>
+        <translation>אודות תוסף עמעום</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="52"/>
         <source>Qmmp Crossfade Plugin</source>
-        <translation>תוספת עמעום של Qmmp</translation>
+        <translation>תוסף עמעום של Qmmp</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Crossfade Plugin Settings</source>
-        <translation>הגדרות תוספת עמעום</translation>
+        <translation>הגדרות תוסף עמעום</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>

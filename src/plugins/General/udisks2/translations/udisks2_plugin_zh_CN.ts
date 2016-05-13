@@ -44,27 +44,27 @@
     <message>
         <location filename="../udisks2factory.cpp" line="30"/>
         <source>UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>UDisk2插件</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="50"/>
         <source>About UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>关于UDisk2插件</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="51"/>
         <source>Qmmp UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp播放器UDisk2插件</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks2</source>
-        <translation type="unfinished"></translation>
+        <translation>本插件使用UDisk2提供对移动设备的探测功能</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished">作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisks2plugin.cpp" line="130"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">添加 CD &quot;%1&quot;</translation>
+        <translation>增加CD&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../udisks2plugin.cpp" line="138"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">添加卷 &quot;%1&quot;</translation>
+        <translation>增加音量&quot;%1&quot;</translation>
     </message>
 </context>
 </TS>

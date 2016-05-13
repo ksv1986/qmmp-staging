@@ -7,28 +7,28 @@
         <location filename="../converter.cpp" line="130"/>
         <location filename="../converter.cpp" line="230"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Abgebrochen</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="145"/>
         <location filename="../converter.cpp" line="212"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="177"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Konvertierungsvorgang</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="241"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodierung</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="279"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Fertiggestellt</translation>
     </message>
 </context>
 <context>
@@ -36,17 +36,17 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>Audiokonverter</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Fortschritt</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
@@ -71,12 +71,12 @@
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished">Konvertieren</translation>
+        <translation>Konvertieren</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stopp</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="107"/>
@@ -144,12 +144,12 @@
         <location filename="../converterdialog.cpp" line="367"/>
         <location filename="../converterdialog.cpp" line="373"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="133"/>
         <source>Waiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Warten</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="197"/>
@@ -194,12 +194,12 @@
     <message>
         <location filename="../converterdialog.cpp" line="367"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot; kann nicht ausgeführt werden. Programm nicht gefunden.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="373"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prozess &quot;%1&quot; mit Fehler fertiggestellt.</translation>
     </message>
 </context>
 <context>
@@ -207,17 +207,17 @@
     <message>
         <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
-        <translation>Konverter-Modul</translation>
+        <translation>Konvertermodul</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
-        <translation>Über Konverter-Modul</translation>
+        <translation>Über Konvertermodul</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
-        <translation>Qmmp Konverter-Modul</translation>
+        <translation>Qmmp Konvertermodul</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="51"/>

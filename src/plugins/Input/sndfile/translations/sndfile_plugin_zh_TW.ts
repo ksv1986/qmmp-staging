@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodersndfilefactory.cpp" line="63"/>
         <source>Sndfile Plugin</source>
-        <translation>Sndfile 插件</translation>
+        <translation>Sndfile 外掛</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="66"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../projectmplugin.cpp" line="41"/>
         <source>ProjectM</source>
-        <translation type="unfinished"></translation>
+        <translation>ProjectM</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="164"/>
         <source>F1</source>
-        <translation type="unfinished"></translation>
+        <translation>F1</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="165"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="165"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="166"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="166"/>
         <source>F3</source>
-        <translation type="unfinished"></translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="167"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="167"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="169"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="169"/>
         <source>N</source>
-        <translation type="unfinished"></translation>
+        <translation>N</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="170"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="170"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation>P</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="171"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="171"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="172"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="172"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="174"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="174"/>
         <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation>F</translation>
     </message>
 </context>
 <context>
@@ -107,27 +107,27 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="29"/>
         <source>ProjectM</source>
-        <translation type="unfinished"></translation>
+        <translation>ProjectM</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="49"/>
         <source>About ProjectM Visual Plugin</source>
-        <translation>אודות תוספת חיזוי ProjectM</translation>
+        <translation>אודות תוסף חיזוי ProjectM</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="50"/>
         <source>Qmmp ProjectM Visual Plugin</source>
-        <translation>תוספת חיזוי ProjectM של Qmmp</translation>
+        <translation>תוסף חיזוי ProjectM של Qmmp</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="51"/>
         <source>This plugin adds projectM visualization</source>
-        <translation>תוספת זו מוסיפה חיזוי של ProjectM</translation>
+        <translation>תוסף זה מוסיף חיזוי ProjectM</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="53"/>

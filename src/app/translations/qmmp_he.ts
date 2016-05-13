@@ -6,7 +6,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="71"/>
         <source>Don&apos;t clear the playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>אל תטהר את רשימת הנגינה</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="72"/>
@@ -61,12 +61,12 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="82"/>
         <source>Show/hide application</source>
-        <translation type="unfinished"></translation>
+        <translation>הצג/הסתר יישום</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="83"/>
         <source>Show main window</source>
-        <translation type="unfinished"></translation>
+        <translation>הצג חלון ראשי</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="84"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="90"/>
         <source>Unknown command</source>
-        <translation type="unfinished"></translation>
+        <translation>פקודה לא מוכרת</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="317"/>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="325"/>
         <source>Ideas, patches, bugreports send to forkotov02@hotmail.ru</source>
-        <translation type="unfinished"></translation>
+        <translation>רעיונות, טלאים, דיווחי באגים שלחו עבור forkotov02@hotmail.ru</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="328"/>
@@ -129,7 +129,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="342"/>
         <source>Compiled with Qt version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>הודר בעזרת Qt גירסה: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="343"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Status Icon Plugin Settings</source>
-        <translation>Einstellungen Statussymbol-Modul</translation>
+        <translation>Einstellungen Statussymbolmodul</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -113,17 +113,17 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="30"/>
         <source>Status Icon Plugin</source>
-        <translation>Statussymbol-Modul</translation>
+        <translation>Statussymbolmodul</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="50"/>
         <source>About Status Icon Plugin</source>
-        <translation>Über Statussymbol-Modul</translation>
+        <translation>Über Statussymbolmodul</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="51"/>
         <source>Qmmp Status Icon Plugin</source>
-        <translation>Qmmp Statussymbol-Modul</translation>
+        <translation>Qmmp Statussymbolmodul</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="52"/>

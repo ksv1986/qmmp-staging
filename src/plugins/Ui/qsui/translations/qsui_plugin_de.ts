@@ -299,7 +299,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktualisieren</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
@@ -479,7 +479,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="277"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkzeugleiste</translation>
     </message>
 </context>
 <context>
@@ -860,12 +860,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="436"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="492"/>
         <source>Edit Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkzeugleisten bearbeiten</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="494"/>
@@ -1005,25 +1005,25 @@
     <message>
         <location filename="../playlistheader.cpp" line="72"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausrichtung</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="73"/>
         <source>Left</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Links</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="74"/>
         <source>Right</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Rechts</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="75"/>
         <source>Center</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Mitte</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="85"/>
@@ -1581,22 +1581,22 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="199"/>
         <source>Toolbar:</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkzeugleiste:</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="222"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Erstellen</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="238"/>
         <source>Re&amp;name</source>
-        <translation type="unfinished"></translation>
+        <translation>Umbe&amp;nennen</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Entfernen</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="100"/>
@@ -1607,22 +1607,22 @@
     <message>
         <location filename="../toolbareditor.cpp" line="248"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkzeugleiste</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="250"/>
         <source>Toolbar %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkzeugleiste %1</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Rename Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkzeugleiste umbenennen</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Toolbar name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkzeugleistenname:</translation>
     </message>
 </context>
 <context>
@@ -1638,7 +1638,7 @@
     <message>
         <location filename="../volumeslider.cpp" line="91"/>
         <source>%1%</source>
-        <translation type="unfinished"></translation>
+        <translation>%1%</translation>
     </message>
 </context>
 </TS>

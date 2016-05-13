@@ -6,7 +6,7 @@
     <message>
         <location filename="../effectladspafactory.cpp" line="30"/>
         <source>LADSPA Plugin</source>
-        <translation>תוספת LADSPA</translation>
+        <translation>תוסף LADSPA</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="50"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../effectladspafactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="53"/>
         <source>Based on the LADSPA Host for BMP</source>
-        <translation>מבוססת על המארח LADSPA עבור BMP</translation>
+        <translation>מבוסס על LADSPA Host עבור BMP</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="54"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>LADSPA Plugin Catalog</source>
-        <translation>קטלוג תוספת LADSPA</translation>
+        <translation>קטלוג תוסף LADSPA</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>This LADSPA plugin has no user controls</source>
-        <translation>לתוספת LADSPA זו אין בקרי משתמש</translation>
+        <translation>לתוסף LADSPA זה אין בקרי משתמש</translation>
     </message>
 </context>
 </TS>

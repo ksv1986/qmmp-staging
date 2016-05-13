@@ -6,7 +6,12 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="44"/>
         <source>WavPack Plugin</source>
-        <translation>WavPack 插件</translation>
+        <translation>WavPack 外掛</translation>
+    </message>
+    <message>
+        <location filename="../decoderwavpackfactory.cpp" line="46"/>
+        <source>WavPack Files</source>
+        <translation>WavPack 檔案</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="155"/>
@@ -28,11 +33,6 @@
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
-    <message>
-        <location filename="../decoderwavpackfactory.cpp" line="46"/>
-        <source>WavPack Files</source>
-        <translation>WavPack 檔案</translation>
-    </message>
 </context>
 <context>
     <name>WavPackMetaDataModel</name>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../wavpackmetadatamodel.cpp" line="66"/>
         <source>Hz</source>
-        <translation type="unfinished">Hz</translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../wavpackmetadatamodel.cpp" line="67"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../wavpackmetadatamodel.cpp" line="68"/>
         <source>kbps</source>
-        <translation type="unfinished">kbps</translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../wavpackmetadatamodel.cpp" line="70"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../wavpackmetadatamodel.cpp" line="70"/>
         <source>KB</source>
-        <translation type="unfinished">KB</translation>
+        <translation>KB</translation>
     </message>
     <message>
         <location filename="../wavpackmetadatamodel.cpp" line="71"/>

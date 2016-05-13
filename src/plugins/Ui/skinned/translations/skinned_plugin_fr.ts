@@ -176,7 +176,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="59"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Anticrénelage</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished">Rafraîchir</translation>
+        <translation>Rafraîchir</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -999,25 +999,25 @@
     <message>
         <location filename="../playlistheader.cpp" line="93"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Alignement</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="94"/>
         <source>Left</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Gauche</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="95"/>
         <source>Right</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Droite</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="96"/>
         <source>Center</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Centre</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="106"/>

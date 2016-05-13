@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputalsafactory.cpp" line="31"/>
         <source>ALSA Plugin</source>
-        <translation>תוספת ALSA</translation>
+        <translation>תוסף ALSA</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="56"/>
         <source>About ALSA Output Plugin</source>
-        <translation>אודות תוספת פלט ALSA</translation>
+        <translation>אודות תוסף פלט ALSA</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="57"/>
         <source>Qmmp ALSA Output Plugin</source>
-        <translation>תוספת פלט ALSA של Qmmp</translation>
+        <translation>תוסף פלט ALSA של Qmmp</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>ALSA Plugin Settings</source>
-        <translation>הגדרות תוספת ALSA</translation>
+        <translation>הגדרות תוסף ALSA</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="193"/>
         <source>Use mmap access</source>
-        <translation>נצל גישת mmap</translation>
+        <translation>השתמש בגישת mmap</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="213"/>

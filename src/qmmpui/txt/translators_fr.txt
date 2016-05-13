@@ -8,6 +8,8 @@ Chinois traditionnel :
 
 Chinois simplifié :
     lon <lon83129@126.com>
+    mabier
+    Mingye Wang
 
 Tchèque :
     Karel Volný <kvolny@redhat.com>
@@ -17,6 +19,7 @@ Néerlandais :
     Ronald Uitermark <ronald645@gmail.com>
 
 Français :
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
     Sébastien Aperghis-Tramoni (maddingue)
     Stanislas Zeller <uncensored.assault@gmail.com>
 

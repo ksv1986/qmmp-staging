@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Status Icon Plugin Settings</source>
-        <translation>הגדרות תוספת צלמית מצב</translation>
+        <translation>הגדרות תוסף סמל מצב</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="165"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="174"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="214"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="225"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="250"/>
         <source>Use standard icons</source>
-        <translation>השתמש בצלמיות רגילות</translation>
+        <translation>השתמש בסמלים רגילים</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="80"/>
@@ -113,22 +113,22 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="30"/>
         <source>Status Icon Plugin</source>
-        <translation>תוספת צלמית מצב</translation>
+        <translation>תוסף סמל מצב</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="50"/>
         <source>About Status Icon Plugin</source>
-        <translation>אודות תוספת צלמית מצב</translation>
+        <translation>אודות תוסף סמל מצב</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="51"/>
         <source>Qmmp Status Icon Plugin</source>
-        <translation>תוספת צלמית מצב של Qmmp</translation>
+        <translation>תוסף סמל מצב של Qmmp</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="52"/>
         <source>Written by:</source>
-        <translation>חוברה על ידי:</translation>
+        <translation>חובר על ידי:</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="53"/>

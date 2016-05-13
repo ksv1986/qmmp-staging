@@ -11,12 +11,12 @@
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="52"/>
         <source>About DirectSound Output Plugin</source>
-        <translation>Über DirectSound-Ausgabe-Modul</translation>
+        <translation>Über DirectSound-Ausgabemodul</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="53"/>
         <source>Qmmp DirectSound Output Plugin</source>
-        <translation>Qmmp DirectSound-Ausgabe-Modul</translation>
+        <translation>Qmmp DirectSound-Ausgabemodul</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="54"/>

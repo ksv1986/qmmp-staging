@@ -44,7 +44,7 @@
     <message>
         <location filename="../flacmetadatamodel.cpp" line="93"/>
         <source>Hz</source>
-        <translation type="unfinished">Hz</translation>
+        <translation>赫兹</translation>
     </message>
     <message>
         <location filename="../flacmetadatamodel.cpp" line="94"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../flacmetadatamodel.cpp" line="95"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>千比特每秒</translation>
     </message>
     <message>
         <location filename="../flacmetadatamodel.cpp" line="96"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../flacmetadatamodel.cpp" line="96"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>千字节</translation>
     </message>
 </context>
 </TS>

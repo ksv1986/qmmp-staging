@@ -299,7 +299,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανανέωση</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
@@ -860,7 +860,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="436"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="492"/>
@@ -1596,7 +1596,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αφαίρεση</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="100"/>

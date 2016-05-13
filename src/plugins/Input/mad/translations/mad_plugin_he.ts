@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodermadfactory.cpp" line="104"/>
         <source>MPEG Plugin</source>
-        <translation>תוספת MPEG</translation>
+        <translation>תוסף MPEG</translation>
     </message>
     <message>
         <location filename="../decodermadfactory.cpp" line="107"/>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../decodermadfactory.cpp" line="263"/>
         <source>About MPEG Audio Plugin</source>
-        <translation>אודות תוספת שמע MPEG</translation>
+        <translation>אודות תוסף שמע MPEG</translation>
     </message>
     <message>
         <location filename="../decodermadfactory.cpp" line="264"/>
         <source>Qmmp MPEG Audio Plugin</source>
-        <translation>תוספת שמע MPEG של Qmmp</translation>
+        <translation>תוסף שמע MPEG של Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermadfactory.cpp" line="265"/>
         <source>Compiled against libmad version:</source>
-        <translation>הודרה כנגדlibmad גירסה:</translation>
+        <translation>הודר כנגדlibmad גירסה:</translation>
     </message>
     <message>
         <location filename="../decodermadfactory.cpp" line="269"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
     <message>
         <location filename="../decodermadfactory.cpp" line="270"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPEG Plugin Settings</source>
-        <translation>הגדרות תוספת MPEG</translation>
+        <translation>הגדרות תוסף MPEG</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -139,21 +139,21 @@
         <location filename="../settingsdialog.ui" line="110"/>
         <location filename="../settingsdialog.ui" line="159"/>
         <source>ID3v1</source>
-        <translation type="unfinished"></translation>
+        <translation>ID3v1</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
         <location filename="../settingsdialog.ui" line="115"/>
         <location filename="../settingsdialog.ui" line="164"/>
         <source>ID3v2</source>
-        <translation type="unfinished"></translation>
+        <translation>ID3v2</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <location filename="../settingsdialog.ui" line="120"/>
         <location filename="../settingsdialog.ui" line="169"/>
         <source>APE</source>
-        <translation type="unfinished"></translation>
+        <translation>APE</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>

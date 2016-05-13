@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputossfactory.cpp" line="36"/>
         <source>OSS Plugin</source>
-        <translation>תוספת OSS</translation>
+        <translation>תוסף OSS</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="56"/>
         <source>About OSS Output Plugin</source>
-        <translation>אודות תוספת פלט OSS</translation>
+        <translation>אודות תוסף פלט OSS</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="57"/>
         <source>Qmmp OSS Output Plugin</source>
-        <translation>תוספת פלט OSS של Qmmp</translation>
+        <translation>תוסף פלט OSS של Qmmp</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="58"/>
         <source>Written by: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</source>
-        <translation>חוברה על ידי: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;‎</translation>
+        <translation>חובר על ידי: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;‎</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="59"/>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>OSS Plugin Settings</source>
-        <translation>הגדרות תוספת OSS</translation>
+        <translation>הגדרות תוסף OSS</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>

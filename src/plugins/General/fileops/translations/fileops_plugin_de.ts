@@ -73,17 +73,17 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="30"/>
         <source>File Operations Plugin</source>
-        <translation>Dateioperationen-Modul</translation>
+        <translation>Dateioperationsmodul</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="50"/>
         <source>About File Operations Plugin</source>
-        <translation>Über Dateioperationen-Modul</translation>
+        <translation>Über Dateioperationsmodul</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="51"/>
         <source>Qmmp File Operations Plugin</source>
-        <translation>Qmmp Dateioperationen-Modul</translation>
+        <translation>Qmmp Dateioperationsmodul</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="52"/>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Operations Settings</source>
-        <translation>EInstellungen Datei-Aktionen-Modul</translation>
+        <translation>EInstellungen Dateioperationsmodul</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>

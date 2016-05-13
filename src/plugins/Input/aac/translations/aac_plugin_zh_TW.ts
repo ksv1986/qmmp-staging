@@ -44,7 +44,7 @@
     <message>
         <location filename="../decoderaacfactory.cpp" line="46"/>
         <source>AAC Plugin</source>
-        <translation>AAC 插件</translation>
+        <translation>AAC 外掛</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="48"/>

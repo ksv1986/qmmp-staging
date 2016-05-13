@@ -6,32 +6,32 @@
     <message>
         <location filename="../copypaste.cpp" line="43"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>剪切(&amp;T)</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="44"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="45"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>复制(&amp;C)</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="46"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="47"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>粘贴(&amp;P)</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="48"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
 </context>
 <context>
@@ -39,27 +39,27 @@
     <message>
         <location filename="../copypastefactory.cpp" line="28"/>
         <source>Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>复制/粘贴插件</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="48"/>
         <source>About Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>关于复制/粘贴插件</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="49"/>
         <source>Qmmp Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp复制/粘贴插件</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="50"/>
         <source>This plugin allows one to copy selected tracks from one playlist to another</source>
-        <translation type="unfinished"></translation>
+        <translation>此插件允许操作者从一个播放列表中复制选定的曲目到另一个播放列表中</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 </TS>

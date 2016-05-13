@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="zh_CN" sourcelanguage="zh_CN">
+<TS version="2.0" language="zh_CN">
 <context>
     <name>SettingsDialog</name>
     <message>
@@ -9,9 +9,9 @@
         <translation>状态图标插件设置</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="79"/>
-        <source>Tooltip</source>
-        <translation>工具提示</translation>
+        <location filename="../settingsdialog.ui" line="29"/>
+        <source>Balloon message</source>
+        <translation>气球通知</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
@@ -20,9 +20,14 @@
         <translation>延迟 [ms]：</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="29"/>
-        <source>Balloon message</source>
-        <translation>气球通知</translation>
+        <location filename="../settingsdialog.ui" line="79"/>
+        <source>Tooltip</source>
+        <translation>工具提示</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="91"/>
+        <source>Try to split file name when no tag</source>
+        <translation>无标签时尝试拆分文件名</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="98"/>
@@ -37,17 +42,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="165"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="225"/>
-        <source>Edit template</source>
-        <translation>编辑模板</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="91"/>
-        <source>Try to split file name when no tag</source>
-        <translation>无标签时尝试拆分文件名</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="174"/>
@@ -57,7 +52,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="214"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="225"/>
+        <source>Edit template</source>
+        <translation>编辑模板</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="250"/>
@@ -116,6 +116,11 @@
         <translation>状态图标插件</translation>
     </message>
     <message>
+        <location filename="../statusiconfactory.cpp" line="50"/>
+        <source>About Status Icon Plugin</source>
+        <translation>关于状态图标插件</translation>
+    </message>
+    <message>
         <location filename="../statusiconfactory.cpp" line="51"/>
         <source>Qmmp Status Icon Plugin</source>
         <translation>Qmmp 状态图标插件</translation>
@@ -128,17 +133,12 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="53"/>
         <source>Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="54"/>
         <source>Artur Guzik &lt;a.guzik88@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../statusiconfactory.cpp" line="50"/>
-        <source>About Status Icon Plugin</source>
-        <translation>关于状态图标插件</translation>
+        <translation>Artur Guzik &lt;a.guzik88@gmail.com&gt;</translation>
     </message>
 </context>
 <context>

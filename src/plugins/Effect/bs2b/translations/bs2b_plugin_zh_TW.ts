@@ -6,7 +6,7 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="31"/>
         <source>BS2B Plugin</source>
-        <translation>BS2B 插件</translation>
+        <translation>BS2B 外掛</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="51"/>

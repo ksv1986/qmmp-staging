@@ -6,7 +6,7 @@
     <message>
         <location filename="../uninstalloption.cpp" line="39"/>
         <source>Restore the old file associations and clean up the registry</source>
-        <translation type="unfinished"></translation>
+        <translation>恢复原有的文件关联并清除注册表信息</translation>
     </message>
 </context>
 </TS>

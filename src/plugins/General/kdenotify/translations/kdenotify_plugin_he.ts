@@ -14,18 +14,18 @@
     <message>
         <location filename="../kdenotifyfactory.cpp" line="30"/>
         <source>KDE 4 notification plugin</source>
-        <translation>תוספת התראת KDE 4</translation>
+        <translation>תוסף התראת KDE 4</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="50"/>
         <source>About KDE Notification Plugin</source>
-        <translation>אודות תוספת התראת KDE 4</translation>
+        <translation>אודות תוסף התראת KDE 4</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="51"/>
         <source>KDE 4 notification plugin for Qmmp 
 </source>
-        <translation>תוספת התראת KDE 4 עבור Qmmp 
+        <translation>תוסף התראת KDE 4 עבור Qmmp 
 </translation>
     </message>
 </context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>KDE 4 Notification Plugin Settings</source>
-        <translation>הגדרות תוספת התראה KDE 4</translation>
+        <translation>הגדרות תוסף התראה KDE 4</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>

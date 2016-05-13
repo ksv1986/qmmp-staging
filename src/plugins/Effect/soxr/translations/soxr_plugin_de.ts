@@ -6,22 +6,22 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="30"/>
         <source>SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>SoX-Abtastratenkonvertierermodul</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="51"/>
         <source>About SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Über SoX-Abtastratenkonvertierermodul</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="52"/>
         <source>Qmmp SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp SoX-Abtastratenkonvertierermodul</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished">Geschrieben von: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>SoX Resampler Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen SoX-Abtastratenkonvertierer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -39,32 +39,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="49"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qualität:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Quick</source>
-        <translation type="unfinished"></translation>
+        <translation>Schnell</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="35"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Niedrig</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Mittel</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoch</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
         <source>Very High</source>
-        <translation type="unfinished"></translation>
+        <translation>Sehr hoch</translation>
     </message>
 </context>
 </TS>

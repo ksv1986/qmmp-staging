@@ -7,28 +7,28 @@
         <location filename="../converter.cpp" line="130"/>
         <location filename="../converter.cpp" line="230"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>בוטלה</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="145"/>
         <location filename="../converter.cpp" line="212"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>שגיאה</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="177"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>המרה</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="241"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>קידוד</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="279"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>נסתיימה</translation>
     </message>
 </context>
 <context>
@@ -36,17 +36,17 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>ממיר אוידו</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>התקדמות</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>מצב</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
@@ -71,12 +71,12 @@
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished">המר</translation>
+        <translation>המר</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>הפסק</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="107"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="192"/>
         <source>Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="39"/>
@@ -107,49 +107,49 @@
     <message>
         <location filename="../converterdialog.cpp" line="194"/>
         <source>Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="195"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה דו ספרתי</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="200"/>
         <source>Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר תקליטור</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="201"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>שם קובץ</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="202"/>
         <source>File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>נתיב קובץ</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="212"/>
         <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>צור עותק</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="196"/>
         <source>Genre</source>
-        <translation>ז&apos;אנר</translation>
+        <translation>ז׳אנר</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="128"/>
         <location filename="../converterdialog.cpp" line="367"/>
         <location filename="../converterdialog.cpp" line="373"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>שגיאה</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="133"/>
         <source>Waiting</source>
-        <translation type="unfinished"></translation>
+        <translation>המתנה</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="197"/>
@@ -194,12 +194,12 @@
     <message>
         <location filename="../converterdialog.cpp" line="367"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא מסוגל לבצע &quot;%1&quot;. תוכנית לא נמצאה.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="373"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>תהליך &quot;%1&quot; נסתיים עם שגיאה.</translation>
     </message>
 </context>
 <context>
@@ -207,27 +207,27 @@
     <message>
         <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
-        <translation>תוספת ממיר</translation>
+        <translation>תוסף ממיר</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
-        <translation>אודות תוספת ממיר</translation>
+        <translation>אודות תוסף ממיר</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
-        <translation>תוספת ממיר של Qmmp</translation>
+        <translation>תוסף ממיר של Qmmp</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
-        <translation>תוספת זו ממירה קבצי שמע נתמכים אל פורמט קובץ באמצעות שורת פקודה של מקודדים חיצוניים</translation>
+        <translation>תוסף זה ממיר קבצי שמע נתמכים לפורמט קובץ באמצעות שורת פקודה של מקודדים חיצוניים</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -240,7 +240,7 @@
     <message>
         <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+C</translation>
     </message>
 </context>
 <context>

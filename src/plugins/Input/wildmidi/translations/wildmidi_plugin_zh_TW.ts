@@ -6,7 +6,7 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="48"/>
         <source>WildMidi Plugin</source>
-        <translation>WildMidi 插件</translation>
+        <translation>WildMidi 外掛</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="50"/>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="104"/>
         <source>About WildMidi Audio Plugin</source>
-        <translation>關於 WildMidi 插件</translation>
+        <translation>關於 WildMidi 外掛</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="105"/>
         <source>Qmmp WildMidi Audio Plugin</source>
-        <translation>Qmmp WildMidi 插件</translation>
+        <translation>Qmmp WildMidi 外掛</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="106"/>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>
         <source>44100 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>44100 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="40"/>
         <source>48000 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>48000 Hz</translation>
     </message>
 </context>
 </TS>

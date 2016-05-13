@@ -6,27 +6,27 @@
     <message>
         <location filename="../halfactory.cpp" line="30"/>
         <source>HAL Plugin</source>
-        <translation>תוספת HAL</translation>
+        <translation>תוסף HAL</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="50"/>
         <source>About HAL Plugin</source>
-        <translation>אודות תוספת HAL</translation>
+        <translation>אודות תוסף HAL</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="51"/>
         <source>Qmmp HAL Plugin</source>
-        <translation>תוספת HAL של Qmmp</translation>
+        <translation>תוסף HAL של Qmmp</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using HAL</source>
-        <translation>תוספת זו מספקת איתור של התקנים נשלפים באמצעות HAL</translation>
+        <translation>תוסף זה מספק איתור של התקנים נשלפים באמצעות HAL</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="54"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="13"/>
         <source>HAL Plugin Settings</source>
-        <translation>הגדרות תוספת HAL</translation>
+        <translation>הגדרות תוסף HAL</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="28"/>

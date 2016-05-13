@@ -6,27 +6,27 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="45"/>
         <source>CD Audio Plugin</source>
-        <translation>תוספת תקליטור שמע</translation>
+        <translation>תוסף תקליטור שמע</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="90"/>
         <source>About CD Audio Plugin</source>
-        <translation>אודות תוספת תקליטור שמע</translation>
+        <translation>אודות תוסף תקליטור שמע</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="91"/>
         <source>Qmmp CD Audio Plugin</source>
-        <translation>תוספת תקליטור שמע של Qmmp</translation>
+        <translation>תוסף תקליטור שמע של Qmmp</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="92"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
-        <translation>הודרה כנגד libcdio-%1 וגם libcddb-%2</translation>
+        <translation>הודר כנגד libcdio-%1 וגם libcddb-%2</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="94"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="95"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>CD Audio Plugin Settings</source>
-        <translation>הגדרות תוספת תקליטור שמע</translation>
+        <translation>הגדרות תוסף תקליטור שמע</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -54,17 +54,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Use cd-text</source>
-        <translation>נצל cd-text</translation>
+        <translation>השתמש ב-cd-text</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>
         <source>CDDB</source>
-        <translation type="unfinished"></translation>
+        <translation>CDDB</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Use HTTP instead of CDDBP</source>
-        <translation>נצל HTTP במקום CDDBP</translation>
+        <translation>השתמש בפרוטוקול HTTP במקום CDDBP</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="88"/>

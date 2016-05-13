@@ -14,7 +14,7 @@
         <location filename="../settingsdialog.ui" line="52"/>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
@@ -39,17 +39,17 @@
     <message>
         <location filename="../settingsdialog.cpp" line="57"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>藝術家</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="58"/>
         <source>Album</source>
-        <translation type="unfinished"></translation>
+        <translation>專輯</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="60"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>標題</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="61"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="63"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>流派</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="59"/>
@@ -89,27 +89,27 @@
     <message>
         <location filename="../settingsdialog.cpp" line="64"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>備註</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="65"/>
         <source>Composer</source>
-        <translation type="unfinished"></translation>
+        <translation>作曲</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="66"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation>持續時間</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="70"/>
         <source>Year</source>
-        <translation type="unfinished"></translation>
+        <translation>年代</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>
         <source>Condition</source>
-        <translation type="unfinished"></translation>
+        <translation>條件</translation>
     </message>
 </context>
 <context>
@@ -137,7 +137,7 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 </TS>

@@ -44,7 +44,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>千字节</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="82"/>
         <source>FPS</source>
-        <translation type="unfinished"></translation>
+        <translation>帧每秒</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="84"/>
@@ -110,16 +110,6 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="29"/>
-        <location filename="../settingsdialog.cpp" line="37"/>
-        <location filename="../settingsdialog.cpp" line="46"/>
-        <location filename="../settingsdialog.cpp" line="47"/>
-        <location filename="../settingsdialog.cpp" line="61"/>
-        <location filename="../settingsdialog.cpp" line="62"/>
-        <source>default</source>
-        <translation>默认</translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPlayer Settings</source>
         <translation>Mplayer 设置</translation>
@@ -135,6 +125,11 @@
         <translation>音频：</translation>
     </message>
     <message>
+        <location filename="../settingsdialog.ui" line="62"/>
+        <source>Audio/video auto synchronization</source>
+        <translation>音频/视频自动同步</translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="72"/>
         <source>Synchronization factor:</source>
         <translation>同步系数：</translation>
@@ -142,17 +137,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
         <source>Extra options:</source>
-        <translation type="unfinished"></translation>
+        <translation>其他选项：</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>
         <source>Extra command line options</source>
-        <translation type="unfinished"></translation>
+        <translation>其他命令行选项</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="62"/>
-        <source>Audio/video auto synchronization</source>
-        <translation>音频/视频自动同步</translation>
+        <location filename="../settingsdialog.cpp" line="29"/>
+        <location filename="../settingsdialog.cpp" line="37"/>
+        <location filename="../settingsdialog.cpp" line="46"/>
+        <location filename="../settingsdialog.cpp" line="47"/>
+        <location filename="../settingsdialog.cpp" line="61"/>
+        <location filename="../settingsdialog.cpp" line="62"/>
+        <source>default</source>
+        <translation>默认</translation>
     </message>
 </context>
 </TS>

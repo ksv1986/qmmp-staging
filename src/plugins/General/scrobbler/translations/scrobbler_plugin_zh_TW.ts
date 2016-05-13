@@ -6,17 +6,17 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="30"/>
         <source>Scrobbler Plugin</source>
-        <translation>Scrobbler 插件</translation>
+        <translation>Scrobbler 外掛</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="50"/>
         <source>About Scrobbler Plugin</source>
-        <translation>關於 Scrobbler 插件</translation>
+        <translation>關於 Scrobbler 外掛</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="51"/>
         <source>Qmmp AudioScrobbler Plugin</source>
-        <translation>Qmmp Scrobbler 插件</translation>
+        <translation>Qmmp Scrobbler 外掛</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="52"/>
@@ -83,6 +83,16 @@
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="103"/>
+        <location filename="../settingsdialog.cpp" line="107"/>
+        <location filename="../settingsdialog.cpp" line="136"/>
+        <location filename="../settingsdialog.cpp" line="140"/>
+        <location filename="../settingsdialog.cpp" line="180"/>
+        <location filename="../settingsdialog.cpp" line="184"/>
+        <source>Error</source>
+        <translation>錯誤</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="103"/>
         <location filename="../settingsdialog.cpp" line="136"/>
         <location filename="../settingsdialog.cpp" line="180"/>
         <source>Network error</source>
@@ -107,16 +117,6 @@
     <message>
         <location filename="../settingsdialog.cpp" line="184"/>
         <source>Permission denied</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="103"/>
-        <location filename="../settingsdialog.cpp" line="107"/>
-        <location filename="../settingsdialog.cpp" line="136"/>
-        <location filename="../settingsdialog.cpp" line="140"/>
-        <location filename="../settingsdialog.cpp" line="180"/>
-        <location filename="../settingsdialog.cpp" line="184"/>
-        <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

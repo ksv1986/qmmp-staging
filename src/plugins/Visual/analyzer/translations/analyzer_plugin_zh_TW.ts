@@ -11,82 +11,82 @@
     <message>
         <location filename="../analyzer.cpp" line="356"/>
         <source>Peaks</source>
-        <translation type="unfinished"></translation>
+        <translation>峰值</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="359"/>
         <source>Refresh Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>刷新率</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="362"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="363"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="364"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="365"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="372"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished"></translation>
+        <translation>解析器下降速度</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="375"/>
         <location filename="../analyzer.cpp" line="389"/>
         <source>Slowest</source>
-        <translation type="unfinished">最慢</translation>
+        <translation>最慢</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>
         <location filename="../analyzer.cpp" line="390"/>
         <source>Slow</source>
-        <translation type="unfinished">慢</translation>
+        <translation>慢</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="377"/>
         <location filename="../analyzer.cpp" line="391"/>
         <source>Medium</source>
-        <translation type="unfinished">中</translation>
+        <translation>中</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="378"/>
         <location filename="../analyzer.cpp" line="392"/>
         <source>Fast</source>
-        <translation type="unfinished">快</translation>
+        <translation>快</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="379"/>
         <location filename="../analyzer.cpp" line="393"/>
         <source>Fastest</source>
-        <translation type="unfinished">最快</translation>
+        <translation>最快</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="386"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../analyzer.cpp" line="400"/>
-        <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation>峰值下降速度</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="400"/>
         <source>&amp;Full Screen</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../analyzer.cpp" line="400"/>
+        <source>F</source>
+        <translation>F</translation>
     </message>
 </context>
 <context>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="49"/>
         <source>About Analyzer Visual Plugin</source>
-        <translation>關於可視化解析器插件</translation>
+        <translation>關於可視化解析器外掛</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="50"/>

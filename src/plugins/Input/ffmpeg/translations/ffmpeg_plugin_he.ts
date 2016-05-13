@@ -6,7 +6,7 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="152"/>
         <source>FFmpeg Plugin</source>
-        <translation>תוספת FFmpeg</translation>
+        <translation>תוסף FFmpeg</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="154"/>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="261"/>
         <source>About FFmpeg Audio Plugin</source>
-        <translation>אודות תוספת שמע FFmpeg</translation>
+        <translation>אודות תוסף שמע FFmpeg</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="262"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
-        <translation>תוספת שמע FFmpeg של Qmmp</translation>
+        <translation>תוסף שמע FFmpeg של Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="263"/>
         <source>Compiled against:</source>
-        <translation>הודרה כנגד:</translation>
+        <translation>הודר כנגד:</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="276"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>FFmpeg Plugin Settings</source>
-        <translation>הגדרות תוספת FFmpeg</translation>
+        <translation>הגדרות תוסף FFmpeg</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
@@ -92,7 +92,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Windows Media Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows Media Audio</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="68"/>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="82"/>
         <source>ADTS AAC</source>
-        <translation type="unfinished"></translation>
+        <translation>ADTS AAC</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
@@ -117,12 +117,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="96"/>
         <source>MPEG-4 AAC/ALAC</source>
-        <translation type="unfinished"></translation>
+        <translation>MPEG-4 AAC/ALAC</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>RealAudio 1.0/2.0</source>
-        <translation type="unfinished"></translation>
+        <translation>RealAudio 1.0/2.0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="110"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="117"/>
         <source>AC3/EAC</source>
-        <translation type="unfinished"></translation>
+        <translation>AC3/EAC</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="124"/>
@@ -147,7 +147,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="138"/>
         <source>VQF</source>
-        <translation type="unfinished"></translation>
+        <translation>VQF</translation>
     </message>
 </context>
 </TS>

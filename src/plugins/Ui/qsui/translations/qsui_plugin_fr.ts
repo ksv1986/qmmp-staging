@@ -299,7 +299,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Rafraîchir</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
@@ -860,7 +860,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="436"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="492"/>
@@ -1005,25 +1005,25 @@
     <message>
         <location filename="../playlistheader.cpp" line="72"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Alignement</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="73"/>
         <source>Left</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Gauche</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="74"/>
         <source>Right</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Droite</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="75"/>
         <source>Center</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Centre</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="85"/>
@@ -1596,7 +1596,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enlever</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="100"/>

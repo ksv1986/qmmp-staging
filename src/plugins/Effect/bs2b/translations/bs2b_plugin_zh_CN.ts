@@ -36,12 +36,12 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="58"/>
         <source>Ilya Kotov</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="59"/>
         <source>Sebastian Pipping</source>
-        <translation type="unfinished"></translation>
+        <translation>Sebastian Pipping</translation>
     </message>
 </context>
 <context>
@@ -60,7 +60,7 @@
         <location filename="../settingsdialog.ui" line="45"/>
         <location filename="../settingsdialog.ui" line="59"/>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation>-</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
@@ -70,22 +70,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>C.Moy</source>
-        <translation type="unfinished"></translation>
+        <translation>C.Moy</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="85"/>
         <source>J. Meier</source>
-        <translation type="unfinished"></translation>
+        <translation>J.Meier</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="60"/>
         <source>%1 Hz, %2 us</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 赫兹，%2 微秒</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="67"/>
         <source>%1 dB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1分贝</translation>
     </message>
 </context>
 </TS>

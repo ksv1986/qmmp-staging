@@ -16,3 +16,5 @@ X-KDE-StartupNotify=false
 # Translations
 Comment[he]=נגן מולטימדיה מבוסס Qt4
 GenericName[he]=נגן שמע
+Name[he]=Qmmp
+Icon[he]=qmmp

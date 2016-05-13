@@ -11,7 +11,7 @@
     <message>
         <location filename="../copypaste.cpp" line="44"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="45"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../copypaste.cpp" line="46"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="47"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../copypaste.cpp" line="48"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
 </context>
 <context>
@@ -39,27 +39,27 @@
     <message>
         <location filename="../copypastefactory.cpp" line="28"/>
         <source>Copy/Paste Plugin</source>
-        <translation>תוספת העתק/הדבק</translation>
+        <translation>תוסף העתק/הדבק</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="48"/>
         <source>About Copy/Paste Plugin</source>
-        <translation>אודות תוספת העתק/הדבק</translation>
+        <translation>אודות תוסף העתק/הדבק</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="49"/>
         <source>Qmmp Copy/Paste Plugin</source>
-        <translation>תוספת העתק/הדבק של Qmmp</translation>
+        <translation>תוסף העתק/הדבק של Qmmp</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="50"/>
         <source>This plugin allows one to copy selected tracks from one playlist to another</source>
-        <translation>תוספת זו מתירה לך להעתיק רצועות נבחרות מתוך רשימת נגינה אחת לאחרת</translation>
+        <translation>תוסף זה מתיר לך להעתיק רצועות נבחרות מתוך רשימת נגינה אחת לאחרת</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 </TS>

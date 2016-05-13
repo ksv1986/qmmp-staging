@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
         <source>KB</source>
-        <translation type="unfinished">KB</translation>
+        <translation>千字节</translation>
     </message>
 </context>
 </TS>

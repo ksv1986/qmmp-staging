@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="67"/>
         <source>SID Plugin</source>
-        <translation>תוספת SID</translation>
+        <translation>תוסף SID</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="69"/>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="123"/>
         <source>About SID Audio Plugin</source>
-        <translation>אודות תוספת שמע SID</translation>
+        <translation>אודות תוסף שמע SID</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="124"/>
         <source>Qmmp SID Audio Plugin</source>
-        <translation>אודות תוספת שמע SID של Qmmp</translation>
+        <translation>אודות תוסף שמע SID של Qmmp</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="125"/>
         <source>This plugin plays Commodore 64 music files using libsidplayfp library</source>
-        <translation>תוספת זו מנגנת קבצי מוזיקה של Commodore 64 באמצעות ספריית libsidplayfp</translation>
+        <translation>תוסף זה מנגן קבצי מוזיקה של Commodore 64 באמצעות ספריית libsidplayfp</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="126"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>SID Plugin Settings</source>
-        <translation>הגדרות תוספת SID</translation>
+        <translation>הגדרות תוסף SID</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>

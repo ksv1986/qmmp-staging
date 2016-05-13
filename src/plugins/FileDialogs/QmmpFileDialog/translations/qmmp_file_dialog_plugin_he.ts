@@ -19,7 +19,7 @@
         <location filename="../qmmpfiledialog.ui" line="72"/>
         <location filename="../qmmpfiledialog.ui" line="97"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="50"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../qmmpfiledialog.ui" line="200"/>
         <source>Files of type:</source>
-        <translation>קבצים מן טיפוס:</translation>
+        <translation>קבצים מטיפוס:</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="226"/>
@@ -75,7 +75,7 @@
         <source>Written by:
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
 Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי:‭
+        <translation>חובר על ידי:‭
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
 Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‬</translation>
     </message>

@@ -64,7 +64,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="114"/>
         <source>Default encoding:</source>
-        <translation>Standard-Kodierung:</translation>
+        <translation>Standardkodierung:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="137"/>

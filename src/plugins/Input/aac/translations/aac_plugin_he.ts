@@ -44,7 +44,7 @@
     <message>
         <location filename="../decoderaacfactory.cpp" line="46"/>
         <source>AAC Plugin</source>
-        <translation>תוספת AAC</translation>
+        <translation>תוסף AAC</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="48"/>
@@ -54,17 +54,17 @@
     <message>
         <location filename="../decoderaacfactory.cpp" line="88"/>
         <source>About AAC Audio Plugin</source>
-        <translation>אודות תוספת שמע AAC</translation>
+        <translation>אודות תוסף שמע AAC</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="89"/>
         <source>Qmmp AAC Audio Plugin</source>
-        <translation>תוספת שמע AAC של Qmmp</translation>
+        <translation>תוסף שמע AAC של Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="90"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 </TS>

@@ -26,7 +26,7 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="91"/>
         <source>Thanks To</source>
-        <translation>תודות</translation>
+        <translation>תודות לכבוד</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="105"/>
@@ -56,27 +56,27 @@
     <message>
         <location filename="../aboutdialog.cpp" line="76"/>
         <source>Input plugins:</source>
-        <translation>תוספות קלט:</translation>
+        <translation>תוספי קלט:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="85"/>
         <source>Output plugins:</source>
-        <translation>תוספות פלט:</translation>
+        <translation>תוספי פלט:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="94"/>
         <source>Visual plugins:</source>
-        <translation>תוספות חזותיות:</translation>
+        <translation>תוספי חזות:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="103"/>
         <source>Effect plugins:</source>
-        <translation>תוספות אפקט:</translation>
+        <translation>תוספי אפקט:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="112"/>
         <source>General plugins:</source>
-        <translation>תוספות כלליות:</translation>
+        <translation>תוספי כלליים:</translation>
     </message>
 </context>
 <context>
@@ -107,75 +107,75 @@
     <message>
         <location filename="../forms/columneditor.ui" line="14"/>
         <source>Edit Column</source>
-        <translation type="unfinished"></translation>
+        <translation>ערוך טור</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="36"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>שם:</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="76"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>פורמט:</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="64"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="29"/>
         <source>Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>טיפוס:</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="78"/>
         <location filename="../columneditor.cpp" line="100"/>
         <source>Artist</source>
-        <translation type="unfinished">אמן</translation>
+        <translation>אמן</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="79"/>
         <location filename="../columneditor.cpp" line="101"/>
         <source>Album</source>
-        <translation type="unfinished">אלבום</translation>
+        <translation>אלבום</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="81"/>
         <location filename="../columneditor.cpp" line="105"/>
         <source>Title</source>
-        <translation type="unfinished">כותרת</translation>
+        <translation>כותרת</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="84"/>
         <location filename="../columneditor.cpp" line="108"/>
         <source>Genre</source>
-        <translation type="unfinished">ז׳אנר</translation>
+        <translation>ז׳אנר</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="85"/>
         <location filename="../columneditor.cpp" line="109"/>
         <source>Comment</source>
-        <translation type="unfinished">הערה</translation>
+        <translation>הערה</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="86"/>
         <location filename="../columneditor.cpp" line="110"/>
         <source>Composer</source>
-        <translation type="unfinished">מלחין</translation>
+        <translation>מלחין</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="87"/>
         <location filename="../columneditor.cpp" line="111"/>
         <source>Duration</source>
-        <translation type="unfinished">משך</translation>
+        <translation>משך</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="91"/>
         <location filename="../columneditor.cpp" line="116"/>
         <source>Year</source>
-        <translation type="unfinished">שנה</translation>
+        <translation>שנה</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="92"/>
@@ -186,58 +186,58 @@
     <message>
         <location filename="../columneditor.cpp" line="93"/>
         <source>Condition</source>
-        <translation type="unfinished">תנאי</translation>
+        <translation>תנאי</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Artist - Album</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן - אלבום</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
         <source>Artist - Title</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן - כותרת</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="80"/>
         <location filename="../columneditor.cpp" line="104"/>
         <source>Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="82"/>
         <location filename="../columneditor.cpp" line="106"/>
         <source>Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="83"/>
         <location filename="../columneditor.cpp" line="107"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה דו ספרתי</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="88"/>
         <location filename="../columneditor.cpp" line="112"/>
         <source>Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר תקליטור</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="89"/>
         <location filename="../columneditor.cpp" line="113"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>שם קובץ</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="90"/>
         <location filename="../columneditor.cpp" line="114"/>
         <source>File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>נתיב קובץ</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="117"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>מותאם</translation>
     </message>
 </context>
 <context>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="67"/>
         <source>Plugins</source>
-        <translation>תוספות</translation>
+        <translation>תוספים</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="76"/>
@@ -286,7 +286,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="129"/>
         <source>Load metadata from files</source>
-        <translation>טען מידע-מוצמד מן קבצים</translation>
+        <translation>טען מידע-מוצמד מתוך קבצים</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="136"/>
@@ -296,12 +296,12 @@
     <message>
         <location filename="../forms/configdialog.ui" line="150"/>
         <source>Group format:</source>
-        <translation type="unfinished"></translation>
+        <translation>פורמט קבוצה:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="160"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="170"/>
@@ -414,7 +414,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="487"/>
         <source>Auto-paste URL from clipboard</source>
-        <translation>הדבק אוטומטית URL מן לוח גזירה</translation>
+        <translation>הדבק אוטומטית URL מתוך לוח גזירה</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="526"/>
@@ -586,7 +586,7 @@
     <message>
         <location filename="../configdialog.cpp" line="302"/>
         <source>Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="303"/>
@@ -606,7 +606,7 @@
     <message>
         <location filename="../configdialog.cpp" line="306"/>
         <source>Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר תקליטור</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="307"/>
@@ -716,7 +716,7 @@
     <message>
         <location filename="../configdialog.cpp" line="347"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>פורטוגזית</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="348"/>
@@ -746,12 +746,12 @@
     <message>
         <location filename="../configdialog.cpp" line="353"/>
         <source>Serbian (Ijekavian)</source>
-        <translation type="unfinished"></translation>
+        <translation>סרבית (Ijekavian)</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="354"/>
         <source>Serbian (Ekavian)</source>
-        <translation type="unfinished"></translation>
+        <translation>סרבית (Ekavian)</translation>
     </message>
 </context>
 <context>
@@ -769,7 +769,7 @@
     <message>
         <location filename="../forms/detailsdialog.ui" line="47"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/detailsdialog.ui" line="63"/>
@@ -794,7 +794,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="179"/>
         <source>Album artist</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="180"/>
@@ -864,17 +864,17 @@
     <message>
         <location filename="../jumptotrackdialog.cpp" line="58"/>
         <source>Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Q</translation>
     </message>
     <message>
         <location filename="../jumptotrackdialog.cpp" line="59"/>
         <source>J</source>
-        <translation type="unfinished"></translation>
+        <translation>J</translation>
     </message>
     <message>
         <location filename="../jumptotrackdialog.cpp" line="60"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../jumptotrackdialog.cpp" line="88"/>
@@ -896,17 +896,17 @@
     <message>
         <location filename="../playlistheadermodel.cpp" line="36"/>
         <source>Artist - Title</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן - כותרת</translation>
     </message>
     <message>
         <location filename="../playlistheadermodel.cpp" line="186"/>
         <source>Title</source>
-        <translation type="unfinished">כותרת</translation>
+        <translation>כותרת</translation>
     </message>
     <message>
         <location filename="../playlistheadermodel.cpp" line="187"/>
         <source>Add Column</source>
-        <translation type="unfinished"></translation>
+        <translation>הוסף טור</translation>
     </message>
 </context>
 <context>
@@ -980,7 +980,7 @@
     <message>
         <location filename="../forms/tageditor.ui" line="113"/>
         <source>Album artist:</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="123"/>
@@ -1002,7 +1002,7 @@
         <location filename="../forms/tageditor.ui" line="228"/>
         <location filename="../forms/tageditor.ui" line="260"/>
         <source>?</source>
-        <translation type="unfinished"></translation>
+        <translation>?</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="203"/>
@@ -1060,17 +1060,17 @@
     <message>
         <location filename="../templateeditor.cpp" line="52"/>
         <source>Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום</translation>
     </message>
     <message>
         <location filename="../templateeditor.cpp" line="54"/>
         <source>Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה</translation>
     </message>
     <message>
         <location filename="../templateeditor.cpp" line="55"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה דו ספרתי</translation>
     </message>
     <message>
         <location filename="../templateeditor.cpp" line="56"/>
@@ -1095,17 +1095,17 @@
     <message>
         <location filename="../templateeditor.cpp" line="60"/>
         <source>Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר תקליטור</translation>
     </message>
     <message>
         <location filename="../templateeditor.cpp" line="61"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>שם קובץ</translation>
     </message>
     <message>
         <location filename="../templateeditor.cpp" line="62"/>
         <source>File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>נתיב קובץ</translation>
     </message>
     <message>
         <location filename="../templateeditor.cpp" line="63"/>
@@ -1198,7 +1198,7 @@
     <message>
         <location filename="../winfileassocpage.cpp" line="146"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
-        <translation>סמן את סיומות הקובץ שברצונך מן Qmmp לנהל. כאשר אתה לוחץ החל, הקבצים המסומנים ישוייכו עם Qmmp. אם אתה מבטל סימון של טיפוס מדיה, השיוך של הקובץ ישוחזר.</translation>
+        <translation>סמן את סיומות הקובץ אשר ברצונך מן Qmmp לנהל. כאשר אתה לוחץ החל, הקבצים המסומנים ישוייכו עם Qmmp. אם אתה מבטל סימון של טיפוס מדיה, השיוך של הקובץ ישוחזר.</translation>
     </message>
     <message>
         <location filename="../winfileassocpage.cpp" line="150"/>

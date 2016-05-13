@@ -6,7 +6,7 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="48"/>
         <source>WildMidi Plugin</source>
-        <translation>תוספת WildMidi</translation>
+        <translation>תוסף WildMidi</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="50"/>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="104"/>
         <source>About WildMidi Audio Plugin</source>
-        <translation>אודות תוספת שמע WildMidi</translation>
+        <translation>אודות תוסף שמע WildMidi</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="105"/>
         <source>Qmmp WildMidi Audio Plugin</source>
-        <translation>תוספת שמע WildMidi של Qmmp</translation>
+        <translation>תוסף שמע WildMidi של Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="106"/>
         <source>This plugin uses WildMidi library to play midi files</source>
-        <translation>תוספת זו עושה שימוש בספריית WildMidi לשם ניגון של קבצי midi</translation>
+        <translation>תוסף זה משתמש בספריית WildMidi לצורך ניגון קבצי midi</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WildMidi Plugin Settings</source>
-        <translation>הגדרות תוספת WildMidi</translation>
+        <translation>הגדרות תוסף WildMidi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>

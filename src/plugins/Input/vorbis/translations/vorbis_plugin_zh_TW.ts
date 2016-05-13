@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodervorbisfactory.cpp" line="52"/>
         <source>Ogg Vorbis Plugin</source>
-        <translation>Ogg Vorbis 插件</translation>
+        <translation>Ogg Vorbis 外掛</translation>
     </message>
     <message>
         <location filename="../decodervorbisfactory.cpp" line="55"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../vorbismetadatamodel.cpp" line="59"/>
         <source>Hz</source>
-        <translation type="unfinished">Hz</translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../vorbismetadatamodel.cpp" line="60"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../vorbismetadatamodel.cpp" line="61"/>
         <source>kbps</source>
-        <translation type="unfinished">kbps</translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../vorbismetadatamodel.cpp" line="62"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../vorbismetadatamodel.cpp" line="62"/>
         <source>KB</source>
-        <translation type="unfinished">KB</translation>
+        <translation>KB</translation>
     </message>
 </context>
 </TS>

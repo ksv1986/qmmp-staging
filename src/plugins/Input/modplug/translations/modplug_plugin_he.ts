@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="55"/>
         <source>ModPlug Plugin</source>
-        <translation>תוספת ModPlug</translation>
+        <translation>תוסף ModPlug</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="61"/>
@@ -16,27 +16,27 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="127"/>
         <source>About ModPlug Audio Plugin</source>
-        <translation>אודות תוספת שמע ModPlug</translation>
+        <translation>אודות תוסף שמע ModPlug</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="128"/>
         <source>Qmmp ModPlug Audio Plugin</source>
-        <translation>תוספת שמע ModPlug של Qmmp</translation>
+        <translation>תוסף שמע ModPlug של Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="129"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="130"/>
         <source>Based on the Modplug Plugin for Xmms</source>
-        <translation>מבוססת על התוספת Modplug עבור Xmms</translation>
+        <translation>מבוסס על התוסף Modplug עבור Xmms</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="131"/>
         <source>Modplug Plugin developers:</source>
-        <translation>מפתחי תוספת Modplug:</translation>
+        <translation>מפתחי תוסף Modplug:</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="132"/>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>ModPlug Plugin Settings</source>
-        <translation>הגדרות תוספת ModPlug</translation>
+        <translation>הגדרות תוסף ModPlug</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
@@ -223,7 +223,7 @@
         <location filename="../settingsdialog.ui" line="499"/>
         <location filename="../settingsdialog.ui" line="618"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="260"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="292"/>
         <source>40</source>
-        <translation type="unfinished"></translation>
+        <translation>40</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="324"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="426"/>
         <source>10</source>
-        <translation type="unfinished"></translation>
+        <translation>10</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="458"/>
@@ -264,7 +264,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="551"/>
         <source>5</source>
-        <translation type="unfinished"></translation>
+        <translation>5</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="577"/>

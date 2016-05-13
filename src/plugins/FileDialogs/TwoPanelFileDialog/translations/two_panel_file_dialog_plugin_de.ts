@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.0" language="de">
 <context>
     <name>TwoPanelFileDialog</name>
     <message>
         <location filename="../twopanelfiledialog.ui" line="14"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei(en) hinzufügen</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="70"/>
         <source>File name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateiname:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="80"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="117"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiedergabe</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="130"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Hinzufügen</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Schließen</translation>
     </message>
 </context>
 <context>
@@ -40,22 +40,22 @@
         <location filename="../twopanelfiledialog.cpp" line="68"/>
         <location filename="../twopanelfiledialog.cpp" line="78"/>
         <source>Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Zwei-Fenster-Dateidialog</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="77"/>
         <source>About Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Über Zwei-Fenster-Dateidialog</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="79"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="80"/>
         <source>Based on code from the Qt library</source>
-        <translation type="unfinished"></translation>
+        <translation>Basiert auf Code aus der Qt-Bibliothek</translation>
     </message>
 </context>
 <context>
@@ -64,23 +64,24 @@
         <location filename="../twopanelfiledialogimpl.cpp" line="326"/>
         <location filename="../twopanelfiledialogimpl.cpp" line="342"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Hinzufügen</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="344"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzeichnisse</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="356"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Speichern</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="463"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 existiert bereits.
+Möchten Sie es ersetzen?</translation>
     </message>
 </context>
 </TS>

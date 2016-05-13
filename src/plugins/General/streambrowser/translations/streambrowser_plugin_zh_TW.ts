@@ -39,7 +39,7 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished">作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../streamwindow.ui" line="102"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>添加</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="109"/>
@@ -78,25 +78,25 @@
         <location filename="../streamwindow.cpp" line="51"/>
         <location filename="../streamwindow.cpp" line="69"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="52"/>
         <location filename="../streamwindow.cpp" line="70"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>流派</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="53"/>
         <location filename="../streamwindow.cpp" line="71"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>比特率</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="54"/>
         <location filename="../streamwindow.cpp" line="72"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>格式</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="125"/>
@@ -116,18 +116,18 @@
     <message>
         <location filename="../streamwindow.cpp" line="141"/>
         <source>Done</source>
-        <translation type="unfinished">完成</translation>
+        <translation>完成</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="144"/>
         <location filename="../streamwindow.cpp" line="145"/>
         <source>Error</source>
-        <translation type="unfinished">錯誤</translation>
+        <translation>錯誤</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="164"/>
         <source>Receiving</source>
-        <translation type="unfinished">接受</translation>
+        <translation>接受</translation>
     </message>
 </context>
 </TS>

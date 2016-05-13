@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="49"/>
         <source>GME Plugin</source>
-        <translation>GME 插件</translation>
+        <translation>GME 外掛</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="52"/>

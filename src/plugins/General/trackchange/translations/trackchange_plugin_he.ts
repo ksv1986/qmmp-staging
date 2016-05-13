@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Track Change Plugin Settings</source>
-        <translation>הגדרות תוספת שינוי רצועה</translation>
+        <translation>הגדרות תוסף שינוי רצועה</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
@@ -14,7 +14,7 @@
         <location filename="../settingsdialog.ui" line="52"/>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
@@ -54,27 +54,27 @@
     <message>
         <location filename="../settingsdialog.cpp" line="61"/>
         <source>Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="62"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה דו ספרתי</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="67"/>
         <source>Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר תקליטור</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="68"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>שם קובץ</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>נתיב קובץ</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="63"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="59"/>
         <source>Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="64"/>
@@ -117,27 +117,27 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="29"/>
         <source>Track Change Plugin</source>
-        <translation>תוספת שינוי רצועה</translation>
+        <translation>תוסף שינוי רצועה</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="49"/>
         <source>About Track Change Plugin</source>
-        <translation>אודות תוספת שינוי רצועה</translation>
+        <translation>אודות תוסף שינוי רצועה</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="50"/>
         <source>Qmmp Track Change Plugin</source>
-        <translation>תוספת שינוי רצועה של Qmmp</translation>
+        <translation>תוסף שינוי רצועה של Qmmp</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="51"/>
         <source>This plugin executes external command when current track is changed</source>
-        <translation>תוספת זו מוציאה לפועל פקודה חיצונית כאשר רצועה נוכחית משתנה</translation>
+        <translation>תוסף זה מבצע פקודה חיצונית כאשר רצועה נוכחית משתנה</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 </TS>

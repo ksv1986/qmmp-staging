@@ -23,9 +23,9 @@
     <message numerus="yes">
         <location filename="../fileops.cpp" line="137"/>
         <source>Are you sure you want to move %n file(s)?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>האם אתה בטוח כי ברצונך להעביר קובץ %n?</numerusform>
+            <numerusform>האם אתה בטוח כי ברצונך להעביר %n קבצים?</numerusform>
         </translation>
     </message>
     <message>
@@ -73,22 +73,22 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="30"/>
         <source>File Operations Plugin</source>
-        <translation>תוספת מבצעי קובץ</translation>
+        <translation>תוסף מבצעי קובץ</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="50"/>
         <source>About File Operations Plugin</source>
-        <translation>אודות תוספת מבצעי קובץ</translation>
+        <translation>אודות תוסף מבצעי קובץ</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="51"/>
         <source>Qmmp File Operations Plugin</source>
-        <translation>תוספת מבצעי קובץ של Qmmp</translation>
+        <translation>תוסף מבצעי קובץ של Qmmp</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -157,7 +157,7 @@
         <location filename="../settingsdialog.ui" line="126"/>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="133"/>
@@ -200,7 +200,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="222"/>
         <source>Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="223"/>
@@ -210,27 +210,27 @@
     <message>
         <location filename="../settingsdialog.cpp" line="224"/>
         <source>Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="225"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה דו ספרתי</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="230"/>
         <source>Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר תקליטור</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="231"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>שם קובץ</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="232"/>
         <source>File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>נתיב קובץ</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="226"/>

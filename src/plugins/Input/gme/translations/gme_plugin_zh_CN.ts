@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="zh_CN" sourcelanguage="zh_CN">
+<TS version="2.0" language="zh_CN">
 <context>
     <name>DecoderGmeFactory</name>
     <message>
@@ -39,22 +39,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>GME Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>GME插件设置</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Fadeout length:</source>
-        <translation type="unfinished"></translation>
+        <translation>淡出长度</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="44"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>毫秒</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="57"/>
         <source>Enable fadeout</source>
-        <translation type="unfinished"></translation>
+        <translation>开启淡出功能</translation>
     </message>
 </context>
 </TS>

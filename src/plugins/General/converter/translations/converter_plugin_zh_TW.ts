@@ -13,7 +13,7 @@
         <location filename="../converter.cpp" line="145"/>
         <location filename="../converter.cpp" line="212"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="177"/>
@@ -76,22 +76,22 @@
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>停止</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="107"/>
         <source>Choose a directory</source>
-        <translation type="unfinished">選取一個目錄</translation>
+        <translation>選取一個目錄</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="190"/>
         <source>Artist</source>
-        <translation type="unfinished">藝術家</translation>
+        <translation>藝術家</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="191"/>
         <source>Album</source>
-        <translation type="unfinished">專輯</translation>
+        <translation>專輯</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="192"/>
@@ -102,7 +102,7 @@
         <location filename="../converterdialog.ui" line="39"/>
         <location filename="../converterdialog.cpp" line="193"/>
         <source>Title</source>
-        <translation type="unfinished">標題</translation>
+        <translation>標題</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="194"/>
@@ -130,16 +130,21 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../converterdialog.cpp" line="212"/>
+        <source>Create a Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../converterdialog.cpp" line="196"/>
         <source>Genre</source>
-        <translation type="unfinished">流派</translation>
+        <translation>流派</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="128"/>
         <location filename="../converterdialog.cpp" line="367"/>
         <location filename="../converterdialog.cpp" line="373"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="133"/>
@@ -149,27 +154,27 @@
     <message>
         <location filename="../converterdialog.cpp" line="197"/>
         <source>Comment</source>
-        <translation type="unfinished">備註</translation>
+        <translation>備註</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="198"/>
         <source>Composer</source>
-        <translation type="unfinished">作曲</translation>
+        <translation>作曲</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="199"/>
         <source>Duration</source>
-        <translation type="unfinished">持續時間</translation>
+        <translation>持續時間</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="203"/>
         <source>Year</source>
-        <translation type="unfinished">年代</translation>
+        <translation>年代</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="204"/>
         <source>Condition</source>
-        <translation type="unfinished">條件</translation>
+        <translation>條件</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="210"/>
@@ -182,14 +187,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="212"/>
-        <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../converterdialog.cpp" line="213"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>移除</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="367"/>
@@ -227,7 +227,7 @@
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished">作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -248,12 +248,12 @@
     <message>
         <location filename="../preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>預設編輯程式</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="29"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>常規</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="35"/>
@@ -273,7 +273,7 @@
     <message>
         <location filename="../preseteditor.ui" line="77"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>設定</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="83"/>

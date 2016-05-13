@@ -6,12 +6,12 @@
     <message>
         <location filename="../streambrowser.cpp" line="33"/>
         <source>Stream Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>媒体流浏览器</translation>
     </message>
     <message>
         <location filename="../streambrowser.cpp" line="35"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
 </context>
 <context>
@@ -19,27 +19,27 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="28"/>
         <source>Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>媒体流浏览器插件</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="49"/>
         <source>About Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>关于媒体流浏览器插件</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="50"/>
         <source>Qmmp Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp媒体流浏览器插件</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>This plugin allows one to add stream from IceCast stream directory</source>
-        <translation type="unfinished"></translation>
+        <translation>此插件允许从IceCast媒体流文件夹向Qmmp中添加媒体流</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished">作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -47,87 +47,87 @@
     <message>
         <location filename="../streamwindow.ui" line="14"/>
         <source>Stream Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>媒体流浏览器</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>筛选器：</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="47"/>
         <source>Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>最喜爱的</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="73"/>
         <source>IceCast</source>
-        <translation type="unfinished"></translation>
+        <translation>IceCast</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="102"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>添加</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="109"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>更新</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="51"/>
         <location filename="../streamwindow.cpp" line="69"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名称</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="52"/>
         <location filename="../streamwindow.cpp" line="70"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>风格</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="53"/>
         <location filename="../streamwindow.cpp" line="71"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>比特率</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="54"/>
         <location filename="../streamwindow.cpp" line="72"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>格式</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="125"/>
         <source>&amp;Add to favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>添加到最爱清单(&amp;A)</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="126"/>
         <source>&amp;Add to playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>添加到播放列表中(&amp;A)</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="131"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>移除(&amp;R)</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="141"/>
         <source>Done</source>
-        <translation type="unfinished">完成</translation>
+        <translation>完成</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="144"/>
         <location filename="../streamwindow.cpp" line="145"/>
         <source>Error</source>
-        <translation type="unfinished">错误</translation>
+        <translation>错误</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="164"/>
         <source>Receiving</source>
-        <translation type="unfinished">接受</translation>
+        <translation>接收中</translation>
     </message>
 </context>
 </TS>

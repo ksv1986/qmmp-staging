@@ -37,3 +37,5 @@ Exec=qmmp --no-start --next
 # Translations
 Comment[he]=נגן מולטימדיה מבוסס Qt4
 GenericName[he]=נגן אודיו
+Name[he]=Qmmp
+Icon[he]=qmmp

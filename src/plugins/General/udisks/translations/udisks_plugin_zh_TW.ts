@@ -44,17 +44,17 @@
     <message>
         <location filename="../udisksfactory.cpp" line="30"/>
         <source>UDisks Plugin</source>
-        <translation>UDisks 插件</translation>
+        <translation>UDisks 外掛</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="50"/>
         <source>About UDisks Plugin</source>
-        <translation>關於 UDisks 插件</translation>
+        <translation>關於 UDisks 外掛</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="51"/>
         <source>Qmmp UDisks Plugin</source>
-        <translation>Qmmp UDisks 插件</translation>
+        <translation>Qmmp UDisks 外掛</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="52"/>

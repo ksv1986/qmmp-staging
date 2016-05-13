@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodermpcfactory.cpp" line="60"/>
         <source>Musepack Plugin</source>
-        <translation>Musepack 插件</translation>
+        <translation>Musepack 外掛</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="62"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../mpcmetadatamodel.cpp" line="47"/>
         <source>Hz</source>
-        <translation type="unfinished">Hz</translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../mpcmetadatamodel.cpp" line="48"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../mpcmetadatamodel.cpp" line="49"/>
         <source>kbps</source>
-        <translation type="unfinished">kbps</translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../mpcmetadatamodel.cpp" line="50"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../mpcmetadatamodel.cpp" line="50"/>
         <source>KB</source>
-        <translation type="unfinished">KB</translation>
+        <translation>KB</translation>
     </message>
 </context>
 </TS>

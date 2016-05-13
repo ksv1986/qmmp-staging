@@ -6,32 +6,32 @@
     <message>
         <location filename="../decoderopusfactory.cpp" line="47"/>
         <source>Opus Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Opus插件</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="50"/>
         <source>Ogg Opus Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogg Opus 文件</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="124"/>
         <source>About Opus Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>关于Opus音频</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="125"/>
         <source>Qmmp Opus Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Opus音频文件插件</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="126"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished">作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="127"/>
         <source>This plugin includes code from TagLib library</source>
-        <translation type="unfinished"></translation>
+        <translation>此插件中含有TagLib文件库中的代码</translation>
     </message>
 </context>
 <context>
@@ -39,42 +39,42 @@
     <message>
         <location filename="../opusmetadatamodel.cpp" line="54"/>
         <source>Length</source>
-        <translation type="unfinished">长度</translation>
+        <translation>长度</translation>
     </message>
     <message>
         <location filename="../opusmetadatamodel.cpp" line="55"/>
         <source>Sample rate</source>
-        <translation type="unfinished">取样率</translation>
+        <translation>采样率</translation>
     </message>
     <message>
         <location filename="../opusmetadatamodel.cpp" line="55"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>赫兹</translation>
     </message>
     <message>
         <location filename="../opusmetadatamodel.cpp" line="56"/>
         <source>Channels</source>
-        <translation type="unfinished">声音通道</translation>
+        <translation>频道</translation>
     </message>
     <message>
         <location filename="../opusmetadatamodel.cpp" line="57"/>
         <source>Bitrate</source>
-        <translation type="unfinished">比特率</translation>
+        <translation>比特率</translation>
     </message>
     <message>
         <location filename="../opusmetadatamodel.cpp" line="57"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>千比特每秒</translation>
     </message>
     <message>
         <location filename="../opusmetadatamodel.cpp" line="58"/>
         <source>File size</source>
-        <translation type="unfinished">文件大小</translation>
+        <translation>文件大小</translation>
     </message>
     <message>
         <location filename="../opusmetadatamodel.cpp" line="58"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>千字节</translation>
     </message>
 </context>
 </TS>

@@ -21,7 +21,7 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished">Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέση</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>

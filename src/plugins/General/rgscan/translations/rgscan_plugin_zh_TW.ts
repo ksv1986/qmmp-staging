@@ -16,7 +16,7 @@
     <message>
         <location filename="../rgscandialog.ui" line="42"/>
         <source>Title</source>
-        <translation type="unfinished">標題</translation>
+        <translation>標題</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="47"/>
@@ -67,7 +67,7 @@
         <location filename="../rgscandialog.cpp" line="130"/>
         <location filename="../rgscandialog.cpp" line="241"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤</translation>
     </message>
     <message>
         <location filename="../rgscandialog.cpp" line="140"/>
@@ -103,7 +103,7 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="53"/>

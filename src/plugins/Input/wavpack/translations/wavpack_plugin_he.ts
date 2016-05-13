@@ -6,7 +6,7 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="44"/>
         <source>WavPack Plugin</source>
-        <translation>תוספת WavPack</translation>
+        <translation>תוסף WavPack</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="46"/>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="155"/>
         <source>About WavPack Audio Plugin</source>
-        <translation>אודות תוספת שמע WavPack</translation>
+        <translation>אודות תוסף שמע WavPack</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="156"/>
         <source>Qmmp WavPack Audio Plugin</source>
-        <translation>תוספת שמע WavPack של Qmmp</translation>
+        <translation>תוסף שמע WavPack של Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="157"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="159"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../projectmplugin.cpp" line="41"/>
         <source>ProjectM</source>
-        <translation type="unfinished">ProjectM</translation>
+        <translation>ProjectM</translation>
     </message>
 </context>
 <context>

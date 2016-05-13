@@ -176,7 +176,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="59"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Suavização</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished">Atualizar</translation>
+        <translation>Atualizar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -356,7 +356,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>&amp;Rename List</source>
-        <translation>Muda&amp;r nome da lista</translation>
+        <translation>&amp;Renomear lista</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
@@ -416,7 +416,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>&amp;Settings</source>
-        <translation>D&amp;efinições</translation>
+        <translation>Definiçõe&amp;s</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
@@ -926,7 +926,7 @@
     <message>
         <location filename="../playlist.cpp" line="586"/>
         <source>Rename Playlist</source>
-        <translation>Mudar nome da lista de reprodução</translation>
+        <translation>Renomear lista de reprodução</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="586"/>
@@ -971,7 +971,7 @@
     <message>
         <location filename="../playlistbrowser.cpp" line="42"/>
         <source>Rename</source>
-        <translation>Mudar nome</translation>
+        <translation>Renomear</translation>
     </message>
 </context>
 <context>
@@ -999,25 +999,25 @@
     <message>
         <location filename="../playlistheader.cpp" line="93"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Alinhamento</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="94"/>
         <source>Left</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Esquerda</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="95"/>
         <source>Right</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Direita</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="96"/>
         <source>Center</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Centro</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="106"/>

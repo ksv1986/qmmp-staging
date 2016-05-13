@@ -6,17 +6,17 @@
     <message>
         <location filename="../halfactory.cpp" line="30"/>
         <source>HAL Plugin</source>
-        <translation>HAL 插件</translation>
+        <translation>HAL 外掛</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="50"/>
         <source>About HAL Plugin</source>
-        <translation>關於 HAL 插件</translation>
+        <translation>關於 HAL 外掛</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="51"/>
         <source>Qmmp HAL Plugin</source>
-        <translation>Qmmp HAL 插件</translation>
+        <translation>Qmmp HAL 外掛</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="52"/>

@@ -24,27 +24,27 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="30"/>
         <source>Global Hotkey Plugin</source>
-        <translation>תוספת מקש חם גלובלי</translation>
+        <translation>תוסף מקש חם גלובלי</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="50"/>
         <source>About Global Hotkey Plugin</source>
-        <translation>אודות תוספת מקש חם גלובלי</translation>
+        <translation>אודות תוסף מקש חם גלובלי</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="51"/>
         <source>Qmmp Global Hotkey Plugin</source>
-        <translation>תוספת מקש חם גלובלי של Qmmp</translation>
+        <translation>תוסף מקש חם גלובלי של Qmmp</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="52"/>
         <source>This plugin adds support for multimedia keys or global key combinations</source>
-        <translation>תוספת זו מוסיפה תמיכה למקשי מולטימדיה או צירופי מקש גלובלי</translation>
+        <translation>תוסף זה מוסיף תמיכה למקשי מולטימדיה או צירופי מקש גלובלי</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Global Hotkey Plugin Settings</source>
-        <translation>הגדרות תוספת מקש חם גלובלי</translation>
+        <translation>הגדרות תוסף מקש חם גלובלי</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="111"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
-        <translation>Key sequence &apos;%1&apos; is already used</translation>
+        <translation>רצף מקש &apos;%1&apos; מצוי כבר בשימוש</translation>
     </message>
 </context>
 </TS>

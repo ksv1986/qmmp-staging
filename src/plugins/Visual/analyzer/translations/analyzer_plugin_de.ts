@@ -102,7 +102,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Analyzer Plugin Settings</source>
-        <translation>Einstellungen Analysator-Modul</translation>
+        <translation>Einstellungen Analysatormodul</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -150,7 +150,7 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="30"/>
         <source>Analyzer Plugin</source>
-        <translation>Analysator-Modul</translation>
+        <translation>Analysatormodul</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="49"/>

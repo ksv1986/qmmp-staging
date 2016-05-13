@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="zh_CN" sourcelanguage="zh_TW">
+<TS version="2.0" language="zh_TW">
 <context>
     <name>EffectLADSPAFactory</name>
     <message>
         <location filename="../effectladspafactory.cpp" line="30"/>
         <source>LADSPA Plugin</source>
-        <translation>LADSPA 插件</translation>
+        <translation>LADSPA 外掛</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="50"/>
@@ -47,21 +47,6 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="47"/>
-        <source>UID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="48"/>
-        <source>Name</source>
-        <translation>名稱</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="132"/>
-        <source>This LADSPA plugin has no user controls</source>
-        <translation>LADSPA 插件用戶設定</translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>LADSPA Plugin Catalog</source>
         <translation>LADSPA 插件目錄</translation>
@@ -80,6 +65,21 @@
         <location filename="../settingsdialog.ui" line="94"/>
         <source>Configure</source>
         <translation>配置</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="47"/>
+        <source>UID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="48"/>
+        <source>Name</source>
+        <translation>名稱</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="132"/>
+        <source>This LADSPA plugin has no user controls</source>
+        <translation>LADSPA 插件用戶設定</translation>
     </message>
 </context>
 </TS>

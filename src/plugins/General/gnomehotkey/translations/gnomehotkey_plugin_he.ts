@@ -6,12 +6,12 @@
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="29"/>
         <source>Gnome Hotkey Plugin</source>
-        <translation>תוספת מקשים חמים Gnome</translation>
+        <translation>תוסף מקשים חמים Gnome</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="50"/>
         <source>About Gnome Hotkey Plugin</source>
-        <translation>אודות תוספת מקשים חמים Gnome</translation>
+        <translation>אודות תוסף מקשים חמים Gnome</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="51"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="52"/>
         <source>This plugin adds support of the GNOME/Cinnamon hotkeys</source>
-        <translation>תוספת זו מוסיפה תמיכה למקשים החמים של GNOME/Cinnamon</translation>
+        <translation>תוסף זה מוסיף תמיכה למקשים חמים של GNOME/Cinnamon</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 </TS>

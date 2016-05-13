@@ -11,7 +11,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="38"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="39"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="39"/>
         <source>C</source>
-        <translation type="unfinished"></translation>
+        <translation>C</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
@@ -51,7 +51,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>B</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>J</source>
-        <translation type="unfinished"></translation>
+        <translation>J</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>S</source>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
@@ -111,7 +111,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="49"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
@@ -131,7 +131,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
         <source>Alt+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
@@ -141,7 +141,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
         <source>Alt+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+E</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
@@ -151,7 +151,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
         <source>Alt+G</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+G</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="56"/>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="58"/>
         <source>Meta+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+D</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="59"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation>9</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
         <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation>F</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
@@ -226,7 +226,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>D</source>
-        <translation type="unfinished"></translation>
+        <translation>D</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="69"/>
@@ -236,7 +236,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="69"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation>U</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished">רענן</translation>
+        <translation>רענן</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -281,7 +281,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
         <source>Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
@@ -301,7 +301,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
@@ -311,7 +311,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>Alt+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+I</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
@@ -321,7 +321,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
@@ -331,7 +331,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
@@ -341,7 +341,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
@@ -351,17 +351,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>&amp;Rename List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;שנה שם רשימה</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
@@ -371,7 +371,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Ctrl+PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+PgDown</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
@@ -381,7 +381,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>Ctrl+PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+PgUp</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
@@ -391,27 +391,27 @@
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation>P</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>&amp;Group Tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>רצועות &amp;קבוצה</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>Ctrl+G</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+G</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>&amp;Show Column Headers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;הצג תקורות טור</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
@@ -421,7 +421,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
 </context>
 <context>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished">אפס</translation>
+        <translation>אפס</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
@@ -926,12 +926,12 @@
     <message>
         <location filename="../playlist.cpp" line="586"/>
         <source>Rename Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>שנה שם רשימת נגינה</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="586"/>
         <source>Playlist name:</source>
-        <translation type="unfinished"></translation>
+        <translation>שם רשימת נגינה:</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="607"/>
@@ -966,7 +966,7 @@
         <location filename="../forms/playlistbrowser.ui" line="57"/>
         <location filename="../forms/playlistbrowser.ui" line="67"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../playlistbrowser.cpp" line="42"/>
@@ -979,12 +979,12 @@
     <message>
         <location filename="../playlistheader.cpp" line="86"/>
         <source>Add Column</source>
-        <translation type="unfinished"></translation>
+        <translation>הוסף טור</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="87"/>
         <source>Edit Column</source>
-        <translation type="unfinished"></translation>
+        <translation>ערוך טור</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="88"/>
@@ -999,30 +999,30 @@
     <message>
         <location filename="../playlistheader.cpp" line="93"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>יישור</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="94"/>
         <source>Left</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>שמאל</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="95"/>
         <source>Right</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>ימין</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="96"/>
         <source>Center</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>מרכז</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="106"/>
         <source>Remove Column</source>
-        <translation type="unfinished"></translation>
+        <translation>הסר טור</translation>
     </message>
 </context>
 <context>
@@ -1085,7 +1085,7 @@
     <message>
         <location filename="../popupsettings.cpp" line="64"/>
         <source>Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום</translation>
     </message>
     <message>
         <location filename="../popupsettings.cpp" line="65"/>
@@ -1095,32 +1095,32 @@
     <message>
         <location filename="../popupsettings.cpp" line="66"/>
         <source>Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה</translation>
     </message>
     <message>
         <location filename="../popupsettings.cpp" line="67"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה דו ספרתי</translation>
     </message>
     <message>
         <location filename="../popupsettings.cpp" line="72"/>
         <source>Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר תקליטור</translation>
     </message>
     <message>
         <location filename="../popupsettings.cpp" line="73"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>שם קובץ</translation>
     </message>
     <message>
         <location filename="../popupsettings.cpp" line="74"/>
         <source>File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>נתיב קובץ</translation>
     </message>
     <message>
         <location filename="../popupsettings.cpp" line="68"/>
         <source>Genre</source>
-        <translation>ז&apos;אנר</translation>
+        <translation>ז׳אנר</translation>
     </message>
     <message>
         <location filename="../popupsettings.cpp" line="69"/>
@@ -1186,7 +1186,7 @@
     <message>
         <location filename="../forms/shortcutdialog.ui" line="29"/>
         <source>Press the key combination you want to assign</source>
-        <translation>הזן את צירוף המקשים שברצונך להקצות</translation>
+        <translation>הזן את צירוף המקשים אשר ברצונך להקצות</translation>
     </message>
     <message>
         <location filename="../forms/shortcutdialog.ui" line="52"/>
@@ -1219,7 +1219,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="47"/>
         <source>Written by:</source>
-        <translation type="unfinished"></translation>
+        <translation>חובר על ידי:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="48"/>
@@ -1234,7 +1234,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="50"/>
         <source>Artwork:</source>
-        <translation type="unfinished"></translation>
+        <translation>עבודת אמנות:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="51"/>
@@ -1267,7 +1267,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="95"/>
         <source>Main Window</source>
-        <translation type="unfinished"></translation>
+        <translation>חלון ראשי</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="101"/>
@@ -1297,12 +1297,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="456"/>
         <source>Playlist:</source>
-        <translation type="unfinished"></translation>
+        <translation>רשימת נגינה:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="492"/>
         <source>Column headers:</source>
-        <translation type="unfinished"></translation>
+        <translation>תקורות טור:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="414"/>
@@ -1314,7 +1314,7 @@
         <location filename="../forms/skinnedsettings.ui" line="478"/>
         <location filename="../forms/skinnedsettings.ui" line="505"/>
         <source>???</source>
-        <translation type="unfinished"></translation>
+        <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="134"/>
@@ -1322,7 +1322,7 @@
         <location filename="../forms/skinnedsettings.ui" line="485"/>
         <location filename="../forms/skinnedsettings.ui" line="512"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="534"/>
@@ -1342,7 +1342,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="89"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>כלליות</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="146"/>
@@ -1359,7 +1359,7 @@
         <location filename="../forms/skinnedsettings.ui" line="199"/>
         <location filename="../forms/skinnedsettings.ui" line="223"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="182"/>
@@ -1384,7 +1384,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="266"/>
         <source>Show song lengths</source>
-        <translation type="unfinished"></translation>
+        <translation>הצג אורך שיר</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="259"/>
@@ -1444,82 +1444,82 @@
     <message>
         <location filename="../skinnedsettings.cpp" line="183"/>
         <source>Artist</source>
-        <translation type="unfinished">אמן</translation>
+        <translation>אמן</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="184"/>
         <source>Album</source>
-        <translation type="unfinished">אלבום</translation>
+        <translation>אלבום</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="185"/>
         <source>Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן אלבום</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="186"/>
         <source>Title</source>
-        <translation type="unfinished">כותרת</translation>
+        <translation>כותרת</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="187"/>
         <source>Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="188"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר רצועה דו ספרתי</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="189"/>
         <source>Genre</source>
-        <translation type="unfinished">ז&apos;אנר</translation>
+        <translation>ז׳אנר</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="190"/>
         <source>Comment</source>
-        <translation type="unfinished">הערה</translation>
+        <translation>הערה</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="191"/>
         <source>Composer</source>
-        <translation type="unfinished">מלחין</translation>
+        <translation>מלחין</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="192"/>
         <source>Duration</source>
-        <translation type="unfinished">משך</translation>
+        <translation>משך</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="193"/>
         <source>Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר תקליטור</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="194"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>שם קובץ</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="195"/>
         <source>File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>נתיב קובץ</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="196"/>
         <source>Year</source>
-        <translation type="unfinished">שנה</translation>
+        <translation>שנה</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="197"/>
         <source>Condition</source>
-        <translation type="unfinished">תנאי</translation>
+        <translation>תנאי</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="198"/>
         <source>Artist - Title</source>
-        <translation type="unfinished"></translation>
+        <translation>אמן - כותרת</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="227"/>

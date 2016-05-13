@@ -6,27 +6,27 @@
     <message>
         <location filename="../effectstereofactory.cpp" line="30"/>
         <source>Extra Stereo Plugin</source>
-        <translation>תוספת סטריאו נוסף</translation>
+        <translation>תוסף סטריאו נוסף</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="50"/>
         <source>About Extra Stereo Plugin</source>
-        <translation>אודות תוספת סטריאו נוסף</translation>
+        <translation>אודות תוסף סטריאו נוסף</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="51"/>
         <source>Qmmp Extra Stereo Plugin</source>
-        <translation>תוספת סטריאו נוסף של Qmmp</translation>
+        <translation>תוסף סטריאו נוסף של Qmmp</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="53"/>
         <source>Based on the Extra Stereo Plugin for Xmms by Johan Levin</source>
-        <translation>מבוססת על תוספת סטריאו נוסף עבור Xmms מאת Johan Levin</translation>
+        <translation>מבוסס על תוסף סטריאו נוסף עבור Xmms מאתJohan Levin</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Extra Stereo Plugin Settings</source>
-        <translation>הגדרות תוספת סטריאו נוסף</translation>
+        <translation>הגדרות תוסף סטריאו נוסף</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="31"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="54"/>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation>-</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="57"/>

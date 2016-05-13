@@ -46,7 +46,7 @@
         <location filename="../settingsdialog.ui" line="50"/>
         <location filename="../settingsdialog.ui" line="126"/>
         <source>Check</source>
-        <translation type="unfinished"></translation>
+        <translation>检查</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="72"/>
@@ -64,50 +64,22 @@
         <location filename="../settingsdialog.cpp" line="121"/>
         <location filename="../settingsdialog.cpp" line="172"/>
         <source>Message</source>
-        <translation type="unfinished"></translation>
+        <translation>信息</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="87"/>
         <source>1. Wait for browser startup</source>
-        <translation type="unfinished"></translation>
+        <translation>1.等候浏览器启动</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="88"/>
         <source>2. Allow Qmmp to scrobble tracks to your %1 account</source>
-        <translation type="unfinished"></translation>
+        <translation>2.允许Qmmp向您的%1账户推荐类似曲目</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="90"/>
         <source>3. Press &quot;OK&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="103"/>
-        <location filename="../settingsdialog.cpp" line="136"/>
-        <location filename="../settingsdialog.cpp" line="180"/>
-        <source>Network error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="107"/>
-        <location filename="../settingsdialog.cpp" line="140"/>
-        <source>Unable to register new session</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="121"/>
-        <source>New session has been received successfully</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="172"/>
-        <source>Permission granted</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="184"/>
-        <source>Permission denied</source>
-        <translation type="unfinished"></translation>
+        <translation>3.按“OK”</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="103"/>
@@ -117,7 +89,35 @@
         <location filename="../settingsdialog.cpp" line="180"/>
         <location filename="../settingsdialog.cpp" line="184"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>错误</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="103"/>
+        <location filename="../settingsdialog.cpp" line="136"/>
+        <location filename="../settingsdialog.cpp" line="180"/>
+        <source>Network error</source>
+        <translation>网络错误</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="107"/>
+        <location filename="../settingsdialog.cpp" line="140"/>
+        <source>Unable to register new session</source>
+        <translation>无法注册新会话</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="121"/>
+        <source>New session has been received successfully</source>
+        <translation>新会话已被成功接收</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="172"/>
+        <source>Permission granted</source>
+        <translation>权限已授予</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="184"/>
+        <source>Permission denied</source>
+        <translation>权限被拒绝</translation>
     </message>
 </context>
 </TS>

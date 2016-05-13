@@ -6,22 +6,22 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="30"/>
         <source>SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin SoX de rééchantillonnage</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="51"/>
         <source>About SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>A propos du plugin SoX de rééchantillonnage</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="52"/>
         <source>Qmmp SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin SoX Qmmp de rééchantillonnage</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished">Écrit par : Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>Ecrit par: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>SoX Resampler Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres du rééchantillonneur SoX</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -39,32 +39,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="49"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qualité:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Quick</source>
-        <translation type="unfinished"></translation>
+        <translation>Rapide</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="35"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Bas</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Moyenne</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>Haut</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
         <source>Very High</source>
-        <translation type="unfinished"></translation>
+        <translation>Très Haut</translation>
     </message>
 </context>
 </TS>

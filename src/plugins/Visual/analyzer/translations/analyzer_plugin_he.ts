@@ -86,7 +86,7 @@
     <message>
         <location filename="../analyzer.cpp" line="400"/>
         <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation>F</translation>
     </message>
 </context>
 <context>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Analyzer Plugin Settings</source>
-        <translation>הגדרות תוספת אבחון</translation>
+        <translation>הגדרות תוסף אבחון</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -150,22 +150,22 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="30"/>
         <source>Analyzer Plugin</source>
-        <translation>תוספת מאבחן</translation>
+        <translation>תוסף מאבחן</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="49"/>
         <source>About Analyzer Visual Plugin</source>
-        <translation>אודות תוספת מאבחן חזותי</translation>
+        <translation>אודות תוסף מאבחן חזותי</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="50"/>
         <source>Qmmp Analyzer Visual Plugin</source>
-        <translation>תוספת מאבחן חזותי של Qmmp</translation>
+        <translation>תוסף מאבחן חזותי של Qmmp</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 </TS>

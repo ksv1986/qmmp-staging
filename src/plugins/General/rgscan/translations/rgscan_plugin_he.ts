@@ -46,7 +46,7 @@
     <message>
         <location filename="../rgscandialog.ui" line="77"/>
         <source>Skip already scanned files</source>
-        <translation type="unfinished"></translation>
+        <translation>דלג על קבצים אשר כבר נסרקו</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="113"/>
@@ -83,32 +83,32 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="28"/>
         <source>ReplayGain Scanner Plugin</source>
-        <translation>תוספת סורק ReplayGain</translation>
+        <translation>תוסף סורק ReplayGain</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="49"/>
         <source>About ReplayGain Scanner Plugin</source>
-        <translation>אודות תוספת סורק ReplayGain</translation>
+        <translation>אודות תוסף סורק ReplayGain</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="50"/>
         <source>ReplayGain Scanner Plugin for Qmmp</source>
-        <translation>תוספת סורק ReplayGain עבור Qmmp</translation>
+        <translation>תוסף סורק ReplayGain עבור Qmmp</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="51"/>
         <source>This plugin scans audio files and gives information for volume normalization</source>
-        <translation>תוספת זו סורקת קבצי שמע ונותנת מידע עבור נורצליזציה של עוצמת שמע</translation>
+        <translation>תוסף זה סורק קבצי שמע ונותן מידע עבור נורמליזציה של עוצמת שמע</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="53"/>
         <source>Based on source code by:</source>
-        <translation>מבוססת על קוד מקור מאת:</translation>
+        <translation>מבוסס על קוד מקור מאת:</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="54"/>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../rgscanhelper.cpp" line="33"/>
         <source>Meta+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+R</translation>
     </message>
 </context>
 </TS>

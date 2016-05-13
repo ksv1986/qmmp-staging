@@ -245,7 +245,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="14"/>
         <source>Qmmp Settings</source>
-        <translation>Einstellungen</translation>
+        <translation>Qmmp Einstellungen</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="58"/>
@@ -500,17 +500,17 @@
     <message>
         <location filename="../forms/configdialog.ui" line="823"/>
         <source>Volume adjustment step:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lautstärken-Anpassungschritt:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="764"/>
         <source>Output bit depth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgabebittiefe</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="771"/>
         <source>Use dithering</source>
-        <translation type="unfinished"></translation>
+        <translation>Dithering verwenden</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="69"/>

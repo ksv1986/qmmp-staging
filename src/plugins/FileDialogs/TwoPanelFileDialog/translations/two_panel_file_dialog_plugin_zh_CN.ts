@@ -6,32 +6,32 @@
     <message>
         <location filename="../twopanelfiledialog.ui" line="14"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>添加文件</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="70"/>
         <source>File name:</source>
-        <translation type="unfinished"></translation>
+        <translation>文件名：</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="80"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>文件类型：</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="117"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>播放</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="130"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>添加</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
     <message>
         <location filename="../twopanelfiledialog.cpp" line="79"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="80"/>
@@ -64,23 +64,24 @@
         <location filename="../twopanelfiledialogimpl.cpp" line="326"/>
         <location filename="../twopanelfiledialogimpl.cpp" line="342"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>添加</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="344"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>目录</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="356"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="463"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 早已存在。
+你想要替换它吗？</translation>
     </message>
 </context>
 </TS>

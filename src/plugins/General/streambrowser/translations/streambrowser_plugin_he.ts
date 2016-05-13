@@ -6,12 +6,12 @@
     <message>
         <location filename="../streambrowser.cpp" line="33"/>
         <source>Stream Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Stream Browser</translation>
     </message>
     <message>
         <location filename="../streambrowser.cpp" line="35"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
 </context>
 <context>
@@ -19,27 +19,27 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="28"/>
         <source>Stream Browser Plugin</source>
-        <translation>תוספת Stream Browser</translation>
+        <translation>תוסף Stream Browser</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="49"/>
         <source>About Stream Browser Plugin</source>
-        <translation>אודות תוספת Stream Browser</translation>
+        <translation>אודות תוסף Stream Browser</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="50"/>
         <source>Qmmp Stream Browser Plugin</source>
-        <translation>תוספת Stream Browser של Qmmp</translation>
+        <translation>תוסף Stream Browser של Qmmp</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>This plugin allows one to add stream from IceCast stream directory</source>
-        <translation>תוספת זו מתירה לך להוסיף זרם מתוך מדור זרם של IceCast</translation>
+        <translation>תוסף זה מתיר לך להוסיף זרם מתוך ספריית זרם IceCast</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../streamwindow.ui" line="14"/>
         <source>Stream Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Stream Browser</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="31"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../streamwindow.ui" line="73"/>
         <source>IceCast</source>
-        <translation type="unfinished"></translation>
+        <translation>IceCast</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="102"/>

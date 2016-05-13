@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>UDisks Plugin Settings</source>
-        <translation>הגדרות תוספת UDisks</translation>
+        <translation>הגדרות תוסף UDisks</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -44,27 +44,27 @@
     <message>
         <location filename="../udisksfactory.cpp" line="30"/>
         <source>UDisks Plugin</source>
-        <translation>תוספת UDisks</translation>
+        <translation>תוסף UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="50"/>
         <source>About UDisks Plugin</source>
-        <translation>אודות תוספת UDisks</translation>
+        <translation>אודות תוסף UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="51"/>
         <source>Qmmp UDisks Plugin</source>
-        <translation>תוספת UDisks של Qmmp</translation>
+        <translation>תוסף UDisks של Qmmp</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks</source>
-        <translation>תוספת זו מספקת איתור של התקנים נשלפים באמצעות UDisks</translation>
+        <translation>תוסף זה מספק איתור של התקנים נשלפים באמצעות UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>

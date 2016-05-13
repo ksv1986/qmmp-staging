@@ -6,22 +6,22 @@
     <message>
         <location filename="../notifierfactory.cpp" line="30"/>
         <source>Notifier Plugin</source>
-        <translation>תוספת התראה</translation>
+        <translation>תוסף התראה</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="50"/>
         <source>About Notifier Plugin</source>
-        <translation>אודות תוספת התראה</translation>
+        <translation>אודות תוסף התראה</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="51"/>
         <source>Qmmp Notifier Plugin</source>
-        <translation>תוספת התראה של Qmmp</translation>
+        <translation>תוסף התראה של Qmmp</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Notifier Plugin Settings</source>
-        <translation>הגדרות תוספת התראה</translation>
+        <translation>הגדרות תוסף התראה</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -52,13 +52,13 @@
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="68"/>
         <location filename="../settingsdialog.ui" line="279"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="75"/>

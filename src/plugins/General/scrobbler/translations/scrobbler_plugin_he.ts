@@ -6,22 +6,22 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="30"/>
         <source>Scrobbler Plugin</source>
-        <translation>תוספת Scrobbler</translation>
+        <translation>תוסף Scrobbler</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="50"/>
         <source>About Scrobbler Plugin</source>
-        <translation>אודות תוספת Scrobbler</translation>
+        <translation>אודות תוסף Scrobbler</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="51"/>
         <source>Qmmp AudioScrobbler Plugin</source>
-        <translation>תוספת AudioScrobbler של Qmmp</translation>
+        <translation>תוסף AudioScrobbler של Qmmp</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Scrobbler Plugin Settings</source>
-        <translation>הגדרות תוספת Scrobbler</translation>
+        <translation>הגדרות תוסף Scrobbler</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Last.fm</source>
-        <translation type="unfinished"></translation>
+        <translation>Last.fm</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="40"/>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="82"/>
         <source>Libre.fm</source>
-        <translation type="unfinished"></translation>
+        <translation>Libre.fm</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="86"/>

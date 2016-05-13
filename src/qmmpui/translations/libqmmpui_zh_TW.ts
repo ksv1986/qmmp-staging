@@ -99,7 +99,7 @@
     <message>
         <location filename="../addurldialog.cpp" line="124"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤</translation>
     </message>
 </context>
 <context>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../forms/columneditor.ui" line="64"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="29"/>
@@ -133,49 +133,49 @@
         <location filename="../columneditor.cpp" line="78"/>
         <location filename="../columneditor.cpp" line="100"/>
         <source>Artist</source>
-        <translation type="unfinished">藝術家</translation>
+        <translation>藝術家</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="79"/>
         <location filename="../columneditor.cpp" line="101"/>
         <source>Album</source>
-        <translation type="unfinished">專輯</translation>
+        <translation>專輯</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="81"/>
         <location filename="../columneditor.cpp" line="105"/>
         <source>Title</source>
-        <translation type="unfinished">標題</translation>
+        <translation>標題</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="84"/>
         <location filename="../columneditor.cpp" line="108"/>
         <source>Genre</source>
-        <translation type="unfinished">流派</translation>
+        <translation>流派</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="85"/>
         <location filename="../columneditor.cpp" line="109"/>
         <source>Comment</source>
-        <translation type="unfinished">備註</translation>
+        <translation>備註</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="86"/>
         <location filename="../columneditor.cpp" line="110"/>
         <source>Composer</source>
-        <translation type="unfinished">作曲</translation>
+        <translation>作曲</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="87"/>
         <location filename="../columneditor.cpp" line="111"/>
         <source>Duration</source>
-        <translation type="unfinished">持續時間</translation>
+        <translation>持續時間</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="91"/>
         <location filename="../columneditor.cpp" line="116"/>
         <source>Year</source>
-        <translation type="unfinished">年代</translation>
+        <translation>年代</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="92"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../columneditor.cpp" line="93"/>
         <source>Condition</source>
-        <translation type="unfinished">條件</translation>
+        <translation>條件</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="102"/>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="67"/>
         <source>Plugins</source>
-        <translation>插件</translation>
+        <translation>外掛</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="76"/>
@@ -364,7 +364,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="338"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>語言：</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="374"/>
@@ -485,7 +485,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="778"/>
         <source>Buffer size:</source>
-        <translation type="unfinished"></translation>
+        <translation>緩沖大小：</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="797"/>
@@ -515,7 +515,7 @@
     <message>
         <location filename="../configdialog.cpp" line="69"/>
         <source>Track</source>
-        <translation type="unfinished">音軌</translation>
+        <translation>音軌</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="70"/>
@@ -526,7 +526,7 @@
     <message>
         <location filename="../configdialog.cpp" line="71"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>無效</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="85"/>
@@ -601,7 +601,7 @@
     <message>
         <location filename="../configdialog.cpp" line="305"/>
         <source>Composer</source>
-        <translation type="unfinished">作曲</translation>
+        <translation>作曲</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="306"/>
@@ -616,7 +616,7 @@
     <message>
         <location filename="../configdialog.cpp" line="308"/>
         <source>Condition</source>
-        <translation type="unfinished">條件</translation>
+        <translation>條件</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="309"/>
@@ -769,7 +769,7 @@
     <message>
         <location filename="../forms/detailsdialog.ui" line="47"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/detailsdialog.ui" line="63"/>
@@ -901,7 +901,7 @@
     <message>
         <location filename="../playlistheadermodel.cpp" line="186"/>
         <source>Title</source>
-        <translation type="unfinished">標題</translation>
+        <translation>標題</translation>
     </message>
     <message>
         <location filename="../playlistheadermodel.cpp" line="187"/>
@@ -944,7 +944,7 @@
     <message>
         <location filename="../qmmpuisettings.cpp" line="56"/>
         <source>Playlist</source>
-        <translation type="unfinished">播放清單</translation>
+        <translation>播放清單</translation>
     </message>
 </context>
 <context>
@@ -1050,7 +1050,7 @@
     <message>
         <location filename="../templateeditor.cpp" line="51"/>
         <source>Album</source>
-        <translation type="unfinished">專輯</translation>
+        <translation>專輯</translation>
     </message>
     <message>
         <location filename="../templateeditor.cpp" line="53"/>
@@ -1139,7 +1139,7 @@
     <message>
         <location filename="../uihelper.cpp" line="164"/>
         <source>Choose a directory</source>
-        <translation type="unfinished"></translation>
+        <translation>選取一個目錄</translation>
     </message>
     <message>
         <location filename="../uihelper.cpp" line="180"/>

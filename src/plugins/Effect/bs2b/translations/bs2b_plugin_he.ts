@@ -6,27 +6,27 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="31"/>
         <source>BS2B Plugin</source>
-        <translation>תוספת BS2B</translation>
+        <translation>תוסף BS2B</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="51"/>
         <source>About BS2B Effect Plugin</source>
-        <translation>אודות תוספת אפקט BS2B</translation>
+        <translation>אודות תוסף אפקט BS2B</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="52"/>
         <source>This is the Qmmp plugin version of Boris Mikhaylov&apos;s headphone DSP effect &quot;Bauer stereophonic-to-binaural&quot;, abbreviated bs2b.</source>
-        <translation>זוהי גירסת תוספת Qmmp של אפקט אוזניות DSP של Boris Mikhaylov ‏&quot;Bauer stereophonic-to-binaural&quot;, ובקיצור bs2b.</translation>
+        <translation>זוהי גירסת תוסף Qmmp של אפקט אוזניות DSP של Boris Mikhaylov ‏&quot;Bauer stereophonic-to-binaural&quot;, ובקיצור bs2b.</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="54"/>
         <source>Visit %1 for more details</source>
-        <translation>בקרו אצל %1 לשם מידע נוסף</translation>
+        <translation>בקרו אצל %1 למידע נוסף</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="56"/>
         <source>Compiled against libbs2b-%1</source>
-        <translation>הודרה כנגד libbs2b-%1</translation>
+        <translation>הודר כנגד libbs2b-%1</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="57"/>
@@ -49,18 +49,18 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>BS2B Plugin Settings</source>
-        <translation>הגדרות תוספת BS2B</translation>
+        <translation>הגדרות תוסף BS2B</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
         <source>Crossfeed level</source>
-        <translation type="unfinished"></translation>
+        <translation>רמת Crossfeed</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <location filename="../settingsdialog.ui" line="59"/>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation>-</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputoss4factory.cpp" line="36"/>
         <source>OSS4 Plugin</source>
-        <translation>תוספת OSS4</translation>
+        <translation>תוסף OSS4</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="56"/>
         <source>About OSS4 Output Plugin</source>
-        <translation>אודות תוספת פלט OSS4</translation>
+        <translation>אודות תוסף פלט OSS4</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="57"/>
         <source>Qmmp OSS4 Output Plugin</source>
-        <translation>תוספת פלט OSS4 של Qmmp</translation>
+        <translation>תוסף פלט OSS4 של Qmmp</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>OSS4 Plugin Settings</source>
-        <translation>הגדרות תוספת OSS4</translation>
+        <translation>הגדרות תוסף OSS4</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>

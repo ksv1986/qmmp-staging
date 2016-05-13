@@ -74,7 +74,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="200"/>
         <source>PCM over Master</source>
-        <translation type="unfinished"></translation>
+        <translation>PCM优先于Master</translation>
     </message>
 </context>
 </TS>

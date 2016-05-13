@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
         <source>Device Settings</source>
-        <translation>Geräte-Einstellungen</translation>
+        <translation>Geräteinstellungen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../decoderflacfactory.cpp" line="59"/>
         <source>FLAC Plugin</source>
-        <translation>תוספת FLAC</translation>
+        <translation>תוסף FLAC</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="61"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../decoderflacfactory.cpp" line="202"/>
         <source>About FLAC Audio Plugin</source>
-        <translation>אודות תוספת שמע FLAC</translation>
+        <translation>אודות תוסף שמע FLAC</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="203"/>
         <source>Qmmp FLAC Audio Plugin</source>
-        <translation>תוספת שמע FLAC של Qmmp</translation>
+        <translation>תוסף שמע FLAC של Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="204"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>חוברה על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
+        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>
 </context>
 <context>

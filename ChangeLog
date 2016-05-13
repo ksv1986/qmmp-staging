@@ -992,7 +992,7 @@ Version 0.9.0
 * added multiple column support
 * added feature to hide track length
 * added feature to disable plugins without qmmp.pri modification (qmake only)
-* added feature to remember playlist scroll position 
+* added feature to remember playlist scroll position
 * added feature to exclude cue data files
 * added feature to change user agent
 * added feature to change window title
@@ -1034,3 +1034,51 @@ Version 0.9.0
 * updated Polish translation (Daniel Krawczyk)
 * updated Greek translation (Dimitrios Glentadakis)
 * updated Japanese translation (RyoTa SimaMoto)
+
+Version 0.10.0
+* using floating point output for all lossy decoders
+* added new audio converter
+* added dithering setting
+* added feature to change output bit depth
+* added feature to change volume adjustment step
+* added soxr-based resampler plugin
+* added feature to change default output plugin (?)
+* added MacOS X support (Ivan Ponomarev)
+* added Qt Multimedia output plugin (Ivan Ponomarev)
+* added feature to refresh playlist
+* added two-panel file dialog
+* added feature to scrobble http streams
+* added multi-thread support in the audio converter plugin
+* added support for m4a files in the replaygain scanner
+* improved skinned interface:
+  - show track details when double-clicking on song title in main window (Thomas Perl)
+  - improved time indicator in shaded mode (Thomas Perl)
+  - added feature to disable anti-aliasing
+  - added feature to seek by mouse wheel
+  - added column alignment option
+* improved qsui plugin:
+  - added column alignment
+  - added feature to add/remove sliders
+  - added feature to create multiple panels
+  - added tooltips to the sliders
+  - improved volume slider
+  - fixed problem with minimum width
+* improved wavpack plugin:
+  - added some optimizations
+  - fixed memory leak
+* improved ffmpeg plugin:
+  - added support for m4a embedded album art
+  - added replaygain support
+* improved ladspa plugin
+* improved command line parser
+* improved details dialog
+* improved "jump to track" dialog
+* removed libsamplerate-based resampler
+* removed libsamplerate dependency from the jack plugin (using soxr instead)
+* changed default settings in the mpeg plugin
+* updated Russian translation
+* updated Japanese translation (RyoTa SimaMoto)
+* updated Ukrainian translation (Gennadi Motsyo)
+* updated Greek translation (Dimitrios Glentadakis)
+* updated Portuguese translation (Sérgio Marques)
+* updated German translation (Ettore Atalan)

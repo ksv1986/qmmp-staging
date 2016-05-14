@@ -3,12 +3,17 @@ Brazilian Portuguese:
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
 
+Bulgarian:
+    Kiril Kirilov
+
 Chinese Traditional:
     lon <lon83129@126.com>
+    Jeff Huang
 
 Chinese Simplified:
     lon <lon83129@126.com>
     mabier
+    Mingcong Bai
     Mingye Wang
 
 Czech:

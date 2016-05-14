@@ -1076,16 +1076,19 @@ Version 0.10.0
 * removed libsamplerate-based resampler
 * removed libsamplerate dependency from the jack plugin (using soxr instead)
 * changed default settings in the mpeg plugin
-* updated Russian translation
-* updated Ukrainian translation (Gennadi Motsyo)
-* updated Japanese translation (RyoTa SimaMoto)
-* updated Greek translation (Dimitrios Glentadakis)
-* updated Portuguese translation (Sérgio Marques)
-* updated German translation (Ettore Atalan)
-* updated Portuguese translation (Sérgio Marques)
-* updated French translation (Adrien Vigneron and Sébastien Aperghis-Tramoni)
-* updated German translation (Ettore Atalan)
-* updated Hebrew translation (Genghis Khan)
+* updated Bulgarian translation (Kiril Kirilov)
 * updated Chinese Traditional translation (Jeff Huang)
 * updated Chinese Simplified translation (Mingcong Bai and Mingye Wang)
-* updated Bulgarian translation (Kiril Kirilov)
+* updated French translation (Adrien Vigneron and Sébastien Aperghis-Tramoni)
+* updated German translation (Ettore Atalan)
+* updated Greek translation (Dimitrios Glentadakis)
+* updated Hebrew translation (Genghis Khan)
+* updated Japanese translation (RyoTa SimaMoto)
+* updated Portuguese translation (Sérgio Marques)
+* updated Russian translation
+* updated Ukrainian translation (Gennadi Motsyo)
+
+
+
+
+

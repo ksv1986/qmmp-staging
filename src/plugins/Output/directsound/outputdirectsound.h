@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Ilya Kotov                                      *
+ *   Copyright (C) 2014-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,7 +23,14 @@
 
 #include <stdio.h>
 #include <windows.h>
-#include <initguid.h>
+#include <ksmedia.h>
+#include <mmreg.h>
+/*#undef CONST
+#include <winnt.h>
+#include <mmreg.h>
+#include <ksmedia.h>
+#include <windows.h>
+#include <initguid.h>*/
 #include <dsound.h>
 #include <qmmp/volume.h>
 #include <qmmp/output.h>
@@ -65,6 +72,14 @@ private:
     IDirectSoundBuffer *m_primaryBuffer;
     IDirectSoundBuffer8 *m_dsBuffer;
     DWORD m_dsBufferAt;
+
+    typedef struct
+    {
+        Qmmp::ChannelPosition pos;
+        DWORD chan_mask;
+    } DSoundChannels;
+
+    static DSoundChannels m_dsound_pos[10];
 };
 
 /**

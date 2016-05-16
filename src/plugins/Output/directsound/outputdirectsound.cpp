@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Ilya Kotov                                      *
+ *   Copyright (C) 2014-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -27,10 +27,22 @@
 #include <math.h>
 #include "outputdirectsound.h"
 
-#define DS_BUFSIZE (48*1024)
+#define DS_BUFSIZE (96*1024)
 
 OutputDirectSound *OutputDirectSound::instance = 0;
 VolumeDirectSound *OutputDirectSound::volumeControl = 0;
+OutputDirectSound::DSoundChannels OutputDirectSound::m_dsound_pos[10]  = {
+   {Qmmp::CHAN_FRONT_LEFT, SPEAKER_FRONT_LEFT},
+   {Qmmp::CHAN_FRONT_RIGHT, SPEAKER_FRONT_RIGHT},
+   {Qmmp::CHAN_FRONT_CENTER, SPEAKER_FRONT_CENTER},
+   {Qmmp::CHAN_LFE, SPEAKER_LOW_FREQUENCY},
+   {Qmmp::CHAN_REAR_LEFT, SPEAKER_BACK_LEFT},
+   {Qmmp::CHAN_REAR_RIGHT, SPEAKER_BACK_RIGHT},
+   {Qmmp::CHAN_REAR_CENTER, SPEAKER_BACK_CENTER},
+   {Qmmp::CHAN_SIDE_LEFT, SPEAKER_SIDE_LEFT},
+   {Qmmp::CHAN_SIDE_RIGHT, SPEAKER_BACK_RIGHT},
+   {Qmmp::CHAN_NULL, 0}
+};
 
 OutputDirectSound::OutputDirectSound() : Output()
 {
@@ -79,16 +91,54 @@ bool OutputDirectSound::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForm
         return false;
     }
 
-    WAVEFORMATEX wfex;
-    ZeroMemory(&wfex, sizeof(WAVEFORMATEX));
-    wfex.wFormatTag      = WAVE_FORMAT_PCM;
-    wfex.nChannels       = map.count();
-    wfex.nSamplesPerSec  = freq;
-    wfex.wBitsPerSample  = 16;
-    wfex.nBlockAlign     = (wfex.wBitsPerSample / 8) * wfex.nChannels;
-    wfex.nAvgBytesPerSec = wfex.nSamplesPerSec * wfex.nBlockAlign;
+    WAVEFORMATEXTENSIBLE wfex;
+    wfex.Format.wFormatTag      = WAVE_FORMAT_EXTENSIBLE;
+    wfex.Format.nChannels       = map.count();
+    wfex.Format.nSamplesPerSec  = freq;
 
-    if((result = m_primaryBuffer->SetFormat(&wfex)) != DS_OK)
+    if(format == Qmmp::PCM_S16LE)
+    {
+        wfex.Format.wBitsPerSample = 16;
+        wfex.Samples.wValidBitsPerSample = 16;
+    }
+    else if(format == Qmmp::PCM_S24LE)
+    {
+        wfex.Format.wBitsPerSample  = 32;
+        wfex.Samples.wValidBitsPerSample = 24;
+    }
+    else if(format == Qmmp::PCM_S32LE)
+    {
+        wfex.Format.wBitsPerSample  = 32;
+        wfex.Samples.wValidBitsPerSample = 32;
+    }
+    else
+    {
+        format = Qmmp::PCM_S16LE;
+        wfex.Format.wBitsPerSample  = 16;
+        wfex.Samples.wValidBitsPerSample = 16;
+    }
+
+    wfex.Format.nBlockAlign     = (wfex.Format.wBitsPerSample / 8) * wfex.Format.nChannels;
+    wfex.Format.nAvgBytesPerSec = wfex.Format.nSamplesPerSec * wfex.Format.nBlockAlign;
+
+    //generate channel order
+    ChannelMap out_map;
+    int i = 0;
+    DWORD mask = 0;
+    while(m_dsound_pos[i].pos != Qmmp::CHAN_NULL)
+    {
+        if(map.contains(m_dsound_pos[i].pos))
+        {
+            mask |= m_dsound_pos[i].chan_mask;
+            out_map << m_dsound_pos[i].pos;
+        }
+        i++;
+    }
+
+    wfex.dwChannelMask = mask;
+    wfex.SubFormat = KSDATAFORMAT_SUBTYPE_PCM;
+
+    if((result = m_primaryBuffer->SetFormat((WAVEFORMATEX*)&wfex)) != DS_OK)
     {
         qWarning("OutputDirectSound: SetFormat failed, error code = 0x%lx", result);
         return false;
@@ -100,19 +150,11 @@ bool OutputDirectSound::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForm
         return false;
     }
 
-    ZeroMemory(&wfex, sizeof(WAVEFORMATEX));
-    wfex.wFormatTag      = WAVE_FORMAT_PCM;
-    wfex.nChannels       = map.count();
-    wfex.nSamplesPerSec  = freq;
-    wfex.wBitsPerSample  = 16;
-    wfex.nBlockAlign     = (wfex.wBitsPerSample / 8) * wfex.nChannels;
-    wfex.nAvgBytesPerSec = wfex.nSamplesPerSec * wfex.nBlockAlign;
-
     ZeroMemory(&bufferDesc, sizeof(DSBUFFERDESC));
     bufferDesc.dwSize        = sizeof(DSBUFFERDESC);
     bufferDesc.dwFlags       = DSBCAPS_CTRLFREQUENCY | DSBCAPS_CTRLPAN | DSBCAPS_CTRLVOLUME |
             DSBCAPS_GLOBALFOCUS | DSBCAPS_GETCURRENTPOSITION2 | DSBCAPS_CTRLPOSITIONNOTIFY;
-    bufferDesc.lpwfxFormat   = &wfex;
+    bufferDesc.lpwfxFormat   = (WAVEFORMATEX*)&wfex;
     bufferDesc.dwBufferBytes = DS_BUFSIZE; // buffer size
 
     IDirectSoundBuffer *pDSB;
@@ -133,7 +175,7 @@ bool OutputDirectSound::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForm
     m_dsBuffer->SetCurrentPosition(0);
     m_dsBuffer->Play(0,0,DSBPLAY_LOOPING);
     m_dsBufferAt = 0;
-    configure(freq, map, Qmmp::PCM_S16LE);
+    configure(freq, out_map, format);
     if(volumeControl)
         volumeControl->restore();
     return true;
@@ -175,6 +217,15 @@ qint64 OutputDirectSound::writeAudio(unsigned char *data, qint64 len)
     }
 
     DWORD totalSize = size + size2; //total locked size
+
+    if(format() == Qmmp::PCM_S24LE)
+    {
+        for(DWORD i = 0; i < totalSize / 4; ++i)
+        {
+            ((quint32*) data)[i] <<= 8;
+        }
+    }
+
     memmove(ptr, data, size);
     if(size2 > 0)
         memmove(ptr2, data + size, size2);
@@ -183,6 +234,7 @@ qint64 OutputDirectSound::writeAudio(unsigned char *data, qint64 len)
 
     m_dsBufferAt += totalSize;
     m_dsBufferAt %= DS_BUFSIZE;
+
     return totalSize;
 }
 

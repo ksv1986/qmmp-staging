@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -110,6 +110,7 @@ private:
     HTTPInputSource *m_parent;
 #ifdef WITH_ENCA
     EncaAnalyser m_analyser;
+    QTextCodec *m_prevCodec;
 #endif
 };
 

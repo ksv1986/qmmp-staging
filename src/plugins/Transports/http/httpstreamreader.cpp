@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -131,6 +131,7 @@ HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) 
         m_codec = QTextCodec::codecForName ("UTF-8");
 #ifdef WITH_ENCA
     m_analyser = 0;
+    m_prevCodec = 0;
     if(settings.value("use_enca", false).toBool())
         m_analyser = enca_analyser_alloc(settings.value("enca_lang").toByteArray ().constData());
     if(m_analyser)
@@ -442,7 +443,11 @@ void HttpStreamReader::parseICYMetaData(char *data, qint64 size)
                    enca_charset_name(encoding.charset,ENCA_NAME_STYLE_ENCA));
             if(!codec)
                 codec = m_codec;
+
+             m_prevCodec = codec;
         }
+        else if(m_prevCodec)
+            codec = m_prevCodec;
     }
 #endif
     QString str = codec->toUnicode(data).trimmed();

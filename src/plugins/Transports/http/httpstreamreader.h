@@ -46,7 +46,7 @@ struct HttpStreamData
     long buf_fill;
     QString content_type;
     bool aborted;
-    QHash <QString, QString> header;
+    QHash <QString, QByteArray> header;
     bool icy_meta_data;
     int icy_metaint;
 };
@@ -95,6 +95,7 @@ private:
     qint64 readBuffer(char* data, qint64 maxlen);
     void readICYMetaData();
     void parseICYMetaData(char *data, qint64 size);
+    void sendStreamInfo(QTextCodec *codec);
     CURL *m_handle;
     QMutex m_mutex;
     HttpStreamData m_stream;

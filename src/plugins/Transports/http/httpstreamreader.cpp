@@ -61,24 +61,24 @@ static size_t curl_header(void *data, size_t size, size_t nmemb,
     }
 
     //qDebug("header received: %s", (char*) data);
-    QString str = QString::fromAscii((char *) data, data_size);
-    str = str.trimmed ();
-    if (str.left(4).contains("HTTP"))
+    QByteArray header((char *) data, data_size);
+    header = header.trimmed ();
+    if (header.left(4).contains("HTTP"))
     {
         qDebug("HttpStreamReader: header received");
         //TODO open metadata socket
     }
-    else if (str.left(4).contains("ICY"))
+    else if (header.left(4).contains("ICY"))
     {
         qDebug("HttpStreamReader: shoutcast header received");
         //dl->stream()->icy_meta_data = true;
     }
     else
     {
-        QString key = str.left(str.indexOf(":")).trimmed().toLower();
-        QString value = str.right(str.size() - str.indexOf(":") - 1).trimmed();
+        QString key = QString::fromLatin1(header.left(header.indexOf(":")).trimmed().toLower());
+        QByteArray value = header.right(header.size() - header.indexOf(":") - 1).trimmed();
         dl->stream()->header.insert(key, value);
-        qDebug("HttpStreamReader: key=%s, value=%s",qPrintable(key),qPrintable(value));
+        qDebug("HttpStreamReader: key=%s, value=%s",qPrintable(key), value.constData());
 
         if (key == "icy-metaint")
         {
@@ -386,7 +386,7 @@ void HttpStreamReader::checkBuffer()
             }
             metaData.insert(Qmmp::URL, m_url);
             m_parent->addMetaData(metaData);
-            m_parent->addStreamInfo(m_stream.header);
+            sendStreamInfo(m_codec);
         }
         emit ready();
     }
@@ -471,14 +471,25 @@ void HttpStreamReader::parseICYMetaData(char *data, qint64 size)
                     metaData.insert(Qmmp::TITLE, m_title);
             }
             else
-                metaData.insert(Qmmp::TITLE, m_stream.header.value("icy-name"));
-            metaData.insert(Qmmp::GENRE, m_stream.header.value("icy-genre"));
+                metaData.insert(Qmmp::TITLE, codec->toUnicode(m_stream.header.value("icy-name")));
+            metaData.insert(Qmmp::GENRE, codec->toUnicode(m_stream.header.value("icy-genre")));
             metaData.insert(Qmmp::URL, m_url);
             m_parent->addMetaData(metaData);
+            sendStreamInfo(codec);
             m_meta_sent = true;
             break;
         }
     }
+}
+
+void HttpStreamReader::sendStreamInfo(QTextCodec *codec)
+{
+    QHash<QString, QString> info;
+    foreach (QString key, m_stream.header.keys())
+    {
+        info.insert(key, codec->toUnicode(m_stream.header.value(key)));
+    }
+    m_parent->addStreamInfo(info);
 }
 
 DownloadThread::DownloadThread(HttpStreamReader *parent) : QThread(parent)

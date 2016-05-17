@@ -80,7 +80,7 @@ bool OutputDirectSound::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForm
 
     ZeroMemory(&bufferDesc, sizeof(DSBUFFERDESC));
     bufferDesc.dwSize        = sizeof(DSBUFFERDESC);
-    bufferDesc.dwFlags       = DSBCAPS_PRIMARYBUFFER | DSBCAPS_CTRLVOLUME;
+    bufferDesc.dwFlags       = DSBCAPS_PRIMARYBUFFER | DSBCAPS_CTRLVOLUME | DSBCAPS_LOCHARDWARE;
     bufferDesc.dwBufferBytes = 0;
     bufferDesc.lpwfxFormat   = NULL;
 
@@ -95,6 +95,7 @@ bool OutputDirectSound::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForm
     wfex.Format.wFormatTag      = WAVE_FORMAT_EXTENSIBLE;
     wfex.Format.nChannels       = map.count();
     wfex.Format.nSamplesPerSec  = freq;
+    wfex.Format.cbSize = sizeof(WAVEFORMATEXTENSIBLE);
 
     if(format == Qmmp::PCM_S16LE)
     {

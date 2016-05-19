@@ -3,6 +3,7 @@ include(../../../qmmp.pri)
 TEMPLATE = subdirs
 win32:SUBDIRS += waveout
 win32:SUBDIRS += directsound
+win32:SUBDIRS += wasapi
 
 SUBDIRS += null
 

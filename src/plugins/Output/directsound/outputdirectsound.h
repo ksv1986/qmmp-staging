@@ -25,12 +25,6 @@
 #include <windows.h>
 #include <ksmedia.h>
 #include <mmreg.h>
-/*#undef CONST
-#include <winnt.h>
-#include <mmreg.h>
-#include <ksmedia.h>
-#include <windows.h>
-#include <initguid.h>*/
 #include <dsound.h>
 #include <qmmp/volume.h>
 #include <qmmp/output.h>

@@ -61,7 +61,6 @@ OutputDirectSound::~OutputDirectSound()
 
 bool OutputDirectSound::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat format)
 {
-    Q_UNUSED(format);
     DSBUFFERDESC bufferDesc;
 
     HRESULT result = DirectSoundCreate8(0, &m_ds, 0);

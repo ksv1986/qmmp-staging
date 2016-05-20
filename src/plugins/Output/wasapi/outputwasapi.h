@@ -70,6 +70,7 @@ private:
     //IDirectSoundBuffer *m_primaryBuffer;
     //IDirectSoundBuffer8 *m_dsBuffer;
     DWORD m_dsBufferAt;
+    UINT32 m_bufferSize;
 
     typedef struct
     {

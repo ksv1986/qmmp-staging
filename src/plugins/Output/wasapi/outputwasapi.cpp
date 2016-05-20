@@ -96,6 +96,81 @@ bool OutputWASAPI::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat fo
         return false;
     }
 
+    WAVEFORMATEXTENSIBLE wfex;
+    wfex.Format.wFormatTag      = WAVE_FORMAT_EXTENSIBLE;
+    wfex.Format.nChannels       = map.count();
+    wfex.Format.nSamplesPerSec  = freq;
+    wfex.Format.cbSize = sizeof(WAVEFORMATEXTENSIBLE);
+
+    if(format == Qmmp::PCM_S16LE)
+    {
+        wfex.Format.wBitsPerSample = 16;
+        wfex.Samples.wValidBitsPerSample = 16;
+    }
+    else if(format == Qmmp::PCM_S24LE)
+    {
+        wfex.Format.wBitsPerSample  = 32;
+        wfex.Samples.wValidBitsPerSample = 24;
+    }
+    else if(format == Qmmp::PCM_S32LE)
+    {
+        wfex.Format.wBitsPerSample  = 32;
+        wfex.Samples.wValidBitsPerSample = 32;
+    }
+    else
+    {
+        format = Qmmp::PCM_S16LE;
+        wfex.Format.wBitsPerSample  = 16;
+        wfex.Samples.wValidBitsPerSample = 16;
+    }
+
+    wfex.Format.nBlockAlign     = (wfex.Format.wBitsPerSample / 8) * wfex.Format.nChannels;
+    wfex.Format.nAvgBytesPerSec = wfex.Format.nSamplesPerSec * wfex.Format.nBlockAlign;
+
+    //generate channel order
+    ChannelMap out_map;
+    int i = 0;
+    DWORD mask = 0;
+    while(m_dsound_pos[i].pos != Qmmp::CHAN_NULL)
+    {
+        if(map.contains(m_dsound_pos[i].pos))
+        {
+            mask |= m_dsound_pos[i].chan_mask;
+            out_map << m_dsound_pos[i].pos;
+        }
+        i++;
+    }
+
+    wfex.dwChannelMask = mask;
+    wfex.SubFormat = KSDATAFORMAT_SUBTYPE_PCM;
+
+    if((result = m_pAudioClient->Initialize(AUDCLNT_SHAREMODE_SHARED,0, 200, 0, (WAVEFORMATEX *)&wfex, NULL)) != S_OK)
+    {
+        qWarning("OutputWASAPI: IAudioClient::Initialize failed, error code = 0x%lx", result);
+        return false;
+    }
+
+    if((result = m_pAudioClient->GetBufferSize(&m_bufferSize)) != S_OK)
+    {
+        qWarning("OutputWASAPI: IAudioClient::GetBufferSize failed, error code = 0x%lx", result);
+        return false;
+    }
+
+     if((result = m_pAudioClient->GetService(IID_IAudioRenderClient, (void**)&m_pRenderClient)) != S_OK)
+     {
+         qWarning("OutputWASAPI: IAudioClient::GetService failed, error code = 0x%lx", result);
+         return false;
+     }
+
+     if((result = m_pAudioClient->Start()) != S_OK)
+     {
+         qWarning("OutputWASAPI: IAudioClient::Start failed, error code = 0x%lx", result);
+         return false;
+     }
+
+     configure(freq, out_map, format);
+
+
     /*if((result = m_ds->SetCooperativeLevel(GetDesktopWindow(), DSSCL_PRIORITY)) != DS_OK)
     {
         qWarning("OutputDirectSound: SetCooperativeLevel failed, error code = 0x%lx", result);
@@ -214,6 +289,21 @@ qint64 OutputWASAPI::latency()
 
 qint64 OutputWASAPI::writeAudio(unsigned char *data, qint64 len)
 {
+    UINT32 frames = 0;
+    BYTE *pData = 0;
+    DWORD flags = 0;
+    m_pAudioClient->GetCurrentPadding(&frames);
+
+    UINT32 framesAvailable = m_bufferSize - frames;
+
+    UINT32 to_write = qMin(framesAvailable, (UINT32)len / 4);
+
+    m_pRenderClient->GetBuffer(to_write, &pData);
+    memcpy(pData, data, to_write * 4);
+    m_pRenderClient->ReleaseBuffer(to_write, flags);
+    return to_write * 4;
+
+
     /*unsigned char *ptr = 0, *ptr2 = 0;
     DWORD size = 0, size2 = 0;
 

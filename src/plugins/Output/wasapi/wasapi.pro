@@ -19,7 +19,7 @@ thread \
 plugin
 
 TEMPLATE = lib
-LIBS += -lqmmp0 -ldxguid -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -ldsound -lksuser
+LIBS += -lqmmp0 -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -lksuser
 
 #RESOURCES = translations/translations.qrc
 

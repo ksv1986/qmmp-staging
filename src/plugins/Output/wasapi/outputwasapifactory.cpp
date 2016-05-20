@@ -39,7 +39,7 @@ Output* OutputWASAPIFactory::create()
 
 Volume *OutputWASAPIFactory::createVolume()
 {
-    return 0;
+    return new VolumeWASAPI;
 }
 
 void OutputWASAPIFactory::showSettings(QWidget* parent)

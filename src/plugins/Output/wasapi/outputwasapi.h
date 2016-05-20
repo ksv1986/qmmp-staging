@@ -28,7 +28,7 @@
 #include <qmmp/volume.h>
 #include <qmmp/output.h>
 
-//class VolumeDirectSound;
+class VolumeWASAPI;
 
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -50,45 +50,42 @@ public:
     void reset();
 
     //volume control
+    ISimpleAudioVolume *simpleAudioVolume();
     static OutputWASAPI *instance;
-    //static VolumeDirectSound *volumeControl;
-    //IDirectSoundBuffer8 *secondaryBuffer();
+    static VolumeWASAPI *volumeControl;
 
 
 private:
     // helper functions
     void status();
     void uninitialize();
-    DWORD bytesToWrite();
 
     IMMDeviceEnumerator *m_pEnumerator;
     IMMDevice *m_pDevice;
     IAudioClient *m_pAudioClient;
     IAudioRenderClient *m_pRenderClient;
+    ISimpleAudioVolume *m_pSimpleAudioVolume;
 
-    //IDirectSound8 *m_ds;
-    //IDirectSoundBuffer *m_primaryBuffer;
-    //IDirectSoundBuffer8 *m_dsBuffer;
-    DWORD m_dsBufferAt;
-    UINT32 m_bufferSize;
+    UINT32 m_bufferFrames;
+    int m_frameSize;
 
     typedef struct
     {
         Qmmp::ChannelPosition pos;
         DWORD chan_mask;
-    } DSoundChannels;
+    } DWASAPIChannels;
 
-    static DSoundChannels m_dsound_pos[10];
+    static DWASAPIChannels m_wasapi_pos[10];
 };
 
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
 */
-/*class VolumeDirectSound : public Volume
+class VolumeWASAPI : public Volume
 {
 public:
-    VolumeDirectSound();
-    ~VolumeDirectSound();
+    VolumeWASAPI();
+    ~VolumeWASAPI();
 
     void setVolume(const VolumeSettings &vol);
     VolumeSettings volume() const;
@@ -96,7 +93,7 @@ public:
 
 private:
     VolumeSettings m_volume;
-};*/
+};
 
 
 #endif // OUTPUTWASAPI_H

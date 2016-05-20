@@ -21,7 +21,7 @@ plugin
 TEMPLATE = lib
 LIBS += -lqmmp0 -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -lksuser
 
-#RESOURCES = translations/translations.qrc
+RESOURCES = translations/translations.qrc
 
 isEmpty (LIB_DIR){
 LIB_DIR = /lib

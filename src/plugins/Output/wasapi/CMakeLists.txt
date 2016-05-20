@@ -27,8 +27,8 @@ SET(QT_INCLUDES
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
 link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
-# Win32 wasapi
-CHECK_INCLUDE_FILE(dsound.h DSOUND_H_FOUND)
+# Windows Audio Session API
+CHECK_INCLUDE_FILE(Audioclient.h WASAPI_FOUND)
 
 SET(libwasapi_SRCS
   outputwasapi.cpp
@@ -44,10 +44,10 @@ SET(libwasapi_RCCS translations/translations.qrc)
 QT4_ADD_RESOURCES(libwasapi_RCC_SRCS ${libwasapi_RCCS})
 
 
-IF(DSOUND_H_FOUND)
+IF(WASAPI_FOUND)
 ADD_LIBRARY(wasapi MODULE ${libwasapi_SRCS} ${libwasapi_RCC_SRCS} ${libwasapi_HDRS})
 add_dependencies(wasapi qmmp)
-target_link_libraries(wasapi ${QT_LIBRARIES} libqmmp -ldxguid -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -ldsound)
+target_link_libraries(wasapi ${QT_LIBRARIES} libqmmp -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -lksuser)
 install(TARGETS wasapi DESTINATION ${LIB_DIR}/qmmp/Output)
-ENDIF(DSOUND_H_FOUND)
+ENDIF(WASAPI_FOUND)
 

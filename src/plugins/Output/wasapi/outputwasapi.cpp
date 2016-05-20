@@ -36,6 +36,10 @@ const IID IID_ISimpleAudioVolume = __uuidof(ISimpleAudioVolume);
 
 #define WASAPI_BUFSIZE 20000000LL //2s
 
+#ifndef AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM
+#define AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM 0x80000000
+#endif
+
 OutputWASAPI *OutputWASAPI::instance = 0;
 VolumeWASAPI *OutputWASAPI::volumeControl = 0;
 OutputWASAPI::DWASAPIChannels OutputWASAPI::m_wasapi_pos[10]  = {
@@ -139,7 +143,15 @@ bool OutputWASAPI::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat fo
     wfex.dwChannelMask = mask;
     wfex.SubFormat = KSDATAFORMAT_SUBTYPE_PCM;
 
-    if((result = m_pAudioClient->Initialize(AUDCLNT_SHAREMODE_SHARED,0, 20000000LL, 0, (WAVEFORMATEX *)&wfex, NULL)) != S_OK)
+    DWORD streamFlags = 0;
+    //enable channel matrixer and a sample rate converter if format is unsupported
+    if(m_pAudioClient->IsFormatSupported(AUDCLNT_SHAREMODE_SHARED, (WAVEFORMATEX *)&wfex, 0) != S_OK)
+    {
+        streamFlags |= AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM;
+        qDebug("OutputWASAPI: format is not supported, using converter");
+    }
+
+    if((result = m_pAudioClient->Initialize(AUDCLNT_SHAREMODE_SHARED, streamFlags, 20000000LL, 0, (WAVEFORMATEX *)&wfex, NULL)) != S_OK)
     {
         qWarning("OutputWASAPI: IAudioClient::Initialize failed, error code = 0x%lx", result);
         return false;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,7 +35,7 @@ DecoderSIDFactory::DecoderSIDFactory()
     settings.beginGroup("SID");
     if(settings.value("use_hvsc", false).toBool())
     {
-        QString default_path = Qmmp::configDir() + "/Songlengths.txt";
+        QString default_path = Qmmp::configDir() + "Songlengths.txt";
         if(!m_db.open(qPrintable(settings.value("hvsc_path", default_path).toString())))
             qWarning("DecoderSIDFactory: %s", m_db.error());
     }
@@ -65,7 +65,7 @@ const DecoderProperties DecoderSIDFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("SID Plugin");
-    properties.filters << "*.sid" << "*.mus" << "*.str" << "*.prg" << "*.P00";
+    properties.filters << "*.sid" << "*.mus" << "*.str" << "*.prg" << "*.P00" << "*.c64";
     properties.description = tr("SID Files");
     //properties.contentType = ;
     properties.shortName = "sid";

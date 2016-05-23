@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -34,7 +34,7 @@ SettingsDialog::SettingsDialog(SidDatabase *db, QWidget *parent) : QDialog(paren
     settings.beginGroup("SID");
 
     m_ui.useHVSCCheckBox->setChecked(settings.value("use_hvsc", false).toBool());
-    QString hvsc_default_path = Qmmp::configDir() + "/Songlengths.txt";
+    QString hvsc_default_path = Qmmp::configDir() + "Songlengths.txt";
     m_ui.hvscPathLineEdit->setText(settings.value("hvsc_path", hvsc_default_path).toString());
     m_ui.defaultLengthSpinBox->setValue(settings.value("song_length", 180).toInt());
 

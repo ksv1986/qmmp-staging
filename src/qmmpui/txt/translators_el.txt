@@ -3,12 +3,17 @@
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
 
+Βουλγαρικά:
+    Kiril Kirilov
+
 Κινέζικα παραδοσιακά
     lon <lon83129@126.com>
+    Jeff Huang
 
 Κινέζικα απλά
     lon <lon83129@126.com>
     mabier
+    Mingcong Bai
     Mingye Wang
 
 Τσέχικα

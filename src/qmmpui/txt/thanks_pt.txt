@@ -16,14 +16,16 @@ Agradecimentos:
     Vadim Kalinnikov <moose@ylsoftware.com> - alojamento do projeto
     Erik Ölsar <erlk.ozlr@gmail.com> - cursor e melhorias de interface
     Funda Wang <fundawang@gmail.com> - correções aos ficheiros cmake
+    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia, versão MacOS X
+    Karel Volný <kvolny@redhat.com> - diversas correções
     Makis Kalofolias <makskafl@gmail.com> - suporte EAC3, DTS e Dolby TrueHD
     Michail Zheludkov <zheludkovm@mail.ru> - correções ao suplemento FFmpeg
     Michał Grosicki <grosik88@o2.pl> - correções ao suplemento ALSA
     Panagiotis Papadopoulos <pano_90@gmx.net> - melhorias de interface e relatórios de erro
     Pino Toscano <toscano.pino@tiscali.it> - melhorias na portabilidade
-    Karel Volný <kvolny@redhat.com> - diversas correções
     Ryota Shimamoto <liangtai.s16@gmail.com> - correções FreeBSD
     Sebastian Pipping <webmaster@hartwork.org> - código bs2b
     Stefan Koelling <stefankoelling.ext@googlemail.com> - correções de compilação
+    Thomas Perl - melhorias na interface
     Ville Skyttä - melhorias ao suplemento ModPlug
     Yaakov Selkowitz <yselkowitz@gmail.com> - correções cygwin

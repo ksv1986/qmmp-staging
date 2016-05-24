@@ -3,12 +3,17 @@ Português do Brasil
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
 
+Búlgaro:
+    Kiril Kirilov
+
 Mandarim tradicional:
     lon <lon83129@126.com>
+    Jeff Huang
 
 Mandarim simplificado:
     lon <lon83129@126.com>
     mabier
+    Mingcong Bai
     Mingye Wang
 
 Checo:

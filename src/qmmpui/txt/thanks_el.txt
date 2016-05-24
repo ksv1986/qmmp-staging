@@ -16,14 +16,16 @@
     Vadim Kalinnikov <moose@ylsoftware.com> - φιλοξενία του έργου
     Erik Ölsar <erlk.ozlr@gmail.com> - θεματοποιημένοι δρομείς, βελτιώσεις περιβάλλοντος χρήστη
     Funda Wang <fundawang@gmail.com> - διορθώσεις αρχείων cmake
+    Ivan Ponomarev ivantrue@gmail.com - Έξοδος QtMultimedia, μεταφορά στο MacOS X
+    Karel Volný <kvolny@redhat.com> - διάφορες διορθώσεις
     Makis Kalofolias <makskafl@gmail.com> - υποστήριξη EAC3, DTS, και Dolby TrueHD
     Michail Zheludkov <zheludkovm@mail.ru> - διορθώσεις πρόσθετου FFmpeg
     Michał Grosicki <grosik88@o2.pl> - διορθώσεις πρόσθετου ALSA
     Panagiotis Papadopoulos <pano_90@gmx.net> - αναφορές σφαλμάτων, διορθώσεις περιβάλλοντος χρήστη
     Pino Toscano <toscano.pino@tiscali.it> - διορθωτικά φορητότητας
-    Karel Volný <kvolny@redhat.com> - διάφορες διορθώσεις
     Ryota Shimamoto <liangtai.s16@gmail.com> - διορθωτικά FreeBSD
     Sebastian Pipping <webmaster@hartwork.org> - διορθωτικά bs2b
     Stefan Koelling <stefankoelling.ext@googlemail.com> - μερικά διορθωτικά στην κατασκευή
+    Thomas Perl - βελτιώσεις του γραφικού περιβάλλοντος
     Ville Skyttä - βελτιώσεις στο πρόσθετο ModPlug
     Yaakov Selkowitz <yselkowitz@gmail.com> - διορθωτικά cygwin

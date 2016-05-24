@@ -3,12 +3,17 @@
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
 
+Bulgarian:
+    Kiril Kirilov
+
 סינית מסורתית:
     lon <lon83129@126.com>
+    Jeff Huang
 
 סינית מפושטת:
     lon <lon83129@126.com>
     mabier
+    Mingcong Bai
     Mingye Wang
 
 צ׳כית:
@@ -62,7 +67,7 @@
 רוסית:
     Ilya Kotov <forkotov02@hotmail.ru>
 
-Serbian:
+סרבית:
     Mladen Pejaković <pejakm@autistici.org>
 
 סלובקית:

@@ -479,7 +479,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="277"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל כלים</translation>
     </message>
 </context>
 <context>
@@ -616,12 +616,12 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="55"/>
         <source>Reset Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>אפס קיצורי דרך</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="56"/>
         <source>Do you want to restore default shortcuts?</source>
-        <translation type="unfinished"></translation>
+        <translation>האם ברצונך לאפס קיצורי דרך ברירת מחדל?</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="68"/>
@@ -865,7 +865,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="492"/>
         <source>Edit Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>ערוך סרגלי כלים</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="494"/>
@@ -894,7 +894,7 @@
         <location filename="../mainwindow.cpp" line="509"/>
         <location filename="../mainwindow.cpp" line="564"/>
         <source>By Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי אלבום אמן</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="513"/>
@@ -936,7 +936,7 @@
         <location filename="../mainwindow.cpp" line="537"/>
         <location filename="../mainwindow.cpp" line="592"/>
         <source>By File Modification Date</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי תאריך שינוי קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="541"/>
@@ -1217,7 +1217,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="52"/>
         <source>Window title format:</source>
-        <translation type="unfinished"></translation>
+        <translation>פורמט כותרת חלון:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="74"/>
@@ -1262,7 +1262,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="869"/>
         <source>Reset fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>אפס גופנים</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="884"/>
@@ -1287,7 +1287,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="131"/>
         <source>Single Column Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>מצב שורה בודדת</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="178"/>
@@ -1581,17 +1581,17 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="199"/>
         <source>Toolbar:</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל כלים:</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="222"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;צור</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="238"/>
         <source>Re&amp;name</source>
-        <translation type="unfinished"></translation>
+        <translation>ש&amp;נה שם</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
@@ -1607,22 +1607,22 @@
     <message>
         <location filename="../toolbareditor.cpp" line="248"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל כלים</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="250"/>
         <source>Toolbar %1</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל כלים %1</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Rename Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>שנה שם סרגל כלים</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Toolbar name:</source>
-        <translation type="unfinished"></translation>
+        <translation>שם סרגל כלים:</translation>
     </message>
 </context>
 <context>

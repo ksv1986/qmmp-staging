@@ -21,7 +21,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="74"/>
         <source>Pause if playing, play otherwise</source>
-        <translation type="unfinished"></translation>
+        <translation>השהה אם מנגן, אחרת נגן</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="75"/>

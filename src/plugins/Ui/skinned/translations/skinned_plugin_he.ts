@@ -553,12 +553,12 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="93"/>
         <source>Reset Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>אפס קיצורי דרך</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="94"/>
         <source>Do you want to restore default shortcuts?</source>
-        <translation type="unfinished"></translation>
+        <translation>האם ברצונך לאפס קיצורי דרך ברירת מחדל?</translation>
     </message>
 </context>
 <context>
@@ -860,7 +860,7 @@
         <location filename="../playlist.cpp" line="235"/>
         <location filename="../playlist.cpp" line="290"/>
         <source>By Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי אלבום אמן</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="239"/>
@@ -896,7 +896,7 @@
         <location filename="../playlist.cpp" line="259"/>
         <location filename="../playlist.cpp" line="314"/>
         <source>By File Modification Date</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי תאריך שינוי קובץ</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="263"/>
@@ -1287,7 +1287,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="253"/>
         <source>Single Column Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>מצב שורה בודדת</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="402"/>
@@ -1327,7 +1327,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="534"/>
         <source>Reset fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>אפס גופנים</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="543"/>
@@ -1337,7 +1337,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="124"/>
         <source>Window title format:</source>
-        <translation type="unfinished"></translation>
+        <translation>פורמט כותרת חלון:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="89"/>

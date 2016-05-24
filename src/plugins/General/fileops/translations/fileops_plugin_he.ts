@@ -57,7 +57,7 @@
     <message>
         <location filename="../fileops.cpp" line="114"/>
         <source>Remove Files</source>
-        <translation type="unfinished"></translation>
+        <translation>הסר קבצים</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="115"/>

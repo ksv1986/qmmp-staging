@@ -40,12 +40,12 @@
         <location filename="../twopanelfiledialog.cpp" line="68"/>
         <location filename="../twopanelfiledialog.cpp" line="78"/>
         <source>Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Διάλογος αρχείων δυο πινάκων</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="77"/>
         <source>About Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Περί του Διαλόγου αρχείων δυο πινάκων</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="79"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../twopanelfiledialog.cpp" line="80"/>
         <source>Based on code from the Qt library</source>
-        <translation type="unfinished"></translation>
+        <translation>Βασισμένο στον κώδικα της βιβλιοθήκης Qt</translation>
     </message>
 </context>
 <context>

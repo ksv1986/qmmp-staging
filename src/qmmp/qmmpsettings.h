@@ -145,7 +145,7 @@ public:
      */
     EqSettings eqSettings() const;
     /*!
-     * Changes equalizer settings to \b settings
+     * Changes equalizer settings to \b settings.
      */
     void setEqSettings(const EqSettings &settings);
     /*!
@@ -154,21 +154,27 @@ public:
      */
     void readEqSettings(int bands = EqSettings::EQ_BANDS_10);
     /*!
-     * Returns buffer size in milliseconds
+     * Returns buffer size in milliseconds.
      */
     int bufferSize() const;
     /*!
-     * Sets buffer size
-     * @param msec Buffer size in milliseconds
+     * Sets buffer size.
+     * @param msec Buffer size in milliseconds.
      */
     void setBufferSize(int msec);
-
+    /*!
+     * Sets volume adjustment step.
+     * \param step Volume adjustment step in percent.
+     */
     void setVolumeStep(int step);
+    /*!
+     * Returns volume adjustment step.
+     */
     int volumeStep() const;
     /*!
-     * Enables/Disables file type determination by content
-     * @param enabled State of the content based type determination
-     * (\b true - enabled, \b false - disabled)
+     * Enables/Disables file type determination by content.
+     * @param enabled State of the content based type determination.
+     * (\b true - enabled, \b false - disabled).
      */
     void setDetermineFileTypeByContent(bool enabled);
     /*!

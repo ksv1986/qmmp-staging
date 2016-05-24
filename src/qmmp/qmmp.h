@@ -105,7 +105,7 @@ public:
         PCM_S32BE,  /*!< Signed 32 bit Big Endian */
         PCM_U32LE,  /*!< Unsigned 32 bit Little Endian */
         PCM_U32BE,  /*!< Unsigned 32 bit Big Endian */
-        PCM_FLOAT   /*!< Float 32 bit Native Endian, Range -1.0 to 1.0 */
+        PCM_FLOAT   /*!< Float 32 bit Native Endian, range: -1.0 to 1.0 */
     };
 
     /*!

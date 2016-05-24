@@ -151,9 +151,14 @@ public slots:
      * @param volume volume of the left and right channels \b [0..100].
      */
     void setVolume(int volume);
+    /*!
+     * Increases volume by volume adjustment step.
+     */
     void volumeUp();
+    /*!
+     * Decreases volume by volume adjustment step.
+     */
     void volumeDown();
-
     /*!
      * Sets the balance between left and right channels.
      * @param balance balance between left and right channels \b [-100..100].

@@ -1036,31 +1036,32 @@ Version 0.9.0
 * updated Japanese translation (RyoTa SimaMoto)
 
 Version 0.10.0
-* using floating point output for all lossy decoders
-* added new audio converter
+* using floating point pcm format for all lossy decoders
+* using floating point pcm format for all audio effects
+* added new internal audio converter
 * added dithering setting
 * added feature to change output bit depth
 * added feature to change volume adjustment step
 * added soxr-based resampler plugin
-* added feature to change default output plugin (?)
 * added MacOS X support (Ivan Ponomarev)
 * added Qt Multimedia output plugin (Ivan Ponomarev)
 * added feature to refresh playlist
 * added two-panel file dialog
 * added feature to scrobble http streams
 * added multi-thread support in the audio converter plugin
-* added support for m4a files in the replaygain scanner
+* added support for m4a files in the ReplayGain scanner
+* added WASAPI output plugin
 * improved skinned interface:
   - show track details when double-clicking on song title in main window (Thomas Perl)
-  - improved time indicator in shaded mode (Thomas Perl)
+  - improved time indicator in the shaded mode (Thomas Perl)
   - added feature to disable anti-aliasing
   - added feature to seek by mouse wheel
   - added column alignment option
-* improved qsui plugin:
-  - added column alignment
+* improved simple user interface (qsui):
+  - added column alignment option
   - added feature to add/remove sliders
   - added feature to create multiple panels
-  - added tooltips to the sliders
+  - added tooltips for the sliders
   - improved volume slider
   - fixed problem with minimum width
 * improved wavpack plugin:
@@ -1073,6 +1074,7 @@ Version 0.10.0
 * improved command line parser
 * improved details dialog
 * improved "jump to track" dialog
+* improved DirectSound output plugin (24/32-bit and multi-channel support)
 * removed libsamplerate-based resampler
 * removed libsamplerate dependency from the jack plugin (using soxr instead)
 * changed default settings in the mpeg plugin
@@ -1087,8 +1089,3 @@ Version 0.10.0
 * updated Portuguese translation (Sérgio Marques)
 * updated Russian translation
 * updated Ukrainian translation (Gennadi Motsyo)
-
-
-
-
-

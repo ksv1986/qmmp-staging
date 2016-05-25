@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,7 +30,7 @@
 const InputSourceProperties HTTPInputFactory::properties() const
 {
     InputSourceProperties p;
-    p.protocols << "http";
+    p.protocols << "http" << "https";
     p.name = tr("HTTP Plugin");
     p.shortName = "http";
     p.hasAbout = true;

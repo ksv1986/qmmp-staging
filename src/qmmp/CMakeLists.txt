@@ -107,6 +107,7 @@ SET(libqmmp_DEVEL_HDRS
     audioconverter.h
     audioparameters.h
     buffer.h
+    channelmap.h
     decoderfactory.h
     decoder.h
     effectfactory.h
@@ -128,7 +129,6 @@ SET(libqmmp_DEVEL_HDRS
     visualfactory.h
     visual.h
     volume.h
-    channelmap.h
 )
 
 # Don't forget to include output directory, otherwise

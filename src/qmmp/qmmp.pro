@@ -112,6 +112,7 @@ unix {
         audioconverter.h \
         audioparameters.h \
         buffer.h \
+        channelmap.h \
         decoderfactory.h \
         decoder.h \
         effectfactory.h \
@@ -132,8 +133,7 @@ unix {
         tagmodel.h \
         visualfactory.h \
         visual.h \
-        volume.h \
-        channelmap.h
+        volume.h
 
     devel.path = /include/qmmp
     INSTALLS += target \

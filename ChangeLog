@@ -1035,6 +1035,82 @@ Version 0.9.0
 * updated Greek translation (Dimitrios Glentadakis)
 * updated Japanese translation (RyoTa SimaMoto)
 
+Version 0.9.1
+* fixed 16-bit converter
+* fixed Russian translation
+
+Version 0.9.2
+* optimized equalizer
+* optimized flac and wavpack plugins
+* improved skinned ui in the shaded mode:
+  - improved time indicator (Thomas Perl)
+  - fixed playlist colors
+* fixed clicks while playing some mp3 files
+* fixed memory leak in the wavpack plugin
+* fixed qt 4.6 support
+* fixed ffmpeg 0.5 support
+* fixed effects and decoders sorting
+* fixed possible race condition
+* updated Greek translation (Dimitrios Glentadakis)
+
+Version 0.9.3
+* improved command line parser
+* fixed crash in the mplayer engine
+* fixed time indicator in the qsui plugin
+* fixed truncated output of the '--pl-dump' command
+* fixed track indexes calculation
+
+Version 0.9.4
+* fixed geometry saving in the skinned UI
+* fixed segmentation fault in the ReplayGain scanner
+* fixed hide on close feature
+* fixed Dutch translation (Rhythmdrill)
+* fixed build (Ivan Ponomarev)
+
+Version 0.9.5
+* added error handling in the mplayer plugin
+* fixed problem with some covers embedded in the mp3 files
+* fixed some skins support
+* fixed issue with equalizer not saving low levels in the qsui plugin
+* fixed gcc warnings
+* updated Chinese Simplified translation (mabier)
+
+Version 0.9.6
+* fixed url dialog size
+* fixed memory leak in the qsui plugin
+* fixed ladspa plugin
+* fixed cpu usage in the vorbis plugins
+* fixed Greek translation (Dimitrios Glentadakis)
+* updated French translation (Adrien Vigneron)
+
+Version 0.9.7
+* added feature to change default output plugin
+* added feature to skip unsupported files in the rgscan plugin
+* fixed gme plugin build
+* fixed gcc warnings
+* fixed Russian translation
+* updated Portuguese translation (Sérgio Marques)
+* updated Chinese Simplified translation (Mingye Wang)
+
+Version 0.9.8
+* added ffmpeg 3.0 support
+* added support for theme change event in the qsui plugin
+* fixed sendig multiple play commands when opening several files for playback
+* fixed memory leaks
+
+Version 0.9.9
+* fixed session check in the scrobbler plugin
+* fixed working with both libre.fm and last.fm
+* fixed cell height in the stream browser
+* fixed unicode support under windows
+* fixed problem with file access under windows
+
+Version 0.9.10
+* improved sid plugin:
+  - added c64 file extension
+  - fixed default HVSC path
+* updated Japanese translation (RyoTa SimaMoto)
+
 Version 0.10.0
 * using floating point pcm format for all lossy decoders
 * using floating point pcm format for all audio effects

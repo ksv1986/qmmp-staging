@@ -23,8 +23,8 @@
     <message numerus="yes">
         <location filename="../fileops.cpp" line="137"/>
         <source>Are you sure you want to move %n file(s)?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>你确定你希望移动%n文件(文件组)吗？</numerusform>
         </translation>
     </message>
     <message>

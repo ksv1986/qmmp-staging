@@ -999,25 +999,25 @@
     <message>
         <location filename="../playlistheader.cpp" line="93"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>对齐</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="94"/>
         <source>Left</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="95"/>
         <source>Right</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="96"/>
         <source>Center</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>居中</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="106"/>
@@ -1399,7 +1399,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="293"/>
         <source>Show anchor</source>
-        <translation type="unfinished"></translation>
+        <translation>显示定位锚</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="300"/>

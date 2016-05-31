@@ -3,12 +3,17 @@
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
 
+Bulgarian:
+    Kiril Kirilov
+
 繁体中文：
     艾昂<Ion83129@126.com>
+    Jeff Huang
 
 简体中文：
     艾昂<Ion83129@126.com>
     mabier
+    Mingcong Bai
     Mingye Wang
 
 捷克语：

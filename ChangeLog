@@ -1128,7 +1128,7 @@ Version 0.10.0
 * added support for m4a files in the ReplayGain scanner
 * added WASAPI output plugin
 * improved skinned interface:
-  - show track details when double-clicking on song title in main window (Thomas Perl)
+  - show track details when double-clicking on song title in the main window (Thomas Perl)
   - improved time indicator in the shaded mode (Thomas Perl)
   - added feature to disable anti-aliasing
   - added feature to seek by mouse wheel
@@ -1154,6 +1154,7 @@ Version 0.10.0
 * removed libsamplerate-based resampler
 * removed libsamplerate dependency from the jack plugin (using soxr instead)
 * changed default settings in the mpeg plugin
+* fixed metadata encoding issue in the http plugin
 * updated Bulgarian translation (Kiril Kirilov)
 * updated Chinese Traditional translation (Jeff Huang)
 * updated Chinese Simplified translation (Mingcong Bai, Mingye Wang, mabier)

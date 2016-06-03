@@ -128,19 +128,20 @@ void Scrobbler::setState(Qmmp::State state)
     if(state == Qmmp::Playing && m_previousState == Qmmp::Paused)
     {
         qDebug("Scrobbler[%s]: resuming from %d seconds played", qPrintable(m_name), m_elapsed / 1000);
-        m_time->addMSecs(m_elapsed - m_time->elapsed());
+        m_time->restart();
     }
     else if(state == Qmmp::Paused)
     {
-        m_elapsed = m_time->elapsed();
+        m_elapsed += m_time->elapsed();
         qDebug("Scrobbler[%s]: pausing after %d seconds played", qPrintable(m_name), m_elapsed / 1000);
-
     }
     else if(state == Qmmp::Stopped && !m_song.metaData().isEmpty())
     {
-        int elapsed = m_time->elapsed() / 1000;
-        if(((elapsed > 240) || (elapsed > int(m_song.length()/2)))
-                && (m_song.length() == 0 || m_song.length() > MIN_SONG_LENGTH))
+        if(m_previousState == Qmmp::Playing)
+            m_elapsed += m_time->elapsed();
+
+        m_elapsed /= 1000; //convert to seconds
+        if((m_elapsed > 240) || (m_elapsed > int(m_song.length()/2) && m_song.length() > MIN_SONG_LENGTH))
         {
             m_cachedSongs << m_song;
             m_cache->save(m_cachedSongs);
@@ -161,9 +162,8 @@ void Scrobbler::updateMetaData()
 
     if(!m_song.metaData().isEmpty() && m_song.metaData() != metadata)
     {
-        int elapsed = m_time->elapsed() / 1000;
-        if(((elapsed > 240) || (elapsed > int(m_song.length()/2)))
-                && (m_song.length() == 0 || m_song.length() > MIN_SONG_LENGTH))
+        int elapsed = (m_elapsed + m_time->elapsed()) / 1000;
+        if((elapsed > 240) || (elapsed > int(m_song.length()/2) && m_song.length() > MIN_SONG_LENGTH))
         {
             m_cachedSongs << m_song;
             m_cache->save(m_cachedSongs);
@@ -177,9 +177,10 @@ void Scrobbler::updateMetaData()
     {
         m_song = SongInfo(metadata, m_core->totalTime()/1000);
         m_song.setTimeStamp(QDateTime::currentDateTime().toTime_t());
-        m_time->restart();
         sendNotification(m_song);
     }
+    m_time->restart();
+    m_elapsed = 0;
 }
 
 void Scrobbler::processResponse(QNetworkReply *reply)

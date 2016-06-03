@@ -1,6 +1,5 @@
 project(libwasapi)
 
-cmake_minimum_required(VERSION 2.4.7)
 
 INCLUDE(CheckIncludeFile)
 

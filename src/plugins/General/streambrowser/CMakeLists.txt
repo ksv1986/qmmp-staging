@@ -1,6 +1,5 @@
 project(libstreambrowser)
 
-cmake_minimum_required(VERSION 2.4.7)
 
 SET(QT_USE_QTNETWORK TRUE)
 INCLUDE(FindQt4)

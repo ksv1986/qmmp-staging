@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -45,6 +45,7 @@ private:
     void readTag();
     Ui::TagEditor *m_ui;
     TagModel *m_tagModel;
+    int m_discs; //Number of discs
 
 };
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,6 +26,7 @@ TagEditor::TagEditor(TagModel *tagModel, QWidget *parent) : QWidget(parent), m_u
 {
     m_ui->setupUi(this);
     m_tagModel = tagModel;
+    m_discs = -1;
     //check available keys
     m_ui->titleLineEdit->setEnabled(m_tagModel->keys().contains(Qmmp::TITLE));
     m_ui->artistLineEdit->setEnabled(m_tagModel->keys().contains(Qmmp::ARTIST));
@@ -59,7 +60,10 @@ void TagEditor::save()
          m_tagModel->setValue(Qmmp::COMPOSER, m_ui->composerLineEdit->text());
          m_tagModel->setValue(Qmmp::GENRE, m_ui->genreLineEdit->text());
          m_tagModel->setValue(Qmmp::COMMENT, m_ui->commentBrowser->toPlainText ());
-         m_tagModel->setValue(Qmmp::DISCNUMBER,  m_ui->discSpinBox->value());
+         if(m_discs < 0)
+             m_tagModel->setValue(Qmmp::DISCNUMBER,  m_ui->discSpinBox->value());
+         else
+             m_tagModel->setValue(Qmmp::DISCNUMBER, QString("%1/%2").arg(m_ui->discSpinBox->value()).arg(m_discs));
          m_tagModel->setValue(Qmmp::YEAR, m_ui->yearSpinBox->value());
          m_tagModel->setValue(Qmmp::TRACK, m_ui->trackSpinBox->value());
     }
@@ -81,7 +85,14 @@ void TagEditor::readTag()
     m_ui->composerLineEdit->setText(m_tagModel->value(Qmmp::COMPOSER));
     m_ui->genreLineEdit->setText(m_tagModel->value(Qmmp::GENRE));
     m_ui->commentBrowser->setText(m_tagModel->value(Qmmp::COMMENT));
-    m_ui->discSpinBox->setValue(m_tagModel->value(Qmmp::DISCNUMBER).toInt());
+    if(m_tagModel->value(Qmmp::DISCNUMBER).contains("/"))
+    {
+        m_ui->discSpinBox->setValue(m_tagModel->value(Qmmp::DISCNUMBER).section("/",0,0).toInt());
+        m_discs = m_tagModel->value(Qmmp::DISCNUMBER).section("/",1,1).toInt();
+        m_ui->discSpinBox->setSuffix(QString("/%1").arg(m_discs));
+    }
+    else
+        m_ui->discSpinBox->setValue(m_tagModel->value(Qmmp::DISCNUMBER).toInt());
     m_ui->yearSpinBox->setValue(m_tagModel->value(Qmmp::YEAR).toInt());
     m_ui->trackSpinBox->setValue(m_tagModel->value(Qmmp::TRACK).toInt());
 }

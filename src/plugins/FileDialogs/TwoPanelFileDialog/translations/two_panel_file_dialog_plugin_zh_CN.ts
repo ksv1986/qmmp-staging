@@ -40,12 +40,12 @@
         <location filename="../twopanelfiledialog.cpp" line="68"/>
         <location filename="../twopanelfiledialog.cpp" line="78"/>
         <source>Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>双面板文件对话</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="77"/>
         <source>About Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>关于双面板文件对话</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="79"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../twopanelfiledialog.cpp" line="80"/>
         <source>Based on code from the Qt library</source>
-        <translation type="unfinished"></translation>
+        <translation>基于源于Qt库的代码</translation>
     </message>
 </context>
 <context>

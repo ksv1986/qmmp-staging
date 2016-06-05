@@ -176,7 +176,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="59"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>抗锯齿图形保真</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="63"/>

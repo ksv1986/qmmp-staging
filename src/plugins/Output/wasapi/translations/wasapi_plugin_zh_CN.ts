@@ -6,17 +6,17 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="28"/>
         <source>WASAPI Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>WASAP　I插件</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="52"/>
         <source>About WASAPI Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>关于WASAPI输出插件</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="53"/>
         <source>Qmmp WASAPI Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp WASAPI输出插件</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="54"/>

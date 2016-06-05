@@ -16,7 +16,7 @@
     Vadim Kalinnikov <moose@ylsoftware.com> - 项目运行平台提供
     Erik Ölsar <erlk.ozlr@gmail.com> - 皮肤化光标，用户界面改进
     Funda Wang <fundawang@gmail.com> - cmake文件修正
-    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia output, MacOS X port
+    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia输出，MacOS X 端口
     Karel Volný <kvolny@redhat.com> - 多种修正
     Makis Kalofolias <makskafl@gmail.com> - EAC3、DTS及杜比、真高清支持
     Michail Zheludkov <zheludkovm@mail.ru> - FFmpeg插件修正
@@ -26,6 +26,6 @@
     yota Shimamoto <liangtai.s16@gmail.com> - FreeBSD补丁
     Sebastian Pipping <webmaster@hartwork.org> - bs2b补丁
     Stefan Koelling <stefankoelling.ext@googlemail.com> - 一些有关程序创建的修复
-    Thomas Perl - gui improvements
+    Thomas Peri - 图形界面改善
     Ville Skyttä - ModPlug插件改进
     Yaakov Selkowitz <yselkowitz@gmail.com> - cygwin补丁

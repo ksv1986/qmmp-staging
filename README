@@ -116,7 +116,7 @@ Installation:
 make install
 
 If someone plugin (for example, Jack plugin) doesn't build or doesn't needed you can disable it
-by running:
+by running the following command:
 cmake ./ -DUSE_JACK:BOOL=FALSE
 
 Available options:
@@ -145,9 +145,7 @@ OSS3 and UDisks support.
 OSS3 and UDisks plugins are deprecated and disabled by default.
 To enable them, run 'cmake ./ -DUSE_OSS:BOOL=TRUE' or 'cmake ./ -DUSE_OSS:UDISKS=TRUE' before compilation.
 
-HAL and UDisks2 support.
-Most Linux distributions does not include HAL anymore. To disable HAL plugin run following command before compilation:
-cmake ./ -DUSE_HAL:BOOL=FALSE
+UDisks2 support.
 UDisks2 project doesn't have port to FreeBSD, so it's recommended to disable Udisks2 plugin under FreeBSD by the
 following command:
 cmake ./ -DUSE_UDISKS2:BOOL=FALSE

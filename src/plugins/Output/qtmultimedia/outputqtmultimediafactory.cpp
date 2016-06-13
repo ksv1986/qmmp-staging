@@ -18,10 +18,12 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+
 #include "outputqtmultimediafactory.h"
 #include "settingsdialog.h"
-
-#include <QtGui>
+#include <QMessageBox>
+#include <QTranslator>
+#include <QtPlugin>
 #include <qmmp/qmmp.h>
 #include "outputqtmultimedia.h"
 

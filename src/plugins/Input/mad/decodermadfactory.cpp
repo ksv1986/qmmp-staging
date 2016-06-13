@@ -18,10 +18,13 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QtGui>
 #include <QDialog>
 #include <QMessageBox>
 #include <QFile>
+#include <QTextCodec>
+#include <QSettings>
+#include <QTranslator>
+#include <QtPlugin>
 #include <mad.h>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>

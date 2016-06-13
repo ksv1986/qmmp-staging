@@ -18,8 +18,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QtGui>
+#include <QMessageBox>
+#include <QTranslator>
+#include <QtPlugin>
 #include <QRegExp>
+#include <QSettings>
 #include <sidplayfp/SidTune.h>
 #include <sidplayfp/SidTuneInfo.h>
 #include "decoder_sid.h"

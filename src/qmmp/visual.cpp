@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,11 +18,15 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QtGui>
 #include <QObject>
 #include <QList>
 #include <QMetaObject>
 #include <QApplication>
+#include <QCloseEvent>
+#include <QSettings>
+#include <QDialog>
+#include <QDir>
+#include <QPluginLoader>
 #include "visualfactory.h"
 #include "output.h"
 #include "visual.h"

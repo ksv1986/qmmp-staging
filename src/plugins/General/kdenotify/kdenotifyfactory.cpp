@@ -18,11 +18,13 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QMessageBox>
+#include <QTranslator>
+#include <QtPlugin>
 #include "kdenotifyfactory.h"
 #include "kdenotify.h"
 #include "settingsdialog.h"
 
-#include <QtGui>
 
 const GeneralProperties KdeNotifyFactory::properties() const
 {

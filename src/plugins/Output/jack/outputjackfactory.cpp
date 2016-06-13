@@ -18,7 +18,10 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QtGui>
+#include <QMessageBox>
+#include <QTranslator>
+#include <QSettings>
+#include <QtPlugin>
 #include <qmmp/qmmp.h>
 #include "outputjack.h"
 #include "outputjackfactory.h"

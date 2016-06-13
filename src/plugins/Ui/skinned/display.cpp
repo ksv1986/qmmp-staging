@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -306,11 +306,7 @@ void MainDisplay::displayVolume()
 
 void MainDisplay::showPosition()
 {
-    int sec = m_posbar->value() / 1000;
-    if(sec >= 3600)
-        sec /= 60;
-    QString time = QString("%1:%2").arg(sec/60, 2, 10, QChar('0')).arg(sec%60, 2, 10, QChar('0'));
-    m_text->setText(tr("Seek to: %1").arg(time));
+    m_text->setText(tr("Seek to: %1").arg(MetaDataFormatter::formatLength(m_posbar->value() / 1000, false)));
 }
 
 void MainDisplay::updatePosition()

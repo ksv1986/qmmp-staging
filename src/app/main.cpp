@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     qt_translator.load(QLibraryInfo::location (QLibraryInfo::TranslationsPath) + "/qt_" + locale);
     a.installTranslator(&qt_translator);
 
-    QMMPStarter starter(argc,argv);
+    QMMPStarter starter;
     Q_UNUSED(starter)
 
     a.setQuitOnLastWindowClosed(false);

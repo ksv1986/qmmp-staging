@@ -34,7 +34,7 @@
 
 bool DecoderSndFileFactory::supports(const QString &source) const
 {
-    if (source.right(4).toLower() == ".wav")
+    if (source.endsWith(".wav", Qt::CaseInsensitive))
     {
         //try top open the file
         SF_INFO snd_info;

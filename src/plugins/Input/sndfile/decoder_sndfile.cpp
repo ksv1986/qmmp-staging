@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -50,7 +50,11 @@ bool DecoderSndFile::initialize()
 
     memset (&snd_info, 0, sizeof(snd_info));
     snd_info.format=0;
-    m_sndfile = sf_open(m_path.toLocal8Bit(), SFM_READ, &snd_info);
+#ifdef Q_OS_WIN
+    m_sndfile = sf_wchar_open(reinterpret_cast<LPCWSTR>(m_path.utf16()), SFM_READ, &snd_info);
+#else
+    m_sndfile = sf_open(m_path.toLocal8Bit().constData(), SFM_READ, &snd_info);
+#endif
     if (!m_sndfile)
     {
         qWarning("DecoderSndFile: failed to open: %s", qPrintable(m_path));

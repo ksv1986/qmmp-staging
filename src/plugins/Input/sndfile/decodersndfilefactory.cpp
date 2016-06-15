@@ -44,10 +44,8 @@ bool DecoderSndFileFactory::supports(const QString &source) const
         SNDFILE *sndfile = sf_open(source.toLocal8Bit().constData(), SFM_READ, &snd_info);
 #endif
         if (!sndfile)
-        {
-            qDebug("failed!!");
             return false;
-        }
+
         sf_close (sndfile);
         sndfile = 0;
         return true;

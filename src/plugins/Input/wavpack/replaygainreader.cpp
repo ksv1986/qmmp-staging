@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,8 +35,14 @@ ReplayGainReader::ReplayGainReader(const QString &path)
         m_path = path;
 
     char err[80];
-    m_ctx = WavpackOpenFileInput (m_path.toLocal8Bit(), err,
+
+#if defined(Q_OS_WIN) && defined(OPEN_FILE_UTF8)
+    m_ctx = WavpackOpenFileInput (m_path.toUtf8().constData(),
+                                  err, OPEN_WVC | OPEN_TAGS | OPEN_FILE_UTF8, 0);
+#else
+    m_ctx = WavpackOpenFileInput (m_path.toLocal8Bit().constData(), err,
                                   OPEN_WVC | OPEN_EDIT_TAGS, 0);
+#endif
     if (!m_ctx)
     {
         qWarning("ReplayGainReader: error: %s", err);

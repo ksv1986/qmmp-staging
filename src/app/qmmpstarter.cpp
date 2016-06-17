@@ -38,6 +38,7 @@
 #include <qmmpui/qmmpuisettings.h>
 #include "qmmpstarter.h"
 #include "lxdesupport.h"
+#include "unitysupport.h"
 #include "builtincommandlineoption.h"
 
 #ifdef Q_OS_WIN
@@ -180,6 +181,8 @@ void QMMPStarter::startPlayer()
 
     //load lxde icons
     LXDESupport::load();
+    //Unity icons
+    UnitySupport::load();
 #endif
 
     //prepare libqmmp and libqmmpui libraries for usage

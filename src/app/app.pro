@@ -3,14 +3,16 @@ include(../../qmmp.pri)
 HEADERS += qmmpstarter.h \
            builtincommandlineoption.h \
     lxdesupport.h \
-    qmmpapplication.h
+    qmmpapplication.h \
+    unitysupport.h
 
 SOURCES += \
            qmmpstarter.cpp \
            builtincommandlineoption.cpp \
     lxdesupport.cpp \
     main.cpp \
-    qmmpapplication.cpp
+    qmmpapplication.cpp \
+    unitysupport.cpp
 
 
 

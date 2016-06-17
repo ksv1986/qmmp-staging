@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -54,8 +54,11 @@ class PlayList : public QWidget
 
         void readSettings();
         void setMinimalMode(bool b = true);
-
         void writeSettings();
+
+#ifdef Q_WS_X11
+        bool useCompiz() const;
+#endif
 
     signals:
         void play();
@@ -131,6 +134,9 @@ class PlayList : public QWidget
         KeyboardManager* m_keyboardManager;
         QPointer <PlayListBrowser> m_pl_browser;
         PlayListSelector *m_pl_selector;
+#ifdef Q_WS_X11
+        bool m_compiz;
+#endif
 };
 
 #endif

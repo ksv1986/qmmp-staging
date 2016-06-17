@@ -229,9 +229,9 @@ void MainDisplay::setMinimalMode(bool b)
     int r = m_skin->ratio();
 
     if(m_shaded)
-         m_mw->resize(r*275,r*14);
+         m_mw->setFixedSize(r*275,r*14);
     else
-         m_mw->resize(r*275,r*116);
+         m_mw->setFixedSize(r*275,r*116);
     updateMask();
 }
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -63,9 +63,28 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
     m_pl_browser = 0;
     m_pl_selector = 0;
 
-    resize (275*m_ratio, 116*m_ratio);
-    setSizeIncrement (25*m_ratio, 29*m_ratio);
-    setMinimumSize(275*m_ratio, 116*m_ratio);
+#ifdef Q_WS_X11
+    QString wm_name = WindowSystem::netWindowManagerName();
+    m_compiz = wm_name.contains("compiz", Qt::CaseInsensitive);
+    if(wm_name.contains("metacity", Qt::CaseInsensitive) ||
+       wm_name.contains("openbox", Qt::CaseInsensitive))
+        setWindowFlags (Qt::Tool | Qt::FramelessWindowHint);
+    else
+#endif
+        setWindowFlags (Qt::Dialog | Qt::FramelessWindowHint);
+
+#ifdef Q_WS_X11
+    if(m_compiz)
+    {
+        setFixedSize(275*m_ratio, 116*m_ratio);
+    }
+    else
+#endif
+    {
+        resize (275*m_ratio, 116*m_ratio);
+        setSizeIncrement (25*m_ratio, 29*m_ratio);
+        setMinimumSize(275*m_ratio, 116*m_ratio);
+    }
 
     m_listWidget = new ListWidget (this);
     m_plslider = new PlayListSlider (this);
@@ -121,14 +140,6 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
 
     setCursor(m_skin->getCursor(Skin::CUR_PNORMAL));
     updatePositions();
-#ifdef Q_WS_X11
-    QString wm_name = WindowSystem::netWindowManagerName();
-    if(wm_name.contains("metacity", Qt::CaseInsensitive) ||
-       wm_name.contains("openbox", Qt::CaseInsensitive))
-        setWindowFlags (Qt::Tool | Qt::FramelessWindowHint);
-    else
-#endif
-        setWindowFlags (Qt::Dialog | Qt::FramelessWindowHint);
 }
 
 PlayList::~PlayList()
@@ -410,26 +421,37 @@ void PlayList::mouseMoveEvent (QMouseEvent *e)
 {
     if (m_resize)
     {
+#ifdef Q_WS_X11
+        if(m_compiz)
+#endif
+        {
+            int dx = m_ratio * 25;
+            int dy = m_ratio * 29;
+
+            int sx = ((e->x() - 275 * m_ratio) + 14) / dx;
+            int sy = ((e->y() - 116 * m_ratio) + 14) / dy;
+
+            sx = qMax(sx, 0);
+            sy = qMax(sy, 0);
+
 #ifdef Q_OS_WIN
-        int sx = (width()-275) /25;
-        int sy = (height()-116) /29;
-    if(width() < e->x() - 14)
-           sx++;
-    else if(width() > e->x() + 14)
-           sx--;
-        if(height() < e->y() - 14)
-           sy++;
-        else if(height() > e->y() + 14)
-           sy--;
-        resize (275+25*sx,116+29*sy);
+            resize(275 * m_ratio + dx * sx, 116 * m_ratio + dy * sy);
 #else
+            setFixedSize(275 * m_ratio + dx * sx, 116 * m_ratio + dy * sy);
+#endif
+        }
+#ifdef Q_WS_X11
+        else
+            resize (e->x() +25, e->y() +25);
+#endif
+
+
 #ifdef Q_WS_X11
         //avoid right corner moving during resize
         if(layoutDirection() == Qt::RightToLeft)
             WindowSystem::revertGravity(winId());
 #endif
-        resize (e->x() +25, e->y() +25);
-#endif
+
     }
 }
 
@@ -503,6 +525,13 @@ void PlayList::writeSettings()
     //position
     settings.setValue ("Skinned/pl_pos", this->pos());
 }
+
+#ifdef Q_WS_X11
+bool PlayList::useCompiz() const
+{
+    return m_compiz;
+}
+#endif
 
 void PlayList::showAddMenu()
 {
@@ -654,18 +683,36 @@ void PlayList::setMinimalMode(bool b)
     if(!m_shaded)
         m_height = height();
     m_shaded = b;
-    if(m_shaded)
+
+#ifdef Q_WS_X11
+    if(m_compiz)
     {
-        m_height = height();
-        setSizeIncrement (25*m_ratio, 1);
-        setMinimumSize (275*m_ratio, 14*m_ratio);
-        resize(width(), 14*m_ratio);
+        if(m_shaded)
+        {
+            m_height = height();
+            setFixedSize(qMax(width(), 275 * m_ratio), 14*m_ratio);
+        }
+        else
+        {
+            setFixedSize(qMax(width(), 275 * m_ratio), qMax(m_height, 116*m_ratio));
+        }
     }
     else
+#endif
     {
-        setMinimumSize(275*m_ratio, 116*m_ratio);
-        resize (width(), m_height);
-        setSizeIncrement (25*m_ratio, 29*m_ratio);
+        if(m_shaded)
+        {
+            m_height = height();
+            setSizeIncrement (25*m_ratio, 1);
+            setMinimumSize (275*m_ratio, 14*m_ratio);
+            resize(width(), 14*m_ratio);
+        }
+        else
+        {
+            setMinimumSize(275*m_ratio, 116*m_ratio);
+            resize (width(), m_height);
+            setSizeIncrement (25*m_ratio, 29*m_ratio);
+        }
     }
     updatePositions();
     update();

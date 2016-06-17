@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006 by Ilya Kotov                                      *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,7 +35,7 @@ public:
 
     virtual ~PixmapWidget();
 
-    virtual void setPixmap(const QPixmap);
+    virtual void setPixmap(const QPixmap, bool fixed_size = false);
 
 protected:
     void paintEvent ( QPaintEvent * event );

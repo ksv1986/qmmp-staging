@@ -60,6 +60,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_update = false;
     setWindowFlags(Qt::Window | Qt::FramelessWindowHint |
                    Qt::WindowCloseButtonHint | Qt::WindowMinMaxButtonsHint | Qt::WindowSystemMenuHint);
+
     setWindowTitle("Qmmp");
 
     m_titleFormatter.setPattern("%if(%p,%p - %t,%t)");
@@ -74,7 +75,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
     //user interface
     m_skin = new Skin(this);
-    resize(275 * m_skin->ratio(),116 * m_skin->ratio());
+    setFixedSize(275 * m_skin->ratio(),116 * m_skin->ratio());
+
     Dock *dock = new Dock(this);
     dock->setMainWidget(this);
     m_display = new MainDisplay(this);

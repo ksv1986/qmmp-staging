@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -45,7 +45,7 @@ EqWidget::EqWidget (QWidget *parent)
     setWindowTitle(tr("Equalizer"));
     m_shaded = false;
     m_skin = Skin::instance();
-    setPixmap (m_skin->getEqPart (Skin::EQ_MAIN));
+    setPixmap (m_skin->getEqPart (Skin::EQ_MAIN), true);
     setCursor (m_skin->getCursor (Skin::CUR_EQNORMAL));
     m_titleBar = new EqTitleBar (this);
     m_titleBar->move (0,0);
@@ -121,7 +121,7 @@ void EqWidget::closeEvent (QCloseEvent* e)
 void EqWidget::updateSkin()
 {
     m_titleBar->setActive (false);
-    setPixmap (m_skin->getEqPart (Skin::EQ_MAIN));
+    setPixmap (m_skin->getEqPart (Skin::EQ_MAIN), true);
     setCursor (m_skin->getCursor (Skin::CUR_EQNORMAL));
     setMimimalMode(m_shaded);
     updatePositions();
@@ -133,9 +133,10 @@ void EqWidget::setMimimalMode(bool b)
     int r = m_skin->ratio();
 
     if(m_shaded)
-         resize(r*275,r*14);
+        setFixedSize(r*275,r*14);
     else
-         resize(r*275,r*116);
+        setFixedSize(r*275,r*116);
+
     updateMask();
 }
 

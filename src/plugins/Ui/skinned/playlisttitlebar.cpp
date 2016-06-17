@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -59,7 +59,12 @@ PlayListTitleBar::PlayListTitleBar(QWidget *parent)
 
     readSettings();
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    m_pl->resize (settings.value ("Skinned/pl_size", QSize (m_ratio*275, m_ratio*116)).toSize());
+#ifdef Q_WS_X11
+    if(m_pl->useCompiz())
+        m_pl->setFixedSize(settings.value ("Skinned/pl_size", QSize (m_ratio*275, m_ratio*116)).toSize());
+    else
+#endif
+        m_pl->resize (settings.value ("Skinned/pl_size", QSize (m_ratio*275, m_ratio*116)).toSize());
     if (settings.value ("Skinned/pl_shaded", false).toBool())
         shade();
     resize(m_pl->width(),height());
@@ -189,8 +194,19 @@ void PlayListTitleBar::mouseMoveEvent(QMouseEvent* event)
         if(layoutDirection() == Qt::RightToLeft)
             WindowSystem::revertGravity(m_pl->winId());
 #endif
-        resize((event->x() + 25*m_ratio), height());
-        m_pl->resize((event->x() + 25*m_ratio), m_pl->height());
+
+        int dx = 25 * m_ratio;
+        int sx = ((event->x() - 275 * m_ratio) + 14) / dx;
+        sx = qMax(sx, 0);
+        resize(275 * m_ratio + dx * sx, height());
+
+#ifdef Q_WS_X11
+        if(m_pl->useCompiz())
+
+            m_pl->setFixedSize(275 * m_ratio + dx * sx, m_pl->height());
+        else
+#endif
+            m_pl->resize(275 * m_ratio + dx * sx, m_pl->height());
     }
     else if (pos.x() < width() - 30*m_ratio)
         Dock::instance()->move(m_pl, npos);

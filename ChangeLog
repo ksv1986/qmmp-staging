@@ -1127,6 +1127,7 @@ Version 0.10.0
 * added multi-thread support in the audio converter plugin
 * added support for m4a files in the ReplayGain scanner
 * added WASAPI output plugin
+* added https support in the http plugin
 * improved skinned interface:
   - show track details when double-clicking on song title in the main window (Thomas Perl)
   - improved time indicator in the shaded mode (Thomas Perl)
@@ -1155,6 +1156,9 @@ Version 0.10.0
 * removed libsamplerate dependency from the jack plugin (using soxr instead)
 * changed default settings in the mpeg plugin
 * fixed metadata encoding issue in the http plugin
+* fixed unicode support under windows
+* fixed unity/compiz support
+* fixed disc number parsing
 * updated Bulgarian translation (Kiril Kirilov)
 * updated Chinese Traditional translation (Jeff Huang)
 * updated Chinese Simplified translation (Mingcong Bai, Mingye Wang, mabier)

@@ -4,32 +4,32 @@
 <context>
     <name>DecoderSIDFactory</name>
     <message>
-        <location filename="../decodersidfactory.cpp" line="67"/>
+        <location filename="../decodersidfactory.cpp" line="70"/>
         <source>SID Plugin</source>
         <translation>Greffon SID</translation>
     </message>
     <message>
-        <location filename="../decodersidfactory.cpp" line="69"/>
+        <location filename="../decodersidfactory.cpp" line="72"/>
         <source>SID Files</source>
         <translation>Fichiers SID</translation>
     </message>
     <message>
-        <location filename="../decodersidfactory.cpp" line="123"/>
+        <location filename="../decodersidfactory.cpp" line="126"/>
         <source>About SID Audio Plugin</source>
         <translation>À propos du greffon audio SID</translation>
     </message>
     <message>
-        <location filename="../decodersidfactory.cpp" line="124"/>
+        <location filename="../decodersidfactory.cpp" line="127"/>
         <source>Qmmp SID Audio Plugin</source>
         <translation>Greffon audio SID pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodersidfactory.cpp" line="125"/>
+        <location filename="../decodersidfactory.cpp" line="128"/>
         <source>This plugin plays Commodore 64 music files using libsidplayfp library</source>
         <translation>Ce greffon permet de jouer les fichiers de musiques Commodore 64 en utilisant la bibliothèque libsidplayfp</translation>
     </message>
     <message>
-        <location filename="../decodersidfactory.cpp" line="126"/>
+        <location filename="../decodersidfactory.cpp" line="129"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

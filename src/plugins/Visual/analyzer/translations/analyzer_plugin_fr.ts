@@ -148,22 +148,22 @@
 <context>
     <name>VisualAnalyzerFactory</name>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="30"/>
+        <location filename="../visualanalyzerfactory.cpp" line="32"/>
         <source>Analyzer Plugin</source>
         <translation>Greffon d&apos;analyse</translation>
     </message>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="49"/>
+        <location filename="../visualanalyzerfactory.cpp" line="51"/>
         <source>About Analyzer Visual Plugin</source>
         <translation>À propos du greffon visuel d&apos;analyse</translation>
     </message>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="50"/>
+        <location filename="../visualanalyzerfactory.cpp" line="52"/>
         <source>Qmmp Analyzer Visual Plugin</source>
         <translation>Greffon visuel d&apos;analyse pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="51"/>
+        <location filename="../visualanalyzerfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

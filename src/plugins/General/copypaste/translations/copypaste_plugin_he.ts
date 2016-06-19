@@ -37,27 +37,27 @@
 <context>
     <name>CopyPasteFactory</name>
     <message>
-        <location filename="../copypastefactory.cpp" line="28"/>
+        <location filename="../copypastefactory.cpp" line="30"/>
         <source>Copy/Paste Plugin</source>
         <translation>תוסף העתק/הדבק</translation>
     </message>
     <message>
-        <location filename="../copypastefactory.cpp" line="48"/>
+        <location filename="../copypastefactory.cpp" line="50"/>
         <source>About Copy/Paste Plugin</source>
         <translation>אודות תוסף העתק/הדבק</translation>
     </message>
     <message>
-        <location filename="../copypastefactory.cpp" line="49"/>
+        <location filename="../copypastefactory.cpp" line="51"/>
         <source>Qmmp Copy/Paste Plugin</source>
         <translation>תוסף העתק/הדבק של Qmmp</translation>
     </message>
     <message>
-        <location filename="../copypastefactory.cpp" line="50"/>
+        <location filename="../copypastefactory.cpp" line="52"/>
         <source>This plugin allows one to copy selected tracks from one playlist to another</source>
         <translation>תוסף זה מתיר לך להעתיק רצועות נבחרות מתוך רשימת נגינה אחת לאחרת</translation>
     </message>
     <message>
-        <location filename="../copypastefactory.cpp" line="51"/>
+        <location filename="../copypastefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>

@@ -17,27 +17,27 @@
 <context>
     <name>StreamBrowserFactory</name>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="28"/>
+        <location filename="../streambrowserfactory.cpp" line="30"/>
         <source>Stream Browser Plugin</source>
         <translation>Greffon de navigation de flux</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="49"/>
+        <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>About Stream Browser Plugin</source>
         <translation>À propos du greffon de navigation de flux</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="50"/>
+        <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>Qmmp Stream Browser Plugin</source>
         <translation>Greffon de navigation de flux pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="51"/>
+        <location filename="../streambrowserfactory.cpp" line="53"/>
         <source>This plugin allows one to add stream from IceCast stream directory</source>
         <translation>Ce greffon permet d&apos;ajouter un flux depuis un annuaire de flux IceCast</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="52"/>
+        <location filename="../streambrowserfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

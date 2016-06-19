@@ -42,27 +42,27 @@
 <context>
     <name>DecoderAACFactory</name>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="46"/>
+        <location filename="../decoderaacfactory.cpp" line="47"/>
         <source>AAC Plugin</source>
         <translation>Πρόσθετο AAC</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="48"/>
+        <location filename="../decoderaacfactory.cpp" line="49"/>
         <source>AAC Files</source>
         <translation>Αρχεία AAC</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="88"/>
+        <location filename="../decoderaacfactory.cpp" line="89"/>
         <source>About AAC Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου AAC</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="89"/>
+        <location filename="../decoderaacfactory.cpp" line="90"/>
         <source>Qmmp AAC Audio Plugin</source>
         <translation>Πρόσθετο ήχου AAC Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="90"/>
+        <location filename="../decoderaacfactory.cpp" line="91"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

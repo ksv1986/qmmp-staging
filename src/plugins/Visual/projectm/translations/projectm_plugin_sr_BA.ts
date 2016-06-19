@@ -105,32 +105,32 @@
 <context>
     <name>VisualProjectMFactory</name>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="29"/>
+        <location filename="../visualprojectmfactory.cpp" line="31"/>
         <source>ProjectM</source>
         <translation>ПројектМ</translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="49"/>
+        <location filename="../visualprojectmfactory.cpp" line="51"/>
         <source>About ProjectM Visual Plugin</source>
         <translation>О ПројектМ визуелизатору</translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="50"/>
+        <location filename="../visualprojectmfactory.cpp" line="52"/>
         <source>Qmmp ProjectM Visual Plugin</source>
         <translation>Кумп ПројектМ визуелни прикључак</translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="51"/>
+        <location filename="../visualprojectmfactory.cpp" line="53"/>
         <source>This plugin adds projectM visualization</source>
         <translation>Подршка за ПројектМ визуелизације</translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="52"/>
+        <location filename="../visualprojectmfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Аутор: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="53"/>
+        <location filename="../visualprojectmfactory.cpp" line="55"/>
         <source>Based on libprojectM-qt library</source>
         <translation>Заснован на libprojectM-qt библиотеци</translation>
     </message>

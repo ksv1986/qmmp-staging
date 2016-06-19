@@ -4,32 +4,32 @@
 <context>
     <name>MplayerEngineFactory</name>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="33"/>
+        <location filename="../mplayerenginefactory.cpp" line="35"/>
         <source>Mplayer Plugin</source>
         <translation>MPlayer įskiepis</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="36"/>
+        <location filename="../mplayerenginefactory.cpp" line="38"/>
         <source>Video Files</source>
         <translation>Video bylos</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="82"/>
+        <location filename="../mplayerenginefactory.cpp" line="84"/>
         <source>About MPlayer Plugin</source>
         <translation>Apie MPlayer Qmmp įskiepį</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="83"/>
+        <location filename="../mplayerenginefactory.cpp" line="85"/>
         <source>Qmmp MPlayer Plugin</source>
         <translation>Qmmp MPlayer įskiepis</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="84"/>
+        <location filename="../mplayerenginefactory.cpp" line="86"/>
         <source>This plugin uses MPlayer as backend</source>
         <translation>Šis įskiepis naudoja Mplayer video grojimui</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="85"/>
+        <location filename="../mplayerenginefactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Sukūrė: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

@@ -4,27 +4,27 @@
 <context>
     <name>DecoderCUEFactory</name>
     <message>
-        <location filename="../decodercuefactory.cpp" line="44"/>
+        <location filename="../decodercuefactory.cpp" line="46"/>
         <source>CUE Plugin</source>
         <translation>Engadido CUE</translation>
     </message>
     <message>
-        <location filename="../decodercuefactory.cpp" line="47"/>
+        <location filename="../decodercuefactory.cpp" line="49"/>
         <source>CUE Files</source>
         <translation>Ficheiros CUE</translation>
     </message>
     <message>
-        <location filename="../decodercuefactory.cpp" line="98"/>
+        <location filename="../decodercuefactory.cpp" line="100"/>
         <source>About CUE Audio Plugin</source>
         <translation>Sobre o engadido de audio CUE</translation>
     </message>
     <message>
-        <location filename="../decodercuefactory.cpp" line="99"/>
+        <location filename="../decodercuefactory.cpp" line="101"/>
         <source>Qmmp CUE Audio Plugin</source>
         <translation>Engadido de audio CUE de Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodercuefactory.cpp" line="100"/>
+        <location filename="../decodercuefactory.cpp" line="102"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Escrito por: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

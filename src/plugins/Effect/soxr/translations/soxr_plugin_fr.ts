@@ -4,22 +4,22 @@
 <context>
     <name>EffectSoXRFactory</name>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="30"/>
+        <location filename="../effectsoxrfactory.cpp" line="32"/>
         <source>SoX Resampler Plugin</source>
         <translation>Plugin SoX de rééchantillonnage</translation>
     </message>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="51"/>
+        <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>About SoX Resampler Plugin</source>
         <translation>A propos du plugin SoX de rééchantillonnage</translation>
     </message>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="52"/>
+        <location filename="../effectsoxrfactory.cpp" line="54"/>
         <source>Qmmp SoX Resampler Plugin</source>
         <translation>Plugin SoX Qmmp de rééchantillonnage</translation>
     </message>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="53"/>
+        <location filename="../effectsoxrfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Ecrit par: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

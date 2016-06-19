@@ -4,22 +4,22 @@
 <context>
     <name>OutputOSS4Factory</name>
     <message>
-        <location filename="../outputoss4factory.cpp" line="36"/>
+        <location filename="../outputoss4factory.cpp" line="38"/>
         <source>OSS4 Plugin</source>
         <translation>תוסף OSS4</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="56"/>
+        <location filename="../outputoss4factory.cpp" line="58"/>
         <source>About OSS4 Output Plugin</source>
         <translation>אודות תוסף פלט OSS4</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="57"/>
+        <location filename="../outputoss4factory.cpp" line="59"/>
         <source>Qmmp OSS4 Output Plugin</source>
         <translation>תוסף פלט OSS4 של Qmmp</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="58"/>
+        <location filename="../outputoss4factory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>

@@ -4,22 +4,22 @@
 <context>
     <name>OutputQtMultimediaFactory</name>
     <message>
-        <location filename="../outputqtmultimediafactory.cpp" line="32"/>
+        <location filename="../outputqtmultimediafactory.cpp" line="34"/>
         <source>Qt Multimedia Plugin</source>
         <translation>Πρόσθετο πολυμέσων Qt</translation>
     </message>
     <message>
-        <location filename="../outputqtmultimediafactory.cpp" line="57"/>
+        <location filename="../outputqtmultimediafactory.cpp" line="59"/>
         <source>About Qt Multimedia Output Plugin</source>
         <translation>Περί του πρόσθετου πολυμέσων Qt</translation>
     </message>
     <message>
-        <location filename="../outputqtmultimediafactory.cpp" line="58"/>
+        <location filename="../outputqtmultimediafactory.cpp" line="60"/>
         <source>Qmmp Qt Multimedia Output Plugin</source>
         <translation>Πρόσθετο εξόδου πολυμέσων Qt Qmmp</translation>
     </message>
     <message>
-        <location filename="../outputqtmultimediafactory.cpp" line="59"/>
+        <location filename="../outputqtmultimediafactory.cpp" line="61"/>
         <source>Written by: Ivan Ponomarev &lt;ivantrue@gmail.com&gt;</source>
         <translation>Γράφτηκε από τον: Ivan Ponomarev &lt;ivantrue@gmail.com&gt;</translation>
     </message>

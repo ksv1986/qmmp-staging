@@ -4,32 +4,32 @@
 <context>
     <name>DecoderGmeFactory</name>
     <message>
-        <location filename="../decodergmefactory.cpp" line="49"/>
+        <location filename="../decodergmefactory.cpp" line="51"/>
         <source>GME Plugin</source>
         <translation>Πρόσθετο GME</translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="52"/>
+        <location filename="../decodergmefactory.cpp" line="54"/>
         <source>Game Music Files</source>
         <translation>Αρχεία μουσικής παιγνιδιών</translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="116"/>
+        <location filename="../decodergmefactory.cpp" line="118"/>
         <source>About GME Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου GME</translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="117"/>
+        <location filename="../decodergmefactory.cpp" line="119"/>
         <source>Qmmp GME Audio Plugin</source>
         <translation>Qmmp πρόσθετο ήχου GME</translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="118"/>
+        <location filename="../decodergmefactory.cpp" line="120"/>
         <source>This plugin uses Game_Music_Emu library to play game music files</source>
         <translation>Αυτό το πρόσθετο χρησιμοποιεί τη βιβλιοθήκη Game_Music_Emu για την αναπαραγωγή αρχείων μουσικής παιγνιδιών</translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="119"/>
+        <location filename="../decodergmefactory.cpp" line="121"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

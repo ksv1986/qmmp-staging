@@ -105,32 +105,32 @@
 <context>
     <name>VisualProjectMFactory</name>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="29"/>
+        <location filename="../visualprojectmfactory.cpp" line="31"/>
         <source>ProjectM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="49"/>
+        <location filename="../visualprojectmfactory.cpp" line="51"/>
         <source>About ProjectM Visual Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="50"/>
+        <location filename="../visualprojectmfactory.cpp" line="52"/>
         <source>Qmmp ProjectM Visual Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="51"/>
+        <location filename="../visualprojectmfactory.cpp" line="53"/>
         <source>This plugin adds projectM visualization</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="52"/>
+        <location filename="../visualprojectmfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="53"/>
+        <location filename="../visualprojectmfactory.cpp" line="55"/>
         <source>Based on libprojectM-qt library</source>
         <translation type="unfinished"></translation>
     </message>

@@ -17,27 +17,27 @@
 <context>
     <name>StreamBrowserFactory</name>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="28"/>
+        <location filename="../streambrowserfactory.cpp" line="30"/>
         <source>Stream Browser Plugin</source>
         <translation>媒体流浏览器插件</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="49"/>
+        <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>About Stream Browser Plugin</source>
         <translation>关于媒体流浏览器插件</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="50"/>
+        <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>Qmmp Stream Browser Plugin</source>
         <translation>Qmmp媒体流浏览器插件</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="51"/>
+        <location filename="../streambrowserfactory.cpp" line="53"/>
         <source>This plugin allows one to add stream from IceCast stream directory</source>
         <translation>此插件允许从IceCast媒体流文件夹向Qmmp中添加媒体流</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="52"/>
+        <location filename="../streambrowserfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

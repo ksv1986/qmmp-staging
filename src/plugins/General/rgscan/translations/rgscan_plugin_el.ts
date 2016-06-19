@@ -81,47 +81,47 @@
 <context>
     <name>RGScanFactory</name>
     <message>
-        <location filename="../rgscanfactory.cpp" line="28"/>
+        <location filename="../rgscanfactory.cpp" line="30"/>
         <source>ReplayGain Scanner Plugin</source>
         <translation>Πρόσθετο σάρωσης ενίσχυσης αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="49"/>
+        <location filename="../rgscanfactory.cpp" line="51"/>
         <source>About ReplayGain Scanner Plugin</source>
         <translation>Σχετικά με το πρόσθετο σάρωσης ενίσχυσης αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="50"/>
+        <location filename="../rgscanfactory.cpp" line="52"/>
         <source>ReplayGain Scanner Plugin for Qmmp</source>
         <translation>Qmmp πρόσθετο σάρωσης ενίσχυσης αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="51"/>
+        <location filename="../rgscanfactory.cpp" line="53"/>
         <source>This plugin scans audio files and gives information for volume normalization</source>
         <translation>Αυτό το πρόσθετο σαρώνει τα αρχεία ήχου και δίνει πληροφορίες για την κανονικοποίηση της έντασης</translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="52"/>
+        <location filename="../rgscanfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="53"/>
+        <location filename="../rgscanfactory.cpp" line="55"/>
         <source>Based on source code by:</source>
         <translation>Βασισμένο στον πηγαίο κώδικα των:</translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="54"/>
+        <location filename="../rgscanfactory.cpp" line="56"/>
         <source>David Robinson &lt;David@Robinson.org&gt;</source>
         <translation>David Robinson &lt;David@Robinson.org&gt;</translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="55"/>
+        <location filename="../rgscanfactory.cpp" line="57"/>
         <source>Glen Sawyer &lt;mp3gain@hotmail.com&gt;</source>
         <translation>Glen Sawyer &lt;mp3gain@hotmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="56"/>
+        <location filename="../rgscanfactory.cpp" line="58"/>
         <source>Frank Klemm</source>
         <translation>Frank Klemm</translation>
     </message>

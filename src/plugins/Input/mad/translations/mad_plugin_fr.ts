@@ -4,37 +4,37 @@
 <context>
     <name>DecoderMADFactory</name>
     <message>
-        <location filename="../decodermadfactory.cpp" line="104"/>
+        <location filename="../decodermadfactory.cpp" line="107"/>
         <source>MPEG Plugin</source>
         <translation>Greffon MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="107"/>
+        <location filename="../decodermadfactory.cpp" line="110"/>
         <source>MPEG Files</source>
         <translation>Fichiers MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="263"/>
+        <location filename="../decodermadfactory.cpp" line="266"/>
         <source>About MPEG Audio Plugin</source>
         <translation>À propos du greffon audio MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="264"/>
+        <location filename="../decodermadfactory.cpp" line="267"/>
         <source>Qmmp MPEG Audio Plugin</source>
         <translation>Greffon audio MPEG pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="265"/>
+        <location filename="../decodermadfactory.cpp" line="268"/>
         <source>Compiled against libmad version:</source>
         <translation>Compilé contre libmad version :</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="269"/>
+        <location filename="../decodermadfactory.cpp" line="272"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="270"/>
+        <location filename="../decodermadfactory.cpp" line="273"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Code source basé sur les projets mq3 et madplay</translation>
     </message>

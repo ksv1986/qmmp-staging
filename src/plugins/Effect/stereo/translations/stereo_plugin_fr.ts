@@ -4,27 +4,27 @@
 <context>
     <name>EffectStereoFactory</name>
     <message>
-        <location filename="../effectstereofactory.cpp" line="30"/>
+        <location filename="../effectstereofactory.cpp" line="32"/>
         <source>Extra Stereo Plugin</source>
         <translation>Greffon de stéréo augmentée</translation>
     </message>
     <message>
-        <location filename="../effectstereofactory.cpp" line="50"/>
+        <location filename="../effectstereofactory.cpp" line="52"/>
         <source>About Extra Stereo Plugin</source>
         <translation>À propos du greffon de stéréo augmentée</translation>
     </message>
     <message>
-        <location filename="../effectstereofactory.cpp" line="51"/>
+        <location filename="../effectstereofactory.cpp" line="53"/>
         <source>Qmmp Extra Stereo Plugin</source>
         <translation>Greffon de stéréo augmentée pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../effectstereofactory.cpp" line="52"/>
+        <location filename="../effectstereofactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../effectstereofactory.cpp" line="53"/>
+        <location filename="../effectstereofactory.cpp" line="55"/>
         <source>Based on the Extra Stereo Plugin for Xmms by Johan Levin</source>
         <translation>Basé sur le greffon de stéréo augmentée pour Xmms par Johan Levin</translation>
     </message>

@@ -4,22 +4,22 @@
 <context>
     <name>EffectSoXRFactory</name>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="30"/>
+        <location filename="../effectsoxrfactory.cpp" line="32"/>
         <source>SoX Resampler Plugin</source>
         <translation>Модуль SoX Resampler</translation>
     </message>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="51"/>
+        <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>About SoX Resampler Plugin</source>
         <translation>Про модуль SoX Resampler</translation>
     </message>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="52"/>
+        <location filename="../effectsoxrfactory.cpp" line="54"/>
         <source>Qmmp SoX Resampler Plugin</source>
         <translation>Перетворювач частоти SoX Resampler для Qmmp</translation>
     </message>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="53"/>
+        <location filename="../effectsoxrfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Розробник: Ілля Котов &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

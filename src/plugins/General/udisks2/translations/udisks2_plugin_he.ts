@@ -42,27 +42,27 @@
 <context>
     <name>UDisks2Factory</name>
     <message>
-        <location filename="../udisks2factory.cpp" line="30"/>
+        <location filename="../udisks2factory.cpp" line="32"/>
         <source>UDisks2 Plugin</source>
         <translation>תוסף UDisks2</translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="50"/>
+        <location filename="../udisks2factory.cpp" line="52"/>
         <source>About UDisks2 Plugin</source>
         <translation>אודות תוסף UDisks2</translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="51"/>
+        <location filename="../udisks2factory.cpp" line="53"/>
         <source>Qmmp UDisks2 Plugin</source>
         <translation>תוסף UDisks2 של Qmmp</translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="52"/>
+        <location filename="../udisks2factory.cpp" line="54"/>
         <source>This plugin provides removable devices detection using UDisks2</source>
         <translation>תוסף זה מספק איתור התקנים ברי הזזה באמצעות UDisks2</translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="53"/>
+        <location filename="../udisks2factory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>

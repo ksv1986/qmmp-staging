@@ -4,22 +4,22 @@
 <context>
     <name>OutputALSAFactory</name>
     <message>
-        <location filename="../outputalsafactory.cpp" line="31"/>
+        <location filename="../outputalsafactory.cpp" line="33"/>
         <source>ALSA Plugin</source>
         <translation>Πρόσθετο ALSA</translation>
     </message>
     <message>
-        <location filename="../outputalsafactory.cpp" line="56"/>
+        <location filename="../outputalsafactory.cpp" line="58"/>
         <source>About ALSA Output Plugin</source>
         <translation>Σχετικά με το πρόσθετο εξόδου ALSA</translation>
     </message>
     <message>
-        <location filename="../outputalsafactory.cpp" line="57"/>
+        <location filename="../outputalsafactory.cpp" line="59"/>
         <source>Qmmp ALSA Output Plugin</source>
         <translation>Πρόσθετο εξόδου ALSA Qmmp</translation>
     </message>
     <message>
-        <location filename="../outputalsafactory.cpp" line="58"/>
+        <location filename="../outputalsafactory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

@@ -17,22 +17,22 @@
 <context>
     <name>CoverManagerFactory</name>
     <message>
-        <location filename="../covermanagerfactory.cpp" line="29"/>
+        <location filename="../covermanagerfactory.cpp" line="31"/>
         <source>Cover Manager Plugin</source>
         <translation>תוסף ניהול כיסוי</translation>
     </message>
     <message>
-        <location filename="../covermanagerfactory.cpp" line="49"/>
+        <location filename="../covermanagerfactory.cpp" line="51"/>
         <source>About Cover Manager Plugin</source>
         <translation>אודות תוסף ניהול כיסוי</translation>
     </message>
     <message>
-        <location filename="../covermanagerfactory.cpp" line="50"/>
+        <location filename="../covermanagerfactory.cpp" line="52"/>
         <source>Qmmp Cover Manager Plugin</source>
         <translation>תוסף ניהול כיסוי של Qmmp</translation>
     </message>
     <message>
-        <location filename="../covermanagerfactory.cpp" line="51"/>
+        <location filename="../covermanagerfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>

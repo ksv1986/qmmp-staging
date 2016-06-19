@@ -42,27 +42,27 @@
 <context>
     <name>UDisksFactory</name>
     <message>
-        <location filename="../udisksfactory.cpp" line="30"/>
+        <location filename="../udisksfactory.cpp" line="32"/>
         <source>UDisks Plugin</source>
         <translation>Greffon UDisks</translation>
     </message>
     <message>
-        <location filename="../udisksfactory.cpp" line="50"/>
+        <location filename="../udisksfactory.cpp" line="52"/>
         <source>About UDisks Plugin</source>
         <translation>À propos du greffon UDisks</translation>
     </message>
     <message>
-        <location filename="../udisksfactory.cpp" line="51"/>
+        <location filename="../udisksfactory.cpp" line="53"/>
         <source>Qmmp UDisks Plugin</source>
         <translation>Greffon UDisks pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../udisksfactory.cpp" line="52"/>
+        <location filename="../udisksfactory.cpp" line="54"/>
         <source>This plugin provides removable devices detection using UDisks</source>
         <translation>Ce greffon fournit une détection de périphériques amovibles en utilisant UDisks</translation>
     </message>
     <message>
-        <location filename="../udisksfactory.cpp" line="53"/>
+        <location filename="../udisksfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

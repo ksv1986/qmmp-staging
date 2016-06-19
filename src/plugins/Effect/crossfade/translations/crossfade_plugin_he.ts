@@ -4,22 +4,22 @@
 <context>
     <name>EffectCrossfadeFactory</name>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="30"/>
+        <location filename="../effectcrossfadefactory.cpp" line="32"/>
         <source>Crossfade Plugin</source>
         <translation>תוסף עמעום</translation>
     </message>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="51"/>
+        <location filename="../effectcrossfadefactory.cpp" line="53"/>
         <source>About Crossfade Plugin</source>
         <translation>אודות תוסף עמעום</translation>
     </message>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="52"/>
+        <location filename="../effectcrossfadefactory.cpp" line="54"/>
         <source>Qmmp Crossfade Plugin</source>
         <translation>תוסף עמעום של Qmmp</translation>
     </message>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="53"/>
+        <location filename="../effectcrossfadefactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;‎</translation>
     </message>

@@ -205,27 +205,27 @@
 <context>
     <name>ConverterFactory</name>
     <message>
-        <location filename="../converterfactory.cpp" line="28"/>
+        <location filename="../converterfactory.cpp" line="30"/>
         <source>Converter Plugin</source>
         <translation>Πρόσθετο Μετατροπέας</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="49"/>
+        <location filename="../converterfactory.cpp" line="51"/>
         <source>About Converter Plugin</source>
         <translation>Σχετικά με το πρόσθετο Μετατροπέας</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="50"/>
+        <location filename="../converterfactory.cpp" line="52"/>
         <source>Qmmp Converter Plugin</source>
         <translation>Qmmp πρόσθετο Μετατροπέας</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="51"/>
+        <location filename="../converterfactory.cpp" line="53"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
         <translation>Αυτό το πρόσθετο μετατρέπει υποστηριζόμενους τύπους αρχείων ήχου σε άλλες μορφές χρησιμοποιώντας κωδικοποιητές της γραμμής εντολών </translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="53"/>
+        <location filename="../converterfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

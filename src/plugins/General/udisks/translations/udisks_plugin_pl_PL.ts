@@ -42,27 +42,27 @@
 <context>
     <name>UDisksFactory</name>
     <message>
-        <location filename="../udisksfactory.cpp" line="30"/>
+        <location filename="../udisksfactory.cpp" line="32"/>
         <source>UDisks Plugin</source>
         <translation>Wtyczka UDisks</translation>
     </message>
     <message>
-        <location filename="../udisksfactory.cpp" line="50"/>
+        <location filename="../udisksfactory.cpp" line="52"/>
         <source>About UDisks Plugin</source>
         <translation>O wtyczce UDisks</translation>
     </message>
     <message>
-        <location filename="../udisksfactory.cpp" line="51"/>
+        <location filename="../udisksfactory.cpp" line="53"/>
         <source>Qmmp UDisks Plugin</source>
         <translation>Wtyczka UDisks dla Qmmp</translation>
     </message>
     <message>
-        <location filename="../udisksfactory.cpp" line="52"/>
+        <location filename="../udisksfactory.cpp" line="54"/>
         <source>This plugin provides removable devices detection using UDisks</source>
         <translation>Ta wtyczka umożliwia wykrywanie urządzeń przenośnych przy użyciu UDisks</translation>
     </message>
     <message>
-        <location filename="../udisksfactory.cpp" line="53"/>
+        <location filename="../udisksfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Autor: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

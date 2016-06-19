@@ -4,22 +4,22 @@
 <context>
     <name>OutputWASAPIFactory</name>
     <message>
-        <location filename="../outputwasapifactory.cpp" line="28"/>
+        <location filename="../outputwasapifactory.cpp" line="30"/>
         <source>WASAPI Plugin</source>
         <translation>WASAP　I插件</translation>
     </message>
     <message>
-        <location filename="../outputwasapifactory.cpp" line="52"/>
+        <location filename="../outputwasapifactory.cpp" line="54"/>
         <source>About WASAPI Output Plugin</source>
         <translation>关于WASAPI输出插件</translation>
     </message>
     <message>
-        <location filename="../outputwasapifactory.cpp" line="53"/>
+        <location filename="../outputwasapifactory.cpp" line="55"/>
         <source>Qmmp WASAPI Output Plugin</source>
         <translation>Qmmp WASAPI输出插件</translation>
     </message>
     <message>
-        <location filename="../outputwasapifactory.cpp" line="54"/>
+        <location filename="../outputwasapifactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

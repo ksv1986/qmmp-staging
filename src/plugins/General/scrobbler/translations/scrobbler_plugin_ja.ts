@@ -4,22 +4,22 @@
 <context>
     <name>ScrobblerFactory</name>
     <message>
-        <location filename="../scrobblerfactory.cpp" line="30"/>
+        <location filename="../scrobblerfactory.cpp" line="32"/>
         <source>Scrobbler Plugin</source>
         <translation>Scrobbler プラグイン</translation>
     </message>
     <message>
-        <location filename="../scrobblerfactory.cpp" line="50"/>
+        <location filename="../scrobblerfactory.cpp" line="52"/>
         <source>About Scrobbler Plugin</source>
         <translation>Scrobbler プラグインについて</translation>
     </message>
     <message>
-        <location filename="../scrobblerfactory.cpp" line="51"/>
+        <location filename="../scrobblerfactory.cpp" line="53"/>
         <source>Qmmp AudioScrobbler Plugin</source>
         <translation>QMMP Scrobbler プラグイン</translation>
     </message>
     <message>
-        <location filename="../scrobblerfactory.cpp" line="52"/>
+        <location filename="../scrobblerfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>制作: Илья Котов (Ilya Kotov) &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

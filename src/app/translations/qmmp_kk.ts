@@ -82,62 +82,62 @@
 <context>
     <name>QMMPStarter</name>
     <message>
-        <location filename="../qmmpstarter.cpp" line="90"/>
+        <location filename="../qmmpstarter.cpp" line="88"/>
         <source>Unknown command</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="317"/>
+        <location filename="../qmmpstarter.cpp" line="315"/>
         <source>Usage: qmmp [options] [files]</source>
         <translation>Қолданылуы: qmmp [опциялар] [файлдар]</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="318"/>
+        <location filename="../qmmpstarter.cpp" line="316"/>
         <source>Options:</source>
         <translation>Опциялары:</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="322"/>
+        <location filename="../qmmpstarter.cpp" line="320"/>
         <source>Don&apos;t start the application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="324"/>
+        <location filename="../qmmpstarter.cpp" line="322"/>
         <source>Print version number and exit</source>
         <translation>Нұсқасын көрсету мен шығу</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="325"/>
+        <location filename="../qmmpstarter.cpp" line="323"/>
         <source>Ideas, patches, bugreports send to forkotov02@hotmail.ru</source>
         <translation>Ұсыныстар, түзетулер, қателер туралы хабарласыңыз:  forkotov02@hotmail.ru</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="328"/>
+        <location filename="../qmmpstarter.cpp" line="326"/>
         <source>Command Line Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="341"/>
+        <location filename="../qmmpstarter.cpp" line="339"/>
         <source>QMMP version: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="342"/>
+        <location filename="../qmmpstarter.cpp" line="340"/>
         <source>Compiled with Qt version: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="343"/>
+        <location filename="../qmmpstarter.cpp" line="341"/>
         <source>Using Qt version: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="346"/>
+        <location filename="../qmmpstarter.cpp" line="344"/>
         <source>Qmmp Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="323"/>
+        <location filename="../qmmpstarter.cpp" line="321"/>
         <source>Display this text and exit</source>
         <translation>Осы мәтінді көрсету және шығу</translation>
     </message>

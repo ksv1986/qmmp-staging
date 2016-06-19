@@ -73,22 +73,22 @@
 <context>
     <name>FileOpsFactory</name>
     <message>
-        <location filename="../fileopsfactory.cpp" line="30"/>
+        <location filename="../fileopsfactory.cpp" line="31"/>
         <source>File Operations Plugin</source>
         <translation>Модуль файловых операций</translation>
     </message>
     <message>
-        <location filename="../fileopsfactory.cpp" line="50"/>
+        <location filename="../fileopsfactory.cpp" line="51"/>
         <source>About File Operations Plugin</source>
         <translation>О модуле файловых операций</translation>
     </message>
     <message>
-        <location filename="../fileopsfactory.cpp" line="51"/>
+        <location filename="../fileopsfactory.cpp" line="52"/>
         <source>Qmmp File Operations Plugin</source>
         <translation>Модуль работы с файлами для Qmmp</translation>
     </message>
     <message>
-        <location filename="../fileopsfactory.cpp" line="52"/>
+        <location filename="../fileopsfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Разработчик: Илья Котов &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

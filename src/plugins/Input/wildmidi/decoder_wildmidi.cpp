@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,6 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <stdint.h>
 #include "wildmidihelper.h"
 #include "decoder_wildmidi.h"
 
@@ -48,7 +49,7 @@ bool DecoderWildMidi::initialize()
         return false;
     }
     WildMidiHelper::instance()->readSettings();
-    midi_ptr = WildMidi_Open (m_path.toLocal8Bit());
+    midi_ptr = WildMidi_Open (m_path.toLocal8Bit().constData());
 
     if(!midi_ptr)
     {
@@ -84,5 +85,10 @@ int DecoderWildMidi::bitrate()
 
 qint64 DecoderWildMidi::read(unsigned char *data, qint64 size)
 {
+#if defined(LIBWILDMIDI_VERSION) && (LIBWILDMIDI_VERSION >= 0x000400)
+    return WildMidi_GetOutput (midi_ptr, (int8_t *)data, size);
+#else
     return WildMidi_GetOutput (midi_ptr, (char *)data, size);
+#endif
+
 }

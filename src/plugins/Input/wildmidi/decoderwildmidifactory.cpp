@@ -35,13 +35,25 @@ DecoderWildMidiFactory::DecoderWildMidiFactory()
 
 bool DecoderWildMidiFactory::supports(const QString &source) const
 {
-    return source.endsWith(".mid", Qt::CaseInsensitive);
+    foreach(QString filter, properties().filters)
+    {
+        QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
+        if (regexp.exactMatch(source))
+            return true;
+    }
+    return false;
 }
 
 bool DecoderWildMidiFactory::canDecode(QIODevice *input) const
 {
     char buf[4];
-    return (input->peek(buf, 4) == 4 && !memcmp(buf, "MThd", 4));
+    if(input->peek(buf, 4) != 4)
+        return false;
+#if defined(LIBWILDMIDI_VERSION) && (LIBWILDMIDI_VERSION >= 0x000400)
+    return !memcmp(buf, "MThd", 4) || !memcmp(buf, "MUS", 3) || !memcmp(buf, "FORM", 4);
+#else
+    return !memcmp(buf, "MThd", 4);
+#endif
 }
 
 const DecoderProperties DecoderWildMidiFactory::properties() const
@@ -49,6 +61,9 @@ const DecoderProperties DecoderWildMidiFactory::properties() const
     DecoderProperties properties;
     properties.name = tr("WildMidi Plugin");
     properties.filters << "*.mid";
+#if defined(LIBWILDMIDI_VERSION) && (LIBWILDMIDI_VERSION >= 0x000400)
+    properties.filters << "*.mus" << "*.xmi";
+#endif
     properties.description = tr("Midi Files");
     //properties.contentType = ;
     properties.shortName = "wildmidi";

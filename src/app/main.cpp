@@ -41,7 +41,13 @@ int main(int argc, char *argv[])
 #endif
     QmmpApplication a (argc, argv );
     a.setApplicationName("qmmp");
-    a.setWindowIcon(QIcon(":/32x32/qmmp.png"));
+    QIcon icon;
+    icon.addFile(":/16x16/qmmp.png");
+    icon.addFile(":/32x32/qmmp.png");
+    icon.addFile(":/48x48/qmmp.png");
+    icon.addFile(":/56x56/qmmp.png");
+    icon.addFile(":/scalable/qmmp.svgz");
+    a.setWindowIcon(icon);
 
     QTranslator translator;
     QString locale = Qmmp::systemLanguageID();

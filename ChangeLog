@@ -1128,6 +1128,8 @@ Version 0.10.0
 * added support for m4a files in the ReplayGain scanner
 * added WASAPI output plugin
 * added https support in the http plugin
+* added wildmidi 0.4.0 support
+* added support for XMIDI and MUS (id Software) formats
 * improved skinned interface:
   - show track details when double-clicking on song title in the main window (Thomas Perl)
   - improved time indicator in the shaded mode (Thomas Perl)

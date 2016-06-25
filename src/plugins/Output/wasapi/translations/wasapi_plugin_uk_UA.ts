@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="54"/>
         <source>About WASAPI Output Plugin</source>
-        <translation>Про модули виведення WASAPI</translation>
+        <translation>Про модуль виведення WASAPI</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="55"/>

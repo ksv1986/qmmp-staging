@@ -388,6 +388,8 @@ qint64 DecoderFFmpeg::ffmpeg_decode()
         }
         if((err = avcodec_receive_frame(c, m_decoded_frame)) < 0)
         {
+            if(err == EAGAIN) //try again
+                return 0;
             qWarning("DecoderFFmpeg: avcodec_receive_frame error: %d", err);
             return -1;
         }

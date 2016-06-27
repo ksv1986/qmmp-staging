@@ -79,6 +79,7 @@ DecoderFFmpeg::DecoderFFmpeg(const QString &path, QIODevice *i)
     m_stream = 0;
     m_decoded_frame = 0;
     m_channels = 0;
+    c = 0;
     av_init_packet(&m_pkt);
     av_init_packet(&m_temp_pkt);
 }
@@ -88,6 +89,10 @@ DecoderFFmpeg::~DecoderFFmpeg()
 {
     m_bitrate = 0;
     m_temp_pkt.size = 0;
+#if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
+    if(c)
+        avcodec_free_context(&c);
+#endif
     if (ic)
         avformat_free_context(ic);
     if(m_pkt.data)
@@ -200,12 +205,19 @@ bool DecoderFFmpeg::initialize()
     ReplayGainReader rg(ic);
     setReplayGainInfo(rg.replayGainInfo());
 
+#if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
+    c = avcodec_alloc_context3(NULL);
+#endif
 
     ic->flags |= AVFMT_FLAG_GENPTS;
     av_read_play(ic);
     for (wma_idx = 0; wma_idx < (int)ic->nb_streams; wma_idx++)
     {
+#if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
+        avcodec_parameters_to_context(c, ic->streams[wma_idx]->codecpar);
+#else
         c = ic->streams[wma_idx]->codec;
+#endif
         if (c->codec_type == AVMEDIA_TYPE_AUDIO)
             break;
     }
@@ -362,7 +374,28 @@ qint64 DecoderFFmpeg::ffmpeg_decode()
         avcodec_get_frame_defaults(m_decoded_frame);
 #endif
 
+#if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
+        int err = 0;
+        if((err = avcodec_send_packet(c, &m_temp_pkt)) < 0)
+        {
+            if(err == EAGAIN) //try again
+                return 0;
+            else
+            {
+                qWarning("DecoderFFmpeg: avcodec_send_packet error: %d", err);
+                return -1;
+            }
+        }
+        if((err = avcodec_receive_frame(c, m_decoded_frame)) < 0)
+        {
+            qWarning("DecoderFFmpeg: avcodec_receive_frame error: %d", err);
+            return -1;
+        }
+        got_frame = av_frame_get_pkt_size(m_decoded_frame);
+        int l = m_temp_pkt.size;
+#else
         int l = avcodec_decode_audio4(c, m_decoded_frame, &got_frame, &m_temp_pkt);
+#endif
 
         if(got_frame)
             out_size = av_samples_get_buffer_size(0, c->channels, m_decoded_frame->nb_samples,

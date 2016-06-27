@@ -51,11 +51,19 @@ QHash<QString, QString> FFmpegMetaDataModel::audioProperties()
     ap.insert(tr("File size"),  QString("%1 ").arg(avio_size(m_in->pb)) + " " + tr("KB"));
     ap.insert(tr("Bitrate"), QString("%1 "+tr("kbps")).arg(m_in->bit_rate/1000));
 
+#if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
+    AVCodecParameters *c = 0;
+#else
     AVCodecContext *c = 0;
+#endif
     uint idx;
     for (idx = 0; idx < m_in->nb_streams; idx++)
     {
+#if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
+        c = m_in->streams[idx]->codecpar;
+#else
         c = m_in->streams[idx]->codec;
+#endif
         if (c->codec_type == AVMEDIA_TYPE_AUDIO)
             break;
     }
@@ -69,10 +77,20 @@ QHash<QString, QString> FFmpegMetaDataModel::audioProperties()
 
 QPixmap FFmpegMetaDataModel::cover()
 {
+#if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
+    AVCodecParameters *c = 0;
+#else
     AVCodecContext *c = 0;
+#endif
+
     for (uint idx = 0; idx < m_in->nb_streams; idx++)
     {
+#if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
+        c = m_in->streams[idx]->codecpar;
+#else
         c = m_in->streams[idx]->codec;
+#endif
+
 #if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav 10
         if (c->codec_type == AVMEDIA_TYPE_VIDEO && c->codec_id == AV_CODEC_ID_MJPEG)
 #else

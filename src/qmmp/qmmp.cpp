@@ -35,6 +35,9 @@
 
 QString Qmmp::m_configDir;
 QString Qmmp::m_langID;
+#ifdef Q_OS_WIN
+QString Qmmp::m_appDir;
+#endif
 
 const QString Qmmp::configFile()
 {
@@ -47,7 +50,7 @@ const QString Qmmp::configDir()
     if(m_configDir.isEmpty())
     {
         if(isPortable())
-            return QCoreApplication::applicationDirPath() + "/.qmmp/";
+            return m_appDir + "/.qmmp/";
         else
             return  QDir::homePath() +"/.qmmp/";
     }
@@ -137,9 +140,11 @@ void Qmmp::setUiLanguageID(const QString &code)
     m_langID.clear();
 }
 
-#if Q_OS_WIN
+#ifdef Q_OS_WIN
 bool Qmmp::isPortable()
 {
-    QFile::exists(QCoreApplication::applicationDirPath() + "/qmmp_portable.txt");
+    if(m_appDir.isEmpty())
+        m_appDir = QCoreApplication::applicationDirPath();
+    return QFile::exists(m_appDir + "/qmmp_portable.txt");
 }
 #endif

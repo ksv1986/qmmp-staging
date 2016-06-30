@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -140,7 +140,7 @@ void Equalizer::loadPresets()
 {
     m_presetComboBox->clear();
     //equalizer presets
-    QString preset_path = QDir::homePath() +"/.qmmp/eq15.preset";
+    QString preset_path = Qmmp::configDir() + "q15.preset";
     if(!QFile::exists(preset_path))
         preset_path = ":/qsui/eq15.preset";
     QSettings eq_preset (preset_path, QSettings::IniFormat);
@@ -243,7 +243,7 @@ void Equalizer::savePreset()
 
 void Equalizer::savePresets()
 {
-    QSettings eq_preset (QDir::homePath() +"/.qmmp/eq15.preset", QSettings::IniFormat);
+    QSettings eq_preset (Qmmp::configDir() + "eq15.preset", QSettings::IniFormat);
     eq_preset.clear ();
     for (int i = 0; i < m_presets.size(); ++i)
     {

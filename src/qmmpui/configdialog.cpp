@@ -81,9 +81,12 @@ ConfigDialog::ConfigDialog (QWidget *parent) : QDialog (parent)
     m_ui->informationButton->setIcon(QIcon::fromTheme("dialog-information"));
     //file associations
 #ifdef Q_OS_WIN
-    m_ui->stackedWidget->addWidget(new WinFileAssocPage(this));
-    m_ui->contentsWidget->addItem(tr("File Types"));
-    m_ui->contentsWidget->item(m_ui->contentsWidget->count() - 1)->setIcon(QIcon(":associations.png"));
+    if(!Qmmp::isPortable())
+    {
+        m_ui->stackedWidget->addWidget(new WinFileAssocPage(this));
+        m_ui->contentsWidget->addItem(tr("File Types"));
+        m_ui->contentsWidget->item(m_ui->contentsWidget->count() - 1)->setIcon(QIcon(":associations.png"));
+    }
 #endif
 }
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,9 +19,10 @@
  ***************************************************************************/
 
 #include <QDir>
-#include <QApplication>
+#include <QCoreApplication>
 #include <QSettings>
 #include <QLocale>
+#include <QFile>
 #include <QByteArray>
 
 #ifndef LIB_DIR
@@ -42,7 +43,19 @@ const QString Qmmp::configFile()
 
 const QString Qmmp::configDir()
 {
+#ifdef Q_OS_WIN
+    if(m_configDir.isEmpty())
+    {
+        if(isPortable())
+            return QCoreApplication::applicationDirPath() + "/.qmmp/";
+        else
+            return  QDir::homePath() +"/.qmmp/";
+    }
+    else
+        return m_configDir;
+#else
     return m_configDir.isEmpty() ? QDir::homePath() +"/.qmmp/" : m_configDir;
+#endif
 }
 
 void Qmmp::setConfigDir(const QString &path)
@@ -123,3 +136,10 @@ void Qmmp::setUiLanguageID(const QString &code)
     settings.setValue("General/locale", code);
     m_langID.clear();
 }
+
+#if Q_OS_WIN
+bool Qmmp::isPortable()
+{
+    QFile::exists(QCoreApplication::applicationDirPath() + "/qmmp_portable.txt");
+}
+#endif

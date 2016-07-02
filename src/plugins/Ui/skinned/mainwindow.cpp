@@ -75,7 +75,16 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
     //user interface
     m_skin = new Skin(this);
-    setFixedSize(275 * m_skin->ratio(),116 * m_skin->ratio());
+#ifdef Q_WS_X11
+    QString wm_name = WindowSystem::netWindowManagerName();
+    if(wm_name.contains("metacity", Qt::CaseInsensitive) ||
+            wm_name.contains("marko", Qt::CaseInsensitive) ||
+            wm_name.contains("mutter", Qt::CaseInsensitive) ||
+            wm_name.contains("gnome3", Qt::CaseInsensitive))
+        resize(275 * m_skin->ratio(),116 * m_skin->ratio());
+    else
+#endif
+        setFixedSize(275 * m_skin->ratio(),116 * m_skin->ratio());
 
     Dock *dock = new Dock(this);
     dock->setMainWidget(this);

@@ -80,7 +80,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     if(wm_name.contains("metacity", Qt::CaseInsensitive) ||
             wm_name.contains("marko", Qt::CaseInsensitive) ||
             wm_name.contains("mutter", Qt::CaseInsensitive) ||
-            wm_name.contains("gnome3", Qt::CaseInsensitive))
+            wm_name.contains("gnome", Qt::CaseInsensitive))
         resize(275 * m_skin->ratio(),116 * m_skin->ratio());
     else
 #endif

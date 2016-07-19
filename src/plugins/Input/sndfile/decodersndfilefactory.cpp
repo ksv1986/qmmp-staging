@@ -29,14 +29,12 @@
 #include "decoder_sndfile.h"
 #include "decodersndfilefactory.h"
 
-
 // DecoderSndFileFactory
-
 bool DecoderSndFileFactory::supports(const QString &source) const
 {
     if (source.endsWith(".wav", Qt::CaseInsensitive))
     {
-        //try top open the file
+        //try to open the file
         SF_INFO snd_info;
 #ifdef Q_OS_WIN
         SNDFILE *sndfile = sf_wchar_open(reinterpret_cast<LPCWSTR>(source.utf16()), SFM_READ, &snd_info);
@@ -75,14 +73,13 @@ const DecoderProperties DecoderSndFileFactory::properties() const
     properties.shortName = "sndfile";
     properties.hasAbout = true;
     properties.hasSettings = false;
-    properties.noInput = true;
-    properties.protocols << "file";
+    properties.noInput = false;
     return properties;
 }
 
-Decoder *DecoderSndFileFactory::create(const QString &path, QIODevice *)
+Decoder *DecoderSndFileFactory::create(const QString &path, QIODevice *input)
 {
-    return new DecoderSndFile(path);
+    return new DecoderSndFile(input);
 }
 
 QList<FileInfo *> DecoderSndFileFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *)

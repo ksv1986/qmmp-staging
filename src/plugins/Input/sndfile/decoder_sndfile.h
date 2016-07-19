@@ -32,7 +32,7 @@
 class DecoderSndFile : public Decoder
 {
 public:
-    DecoderSndFile(const QString &path);
+    DecoderSndFile(QIODevice *input);
     virtual ~DecoderSndFile();
 
     // Standard Decoder API
@@ -51,7 +51,7 @@ private:
     int m_bitrate;
     quint32 m_freq;
     qint64 m_totalTime;
-    QString m_path;
+    SF_VIRTUAL_IO m_vio;
 };
 
 

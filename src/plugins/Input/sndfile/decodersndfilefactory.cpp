@@ -77,7 +77,7 @@ const DecoderProperties DecoderSndFileFactory::properties() const
     return properties;
 }
 
-Decoder *DecoderSndFileFactory::create(const QString &path, QIODevice *input)
+Decoder *DecoderSndFileFactory::create(const QString &, QIODevice *input)
 {
     return new DecoderSndFile(input);
 }

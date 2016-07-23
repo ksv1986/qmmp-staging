@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -141,7 +141,7 @@ private:
     AudioConverter *m_format_converter;
     ChannelConverter *m_channel_converter;
     unsigned char *m_output_buf;
-    size_t m_output_at;
+    size_t m_output_size; //samples
 };
 
 #endif // OUTPUTWRITER_P_H

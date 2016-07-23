@@ -53,7 +53,6 @@ OutputWriter::OutputWriter (QObject* parent) : QThread (parent)
     m_format_converter = 0;
     m_channel_converter = 0;
     m_output_buf = 0;
-    m_output_at = 0;
 }
 
 OutputWriter::~OutputWriter()
@@ -104,8 +103,8 @@ bool OutputWriter::initialize(quint32 freq, ChannelMap map)
 
     if(m_output_buf)
         delete[] m_output_buf;
-    m_output_buf = new unsigned char[QMMP_BLOCK_FRAMES * m_channels * m_output->sampleSize() * 4];
-    m_output_at = 0;
+    m_output_size = QMMP_BLOCK_FRAMES * m_channels * 4;
+    m_output_buf = new unsigned char[m_output_size * m_output->sampleSize()];
 
     m_bytesPerMillisecond = m_frequency * m_channels * AudioParameters::sampleSize(m_format) / 1000;
     m_recycler.configure(m_in_params.sampleRate(), m_in_params.channels()); //calculate output buffer size
@@ -274,6 +273,7 @@ void OutputWriter::run()
     Buffer *b = 0;
     quint64 l;
     qint64 m = 0;
+    size_t output_at = 0;
 
     dispatch(Qmmp::Playing);
 
@@ -334,10 +334,18 @@ void OutputWriter::run()
             l = 0;
             m = 0;
 
-            m_format_converter->fromFloat(b->data, m_output_buf, b->samples);
-            m_output_at = b->samples * m_output->sampleSize();
+            //increase buffer size if needed
+            if(b->samples > m_output_size)
+            {
+                delete [] m_output_buf;
+                m_output_size = b->samples;
+                m_output_buf = new unsigned char[m_output_size * sampleSize()];
+            }
 
-            while (l < m_output_at && !m_pause && !m_prev_pause)
+            m_format_converter->fromFloat(b->data, m_output_buf, b->samples);
+            output_at = b->samples * m_output->sampleSize();
+
+            while (l < output_at && !m_pause && !m_prev_pause)
             {
                 mutex()->lock();
                 if(m_skip)
@@ -348,7 +356,7 @@ void OutputWriter::run()
                     break;
                 }
                 mutex()->unlock();
-                m = m_output->writeAudio(m_output_buf + l, m_output_at - l);
+                m = m_output->writeAudio(m_output_buf + l, output_at - l);
                 if(m >= 0)
                 {
                     m_totalWritten += m;

@@ -29,6 +29,12 @@
 #include "decoder_sndfile.h"
 #include "decodersndfilefactory.h"
 
+#define WAVE_FORMAT_PCM 0x0001
+#define WAVE_FORMAT_ADPCM 0x0002
+#define WAVE_FORMAT_IEEE_FLOAT 0x0003
+#define WAVE_FORMAT_ALAW 0x0006
+#define WAVE_FORMAT_MULAW 0x0007
+
 // DecoderSndFileFactory
 bool DecoderSndFileFactory::supports(const QString &source) const
 {
@@ -57,8 +63,46 @@ bool DecoderSndFileFactory::supports(const QString &source) const
     return false;
 }
 
-bool DecoderSndFileFactory::canDecode(QIODevice *) const
+bool DecoderSndFileFactory::canDecode(QIODevice *input) const
 {
+    char buf[36];
+    if(input->peek(buf, sizeof(buf)) != sizeof(buf))
+        return false;
+
+    if(!memcmp(buf + 8, "WAVE", 4) && (!memcmp(buf, "RIFF", 4) || !memcmp(buf, "RIFX", 4)))
+    {
+        quint16 subformat = (quint16(buf[21]) << 8) + buf[20];
+
+        switch (subformat)
+        {
+        case WAVE_FORMAT_PCM:
+        case WAVE_FORMAT_ADPCM:
+        case WAVE_FORMAT_IEEE_FLOAT:
+        case WAVE_FORMAT_ALAW:
+        case WAVE_FORMAT_MULAW:
+            return true;
+        default:
+            return false;
+        }
+    }
+    else if(!memcmp(buf, "FORM", 4))
+    {
+        if(!memcmp(buf + 8, "AIFF", 4))
+            return true;
+        if(!memcmp(buf + 8, "8SVX", 4))
+            return true;
+    }
+    else if(!memcmp(buf, ".snd", 4) || !memcmp(buf, "dns.", 4))
+        return true;
+    else if(!memcmp(buf, "fap ", 4) || !memcmp(buf, " paf", 4))
+        return true;
+    else if(!memcmp(buf, "NIST", 4))
+        return true;
+    else if(!memcmp(buf, "Crea", 4) && !memcmp(buf + 4, "tive", 4))
+        return true;
+    else if(!memcmp(buf, "riff", 4))
+        return true;
+
     return false;
 }
 

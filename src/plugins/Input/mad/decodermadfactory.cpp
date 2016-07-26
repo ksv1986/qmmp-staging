@@ -84,6 +84,9 @@ bool DecoderMADFactory::canDecode(QIODevice *input) const
 
     if (input->peek(buf,sizeof(buf)) == sizeof(buf))
     {
+        if (!memcmp(buf + 8, "WAVE", 4) && !memcmp(buf + 20, "U" ,1))
+            return true;
+
         struct mad_stream stream;
         struct mad_header header;
         int dec_res;

@@ -29,17 +29,6 @@
 
 // DecoderGmeFactory
 
-bool DecoderGmeFactory::supports(const QString &source) const
-{
-    foreach(QString filter, properties().filters)
-    {
-        QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        if (regexp.exactMatch(source))
-            return true;
-    }
-    return false;
-}
-
 bool DecoderGmeFactory::canDecode(QIODevice *) const
 {
     return false;

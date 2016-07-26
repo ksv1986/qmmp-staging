@@ -36,33 +36,6 @@
 #define WAVE_FORMAT_MULAW 0x0007
 
 // DecoderSndFileFactory
-bool DecoderSndFileFactory::supports(const QString &source) const
-{
-    if (source.endsWith(".wav", Qt::CaseInsensitive))
-    {
-        //try to open the file
-        SF_INFO snd_info;
-#ifdef Q_OS_WIN
-        SNDFILE *sndfile = sf_wchar_open(reinterpret_cast<LPCWSTR>(source.utf16()), SFM_READ, &snd_info);
-#else
-        SNDFILE *sndfile = sf_open(source.toLocal8Bit().constData(), SFM_READ, &snd_info);
-#endif
-        if (!sndfile)
-            return false;
-
-        sf_close (sndfile);
-        sndfile = 0;
-        return true;
-    }
-    foreach(QString filter, properties().filters)
-    {
-        QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        if (regexp.exactMatch(source))
-            return true;
-    }
-    return false;
-}
-
 bool DecoderSndFileFactory::canDecode(QIODevice *input) const
 {
     char buf[36];

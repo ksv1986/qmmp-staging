@@ -31,11 +31,6 @@
 
 // DecoderCDAudioFactory
 
-bool DecoderCDAudioFactory::supports(const QString &source) const
-{
-    return source == "/" || source.startsWith("/dev");
-}
-
 bool DecoderCDAudioFactory::canDecode(QIODevice *) const
 {
     return false;

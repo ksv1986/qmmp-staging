@@ -27,12 +27,6 @@
 #include "cueparser.h"
 
 // DecoderWavPackFactory
-
-bool DecoderWavPackFactory::supports(const QString &source) const
-{
-    return source.endsWith(".wv", Qt::CaseInsensitive);
-}
-
 bool DecoderWavPackFactory::canDecode(QIODevice *input) const
 {
     char buf[4];

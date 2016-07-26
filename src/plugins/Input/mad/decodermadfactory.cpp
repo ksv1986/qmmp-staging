@@ -58,26 +58,6 @@ DecoderMADFactory::DecoderMADFactory()
     }
 }
 
-bool DecoderMADFactory::supports(const QString &source) const
-{
-    QString ext = source.right(4).toLower();
-    if (ext == ".mp1" || ext == ".mp2" || ext == ".mp3")
-        return true;
-    else if (ext == ".wav") //check for mp3 wav files
-    {
-        QFile file(source);
-        file.open(QIODevice::ReadOnly);
-        char buf[22];
-        file.peek(buf,sizeof(buf));
-        file.close();
-        if (!memcmp(buf + 8, "WAVE", 4) && !memcmp(buf + 20, "U" ,1))
-        {
-            return true;
-        }
-    }
-    return false;
-}
-
 bool DecoderMADFactory::canDecode(QIODevice *input) const
 {
     char buf[16 * 512];

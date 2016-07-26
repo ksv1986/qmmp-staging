@@ -33,12 +33,6 @@
 #include "decodervorbisfactory.h"
 
 // DecoderOggFactory
-
-bool DecoderVorbisFactory::supports(const QString &source) const
-{
-    return source.right(4).toLower() == ".ogg";
-}
-
 bool DecoderVorbisFactory::canDecode(QIODevice *input) const
 {
     char buf[36];

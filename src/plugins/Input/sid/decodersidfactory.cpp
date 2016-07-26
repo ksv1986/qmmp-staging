@@ -46,24 +46,6 @@ DecoderSIDFactory::DecoderSIDFactory()
     settings.endGroup();
 }
 
-bool DecoderSIDFactory::supports(const QString &source) const
-{
-    if(source.endsWith(".mus", Qt::CaseInsensitive))
-    {
-        QFile file(source);
-        file.open(QIODevice::ReadOnly);
-        return canDecode(&file);
-    }
-
-    foreach(QString filter, properties().filters)
-    {
-        QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        if (regexp.exactMatch(source))
-            return true;
-    }
-    return false;
-}
-
 bool DecoderSIDFactory::canDecode(QIODevice *input) const
 {
     char buf[4];

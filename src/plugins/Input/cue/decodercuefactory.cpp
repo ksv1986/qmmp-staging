@@ -30,11 +30,6 @@
 
 // DecoderCUEFactory
 
-bool DecoderCUEFactory::supports(const QString &source) const
-{
-    return source.right(4).toLower() == ".cue";
-}
-
 bool DecoderCUEFactory::canDecode(QIODevice *) const
 {
     return false;

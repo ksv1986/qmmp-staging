@@ -37,7 +37,6 @@ Q_OBJECT
 Q_INTERFACES(DecoderFactory)
 
 public:
-    bool supports(const QString &source) const;
     bool canDecode(QIODevice *input) const;
     const DecoderProperties properties() const;
     Decoder *create(const QString &, QIODevice *);

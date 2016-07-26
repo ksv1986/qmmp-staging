@@ -33,17 +33,6 @@ DecoderWildMidiFactory::DecoderWildMidiFactory()
     new WildMidiHelper(qApp);
 }
 
-bool DecoderWildMidiFactory::supports(const QString &source) const
-{
-    foreach(QString filter, properties().filters)
-    {
-        QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        if (regexp.exactMatch(source))
-            return true;
-    }
-    return false;
-}
-
 bool DecoderWildMidiFactory::canDecode(QIODevice *input) const
 {
     char buf[4];

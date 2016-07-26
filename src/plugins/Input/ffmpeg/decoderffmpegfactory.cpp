@@ -45,17 +45,6 @@ DecoderFFmpegFactory::DecoderFFmpegFactory()
     av_register_all();
 }
 
-bool DecoderFFmpegFactory::supports(const QString &source) const
-{
-    foreach(QString filter, properties().filters)
-    {
-        QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        if (regexp.exactMatch(source))
-            return true;
-    }
-    return false;
-}
-
 bool DecoderFFmpegFactory::canDecode(QIODevice *i) const
 {
     QStringList filters = properties().filters;

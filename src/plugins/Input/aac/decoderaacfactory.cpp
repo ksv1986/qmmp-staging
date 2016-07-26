@@ -30,11 +30,6 @@
 
 // DecoderAACFactory
 
-bool DecoderAACFactory::supports(const QString &source) const
-{
-    return (source.right(4).toLower() == ".aac");
-}
-
 bool DecoderAACFactory::canDecode(QIODevice *input) const
 {
     AACFile aac_file(input, false, false);

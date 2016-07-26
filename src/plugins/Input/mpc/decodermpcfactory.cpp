@@ -33,12 +33,6 @@
 #include "decodermpcfactory.h"
 
 // DecoderMPCFactory
-
-bool DecoderMPCFactory::supports(const QString &source) const
-{
-    return (source.right(4).toLower() == ".mpc");
-}
-
 bool DecoderMPCFactory::canDecode(QIODevice *input) const
 {
     char buf[36];

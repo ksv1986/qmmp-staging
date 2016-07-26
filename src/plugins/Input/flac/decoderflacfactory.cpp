@@ -38,11 +38,6 @@
 
 // DecoderFLACFactory
 
-bool DecoderFLACFactory::supports(const QString &source) const
-{
-    return source.endsWith(".flac", Qt::CaseInsensitive) || source.endsWith(".oga", Qt::CaseInsensitive);
-}
-
 bool DecoderFLACFactory::canDecode(QIODevice *input) const
 {
     char buf[36];

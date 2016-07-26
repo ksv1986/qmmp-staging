@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -73,10 +73,6 @@ public:
     * Object destructor.
     */
     virtual ~DecoderFactory() {}
-    /*!
-     * Returns \b true if plugin supports \b source, otherwise returns \b false
-     */
-    virtual bool supports(const QString &source) const = 0;
     /*!
      * Returns \b true if plugin can decode data provided by \b d, otherwise returns \b false
      */

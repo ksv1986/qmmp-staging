@@ -58,7 +58,7 @@ QList <FileInfo *> MetaDataManager::createPlayList(const QString &fileName, bool
     {
         if(!QFile::exists(fileName))
             return list;
-        else if((fact = Decoder::findByPath(fileName, m_settings->determineFileTypeByContent())))
+        else if((fact = Decoder::findByFilePath(fileName, m_settings->determineFileTypeByContent())))
             return fact->createPlayList(fileName, useMetaData, ignoredPaths);
         else if((efact = AbstractEngine::findByPath(fileName)))
             return efact->createPlayList(fileName, useMetaData, ignoredPaths);
@@ -90,7 +90,7 @@ MetaDataModel* MetaDataManager::createMetaDataModel(const QString &path, QObject
     {
         if(!QFile::exists(path))
             return 0;
-        else if((fact = Decoder::findByPath(path, m_settings->determineFileTypeByContent())))
+        else if((fact = Decoder::findByFilePath(path, m_settings->determineFileTypeByContent())))
             return fact->createMetaDataModel(path, parent);
         else if((efact = AbstractEngine::findByPath(path)))
             return efact->createMetaDataModel(path, parent);
@@ -168,7 +168,7 @@ bool MetaDataManager::supports(const QString &fileName) const
     {
         if (!QFile::exists(fileName))
             return false;
-        if((fact = Decoder::findByPath(fileName)))
+        if((fact = Decoder::findByFilePath(fileName)))
             return true;
         else if((efact = AbstractEngine::findByPath(fileName)))
             return true;

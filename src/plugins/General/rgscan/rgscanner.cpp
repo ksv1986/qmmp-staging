@@ -74,7 +74,7 @@ bool RGScanner::prepare(const QString &url)
         return false;
     }
 
-    DecoderFactory *factory = Decoder::findByPath(source->url());
+    DecoderFactory *factory = Decoder::findByFilePath(source->url());
 
     if(!factory)
     {

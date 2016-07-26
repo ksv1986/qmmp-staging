@@ -307,7 +307,7 @@ qint64 CUEParser::getLength(const QString &str)
 
 QString CUEParser::getDirtyPath(const QString &cue_path, const QString &path)
 {
-    if((QFile::exists(path) && Decoder::findByPath(path)) || !m_dirty)
+    if((QFile::exists(path) && Decoder::findByFilePath(path)) || !m_dirty)
         return path;
 
     QStringList candidates;
@@ -316,7 +316,7 @@ QString CUEParser::getDirtyPath(const QString &cue_path, const QString &path)
     {
         it.next();
         QString f = it.filePath();
-        if ((f != cue_path) && Decoder::findByPath(f))
+        if ((f != cue_path) && Decoder::findByFilePath(f))
             candidates.push_back(f);
     }
 

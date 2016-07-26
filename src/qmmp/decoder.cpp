@@ -84,7 +84,6 @@ QMap<Qmmp::MetaData, QString> Decoder::takeMetaData()
 
 // static methods
 QStringList Decoder::m_disabledNames;
-DecoderFactory *Decoder::m_lastFactory = 0;
 QList<QmmpPluginCache*> *Decoder::m_cache = 0;
 
 //sort cache items by priority
@@ -146,13 +145,13 @@ QStringList Decoder::protocols()
     return protocolsList;
 }
 
-DecoderFactory *Decoder::findByPath(const QString& source, bool useContent)
+DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
 {
     loadPlugins();
-    DecoderFactory *fact = m_lastFactory;
+    DecoderFactory *fact = 0;
     if(useContent)
     {
-        QFile file(source);
+        QFile file(path);
         if(!file.open(QIODevice::ReadOnly))
         {
             qWarning("Decoder: file open error: %s", qPrintable(file.errorString()));
@@ -181,28 +180,56 @@ DecoderFactory *Decoder::findByPath(const QString& source, bool useContent)
                 continue;
 
             if (fact->canDecode(&buffer))
-            {
-                m_lastFactory = fact;
                 return fact;
+        }
+        return 0;
+    }
+    else
+    {
+        QList<DecoderFactory*> filered;
+        foreach (QmmpPluginCache *item, *m_cache)
+        {
+            if(m_disabledNames.contains(item->shortName()))
+                continue;
+
+            DecoderFactory *fact = item->decoderFactory();
+
+            foreach(QString filter, fact->properties().filters)
+            {
+                QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
+                if (regexp.exactMatch(path))
+                {
+                    filered.append(fact);
+                    break;
+                }
             }
         }
-        fact = 0;
-    }
-    if (fact && isEnabled(fact) && fact->supports(source)) //try last factory
-        return fact;
 
-    foreach (QmmpPluginCache *item, *m_cache)
-    {
-        if(m_disabledNames.contains(item->shortName()))
-            continue;
-        DecoderFactory *fact = item->decoderFactory();
-        if(fact && fact->supports(source))
+        if(filered.isEmpty())
+            return 0;
+
+        if(filered.size() == 1)
+            return filered.at(0);
+
+        //more than one factories with same filters
+        //try to determine by content
+        QFile file(path);
+        if(!file.open(QIODevice::ReadOnly))
         {
-            m_lastFactory = fact;
-            return fact;
+            qWarning("Decoder: file open error: %s", qPrintable(file.errorString()));
+            return 0;
         }
+        QByteArray array = file.read(8192);
+        QBuffer buffer(&array);
+        buffer.open(QIODevice::ReadOnly);
+
+        foreach (fact, filered)
+        {
+            if(fact->canDecode(&buffer))
+                return fact;
+        }
+        return 0;
     }
-    return 0;
 }
 
 DecoderFactory *Decoder::findByMime(const QString& type)

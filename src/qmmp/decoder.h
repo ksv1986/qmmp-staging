@@ -111,7 +111,7 @@ public:
      * @param path Full local file path.
      * @param useContent Content-based file type determination (\b true - enabled, \b false - disabled)
      */
-    static DecoderFactory *findByPath(const QString &path, bool useContent = false);
+    static DecoderFactory *findByFilePath(const QString &path, bool useContent = false);
     /*!
      * Returns DecoderFactory pointer which supports mime type \b mime or \b 0 if mime type \b mime is unsupported
      */
@@ -173,7 +173,6 @@ protected:
 
 private:
     static void loadPlugins();
-    static DecoderFactory *m_lastFactory;
     static QList<QmmpPluginCache*> *m_cache;
     static QStringList m_disabledNames;
     AudioParameters m_parameters;

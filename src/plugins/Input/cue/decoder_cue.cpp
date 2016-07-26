@@ -71,7 +71,7 @@ bool DecoderCUE::initialize()
         qWarning("DecoderCUE: file \"%s\" doesn't exist", qPrintable(m_path));
         return false;
     }
-    DecoderFactory *df = Decoder::findByPath(m_path);
+    DecoderFactory *df = Decoder::findByFilePath(m_path);
     if (!df)
     {
         qWarning("DecoderCUE: unsupported file format");

@@ -82,7 +82,7 @@ bool Converter::prepare(const QString &url, int row, const QVariantMap &preset)
     DecoderFactory *factory = 0;
 
     if(!source->url().contains("://"))
-        factory = Decoder::findByPath(source->url());
+        factory = Decoder::findByFilePath(source->url());
     if(!factory)
         factory = Decoder::findByMime(source->contentType());
     if(!factory && source->ioDevice() && source->url().contains("://")) //ignore content of local files

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -56,10 +56,8 @@ private:
         QMap<Qmmp::ReplayGainKey, double> replayGain;
     };
     QList <CUETrack * > m_tracks;
-    bool m_dirty;
     QStringList splitLine(const QString &line);
     qint64 getLength(const QString &str);
-    QString getDirtyPath(const QString &cue, const QString &path);
     QString m_filePath;
 };
 

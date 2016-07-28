@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -211,51 +211,4 @@ qint64 CUEParser::getLength(const QString &str)
     else if (list.size() == 3)
         return (qint64)list.at(0).toInt()*60000 + list.at(1).toInt()*1000 + list.at(2).toInt()*1000/75;
     return 0;
-}
-
-QString CUEParser::getDirtyPath(const QString &cue, const QString &path)
-{
-
-    if (Decoder::findByFilePath(path) || ! m_dirty)
-        return path;
-
-    QStringList candidates;
-    QDirIterator it(QFileInfo(path).dir().path(), QDir::Files);
-    while (it.hasNext())
-    {
-        it.next();
-        QString f = it.filePath();
-        if ((f != cue) && Decoder::findByFilePath(f))
-            candidates.push_back(f);
-    }
-
-    if (candidates.empty())
-        return path;
-    else if (candidates.count() == 1)
-        return candidates.first();
-
-    int dot = cue.lastIndexOf('.');
-    if (dot != -1)
-    {
-        QRegExp r(QRegExp::escape(cue.left(dot)) + "\\.[^\\.]+$");
-
-        int index = candidates.indexOf(r);
-        int rindex = candidates.lastIndexOf(r);
-
-        if ((index != -1) && (index == rindex))
-            return candidates[index];
-    }
-    dot = path.lastIndexOf('.');
-    if (dot != -1)
-    {
-        QRegExp r(QRegExp::escape(path.left(dot)) + "\\.[^\\.]+$");
-
-        int index = candidates.indexOf(r);
-        int rindex = candidates.lastIndexOf(r);
-
-        if ((index != -1) && (index == rindex))
-            return candidates[index];
-    }
-
-    return path;
 }

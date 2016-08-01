@@ -87,7 +87,7 @@ bool DecoderMADFactory::canDecode(QIODevice *input) const
         {
             input->seek(header.tagSize());
             buf_at = input->read(buf, sizeof(buf));
-            input->seek(0);
+            input->seek(0); //restore inital position
         }
     }
 

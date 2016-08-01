@@ -95,16 +95,6 @@ bool DecoderVorbis::initialize()
         return false;
     }
 
-    if (!input()->isOpen())
-    {
-        if (!input()->open(QIODevice::ReadOnly))
-        {
-            qWarning("%s",qPrintable("DecoderVorbis: failed to open input. " +
-                                input()->errorString () + "."));
-            return false;
-        }
-    }
-
     ov_callbacks oggcb =
     {
         oggread,

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -125,14 +125,6 @@ bool DecoderMPC::initialize()
         return false;
     }
 
-    if (!input()->isOpen())
-    {
-        if (!input()->open(QIODevice::ReadOnly))
-        {
-            qWarning("DecoderMPC: unable to open input.");
-            return false;
-        }
-    }
     if (!m_data)
     {
         m_data = new mpc_data;

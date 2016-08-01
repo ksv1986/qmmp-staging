@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -91,15 +91,6 @@ bool DecoderOpus::initialize()
     {
         qDebug("DecoderOpus: cannot initialize.  No input");
         return false;
-    }
-
-    if (!input()->isOpen())
-    {
-        if (!input()->open(QIODevice::ReadOnly))
-        {
-            qWarning("DecoderOpus: unable to open input. Error: %s",qPrintable(input()->errorString()));
-            return false;
-        }
     }
 
     OpusFileCallbacks opuscb =

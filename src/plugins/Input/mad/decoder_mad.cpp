@@ -75,15 +75,6 @@ bool DecoderMAD::initialize()
     if (!m_input_buf)
         m_input_buf = new char[INPUT_BUFFER_SIZE];
 
-    if (!input()->isOpen())
-    {
-        if (!input()->open(QIODevice::ReadOnly))
-        {
-            qWarning("DecoderMAD: %s", qPrintable(input()->errorString ()));
-            return false;
-        }
-    }
-
     if (input()->isSequential ()) //for streams only
     {
         TagExtractor extractor(input());

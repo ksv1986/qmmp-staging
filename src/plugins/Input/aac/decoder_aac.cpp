@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -74,14 +74,6 @@ bool DecoderAAC::initialize()
         m_input_buf = new char[AAC_BUFFER_SIZE];
     m_input_at = 0;
 
-    if (!input()->isOpen())
-    {
-        if (!input()->open(QIODevice::ReadOnly))
-        {
-            qWarning("DecoderAAC: %s", qPrintable(input()->errorString ()));
-            return false;
-        }
-    }
     AACFile aac_file(input());
     if (!aac_file.isValid())
     {

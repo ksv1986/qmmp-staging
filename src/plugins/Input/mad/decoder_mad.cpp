@@ -202,6 +202,7 @@ bool DecoderMAD::findHeader()
     mad_timer_t duration = mad_timer_zero;
     struct mad_header header;
     mad_header_init (&header);
+    uint id3v2Size = 0;
 
     forever
     {
@@ -232,7 +233,10 @@ bool DecoderMAD::findHeader()
                 uint tagSize = findID3v2((uchar *)m_stream.this_frame,
                                          (ulong) (m_stream.bufend - m_stream.this_frame));
                 if (tagSize > 0)
+                {
                     mad_stream_skip(&m_stream, tagSize);
+                    id3v2Size = tagSize;
+                }
                 continue;
             }
             else if (m_stream.error == MAD_ERROR_BUFLEN || MAD_RECOVERABLE(m_stream.error))
@@ -292,7 +296,7 @@ bool DecoderMAD::findHeader()
 
     if (!is_vbr && !input()->isSequential())
     {
-        double time = (input()->size() * 8.0) / (header.bitrate);
+        double time = ((input()->size() - id3v2Size) * 8.0) / (header.bitrate);
         double timefrac = (double)time - ((long)(time));
         mad_timer_set(&duration, (long)time, (long)(timefrac*100), 100);
     }

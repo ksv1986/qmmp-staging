@@ -517,8 +517,13 @@ void QmmpAudioEngine::run()
                 }
                 m_output->recycler()->mutex()->unlock();
             }
-            m_done = true;
-            m_finish = !m_user_stop;
+
+            //continue if new input was queued
+            if(m_decoders.isEmpty() || m_user_stop)
+            {
+                m_done = true;
+                m_finish = !m_user_stop;
+            }
         }
         else
             m_finish = true;

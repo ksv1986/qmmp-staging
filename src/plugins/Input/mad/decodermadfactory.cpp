@@ -60,24 +60,50 @@ DecoderMADFactory::DecoderMADFactory()
 
 bool DecoderMADFactory::canDecode(QIODevice *input) const
 {
-    char buf[16 * 512];
+    char buf[8192];
+    qint64 buf_at = sizeof(buf);
 
-    if (input->peek(buf,sizeof(buf)) == sizeof(buf))
+    if(input->peek(buf, sizeof(buf)) != sizeof(buf))
+        return false;
+
+    if (!memcmp(buf + 8, "WAVE", 4) && !memcmp(buf + 20, "U" ,1))
+        return true;
+
+    if(!memcmp(buf, "ID3", 3))
     {
-        if (!memcmp(buf + 8, "WAVE", 4) && !memcmp(buf + 20, "U" ,1))
-            return true;
+        TagLib::ByteVector byteVector(buf, sizeof(buf));
+        TagLib::ID3v2::Header header(byteVector);
 
+        //skip id3v2tag if possible
+        if(input->isSequential())
+        {
+            if(header.tagSize() >= sizeof(buf))
+                return false;
+
+            buf_at = sizeof(buf) - header.tagSize();
+            memmove(buf, buf + header.tagSize() + header.tagSize(), sizeof(buf) - header.tagSize());
+        }
+        else
+        {
+            input->seek(header.tagSize());
+            buf_at = input->read(buf, sizeof(buf));
+            input->seek(0);
+        }
+    }
+
+    if(buf_at > 0)
+    {
         struct mad_stream stream;
         struct mad_header header;
         int dec_res;
 
         mad_stream_init (&stream);
         mad_header_init (&header);
-        mad_stream_buffer (&stream, (unsigned char *) buf, sizeof(buf));
+        mad_stream_buffer (&stream, (unsigned char *) buf, buf_at);
         stream.error = MAD_ERROR_NONE;
 
         while ((dec_res = mad_header_decode(&header, &stream)) == -1
-                && MAD_RECOVERABLE(stream.error))
+               && MAD_RECOVERABLE(stream.error))
             ;
         return dec_res != -1 ? true: false;
     }

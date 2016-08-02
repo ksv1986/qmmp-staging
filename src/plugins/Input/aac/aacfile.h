@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -42,7 +42,7 @@ class QBuffer;
 class AACFile
 {
 public:
-    AACFile(QIODevice *i, bool metaData = true, bool adts = true);
+    AACFile(QIODevice *input, bool metaData = true, bool adts = true);
 
     ~AACFile();
 
@@ -55,7 +55,7 @@ public:
 
 private:
     void parseADTS();
-    void parseID3v2();
+    void parseID3v2(const QByteArray &data);
     qint64 m_length;
     quint32 m_bitrate;
     int m_offset;
@@ -68,14 +68,13 @@ private:
 class ID3v2Tag : public TagLib::ID3v2::Tag
 {
 public:
-    ID3v2Tag(QByteArray *array, long offset);
+    ID3v2Tag(const QByteArray &array);
 
 protected:
     void read ();
 
 private:
-    QBuffer *m_buf;
-    long m_offset;
+    QByteArray m_buf;
 };
 
 #endif

@@ -6,32 +6,32 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="35"/>
         <source>Mplayer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Mplayer</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="38"/>
         <source>Video Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivos de vídeo</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="84"/>
         <source>About MPlayer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugin Mplayer</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="85"/>
         <source>Qmmp MPlayer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Qmmp Mplayer</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="86"/>
         <source>This plugin uses MPlayer as backend</source>
-        <translation type="unfinished"></translation>
+        <translation>Este plugin utiliza o Mplayer para a reprodução</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,72 +39,72 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>KB</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Duração</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="77"/>
         <source>Demuxer</source>
-        <translation type="unfinished"></translation>
+        <translation>Demuxer</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="80"/>
         <source>Video format</source>
-        <translation type="unfinished"></translation>
+        <translation>Formato do vídeo</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="82"/>
         <source>FPS</source>
-        <translation type="unfinished"></translation>
+        <translation>FPS</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="84"/>
         <source>Video codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Codificador de vídeo</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="86"/>
         <source>Aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho do vídeo</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="88"/>
         <source>Video bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de dados do vídeo</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="95"/>
         <source>Audio codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Codificador de áudio</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="97"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequência</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="99"/>
         <source>Audio bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de dados do áudio</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="101"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Canais</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="103"/>
         <source>Resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolução</translation>
     </message>
 </context>
 <context>
@@ -112,37 +112,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPlayer Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferências MPlayer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Video:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vídeo:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>Audio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Áudio:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Audio/video auto synchronization</source>
-        <translation type="unfinished"></translation>
+        <translation>Sincronização automática de áudio/vídeo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="72"/>
         <source>Synchronization factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fator de sincronização:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
         <source>Extra options:</source>
-        <translation type="unfinished"></translation>
+        <translation>Opções extra:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>
         <source>Extra command line options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opções extras na linha de comandos</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>
@@ -152,7 +152,7 @@
         <location filename="../settingsdialog.cpp" line="61"/>
         <location filename="../settingsdialog.cpp" line="62"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>pré-definido</translation>
     </message>
 </context>
 </TS>

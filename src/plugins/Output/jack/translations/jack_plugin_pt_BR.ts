@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputjackfactory.cpp" line="33"/>
         <source>JACK Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin JACK</translation>
     </message>
     <message>
         <location filename="../outputjackfactory.cpp" line="56"/>
         <source>About Jack Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugin Jack Output</translation>
     </message>
     <message>
         <location filename="../outputjackfactory.cpp" line="57"/>
         <source>Qmmp Jack Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Qmmp Jack Output</translation>
     </message>
     <message>
         <location filename="../outputjackfactory.cpp" line="58"/>
         <source>Written by: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvido por: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</translation>
     </message>
 </context>
 </TS>

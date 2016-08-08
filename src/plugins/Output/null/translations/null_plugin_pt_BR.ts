@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputnullfactory.cpp" line="32"/>
         <source>Null Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Null</translation>
     </message>
     <message>
         <location filename="../outputnullfactory.cpp" line="56"/>
         <source>About Null Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugin Null Output</translation>
     </message>
     <message>
         <location filename="../outputnullfactory.cpp" line="57"/>
         <source>Qmmp Null Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Qmmp Null Output</translation>
     </message>
     <message>
         <location filename="../outputnullfactory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 </TS>

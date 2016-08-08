@@ -6,27 +6,27 @@
     <message>
         <location filename="../outputossfactory.cpp" line="38"/>
         <source>OSS Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin OSS</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="58"/>
         <source>About OSS Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugin OSS</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="59"/>
         <source>Qmmp OSS Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Qmmp OSS</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="60"/>
         <source>Written by: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvido por: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="61"/>
         <source>Based on code by: Brad Hughes &lt;bhughes@trolltech.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Baseado no código de: Brad Hughes &lt;bhughes@trolltech.com&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,47 +34,47 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>OSS Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferências do plugin OSS</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
         <source>Device Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferências do dispositivo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Audio device</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo de áudio</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Mixer device</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo mixador</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="84"/>
         <source>Advanced Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferências avançadas</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>
         <source>Soundcard</source>
-        <translation type="unfinished"></translation>
+        <translation>Placa de som</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="160"/>
         <source>Buffer time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Memória (ms):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="170"/>
         <source>Period time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Período (ms):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="200"/>
         <source>PCM over Master</source>
-        <translation type="unfinished"></translation>
+        <translation>PCM sobre Master</translation>
     </message>
 </context>
 </TS>

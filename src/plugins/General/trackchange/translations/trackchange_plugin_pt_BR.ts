@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Track Change Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferências do plugin Track Change</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
@@ -14,102 +14,102 @@
         <location filename="../settingsdialog.ui" line="52"/>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Command to run when Qmmp starts new track</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando a executar ao iniciar uma nova faixa</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="83"/>
         <source>Command to run toward to end of a track</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando a executar ao terminar a faixa</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="90"/>
         <source>Command to run when Qmmp reaches the end of the playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando a executar ao atingir o fim da lista de reprodução</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="97"/>
         <source>Command to run when title changes (i.e. network streams title)</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando a executar ao mudar o título (exemplo: emissões web)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="57"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Artista</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="58"/>
         <source>Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Álbum</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="60"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Título</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="61"/>
         <source>Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Número da faixa</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="62"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Número da faixa com 2 dígitos</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="67"/>
         <source>Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Número do disco</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="68"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do arquivo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminho do arquivo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="63"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Gênero</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="59"/>
         <source>Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Artista do álbum</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="64"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Comentário</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="65"/>
         <source>Composer</source>
-        <translation type="unfinished"></translation>
+        <translation>Compositor</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="66"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation>Duração</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="70"/>
         <source>Year</source>
-        <translation type="unfinished"></translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>
         <source>Condition</source>
-        <translation type="unfinished"></translation>
+        <translation>Condição</translation>
     </message>
 </context>
 <context>
@@ -117,27 +117,27 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="31"/>
         <source>Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Track Change</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="51"/>
         <source>About Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugin Track Change</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="52"/>
         <source>Qmmp Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Qmmp Track Change</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="53"/>
         <source>This plugin executes external command when current track is changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Este plugin executa comandos externos se a faixa em reprodução for alterada</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 </TS>

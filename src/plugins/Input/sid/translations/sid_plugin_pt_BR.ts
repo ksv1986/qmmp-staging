@@ -6,32 +6,32 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="60"/>
         <source>SID Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin SID</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="62"/>
         <source>SID Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivos SID</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="116"/>
         <source>About SID Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugin SID Audio</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="117"/>
         <source>Qmmp SID Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Qmmp SID Audio</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="118"/>
         <source>This plugin plays Commodore 64 music files using libsidplayfp library</source>
-        <translation type="unfinished"></translation>
+        <translation>Este plugin reproduz os arquivos de som Commodore 64 com a biblioteca libsidplayfp</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="119"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,52 +39,52 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>SID Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferências do plugin SID</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Fast resampling</source>
-        <translation type="unfinished"></translation>
+        <translation>Amostragem rápida</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequência:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>
         <source>HVSC database file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo HVSC:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Resampling method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Método de amostragem:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="93"/>
         <source>Defaults song length, sec:</source>
-        <translation type="unfinished"></translation>
+        <translation>Duração pré-definida da faixa (seg):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="100"/>
         <source>Enable HVSC song length database</source>
-        <translation type="unfinished"></translation>
+        <translation>Ativar base de dados de duração HVSC</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="107"/>
         <source>Emulation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Emulação:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
         <source>44100 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>44100 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="42"/>
         <source>48000 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>48000 Hz</translation>
     </message>
 </context>
 </TS>

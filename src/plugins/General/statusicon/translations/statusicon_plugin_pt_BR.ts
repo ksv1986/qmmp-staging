@@ -6,68 +6,68 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Status Icon Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferências do plugin Status Icon</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Balloon message</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensagem em balão</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
         <location filename="../settingsdialog.ui" line="105"/>
         <source>Delay, ms:</source>
-        <translation type="unfinished"></translation>
+        <translation>Atraso (ms):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="79"/>
         <source>Tooltip</source>
-        <translation type="unfinished"></translation>
+        <translation>Dica</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="91"/>
         <source>Try to split file name when no tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentar separar o nome se não existir etiqueta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="98"/>
         <source>Show progress bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar barra de progresso</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="131"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparência:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="165"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="174"/>
         <source>Cover size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho da capa:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="214"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="225"/>
         <source>Edit template</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar modelo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="250"/>
         <source>Use standard icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar ícones padrão</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="80"/>
         <source>Tooltip Template</source>
-        <translation type="unfinished"></translation>
+        <translation>Modelo das dicas</translation>
     </message>
 </context>
 <context>
@@ -75,37 +75,37 @@
     <message>
         <location filename="../statusicon.cpp" line="67"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Reproduzir</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="68"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausa</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="69"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Parar</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="71"/>
         <source>Next</source>
-        <translation type="unfinished"></translation>
+        <translation>Próximo</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="72"/>
         <source>Previous</source>
-        <translation type="unfinished"></translation>
+        <translation>Anterior</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="74"/>
         <source>Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Sair</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="129"/>
         <source>Now Playing</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocando agora</translation>
     </message>
 </context>
 <context>
@@ -113,32 +113,32 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="31"/>
         <source>Status Icon Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Status Icon</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="51"/>
         <source>About Status Icon Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugin Status Icon</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="52"/>
         <source>Qmmp Status Icon Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin QMMP Status Icon</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="53"/>
         <source>Written by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvido por:</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="54"/>
         <source>Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="55"/>
         <source>Artur Guzik &lt;a.guzik88@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Artur Guzik &lt;a.guzik88@gmail.com&gt;</translation>
     </message>
 </context>
 <context>
@@ -146,7 +146,7 @@
     <message>
         <location filename="../statusiconpopupwidget.cpp" line="135"/>
         <source>Stopped</source>
-        <translation type="unfinished"></translation>
+        <translation>Parado</translation>
     </message>
 </context>
 </TS>

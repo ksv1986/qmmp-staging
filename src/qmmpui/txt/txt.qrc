@@ -33,6 +33,11 @@
     <file>thanks_bg.txt</file>
     <file>translators_bg.txt</file>
 
+    <file>description_pt_BR.txt</file>
+    <file>authors_pt_BR.txt</file>
+    <file>thanks_pt_BR.txt</file>
+    <file>translators_pt_BR.txt</file>
+
     <file>description_de.txt</file>
     <file>authors_de.txt</file>
     <file>thanks_de.txt</file>

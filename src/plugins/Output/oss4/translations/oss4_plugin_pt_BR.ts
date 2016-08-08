@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputoss4factory.cpp" line="38"/>
         <source>OSS4 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin OSS4</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="58"/>
         <source>About OSS4 Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugin OSS4</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="59"/>
         <source>Qmmp OSS4 Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Qmmp OSS4</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,17 +29,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>OSS4 Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferências do plugin OSS4</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Pré-definido</translation>
     </message>
 </context>
 </TS>

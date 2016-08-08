@@ -6,12 +6,12 @@
     <message>
         <location filename="../streambrowser.cpp" line="33"/>
         <source>Stream Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Navegar por transmissões</translation>
     </message>
     <message>
         <location filename="../streambrowser.cpp" line="35"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
 </context>
 <context>
@@ -19,27 +19,27 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="30"/>
         <source>Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Stream Browser</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>About Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o plugin Stream Browser</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>Qmmp Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Qmmp Stream Browser</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="53"/>
         <source>This plugin allows one to add stream from IceCast stream directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Este plugin permite a adição de transmissões do diretório Icecast</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -47,87 +47,87 @@
     <message>
         <location filename="../streamwindow.ui" line="14"/>
         <source>Stream Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Navegar por transmissões</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro:</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="47"/>
         <source>Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Favoritas</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="73"/>
         <source>IceCast</source>
-        <translation type="unfinished"></translation>
+        <translation>IceCast</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="102"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionar</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="109"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Atualizar</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="51"/>
         <location filename="../streamwindow.cpp" line="69"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="52"/>
         <location filename="../streamwindow.cpp" line="70"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Gênero</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="53"/>
         <location filename="../streamwindow.cpp" line="71"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de dados</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="54"/>
         <location filename="../streamwindow.cpp" line="72"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Formato</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="125"/>
         <source>&amp;Add to favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Adicionar às favoritas</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="126"/>
         <source>&amp;Add to playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;dicionar à lista de reprodução</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="131"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Remover</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="141"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Terminado</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="144"/>
         <location filename="../streamwindow.cpp" line="145"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="164"/>
         <source>Receiving</source>
-        <translation type="unfinished"></translation>
+        <translation>Recebendo</translation>
     </message>
 </context>
 </TS>

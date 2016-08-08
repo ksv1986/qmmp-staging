@@ -1,4 +1,5 @@
 Brazilian Portuguese:
+    Vitor Pereira
     Klaos Lacerda
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>

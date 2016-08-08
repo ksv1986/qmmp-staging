@@ -4,32 +4,32 @@
 <context>
     <name>DecoderCDAudioFactory</name>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="47"/>
+        <location filename="../decodercdaudiofactory.cpp" line="42"/>
         <source>CD Audio Plugin</source>
         <translation>CD Ses Eklentisi</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="92"/>
+        <location filename="../decodercdaudiofactory.cpp" line="87"/>
         <source>About CD Audio Plugin</source>
         <translation>CD Ses Eklentisi Hakkında</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="93"/>
+        <location filename="../decodercdaudiofactory.cpp" line="88"/>
         <source>Qmmp CD Audio Plugin</source>
         <translation>Qmmp CD Ses Eklentisi</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="94"/>
+        <location filename="../decodercdaudiofactory.cpp" line="89"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="96"/>
+        <location filename="../decodercdaudiofactory.cpp" line="91"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Yazan: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="97"/>
+        <location filename="../decodercdaudiofactory.cpp" line="92"/>
         <source>Usage: open cdda:/// using Add URL dialog or command line</source>
         <translation>Kullanımı: komut satırından veya URL Ekle diyaloğundan open cdda:/// şeklindedir</translation>
     </message>

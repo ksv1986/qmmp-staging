@@ -4,32 +4,32 @@
 <context>
     <name>DecoderCDAudioFactory</name>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="47"/>
+        <location filename="../decodercdaudiofactory.cpp" line="42"/>
         <source>CD Audio Plugin</source>
         <translation>CD 音频插件</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="92"/>
+        <location filename="../decodercdaudiofactory.cpp" line="87"/>
         <source>About CD Audio Plugin</source>
         <translation>关于 CD 音频插件</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="93"/>
+        <location filename="../decodercdaudiofactory.cpp" line="88"/>
         <source>Qmmp CD Audio Plugin</source>
         <translation>Qmmp CD 音频插件</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="94"/>
+        <location filename="../decodercdaudiofactory.cpp" line="89"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
         <translation>编译依赖 libcdio-%1 和 libcddb-%2</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="96"/>
+        <location filename="../decodercdaudiofactory.cpp" line="91"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="97"/>
+        <location filename="../decodercdaudiofactory.cpp" line="92"/>
         <source>Usage: open cdda:/// using Add URL dialog or command line</source>
         <translation>用法：open cdda:/// 使用添加 URL 对话或命令行</translation>
     </message>

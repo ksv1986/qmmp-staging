@@ -4,52 +4,52 @@
 <context>
     <name>DecoderModPlugFactory</name>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="59"/>
+        <location filename="../decodermodplugfactory.cpp" line="48"/>
         <source>ModPlug Plugin</source>
         <translation>ModPlug 插件</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="65"/>
+        <location filename="../decodermodplugfactory.cpp" line="54"/>
         <source>ModPlug Files</source>
         <translation>ModPlug 文件</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="131"/>
+        <location filename="../decodermodplugfactory.cpp" line="120"/>
         <source>About ModPlug Audio Plugin</source>
         <translation>关于 ModPlug 音频插件</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="132"/>
+        <location filename="../decodermodplugfactory.cpp" line="121"/>
         <source>Qmmp ModPlug Audio Plugin</source>
         <translation>Qmmp ModPlug 音频插件</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="133"/>
+        <location filename="../decodermodplugfactory.cpp" line="122"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="134"/>
+        <location filename="../decodermodplugfactory.cpp" line="123"/>
         <source>Based on the Modplug Plugin for Xmms</source>
         <translation>基于 Modplug 的 Xmms 插件</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="135"/>
+        <location filename="../decodermodplugfactory.cpp" line="124"/>
         <source>Modplug Plugin developers:</source>
         <translation>ModPlug 插件开发者：</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="136"/>
+        <location filename="../decodermodplugfactory.cpp" line="125"/>
         <source>Olivier Lapicque &lt;olivierl@jps.net&gt;</source>
         <translation>Olivier Lapicque &lt;olivierl@jps.net&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="137"/>
+        <location filename="../decodermodplugfactory.cpp" line="126"/>
         <source>Kenton Varda &lt;temporal@gauge3d.org&gt;</source>
         <translation>Kenton Varda &lt;temporal@gauge3d.org&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="138"/>
+        <location filename="../decodermodplugfactory.cpp" line="127"/>
         <source>Konstanty Bialkowski &lt;konstanty@ieee.org&gt;</source>
         <translation>Konstanty Bialkowski &lt;konstanty@ieee.org&gt;</translation>
     </message>

@@ -4,32 +4,32 @@
 <context>
     <name>DecoderWildMidiFactory</name>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="62"/>
+        <location filename="../decoderwildmidifactory.cpp" line="51"/>
         <source>WildMidi Plugin</source>
         <translation>WildMidi 外掛</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="67"/>
+        <location filename="../decoderwildmidifactory.cpp" line="56"/>
         <source>Midi Files</source>
         <translation>Midi 文件</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="121"/>
+        <location filename="../decoderwildmidifactory.cpp" line="110"/>
         <source>About WildMidi Audio Plugin</source>
         <translation>關於 WildMidi 外掛</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="122"/>
+        <location filename="../decoderwildmidifactory.cpp" line="111"/>
         <source>Qmmp WildMidi Audio Plugin</source>
         <translation>Qmmp WildMidi 外掛</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="123"/>
+        <location filename="../decoderwildmidifactory.cpp" line="112"/>
         <source>This plugin uses WildMidi library to play midi files</source>
         <translation>此插件使用 WildMidi 庫來播放 Midi 文件</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="124"/>
+        <location filename="../decoderwildmidifactory.cpp" line="113"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

@@ -4,37 +4,37 @@
 <context>
     <name>DecoderMADFactory</name>
     <message>
-        <location filename="../decodermadfactory.cpp" line="107"/>
+        <location filename="../decodermadfactory.cpp" line="116"/>
         <source>MPEG Plugin</source>
         <translation>MPEG-Modul</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="110"/>
+        <location filename="../decodermadfactory.cpp" line="119"/>
         <source>MPEG Files</source>
         <translation>MPEG-Dateien</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="266"/>
+        <location filename="../decodermadfactory.cpp" line="275"/>
         <source>About MPEG Audio Plugin</source>
         <translation>Über MPEG-Audiomodul</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="267"/>
+        <location filename="../decodermadfactory.cpp" line="276"/>
         <source>Qmmp MPEG Audio Plugin</source>
         <translation>Qmmp MPEG-Audiomodul</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="268"/>
+        <location filename="../decodermadfactory.cpp" line="277"/>
         <source>Compiled against libmad version:</source>
         <translation>Kompiliert gegen libmad-Version:</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="272"/>
+        <location filename="../decodermadfactory.cpp" line="281"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="273"/>
+        <location filename="../decodermadfactory.cpp" line="282"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Basiert auf Code von den mq3- und madplay-Projekten</translation>
     </message>

@@ -4,32 +4,32 @@
 <context>
     <name>DecoderWavPackFactory</name>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="45"/>
+        <location filename="../decoderwavpackfactory.cpp" line="39"/>
         <source>WavPack Plugin</source>
         <translation>Greffon WavPack</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="47"/>
+        <location filename="../decoderwavpackfactory.cpp" line="41"/>
         <source>WavPack Files</source>
         <translation>Fichiers WavPack</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="161"/>
+        <location filename="../decoderwavpackfactory.cpp" line="155"/>
         <source>About WavPack Audio Plugin</source>
         <translation>À propos du greffon audio WavPack</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="162"/>
+        <location filename="../decoderwavpackfactory.cpp" line="156"/>
         <source>Qmmp WavPack Audio Plugin</source>
         <translation>Greffon audio WavPack pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="163"/>
+        <location filename="../decoderwavpackfactory.cpp" line="157"/>
         <source>WavPack library version:</source>
         <translation>Version de la bibliothèque WavPack :</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="165"/>
+        <location filename="../decoderwavpackfactory.cpp" line="159"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

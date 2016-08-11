@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -97,7 +97,7 @@ public:
     /*!
      * Returns EngineFactory pointer which supports file \b path or 0 if file \b path is unsupported
      */
-    static EngineFactory *findByPath(const QString &path);
+    static EngineFactory *findByFilePath(const QString &path);
     /*!
      * Sets whether the engine is enabled.
      * @param factory Engine plugin factory.

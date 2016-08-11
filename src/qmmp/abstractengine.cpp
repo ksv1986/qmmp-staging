@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -128,7 +128,7 @@ QList<EngineFactory *> AbstractEngine::enabledFactories()
     return list;
 }
 
-EngineFactory *AbstractEngine::findByPath(const QString& source)
+EngineFactory *AbstractEngine::findByFilePath(const QString& source)
 {
     loadPlugins();
     foreach(QmmpPluginCache *item, *m_cache)

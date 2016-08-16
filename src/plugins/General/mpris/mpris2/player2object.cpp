@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -150,6 +150,8 @@ QVariantMap Player2Object::metadata() const
         map["xesam:title"] = m_core->metaData(Qmmp::TITLE);
     if(!m_core->metaData(Qmmp::TRACK).isEmpty())
         map["xesam:trackNumber"] = m_core->metaData(Qmmp::TRACK).toInt();
+    if(!m_core->metaData(Qmmp::YEAR).isEmpty())
+        map["xesam:contentCreated"] = m_core->metaData(Qmmp::YEAR);
     map["mpris:trackid"] = QVariant::fromValue<QDBusObjectPath>(m_trackID);
     if(m_core->metaData(Qmmp::URL).startsWith("/"))
         map["xesam:url"] =  QUrl::fromLocalFile(m_core->metaData(Qmmp::URL)).toString();

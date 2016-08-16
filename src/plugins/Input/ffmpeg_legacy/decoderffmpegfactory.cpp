@@ -70,6 +70,10 @@ bool DecoderFFmpegFactory::canDecode(QIODevice *i) const
         return true;
     else if(filters.contains("*.vqf") && !memcmp(fmt->name, "vqf", 3))
         return true;
+    else if(filters.contains("*.ape") && !memcmp(fmt->name, "ape", 3))
+        return true;
+    else if(filters.contains("*.tta") && !memcmp(fmt->name, "tta", 3))
+        return true;
     return false;
 }
 

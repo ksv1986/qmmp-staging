@@ -149,6 +149,7 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
 {
     loadPlugins();
     DecoderFactory *fact = 0;
+    //detect by content if enabled
     if(useContent)
     {
         QFile file(path);
@@ -165,57 +166,59 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
 
             fact = item->decoderFactory();
 
-            if(fact && fact->properties().noInput && !fact->properties().protocols.contains("file"))
+            if(fact->properties().noInput && !fact->properties().protocols.contains("file"))
                 continue;
 
             if (fact->canDecode(&file))
                 return fact;
         }
-        return 0;
+        fact = 0;
     }
-    else
+
+    QList<DecoderFactory*> filered;
+    foreach (QmmpPluginCache *item, *m_cache)
     {
-        QList<DecoderFactory*> filered;
-        foreach (QmmpPluginCache *item, *m_cache)
+        if(m_disabledNames.contains(item->shortName()))
+            continue;
+
+        DecoderFactory *fact = item->decoderFactory();
+
+        foreach(QString filter, fact->properties().filters)
         {
-            if(m_disabledNames.contains(item->shortName()))
-                continue;
-
-            DecoderFactory *fact = item->decoderFactory();
-
-            foreach(QString filter, fact->properties().filters)
+            QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
+            if (regexp.exactMatch(path))
             {
-                QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-                if (regexp.exactMatch(path))
-                {
-                    filered.append(fact);
-                    break;
-                }
+                filered.append(fact);
+                break;
             }
         }
+    }
 
-        if(filered.isEmpty())
-            return 0;
+    if(filered.isEmpty())
+        return 0;
 
-        if(filered.size() == 1)
-            return filered.at(0);
+    if(filered.size() == 1)
+        return filered.at(0);
 
-        //more than one factories with same filters
-        //try to determine by content
-        QFile file(path);
-        if(!file.open(QIODevice::ReadOnly))
-        {
-            qWarning("Decoder: file open error: %s", qPrintable(file.errorString()));
-            return 0;
-        }
-
-        foreach (fact, filered)
-        {
-            if(fact->canDecode(&file))
-                return fact;
-        }
+    //more than one factories with same filters
+    //try to determine by content
+    QFile file(path);
+    if(!file.open(QIODevice::ReadOnly))
+    {
+        qWarning("Decoder: file open error: %s", qPrintable(file.errorString()));
         return 0;
     }
+
+    foreach (fact, filered)
+    {
+        if(fact->canDecode(&file))
+            return fact;
+    }
+
+    if(!filered.isEmpty() && !useContent) //fallback
+        return filered.first();
+
+    return 0;
 }
 
 DecoderFactory *Decoder::findByMime(const QString& type)

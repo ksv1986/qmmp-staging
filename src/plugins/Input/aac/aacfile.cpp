@@ -90,6 +90,9 @@ AACFile::AACFile(QIODevice *input, bool metaData, bool adts)
             unsigned int frame_length = ((((unsigned int)buf[adts_offset+3] & 0x3)) << 11)
                     | (((unsigned int)buf[adts_offset+4]) << 3) | ((unsigned int)buf[adts_offset+5] >> 5);
 
+            if(frame_length == 0)
+                break;
+
             if(adts_offset + frame_length > buf_at - 6)
                 break;
 
@@ -202,6 +205,9 @@ void AACFile::parseADTS()
 
             frame_length = ((((unsigned int)buf[3] & 0x3)) << 11)
                            | (((unsigned int)buf[4]) << 3) | (buf[5] >> 5);
+
+            if(frame_length == 0)
+                break;
 
             t_framelength += frame_length;
 

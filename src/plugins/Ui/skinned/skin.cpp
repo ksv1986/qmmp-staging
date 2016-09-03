@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *
@@ -27,6 +27,8 @@
 #include <QPolygon>
 #include <QImage>
 #include <QAction>
+#include <QTextStream>
+#include <QStringList>
 #include <qmmp/qmmp.h>
 #include "actionmanager.h"
 #include "skin.h"
@@ -431,22 +433,27 @@ void Skin::loadPLEdit()
 
     QFile file(path);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
-        qFatal("Skin: unable to open %s", qPrintable(path));
-
-    while (!file.atEnd ())
     {
-        QByteArray line = file.readLine ();
+        qFatal("Skin: unable to open %s", qPrintable(path));
+        return;
+    }
+
+    QTextStream stream(&file);
+
+    while (!stream.atEnd ())
+    {
+        QString line = stream.readLine ();
 
         line = line.trimmed ();
         line.replace("\"","");
         if(line.contains("//"))
             line.truncate (line.indexOf ("//"));
 
-        QList<QByteArray> l = line.split ('=');
+        QStringList l = line.split ('=');
         if (l.count () == 2)
         {
-            key = l[0].toLower ();
-            value = l[1].trimmed();
+            key = l[0].toLower().toLatin1();
+            value = l[1].trimmed().toLatin1();
             if(!value.startsWith("#") && key != "font")
                 value.prepend("#");  //add # for color if needed
 

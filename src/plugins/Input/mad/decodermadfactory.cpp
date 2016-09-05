@@ -66,6 +66,9 @@ bool DecoderMADFactory::canDecode(QIODevice *input) const
     if(input->peek(buf, sizeof(buf)) != sizeof(buf))
         return false;
 
+    if (!memcmp(buf, "FLV", 3)) //skip Macromedia Flash Video
+        return false;
+
     if (!memcmp(buf + 8, "WAVE", 4) && !memcmp(buf + 20, "U" ,1))
         return true;
 

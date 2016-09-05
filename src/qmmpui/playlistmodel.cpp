@@ -276,6 +276,11 @@ int PlayListModel::trackCount() const
     return m_container->trackCount();
 }
 
+bool PlayListModel::isEmpty() const
+{
+    return m_container->isEmpty();
+}
+
 int PlayListModel::columnCount() const
 {
     return MetaDataHelper::instance()->columnCount();

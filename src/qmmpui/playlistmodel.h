@@ -128,6 +128,10 @@ public:
      */
     int trackCount() const;
     /*!
+     * Returns \b true if the model contains no tracks; otherwise returns \b false.
+     */
+    bool isEmpty() const;
+    /*!
      * Returns number of columns.
      */
     int columnCount() const;

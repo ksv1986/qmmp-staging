@@ -175,7 +175,7 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
         fact = 0;
     }
 
-    QList<DecoderFactory*> filered;
+    QList<DecoderFactory*> filtered;
     foreach (QmmpPluginCache *item, *m_cache)
     {
         if(m_disabledNames.contains(item->shortName()))
@@ -188,17 +188,17 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
             QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
             if (regexp.exactMatch(path))
             {
-                filered.append(fact);
+                filtered.append(fact);
                 break;
             }
         }
     }
 
-    if(filered.isEmpty())
+    if(filtered.isEmpty())
         return 0;
 
-    if(filered.size() == 1)
-        return filered.at(0);
+    if(filtered.size() == 1)
+        return filtered.at(0);
 
     //more than one factories with same filters
     //try to determine by content
@@ -209,14 +209,14 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
         return 0;
     }
 
-    foreach (fact, filered)
+    foreach (fact, filtered)
     {
         if(fact->canDecode(&file))
             return fact;
     }
 
-    if(!filered.isEmpty() && !useContent) //fallback
-        return filered.first();
+    if(!filtered.isEmpty() && !useContent) //fallback
+        return filtered.first();
 
     return 0;
 }

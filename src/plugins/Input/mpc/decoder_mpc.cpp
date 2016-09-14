@@ -179,12 +179,12 @@ bool DecoderMPC::initialize()
     return true;
 }
 
-qint64 DecoderMPC::totalTime()
+qint64 DecoderMPC::totalTime() const
 {
     return m_totalTime;
 }
 
-int DecoderMPC::bitrate()
+int DecoderMPC::bitrate() const
 {
     return m_bitrate;
 }

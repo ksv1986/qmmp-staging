@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -65,14 +65,19 @@ public:
 
     // Standard Decoder API
     bool initialize();
-    qint64 totalTime();
-    int bitrate();
+    qint64 totalTime() const;
+    int bitrate() const;
     qint64 read(unsigned char *data, qint64 maxSize);
     void seek(qint64 time);
     const QString nextURL() const;
     void next();
 
     struct flac_data *data()
+    {
+        return m_data;
+    }
+
+    const struct flac_data *data() const
     {
         return m_data;
     }

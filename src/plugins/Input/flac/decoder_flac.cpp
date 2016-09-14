@@ -436,14 +436,14 @@ bool DecoderFLAC::initialize()
     return true;
 }
 
-qint64 DecoderFLAC::totalTime()
+qint64 DecoderFLAC::totalTime() const
 {
     if(m_parser)
         return m_length;
     return data()->length;
 }
 
-int DecoderFLAC::bitrate()
+int DecoderFLAC::bitrate() const
 {
     return data()->bitrate;
 }

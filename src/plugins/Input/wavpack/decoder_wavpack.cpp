@@ -155,14 +155,14 @@ bool DecoderWavPack::initialize()
     return true;
 }
 
-int DecoderWavPack::bitrate()
+int DecoderWavPack::bitrate() const
 {
     if(m_context)
         return int(WavpackGetInstantBitrate(m_context)/1000);
     return 0;
 }
 
-qint64 DecoderWavPack::totalTime()
+qint64 DecoderWavPack::totalTime() const
 {
     if(m_parser)
         return m_length;

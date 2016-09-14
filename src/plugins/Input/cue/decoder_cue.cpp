@@ -111,7 +111,7 @@ bool DecoderCUE::initialize()
     return true;
 }
 
-qint64 DecoderCUE::totalTime()
+qint64 DecoderCUE::totalTime() const
 {
     return m_decoder ? m_length : 0;
 }
@@ -168,7 +168,7 @@ qint64 DecoderCUE::read(unsigned char *data, qint64 size)
     return len2;
 }
 
-int DecoderCUE::bitrate()
+int DecoderCUE::bitrate() const
 {
     return m_decoder->bitrate();
 }

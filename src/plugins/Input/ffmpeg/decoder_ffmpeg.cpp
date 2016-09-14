@@ -314,12 +314,12 @@ bool DecoderFFmpeg::initialize()
     return true;
 }
 
-qint64 DecoderFFmpeg::totalTime()
+qint64 DecoderFFmpeg::totalTime() const
 {
     return m_totalTime;
 }
 
-int DecoderFFmpeg::bitrate()
+int DecoderFFmpeg::bitrate() const
 {
     return m_bitrate;
 }

@@ -95,12 +95,12 @@ bool DecoderModPlug::initialize()
     return true;
 }
 
-qint64 DecoderModPlug::totalTime()
+qint64 DecoderModPlug::totalTime() const
 {
     return m_totalTime;
 }
 
-int DecoderModPlug::bitrate()
+int DecoderModPlug::bitrate() const
 {
     return m_bitrate;
 }

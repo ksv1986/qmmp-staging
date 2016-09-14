@@ -135,14 +135,14 @@ bool DecoderVorbis::initialize()
 }
 
 
-qint64 DecoderVorbis::totalTime()
+qint64 DecoderVorbis::totalTime() const
 {
     if (!m_inited)
         return 0;
     return m_totalTime;
 }
 
-int DecoderVorbis::bitrate()
+int DecoderVorbis::bitrate() const
 {
     return m_bitrate;
 }

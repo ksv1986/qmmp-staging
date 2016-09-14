@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -459,12 +459,12 @@ bool DecoderCDAudio::initialize()
 }
 
 
-qint64 DecoderCDAudio::totalTime()
+qint64 DecoderCDAudio::totalTime() const
 {
     return m_totalTime;
 }
 
-int DecoderCDAudio::bitrate()
+int DecoderCDAudio::bitrate() const
 {
     return m_bitrate;
 }

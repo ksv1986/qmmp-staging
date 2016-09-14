@@ -44,7 +44,7 @@ public:
      * Returns the total time in milliseconds.
      * Subclass should reimplement this function.
      */
-    virtual qint64 totalTime() = 0;
+    virtual qint64 totalTime() const = 0;
     /*!
      * Requests a seek to the time \b time indicated, specified in milliseconds.
      * Subclass should reimplement this function.
@@ -60,7 +60,7 @@ public:
      * Returns current bitrate (in kbps).
      * Subclass should reimplement this function.
      */
-    virtual int bitrate() = 0;
+    virtual int bitrate() const = 0;
     /*!
      * Tells decoder that it should play next track.
      * By default this function does nothing.

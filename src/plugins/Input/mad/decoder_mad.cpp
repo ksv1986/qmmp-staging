@@ -308,14 +308,14 @@ bool DecoderMAD::findHeader()
     return true;
 }
 
-qint64 DecoderMAD::totalTime()
+qint64 DecoderMAD::totalTime() const
 {
     if (!m_inited)
         return 0;
     return m_totalTime;
 }
 
-int DecoderMAD::bitrate()
+int DecoderMAD::bitrate() const
 {
     return int(m_bitrate);
 }

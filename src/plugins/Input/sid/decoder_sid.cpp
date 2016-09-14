@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -148,7 +148,7 @@ bool DecoderSID::initialize()
     return true;
 }
 
-qint64 DecoderSID::totalTime()
+qint64 DecoderSID::totalTime() const
 {
     return 0;
 }
@@ -158,7 +158,7 @@ void DecoderSID::seek(qint64 pos)
     Q_UNUSED(pos);
 }
 
-int DecoderSID::bitrate()
+int DecoderSID::bitrate() const
 {
     return 8;
 }

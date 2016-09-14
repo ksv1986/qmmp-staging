@@ -35,8 +35,8 @@ public:
     static DecoderModPlug* instance();
     // Standard Decoder API
     bool initialize();
-    qint64 totalTime();
-    int bitrate();
+    qint64 totalTime() const;
+    int bitrate() const;
     qint64 read(unsigned char *audio, qint64 maxSize);
     void seek(qint64 time);
 

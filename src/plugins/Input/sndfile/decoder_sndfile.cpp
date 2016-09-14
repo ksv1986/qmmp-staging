@@ -136,12 +136,12 @@ void DecoderSndFile::deinit()
     m_sndfile = 0;
 }
 
-qint64 DecoderSndFile::totalTime()
+qint64 DecoderSndFile::totalTime() const
 {
     return m_totalTime;
 }
 
-int DecoderSndFile::bitrate()
+int DecoderSndFile::bitrate() const
 {
     return m_bitrate;
 }

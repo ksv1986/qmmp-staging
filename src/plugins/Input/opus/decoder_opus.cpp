@@ -132,14 +132,14 @@ bool DecoderOpus::initialize()
     return true;
 }
 
-qint64 DecoderOpus::totalTime()
+qint64 DecoderOpus::totalTime() const
 {
     if (!m_opusfile)
         return 0;
     return m_totalTime;
 }
 
-int DecoderOpus::bitrate()
+int DecoderOpus::bitrate() const
 {
     return m_bitrate;
 }

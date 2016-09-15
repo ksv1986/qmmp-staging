@@ -338,10 +338,10 @@ void PlayListManager::writePlayLists()
     tmpFile.write(QString("current_playlist=%1\n").arg(m_models.indexOf(m_current)).toUtf8());
     foreach(PlayListModel *model, m_models)
     {
+        tmpFile.write(QString("playlist=%1\n").arg(model->name()).toUtf8());
         if(model->isEmpty())
             continue;
         QList<PlayListItem *> items = model->items();
-        tmpFile.write(QString("playlist=%1\n").arg(model->name()).toUtf8());
         tmpFile.write(QString("current=%1\n").arg(model->indexOfTrack(model->currentIndex())).toUtf8());
         foreach(PlayListItem* m, items)
         {

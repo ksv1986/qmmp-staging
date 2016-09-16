@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -96,9 +96,7 @@ bool DecoderCUE::initialize()
     }
     m_decoder->seek(m_offset);
 
-    configure(m_decoder->audioParameters().sampleRate(),
-              m_decoder->audioParameters().channelMap(),
-              m_decoder->audioParameters().format());
+    configure(m_decoder->audioParameters());
     setReplayGainInfo(m_parser->replayGain(m_track));
     length_in_bytes = audioParameters().sampleRate() *
                       audioParameters().channels() *

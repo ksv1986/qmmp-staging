@@ -42,6 +42,11 @@ void Decoder::configure(quint32 srate, int channels, Qmmp::AudioFormat f)
     m_parameters = AudioParameters(srate, ChannelMap(channels), f);
 }
 
+void Decoder::configure(const AudioParameters &p)
+{
+    m_parameters = p;
+}
+
 void Decoder::next()
 {}
 

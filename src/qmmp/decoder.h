@@ -170,6 +170,11 @@ protected:
      * @param f Audio format.
      */
     void configure(quint32 srate, int channels, Qmmp::AudioFormat f = Qmmp::PCM_S16LE);
+    /*!
+     * Use this function inside initialize() reimplementation to tell other plugins about audio parameters.
+     * @param p Audio parameters.
+     */
+    void configure(const AudioParameters &p);
 
 private:
     static void loadPlugins();

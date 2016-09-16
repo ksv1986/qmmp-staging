@@ -40,7 +40,7 @@ bool DecoderArchive::initialize()
 
     if(!QFile::exists(archivePath))
     {
-        qWarning("DecoderArc: file '%s' not found", qPrintable(archivePath));
+        qWarning("DecoderArchive: file '%s' not found", qPrintable(archivePath));
         return false;
     }
 
@@ -63,7 +63,7 @@ bool DecoderArchive::initialize()
 
     if(filtered.isEmpty())
     {
-        qWarning("DecoderArc: unable to find decoder");
+        qWarning("DecoderArchive: unable to find decoder");
         return false;
     }
 
@@ -74,7 +74,7 @@ bool DecoderArchive::initialize()
     int r = archive_read_open_filename(m_archive, archivePath.toLocal8Bit().constData(), 10240);
     if (r != ARCHIVE_OK)
     {
-        qWarning("DecoderArc: unable to open file '%s', error code: %d", qPrintable(archivePath), r);
+        qWarning("DecoderArchive: unable to open file '%s', error code: %d", qPrintable(archivePath), r);
         return false;
     }
 
@@ -96,7 +96,7 @@ bool DecoderArchive::initialize()
 
     if(!m_input)
     {
-        qWarning("DecoderArc: unable to find file '%s' inside archive '%s'", qPrintable(filePath),
+        qWarning("DecoderArchive: unable to find file '%s' inside archive '%s'", qPrintable(filePath),
                  qPrintable(archivePath));
         return false;
     }
@@ -106,7 +106,7 @@ bool DecoderArchive::initialize()
         factory = filtered.first();
     else
     {
-        //several factories, so trying to determine by content
+        //multiple factories, so trying to determine by content
         foreach (DecoderFactory *fact, filtered)
         {
             if(fact->canDecode(m_input))
@@ -119,22 +119,18 @@ bool DecoderArchive::initialize()
 
     if(!factory)
     {
-        qWarning("DecoderArc: unable to find supported decoder factory");
+        qWarning("DecoderArchive: unable to find decoder factory");
         return false;
     }
 
-    qDebug("DecoderArc: selected decoder: %s", qPrintable(factory->properties().shortName));
-    qDebug("+");
+    qDebug("DecoderArchive: selected decoder: %s", qPrintable(factory->properties().shortName));
     m_decoder = factory->create(m_url, m_input);
-    qDebug("+1");
     if(!m_decoder->initialize())
     {
-        qWarning("DecoderArc: unable to initialize decoder");
+        qWarning("DecoderArchive: unable to initialize decoder");
         return false;
     }
-    qDebug("+2");
-    configure(m_decoder->audioParameters().sampleRate(), m_decoder->audioParameters().channelMap(),
-              m_decoder->audioParameters().format());
+    configure(m_decoder->audioParameters());
     return true;
 }
 

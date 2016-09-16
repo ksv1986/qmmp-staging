@@ -26,8 +26,8 @@
 #include "decoder_archive.h"
 #include "decoderarchivefactory.h"
 
-// DecoderSndFileFactory
-bool DecoderArchiveFactory::canDecode(QIODevice *input) const
+// DecoderArchiveFileFactory
+bool DecoderArchiveFactory::canDecode(QIODevice *) const
 {
     return false;
 }

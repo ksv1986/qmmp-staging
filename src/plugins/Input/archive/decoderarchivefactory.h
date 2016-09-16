@@ -37,7 +37,7 @@ Q_OBJECT
 Q_INTERFACES(DecoderFactory)
 
 public:
-    bool canDecode(QIODevice *input) const;
+    bool canDecode(QIODevice *) const;
     const DecoderProperties properties() const;
     Decoder *create(const QString &url, QIODevice *);
     QList<FileInfo *> createPlayList(const QString &fileName, bool useMetaData, QStringList *);

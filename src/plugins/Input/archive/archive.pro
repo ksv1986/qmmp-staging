@@ -3,12 +3,14 @@ include(../../plugins.pri)
 HEADERS += \
     archiveinputdevice.h \
     decoderarchivefactory.h \
-    decoder_archive.h
+    decoder_archive.h \
+    archivetagreader.h
 
 SOURCES += \
     archiveinputdevice.cpp \
     decoderarchivefactory.cpp \
-    decoder_archive.cpp
+    decoder_archive.cpp \
+    archivetagreader.cpp
 
 TARGET=$$PLUGINS_PREFIX/Input/archive
 

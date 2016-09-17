@@ -1,6 +1,26 @@
+/***************************************************************************
+ *   Copyright (C) 2016 by Ilya Kotov                                      *
+ *   forkotov02@hotmail.ru                                                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
+ ***************************************************************************/
 #include <QFile>
 #include <archive_entry.h>
 #include "archiveinputdevice.h"
+#include "archivetagreader.h"
 #include "decoder_archive.h"
 
 DecoderArchive::DecoderArchive(const QString &url)
@@ -44,21 +64,12 @@ bool DecoderArchive::initialize()
         return false;
     }
 
-    QList<DecoderFactory*> filtered;
-    foreach (DecoderFactory *fact, Decoder::enabledFactories())
+    //is this file supported by qmmp?
+    QList<DecoderFactory *> filtered = Decoder::findByFileExtension(filePath);
+    foreach (DecoderFactory *f, filtered)
     {
-        if(fact->properties().noInput)
-            continue;
-
-        foreach(QString filter, fact->properties().filters)
-        {
-            QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-            if (regexp.exactMatch(filePath))
-            {
-                filtered.append(fact);
-                break;
-            }
-        }
+        if(f->properties().noInput)
+            filtered.removeAll(f); //remove all factories without streaming input
     }
 
     if(filtered.isEmpty())
@@ -130,6 +141,9 @@ bool DecoderArchive::initialize()
         qWarning("DecoderArchive: unable to initialize decoder");
         return false;
     }
+
+    ArchiveTagReader reader(m_input, m_url);
+    addMetaData(reader.metaData());
     configure(m_decoder->audioParameters());
     return true;
 }

@@ -24,6 +24,8 @@
 #include <archive.h>
 #include <archive_entry.h>
 #include "decoder_archive.h"
+#include "archivetagreader.h"
+#include "archiveinputdevice.h"
 #include "decoderarchivefactory.h"
 
 // DecoderArchiveFileFactory
@@ -38,9 +40,9 @@ const DecoderProperties DecoderArchiveFactory::properties() const
     properties.name = tr("Archive Plugin");
     properties.filters << "*.rar" << "*.zip";
     properties.description = tr("Archives");
-    //properties.contentType = "";
+    properties.contentTypes << "application/zip" << "application/x-rar-compressed";
     properties.shortName = "archive";
-    properties.hasAbout = false;
+    properties.hasAbout = true;
     properties.hasSettings = false;
     properties.noInput = true;
     properties.protocols << "rar" << "zip";
@@ -52,41 +54,55 @@ Decoder *DecoderArchiveFactory::create(const QString &url, QIODevice *)
     return new DecoderArchive(url);
 }
 
-QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *)
+QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &archivePath, bool useMetaData, QStringList *)
 {
     QList <FileInfo *> list;
+    struct archive_entry *entry = 0;
 
-
-    struct archive *a;
-    struct archive_entry *entry;
-    int r;
-
-    a = archive_read_new();
+    struct archive *a = archive_read_new();
     archive_read_support_filter_all(a);
     archive_read_support_format_all(a);
-    r = archive_read_open_filename(a, fileName.toLocal8Bit().constData(), 10240);
-    if (r != ARCHIVE_OK)
+
+    if(archive_read_open_filename(a, archivePath.toLocal8Bit().constData(), 10240) != ARCHIVE_OK)
     {
-        //exit(1);
+        qWarning("DecoderArchiveFactory: unable to open archive; libarchive error: %s", archive_error_string(a));
         return list;
     }
     while (archive_read_next_header(a, &entry) == ARCHIVE_OK)
     {
         if(archive_entry_filetype(entry) == AE_IFREG)
         {
-            QString pathName = QString::fromLocal8Bit(archive_entry_pathname(entry));
-            if(!pathName.startsWith("/"))
-                pathName.prepend("/");
+            QString filePath = QString::fromLocal8Bit(archive_entry_pathname(entry));
+            if(!filePath.startsWith("/"))
+                filePath.prepend("/");
 
-            list << new FileInfo(QString("%1://%2#%3")
-                                 .arg(fileName.section(".", -1)).toLower()
-                                 .arg(fileName)
-                                 .arg(pathName));
-            //TODO read tags
+            //is this file supported by qmmp?
+            QList<DecoderFactory *> filtered = Decoder::findByFileExtension(filePath);
+            foreach (DecoderFactory *f, filtered)
+            {
+                if(f->properties().noInput)
+                    filtered.removeAll(f); //remove all factories without streaming input
+            }
+
+            if(!filtered.isEmpty())
+            {
+                list << new FileInfo(QString("%1://%2#%3")
+                                     .arg(archivePath.section(".", -1)).toLower()
+                                     .arg(archivePath)
+                                     .arg(filePath));
+
+                ArchiveInputDevice dev(a, entry, 0);
+                ArchiveTagReader reader(&dev, list.last()->path());
+
+                if(useMetaData)
+                    list.last()->setMetaData(reader.metaData());
+                if(reader.audioProperties())
+                    list.last()->setLength(reader.audioProperties()->length());
+            }
         }
         archive_read_data_skip(a);
     }
-    r = archive_read_free(a);
+    archive_read_free(a);
 
     return list;
 }
@@ -101,12 +117,10 @@ void DecoderArchiveFactory::showSettings(QWidget *)
 
 void DecoderArchiveFactory::showAbout(QWidget *parent)
 {
-    /*char  version [128] ;
-    sf_command (NULL, SFC_GET_LIB_VERSION, version, sizeof (version)) ;
-    QMessageBox::about (parent, tr("About Sndfile Audio Plugin"),
-                        tr("Qmmp Sndfile Audio Plugin")+"\n"+
-                        tr("Compiled against")+" "+QString(version)+"\n" +
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));*/
+    QMessageBox::about (parent, tr("About Archive Reader Plugin"),
+                        tr("Qmmp Archive Reader Plugin")+"\n"+
+                        tr("Compiled against %1").arg(ARCHIVE_VERSION_STRING)+"\n" +
+                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
 }
 
 QTranslator *DecoderArchiveFactory::createTranslator(QObject *parent)

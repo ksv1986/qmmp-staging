@@ -180,24 +180,7 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
         fact = 0;
     }
 
-    QList<DecoderFactory*> filtered;
-    foreach (QmmpPluginCache *item, *m_cache)
-    {
-        if(m_disabledNames.contains(item->shortName()))
-            continue;
-
-        DecoderFactory *fact = item->decoderFactory();
-
-        foreach(QString filter, fact->properties().filters)
-        {
-            QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-            if (regexp.exactMatch(path))
-            {
-                filtered.append(fact);
-                break;
-            }
-        }
-    }
+    QList<DecoderFactory*> filtered = findByFileExtension(path);
 
     if(filtered.isEmpty())
         return 0;
@@ -268,6 +251,30 @@ DecoderFactory *Decoder::findByProtocol(const QString &p)
             return item->decoderFactory();
     }
     return 0;
+}
+
+QList<DecoderFactory *> Decoder::findByFileExtension(const QString &path)
+{
+    QList<DecoderFactory*> filtered;
+    foreach (QmmpPluginCache *item, *m_cache)
+    {
+        if(m_disabledNames.contains(item->shortName()))
+            continue;
+
+        DecoderFactory *fact = item->decoderFactory();
+
+        foreach(QString filter, fact->properties().filters)
+        {
+            QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
+            if (regexp.exactMatch(path))
+            {
+                filtered.append(fact);
+                break;
+            }
+        }
+    }
+
+    return filtered;
 }
 
 void Decoder::setEnabled(DecoderFactory* factory, bool enable)

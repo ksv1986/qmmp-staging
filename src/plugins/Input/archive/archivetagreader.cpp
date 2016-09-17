@@ -1,14 +1,32 @@
+/***************************************************************************
+ *   Copyright (C) 2016 by Ilya Kotov                                      *
+ *   forkotov02@hotmail.ru                                                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
+ ***************************************************************************/
 #include <taglib/tiostream.h>
-#include <taglib/fileref.h>
 #include "archivetagreader.h"
 
 class IODeviceStream : public TagLib::IOStream
 {
 public:
-    IODeviceStream(QIODevice *input, const QString &fileName)
+    IODeviceStream(QIODevice *input, const QString &url)
     {
         m_input = input;
-        m_fileName = fileName;
+        m_fileName = url.section("/", -1);
     }
 
     virtual ~IODeviceStream() {}
@@ -42,21 +60,18 @@ public:
         {
         case Beginning:
             m_input->seek(offset);
-            return;
+            break;
         case Current:
             m_input->seek(m_input->pos() + offset);
-            return;
+            break;
         case End:
-            m_input->seek(m_input->size() - offset);
-            return;
+            m_input->seek(m_input->size() + offset);
+            break;
         }
-        return;
     }
-
-
     virtual void clear()
     {
-        m_input->reset();
+        m_input->seek(0);
         TagLib::IOStream::clear();
     }
     virtual long tell() const
@@ -76,28 +91,39 @@ private:
 
 };
 
-ArchiveTagReader::ArchiveTagReader(QIODevice *input, const QString &fileName)
+ArchiveTagReader::ArchiveTagReader(QIODevice *input, const QString &url)
 {
-    m_stream = new IODeviceStream(input, fileName);
+    m_stream = new IODeviceStream(input, url);
+    m_file = new TagLib::FileRef(m_stream);
+    m_url = url;
 }
 
 ArchiveTagReader::~ArchiveTagReader()
 {
+    delete m_file;
     delete m_stream;
 }
 
-/*const QMap<Qmmp::MetaData, QString> ArchiveTagReader::metaData() const
+const QMap<Qmmp::MetaData, QString> ArchiveTagReader::metaData() const
 {
-    TagLib::FileRef file(m_stream);
     QMap<Qmmp::MetaData, QString> m;
 
-    m[Qmmp::ALBUM, QString::fromUtf8(tag->album().toCString(true)).trimmed()];
-    m[Qmmp::ARTIST, QString::fromUtf8(tag->artist().toCString(true)).trimmed()];
-    m[Qmmp::COMMENT, QString::fromUtf8(tag->comment().toCString(true)).trimmed()];
-    m[Qmmp::GENRE, QString::fromUtf8(tag->genre().toCString(true)).trimmed()];
-    m[Qmmp::TITLE, QString::fromUtf8(tag->title().toCString(true)).trimmed()];
-    m[Qmmp::YEAR, tag->year());
-    m[Qmmp::TRACK, tag->track());
-
+    TagLib::Tag *tag = m_file->tag();
+    if(tag)
+    {
+        m[Qmmp::ALBUM] = TStringToQString(tag->album()).trimmed();
+        m[Qmmp::ARTIST] = TStringToQString(tag->artist()).trimmed();
+        m[Qmmp::COMMENT] = TStringToQString(tag->comment()).trimmed();
+        m[Qmmp::GENRE] = TStringToQString(tag->genre()).trimmed();
+        m[Qmmp::TITLE] = TStringToQString(tag->title()).trimmed();
+        m[Qmmp::YEAR] = QString::number(tag->year());
+        m[Qmmp::TRACK] = QString::number(tag->track());
+    }
+    m[Qmmp::URL] = m_url;
     return m;
-}*/
+}
+
+TagLib::AudioProperties *ArchiveTagReader::audioProperties() const
+{
+    return m_file->audioProperties();
+}

@@ -33,7 +33,7 @@ unix {
 
     QMAKE_LIBDIR += ../../../../lib
     LIBS += -lqmmp
-    PKGCONFIG += libarchive
+    PKGCONFIG += libarchive taglib
     QMAKE_CLEAN =$$PLUGINS_PREFIX/Input/libarc.so
 }
 
@@ -41,5 +41,5 @@ win32 {
 #    HEADERS += ../../../../src/qmmp/metadatamodel.h \
 #               ../../../../src/qmmp/decoderfactory.h
     QMAKE_LIBDIR += ../../../../bin
-    LIBS += -lqmmp0 -larchive
+    LIBS += -lqmmp0 -larchive -ltag
 }

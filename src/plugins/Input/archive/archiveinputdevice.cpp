@@ -1,3 +1,22 @@
+/***************************************************************************
+ *   Copyright (C) 2016 by Ilya Kotov                                      *
+ *   forkotov02@hotmail.ru                                                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
+ ***************************************************************************/
 #include "archiveinputdevice.h"
 
 ArchiveInputDevice::ArchiveInputDevice(archive *a, archive_entry *e, QObject *parent) : QIODevice(parent)
@@ -20,14 +39,22 @@ bool ArchiveInputDevice::seek(qint64 pos)
         {
             qint64 r = qMin(qint64(sizeof(tmp)), delta);
             r = archive_read_data(m_archive, tmp, r);
-            m_buffer.buffer().append(tmp, r);
-            delta -= r;
+            if(r > 0)
+            {
+                m_buffer.buffer().append(tmp, r);
+                delta -= r;
+                continue;
+            }
+            else if(r < 0)
+            {
+                qWarning("ArchiveInputDevice: seeking failed; libarchive error: %s", archive_error_string(m_archive));
+            }
+            return false;
         }
 
     }
 
-    m_buffer.seek(pos);
-    return true;
+    return m_buffer.seek(pos);
 }
 
 qint64 ArchiveInputDevice::size() const
@@ -37,11 +64,15 @@ qint64 ArchiveInputDevice::size() const
 
 qint64 ArchiveInputDevice::readData(char *data, qint64 maxSize)
 {
-    if(m_buffer.atEnd())
+    if(m_buffer.pos() + maxSize > m_buffer.size())
     {
-        char tmp[maxSize];
-        int r = archive_read_data(m_archive, tmp, maxSize);
-        m_buffer.buffer().append(tmp, r);
+        qint64 l = m_buffer.pos() + maxSize - m_buffer.size();
+        char tmp[l];
+        int r = archive_read_data(m_archive, tmp, l);
+        if(r > 0)
+            m_buffer.buffer().append(tmp, r);
+        else if(r < 0)
+            qWarning("ArchiveInputDevice: reading failed; libarchive error: %s", archive_error_string(m_archive));
     }
     return m_buffer.read(data, maxSize);
 }

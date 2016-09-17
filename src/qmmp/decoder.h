@@ -126,6 +126,11 @@ public:
      */
     static DecoderFactory *findByProtocol(const QString &p);
     /*!
+     * Returns a list of DecoderFactory pointers which support extension of the required file
+     * @param path Full file path or url with correct extension.
+     */
+    static QList<DecoderFactory *> findByFileExtension(const QString &path);
+    /*!
      * Returns a list of decoder factories.
      */
     static QList<DecoderFactory*> factories();

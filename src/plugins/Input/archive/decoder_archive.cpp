@@ -17,6 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+
 #include <QFile>
 #include <archive_entry.h>
 #include "archiveinputdevice.h"
@@ -26,7 +27,6 @@
 DecoderArchive::DecoderArchive(const QString &url)
 {
     m_url = url;
-    m_archive = 0;
     m_decoder = 0;
     m_input = 0;
 }
@@ -42,12 +42,6 @@ DecoderArchive::~DecoderArchive()
     {
         delete m_input;
         m_input = 0;
-    }
-    if(m_archive)
-    {
-        archive_read_close(m_archive);
-        archive_read_free(m_archive);
-        m_archive = 0;
     }
 }
 
@@ -78,37 +72,11 @@ bool DecoderArchive::initialize()
         return false;
     }
 
-    m_archive = archive_read_new();
-    archive_read_support_filter_all(m_archive);
-    archive_read_support_format_all(m_archive);
+    m_input = new ArchiveInputDevice(m_url);
 
-    int r = archive_read_open_filename(m_archive, archivePath.toLocal8Bit().constData(), 10240);
-    if (r != ARCHIVE_OK)
+    if(!m_input->isOpen())
     {
-        qWarning("DecoderArchive: unable to open file '%s', error code: %d", qPrintable(archivePath), r);
-        return false;
-    }
-
-    struct archive_entry *entry = 0;
-
-    while (archive_read_next_header(m_archive, &entry) == ARCHIVE_OK)
-    {
-        QString pathName = QString::fromLocal8Bit(archive_entry_pathname(entry));
-        if(!pathName.startsWith("/"))
-            pathName.prepend("/");
-
-        if(archive_entry_filetype(entry) == AE_IFREG && filePath == pathName)
-        {
-            m_input = new ArchiveInputDevice(m_archive, entry, 0);
-            break;
-        }
-        archive_read_data_skip(m_archive);
-    }
-
-    if(!m_input)
-    {
-        qWarning("DecoderArchive: unable to find file '%s' inside archive '%s'", qPrintable(filePath),
-                 qPrintable(archivePath));
+        qWarning("DecoderArchive: unable to open archive");
         return false;
     }
 

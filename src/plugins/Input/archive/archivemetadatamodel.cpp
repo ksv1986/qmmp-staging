@@ -18,32 +18,39 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#ifndef DECODERARCHIVE_H
-#define DECODERARCHIVE_H
+#include "archiveinputdevice.h"
+#include "archivetagreader.h"
+#include "archivemetadatamodel.h"
 
-#include <QString>
-#include <archive.h>
-#include <qmmp/decoder.h>
-
-
-class DecoderArchive : public Decoder
+ArchiveMetaDataModel::ArchiveMetaDataModel(const QString &url, QObject *parent) :
+    MetaDataModel(parent)
 {
-public:
-    DecoderArchive(const QString &url);
+    m_reader = 0;
+    m_input = 0;
+    m_input = new ArchiveInputDevice(url);
+    if(m_input->isOpen())
+        m_reader = new ArchiveTagReader(m_input, url);
+}
 
-    virtual ~DecoderArchive();
+ArchiveMetaDataModel::~ArchiveMetaDataModel()
+{
+    if(m_reader)
+        delete m_reader;
+    if(m_input)
+        delete m_input;
+}
 
-    bool initialize();
-    qint64 totalTime() const;
-    void seek(qint64 time);
-    qint64 read(unsigned char *data, qint64 maxSize);
-    int bitrate() const;
-
-private:
-    QString m_url;
-    Decoder *m_decoder;
-    QIODevice *m_input;
-
-};
-
-#endif // DECODERARCHIVE_H
+QHash<QString, QString> ArchiveMetaDataModel::audioProperties()
+{
+    QHash <QString, QString> ap;
+    if(m_reader && m_reader->audioProperties())
+    {
+        TagLib::AudioProperties *p = m_reader->audioProperties();
+        ap.insert(tr("Length"), QString("%1:%2").arg(p->length()/60).arg(p->length()%60, 2, 10, QChar('0')));
+        ap.insert(tr("Sample rate"), QString("%1 " + tr("Hz")).arg(p->sampleRate()));
+        ap.insert(tr("Channels"), QString("%1").arg(p->channels()));
+        ap.insert(tr("Bitrate"), QString("%1 " + tr("kbps")).arg(p->bitrate()));
+        ap.insert(tr("File size"), QString("%1 "+tr("KB")).arg(m_input->size()/1024));
+    }
+    return ap;
+}

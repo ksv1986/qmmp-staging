@@ -17,6 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+
 #include <QRegExp>
 #include <QMessageBox>
 #include <QTranslator>
@@ -26,9 +27,10 @@
 #include "decoder_archive.h"
 #include "archivetagreader.h"
 #include "archiveinputdevice.h"
+#include "archivemetadatamodel.h"
 #include "decoderarchivefactory.h"
 
-// DecoderArchiveFileFactory
+// DecoderArchiveFactory
 bool DecoderArchiveFactory::canDecode(QIODevice *) const
 {
     return false;
@@ -54,7 +56,7 @@ Decoder *DecoderArchiveFactory::create(const QString &url, QIODevice *)
     return new DecoderArchive(url);
 }
 
-QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &archivePath, bool useMetaData, QStringList *)
+QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &path, bool useMetaData, QStringList *)
 {
     QList <FileInfo *> list;
     struct archive_entry *entry = 0;
@@ -62,6 +64,19 @@ QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &archivePa
     struct archive *a = archive_read_new();
     archive_read_support_filter_all(a);
     archive_read_support_format_all(a);
+
+    QString archivePath, requiredFilePath;
+    if(path.contains("://"))
+    {
+        requiredFilePath = path.section("#", -1);
+        archivePath = path;
+        archivePath.remove(QRegExp("^.+://"));
+        archivePath.remove(QRegExp("#.+$"));
+    }
+    else
+    {
+        archivePath = path;
+    }
 
     if(archive_read_open_filename(a, archivePath.toLocal8Bit().constData(), 10240) != ARCHIVE_OK)
     {
@@ -75,6 +90,12 @@ QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &archivePa
             QString filePath = QString::fromLocal8Bit(archive_entry_pathname(entry));
             if(!filePath.startsWith("/"))
                 filePath.prepend("/");
+
+            if(!requiredFilePath.isEmpty() && filePath != requiredFilePath)
+            {
+                archive_read_data_skip(a);
+                continue;
+            }
 
             //is this file supported by qmmp?
             QList<DecoderFactory *> filtered = Decoder::findByFileExtension(filePath);
@@ -107,9 +128,9 @@ QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &archivePa
     return list;
 }
 
-MetaDataModel* DecoderArchiveFactory::createMetaDataModel(const QString&, QObject *)
+MetaDataModel* DecoderArchiveFactory::createMetaDataModel(const QString &path, QObject *parent)
 {
-    return 0;
+    return new ArchiveMetaDataModel(path, parent);
 }
 
 void DecoderArchiveFactory::showSettings(QWidget *)

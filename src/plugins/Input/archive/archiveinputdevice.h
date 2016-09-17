@@ -17,6 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+
 #ifndef ARCHIVEINPUTDEVICE_H
 #define ARCHIVEINPUTDEVICE_H
 
@@ -29,7 +30,9 @@ class ArchiveInputDevice : public QIODevice
 {
     Q_OBJECT
 public:
-    ArchiveInputDevice(struct archive *a, struct archive_entry *e, QObject *parent);
+    ArchiveInputDevice(const QString &url, QObject *parent = 0);
+    ArchiveInputDevice(struct archive *a, struct archive_entry *e, QObject *parent = 0);
+    virtual ~ArchiveInputDevice();
 
     bool seek(qint64 pos);
     qint64 size() const;
@@ -42,7 +45,7 @@ private:
     struct archive *m_archive;
     struct archive_entry *m_entry;
     QBuffer m_buffer;
-
+    bool m_close_libarchive;
 };
 
 #endif // ARCHIVEINPUTDEVICE_H

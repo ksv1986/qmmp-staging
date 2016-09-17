@@ -18,32 +18,28 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#ifndef DECODERARCHIVE_H
-#define DECODERARCHIVE_H
+#ifndef ARCHIVEMETADATAMODEL_H
+#define ARCHIVEMETADATAMODEL_H
 
-#include <QString>
-#include <archive.h>
-#include <qmmp/decoder.h>
+#include <QObject>
+#include <qmmp/metadatamodel.h>
 
+class ArchiveInputDevice;
+class ArchiveTagReader;
 
-class DecoderArchive : public Decoder
+class ArchiveMetaDataModel : public MetaDataModel
 {
+    Q_OBJECT
 public:
-    DecoderArchive(const QString &url);
+    explicit ArchiveMetaDataModel(const QString &url, QObject *parent = 0);
+    virtual ~ArchiveMetaDataModel();
 
-    virtual ~DecoderArchive();
-
-    bool initialize();
-    qint64 totalTime() const;
-    void seek(qint64 time);
-    qint64 read(unsigned char *data, qint64 maxSize);
-    int bitrate() const;
+    QHash<QString, QString> audioProperties();
 
 private:
-    QString m_url;
-    Decoder *m_decoder;
-    QIODevice *m_input;
+    ArchiveInputDevice *m_input;
+    ArchiveTagReader *m_reader;
 
 };
 
-#endif // DECODERARCHIVE_H
+#endif // ARCHIVEMETADATAMODEL_H

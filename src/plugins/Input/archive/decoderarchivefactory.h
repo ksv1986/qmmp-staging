@@ -17,6 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+
 #ifndef DECODERARCHIVEFACTORY_H
 #define DECODERARCHIVEFACTORY_H
 
@@ -40,7 +41,7 @@ public:
     bool canDecode(QIODevice *) const;
     const DecoderProperties properties() const;
     Decoder *create(const QString &url, QIODevice *);
-    QList<FileInfo *> createPlayList(const QString &fileName, bool useMetaData, QStringList *);
+    QList<FileInfo *> createPlayList(const QString &path, bool useMetaData, QStringList *);
     MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);

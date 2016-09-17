@@ -17,7 +17,47 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+
+#include <QRegExp>
 #include "archiveinputdevice.h"
+
+ArchiveInputDevice::ArchiveInputDevice(const QString &url, QObject *parent)  : QIODevice(parent)
+{
+    m_archive = 0;
+    m_entry = 0;
+    QString filePath = url.section("#", -1);
+    QString archivePath = url;
+    archivePath.remove(QRegExp("^.+://"));
+    archivePath.remove(QRegExp("#.+$"));
+
+    m_archive = archive_read_new();
+    archive_read_support_filter_all(m_archive);
+    archive_read_support_format_all(m_archive);
+
+    int r = archive_read_open_filename(m_archive, archivePath.toLocal8Bit().constData(), 10240);
+    if (r != ARCHIVE_OK)
+    {
+        qWarning("ArchiveInputDevice: unable to open file '%s', libarchive error: %s",
+                 qPrintable(archivePath), archive_error_string(m_archive));
+        return;
+    }
+
+    while (archive_read_next_header(m_archive, &m_entry) == ARCHIVE_OK)
+    {
+        QString pathName = QString::fromLocal8Bit(archive_entry_pathname(m_entry));
+        if(!pathName.startsWith("/"))
+            pathName.prepend("/");
+
+        if(archive_entry_filetype(m_entry) == AE_IFREG && filePath == pathName)
+        {
+            open(QIODevice::ReadOnly);
+            m_buffer.open(QBuffer::ReadWrite);
+            break;
+        }
+        archive_read_data_skip(m_archive);
+    }
+    m_close_libarchive = true;
+}
 
 ArchiveInputDevice::ArchiveInputDevice(archive *a, archive_entry *e, QObject *parent) : QIODevice(parent)
 {
@@ -25,6 +65,17 @@ ArchiveInputDevice::ArchiveInputDevice(archive *a, archive_entry *e, QObject *pa
     m_entry = e;
     open(QIODevice::ReadOnly);
     m_buffer.open(QBuffer::ReadWrite);
+    m_close_libarchive = false;
+}
+
+ArchiveInputDevice::~ArchiveInputDevice()
+{
+    if(m_close_libarchive && m_archive)
+    {
+        archive_read_close(m_archive);
+        archive_read_free(m_archive);
+        m_archive = 0;
+    }
 }
 
 bool ArchiveInputDevice::seek(qint64 pos)

@@ -39,6 +39,7 @@ public:
 private:
     ArchiveInputDevice *m_input;
     ArchiveTagReader *m_reader;
+    QString m_url;
 
 };
 

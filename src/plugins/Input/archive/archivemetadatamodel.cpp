@@ -27,9 +27,7 @@ ArchiveMetaDataModel::ArchiveMetaDataModel(const QString &url, QObject *parent) 
 {
     m_reader = 0;
     m_input = 0;
-    m_input = new ArchiveInputDevice(url);
-    if(m_input->isOpen())
-        m_reader = new ArchiveTagReader(m_input, url);
+    m_url = url;
 }
 
 ArchiveMetaDataModel::~ArchiveMetaDataModel()
@@ -42,6 +40,13 @@ ArchiveMetaDataModel::~ArchiveMetaDataModel()
 
 QHash<QString, QString> ArchiveMetaDataModel::audioProperties()
 {
+    if(!m_input)
+    {
+        m_input = new ArchiveInputDevice(m_url);
+        if(m_input->isOpen())
+            m_reader = new ArchiveTagReader(m_input, m_url);
+    }
+
     QHash <QString, QString> ap;
     if(m_reader && m_reader->audioProperties())
     {

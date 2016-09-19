@@ -4,37 +4,37 @@
 <context>
     <name>DecoderMADFactory</name>
     <message>
-        <location filename="../decodermadfactory.cpp" line="116"/>
+        <location filename="../decodermadfactory.cpp" line="119"/>
         <source>MPEG Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="119"/>
+        <location filename="../decodermadfactory.cpp" line="122"/>
         <source>MPEG Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="275"/>
+        <location filename="../decodermadfactory.cpp" line="278"/>
         <source>About MPEG Audio Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="276"/>
+        <location filename="../decodermadfactory.cpp" line="279"/>
         <source>Qmmp MPEG Audio Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="277"/>
+        <location filename="../decodermadfactory.cpp" line="280"/>
         <source>Compiled against libmad version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="281"/>
+        <location filename="../decodermadfactory.cpp" line="284"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="282"/>
+        <location filename="../decodermadfactory.cpp" line="285"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation type="unfinished"></translation>
     </message>

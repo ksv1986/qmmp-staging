@@ -4,32 +4,32 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="90"/>
+        <location filename="../decoderffmpegfactory.cpp" line="94"/>
         <source>FFmpeg Plugin</source>
         <translation>Greffon FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="92"/>
+        <location filename="../decoderffmpegfactory.cpp" line="96"/>
         <source>FFmpeg Formats</source>
         <translation>Formats FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="199"/>
+        <location filename="../decoderffmpegfactory.cpp" line="203"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>À propos du greffon audio FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="201"/>
+        <location filename="../decoderffmpegfactory.cpp" line="205"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>Greffon audio FFmpeg pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="202"/>
+        <location filename="../decoderffmpegfactory.cpp" line="206"/>
         <source>Compiled against libavformat-%1.%2.%3 and libavcodec-%4.%5.%6</source>
         <translation>Compilé contre libavformat-%1.%2.%3 et libavcodec-%4.%5.%6</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="209"/>
+        <location filename="../decoderffmpegfactory.cpp" line="213"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

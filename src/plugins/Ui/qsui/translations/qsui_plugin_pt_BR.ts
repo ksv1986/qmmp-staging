@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="pt_BR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt_BR" version="2.0">
 <context>
     <name>AboutQSUIDialog</name>
     <message>
@@ -324,7 +322,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
         <source>&amp;Select All</source>
-        <translation>&amp;Marcar tudo</translation>
+        <translation>&amp;Selecionar todos</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
@@ -1351,7 +1349,7 @@
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="583"/>
-        <source>Hightlighted text:</source>
+        <source>Highlighted text:</source>
         <translation>Destaque de texto:</translation>
     </message>
     <message>

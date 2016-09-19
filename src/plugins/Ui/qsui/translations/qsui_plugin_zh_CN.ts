@@ -1351,7 +1351,7 @@
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="583"/>
-        <source>Hightlighted text:</source>
+        <source>Highlighted text:</source>
         <translation>高亮显示的文本：</translation>
     </message>
     <message>

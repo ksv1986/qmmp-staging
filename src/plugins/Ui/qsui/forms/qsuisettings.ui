@@ -580,7 +580,7 @@
              <item row="2" column="3">
               <widget class="QLabel" name="label_12">
                <property name="text">
-                <string>Hightlighted text:</string>
+                <string>Highlighted text:</string>
                </property>
               </widget>
              </item>

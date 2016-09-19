@@ -1388,7 +1388,7 @@
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="583"/>
-        <source>Hightlighted text:</source>
+        <source>Highlighted text:</source>
         <translation>Paryškintas textas:</translation>
     </message>
     <message>

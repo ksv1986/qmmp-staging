@@ -1388,7 +1388,7 @@ Instellingen</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="583"/>
-        <source>Hightlighted text:</source>
+        <source>Highlighted text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

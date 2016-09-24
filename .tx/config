@@ -139,6 +139,12 @@ source_lang = en
 source_file = src/plugins/Input/vorbis/translations/vorbis_plugin_en.ts
 type = QT
 
+[qmmp.archive]
+file_filter = src/plugins/Input/archive/translations/archive_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/Input/archive/translations/archive_plugin_en.ts
+type = QT
+
 [qmmp.wavpack]
 file_filter = src/plugins/Input/wavpack/translations/wavpack_plugin_<lang>.ts
 source_lang = en

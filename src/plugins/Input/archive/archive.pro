@@ -26,7 +26,7 @@ TEMPLATE = lib
 
 QMAKE_LIBDIR += ../../../../lib
 
-#RESOURCES = translations/translations.qrc
+RESOURCES = translations/translations.qrc
 
 unix {
     isEmpty(LIB_DIR):LIB_DIR = /lib

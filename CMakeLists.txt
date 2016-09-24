@@ -159,6 +159,7 @@ PRINT_SUMMARY ("Midi support ......................" USE_MIDI WILDMIDI_FOUND)
 PRINT_SUMMARY ("Game music support ................" USE_GME GME_FOUND)
 PRINT_SUMMARY ("Ogg Opus support .................." USE_OPUS OPUS_FOUND)
 PRINT_SUMMARY ("SID support ......................." USE_SID SIDPLAYFP_FOUND)
+PRINT_SUMMARY ("Archive support ..................." USE_ARCHIVE LIBARCHIVE_FOUND)
 
 MESSAGE("")
 MESSAGE("Output Plugins:")

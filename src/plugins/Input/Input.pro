@@ -51,7 +51,16 @@ contains(CONFIG, WILDMIDI_PLUGIN){
 }
 
 contains(CONFIG, ARCHIVE_PLUGIN){
-  SUBDIRS += archive
+  TAGLIB_VERSION = $$system("pkg-config --modversion taglib")
+  TAGLIB_VERSION = $$split(TAGLIB_VERSION, ".")
+  TAGLIB_VER_MAJ = $$member(TAGLIB_VERSION, 0)
+  TAGLIB_VER_MIN = $$member(TAGLIB_VERSION, 1)
+
+  greaterThan(TAGLIB_VER_MAJ, 1) | equals(TAGLIB_VER_MAJ, 1) {
+    greaterThan(TAGLIB_VER_MIN, 10):SUBDIRS += archive
+  } else {
+    message("Archive plugin requires at least TagLib 1.11")
+  }
 }
 
 }

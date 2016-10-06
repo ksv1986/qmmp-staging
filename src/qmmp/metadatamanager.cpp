@@ -267,7 +267,7 @@ QFileInfoList MetaDataManager::findCoverFiles(QDir dir, int depth) const
     return file_list;
 }
 
-void MetaDataManager::clearCoverChache()
+void MetaDataManager::clearCoverCache()
 {
     m_cover_path_cache.clear();
     m_cached_cover = QPixmap();

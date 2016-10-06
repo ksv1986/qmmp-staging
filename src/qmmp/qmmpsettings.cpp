@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -148,7 +148,7 @@ void QmmpSettings::setCoverSettings(QStringList inc, QStringList exc, int depth,
     m_cover_exclude = exc;
     m_cover_depth = depth;
     m_cover_use_files = use_files;
-    MetaDataManager::instance()->clearCoverChache();
+    MetaDataManager::instance()->clearCoverCache();
     m_timer->start();
     emit coverSettingsChanged();
 }

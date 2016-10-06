@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -95,7 +95,7 @@ public:
     /*!
      * Clears cover path cache.
      */
-    void clearCoverChache();
+    void clearCoverCache();
     /*!
      * Prepares object for usage by another thread to avoid warnings about parent from the different thread
      */

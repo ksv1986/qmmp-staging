@@ -34,7 +34,6 @@ public:
     ~WavPackMetaDataModel();
     QHash<QString, QString> audioProperties();
     QList<TagModel* > tags();
-    QPixmap cover();
     QString coverPath();
 
 private:

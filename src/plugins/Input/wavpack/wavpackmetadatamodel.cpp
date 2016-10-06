@@ -83,15 +83,9 @@ QList<TagModel* > WavPackMetaDataModel::tags()
     return m_tags;
 }
 
-QPixmap WavPackMetaDataModel::cover()
-{
-    QString cPath = coverPath();
-    return cPath.isEmpty() ? QPixmap() : QPixmap(cPath);
-}
-
 QString WavPackMetaDataModel::coverPath()
 {
-    return MetaDataManager::instance()->getCoverPath(m_path);
+    return MetaDataManager::instance()->findCoverFile(m_path);
 }
 
 WavPackFileTagModel::WavPackFileTagModel(WavpackContext *ctx) : TagModel(TagModel::Save)

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,7 +32,6 @@ public:
     CUEMetaDataModel(const QString &url, QObject *parent);
     ~CUEMetaDataModel();
     QHash<QString, QString> audioProperties();
-    QPixmap cover();
     QString coverPath();
 
 private:

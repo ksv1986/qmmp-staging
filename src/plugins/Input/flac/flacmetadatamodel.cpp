@@ -106,6 +106,7 @@ QList<TagModel* > FLACMetaDataModel::tags()
 QPixmap FLACMetaDataModel::cover()
 {
     //embedded cover
+    QPixmap cover;
     FLAC__StreamMetadata *metadata;
     FLAC__metadata_get_picture (qPrintable(m_path),
                                 &metadata,
@@ -114,18 +115,15 @@ QPixmap FLACMetaDataModel::cover()
     if(metadata)
     {
         FLAC__StreamMetadata_Picture *pict = &metadata->data.picture;
-        QPixmap cover;
         cover.loadFromData(QByteArray((char *)pict->data, (int) pict->data_length));
         FLAC__metadata_object_delete(metadata);
-        return cover;
     }
-    QString cPath = coverPath();
-    return cPath.isEmpty() ? QPixmap() : QPixmap(cPath);
+    return cover;
 }
 
 QString FLACMetaDataModel::coverPath()
 {
-    return MetaDataManager::instance()->getCoverPath(m_path);
+    return MetaDataManager::instance()->findCoverFile(m_path);
 }
 
 VorbisCommentModel::VorbisCommentModel(TagLib::Ogg::XiphComment *tag, TagLib::File *file) : TagModel(TagModel::Save)

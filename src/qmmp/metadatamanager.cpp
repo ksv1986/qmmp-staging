@@ -182,6 +182,7 @@ bool MetaDataManager::supports(const QString &fileName) const
 
 QPixmap MetaDataManager::getCover(const QString &url) const
 {
+    QMutexLocker locker(&m_mutex);
     for(int i = 0; i < m_cover_cache.size(); ++i)
     {
         if(m_cover_cache[i]->url == url)
@@ -198,6 +199,7 @@ QPixmap MetaDataManager::getCover(const QString &url) const
 
 QString MetaDataManager::getCoverPath(const QString &url) const
 {
+    QMutexLocker locker(&m_mutex);
     for(int i = 0; i < m_cover_cache.size(); ++i)
     {
         if(m_cover_cache[i]->url == url)

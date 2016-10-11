@@ -153,6 +153,32 @@ PlayListModel *ListWidget::model()
     return m_model;
 }
 
+void ListWidget::setModel(PlayListModel *selected, PlayListModel *previous)
+{
+    if(previous)
+    {
+        previous->setProperty("first_visible", m_first);
+        disconnect(previous, 0, this, 0); //disconnect previous model
+        disconnect(previous,0,m_header,0);
+    }
+    qApp->processEvents();
+    m_model = selected;
+
+    if(m_model->property("first_visible").isValid())
+    {
+        m_first = m_model->property("first_visible").toInt();
+        updateList(PlayListModel::STRUCTURE);
+    }
+    else
+    {
+        m_first = 0;
+        updateList(PlayListModel::STRUCTURE | PlayListModel::CURRENT);
+    }
+    connect (m_model, SIGNAL(currentVisibleRequest()), SLOT(scrollToCurrent()));
+    connect (m_model, SIGNAL(listChanged(int)), SLOT(updateList(int)));
+    connect (m_model, SIGNAL(sortingByColumnFinished(int,bool)), m_header, SLOT(showSortIndicator(int,bool)));
+}
+
 void ListWidget::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
@@ -327,7 +353,6 @@ bool ListWidget::event (QEvent *e)
 
 void ListWidget::updateList(int flags)
 {
-    m_hslider->setVisible(m_header->maxScrollValue() > 0);
     m_hslider->setRange(0, m_header->maxScrollValue());
     m_hslider->setValue(m_header->offset());
 
@@ -341,6 +366,7 @@ void ListWidget::updateList(int flags)
 
     if(flags & PlayListModel::STRUCTURE || flags & PlayListModel::CURRENT)
     {
+        m_scrollBar->blockSignals(true);
         if(m_row_count >= m_model->count())
         {
             m_first = 0;
@@ -361,6 +387,7 @@ void ListWidget::updateList(int flags)
             m_scrollBar->setValue(m_first);
             emit positionChanged(m_first, m_model->count() - m_row_count);
         }
+        m_scrollBar->blockSignals(false);
 
         items = m_model->mid(m_first, m_row_count);
 
@@ -394,6 +421,7 @@ void ListWidget::updateList(int flags)
     int rowWidth = width() + m_header->maxScrollValue() - 10 - scroll_bar_width;
     bool rtl = layoutDirection() == Qt::RightToLeft;
     m_header->setScrollBarWidth(scroll_bar_width);
+    m_hslider->setVisible(m_header->maxScrollValue() > 0);
 
     for(int i = 0; i < items.count(); ++i)
     {

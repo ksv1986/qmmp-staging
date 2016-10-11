@@ -40,6 +40,8 @@ class VisualMenu;
 class PositionSlider;
 class KeyboardManager;
 class QSUiAnalyzer;
+class ListWidget;
+class QSUiTabWidget;
 
 
 /**
@@ -91,11 +93,10 @@ private slots:
 private:
     void closeEvent(QCloseEvent *);
     void hideEvent(QHideEvent *);
+    void createWidgets();
     void createActions();
-    void createButtons();
     void writeSettings();
     bool m_wasMaximized;
-    QString m_lastDir;
     PlayListManager *m_pl_manager;
     Ui::MainWindow m_ui;
     MediaPlayer *m_player;
@@ -112,10 +113,11 @@ private:
     KeyboardManager *m_key_manager;
     QSUiAnalyzer *m_analyzer;
     QToolButton *m_addListButton, *m_tabListMenuButton;
+    ListWidget *m_listWidget;
     MetaDataFormatter m_titleFormatter;
-    int m_balance;
     bool m_update;
     bool m_hideOnClose;
+    QSUiTabWidget *m_tabWidget;
 
 };
 

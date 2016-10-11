@@ -26,6 +26,7 @@
 #include <QMenu>
 #include <QSettings>
 #include <QInputDialog>
+#include <QGridLayout>
 #include <qmmp/soundcore.h>
 #include <qmmp/decoder.h>
 #include <qmmp/metadatamanager.h>
@@ -38,6 +39,7 @@
 #include <qmmpui/uihelper.h>
 #include <qmmpui/configdialog.h>
 #include <qmmpui/qmmpuisettings.h>
+#include "qsuitabbar.h"
 #include "toolbareditor.h"
 #include "actionmanager.h"
 #include "qsuianalyzer.h"
@@ -53,6 +55,7 @@
 #include "coverwidget.h"
 #include "playlistbrowser.h"
 #include "volumeslider.h"
+#include "qsuitabwidget.h"
 #include "equalizer.h"
 
 #define KEY_OFFSET 10000
@@ -60,7 +63,6 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
     m_ui.setupUi(this);
-    m_balance = 0;
     m_update = false;
     m_wasMaximized = false;
     m_titleFormatter.setPattern("%if(%p,%p - %t,%t)");
@@ -76,6 +78,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_ui.actionVisualization->setMenu(m_visMenu);
     m_pl_menu = new QMenu(this); //playlist menu
     new ActionManager(this); //action manager
+    createWidgets(); //widgets
     //status
     connect(m_core, SIGNAL(elapsedChanged(qint64)), SLOT(updatePosition(qint64)));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(showState(Qmmp::State)));
@@ -87,22 +90,15 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     //create tabs
     foreach(PlayListModel *model, m_pl_manager->playLists())
     {
-        ListWidget *list = new ListWidget(model, this);
-        list->setMenu(m_pl_menu);
         if(m_pl_manager->currentPlayList() != model)
-            m_ui.tabWidget->addTab(list, model->name());
+            m_tabWidget->addTab(model->name());
         else
-        {
-            m_ui.tabWidget->addTab(list, "[" + model->name() + "]");
-            m_ui.tabWidget->setCurrentWidget(list);
-        }
-        if(model == m_pl_manager->selectedPlayList())
-        {
-            m_ui.tabWidget->setCurrentWidget(list);
-            m_key_manager->setListWidget(list);
-        }
+            m_tabWidget->addTab("[" + model->name() + "]");
         connect(model, SIGNAL(nameChanged(QString)), SLOT(updateTabs()));
     }
+    m_tabWidget->setCurrentIndex(m_pl_manager->selectedPlayListIndex());
+    m_key_manager->setListWidget(m_listWidget);
+
     m_positionSlider = new PositionSlider(this);
     m_positionSlider->setFocusPolicy(Qt::NoFocus);
     m_positionSlider->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
@@ -116,14 +112,16 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
             SLOT(updateTabs()));
     connect(m_pl_manager, SIGNAL(playListRemoved(int)), SLOT(removeTab(int)));
     connect(m_pl_manager, SIGNAL(playListAdded(int)), SLOT(addTab(int)));
-    connect(m_ui.tabWidget,SIGNAL(currentChanged(int)), m_pl_manager, SLOT(selectPlayList(int)));
-    connect(m_ui.tabWidget, SIGNAL(tabCloseRequested(int)), m_pl_manager, SLOT(removePlayList(int)));
-    connect(m_ui.tabWidget, SIGNAL(tabMoved(int,int)), m_pl_manager, SLOT(move(int,int)));
-    connect(m_ui.tabWidget, SIGNAL(createPlayListRequested()), m_pl_manager, SLOT(createPlayList()));
+    connect(m_pl_manager, SIGNAL(selectedPlayListChanged(PlayListModel*,PlayListModel*)),
+            m_listWidget, SLOT(setModel(PlayListModel*,PlayListModel*)));
+    connect(m_tabWidget,SIGNAL(currentChanged(int)), m_pl_manager, SLOT(selectPlayList(int)));
+    connect(m_tabWidget, SIGNAL(tabCloseRequested(int)), m_pl_manager, SLOT(removePlayList(int)));
+    connect(m_tabWidget, SIGNAL(tabMoved(int,int)), m_pl_manager, SLOT(move(int,int)));
+    connect(m_tabWidget, SIGNAL(createPlayListRequested()), m_pl_manager, SLOT(createPlayList()));
 
-    m_ui.tabWidget->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(m_ui.tabWidget, SIGNAL(customContextMenuRequested(QPoint)), SLOT(showTabMenu(QPoint)));
-    m_tab_menu = new QMenu(m_ui.tabWidget);
+    m_tabWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(m_tabWidget, SIGNAL(customContextMenuRequested(QPoint)), SLOT(showTabMenu(QPoint)));
+    m_tab_menu = new QMenu(m_tabWidget);
     //status bar
     m_timeLabel = new QLabel(this);
     m_statusLabel = new QLabel(this);
@@ -156,7 +154,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_ui.playlistsDockWidget->setWidget(new PlayListBrowser(m_pl_manager, this));
 
     createActions();
-    createButtons();
     readSettings();
     updateStatus();
 }
@@ -241,17 +238,11 @@ void MainWindow::updateTabs()
     {
         PlayListModel *model = m_pl_manager->playListAt(i);
         if(model == m_pl_manager->currentPlayList())
-            m_ui.tabWidget->setTabText(i, "[" + model->name() + "]");
+            m_tabWidget->setTabText(i, "[" + model->name() + "]");
         else
-            m_ui.tabWidget->setTabText(i, model->name());
-        //hack for displaying '&'
-        m_ui.tabWidget->setTabText(i, m_ui.tabWidget->tabText(i).replace("&", "&&"));
-        if(model == m_pl_manager->selectedPlayList())
-        {
-            m_ui.tabWidget->setCurrentIndex(i);
-            m_key_manager->setListWidget(qobject_cast<ListWidget *>(m_ui.tabWidget->widget(i)));
-        }
+            m_tabWidget->setTabText(i, model->name());
     }
+    m_tabWidget->setCurrentIndex(m_pl_manager->selectedPlayListIndex());
 }
 
 void MainWindow::removePlaylist()
@@ -266,17 +257,14 @@ void MainWindow::removePlaylistWithIndex(int index)
 
 void MainWindow::addTab(int index)
 {
-    ListWidget *list = new ListWidget(m_pl_manager->playListAt(index), this);
-    list->setMenu(m_pl_menu);
-    m_ui.tabWidget->insertTab(index, list, m_pl_manager->playListAt(index)->name());
+    m_tabWidget->insertTab(index, m_pl_manager->playListAt(index)->name());
     connect(m_pl_manager->playListAt(index), SIGNAL(nameChanged(QString)), SLOT(updateTabs()));
     updateTabs();
 }
 
 void MainWindow::removeTab(int index)
 {
-    m_ui.tabWidget->widget(index)->deleteLater();
-    m_ui.tabWidget->removeTab(index);
+    m_tabWidget->removeTab(index);
     updateTabs();
 }
 
@@ -403,9 +391,34 @@ void MainWindow::hideEvent(QHideEvent *)
     m_wasMaximized = isMaximized();
 }
 
+void MainWindow::createWidgets()
+{
+    m_tabWidget = new QSUiTabWidget(this);
+    m_listWidget = m_tabWidget->listWidget();
+    m_listWidget->setMenu(m_pl_menu);
+    setCentralWidget(m_tabWidget);
+    //'new playlist' button
+    m_addListButton = new QToolButton(m_tabWidget);
+    m_addListButton->setText("+");
+    m_addListButton->setToolButtonStyle(Qt::ToolButtonIconOnly);
+    m_addListButton->setAutoRaise(true);
+    m_addListButton->setIcon(QIcon::fromTheme("list-add"));
+    m_addListButton->setToolTip(tr("Add new playlist"));
+    connect(m_addListButton, SIGNAL(clicked()), m_pl_manager, SLOT(createPlayList()));
+    //playlist menu button
+    m_tabListMenuButton = new QToolButton(m_tabWidget);
+    m_tabListMenuButton->setToolButtonStyle(Qt::ToolButtonIconOnly);
+    m_tabListMenuButton->setAutoRaise(true);
+    m_tabListMenuButton->setToolTip(tr("Show all tabs"));
+    m_tabListMenuButton->setArrowType(Qt::DownArrow);
+    m_tabListMenuButton->setStyleSheet("QToolButton::menu-indicator { image: none; }");
+    m_tabListMenuButton->setPopupMode(QToolButton::InstantPopup);
+    m_tabListMenuButton->setMenu(m_tabWidget->menu());
+}
+
 void MainWindow::createActions()
 {
-    //prepare cheackable actions
+    //prepare checkable actions
     ACTION(ActionManager::REPEAT_ALL)->setChecked(m_ui_settings->isRepeatableList());
     ACTION(ActionManager::REPEAT_TRACK)->setChecked(m_ui_settings->isRepeatableTrack());
     ACTION(ActionManager::SHUFFLE)->setChecked(m_ui_settings->isShuffle());
@@ -484,7 +497,7 @@ void MainWindow::createActions()
     m_ui.menuView->addAction(m_ui.coverDockWidget->toggleViewAction());
     m_ui.menuView->addAction(m_ui.playlistsDockWidget->toggleViewAction());
     m_ui.menuView->addSeparator();
-    m_ui.menuView->addAction(SET_ACTION(ActionManager::UI_SHOW_TABS, m_ui.tabWidget, SLOT(setTabsVisible(bool))));
+    m_ui.menuView->addAction(SET_ACTION(ActionManager::UI_SHOW_TABS, m_tabWidget->tabBar(), SLOT(setVisible(bool))));
     m_ui.menuView->addAction(SET_ACTION(ActionManager::UI_SHOW_TITLEBARS, this, SLOT(setTitleBarsVisible(bool))));
     m_ui.menuView->addAction(ACTION(ActionManager::PL_SHOW_HEADER));
     m_ui.menuView->addSeparator();
@@ -671,27 +684,6 @@ void MainWindow::createActions()
     addActions(m_key_manager->actions());
 }
 
-void MainWindow::createButtons()
-{
-    //'new playlist' button
-    m_addListButton = new QToolButton(m_ui.tabWidget);
-    m_addListButton->setText("+");
-    m_addListButton->setToolButtonStyle(Qt::ToolButtonIconOnly);
-    m_addListButton->setAutoRaise(true);
-    m_addListButton->setIcon(QIcon::fromTheme("list-add"));
-    m_addListButton->setToolTip(tr("Add new playlist"));
-    connect(m_addListButton, SIGNAL(clicked()), m_pl_manager, SLOT(createPlayList()));
-    //playlist menu button
-    m_tabListMenuButton = new QToolButton(m_ui.tabWidget);
-    m_tabListMenuButton->setToolButtonStyle(Qt::ToolButtonIconOnly);
-    m_tabListMenuButton->setAutoRaise(true);
-    m_tabListMenuButton->setToolTip(tr("Show all tabs"));
-    m_tabListMenuButton->setArrowType(Qt::DownArrow);
-    m_tabListMenuButton->setStyleSheet("QToolButton::menu-indicator { image: none; }");
-    m_tabListMenuButton->setPopupMode(QToolButton::InstantPopup);
-    m_tabListMenuButton->setMenu(m_ui.tabWidget->menu());
-}
-
 void MainWindow::readSettings()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
@@ -733,10 +725,7 @@ void MainWindow::readSettings()
 
     if(m_update)
     {
-        for(int i = 0; i < m_ui.tabWidget->count(); ++i)
-        {
-            qobject_cast<ListWidget *>(m_ui.tabWidget->widget(i))->readSettings();
-        }
+        m_listWidget->readSettings();
         qobject_cast<FileSystemBrowser *> (m_ui.fileSystemDockWidget->widget())->readSettings();
 
         if(ACTION(ActionManager::WM_ALLWAYS_ON_TOP)->isChecked())
@@ -747,7 +736,7 @@ void MainWindow::readSettings()
         if(m_core->state() == Qmmp::Playing || m_core->state() == Qmmp::Paused)
             showMetaData();
 
-        m_ui.tabWidget->readSettings();
+        m_tabWidget->readSettings();
 
         show();
     }
@@ -779,7 +768,7 @@ void MainWindow::readSettings()
 
         state = settings.value("show_tabs", true).toBool();
         ACTION(ActionManager::UI_SHOW_TABS)->setChecked(state);
-        m_ui.tabWidget->setTabsVisible(state);
+        m_tabWidget->setTabsVisible(state);
 
         state = settings.value("block_toolbars", false).toBool();
         ACTION(ActionManager::UI_BLOCK_TOOLBARS)->setChecked(state);
@@ -789,30 +778,30 @@ void MainWindow::readSettings()
     }
 
     m_hideOnClose = settings.value("hide_on_close", false).toBool();
-    m_ui.tabWidget->setTabsClosable(settings.value("pl_tabs_closable", false).toBool());
 
     if(settings.value("pl_show_new_pl_button", false).toBool())
     {
-        m_ui.tabWidget->setCornerWidget(m_addListButton, Qt::TopLeftCorner);
+        m_tabWidget->setCornerWidget(m_addListButton, Qt::TopLeftCorner);
         m_addListButton->setIconSize(QSize(16, 16));
         m_addListButton->setVisible(true);
     }
     else
     {
         m_addListButton->setVisible(false);
-        m_ui.tabWidget->setCornerWidget(0, Qt::TopLeftCorner);
+        m_tabWidget->setCornerWidget(0, Qt::TopLeftCorner);
     }
     if(settings.value("pl_show_tab_list_menu", false).toBool())
     {
-        m_ui.tabWidget->setCornerWidget(m_tabListMenuButton, Qt::TopRightCorner);
+        m_tabWidget->setCornerWidget(m_tabListMenuButton, Qt::TopRightCorner);
         m_tabListMenuButton->setIconSize(QSize(16, 16));
         m_tabListMenuButton->setVisible(true);
     }
     else
     {
         m_tabListMenuButton->setVisible(false);
-        m_ui.tabWidget->setCornerWidget(0, Qt::TopRightCorner);
+        m_tabWidget->setCornerWidget(0, Qt::TopRightCorner);
     }
+
     settings.endGroup();
     addActions(m_uiHelper->actions(UiHelper::TOOLS_MENU));
     addActions(m_uiHelper->actions(UiHelper::PLAYLIST_MENU));
@@ -820,16 +809,12 @@ void MainWindow::readSettings()
 
 void MainWindow::showTabMenu(QPoint pos)
 {
-    QTabBar *tabBar = qobject_cast<QTabBar *> (m_ui.tabWidget->childAt(pos));
-    if(!tabBar)
-        return;
-
-    int index = tabBar->tabAt(pos);
+    int index = m_tabWidget->tabBar()->tabAt(pos);
     if(index == -1)
         return;
 
     m_pl_manager->selectPlayList(index);
-    m_tab_menu->popup(m_ui.tabWidget->mapToGlobal(pos));
+    m_tab_menu->popup(m_tabWidget->mapToGlobal(pos));
 }
 
 void MainWindow::writeSettings()

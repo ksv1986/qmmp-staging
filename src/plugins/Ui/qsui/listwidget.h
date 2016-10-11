@@ -67,6 +67,7 @@ public:
     PlayListModel *model();
 
 public slots:
+    void setModel(PlayListModel *selected, PlayListModel *previous);
     void readSettings();
     void updateList(int flags);
     void scroll(int); //0-99

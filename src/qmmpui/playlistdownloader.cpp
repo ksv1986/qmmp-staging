@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012 by Ilya Kotov                                      *
+ *   Copyright (C) 2012-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -50,7 +50,7 @@ void PlayListDownloader::start(const QUrl &url)
 {
     if(!PlayListParser::findByUrl(url)) //is it playlist?
     {
-        emit done(QStringList() << url.toString()); //just send initial URL
+        emit done(QStringList() << QString::fromLatin1(url.toEncoded())); //just send initial URL
         return;
     }
     m_url = url;

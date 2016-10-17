@@ -274,6 +274,7 @@ void HttpStreamReader::abort()
         curl_easy_cleanup(m_handle);
         m_handle = 0;
     }
+    QIODevice::close();
 }
 
 qint64 HttpStreamReader::bytesAvailable() const
@@ -285,6 +286,7 @@ void HttpStreamReader::run()
 {
     qDebug("HttpStreamReader: starting download thread");
     char errorBuffer[CURL_ERROR_SIZE];
+    memset(errorBuffer, 0, sizeof(errorBuffer));
     m_handle = curl_easy_init();
     //proxy
     if (QmmpSettings::instance()->isProxyEnabled())
@@ -351,8 +353,8 @@ void HttpStreamReader::run()
     {
         setErrorString(errorBuffer);
         emit error();
+        QIODevice::close();
     }
-    QIODevice::close();
 }
 
 qint64 HttpStreamReader::readBuffer(char* data, qint64 maxlen)

@@ -395,9 +395,17 @@ void QmmpAudioEngine::run()
         }
         //metadata
         if(m_decoder->hasMetaData())
-            StateHandler::instance()->dispatch(m_decoder->takeMetaData());
+        {
+            QMap<Qmmp::MetaData, QString> m = m_decoder->takeMetaData();
+            m[Qmmp::URL] = m_inputs[m_decoder]->url();
+            StateHandler::instance()->dispatch(m);
+        }
         if(m_inputs[m_decoder]->hasMetaData())
-            StateHandler::instance()->dispatch(m_inputs[m_decoder]->takeMetaData());
+        {
+            QMap<Qmmp::MetaData, QString> m = m_inputs[m_decoder]->takeMetaData();
+            m[Qmmp::URL] = m_inputs[m_decoder]->url();
+            StateHandler::instance()->dispatch(m);
+        }
         if(m_inputs[m_decoder]->hasStreamInfo())
             StateHandler::instance()->dispatch(m_inputs[m_decoder]->takeStreamInfo());
         //wait more data

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -78,7 +78,7 @@ FileSystemBrowser::~FileSystemBrowser()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
-    settings.setValue("fsbrowser_current_dir", m_model->rootPath());
+    settings.setValue("fsbrowser_current_dir", m_model->rootDirectory().canonicalPath());
     settings.endGroup();
 }
 
@@ -132,7 +132,7 @@ void FileSystemBrowser::addToPlayList()
 void FileSystemBrowser::selectDirectory()
 {
     QString dir = FileDialog::getExistingDirectory(qApp->activeWindow(),
-                                                   tr("Select Directory"), m_model->rootPath());
+                                                   tr("Select Directory"), m_model->rootDirectory().canonicalPath());
     if(!dir.isEmpty())
         setCurrentDirectory(dir);
 }

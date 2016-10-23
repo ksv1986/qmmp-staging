@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -124,7 +124,7 @@ QString PlayListOption::executeCommand(const QString& opt_str, const QStringList
     }
     else if(opt_str == "--pl-repeat-toggle")
     {
-        ui_settings->setRepeatableTrack(!ui_settings->isRepeatableTrack());
+        ui_settings->setRepeatableList(!ui_settings->isRepeatableList());
     }
     else if(opt_str == "--pl-shuffle-toggle")
     {

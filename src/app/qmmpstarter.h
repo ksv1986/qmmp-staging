@@ -47,6 +47,9 @@ public:
     QMMPStarter();
     ~QMMPStarter();
 
+    bool isFinished() const;
+    int exitCode() const;
+
 
 private slots:
     /*!
@@ -76,6 +79,8 @@ private:
     BuiltinCommandLineOption* m_option_manager;
     QLocalServer *m_server;
     QLocalSocket *m_socket;
+    bool m_finished;
+    bool m_exit_code;
 #ifdef Q_OS_WIN
     HANDLE m_named_mutex;
 #endif

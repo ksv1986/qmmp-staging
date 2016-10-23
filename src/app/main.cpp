@@ -63,7 +63,9 @@ int main(int argc, char *argv[])
     a.installTranslator(&qt_translator);
 
     QMMPStarter starter;
-    Q_UNUSED(starter)
+
+    if(starter.isFinished())
+        return starter.exitCode();
 
     a.setQuitOnLastWindowClosed(false);
     return a.exec();

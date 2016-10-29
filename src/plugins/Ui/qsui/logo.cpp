@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -207,7 +207,7 @@ void Logo::processPreset3()
 {
     m_lines.clear();
     mutex()->lock();
-    QString str = QString("...%1...").arg(Qmmp::strVersion().left(5));
+    QString str = QString("...%1...").arg(Qmmp::strVersion().left(6));
     int at = m_value % str.size();
 
     foreach(QString line, m_source_lines)

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -254,7 +254,7 @@ void MplayerEngine::readStdOut()
 
 void MplayerEngine::onError(QProcess::ProcessError error)
 {
-    if(error == QProcess::FailedToStart || error == QProcess::FailedToStart)
+    if(error == QProcess::FailedToStart || error == QProcess::Crashed)
         StateHandler::instance()->dispatch(Qmmp::FatalError);
     qWarning("MplayerEngine: process error: %d", error);
 }

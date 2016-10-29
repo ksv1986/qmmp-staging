@@ -118,6 +118,7 @@ HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) 
     m_handle = 0;
     m_metacount = 0;
     m_meta_sent = false;
+    m_ready = false;
     m_thread = new DownloadThread(this);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("HTTP");

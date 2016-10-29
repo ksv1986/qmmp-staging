@@ -53,6 +53,7 @@ OutputWriter::OutputWriter (QObject* parent) : QThread (parent)
     m_format_converter = 0;
     m_channel_converter = 0;
     m_output_buf = 0;
+    m_output_size = 0;
 }
 
 OutputWriter::~OutputWriter()

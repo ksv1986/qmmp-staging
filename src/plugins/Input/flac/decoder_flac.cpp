@@ -240,6 +240,7 @@ DecoderFLAC::DecoderFLAC(const QString &path, QIODevice *i)
     m_sz = 0;
     m_buf = 0;
     m_offset = 0;
+    m_track = 0;
 }
 
 

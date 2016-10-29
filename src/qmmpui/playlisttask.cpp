@@ -108,6 +108,7 @@ PlayListTask::PlayListTask(QObject *parent) : QThread(parent)
     m_current_track = 0;
     m_column = 0;
     m_task = EMPTY;
+    m_sort_mode = PlayListModel::TITLE;
 
     m_sort_keys.insert(PlayListModel::TITLE, Qmmp::TITLE);
     m_sort_keys.insert(PlayListModel::DISCNUMBER, Qmmp::DISCNUMBER);

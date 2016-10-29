@@ -86,9 +86,8 @@ QString WindowSystem::netWindowManagerName()
     }
 
     XFree(retValue2);
-    retValue2 = NULL;
-
     retValue2 = getWindowProperty(win, "_NET_WM_NAME");
+
     XFree(retValue1);
     if (retValue2 == NULL)
         return QString();
@@ -156,7 +155,6 @@ unsigned char* WindowSystem::getWindowProperty(WId win, const char* prop)
   if (reqAtom == None)
     return NULL;
 
-  int retCheck = None;
   Atom retType = None;
   int retFormat = 0;
   unsigned long retItems = 0UL;
@@ -164,7 +162,7 @@ unsigned char* WindowSystem::getWindowProperty(WId win, const char* prop)
   unsigned char* retValue = NULL;
 
   // Check if the property exists and calculate its length.
-  retCheck = XGetWindowProperty(dsp, win,
+  int retCheck = XGetWindowProperty(dsp, win,
       reqAtom, 0L, 0L, False, AnyPropertyType,
       &retType, &retFormat, &retItems, &retMoreBytes, &retValue);
 

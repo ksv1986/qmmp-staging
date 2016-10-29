@@ -31,7 +31,7 @@ PixmapWidget::PixmapWidget(QWidget *parent)
 PixmapWidget::~PixmapWidget()
 {}
 
-void PixmapWidget::setPixmap(const QPixmap pixmap, bool fixed_size)
+void PixmapWidget::setPixmap(const QPixmap &pixmap, bool fixed_size)
 {
     m_pixmap = pixmap;
     if(fixed_size)

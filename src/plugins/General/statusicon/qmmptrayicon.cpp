@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -33,6 +33,9 @@
 QmmpTrayIcon::QmmpTrayIcon(QObject *parent)
         : QSystemTrayIcon(parent)
 {
+#ifdef Q_WS_X11
+    m_showNiceToolTip = false;
+#endif
 }
 
 

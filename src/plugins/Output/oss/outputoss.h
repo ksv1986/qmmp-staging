@@ -46,7 +46,6 @@ private:
     QString m_audio_device;
 
     int m_audio_fd;
-    long bl, br;
 };
 
 class VolumeOSS : public Volume

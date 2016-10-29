@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -51,6 +51,9 @@ DecoderModPlug::DecoderModPlug(const QString &path) : Decoder(0)
     m_soundFile = 0;
     m_sampleSize = 0;
     m_instance = this;
+    m_bps = 0;
+    m_preampFactor = 0.0f;
+    m_usePreamp = false;
 }
 
 DecoderModPlug::~DecoderModPlug()

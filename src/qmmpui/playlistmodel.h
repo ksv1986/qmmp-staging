@@ -50,7 +50,8 @@ struct SimpleSelection
      */
     SimpleSelection()
     {
-        ;
+        m_bottom = -1;
+        m_top = 1;
     }
     /*!
      * Returns \p true if this selection is valid; otherwise returns returns \p false.

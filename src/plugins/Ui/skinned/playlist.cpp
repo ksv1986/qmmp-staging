@@ -631,7 +631,7 @@ void PlayList::generateCopySelectedMenu()
 
     foreach(QString name, m_pl_manager->playListNames())
     {
-        action = m_copySelectedMenu->addAction("&"+name.replace("&", "&&"));
+        m_copySelectedMenu->addAction("&"+name.replace("&", "&&"));
     }
 }
 

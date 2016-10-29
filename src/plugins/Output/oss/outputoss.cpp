@@ -122,7 +122,7 @@ bool OutputOSS::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat forma
 
     ioctl(m_audio_fd, SNDCTL_DSP_RESET, 0);
 
-    configure(freq, map, format);
+    configure(freq, ChannelMap(chan), format);
     return true;
 }
 

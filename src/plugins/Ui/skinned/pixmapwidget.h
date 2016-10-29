@@ -35,7 +35,7 @@ public:
 
     virtual ~PixmapWidget();
 
-    virtual void setPixmap(const QPixmap, bool fixed_size = false);
+    virtual void setPixmap(const QPixmap &pixmap, bool fixed_size = false);
 
 protected:
     void paintEvent ( QPaintEvent * event );

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -64,7 +64,6 @@ private slots:
     void startMplayerProcess();
 
 private:
-    int mplayer_pipe[2];
     QStringList m_args;
     QProcess *m_process;
     int m_bitrate;

@@ -1,7 +1,7 @@
 /***************************************************************************
  *   Based on Licq                                                         *
  *   Copyright (C) 2006-2009 Licq developers                               *
- *   Copyright (C) 2011-2015 Ilya Kotov                                    *
+ *   Copyright (C) 2011-2016 Ilya Kotov                                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -65,16 +65,13 @@ QString WindowSystem::netWindowManagerName()
     Display* dsp = QX11Info::display();
     WId root = DefaultRootWindow(dsp);
 
-    unsigned char* retValue1 = NULL;
-    unsigned char* retValue2 = NULL;
-
-    retValue1 = getWindowProperty(root, "_NET_SUPPORTING_WM_CHECK");
+    unsigned char* retValue1 = getWindowProperty(root, "_NET_SUPPORTING_WM_CHECK");
     if (retValue1 == NULL)
         return QString();
 
     WId win = *(reinterpret_cast<unsigned long*>(retValue1));
 
-    retValue2 = getWindowProperty(win, "_NET_SUPPORTING_WM_CHECK");
+    unsigned char* retValue2 = getWindowProperty(win, "_NET_SUPPORTING_WM_CHECK");
     if (retValue2 == NULL)
     {
         XFree(retValue1);

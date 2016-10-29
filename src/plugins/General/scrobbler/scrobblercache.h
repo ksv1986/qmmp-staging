@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,7 +38,7 @@ public:
 
     ~SongInfo();
 
-    void operator=(const SongInfo &info);
+    SongInfo & operator=(const SongInfo &info);
     bool operator==(const SongInfo &info);
     bool operator!=(const SongInfo &info);
 

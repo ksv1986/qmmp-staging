@@ -40,6 +40,7 @@ Converter::Converter(QObject *parent) : QObject(parent), QRunnable()
     m_user_stop = false;
     m_decoder = 0;
     m_input = 0;
+    m_row = -1;
 }
 
 Converter::~Converter()

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -42,11 +42,12 @@ SongInfo::SongInfo(const SongInfo &other)
 SongInfo::~SongInfo()
 {}
 
-void SongInfo::operator=(const SongInfo &info)
+SongInfo & SongInfo::operator=(const SongInfo &info)
 {
     m_metadata = info.metaData();
     m_length = info.length();
     m_start_ts = info.timeStamp();
+    return *this;
 }
 
 bool SongInfo::operator==(const SongInfo &info)

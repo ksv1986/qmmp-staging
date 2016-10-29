@@ -190,11 +190,10 @@ void SettingsDialog::getCardDevices(int card)
 void SettingsDialog::getMixerDevices(QString card)
 {
     ui.mixerDeviceComboBox->clear();
-    int err;
     snd_mixer_t *mixer;
     snd_mixer_elem_t *current;
 
-    if ((err = getMixer(&mixer, card)) < 0)
+    if (getMixer(&mixer, card) < 0)
         return;
 
     current = snd_mixer_first_elem(mixer);

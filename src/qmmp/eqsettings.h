@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -65,7 +65,7 @@ public:
     /*!
      * Assigns equalizer settings \b s to this settings.
      */
-    void operator=(const EqSettings &s);
+    EqSettings &operator=(const EqSettings &s);
     /*!
      * Returns \b true if equalizer settins \b s is equal to this settings; otherwise returns false.
      */

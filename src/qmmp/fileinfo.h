@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2009 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -47,7 +47,7 @@ public:
     /*!
      * Makes a copy of the given \b info
      */
-    void operator=(const FileInfo &info);
+    FileInfo &operator=(const FileInfo &info);
     /*!
      * Returns \b true if this FileInfo object refers to \b info; otherwise returns \b false.
      */

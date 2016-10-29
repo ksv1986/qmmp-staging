@@ -49,7 +49,7 @@ public:
     /*!
      * Assigns audio parameters \b p to this parameters.
      */
-    void operator=(const AudioParameters &p);
+    AudioParameters &operator=(const AudioParameters &p);
     /*!
      * Returns \b true if parameters \b p is equal to this parameters; otherwise returns \b false.
      */

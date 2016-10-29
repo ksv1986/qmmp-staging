@@ -44,12 +44,13 @@ AudioParameters::AudioParameters(quint32 srate, const ChannelMap &map, Qmmp::Aud
     m_sz = sampleSize(format);
 }
 
-void AudioParameters::operator=(const AudioParameters &p)
+AudioParameters &AudioParameters::operator=(const AudioParameters &p)
 {
     m_srate = p.sampleRate();
     m_chan_map = p.channelMap();
     m_format = p.format();
     m_sz = p.sampleSize();
+    return *this;
 }
 
 bool AudioParameters::operator==(const AudioParameters &p) const

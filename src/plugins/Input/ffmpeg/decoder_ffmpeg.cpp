@@ -376,26 +376,23 @@ qint64 DecoderFFmpeg::ffmpeg_decode()
 #endif
 
 #if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
-        int err = 0;
-        if((err = avcodec_send_packet(c, &m_temp_pkt)) < 0)
+        int err = avcodec_send_packet(c, &m_temp_pkt);
+        if(err != 0 && err != AVERROR(EAGAIN) && err != AVERROR(EINVAL))
         {
-            if(err == EAGAIN) //try again
-                return 0;
-            else
-            {
-                qWarning("DecoderFFmpeg: avcodec_send_packet error: %d", err);
-                return -1;
-            }
+            qWarning("DecoderFFmpeg: avcodec_send_packet error: %d", err);
+            return -1;
         }
+
+        int l = (err == AVERROR(EAGAIN)) ? 0 : m_temp_pkt.size;
+
         if((err = avcodec_receive_frame(c, m_decoded_frame)) < 0)
         {
-            if(err == EAGAIN) //try again
+            if(err == AVERROR(EAGAIN)) //try again
                 return 0;
             qWarning("DecoderFFmpeg: avcodec_receive_frame error: %d", err);
             return -1;
         }
         got_frame = av_frame_get_pkt_size(m_decoded_frame);
-        int l = m_temp_pkt.size;
 #else
         int l = avcodec_decode_audio4(c, m_decoded_frame, &got_frame, &m_temp_pkt);
 #endif
@@ -443,7 +440,7 @@ void DecoderFFmpeg::seek(qint64 pos)
 
 void DecoderFFmpeg::fillBuffer()
 {
-    while(!m_output_at)
+    while(!m_output_at || m_skipBytes > 0)
     {
         if(!m_temp_pkt.size)
         {
@@ -478,8 +475,6 @@ void DecoderFFmpeg::fillBuffer()
                                                  ic->streams[m_pkt.stream_index]->time_base.den);
                 m_skipBytes =  (m_seekTime - rescaledPts) * c->sample_rate * 4 / AV_TIME_BASE;
             }
-            else
-                m_skipBytes = 0;
             m_seekTime = 0;
         }
 #if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav 10

@@ -4,55 +4,55 @@
 <context>
     <name>QmmpFileDialog</name>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="13"/>
+        <location filename="../qmmpfiledialog.ui" line="14"/>
         <source>Add Files</source>
         <translation>הוסף קבצים</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="37"/>
+        <location filename="../qmmpfiledialog.ui" line="44"/>
         <source>Up</source>
         <translation>מעלה</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="40"/>
-        <location filename="../qmmpfiledialog.ui" line="53"/>
-        <location filename="../qmmpfiledialog.ui" line="72"/>
-        <location filename="../qmmpfiledialog.ui" line="97"/>
+        <location filename="../qmmpfiledialog.ui" line="47"/>
+        <location filename="../qmmpfiledialog.ui" line="60"/>
+        <location filename="../qmmpfiledialog.ui" line="79"/>
+        <location filename="../qmmpfiledialog.ui" line="104"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="50"/>
+        <location filename="../qmmpfiledialog.ui" line="57"/>
         <source>List view</source>
         <translation>תצוגת רשימה</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="69"/>
+        <location filename="../qmmpfiledialog.ui" line="76"/>
         <source>Detailed view</source>
         <translation>תצוגה מפורטת</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="94"/>
+        <location filename="../qmmpfiledialog.ui" line="101"/>
         <source>Close dialog on add</source>
         <translation>סגור דו שיח בעת הוספה</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="177"/>
+        <location filename="../qmmpfiledialog.ui" line="184"/>
         <source>File name:</source>
         <translation>שם קובץ:</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="193"/>
+        <location filename="../qmmpfiledialog.ui" line="200"/>
         <source>Add</source>
         <translation>הוסף</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="200"/>
+        <location filename="../qmmpfiledialog.ui" line="207"/>
         <source>Files of type:</source>
         <translation>קבצים מטיפוס:</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="226"/>
+        <location filename="../qmmpfiledialog.ui" line="233"/>
         <source>Close</source>
         <translation>סגור</translation>
     </message>

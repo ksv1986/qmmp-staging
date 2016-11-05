@@ -82,62 +82,62 @@
 <context>
     <name>QMMPStarter</name>
     <message>
-        <location filename="../qmmpstarter.cpp" line="88"/>
+        <location filename="../qmmpstarter.cpp" line="93"/>
         <source>Unknown command</source>
         <translation>不明なコマンドです</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="315"/>
+        <location filename="../qmmpstarter.cpp" line="342"/>
         <source>Usage: qmmp [options] [files]</source>
         <translation>使用法: qmmp [オプション] [ファイル名:複数可]</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="316"/>
+        <location filename="../qmmpstarter.cpp" line="343"/>
         <source>Options:</source>
         <translation>オプション:</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="320"/>
+        <location filename="../qmmpstarter.cpp" line="347"/>
         <source>Don&apos;t start the application</source>
         <translation>アプリケーションを始動しない</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="321"/>
+        <location filename="../qmmpstarter.cpp" line="348"/>
         <source>Display this text and exit</source>
         <translation>このメッセージを表示して終了</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="322"/>
+        <location filename="../qmmpstarter.cpp" line="349"/>
         <source>Print version number and exit</source>
         <translation>バージョン番号を表示して終了</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="323"/>
+        <location filename="../qmmpstarter.cpp" line="350"/>
         <source>Ideas, patches, bugreports send to forkotov02@hotmail.ru</source>
         <translation>名案, パッチ, バグ報告は forkotov02@hotmail.ru まで</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="326"/>
+        <location filename="../qmmpstarter.cpp" line="353"/>
         <source>Command Line Help</source>
         <translation>コマンド行ヘルプ</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="339"/>
+        <location filename="../qmmpstarter.cpp" line="366"/>
         <source>QMMP version: %1</source>
         <translation>QMMP のバージョン: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="340"/>
+        <location filename="../qmmpstarter.cpp" line="367"/>
         <source>Compiled with Qt version: %1</source>
         <translation>コンパイルに使用した Qt のバージョン: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="341"/>
+        <location filename="../qmmpstarter.cpp" line="368"/>
         <source>Using Qt version: %1</source>
         <translation>現在使用中の Qt のバージョン: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="344"/>
+        <location filename="../qmmpstarter.cpp" line="371"/>
         <source>Qmmp Version</source>
         <translation>QMMP バージョン</translation>
     </message>

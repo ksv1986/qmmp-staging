@@ -4,55 +4,55 @@
 <context>
     <name>QmmpFileDialog</name>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="13"/>
+        <location filename="../qmmpfiledialog.ui" line="14"/>
         <source>Add Files</source>
         <translation>Ajouter des fichiers</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="37"/>
+        <location filename="../qmmpfiledialog.ui" line="44"/>
         <source>Up</source>
         <translation>Haut</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="40"/>
-        <location filename="../qmmpfiledialog.ui" line="53"/>
-        <location filename="../qmmpfiledialog.ui" line="72"/>
-        <location filename="../qmmpfiledialog.ui" line="97"/>
+        <location filename="../qmmpfiledialog.ui" line="47"/>
+        <location filename="../qmmpfiledialog.ui" line="60"/>
+        <location filename="../qmmpfiledialog.ui" line="79"/>
+        <location filename="../qmmpfiledialog.ui" line="104"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="50"/>
+        <location filename="../qmmpfiledialog.ui" line="57"/>
         <source>List view</source>
         <translation>Vue par liste</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="69"/>
+        <location filename="../qmmpfiledialog.ui" line="76"/>
         <source>Detailed view</source>
         <translation>Vue détaillée</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="94"/>
+        <location filename="../qmmpfiledialog.ui" line="101"/>
         <source>Close dialog on add</source>
         <translation>Fermer le dialogue après ajout</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="177"/>
+        <location filename="../qmmpfiledialog.ui" line="184"/>
         <source>File name:</source>
         <translation>Nom du fichier :</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="193"/>
+        <location filename="../qmmpfiledialog.ui" line="200"/>
         <source>Add</source>
         <translation>Ajouter</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="200"/>
+        <location filename="../qmmpfiledialog.ui" line="207"/>
         <source>Files of type:</source>
         <translation>Fichiers de type :</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="226"/>
+        <location filename="../qmmpfiledialog.ui" line="233"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>

@@ -4,55 +4,55 @@
 <context>
     <name>QmmpFileDialog</name>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="13"/>
+        <location filename="../qmmpfiledialog.ui" line="14"/>
         <source>Add Files</source>
         <translation>Přidat soubory</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="37"/>
+        <location filename="../qmmpfiledialog.ui" line="44"/>
         <source>Up</source>
         <translation>Nahoru</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="40"/>
-        <location filename="../qmmpfiledialog.ui" line="53"/>
-        <location filename="../qmmpfiledialog.ui" line="72"/>
-        <location filename="../qmmpfiledialog.ui" line="97"/>
+        <location filename="../qmmpfiledialog.ui" line="47"/>
+        <location filename="../qmmpfiledialog.ui" line="60"/>
+        <location filename="../qmmpfiledialog.ui" line="79"/>
+        <location filename="../qmmpfiledialog.ui" line="104"/>
         <source>...</source>
         <translation>…</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="50"/>
+        <location filename="../qmmpfiledialog.ui" line="57"/>
         <source>List view</source>
         <translation>Seznam</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="69"/>
+        <location filename="../qmmpfiledialog.ui" line="76"/>
         <source>Detailed view</source>
         <translation>Podrobnosti</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="94"/>
+        <location filename="../qmmpfiledialog.ui" line="101"/>
         <source>Close dialog on add</source>
         <translation>Zavřít dialog po přidání</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="177"/>
+        <location filename="../qmmpfiledialog.ui" line="184"/>
         <source>File name:</source>
         <translation>Název souboru:</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="193"/>
+        <location filename="../qmmpfiledialog.ui" line="200"/>
         <source>Add</source>
         <translation>Přidat</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="200"/>
+        <location filename="../qmmpfiledialog.ui" line="207"/>
         <source>Files of type:</source>
         <translation>Soubory typu:</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="226"/>
+        <location filename="../qmmpfiledialog.ui" line="233"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>

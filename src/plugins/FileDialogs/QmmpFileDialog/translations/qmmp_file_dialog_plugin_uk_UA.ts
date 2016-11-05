@@ -4,55 +4,55 @@
 <context>
     <name>QmmpFileDialog</name>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="13"/>
+        <location filename="../qmmpfiledialog.ui" line="14"/>
         <source>Add Files</source>
         <translation>Додати файли</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="37"/>
+        <location filename="../qmmpfiledialog.ui" line="44"/>
         <source>Up</source>
         <translation>Вгору</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="40"/>
-        <location filename="../qmmpfiledialog.ui" line="53"/>
-        <location filename="../qmmpfiledialog.ui" line="72"/>
-        <location filename="../qmmpfiledialog.ui" line="97"/>
+        <location filename="../qmmpfiledialog.ui" line="47"/>
+        <location filename="../qmmpfiledialog.ui" line="60"/>
+        <location filename="../qmmpfiledialog.ui" line="79"/>
+        <location filename="../qmmpfiledialog.ui" line="104"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="50"/>
+        <location filename="../qmmpfiledialog.ui" line="57"/>
         <source>List view</source>
         <translation>Перегляд списком</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="69"/>
+        <location filename="../qmmpfiledialog.ui" line="76"/>
         <source>Detailed view</source>
         <translation>Деталізований перегляд</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="94"/>
+        <location filename="../qmmpfiledialog.ui" line="101"/>
         <source>Close dialog on add</source>
         <translation>Закрити після додавання</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="177"/>
+        <location filename="../qmmpfiledialog.ui" line="184"/>
         <source>File name:</source>
         <translation>Ім&apos;я файлу:</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="193"/>
+        <location filename="../qmmpfiledialog.ui" line="200"/>
         <source>Add</source>
         <translation>Додати</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="200"/>
+        <location filename="../qmmpfiledialog.ui" line="207"/>
         <source>Files of type:</source>
         <translation>Типи файлів:</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="226"/>
+        <location filename="../qmmpfiledialog.ui" line="233"/>
         <source>Close</source>
         <translation>Закрити</translation>
     </message>

@@ -40,22 +40,22 @@
         <translation>Bildirim Eklentisi Ayarları</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="75"/>
+        <location filename="../settingsdialog.ui" line="85"/>
         <source>Transparency:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="107"/>
+        <location filename="../settingsdialog.cpp" line="109"/>
         <source>Notification Template</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="378"/>
+        <location filename="../settingsdialog.ui" line="388"/>
         <source>Psi Notification</source>
         <translation>Psi Bildirimi</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="390"/>
+        <location filename="../settingsdialog.ui" line="400"/>
         <source>Enable Psi notification</source>
         <translation>Psi bildirimi etkinleştir</translation>
     </message>
@@ -80,23 +80,33 @@
         <translation>Ses değişimi bildirimi</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="68"/>
+        <location filename="../settingsdialog.ui" line="78"/>
         <location filename="../settingsdialog.ui" line="279"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="219"/>
+        <location filename="../settingsdialog.ui" line="229"/>
         <source>Position</source>
         <translation>Konum</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="241"/>
+        <location filename="../settingsdialog.ui" line="251"/>
         <source>Edit template</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="41"/>
+        <location filename="../settingsdialog.ui" line="375"/>
+        <source>Disable notifications when another application is in the Full Screen Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="378"/>
+        <source>Disable for full screen windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="51"/>
         <source>Font:</source>
         <translation>Шрифт:</translation>
     </message>
@@ -111,7 +121,7 @@
         <translation>Задержка (мс):</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="61"/>
+        <location filename="../settingsdialog.ui" line="71"/>
         <source>...</source>
         <translation></translation>
     </message>

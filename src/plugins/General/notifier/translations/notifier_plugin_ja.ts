@@ -55,12 +55,22 @@
         <translation>曲名通知</translation>
     </message>
     <message>
+        <location filename="../settingsdialog.ui" line="375"/>
+        <source>Disable notifications when another application is in the Full Screen Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="378"/>
+        <source>Disable for full screen windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="325"/>
         <source>Volume change notification</source>
         <translation>音量変化通知</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="41"/>
+        <location filename="../settingsdialog.ui" line="51"/>
         <source>Font:</source>
         <translation>書体:</translation>
     </message>
@@ -70,28 +80,28 @@
         <translation>待ち時間 (ミリ秒):</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="75"/>
+        <location filename="../settingsdialog.ui" line="85"/>
         <source>Transparency:</source>
         <translation>透明度:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="241"/>
+        <location filename="../settingsdialog.ui" line="251"/>
         <source>Edit template</source>
         <translation>ひな型を編集</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="68"/>
+        <location filename="../settingsdialog.ui" line="78"/>
         <location filename="../settingsdialog.ui" line="279"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="219"/>
+        <location filename="../settingsdialog.ui" line="229"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="61"/>
+        <location filename="../settingsdialog.ui" line="71"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -101,17 +111,17 @@
         <translation>表紙画像の大きさ:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="107"/>
+        <location filename="../settingsdialog.cpp" line="109"/>
         <source>Notification Template</source>
         <translation>通知のひな形</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="378"/>
+        <location filename="../settingsdialog.ui" line="388"/>
         <source>Psi Notification</source>
         <translation>PSI 通知</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="390"/>
+        <location filename="../settingsdialog.ui" line="400"/>
         <source>Enable Psi notification</source>
         <translation>PSI 通知を有効にする</translation>
     </message>

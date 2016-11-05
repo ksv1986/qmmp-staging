@@ -45,33 +45,33 @@
         <translation>Обавјештења на радној површи</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="41"/>
+        <location filename="../settingsdialog.ui" line="51"/>
         <source>Font:</source>
         <translation>Фонт:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="61"/>
+        <location filename="../settingsdialog.ui" line="71"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="68"/>
+        <location filename="../settingsdialog.ui" line="78"/>
         <location filename="../settingsdialog.ui" line="279"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="75"/>
+        <location filename="../settingsdialog.ui" line="85"/>
         <source>Transparency:</source>
         <translation>Прозирност:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="219"/>
+        <location filename="../settingsdialog.ui" line="229"/>
         <source>Position</source>
         <translation>Положај</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="241"/>
+        <location filename="../settingsdialog.ui" line="251"/>
         <source>Edit template</source>
         <translation>Уреди шаблон</translation>
     </message>
@@ -101,17 +101,27 @@
         <translation>Обавјештење о промјени нумере</translation>
     </message>
     <message>
+        <location filename="../settingsdialog.ui" line="375"/>
+        <source>Disable notifications when another application is in the Full Screen Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="378"/>
+        <source>Disable for full screen windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="388"/>
         <source>Psi Notification</source>
         <translation>Пси обавјештења</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="390"/>
+        <location filename="../settingsdialog.ui" line="400"/>
         <source>Enable Psi notification</source>
         <translation>Омогући Пси обавјештења</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="107"/>
+        <location filename="../settingsdialog.cpp" line="109"/>
         <source>Notification Template</source>
         <translation>Шаблон обавјештења</translation>
     </message>

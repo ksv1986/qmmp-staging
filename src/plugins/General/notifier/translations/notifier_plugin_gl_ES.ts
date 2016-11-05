@@ -45,33 +45,33 @@
         <translation>Notificación de escritorio</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="41"/>
+        <location filename="../settingsdialog.ui" line="51"/>
         <source>Font:</source>
         <translation>Fonte:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="61"/>
+        <location filename="../settingsdialog.ui" line="71"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="68"/>
+        <location filename="../settingsdialog.ui" line="78"/>
         <location filename="../settingsdialog.ui" line="279"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="75"/>
+        <location filename="../settingsdialog.ui" line="85"/>
         <source>Transparency:</source>
         <translation>Transparencia:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="219"/>
+        <location filename="../settingsdialog.ui" line="229"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="241"/>
+        <location filename="../settingsdialog.ui" line="251"/>
         <source>Edit template</source>
         <translation>Editar plantilla</translation>
     </message>
@@ -101,17 +101,27 @@
         <translation>Notificación de cambio de canción</translation>
     </message>
     <message>
+        <location filename="../settingsdialog.ui" line="375"/>
+        <source>Disable notifications when another application is in the Full Screen Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="378"/>
+        <source>Disable for full screen windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="388"/>
         <source>Psi Notification</source>
         <translation>Notificación Psi</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="390"/>
+        <location filename="../settingsdialog.ui" line="400"/>
         <source>Enable Psi notification</source>
         <translation>Activar notificación Psi</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="107"/>
+        <location filename="../settingsdialog.cpp" line="109"/>
         <source>Notification Template</source>
         <translation>Plantilla de notificación</translation>
     </message>

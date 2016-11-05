@@ -176,7 +176,7 @@ void Notifier::removePsiTuneFiles()
 #ifdef Q_WS_X11
 bool Notifier::hasFullscreenWindow() const
 {
-    if(m_disableForFullScreen)
+    if(!m_disableForFullScreen)
         return false;
     Atom type = None;
     int format = 0;

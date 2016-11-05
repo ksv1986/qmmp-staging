@@ -50,6 +50,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_ui.resumeCheckBox->setChecked(settings.value("resume_notification", false).toBool());
     m_ui.songCheckBox->setChecked(settings.value("song_notification", true).toBool());
     m_ui.volumeCheckBox->setChecked(settings.value("volume_notification", true).toBool());
+    m_ui.disableForFScheckBox->setChecked(settings.value("disable_fullscreen", false).toBool());
     m_ui.transparencySlider->setValue(100 - settings.value("opacity", 1.0).toDouble()*100);
     QString fontname = settings.value ("font").toString();
     m_ui.coverSizeSlider->setValue(settings.value ("cover_size", 64).toInt());
@@ -82,6 +83,7 @@ void SettingsDialog::accept()
     settings.setValue("resume_notification", m_ui.resumeCheckBox->isChecked());
     settings.setValue("song_notification", m_ui.songCheckBox->isChecked());
     settings.setValue("volume_notification", m_ui.volumeCheckBox->isChecked());
+    settings.setValue("disable_fullscreen", m_ui.disableForFScheckBox->isChecked());
     settings.setValue("opacity", 1.0 -  (double)m_ui.transparencySlider->value()/100);
     settings.setValue("font", m_ui.fontLabel->font().toString());
     settings.setValue("cover_size", m_ui.coverSizeSlider->value());

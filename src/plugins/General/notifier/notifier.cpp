@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,7 +22,17 @@
 #include <QFile>
 #include <QDir>
 #include <QSettings>
+#define Visual VisualQmmp
 #include <qmmp/soundcore.h>
+#undef Visual
+
+#ifdef Q_WS_X11
+#include <QX11Info>
+#include <X11/X.h>
+#include <X11/Xatom.h>
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#endif
 
 #include "popupwidget.h"
 #include "notifier.h"
@@ -39,6 +49,7 @@ Notifier::Notifier(QObject *parent) : QObject(parent)
     m_resumeNotification = settings.value("resume_notification", false).toBool();
     m_showVolume = settings.value("volume_notification", true).toBool();
     m_psi = settings.value("psi_notification", false).toBool();
+    m_disableForFullScreen = settings.value("disable_fullscreen", false).toBool();
     settings.endGroup();
     m_core = SoundCore::instance();
     connect (m_core, SIGNAL(metaDataChanged ()), SLOT(showMetaData()));
@@ -108,7 +119,7 @@ void Notifier::setState(Qmmp::State state)
 
 void Notifier::showMetaData()
 {
-    if (m_desktop)
+    if (m_desktop && !hasFullscreenWindow())
     {
         if (!m_popupWidget)
             m_popupWidget = new PopupWidget();
@@ -135,7 +146,6 @@ void Notifier::showMetaData()
         file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate);
         file.write(data);
         file.close();
-        continue;
     }
 }
 
@@ -143,7 +153,7 @@ void Notifier::showVolume(int l, int r)
 {
     if (((m_l != l) || (m_r != r)) && m_showVolume)
     {
-        if (m_l >= 0)
+        if (m_l >= 0 && !hasFullscreenWindow())
         {
             if (!m_popupWidget)
                 m_popupWidget = new PopupWidget();
@@ -162,3 +172,49 @@ void Notifier::removePsiTuneFiles()
             QFile::remove(path);
     }
 }
+
+#ifdef Q_WS_X11
+bool Notifier::hasFullscreenWindow() const
+{
+    if(m_disableForFullScreen)
+        return false;
+    Atom type = None;
+    int format = 0;
+    unsigned long nitems = 0, bytes_after = 0;
+    unsigned char *prop;
+
+    Display *display = QX11Info::display();
+
+    Atom filter = XInternAtom(display, "_NET_WM_STATE_FULLSCREEN", False);
+    Atom net_wm_state = XInternAtom(display, "_NET_WM_STATE", False);
+
+    Window window;
+    int ret;
+    XGetInputFocus(display, &window, &ret);
+
+
+    int status = XGetWindowProperty(display, window, net_wm_state, 0, 256,
+                                    False, XA_ATOM, &type, &format, &nitems,
+                                    &bytes_after, &prop);
+    if(status != Success || type == None)
+        return false;
+
+    Atom *atoms = (Atom *)prop;
+
+    for (unsigned long i = 0; i < nitems; i++)
+    {
+        if (atoms[i] == filter)
+        {
+            XFree(prop);
+            return true;
+        }
+    }
+    XFree(prop);
+    return false;
+}
+#else
+bool Notifier::hasFullscreenWindow() const
+{
+    return false;
+}
+#endif

@@ -34,6 +34,10 @@
 #include <X11/Xutil.h>
 #endif
 
+#ifdef Q_OS_WIN
+#include <windows.h>
+#endif
+
 #include "popupwidget.h"
 #include "notifier.h"
 
@@ -211,6 +215,19 @@ bool Notifier::hasFullscreenWindow() const
     }
     XFree(prop);
     return false;
+}
+#elif defined(Q_OS_WIN)
+bool Notifier::hasFullscreenWindow() const
+{
+    if(!m_disableForFullScreen)
+        return false;
+    int width = GetSystemMetrics(SM_CXSCREEN);
+    int height = GetSystemMetrics(SM_CYSCREEN);
+
+    RECT windowRect;
+    GetWindowRect(GetForegroundWindow(), &windowRect);
+
+    return (width == windowRect.right - windowRect.left) && (height == windowRect.bottom - windowRect.top);
 }
 #else
 bool Notifier::hasFullscreenWindow() const

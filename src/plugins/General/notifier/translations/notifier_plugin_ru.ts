@@ -92,12 +92,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="375"/>
         <source>Disable notifications when another application is in the Full Screen Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключает уведомление, если выполняется программа в полноэкранном режиме</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="378"/>
         <source>Disable for full screen windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить для полноэкранных окон</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="325"/>

@@ -47,9 +47,7 @@ private slots:
 
 private:
     void removePsiTuneFiles();
-#ifdef Q_WS_X11
     bool hasFullscreenWindow() const;
-#endif
     QPointer<PopupWidget> m_popupWidget;
     bool m_desktop, m_showVolume;
     bool m_psi;

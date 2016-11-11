@@ -49,7 +49,6 @@ MetaDataManager::~MetaDataManager()
 
 QList <FileInfo *> MetaDataManager::createPlayList(const QString &fileName, bool useMetaData, QStringList *ignoredPaths) const
 {
-    QMutexLocker locker(&m_mutex);
     QList <FileInfo *> list;
     DecoderFactory *fact = 0;
     EngineFactory *efact = 0;

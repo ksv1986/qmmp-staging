@@ -352,7 +352,7 @@ void HttpStreamReader::run()
     qDebug("HttpStreamReader: curl thread finished with code %d (%s)", return_code, errorBuffer);
     if(!m_stream.aborted && !m_ready)
     {
-        setErrorString(errorBuffer);
+        setErrorString(QString::fromLocal8Bit(errorBuffer));
         emit error();
         QIODevice::close();
     }

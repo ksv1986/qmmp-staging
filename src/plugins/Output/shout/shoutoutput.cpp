@@ -19,13 +19,18 @@
  ***************************************************************************/
 
 #include <QFile>
-#include <unistd.h>
+#include <QSettings>
+#include <qmmp/qmmp.h>
 #include "shoutoutput.h"
 
 ShoutOutput::ShoutOutput(ShoutClient *m)
 {
     m_client = m;
-
+    m_soxr = 0;
+    m_ratio = 0;
+    m_soxr_buf = 0;
+    m_soxr_buf_frames = 0;
+    qsrand(time(NULL));
 }
 
 ShoutOutput::~ShoutOutput()
@@ -36,20 +41,33 @@ ShoutOutput::~ShoutOutput()
     vorbis_dsp_clear(&m_vd);
     vorbis_comment_clear(&m_vc);
     vorbis_info_clear(&m_vi);
+    if(m_soxr)
+    {
+        soxr_delete(m_soxr);
+        m_soxr = 0;
+    }
 }
 
 bool ShoutOutput::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat)
 {
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    float quality = settings.value("Shout/vorbis_quality", 0.8).toFloat();
+    quint32 outFreq = settings.value("Shout/sample_rate", 44100).toInt();
+
+    if(freq != outFreq)
+    {
+        m_soxr = soxr_create(freq, outFreq, map.size(), 0, 0, 0, 0);
+        m_ratio = (double)outFreq/freq;
+    }
+
     vorbis_info_init(&m_vi);
-    vorbis_encode_init_vbr(&m_vi,2,freq,.4);
+    vorbis_encode_init_vbr(&m_vi,2,outFreq, quality);
 
     vorbis_comment_init(&m_vc);
-    //vorbis_comment_add_tag(&m_vc,"TITLE","encoder_example.c");
 
     vorbis_analysis_init(&m_vd, &m_vi);
     vorbis_block_init(&m_vd,&m_vb);
 
-    qsrand(time(NULL));
     ogg_stream_init(&m_os,qrand());
 
     configure(freq, map, Qmmp::PCM_FLOAT);
@@ -65,19 +83,42 @@ qint64 ShoutOutput::writeAudio(unsigned char *data, qint64 maxSize)
 {
     int chan = channels();
     int frames = maxSize / chan / sizeof(float);
+    float *input_data = 0;
+
+    if(m_soxr)
+    {
+        size_t required_frames = double(frames) * m_ratio * 2 + 2;
+        if(required_frames > m_soxr_buf_frames)
+        {
+            m_soxr_buf_frames = required_frames;
+            m_soxr_buf = (float *)realloc(m_soxr_buf, m_soxr_buf_frames * sizeof(float) * chan);
+        }
+
+        size_t done = 0;
+        soxr_process(m_soxr, data, frames, 0,  m_soxr_buf, m_soxr_buf_frames, &done);
+        input_data = m_soxr_buf;
+        if(done == 0) //soxr requires more data
+            return maxSize;
+        frames = done;
+    }
+    else
+    {
+        input_data = (float *)data;
+    }
+
     float **buffer = vorbis_analysis_buffer(&m_vd, frames);
 
     if(chan == 1)
     {
-        memcpy(buffer[0], data, frames * sizeof(float));
-        memcpy(buffer[1], data, frames * sizeof(float));
+        memcpy(buffer[0], input_data, frames * sizeof(float));
+        memcpy(buffer[1], input_data, frames * sizeof(float));
     }
     else
     {
         for(int i = 0; i < frames; i++)
         {
-            buffer[0][i] = *reinterpret_cast<float *>(data + (i * chan) * sizeof(float));
-            buffer[1][i] = *reinterpret_cast<float *>(data + (i * chan + 1) * sizeof(float));
+            buffer[0][i] = input_data[i * chan];
+            buffer[1][i] = input_data[i * chan + 1];
         }
     }
 
@@ -131,7 +172,6 @@ qint64 ShoutOutput::writeAudio(unsigned char *data, qint64 maxSize)
         if(!m_client->open())
             return -1;
 
-        qsrand(time(NULL));
         ogg_stream_reset(&m_os);
         ogg_stream_init(&m_os,qrand());
 

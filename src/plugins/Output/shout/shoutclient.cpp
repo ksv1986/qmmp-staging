@@ -19,6 +19,8 @@
  ***************************************************************************/
 
 #include <QTimer>
+#include <QSettings>
+#include <qmmp/qmmp.h>
 #include "shoutclient.h"
 
 ShoutClient::ShoutClient(QObject *parent) :
@@ -42,19 +44,25 @@ ShoutClient::~ShoutClient()
 
 void ShoutClient::readSettings()
 {
-    shout_set_host(m_shout_conn, "127.0.0.1");
-    shout_set_port(m_shout_conn, 8000);
-    shout_set_password(m_shout_conn, "hackme");
-    shout_set_mount(m_shout_conn, "/qmmp.out");
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginGroup("Shout");
+    shout_set_host(m_shout_conn, settings.value("host", "127.0.0.1").toString().toLatin1().constData());
+    shout_set_port(m_shout_conn, settings.value("port", 8000).toInt());
+    shout_set_password(m_shout_conn, settings.value("passw", "hackme").toString().toLatin1().constData());
+    shout_set_mount(m_shout_conn, QString("/%1").arg(settings.value("mount", "qmmp.out").toString()).
+                    toLatin1().constData());
     shout_set_name(m_shout_conn, "qmmp");
-    shout_set_user(m_shout_conn, "source");
-    shout_set_public(m_shout_conn, 0);
+    shout_set_user(m_shout_conn, settings.value("user", "source").toString().toLatin1().constData());
+    shout_set_public(m_shout_conn, settings.value("public", false).toBool() ? 1 : 0);
     shout_set_format(m_shout_conn, SHOUT_FORMAT_OGG);
     shout_set_protocol(m_shout_conn, SHOUT_PROTOCOL_HTTP);
     shout_set_agent(m_shout_conn, "qmmp");
     shout_set_audio_info(m_shout_conn, SHOUT_AI_CHANNELS, "2");
-    shout_set_audio_info(m_shout_conn, SHOUT_AI_QUALITY, "0.4");
-    shout_set_audio_info(m_shout_conn, SHOUT_AI_SAMPLERATE, "44100");
+    shout_set_audio_info(m_shout_conn, SHOUT_AI_QUALITY,
+                         QString::number(settings.value("vorbis_quality", 0.8).toDouble(), 'f').toLatin1().constData());
+    shout_set_audio_info(m_shout_conn, SHOUT_AI_SAMPLERATE,
+                         QString::number(settings.value("sample_rate", 44100).toInt()).toLatin1().constData());
+    settings.endGroup();
 }
 
 bool ShoutClient::open()

@@ -18,41 +18,28 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#ifndef SHOUTOUTPUT_H
-#define SHOUTOUTPUT_H
+#ifndef SETTINGSDIALOG_H
+#define SETTINGSDIALOG_H
 
-#include <vorbis/vorbisenc.h>
-#include <soxr.h>
-#include <qmmp/output.h>
-#include "shoutclient.h"
+#include <QDialog>
 
-class ShoutOutput : public Output
+namespace Ui {
+class SettingsDialog;
+}
+
+class SettingsDialog : public QDialog
 {
-public:
-    ShoutOutput(ShoutClient *m);
-    ~ShoutOutput();
+    Q_OBJECT
 
-    bool initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat);
-    qint64 latency();
-    qint64 writeAudio(unsigned char *data, qint64 maxSize);
-    void drain();
-    void reset();
-    void setMetaData(const QMap<Qmmp::MetaData, QString> &metaData);
+public:
+    explicit SettingsDialog(QWidget *parent = 0);
+    ~SettingsDialog();
+
+public slots:
+    void accept();
 
 private:
-    void sendHeader();
-    ShoutClient *m_client;
-    ogg_stream_state m_os; //take physical pages, weld into a logical stream of packets
-    ogg_page         m_og; //one Ogg bitstream page.  Vorbis packets are inside */
-    ogg_packet       m_op; //one raw packet of data for decode
-    vorbis_info      m_vi; //struct that stores all the static vorbis bitstream settings
-    vorbis_comment   m_vc; //struct that stores all the user comments
-    vorbis_dsp_state m_vd; //central working state for the packet->PCM decoder
-    vorbis_block     m_vb; //local working space for packet->PCM decode
-    soxr_t m_soxr;
-    float *m_soxr_buf;
-    size_t m_soxr_buf_frames;
-    double m_ratio;
+    Ui::SettingsDialog *m_ui;
 };
 
-#endif // SHOUTOUTPUT_H
+#endif // SETTINGSDIALOG_H

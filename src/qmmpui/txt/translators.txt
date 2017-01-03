@@ -43,11 +43,11 @@ Greek:
 Hebrew:
     Genghis Khan <genghiskhan@gmx.ca>
 
-Indonesian:
-    Wantoyo <wantoyek@gmail.com>
-
 Hungarian:
     Németh Gábor <sutee84@freemail.hu>
+
+Indonesian:
+    Wantoyo <wantoyek@gmail.com>
 
 Italian:
     Gian Paolo Renello <emmerkar@gmail.com>

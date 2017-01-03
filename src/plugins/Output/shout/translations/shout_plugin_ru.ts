@@ -6,27 +6,27 @@
     <message>
         <location filename="../outputshoutfactory.cpp" line="41"/>
         <source>Icecast Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Модуль Icecast</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="66"/>
         <source>About Icecast Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>О модуле вывода Icecast</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="67"/>
         <source>Qmmp Icecast Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Модуль вывода Icecast для Qmmp</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="68"/>
         <source>Compiled against libshout-%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Собран с libshout-%1</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="69"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Разработчик: Илья Котов &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,52 +34,52 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Connection Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки соединения</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
         <source>Host:</source>
-        <translation type="unfinished"></translation>
+        <translation>Хост:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Порт:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="56"/>
         <source>Mount point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Точка монтирования:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
         <source>User:</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользователь:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="86"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Качество:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="106"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота дискретизации:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="136"/>
         <source>Public</source>
-        <translation type="unfinished"></translation>
+        <translation>Публичный</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Гц</translation>
     </message>
 </context>
 </TS>

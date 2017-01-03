@@ -187,6 +187,12 @@ source_lang = en
 source_file = src/plugins/Output/oss4/translations/oss4_plugin_en.ts
 type = QT
 
+[qmmp.shout]
+file_filter = src/plugins/Output/shout/translations/shout_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/Output/shout/translations/shout_plugin_en.ts
+type = QT
+
 [qmmp.wasapi]
 file_filter = src/plugins/Output/wasapi/translations/wasapi_plugin_<lang>.ts
 source_lang = en

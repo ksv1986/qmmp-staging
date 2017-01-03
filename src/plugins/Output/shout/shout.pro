@@ -22,7 +22,7 @@ link_pkgconfig
 
 TEMPLATE = lib
 
-#RESOURCES = translations/translations.qrc
+RESOURCES = translations/translations.qrc
 
 unix {
     isEmpty (LIB_DIR){

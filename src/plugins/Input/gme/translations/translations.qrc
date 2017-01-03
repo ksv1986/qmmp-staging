@@ -26,5 +26,6 @@
     <file>gme_plugin_sr_RS.qm</file>
     <file>gme_plugin_bg.qm</file>
     <file>gme_plugin_el.qm</file>
+    <file>gme_plugin_id.qm</file>
   </qresource>
 </RCC>

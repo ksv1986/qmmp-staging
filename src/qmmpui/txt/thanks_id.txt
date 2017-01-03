@@ -1,0 +1,31 @@
+Terimakasih kepada:
+
+    Adria Arrufat <swiftscythe@gmail.com> - laporan bug
+    Adrian Knoth <adi@drcomp.erfurt.thur.de> - perbaikan plugin JACK, laporan bug
+    Anton Petrusevich <casus@casus.us> - penambahan-baik playback acak
+    Avihay Baratz <avihayb@gmail.com> - fitur auto stop, perbaikan bug
+    Brice Videau <brice.videau@gmail.com> - perbaikan bug
+    Cristian Rodríguez <judas.iscariote@gmail.com> - perbaikan scrobbler
+    Csaba Hruska <csaba.hruska@gmail.com> - perbaikan plugin FFmpeg
+    Dmitry Kostin <kostindima@gmail.com> - dukungan iso.wv
+    Dmitry Misharov <Dmitry.Misharov@gmail.com> - dukungan tag album artist
+    Evgeny Gleyzerman <evgley@gmail.com> - penambahan-baik penguraian cue
+    Ferdinand Vesely <erdofves@gmail.com> - penambahan-baik scrobbler
+    Gennadi Motsyo <drool@altlinux.ru> - laporan bug
+    Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - optimisasi
+    Vadim Kalinnikov <moose@ylsoftware.com> - project hosting
+    Erik Ölsar <erlk.ozlr@gmail.com> - skinned cursors, penambahan-baik ui
+    Funda Wang <fundawang@gmail.com> - perbaikan file-file cmake
+    Ivan Ponomarev ivantrue@gmail.com - keluaran QtMultimedia, MacOS X port
+    Karel Volný <kvolny@redhat.com> - berbagai perbaikan
+    Makis Kalofolias <makskafl@gmail.com> - EAC3, DTS, dan dukungan Dolby TrueHD
+    Michail Zheludkov <zheludkovm@mail.ru> - perbaikan plugin FFmpeg
+    Michał Grosicki <grosik88@o2.pl> - perbaikan plugin ALSA
+    Panagiotis Papadopoulos <pano_90@gmx.net> - perbaikan ui, laporan bug
+    Pino Toscano <toscano.pino@tiscali.it> - tambalan portabilitas
+    Ryota Shimamoto <liangtai.s16@gmail.com> - tambalan FreeBSD
+    Sebastian Pipping <webmaster@hartwork.org> - tambalan bs2b
+    Stefan Koelling <stefankoelling.ext@googlemail.com> - beberapa perbaikan build
+    Thomas Perl - penambahan-baik gui
+    Ville Skyttä - penambahan-baik plugin ModPlug
+    Yaakov Selkowitz <yselkowitz@gmail.com> - tambalan cygwin

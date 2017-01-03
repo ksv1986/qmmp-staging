@@ -68,6 +68,11 @@
     <file>thanks_he.txt</file>
     <file>translators_he.txt</file>
 
+    <file>description_id.txt</file>
+    <file>authors_id.txt</file>
+    <file>thanks_id.txt</file>
+    <file>translators_id.txt</file>
+
     <file>description_ja.txt</file>
     <file>authors_ja.txt</file>
     <file>thanks_ja.txt</file>

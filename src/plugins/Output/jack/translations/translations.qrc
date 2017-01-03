@@ -26,5 +26,6 @@
     <file>jack_plugin_sr_RS.qm</file>
     <file>jack_plugin_bg.qm</file>
     <file>jack_plugin_el.qm</file>
+    <file>jack_plugin_id.qm</file>
   </qresource>
 </RCC>

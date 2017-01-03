@@ -26,5 +26,6 @@
     <file>vorbis_plugin_sr_RS.qm</file>
     <file>vorbis_plugin_bg.qm</file>
     <file>vorbis_plugin_el.qm</file>
+    <file>vorbis_plugin_id.qm</file>
   </qresource>
 </RCC>

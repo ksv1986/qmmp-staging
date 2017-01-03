@@ -26,5 +26,6 @@
     <file>uninstall_plugin_sr_RS.qm</file>
     <file>uninstall_plugin_bg.qm</file>
     <file>uninstall_plugin_el.qm</file>
+    <file>uninstall_plugin_id.qm</file>
   </qresource>
 </RCC>

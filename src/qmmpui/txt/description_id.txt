@@ -1,0 +1,1 @@
+Program ini adalah sebuah player-audio, ditulis dengan bantuan pustaka Qt.

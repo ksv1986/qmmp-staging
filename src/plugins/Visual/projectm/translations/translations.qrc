@@ -26,5 +26,6 @@
     <file>projectm_plugin_sr_RS.qm</file>
     <file>projectm_plugin_bg.qm</file>
     <file>projectm_plugin_el.qm</file>
+    <file>projectm_plugin_id.qm</file>
   </qresource>
 </RCC>

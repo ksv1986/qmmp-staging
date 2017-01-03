@@ -1,0 +1,14 @@
+Pengembang Inti:
+
+    Ilya Kotov <forkotov02@hotmail.ru> - gagasan dan kode dasar
+
+Pengembang Yang Dahulu:
+
+    Artur Guzik <aguzik88@gmail.com> - plugin pemberitahuan kde4, penambahan-baik ikon baki
+    Vladimir Kuznetsov <vovanec@gmail.com> - look&feel dan banyak penambahan-baik
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - JACK dan plugin-plugin OSS
+
+Karya Seni:
+
+    Andrey Adreev <andreev00@gmail.com> - ikon-ikon dan skin baku (untuk versi 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - skin baku

@@ -29,6 +29,9 @@ contains(CONFIG, OSS4_PLUGIN){
     SUBDIRS += oss4
 }
 
+contains(CONFIG, SHOUT_PLUGIN){
+   SUBDIRS += shout
+}
 }
 
 #all platforms

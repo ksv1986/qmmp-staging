@@ -10,6 +10,7 @@
 
 #include <QList>
 #include <QIODevice>
+#include <QMap>
 #include "outputfactory.h"
 #include "audioparameters.h"
 #include "channelmap.h"
@@ -74,6 +75,12 @@ public:
      * Resumes processing audio data.
      */
     virtual void resume();
+    /*!
+     * Sets metadata for output.
+     * Default implementation does nothing.
+     * Reimplement this function to receive metadata.
+     */
+    virtual void setMetaData(const QMap<Qmmp::MetaData, QString> &metaData);
     /*!
      * Returns selected audio parameters.
      */

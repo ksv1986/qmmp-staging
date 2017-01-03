@@ -301,6 +301,8 @@ void QmmpAudioEngine::stop()
 qint64 QmmpAudioEngine::produceSound(unsigned char *data, qint64 size, quint32 brate)
 {
     Buffer *b = m_output->recycler()->get();
+    b->metaData = m_metaData;
+    m_metaData.clear();
     size_t sz = size < m_bks ? size : m_bks;
     size_t samples = sz / m_sample_size;
 
@@ -363,6 +365,7 @@ void QmmpAudioEngine::run()
 {
     mutex()->lock ();
     m_next = false;
+    m_metaData.clear();
     qint64 len = 0;
     int delay = 0;
     if(m_decoders.isEmpty())
@@ -399,12 +402,14 @@ void QmmpAudioEngine::run()
             QMap<Qmmp::MetaData, QString> m = m_decoder->takeMetaData();
             m[Qmmp::URL] = m_inputs[m_decoder]->url();
             StateHandler::instance()->dispatch(m);
+            m_metaData = QSharedPointer<QMap<Qmmp::MetaData, QString> >(new QMap<Qmmp::MetaData, QString>(m));
         }
         if(m_inputs[m_decoder]->hasMetaData())
         {
             QMap<Qmmp::MetaData, QString> m = m_inputs[m_decoder]->takeMetaData();
             m[Qmmp::URL] = m_inputs[m_decoder]->url();
             StateHandler::instance()->dispatch(m);
+            m_metaData = QSharedPointer<QMap<Qmmp::MetaData, QString> >(new QMap<Qmmp::MetaData, QString>(m));
         }
         if(m_inputs[m_decoder]->hasStreamInfo())
             StateHandler::instance()->dispatch(m_inputs[m_decoder]->takeStreamInfo());
@@ -610,6 +615,7 @@ void QmmpAudioEngine::sendMetaData()
         if (!list.isEmpty())
         {
             StateHandler::instance()->dispatch(list[0]->metaData());
+            m_metaData = QSharedPointer<QMap<Qmmp::MetaData, QString> >(new QMap<Qmmp::MetaData, QString>(list[0]->metaData()));
             while (!list.isEmpty())
                 delete list.takeFirst();
         }

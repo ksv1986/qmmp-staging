@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,6 +23,7 @@
 
 #include <QQueue>
 #include <QHash>
+#include <QSharedPointer>
 #include "abstractengine.h"
 #include "audioparameters.h"
 
@@ -94,6 +95,7 @@ private:
     AudioParameters m_ap;
     bool m_next;
     bool m_muted;
+    QSharedPointer<QMap<Qmmp::MetaData, QString> > m_metaData;
     static QmmpAudioEngine *m_instance;
     ReplayGain *m_replayGain;
     QmmpSettings *m_settings;

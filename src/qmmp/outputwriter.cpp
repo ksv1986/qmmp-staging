@@ -310,9 +310,13 @@ void OutputWriter::run()
         status();
         if (!b)
         {
-            b = recycler()->next();
-            if (b && b->rate)
-                m_kbps = b->rate;
+            if((b = recycler()->next()))
+            {
+                if(b->rate)
+                    m_kbps = b->rate;
+                if(b->metaData)
+                    m_output->setMetaData(*b->metaData);
+            }
         }
 
         recycler()->cond()->wakeOne();

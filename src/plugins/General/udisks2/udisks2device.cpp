@@ -48,7 +48,7 @@ UDisks2Device::~UDisks2Device()
 
 QVariant UDisks2Device::property(const QString &key) const
 {
-    return m_block_interface->property(key.toAscii().data());
+    return m_block_interface->property(key.toLatin1().data());
 }
 
 bool UDisks2Device::isRemovable() const

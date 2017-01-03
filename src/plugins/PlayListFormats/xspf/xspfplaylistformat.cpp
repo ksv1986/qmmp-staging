@@ -69,9 +69,9 @@ QStringList XSPFPlaylistFormat::decode(const QString & contents)
 
                 QUrl url(xml.text().toString());
                 if (url.scheme() == "file")  //remove scheme for local files only
-                    out << QUrl::fromPercentEncoding(url.toString().toAscii()).remove("file://");
+                    out << QUrl::fromPercentEncoding(url.toString().toLatin1()).remove("file://");
                 else
-                    out << QUrl::fromPercentEncoding(url.toString().toAscii());
+                    out << QUrl::fromPercentEncoding(url.toString().toLatin1());
             }
             else
                 xml.skipCurrentElement();

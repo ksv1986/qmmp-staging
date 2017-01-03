@@ -90,7 +90,7 @@ Scrobbler::Scrobbler(const QString &scrobblerUrl, const QString &name, QObject *
     m_name = name;
     m_time = new QTime();
     m_cache = new ScrobblerCache(Qmmp::configDir() +"scrobbler_"+name+".cache");
-    m_ua = QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toAscii();
+    m_ua = QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toLatin1();
     m_http = new QNetworkAccessManager(this);
     m_core = SoundCore::instance();
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
@@ -326,7 +326,7 @@ void Scrobbler::submit()
 
     QNetworkRequest request(url);
     request.setRawHeader("User-Agent", m_ua);
-    request.setRawHeader("Host", url.host().toAscii());
+    request.setRawHeader("Host", url.host().toLatin1());
     request.setRawHeader("Accept", "*/*");
     request.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
     request.setHeader(QNetworkRequest::ContentLengthHeader, bodyData.size());
@@ -375,7 +375,7 @@ void Scrobbler::sendNotification(const SongInfo &info)
 
     QNetworkRequest request(url);
     request.setRawHeader("User-Agent", m_ua);
-    request.setRawHeader("Host", url.host().toAscii());
+    request.setRawHeader("Host", url.host().toLatin1());
     request.setRawHeader("Accept", "*/*");
     request.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
     request.setHeader(QNetworkRequest::ContentLengthHeader,  bodyData.size());
@@ -390,7 +390,7 @@ ScrobblerAuth::ScrobblerAuth(const QString &scrobblerUrl, const QString &authUrl
     m_scrobblerUrl = scrobblerUrl;
     m_authUrl = authUrl;
     m_name = name;
-    m_ua = QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toAscii();
+    m_ua = QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toLatin1();
     m_http = new QNetworkAccessManager(this);
     connect(m_http, SIGNAL(finished (QNetworkReply *)), SLOT(processResponse(QNetworkReply *)));
 
@@ -426,7 +426,7 @@ void ScrobblerAuth::getToken()
 
     QNetworkRequest request(url);
     request.setRawHeader("User-Agent",  m_ua);
-    request.setRawHeader("Host",url.host().toAscii());
+    request.setRawHeader("Host",url.host().toLatin1());
     request.setRawHeader("Accept", "*/*");
     m_getTokenReply = m_http->get(request);
 }
@@ -449,7 +449,7 @@ void ScrobblerAuth::getSession()
 
     QNetworkRequest request(url);
     request.setRawHeader("User-Agent",  m_ua);
-    request.setRawHeader("Host",url.host().toAscii());
+    request.setRawHeader("Host",url.host().toLatin1());
     request.setRawHeader("Accept", "*/*");
     m_getSessionReply = m_http->get(request);
 }
@@ -480,7 +480,7 @@ void ScrobblerAuth::checkSession(const QString &session)
 
     QNetworkRequest request(url);
     request.setRawHeader("User-Agent", m_ua);
-    request.setRawHeader("Host", url.host().toAscii());
+    request.setRawHeader("Host", url.host().toLatin1());
     request.setRawHeader("Accept", "*/*");
     request.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
     request.setHeader(QNetworkRequest::ContentLengthHeader,  bodyData.size());

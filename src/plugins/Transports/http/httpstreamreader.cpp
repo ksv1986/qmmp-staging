@@ -306,7 +306,7 @@ void HttpStreamReader::run()
                                 toLatin1 ().constData ()));
 
     // Set url to download
-    curl_easy_setopt(m_handle, CURLOPT_URL, strdup(m_url.toAscii().constData()));
+    curl_easy_setopt(m_handle, CURLOPT_URL, strdup(m_url.toLatin1().constData()));
     // callback for wrting
     curl_easy_setopt(m_handle, CURLOPT_WRITEFUNCTION, curl_write_data);
     // Set destination file

@@ -244,7 +244,7 @@ int SettingsDialog::getMixer(snd_mixer_t **mixer, QString card)
         mixer = NULL;
         return -1;
     }
-    if ((err = snd_mixer_attach(*mixer, card.toAscii().constData())) < 0)
+    if ((err = snd_mixer_attach(*mixer, card.toLatin1().constData())) < 0)
     {
         qWarning("SettingsDialog (ALSA): alsa_get_mixer(): "
                  "Attaching to mixer %s failed: %s", qPrintable(card), snd_strerror(-err));

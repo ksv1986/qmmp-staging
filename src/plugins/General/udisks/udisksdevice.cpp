@@ -37,7 +37,7 @@ UDisksDevice::UDisksDevice(QDBusObjectPath o, QObject *parent)
 
 QVariant UDisksDevice::property (const QString &key)
 {
-    return m_interface->property(key.toAscii().data());
+    return m_interface->property(key.toLatin1().data());
 }
 
 UDisksDevice::~UDisksDevice()

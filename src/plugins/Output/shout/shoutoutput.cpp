@@ -46,6 +46,11 @@ ShoutOutput::~ShoutOutput()
         soxr_delete(m_soxr);
         m_soxr = 0;
     }
+    if(m_soxr_buf)
+    {
+        free(m_soxr_buf);
+        m_soxr_buf = 0;
+    }
 }
 
 bool ShoutOutput::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat)

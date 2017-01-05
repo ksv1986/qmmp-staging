@@ -20,6 +20,8 @@
 
 #include <QFile>
 #include <QSettings>
+#include <stdlib.h>
+#include <time.h>
 #include <qmmp/qmmp.h>
 #include "shoutoutput.h"
 

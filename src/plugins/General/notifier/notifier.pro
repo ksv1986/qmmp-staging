@@ -20,6 +20,8 @@ RESOURCES = notifier_images.qrc \
 unix {
 isEmpty(LIB_DIR){
     LIB_DIR = /lib
+    CONFIG += link_pkgconfig
+    PKGCONFIG += x11
 }
 target.path = $$LIB_DIR/qmmp/General
 INSTALLS += target

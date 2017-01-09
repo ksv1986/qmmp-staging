@@ -29,7 +29,7 @@
 #include <QPluginLoader>
 #include "visualfactory.h"
 #include "output.h"
-#include "visualbuffer.h"
+#include "visualbuffer_p.h"
 #include "visual.h"
 
 Visual::Visual(QWidget *parent, Qt::WindowFlags f) : QWidget(parent, f)

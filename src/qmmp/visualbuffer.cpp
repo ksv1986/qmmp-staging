@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 #include <string.h>
-#include "visualbuffer.h"
+#include "visualbuffer_p.h"
 
 static inline void stereo_from_multichannel(float *l,
                                               float *r,

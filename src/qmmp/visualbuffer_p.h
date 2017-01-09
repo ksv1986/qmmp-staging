@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#ifndef VISUALBUFFER_H
-#define VISUALBUFFER_H
+#ifndef VISUALBUFFER_P_H
+#define VISUALBUFFER_P_H
 
 #include <QtGlobal>
 #include <QTime>

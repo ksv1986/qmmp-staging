@@ -41,7 +41,7 @@ HEADERS += \
     channelconverter_p.h \
     audioconverter.h \
     dithering_p.h \
-    visualbuffer.h
+    visualbuffer_p.h
 SOURCES += recycler.cpp \
     decoder.cpp \
     output.cpp \

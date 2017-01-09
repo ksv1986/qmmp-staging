@@ -121,7 +121,7 @@ void QSUiAnalyzer::setCover(const QPixmap &pixmap)
 
 void QSUiAnalyzer::timeout()
 {
-    mutex()->lock();
+    /*mutex()->lock();
     if(m_buffer_at < VISUAL_NODE_SIZE)
     {
         mutex()->unlock ();
@@ -132,7 +132,9 @@ void QSUiAnalyzer::timeout()
     m_buffer_at -= VISUAL_NODE_SIZE;
     memmove(m_left_buffer, m_left_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
     memmove(m_right_buffer, m_right_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-    mutex()->unlock ();
+    mutex()->unlock ();*/
+    takeData(m_left_buffer, m_right_buffer);
+    process (m_left_buffer, m_right_buffer);
     update();
 }
 

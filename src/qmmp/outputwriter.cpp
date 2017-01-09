@@ -190,6 +190,7 @@ void OutputWriter::dispatchVisual (Buffer *buffer)
     if(!buffer)
         return;
 
+    Visual::addData(buffer->data, buffer->samples, m_channels, m_totalWritten / m_bytesPerMillisecond, m_output->latency());
     foreach (Visual *visual, *Visual::visuals())
     {
         visual->mutex()->lock ();

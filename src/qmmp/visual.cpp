@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -29,6 +29,7 @@
 #include <QPluginLoader>
 #include "visualfactory.h"
 #include "output.h"
+#include "visualbuffer.h"
 #include "visual.h"
 
 Visual::Visual(QWidget *parent, Qt::WindowFlags f) : QWidget(parent, f)
@@ -70,6 +71,15 @@ void Visual::closeEvent (QCloseEvent *event)
     QWidget::closeEvent(event);
 }
 
+void Visual::takeData(float *left, float *right)
+{
+    m_buffer.mutex()->lock();
+    VisualNode *node = m_buffer.take();
+    memcpy(left, node->data[0], 512);
+    memcpy(right, node->data[1], 512);
+    m_buffer.mutex()->unlock();
+}
+
 //static members
 QList<VisualFactory*> *Visual::m_factories = 0;
 QHash <VisualFactory*, QString> *Visual::m_files = 0;
@@ -78,6 +88,7 @@ QHash<VisualFactory*, Visual*> Visual::m_vis_map;
 QWidget *Visual::m_parentWidget = 0;
 QObject *Visual::m_receiver = 0;
 const char *Visual::m_member = 0;
+VisualBuffer Visual::m_buffer;
 
 QList<VisualFactory *> Visual::factories()
 {
@@ -197,6 +208,13 @@ void Visual::showSettings(VisualFactory *factory, QWidget *parent)
         add(visual);
     }
     dialog->deleteLater();
+}
+
+void Visual::addData(float *pcm, int samples, int channels, qint64 ts, qint64 delay)
+{
+    m_buffer.mutex()->lock();
+    m_buffer.add(pcm, samples, channels, ts, delay);
+    m_buffer.mutex()->unlock();
 }
 
 void Visual::checkFactories()

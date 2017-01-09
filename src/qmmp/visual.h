@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,6 +30,7 @@ class Buffer;
 class Decoder;
 class Output;
 class VisualFactory;
+class VisualBuffer;
 
 /*! @brief The Visual class provides the base interface class of visualizations.
  *  @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -111,6 +112,9 @@ public:
      */
     static void showSettings(VisualFactory *factory, QWidget *parent);
 
+
+    static void addData(float *pcm, int samples, int channels, qint64 ts, qint64 delay);
+
 signals:
     /*!
      * Emitted when visual widget is closed by user.
@@ -123,6 +127,8 @@ protected:
      * @param event QCloseEvent insatance.
      */
     virtual void closeEvent (QCloseEvent *event);
+
+    virtual void takeData(float *left, float *right);
 
 private:
     Decoder *m_decoder;
@@ -137,6 +143,7 @@ private:
     static QWidget *m_parentWidget;
     static QObject *m_receiver;
     static const char *m_member;
+    static VisualBuffer m_buffer;
 };
 
 #endif

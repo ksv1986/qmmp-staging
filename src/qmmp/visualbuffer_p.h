@@ -60,4 +60,4 @@ private:
 
 };
 
-#endif // VISUALBUFFER_H
+#endif // VISUALBUFFER_P_H

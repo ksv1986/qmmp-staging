@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -83,6 +83,10 @@ static size_t curl_header(void *data, size_t size, size_t nmemb,
         if (key == "icy-metaint")
         {
             dl->stream()->icy_metaint = value.toInt();
+            dl->stream()->icy_meta_data = true;
+        }
+        else if(key == "icy-name")
+        {
             dl->stream()->icy_meta_data = true;
         }
     }
@@ -212,7 +216,7 @@ qint64 HttpStreamReader::readData(char* data, qint64 maxlen)
         m_mutex.unlock();
         return 0;
     }
-    if (!m_stream.icy_meta_data || m_stream.icy_metaint == 0)
+    if (m_stream.icy_metaint == 0)
         len = readBuffer(data, maxlen);
     else
     {

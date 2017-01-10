@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -134,7 +134,13 @@ bool QmmpAudioEngine::enqueue(InputSource *source)
     if(!factory && !source->url().contains("://"))
         factory = Decoder::findByFilePath(source->url(), m_settings->determineFileTypeByContent());
     if(!factory)
-        factory = Decoder::findByMime(source->contentType());
+    {
+        if((factory = Decoder::findByMime(source->contentType())))
+        {
+            if(!factory->canDecode(source->ioDevice()))
+                factory = 0;
+        }
+    }
     if(!factory && source->ioDevice() && source->url().contains("://")) //ignore content of local files
         factory = Decoder::findByContent(source->ioDevice());
     if(!factory && source->url().contains("://"))

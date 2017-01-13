@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#ifndef HTTPINPUTFACTORY_H
-#define HTTPINPUTFACTORY_H
+#ifndef MMSINPUTFACTORY_H
+#define MMSINPUTFACTORY_H
 
 #include <QObject>
 #include <QStringList>
@@ -42,4 +42,4 @@ public:
     QTranslator *createTranslator(QObject *parent);
 };
 
-#endif // HTTPINPUTFACTORY_H
+#endif // MMSINPUTFACTORY_H

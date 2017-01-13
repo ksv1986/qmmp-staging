@@ -29,3 +29,5 @@ INSTALLS += target
 FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
+
+QMAKE_CFLAGS_ISYSTEM='' #removes "-isystem /usr/include"  provided by libmms.pc

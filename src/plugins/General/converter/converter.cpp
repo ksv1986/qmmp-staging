@@ -301,10 +301,10 @@ bool Converter::convert(Decoder *decoder, FILE *file, bool use16bit)
         outFormat = Qmmp::PCM_S8;
     else if(ap.sampleSize() == 2)
         outFormat = Qmmp::PCM_S16LE;
-    else if(ap.sampleSize()  == 4)
+    else if(ap.sampleSize() == 4)
         outFormat = Qmmp::PCM_S32LE;
 
-        outConverter.configure(outFormat);
+    outConverter.configure(outFormat);
 
     int outSampleSize = AudioParameters::sampleSize(outFormat);
 

@@ -201,6 +201,7 @@ void OutputWriter::dispatchVisual (Buffer *buffer)
 
 void OutputWriter::clearVisuals()
 {
+    Visual::clearQueue();
     foreach (Visual *visual, *Visual::visuals())
     {
         visual->mutex()->lock ();
@@ -287,6 +288,7 @@ void OutputWriter::run()
         {
             if(m_pause)
             {
+                Visual::clearQueue();
                 m_output->suspend();
                 mutex()->unlock();
                 m_prev_pause = m_pause;

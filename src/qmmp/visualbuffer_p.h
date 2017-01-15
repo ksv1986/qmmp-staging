@@ -48,6 +48,7 @@ public:
 
     void add(float *pcm, int samples, int channels, qint64 ts, qint64 delay);
     VisualNode *take();
+    void clear();
     QMutex *mutex();
 
 private:

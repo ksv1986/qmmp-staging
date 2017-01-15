@@ -75,8 +75,8 @@ void Visual::takeData(float *left, float *right)
 {
     m_buffer.mutex()->lock();
     VisualNode *node = m_buffer.take();
-    memcpy(left, node->data[0], 512);
-    memcpy(right, node->data[1], 512);
+    memcpy(left, node->data[0], 512 * sizeof(float));
+    memcpy(right, node->data[1], 512 * sizeof(float));
     m_buffer.mutex()->unlock();
 }
 
@@ -214,6 +214,13 @@ void Visual::addData(float *pcm, int samples, int channels, qint64 ts, qint64 de
 {
     m_buffer.mutex()->lock();
     m_buffer.add(pcm, samples, channels, ts, delay);
+    m_buffer.mutex()->unlock();
+}
+
+void Visual::clearQueue()
+{
+    m_buffer.mutex()->lock();
+    m_buffer.clear();
     m_buffer.mutex()->unlock();
 }
 

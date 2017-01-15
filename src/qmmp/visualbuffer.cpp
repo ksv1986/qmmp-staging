@@ -68,8 +68,8 @@ void VisualBuffer::add(float *pcm, int samples, int channels, qint64 ts, qint64 
 VisualNode *VisualBuffer::take()
 {
     int steps = 0;
-    int t = m_elapsed + m_time.elapsed();
-    while(!m_buffer[consumer_pos].ts || ((m_buffer[consumer_pos].ts < t) && (steps++ < VISUAL_BUFFER_SIZE)))
+    int t = m_elapsed/* + m_time.elapsed()*/;
+    while((m_buffer[consumer_pos].ts < t) && (steps++ < VISUAL_BUFFER_SIZE))
     {
         consumer_pos++;
         if(consumer_pos == VISUAL_BUFFER_SIZE)
@@ -78,6 +78,19 @@ VisualNode *VisualBuffer::take()
         }
     }
     return &m_buffer[consumer_pos];
+}
+
+void VisualBuffer::clear()
+{
+    consumer_pos = 0;
+    insertion_pos = 0;
+    for(int i = 0; i < VISUAL_BUFFER_SIZE; ++i)
+    {
+        m_buffer[i].ts = 0;
+        m_buffer[i].used = false;
+        memset(m_buffer[i].data[0], 0, 512 * sizeof(float));
+        memset(m_buffer[i].data[1], 0, 512 * sizeof(float));
+    }
 }
 
 QMutex *VisualBuffer::mutex()

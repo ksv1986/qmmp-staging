@@ -114,6 +114,7 @@ public:
 
 
     static void addData(float *pcm, int samples, int channels, qint64 ts, qint64 delay);
+    static void clearQueue();
 
 signals:
     /*!

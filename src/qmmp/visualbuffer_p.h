@@ -54,8 +54,8 @@ public:
 private:
     VisualNode m_buffer[VISUAL_BUFFER_SIZE];
     qint64 m_elapsed;
-    int consumer_pos;
-    int insertion_pos;
+    int m_take_index;
+    int m_add_index;
     QTime m_time;
     QMutex m_mutex;
 

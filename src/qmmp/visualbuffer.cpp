@@ -45,22 +45,23 @@ static inline void stereo_from_multichannel(float *l,
 
 VisualBuffer::VisualBuffer()
 {
-    consumer_pos = 0;
-    insertion_pos = 0;
+    m_take_index = 0;
+    m_add_index = 0;
     m_elapsed = 0;
 }
 
 void VisualBuffer::add(float *pcm, int samples, int channels, qint64 ts, qint64 delay)
 {
-    insertion_pos++;
-    if (insertion_pos == VISUAL_BUFFER_SIZE )
+    m_add_index++;
+    if (m_add_index == VISUAL_BUFFER_SIZE)
     {
-        insertion_pos = 0;
+        m_add_index = 0;
     }
 
-    VisualNode *b = &m_buffer[insertion_pos];
+    VisualNode *b = &m_buffer[m_add_index];
     stereo_from_multichannel(b->data[0], b->data[1], pcm, qMin(512, samples / channels), channels);
     b->ts = ts;
+    delay = qMax(delay, 50LL); //leave at least 50 ms for the visualization
     m_elapsed = qMax(0LL, ts - delay);
     m_time.restart();
 }
@@ -68,22 +69,23 @@ void VisualBuffer::add(float *pcm, int samples, int channels, qint64 ts, qint64 
 VisualNode *VisualBuffer::take()
 {
     int steps = 0;
-    int t = m_elapsed/* + m_time.elapsed()*/;
-    while((m_buffer[consumer_pos].ts < t) && (steps++ < VISUAL_BUFFER_SIZE))
+    int t = m_elapsed + m_time.elapsed();
+    while(m_buffer[m_take_index].used ||
+          ((m_buffer[m_take_index].ts < t) && (steps++ < VISUAL_BUFFER_SIZE)))
     {
-        consumer_pos++;
-        if(consumer_pos == VISUAL_BUFFER_SIZE)
+        m_take_index++;
+        if(m_take_index == VISUAL_BUFFER_SIZE)
         {
-            consumer_pos = 0;
+            m_take_index = 0;
         }
     }
-    return &m_buffer[consumer_pos];
+    return &m_buffer[m_take_index];
 }
 
 void VisualBuffer::clear()
 {
-    consumer_pos = 0;
-    insertion_pos = 0;
+    m_take_index = 0;
+    m_add_index = 0;
     for(int i = 0; i < VISUAL_BUFFER_SIZE; ++i)
     {
         m_buffer[i].ts = 0;

@@ -26,6 +26,8 @@
 #include <QHash>
 #include <stddef.h>
 
+#define QMMP_VISUAL_NODE_SIZE 512 //samples
+
 class Buffer;
 class Decoder;
 class Output;
@@ -56,12 +58,12 @@ public:
      * @param samples Number of samples.
      * @param chan Number of channels.
      */
-    virtual void add(float *data, size_t samples, int chan) = 0;
+    virtual void add(float *data, size_t samples, int chan){}
     /*!
      * Resets visual plugin buffers and widgets.
      * Subclass should reimplement this function.
      */
-    virtual void clear() = 0;
+    //virtual void clear() = 0;
     /*!
      * Returns mutex pointer.
      */
@@ -113,8 +115,12 @@ public:
     static void showSettings(VisualFactory *factory, QWidget *parent);
 
 
-    static void addData(float *pcm, int samples, int channels, qint64 ts, qint64 delay);
-    static void clearQueue();
+    static void addAudio(float *pcm, int samples, int channels, qint64 ts, qint64 delay);
+    static void clearBuffer();
+
+public slots:
+    virtual void start(){} //= 0;
+    virtual void stop(){}// = 0;
 
 signals:
     /*!
@@ -129,7 +135,7 @@ protected:
      */
     virtual void closeEvent (QCloseEvent *event);
 
-    virtual void takeData(float *left, float *right);
+    virtual bool takeData(float *left, float *right);
 
 private:
     Decoder *m_decoder;

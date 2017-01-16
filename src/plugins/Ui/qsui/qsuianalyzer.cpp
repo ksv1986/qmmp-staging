@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,15 +31,11 @@
 #include "inlines.h"
 #include "qsuianalyzer.h"
 
-#define VISUAL_NODE_SIZE 512 //samples
-#define VISUAL_BUFFER_SIZE (5*VISUAL_NODE_SIZE)
-
 QSUiAnalyzer::QSUiAnalyzer (QWidget *parent) : Visual (parent)
 {
     m_intern_vis_data = 0;
     m_peaks = 0;
     m_x_scale = 0;
-    m_buffer_at = 0;
     m_rows = 0;
     m_cols = 0;
     m_offset = 0;
@@ -51,8 +47,8 @@ QSUiAnalyzer::QSUiAnalyzer (QWidget *parent) : Visual (parent)
 
     m_timer = new QTimer (this);
     connect(m_timer, SIGNAL (timeout()), this, SLOT (timeout()));
-    m_left_buffer = new float[VISUAL_BUFFER_SIZE];
-    m_right_buffer = new float[VISUAL_BUFFER_SIZE];
+    m_left_buffer = new float[QMMP_VISUAL_NODE_SIZE];
+    m_right_buffer = new float[QMMP_VISUAL_NODE_SIZE];
 
     readSettings();
     clear();
@@ -73,7 +69,6 @@ QSUiAnalyzer::~QSUiAnalyzer()
 
 void QSUiAnalyzer::clear()
 {
-    m_buffer_at = 0;
     m_rows = 0;
     m_cols = 0;
     update();
@@ -91,28 +86,6 @@ QSize QSUiAnalyzer::sizeHint() const
     return QSize(200, 100);
 }
 
-void QSUiAnalyzer::add (float *data, size_t samples, int chan)
-{
-    if (!m_timer->isActive ())
-        return;
-
-    if(VISUAL_BUFFER_SIZE == m_buffer_at)
-    {
-        m_buffer_at -= VISUAL_NODE_SIZE;
-        memmove(m_left_buffer, m_left_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-        memmove(m_right_buffer, m_right_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-        return;
-    }
-
-    int frames = qMin(int(samples/chan), VISUAL_BUFFER_SIZE - m_buffer_at);
-
-    stereo_from_multichannel(m_left_buffer + m_buffer_at,
-                               m_right_buffer + m_buffer_at, data, frames, chan);
-
-
-    m_buffer_at += frames;
-}
-
 void QSUiAnalyzer::setCover(const QPixmap &pixmap)
 {
     m_cover = pixmap;
@@ -121,21 +94,11 @@ void QSUiAnalyzer::setCover(const QPixmap &pixmap)
 
 void QSUiAnalyzer::timeout()
 {
-    /*mutex()->lock();
-    if(m_buffer_at < VISUAL_NODE_SIZE)
+    if(takeData(m_left_buffer, m_right_buffer))
     {
-        mutex()->unlock ();
-        return;
+        process();
+        update();
     }
-
-    process (m_left_buffer, m_right_buffer);
-    m_buffer_at -= VISUAL_NODE_SIZE;
-    memmove(m_left_buffer, m_left_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-    memmove(m_right_buffer, m_right_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-    mutex()->unlock ();*/
-    takeData(m_left_buffer, m_right_buffer);
-    process (m_left_buffer, m_right_buffer);
-    update();
 }
 
 void QSUiAnalyzer::paintEvent (QPaintEvent * e)
@@ -161,7 +124,7 @@ void QSUiAnalyzer::resizeEvent(QResizeEvent *)
     updateCover();
 }
 
-void QSUiAnalyzer::process (float *left, float *right)
+void QSUiAnalyzer::process()
 {
     int rows = qMax((height() - 2) / m_cell_size.height(),2);
     int cols = qMax((width() - m_offset - 2) / m_cell_size.width(),1);
@@ -193,9 +156,9 @@ void QSUiAnalyzer::process (float *left, float *right)
     int k, magnitude;
     float data[512];
 
-    for(int i = 0; i < VISUAL_NODE_SIZE; ++i)
+    for(int i = 0; i < QMMP_VISUAL_NODE_SIZE; ++i)
     {
-        data[i] = left[i] / 2 + right[i] / 2;
+        data[i] = m_left_buffer[i] / 2 + m_right_buffer[i] / 2;
         data[i] = qBound(-1.0f, data[i], 1.0f);
     }
     calc_freq (dest, data);
@@ -412,4 +375,5 @@ void QSUiAnalyzer::stop()
 {
     m_running = false;
     m_timer->stop();
+    clear();
 }

@@ -79,6 +79,9 @@ VisualNode *VisualBuffer::take()
             m_take_index = 0;
         }
     }
+    if(m_buffer[m_take_index].ts < t) //unable to find node
+        return 0;
+
     return &m_buffer[m_take_index];
 }
 

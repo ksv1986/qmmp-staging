@@ -71,13 +71,17 @@ void Visual::closeEvent (QCloseEvent *event)
     QWidget::closeEvent(event);
 }
 
-void Visual::takeData(float *left, float *right)
+bool Visual::takeData(float *left, float *right)
 {
     m_buffer.mutex()->lock();
     VisualNode *node = m_buffer.take();
-    memcpy(left, node->data[0], 512 * sizeof(float));
-    memcpy(right, node->data[1], 512 * sizeof(float));
+    if(node)
+    {
+        memcpy(left, node->data[0], 512 * sizeof(float));
+        memcpy(right, node->data[1], 512 * sizeof(float));
+    }
     m_buffer.mutex()->unlock();
+    return node != 0;
 }
 
 //static members
@@ -210,14 +214,14 @@ void Visual::showSettings(VisualFactory *factory, QWidget *parent)
     dialog->deleteLater();
 }
 
-void Visual::addData(float *pcm, int samples, int channels, qint64 ts, qint64 delay)
+void Visual::addAudio(float *pcm, int samples, int channels, qint64 ts, qint64 delay)
 {
     m_buffer.mutex()->lock();
     m_buffer.add(pcm, samples, channels, ts, delay);
     m_buffer.mutex()->unlock();
 }
 
-void Visual::clearQueue()
+void Visual::clearBuffer()
 {
     m_buffer.mutex()->lock();
     m_buffer.clear();

@@ -119,6 +119,8 @@ private:
     void dispatchVisual(Buffer *buffer);
     void clearVisuals();
     bool prepareConverters();
+    void startVisualization();
+    void stopVisualization();
 
     bool m_skip;
     QMutex m_mutex;

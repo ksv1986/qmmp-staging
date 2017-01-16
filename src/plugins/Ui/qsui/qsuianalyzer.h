@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -34,18 +34,19 @@ class QSUiAnalyzer : public Visual
 {
     Q_OBJECT
 public:
-    QSUiAnalyzer( QWidget *parent = 0);
+    QSUiAnalyzer(QWidget *parent = 0);
     virtual ~QSUiAnalyzer();
 
-    void add(float *data, size_t samples, int chan);
     void setCover(const QPixmap &pixmap);
     void clear();
     void clearCover();
     QSize sizeHint() const;
-    void start();
-    void stop();
+    //void start();
+    //void stop();
 
 public slots:
+    void start();
+    void stop();
     void readSettings();
 
 private slots:
@@ -58,7 +59,7 @@ private:
     void hideEvent(QHideEvent *);
     void showEvent(QShowEvent *);
     void resizeEvent(QResizeEvent *);
-    void process(float *l, float *r);
+    void process();
     void draw(QPainter *p);
     void createMenu();
     void updateCover();
@@ -75,7 +76,6 @@ private:
     bool m_show_cover;
     float *m_left_buffer;
     float *m_right_buffer;
-    int m_buffer_at;
     int m_cols, m_rows;
     int m_offset;
     bool m_update;

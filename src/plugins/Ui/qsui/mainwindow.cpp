@@ -209,7 +209,7 @@ void MainWindow::showState(Qmmp::State state)
     case Qmmp::Playing:
     {
         updateStatus();
-        m_analyzer->start();
+        //m_analyzer->start();
         m_analyzer->setCover(MetaDataManager::instance()->getCover(m_core->url()));
         CoverWidget *cw = qobject_cast<CoverWidget *>(m_ui.coverDockWidget->widget());
         cw->setCover(MetaDataManager::instance()->getCover(m_core->url()));
@@ -220,7 +220,7 @@ void MainWindow::showState(Qmmp::State state)
         break;
     case Qmmp::Stopped:
         updateStatus();
-        m_analyzer->stop();
+        //m_analyzer->stop();
         m_timeLabel->clear();
         m_positionSlider->setValue(0);
         m_analyzer->clearCover();

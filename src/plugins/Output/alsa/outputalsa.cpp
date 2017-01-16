@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -243,7 +243,10 @@ bool OutputALSA::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat form
 
 qint64 OutputALSA::latency()
 {
-    return m_prebuf_fill * 1000 / sampleRate() / channels() / sampleSize();
+    snd_pcm_sframes_t delay = 0;
+    snd_pcm_delay(pcm_handle, &delay);
+    delay = qBound(3000L, delay, 30000L); //filter out possible invalid values
+    return m_prebuf_fill * 1000 / sampleRate() / channels() / sampleSize() + delay * 1000 / sampleRate();
 }
 
 void OutputALSA::drain()

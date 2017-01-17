@@ -45,8 +45,6 @@ Analyzer::Analyzer (QWidget *parent) : Visual (parent)
     setMinimumSize(2*300-30,105);
     m_timer = new QTimer (this);
     connect(m_timer, SIGNAL (timeout()), this, SLOT (timeout()));
-    m_left_buffer = new float[QMMP_VISUAL_NODE_SIZE];
-    m_right_buffer = new float[QMMP_VISUAL_NODE_SIZE];
 
     clear();
     createMenu();
@@ -55,9 +53,6 @@ Analyzer::Analyzer (QWidget *parent) : Visual (parent)
 
 Analyzer::~Analyzer()
 {
-    delete [] m_left_buffer;
-    delete [] m_right_buffer;
-
     if(m_peaks)
         delete [] m_peaks;
     if(m_intern_vis_data)

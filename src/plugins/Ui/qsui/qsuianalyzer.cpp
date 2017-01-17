@@ -31,7 +31,7 @@
 #include "inlines.h"
 #include "qsuianalyzer.h"
 
-QSUiAnalyzer::QSUiAnalyzer (QWidget *parent) : Visual (parent)
+QSUiAnalyzer::QSUiAnalyzer(QWidget *parent) : Visual (parent)
 {
     m_intern_vis_data = 0;
     m_peaks = 0;
@@ -47,8 +47,6 @@ QSUiAnalyzer::QSUiAnalyzer (QWidget *parent) : Visual (parent)
 
     m_timer = new QTimer (this);
     connect(m_timer, SIGNAL (timeout()), this, SLOT (timeout()));
-    m_left_buffer = new float[QMMP_VISUAL_NODE_SIZE];
-    m_right_buffer = new float[QMMP_VISUAL_NODE_SIZE];
 
     readSettings();
     clear();
@@ -56,9 +54,6 @@ QSUiAnalyzer::QSUiAnalyzer (QWidget *parent) : Visual (parent)
 
 QSUiAnalyzer::~QSUiAnalyzer()
 {
-    delete [] m_left_buffer;
-    delete [] m_right_buffer;
-
     if(m_peaks)
         delete [] m_peaks;
     if(m_intern_vis_data)
@@ -94,7 +89,7 @@ void QSUiAnalyzer::setCover(const QPixmap &pixmap)
 
 void QSUiAnalyzer::timeout()
 {
-    if(takeData(m_left_buffer, m_right_buffer))
+    if(takeData(m_buffer))
     {
         process();
         update();
@@ -154,14 +149,8 @@ void QSUiAnalyzer::process()
     short dest[256];
     short y;
     int k, magnitude;
-    float data[512];
 
-    for(int i = 0; i < QMMP_VISUAL_NODE_SIZE; ++i)
-    {
-        data[i] = m_left_buffer[i] / 2 + m_right_buffer[i] / 2;
-        data[i] = qBound(-1.0f, data[i], 1.0f);
-    }
-    calc_freq (dest, data);
+    calc_freq (dest, m_buffer);
 
     double y_scale = (double) 1.25 * m_rows / log(256);
 

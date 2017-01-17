@@ -29,6 +29,8 @@
 #include <QPixmap>
 #include <qmmp/visual.h>
 
+class QTimer;
+
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
 */
@@ -56,10 +58,10 @@ private:
     QHash <QChar, QPixmap> m_letters;
     QStringList m_lines;
     QStringList m_source_lines;
-    float *m_left_buffer;
-    float *m_right_buffer;
+    float m_buffer[QMMP_VISUAL_NODE_SIZE];
     int m_value;
     qint64 m_elapsed;
+    QTimer *m_timer;
 
 };
 

@@ -72,8 +72,7 @@ private:
     double m_analyzer_falloff;
     bool m_show_peaks;
     bool m_show_cover;
-    float *m_left_buffer;
-    float *m_right_buffer;
+    float m_buffer[QMMP_VISUAL_NODE_SIZE];
     int m_cols, m_rows;
     int m_offset;
     bool m_update;

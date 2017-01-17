@@ -27,6 +27,7 @@
 #include <QDialog>
 #include <QDir>
 #include <QPluginLoader>
+#include "statehandler.h"
 #include "visualfactory.h"
 #include "output.h"
 #include "visualbuffer_p.h"
@@ -72,8 +73,16 @@ bool Visual::takeData(float *left, float *right)
     VisualNode *node = m_buffer.take();
     if(node)
     {
-        memcpy(left, node->data[0], 512 * sizeof(float));
-        memcpy(right, node->data[1], 512 * sizeof(float));
+        if(left && right)
+        {
+            memcpy(left, node->data[0], QMMP_VISUAL_NODE_SIZE * sizeof(float));
+            memcpy(right, node->data[1], QMMP_VISUAL_NODE_SIZE * sizeof(float));
+        }
+        else if(left && !right)
+        {
+            for(int i = 0; i < QMMP_VISUAL_NODE_SIZE; ++i)
+                left[i] = qBound(-1.0f, (node->data[0][i] + node->data[1][i]) / 2, 1.0f);
+        }
     }
     m_buffer.mutex()->unlock();
     return node != 0;
@@ -122,6 +131,9 @@ void Visual::setEnabled(VisualFactory* factory, bool enable)
                 connect(visual, SIGNAL(closedByUser()), m_receiver, m_member);
             visual->setWindowFlags(Qt::Window);
             m_vis_map.insert (factory, visual);
+            Qmmp::State st = StateHandler::instance()->state();
+            if(st == Qmmp::Playing || st == Qmmp::Buffering || st == Qmmp::Paused)
+                visual->start();
             m_visuals.append(visual);
             visual->show();
         }
@@ -153,7 +165,12 @@ bool Visual::isEnabled(VisualFactory* factory)
 void Visual::add(Visual *visual)
 {
     if (!m_visuals.contains(visual))
+    {
+        Qmmp::State st = StateHandler::instance()->state();
+        if(st == Qmmp::Playing || st == Qmmp::Buffering || st == Qmmp::Paused)
+            visual->start();
         m_visuals.append(visual);
+    }
 }
 
 void Visual::remove(Visual *visual)

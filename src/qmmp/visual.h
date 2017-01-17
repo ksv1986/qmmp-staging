@@ -122,7 +122,7 @@ protected:
      */
     virtual void closeEvent (QCloseEvent *event);
 
-    bool takeData(float *left, float *right);
+    bool takeData(float *left, float *right = 0);
 
 private:
     Decoder *m_decoder;

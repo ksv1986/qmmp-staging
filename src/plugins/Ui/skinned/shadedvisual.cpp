@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,9 +25,6 @@
 #include "inlines.h"
 #include "shadedvisual.h"
 
-#define VISUAL_NODE_SIZE 512 //samples
-#define VISUAL_BUFFER_SIZE (5*VISUAL_NODE_SIZE)
-
 ShadedVisual::ShadedVisual(QWidget *parent) : Visual(parent)
 {
     m_skin = Skin::instance();
@@ -37,9 +34,9 @@ ShadedVisual::ShadedVisual(QWidget *parent) : Visual(parent)
     m_timer = new QTimer(this);
     connect(m_timer, SIGNAL (timeout()), this, SLOT (timeout()));
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
-    m_left_buffer = new float[VISUAL_BUFFER_SIZE];
-    m_right_buffer = new float[VISUAL_BUFFER_SIZE];
-    m_buffer_at = 0;
+    m_left_buffer = new float[QMMP_VISUAL_NODE_SIZE];
+    m_right_buffer = new float[QMMP_VISUAL_NODE_SIZE];
+    m_running = false;
     m_timer->setInterval(50);
     m_timer->start();
     clear();
@@ -51,29 +48,8 @@ ShadedVisual::~ShadedVisual()
     delete [] m_right_buffer;
 }
 
-void ShadedVisual::add(float *data, size_t samples, int chan)
-{
-    if (!m_timer->isActive ())
-        return;
-
-    if(VISUAL_BUFFER_SIZE == m_buffer_at)
-    {
-        m_buffer_at -= VISUAL_NODE_SIZE;
-        memmove(m_left_buffer, m_left_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-        memmove(m_right_buffer, m_right_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-        return;
-    }
-
-    int frames = qMin(int(samples/chan), VISUAL_BUFFER_SIZE - m_buffer_at);
-
-    stereo16_from_multichannel(m_left_buffer + m_buffer_at,
-                               m_right_buffer + m_buffer_at, data, frames, chan);
-    m_buffer_at += frames;
-}
-
 void ShadedVisual::clear()
 {
-    m_buffer_at = 0;
     m_l = 0;
     m_r = 0;
     m_pixmap.fill(m_skin->getVisColor(0));
@@ -84,26 +60,32 @@ void ShadedVisual::timeout()
 {
     m_pixmap.fill(m_skin->getVisColor(0));
 
-    mutex()->lock ();
-    if(m_buffer_at < VISUAL_NODE_SIZE)
+    if(takeData(m_left_buffer, m_right_buffer))
     {
-        mutex()->unlock ();
-        return;
+        process();
+        QPainter p(&m_pixmap);
+        draw (&p);
+        update();
     }
-
-    process (m_left_buffer, m_right_buffer);
-    m_buffer_at -= VISUAL_NODE_SIZE;
-    memmove(m_left_buffer, m_left_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-    memmove(m_right_buffer, m_right_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-    QPainter p(&m_pixmap);
-    draw (&p);
-    mutex()->unlock ();
-    update();
 }
 
-void ShadedVisual::process (float *left, float *right)
+void ShadedVisual::start()
 {
-    int step = (VISUAL_NODE_SIZE << 8)/74;
+    m_running = true;
+    if(isVisible())
+        m_timer->start();
+}
+
+void ShadedVisual::stop()
+{
+    m_running = false;
+    m_timer->stop();
+    clear();
+}
+
+void ShadedVisual::process ()
+{
+    int step = (QMMP_VISUAL_NODE_SIZE << 8)/74;
     int pos = 0;
     int l = 0;
     int r = 0;
@@ -113,21 +95,16 @@ void ShadedVisual::process (float *left, float *right)
     {
         pos += step;
 
-        if (left)
-        {
-            j_l = abs(left[pos >> 8] * 8.0);
+        j_l = abs(m_left_buffer[pos >> 8] * 8.0);
 
-            if (j_l > 15)
-                j_l = 15;
-            l = qMax(l, j_l);
-        }
-        if (right)
-        {
-            j_r = abs(right[pos >> 8] * 8.0);
-            if (j_r > 15)
-                j_r = 15;
-            r = qMax(r, j_r);
-        }
+        if (j_l > 15)
+            j_l = 15;
+        l = qMax(l, j_l);
+
+        j_r = abs(m_right_buffer[pos >> 8] * 8.0);
+        if (j_r > 15)
+            j_r = 15;
+        r = qMax(r, j_r);
     }
     m_l -= 0.5;
     m_l = qMax(m_l, (double)l);
@@ -160,7 +137,8 @@ void ShadedVisual::hideEvent (QHideEvent *)
 
 void ShadedVisual::showEvent (QShowEvent *)
 {
-    m_timer->start();
+    if(m_running)
+        m_timer->start();
 }
 
 void ShadedVisual::updateSkin()

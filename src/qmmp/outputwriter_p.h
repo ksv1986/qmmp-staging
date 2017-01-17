@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -117,7 +117,6 @@ private:
                   int channels);
     void dispatch(const Qmmp::State &state);
     void dispatchVisual(Buffer *buffer);
-    void clearVisuals();
     bool prepareConverters();
     void startVisualization();
     void stopVisualization();

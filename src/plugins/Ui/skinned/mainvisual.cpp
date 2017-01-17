@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,9 +31,6 @@
 #include "inlines.h"
 #include "mainvisual.h"
 
-#define VISUAL_NODE_SIZE 512 //samples
-#define VISUAL_BUFFER_SIZE (5*VISUAL_NODE_SIZE)
-
 MainVisual *MainVisual::m_instance = 0;
 
 MainVisual *MainVisual::instance()
@@ -50,10 +47,11 @@ MainVisual::MainVisual (QWidget *parent) : Visual (parent), m_vis (0)
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(readSettings()));
     m_timer = new QTimer (this);
     connect(m_timer, SIGNAL (timeout()), this, SLOT (timeout()));
-    m_buffer = new float[VISUAL_BUFFER_SIZE];
-    m_buffer_at = 0;
+    m_left_buffer = new float[QMMP_VISUAL_NODE_SIZE];
+    m_right_buffer = new float[QMMP_VISUAL_NODE_SIZE];
     m_instance = this;
     m_update = false;
+    m_running = false;
     createMenu();
     readSettings();
 }
@@ -67,7 +65,8 @@ MainVisual::~MainVisual()
         delete m_vis;
         m_vis = 0;
     }
-    delete [] m_buffer;
+    delete [] m_left_buffer;
+    delete [] m_right_buffer;
     m_instance = 0;
 }
 
@@ -88,52 +87,22 @@ void MainVisual::setVisual (VisualBase *newvis)
 
 void MainVisual::clear()
 {
-    m_buffer_at = 0;
     if (m_vis)
         m_vis->clear();
     m_pixmap = m_bg;
     update();
 }
 
-void MainVisual::add (float *data, size_t samples, int chan)
-{
-    if (!m_timer->isActive () || !m_vis)
-        return;
-
-    if(VISUAL_BUFFER_SIZE == m_buffer_at)
-    {
-        m_buffer_at -= VISUAL_NODE_SIZE;
-        memmove(m_buffer, m_buffer + VISUAL_NODE_SIZE, m_buffer_at * sizeof(float));
-        return;
-    }
-
-    int frames = qMin(int(samples/chan), VISUAL_BUFFER_SIZE - m_buffer_at);
-    mono16_from_multichannel(m_buffer + m_buffer_at, data, frames, chan);
-
-    m_buffer_at += frames;
-}
-
 void MainVisual::timeout()
 {
-    mutex()->lock ();
-
-    if(m_buffer_at < VISUAL_NODE_SIZE)
+    if(m_vis && takeData(m_left_buffer, m_right_buffer))
     {
-        mutex()->unlock ();
-        return;
-    }
-
-    if (m_vis)
-    {
-        m_vis->process (m_buffer);
-        m_buffer_at -= VISUAL_NODE_SIZE;
-        memmove(m_buffer, m_buffer + VISUAL_NODE_SIZE, m_buffer_at*sizeof(float));
+        m_vis->process(m_left_buffer);
         m_pixmap = m_bg;
         QPainter p(&m_pixmap);
         m_vis->draw (&p);
+        update();
     }
-    mutex()->unlock ();
-    update();
 }
 
 void MainVisual::paintEvent (QPaintEvent *)
@@ -149,7 +118,7 @@ void MainVisual::hideEvent (QHideEvent *)
 
 void MainVisual::showEvent (QShowEvent *)
 {
-    if (m_vis)
+    if (m_vis && m_running)
         m_timer->start();
 }
 
@@ -178,6 +147,18 @@ void MainVisual::mousePressEvent (QMouseEvent *e)
         }
         writeSettings();
     }
+}
+
+void MainVisual::start()
+{
+    m_running = true;
+    if(isVisible())
+        m_timer->start();
+}
+
+void MainVisual::stop()
+{
+    m_timer->stop();
 }
 
 void MainVisual::drawBackGround()
@@ -552,7 +533,7 @@ Scope::~Scope()
 
 bool Scope::process(float *l)
 {
-    int step = (VISUAL_NODE_SIZE << 8)/76;
+    int step = (QMMP_VISUAL_NODE_SIZE << 8)/76;
     int pos = 0;
 
     for (int i = 0; i < 76; ++i)

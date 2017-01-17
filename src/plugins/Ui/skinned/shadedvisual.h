@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -39,30 +39,30 @@ public:
 
     ~ShadedVisual();
 
-    void add(float *data, size_t samples, int chan);
-    void clear();
-
-    void paintEvent (QPaintEvent *);
-    void hideEvent (QHideEvent *);
-    void showEvent (QShowEvent *);
-
 public slots:
     void timeout();
+    void start();
+    void stop();
 
 private slots:
     void updateSkin();
 
 private:
-    void process (float *l, float *r);
+    void clear();
+    void paintEvent (QPaintEvent *);
+    void hideEvent (QHideEvent *);
+    void showEvent (QShowEvent *);
+    void process ();
     void draw (QPainter *);
+
     Skin *m_skin;
     QTimer *m_timer;
     QPixmap m_pixmap;
     float *m_left_buffer;
     float *m_right_buffer;
-    int m_buffer_at;
     double m_l, m_r;
     int m_ratio;
+    bool m_running;
 
 };
 

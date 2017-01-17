@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -45,13 +45,12 @@ class MainVisual : public Visual
     Q_OBJECT
 
 public:
-    MainVisual( QWidget *parent = 0);
+    MainVisual(QWidget *parent = 0);
     virtual ~MainVisual();
 
     static MainVisual *instance();
     void setVisual(VisualBase *newvis);
-    void add(float *data, size_t samples, int chan);
-    void clear();
+
     void paintEvent(QPaintEvent *);
 
 protected:
@@ -60,13 +59,16 @@ protected:
     virtual void mousePressEvent (QMouseEvent *);
 
 public slots:
-    void timeout();
+    void start();
+    void stop();
 
 private slots:
+    void timeout();
     void readSettings();
     void writeSettings();
 
 private:
+    void clear();
     void drawBackGround();
     void createMenu();
 
@@ -88,9 +90,10 @@ private:
     QAction *m_peaksAction;
     QAction *m_transparentAction;
     int m_ratio;
-    float *m_buffer;
-    int m_buffer_at;
+    float *m_left_buffer;
+    float *m_right_buffer;
     bool m_update;
+    bool m_running;
 };
 
 namespace mainvisual

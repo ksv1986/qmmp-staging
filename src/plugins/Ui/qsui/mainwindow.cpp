@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -209,7 +209,6 @@ void MainWindow::showState(Qmmp::State state)
     case Qmmp::Playing:
     {
         updateStatus();
-        //m_analyzer->start();
         m_analyzer->setCover(MetaDataManager::instance()->getCover(m_core->url()));
         CoverWidget *cw = qobject_cast<CoverWidget *>(m_ui.coverDockWidget->widget());
         cw->setCover(MetaDataManager::instance()->getCover(m_core->url()));
@@ -220,7 +219,6 @@ void MainWindow::showState(Qmmp::State state)
         break;
     case Qmmp::Stopped:
         updateStatus();
-        //m_analyzer->stop();
         m_timeLabel->clear();
         m_positionSlider->setValue(0);
         m_analyzer->clearCover();

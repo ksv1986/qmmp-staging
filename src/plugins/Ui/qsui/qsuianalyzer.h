@@ -41,8 +41,6 @@ public:
     void clear();
     void clearCover();
     QSize sizeHint() const;
-    //void start();
-    //void stop();
 
 public slots:
     void start();

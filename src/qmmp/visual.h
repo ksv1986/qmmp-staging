@@ -52,23 +52,6 @@ public:
      */
     virtual ~Visual();
     /*!
-     * Adds data for visualization.
-     * Subclass should reimplement this function.
-     * @param data Audio data.
-     * @param samples Number of samples.
-     * @param chan Number of channels.
-     */
-    virtual void add(float *data, size_t samples, int chan){}
-    /*!
-     * Resets visual plugin buffers and widgets.
-     * Subclass should reimplement this function.
-     */
-    //virtual void clear() = 0;
-    /*!
-     * Returns mutex pointer.
-     */
-    QMutex *mutex();
-    /*!
     * Returns a list of visual factories.
     */
     static QList<VisualFactory*> factories();
@@ -113,14 +96,18 @@ public:
      * @param parent Parent widget.
      */
     static void showSettings(VisualFactory *factory, QWidget *parent);
-
-
+    /*!
+     * Adds data for visualization.
+     * @param ocm Audio data.
+     * @param samples Number of samples.
+     * @param chan Number of channels.
+     */
     static void addAudio(float *pcm, int samples, int channels, qint64 ts, qint64 delay);
     static void clearBuffer();
 
 public slots:
-    virtual void start(){} //= 0;
-    virtual void stop(){}// = 0;
+    virtual void start() = 0;
+    virtual void stop() = 0;
 
 signals:
     /*!
@@ -135,12 +122,11 @@ protected:
      */
     virtual void closeEvent (QCloseEvent *event);
 
-    virtual bool takeData(float *left, float *right);
+    bool takeData(float *left, float *right);
 
 private:
     Decoder *m_decoder;
     Output *m_output;
-    QMutex m_mutex;
 
     static QList<VisualFactory*> *m_factories;
     static QHash <VisualFactory*, QString> *m_files;

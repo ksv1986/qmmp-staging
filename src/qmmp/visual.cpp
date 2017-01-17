@@ -45,11 +45,6 @@ Visual::~Visual()
     qDebug("Visual::~Visual()");
 }
 
-QMutex *Visual::mutex()
-{
-    return &m_mutex;
-}
-
 void Visual::closeEvent (QCloseEvent *event)
 {
     m_visuals.removeAll(this);

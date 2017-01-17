@@ -34,8 +34,6 @@ ShadedVisual::ShadedVisual(QWidget *parent) : Visual(parent)
     m_timer = new QTimer(this);
     connect(m_timer, SIGNAL (timeout()), this, SLOT (timeout()));
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
-    m_left_buffer = new float[QMMP_VISUAL_NODE_SIZE];
-    m_right_buffer = new float[QMMP_VISUAL_NODE_SIZE];
     m_running = false;
     m_timer->setInterval(50);
     m_timer->start();
@@ -43,10 +41,7 @@ ShadedVisual::ShadedVisual(QWidget *parent) : Visual(parent)
 }
 
 ShadedVisual::~ShadedVisual()
-{
-    delete [] m_left_buffer;
-    delete [] m_right_buffer;
-}
+{}
 
 void ShadedVisual::clear()
 {

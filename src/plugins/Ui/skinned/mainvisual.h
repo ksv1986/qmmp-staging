@@ -90,8 +90,7 @@ private:
     QAction *m_peaksAction;
     QAction *m_transparentAction;
     int m_ratio;
-    float *m_left_buffer;
-    float *m_right_buffer;
+    float m_buffer[QMMP_VISUAL_NODE_SIZE];
     bool m_update;
     bool m_running;
 };

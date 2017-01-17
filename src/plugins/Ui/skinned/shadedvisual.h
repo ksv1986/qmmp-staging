@@ -58,8 +58,8 @@ private:
     Skin *m_skin;
     QTimer *m_timer;
     QPixmap m_pixmap;
-    float *m_left_buffer;
-    float *m_right_buffer;
+    float m_left_buffer[QMMP_VISUAL_NODE_SIZE];
+    float m_right_buffer[QMMP_VISUAL_NODE_SIZE];
     double m_l, m_r;
     int m_ratio;
     bool m_running;

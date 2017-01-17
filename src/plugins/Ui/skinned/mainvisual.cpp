@@ -47,8 +47,6 @@ MainVisual::MainVisual (QWidget *parent) : Visual (parent), m_vis (0)
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(readSettings()));
     m_timer = new QTimer (this);
     connect(m_timer, SIGNAL (timeout()), this, SLOT (timeout()));
-    m_left_buffer = new float[QMMP_VISUAL_NODE_SIZE];
-    m_right_buffer = new float[QMMP_VISUAL_NODE_SIZE];
     m_instance = this;
     m_update = false;
     m_running = false;
@@ -61,12 +59,9 @@ MainVisual::~MainVisual()
     writeSettings();
     if (m_vis)
     {
-
         delete m_vis;
         m_vis = 0;
     }
-    delete [] m_left_buffer;
-    delete [] m_right_buffer;
     m_instance = 0;
 }
 
@@ -95,9 +90,9 @@ void MainVisual::clear()
 
 void MainVisual::timeout()
 {
-    if(m_vis && takeData(m_left_buffer, m_right_buffer))
+    if(m_vis && takeData(m_buffer))
     {
-        m_vis->process(m_left_buffer);
+        m_vis->process(m_buffer);
         m_pixmap = m_bg;
         QPainter p(&m_pixmap);
         m_vis->draw (&p);
@@ -158,7 +153,9 @@ void MainVisual::start()
 
 void MainVisual::stop()
 {
+    m_running = false;
     m_timer->stop();
+    clear();
 }
 
 void MainVisual::drawBackGround()

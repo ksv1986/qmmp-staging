@@ -21,7 +21,7 @@
 #include <QPainter>
 #include <QFile>
 #include <QTimer>
-#include <stdlib.h>
+#include <cmath>
 #include <qmmp/qmmp.h>
 #include "inlines.h"
 #include "logo.h"
@@ -211,7 +211,7 @@ void Logo::processPreset4()
     {
         for(int j = 0; j < QMMP_VISUAL_NODE_SIZE; j+=8)
         {
-            max = qMax(max, abs(m_buffer[j] * 65536.0));
+            max = qMax(max, int(std::abs(m_buffer[j] * 65536.0)));
         }
     }
 
@@ -227,7 +227,7 @@ void Logo::processPreset4()
 
         while(k < m_value * count / 65536 / 2)
         {
-            int value = abs(m_buffer[qMin(at++, QMMP_VISUAL_NODE_SIZE)] * 16);
+            int value = std::abs(m_buffer[qMin(at++, QMMP_VISUAL_NODE_SIZE)] * 16);
             line.replace(line.indexOf("X"), 1, QString("%1").arg(value, 0, 16).toUpper());
             k++;
         }
@@ -236,7 +236,7 @@ void Logo::processPreset4()
 
         while(k < m_value * count / 65536 / 2)
         {
-            int value = abs(m_buffer[qMin(at++, QMMP_VISUAL_NODE_SIZE)] * 16);
+            int value = std::abs(m_buffer[qMin(at++, QMMP_VISUAL_NODE_SIZE)] * 16);
             line.replace(line.lastIndexOf("X"), 1, QString("%1").arg(value, 0, 16).toUpper());
             k++;
         }

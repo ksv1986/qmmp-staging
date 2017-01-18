@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -66,7 +66,6 @@ private:
     void createActions();
     ProjectMWrapper *m_projectM;
     QMenu *m_menu;
-    QTimer *m_timer;
     QListWidget *m_listWidget;
 };
 

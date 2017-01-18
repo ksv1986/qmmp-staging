@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,6 +37,7 @@
 ProjectMPlugin::ProjectMPlugin (QWidget *parent)
         : Visual (parent, Qt::Window | Qt::MSWindowsOwnDC)
 {
+    m_running = false;
     setlocale(LC_NUMERIC, "C"); //fixes problem with none-english locales
     setWindowTitle(tr("ProjectM"));
     setWindowIcon(parent->windowIcon());
@@ -62,14 +63,47 @@ ProjectMPlugin::ProjectMPlugin (QWidget *parent)
     restoreGeometry(settings.value("ProjectM/geometry").toByteArray());
     m_splitter->setSizes(QList<int>() << 300 << 300);
     m_splitter->restoreState(settings.value("ProjectM/splitter_sizes").toByteArray());
+
+    m_timer = new QTimer(this);
+    m_timer->setInterval(0);
+    connect(m_timer, SIGNAL(timeout()), SLOT(onTimeout()));
 }
 
 ProjectMPlugin::~ProjectMPlugin()
 {}
 
-void ProjectMPlugin::clear()
+void ProjectMPlugin::start()
 {
+    m_running = true;
+    if(isVisible())
+        m_timer->start();
+}
+
+void ProjectMPlugin::stop()
+{
+    m_timer->stop();
+    m_running = false;
     update();
+}
+
+void ProjectMPlugin::onTimeout()
+{
+    projectM *instance = m_projectMWidget->projectMInstance();
+    if (!instance)
+        return;
+
+    if(takeData(m_left, m_right))
+    {
+        for(size_t i = 0; i < 512; i++)
+        {
+            m_buf[0][i] = m_left[i] * 32767.0;
+            m_buf[1][i] = m_right[i] * 32767.0;
+        }
+
+        m_projectMWidget->projectMInstance()->pcm()->addPCM16(m_buf);
+    }
+
+    m_projectMWidget->updateGL();
 }
 
 void ProjectMPlugin::setFullScreen(bool yes)
@@ -80,35 +114,6 @@ void ProjectMPlugin::setFullScreen(bool yes)
         setWindowState(windowState() & ~Qt::WindowFullScreen);
 }
 
-void ProjectMPlugin::add (float *data, size_t samples, int chan)
-{
-    projectM *instance = m_projectMWidget->projectMInstance();
-    if (!instance)
-        return;
-
-    size_t frames = qMin(samples / chan, (size_t)512);
-
-    if(chan == 1)
-    {
-        for(size_t i = 0; i < frames; i++)
-        {
-            m_buf[0][i] = data[i*chan] * 32767.0;
-            m_buf[1][i] = data[i*chan] * 32767.0;
-        }
-
-    }
-    else
-    {
-        for(size_t i = 0; i < frames; i++)
-        {
-            m_buf[0][i] = data[i*chan] * 32767.0;
-            m_buf[1][i] = data[i*chan+1] * 32767.0;
-        }
-    }
-
-    m_projectMWidget->projectMInstance()->pcm()->addPCM16(m_buf);
-}
-
 void ProjectMPlugin::closeEvent (QCloseEvent *event)
 {
     //save geometry
@@ -116,4 +121,14 @@ void ProjectMPlugin::closeEvent (QCloseEvent *event)
     settings.setValue("ProjectM/geometry", saveGeometry());
     settings.setValue("ProjectM/splitter_sizes", m_splitter->saveState());
     Visual::closeEvent(event); //removes visualization object
+}
+
+void ProjectMPlugin::showEvent(QShowEvent *)
+{
+    m_timer->start();
+}
+
+void ProjectMPlugin::hideEvent(QHideEvent *)
+{
+    m_timer->stop();
 }

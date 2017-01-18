@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,6 +21,7 @@
 #define PROJECTMPLUGIN_H
 
 #include <QWidget>
+#include <QTime>
 #include <qmmp/visual.h>
 
 class QTimer;
@@ -35,18 +36,25 @@ public:
     ProjectMPlugin(QWidget *parent = 0);
     virtual ~ProjectMPlugin();
 
-    void add(float *data, size_t samples, int chan);
-    void clear();
+public slots:
+    void start();
+    void stop();
 
 private slots:
+    void onTimeout();
     void setFullScreen(bool yes);
 
 private:
     void closeEvent(QCloseEvent *event);
+    void showEvent(QShowEvent *);
+    void hideEvent(QHideEvent *);
     QTimer *m_timer;
     ProjectMWidget *m_projectMWidget;
     QSplitter *m_splitter;
     short m_buf[2][512];
+    float m_left[QMMP_VISUAL_NODE_SIZE];
+    float m_right[QMMP_VISUAL_NODE_SIZE];
+    bool m_running;
 };
 
 

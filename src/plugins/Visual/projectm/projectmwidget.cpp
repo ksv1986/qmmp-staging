@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   Copyright (C) 2007 by  projectM team                                  *
@@ -22,7 +22,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTimer>
 #include <QDir>
 #include <QKeyEvent>
 #include <QMenu>
@@ -43,8 +42,6 @@ ProjectMWidget::ProjectMWidget(QListWidget *listWidget, QWidget *parent)
     setMouseTracking(true);
     m_listWidget = listWidget;
     m_projectM = 0;
-    m_timer = new QTimer(this);
-    connect(m_timer, SIGNAL(timeout()),SLOT(updateGL()));
     m_menu = new QMenu(this);
     connect(SoundCore::instance(), SIGNAL(metaDataChanged()), SLOT(updateTitle()));
 #if QT_VERSION >= 0x040700
@@ -134,7 +131,6 @@ void ProjectMWidget::initializeGL()
         connect(m_listWidget, SIGNAL(currentRowChanged(int)), m_projectM, SLOT(selectPreset(int)));
         connect(m_projectM, SIGNAL(currentPresetChanged(int)), SLOT(setCurrentRow(int)));
         updateTitle();
-        m_timer->start(0);
     }
 }
 

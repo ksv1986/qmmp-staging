@@ -37,8 +37,7 @@
 ProjectMPlugin::ProjectMPlugin (QWidget *parent)
         : Visual (parent, Qt::Window | Qt::MSWindowsOwnDC)
 {
-    m_running = false;
-    setlocale(LC_NUMERIC, "C"); //fixes problem with none-english locales
+    setlocale(LC_NUMERIC, "C"); //fixes problem with non-english locales
     setWindowTitle(tr("ProjectM"));
     setWindowIcon(parent->windowIcon());
 
@@ -74,15 +73,12 @@ ProjectMPlugin::~ProjectMPlugin()
 
 void ProjectMPlugin::start()
 {
-    m_running = true;
     if(isVisible())
         m_timer->start();
 }
 
 void ProjectMPlugin::stop()
 {
-    m_timer->stop();
-    m_running = false;
     update();
 }
 

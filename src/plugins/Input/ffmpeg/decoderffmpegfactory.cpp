@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -58,26 +58,29 @@ bool DecoderFFmpegFactory::canDecode(QIODevice *i) const
         return false;
     AVInputFormat *fmt = av_probe_input_format(&pd, 1);
     if(!fmt)
-    {
         return false;
-    }
-    if(filters.contains("*.wma") && !memcmp(fmt->name, "asf", 3))
+
+    QStringList formats = QString::fromLatin1(fmt->name).split(",");
+
+    if(filters.contains("*.wma") && formats.contains("asf"))
         return true;
-    else if(filters.contains("*.mp3") && !memcmp(fmt->name, "mp3", 3))
+    else if(filters.contains("*.mp3") && formats.contains("mp3"))
         return true;
-    else if(filters.contains("*.aac") && !memcmp(fmt->name, "aac", 3))
+    else if(filters.contains("*.aac") && formats.contains("aac"))
         return true;
-    else if(filters.contains("*.ac3") && !memcmp(fmt->name, "eac3", 4))
+    else if(filters.contains("*.ac3") && formats.contains("eac3"))
         return true;
-    else if(filters.contains("*.dts") && !memcmp(fmt->name, "dts", 3))
+    else if(filters.contains("*.dts") && formats.contains("dts"))
         return true;
-    else if(filters.contains("*.mka") && !memcmp(fmt->name, "mka", 3))
+    else if(filters.contains("*.mka") && formats.contains("mka"))
         return true;
-    else if(filters.contains("*.vqf") && !memcmp(fmt->name, "vqf", 3))
+    else if(filters.contains("*.vqf") && formats.contains("vqf"))
         return true;
-    else if(filters.contains("*.ape") && !memcmp(fmt->name, "ape", 3))
+    else if(filters.contains("*.ape") && formats.contains("ape"))
         return true;
-    else if(filters.contains("*.tta") && !memcmp(fmt->name, "tta", 3))
+    else if(filters.contains("*.tta") && formats.contains("tta"))
+        return true;
+    else if(filters.contains("*.m4a") && (formats.contains("m4a") || formats.contains("mp4")))
         return true;
     return false;
 }

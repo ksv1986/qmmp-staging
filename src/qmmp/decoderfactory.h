@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -47,7 +47,6 @@ public:
         hasAbout = false;
         hasSettings = false;
         noInput = false;
-        noOutput = false;
         priority = 0;
     }
     QString name;             /*!< Input plugin full name */
@@ -60,7 +59,6 @@ public:
     bool hasAbout;            /*!< Should be \b true if plugin has about dialog, otherwise \b false */
     bool hasSettings;         /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
     bool noInput;             /*!< Should be \b true if plugin has own input, otherwise \b false */
-    bool noOutput;            /*!< Should be \b true if plugin has own output, otherwise \b false */
     int priority;             /*!< Decoder priority. Decoders with lowest value will be used first */
 };
 /*! @brief Input plugin interface (decoder factory).

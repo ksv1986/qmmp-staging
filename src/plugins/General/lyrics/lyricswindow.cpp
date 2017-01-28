@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,6 +23,9 @@
 #include <QNetworkProxy>
 #include <QUrl>
 #include <QRegExp>
+#include <QFile>
+#include <QDir>
+#include <QCryptographicHash>
 #include <qmmp/qmmpsettings.h>
 #include <qmmp/qmmp.h>
 #include "lyricswindow.h"
@@ -30,13 +33,14 @@
 LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget *parent)
         : QWidget(parent)
 {
-    ui.setupUi(this);
+    m_ui.setupUi(this);
     setWindowFlags(Qt::Dialog);
     setAttribute(Qt::WA_DeleteOnClose);
     setAttribute(Qt::WA_QuitOnClose, false);
     m_requestReply = 0;
-    ui.artistLineEdit->setText(artist);
-    ui.titleLineEdit->setText(title);
+    m_cachePath = Qmmp::configDir() + "lyrics/";
+    m_ui.artistLineEdit->setText(artist);
+    m_ui.titleLineEdit->setText(title);
     m_http = new QNetworkAccessManager(this);
      //load global proxy settings
     QmmpSettings *gs = QmmpSettings::instance();
@@ -51,7 +55,15 @@ LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget 
         m_http->setProxy(proxy);
     }
     connect(m_http, SIGNAL(finished (QNetworkReply *)), SLOT(showText(QNetworkReply *)));
-    on_searchPushButton_clicked();
+
+    QDir cacheDir(m_cachePath);
+    if(!cacheDir.exists())
+    {
+        if(!cacheDir.mkpath(cacheDir.absolutePath()))
+            qWarning("LyricsWindow: unable to create cache directory");
+    }
+    if(!loadFromCache())
+        on_searchPushButton_clicked();
 }
 
 
@@ -61,11 +73,11 @@ LyricsWindow::~LyricsWindow()
 
 void LyricsWindow::showText(QNetworkReply *reply)
 {
-    ui.stateLabel->setText(tr("Done"));
+    m_ui.stateLabel->setText(tr("Done"));
     if (reply->error() != QNetworkReply::NoError)
     {
-        ui.stateLabel->setText(tr("Error"));
-        ui.textBrowser->setText(reply->errorString());
+        m_ui.stateLabel->setText(tr("Error"));
+        m_ui.textBrowser->setText(reply->errorString());
         m_requestReply = 0;
         reply->deleteLater();
         return;
@@ -88,13 +100,13 @@ void LyricsWindow::showText(QNetworkReply *reply)
 
         if(artist_regexp.indexIn(content) < 0)
         {
-            ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
+            m_ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
             return;
         }
 
         if(artist_regexp.indexIn(content) < 0)
         {
-            ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
+            m_ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
             return;
         }
         else
@@ -102,7 +114,7 @@ void LyricsWindow::showText(QNetworkReply *reply)
 
         if(song_regexp.indexIn(content) < 0)
         {
-            ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
+            m_ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
             return;
         }
         else
@@ -110,18 +122,18 @@ void LyricsWindow::showText(QNetworkReply *reply)
 
         if(lyrics_regexp.indexIn(content) < 0)
         {
-            ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
+            m_ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
             return;
         }
         else if(lyrics_regexp.cap(1) == "Not found")
         {
-            ui.textBrowser->setHtml("<b>" + tr("Not found") + "</b>");
+            m_ui.textBrowser->setHtml("<b>" + tr("Not found") + "</b>");
             return;
         }
 
         if(url_regexp.indexIn(content) < 0)
         {
-            ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
+            m_ui.textBrowser->setHtml("<b>" + tr("Error") + "</b>");
             return;
         }
 
@@ -136,7 +148,7 @@ void LyricsWindow::showText(QNetworkReply *reply)
         QNetworkRequest request;
         request.setUrl(url);
         request.setRawHeader("Referer", referer.toLatin1());
-        ui.stateLabel->setText(tr("Receiving"));
+        m_ui.stateLabel->setText(tr("Receiving"));
         m_http->get(request);
         reply->deleteLater();
         return;
@@ -150,23 +162,62 @@ void LyricsWindow::showText(QNetworkReply *reply)
     lyrics = lyrics.trimmed();
     lyrics.replace("\n", "<br>");
     if(lyrics.isEmpty())
-        ui.textBrowser->setHtml("<b>" + tr("Not found") + "</b>");
+        m_ui.textBrowser->setHtml("<b>" + tr("Not found") + "</b>");
     else
     {
         text += lyrics;
-        ui.textBrowser->setHtml(text);
+        m_ui.textBrowser->setHtml(text);
+        saveToCache(text);
+
     }
     reply->deleteLater();
 }
 
 void LyricsWindow::on_searchPushButton_clicked()
 {
-    ui.stateLabel->setText(tr("Receiving"));
-    setWindowTitle(QString(tr("Lyrics: %1 - %2")).arg(ui.artistLineEdit->text())
-                   .arg(ui.titleLineEdit->text()));
+    m_ui.stateLabel->setText(tr("Receiving"));
+    setWindowTitle(QString(tr("Lyrics: %1 - %2")).arg(m_ui.artistLineEdit->text())
+                   .arg(m_ui.titleLineEdit->text()));
     QNetworkRequest request;
     request.setUrl(QUrl("http://lyrics.wikia.com/api.php?action=lyrics&artist=" +
-                        ui.artistLineEdit->text()+"&song=" + ui.titleLineEdit->text() + "&fmt=xml"));
+                        m_ui.artistLineEdit->text()+"&song=" + m_ui.titleLineEdit->text() + "&fmt=xml"));
     request.setRawHeader("User-Agent", QString("qmmp/%1").arg(Qmmp::strVersion()).toLatin1());
     m_requestReply = m_http->get(request);
+}
+
+QString LyricsWindow::cacheFilePath() const
+{
+    QString name = m_ui.artistLineEdit->text() + "_" + m_ui.titleLineEdit->text();
+    QByteArray hash = QCryptographicHash::hash(name.toUtf8(), QCryptographicHash::Md5);
+    return m_cachePath + QString::fromLatin1(hash.toHex()) + ".html";
+}
+
+bool LyricsWindow::loadFromCache()
+{
+    QFile file(cacheFilePath());
+    if(!file.exists())
+        return false;
+
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        qWarning("LyricsWindow: unable to open cache file '%s', error: %s",
+                 qPrintable(file.fileName()), qPrintable(file.errorString()));
+        return false;
+    }
+
+    m_ui.textBrowser->setHtml(QString::fromUtf8(file.readAll()));
+    m_ui.stateLabel->setText(tr("Done"));
+    return true;
+}
+
+void LyricsWindow::saveToCache(const QString &text)
+{
+    QFile file(cacheFilePath());
+    if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        qWarning("LyricsWindow: unable to open cache file '%s', error: %s",
+                 qPrintable(file.fileName()), qPrintable(file.errorString()));
+        return;
+    }
+    file.write(text.toUtf8());
 }

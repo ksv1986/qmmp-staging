@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,12 +41,16 @@ public:
 private slots:
     void showText(QNetworkReply *reply);
     void on_searchPushButton_clicked();
+    QString cacheFilePath() const;
+    bool loadFromCache();
+    void saveToCache(const QString &text);
 
 private:
-    Ui::LyricsWindow ui;
+    Ui::LyricsWindow m_ui;
     QNetworkAccessManager *m_http;
     QNetworkReply *m_requestReply;
     QString m_artist, m_title;
+    QString m_cachePath;
 };
 
 #endif

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -73,7 +73,7 @@ void TrackChange::onMetaDataChanged()
         {
             if(!m_titleChangeCommand.isEmpty())
             {
-                qDebug("TrackChange: startig title change command..");
+                qDebug("TrackChange: starting title change command..");
                 executeCommand(metaData, m_titleChangeCommand);
             }
         }
@@ -81,7 +81,7 @@ void TrackChange::onMetaDataChanged()
         {
             if(!m_newTrackCommand.isEmpty())
             {
-                qDebug("TrackChange: startig new track command..");
+                qDebug("TrackChange: starting new track command..");
                 executeCommand(metaData, m_newTrackCommand);
             }
         }
@@ -93,12 +93,12 @@ void TrackChange::onFinised()
 {
     if(!m_endOfTrackCommand.isEmpty())
     {
-        qDebug("TrackChange: startig end of track command..");
+        qDebug("TrackChange: starting end of track command..");
         executeCommand(m_prevMetaData, m_endOfTrackCommand);
     }
     if(!m_endOfPlCommand.isEmpty() && !m_plManager->currentPlayList()->nextTrack())
     {
-        qDebug("TrackChange: startig end of playlist command..");
+        qDebug("TrackChange: starting end of playlist command..");
         executeCommand(m_prevMetaData, m_endOfPlCommand);
     }
 }

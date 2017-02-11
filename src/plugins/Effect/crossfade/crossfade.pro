@@ -10,21 +10,16 @@ SOURCES += crossfadeplugin.cpp \
 
 TARGET =$$PLUGINS_PREFIX/Effect/crossfade
 
-INCLUDEPATH += ../../../
 CONFIG += warn_on \
 plugin
 
 TEMPLATE = lib
-QMAKE_LIBDIR += ../../../../lib
 
 RESOURCES = translations/translations.qrc
 
 FORMS += settingsdialog.ui
 
 unix {
-    isEmpty(LIB_DIR){
-        LIB_DIR = /lib
-    }
     target.path = $$LIB_DIR/qmmp/Effect
     INSTALLS += target
 
@@ -33,7 +28,6 @@ unix {
 }
 
 win32 {
-    QMAKE_LIBDIR += ../../../../bin
     LIBS += -lqmmp0
 }
 

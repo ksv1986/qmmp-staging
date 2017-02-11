@@ -2,7 +2,6 @@
 # Project created by QtCreator 2009-10-14T17:55:38
 # -------------------------------------------------
 include(../../plugins.pri)
-INCLUDEPATH += ../../../../src
 QT += dbus
 CONFIG += warn_on \
     plugin
@@ -10,12 +9,10 @@ unix:TARGET = $$PLUGINS_PREFIX/General/kdenotify
 unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libkdenotify.so
 TEMPLATE = lib
 unix {
-    QMAKE_LIBDIR += ../../../../lib
     LIBS += -lqmmpui \
         -lqmmp
 }
 unix {
-    isEmpty(LIB_DIR):LIB_DIR = /lib
     target.path = $$LIB_DIR/qmmp/General
     INSTALLS += target
 }

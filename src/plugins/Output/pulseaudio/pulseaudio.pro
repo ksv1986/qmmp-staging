@@ -10,9 +10,6 @@ SOURCES += outputpulseaudiofactory.cpp \
 TARGET=$$PLUGINS_PREFIX/Output/pulseaudio
 QMAKE_CLEAN =$$PLUGINS_PREFIX/Output/libpulseaudio.so
 
-INCLUDEPATH += ../../../
-QMAKE_LIBDIR += ../../../../lib
-
 CONFIG += warn_on \
 thread \
 plugin \
@@ -24,10 +21,6 @@ LIBS += -lqmmp
 PKGCONFIG += libpulse-simple
 
 RESOURCES = translations/translations.qrc
-
-isEmpty (LIB_DIR){
-LIB_DIR = /lib
-}
 
 target.path = $$LIB_DIR/qmmp/Output
 INSTALLS += target

@@ -9,16 +9,13 @@ SOURCES += mplayerengine.cpp \
     mplayermetadatamodel.cpp
 TARGET = $$PLUGINS_PREFIX/Engines/mplayer
 QMAKE_CLEAN = $$PLUGINS_PREFIX/Engines/libmplayer.so
-INCLUDEPATH += ../../../
 CONFIG += warn_on \
     plugin
 TEMPLATE = lib
-QMAKE_LIBDIR += ../../../../lib
 LIBS += -lqmmp \
     -L/usr/lib
 
 RESOURCES = translations/translations.qrc
-isEmpty(LIB_DIR):LIB_DIR = /lib
 target.path = $$LIB_DIR/qmmp/Engines
 INSTALLS += target
 FORMS += settingsdialog.ui

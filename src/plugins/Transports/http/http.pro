@@ -13,22 +13,18 @@ win32:HEADERS += ../../../../src/qmmp/inputsource.h \
     ../../../../src/qmmp/inputsourcefactory.h
 TARGET = $$PLUGINS_PREFIX/Transports/http
 unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libhttp.so
-INCLUDEPATH += ../../../
 CONFIG += warn_on \
     plugin \
     link_pkgconfig
 TEMPLATE = lib
 unix {
-    QMAKE_LIBDIR += ../../../../lib
     LIBS += -lqmmp \
         -L/usr/lib
     PKGCONFIG += libcurl
-    isEmpty(LIB_DIR):LIB_DIR = /lib
     target.path = $$LIB_DIR/qmmp/Transports
     INSTALLS += target
 }
 win32 {
-    QMAKE_LIBDIR += ../../../../bin
     LIBS += -lqmmp0 \
         -lcurldll
 }

@@ -88,20 +88,11 @@ CONFIG += warn_on \
 TARGET = $$PLUGINS_PREFIX/Ui/qsui
 
 unix{
-  QMAKE_LIBDIR += ../../../../lib
   LIBS += -lqmmpui -lqmmp
-  isEmpty(LIB_DIR){
-    LIB_DIR = /lib
-  }  
-
   target.path = $$LIB_DIR/qmmp/Ui
   INSTALLS += target
 }
 
 win32{
-   QMAKE_LIBDIR += ../../../../bin
    LIBS += -lqmmpui0 -lqmmp0
-   INCLUDEPATH += ../../ ./
 }
-
-INCLUDEPATH += ../../../

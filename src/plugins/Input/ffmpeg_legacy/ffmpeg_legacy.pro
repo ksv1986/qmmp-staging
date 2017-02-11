@@ -9,9 +9,6 @@ SOURCES += decoder_ffmpeg.cpp \
     settingsdialog.cpp \
     ffmpegmetadatamodel.cpp
 
-INCLUDEPATH += ../../../
-
-
 
 CONFIG += warn_on \
     plugin \
@@ -21,12 +18,10 @@ TEMPLATE = lib
 TARGET = $$PLUGINS_PREFIX/Input/ffmpeg_legacy
 
 unix {
-    isEmpty(LIB_DIR):LIB_DIR = /lib
     target.path = $$LIB_DIR/qmmp/Input
     INSTALLS += target
     QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libffmpeg_legacy.so
     LIBS += -lqmmp
-    QMAKE_LIBDIR += ../../../../lib
     PKGCONFIG += libavcodec libavformat libavutil
 }
 
@@ -34,7 +29,6 @@ unix {
 win32 {
     HEADERS += ../../../../src/qmmp/metadatamodel.h \
                ../../../../src/qmmp/decoderfactory.h
-    QMAKE_LIBDIR += ../../../../bin
     LIBS += -lqmmp0 -lavcodec.dll -lavformat.dll -lavutil.dll
 }
 

@@ -9,19 +9,11 @@ TARGET =$$PLUGINS_PREFIX/General/mpris
 QMAKE_CLEAN =$$PLUGINS_PREFIX/General/libmpris.so
 
 TEMPLATE = lib
-QMAKE_LIBDIR += ../../../../lib
 
 RESOURCES = translations/translations.qrc
 
-isEmpty(LIB_DIR){
-    LIB_DIR = /lib
-}
 target.path = $$LIB_DIR/qmmp/General
 INSTALLS += target
-#FORMS += settingsdialog.ui
-
-#RESOURCES += images/images.qrc
-
 
 HEADERS += mprisfactory.h \
            mpris.h  \
@@ -38,7 +30,5 @@ SOURCES += mprisfactory.cpp \
            mpris1/tracklistobject.cpp \
            mpris2/root2object.cpp \
            mpris2/player2object.cpp
-
-INCLUDEPATH += ../../../../src
 
 LIBS += -lqmmpui -lqmmp

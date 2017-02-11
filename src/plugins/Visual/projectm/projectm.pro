@@ -15,13 +15,11 @@ SOURCES += projectmplugin.cpp \
            visualprojectmfactory.cpp \
            projectmwidget.cpp \
     projectmwrapper.cpp
-INCLUDEPATH += ../../../
 CONFIG += warn_on \
 plugin \
 link_pkgconfig
 
 TEMPLATE = lib
-QMAKE_LIBDIR += ../../../../lib
 QT += opengl
 
 TRANSLATIONS = translations/projectm_plugin_cs.ts \
@@ -43,7 +41,6 @@ RESOURCES = translations/translations.qrc
 
 unix {
   PKGCONFIG += libprojectM
-  isEmpty(LIB_DIR):LIB_DIR = /lib
   target.path = $$LIB_DIR/qmmp/Visual
   INSTALLS += target
   LIBS += -lqmmp -L/usr/lib -I/usr/include
@@ -59,6 +56,5 @@ unix {
 }
 
 win32 {
-    QMAKE_LIBDIR += ../../../../bin
     LIBS += -lqmmp0 -lprojectM.dll
 }

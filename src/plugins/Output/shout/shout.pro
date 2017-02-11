@@ -12,9 +12,6 @@ SOURCES += outputshoutfactory.cpp \
 
 TARGET=$$PLUGINS_PREFIX/Output/shout
 
-INCLUDEPATH += ../../../
-QMAKE_LIBDIR += ../../../../lib
-
 CONFIG += warn_on \
 thread \
 plugin \
@@ -25,10 +22,6 @@ TEMPLATE = lib
 RESOURCES = translations/translations.qrc
 
 unix {
-    isEmpty (LIB_DIR){
-    LIB_DIR = /lib
-    }
-
     target.path = $$LIB_DIR/qmmp/Output
     INSTALLS += target
     LIBS += -lqmmp
@@ -38,7 +31,6 @@ unix {
 
 win32 {
     LIBS += -lqmmp0
-    QMAKE_LIBDIR += ../../../../bin
 }
 
 FORMS += \

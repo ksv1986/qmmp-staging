@@ -2,8 +2,6 @@ include(../../plugins.pri)
 CONFIG += warn_on \
     plugin
 TEMPLATE = lib
-unix:QMAKE_LIBDIR += ../../../../lib
-win32:QMAKE_LIBDIR += ../../../../bin
 TARGET = $$PLUGINS_PREFIX/General/covermanager
 unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libcovermanager.so
 TRANSLATIONS = translations/covermanager_plugin_cs.ts \
@@ -24,8 +22,7 @@ TRANSLATIONS = translations/covermanager_plugin_cs.ts \
 
 RESOURCES = translations/translations.qrc \
             images/cm_images.qrc
-unix { 
-    isEmpty(LIB_DIR):LIB_DIR = /lib
+unix {
     target.path = $$LIB_DIR/qmmp/General
     INSTALLS += target
 }
@@ -37,9 +34,8 @@ SOURCES += covermanagerfactory.cpp \
     coverwidget.cpp \
     covermanager.cpp
 QT += network
-INCLUDEPATH += ../../../
+
 unix:LIBS += -lqmmpui \
     -lqmmp
 win32:LIBS += -lqmmpui0 \
     -lqmmp0
-FORMS += 

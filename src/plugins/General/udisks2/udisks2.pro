@@ -9,13 +9,9 @@ TARGET = $$PLUGINS_PREFIX/General/udisks2
 QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libudisks2.so
 
 TEMPLATE = lib
-QMAKE_LIBDIR += ../../../../lib
 
 RESOURCES = translations/translations.qrc
 
-isEmpty(LIB_DIR){
-    LIB_DIR = /lib
-}
 target.path = $$LIB_DIR/qmmp/General
 INSTALLS += target
 
@@ -31,8 +27,6 @@ SOURCES += udisks2factory.cpp \
            udisks2manager.cpp \
            udisks2device.cpp \
            settingsdialog.cpp
-
-INCLUDEPATH += ../../../../src
 
 LIBS += -lqmmpui -lqmmp
 

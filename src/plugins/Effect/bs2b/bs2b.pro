@@ -10,22 +10,17 @@ SOURCES += bs2bplugin.cpp \
 
 TARGET =$$PLUGINS_PREFIX/Effect/bs2b
 
-INCLUDEPATH += ../../../
 CONFIG += warn_on \
 plugin \
 link_pkgconfig
 
 TEMPLATE = lib
-QMAKE_LIBDIR += ../../../../lib
 
 RESOURCES = translations/translations.qrc
 
 FORMS += settingsdialog.ui
 
 unix {
-    isEmpty(LIB_DIR){
-        LIB_DIR = /lib
-    }
     target.path = $$LIB_DIR/qmmp/Effect
     INSTALLS += target
 
@@ -35,6 +30,5 @@ unix {
 }
 
 win32 {
-    QMAKE_LIBDIR += ../../../../bin
     LIBS += -lqmmp0 -lbs2b
 }

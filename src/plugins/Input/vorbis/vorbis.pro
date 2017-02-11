@@ -10,17 +10,14 @@ SOURCES += decoder_vorbis.cpp \
     replaygainreader.cpp
 TARGET = $$PLUGINS_PREFIX/Input/vorbis
 
-INCLUDEPATH += ../../../
 CONFIG += warn_on \
     plugin \
     link_pkgconfig
 TEMPLATE = lib
-QMAKE_LIBDIR += ../../../../lib
 
 RESOURCES = translations/translations.qrc
 
 unix {
-    isEmpty (LIB_DIR):LIB_DIR = /lib
     target.path = $$LIB_DIR/qmmp/Input
     INSTALLS += target
 
@@ -32,7 +29,6 @@ unix {
 win32 {
     HEADERS += ../../../../src/qmmp/metadatamodel.h \
                ../../../../src/qmmp/decoderfactory.h
-    QMAKE_LIBDIR += ../../../../bin
     LIBS += -lqmmp0 -lvorbisfile -lvorbis -logg -ltag.dll -lm
     LD_FLAGS += -no-undefined
 }

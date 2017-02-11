@@ -17,14 +17,10 @@ SOURCES += analyzer.cpp \
            colorwidget.cpp \
            settingsdialog.cpp
 win32:HEADERS += ../../../../src/qmmp/visual.h
-win32:INCLUDEPATH += ./
-INCLUDEPATH += ../../../
 CONFIG += warn_on \
 plugin
 TEMPLATE = lib
-unix:QMAKE_LIBDIR += ../../../../lib
 unix:LIBS += -lqmmp -L/usr/lib -I/usr/include
-win32:QMAKE_LIBDIR += ../../../../bin
 win32:LIBS += -lqmmp0
 
 TRANSLATIONS = translations/analyzer_plugin_cs.ts \
@@ -45,9 +41,6 @@ TRANSLATIONS = translations/analyzer_plugin_cs.ts \
 
 RESOURCES = translations/translations.qrc
 unix{
-isEmpty(LIB_DIR){
-    LIB_DIR = /lib
-}
 target.path = $$LIB_DIR/qmmp/Visual
 INSTALLS += target
 }

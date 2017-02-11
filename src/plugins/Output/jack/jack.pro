@@ -15,8 +15,6 @@ contains(CONFIG, WITH_NEW_JACK){
     DEFINES += JACK_NEW_API
 }
 
-INCLUDEPATH += ../../../
-QMAKE_LIBDIR += ../../../../lib
 CONFIG += warn_on \
 thread \
 plugin \
@@ -26,10 +24,6 @@ LIBS += -lqmmp
 PKGCONFIG += jack soxr
 
 RESOURCES = translations/translations.qrc
-
-isEmpty (LIB_DIR){
-LIB_DIR = /lib
-}
 
 target.path = $$LIB_DIR/qmmp/Output
 INSTALLS += target

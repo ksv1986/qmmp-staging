@@ -10,9 +10,6 @@ SOURCES += outputalsa.cpp \
 TARGET=$$PLUGINS_PREFIX/Output/alsa
 QMAKE_CLEAN =$$PLUGINS_PREFIX/Output/libalsa.so
 
-INCLUDEPATH += ../../../
-QMAKE_LIBDIR += ../../../../lib
-
 CONFIG += warn_on \
 thread \
 plugin \
@@ -25,10 +22,6 @@ PKGCONFIG += alsa
 FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
-
-isEmpty (LIB_DIR){
-LIB_DIR = /lib
-}
 
 target.path = $$LIB_DIR/qmmp/Output
 INSTALLS += target

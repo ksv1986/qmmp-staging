@@ -5,7 +5,6 @@ HEADERS += outputossfactory.h \
            outputoss.h \
            settingsdialog.h
 
-
 SOURCES += outputossfactory.cpp \
            outputoss.cpp \
            settingsdialog.cpp
@@ -13,9 +12,6 @@ SOURCES += outputossfactory.cpp \
 TARGET=$$PLUGINS_PREFIX/Output/oss
 QMAKE_CLEAN =$$PLUGINS_PREFIX/Output/liboss.so
 
-
-INCLUDEPATH += ../../../
-QMAKE_LIBDIR += ../../../../lib
 CONFIG += warn_on \
 thread \
 plugin
@@ -26,9 +22,6 @@ TEMPLATE = lib
 LIBS += -lqmmp
 
 RESOURCES = translations/translations.qrc
-isEmpty (LIB_DIR){
-LIB_DIR = /lib
-}
 
 target.path = $$LIB_DIR/qmmp/Output
 INSTALLS += target

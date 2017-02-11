@@ -10,7 +10,6 @@ SOURCES += decoder_gme.cpp \
     settingsdialog.cpp
 TARGET = $$PLUGINS_PREFIX/Input/gme
 QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libgme.so
-INCLUDEPATH += ../../../
 CONFIG += warn_on \
     plugin
 TEMPLATE = lib
@@ -18,10 +17,8 @@ TEMPLATE = lib
 RESOURCES = translations/translations.qrc
 
 unix{
-    isEmpty (LIB_DIR):LIB_DIR = /lib
     target.path = $$LIB_DIR/qmmp/Input
     INSTALLS += target
-    QMAKE_LIBDIR += ../../../../lib
     LIBS += -lqmmp \
       -L/usr/lib \
       -L/usr/local/lib \
@@ -33,7 +30,6 @@ unix{
 win32 {
     HEADERS += ../../../../src/qmmp/metadatamodel.h \
                ../../../../src/qmmp/decoderfactory.h
-    QMAKE_LIBDIR += ../../../../bin
     LIBS += -lqmmp0 -lgme.dll
 }
 

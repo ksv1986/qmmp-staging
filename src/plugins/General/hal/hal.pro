@@ -9,13 +9,9 @@ TARGET = $$PLUGINS_PREFIX/General/hal
 QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libhal.so
 
 TEMPLATE = lib
-QMAKE_LIBDIR += ../../../../lib
 
 RESOURCES = translations/translations.qrc
 
-isEmpty(LIB_DIR){
-    LIB_DIR = /lib
-}
 target.path = $$LIB_DIR/qmmp/General
 INSTALLS += target
 
@@ -31,8 +27,6 @@ SOURCES += halfactory.cpp \
            halmanager.cpp \
            haldevice.cpp \
            settingsdialog.cpp
-
-INCLUDEPATH += ../../../../src
 
 LIBS += -lqmmpui -lqmmp
 

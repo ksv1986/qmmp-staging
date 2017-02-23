@@ -20,13 +20,14 @@ unix {
     target.path = $$LIB_DIR/qmmp/Effect
     INSTALLS += target
 
-    LIBS += -lqmmp
+    LIBS += -lqmmp -lqmmpui
     QMAKE_CLEAN =$$PLUGINS_PREFIX/Effect/libfilewriter.so
     PKGCONFIG += ogg vorbis vorbisenc
 }
 
 win32 {
-    LIBS += -lqmmp0
+    LIBS += -lqmmp0 -lqmmpui0 -lvorbisfile -lvorbis -logg -lvorbisenc
+    LD_FLAGS += -no-undefined
 }
 
 FORMS += \

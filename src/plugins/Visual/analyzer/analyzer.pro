@@ -17,6 +17,7 @@ SOURCES += analyzer.cpp \
            colorwidget.cpp \
            settingsdialog.cpp
 win32:HEADERS += ../../../../src/qmmp/visual.h
+win32:INCLUDEPATH += ./
 CONFIG += warn_on \
 plugin
 TEMPLATE = lib

@@ -95,4 +95,5 @@ unix{
 
 win32{
    LIBS += -lqmmpui0 -lqmmp0
+   INCLUDEPATH += ./
 }

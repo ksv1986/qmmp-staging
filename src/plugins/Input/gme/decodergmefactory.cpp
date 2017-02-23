@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,7 +38,7 @@ const DecoderProperties DecoderGmeFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("GME Plugin");
-    properties.filters << "*.ay" << "*.gms" << "*.gym" << "*.hes" << "*.kss" << "*.nsf" << "*.nsfe";
+    properties.filters << "*.ay" << "*.gbs" << "*.gym" << "*.hes" << "*.kss" << "*.nsf" << "*.nsfe";
     properties.filters << "*.sap" << "*.spc" << "*.vgm" << "*.vgz";
     properties.description = tr("Game Music Files");
     //properties.contentType = ;

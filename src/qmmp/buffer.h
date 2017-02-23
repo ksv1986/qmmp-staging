@@ -47,7 +47,7 @@ public:
     size_t samples;      /*!< Audio data size in samples */
     size_t size;         /*!< Buffer size in samples */
     unsigned int rate;   /*!< Buffer bitrate */
-    QSharedPointer<QMap<Qmmp::MetaData, QString> > metaData; /*!< Indicates that new metadata is available */
+    QSharedPointer<QMap<Qmmp::MetaData, QString> > metaData; /*!< A pointer to the new metadata if available */
 };
 
 

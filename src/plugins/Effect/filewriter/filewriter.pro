@@ -14,7 +14,7 @@ CONFIG += warn_on plugin link_pkgconfig
 
 TEMPLATE = lib
 
-#RESOURCES = translations/translations.qrc
+RESOURCES = translations/translations.qrc
 
 unix {
     target.path = $$LIB_DIR/qmmp/Effect

@@ -4,32 +4,32 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="147"/>
+        <location filename="../decoderffmpegfactory.cpp" line="150"/>
         <source>FFmpeg Plugin</source>
         <translation>Πρόσθετο FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="149"/>
+        <location filename="../decoderffmpegfactory.cpp" line="152"/>
         <source>FFmpeg Formats</source>
         <translation>Μορφές FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="256"/>
+        <location filename="../decoderffmpegfactory.cpp" line="259"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="257"/>
+        <location filename="../decoderffmpegfactory.cpp" line="260"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>Qmmp πρόσθετο ήχου FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="258"/>
+        <location filename="../decoderffmpegfactory.cpp" line="261"/>
         <source>Compiled against:</source>
         <translation>Μεταγλωττίστηκε χρησιμοποιώντας:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="271"/>
+        <location filename="../decoderffmpegfactory.cpp" line="274"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

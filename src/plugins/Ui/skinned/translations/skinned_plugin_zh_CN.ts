@@ -652,132 +652,132 @@
 <context>
     <name>MainVisual</name>
     <message>
-        <location filename="../mainvisual.cpp" line="235"/>
+        <location filename="../mainvisual.cpp" line="213"/>
         <source>Visualization Mode</source>
         <translation>可视化模式</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="238"/>
+        <location filename="../mainvisual.cpp" line="216"/>
         <source>Analyzer</source>
         <translation>分析器</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="239"/>
+        <location filename="../mainvisual.cpp" line="217"/>
         <source>Scope</source>
         <translation>示波器</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="240"/>
+        <location filename="../mainvisual.cpp" line="218"/>
         <source>Off</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="247"/>
+        <location filename="../mainvisual.cpp" line="225"/>
         <source>Analyzer Mode</source>
         <translation>分析模式</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="250"/>
+        <location filename="../mainvisual.cpp" line="228"/>
         <source>Normal</source>
         <translation>标准</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="251"/>
+        <location filename="../mainvisual.cpp" line="229"/>
         <source>Fire</source>
         <translation>火花</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="252"/>
+        <location filename="../mainvisual.cpp" line="230"/>
         <source>Vertical Lines</source>
         <translation>垂直线</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="253"/>
+        <location filename="../mainvisual.cpp" line="231"/>
         <source>Lines</source>
         <translation>线形</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="254"/>
+        <location filename="../mainvisual.cpp" line="232"/>
         <source>Bars</source>
         <translation>条形</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="267"/>
+        <location filename="../mainvisual.cpp" line="245"/>
         <source>Peaks</source>
         <translation>峰值</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="271"/>
+        <location filename="../mainvisual.cpp" line="249"/>
         <source>Refresh Rate</source>
         <translation>刷新率</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="274"/>
+        <location filename="../mainvisual.cpp" line="252"/>
         <source>50 fps</source>
         <translation>50 fps</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="275"/>
+        <location filename="../mainvisual.cpp" line="253"/>
         <source>25 fps</source>
         <translation>25 fps</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="276"/>
+        <location filename="../mainvisual.cpp" line="254"/>
         <source>10 fps</source>
         <translation>10 fps</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="277"/>
+        <location filename="../mainvisual.cpp" line="255"/>
         <source>5 fps</source>
         <translation>5 fps</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="284"/>
+        <location filename="../mainvisual.cpp" line="262"/>
         <source>Analyzer Falloff</source>
         <translation>分析器下降速度</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="287"/>
-        <location filename="../mainvisual.cpp" line="301"/>
+        <location filename="../mainvisual.cpp" line="265"/>
+        <location filename="../mainvisual.cpp" line="279"/>
         <source>Slowest</source>
         <translation>最慢</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="288"/>
-        <location filename="../mainvisual.cpp" line="302"/>
+        <location filename="../mainvisual.cpp" line="266"/>
+        <location filename="../mainvisual.cpp" line="280"/>
         <source>Slow</source>
         <translation>慢</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="289"/>
-        <location filename="../mainvisual.cpp" line="303"/>
+        <location filename="../mainvisual.cpp" line="267"/>
+        <location filename="../mainvisual.cpp" line="281"/>
         <source>Medium</source>
         <translation>中</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="290"/>
-        <location filename="../mainvisual.cpp" line="304"/>
+        <location filename="../mainvisual.cpp" line="268"/>
+        <location filename="../mainvisual.cpp" line="282"/>
         <source>Fast</source>
         <translation>快</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="291"/>
-        <location filename="../mainvisual.cpp" line="305"/>
+        <location filename="../mainvisual.cpp" line="269"/>
+        <location filename="../mainvisual.cpp" line="283"/>
         <source>Fastest</source>
         <translation>最快</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="298"/>
+        <location filename="../mainvisual.cpp" line="276"/>
         <source>Peaks Falloff</source>
         <translation>峰值下降速度</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="311"/>
+        <location filename="../mainvisual.cpp" line="289"/>
         <source>Background</source>
         <translation>背景</translation>
     </message>
     <message>
-        <location filename="../mainvisual.cpp" line="312"/>
+        <location filename="../mainvisual.cpp" line="290"/>
         <source>Transparent</source>
         <translation>透明</translation>
     </message>

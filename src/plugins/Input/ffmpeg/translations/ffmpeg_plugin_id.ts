@@ -4,32 +4,32 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="147"/>
+        <location filename="../decoderffmpegfactory.cpp" line="150"/>
         <source>FFmpeg Plugin</source>
         <translation>Plugin FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="149"/>
+        <location filename="../decoderffmpegfactory.cpp" line="152"/>
         <source>FFmpeg Formats</source>
         <translation>Format FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="256"/>
+        <location filename="../decoderffmpegfactory.cpp" line="259"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>Tentang Plugin Audio FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="257"/>
+        <location filename="../decoderffmpegfactory.cpp" line="260"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>Qmmp Plugin Audio FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="258"/>
+        <location filename="../decoderffmpegfactory.cpp" line="261"/>
         <source>Compiled against:</source>
         <translation>Dikompilasi terhadap:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="271"/>
+        <location filename="../decoderffmpegfactory.cpp" line="274"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
         <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

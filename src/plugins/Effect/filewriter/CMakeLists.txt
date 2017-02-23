@@ -23,6 +23,8 @@ SET(QT_INCLUDES
 # libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
 link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
+# libqmmpui
+link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmpui)
 
 pkg_check_modules(VORBISENC vorbis ogg vorbisenc)
 
@@ -57,7 +59,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(VORBISENC_FOUND)
 ADD_LIBRARY(filewriter MODULE ${libfilewriter_SRCS} ${libfilewriter_UIS_H} ${libfilewriter_RCC_SRCS} ${libfilewriter_HDRS})
-add_dependencies(filewriter qmmp)
-target_link_libraries(filewriter ${QT_LIBRARIES} libqmmp ${VORBISENC_LDFLAGS})
+add_dependencies(filewriter qmmp qmmpui)
+target_link_libraries(filewriter ${QT_LIBRARIES} libqmmp qmmpui ${VORBISENC_LDFLAGS})
 install(TARGETS filewriter DESTINATION ${LIB_DIR}/qmmp/Effect)
 ENDIF(VORBISENC_FOUND)

@@ -49,6 +49,12 @@ source_lang = en
 source_file = src/plugins/Effect/ladspa/translations/ladspa_plugin_en.ts
 type = QT
 
+[qmmp.filewriter]
+file_filter = src/plugins/Effect/filewriter/translations/filewriter_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/Effect/filewriter/translations/filewriter_plugin_en.ts
+type = QT
+
 [qmmp.stereo]
 file_filter = src/plugins/Effect/stereo/translations/stereo_plugin_<lang>.ts
 source_lang = en

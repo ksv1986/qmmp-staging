@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2014-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -372,14 +372,14 @@ void PlayListTask::run()
         {
             f = m_fields.at(i);
 
-           if(urls.contains(f->value))
-           {
-               m_indexes.append(i);
-           }
-           else
-           {
-               urls.append(f->value);
-           }
+            if(urls.contains(f->value))
+            {
+                m_indexes.append(i);
+            }
+            else
+            {
+                urls.append(f->value);
+            }
         }
     }
     else if(m_task == REFRESH)
@@ -400,7 +400,7 @@ void PlayListTask::run()
             if(!ok)
                 m_indexes << i;
         }
-        //find new files
+        //find all directories
         QStringList dirs; QString path;
         for(int i = 0; i < m_fields.count(); ++i)
         {
@@ -414,7 +414,7 @@ void PlayListTask::run()
             if(!dirs.contains(path))
                 dirs << path;
         }
-
+        //find all files
         QFileInfoList l;
         foreach (QString p, dirs)
         {
@@ -423,26 +423,47 @@ void PlayListTask::run()
             dir.setSorting(QDir::Name);
             l << dir.entryInfoList(mm->nameFilters());
         }
+        //generate URLs for the current playlist
+        QStringList urls;
+        foreach (TrackField *t, m_fields)
+            urls.append(t->value);
 
+        //find files that have already been added
+        QList<int> indexes;
+        for(int i = 0; i < l.count(); ++i)
+        {
+            QFileInfo f = l[i];
+            if(urls.contains(f.canonicalFilePath()))
+                indexes.append(i);
+            else
+                urls.append(f.canonicalFilePath());
+        }
+        //remove existing URLs
+        for(int i = indexes.count() - 1; i >= 0; i--)
+            l.takeAt(indexes[i]);
+
+        //create new playlist tracks
+        QStringList ignoredFiles;
         foreach (QFileInfo f, l)
         {
-            bool contains = false;
-            foreach (TrackField *t, m_fields)
+            QStringList ignored;
+            foreach (FileInfo *info, mm->createPlayList(f.canonicalFilePath(),
+                                                        QmmpUiSettings::instance()->useMetadata(),
+                                                        &ignored))
             {
-                if(f.canonicalFilePath() == t->value)
-                {
-                    contains = true;
-                    break;
-                }
+                m_new_tracks << new PlayListTrack(info);
             }
-
-            if(!contains)
+            ignoredFiles.append(ignored);
+        }
+        //remove dublicate URLs and ignored files
+        //this code prevents re-addition of cue tracks
+        foreach (PlayListTrack *t, m_new_tracks)
+        {
+            if((t->url().contains("://") && urls.contains(t->url())) ||
+                    ignoredFiles.contains(t->url()))
             {
-                foreach (FileInfo *info, mm->createPlayList(f.canonicalFilePath(),
-                                                            QmmpUiSettings::instance()->useMetadata()))
-                {
-                    m_new_tracks << new PlayListTrack(info);
-                }
+                m_new_tracks.removeAll(t);
+                delete t;
             }
         }
     }

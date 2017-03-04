@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,13 +21,14 @@
 #define UILOADER_H
 
 #include <QString>
+#include <QStringList>
 #include <QList>
 #include <QObject>
 #include "uifactory.h"
 
 class QmmpUiPluginCache;
 
-/*! @brief The UiLoader provides user interface plugins access
+/*! @brief The UiLoader provides user interface plugins access.
  * @author Ilya Kotov <forkotov02@hotmail.ru>
  */
 class UiLoader
@@ -37,6 +38,10 @@ public:
      * Returns a list of the loaded ui plugin factories.
      */
     static QList<UiFactory*> factories();
+    /*!
+     * Returns a list of the ui plugin short names.
+     */
+    QStringList names() const;
     /*!
      * Returns plugin file path.
      * @param factory User interface plugin factory.
@@ -48,7 +53,12 @@ public:
      */
     static void select(UiFactory* factory);
     /*!
-     * Returns \b true if general plugin is enabled, otherwise returns \b false
+     * Selects active user interface.
+     * @param name Ui plugin factory short name.
+     */
+    static void select(const QString &name);
+    /*!
+     * Returns \b true if general plugin is enabled, otherwise returns \b false.-
      */
     static UiFactory *selected();
 

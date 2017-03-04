@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -60,6 +60,17 @@ QList<UiFactory *> UiLoader::factories()
     return list;
 }
 
+QStringList UiLoader::names() const
+{
+    QStringList out;
+    loadPlugins();
+    foreach(QmmpUiPluginCache *item, *m_cache)
+    {
+        out << item->shortName();
+    }
+    return out;
+}
+
 QString UiLoader::file(UiFactory *factory)
 {
     loadPlugins();
@@ -73,11 +84,21 @@ QString UiLoader::file(UiFactory *factory)
 
 void UiLoader::select(UiFactory* factory)
 {
+    select(factory->properties().shortName);
+}
+
+void UiLoader::select(const QString &name)
+{
     loadPlugins();
-    if (!factories().contains(factory))
-        return;
-    QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    settings.setValue ("Ui/current_plugin", factory->properties().shortName);
+    foreach(QmmpUiPluginCache *item, *m_cache)
+    {
+        if(item->shortName() == name)
+        {
+            QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
+            settings.setValue ("Ui/current_plugin", name);
+            break;
+        }
+    }
 }
 
 UiFactory *UiLoader::selected()

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -70,12 +70,11 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
             out += "GENRE = %g\n";
             out += "YEAR = %y\n";
             out += "TRACK = %n\n";
-            out += "FILE = %f\n";
+            out += "FILE = %f";
             MetaDataFormatter formatter(out);
             out = formatter.format(core->metaData(), core->totalTime());
         }
-        else
-            out += "\n";
+        out += "\n";
     }
     else if(opt_str == "--nowplaying")
     {

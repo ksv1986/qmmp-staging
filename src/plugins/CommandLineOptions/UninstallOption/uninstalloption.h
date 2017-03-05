@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Ilya Kotov                                      *
+ *   Copyright (C) 2014-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,9 +35,9 @@ class UninstallOption : public QObject, public CommandLineOption
 Q_OBJECT
 Q_INTERFACES(CommandLineOption)
 public:
-    virtual bool identify(const QString& opt_str)const;
-    virtual const QString name()const;
-    virtual const QString helpString()const;
+    virtual bool identify(const QString& opt_str) const;
+    virtual const QString name() const;
+    virtual const QStringList helpString() const;
     virtual QString executeCommand(const QString& opt_str, const QStringList &args);
     virtual QTranslator *createTranslator(QObject *parent);
 

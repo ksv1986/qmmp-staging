@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010 by Ilya Kotov                                      *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,13 +32,12 @@ bool SeekOption::identify(const QString &str) const
     return opts.contains(str);
 }
 
-const QString SeekOption::helpString() const
+const QStringList SeekOption::helpString() const
 {
-    QString help;
-    help += QString("--seek <time>            ") + tr("Seek to position in the current track") + "\n";
-    help += QString("--seek-fwd <time>        ") + tr("Seek forward") + "\n";
-    help += QString("--seek-bwd <time>        ") + tr("Seek backwards") + "\n";
-    return  help;
+    return QStringList()
+            << QString("--seek <time>") + "||" + tr("Seek to position in the current track")
+            << QString("--seek-fwd <time>") + "||" + tr("Seek forward")
+            << QString("--seek-bwd <time>") + "||" + tr("Seek backwards");
 }
 
 QString SeekOption::executeCommand(const QString &opt_str, const QStringList &args)

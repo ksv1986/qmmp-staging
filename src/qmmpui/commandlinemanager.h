@@ -47,6 +47,8 @@ public:
      */
     static void printUsage();
 
+    static QString formatHelpString(const QString &line);
+
 private:
     static void checkOptions();
     static QList<CommandLineOption *> *m_options;

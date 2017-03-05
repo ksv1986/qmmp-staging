@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -42,8 +42,8 @@ public:
 
     ~BuiltinCommandLineOption();
 
-    bool identify(const QString& str)const;
-    const QString helpString()const;
+    bool identify(const QString& str) const;
+    const QStringList helpString() const;
     void executeCommand(const QString& option, const QStringList &args,
                         const QString &cwd);
     QHash <QString, QStringList> splitArgs(const QStringList &args) const;

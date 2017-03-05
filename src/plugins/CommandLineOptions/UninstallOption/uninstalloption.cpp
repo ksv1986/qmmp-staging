@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Ilya Kotov                                      *
+ *   Copyright (C) 2014-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -33,12 +33,10 @@ bool UninstallOption::identify(const QString &str) const
     return opts.contains(str);
 }
 
-const QString UninstallOption::helpString() const
+const QStringList UninstallOption::helpString() const
 {
-    QString help;
-    help += QString("--uninstall              ") + tr("Restore the old file associations and clean up the registry")
-            + "\n";
-    return  help;
+    return QStringList()
+            << QString("--uninstall") + "||" + tr("Restore the old file associations and clean up the registry");
 }
 
 QString UninstallOption::executeCommand(const QString &opt_str, const QStringList &args)

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -342,12 +342,19 @@ void QMMPStarter::printUsage()
     cout << qPrintable(tr("Usage: qmmp [options] [files]")) << endl;
     cout << qPrintable(tr("Options:")) << endl;
     cout << "--------" << endl;
-    cout << qPrintable(m_option_manager->helpString()) << endl;
+    foreach (QString line, m_option_manager->helpString())
+        cout << qPrintable(CommandLineManager::formatHelpString(line) ) << endl;
     CommandLineManager::printUsage();
-    cout << "--no-start               " << qPrintable(tr("Don't start the application")) << endl;
-    cout << "--help                   " << qPrintable(tr("Display this text and exit")) << endl;
-    cout << "--version                " << qPrintable(tr("Print version number and exit")) << endl;
-    cout << qPrintable(tr("Ideas, patches, bugreports send to forkotov02@hotmail.ru")) << endl;
+    QStringList extraHelp;
+    extraHelp << QString("--no-start") + "||" + tr("Don't start the application");
+    extraHelp << QString("--help") + "||" + tr("Display this text and exit");
+    extraHelp << QString("--version") + "||" + tr("Print version number and exit");
+    extraHelp << "";
+    extraHelp << tr("Home page: %1").arg("http://qmmp.ylsoftware.com");
+    extraHelp << tr("Development page: %1").arg("https://sourceforge.net/p/qmmp-dev");
+    extraHelp << tr("Bug tracker: %1").arg("https://sourceforge.net/p/qmmp-dev/tickets");
+    foreach (QString line, extraHelp)
+        cout << qPrintable(CommandLineManager::formatHelpString(line)) << endl;
 #ifdef Q_OS_WIN
     string text = tmp_stream.str();
     QMessageBox::information(0, tr("Command Line Help"), QString::fromLocal8Bit(text.c_str()));

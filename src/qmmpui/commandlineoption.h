@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2009 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,15 +37,16 @@ public:
      * Returns \b true if \b opt_str string can be processed,
      * otherise \b false
      */
-    virtual bool identify(const QString& opt_str)const = 0;
+    virtual bool identify(const QString& opt_str) const = 0;
     /*!
      * Command line option name
      */
-    virtual const QString name()const = 0;
+    virtual const QString name() const = 0;
     /*!
-     * Help string.
+     * A list of specially formatted help strings.
+     * Example: "--help||Display this text and exit".
      */
-    virtual const QString helpString()const = 0;
+    virtual const QStringList helpString() const = 0;
     /*!
      * Parses \b opt_str args(if needed), executes command.
      * @param opt_str Command to execute

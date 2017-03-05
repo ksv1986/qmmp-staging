@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -65,25 +65,24 @@ bool BuiltinCommandLineOption::identify(const QString &str) const
     return m_options.contains(str);
 }
 
-const QString BuiltinCommandLineOption::helpString() const
+const QStringList BuiltinCommandLineOption::helpString() const
 {
-    return QString(
-               "-e, --enqueue            "+tr("Don't clear the playlist") + "\n" +
-               "-p, --play               "+tr("Start playing current song")+"\n" +
-               "-u, --pause              "+tr("Pause current song")+ "\n"
-               "-t, --play-pause         "+tr("Pause if playing, play otherwise")+ "\n"
-               "-s, --stop               "+tr("Stop current song")+ "\n" +
-               "-j, --jump-to-file       "+tr("Display Jump to File dialog")+ "\n" +
-               "-q, --quit               "+tr("Quit application") + "\n" +
-               "--volume <0..100>        "+tr("Set playback volume (example: qmmp --volume 20)") + "\n"
-               "--toggle-mute            "+tr("Mute/Restore volume") + "\n"
-               "--next                   "+tr("Skip forward in playlist")+ "\n" +
-               "--previous               "+tr("Skip backwards in playlist")+"\n" +
-               "--toggle-visibility      "+tr("Show/hide application")+ "\n" +
-               "--show-mw                "+tr("Show main window") + "\n" +
-               "--add-file               "+tr("Display Add File dialog")+ "\n" +
-               "--add-dir                "+tr("Display Add Directory dialog")
-           );
+    return QStringList()
+            << QString("-e, --enqueue") + "||" + tr("Don't clear the playlist")
+            << QString("-p, --play") + "||" + tr("Start playing current song")
+            << QString("-u, --pause") + "||" + tr("Pause current song")
+            << QString("-t, --play-pause") + "||" + tr("Pause if playing, play otherwise")
+            << QString("-s, --stop") + "||" + tr("Stop current song")
+            << QString("-j, --jump-to-file") + "||" + tr("Display Jump to File dialog")
+            << QString("-q, --quit") + "||" + tr("Quit application")
+            << QString("--volume <0..100>") + "||" + tr("Set playback volume (example: qmmp --volume 20)")
+            << QString("--toggle-mute") + "||" + tr("Mute/Restore volume")
+            << QString("--next") + "||" + tr("Skip forward in playlist")
+            << QString("--previous") + "||" + tr("Skip backwards in playlist")
+            << QString("--toggle-visibility") + "||" + tr("Show/hide application")
+            << QString("--show-mw") + "||" + tr("Show main window")
+            << QString("--add-file") + "||" + tr("Display Add File dialog")
+            << QString("--add-dir") + "||" + tr("Display Add Directory dialog");
 }
 
 void BuiltinCommandLineOption::executeCommand(const QString &option_string,

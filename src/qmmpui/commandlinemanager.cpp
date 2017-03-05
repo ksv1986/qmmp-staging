@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -103,5 +103,22 @@ void CommandLineManager::printUsage()
 {
     checkOptions();
     foreach(CommandLineOption *opt, *m_options)
-        cout << qPrintable(opt->helpString());
+    {
+        foreach (QString line, opt->helpString())
+        {
+            QString str = formatHelpString(line);
+            if(!str.isEmpty())
+                cout << qPrintable(str) << endl;
+        }
+    }
+}
+
+QString CommandLineManager::formatHelpString(const QString &line)
+{
+    QStringList list = line.split("||", QString::SkipEmptyParts);
+    if(list.count() == 1)
+        return list.at(0);
+    else if(list.count() >= 2)
+        return list.at(0).leftJustified(25) + list.at(1);
+    return QString();
 }

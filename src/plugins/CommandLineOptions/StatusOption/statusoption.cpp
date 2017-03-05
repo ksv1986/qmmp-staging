@@ -33,14 +33,13 @@ bool StatusOption::identify(const QString &str) const
     return opts.contains(str);
 }
 
-const QString StatusOption::helpString() const
+const QStringList StatusOption::helpString() const
 {
-    QString help;
-    help += QString("--status                 ") + tr("Print playback status") + "\n";
-    help += QString("--nowplaying <fmt>       ")
-            + tr("Print formatted track name (example: qmmp --nowplaying \"%t - %a\")") + "\n";
-    help += QString("--nowplaying-syntax      ") + tr("Print --nowplaying syntax") + "\n";
-    return  help;
+    return QStringList()
+            << QString("--status") + "||" + tr("Print playback status")
+            << QString("--nowplaying <fmt>") + "||"
+               + tr("Print formatted track name (example: qmmp --nowplaying \"%t - %a\")")
+            << QString("--nowplaying-syntax") + "||" + tr("Print --nowplaying syntax");
 }
 
 QString StatusOption::executeCommand(const QString &opt_str, const QStringList &args)

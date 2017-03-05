@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,6 +21,7 @@
 #include <QtPlugin>
 #include <QTranslator>
 #include <QLocale>
+#include <QPair>
 #include <qmmp/soundcore.h>
 
 #include "incdecvolumeoption.h"
@@ -38,12 +39,11 @@ bool IncDecVolumeCommandLineOption::identify(const QString & str) const
     return false;
 }
 
-const QString IncDecVolumeCommandLineOption::helpString() const
+const QStringList IncDecVolumeCommandLineOption::helpString() const
 {
-    return  QString(
-                "--volume-inc             " + tr("Increase volume by 5 steps")+"\n"
-                "--volume-dec             " + tr("Decrease volume by 5 steps")+"\n"
-            );
+    return QStringList()
+            << QString("--volume-inc") + "||" + tr("Increase volume by 5 steps")
+            << QString("--volume-dec") + "||" + tr("Decrease volume by 5 steps");
 }
 
 QString IncDecVolumeCommandLineOption::executeCommand(const QString& opt_str, const QStringList &args)

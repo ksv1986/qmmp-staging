@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,11 +40,10 @@ bool PlayListOption::identify(const QString & str) const
             str == QString("--pl-state");
 }
 
-const QString PlayListOption::helpString() const
+const QStringList PlayListOption::helpString() const
 {
-    return QString(
-                "--pl-help                " + tr("Show playlist manipulation commands")+"\n"
-                );
+    return QStringList()
+            << QString("--pl-help") + "||" + tr("Show playlist manipulation commands");
 }
 
 QString PlayListOption::executeCommand(const QString& opt_str, const QStringList &args)

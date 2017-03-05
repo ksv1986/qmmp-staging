@@ -104,17 +104,17 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="353"/>
         <source>Home page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Домашняя страница: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="354"/>
         <source>Development page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Страница разработки: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="355"/>
         <source>Bug tracker: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Система регистрации ошибок: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="360"/>

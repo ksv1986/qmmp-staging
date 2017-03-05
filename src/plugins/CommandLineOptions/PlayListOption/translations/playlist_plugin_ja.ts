@@ -9,54 +9,54 @@
         <translation>プレイリストを操作するコマンドを表示</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="60"/>
+        <location filename="../playlistoption.cpp" line="59"/>
         <source>List all available playlists</source>
         <translation>すべての利用可能なプレイリストを一覧表示</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="61"/>
+        <location filename="../playlistoption.cpp" line="60"/>
         <source>Show playlist content</source>
         <translation>プレイリストの内容を表示</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="62"/>
+        <location filename="../playlistoption.cpp" line="61"/>
         <source>Play track &lt;track&gt; in playlist &lt;id&gt;</source>
         <translation>&lt;id&gt; 番プレイリストより &lt;track&gt; 番目を再生</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="63"/>
+        <location filename="../playlistoption.cpp" line="62"/>
         <source>Clear playlist</source>
         <translation>プレイリストを消去</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="64"/>
+        <location filename="../playlistoption.cpp" line="63"/>
         <source>Toggle playlist repeat</source>
         <translation>プレイリスト繰り返しの有無を切り替え</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="65"/>
+        <location filename="../playlistoption.cpp" line="64"/>
         <source>Toggle playlist shuffle</source>
         <translation>プレイリストのシャッフルの有無を切り替え</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="66"/>
+        <location filename="../playlistoption.cpp" line="65"/>
         <source>Show playlist options</source>
         <translation>プレイリストのオプションを表示</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="85"/>
-        <location filename="../playlistoption.cpp" line="106"/>
-        <location filename="../playlistoption.cpp" line="122"/>
+        <location filename="../playlistoption.cpp" line="84"/>
+        <location filename="../playlistoption.cpp" line="105"/>
+        <location filename="../playlistoption.cpp" line="121"/>
         <source>Invalid playlist ID</source>
         <translation>プレイリストの ID が不正</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="100"/>
+        <location filename="../playlistoption.cpp" line="99"/>
         <source>Invalid number of arguments</source>
         <translation>引数の項目数が不正</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="110"/>
+        <location filename="../playlistoption.cpp" line="109"/>
         <source>Invalid track ID</source>
         <translation>トラックの ID が不正</translation>
     </message>

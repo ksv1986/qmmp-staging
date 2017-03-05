@@ -4,12 +4,12 @@
 <context>
     <name>IncDecVolumeCommandLineOption</name>
     <message>
-        <location filename="../incdecvolumeoption.cpp" line="44"/>
+        <location filename="../incdecvolumeoption.cpp" line="45"/>
         <source>Increase volume by 5 steps</source>
         <translation>Zvýšit hlasitost s krokem 5</translation>
     </message>
     <message>
-        <location filename="../incdecvolumeoption.cpp" line="45"/>
+        <location filename="../incdecvolumeoption.cpp" line="46"/>
         <source>Decrease volume by 5 steps</source>
         <translation>Snížit hlasitost s krokem 5</translation>
     </message>

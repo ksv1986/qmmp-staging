@@ -92,12 +92,12 @@
         <translation>Nustatymai:</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="349"/>
+        <location filename="../qmmpstarter.cpp" line="351"/>
         <source>Print version number and exit</source>
         <translation>Parodyti versiją ir išeiti</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="348"/>
+        <location filename="../qmmpstarter.cpp" line="350"/>
         <source>Display this text and exit</source>
         <translation>Parodyti šį tekstą ir išeiti</translation>
     </message>
@@ -107,37 +107,47 @@
         <translation>Nežinoma komanda</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="347"/>
+        <location filename="../qmmpstarter.cpp" line="349"/>
         <source>Don&apos;t start the application</source>
         <translation>Nepaleisti programos</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="350"/>
-        <source>Ideas, patches, bugreports send to forkotov02@hotmail.ru</source>
-        <translation>Idėjas, pataisymus, klaidas siųsti forkotov02@hotmail.ru</translation>
+        <location filename="../qmmpstarter.cpp" line="353"/>
+        <source>Home page: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="353"/>
+        <location filename="../qmmpstarter.cpp" line="354"/>
+        <source>Development page: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qmmpstarter.cpp" line="355"/>
+        <source>Bug tracker: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qmmpstarter.cpp" line="360"/>
         <source>Command Line Help</source>
         <translation>Terminalo pagalba </translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="366"/>
+        <location filename="../qmmpstarter.cpp" line="373"/>
         <source>QMMP version: %1</source>
         <translation>QMMP versija: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="367"/>
+        <location filename="../qmmpstarter.cpp" line="374"/>
         <source>Compiled with Qt version: %1</source>
         <translation>Sukompiliuota su Qt versija: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="368"/>
+        <location filename="../qmmpstarter.cpp" line="375"/>
         <source>Using Qt version: %1</source>
         <translation>Naudojama Qt versija: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="371"/>
+        <location filename="../qmmpstarter.cpp" line="378"/>
         <source>Qmmp Version</source>
         <translation>Qmmp Versija</translation>
     </message>

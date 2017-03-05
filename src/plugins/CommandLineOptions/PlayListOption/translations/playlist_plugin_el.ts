@@ -9,54 +9,54 @@
         <translation>Εμφάνιση των εντολών χειρισμού της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="60"/>
+        <location filename="../playlistoption.cpp" line="59"/>
         <source>List all available playlists</source>
         <translation>Εμφάνιση όλων των διαθέσιμων λιστών αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="61"/>
+        <location filename="../playlistoption.cpp" line="60"/>
         <source>Show playlist content</source>
         <translation>Εμφάνιση του περιεχομένου της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="62"/>
+        <location filename="../playlistoption.cpp" line="61"/>
         <source>Play track &lt;track&gt; in playlist &lt;id&gt;</source>
         <translation>Εκτέλεση κομματιού &lt;track&gt; στη λίστα αναπαραγωγής &lt;id&gt;</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="63"/>
+        <location filename="../playlistoption.cpp" line="62"/>
         <source>Clear playlist</source>
         <translation>Καθαρισμός της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="64"/>
+        <location filename="../playlistoption.cpp" line="63"/>
         <source>Toggle playlist repeat</source>
         <translation>Εναλλαγή επανάληψης της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="65"/>
+        <location filename="../playlistoption.cpp" line="64"/>
         <source>Toggle playlist shuffle</source>
         <translation>Εναλλαγή ανακατέματος της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="66"/>
+        <location filename="../playlistoption.cpp" line="65"/>
         <source>Show playlist options</source>
         <translation>Εμφάνιση των επιλογών της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="85"/>
-        <location filename="../playlistoption.cpp" line="106"/>
-        <location filename="../playlistoption.cpp" line="122"/>
+        <location filename="../playlistoption.cpp" line="84"/>
+        <location filename="../playlistoption.cpp" line="105"/>
+        <location filename="../playlistoption.cpp" line="121"/>
         <source>Invalid playlist ID</source>
         <translation>Μη έγκυρο αναγνωριστικό της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="100"/>
+        <location filename="../playlistoption.cpp" line="99"/>
         <source>Invalid number of arguments</source>
         <translation>Μη έγκυρος αριθμός ορισμάτων</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="110"/>
+        <location filename="../playlistoption.cpp" line="109"/>
         <source>Invalid track ID</source>
         <translation>Μη έγκυρο αναγνωριστικό κομματιού</translation>
     </message>

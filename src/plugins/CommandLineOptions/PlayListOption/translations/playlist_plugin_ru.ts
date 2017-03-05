@@ -9,54 +9,54 @@
         <translation>Показать команды для работы со списком воспроизведения</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="60"/>
+        <location filename="../playlistoption.cpp" line="59"/>
         <source>List all available playlists</source>
         <translation>Показать все доступные списки воспроизведения</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="61"/>
+        <location filename="../playlistoption.cpp" line="60"/>
         <source>Show playlist content</source>
         <translation>Показать содержимое списка воспроизведения</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="62"/>
+        <location filename="../playlistoption.cpp" line="61"/>
         <source>Play track &lt;track&gt; in playlist &lt;id&gt;</source>
         <translation>Воспроизвести трек &lt;track&gt; в списке воспроизведения &lt;id&gt;</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="63"/>
+        <location filename="../playlistoption.cpp" line="62"/>
         <source>Clear playlist</source>
         <translation>Очистить список воспроизведения</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="64"/>
+        <location filename="../playlistoption.cpp" line="63"/>
         <source>Toggle playlist repeat</source>
         <translation>Включить/выключить повтор списка воспроизведения</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="65"/>
+        <location filename="../playlistoption.cpp" line="64"/>
         <source>Toggle playlist shuffle</source>
         <translation>Включить/выключить случайный порядок</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="66"/>
+        <location filename="../playlistoption.cpp" line="65"/>
         <source>Show playlist options</source>
         <translation>Показать настройки списка воспроизведения</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="85"/>
-        <location filename="../playlistoption.cpp" line="106"/>
-        <location filename="../playlistoption.cpp" line="122"/>
+        <location filename="../playlistoption.cpp" line="84"/>
+        <location filename="../playlistoption.cpp" line="105"/>
+        <location filename="../playlistoption.cpp" line="121"/>
         <source>Invalid playlist ID</source>
         <translation>Неправильный номер списка воспроизведения</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="100"/>
+        <location filename="../playlistoption.cpp" line="99"/>
         <source>Invalid number of arguments</source>
         <translation>Неправильное число аргументов</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="110"/>
+        <location filename="../playlistoption.cpp" line="109"/>
         <source>Invalid track ID</source>
         <translation>Неправильный номер трека</translation>
     </message>

@@ -26,6 +26,7 @@
 #include <qmmpui/metadataformatter.h>
 #include <qmmpui/mediaplayer.h>
 #include <qmmpui/qmmpuisettings.h>
+#include <qmmpui/commandlinemanager.h>
 #include "playlistoption.h"
 
 bool PlayListOption::identify(const QString & str) const
@@ -56,13 +57,17 @@ QString PlayListOption::executeCommand(const QString& opt_str, const QStringList
 
     if(opt_str == "--pl-help")
     {
-        out = "--pl-list                " + tr("List all available playlists")+"\n"+
-              "--pl-dump <id>           " + tr("Show playlist content")+"\n" +
-              "--pl-play <id> <track>   " + tr("Play track <track> in playlist <id>")+"\n" +
-              "--pl-clear <id>          " + tr("Clear playlist")+"\n"+
-              "--pl-repeat-toggle       " + tr("Toggle playlist repeat")+"\n"+
-              "--pl-shuffle-toggle      " + tr("Toggle playlist shuffle")+"\n"+
-              "--pl-state               " + tr("Show playlist options")+"\n";
+        QStringList list = QStringList()
+                << QString("--pl-list") + "||" + tr("List all available playlists")
+                << QString("--pl-dump <id>") + "||" + tr("Show playlist content")
+                << QString("--pl-play <id> <track>") + "||" + tr("Play track <track> in playlist <id>")
+                << QString("--pl-clear <id>") + "||" + tr("Clear playlist")
+                << QString("--pl-repeat-toggle") + "||" + tr("Toggle playlist repeat")
+                << QString("--pl-shuffle-toggle") + "||" + tr("Toggle playlist shuffle")
+                << QString("--pl-state") + "||" + tr("Show playlist options");
+
+        foreach (QString line, list)
+            out += CommandLineManager::formatHelpString(line) + "\n";
     }
     else if(opt_str == "--pl-list")
     {

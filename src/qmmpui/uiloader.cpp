@@ -60,7 +60,7 @@ QList<UiFactory *> UiLoader::factories()
     return list;
 }
 
-QStringList UiLoader::names() const
+QStringList UiLoader::names()
 {
     QStringList out;
     loadPlugins();

@@ -41,7 +41,7 @@ public:
     /*!
      * Returns a list of the ui plugin short names.
      */
-    QStringList names() const;
+    static QStringList names();
     /*!
      * Returns plugin file path.
      * @param factory User interface plugin factory.

@@ -82,13 +82,25 @@ QMMPStarter::QMMPStarter() : QObject()
         m_finished = true;
         return;
     }
+    if(commands.keys().contains("--ui-list"))
+    {
+        printUserInterfaces();
+        m_finished = true;
+        return;
+    }
+    if(commands.keys().contains("--ui"))
+    {
+        QStringList args = commands.value("--ui");
+        if(args.size() == 1)
+            UiLoader::select(args.first());
+    }
 
     if(!commands.isEmpty())
     {
         foreach(QString arg, commands.keys())
         {
             if(!m_option_manager->identify(arg) && !CommandLineManager::hasOption(arg) &&
-                    arg != "--no-start")
+                    arg != "--no-start" && arg != "--ui")
             {
                 cout << qPrintable(tr("Unknown command")) << endl;
                 m_exit_code = EXIT_FAILURE;
@@ -319,7 +331,7 @@ QString QMMPStarter::processCommandArgs(const QStringList &slist, const QString&
         return QString();
     foreach(QString key, commands.keys())
     {
-        if(key == "--no-start")
+        if(key == "--no-start" || key == "--ui")
             continue;
         if (CommandLineManager::hasOption(key))
             return CommandLineManager::executeCommand(key, commands.value(key));
@@ -346,6 +358,8 @@ void QMMPStarter::printUsage()
         cout << qPrintable(CommandLineManager::formatHelpString(line) ) << endl;
     CommandLineManager::printUsage();
     QStringList extraHelp;
+    extraHelp << QString("--ui <name>") + "||" + tr("Start qmmp with the specified user interface");
+    extraHelp << QString("--ui-list") + "||" + tr("List all available user interfaces");
     extraHelp << QString("--no-start") + "||" + tr("Don't start the application");
     extraHelp << QString("--help") + "||" + tr("Display this text and exit");
     extraHelp << QString("--version") + "||" + tr("Print version number and exit");
@@ -376,6 +390,23 @@ void QMMPStarter::printVersion()
 #ifdef Q_OS_WIN
     string text = tmp_stream.str();
     QMessageBox::information(0, tr("Qmmp Version"), QString::fromLocal8Bit(text.c_str()));
+    cout.rdbuf(old_stream); //restore old stream buffer
+#endif
+}
+
+void QMMPStarter::printUserInterfaces()
+{
+    //show dialog with qmmp version under ms windows
+#ifdef Q_OS_WIN
+    stringstream tmp_stream;
+    tmp_stream.copyfmt(cout);
+    streambuf* old_stream = cout.rdbuf(tmp_stream.rdbuf());
+#endif
+    foreach (QString name, UiLoader::names())
+        cout << qPrintable(name) << endl;
+#ifdef Q_OS_WIN
+    string text = tmp_stream.str();
+    QMessageBox::information(0, tr("User Interfaces"), QString::fromLocal8Bit(text.c_str()));
     cout.rdbuf(old_stream); //restore old stream buffer
 #endif
 }

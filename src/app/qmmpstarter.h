@@ -69,6 +69,7 @@ private:
      * Prints version of program
      */
     void printVersion();
+    void printUserInterfaces();
     void startPlayer();
 
 private:

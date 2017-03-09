@@ -61,6 +61,7 @@ SET(libqmmpui_SRCS
     playlistheadermodel.cpp
     columneditor.cpp
     metadatahelper.cpp
+    coverviewer.cpp
 )
 
 SET(libqmmpui_HDRS

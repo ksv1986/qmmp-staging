@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,6 +31,7 @@
 #include "ui_detailsdialog.h"
 #include "playlisttrack.h"
 #include "tageditor_p.h"
+#include "coverviewer_p.h"
 #include "detailsdialog.h"
 
 DetailsDialog::DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent)
@@ -142,6 +143,14 @@ void DetailsDialog::updatePage()
     else
         m_metaData = *m_track;
     qDeleteAll(flist);
+
+    QPixmap cover = MetaDataManager::instance()->getCover(m_path);
+    if(!cover.isNull())
+    {
+        CoverViewer *coverViewer = new CoverViewer(this);
+        coverViewer->setPixmap(cover);
+        m_ui->tabWidget->addTab(coverViewer, tr("Cover"));
+    }
 
     m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_path, this);
 

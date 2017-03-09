@@ -755,6 +755,24 @@
     </message>
 </context>
 <context>
+    <name>CoverViewer</name>
+    <message>
+        <location filename="../coverviewer.cpp" line="30"/>
+        <source>&amp;Save As...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../coverviewer.cpp" line="54"/>
+        <source>Save Cover As</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../coverviewer.cpp" line="56"/>
+        <source>Images</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DetailsDialog</name>
     <message>
         <location filename="../forms/detailsdialog.ui" line="14"/>
@@ -777,57 +795,62 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="132"/>
+        <location filename="../detailsdialog.cpp" line="133"/>
         <source>%1/%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="177"/>
+        <location filename="../detailsdialog.cpp" line="152"/>
+        <source>Cover</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="186"/>
         <source>Title</source>
         <translation type="unfinished">Názov</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="178"/>
+        <location filename="../detailsdialog.cpp" line="187"/>
         <source>Artist</source>
         <translation type="unfinished">Interprét</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="179"/>
+        <location filename="../detailsdialog.cpp" line="188"/>
         <source>Album artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="180"/>
+        <location filename="../detailsdialog.cpp" line="189"/>
         <source>Album</source>
         <translation type="unfinished">Album</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="181"/>
+        <location filename="../detailsdialog.cpp" line="190"/>
         <source>Comment</source>
         <translation type="unfinished">Poznámka</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="182"/>
+        <location filename="../detailsdialog.cpp" line="191"/>
         <source>Genre</source>
         <translation type="unfinished">Žáner</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="183"/>
+        <location filename="../detailsdialog.cpp" line="192"/>
         <source>Composer</source>
         <translation type="unfinished">Skladateľ</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="185"/>
+        <location filename="../detailsdialog.cpp" line="194"/>
         <source>Year</source>
         <translation type="unfinished">Rok</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="187"/>
+        <location filename="../detailsdialog.cpp" line="196"/>
         <source>Track</source>
         <translation type="unfinished">Skladba</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="189"/>
+        <location filename="../detailsdialog.cpp" line="198"/>
         <source>Disc number</source>
         <translation type="unfinished">Číslo disku</translation>
     </message>

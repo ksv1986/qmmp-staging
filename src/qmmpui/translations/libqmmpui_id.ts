@@ -755,6 +755,24 @@
     </message>
 </context>
 <context>
+    <name>CoverViewer</name>
+    <message>
+        <location filename="../coverviewer.cpp" line="30"/>
+        <source>&amp;Save As...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../coverviewer.cpp" line="54"/>
+        <source>Save Cover As</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../coverviewer.cpp" line="56"/>
+        <source>Images</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DetailsDialog</name>
     <message>
         <location filename="../forms/detailsdialog.ui" line="14"/>
@@ -777,57 +795,62 @@
         <translation>Ringkasan</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="132"/>
+        <location filename="../detailsdialog.cpp" line="133"/>
         <source>%1/%2</source>
         <translation>%1/%2</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="177"/>
+        <location filename="../detailsdialog.cpp" line="152"/>
+        <source>Cover</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="186"/>
         <source>Title</source>
         <translation>Judul</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="178"/>
+        <location filename="../detailsdialog.cpp" line="187"/>
         <source>Artist</source>
         <translation>Artist</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="179"/>
+        <location filename="../detailsdialog.cpp" line="188"/>
         <source>Album artist</source>
         <translation>Album artist</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="180"/>
+        <location filename="../detailsdialog.cpp" line="189"/>
         <source>Album</source>
         <translation>Album</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="181"/>
+        <location filename="../detailsdialog.cpp" line="190"/>
         <source>Comment</source>
         <translation>Komentar</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="182"/>
+        <location filename="../detailsdialog.cpp" line="191"/>
         <source>Genre</source>
         <translation>Genre</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="183"/>
+        <location filename="../detailsdialog.cpp" line="192"/>
         <source>Composer</source>
         <translation>Pengarang</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="185"/>
+        <location filename="../detailsdialog.cpp" line="194"/>
         <source>Year</source>
         <translation>Tahun</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="187"/>
+        <location filename="../detailsdialog.cpp" line="196"/>
         <source>Track</source>
         <translation>Track</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="189"/>
+        <location filename="../detailsdialog.cpp" line="198"/>
         <source>Disc number</source>
         <translation>Nomor cakram</translation>
     </message>

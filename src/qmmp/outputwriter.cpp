@@ -368,6 +368,7 @@ void OutputWriter::run()
                 if(m_skip)
                 {
                     m_skip = false;
+                    Visual::clearBuffer();
                     m_output->reset();
                     mutex()->unlock();
                     break;

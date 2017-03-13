@@ -323,12 +323,13 @@ QString QMMPStarter::processCommandArgs(const QStringList &slist, const QString&
     }
     if(!paths.isEmpty())
     {
-        m_option_manager->executeCommand(QString(), paths, cwd); //add paths only
-        return QString();
+        return m_option_manager->executeCommand(QString(), paths, cwd); //add paths only
     }
     QHash<QString, QStringList> commands = m_option_manager->splitArgs(slist);
     if(commands.isEmpty())
         return QString();
+
+    QString out;
     foreach(QString key, commands.keys())
     {
         if(key == "--no-start" || key == "--ui")
@@ -336,11 +337,11 @@ QString QMMPStarter::processCommandArgs(const QStringList &slist, const QString&
         if (CommandLineManager::hasOption(key))
             return CommandLineManager::executeCommand(key, commands.value(key));
         else if (m_option_manager->identify(key))
-            m_option_manager->executeCommand(key, commands.value(key), cwd);
+            out += m_option_manager->executeCommand(key, commands.value(key), cwd);
         else
             return QString();
     }
-    return QString();
+    return out;
 }
 
 void QMMPStarter::printUsage()

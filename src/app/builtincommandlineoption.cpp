@@ -41,8 +41,8 @@ BuiltinCommandLineOption::BuiltinCommandLineOption(QObject *parent) : QObject(pa
               << "--stop" << "-s"
               << "--jump-to-file" << "-j"
               << "--quit" << "-q"
-              << "--volume"
-              << "--toggle-mute"
+              << "--volume" << "--volume-status"
+              << "--toggle-mute" << "--mute-status"
               << "--next" << "--previous"
               << "--toggle-visibility"
               << "--show-mw"
@@ -76,7 +76,9 @@ const QStringList BuiltinCommandLineOption::helpString() const
             << QString("-j, --jump-to-file") + "||" + tr("Display Jump to File dialog")
             << QString("-q, --quit") + "||" + tr("Quit application")
             << QString("--volume <0..100>") + "||" + tr("Set playback volume (example: qmmp --volume 20)")
+            << QString("--volume-status") + "||" + tr("Print volume level")
             << QString("--toggle-mute") + "||" + tr("Mute/Restore volume")
+            << QString("--mute-status") + "||" + tr("Print mute status")
             << QString("--next") + "||" + tr("Skip forward in playlist")
             << QString("--previous") + "||" + tr("Skip backwards in playlist")
             << QString("--toggle-visibility") + "||" + tr("Show/hide application")
@@ -85,7 +87,7 @@ const QStringList BuiltinCommandLineOption::helpString() const
             << QString("--add-dir") + "||" + tr("Display Add Directory dialog");
 }
 
-void BuiltinCommandLineOption::executeCommand(const QString &option_string,
+QString BuiltinCommandLineOption::executeCommand(const QString &option_string,
                                               const QStringList &args,
                                               const QString &cwd)
 {
@@ -93,12 +95,13 @@ void BuiltinCommandLineOption::executeCommand(const QString &option_string,
     MediaPlayer *player = MediaPlayer::instance();
     PlayListManager *pl_manager = PlayListManager::instance();
     QmmpUiSettings *settings = QmmpUiSettings::instance();
+    QString out;
     if(!core || !player)
-        return;
+        return out;
     if(option_string == "--enqueue" || option_string == "-e" || option_string.isEmpty())
     {
         if(args.isEmpty())
-            return;
+            return out;
         QStringList full_path_list, remote_pls_list;
         foreach(QString s, args)
         {
@@ -214,10 +217,19 @@ void BuiltinCommandLineOption::executeCommand(const QString &option_string,
         if (ok)
             core->setVolume(volume,volume);
     }
+    else if (option_string == "--volume-status")
+    {
+        out += QString("%1\n").arg(core->volume());
+    }
     else if (option_string == "--toggle-mute")
     {
         core->setMuted(!core->isMuted());
     }
+    else if (option_string == "--mute-status")
+    {
+        out += QString("%1\n").arg(core->isMuted());
+    }
+    return out;
 }
 
 QHash <QString, QStringList> BuiltinCommandLineOption::splitArgs(const QStringList &args) const

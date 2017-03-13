@@ -45,36 +45,46 @@
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>
+        <source>Print volume level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../builtincommandlineoption.cpp" line="80"/>
         <source>Mute/Restore volume</source>
         <translation>Bungkam/Pulihkan volume</translation>
     </message>
     <message>
-        <location filename="../builtincommandlineoption.cpp" line="80"/>
+        <location filename="../builtincommandlineoption.cpp" line="81"/>
+        <source>Print mute status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../builtincommandlineoption.cpp" line="82"/>
         <source>Skip forward in playlist</source>
         <translation>Lewati maju dalam daftarmain</translation>
     </message>
     <message>
-        <location filename="../builtincommandlineoption.cpp" line="81"/>
+        <location filename="../builtincommandlineoption.cpp" line="83"/>
         <source>Skip backwards in playlist</source>
         <translation>Lewati mundur dalam daftarmain</translation>
     </message>
     <message>
-        <location filename="../builtincommandlineoption.cpp" line="82"/>
+        <location filename="../builtincommandlineoption.cpp" line="84"/>
         <source>Show/hide application</source>
         <translation>Tampakkan/sembunyikan aplikasi</translation>
     </message>
     <message>
-        <location filename="../builtincommandlineoption.cpp" line="83"/>
+        <location filename="../builtincommandlineoption.cpp" line="85"/>
         <source>Show main window</source>
         <translation>Tampakkan jendela utama</translation>
     </message>
     <message>
-        <location filename="../builtincommandlineoption.cpp" line="84"/>
+        <location filename="../builtincommandlineoption.cpp" line="86"/>
         <source>Display Add File dialog</source>
         <translation>Tayangkan dialog Tambah File</translation>
     </message>
     <message>
-        <location filename="../builtincommandlineoption.cpp" line="85"/>
+        <location filename="../builtincommandlineoption.cpp" line="87"/>
         <source>Display Add Directory dialog</source>
         <translation>Tayangkan dialog Tambah Direktori</translation>
     </message>
@@ -87,82 +97,82 @@
         <translation>Perintah tak diketahui</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="354"/>
+        <location filename="../qmmpstarter.cpp" line="355"/>
         <source>Usage: qmmp [options] [files]</source>
         <translation>Penggunaan: qmmp [pilihan] [file]</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="355"/>
+        <location filename="../qmmpstarter.cpp" line="356"/>
         <source>Options:</source>
         <translation>Pilihan:</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="361"/>
+        <location filename="../qmmpstarter.cpp" line="362"/>
         <source>Start qmmp with the specified user interface</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="362"/>
+        <location filename="../qmmpstarter.cpp" line="363"/>
         <source>List all available user interfaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="363"/>
+        <location filename="../qmmpstarter.cpp" line="364"/>
         <source>Don&apos;t start the application</source>
         <translation>Jangan mulaikan aplikasi</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="364"/>
+        <location filename="../qmmpstarter.cpp" line="365"/>
         <source>Display this text and exit</source>
         <translation>Tayangkan teks ini dan keluar</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="365"/>
+        <location filename="../qmmpstarter.cpp" line="366"/>
         <source>Print version number and exit</source>
         <translation>Cetak nomor versi dan keluar</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="367"/>
+        <location filename="../qmmpstarter.cpp" line="368"/>
         <source>Home page: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="368"/>
+        <location filename="../qmmpstarter.cpp" line="369"/>
         <source>Development page: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="369"/>
+        <location filename="../qmmpstarter.cpp" line="370"/>
         <source>Bug tracker: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="374"/>
+        <location filename="../qmmpstarter.cpp" line="375"/>
         <source>Command Line Help</source>
         <translation>Bantuan Baris Perintah</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="387"/>
+        <location filename="../qmmpstarter.cpp" line="388"/>
         <source>QMMP version: %1</source>
         <translation>Versi QMMP: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="388"/>
+        <location filename="../qmmpstarter.cpp" line="389"/>
         <source>Compiled with Qt version: %1</source>
         <translation>Dikompilasi dengan versi Qt: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="389"/>
+        <location filename="../qmmpstarter.cpp" line="390"/>
         <source>Using Qt version: %1</source>
         <translation>Menggunakan versi Qt: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="392"/>
+        <location filename="../qmmpstarter.cpp" line="393"/>
         <source>Qmmp Version</source>
         <translation>Versi Qmmp</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="409"/>
+        <location filename="../qmmpstarter.cpp" line="410"/>
         <source>User Interfaces</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,6 +23,7 @@
 #include <QInputDialog>
 #include <QCloseEvent>
 #include <QFile>
+#include <QDesktopWidget>
 #include <qmmpui/filedialog.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmp/soundcore.h>
@@ -143,7 +144,16 @@ void EqWidget::setMimimalMode(bool b)
 void EqWidget::readSettings()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    move (settings.value ("Skinned/eq_pos", QPoint (100, 216)).toPoint()); //geometry
+    QDesktopWidget *desktop = qApp->desktop();
+    QPoint pos = settings.value("Skinned/eq_pos", QPoint(100, 216)).toPoint();
+    if(!desktop->availableGeometry().contains(pos))
+    {
+        QRect availableGeometry = desktop->availableGeometry();
+        int r = m_skin->ratio();
+        pos.setX(qBound(availableGeometry.left(), pos.x(), availableGeometry.right() - r*275));
+        pos.setY(qBound(availableGeometry.top(), pos.y(), availableGeometry.bottom() - r*116));
+    }
+    move (pos); //geometry
     readEq();
     //equalizer presets
     QString preset_path = Qmmp::configDir() + "eq.preset";

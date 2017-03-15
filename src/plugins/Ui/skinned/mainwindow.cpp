@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,6 +21,7 @@
 #include <QDir>
 #include <QAction>
 #include <QMenu>
+#include <QDesktopWidget>
 #include <math.h>
 #include <qmmp/soundcore.h>
 #include <qmmp/visual.h>
@@ -276,7 +277,16 @@ void MainWindow::readSettings()
     }
     else
     {
-        move(settings.value("mw_pos", QPoint(100, 100)).toPoint()); //geometry
+        QDesktopWidget *desktop = qApp->desktop();
+        QPoint pos = settings.value("mw_pos", QPoint(100, 100)).toPoint();
+        if(!desktop->availableGeometry().contains(pos))
+        {
+            QRect availableGeometry = desktop->availableGeometry();
+            int r = m_skin->ratio();
+            pos.setX(qBound(availableGeometry.left(), pos.x(), availableGeometry.right() - r*275));
+            pos.setY(qBound(availableGeometry.top(), pos.y(), availableGeometry.bottom() - r*116));
+        }
+        move(pos); //geometry
         m_startHidden = settings.value("start_hidden", false).toBool();
         if(settings.value("always_on_top", false).toBool())
         {

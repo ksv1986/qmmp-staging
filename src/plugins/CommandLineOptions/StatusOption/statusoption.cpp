@@ -100,6 +100,7 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
         out += tr("%y - year") + "\n";
         out += tr("%l - duration") + "\n";
         out += tr("%if(A&B&C,D,E) - condition") + "\n";
+        out += tr("%dir(n) - directory name located on n levels above");
     }
     return out;
 }

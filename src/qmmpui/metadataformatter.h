@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -52,7 +52,8 @@ public:
      * %y - year,
      * %l - duration,
      * %I - track index,
-     * %if(A,B,C) or %if(A&B&C,D,E) - condition.
+     * %if(A,B,C) or %if(A&B&C,D,E) - condition,
+     * %dir(n) - Name of the directory located on \b n levels above.
      */
     MetaDataFormatter(const QString &pattern = QString());
     /*!
@@ -95,7 +96,8 @@ private:
             PRINT_TEXT = 0,
             IF_KEYWORD,
             OR_OPERATOR,
-            AND_OPERATOR
+            AND_OPERATOR,
+            DIR_FUNCTION
         } command;
 
         QList<Param> params;
@@ -106,6 +108,7 @@ private:
         enum {
             FIELD = 0,
             TEXT,
+            NUMERIC,
             NODES
         } type;
 
@@ -120,11 +123,13 @@ private:
 
         int field;
         QString text;
+        int number;
         QList<Node> children;
     };
 
     bool parseField(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
     bool parseIf(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
+    bool parseDir(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
     void parseText(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
     void parseEscape(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,7 +37,8 @@ Syntax:
 %y - year,
 %l - duration,
 %I - track index,
-%if(A,B,C) or %if(A&B&C,D,E) - condition.
+%if(A,B,C) or %if(A&B&C,D,E) - condition,
+%dir(n) - Name of the directory located on n levels above.
 */
 
 #include <QStringList>
@@ -271,6 +272,82 @@ bool MetaDataFormatter::parseIf(QList<MetaDataFormatter::Node> *nodes, QString::
     return true;
 }
 
+bool MetaDataFormatter::parseDir(QList<MetaDataFormatter::Node> *nodes, QString::const_iterator *i, QString::const_iterator end)
+{
+    if((*i) + 1 == end || (*i) + 2 == end || (*i) + 3 == end)
+        return false;
+
+    if((**i) != QChar('d') || *((*i)+1) != QChar('i') || *((*i)+2) != QChar('r'))
+        return false;
+
+    (*i)+=3;
+
+    if((**i) != QChar('('))
+        return false;
+
+    Node node;
+    node.command = Node::DIR_FUNCTION;
+    QString var;
+
+    enum {
+        STARTING = 0,
+        READING_VAR,
+        FINISHED,
+
+    } state = STARTING;
+
+    while((*i) != end)
+    {
+        if((**i) == QChar('(') && state == STARTING)
+        {
+            state = READING_VAR;
+            (*i)++;
+            continue;
+        }
+
+        switch (state)
+        {
+        case STARTING:
+        {
+            break;
+        }
+        case READING_VAR:
+        {
+            if((**i) == QChar(')'))
+            {
+                state = FINISHED;
+                break;
+            }
+            var.append((**i));
+            break;
+        }
+        default:
+            break;
+        }
+
+        if(state == FINISHED)
+            break;
+
+        (*i)++;
+    }
+
+    if(state != FINISHED)
+    {
+        qWarning("MetaDataFormatter: syntax error");
+        return false;
+    }
+
+    Param param;
+    param.type = Param::NUMERIC;
+    bool ok = false;
+    param.number = var.toInt(&ok);
+    if(!ok)
+        param.number = 0;
+    node.params << param;
+    nodes->append(node);
+    return true;
+}
+
 void MetaDataFormatter::parseText(QList<MetaDataFormatter::Node> *nodes, QString::const_iterator *i, QString::const_iterator end)
 {
     Node node;
@@ -345,6 +422,10 @@ QString MetaDataFormatter::evalute(const QList<Node> *nodes, const QMap<Qmmp::Me
                 if(!var2.isEmpty())
                     out.append("1");
             }
+        }
+        else if(node.command == Node::DIR_FUNCTION)
+        {
+            out.append(metaData->value(Qmmp::URL).section('/', -node.params[0].number - 2, -node.params[0].number - 2));
         }
     }
     return out;
@@ -427,6 +508,8 @@ QString MetaDataFormatter::dumpNode(MetaDataFormatter::Node node) const
             params.append(QString("FIELD:%1").arg(p.field));
         else if(p.type == Param::TEXT)
             params.append(QString("TEXT:%1").arg(p.text));
+        else if(p.type == Param::NUMERIC)
+            params.append(QString("NUMBER:%1").arg(p.number));
         else if(p.type == Param::NODES)
         {
             QStringList nodeStrList;
@@ -454,6 +537,12 @@ QList<MetaDataFormatter::Node> MetaDataFormatter::compile(const QString &expr)
             i++;
             if(i == expr.constEnd())
                 continue;
+
+            if(parseDir(&nodes, &i, expr.constEnd()))
+            {
+                i++;
+                continue;
+            }
 
             if(parseField(&nodes, &i, expr.constEnd()))
             {

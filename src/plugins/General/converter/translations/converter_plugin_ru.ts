@@ -79,125 +79,54 @@
         <translation>Остановить</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="107"/>
+        <location filename="../converterdialog.cpp" line="108"/>
         <source>Choose a directory</source>
         <translation>Выберите директорию</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="190"/>
-        <source>Artist</source>
-        <translation>Исполнитель</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="191"/>
-        <source>Album</source>
-        <translation>Альбом</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="192"/>
-        <source>Album Artist</source>
-        <translation>Исполнитель альбома</translation>
-    </message>
-    <message>
         <location filename="../converterdialog.ui" line="39"/>
-        <location filename="../converterdialog.cpp" line="193"/>
         <source>Title</source>
         <translation>Название</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="194"/>
-        <source>Track Number</source>
-        <translation>Номер трека</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="195"/>
-        <source>Two-digit Track Number</source>
-        <translation>2-х разрядный номер трека</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="200"/>
-        <source>Disc Number</source>
-        <translation>Номер диска</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="201"/>
-        <source>File Name</source>
-        <translation>Имя файла</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="202"/>
-        <source>File Path</source>
-        <translation>Путь к файлу</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="196"/>
-        <source>Genre</source>
-        <translation>Жанр</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="128"/>
-        <location filename="../converterdialog.cpp" line="367"/>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="129"/>
+        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="133"/>
+        <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
         <translation>Ожидание</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="197"/>
-        <source>Comment</source>
-        <translation>Комментарий</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="198"/>
-        <source>Composer</source>
-        <translation>Композитор</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="199"/>
-        <source>Duration</source>
-        <translation>Длительность</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="203"/>
-        <source>Year</source>
-        <translation>Год</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="204"/>
-        <source>Condition</source>
-        <translation>Условие</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="210"/>
+        <location filename="../converterdialog.cpp" line="196"/>
         <source>Create</source>
         <translation>Создать</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="211"/>
+        <location filename="../converterdialog.cpp" line="197"/>
         <source>Edit</source>
         <translation>Изменить</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="212"/>
+        <location filename="../converterdialog.cpp" line="198"/>
         <source>Create a Copy</source>
         <translation>Сделать копию</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="213"/>
+        <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="367"/>
+        <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation>Невозможно запустить &quot;%1&quot;. Программа не найдена.</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation>Процесс &quot;%1&quot; завершился с ошибкой.</translation>
     </message>

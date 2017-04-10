@@ -79,125 +79,54 @@
         <translation>Διακοπή</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="107"/>
+        <location filename="../converterdialog.cpp" line="108"/>
         <source>Choose a directory</source>
         <translation>Επιλογή ενός καταλόγου</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="190"/>
-        <source>Artist</source>
-        <translation>Καλλιτέχνης</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="191"/>
-        <source>Album</source>
-        <translation>Άλμπουμ</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="192"/>
-        <source>Album Artist</source>
-        <translation>Καλλιτέχνης άλμπουμ</translation>
-    </message>
-    <message>
         <location filename="../converterdialog.ui" line="39"/>
-        <location filename="../converterdialog.cpp" line="193"/>
         <source>Title</source>
         <translation>Τίτλος</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="194"/>
-        <source>Track Number</source>
-        <translation>Αριθμός κομματιού</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="195"/>
-        <source>Two-digit Track Number</source>
-        <translation>Διψήφιος αριθμός κομματιού</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="200"/>
-        <source>Disc Number</source>
-        <translation>Αριθμός δίσκου</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="201"/>
-        <source>File Name</source>
-        <translation>Όνομα αρχείου</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="202"/>
-        <source>File Path</source>
-        <translation>Διαδρομή αρχείου</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="212"/>
+        <location filename="../converterdialog.cpp" line="198"/>
         <source>Create a Copy</source>
         <translation>Δημιουργία αντιγράφου</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="196"/>
-        <source>Genre</source>
-        <translation>Είδος</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="128"/>
-        <location filename="../converterdialog.cpp" line="367"/>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="129"/>
+        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="133"/>
+        <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
         <translation>Αναμονή</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="197"/>
-        <source>Comment</source>
-        <translation>Σχόλιο</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="198"/>
-        <source>Composer</source>
-        <translation>Συνθέτης</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="199"/>
-        <source>Duration</source>
-        <translation>Διάρκεια</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="203"/>
-        <source>Year</source>
-        <translation>Έτος</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="204"/>
-        <source>Condition</source>
-        <translation>Συνθήκη</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="210"/>
+        <location filename="../converterdialog.cpp" line="196"/>
         <source>Create</source>
         <translation>Δημιουργία</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="211"/>
+        <location filename="../converterdialog.cpp" line="197"/>
         <source>Edit</source>
         <translation>Επεξεργασία</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="213"/>
+        <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
         <translation>Διαγραφή</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="367"/>
+        <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation>Αδύνατη η εκτέλεση του «%1». Το πρόγραμμα δεν βρέθηκε.</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation>Η διεργασία «%1» ολοκληρώθηκε με σφάλμα.</translation>
     </message>

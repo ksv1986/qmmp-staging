@@ -447,58 +447,58 @@
 <context>
     <name>EqWidget</name>
     <message>
-        <location filename="../eqwidget.cpp" line="156"/>
-        <location filename="../eqwidget.cpp" line="173"/>
+        <location filename="../eqwidget.cpp" line="166"/>
+        <location filename="../eqwidget.cpp" line="183"/>
         <source>preset</source>
         <translation>предвстановлення</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="256"/>
+        <location filename="../eqwidget.cpp" line="266"/>
         <source>&amp;Load/Delete</source>
         <translation>&amp;Завантажити/Видалити</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="258"/>
+        <location filename="../eqwidget.cpp" line="268"/>
         <source>&amp;Save Preset</source>
         <translation>&amp;Зберегти предвстановлення</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="260"/>
+        <location filename="../eqwidget.cpp" line="270"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>&amp;Зберегти авто-предвстановлення</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="265"/>
+        <location filename="../eqwidget.cpp" line="275"/>
         <source>&amp;Clear</source>
         <translation>&amp;Очистити</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="294"/>
+        <location filename="../eqwidget.cpp" line="304"/>
         <source>Saving Preset</source>
         <translation>Збережені предвстановлення</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="295"/>
+        <location filename="../eqwidget.cpp" line="305"/>
         <source>Preset name:</source>
         <translation>Ім&apos;я предвстановлення:</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="296"/>
+        <location filename="../eqwidget.cpp" line="306"/>
         <source>preset #</source>
         <translation>предвстановлення #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="262"/>
+        <location filename="../eqwidget.cpp" line="272"/>
         <source>&amp;Import</source>
         <translation>&amp;Імпортувати</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="45"/>
+        <location filename="../eqwidget.cpp" line="46"/>
         <source>Equalizer</source>
         <translation>Еквалайзер</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="387"/>
+        <location filename="../eqwidget.cpp" line="397"/>
         <source>Import Preset</source>
         <translation>Імпорт предвстановлення</translation>
     </message>
@@ -785,32 +785,32 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="346"/>
+        <location filename="../mainwindow.cpp" line="356"/>
         <source>Appearance</source>
         <translation>Зовнішній вигляд</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="347"/>
+        <location filename="../mainwindow.cpp" line="357"/>
         <source>Shortcuts</source>
         <translation>Комбінації клавіш</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="417"/>
+        <location filename="../mainwindow.cpp" line="427"/>
         <source>View</source>
         <translation>Вигляд</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="426"/>
+        <location filename="../mainwindow.cpp" line="436"/>
         <source>Playlist</source>
         <translation>Список</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="444"/>
+        <location filename="../mainwindow.cpp" line="454"/>
         <source>Audio</source>
         <translation>Звук</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Tools</source>
         <translation>Утиліти</translation>
     </message>
@@ -818,123 +818,123 @@
 <context>
     <name>PlayList</name>
     <message>
-        <location filename="../playlist.cpp" line="197"/>
+        <location filename="../playlist.cpp" line="198"/>
         <source>&amp;Copy Selection To</source>
         <translation>&amp;Копіювати вибране в</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="227"/>
+        <location filename="../playlist.cpp" line="228"/>
         <source>Sort List</source>
         <translation>Сортувати</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="230"/>
-        <location filename="../playlist.cpp" line="285"/>
+        <location filename="../playlist.cpp" line="231"/>
+        <location filename="../playlist.cpp" line="286"/>
         <source>By Title</source>
         <translation>За назвою</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="234"/>
-        <location filename="../playlist.cpp" line="289"/>
+        <location filename="../playlist.cpp" line="235"/>
+        <location filename="../playlist.cpp" line="290"/>
         <source>By Album</source>
         <translation>За альбомом</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="238"/>
-        <location filename="../playlist.cpp" line="293"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Disc Number</source>
         <translation>За номером диску</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="242"/>
-        <location filename="../playlist.cpp" line="297"/>
+        <location filename="../playlist.cpp" line="243"/>
+        <location filename="../playlist.cpp" line="298"/>
         <source>By Artist</source>
         <translation>За виконавцем</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="246"/>
-        <location filename="../playlist.cpp" line="301"/>
+        <location filename="../playlist.cpp" line="247"/>
+        <location filename="../playlist.cpp" line="302"/>
         <source>By Album Artist</source>
         <translation>За альбомом виконавця</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="250"/>
-        <location filename="../playlist.cpp" line="305"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="306"/>
         <source>By Filename</source>
         <translation>За ім&apos;ям файлу</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="254"/>
-        <location filename="../playlist.cpp" line="309"/>
+        <location filename="../playlist.cpp" line="255"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>By Path + Filename</source>
         <translation>За шляхом та файлом</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="258"/>
-        <location filename="../playlist.cpp" line="313"/>
+        <location filename="../playlist.cpp" line="259"/>
+        <location filename="../playlist.cpp" line="314"/>
         <source>By Date</source>
         <translation>За датою</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="266"/>
-        <location filename="../playlist.cpp" line="321"/>
+        <location filename="../playlist.cpp" line="267"/>
+        <location filename="../playlist.cpp" line="322"/>
         <source>By File Creation Date</source>
         <translation>За датою створення файлу</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="270"/>
-        <location filename="../playlist.cpp" line="325"/>
+        <location filename="../playlist.cpp" line="271"/>
+        <location filename="../playlist.cpp" line="326"/>
         <source>By File Modification Date</source>
         <translation>За датою модифікації файлу</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="274"/>
+        <location filename="../playlist.cpp" line="275"/>
         <source>By Group</source>
         <translation>За групою</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="282"/>
+        <location filename="../playlist.cpp" line="283"/>
         <source>Sort Selection</source>
         <translation>Сортувати вибране</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="333"/>
+        <location filename="../playlist.cpp" line="334"/>
         <source>Randomize List</source>
         <translation>Перемішати</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="335"/>
+        <location filename="../playlist.cpp" line="336"/>
         <source>Reverse List</source>
         <translation>Перевернути</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="607"/>
+        <location filename="../playlist.cpp" line="617"/>
         <source>Rename Playlist</source>
         <translation>Переіменувати список</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="607"/>
+        <location filename="../playlist.cpp" line="617"/>
         <source>Playlist name:</source>
         <translation>Ім&apos;я списка:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="628"/>
+        <location filename="../playlist.cpp" line="638"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Новий список</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="262"/>
-        <location filename="../playlist.cpp" line="317"/>
+        <location filename="../playlist.cpp" line="263"/>
+        <location filename="../playlist.cpp" line="318"/>
         <source>By Track Number</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="55"/>
+        <location filename="../playlist.cpp" line="56"/>
         <source>Playlist</source>
         <translation>Список</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="346"/>
+        <location filename="../playlist.cpp" line="347"/>
         <source>Actions</source>
         <translation>Дії</translation>
     </message>
@@ -1071,81 +1071,6 @@
         <location filename="../forms/popupsettings.ui" line="65"/>
         <source>Insert</source>
         <translation>Вставити</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="62"/>
-        <source>Artist</source>
-        <translation>Виконавець</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="63"/>
-        <source>Album</source>
-        <translation>Альбом</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="64"/>
-        <source>Album Artist</source>
-        <translation>Альбом Виконавець</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="65"/>
-        <source>Title</source>
-        <translation>Назва</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="66"/>
-        <source>Track Number</source>
-        <translation>Номер треку</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="67"/>
-        <source>Two-digit Track Number</source>
-        <translation>Подвійний номер треку</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="72"/>
-        <source>Disc Number</source>
-        <translation>Номер диску</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="73"/>
-        <source>File Name</source>
-        <translation>Ім&apos;я файла</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="74"/>
-        <source>File Path</source>
-        <translation>Шлях файла</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="68"/>
-        <source>Genre</source>
-        <translation>Жанр</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="69"/>
-        <source>Comment</source>
-        <translation>Коментар</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="70"/>
-        <source>Composer</source>
-        <translation>Композитор</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="71"/>
-        <source>Duration</source>
-        <translation>Тривалість</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="75"/>
-        <source>Year</source>
-        <translation>Рік</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="76"/>
-        <source>Condition</source>
-        <translation>Умова</translation>
     </message>
 </context>
 <context>
@@ -1442,87 +1367,7 @@
         <translation>Розпакована тема</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="183"/>
-        <source>Artist</source>
-        <translation>Виконавець</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="184"/>
-        <source>Album</source>
-        <translation>Альбом</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="185"/>
-        <source>Album Artist</source>
-        <translation>Альбом Виконавець</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="186"/>
-        <source>Title</source>
-        <translation>Назва</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="187"/>
-        <source>Track Number</source>
-        <translation>Номер треку</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="188"/>
-        <source>Two-digit Track Number</source>
-        <translation>Подвійний номер треку</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="189"/>
-        <source>Genre</source>
-        <translation>Жанр</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="190"/>
-        <source>Comment</source>
-        <translation>Коментар</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="191"/>
-        <source>Composer</source>
-        <translation>Композитор</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="192"/>
-        <source>Duration</source>
-        <translation>Тривалість</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="193"/>
-        <source>Disc Number</source>
-        <translation>Номер диску</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="194"/>
-        <source>File Name</source>
-        <translation>Ім&apos;я файла</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="195"/>
-        <source>File Path</source>
-        <translation>Шлях файла</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="196"/>
-        <source>Year</source>
-        <translation>Рік</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="197"/>
-        <source>Condition</source>
-        <translation>Умова</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="198"/>
-        <source>Artist - Title</source>
-        <translation>Виконавець - Назва</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="227"/>
+        <location filename="../skinnedsettings.cpp" line="210"/>
         <source>Archived skin</source>
         <translation>Упакована тема</translation>
     </message>

@@ -138,88 +138,13 @@
         <translation>Нова дія</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="220"/>
-        <source>Artist</source>
-        <translation>Виконавець</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="221"/>
-        <source>Album</source>
-        <translation>Альбом</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="222"/>
-        <source>Album Artist</source>
-        <translation>Альбом Виконавець</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="223"/>
-        <source>Title</source>
-        <translation>Назва</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="224"/>
-        <source>Track Number</source>
-        <translation>Номер доріжки</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="225"/>
-        <source>Two-digit Track Number</source>
-        <translation>Подвійний номер доріжки</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="226"/>
-        <source>Genre</source>
-        <translation>Жанр</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="230"/>
-        <source>Disc Number</source>
-        <translation>Номер диску</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="231"/>
-        <source>File Name</source>
-        <translation>Ім&apos;я файла</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="232"/>
-        <source>File Path</source>
-        <translation>Шлях файла</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="233"/>
-        <source>Year</source>
-        <translation>Рік</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="227"/>
-        <source>Comment</source>
-        <translation>Коментар</translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.cpp" line="53"/>
         <location filename="../settingsdialog.cpp" line="133"/>
         <source>Move</source>
         <translation>Перемістити</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="228"/>
-        <source>Composer</source>
-        <translation>Композитор</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="229"/>
-        <source>Duration</source>
-        <translation>Тривалість</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="234"/>
-        <source>Condition</source>
-        <translation>Умова</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="247"/>
+        <location filename="../settingsdialog.cpp" line="232"/>
         <source>Choose a directory</source>
         <translation>Виберіть теку</translation>
     </message>

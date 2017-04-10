@@ -79,125 +79,54 @@
         <translation>Henti</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="107"/>
+        <location filename="../converterdialog.cpp" line="108"/>
         <source>Choose a directory</source>
         <translation>Memilih sebuah direktori</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="190"/>
-        <source>Artist</source>
-        <translation>Artist</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="191"/>
-        <source>Album</source>
-        <translation>Album</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="192"/>
-        <source>Album Artist</source>
-        <translation>Album Artist</translation>
-    </message>
-    <message>
         <location filename="../converterdialog.ui" line="39"/>
-        <location filename="../converterdialog.cpp" line="193"/>
         <source>Title</source>
         <translation>Judul</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="194"/>
-        <source>Track Number</source>
-        <translation>Nomor Trek</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="195"/>
-        <source>Two-digit Track Number</source>
-        <translation>Nomor Track Dua-digit</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="200"/>
-        <source>Disc Number</source>
-        <translation>Nomor Cakram</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="201"/>
-        <source>File Name</source>
-        <translation>Nama File</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="202"/>
-        <source>File Path</source>
-        <translation>Alur File</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="212"/>
+        <location filename="../converterdialog.cpp" line="198"/>
         <source>Create a Copy</source>
         <translation>Ciptakan sebuah Salinan</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="196"/>
-        <source>Genre</source>
-        <translation>Genre</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="128"/>
-        <location filename="../converterdialog.cpp" line="367"/>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="129"/>
+        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
         <translation>Galat</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="133"/>
+        <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
         <translation>Menunggu</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="197"/>
-        <source>Comment</source>
-        <translation>Komentar</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="198"/>
-        <source>Composer</source>
-        <translation>Pengarang</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="199"/>
-        <source>Duration</source>
-        <translation>Durasi</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="203"/>
-        <source>Year</source>
-        <translation>Tahun</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="204"/>
-        <source>Condition</source>
-        <translation>Kondisi</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="210"/>
+        <location filename="../converterdialog.cpp" line="196"/>
         <source>Create</source>
         <translation>Ciptakan</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="211"/>
+        <location filename="../converterdialog.cpp" line="197"/>
         <source>Edit</source>
         <translation>Edit</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="213"/>
+        <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
         <translation>Hapus</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="367"/>
+        <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation>Tak dapat mengeksekusi &quot;%1&quot; Program tidak ditemukan.</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation>Proses &quot;%1&quot; selesai dengan galat.</translation>
     </message>

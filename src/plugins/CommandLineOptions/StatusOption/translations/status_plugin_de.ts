@@ -98,5 +98,10 @@
         <source>%if(A&amp;B&amp;C,D,E) - condition</source>
         <translation>%if(A&amp;B&amp;C,D,E) – Bedingung</translation>
     </message>
+    <message>
+        <location filename="../statusoption.cpp" line="103"/>
+        <source>%dir(n) - directory name located on n levels above</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

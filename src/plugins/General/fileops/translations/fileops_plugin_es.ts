@@ -136,88 +136,13 @@
         <translation>Nueva acción</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="220"/>
-        <source>Artist</source>
-        <translation>Intérprete</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="221"/>
-        <source>Album</source>
-        <translation>Album</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="222"/>
-        <source>Album Artist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="223"/>
-        <source>Title</source>
-        <translation>Título</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="224"/>
-        <source>Track Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="225"/>
-        <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="226"/>
-        <source>Genre</source>
-        <translation>Género</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="230"/>
-        <source>Disc Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="231"/>
-        <source>File Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="232"/>
-        <source>File Path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="233"/>
-        <source>Year</source>
-        <translation>Año</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="227"/>
-        <source>Comment</source>
-        <translation>Comentario</translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.cpp" line="53"/>
         <location filename="../settingsdialog.cpp" line="133"/>
         <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="228"/>
-        <source>Composer</source>
-        <translation>Compositor</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="229"/>
-        <source>Duration</source>
-        <translation>Duración</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="234"/>
-        <source>Condition</source>
-        <translation>Condición</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="247"/>
+        <location filename="../settingsdialog.cpp" line="232"/>
         <source>Choose a directory</source>
         <translation>Elija un directorio</translation>
     </message>

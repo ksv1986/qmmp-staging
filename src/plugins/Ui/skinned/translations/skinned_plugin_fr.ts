@@ -447,58 +447,58 @@
 <context>
     <name>EqWidget</name>
     <message>
-        <location filename="../eqwidget.cpp" line="45"/>
+        <location filename="../eqwidget.cpp" line="46"/>
         <source>Equalizer</source>
         <translation>Égaliseur</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="156"/>
-        <location filename="../eqwidget.cpp" line="173"/>
+        <location filename="../eqwidget.cpp" line="166"/>
+        <location filename="../eqwidget.cpp" line="183"/>
         <source>preset</source>
         <translation>réglage</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="256"/>
+        <location filename="../eqwidget.cpp" line="266"/>
         <source>&amp;Load/Delete</source>
         <translation>&amp;Charger / Supprimer</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="258"/>
+        <location filename="../eqwidget.cpp" line="268"/>
         <source>&amp;Save Preset</source>
         <translation>&amp;Enregistrer un réglage</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="260"/>
+        <location filename="../eqwidget.cpp" line="270"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>&amp;Enregistrer un réglage automatiquement chargé</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="262"/>
+        <location filename="../eqwidget.cpp" line="272"/>
         <source>&amp;Import</source>
         <translation>&amp;Importer</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="265"/>
+        <location filename="../eqwidget.cpp" line="275"/>
         <source>&amp;Clear</source>
         <translation>&amp;Effacer</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="294"/>
+        <location filename="../eqwidget.cpp" line="304"/>
         <source>Saving Preset</source>
         <translation>Réglage en cours d&apos;enregistrement</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="295"/>
+        <location filename="../eqwidget.cpp" line="305"/>
         <source>Preset name:</source>
         <translation>Nom du réglage : </translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="296"/>
+        <location filename="../eqwidget.cpp" line="306"/>
         <source>preset #</source>
         <translation>réglage #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="387"/>
+        <location filename="../eqwidget.cpp" line="397"/>
         <source>Import Preset</source>
         <translation>Importer un réglage</translation>
     </message>
@@ -785,32 +785,32 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="346"/>
+        <location filename="../mainwindow.cpp" line="356"/>
         <source>Appearance</source>
         <translation>Apparence</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="347"/>
+        <location filename="../mainwindow.cpp" line="357"/>
         <source>Shortcuts</source>
         <translation>Raccourcis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="417"/>
+        <location filename="../mainwindow.cpp" line="427"/>
         <source>View</source>
         <translation>Vue</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="426"/>
+        <location filename="../mainwindow.cpp" line="436"/>
         <source>Playlist</source>
         <translation>Liste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="444"/>
+        <location filename="../mainwindow.cpp" line="454"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Tools</source>
         <translation>Outils</translation>
     </message>
@@ -818,123 +818,123 @@
 <context>
     <name>PlayList</name>
     <message>
-        <location filename="../playlist.cpp" line="55"/>
+        <location filename="../playlist.cpp" line="56"/>
         <source>Playlist</source>
         <translation>Liste</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="197"/>
+        <location filename="../playlist.cpp" line="198"/>
         <source>&amp;Copy Selection To</source>
         <translation>&amp;Copier la sélection vers</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="227"/>
+        <location filename="../playlist.cpp" line="228"/>
         <source>Sort List</source>
         <translation>Trier la liste</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="230"/>
-        <location filename="../playlist.cpp" line="285"/>
+        <location filename="../playlist.cpp" line="231"/>
+        <location filename="../playlist.cpp" line="286"/>
         <source>By Title</source>
         <translation>par titre</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="234"/>
-        <location filename="../playlist.cpp" line="289"/>
+        <location filename="../playlist.cpp" line="235"/>
+        <location filename="../playlist.cpp" line="290"/>
         <source>By Album</source>
         <translation>par album</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="238"/>
-        <location filename="../playlist.cpp" line="293"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Disc Number</source>
         <translation>par numéro de disque</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="242"/>
-        <location filename="../playlist.cpp" line="297"/>
+        <location filename="../playlist.cpp" line="243"/>
+        <location filename="../playlist.cpp" line="298"/>
         <source>By Artist</source>
         <translation>par artiste</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="246"/>
-        <location filename="../playlist.cpp" line="301"/>
+        <location filename="../playlist.cpp" line="247"/>
+        <location filename="../playlist.cpp" line="302"/>
         <source>By Album Artist</source>
         <translation>par artiste d&apos;album</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="250"/>
-        <location filename="../playlist.cpp" line="305"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="306"/>
         <source>By Filename</source>
         <translation>par nom de fichier</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="254"/>
-        <location filename="../playlist.cpp" line="309"/>
+        <location filename="../playlist.cpp" line="255"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>By Path + Filename</source>
         <translation>par emplacement + nom de fichier</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="258"/>
-        <location filename="../playlist.cpp" line="313"/>
+        <location filename="../playlist.cpp" line="259"/>
+        <location filename="../playlist.cpp" line="314"/>
         <source>By Date</source>
         <translation>par date</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="262"/>
-        <location filename="../playlist.cpp" line="317"/>
+        <location filename="../playlist.cpp" line="263"/>
+        <location filename="../playlist.cpp" line="318"/>
         <source>By Track Number</source>
         <translation>par numéro de piste</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="266"/>
-        <location filename="../playlist.cpp" line="321"/>
+        <location filename="../playlist.cpp" line="267"/>
+        <location filename="../playlist.cpp" line="322"/>
         <source>By File Creation Date</source>
         <translation>par date de création du fichier</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="270"/>
-        <location filename="../playlist.cpp" line="325"/>
+        <location filename="../playlist.cpp" line="271"/>
+        <location filename="../playlist.cpp" line="326"/>
         <source>By File Modification Date</source>
         <translation>par date de modification du fichier</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="274"/>
+        <location filename="../playlist.cpp" line="275"/>
         <source>By Group</source>
         <translation>par groupe</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="282"/>
+        <location filename="../playlist.cpp" line="283"/>
         <source>Sort Selection</source>
         <translation>Trier la sélection</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="333"/>
+        <location filename="../playlist.cpp" line="334"/>
         <source>Randomize List</source>
         <translation>Mélanger la liste</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="335"/>
+        <location filename="../playlist.cpp" line="336"/>
         <source>Reverse List</source>
         <translation>Inverser la liste</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="346"/>
+        <location filename="../playlist.cpp" line="347"/>
         <source>Actions</source>
         <translation>Actions</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="607"/>
+        <location filename="../playlist.cpp" line="617"/>
         <source>Rename Playlist</source>
         <translation>Renommer la liste</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="607"/>
+        <location filename="../playlist.cpp" line="617"/>
         <source>Playlist name:</source>
         <translation>Nom de la liste : </translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="628"/>
+        <location filename="../playlist.cpp" line="638"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Nouvelle liste</translation>
     </message>
@@ -1071,81 +1071,6 @@
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
         <translation>ms</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="62"/>
-        <source>Artist</source>
-        <translation>Artiste</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="63"/>
-        <source>Album</source>
-        <translation>Album</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="64"/>
-        <source>Album Artist</source>
-        <translation>Artiste d&apos;album</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="65"/>
-        <source>Title</source>
-        <translation>Titre</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="66"/>
-        <source>Track Number</source>
-        <translation>Numéro de piste</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="67"/>
-        <source>Two-digit Track Number</source>
-        <translation>Numéro de piste à deux chiffres</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="72"/>
-        <source>Disc Number</source>
-        <translation>Numéro de disque</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="73"/>
-        <source>File Name</source>
-        <translation>Nom du fichier</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="74"/>
-        <source>File Path</source>
-        <translation>Chemin du fichier</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="68"/>
-        <source>Genre</source>
-        <translation>Genre</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="69"/>
-        <source>Comment</source>
-        <translation>Commentaire</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="70"/>
-        <source>Composer</source>
-        <translation>Compositeur</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="71"/>
-        <source>Duration</source>
-        <translation>Durée</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="75"/>
-        <source>Year</source>
-        <translation>Année</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="76"/>
-        <source>Condition</source>
-        <translation>Condition</translation>
     </message>
 </context>
 <context>
@@ -1442,87 +1367,7 @@
         <translation>Thème désarchivé</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="183"/>
-        <source>Artist</source>
-        <translation>Artiste</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="184"/>
-        <source>Album</source>
-        <translation>Album</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="185"/>
-        <source>Album Artist</source>
-        <translation>Artiste d&apos;album</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="186"/>
-        <source>Title</source>
-        <translation>Titre</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="187"/>
-        <source>Track Number</source>
-        <translation>Numéro de piste</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="188"/>
-        <source>Two-digit Track Number</source>
-        <translation>Numéro de piste à deux chiffres</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="189"/>
-        <source>Genre</source>
-        <translation>Genre</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="190"/>
-        <source>Comment</source>
-        <translation>Commentaire</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="191"/>
-        <source>Composer</source>
-        <translation>Compositeur</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="192"/>
-        <source>Duration</source>
-        <translation>Durée</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="193"/>
-        <source>Disc Number</source>
-        <translation>Numéro de disque</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="194"/>
-        <source>File Name</source>
-        <translation>Nom du fichier</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="195"/>
-        <source>File Path</source>
-        <translation>Chemin du fichier</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="196"/>
-        <source>Year</source>
-        <translation>Année</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="197"/>
-        <source>Condition</source>
-        <translation>Condition</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="198"/>
-        <source>Artist - Title</source>
-        <translation>Artiste - Titre</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="227"/>
+        <location filename="../skinnedsettings.cpp" line="210"/>
         <source>Archived skin</source>
         <translation>Thème archivé</translation>
     </message>

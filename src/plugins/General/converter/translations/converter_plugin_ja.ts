@@ -79,125 +79,54 @@
         <translation>停止</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="107"/>
+        <location filename="../converterdialog.cpp" line="108"/>
         <source>Choose a directory</source>
         <translation>ディレクトリを選択</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="190"/>
-        <source>Artist</source>
-        <translation>アーティスト</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="191"/>
-        <source>Album</source>
-        <translation>アルバム</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="192"/>
-        <source>Album Artist</source>
-        <translation>アルバムアーティスト</translation>
-    </message>
-    <message>
         <location filename="../converterdialog.ui" line="39"/>
-        <location filename="../converterdialog.cpp" line="193"/>
         <source>Title</source>
         <translation>タイトル</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="194"/>
-        <source>Track Number</source>
-        <translation>トラック番号</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="195"/>
-        <source>Two-digit Track Number</source>
-        <translation>トラック番号 数字2桁</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="200"/>
-        <source>Disc Number</source>
-        <translation>ディスク番号</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="201"/>
-        <source>File Name</source>
-        <translation>ファイル名</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="202"/>
-        <source>File Path</source>
-        <translation>ファイルパス</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="196"/>
-        <source>Genre</source>
-        <translation>ジャンル</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="128"/>
-        <location filename="../converterdialog.cpp" line="367"/>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="129"/>
+        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
         <translation>エラーです</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="133"/>
+        <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
         <translation>待機中です</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="197"/>
-        <source>Comment</source>
-        <translation>コメント</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="198"/>
-        <source>Composer</source>
-        <translation>作曲者</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="199"/>
-        <source>Duration</source>
-        <translation>演奏時間</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="203"/>
-        <source>Year</source>
-        <translation>年</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="204"/>
-        <source>Condition</source>
-        <translation>定番</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="210"/>
+        <location filename="../converterdialog.cpp" line="196"/>
         <source>Create</source>
         <translation>作成</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="211"/>
+        <location filename="../converterdialog.cpp" line="197"/>
         <source>Edit</source>
         <translation>編集</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="212"/>
+        <location filename="../converterdialog.cpp" line="198"/>
         <source>Create a Copy</source>
         <translation>複製を作成</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="213"/>
+        <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="367"/>
+        <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation>&quot;%1&quot; を実行できません。プログラムがみつかりません。</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation>プロセス &quot;%1&quot; がエラーで終了しました。</translation>
     </message>

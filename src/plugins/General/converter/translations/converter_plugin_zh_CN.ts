@@ -79,125 +79,54 @@
         <translation>停止</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="107"/>
+        <location filename="../converterdialog.cpp" line="108"/>
         <source>Choose a directory</source>
         <translation>选择文件夹</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="190"/>
-        <source>Artist</source>
-        <translation>艺术家</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="191"/>
-        <source>Album</source>
-        <translation>专辑</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="192"/>
-        <source>Album Artist</source>
-        <translation>专辑艺术家</translation>
-    </message>
-    <message>
         <location filename="../converterdialog.ui" line="39"/>
-        <location filename="../converterdialog.cpp" line="193"/>
         <source>Title</source>
         <translation>题头</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="194"/>
-        <source>Track Number</source>
-        <translation>单曲号</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="195"/>
-        <source>Two-digit Track Number</source>
-        <translation>两位单曲号</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="200"/>
-        <source>Disc Number</source>
-        <translation>碟片编号</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="201"/>
-        <source>File Name</source>
-        <translation>文件名</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="202"/>
-        <source>File Path</source>
-        <translation>文件路径</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="212"/>
+        <location filename="../converterdialog.cpp" line="198"/>
         <source>Create a Copy</source>
         <translation>创建一个副本</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="196"/>
-        <source>Genre</source>
-        <translation>风格</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="128"/>
-        <location filename="../converterdialog.cpp" line="367"/>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="129"/>
+        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="133"/>
+        <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
         <translation>等待中</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="197"/>
-        <source>Comment</source>
-        <translation>评论</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="198"/>
-        <source>Composer</source>
-        <translation>曲作者</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="199"/>
-        <source>Duration</source>
-        <translation>长度</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="203"/>
-        <source>Year</source>
-        <translation>年份</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="204"/>
-        <source>Condition</source>
-        <translation>条件</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="210"/>
+        <location filename="../converterdialog.cpp" line="196"/>
         <source>Create</source>
         <translation>创建</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="211"/>
+        <location filename="../converterdialog.cpp" line="197"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="213"/>
+        <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="367"/>
+        <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation>无法执行&quot;%1&quot;。程序未找到。</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="373"/>
+        <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation>进程”%1“完成同时发现错误。</translation>
     </message>

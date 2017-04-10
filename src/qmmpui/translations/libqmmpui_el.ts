@@ -130,112 +130,97 @@
         <translation>Τύπος:</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="78"/>
-        <location filename="../columneditor.cpp" line="100"/>
+        <location filename="../columneditor.cpp" line="85"/>
         <source>Artist</source>
         <translation>Καλλιτέχνης</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="79"/>
-        <location filename="../columneditor.cpp" line="101"/>
+        <location filename="../columneditor.cpp" line="86"/>
         <source>Album</source>
         <translation>Άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="81"/>
-        <location filename="../columneditor.cpp" line="105"/>
+        <location filename="../columneditor.cpp" line="90"/>
         <source>Title</source>
         <translation>Τίτλος</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="84"/>
-        <location filename="../columneditor.cpp" line="108"/>
+        <location filename="../columneditor.cpp" line="93"/>
         <source>Genre</source>
         <translation>Είδος</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="85"/>
-        <location filename="../columneditor.cpp" line="109"/>
+        <location filename="../columneditor.cpp" line="94"/>
         <source>Comment</source>
         <translation>Σχόλιο</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="86"/>
-        <location filename="../columneditor.cpp" line="110"/>
+        <location filename="../columneditor.cpp" line="95"/>
         <source>Composer</source>
         <translation>Συνθέτης</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="87"/>
-        <location filename="../columneditor.cpp" line="111"/>
+        <location filename="../columneditor.cpp" line="96"/>
         <source>Duration</source>
         <translation>Διάρκεια</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="91"/>
-        <location filename="../columneditor.cpp" line="116"/>
+        <location filename="../columneditor.cpp" line="101"/>
         <source>Year</source>
         <translation>Έτος</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="92"/>
-        <location filename="../columneditor.cpp" line="115"/>
+        <location filename="../columneditor.cpp" line="100"/>
         <source>Track Index</source>
         <translation>Δείκτης κομματιού</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="93"/>
-        <source>Condition</source>
-        <translation>Συνθήκη</translation>
-    </message>
-    <message>
-        <location filename="../columneditor.cpp" line="102"/>
+        <location filename="../columneditor.cpp" line="87"/>
         <source>Artist - Album</source>
         <translation>Καλλιτέχνης - Άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="103"/>
+        <location filename="../columneditor.cpp" line="88"/>
         <source>Artist - Title</source>
         <translation>Καλλιτέχνης - Τίτλος</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="80"/>
-        <location filename="../columneditor.cpp" line="104"/>
+        <location filename="../columneditor.cpp" line="89"/>
         <source>Album Artist</source>
         <translation>Καλλιτέχνης άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="82"/>
-        <location filename="../columneditor.cpp" line="106"/>
+        <location filename="../columneditor.cpp" line="91"/>
         <source>Track Number</source>
         <translation>Αριθμός κομματιού</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="83"/>
-        <location filename="../columneditor.cpp" line="107"/>
+        <location filename="../columneditor.cpp" line="92"/>
         <source>Two-digit Track Number</source>
         <translation>Διψήφιος αριθμός κομματιού</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="88"/>
-        <location filename="../columneditor.cpp" line="112"/>
+        <location filename="../columneditor.cpp" line="97"/>
         <source>Disc Number</source>
         <translation>Αριθμός δίσκου</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="89"/>
-        <location filename="../columneditor.cpp" line="113"/>
+        <location filename="../columneditor.cpp" line="98"/>
         <source>File Name</source>
         <translation>Όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="90"/>
-        <location filename="../columneditor.cpp" line="114"/>
+        <location filename="../columneditor.cpp" line="99"/>
         <source>File Path</source>
         <translation>Διαδρομή αρχείου</translation>
     </message>
     <message>
-        <location filename="../columneditor.cpp" line="117"/>
+        <location filename="../columneditor.cpp" line="102"/>
+        <source>Parent Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../columneditor.cpp" line="103"/>
         <source>Custom</source>
         <translation>Προσαρμοσμένο</translation>
     </message>
@@ -336,13 +321,13 @@
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="260"/>
-        <location filename="../configdialog.cpp" line="320"/>
+        <location filename="../configdialog.cpp" line="302"/>
         <source>Preferences</source>
         <translation>Προτιμήσεις</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="273"/>
-        <location filename="../configdialog.cpp" line="323"/>
+        <location filename="../configdialog.cpp" line="305"/>
         <source>Information</source>
         <translation>Πληροφορίες</translation>
     </message>
@@ -513,243 +498,192 @@
         <translation>Χρήση αμφιταλάντευσης</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="69"/>
+        <location filename="../configdialog.cpp" line="64"/>
         <source>Track</source>
         <translation>Κομμάτι</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="70"/>
-        <location filename="../configdialog.cpp" line="304"/>
+        <location filename="../configdialog.cpp" line="65"/>
         <source>Album</source>
         <translation>Άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="71"/>
+        <location filename="../configdialog.cpp" line="66"/>
         <source>Disabled</source>
         <translation>Απενεργοποιημένο</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="87"/>
+        <location filename="../configdialog.cpp" line="82"/>
         <source>File Types</source>
         <translation>Τύποι αρχείων</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="191"/>
+        <location filename="../configdialog.cpp" line="186"/>
         <source>Transports</source>
         <translation>Πρωτόκολλο μεταφοράς</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="201"/>
+        <location filename="../configdialog.cpp" line="196"/>
         <source>Decoders</source>
         <translation>Αποκωδικοποιητές</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="211"/>
+        <location filename="../configdialog.cpp" line="206"/>
         <source>Engines</source>
         <translation>Μηχανές</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="221"/>
+        <location filename="../configdialog.cpp" line="216"/>
         <source>Effects</source>
         <translation>Τεχνάσματα εντυπωσιασμού</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="231"/>
+        <location filename="../configdialog.cpp" line="226"/>
         <source>Visualization</source>
         <translation>Οπτικοποίηση</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="241"/>
+        <location filename="../configdialog.cpp" line="236"/>
         <source>General</source>
         <translation>Γενικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="251"/>
+        <location filename="../configdialog.cpp" line="246"/>
         <source>Output</source>
         <translation>Έξοδος</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="261"/>
+        <location filename="../configdialog.cpp" line="256"/>
         <source>File Dialogs</source>
         <translation>Διάλογοι αρχείων</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="271"/>
+        <location filename="../configdialog.cpp" line="266"/>
         <source>User Interfaces</source>
         <translation>Περιβάλλοντα χρήστη</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="303"/>
-        <source>Artist</source>
-        <translation>Καλλιτέχνης</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="305"/>
-        <source>Album Artist</source>
-        <translation>Καλλιτέχνης άλμπουμ</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="306"/>
-        <source>Genre</source>
-        <translation>Είδος</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="307"/>
-        <source>Comment</source>
-        <translation>Σχόλιο</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="308"/>
-        <source>Composer</source>
-        <translation>Συνθέτης</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="309"/>
-        <source>Disc Number</source>
-        <translation>Αριθμός δίσκου</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="310"/>
-        <source>Year</source>
-        <translation>Έτος</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="311"/>
-        <source>Condition</source>
-        <translation>Συνθήκη</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="312"/>
-        <source>Artist/Album</source>
-        <translation>Καλλιτέχνης/Άλμπουμ</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="313"/>
-        <source>Artist/Year/Album</source>
-        <translation>Καλλιτέχνης/Έτος/Άλμπουμ</translation>
-    </message>
-    <message>
-        <location filename="../configdialog.cpp" line="333"/>
+        <location filename="../configdialog.cpp" line="315"/>
         <source>&lt;Autodetect&gt;</source>
         <translation>&lt;αυτόματο&gt;</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="334"/>
+        <location filename="../configdialog.cpp" line="316"/>
         <source>Brazilian Portuguese</source>
         <translation>Πορτογαλικά Βραζιλίας</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="335"/>
+        <location filename="../configdialog.cpp" line="317"/>
         <source>Chinese Simplified</source>
         <translation>Κινέζικα απλά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="336"/>
+        <location filename="../configdialog.cpp" line="318"/>
         <source>Chinese Traditional</source>
         <translation>Κινέζικα παραδοσιακά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="337"/>
+        <location filename="../configdialog.cpp" line="319"/>
         <source>Czech</source>
         <translation>Τσέχικα</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="338"/>
+        <location filename="../configdialog.cpp" line="320"/>
         <source>Dutch</source>
         <translation>Ολλανδικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="339"/>
+        <location filename="../configdialog.cpp" line="321"/>
         <source>English</source>
         <translation>Αγγλικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="340"/>
+        <location filename="../configdialog.cpp" line="322"/>
         <source>French</source>
         <translation>Γαλλικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="341"/>
+        <location filename="../configdialog.cpp" line="323"/>
         <source>Galician</source>
         <translation>Γαλικιανά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="342"/>
+        <location filename="../configdialog.cpp" line="324"/>
         <source>German</source>
         <translation>Γερμανικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="343"/>
+        <location filename="../configdialog.cpp" line="325"/>
         <source>Hebrew</source>
         <translation>Εβραϊκά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="344"/>
+        <location filename="../configdialog.cpp" line="326"/>
         <source>Hungarian</source>
         <translation>Ουγγρικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="345"/>
+        <location filename="../configdialog.cpp" line="327"/>
         <source>Italian</source>
         <translation>Ιταλικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="346"/>
+        <location filename="../configdialog.cpp" line="328"/>
         <source>Japanese</source>
         <translation>Ιαπωνικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="347"/>
+        <location filename="../configdialog.cpp" line="329"/>
         <source>Kazakh</source>
         <translation>Καζακικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="348"/>
+        <location filename="../configdialog.cpp" line="330"/>
         <source>Lithuanian</source>
         <translation>Λιθουανικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="349"/>
+        <location filename="../configdialog.cpp" line="331"/>
         <source>Polish</source>
         <translation>Πολωνικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="350"/>
+        <location filename="../configdialog.cpp" line="332"/>
         <source>Portuguese</source>
         <translation>Πορτογαλικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="351"/>
+        <location filename="../configdialog.cpp" line="333"/>
         <source>Russian</source>
         <translation>Ρωσικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="352"/>
+        <location filename="../configdialog.cpp" line="334"/>
         <source>Slovak</source>
         <translation>Σλοβακικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="353"/>
+        <location filename="../configdialog.cpp" line="335"/>
         <source>Spanish</source>
         <translation>Ισπανικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="354"/>
+        <location filename="../configdialog.cpp" line="336"/>
         <source>Turkish</source>
         <translation>Τουρκικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="355"/>
+        <location filename="../configdialog.cpp" line="337"/>
         <source>Ukrainian</source>
         <translation>Ουκρανικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="356"/>
+        <location filename="../configdialog.cpp" line="338"/>
         <source>Serbian (Ijekavian)</source>
         <translation>Σερβικά Ijekavian</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="357"/>
+        <location filename="../configdialog.cpp" line="339"/>
         <source>Serbian (Ekavian)</source>
         <translation>Σερβικά (Ekavian)</translation>
     </message>
@@ -904,6 +838,94 @@
         <location filename="../jumptotrackdialog.cpp" line="135"/>
         <source>Unqueue</source>
         <translation>Αφαίρεση από την ουρά αναμονής</translation>
+    </message>
+</context>
+<context>
+    <name>MetaDataFormatterMenu</name>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="26"/>
+        <source>Artist</source>
+        <translation type="unfinished">Καλλιτέχνης</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="27"/>
+        <source>Album</source>
+        <translation type="unfinished">Άλμπουμ</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="28"/>
+        <source>Album Artist</source>
+        <translation type="unfinished">Καλλιτέχνης άλμπουμ</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="31"/>
+        <source>Title</source>
+        <translation type="unfinished">Τίτλος</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="32"/>
+        <source>Track Number</source>
+        <translation type="unfinished">Αριθμός κομματιού</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="33"/>
+        <source>Two-digit Track Number</source>
+        <translation type="unfinished">Διψήφιος αριθμός κομματιού</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="35"/>
+        <source>Genre</source>
+        <translation type="unfinished">Είδος</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="36"/>
+        <source>Comment</source>
+        <translation type="unfinished">Σχόλιο</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="37"/>
+        <source>Composer</source>
+        <translation type="unfinished">Συνθέτης</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="38"/>
+        <source>Duration</source>
+        <translation type="unfinished">Διάρκεια</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="39"/>
+        <source>Disc Number</source>
+        <translation type="unfinished">Αριθμός δίσκου</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="42"/>
+        <source>File Name</source>
+        <translation type="unfinished">Όνομα αρχείου</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="43"/>
+        <source>File Path</source>
+        <translation type="unfinished">Διαδρομή αρχείου</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="45"/>
+        <source>Year</source>
+        <translation type="unfinished">Έτος</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="46"/>
+        <source>Condition</source>
+        <translation type="unfinished">Συνθήκη</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="47"/>
+        <source>Artist - Title</source>
+        <translation type="unfinished">Καλλιτέχνης - Τίτλος</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="48"/>
+        <source>Parent Directory Name</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1064,81 +1086,6 @@
         <location filename="../forms/templateeditor.ui" line="46"/>
         <source>Insert</source>
         <translation>Εισαγωγή</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="50"/>
-        <source>Artist</source>
-        <translation>Καλλιτέχνης</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="51"/>
-        <source>Album</source>
-        <translation>Άλμπουμ</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="53"/>
-        <source>Title</source>
-        <translation>Τίτλος</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="52"/>
-        <source>Album Artist</source>
-        <translation>Καλλιτέχνης άλμπουμ</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="54"/>
-        <source>Track Number</source>
-        <translation>Αριθμός κομματιού</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="55"/>
-        <source>Two-digit Track Number</source>
-        <translation>Διψήφιος αριθμός κομματιού</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="56"/>
-        <source>Genre</source>
-        <translation>Είδος</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="57"/>
-        <source>Comment</source>
-        <translation>Σχόλιο</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="58"/>
-        <source>Composer</source>
-        <translation>Συνθέτης</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="59"/>
-        <source>Duration</source>
-        <translation>Διάρκεια</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="60"/>
-        <source>Disc Number</source>
-        <translation>Αριθμός δίσκου</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="61"/>
-        <source>File Name</source>
-        <translation>Όνομα αρχείου</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="62"/>
-        <source>File Path</source>
-        <translation>Διαδρομή αρχείου</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="63"/>
-        <source>Year</source>
-        <translation>Έτος</translation>
-    </message>
-    <message>
-        <location filename="../templateeditor.cpp" line="64"/>
-        <source>Condition</source>
-        <translation>Συνθήκη</translation>
     </message>
 </context>
 <context>

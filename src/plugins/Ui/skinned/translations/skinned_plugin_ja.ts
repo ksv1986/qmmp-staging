@@ -447,58 +447,58 @@
 <context>
     <name>EqWidget</name>
     <message>
-        <location filename="../eqwidget.cpp" line="45"/>
+        <location filename="../eqwidget.cpp" line="46"/>
         <source>Equalizer</source>
         <translation>イコライザー</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="156"/>
-        <location filename="../eqwidget.cpp" line="173"/>
+        <location filename="../eqwidget.cpp" line="166"/>
+        <location filename="../eqwidget.cpp" line="183"/>
         <source>preset</source>
         <translation>プリセット</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="256"/>
+        <location filename="../eqwidget.cpp" line="266"/>
         <source>&amp;Load/Delete</source>
         <translation>読み込み/削除(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="258"/>
+        <location filename="../eqwidget.cpp" line="268"/>
         <source>&amp;Save Preset</source>
         <translation>プリセットを保存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="260"/>
+        <location filename="../eqwidget.cpp" line="270"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>自動読み込みされたプリセットを保存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="262"/>
+        <location filename="../eqwidget.cpp" line="272"/>
         <source>&amp;Import</source>
         <translation>移入(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="265"/>
+        <location filename="../eqwidget.cpp" line="275"/>
         <source>&amp;Clear</source>
         <translation>消去(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="294"/>
+        <location filename="../eqwidget.cpp" line="304"/>
         <source>Saving Preset</source>
         <translation>プリセットを保存しています</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="295"/>
+        <location filename="../eqwidget.cpp" line="305"/>
         <source>Preset name:</source>
         <translation>プリセット名:</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="296"/>
+        <location filename="../eqwidget.cpp" line="306"/>
         <source>preset #</source>
         <translation>プリセット番号</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="387"/>
+        <location filename="../eqwidget.cpp" line="397"/>
         <source>Import Preset</source>
         <translation>プリセットを移入</translation>
     </message>
@@ -786,32 +786,32 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="426"/>
+        <location filename="../mainwindow.cpp" line="436"/>
         <source>Playlist</source>
         <translation>プレイリスト</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="346"/>
+        <location filename="../mainwindow.cpp" line="356"/>
         <source>Appearance</source>
         <translation>外観</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="347"/>
+        <location filename="../mainwindow.cpp" line="357"/>
         <source>Shortcuts</source>
         <translation>ショートカット</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="417"/>
+        <location filename="../mainwindow.cpp" line="427"/>
         <source>View</source>
         <translation>観容</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="444"/>
+        <location filename="../mainwindow.cpp" line="454"/>
         <source>Audio</source>
         <translation>音響</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Tools</source>
         <translation>ツール</translation>
     </message>
@@ -819,123 +819,123 @@
 <context>
     <name>PlayList</name>
     <message>
-        <location filename="../playlist.cpp" line="55"/>
+        <location filename="../playlist.cpp" line="56"/>
         <source>Playlist</source>
         <translation>プレイリスト</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="197"/>
+        <location filename="../playlist.cpp" line="198"/>
         <source>&amp;Copy Selection To</source>
         <translation>選んだ曲目で新しいプレイリストを作る(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="227"/>
+        <location filename="../playlist.cpp" line="228"/>
         <source>Sort List</source>
         <translation>リストを並べ換え</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="230"/>
-        <location filename="../playlist.cpp" line="285"/>
+        <location filename="../playlist.cpp" line="231"/>
+        <location filename="../playlist.cpp" line="286"/>
         <source>By Title</source>
         <translation>タイトル順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="234"/>
-        <location filename="../playlist.cpp" line="289"/>
+        <location filename="../playlist.cpp" line="235"/>
+        <location filename="../playlist.cpp" line="290"/>
         <source>By Album</source>
         <translation>アルバム名順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="238"/>
-        <location filename="../playlist.cpp" line="293"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Disc Number</source>
         <translation>ディスク番号順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="242"/>
-        <location filename="../playlist.cpp" line="297"/>
+        <location filename="../playlist.cpp" line="243"/>
+        <location filename="../playlist.cpp" line="298"/>
         <source>By Artist</source>
         <translation>アーティスト名順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="246"/>
-        <location filename="../playlist.cpp" line="301"/>
+        <location filename="../playlist.cpp" line="247"/>
+        <location filename="../playlist.cpp" line="302"/>
         <source>By Album Artist</source>
         <translation>アルバムのアーティスト名順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="250"/>
-        <location filename="../playlist.cpp" line="305"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="306"/>
         <source>By Filename</source>
         <translation>ファイル名順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="254"/>
-        <location filename="../playlist.cpp" line="309"/>
+        <location filename="../playlist.cpp" line="255"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>By Path + Filename</source>
         <translation>パスとファイル名の順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="258"/>
-        <location filename="../playlist.cpp" line="313"/>
+        <location filename="../playlist.cpp" line="259"/>
+        <location filename="../playlist.cpp" line="314"/>
         <source>By Date</source>
         <translation>日付順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="262"/>
-        <location filename="../playlist.cpp" line="317"/>
+        <location filename="../playlist.cpp" line="263"/>
+        <location filename="../playlist.cpp" line="318"/>
         <source>By Track Number</source>
         <translation>トラック番号順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="266"/>
-        <location filename="../playlist.cpp" line="321"/>
+        <location filename="../playlist.cpp" line="267"/>
+        <location filename="../playlist.cpp" line="322"/>
         <source>By File Creation Date</source>
         <translation>ファイルの作成日順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="270"/>
-        <location filename="../playlist.cpp" line="325"/>
+        <location filename="../playlist.cpp" line="271"/>
+        <location filename="../playlist.cpp" line="326"/>
         <source>By File Modification Date</source>
         <translation>ファイルの加工日時順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="274"/>
+        <location filename="../playlist.cpp" line="275"/>
         <source>By Group</source>
         <translation>グループ名順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="282"/>
+        <location filename="../playlist.cpp" line="283"/>
         <source>Sort Selection</source>
         <translation>選択範囲内で並べ換え</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="333"/>
+        <location filename="../playlist.cpp" line="334"/>
         <source>Randomize List</source>
         <translation>リストを順不同に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="335"/>
+        <location filename="../playlist.cpp" line="336"/>
         <source>Reverse List</source>
         <translation>リストを逆順に</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="346"/>
+        <location filename="../playlist.cpp" line="347"/>
         <source>Actions</source>
         <translation>動作</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="607"/>
+        <location filename="../playlist.cpp" line="617"/>
         <source>Rename Playlist</source>
         <translation>プレイリスト名を変更</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="607"/>
+        <location filename="../playlist.cpp" line="617"/>
         <source>Playlist name:</source>
         <translation>プレイリスト名:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="628"/>
+        <location filename="../playlist.cpp" line="638"/>
         <source>&amp;New PlayList</source>
         <translation>新しいプレイリスト(&amp;N)</translation>
     </message>
@@ -1072,81 +1072,6 @@
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
         <translation>ミリ秒</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="62"/>
-        <source>Artist</source>
-        <translation>アーティスト</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="63"/>
-        <source>Album</source>
-        <translation>アルバム</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="64"/>
-        <source>Album Artist</source>
-        <translation>アルバムアーティスト</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="65"/>
-        <source>Title</source>
-        <translation>タイトル</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="66"/>
-        <source>Track Number</source>
-        <translation>トラック番号</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="67"/>
-        <source>Two-digit Track Number</source>
-        <translation>トラック番号 数字2桁</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="72"/>
-        <source>Disc Number</source>
-        <translation>ディスク番号</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="73"/>
-        <source>File Name</source>
-        <translation>ファイル名</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="74"/>
-        <source>File Path</source>
-        <translation>ファイルパス</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="68"/>
-        <source>Genre</source>
-        <translation>ジャンル</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="69"/>
-        <source>Comment</source>
-        <translation>コメント</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="70"/>
-        <source>Composer</source>
-        <translation>作曲者</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="71"/>
-        <source>Duration</source>
-        <translation>再生時間</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="75"/>
-        <source>Year</source>
-        <translation>年</translation>
-    </message>
-    <message>
-        <location filename="../popupsettings.cpp" line="76"/>
-        <source>Condition</source>
-        <translation>定番</translation>
     </message>
 </context>
 <context>
@@ -1443,87 +1368,7 @@
         <translation>非書庫化スキン</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="183"/>
-        <source>Artist</source>
-        <translation>アーティスト</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="184"/>
-        <source>Album</source>
-        <translation>アルバム</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="185"/>
-        <source>Album Artist</source>
-        <translation>アルバムアーティスト</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="186"/>
-        <source>Title</source>
-        <translation>タイトル</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="187"/>
-        <source>Track Number</source>
-        <translation>トラック番号</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="188"/>
-        <source>Two-digit Track Number</source>
-        <translation>トラック番号 数字2桁</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="189"/>
-        <source>Genre</source>
-        <translation>ジャンル</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="190"/>
-        <source>Comment</source>
-        <translation>コメント</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="191"/>
-        <source>Composer</source>
-        <translation>作曲者</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="192"/>
-        <source>Duration</source>
-        <translation>再生時間</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="193"/>
-        <source>Disc Number</source>
-        <translation>ディスク番号</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="194"/>
-        <source>File Name</source>
-        <translation>ファイル名</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="195"/>
-        <source>File Path</source>
-        <translation>ファイルパス</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="196"/>
-        <source>Year</source>
-        <translation>年</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="197"/>
-        <source>Condition</source>
-        <translation>定番</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="198"/>
-        <source>Artist - Title</source>
-        <translation>アーティスト - タイトル</translation>
-    </message>
-    <message>
-        <location filename="../skinnedsettings.cpp" line="227"/>
+        <location filename="../skinnedsettings.cpp" line="210"/>
         <source>Archived skin</source>
         <translation>書庫化スキン</translation>
     </message>

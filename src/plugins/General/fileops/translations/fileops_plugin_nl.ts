@@ -136,88 +136,13 @@
         <translation>Nieuwe actie</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="220"/>
-        <source>Artist</source>
-        <translation>Artiest</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="221"/>
-        <source>Album</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="222"/>
-        <source>Album Artist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="223"/>
-        <source>Title</source>
-        <translation>Naam</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="224"/>
-        <source>Track Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="225"/>
-        <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="226"/>
-        <source>Genre</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="230"/>
-        <source>Disc Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="231"/>
-        <source>File Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="232"/>
-        <source>File Path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="233"/>
-        <source>Year</source>
-        <translation>Jaar</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="227"/>
-        <source>Comment</source>
-        <translation>Commentaar</translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.cpp" line="53"/>
         <location filename="../settingsdialog.cpp" line="133"/>
         <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="228"/>
-        <source>Composer</source>
-        <translation>Componist</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="229"/>
-        <source>Duration</source>
-        <translation>Duur</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="234"/>
-        <source>Condition</source>
-        <translation>Staat</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="247"/>
+        <location filename="../settingsdialog.cpp" line="232"/>
         <source>Choose a directory</source>
         <translation>Kies een map</translation>
     </message>

@@ -217,7 +217,7 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Родительский каталог</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
@@ -845,87 +845,87 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished">Исполнитель</translation>
+        <translation>Исполнитель</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation type="unfinished">Альбом</translation>
+        <translation>Альбом</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
         <source>Album Artist</source>
-        <translation type="unfinished">Исполнитель альбома</translation>
+        <translation>Исполнитель альбома</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished">Название</translation>
+        <translation>Название</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
         <source>Track Number</source>
-        <translation type="unfinished">Номер трека</translation>
+        <translation>Номер трека</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="33"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished">2-х разрядный номер трека</translation>
+        <translation>2-х разрядный номер трека</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="35"/>
         <source>Genre</source>
-        <translation type="unfinished">Жанр</translation>
+        <translation>Жанр</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="36"/>
         <source>Comment</source>
-        <translation type="unfinished">Комментарий</translation>
+        <translation>Комментарий</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Composer</source>
-        <translation type="unfinished">Композитор</translation>
+        <translation>Композитор</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="38"/>
         <source>Duration</source>
-        <translation type="unfinished">Длительность</translation>
+        <translation>Длительность</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Disc Number</source>
-        <translation type="unfinished">Номер диска</translation>
+        <translation>Номер диска</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
         <source>File Name</source>
-        <translation type="unfinished">Имя файла</translation>
+        <translation>Имя файла</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>File Path</source>
-        <translation type="unfinished">Путь к файлу</translation>
+        <translation>Путь к файлу</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="45"/>
         <source>Year</source>
-        <translation type="unfinished">Год</translation>
+        <translation>Год</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Condition</source>
-        <translation type="unfinished">Условие</translation>
+        <translation>Условие</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="47"/>
         <source>Artist - Title</source>
-        <translation type="unfinished">Исполнитель - название</translation>
+        <translation>Исполнитель - название</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="48"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя родительского каталога</translation>
     </message>
 </context>
 <context>

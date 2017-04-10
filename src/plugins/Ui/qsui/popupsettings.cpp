@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,8 +19,8 @@
  ***************************************************************************/
 
 #include <QSettings>
-#include <QMenu>
 #include <qmmp/qmmp.h>
+#include <qmmpui/metadataformattermenu.h>
 #include "popupwidget.h"
 #include "popupsettings.h"
 
@@ -38,7 +38,6 @@ PopupSettings::PopupSettings(QWidget *parent)
     settings.endGroup();
     createMenu();
 }
-
 
 PopupSettings::~PopupSettings()
 {}
@@ -58,29 +57,9 @@ void PopupSettings::accept()
 
 void PopupSettings::createMenu()
 {
-    QMenu *menu = new QMenu(this);
-    menu->addAction(tr("Artist"))->setData("%p");
-    menu->addAction(tr("Album"))->setData("%a");
-    menu->addAction(tr("Album Artist"))->setData("%aa");
-    menu->addAction(tr("Title"))->setData("%t");
-    menu->addAction(tr("Track Number"))->setData("%n");
-    menu->addAction(tr("Two-digit Track Number"))->setData("%NN");
-    menu->addAction(tr("Genre"))->setData("%g");
-    menu->addAction(tr("Comment"))->setData("%c");
-    menu->addAction(tr("Composer"))->setData("%C");
-    menu->addAction(tr("Duration"))->setData("%l");
-    menu->addAction(tr("Disc Number"))->setData("%D");
-    menu->addAction(tr("File Name"))->setData("%f");
-    menu->addAction(tr("File Path"))->setData("%F");
-    menu->addAction(tr("Year"))->setData("%y");
-    menu->addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
+    MetaDataFormatterMenu *menu = new MetaDataFormatterMenu(MetaDataFormatterMenu::TITLE_MENU, this);
     m_ui.insertButton->setMenu(menu);
-    connect(menu, SIGNAL(triggered (QAction *)), SLOT(insertExpression(QAction *)));
-}
-
-void PopupSettings::insertExpression(QAction *a)
-{
-    m_ui.textEdit->insertPlainText(a->data().toString());
+    connect(menu, SIGNAL(patternSelected(QString)), m_ui.textEdit, SLOT(insertPlainText(QString)));
 }
 
 void PopupSettings::on_resetButton_clicked()

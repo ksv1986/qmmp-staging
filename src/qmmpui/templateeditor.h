@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010 by Ilya Kotov                                      *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,8 +26,6 @@
 namespace Ui {
     class TemplateEditor;
 }
-class QAction;
-
 
 /*! @brief The TemplateEditor class provides simple template editor dialog.
  * @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -66,7 +64,6 @@ public:
                                 const QString &default_template = QString(), bool *ok = 0);
 
 private slots:
-    void insertExpression(QAction *a);
     void on_resetButton_clicked();
 
 private:

@@ -45,6 +45,7 @@ SET(libqmmpui_SRCS
     tageditor.cpp
     playlistmanager.cpp
     metadataformatter.cpp
+    metadataformattermenu.cpp
     templateeditor.cpp
     uiloader.cpp
     jumptotrackdialog.cpp
@@ -78,6 +79,7 @@ SET(libqmmpui_HDRS
     normalcontainer_p.h
     groupedcontainer_p.h
     metadataformatter.h
+    metadataformattermenu.h
     uiloader.h
     uifactory.h
     pluginitem_p.h
@@ -98,6 +100,7 @@ SET(libqmmpui_DEVEL_HDRS
     general.h
     mediaplayer.h
     metadataformatter.h
+    metadataformattermenu.h
     playlistdownloader.h
     playlistformat.h
     playlistitem.h
@@ -140,8 +143,8 @@ install(TARGETS qmmpui LIBRARY DESTINATION ${LIB_DIR}
                        RUNTIME DESTINATION bin
                        ARCHIVE DESTINATION ${LIB_DIR})
 IF(NOT ${CMAKE_SYSTEM_NAME} MATCHES Darwin)
-	install(FILES ${libqmmpui_DEVEL_HDRS} DESTINATION include/qmmpui)
+    install(FILES ${libqmmpui_DEVEL_HDRS} DESTINATION include/qmmpui)
 
-	configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qmmpui.pc.in ${CMAKE_CURRENT_BINARY_DIR}/qmmpui.pc @ONLY)
-	install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qmmpui.pc DESTINATION ${LIB_DIR}/pkgconfig)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qmmpui.pc.in ${CMAKE_CURRENT_BINARY_DIR}/qmmpui.pc @ONLY)
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qmmpui.pc DESTINATION ${LIB_DIR}/pkgconfig)
 ENDIF()

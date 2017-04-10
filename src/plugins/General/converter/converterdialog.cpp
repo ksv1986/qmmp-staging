@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,6 +31,7 @@
 #include <qmmpui/metadataformatter.h>
 #include <qmmpui/filedialog.h>
 #include <qmmp/metadatamanager.h>
+#include <qmmpui/metadataformattermenu.h>
 #include "converter.h"
 #include "preseteditor.h"
 #include "converterdialog.h"
@@ -186,25 +187,10 @@ void ConverterDialog::reject()
 
 void ConverterDialog::createMenus()
 {
-    QMenu *fileNameMenu = new QMenu(this);
-    fileNameMenu->addAction(tr("Artist"))->setData("%p");
-    fileNameMenu->addAction(tr("Album"))->setData("%a");
-    fileNameMenu->addAction(tr("Album Artist"))->setData("%aa");
-    fileNameMenu->addAction(tr("Title"))->setData("%t");
-    fileNameMenu->addAction(tr("Track Number"))->setData("%n");
-    fileNameMenu->addAction(tr("Two-digit Track Number"))->setData("%NN");
-    fileNameMenu->addAction(tr("Genre"))->setData("%g");
-    fileNameMenu->addAction(tr("Comment"))->setData("%c");
-    fileNameMenu->addAction(tr("Composer"))->setData("%C");
-    fileNameMenu->addAction(tr("Duration"))->setData("%l");
-    fileNameMenu->addAction(tr("Disc Number"))->setData("%D");
-    fileNameMenu->addAction(tr("File Name"))->setData("%f");
-    fileNameMenu->addAction(tr("File Path"))->setData("%F");
-    fileNameMenu->addAction(tr("Year"))->setData("%y");
-    fileNameMenu->addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
+    MetaDataFormatterMenu *fileNameMenu = new MetaDataFormatterMenu(MetaDataFormatterMenu::TITLE_MENU, this);
     m_ui.fileNameButton->setMenu(fileNameMenu);
     m_ui.fileNameButton->setPopupMode(QToolButton::InstantPopup);
-    connect(fileNameMenu, SIGNAL(triggered(QAction *)), SLOT(addTitleString(QAction *)));
+    connect(fileNameMenu, SIGNAL(patternSelected(QString)), SLOT(addTitleString(QString)));
 
     QMenu *presetMenu = new QMenu(this);
     presetMenu->addAction(tr("Create"), this, SLOT(createPreset()));
@@ -215,12 +201,12 @@ void ConverterDialog::createMenus()
     m_ui.presetButton->setPopupMode(QToolButton::InstantPopup);
 }
 
-void ConverterDialog::addTitleString(QAction *a)
+void ConverterDialog::addTitleString(const QString &str)
 {
     if (m_ui.outFileEdit->cursorPosition () < 1)
-        m_ui.outFileEdit->insert(a->data().toString());
+        m_ui.outFileEdit->insert(str);
     else
-        m_ui.outFileEdit->insert(" - "+a->data().toString());
+        m_ui.outFileEdit->insert(" - "+str);
 }
 
 void ConverterDialog::createPreset()

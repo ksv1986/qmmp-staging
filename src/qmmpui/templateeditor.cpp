@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMenu>
-#include <QAction>
+#include "metadataformattermenu.h"
 #include "ui_templateeditor.h"
 #include "templateeditor.h"
 
@@ -46,29 +45,9 @@ void TemplateEditor::setDefaultTemplate(const QString &text)
 
 void TemplateEditor::createMenu()
 {
-    QMenu *menu = new QMenu(this);
-    menu->addAction(tr("Artist"))->setData("%p");
-    menu->addAction(tr("Album"))->setData("%a");
-    menu->addAction(tr("Album Artist"))->setData("%aa");
-    menu->addAction(tr("Title"))->setData("%t");
-    menu->addAction(tr("Track Number"))->setData("%n");
-    menu->addAction(tr("Two-digit Track Number"))->setData("%NN");
-    menu->addAction(tr("Genre"))->setData("%g");
-    menu->addAction(tr("Comment"))->setData("%c");
-    menu->addAction(tr("Composer"))->setData("%C");
-    menu->addAction(tr("Duration"))->setData("%l");
-    menu->addAction(tr("Disc Number"))->setData("%D");
-    menu->addAction(tr("File Name"))->setData("%f");
-    menu->addAction(tr("File Path"))->setData("%F");
-    menu->addAction(tr("Year"))->setData("%y");
-    menu->addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
+    MetaDataFormatterMenu *menu = new MetaDataFormatterMenu(MetaDataFormatterMenu::TITLE_MENU, this);
     m_ui->insertButton->setMenu(menu);
-    connect(menu, SIGNAL(triggered (QAction *)), SLOT(insertExpression(QAction *)));
-}
-
-void TemplateEditor::insertExpression(QAction *a)
-{
-    m_ui->textEdit->insertPlainText(a->data().toString());
+    connect(menu, SIGNAL(patternSelected(QString)), m_ui->textEdit, SLOT(insertPlainText(QString)));
 }
 
 void TemplateEditor::on_resetButton_clicked()

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 #include <QSettings>
-#include <QMenu>
 #include <QHeaderView>
 #include <QApplication>
 #include <QCheckBox>
@@ -26,6 +25,7 @@
 #include <QDesktopServices>
 #include <qmmp/qmmp.h>
 #include <qmmpui/filedialog.h>
+#include <qmmpui/metadataformattermenu.h>
 #include "fileops.h"
 #include "hotkeydialog.h"
 #include "settingsdialog.h"
@@ -216,30 +216,15 @@ void SettingsDialog::on_patternEdit_textChanged(QString pattern)
 
 void SettingsDialog::createMenus()
 {
-    QMenu *menu = new QMenu(this);
-    menu->addAction(tr("Artist"))->setData("%p");
-    menu->addAction(tr("Album"))->setData("%a");
-    menu->addAction(tr("Album Artist"))->setData("%aa");
-    menu->addAction(tr("Title"))->setData("%t");
-    menu->addAction(tr("Track Number"))->setData("%n");
-    menu->addAction(tr("Two-digit Track Number"))->setData("%NN");
-    menu->addAction(tr("Genre"))->setData("%g");
-    menu->addAction(tr("Comment"))->setData("%c");
-    menu->addAction(tr("Composer"))->setData("%C");
-    menu->addAction(tr("Duration"))->setData("%l");
-    menu->addAction(tr("Disc Number"))->setData("%D");
-    menu->addAction(tr("File Name"))->setData("%f");
-    menu->addAction(tr("File Path"))->setData("%F");
-    menu->addAction(tr("Year"))->setData("%y");
-    menu->addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
+    MetaDataFormatterMenu *menu = new MetaDataFormatterMenu(MetaDataFormatterMenu::TITLE_MENU, this);
     m_ui.patternButton->setMenu(menu);
     m_ui.patternButton->setPopupMode(QToolButton::InstantPopup);
-    connect(menu, SIGNAL(triggered (QAction *)), SLOT(addTitleString( QAction *)));
+    connect(menu, SIGNAL(patternSelected(QString)), SLOT(addTitleString(QString)));
 }
 
-void SettingsDialog::addTitleString(QAction *a)
+void SettingsDialog::addTitleString(const QString &str)
 {
-    m_ui.patternEdit->insert(a->data().toString());
+    m_ui.patternEdit->insert(str);
 }
 
 void SettingsDialog::on_destButton_clicked()

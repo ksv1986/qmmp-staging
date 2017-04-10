@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2017 by Ilya Kotov                                      *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,54 +18,39 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#ifndef CONVERTERDIALOG_H
-#define CONVERTERDIALOG_H
+#include "metadataformattermenu.h"
 
-#include <QDialog>
-#include <QStringList>
-#include <QCloseEvent>
-#include "ui_converterdialog.h"
-
-class PlayListTrack;
-class ConverterPreset;
-class Converter;
-
-/**
-    @author Ilya Kotov <forkotov02@hotmail.ru>
-*/
-class ConverterDialog : public QDialog
+MetaDataFormatterMenu::MetaDataFormatterMenu(Type type, QWidget *parent) :
+    QMenu(parent)
 {
-    Q_OBJECT
-public:
-    explicit ConverterDialog(QList <PlayListTrack *> items,  QWidget *parent = 0);
-    virtual ~ConverterDialog();
+    addAction(tr("Artist"))->setData("%p");
+    addAction(tr("Album"))->setData("%a");
+    addAction(tr("Album Artist"))->setData("%aa");
+    if(type == TITLE_MENU)
+    {
+        addAction(tr("Title"))->setData("%t");
+        addAction(tr("Track Number"))->setData("%n");
+        addAction(tr("Two-digit Track Number"))->setData("%NN");
+    }
+    addAction(tr("Genre"))->setData("%g");
+    addAction(tr("Comment"))->setData("%c");
+    addAction(tr("Composer"))->setData("%C");
+    addAction(tr("Duration"))->setData("%l");
+    addAction(tr("Disc Number"))->setData("%D");
+    if(type == TITLE_MENU)
+    {
+        addAction(tr("File Name"))->setData("%f");
+        addAction(tr("File Path"))->setData("%F");
+    }
+    addAction(tr("Year"))->setData("%y");
+    addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
+    addAction(tr("Artist - Title"))->setData("%if(%p,%p - %t,%t)");
+    addAction(tr("Parent Directory Name"))->setData("%dir(0)");
 
-public slots:
-    virtual void reject();
+    connect(this, SIGNAL(triggered (QAction *)), SLOT(onActionTriggered(QAction*)));
+}
 
-private slots:
-    void on_dirButton_clicked();
-    void on_convertButton_clicked();
-    void on_stopButton_clicked();
-    void onStateChanged(int row, QString message);
-    void onConvertFinished(Converter *c);
-    void addTitleString(const QString &str);
-    void createPreset();
-    void editPreset();
-    void copyPreset();
-    void deletePreset();
-
-private:
-    void createMenus();
-    void readPresets(const QString &path);
-    void savePresets();
-    QVariantMap preset() const;
-    QString uniqueName(const QString &name);
-    bool checkPreset(const QVariantMap &preset);
-
-    Ui::ConverterDialog m_ui;
-    QList <Converter *> m_converters;
-
-};
-
-#endif // CONVERTERDIALOG_H
+void MetaDataFormatterMenu::onActionTriggered(QAction *action)
+{
+    emit patternSelected(action->data().toString());
+}

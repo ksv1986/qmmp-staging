@@ -71,7 +71,8 @@ HEADERS += general.h \
     columneditor_p.h \
     playlistheadermodel.h \
     metadatahelper_p.h \
-    coverviewer_p.h
+    coverviewer_p.h \
+    metadataformattermenu.h
 
 SOURCES += general.cpp \
     playlistparser.cpp \
@@ -109,7 +110,8 @@ SOURCES += general.cpp \
     columneditor.cpp \
     playlistheadermodel.cpp \
     metadatahelper.cpp \
-    coverviewer.cpp
+    coverviewer.cpp \
+    metadataformattermenu.cpp
 
 FORMS += forms/detailsdialog.ui \
     forms/tageditor.ui \
@@ -165,7 +167,8 @@ unix {
     playlistgroup.h \
     playlisttrack.h \
     metadataformatter.h \
-    playlistheadermodel.h
+    playlistheadermodel.h \
+    metadataformattermenu.h
 
     devel.path = /include/qmmpui
     INSTALLS += target \

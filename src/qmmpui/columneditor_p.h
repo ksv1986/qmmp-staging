@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,7 +41,7 @@ public:
     QString pattern() const;
 
 private slots:
-    void insertExpression(QAction *a);
+    void insertExpression(const QString &str);
     void on_comboBox_activated(int index);
     void on_formatLineEdit_textChanged(const QString &text);
 

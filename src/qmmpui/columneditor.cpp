@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,6 +20,7 @@
 
 #include <QMenu>
 #include "columneditor_p.h"
+#include "metadataformattermenu.h"
 #include "ui_columneditor.h"
 
 ColumnEditor::ColumnEditor(const QString &name, const QString &patt, QWidget *parent) :
@@ -50,12 +51,12 @@ QString ColumnEditor::pattern() const
     return m_ui->formatLineEdit->text();
 }
 
-void ColumnEditor::insertExpression(QAction *a)
+void ColumnEditor::insertExpression(const QString &str)
 {
     if (m_ui->formatLineEdit->cursorPosition () < 1)
-        m_ui->formatLineEdit->insert(a->data().toString());
+        m_ui->formatLineEdit->insert(str);
     else
-        m_ui->formatLineEdit->insert(" - "+a->data().toString());
+        m_ui->formatLineEdit->insert(" - "+str);
 }
 
 void ColumnEditor::on_comboBox_activated(int index)
@@ -74,25 +75,9 @@ void ColumnEditor::on_formatLineEdit_textChanged(const QString &text)
 
 void ColumnEditor::createMenu()
 {
-    QMenu *menu = new QMenu(this);
-    menu->addAction(tr("Artist"))->setData("%p");
-    menu->addAction(tr("Album"))->setData("%a");
-    menu->addAction(tr("Album Artist"))->setData("%aa");
-    menu->addAction(tr("Title"))->setData("%t");
-    menu->addAction(tr("Track Number"))->setData("%n");
-    menu->addAction(tr("Two-digit Track Number"))->setData("%NN");
-    menu->addAction(tr("Genre"))->setData("%g");
-    menu->addAction(tr("Comment"))->setData("%c");
-    menu->addAction(tr("Composer"))->setData("%C");
-    menu->addAction(tr("Duration"))->setData("%l");
-    menu->addAction(tr("Disc Number"))->setData("%D");
-    menu->addAction(tr("File Name"))->setData("%f");
-    menu->addAction(tr("File Path"))->setData("%F");
-    menu->addAction(tr("Year"))->setData("%y");
-    menu->addAction(tr("Track Index"))->setData("%I");
-    menu->addAction(tr("Condition"))->setData("%if(%p,%p - %t,%t)");
+    MetaDataFormatterMenu *menu = new MetaDataFormatterMenu(MetaDataFormatterMenu::TITLE_MENU, this);
     m_ui->formatButton->setMenu(menu);
-    connect(menu, SIGNAL(triggered (QAction *)), SLOT(insertExpression(QAction *)));
+    connect(menu, SIGNAL(patternSelected(QString)), SLOT(insertExpression(QString)));
 }
 
 void ColumnEditor::fillTypes()
@@ -114,5 +99,6 @@ void ColumnEditor::fillTypes()
     m_ui->comboBox->addItem(tr("File Path"),"%F");
     m_ui->comboBox->addItem(tr("Track Index"), "%I");
     m_ui->comboBox->addItem(tr("Year"),"%y");
+    m_ui->comboBox->addItem(tr("Parent Directory"),"%dir(0)");
     m_ui->comboBox->addItem(tr("Custom"),"custom");
 }

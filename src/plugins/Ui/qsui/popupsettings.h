@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,8 +23,6 @@
 #include <QDialog>
 #include "ui_popupsettings.h"
 
-class Action;
-
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
 */
@@ -40,7 +38,6 @@ public slots:
     virtual void accept();
 
 private slots:
-    void insertExpression(QAction *);
     void on_resetButton_clicked();
 
 private:

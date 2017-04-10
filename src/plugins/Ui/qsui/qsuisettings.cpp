@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,10 +21,10 @@
 #include <QSettings>
 #include <QDir>
 #include <QFontDialog>
-#include <QMenu>
 #include <qmmp/qmmp.h>
 #include <qmmpui/filedialog.h>
 #include <qmmpui/uihelper.h>
+#include <qmmpui/metadataformattermenu.h>
 #include "actionmanager.h"
 #include "shortcutitem.h"
 #include "shortcutdialog.h"
@@ -114,27 +114,10 @@ void QSUISettings::loadFonts()
 
 void QSUISettings::createActions()
 {
-    QMenu *menu = new QMenu(this);
-    menu->addAction(tr("Artist"))->setData("%p");
-    menu->addAction(tr("Album"))->setData("%a");
-    menu->addAction(tr("Album Artist"))->setData("%aa");
-    menu->addAction(tr("Title"))->setData("%t");
-    menu->addAction(tr("Track Number"))->setData("%n");
-    menu->addAction(tr("Two-digit Track Number"))->setData("%NN");
-    menu->addAction(tr("Genre"))->setData("%g");
-    menu->addAction(tr("Comment"))->setData("%c");
-    menu->addAction(tr("Composer"))->setData("%C");
-    menu->addAction(tr("Duration"))->setData("%l");
-    menu->addAction(tr("Disc Number"))->setData("%D");
-    menu->addAction(tr("File Name"))->setData("%f");
-    menu->addAction(tr("File Path"))->setData("%F");
-    menu->addAction(tr("Year"))->setData("%y");
-    menu->addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
-    menu->addAction(tr("Artist - Title"))->setData("%if(%p,%p - %t,%t)");
-
+    MetaDataFormatterMenu *menu = new MetaDataFormatterMenu(MetaDataFormatterMenu::TITLE_MENU, this);
     m_ui.windowTitleButton->setMenu(menu);
     m_ui.windowTitleButton->setPopupMode(QToolButton::InstantPopup);
-    connect(menu, SIGNAL(triggered (QAction *)), SLOT(addWindowTitleString(QAction *)));
+    connect(menu, SIGNAL(patternSelected(QString)), SLOT(addWindowTitleString(QString)));
 }
 
 void QSUISettings::on_popupTemplateButton_clicked()
@@ -236,10 +219,10 @@ void QSUISettings::on_resetFontsButton_clicked()
     loadFonts();
 }
 
-void QSUISettings::addWindowTitleString(QAction *a)
+void QSUISettings::addWindowTitleString(const QString &str)
 {
     if (m_ui.windowTitleLineEdit->cursorPosition () < 1)
-        m_ui.windowTitleLineEdit->insert(a->data().toString());
+        m_ui.windowTitleLineEdit->insert(str);
     else
-        m_ui.windowTitleLineEdit->insert(" - "+a->data().toString());
+        m_ui.windowTitleLineEdit->insert(" - "+str);
 }

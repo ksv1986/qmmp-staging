@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -45,7 +45,7 @@ private slots:
     void on_skinInstallButton_clicked();
     void loadSkins();
     void on_popupTemplateButton_clicked();
-    void addWindowTitleString(QAction *a);
+    void addWindowTitleString(const QString &str);
 
 
 

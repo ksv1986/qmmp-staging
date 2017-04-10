@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2017 by Ilya Kotov                                      *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,54 +18,32 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#ifndef CONVERTERDIALOG_H
-#define CONVERTERDIALOG_H
+#ifndef METADATAFORMATTERMENU_H
+#define METADATAFORMATTERMENU_H
 
-#include <QDialog>
-#include <QStringList>
-#include <QCloseEvent>
-#include "ui_converterdialog.h"
+#include <QMenu>
 
-class PlayListTrack;
-class ConverterPreset;
-class Converter;
+class QAction;
 
-/**
-    @author Ilya Kotov <forkotov02@hotmail.ru>
-*/
-class ConverterDialog : public QDialog
+class MetaDataFormatterMenu : public QMenu
 {
     Q_OBJECT
 public:
-    explicit ConverterDialog(QList <PlayListTrack *> items,  QWidget *parent = 0);
-    virtual ~ConverterDialog();
 
-public slots:
-    virtual void reject();
+    enum Type
+    {
+        TITLE_MENU = 0,
+        GROUP_MENU
+    };
+
+    explicit MetaDataFormatterMenu(Type type, QWidget *parent = 0);
+
+signals:
+    void patternSelected(const QString &pattern);
 
 private slots:
-    void on_dirButton_clicked();
-    void on_convertButton_clicked();
-    void on_stopButton_clicked();
-    void onStateChanged(int row, QString message);
-    void onConvertFinished(Converter *c);
-    void addTitleString(const QString &str);
-    void createPreset();
-    void editPreset();
-    void copyPreset();
-    void deletePreset();
-
-private:
-    void createMenus();
-    void readPresets(const QString &path);
-    void savePresets();
-    QVariantMap preset() const;
-    QString uniqueName(const QString &name);
-    bool checkPreset(const QVariantMap &preset);
-
-    Ui::ConverterDialog m_ui;
-    QList <Converter *> m_converters;
+    void onActionTriggered(QAction *action);
 
 };
 
-#endif // CONVERTERDIALOG_H
+#endif // METADATAFORMATTERMENU_H

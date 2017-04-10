@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,6 +21,7 @@
 #include <QSettings>
 #include <QMenu>
 #include <qmmp/qmmp.h>
+#include <qmmpui/metadataformattermenu.h>
 #include "settingsdialog.h"
 
 SettingsDialog::SettingsDialog(QWidget *parent) : QDialog(parent)
@@ -53,28 +54,13 @@ void SettingsDialog::accept()
 
 void SettingsDialog::addMenu(QToolButton *button)
 {
-    QMenu *menu = new QMenu(this);
-    menu->addAction(tr("Artist"))->setData("%p");
-    menu->addAction(tr("Album"))->setData("%a");
-    menu->addAction(tr("Album Artist"))->setData("%aa");
-    menu->addAction(tr("Title"))->setData("%t");
-    menu->addAction(tr("Track Number"))->setData("%n");
-    menu->addAction(tr("Two-digit Track Number"))->setData("%NN");
-    menu->addAction(tr("Genre"))->setData("%g");
-    menu->addAction(tr("Comment"))->setData("%c");
-    menu->addAction(tr("Composer"))->setData("%C");
-    menu->addAction(tr("Duration"))->setData("%l");
-    menu->addAction(tr("Disc Number"))->setData("%D");
-    menu->addAction(tr("File Name"))->setData("%f");
-    menu->addAction(tr("File Path"))->setData("%F");
-    menu->addAction(tr("Year"))->setData("%y");
-    menu->addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
+    MetaDataFormatterMenu *menu = new MetaDataFormatterMenu(MetaDataFormatterMenu::TITLE_MENU, this);
     button->setMenu(menu);
     button->setPopupMode(QToolButton::InstantPopup);
-    connect(menu, SIGNAL(triggered (QAction *)), SLOT(addTemplateString(QAction *)));
+    connect(menu, SIGNAL(patternSelected(QString)), SLOT(addTemplateString(QString)));
 }
 
-void SettingsDialog::addTemplateString(QAction *a)
+void SettingsDialog::addTemplateString(const QString &str)
 {
     QMenu *menu = qobject_cast<QMenu*> (sender());
     if(!menu)
@@ -82,18 +68,18 @@ void SettingsDialog::addTemplateString(QAction *a)
 
     if(m_ui.newTrackButton->menu() == menu)
     {
-        m_ui.newTrackLineEdit->insert(a->data().toString());
+        m_ui.newTrackLineEdit->insert(str);
     }
     else if(m_ui.endOfTrackButton->menu() == menu)
     {
-        m_ui.endOfTrackLineEdit->insert(a->data().toString());
+        m_ui.endOfTrackLineEdit->insert(str);
     }
     else if(m_ui.endOfPlayListButton->menu() == menu)
     {
-        m_ui.endOfPlayListLineEdit->insert(a->data().toString());
+        m_ui.endOfPlayListLineEdit->insert(str);
     }
     else if(m_ui.titleChangeButton->menu() == menu)
     {
-        m_ui.titleChangeLineEdit->insert(a->data().toString());
+        m_ui.titleChangeLineEdit->insert(str);
     }
 }

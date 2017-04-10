@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,12 +20,6 @@
 #include <QDir>
 #include <QSettings>
 #include <QFontDialog>
-#include <QTreeWidgetItem>
-#include <QHeaderView>
-#include <QCheckBox>
-#include <QRadioButton>
-#include <QMenu>
-#include <QMessageBox>
 #include <QTreeWidgetItem>
 #include <qmmp/decoder.h>
 #include <qmmp/output.h>
@@ -52,6 +46,7 @@
 #include "qmmpuisettings.h"
 #include "playlistmodel.h"
 #include "winfileassocpage_p.h"
+#include "metadataformattermenu.h"
 #include "configdialog.h"
 
 ConfigDialog::ConfigDialog (QWidget *parent) : QDialog (parent)
@@ -298,23 +293,10 @@ void ConfigDialog::on_informationButton_clicked()
 
 void ConfigDialog::createMenus()
 {
-    QMenu *groupMenu = new QMenu(this);
-
-    groupMenu->addAction(tr("Artist"))->setData("%p");
-    groupMenu->addAction(tr("Album"))->setData("%a");
-    groupMenu->addAction(tr("Album Artist"))->setData("%aa");
-    groupMenu->addAction(tr("Genre"))->setData("%g");
-    groupMenu->addAction(tr("Comment"))->setData("%c");
-    groupMenu->addAction(tr("Composer"))->setData("%C");
-    groupMenu->addAction(tr("Disc Number"))->setData("%D");
-    groupMenu->addAction(tr("Year"))->setData("%y");
-    groupMenu->addAction(tr("Condition"))->setData("%if(%p&%a,%p - %a,%p%a)");
-    groupMenu->addAction(tr("Artist/Album"))->setData("%p%if(%p&%a, - ,)%a");
-    groupMenu->addAction(tr("Artist/Year/Album"))->setData("%p%if(%p&%a, - %if(%y,[%y] ,),)%a");
-
+    MetaDataFormatterMenu *groupMenu = new MetaDataFormatterMenu(MetaDataFormatterMenu::GROUP_MENU, this);
     m_ui->groupButton->setMenu(groupMenu);
     m_ui->groupButton->setPopupMode(QToolButton::InstantPopup);
-    connect(groupMenu, SIGNAL(triggered (QAction *)), SLOT(addGroupString(QAction *)));
+    connect(groupMenu, SIGNAL(patternSelected(QString)), SLOT(addGroupString(QString)));
 
     m_ui->treeWidget->setContextMenuPolicy(Qt::ActionsContextMenu);
     m_preferencesAction = new QAction(QIcon::fromTheme("configure"),tr("Preferences"), m_ui->treeWidget);
@@ -369,12 +351,12 @@ void ConfigDialog::loadLanguages()
     m_ui->langComboBox->setCurrentIndex(index);
 }
 
-void ConfigDialog::addGroupString(QAction *a)
+void ConfigDialog::addGroupString(const QString &str)
 {
     if (m_ui->groupLineEdit->cursorPosition () < 1)
-        m_ui->groupLineEdit->insert(a->data().toString());
+        m_ui->groupLineEdit->insert(str);
     else
-        m_ui->groupLineEdit->insert(" - "+a->data().toString());
+        m_ui->groupLineEdit->insert(" - "+str);
 }
 
 void ConfigDialog::saveSettings()

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,7 +21,6 @@
 #define SETTINGSDIALOG_H
 
 #include <QDialog>
-
 #include "ui_settingsdialog.h"
 
 /**
@@ -47,7 +46,7 @@ private slots:
     void updateLineEdits();
     void on_destinationEdit_textChanged(QString dest);
     void on_patternEdit_textChanged(QString pattern);
-    void addTitleString(QAction *action);
+    void addTitleString(const QString &str);
     void on_destButton_clicked();
     void on_tableWidget_itemDoubleClicked (QTableWidgetItem *item);
 

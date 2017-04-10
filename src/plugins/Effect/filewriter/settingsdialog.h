@@ -38,7 +38,7 @@ public slots:
     virtual void accept();
 
 private slots:
-    void addTitleString(QAction *a);
+    void addTitleString(const QString &str);
     void on_dirButton_clicked();
 
 private:

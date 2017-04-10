@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,8 +25,6 @@
 #include <QFileInfo>
 #include "ui_qsuisettings.h"
 
-class QAction;
-
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
 */
@@ -45,7 +43,7 @@ private slots:
     void on_tabsFontButton_clicked();
     void on_popupTemplateButton_clicked();
     void on_resetFontsButton_clicked();
-    void addWindowTitleString(QAction *a);
+    void addWindowTitleString(const QString &str);
 
 private:
     void showEvent(QShowEvent *);

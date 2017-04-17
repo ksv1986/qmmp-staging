@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>BuiltinCommandLineOption</name>
     <message>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>
         <source>Print volume level</source>
-        <translation type="unfinished"></translation>
+        <translation>Вивести рівень гучності</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="80"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="81"/>
         <source>Print mute status</source>
-        <translation type="unfinished"></translation>
+        <translation>Вивести статус приглушення</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="84"/>
@@ -104,12 +104,12 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="362"/>
         <source>Start qmmp with the specified user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустити qmmp з вказаним інтерфейсом користувача</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="363"/>
         <source>List all available user interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Перелік доступних інтерфейсів користувача</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="364"/>
@@ -124,17 +124,17 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="368"/>
         <source>Home page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Домашня сторінка: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="369"/>
         <source>Development page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Сторінка розробки: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="370"/>
         <source>Bug tracker: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Трекер помилок: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="375"/>
@@ -164,7 +164,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="410"/>
         <source>User Interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Інтерфейси користувача</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="365"/>

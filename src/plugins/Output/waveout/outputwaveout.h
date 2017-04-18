@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -49,6 +49,8 @@ private:
     // helper functions
     void status();
     void uninitialize();
+    qint64 m_totalWritten;
+    qint32 m_frameSize;
 };
 
 class VolumeWaveOut : public Volume

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2014-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -50,6 +50,8 @@ OutputDirectSound::OutputDirectSound() : Output()
     m_primaryBuffer = 0;
     m_dsBuffer = 0;
     m_dsBufferAt = 0;
+    m_latency = 0;
+    m_bytesPerSecond = 0;
     instance = this;
 }
 
@@ -61,7 +63,9 @@ OutputDirectSound::~OutputDirectSound()
 
 bool OutputDirectSound::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat format)
 {
+    m_latency = 0;
     DSBUFFERDESC bufferDesc;
+
 
     HRESULT result = DirectSoundCreate8(0, &m_ds, 0);
     if(result != DS_OK)
@@ -178,13 +182,14 @@ bool OutputDirectSound::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForm
     configure(freq, out_map, format);
     if(volumeControl)
         volumeControl->restore();
+    m_bytesPerSecond = (sampleRate() * sampleSize() * channels());
     return true;
 }
 
 
 qint64 OutputDirectSound::latency()
 {
-    return 0;
+    return m_latency;
 }
 
 qint64 OutputDirectSound::writeAudio(unsigned char *data, qint64 len)
@@ -193,6 +198,7 @@ qint64 OutputDirectSound::writeAudio(unsigned char *data, qint64 len)
     DWORD size = 0, size2 = 0;
 
     DWORD available = bytesToWrite(); //available bytes
+    m_latency = (DS_BUFSIZE - available) * 1000 / m_bytesPerSecond;
     if(available < 128)
     {
         usleep(5000);

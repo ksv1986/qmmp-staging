@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2014-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -74,6 +74,8 @@ private:
     } DSoundChannels;
 
     static DSoundChannels m_dsound_pos[10];
+    qint64 m_latency;
+    qint32 m_bytesPerSecond;
 };
 
 /**

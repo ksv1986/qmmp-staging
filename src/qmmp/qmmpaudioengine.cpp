@@ -248,7 +248,6 @@ void QmmpAudioEngine::pause()
         m_output->recycler()->cond()->wakeAll();
         m_output->recycler()->mutex()->unlock();
     }
-
 }
 
 void QmmpAudioEngine::setMuted(bool muted)
@@ -276,19 +275,6 @@ void QmmpAudioEngine::stop()
 
     if (m_output)
     {
-        m_output->mutex()->lock ();
-        m_output->stop();
-        m_output->mutex()->unlock();
-    }
-
-    // wake up threads
-    if (m_output)
-    {
-        m_output->mutex()->lock();
-        m_output->recycler()->cond()->wakeAll();
-        m_output->mutex()->unlock();
-        if(m_output->isRunning())
-            m_output->wait();
         delete m_output;
         m_output = 0;
     }
@@ -556,6 +542,22 @@ void QmmpAudioEngine::run()
         m_output->mutex()->unlock();
     }
     mutex()->unlock();
+
+    if (m_output)
+    {
+        if(m_user_stop)
+        {
+            m_output->mutex()->lock ();
+            m_output->stop();
+            m_output->recycler()->cond()->wakeAll();
+            m_output->mutex()->unlock();
+        }
+
+        if((m_user_stop || m_finish) && m_output->isRunning())
+        {
+            m_output->wait();
+        }
+    }
 }
 
 void QmmpAudioEngine::flush(bool final)

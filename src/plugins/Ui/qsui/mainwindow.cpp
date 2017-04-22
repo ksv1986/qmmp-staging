@@ -68,6 +68,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_titleFormatter.setPattern("%if(%p,%p - %t,%t)");
     //qmmp objects
     m_player = MediaPlayer::instance();
+    connect(m_player, SIGNAL(playbackFinished()), SLOT(restoreWindowTitle()));
     m_core = SoundCore::instance();
     m_pl_manager = PlayListManager::instance();
     m_uiHelper = UiHelper::instance();
@@ -156,6 +157,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     createActions();
     readSettings();
     updateStatus();
+    restoreWindowTitle();
 }
 
 MainWindow::~MainWindow()
@@ -223,7 +225,7 @@ void MainWindow::showState(Qmmp::State state)
         m_positionSlider->setValue(0);
         m_analyzer->clearCover();
         qobject_cast<CoverWidget *>(m_ui.coverDockWidget->widget())->clearCover();
-        setWindowTitle("Qmmp");
+        //setWindowTitle("Qmmp");
         break;
     default:
         ;
@@ -927,4 +929,9 @@ void MainWindow::editToolBar()
         readSettings();
     }
     e->deleteLater();
+}
+
+void MainWindow::restoreWindowTitle()
+{
+    setWindowTitle(tr("Qmmp"));
 }

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,6 +30,7 @@
 #include <qmmpui/metadataformatter.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/playlistmodel.h>
+#include <qmmpui/mediaplayer.h>
 #include "skin.h"
 #include "actionmanager.h"
 #include "textscroller.h"
@@ -62,6 +63,7 @@ TextScroller::TextScroller (QWidget *parent) : QWidget (parent)
     connect(m_skin, SIGNAL(skinChanged()), SLOT(updateSkin()));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(processState(Qmmp::State)));
     connect(m_core, SIGNAL(metaDataChanged()), SLOT(processMetaData()));
+    connect(MediaPlayer::instance(), SIGNAL(playbackFinished()), SLOT(clearText()));
     updateSkin();
 }
 
@@ -237,15 +239,9 @@ void TextScroller::processState(Qmmp::State state)
         updateText();
         break;
     }
-    case Qmmp::Paused:
-    {
-        break;
-    }
     case Qmmp::Stopped:
     {
-        m_bufferText.clear();
-        m_titleText.clear();
-        updateText();
+        disconnect(m_core, SIGNAL(bufferingProgress(int)), this, 0);
         break;
     }
     default:
@@ -339,4 +335,11 @@ void TextScroller::updateText() //draw text according priority
         m_scroll = false;
     }
     update();
+}
+
+void TextScroller::clearText()
+{
+    m_bufferText.clear();
+    m_titleText.clear();
+    updateText();
 }

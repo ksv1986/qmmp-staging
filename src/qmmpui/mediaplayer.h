@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,6 +26,7 @@
 
 
 class QmmpUiSettings;
+class QTimer;
 
 
 /*! @brief The MediaPlayer class provides a simple way to use SoundCore and PlayListModel together.
@@ -37,7 +38,7 @@ class MediaPlayer : public QObject
 public:
     /*!
      * Object constructor,
-     * @param parent Parent object
+     * @param parent Parent object.
      */
     MediaPlayer(QObject *parent = 0);
     /*!
@@ -52,6 +53,13 @@ public:
      * Returns playlist manager pointer
      */
     PlayListManager *playListManager();
+
+signals:
+    /*!
+     * Signal emitted when playlist has finished or playback has been stopped by user.
+     * This signal should be used to reset/restore window title.
+     */
+    void playbackFinished();
 
 public slots:
     /*!
@@ -84,6 +92,7 @@ private:
     static MediaPlayer* m_instance;
     int m_skips;
     QString m_nextUrl;
+    QTimer *m_finishTimer;
 };
 
 #endif

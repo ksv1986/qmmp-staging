@@ -22,6 +22,7 @@
 #include <QString>
 #include <QTranslator>
 #include <QLocale>
+#include <QTimer>
 #include "playlistitem.h"
 #include "qmmpuisettings.h"
 #include "mediaplayer.h"
@@ -37,6 +38,10 @@ MediaPlayer::MediaPlayer(QObject *parent)
     m_pl_manager = 0;
     m_core = 0;
     m_skips = 0;
+    m_finishTimer = new QTimer(this);
+    m_finishTimer->setSingleShot(true);
+    m_finishTimer->setInterval(500);
+    connect(m_finishTimer, SIGNAL(timeout()), SIGNAL(playbackFinished()));
     QTranslator *translator = new QTranslator(parent);
     QString locale = Qmmp::systemLanguageID();
     translator->load(QString(":/libqmmpui_") + locale);
@@ -177,7 +182,12 @@ void MediaPlayer::processState(Qmmp::State state)
         m_nextUrl.clear();
         break;
     case Qmmp::Playing:
+        m_finishTimer->stop();
         m_skips = 0;
+        break;
+    case Qmmp::Stopped:
+        m_finishTimer->start();
+        break;
     default:
         ;
     }

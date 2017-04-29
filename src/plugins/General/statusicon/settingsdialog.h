@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,8 +21,6 @@
 #define SETTINGSDIALOG_H
 
 #include <QDialog>
-
-
 #include "ui_settingsdialog.h"
 
 /**
@@ -43,7 +41,7 @@ private slots:
     void on_templateButton_clicked();
 
 private:
-    Ui::SettingsDialog ui;
+    Ui::SettingsDialog m_ui;
     QString m_template;
 
 };

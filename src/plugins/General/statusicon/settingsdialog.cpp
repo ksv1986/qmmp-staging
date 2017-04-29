@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,32 +22,32 @@
 #include <qmmpui/templateeditor.h>
 #include <qmmp/qmmp.h>
 #include "statusiconpopupwidget.h"
+#include "statusicon.h"
 #include "settingsdialog.h"
 
 SettingsDialog::SettingsDialog(QWidget *parent)
         : QDialog(parent)
 {
-    ui.setupUi(this);
+    m_ui.setupUi(this);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Tray");
-    ui.messageGroupBox->setChecked(settings.value("show_message",true).toBool());
-    ui.messageDelaySpinBox->setValue(settings.value("message_delay", 2000).toInt());
-    ui.niceTooltipGroupBox->setChecked(settings.value("show_tooltip", true).toBool());
+    m_ui.messageGroupBox->setChecked(settings.value("show_message",true).toBool());
+    m_ui.messageDelaySpinBox->setValue(settings.value("message_delay", 2000).toInt());
+    m_ui.niceTooltipGroupBox->setChecked(settings.value("show_tooltip", true).toBool());
 #ifdef Q_WS_X11
-    ui.niceTooltipDelaySpinBox->setValue(settings.value("tooltip_delay",2000).toInt());
-    ui.transparencySlider->setValue(settings.value("tooltip_transparency",0).toInt());
-    ui.coverSizeSlider->setValue(settings.value("tooltip_cover_size", 100).toInt());
-    ui.progressCheckBox->setChecked(settings.value("tooltip_progress",true).toBool());
-    ui.niceTooltipSplitCheckBox->setChecked(settings.value("split_file_name",true).toBool());
+    m_ui.niceTooltipDelaySpinBox->setValue(settings.value("tooltip_delay",2000).toInt());
+    m_ui.transparencySlider->setValue(settings.value("tooltip_transparency",0).toInt());
+    m_ui.coverSizeSlider->setValue(settings.value("tooltip_cover_size", 100).toInt());
+    m_ui.progressCheckBox->setChecked(settings.value("tooltip_progress",true).toBool());
+    m_ui.niceTooltipSplitCheckBox->setChecked(settings.value("split_file_name",true).toBool());
 #else
-    ui.niceTooltipDelaySpinBox->setEnabled(false);
-    ui.transparencySlider->setEnabled(false);
-    ui.coverSizeSlider->setEnabled(false);
-    ui.progressCheckBox->setEnabled(false);
-    ui.niceTooltipSplitCheckBox->setEnabled(false);
-    ui.templateButton->setEnabled(false);
+    m_ui.niceTooltipDelaySpinBox->setEnabled(false);
+    m_ui.transparencySlider->setEnabled(false);
+    m_ui.coverSizeSlider->setEnabled(false);
+    m_ui.progressCheckBox->setEnabled(false);
+    m_ui.templateButton->setEnabled(false);
 #endif
-    ui.standardIconsCheckBox->setChecked(settings.value("use_standard_icons",false).toBool());
+    m_ui.standardIconsCheckBox->setChecked(settings.value("use_standard_icons",false).toBool());
     m_template = settings.value("tooltip_template", DEFAULT_TEMPLATE).toString();
     settings.endGroup();
 }
@@ -59,16 +59,16 @@ void SettingsDialog::accept()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Tray");
-    settings.setValue("show_message", ui.messageGroupBox->isChecked());
-    settings.setValue("message_delay", ui.messageDelaySpinBox->value());
-    settings.setValue("use_standard_icons", ui.standardIconsCheckBox->isChecked());
-    settings.setValue("show_tooltip", ui.niceTooltipGroupBox->isChecked());
+    settings.setValue("show_message", m_ui.messageGroupBox->isChecked());
+    settings.setValue("message_delay", m_ui.messageDelaySpinBox->value());
+    settings.setValue("use_standard_icons", m_ui.standardIconsCheckBox->isChecked());
+    settings.setValue("show_tooltip", m_ui.niceTooltipGroupBox->isChecked());
+    settings.setValue("split_file_name", m_ui.niceTooltipSplitCheckBox->isChecked());
 #ifdef Q_WS_X11
-    settings.setValue("split_file_name", ui.niceTooltipSplitCheckBox->isChecked());
-    settings.setValue("tooltip_delay", ui.niceTooltipDelaySpinBox->value());
-    settings.setValue("tooltip_transparency",  ui.transparencySlider->value());
-    settings.setValue("tooltip_cover_size",  ui.coverSizeSlider->value());
-    settings.setValue("tooltip_progress", ui.progressCheckBox->isChecked());
+    settings.setValue("tooltip_delay", m_ui.niceTooltipDelaySpinBox->value());
+    settings.setValue("tooltip_transparency",  m_ui.transparencySlider->value());
+    settings.setValue("tooltip_cover_size",  m_ui.coverSizeSlider->value());
+    settings.setValue("tooltip_progress", m_ui.progressCheckBox->isChecked());
 #endif
     settings.setValue("tooltip_template", m_template);
     settings.endGroup();

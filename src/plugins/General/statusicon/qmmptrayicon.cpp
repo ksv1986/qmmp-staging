@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,7 +21,7 @@
 #include <QEvent>
 #include <QWheelEvent>
 #include <QMouseEvent>
-
+#include <QApplication>
 #include <qmmp/soundcore.h>
 
 #include "qmmptrayicon.h"
@@ -32,25 +32,28 @@
 
 QmmpTrayIcon::QmmpTrayIcon(QObject *parent)
         : QSystemTrayIcon(parent)
-{
-#ifdef Q_WS_X11
-    m_showNiceToolTip = false;
-#endif
-}
+{}
 
 
 QmmpTrayIcon::~QmmpTrayIcon()
 {
 }
-#ifdef Q_WS_X11
-void QmmpTrayIcon::showNiceToolTip(bool value)
+
+void QmmpTrayIcon::setToolTip(const QString &tip)
 {
-    m_showNiceToolTip = value;
+#ifdef Q_WS_X11
+    m_message = tip;
+    if(m_popupWidget)
+        showToolTip();
+#else
+    QSystemTrayIcon::setToolTip(tip);
+#endif
 }
 
+#ifdef Q_WS_X11
 bool QmmpTrayIcon::event(QEvent *e)
 {
-    if (e->type() == QEvent::Wheel )
+    if (e->type() == QEvent::Wheel)
     {
         wheelEvent((QWheelEvent *) e);
         e->accept();
@@ -72,13 +75,10 @@ void QmmpTrayIcon::wheelEvent(QWheelEvent *e)
 
 void QmmpTrayIcon::showToolTip()
 {
-    if(m_showNiceToolTip)
+    if(m_popupWidget.isNull())
     {
-        if(m_PopupWidget.isNull())
-        {
-            m_PopupWidget = new StatusIconPopupWidget();
-        }
-        m_PopupWidget->showInfo(geometry().x(),geometry().y());
+        m_popupWidget = new StatusIconPopupWidget();
     }
+    m_popupWidget->showInfo(geometry().x(),geometry().y(), m_message);
 }
 #endif

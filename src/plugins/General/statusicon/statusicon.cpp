@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -46,16 +46,19 @@ StatusIcon::StatusIcon(QObject *parent) : QObject(parent)
     m_messageDelay = settings.value("message_delay", 2000).toInt();
     m_hideToTray = settings.value("hide_on_close", false).toBool();
     m_useStandardIcons = settings.value("use_standard_icons",false).toBool();
-    m_tooltip = settings.value("show_tooltip",true).toBool();
-    m_formatter.setPattern("%p%if(%p&%t, - ,)%t");
+    m_showToolTip = settings.value("show_tooltip",true).toBool();
+    m_splitFileName = settings.value("split_file_name",true).toBool();
 #ifdef Q_WS_X11
-    m_tray->showNiceToolTip(m_tooltip);
+    m_toolTipTemplate = settings.value("tooltip_template", DEFAULT_TEMPLATE).toString();
+#else
+    m_toolTipTemplate = "%p%if(%p&%t, - ,)%t";
 #endif
+    m_toolTipFormatter.setPattern(m_toolTipTemplate);
+    m_messageFormatter.setPattern("%p%if(%p&%t, - ,)%t");
     if(m_useStandardIcons)
         m_tray->setIcon(QApplication::style ()->standardIcon(QStyle::SP_MediaStop));
     else
         m_tray->setIcon(QIcon(":/tray_stop.png"));
-    m_tray->show();
     settings.endGroup();
     //actions
     m_menu = new QMenu();
@@ -73,6 +76,7 @@ StatusIcon::StatusIcon(QObject *parent) : QObject(parent)
     m_menu->addSeparator();
     m_menu->addAction(tr("Exit"), UiHelper::instance(), SLOT(exit()));
     m_tray->setContextMenu(m_menu);
+    m_tray->show();
     connect (m_core, SIGNAL(metaDataChanged ()), SLOT(showMetaData()));
     connect (m_core, SIGNAL(stateChanged (Qmmp::State)), SLOT(setState(Qmmp::State)));
     setState(m_core->state()); //update state
@@ -111,9 +115,8 @@ void StatusIcon::setState(Qmmp::State state)
             m_tray->setIcon(QApplication::style ()->standardIcon(QStyle::SP_MediaStop));
         else
             m_tray->setIcon (QIcon(":/tray_stop.png"));
-#ifndef Q_WS_X11
-        m_tray->setToolTip("");
-#endif
+        if(m_showToolTip)
+            m_tray->setToolTip(tr("Stopped"));
         break;
     }
     }
@@ -121,22 +124,33 @@ void StatusIcon::setState(Qmmp::State state)
 
 void StatusIcon::showMetaData()
 {
-    QString message = m_formatter.format(m_core->metaData());
+    QMap<Qmmp::MetaData, QString> meta = m_core->metaData();
+    if(m_splitFileName && meta[Qmmp::TITLE].isEmpty() && !meta[Qmmp::URL].contains("://"))
+    {
+        QString name = QFileInfo(meta[Qmmp::URL]).completeBaseName();
+        if(name.contains("-"))
+        {
+            meta[Qmmp::TITLE] = name.section('-',1,1).trimmed();
+            if(meta[Qmmp::ARTIST].isEmpty())
+                meta[Qmmp::ARTIST] = name.section('-',0,0).trimmed();
+        }
+    }
+
+    QString message = m_messageFormatter.format(meta, m_core->totalTime() / 1000);
     if (message.isEmpty())
-        message = m_core->metaData(Qmmp::URL).section('/',-1);
+        message = meta[Qmmp::URL].section('/',-1);
 
     if (m_showMessage)
         m_tray->showMessage (tr("Now Playing"), message,
                              QSystemTrayIcon::Information, m_messageDelay);
-#ifndef Q_WS_X11
-    if(m_tooltip)
+
+    if(m_showToolTip)
     {
-        QString message = m_formatter.format(m_core->metaData());
+        message = m_toolTipFormatter.format(meta, m_core->totalTime() / 1000);
         if(message.isEmpty())
-            message = m_core->metaData(Qmmp::URL).section('/',-1);
+            message = meta[Qmmp::URL].section('/',-1);
         m_tray->setToolTip(message);
     }
-#endif
 }
 
 void StatusIcon::trayActivated(QSystemTrayIcon::ActivationReason reason)

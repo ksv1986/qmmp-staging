@@ -2,7 +2,7 @@
  *   Copyright (C) 2009 by Artur Guzik                                     *
  *   a.guzik88@gmail.com                                                   *
  *                                                                         *
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,8 +24,8 @@
 #ifndef STATUSICONPOPUPWIDGET_H
 #define STATUSICONPOPUPWIDGET_H
 
-#define DEFAULT_TEMPLATE "<b>%if(%t,%t,%f)</b>\n%if(%p,<br>%p,)\n%if(%a,<br>%a,)\n%if(%l,<br><b>%l</b>,)"
-
+#include <QtGlobal>
+#ifdef Q_WS_X11
 #include <QFrame>
 #include <QWidget>
 #include <QProgressBar>
@@ -46,28 +46,27 @@ public:
     StatusIconPopupWidget(QWidget * parent = 0);
     ~StatusIconPopupWidget();
 
-    void showInfo(int x, int y); //x,y are tray icon position
+    void showInfo(int x, int y, const QString &message); //x,y are tray icon position
 
 protected:
     virtual void mousePressEvent(QMouseEvent *);
 
 private slots:
     void updatePosition(int trayx, int trayy);
-    void updateMetaData();
     void updateTime(qint64 elapsed);
 
 private:
+    void updateMetaData(const QString &message);
     QLabel *m_textLabel;
     QHBoxLayout *m_hLayout;
     QVBoxLayout *m_vLayout;
     QTimer *m_timer;
-    CoverWidget * m_cover;
+    CoverWidget *m_cover;
     QString m_totalTime;
     QSpacerItem *m_spacer;
     QProgressBar *m_bar;
     int m_lastTrayX;
     int m_lastTrayY;
-    int m_splitFileName;
     QString m_template;
     bool m_showProgress;
 };
@@ -80,5 +79,6 @@ public:
     virtual QString text() const;
 };
 
+#endif
 
 #endif // STATUSICONPOPUPWIDGET_H

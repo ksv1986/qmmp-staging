@@ -21,6 +21,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QtGlobal>
+#ifdef Q_WS_X11
+
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QLabel>
@@ -70,9 +73,7 @@ StatusIconPopupWidget::StatusIconPopupWidget(QWidget * parent)
     m_bar->setMinimumWidth(110);
 
     connect(m_timer,SIGNAL(timeout()),SLOT(deleteLater()));
-    connect(SoundCore::instance(),SIGNAL(metaDataChanged()),this,SLOT(updateMetaData()));
     connect(SoundCore::instance(),SIGNAL(elapsedChanged(qint64)),this,SLOT(updateTime(qint64)));
-    connect(SoundCore::instance(),SIGNAL(stateChanged(Qmmp::State)),this,SLOT(updateMetaData()));
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Tray");
@@ -80,9 +81,7 @@ StatusIconPopupWidget::StatusIconPopupWidget(QWidget * parent)
     setWindowOpacity(1.0 - settings.value("tooltip_transparency",0).toInt()/100.0);
     int size = settings.value("tooltip_cover_size",100).toInt();
     m_cover->setFixedSize(size,size);
-    m_splitFileName = settings.value("split_file_name",true).toBool();
     m_showProgress = settings.value("tooltip_progress",true).toBool();
-    m_template = settings.value("tooltip_template", DEFAULT_TEMPLATE).toString();
     settings.endGroup();
 }
 
@@ -95,29 +94,13 @@ void StatusIconPopupWidget::mousePressEvent(QMouseEvent *)
     deleteLater();
 }
 
-void StatusIconPopupWidget::updateMetaData()
+void StatusIconPopupWidget::updateMetaData(const QString &message)
 {
     m_timer->stop();
     SoundCore *core = SoundCore::instance();
+    m_textLabel->setText(message);
     if(core->state() == Qmmp::Playing || core->state() == Qmmp::Paused)
     {
-        QString title = m_template;
-        SoundCore *core = SoundCore::instance();
-        QMap<Qmmp::MetaData, QString> meta = core->metaData();
-        if(m_splitFileName && meta[Qmmp::TITLE].isEmpty() && !meta[Qmmp::URL].contains("://"))
-        {
-            QString name = QFileInfo(meta[Qmmp::URL]).completeBaseName();
-            if(name.contains("-"))
-            {
-                meta[Qmmp::TITLE] = name.section('-',1,1).trimmed();
-                if(meta[Qmmp::ARTIST].isEmpty())
-                    meta[Qmmp::ARTIST] = name.section('-',0,0).trimmed();
-            }
-        }
-
-        MetaDataFormatter f(title);
-        title = f.format(core->metaData(), core->totalTime()/1000);
-        m_textLabel->setText(title);
         QPixmap cover = MetaDataManager::instance()->getCover(core->metaData(Qmmp::URL));
         m_cover->show();
         m_bar->show();
@@ -132,8 +115,8 @@ void StatusIconPopupWidget::updateMetaData()
     {
         m_cover->hide();
         m_bar->hide();
-        m_textLabel->setText(tr("Stopped"));
     }
+    m_textLabel->setText(message);
     qApp->processEvents();
     resize(sizeHint());
     qApp->processEvents();
@@ -172,12 +155,12 @@ void StatusIconPopupWidget::updatePosition(int trayx, int trayy)
     return;
 }
 
-void StatusIconPopupWidget::showInfo(int x, int y)
+void StatusIconPopupWidget::showInfo(int x, int y, const QString &message)
 {
     m_timer->stop();
     m_lastTrayX = x;
     m_lastTrayY = y;
-    updateMetaData();
+    updateMetaData(message);
     qApp->processEvents();
     updatePosition(x,y);
     qApp->processEvents();
@@ -192,3 +175,5 @@ QString TimeBar::text() const
 {
     return QString("%1:%2").arg(value()/60,2,10,QChar('0')).arg(value()%60,2,10,QChar('0'));
 }
+
+#endif

@@ -61,7 +61,7 @@ void VisualBuffer::add(float *pcm, int samples, int channels, qint64 ts, qint64 
     VisualNode *b = &m_buffer[m_add_index];
     stereo_from_multichannel(b->data[0], b->data[1], pcm, qMin(512, samples / channels), channels);
     b->ts = ts;
-    delay = qMax(delay, 50LL); //leave at least 50 ms for the visualization
+    delay = qBound(50LL, delay, 1000LL); //limit visualization delay
     m_elapsed = qMax(0LL, ts - delay);
     m_time.restart();
 }

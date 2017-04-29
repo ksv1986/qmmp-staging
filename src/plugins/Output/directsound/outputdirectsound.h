@@ -76,6 +76,7 @@ private:
     static DSoundChannels m_dsound_pos[10];
     qint64 m_latency;
     qint32 m_bytesPerSecond;
+    bool m_reset;
 };
 
 /**

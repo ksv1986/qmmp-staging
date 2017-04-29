@@ -52,6 +52,7 @@ OutputDirectSound::OutputDirectSound() : Output()
     m_dsBufferAt = 0;
     m_latency = 0;
     m_bytesPerSecond = 0;
+    m_reset = false;
     instance = this;
 }
 
@@ -186,19 +187,25 @@ bool OutputDirectSound::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForm
     return true;
 }
 
-
 qint64 OutputDirectSound::latency()
 {
     return m_latency;
 }
 
 qint64 OutputDirectSound::writeAudio(unsigned char *data, qint64 len)
-{
+{   
     unsigned char *ptr = 0, *ptr2 = 0;
     DWORD size = 0, size2 = 0;
-
     DWORD available = bytesToWrite(); //available bytes
     m_latency = (DS_BUFSIZE - available) * 1000 / m_bytesPerSecond;
+
+    if(m_reset)
+    {
+        available = DS_BUFSIZE;
+        m_dsBuffer->SetCurrentPosition(m_dsBufferAt);
+        m_reset = false;
+    }
+
     if(available < 128)
     {
         usleep(5000);
@@ -276,7 +283,7 @@ void OutputDirectSound::resume()
 
 void OutputDirectSound::reset()
 {
-    m_dsBuffer->SetCurrentPosition(m_dsBufferAt-128);
+    m_reset = true;
 }
 
 IDirectSoundBuffer8 *OutputDirectSound::secondaryBuffer()

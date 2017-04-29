@@ -73,37 +73,42 @@
 <context>
     <name>StatusIcon</name>
     <message>
-        <location filename="../statusicon.cpp" line="67"/>
+        <location filename="../statusicon.cpp" line="70"/>
         <source>Play</source>
         <translation>Afspelen</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="68"/>
+        <location filename="../statusicon.cpp" line="71"/>
         <source>Pause</source>
         <translation>Pauze</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="69"/>
+        <location filename="../statusicon.cpp" line="72"/>
         <source>Stop</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="71"/>
+        <location filename="../statusicon.cpp" line="74"/>
         <source>Next</source>
         <translation>Volgende</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="72"/>
+        <location filename="../statusicon.cpp" line="75"/>
         <source>Previous</source>
         <translation>Vorige</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="74"/>
+        <location filename="../statusicon.cpp" line="77"/>
         <source>Exit</source>
         <translation>Afsluiten</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="129"/>
+        <location filename="../statusicon.cpp" line="119"/>
+        <source>Stopped</source>
+        <translation type="unfinished">Gestopt</translation>
+    </message>
+    <message>
+        <location filename="../statusicon.cpp" line="144"/>
         <source>Now Playing</source>
         <translation>Huidig nummer</translation>
     </message>
@@ -139,14 +144,6 @@
         <location filename="../statusiconfactory.cpp" line="51"/>
         <source>About Status Icon Plugin</source>
         <translation>Over de Status Icoon Module</translation>
-    </message>
-</context>
-<context>
-    <name>StatusIconPopupWidget</name>
-    <message>
-        <location filename="../statusiconpopupwidget.cpp" line="135"/>
-        <source>Stopped</source>
-        <translation>Gestopt</translation>
     </message>
 </context>
 </TS>

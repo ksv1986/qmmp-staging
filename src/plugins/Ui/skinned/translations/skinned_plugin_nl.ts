@@ -785,34 +785,39 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="356"/>
+        <location filename="../mainwindow.cpp" line="353"/>
         <source>Appearance</source>
         <translation>Vertoning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="357"/>
+        <location filename="../mainwindow.cpp" line="354"/>
         <source>Shortcuts</source>
         <translation>Sneltoetsen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="427"/>
+        <location filename="../mainwindow.cpp" line="424"/>
         <source>View</source>
         <translation>Weergave</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="436"/>
+        <location filename="../mainwindow.cpp" line="433"/>
         <source>Playlist</source>
         <translation>Afspeellijst</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="454"/>
+        <location filename="../mainwindow.cpp" line="451"/>
         <source>Audio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="462"/>
+        <location filename="../mainwindow.cpp" line="459"/>
         <source>Tools</source>
         <translation>Gereedschappen</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="541"/>
+        <source>Qmmp</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1375,17 +1380,17 @@
 <context>
     <name>TextScroller</name>
     <message>
-        <location filename="../textscroller.cpp" line="56"/>
+        <location filename="../textscroller.cpp" line="57"/>
         <source>Autoscroll Songname</source>
         <translation>Automatisch naar Liednummer Scrollen</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="57"/>
+        <location filename="../textscroller.cpp" line="58"/>
         <source>Transparent Background</source>
         <translation>Transparante Achtergrond</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="126"/>
+        <location filename="../textscroller.cpp" line="128"/>
         <source>Buffering: %1%</source>
         <translation>Bufferen: %1%</translation>
     </message>

@@ -73,37 +73,42 @@
 <context>
     <name>StatusIcon</name>
     <message>
-        <location filename="../statusicon.cpp" line="67"/>
+        <location filename="../statusicon.cpp" line="70"/>
         <source>Play</source>
         <translation>Пусти</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="68"/>
+        <location filename="../statusicon.cpp" line="71"/>
         <source>Pause</source>
         <translation>Паузирај</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="69"/>
+        <location filename="../statusicon.cpp" line="72"/>
         <source>Stop</source>
         <translation>Заустави</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="71"/>
+        <location filename="../statusicon.cpp" line="74"/>
         <source>Next</source>
         <translation>Следећа</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="72"/>
+        <location filename="../statusicon.cpp" line="75"/>
         <source>Previous</source>
         <translation>Претходна</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="74"/>
+        <location filename="../statusicon.cpp" line="77"/>
         <source>Exit</source>
         <translation>Напусти</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="129"/>
+        <location filename="../statusicon.cpp" line="119"/>
+        <source>Stopped</source>
+        <translation type="unfinished">Заустављено</translation>
+    </message>
+    <message>
+        <location filename="../statusicon.cpp" line="144"/>
         <source>Now Playing</source>
         <translation>Тренутна свирка</translation>
     </message>
@@ -139,14 +144,6 @@
         <location filename="../statusiconfactory.cpp" line="55"/>
         <source>Artur Guzik &lt;a.guzik88@gmail.com&gt;</source>
         <translation>Artur Guzik &lt;a.guzik88@gmail.com&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>StatusIconPopupWidget</name>
-    <message>
-        <location filename="../statusiconpopupwidget.cpp" line="135"/>
-        <source>Stopped</source>
-        <translation>Заустављено</translation>
     </message>
 </context>
 </TS>

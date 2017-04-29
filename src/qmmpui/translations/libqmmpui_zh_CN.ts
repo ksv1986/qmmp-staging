@@ -890,7 +890,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="38"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">长度</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>

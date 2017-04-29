@@ -73,37 +73,42 @@
 <context>
     <name>StatusIcon</name>
     <message>
-        <location filename="../statusicon.cpp" line="67"/>
+        <location filename="../statusicon.cpp" line="70"/>
         <source>Play</source>
         <translation>Groti</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="68"/>
+        <location filename="../statusicon.cpp" line="71"/>
         <source>Pause</source>
         <translation>Pauzė</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="69"/>
+        <location filename="../statusicon.cpp" line="72"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="71"/>
+        <location filename="../statusicon.cpp" line="74"/>
         <source>Next</source>
         <translation>Sekantis takelis</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="72"/>
+        <location filename="../statusicon.cpp" line="75"/>
         <source>Previous</source>
         <translation>Ankstesnis takelis</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="74"/>
+        <location filename="../statusicon.cpp" line="77"/>
         <source>Exit</source>
         <translation>Uždaryti</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="129"/>
+        <location filename="../statusicon.cpp" line="119"/>
+        <source>Stopped</source>
+        <translation type="unfinished">Sustojo</translation>
+    </message>
+    <message>
+        <location filename="../statusicon.cpp" line="144"/>
         <source>Now Playing</source>
         <translation>Dabar groju</translation>
     </message>
@@ -139,14 +144,6 @@
         <location filename="../statusiconfactory.cpp" line="55"/>
         <source>Artur Guzik &lt;a.guzik88@gmail.com&gt;</source>
         <translation>Artur Guzik &lt;a.guzik88@gmail.com&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>StatusIconPopupWidget</name>
-    <message>
-        <location filename="../statusiconpopupwidget.cpp" line="135"/>
-        <source>Stopped</source>
-        <translation>Sustojo</translation>
     </message>
 </context>
 </TS>

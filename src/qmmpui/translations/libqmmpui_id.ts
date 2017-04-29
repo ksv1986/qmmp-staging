@@ -865,7 +865,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
         <source>Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nomor track</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="33"/>

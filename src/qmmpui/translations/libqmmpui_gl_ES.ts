@@ -152,7 +152,7 @@
     <message>
         <location filename="../columneditor.cpp" line="94"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Comentario</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="95"/>
@@ -880,7 +880,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="36"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Comentario</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>

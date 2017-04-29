@@ -132,7 +132,7 @@
     <message>
         <location filename="../columneditor.cpp" line="85"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Извођач</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="86"/>
@@ -142,22 +142,22 @@
     <message>
         <location filename="../columneditor.cpp" line="90"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Наслов</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="93"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Жанр</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="94"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Коментар</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="95"/>
         <source>Composer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Композитор</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="96"/>
@@ -167,7 +167,7 @@
     <message>
         <location filename="../columneditor.cpp" line="101"/>
         <source>Year</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Година</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="100"/>
@@ -845,7 +845,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Извођач</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
@@ -860,7 +860,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Наслов</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
@@ -875,17 +875,17 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="35"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Жанр</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="36"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Коментар</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Composer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Композитор</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="38"/>
@@ -910,7 +910,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="45"/>
         <source>Year</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Година</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
@@ -946,7 +946,7 @@
     <message>
         <location filename="../playlistheadermodel.cpp" line="186"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Наслов</translation>
     </message>
     <message>
         <location filename="../playlistheadermodel.cpp" line="187"/>

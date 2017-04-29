@@ -73,37 +73,42 @@
 <context>
     <name>StatusIcon</name>
     <message>
-        <location filename="../statusicon.cpp" line="67"/>
+        <location filename="../statusicon.cpp" line="70"/>
         <source>Play</source>
         <translation>Reproducir</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="68"/>
+        <location filename="../statusicon.cpp" line="71"/>
         <source>Pause</source>
         <translation>Pausar</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="69"/>
+        <location filename="../statusicon.cpp" line="72"/>
         <source>Stop</source>
         <translation>Detener</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="71"/>
+        <location filename="../statusicon.cpp" line="74"/>
         <source>Next</source>
         <translation>Siguiente</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="72"/>
+        <location filename="../statusicon.cpp" line="75"/>
         <source>Previous</source>
         <translation>Anterior</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="74"/>
+        <location filename="../statusicon.cpp" line="77"/>
         <source>Exit</source>
         <translation>Salir</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="129"/>
+        <location filename="../statusicon.cpp" line="119"/>
+        <source>Stopped</source>
+        <translation type="unfinished">Detenido</translation>
+    </message>
+    <message>
+        <location filename="../statusicon.cpp" line="144"/>
         <source>Now Playing</source>
         <translation>Ahora reproduciendo: </translation>
     </message>
@@ -139,14 +144,6 @@
         <location filename="../statusiconfactory.cpp" line="51"/>
         <source>About Status Icon Plugin</source>
         <translation>Acerca del módulo de icono de estado</translation>
-    </message>
-</context>
-<context>
-    <name>StatusIconPopupWidget</name>
-    <message>
-        <location filename="../statusiconpopupwidget.cpp" line="135"/>
-        <source>Stopped</source>
-        <translation>Detenido</translation>
     </message>
 </context>
 </TS>

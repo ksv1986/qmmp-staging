@@ -870,7 +870,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="33"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2 cijferig nummer</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="35"/>

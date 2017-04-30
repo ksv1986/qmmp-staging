@@ -53,11 +53,7 @@ VisualBuffer::VisualBuffer()
 void VisualBuffer::add(float *pcm, int samples, int channels, qint64 ts, qint64 delay)
 {
     m_add_index++;
-    if (m_add_index == VISUAL_BUFFER_SIZE)
-    {
-        m_add_index = 0;
-    }
-
+    m_add_index %= VISUAL_BUFFER_SIZE;
     VisualNode *b = &m_buffer[m_add_index];
     stereo_from_multichannel(b->data[0], b->data[1], pcm, qMin(512, samples / channels), channels);
     b->ts = ts;
@@ -74,12 +70,12 @@ VisualNode *VisualBuffer::take()
           ((m_buffer[m_take_index].ts < t) && (steps++ < VISUAL_BUFFER_SIZE)))
     {
         m_take_index++;
-        if(m_take_index == VISUAL_BUFFER_SIZE)
-        {
-            m_take_index = 0;
-        }
+        m_take_index %= VISUAL_BUFFER_SIZE;
     }
     if(m_buffer[m_take_index].ts < t) //unable to find node
+        return 0;
+
+    if(m_buffer[m_take_index].ts > t + 100) //node is more than 100 ms in the future. So, ignore it.
         return 0;
 
     return &m_buffer[m_take_index];

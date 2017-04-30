@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *
@@ -382,9 +382,7 @@ void Skin::loadPlayList()
 QPixmap *Skin::getPixmap (const QString& name, const QString &fallback)
 {
     m_skin_dir.setFilter (QDir::Files | QDir::Hidden | QDir::NoSymLinks);
-    m_skin_dir.setNameFilters(QStringList() << name + ".*");
-
-    foreach(QFileInfo info, m_skin_dir.entryInfoList())
+    foreach(QFileInfo info, m_skin_dir.entryInfoList(QStringList() << name + ".*"))
     {
         if(info.suffix().toLower() != "cur")
             return new QPixmap (info.filePath());
@@ -392,8 +390,7 @@ QPixmap *Skin::getPixmap (const QString& name, const QString &fallback)
 
     if(!fallback.isEmpty())
     {
-        m_skin_dir.setNameFilters(QStringList() << fallback + ".*");
-        foreach(QFileInfo info, m_skin_dir.entryInfoList())
+        foreach(QFileInfo info, m_skin_dir.entryInfoList(QStringList() << fallback + ".*"))
         {
             if(info.suffix().toLower() != "cur")
                 return new QPixmap (info.filePath());
@@ -405,7 +402,7 @@ QPixmap *Skin::getPixmap (const QString& name, const QString &fallback)
 QString Skin::getPath (const QString& name)
 {
     m_skin_dir.setFilter (QDir::Files | QDir::Hidden | QDir::NoSymLinks);
-    QFileInfoList f = m_skin_dir.entryInfoList();
+    QFileInfoList f = m_skin_dir.entryInfoList(QStringList() << name + ".*");
     bool nameHasExt = name.contains('.');
     for (int j = 0; j < f.size(); ++j)
     {
@@ -856,8 +853,7 @@ QPixmap Skin::scalePixmap(const QPixmap &pix, int ratio)
 const QString Skin::findFile(const QString &name)
 {
     m_skin_dir.setFilter (QDir::Files | QDir::Hidden | QDir::NoSymLinks);
-    m_skin_dir.setNameFilters(QStringList() << name);
-    QFileInfoList f = m_skin_dir.entryInfoList();
+    QFileInfoList f = m_skin_dir.entryInfoList(QStringList() << name);
     if(!f.isEmpty())
     {
         return f.first().filePath();

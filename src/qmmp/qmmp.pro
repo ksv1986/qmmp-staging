@@ -1,5 +1,4 @@
-unix:include(../../qmmp.pri)
-win32:include(../../qmmp.pri)
+include(../../qmmp.pri)
 HEADERS += \
     buffer.h \
     decoder.h \
@@ -76,7 +75,7 @@ SOURCES += recycler.cpp \
     volume.cpp \
     dithering.cpp \
     visualbuffer.cpp
-FORMS +=
+
 unix:TARGET = ../../lib/qmmp
 win32:TARGET = ../../../bin/qmmp
 CONFIG += shared \

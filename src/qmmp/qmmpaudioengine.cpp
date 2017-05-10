@@ -545,7 +545,7 @@ void QmmpAudioEngine::run()
 
     if (m_output)
     {
-        if(m_user_stop)
+        if(m_user_stop || (m_done && !m_finish))
         {
             m_output->mutex()->lock ();
             m_output->stop();
@@ -553,7 +553,7 @@ void QmmpAudioEngine::run()
             m_output->mutex()->unlock();
         }
 
-        if((m_user_stop || m_finish) && m_output->isRunning())
+        if(m_output->isRunning())
         {
             m_output->wait();
         }

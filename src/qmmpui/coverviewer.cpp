@@ -21,7 +21,7 @@
 #include <QPainter>
 #include <QPaintEvent>
 #include <QAction>
-#include <qmmpui/filedialog.h>
+#include "filedialog.h"
 #include "coverviewer_p.h"
 
 CoverViewer::CoverViewer(QWidget *parent)

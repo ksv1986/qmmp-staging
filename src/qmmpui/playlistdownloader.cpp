@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,7 +23,7 @@
 #include <QNetworkReply>
 #include <qmmp/qmmp.h>
 #include <qmmp/qmmpsettings.h>
-#include <qmmpui/playlistparser.h>
+#include "playlistparser.h"
 #include "playlistdownloader.h"
 
 PlayListDownloader::PlayListDownloader(QObject *parent) : QObject(parent)

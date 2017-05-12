@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,10 +25,10 @@
 #include <QSettings>
 #include <qmmp/soundcore.h>
 #include <qmmp/metadatamanager.h>
-#include <qmmpui/filedialog.h>
-#include <qmmpui/playlistparser.h>
-#include <qmmpui/playlistmanager.h>
-#include <qmmpui/qmmpuisettings.h>
+#include "filedialog.h"
+#include "playlistparser.h"
+#include "playlistmanager.h"
+#include "qmmpuisettings.h"
 #include "general.h"
 #include "generalfactory.h"
 #include "jumptotrackdialog_p.h"

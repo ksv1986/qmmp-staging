@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+*   Copyright (C) 2006-2017 by Ilya Kotov                                 *
 *   forkotov02@hotmail.ru                                                 *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -29,8 +29,8 @@
 #include <qmmp/effect.h>
 #include <qmmp/effectfactory.h>
 #include <qmmp/qmmp.h>
-#include <qmmpui/general.h>
-#include <qmmpui/generalfactory.h>
+#include "general.h"
+#include "generalfactory.h"
 #include "aboutdialog_p.h"
 
 

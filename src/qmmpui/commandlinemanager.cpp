@@ -27,8 +27,8 @@
 #include <iostream>
 #include <qmmp/qmmp.h>
 #include <qmmp/soundcore.h>
-#include <qmmpui/uihelper.h>
-#include <qmmpui/mediaplayer.h>
+#include "uihelper.h"
+#include "mediaplayer.h"
 #include "commandlinemanager.h"
 
 using namespace std;

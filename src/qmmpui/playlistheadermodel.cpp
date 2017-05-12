@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 by Ilya Kotov                                      *
+ *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,7 +21,7 @@
 #include <QApplication>
 #include <QMetaObject>
 #include <qmmp/qmmp.h>
-#include <qmmpui/playlistmanager.h>
+#include "playlistmanager.h"
 #include "columneditor_p.h"
 #include "metadatahelper_p.h"
 #include "playlistheadermodel.h"

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,12 +30,12 @@
 #include <qmmp/soundcore.h>
 #include <qmmp/enginefactory.h>
 #include <qmmp/abstractengine.h>
-#include <qmmpui/generalfactory.h>
-#include <qmmpui/general.h>
-#include <qmmpui/uihelper.h>
-#include <qmmpui/filedialogfactory.h>
-#include <qmmpui/filedialog.h>
-#include <qmmpui/uiloader.h>
+#include "generalfactory.h"
+#include "general.h"
+#include "uihelper.h"
+#include "filedialogfactory.h"
+#include "filedialog.h"
+#include "uiloader.h"
 #include "radioitemdelegate_p.h"
 #include "pluginitem_p.h"
 

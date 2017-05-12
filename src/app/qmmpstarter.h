@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -81,7 +81,7 @@ private:
     QLocalServer *m_server;
     QLocalSocket *m_socket;
     bool m_finished;
-    bool m_exit_code;
+    int m_exit_code;
 #ifdef Q_OS_WIN
     HANDLE m_named_mutex;
 #endif

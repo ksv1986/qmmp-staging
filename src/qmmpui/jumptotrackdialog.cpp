@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -48,7 +48,7 @@ JumpToTrackDialog::JumpToTrackDialog(PlayListModel *model, QWidget* parent)
     m_proxyModel->setSortLocaleAware(true);
     songsListView->setModel(m_proxyModel);
 
-    connect(songsListView,SIGNAL(doubleClicked(QModelIndex)),SLOT(jumpTo(QModelIndex)));
+    connect(songsListView,SIGNAL(activated(QModelIndex)),SLOT(jumpTo(QModelIndex)));
     connect(songsListView,SIGNAL(activated(QModelIndex)),SLOT(accept()));
     connect(songsListView->selectionModel(),SIGNAL(currentRowChanged(QModelIndex, QModelIndex)),
             SLOT(queueUnqueue(QModelIndex, QModelIndex)));

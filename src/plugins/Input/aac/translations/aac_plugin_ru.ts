@@ -26,7 +26,7 @@
     <message>
         <location filename="../aacmetadatamodel.cpp" line="47"/>
         <source>kbps</source>
-        <translation>Кб/с</translation>
+        <translation>кбит/с</translation>
     </message>
     <message>
         <location filename="../aacmetadatamodel.cpp" line="48"/>

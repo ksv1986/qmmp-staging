@@ -64,7 +64,7 @@
     <message>
         <location filename="../vorbismetadatamodel.cpp" line="61"/>
         <source>kbps</source>
-        <translation>Кб/с</translation>
+        <translation>кбит/с</translation>
     </message>
     <message>
         <location filename="../vorbismetadatamodel.cpp" line="62"/>

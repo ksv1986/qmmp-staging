@@ -59,7 +59,7 @@
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="50"/>
         <source>kbps</source>
-        <translation>Кб/с</translation>
+        <translation>кбит/с</translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="66"/>

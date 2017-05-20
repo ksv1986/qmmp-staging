@@ -29,6 +29,9 @@
 #include <QAction>
 #include <QTextStream>
 #include <QStringList>
+#ifdef Q_OS_WIN
+#include <QApplication>
+#endif
 #include <qmmp/qmmp.h>
 #include "actionmanager.h"
 #include "skin.h"
@@ -58,6 +61,10 @@ Skin::Skin (QObject *parent) : QObject (parent)
     m_instance = this;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     QString path = settings.value("Skinned/skin_path").toString();
+#ifdef Q_OS_WIN
+    if(Qmmp::isPortable())
+        path.prepend(QApplication::applicationDirPath() + "/");
+#endif
     if (path.isEmpty() || !QDir(path).exists ())
         path = ":/glare";
     m_double_size = settings.value("Skinned/double_size", false).toBool();
@@ -79,7 +86,18 @@ void Skin::setSkin (const QString& path)
     m_use_cursors = settings.value("Skinned/skin_cursors", false).toBool();
     m_double_size = ACTION(ActionManager::WM_DOUBLE_SIZE)->isChecked();
     m_antialiasing = ACTION(ActionManager::WM_ANTIALIASING)->isChecked();
-    settings.setValue("Skinned/skin_path",path);
+#ifdef Q_OS_WIN
+    if(Qmmp::isPortable() && path.startsWith(QApplication::applicationDirPath()))
+    {
+        QString relativePath = path;
+        relativePath.remove(QApplication::applicationDirPath(), Qt::CaseInsensitive);
+        if(relativePath.startsWith("/"))
+            relativePath.remove(0, 1);
+        settings.setValue("Skinned/skin_path", relativePath);
+    }
+    else
+#endif
+        settings.setValue("Skinned/skin_path",path);
     qDebug ("Skin: using %s",qPrintable(path));
     m_skin_dir = QDir (path);
     //clear old values

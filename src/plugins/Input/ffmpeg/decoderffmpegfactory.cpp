@@ -49,9 +49,9 @@ bool DecoderFFmpegFactory::canDecode(QIODevice *i) const
 {
     QStringList filters = properties().filters;
 
-    AVProbeData  pd;
+    AVProbeData pd;
+    memset(&pd, 0, sizeof(pd));
     uint8_t buf[PROBE_BUFFER_SIZE + AVPROBE_PADDING_SIZE];
-    pd.filename = 0;
     pd.buf_size = i->peek((char*)buf, sizeof(buf) - AVPROBE_PADDING_SIZE);
     pd.buf = buf;
     if(pd.buf_size < PROBE_BUFFER_SIZE)

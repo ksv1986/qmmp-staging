@@ -169,7 +169,8 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
             if(m_disabledNames.contains(item->shortName()))
                 continue;
 
-            fact = item->decoderFactory();
+            if(!(fact = item->decoderFactory()))
+                continue;
 
             if(fact->properties().noInput && !fact->properties().protocols.contains("file"))
                 continue;
@@ -256,13 +257,13 @@ DecoderFactory *Decoder::findByProtocol(const QString &p)
 QList<DecoderFactory *> Decoder::findByFileExtension(const QString &path)
 {
     QList<DecoderFactory*> filtered;
+    DecoderFactory *fact = 0;
     foreach (QmmpPluginCache *item, *m_cache)
     {
         if(m_disabledNames.contains(item->shortName()))
             continue;
 
-        DecoderFactory *fact = item->decoderFactory();
-        if(!fact)
+        if(!(fact = item->decoderFactory()))
             continue;
 
         foreach(QString filter, fact->properties().filters)

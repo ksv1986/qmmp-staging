@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,8 +25,8 @@
 #include "audioparameters.h"
 #include "channelmap.h"
 #include "buffer.h"
+#include "effectfactory.h"
 
-class EffectFactory;
 class QmmpPluginCache;
 
 /*! @brief The Effect class provides the base interface class of audio effects.

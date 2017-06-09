@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -77,31 +77,31 @@ public:
     /*!
      * Returns the current time (in milliseconds).
      */
-    qint64 elapsed();
+    qint64 elapsed() const;
     /*!
      * Returns length in milliseconds
      */
-    qint64 totalTime();
+    qint64 totalTime() const;
     /*!
      * Returns current bitrate (in kbps)
      */
-    int bitrate();
+    int bitrate() const;
     /*!
      * Returns current sample rate (in Hz).
      */
-    int frequency();
+    int frequency() const;
     /*!
      * Returns sample size (in bits).
      */
-    int sampleSize();
+    int sampleSize() const;
     /*!
      * Returns channels number.
      */
-    int channels();
+    int channels() const;
     /*!
      * Returns the current state.
      */
-    Qmmp::State state();
+    Qmmp::State state() const;
     /*!
      * Sends next track request.
      */
@@ -158,7 +158,7 @@ private:
     QMap <Qmmp::MetaData, QString> m_metaData;
     QHash <QString, QString> m_streamInfo;
     Qmmp::State m_state;
-    QMutex m_mutex;
+    mutable QMutex m_mutex;
 };
 
 #endif

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -183,39 +183,39 @@ void StateHandler::dispatchBuffer(int percent)
         emit bufferingProgress(percent);
 }
 
-qint64 StateHandler::elapsed()
+qint64 StateHandler::elapsed() const
 {
     QMutexLocker locker(&m_mutex);
     return m_elapsed;
 }
 
-qint64 StateHandler::totalTime()
+qint64 StateHandler::totalTime() const
 {
     QMutexLocker locker(&m_mutex);
     return m_length;
 }
 
-int StateHandler::bitrate()
+int StateHandler::bitrate() const
 {
     return m_bitrate;
 }
 
-int StateHandler::frequency()
+int StateHandler::frequency() const
 {
     return m_frequency;
 }
 
-int StateHandler::sampleSize()
+int StateHandler::sampleSize() const
 {
     return m_precision;
 }
 
-int StateHandler::channels()
+int StateHandler::channels() const
 {
     return m_channels;
 }
 
-Qmmp::State StateHandler::state()
+Qmmp::State StateHandler::state() const
 {
     return m_state;
 }

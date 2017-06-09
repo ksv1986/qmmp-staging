@@ -222,27 +222,27 @@ bool SoundCore::isMuted() const
     return m_muted;
 }
 
-qint64 SoundCore::elapsed()
+qint64 SoundCore::elapsed() const
 {
     return m_handler->elapsed();
 }
 
-int SoundCore::bitrate()
+int SoundCore::bitrate() const
 {
     return m_handler->bitrate();
 }
 
-quint32 SoundCore::frequency()
+quint32 SoundCore::frequency() const
 {
     return m_handler->frequency();
 }
 
-int SoundCore::sampleSize()
+int SoundCore::sampleSize() const
 {
     return m_handler->sampleSize();
 }
 
-int SoundCore::channels()
+int SoundCore::channels() const
 {
     return m_handler->channels();
 }

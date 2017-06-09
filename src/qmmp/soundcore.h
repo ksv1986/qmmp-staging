@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -87,23 +87,23 @@ public:
     /*!
      * Returns the current time (in milliseconds).
      */
-    qint64 elapsed();
+    qint64 elapsed() const;
     /*!
      * Returns current bitrate (in kbps)
      */
-    int bitrate();
+    int bitrate() const;
     /*!
      * Returns current sample rate (in Hz).
      */
-    quint32 frequency();
+    quint32 frequency() const;
     /*!
      * Returns sample size (in bits).
      */
-    int sampleSize();
+    int sampleSize() const;
     /*!
      * Returns channels number.
      */
-    int channels();
+    int channels() const;
     /*!
      * Returns the current state.
      */

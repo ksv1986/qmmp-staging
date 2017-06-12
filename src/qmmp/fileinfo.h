@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -101,7 +101,6 @@ private:
     QMap <Qmmp::MetaData, QString> m_metaData;
     qint64 m_length;
     QString m_path;
-    QList<QMap<int, int> > map;
 };
 
 #endif

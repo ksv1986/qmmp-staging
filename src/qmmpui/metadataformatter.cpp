@@ -106,6 +106,11 @@ QString MetaDataFormatter::format(const QMap<Qmmp::MetaData, QString> &metaData,
     return evalute(&m_nodes, &metaData, length, track).trimmed();
 }
 
+QString MetaDataFormatter::format(const FileInfo *info, int track) const
+{
+    return format(info->metaData(), info->length(), track);
+}
+
 QString MetaDataFormatter::formatLength(qint64 length, bool hideZero)
 {
     if(length <= 0)

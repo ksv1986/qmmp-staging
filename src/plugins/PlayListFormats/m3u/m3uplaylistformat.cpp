@@ -67,7 +67,9 @@ QString M3UPlaylistFormat::encode(const QList<PlayListTrack*> & contents, const 
         if(!f->url().contains("://") && f->url().startsWith(m3uDir))
         {
             QString p = f->url();
-            p.remove(0, m3uDir.size() + 1);
+            p.remove(0, m3uDir.size());
+            if(p.startsWith("/"))
+                p.remove(0, 1);
             out.append(p);
         }
         else

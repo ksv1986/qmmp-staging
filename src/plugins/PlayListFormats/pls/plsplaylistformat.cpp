@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -64,8 +64,9 @@ QStringList PLSPlaylistFormat::decode(const QString & contents)
     return QStringList();
 }
 
-QString PLSPlaylistFormat::encode(const QList<PlayListTrack *> & contents)
+QString PLSPlaylistFormat::encode(const QList<PlayListTrack *> & contents, const QString &path)
 {
+    Q_UNUSED(path);
     QStringList out;
     out << QString("[playlist]");
     int counter = 1;

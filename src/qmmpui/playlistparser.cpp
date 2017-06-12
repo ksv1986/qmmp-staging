@@ -90,7 +90,7 @@ void PlayListParser::savePlayList(QList<PlayListTrack *> tracks, const QString &
     if (file.open(QIODevice::WriteOnly))
     {
         QTextStream ts(&file);
-        ts << prs->encode(tracks);
+        ts << prs->encode(tracks, QFileInfo(f_name).canonicalFilePath());
         file.close();
     }
     else

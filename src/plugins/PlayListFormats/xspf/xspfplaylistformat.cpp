@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -88,8 +88,9 @@ QStringList XSPFPlaylistFormat::decode(const QString & contents)
 
 // Needs more work - it's better use libSpiff there and put it as plugin.
 
-QString XSPFPlaylistFormat::encode(const QList<PlayListTrack*> & files)
+QString XSPFPlaylistFormat::encode(const QList<PlayListTrack*> & files, const QString &path)
 {
+    Q_UNUSED(path);
     QString out;
     QXmlStreamWriter xml(&out);
     xml.setCodec("UTF-8");

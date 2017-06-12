@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -56,9 +56,10 @@ public:
     virtual QStringList decode(const QString& contents) = 0;
     /*!
      * Takes the list of AbstractPlaylistItem objects, should return string of
-     * encoded playlist file
+     * encoded playlist file.
+     * @param dir Playlist file path (May be used to adjust playlist content).
      */
-    virtual QString encode(const QList<PlayListTrack*>& contents) = 0;
+    virtual QString encode(const QList<PlayListTrack*>& contents, const QString &path) = 0;
 };
 
 Q_DECLARE_INTERFACE(PlayListFormat,"PlayListFormat/1.0")

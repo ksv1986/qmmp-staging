@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,6 +20,7 @@
 
 #include <QFileInfo>
 #include <QtPlugin>
+#include <qmmpui/metadataformatter.h>
 #include "m3uplaylistformat.h"
 
 const PlayListFormatProperties M3UPlaylistFormat::properties() const
@@ -51,15 +52,26 @@ QStringList M3UPlaylistFormat::decode(const QString & contents)
     return out;
 }
 
-QString M3UPlaylistFormat::encode(const QList<PlayListTrack*> & contents)
+QString M3UPlaylistFormat::encode(const QList<PlayListTrack*> & contents, const QString &path)
 {
     QStringList out;
     out << QString("#EXTM3U");
+    MetaDataFormatter formatter("%if(%p,%p - %t,%t)%if(%p|%t,,%f)");
+    QString m3uDir = QFileInfo(path).canonicalPath();
+
     foreach(PlayListTrack* f,contents)
     {
-        QString info = "#EXTINF:" + QString::number(f->length()) + "," + f->value(Qmmp::TITLE);
+        QString info = "#EXTINF:" + QString::number(f->length()) + "," + formatter.format(f);
         out.append(info);
-        out.append(f->url());
+
+        if(!f->url().contains("://") && f->url().startsWith(m3uDir))
+        {
+            QString p = f->url();
+            p.remove(0, m3uDir.size() + 1);
+            out.append(p);
+        }
+        else
+            out.append(f->url());
     }
     return out.join("\n");
 }

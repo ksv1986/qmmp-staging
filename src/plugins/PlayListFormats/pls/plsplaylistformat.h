@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008 by Ilya Kotov                                      *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,7 +37,7 @@ class PLSPlaylistFormat : public QObject, public PlayListFormat
 public:
     const PlayListFormatProperties properties() const;
     QStringList decode(const QString& contents);
-    QString encode(const QList<PlayListTrack*>& contents);
+    QString encode(const QList<PlayListTrack*>& contents, const QString &path);
 
 };
 

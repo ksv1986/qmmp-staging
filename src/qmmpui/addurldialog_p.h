@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,8 +41,7 @@ public:
     static void popup(QWidget* parent ,PlayListModel*);
 
 private slots:
-    void add(const QStringList &urls);
-    void showError(const QString &message);
+    void onFinished(bool ok, const QString &message);
 
 private:
     AddUrlDialog(QWidget *parent);

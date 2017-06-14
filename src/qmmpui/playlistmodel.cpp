@@ -143,26 +143,12 @@ void PlayListModel::add(QList<PlayListTrack *> tracks)
 
 void PlayListModel::add(const QString &path)
 {
-    QStringList paths = PlayListParser::loadPlaylist(path);
-    if(paths.isEmpty())
-        m_loader->add(path);
-    else
-        m_loader->add(paths);
+    m_loader->add(path);
 }
 
 void PlayListModel::add(const QStringList &paths)
 {
-    QStringList urls, pl_urls;
-    foreach(QString path, paths)
-    {
-        pl_urls = PlayListParser::loadPlaylist(path); //is it playlist?
-        if(pl_urls.isEmpty())
-            urls.append(path);
-        else
-            urls.append(pl_urls);
-
-    }
-    m_loader->add(urls);
+    m_loader->add(paths);
 }
 
 void PlayListModel::insert(int index, PlayListTrack *track)
@@ -242,11 +228,7 @@ void PlayListModel::insert(int index, const QStringList &paths)
     else
     {
         PlayListItem *before = m_container->item(index);
-
-        QStringList list = paths;
-        foreach (QString path, paths)
-            list.append(PlayListParser::loadPlaylist(path));
-        m_loader->insert(before, list);
+        m_loader->insert(before, paths);
     }
 }
 
@@ -945,8 +927,12 @@ void PlayListModel::doCurrentVisibleRequest()
 
 void PlayListModel::loadPlaylist(const QString &f_name)
 {
-    QStringList list = PlayListParser::loadPlaylist(f_name);
-    m_loader->add(list);
+    m_loader->add(f_name);
+}
+
+void PlayListModel::loadPlaylist(const QString &fmt, const QByteArray &data)
+{
+    m_loader->addPlayList(fmt, data);
 }
 
 void PlayListModel::savePlaylist(const QString &f_name)

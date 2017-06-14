@@ -46,11 +46,13 @@ PlayListDownloader::PlayListDownloader(QObject *parent) : QObject(parent)
     }
 }
 
-void PlayListDownloader::start(const QUrl &url)
+void PlayListDownloader::start(const QUrl &url, PlayListModel *model)
 {
+    m_model = model;
     if(!PlayListParser::findByUrl(url)) //is it playlist?
     {
-        emit done(QStringList() << QString::fromLatin1(url.toEncoded())); //just send initial URL
+        m_model->add(url.toString());
+        emit finished(true);
         return;
     }
     m_url = url;
@@ -71,7 +73,7 @@ void PlayListDownloader::readResponse(QNetworkReply *reply)
 
     if(reply->error() != QNetworkReply::NoError)
     {
-        emit error(reply->errorString() + " (" + reply->error() + ")");
+        emit finished(false, reply->errorString() + " (" + reply->error() + ")");
         reply->deleteLater();
         return;
     }
@@ -93,6 +95,13 @@ void PlayListDownloader::readResponse(QNetworkReply *reply)
     if(reply == m_getReply)
     {
         m_getReply = 0;
+
+        if(m_model.isNull())
+        {
+            emit finished(true);
+            return;
+        }
+
         QString contentType = reply->header(QNetworkRequest::ContentTypeHeader).toString();
         qDebug("PlayListDownloader: content type: %s", qPrintable(contentType));
         PlayListFormat *fmt = PlayListParser::findByMime(contentType);
@@ -100,12 +109,12 @@ void PlayListDownloader::readResponse(QNetworkReply *reply)
             fmt = PlayListParser::findByUrl(m_url);
         if(fmt)
         {
-            QStringList list = fmt->decode(QString::fromUtf8(reply->readAll()));
-            emit done(list);
+            m_model->loadPlaylist(fmt->properties().shortName, reply->readAll());
+            emit finished(true);
         }
         else
         {
-            emit error(tr("Unsupported playlist format"));
+            emit finished(false, tr("Unsupported playlist format"));
         }
     }
     reply->deleteLater();

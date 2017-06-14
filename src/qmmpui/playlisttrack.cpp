@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -59,7 +59,7 @@ PlayListTrack::PlayListTrack(FileInfo *info) :  QMap<Qmmp::MetaData, QString>(in
     m_track_index = -1;
     m_settings = QmmpUiSettings::instance();
     m_helper = MetaDataHelper::instance();
-    setLength(m_length = info->length());
+    m_length = info->length();
     insert(Qmmp::URL, info->path());
     m_refCount = 0;
     m_sheduledForDeletion = false;
@@ -78,17 +78,23 @@ void PlayListTrack::updateMetaData(const QMap <Qmmp::MetaData, QString> &metaDat
     formatGroup();
 }
 
+void PlayListTrack::updateMetaData(FileInfo *info)
+{
+    m_length = info->length();
+    QMap <Qmmp::MetaData, QString>::operator =(info->metaData());
+    insert(Qmmp::URL, info->path());
+    m_formattedTitles.clear();
+    m_formattedLength.clear();
+    formatGroup();
+}
+
 void PlayListTrack::updateMetaData()
 {
     QList <FileInfo *> list =  MetaDataManager::instance()->createPlayList(value(Qmmp::URL));
     if(!list.isEmpty() && !list.at(0)->path().contains("://"))
     {
         FileInfo *info = list.at(0);
-        m_length = info->length();
-        QMap <Qmmp::MetaData, QString>::operator =(info->metaData());
-        insert(Qmmp::URL, info->path());
-        m_formattedTitles.clear();
-        formatGroup();
+        updateMetaData(info);
     }
     qDeleteAll(list);
 }
@@ -223,7 +229,7 @@ qint64 PlayListTrack::length() const
 
 void PlayListTrack::setLength(qint64 length)
 {
-    m_length = length;
+    m_length = qMax(length, 0LL);
     m_formattedLength.clear();
 }
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,7 +23,6 @@
 #include <QList>
 #include <QDir>
 #include <QApplication>
-#include <QTextStream>
 #include <qmmp/qmmp.h>
 #include "playlistformat.h"
 #include "playlistparser.h"
@@ -32,13 +31,13 @@ QList<PlayListFormat*> *PlayListParser::m_formats = 0;
 
 QList<PlayListFormat *> PlayListParser::formats()
 {
-    checkFormats();
+    loadFormats();
     return *m_formats;
 }
 
 QStringList PlayListParser::nameFilters()
 {
-    checkFormats();
+    loadFormats();
     QStringList filters;
     foreach(PlayListFormat* format, *m_formats)
     {
@@ -47,9 +46,20 @@ QStringList PlayListParser::nameFilters()
     return filters;
 }
 
+bool PlayListParser::isPlayList(const QString &url)
+{
+    foreach (QString filter, nameFilters())
+    {
+        QRegExp r(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
+        if(r.exactMatch(url))
+            return true;
+    }
+    return false;
+}
+
 PlayListFormat *PlayListParser::findByMime(const QString &mime)
 {
-    checkFormats();
+    loadFormats();
     foreach(PlayListFormat* format, *m_formats)
     {
         if(format->properties().contentTypes.contains(mime))
@@ -60,7 +70,7 @@ PlayListFormat *PlayListParser::findByMime(const QString &mime)
 
 PlayListFormat *PlayListParser::findByPath(const QString &filePath)
 {
-    checkFormats();
+    loadFormats();
     foreach(PlayListFormat* format, *m_formats)
     {
         foreach(QString filter, format->properties().filters)
@@ -89,50 +99,65 @@ void PlayListParser::savePlayList(QList<PlayListTrack *> tracks, const QString &
     QFile file(f_name);
     if (file.open(QIODevice::WriteOnly))
     {
-        QTextStream ts(&file);
-        ts << prs->encode(tracks, QFileInfo(f_name).canonicalFilePath());
+        file.write(prs->encode(tracks, QFileInfo(f_name).canonicalFilePath()));
         file.close();
     }
     else
         qWarning("PlayListParser: unable to save playlist, error: %s", qPrintable(file.errorString()));
 }
 
-QStringList PlayListParser::loadPlaylist(const QString &f_name)
+QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &f_name)
 {
-    QStringList list;
     if(!QFile::exists(f_name))
-        return list;
+        return QList<PlayListTrack *>();
     PlayListFormat* prs = PlayListParser::findByPath(f_name);
     if(!prs)
-        return list;
+        return QList<PlayListTrack *>();
 
     QFile file(f_name);
     if (!file.open(QIODevice::ReadOnly))
     {
         qWarning("PlayListParser: unable to open playlist, error: %s", qPrintable(file.errorString()));
-        return list;
+        return QList<PlayListTrack *>();
     }
 
-    list = prs->decode(QTextStream(&file).readAll());
-    if(list.isEmpty())
-        qWarning("PlayListParser: error opening %s",qPrintable(f_name));
+    QList <PlayListTrack*> tracks = prs->decode(file.readAll());
 
-    for (int i = 0; i < list.size(); ++i)
+    if(tracks.isEmpty())
     {
-        if(list.at(i).contains("://"))
+        qWarning("PlayListParser: error opening %s",qPrintable(f_name));
+        return tracks;
+    }
+
+    QString url;
+    foreach (PlayListTrack *t, tracks)
+    {
+        url = t->value(Qmmp::URL);
+
+        if(url.contains("://"))
             continue;
 
-        if (QFileInfo(list.at(i)).isRelative())
-            list[i].prepend(QFileInfo(f_name).canonicalPath () + "/");
+        if(QFileInfo(url).isRelative())
+            url.prepend(QFileInfo(f_name).canonicalPath () + "/");
 
-        list[i].replace("\\","/");
-        list[i].replace("//","/");
+        url.replace("\\","/");
+        url.replace("//","/");
+        t->insert(Qmmp::URL, url);
     }
-    file.close();
-    return list;
+    return tracks;
 }
 
-void PlayListParser::checkFormats()
+QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &fmt, const QByteArray &contents)
+{
+    foreach (PlayListFormat *p, *m_formats)
+    {
+        if(p->properties().shortName == fmt)
+            return p->decode(contents);
+    }
+    return QList<PlayListTrack *>();
+}
+
+void PlayListParser::loadFormats()
 {
     if (m_formats)
         return;

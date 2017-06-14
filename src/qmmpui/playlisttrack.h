@@ -84,6 +84,11 @@ public:
      */
     void updateMetaData(const QMap <Qmmp::MetaData, QString> &metaData);
     /*!
+     *  Updates current metadata.
+     *  @param info Media file information.
+     */
+    void updateMetaData(FileInfo *info);
+    /*!
      * Gets new metadata from file (works for local files only).
      */
     void updateMetaData();

@@ -32,34 +32,57 @@ const PlayListFormatProperties M3UPlaylistFormat::properties() const
     return p;
 }
 
-QStringList M3UPlaylistFormat::decode(const QString & contents)
+QList<PlayListTrack *> M3UPlaylistFormat::decode(const QByteArray &contents)
 {
-    QStringList out;
-    QStringList splitted = contents.split("\n");
+    QList<PlayListTrack*> out;
+    QStringList splitted = QString::fromUtf8(contents).split("\n");
     if(splitted.isEmpty())
-        return QStringList();
+        return out;
+
+    QRegExp extInfRegExp("#EXTINF:(-{0,1}\\d+),(.*) - (.*)");
+    int length = 0;
+    QString artist, title;
+    bool hasExtInf = false;
 
     foreach(QString str, splitted)
     {
-        str = str.trimmed ();
-        if (str.startsWith("#EXTM3U") || str.startsWith("#EXTINF:") || str.isEmpty())
-            continue;//TODO: Let's skip it for now..
-        else if (str.startsWith("#") || str.isEmpty())
+        str = str.trimmed();
+        if(str.startsWith("#EXTM3U") || str.isEmpty())
             continue;
-        else
-            out << str;
+
+        if(extInfRegExp.indexIn(str) > -1)
+        {
+            length = extInfRegExp.cap(1).toInt();
+            artist = extInfRegExp.cap(2);
+            title =  extInfRegExp.cap(3);
+            hasExtInf = true;
+        }
+
+        if(str.startsWith("#"))
+            continue;
+
+        out << new PlayListTrack();
+        out.last()->insert(Qmmp::URL, str);
+
+        if(hasExtInf)
+        {
+            out.last()->setLength(length);
+            out.last()->insert(Qmmp::ARTIST, artist);
+            out.last()->insert(Qmmp::TITLE, title);
+            hasExtInf = false;
+        }
     }
     return out;
 }
 
-QString M3UPlaylistFormat::encode(const QList<PlayListTrack*> & contents, const QString &path)
+QByteArray M3UPlaylistFormat::encode(const QList<PlayListTrack*> &contents, const QString &path)
 {
     QStringList out;
     out << QString("#EXTM3U");
     MetaDataFormatter formatter("%if(%p,%p - %t,%t)%if(%p|%t,,%f)");
     QString m3uDir = QFileInfo(path).canonicalPath();
 
-    foreach(PlayListTrack* f,contents)
+    foreach(PlayListTrack* f, contents)
     {
         QString info = "#EXTINF:" + QString::number(f->length()) + "," + formatter.format(f);
         out.append(info);
@@ -75,7 +98,7 @@ QString M3UPlaylistFormat::encode(const QList<PlayListTrack*> & contents, const 
         else
             out.append(f->url());
     }
-    return out.join("\n");
+    return out.join("\n").toUtf8();
 }
 
 Q_EXPORT_PLUGIN2(m3uplaylistformat,M3UPlaylistFormat)

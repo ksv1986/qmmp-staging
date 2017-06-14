@@ -287,6 +287,8 @@ public:
      * Loads playlist with \b f_name name.
      */
     void loadPlaylist(const QString& f_name);
+
+    void loadPlaylist(const QString &fmt, const QByteArray &data);
     /*!
      * Saves current songs to the playlist with \b f_name name.
      */

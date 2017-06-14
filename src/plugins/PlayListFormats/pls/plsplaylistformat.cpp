@@ -18,8 +18,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QFileInfo>
 #include <QtPlugin>
+#include <QRegExp>
+#include <qmmpui/metadataformatter.h>
 #include "plsplaylistformat.h"
 
 const PlayListFormatProperties PLSPlaylistFormat::properties() const
@@ -31,57 +32,111 @@ const PlayListFormatProperties PLSPlaylistFormat::properties() const
     return p;
 }
 
-QStringList PLSPlaylistFormat::decode(const QString & contents)
+QList<PlayListTrack *> PLSPlaylistFormat::decode(const QByteArray &contents)
 {
-    QStringList out;
-    QStringList splitted = contents.split("\n");
-    if (!splitted.isEmpty())
+    QList<PlayListTrack *> out;
+    QStringList splitted = QString::fromUtf8(contents).split("\n");
+
+    if(splitted.isEmpty())
     {
-        if (splitted.takeAt(0).toLower().contains("[playlist]"))
+        qWarning("PLSPlaylistFormat: error parsing PLS format");
+        return out;
+    }
+
+    if(!splitted.takeFirst().toLower().startsWith("[playlist]"))
+    {
+        qWarning("PLSPlaylistFormat: unknown playlist format");
+        return out;
+    }
+
+    QRegExp fileRegExp("^File(\\d+)=(.+)");
+    QRegExp fullTitleRegExp("^Title(\\d+)=(.+) - (.+)");
+    QRegExp titleRegExp("^Title(\\d+)=(.+)");
+    QRegExp lengthRegExp("^Length(\\d+)=(-{0,1}\\d+)");
+
+    int number = 0;
+    bool error = false;
+
+    foreach (QString line, splitted)
+    {
+        if(fileRegExp.indexIn(line) > -1)
         {
-            foreach(QString str, splitted)
+            if((number = fileRegExp.cap(1).toInt()) > 0)
             {
-                if (str.startsWith("File"))
-                {
-                    QString unverified = str.remove(0,str.indexOf(QChar('=')) + 1);
-                    unverified = unverified.trimmed();
-                    if (unverified.startsWith("http://"))
-                    {
-                        out << unverified;
-                    }
-                    else /*if (QFileInfo(unverified).exists())*/
-                        out << QFileInfo(unverified).absoluteFilePath();
-                    /*else
-                        qWarning("File %s does not exist", qPrintable(unverified));*/
-                }
+                while(number > out.count())
+                    out << new PlayListTrack();
+                out[number - 1]->insert(Qmmp::URL, fileRegExp.cap(2));
             }
-            return out;
+            else
+                error = true;
+        }
+        else if(fullTitleRegExp.indexIn(line) > -1)
+        {
+            if((number = fullTitleRegExp.cap(1).toInt()) > 0)
+            {
+                while(number > out.count())
+                    out << new PlayListTrack();
+                out[number - 1]->insert(Qmmp::ARTIST, fullTitleRegExp.cap(2));
+                out[number - 1]->insert(Qmmp::TITLE, fullTitleRegExp.cap(3));
+            }
+            else
+                error = true;
+        }
+        else if(titleRegExp.indexIn(line) > -1)
+        {
+            if((number = titleRegExp.cap(1).toInt()) > 0)
+            {
+                while(number > out.count())
+                    out << new PlayListTrack();
+                out[number - 1]->insert(Qmmp::TITLE, titleRegExp.cap(2));
+            }
+            else
+                error = true;
+        }
+        else if(lengthRegExp.indexIn(line) > -1)
+        {
+            if((number = lengthRegExp.cap(1).toInt()) > 0)
+            {
+                while(number > out.count())
+                    out << new PlayListTrack();
+                out[number - 1]->setLength(lengthRegExp.cap(2).toInt());
+            }
+            else
+                error = true;
+        }
+
+        if(error)
+        {
+            qWarning("PLSPlaylistFormat: error while parsing line: '%s'", qPrintable(line));
+            qDeleteAll(out);
+            out.clear();
+            break;
         }
     }
-    else
-        qWarning("Error parsing PLS format");
 
-    return QStringList();
+    return out;
 }
 
-QString PLSPlaylistFormat::encode(const QList<PlayListTrack *> & contents, const QString &path)
+QByteArray PLSPlaylistFormat::encode(const QList<PlayListTrack *> &contents, const QString &path)
 {
     Q_UNUSED(path);
+    MetaDataFormatter formatter("%if(%p,%p - %t,%t)%if(%p|%t,,%f)");
     QStringList out;
     out << QString("[playlist]");
     int counter = 1;
-    foreach(PlayListTrack* f,contents)
+    foreach(PlayListTrack *f, contents)
     {
         QString begin = "File" + QString::number(counter) + "=";
         out.append(begin + f->url());
         begin = "Title" + QString::number(counter) + "=";
-        out.append(begin + f->value(Qmmp::TITLE));
+        out.append(begin + formatter.format(f));
         begin = "Length" + QString::number(counter) + "=";
         out.append(begin + QString::number(f->length()));
-        counter ++;
+        counter++;
     }
     out << "NumberOfEntries=" + QString::number(contents.count());
-    return out.join("\n");
+    out << "Version=2";
+    return out.join("\n").toUtf8();
 }
 
 Q_EXPORT_PLUGIN2(plsplaylistformat, PLSPlaylistFormat)

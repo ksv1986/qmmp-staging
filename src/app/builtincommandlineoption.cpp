@@ -147,10 +147,8 @@ QString BuiltinCommandLineOption::executeCommand(const QString &option_string,
         if(!remote_pls_list.isEmpty())
         {
             PlayListDownloader *downloader = new PlayListDownloader(this);
-            connect(downloader, SIGNAL(done(QStringList)), m_model, SLOT(add(QStringList)));
-            connect(downloader, SIGNAL(done(QStringList)), downloader, SLOT(deleteLater()));
-            connect(downloader, SIGNAL(error(QString)), downloader, SLOT(deleteLater()));
-            downloader->start(remote_pls_list.at(0));
+            connect(downloader, SIGNAL(finished(bool,QString)), downloader, SLOT(deleteLater()));
+            downloader->start(remote_pls_list.at(0), m_model);
         }
     }
     else if (option_string == "--play" || option_string == "-p")

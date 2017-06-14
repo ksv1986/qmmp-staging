@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -43,8 +43,8 @@ AddUrlDialog::AddUrlDialog(QWidget *parent) : QDialog(parent)
     m_history = settings.value("URLDialog/history").toStringList();
     urlComboBox->addItems(m_history);
     m_downloader = new PlayListDownloader(this);
-    connect(m_downloader, SIGNAL(done(QStringList)), SLOT(add(QStringList)));
-    connect(m_downloader, SIGNAL(error(QString)), SLOT(showError(QString)));
+    connect(m_downloader, SIGNAL(finished(bool,QString)), SLOT(onFinished(bool,QString)));
+
     if(QmmpUiSettings::instance()->useClipboard())
     {
         QUrl url(QApplication::clipboard()->text().trimmed());
@@ -74,6 +74,19 @@ void AddUrlDialog::popup(QWidget* parent, PlayListModel* model)
     m_instance->raise();
 }
 
+void AddUrlDialog::onFinished(bool ok, const QString &message)
+{
+    if(ok)
+    {
+        QDialog::accept();
+    }
+    else
+    {
+        QMessageBox::warning(this, tr("Error"), message);
+        addButton->setEnabled(true);
+    }
+}
+
 void AddUrlDialog::accept()
 {
     addButton->setEnabled(false);
@@ -98,9 +111,9 @@ void AddUrlDialog::accept()
     m_history.removeAll(s);
     m_history.prepend(s);
 
-    if (s.startsWith("http://")) //try to download playlist
+    if (s.startsWith("http://") || s.startsWith("https://")) //try to download playlist
     {
-        m_downloader->start(QUrl(s));
+        m_downloader->start(QUrl(s), m_model);
         return;
     }
     m_model->add(s);
@@ -110,17 +123,4 @@ void AddUrlDialog::accept()
 void AddUrlDialog::setModel(PlayListModel *m)
 {
     m_model = m;
-}
-
-void AddUrlDialog::add(const QStringList &urls)
-{
-    addButton->setEnabled(true);
-    m_model->add(urls);
-    QDialog::accept();
-}
-
-void AddUrlDialog::showError(const QString &message)
-{
-    QMessageBox::warning(this, tr("Error"), message);
-    addButton->setEnabled(true);
 }

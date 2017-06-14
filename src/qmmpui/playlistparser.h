@@ -39,6 +39,9 @@ public:
      * Returns a list of the supported files name filters, i.e. "*.m3u *.pls"
      */
     static QStringList nameFilters();
+
+    static bool isPlayList(const QString &url);
+
     /*!
      * Returns PlayListFormat pointer which supports mime type \b mime
      * or \b 0 if mime type \b mime is unsupported
@@ -59,17 +62,23 @@ public:
      * @param tracks A list of tracks.
      * @param f_name File name the  playlist.
      */
-    static void savePlayList(QList <PlayListTrack *> tracks, const QString &f_name);
+    static void savePlayList(QList<PlayListTrack *> tracks, const QString &f_name);
     /*!
      * Loads playlist from file \b f_name
      * @param f_name File name.
      * @return A list of URLs or file paths.
      */
-    static QStringList loadPlaylist(const QString &f_name);
+    static QList<PlayListTrack *> loadPlaylist(const QString &f_name);
+
+    static QList<PlayListTrack *> loadPlaylist(const QString &fmt, const QByteArray &contents);
+    /*!
+     * Loads all playlist plugins. Should be called before usage from another thread.
+     */
+    static void loadFormats();
 
 private:
     PlayListParser(){}
-    static void checkFormats();
+
     static QList<PlayListFormat*> *m_formats;
 
 

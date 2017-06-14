@@ -53,13 +53,13 @@ public:
      * Takes raw contents of playlist file, should return string list of
      * ready file pathes to fill the playlist.
      */
-    virtual QStringList decode(const QString& contents) = 0;
+    virtual QList<PlayListTrack*> decode(const QByteArray &contents) = 0;
     /*!
-     * Takes the list of AbstractPlaylistItem objects, should return string of
+     * Takes the list of \b PlayListTrack objects, should return content of
      * encoded playlist file.
-     * @param dir Playlist file path (May be used to adjust playlist content).
+     * @param path Playlist file path (May be used to adjust playlist content).
      */
-    virtual QString encode(const QList<PlayListTrack*>& contents, const QString &path) = 0;
+    virtual QByteArray encode(const QList<PlayListTrack*> &contents, const QString &path) = 0;
 };
 
 Q_DECLARE_INTERFACE(PlayListFormat,"PlayListFormat/1.0")

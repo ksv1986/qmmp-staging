@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,6 +26,7 @@
 #include "fileloader_p.h"
 #include "qmmpuisettings.h"
 #include "playlistitem.h"
+#include "playlistparser.h"
 #include "playlisttrack.h"
 
 FileLoader::FileLoader(QObject *parent) : QThread(parent)
@@ -51,6 +52,62 @@ QList<PlayListTrack *> FileLoader::processFile(const QString &path, QStringList 
     }
     qDeleteAll(infoList);
     return tracks;
+}
+
+void FileLoader::insertPlayList(const QString &fmt, const QByteArray &contents, PlayListItem *before)
+{
+    QList<PlayListTrack *> tracks = PlayListParser::loadPlaylist(fmt, contents);
+
+    while (!tracks.isEmpty() && !m_finished)
+    {
+        PlayListTrack *t = tracks.takeFirst();
+        QList <FileInfo *> infoList = MetaDataManager::instance()->createPlayList(t->url(), m_use_meta);
+        if(infoList.count() != 1) //invalid or unsupported track
+        {
+            qDeleteAll(infoList);
+            infoList.clear();
+            delete t;
+            continue;
+        }
+
+        FileInfo *info = infoList.first();
+        if(!info->metaData(Qmmp::ALBUM).isEmpty() && !info->metaData(Qmmp::ARTIST).isEmpty())
+            t->updateMetaData(infoList.first());
+
+        emit newTracksToInsert(before, QList<PlayListTrack *>() << t);
+        delete info;
+    }
+    //clear remaining tracks
+    qDeleteAll(tracks);
+    tracks.clear();
+}
+
+void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
+{
+    QList<PlayListTrack *> tracks = PlayListParser::loadPlaylist(path);
+
+    while (!tracks.isEmpty() && !m_finished)
+    {
+        PlayListTrack *t = tracks.takeFirst();
+        QList <FileInfo *> infoList = MetaDataManager::instance()->createPlayList(t->url(), m_use_meta);
+        if(infoList.count() != 1) //invalid or unsupported track
+        {
+            qDeleteAll(infoList);
+            infoList.clear();
+            delete t;
+            continue;
+        }
+
+        FileInfo *info = infoList.first();
+        if(!info->metaData(Qmmp::ALBUM).isEmpty() && !info->metaData(Qmmp::ARTIST).isEmpty())
+            t->updateMetaData(infoList.first());
+
+        emit newTracksToInsert(before, QList<PlayListTrack *>() << t);
+        delete info;
+    }
+    //clear remaining tracks
+    qDeleteAll(tracks);
+    tracks.clear();
 }
 
 void FileLoader::addDirectory(const QString& s, PlayListItem *before)
@@ -127,20 +184,31 @@ void FileLoader::run()
         PlayListItem *before = i.before;
         QString path = i.path;
 
-        QFileInfo info(path);
-
-        if(info.isDir())
+        if(!path.isEmpty())
         {
-            addDirectory(path, before);
+            QFileInfo info(path);
 
-        }
-        else if(info.isFile() || path.contains("://"))
-        {
-            QList<PlayListTrack *> tracks = processFile(path);
-            if(!tracks.isEmpty())
+            if(info.isDir())
             {
-                emit newTracksToInsert(before, tracks);
+                addDirectory(path, before);
+
             }
+            else if(info.isFile() && PlayListParser::isPlayList(path))
+            {
+                insertPlayList(path, before);
+            }
+            else if(info.isFile() || path.contains("://"))
+            {
+                QList<PlayListTrack *> tracks = processFile(path);
+                if(!tracks.isEmpty())
+                {
+                    emit newTracksToInsert(before, tracks);
+                }
+            }
+        }
+        else if(!i.playListContent.isEmpty() && !i.playListFormat.isEmpty())
+        {
+            insertPlayList(i.playListFormat, i.playListContent, before);
         }
 
         m_mutex.lock();
@@ -161,6 +229,25 @@ void FileLoader::add(const QString &path)
 void FileLoader::add(const QStringList &paths)
 {
     insert(0, paths);
+}
+
+void FileLoader::addPlayList(const QString &fmt, const QByteArray &data)
+{
+    m_mutex.lock();
+    LoaderTask task;
+    task.before = 0;
+    task.playListFormat = fmt;
+    task.playListContent = data;
+    m_tasks.append(task);
+    m_mutex.unlock();
+    if(!isRunning())
+    {
+        MetaDataManager::instance()->prepareForAnotherThread();
+        PlayListParser::loadFormats();
+        m_filters = MetaDataManager::instance()->nameFilters();
+        m_use_meta = m_settings->useMetadata();
+    }
+    start(QThread::IdlePriority);
 }
 
 void FileLoader::insert(PlayListItem *before, const QString &path)

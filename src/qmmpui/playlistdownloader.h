@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012 by Ilya Kotov                                      *
+ *   Copyright (C) 2012-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,6 +23,8 @@
 
 #include <QObject>
 #include <QUrl>
+#include <QPointer>
+#include "playlistmodel.h"
 
 class QNetworkAccessManager;
 class QNetworkReply;
@@ -41,23 +43,19 @@ public:
 
 signals:
     /*!
-     * Emitted when downloading is finished without errors.
-     * @param urls A list of extracted URLs or argument of the \b PlayListDownloader::start()
-     * function if remote URL doesn't contain playlist.
-     */
-    void done(const QStringList &urls);
-    /*!
-     * Emitted when downloading is finished with error.
+     * Emitted when downloading is finished.
+     * @param ok Result of downloading (if an error occurs, \b ok is set to \b false; otherwise \b ok is set to \b true).
      * @param message Error message.
      */
-    void error(const QString &message);
+    void finished(bool ok, const QString &message = QString());
 
 public slots:
     /*!
-     * Starts playlist downloading
-     * @param url URL of remote playlist
+     * Starts playlist downloading.
+     * @param url URL of remote playlist.
+     * @param model Destination playlist model.
      */
-    void start(const QUrl &url);
+    void start(const QUrl &url, PlayListModel *model);
 
 private slots:
     void readResponse(QNetworkReply *reply);
@@ -67,6 +65,7 @@ private:
     QUrl m_redirect_url, m_url;
     QNetworkReply *m_getReply;
     QByteArray m_ua;
+    QPointer<PlayListModel> m_model;
 };
 
 #endif // PLAYLISTDOWNLOADER_H

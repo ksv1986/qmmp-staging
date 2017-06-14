@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -61,9 +61,11 @@ public:
      * Sets files/directories to load
      */
     void add(const QStringList &paths);
+    void addPlayList(const QString &fmt, const QByteArray &data);
 
     void insert(PlayListItem *before, const QString &path);
     void insert(PlayListItem *before, const QStringList &paths);
+
 
 public slots:
     /*!
@@ -81,6 +83,8 @@ signals:
 private:
     void run();
     QList<PlayListTrack*> processFile(const QString &path, QStringList *ignoredPaths = 0);
+    void insertPlayList(const QString &fmt, const QByteArray &contents, PlayListItem *before);
+    void insertPlayList(const QString &path, PlayListItem *before);
     void addDirectory(const QString &s, PlayListItem *before = 0);
     bool checkRestrictFilters(const QFileInfo &info);
     bool checkExcludeFilters(const QFileInfo &info);
@@ -89,6 +93,8 @@ private:
     {
         QString path;
         PlayListItem *before;
+        QString playListFormat;
+        QByteArray playListContent;
     };
     QQueue <LoaderTask> m_tasks;
     QStringList m_filters;

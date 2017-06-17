@@ -48,8 +48,8 @@ JumpToTrackDialog::JumpToTrackDialog(PlayListModel *model, QWidget* parent)
     m_proxyModel->setSortLocaleAware(true);
     songsListView->setModel(m_proxyModel);
 
-    connect(songsListView,SIGNAL(activated(QModelIndex)),SLOT(jumpTo(QModelIndex)));
-    connect(songsListView,SIGNAL(activated(QModelIndex)),SLOT(accept()));
+    connect(songsListView,SIGNAL(doubleClicked(QModelIndex)),SLOT(jumpTo(QModelIndex)));
+    connect(songsListView,SIGNAL(doubleClicked(QModelIndex)),SLOT(accept()));
     connect(songsListView->selectionModel(),SIGNAL(currentRowChanged(QModelIndex, QModelIndex)),
             SLOT(queueUnqueue(QModelIndex, QModelIndex)));
 
@@ -60,6 +60,7 @@ JumpToTrackDialog::JumpToTrackDialog(PlayListModel *model, QWidget* parent)
     new QShortcut(tr("F5"),this,SLOT(on_refreshPushButton_clicked()));
 
     filterLineEdit->installEventFilter(this);
+    songsListView->installEventFilter(this);
     connect(filterLineEdit, SIGNAL(textChanged(QString)),
             m_proxyModel, SLOT(setFilterFixedString(QString)));
 
@@ -167,6 +168,21 @@ bool JumpToTrackDialog::eventFilter(QObject *o, QEvent *e)
             return true;
         }
         else if(key_event->key() == Qt::Key_Return)
+        {
+            if(index.isValid())
+            {
+                jumpTo(index);
+                accept();
+            }
+            return true;
+        }
+    }
+    else if(o == songsListView && e->type() == QEvent::KeyPress)
+    {
+        QKeyEvent *key_event = static_cast<QKeyEvent *>(e);
+        QModelIndex index = songsListView->currentIndex();
+
+        if(key_event->key() == Qt::Key_Return)
         {
             if(index.isValid())
             {

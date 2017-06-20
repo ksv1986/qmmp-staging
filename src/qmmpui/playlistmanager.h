@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -200,6 +200,10 @@ public slots:
      * This is a convenience function and is the same as calling \b selectedPlayList()->showDetails()
      */
     void showDetails();
+    /*!
+     * This is a convenience function and is the same as calling \b selectedPlayList()->add(path)
+     */
+    void add(const QString &path);
     /*!
      * This is a convenience function and is the same as calling \b selectedPlayList()->add(paths)
      */

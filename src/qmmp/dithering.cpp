@@ -2,7 +2,7 @@
  *  Based on madplay project                                               *
  *                                                                         *
  * Copyright (C) 2000-2004 Robert Leslie <rob@mars.org>                    *
- * Copyright (C) 2016 Ilya Kotov forkotov02@hotmail.ru                     *
+ * Copyright (C) 2016-2017 Ilya Kotov forkotov02@hotmail.ru                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -20,13 +20,14 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include "qmmpsettings.h"
 #include "dithering_p.h"
 
 Dithering::Dithering() : Effect()
 {
     m_lsb = 0.0f;
     m_required = false;
-    m_enabled = false;
+    m_enabled = QmmpSettings::instance()->useDithering();
     m_chan = 2;
     clearHistory();
 }

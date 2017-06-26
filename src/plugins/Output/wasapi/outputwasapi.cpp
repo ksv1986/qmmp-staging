@@ -217,6 +217,14 @@ qint64 OutputWASAPI::writeAudio(unsigned char *data, qint64 len)
         framesToWrite = qMin(framesAvailable, (UINT32)len / m_frameSize);
     }
 
+    if(format() == Qmmp::PCM_S24LE)
+    {
+        for(DWORD i = 0; i < framesToWrite * channels(); ++i)
+        {
+            ((quint32*) data)[i] <<= 8;
+        }
+    }
+
     if((result = m_pRenderClient->GetBuffer(framesToWrite, &pData)) != S_OK)
     {
         qWarning("OutputWASAPI: IAudioClient::GetBuffer failed, error code = 0x%lx", result);

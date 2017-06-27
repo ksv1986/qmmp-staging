@@ -28,9 +28,6 @@
 
 #define QMMP_VISUAL_NODE_SIZE 512 //samples
 
-class Buffer;
-class Decoder;
-class Output;
 class VisualFactory;
 class VisualBuffer;
 
@@ -125,9 +122,6 @@ protected:
     bool takeData(float *left, float *right = 0);
 
 private:
-    Decoder *m_decoder;
-    Output *m_output;
-
     static QList<VisualFactory*> *m_factories;
     static QHash <VisualFactory*, QString> *m_files;
     static void checkFactories();

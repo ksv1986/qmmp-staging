@@ -29,7 +29,6 @@
 #include <QPluginLoader>
 #include "statehandler.h"
 #include "visualfactory.h"
-#include "output.h"
 #include "visualbuffer_p.h"
 #include "visual.h"
 
@@ -37,8 +36,6 @@ Visual::Visual(QWidget *parent, Qt::WindowFlags f) : QWidget(parent, f)
 {
     setAttribute(Qt::WA_DeleteOnClose, true);
     setAttribute(Qt::WA_QuitOnClose, false);
-    m_decoder = 0;
-    m_output = 0;
 }
 
 Visual::~Visual()

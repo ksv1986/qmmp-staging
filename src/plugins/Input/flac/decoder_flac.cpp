@@ -29,9 +29,6 @@
 #include <taglib/xiphcomment.h>
 #include <taglib/tmap.h>
 #include <taglib/id3v2header.h>
-#include <qmmp/buffer.h>
-#include <qmmp/output.h>
-#include <qmmp/statehandler.h>
 #include <QObject>
 #include <QFile>
 #include <QIODevice>

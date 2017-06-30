@@ -88,31 +88,31 @@ static size_t pack_pcm_signed (FLAC__byte *output,
 
 static int flac_decode (void *void_data, unsigned char *buf, int buf_len)
 {
-    DecoderFLAC *dflac = (DecoderFLAC *) void_data;
+    flac_data *data = (flac_data *) void_data;
     unsigned to_copy;
 
-    if (!dflac->data()->sample_buffer_fill)
+    if (!data->sample_buffer_fill)
     {
 
-        if (FLAC__stream_decoder_get_state(dflac->data()->decoder)
+        if (FLAC__stream_decoder_get_state(data->decoder)
                 == FLAC__STREAM_DECODER_END_OF_STREAM)
         {
             return 0;
         }
 
         if (!FLAC__stream_decoder_process_single(
-                    dflac->data()->decoder))
+                    data->decoder))
         {
             return 0;
         }
     }
 
-    to_copy = qMin((unsigned)buf_len, dflac->data()->sample_buffer_fill);
-    memcpy (buf, dflac->data()->sample_buffer, to_copy);
-    memmove (dflac->data()->sample_buffer,
-             dflac->data()->sample_buffer + to_copy,
-             dflac->data()->sample_buffer_fill - to_copy);
-    dflac->data()->sample_buffer_fill -= to_copy;
+    to_copy = qMin((unsigned)buf_len, data->sample_buffer_fill);
+    memcpy (buf, data->sample_buffer, to_copy);
+    memmove (data->sample_buffer,
+             data->sample_buffer + to_copy,
+             data->sample_buffer_fill - to_copy);
+    data->sample_buffer_fill -= to_copy;
     return to_copy;
 }
 
@@ -122,14 +122,13 @@ static FLAC__StreamDecoderReadStatus flac_callback_read (const FLAC__StreamDecod
         size_t *bytes,
         void *client_data)
 {
-    DecoderFLAC *dflac = (DecoderFLAC *) client_data;
-    qint64 res = dflac->data()->input->read((char *)buffer, *bytes);
-    qDebug("%lld", res);
+    flac_data *data = (flac_data *) client_data;
+    qint64 res = data->input->read((char *)buffer, *bytes);
 
     if (res > 0)
     {
         *bytes = res;
-        dflac->data()->read_bytes += res;
+        data->read_bytes += res;
         return FLAC__STREAM_DECODER_READ_STATUS_CONTINUE;
     }
     if (res == 0)
@@ -147,41 +146,40 @@ static FLAC__StreamDecoderWriteStatus flac_callback_write (const FLAC__StreamDec
         const FLAC__int32* const buffer[],
         void *client_data)
 {
-    DecoderFLAC *dflac = (DecoderFLAC *) client_data;
+    flac_data *data = (flac_data *) client_data;
     const unsigned wide_samples = frame->header.blocksize;
-    qDebug("wid %u", wide_samples);
 
-    if (dflac->data()->abort)
+    if (data->abort)
         return FLAC__STREAM_DECODER_WRITE_STATUS_ABORT;
 
     //bitrate calculation
     FLAC__uint64 decode_position = 0;
     if(FLAC__stream_decoder_get_decode_position(d, &decode_position))
     {
-        if(decode_position > dflac->data()->last_decode_position)
+        if(decode_position > data->last_decode_position)
         {
-            dflac->data()->bitrate = (decode_position - dflac->data()->last_decode_position) * 8 * frame->header.sample_rate /
+            data->bitrate = (decode_position - data->last_decode_position) * 8 * frame->header.sample_rate /
                     frame->header.blocksize / 1000;
         }
 
-        dflac->data()->last_decode_position = decode_position;
+        data->last_decode_position = decode_position;
     }
     else
     {
-        dflac->data()->frame_counter += wide_samples;
-        if(dflac->data()->frame_counter * 1000 / frame->header.sample_rate > BITRATE_CALC_TIME_MS)
+        data->frame_counter += wide_samples;
+        if(data->frame_counter * 1000 / frame->header.sample_rate > BITRATE_CALC_TIME_MS)
         {
-            dflac->data()->bitrate = dflac->data()->read_bytes * 8 * frame->header.sample_rate / dflac->data()->frame_counter / 1000;
-            dflac->data()->frame_counter = 0;
-            dflac->data()->read_bytes = 0;
+            data->bitrate = data->read_bytes * 8 * frame->header.sample_rate / data->frame_counter / 1000;
+            data->frame_counter = 0;
+            data->read_bytes = 0;
         }
     }
 
-    dflac->data()->sample_buffer_fill = pack_pcm_signed (
-                                            dflac->data()->sample_buffer,
+    data->sample_buffer_fill = pack_pcm_signed (
+                                            data->sample_buffer,
                                             buffer, wide_samples,
-                                            dflac->data()->channels,
-                                            dflac->data()->bits_per_sample);
+                                            data->channels,
+                                            data->bits_per_sample);
 
     return FLAC__STREAM_DECODER_WRITE_STATUS_CONTINUE;
 }
@@ -190,11 +188,11 @@ static FLAC__StreamDecoderTellStatus flac_callback_tell (const FLAC__StreamDecod
         FLAC__uint64 *offset,
         void *client_data)
 {
-    DecoderFLAC *dflac = (DecoderFLAC *) client_data;
-    if(dflac->data()->input->isSequential())
+    flac_data *data = (flac_data *) client_data;
+    if(data->input->isSequential())
         return FLAC__STREAM_DECODER_TELL_STATUS_UNSUPPORTED;
 
-    *offset = dflac->data()->input->pos ();
+    *offset = data->input->pos ();
     return FLAC__STREAM_DECODER_TELL_STATUS_OK;
 }
 
@@ -202,11 +200,11 @@ static FLAC__StreamDecoderSeekStatus flac_callback_seek (const FLAC__StreamDecod
         FLAC__uint64 offset,
         void *client_data)
 {
-    DecoderFLAC *dflac = (DecoderFLAC *) client_data;
-    if(dflac->data()->input->isSequential())
+    flac_data *data = (flac_data *) client_data;
+    if(data->input->isSequential())
         return FLAC__STREAM_DECODER_SEEK_STATUS_UNSUPPORTED;
 
-    return dflac->data()->input->seek(offset)
+    return data->input->seek(offset)
            ? FLAC__STREAM_DECODER_SEEK_STATUS_OK
            : FLAC__STREAM_DECODER_SEEK_STATUS_ERROR;
 }
@@ -215,11 +213,11 @@ static FLAC__StreamDecoderLengthStatus flac_callback_length (const FLAC__StreamD
         FLAC__uint64 *stream_length,
         void *client_data)
 {
-    DecoderFLAC *dflac = (DecoderFLAC *) client_data;
-    if(dflac->data()->input->isSequential())
+    flac_data *data = (flac_data *) client_data;
+    if(data->input->isSequential())
         return FLAC__STREAM_DECODER_LENGTH_STATUS_UNSUPPORTED;
 
-    *stream_length = dflac->data()->input->size();
+    *stream_length = data->input->size();
     return FLAC__STREAM_DECODER_LENGTH_STATUS_OK;
 }
 
@@ -227,28 +225,28 @@ static void flac_callback_metadata (const FLAC__StreamDecoder *,
                                     const FLAC__StreamMetadata *metadata,
                                     void *client_data)
 {
-    DecoderFLAC *dflac = (DecoderFLAC *) client_data;
+    flac_data *data = (flac_data *) client_data;
 
     if (metadata->type == FLAC__METADATA_TYPE_STREAMINFO)
     {
         qDebug ("DecoderFLAC: getting metadata info");
 
-        dflac->data()->total_samples =
+        data->total_samples =
             (unsigned)(metadata->data.stream_info.total_samples
                        & 0xffffffff);
-        dflac->data()->bits_per_sample =
+        data->bits_per_sample =
             metadata->data.stream_info.bits_per_sample;
-        dflac->data()->channels = metadata->data.stream_info.channels;
-        dflac->data()->sample_rate = metadata->data.stream_info.sample_rate;
-        dflac->data()->length = dflac->data()->total_samples * 1000 / dflac->data()->sample_rate;
+        data->channels = metadata->data.stream_info.channels;
+        data->sample_rate = metadata->data.stream_info.sample_rate;
+        data->length = data->total_samples * 1000 / data->sample_rate;
 
-        if(metadata->data.stream_info.total_samples > 0 && dflac->data()->length > 0)
+        if(metadata->data.stream_info.total_samples > 0 && data->length > 0)
         {
-            dflac->data()->bitrate = dflac->data()->input->size() * 8 /  dflac->data()->length;
+            data->bitrate = data->input->size() * 8 /  data->length;
         }
         else
         {
-            dflac->data()->bitrate = 0;
+            data->bitrate = 0;
         }
     }
 }
@@ -273,7 +271,7 @@ DecoderFLAC::DecoderFLAC(const QString &path, QIODevice *i)
     m_path = path;
     m_data = new flac_data;
     m_data->decoder = NULL;
-    data()->input = i;
+    m_data->input = i;
     m_parser = 0;
     length_in_bytes = 0;
     m_totalBytes = 0;
@@ -287,11 +285,11 @@ DecoderFLAC::DecoderFLAC(const QString &path, QIODevice *i)
 DecoderFLAC::~DecoderFLAC()
 {
     deinit();
-    if (data())
+    if (m_data)
     {
-        if (data()->decoder)
-            FLAC__stream_decoder_delete (data()->decoder);
-        delete data();
+        if (m_data->decoder)
+            FLAC__stream_decoder_delete(m_data->decoder);
+        delete m_data;
         m_data = 0;
     }
     if(m_buf)
@@ -301,7 +299,7 @@ DecoderFLAC::~DecoderFLAC()
 
 bool DecoderFLAC::initialize()
 {
-    if (!data()->input)
+    if (!m_data->input)
     {
         if (m_path.startsWith("flac://")) //embeded cue track
         {
@@ -323,8 +321,8 @@ bool DecoderFLAC::initialize()
                     qWarning("DecoderFLAC: invalid cuesheet xiph comment");
                     return false;
                 }
-                data()->input = new QFile(p);
-                data()->input->open(QIODevice::ReadOnly);
+                m_data->input = new QFile(p);
+                m_data->input->open(QIODevice::ReadOnly);
                 if(xiph_comment->contains("DISCNUMBER") && !xiph_comment->fieldListMap()["DISCNUMBER"].isEmpty())
                 {
                     TagLib::StringList fld = xiph_comment->fieldListMap()["DISCNUMBER"];
@@ -350,7 +348,7 @@ bool DecoderFLAC::initialize()
         }
     }
 
-    if (!data()->input->isOpen())
+    if (!m_data->input->isOpen())
     {
         qWarning("DecoderFLAC: unable to open input file");
         return false;
@@ -371,15 +369,15 @@ bool DecoderFLAC::initialize()
     }
     char buf[500];
     //skip id3v2
-    data()->input->peek(buf, sizeof(buf));
+    m_data->input->peek(buf, sizeof(buf));
     ulong id3v2_size = findID3v2(buf, sizeof(buf));
     if(id3v2_size)
     {
         qDebug("DecoderFLAC: skipping id3v2 tag (%lu bytes)", id3v2_size);
-        data()->input->seek(id3v2_size);
+        m_data->input->seek(id3v2_size);
     }
-    data()->input->peek(buf,sizeof(buf));
-    data()->input->seek(0);
+    m_data->input->peek(buf,sizeof(buf));
+    m_data->input->seek(0);
     qDebug("DecoderFLAC: setting callbacks");
     if(!memcmp(buf, "OggS", 4))
     {
@@ -398,7 +396,7 @@ bool DecoderFLAC::initialize()
                 flac_callback_write,
                 flac_callback_metadata,
                 flac_callback_error,
-                this) != FLAC__STREAM_DECODER_INIT_STATUS_OK)
+                m_data) != FLAC__STREAM_DECODER_INIT_STATUS_OK)
         {
             return false;
         }
@@ -416,7 +414,7 @@ bool DecoderFLAC::initialize()
                 flac_callback_write,
                 flac_callback_metadata,
                 flac_callback_error,
-                this) != FLAC__STREAM_DECODER_INIT_STATUS_OK)
+                m_data) != FLAC__STREAM_DECODER_INIT_STATUS_OK)
         {
             return false;
         }
@@ -429,29 +427,29 @@ bool DecoderFLAC::initialize()
     }
 
     if (!FLAC__stream_decoder_process_until_end_of_metadata(
-                data()->decoder))
+                m_data->decoder))
     {
         return false;
     }
 
-    ChannelMap chmap = findChannelMap(data()->channels);
+    ChannelMap chmap = findChannelMap(m_data->channels);
     if(chmap.isEmpty())
     {
-        qWarning("DecoderFLAC: unsupported number of channels: %d", data()->channels);
+        qWarning("DecoderFLAC: unsupported number of channels: %d", m_data->channels);
         return false;
     }
 
-    switch(data()->bits_per_sample)
+    switch(m_data->bits_per_sample)
     {
     case 8:
-        configure(data()->sample_rate, chmap, Qmmp::PCM_S8);
+        configure(m_data->sample_rate, chmap, Qmmp::PCM_S8);
         break;
     case 16:
-        configure(data()->sample_rate, chmap, Qmmp::PCM_S16LE);
+        configure(m_data->sample_rate, chmap, Qmmp::PCM_S16LE);
         break;
     case 24:
     case 32:
-        configure(data()->sample_rate, chmap, Qmmp::PCM_S32LE);
+        configure(m_data->sample_rate, chmap, Qmmp::PCM_S32LE);
         break;
     default:
         return false;
@@ -483,12 +481,12 @@ qint64 DecoderFLAC::totalTime() const
 {
     if(m_parser)
         return m_length;
-    return data()->length;
+    return m_data->length;
 }
 
 int DecoderFLAC::bitrate() const
 {
-    return data()->bitrate;
+    return m_data->bitrate;
 }
 
 void DecoderFLAC::seek(qint64 time)
@@ -498,12 +496,12 @@ void DecoderFLAC::seek(qint64 time)
                    audioParameters().sampleSize() * time/1000;
     if(m_parser)
         time += m_offset;
-    FLAC__uint64 target_sample = FLAC__uint64(time * data()->total_samples /data()->length);
-    FLAC__stream_decoder_seek_absolute(data()->decoder, target_sample);
+    FLAC__uint64 target_sample = FLAC__uint64(time * m_data->total_samples / m_data->length);
+    FLAC__stream_decoder_seek_absolute(m_data->decoder, target_sample);
 
 }
 
-qint64 DecoderFLAC::read(unsigned char *data, qint64 size)
+qint64 DecoderFLAC::read(unsigned char *buf, qint64 size)
 {
     if(m_parser)
     {
@@ -515,7 +513,7 @@ qint64 DecoderFLAC::read(unsigned char *data, qint64 size)
         if(m_buf) //read remaining data first
         {
             len = qMin(m_buf_size, size);
-            memmove(data, m_buf, len);
+            memmove(buf, m_buf, len);
             if(size >= m_buf_size)
             {
                 delete[] m_buf;
@@ -526,7 +524,7 @@ qint64 DecoderFLAC::read(unsigned char *data, qint64 size)
                 memmove(m_buf, m_buf + len, size - len);
         }
         else
-            len = flac_decode (this, data, size);
+            len = flac_decode (m_data, buf, size);
 
         if(len <= 0) //end of file
             return 0;
@@ -545,22 +543,22 @@ qint64 DecoderFLAC::read(unsigned char *data, qint64 size)
             delete[] m_buf;
         m_buf_size = len - len2;
         m_buf = new char[m_buf_size];
-        memmove(m_buf, data + len2, m_buf_size);
+        memmove(m_buf, buf + len2, m_buf_size);
         return len2;
     }
-    return flac_decode (this, data, size);
+    return flac_decode (m_data, buf, size);
 }
 
 void DecoderFLAC::deinit()
 {
-    if (data()->decoder)
-        FLAC__stream_decoder_finish (data()->decoder);
+    if (m_data->decoder)
+        FLAC__stream_decoder_finish (m_data->decoder);
 
-    if (!input() && data()->input) //delete internal input only
+    if (!input() && m_data->input) //delete internal input only
     {
-        data()->input->close();
-        delete data()->input;
-        data()->input = 0;
+        m_data->input->close();
+        delete m_data->input;
+        m_data->input = 0;
     };
     if(m_parser)
         delete m_parser;

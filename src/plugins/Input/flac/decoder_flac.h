@@ -73,16 +73,6 @@ public:
     const QString nextURL() const;
     void next();
 
-    struct flac_data *data()
-    {
-        return m_data;
-    }
-
-    const struct flac_data *data() const
-    {
-        return m_data;
-    }
-
 private:
 
     // helper functions

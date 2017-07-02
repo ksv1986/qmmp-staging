@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>ActionManager</name>
     <message>
@@ -817,7 +817,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="541"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>

@@ -184,6 +184,7 @@ void ConfigDialog::loadPluginsInfo()
         load transport plugin information
      */
     QTreeWidgetItem *item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Transports"));
+    item->setFirstColumnSpanned(true);
     foreach(InputSourceFactory *factory, InputSource::factories())
     {
         new PluginItem (item, factory,  InputSource::file(factory));
@@ -194,6 +195,7 @@ void ConfigDialog::loadPluginsInfo()
         load input plugins information
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Decoders"));
+    item->setFirstColumnSpanned(true);
     foreach(DecoderFactory *factory, Decoder::factories())
     {
         new PluginItem (item, factory,  Decoder::file(factory));
@@ -204,6 +206,7 @@ void ConfigDialog::loadPluginsInfo()
         load audio engines information
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Engines"));
+    item->setFirstColumnSpanned(true);
     foreach(EngineFactory *factory, AbstractEngine::factories())
     {
         new PluginItem (item, factory,  AbstractEngine::file(factory));
@@ -214,6 +217,7 @@ void ConfigDialog::loadPluginsInfo()
         load effect plugin information
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Effects"));
+    item->setFirstColumnSpanned(true);
     foreach(EffectFactory *factory, Effect::factories())
     {
         new PluginItem (item, factory, Effect::file(factory));
@@ -224,6 +228,7 @@ void ConfigDialog::loadPluginsInfo()
         load visual plugin information
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Visualization"));
+    item->setFirstColumnSpanned(true);
     foreach(VisualFactory *factory, Visual::factories())
     {
         new PluginItem (item, factory, Visual::file(factory));
@@ -234,6 +239,7 @@ void ConfigDialog::loadPluginsInfo()
         load general plugin information
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("General"));
+    item->setFirstColumnSpanned(true);
     foreach(GeneralFactory *factory, General::factories())
     {
         new PluginItem (item, factory, General::file(factory));
@@ -244,6 +250,7 @@ void ConfigDialog::loadPluginsInfo()
         load output plugins information
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Output"));
+    item->setFirstColumnSpanned(true);
     foreach(OutputFactory *factory, Output::factories())
     {
         new PluginItem (item, factory, Output::file(factory));
@@ -254,6 +261,7 @@ void ConfigDialog::loadPluginsInfo()
         load file dialogs information
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("File Dialogs"));
+    item->setFirstColumnSpanned(true);
     foreach(FileDialogFactory *factory, FileDialog::factories())
     {
         new PluginItem (item, factory, FileDialog::file(factory));
@@ -264,6 +272,7 @@ void ConfigDialog::loadPluginsInfo()
         load user interfaces information
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("User Interfaces"));
+    item->setFirstColumnSpanned(true);
     foreach(UiFactory *factory, UiLoader::factories())
     {
         new PluginItem (item, factory, UiLoader::file(factory));

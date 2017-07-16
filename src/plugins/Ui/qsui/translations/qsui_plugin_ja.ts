@@ -576,17 +576,22 @@
 <context>
     <name>FileSystemBrowser</name>
     <message>
-        <location filename="../filesystembrowser.cpp" line="67"/>
+        <location filename="../filesystembrowser.cpp" line="95"/>
         <source>Add to Playlist</source>
         <translation>プレイリストに追加</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="135"/>
+        <location filename="../filesystembrowser.cpp" line="99"/>
+        <source>Quick Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../filesystembrowser.cpp" line="173"/>
         <source>Select Directory</source>
         <translation>ディレクトリーを選択</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="70"/>
+        <location filename="../filesystembrowser.cpp" line="97"/>
         <source>Change Directory</source>
         <translation>ディレクトリーを変更</translation>
     </message>

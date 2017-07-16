@@ -583,7 +583,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="99"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Быстрый поиск</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="173"/>

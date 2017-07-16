@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,6 +26,9 @@
 class QFileSystemModel;
 class QModelIndex;
 class QListView;
+class QAction;
+class QLineEdit;
+class FileSystemFilterProxyModel;
 
 namespace Utils {
    class ElidingLabel;
@@ -48,13 +51,17 @@ private slots:
     void onListViewActivated(const QModelIndex &index);
     void addToPlayList();
     void selectDirectory();
+    void onFilterLineEditTextChanged(const QString &str);
 
 private:
     void setCurrentDirectory(const QString &path);
     bool m_update;
     Utils::ElidingLabel *m_label;
-    QFileSystemModel *m_model;
+    QFileSystemModel *m_fileSystemModel;
     QListView *m_listView;
+    FileSystemFilterProxyModel  *m_proxyModel;
+    QLineEdit *m_filterLineEdit;
+    QAction *m_showFilterAction;
 
 };
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,11 +19,13 @@
  ***************************************************************************/
 
 #include <QFileSystemModel>
+#include <QSortFilterProxyModel>
 #include <QListView>
 #include <QVBoxLayout>
 #include <QSettings>
 #include <QAction>
 #include <QApplication>
+#include <QLineEdit>
 #include <qmmp/metadatamanager.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/filedialog.h>
@@ -31,6 +33,22 @@
 #include <qmmp/qmmp.h>
 #include "elidinglabel.h"
 #include "filesystembrowser.h"
+
+class FileSystemFilterProxyModel : public QSortFilterProxyModel
+{
+public:
+    FileSystemFilterProxyModel(QObject *parent) : QSortFilterProxyModel(parent) {}
+
+protected:
+    virtual bool filterAcceptsRow(
+            int source_row, const QModelIndex &source_parent) const{
+        QFileSystemModel *sm = qobject_cast<QFileSystemModel*>(sourceModel());
+        if (source_parent == sm->index(sm->rootPath())) {
+            return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
+        }
+        return true;
+    }
+};
 
 FileSystemBrowser::FileSystemBrowser(QWidget *parent) :
     QWidget(parent)
@@ -47,29 +65,45 @@ FileSystemBrowser::FileSystemBrowser(QWidget *parent) :
     m_label->setContentsMargins(5,5,5,0);
     m_label->setMargin(0);
 
+    m_filterLineEdit = new QLineEdit(this);
+    m_filterLineEdit->setContentsMargins(5,5,5,0);
+    m_filterLineEdit->setVisible(false);
+
     QVBoxLayout *layout = new QVBoxLayout();
     layout->setContentsMargins(0,0,0,0);
     layout->addWidget(m_label);
+    layout->addWidget(m_filterLineEdit);
     layout->addWidget(m_listView);
     setLayout(layout);
 
-    m_model = new QFileSystemModel(this);
-    m_model->setReadOnly(true);
-    m_model->setNameFilterDisables(false);
+    m_fileSystemModel = new QFileSystemModel(this);
+    m_fileSystemModel->setReadOnly(true);
+    m_fileSystemModel->setNameFilterDisables(false);
 #if QT_VERSION >= 0x040700
-    m_model->setFilter(QDir::AllDirs | QDir::Files | QDir::NoDot);
+    m_fileSystemModel->setFilter(QDir::AllDirs | QDir::Files | QDir::NoDot);
 #else
-    m_model->setFilter(QDir::AllDirs | QDir::Files);
+    m_fileSystemModel->setFilter(QDir::AllDirs | QDir::Files);
 #endif
-    m_listView->setModel(m_model);
+
+    m_proxyModel = new  FileSystemFilterProxyModel(this);
+    m_proxyModel->setDynamicSortFilter(true);
+    m_proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    m_proxyModel->setSourceModel(m_fileSystemModel);
+    m_listView->setModel(m_proxyModel);
 
     setContextMenuPolicy(Qt::ActionsContextMenu);
     QAction *addToPlaylistAction = new QAction(tr("Add to Playlist"), this);
-    connect(addToPlaylistAction, SIGNAL(triggered()), SLOT(addToPlayList()));
     addAction(addToPlaylistAction);
     QAction *selectDirAction = new QAction(tr("Change Directory"), this);
-    connect(selectDirAction, SIGNAL(triggered()), SLOT(selectDirectory()));
     addAction(selectDirAction);
+    addAction(m_showFilterAction = new QAction(tr("Quick Search"), this));
+    m_showFilterAction->setCheckable(true);
+
+    connect(selectDirAction, SIGNAL(triggered()), SLOT(selectDirectory()));
+    connect(addToPlaylistAction, SIGNAL(triggered()), SLOT(addToPlayList()));
+    connect(m_showFilterAction, SIGNAL(toggled(bool)), m_filterLineEdit, SLOT(setVisible(bool)));
+    connect(m_showFilterAction, SIGNAL(triggered()), m_filterLineEdit, SLOT(clear()));
+    connect(m_filterLineEdit, SIGNAL(textChanged(QString)), SLOT(onFilterLineEditTextChanged(QString)));
 
     readSettings();
 }
@@ -78,7 +112,8 @@ FileSystemBrowser::~FileSystemBrowser()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
-    settings.setValue("fsbrowser_current_dir", m_model->rootDirectory().canonicalPath());
+    settings.setValue("fsbrowser_current_dir", m_fileSystemModel->rootDirectory().canonicalPath());
+    settings.setValue("fsbrowser_quick_search", m_showFilterAction->isChecked());
     settings.endGroup();
 }
 
@@ -89,11 +124,11 @@ void FileSystemBrowser::readSettings()
     if(!m_update)
     {
         m_update = true;
-        setCurrentDirectory(settings.value("fsbrowser_current_dir",
-                                           QDir::homePath()).toString());
+        setCurrentDirectory(settings.value("fsbrowser_current_dir", QDir::homePath()).toString());
+        m_showFilterAction->setChecked(settings.value("fsbrowser_quick_search", false).toBool());
     }
     settings.endGroup();
-    m_model->setNameFilters(MetaDataManager::instance()->nameFilters());
+    m_fileSystemModel->setNameFilters(MetaDataManager::instance()->nameFilters());
 }
 
 void FileSystemBrowser::onListViewActivated(const QModelIndex &index)
@@ -101,17 +136,19 @@ void FileSystemBrowser::onListViewActivated(const QModelIndex &index)
     if (!index.isValid())
         return;
 
-    QString name = m_model->fileName(index);
+    QModelIndex sourceIndex = m_proxyModel->mapToSource(index);
+
+    QString name = m_fileSystemModel->fileName(sourceIndex);
 
     if(name == "..")
     {
-        setCurrentDirectory(m_model->fileInfo(index).absoluteFilePath());
+        setCurrentDirectory(m_fileSystemModel->fileInfo(sourceIndex).absoluteFilePath());
     }
-    else if(m_model->isDir(index))
+    else if(m_fileSystemModel->isDir(sourceIndex))
     {
-        QFileInfo info = m_model->fileInfo(index);
+        QFileInfo info = m_fileSystemModel->fileInfo(sourceIndex);
         if(info.isExecutable() && info.isReadable())
-            setCurrentDirectory(m_model->filePath(index));
+            setCurrentDirectory(m_fileSystemModel->filePath(sourceIndex));
     }
 }
 
@@ -122,19 +159,25 @@ void FileSystemBrowser::addToPlayList()
         if(!index.isValid())
             continue;
 
-        QString name = m_model->fileName(index);
+        QModelIndex sourceIndex = m_proxyModel->mapToSource(index);
+        QString name = m_fileSystemModel->fileName(sourceIndex);
         if(name == "..")
             continue;
-        PlayListManager::instance()->selectedPlayList()->add(m_model->filePath(index));
+        PlayListManager::instance()->selectedPlayList()->add(m_fileSystemModel->filePath(sourceIndex));
     }
 }
 
 void FileSystemBrowser::selectDirectory()
 {
     QString dir = FileDialog::getExistingDirectory(qApp->activeWindow(),
-                                                   tr("Select Directory"), m_model->rootDirectory().canonicalPath());
+                                                   tr("Select Directory"), m_fileSystemModel->rootDirectory().canonicalPath());
     if(!dir.isEmpty())
         setCurrentDirectory(dir);
+}
+
+void FileSystemBrowser::onFilterLineEditTextChanged(const QString &str)
+{
+    m_proxyModel->setFilterFixedString(str);
 }
 
 void FileSystemBrowser::setCurrentDirectory(const QString &path)
@@ -142,11 +185,13 @@ void FileSystemBrowser::setCurrentDirectory(const QString &path)
     if(path.isEmpty())
         return;
 
-    QModelIndex index = m_model->setRootPath(QDir(path).exists() ? path : QDir::homePath());
+    m_filterLineEdit->clear();
+
+    QModelIndex index = m_fileSystemModel->setRootPath(QDir(path).exists() ? path : QDir::homePath());
     if(index.isValid())
     {
-        m_listView->setRootIndex(index);
-        m_label->setText(QDir(m_model->rootPath()).dirName());
+        m_listView->setRootIndex(m_proxyModel->mapFromSource(index));
+        m_label->setText(QDir(m_fileSystemModel->rootPath()).dirName());
     }
     else
         m_label->clear();

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -117,6 +117,7 @@ public:
         QString title;
         QString uid;
         QStringList actionNames;
+        QSize iconSize;
     };
 
     QAction *action(int type);

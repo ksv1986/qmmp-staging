@@ -29,6 +29,7 @@
 #include "shortcutitem.h"
 #include "shortcutdialog.h"
 #include "popupsettings.h"
+#include "toolbareditor.h"
 #include "qsuisettings.h"
 
 QSUISettings::QSUISettings(QWidget *parent) : QWidget(parent)
@@ -36,6 +37,14 @@ QSUISettings::QSUISettings(QWidget *parent) : QWidget(parent)
     m_ui.setupUi(this);
     //setup icons
     m_ui.popupTemplateButton->setIcon(QIcon::fromTheme("configure"));
+    m_ui.customizeToolBarButton->setIcon(QIcon::fromTheme("configure"));
+    //icon sizes
+    m_ui.toolBarIconSizeComboBox->addItem(tr("Default"), -1);
+    m_ui.toolBarIconSizeComboBox->addItem(tr("16x16"), 16);
+    m_ui.toolBarIconSizeComboBox->addItem(tr("22x22"), 22);
+    m_ui.toolBarIconSizeComboBox->addItem(tr("32x32"), 32);
+    m_ui.toolBarIconSizeComboBox->addItem(tr("48x48"), 48);
+    m_ui.toolBarIconSizeComboBox->addItem(tr("64x64"), 64);
     //load settings
     readSettings();
     loadFonts();
@@ -127,6 +136,21 @@ void QSUISettings::on_popupTemplateButton_clicked()
     p->deleteLater();
 }
 
+void QSUISettings::on_customizeToolBarButton_clicked()
+{
+    ToolBarEditor editor(this);
+    editor.exec();
+}
+
+void QSUISettings::on_resetFontsButton_clicked()
+{
+    QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
+    settings.remove("Simple/pl_font");
+    settings.remove("Simple/pl_tabs_font");
+    settings.remove("Simple/pl_header_font");
+    loadFonts();
+}
+
 void QSUISettings::readSettings()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
@@ -170,6 +194,9 @@ void QSUISettings::readSettings()
     m_ui.plTextHlCurrentColor->setColor(settings.value("pl_hl_text_color", highlighted).toString());
     m_ui.plGrBgColor->setColor(settings.value("pl_group_bg", group_bg).toString());
     m_ui.plGrTextColor->setColor(settings.value("pl_group_text", group_text).toString());
+    //toolbar
+    int index = m_ui.toolBarIconSizeComboBox->findData(settings.value("toolbar_icon_size", -1).toInt());
+    m_ui.toolBarIconSizeComboBox->setCurrentIndex(index > 0 ? index : 0);
     settings.endGroup();
 }
 
@@ -207,16 +234,9 @@ void QSUISettings::writeSettings()
     settings.setValue("pl_tabs_font", m_ui.tabsFontLabel->font().toString());
     settings.setValue("pl_header_font", m_ui.columnFontLabel->font().toString());
     settings.setValue("use_system_fonts", m_ui.systemFontsCheckBox->isChecked());
+    int index = m_ui.toolBarIconSizeComboBox->currentIndex();
+    settings.setValue("toolbar_icon_size", m_ui.toolBarIconSizeComboBox->itemData(index));
     settings.endGroup();
-}
-
-void QSUISettings::on_resetFontsButton_clicked()
-{
-    QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    settings.remove("Simple/pl_font");
-    settings.remove("Simple/pl_tabs_font");
-    settings.remove("Simple/pl_header_font");
-    loadFonts();
 }
 
 void QSUISettings::addWindowTitleString(const QString &str)

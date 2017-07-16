@@ -42,6 +42,7 @@ private slots:
     void on_columnFontButton_clicked();
     void on_tabsFontButton_clicked();
     void on_popupTemplateButton_clicked();
+    void on_customizeToolBarButton_clicked();
     void on_resetFontsButton_clicked();
     void addWindowTitleString(const QString &str);
 

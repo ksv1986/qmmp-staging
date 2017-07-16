@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,6 +23,7 @@
 #include <QIcon>
 #include <QFile>
 #include <QApplication>
+#include <QStyle>
 #include <QWidgetAction>
 #include <qmmp/qmmp.h>
 #include "actionmanager.h"
@@ -237,7 +238,7 @@ QToolBar *ActionManager::createToolBar(ActionManager::ToolBarInfo info, QWidget 
     QToolBar *toolBar = new QToolBar(info.title, parent);
     updateToolBar(toolBar, info);
     toolBar->setProperty("uid", info.uid);
-    toolBar->setIconSize(QSize(16,16));
+    toolBar->setIconSize(info.iconSize);
     toolBar->setObjectName("Toolbar" + info.uid);
     return toolBar;
 }
@@ -245,6 +246,7 @@ QToolBar *ActionManager::createToolBar(ActionManager::ToolBarInfo info, QWidget 
 void ActionManager::updateToolBar(QToolBar *toolBar, ActionManager::ToolBarInfo info)
 {
     toolBar->clear();
+    toolBar->setIconSize(info.iconSize);
     foreach (QString name, info.actionNames)
     {
         if(name == "separator")
@@ -284,6 +286,9 @@ QList<ActionManager::ToolBarInfo> ActionManager::readToolBarSettings() const
 {
     QList<ToolBarInfo> list;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    int iconSize = settings.value("Simple/toolbar_icon_size", -1).toInt();
+    if(iconSize <= 0)
+        iconSize = qApp->style()->pixelMetric(QStyle::PM_ToolBarIconSize);
     int size = settings.beginReadArray("SimpleUiToolbars");
     for(int i = 0; i < size; ++i)
     {
@@ -292,6 +297,7 @@ QList<ActionManager::ToolBarInfo> ActionManager::readToolBarSettings() const
         info.title = settings.value("title").toString();
         info.actionNames = settings.value("actions").toStringList();
         info.uid = settings.value("uid").toString();
+        info.iconSize = QSize(iconSize, iconSize);
         list.append(info);
     }
     settings.endArray();

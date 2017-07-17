@@ -143,9 +143,9 @@ cmake ./ -DCMAKE_INSTALL_PREFIX=другой_путь
 Модули OSS3 и UDisks устарели и отключёны по умолчанию.
 Для их включения выполните 'cmake ./ -DUSE_OSS:BOOL=TRUE' или 'cmake ./ -DUSE_OSS:UDISKS=TRUE' перед сборкой.
 
-Поддержка UDisks2.
-Проект UDisks не поддерживает FreeBSD, поэтому под FreeBSD рекомендуется исключить модуль Udisks2 из сборки следующей командой:
-cmake ./ -DUSE_UDISKS2:BOOL=FALSE
+Поддержка UDisks2 и FreeBSD.
+Под FreeBSD есть возможность использовать модуль Udisks2. Для этого вы также должны установить порт 
+sysutils/bsdisks. Bsdisks является реализацией сервиса UDisks2 для FreeBSD.
 
 В некоторых случаях вы можете использовать qmake для сборки и установки.
 

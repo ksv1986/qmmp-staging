@@ -145,11 +145,9 @@ OSS3 and UDisks support.
 OSS3 and UDisks plugins are deprecated and disabled by default.
 To enable them, run 'cmake ./ -DUSE_OSS:BOOL=TRUE' or 'cmake ./ -DUSE_OSS:UDISKS=TRUE' before compilation.
 
-UDisks2 support.
-UDisks2 project doesn't have port to FreeBSD, so it's recommended to disable Udisks2 plugin under FreeBSD by the
-following command:
-cmake ./ -DUSE_UDISKS2:BOOL=FALSE
-
+UDisks2 support and FreeBSD.
+Under FreeBSD you are able to use UDisks2 plugin. Also, you should install port sysutils/bsdisks. 
+Bsdisks is an implementation of UDisks2 service for FreeBSD.
 
 In some cases, you can use qmake for building and installation.
 

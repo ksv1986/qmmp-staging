@@ -402,7 +402,7 @@ QPixmap *Skin::getPixmap (const QString& name, const QString &fallback)
     m_skin_dir.setFilter (QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     foreach(QFileInfo info, m_skin_dir.entryInfoList(QStringList() << name + ".*"))
     {
-        if(info.suffix().toLower() != "cur")
+        if(info.suffix().toLower() != "cur" && info.suffix().toLower() != "txt")
             return new QPixmap (info.filePath());
     }
 
@@ -410,7 +410,7 @@ QPixmap *Skin::getPixmap (const QString& name, const QString &fallback)
     {
         foreach(QFileInfo info, m_skin_dir.entryInfoList(QStringList() << fallback + ".*"))
         {
-            if(info.suffix().toLower() != "cur")
+            if(info.suffix().toLower() != "cur" && info.suffix().toLower() != "txt")
                 return new QPixmap (info.filePath());
         }
     }

@@ -27,7 +27,7 @@
 #include <math.h>
 #include "outputdirectsound.h"
 
-#define DS_BUFSIZE (96*1024)
+#define DS_BUFSIZE (128*1024)
 
 OutputDirectSound *OutputDirectSound::instance = 0;
 VolumeDirectSound *OutputDirectSound::volumeControl = 0;
@@ -193,7 +193,7 @@ qint64 OutputDirectSound::latency()
 }
 
 qint64 OutputDirectSound::writeAudio(unsigned char *data, qint64 len)
-{   
+{
     unsigned char *ptr = 0, *ptr2 = 0;
     DWORD size = 0, size2 = 0;
     DWORD available = bytesToWrite(); //available bytes

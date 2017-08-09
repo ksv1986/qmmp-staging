@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -45,10 +45,10 @@ Player2Object::Player2Object(QObject *parent) : QDBusAbstractAdaptor(parent)
     connect(m_core, SIGNAL(volumeChanged(int,int)), SLOT(emitPropertiesChanged()));
     connect(m_core, SIGNAL(elapsedChanged(qint64)), SLOT(checkSeeking(qint64)));
     connect(m_ui_settings, SIGNAL(repeatableListChanged(bool)), SLOT(emitPropertiesChanged()));
+    connect(m_ui_settings, SIGNAL(repeatableTrackChanged(bool)), SLOT(emitPropertiesChanged()));
     connect(m_ui_settings, SIGNAL(shuffleChanged(bool)), SLOT(emitPropertiesChanged()));
     connect(m_pl_manager, SIGNAL(currentPlayListChanged(PlayListModel*,PlayListModel*)),
             SLOT(setModel(PlayListModel*,PlayListModel*)));
-    connect(m_ui_settings, SIGNAL(repeatableListChanged(bool)), SLOT(emitPropertiesChanged()));
     setModel(m_pl_manager->currentPlayList(), 0);
     updateId();
     syncProperties();

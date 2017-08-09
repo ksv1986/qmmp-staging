@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -44,7 +44,7 @@ bool Root2Object::canQuit() const
 
 bool Root2Object::canRaise() const
 {
-    return false;
+    return true;
 }
 
 QString Root2Object::desktopEntry() const
@@ -85,4 +85,7 @@ void Root2Object::Quit()
     UiHelper::instance()->exit();
 }
 
-void Root2Object::Raise(){}
+void Root2Object::Raise()
+{
+    UiHelper::instance()->showMainWindow();
+}

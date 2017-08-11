@@ -261,7 +261,7 @@ void Player2Object::Previous()
 
 void Player2Object::Seek(qlonglong Offset)
 {
-    m_core->seek(qMin((qint64)0, m_core->elapsed() +  Offset/1000));
+    m_core->seek(qMax(qint64(0), m_core->elapsed() +  Offset/1000));
 }
 void Player2Object::SetPosition(const QDBusObjectPath &TrackId, qlonglong Position)
 {

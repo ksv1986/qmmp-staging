@@ -82,7 +82,7 @@ void ToolBarEditor::populateActionList(bool reset)
         m_ui->toolbarNameComboBox->addItem(info.title);
     }
 
-    for(int id = ActionManager::PLAY; id <= ActionManager::UI_VOL_SLIDER; ++id)
+    for(int id = ActionManager::PLAY; id <= ActionManager::UI_QUICK_SEARCH; ++id)
     {
         QAction *action = ACTION(id);
         if(!action || actionNames.contains(action->objectName()))

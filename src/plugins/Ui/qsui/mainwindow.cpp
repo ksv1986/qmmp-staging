@@ -56,6 +56,7 @@
 #include "playlistbrowser.h"
 #include "volumeslider.h"
 #include "qsuitabwidget.h"
+#include "qsuiquicksearch.h"
 #include "equalizer.h"
 
 #define KEY_OFFSET 10000
@@ -143,6 +144,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     connect(m_core, SIGNAL(mutedChanged(bool)), ACTION(ActionManager::VOL_MUTE), SLOT(setChecked(bool)));
     m_volumeSlider->setValue(m_core->volume());
     updateVolumeIcon();
+    //quick search
+    m_quickSearch = new QSUIQuickSearch(this);
+    m_quickSearch->setMaximumWidth(250);
     //visualization
     m_analyzer = new QSUiAnalyzer(this);
     m_ui.analyzerDockWidget->setWidget(m_analyzer);
@@ -449,6 +453,8 @@ void MainWindow::createActions()
                                               tr("Position"), "position_slider");
     ActionManager::instance()->registerWidget(ActionManager::UI_VOL_SLIDER, m_volumeSlider,
                                               tr("Volume"), "volume_slider");
+    ActionManager::instance()->registerWidget(ActionManager::UI_QUICK_SEARCH, m_quickSearch,
+                                              tr("Quick Search"), "quick_search");
     //playback
     SET_ACTION(ActionManager::PREVIOUS, m_player, SLOT(previous()));
     SET_ACTION(ActionManager::PLAY, m_player, SLOT(play()));

@@ -42,6 +42,7 @@ class KeyboardManager;
 class QSUiAnalyzer;
 class ListWidget;
 class QSUiTabWidget;
+class QSUIQuickSearch;
 
 
 /**
@@ -111,6 +112,7 @@ private:
     QMenu *m_pl_menu;
     QMenu *m_tab_menu;
     QSlider *m_volumeSlider;
+    QSUIQuickSearch *m_quickSearch;
     KeyboardManager *m_key_manager;
     QSUiAnalyzer *m_analyzer;
     QToolButton *m_addListButton, *m_tabListMenuButton;

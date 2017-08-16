@@ -255,8 +255,11 @@ void ActionManager::updateToolBar(QToolBar *toolBar, ActionManager::ToolBarInfo 
             continue;
         }
         QAction *action = findChild<QAction *>(name);
-        action->setVisible(true);
-        toolBar->addAction(action);
+        if(action)
+        {
+            action->setVisible(true);
+            toolBar->addAction(action);
+        }
     }
 }
 

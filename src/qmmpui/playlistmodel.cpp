@@ -462,6 +462,13 @@ void PlayListModel::setSelected(int first, int last, bool selected)
     emit listChanged(SELECTION);
 }
 
+void PlayListModel::setSelected(QList<int> indexes, bool selected)
+{
+    foreach (int idx, indexes)
+        m_container->setSelected(idx, selected);
+    emit listChanged(SELECTION);
+}
+
 void PlayListModel::removeSelected()
 {
     removeSelection(false);

@@ -22,8 +22,10 @@
 #define QSUIQUICKSEARCH_H
 
 #include <QWidget>
+#include <QList>
 
 class QLineEdit;
+class PlayListManager;
 
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -36,9 +38,16 @@ public:
 
 private slots:
     void onFocusChanged(QWidget *old, QWidget *now);
+    void onTextEdited(const QString &str);
+    void onSearchUpClicked();
+    void onSearchDownClicked();
 
 private:
+    void search(const QString &str);
+    void updateSelection();
     QLineEdit *m_lineEdit;
+    PlayListManager *m_manager;
+    QList<int> m_indexes;
 
 };
 

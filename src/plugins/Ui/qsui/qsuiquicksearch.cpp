@@ -24,11 +24,15 @@
 #include <QStyle>
 #include <QEvent>
 #include <QApplication>
+#include <QDebug>
+#include <qmmpui/playlistmanager.h>
+#include <qmmpui/playlistmodel.h>
 #include "qsuiquicksearch.h"
 
 QSUIQuickSearch::QSUIQuickSearch(QWidget *parent) :
     QWidget(parent)
 {
+    m_manager = PlayListManager::instance();
     m_lineEdit = new QLineEdit(this);
     QHBoxLayout *layout = new QHBoxLayout;
     layout->setSpacing(0);
@@ -47,13 +51,62 @@ QSUIQuickSearch::QSUIQuickSearch(QWidget *parent) :
     layout->addWidget(upButton);
 
     connect(qApp, SIGNAL(focusChanged(QWidget*,QWidget*)), SLOT(onFocusChanged(QWidget*,QWidget*)));
+    connect(m_lineEdit, SIGNAL(textEdited(QString)), SLOT(onTextEdited(QString)));
+    connect(downButton, SIGNAL(clicked(bool)), SLOT(onSearchDownClicked()));
+    connect(upButton, SIGNAL(clicked(bool)), SLOT(onSearchUpClicked()));
 }
 
 void QSUIQuickSearch::onFocusChanged(QWidget *old, QWidget *now)
 {
     if(now == m_lineEdit)
+    {
         qDebug("focus in");
+        search(m_lineEdit->text());
+        updateSelection();
+    }
     else if(old == m_lineEdit)
         qDebug("focus out");
+}
+
+void QSUIQuickSearch::onTextEdited(const QString &str)
+{
+    search(str);
+    updateSelection();
+}
+
+void QSUIQuickSearch::onSearchUpClicked()
+{
+    PlayListModel *model = m_manager->selectedPlayList();
+}
+
+void QSUIQuickSearch::onSearchDownClicked()
+{
+    PlayListModel *model = m_manager->selectedPlayList();
+}
+
+void QSUIQuickSearch::search(const QString &str)
+{
+    m_indexes.clear();
+    if(str.isEmpty())
+        return;
+
+    PlayListModel *model = m_manager->selectedPlayList();
+
+    for(int i = 0; i < model->count(); ++i)
+    {
+        PlayListItem *item = model->item(i);
+        if(item->isGroup())
+            continue;
+
+        if(!item->formattedTitles().filter(str, Qt::CaseInsensitive).isEmpty())
+            m_indexes << i;
+    }
+}
+
+void QSUIQuickSearch::updateSelection()
+{
+    PlayListModel *model = m_manager->selectedPlayList();
+    model->clearSelection();
+    model->setSelected(m_indexes);
 }
 

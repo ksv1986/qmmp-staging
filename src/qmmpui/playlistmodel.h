@@ -214,6 +214,9 @@ public:
      * @param selected Selection state (\b true - select, \b false - unselect).
      */
     void setSelected(int first, int last, bool selected = true);
+
+
+    void setSelected(QList<int> indexes, bool selected = true);
     /*!
      * Advances to the next item. Returns \b false if next iten doesn't exist,
      * otherwise returns \b true

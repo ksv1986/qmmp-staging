@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>AboutQSUIDialog</name>
     <message>
@@ -584,7 +584,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="99"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Швидкий пошук</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="173"/>
@@ -1325,47 +1325,47 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="947"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Панелі інструментів</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="955"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Розмір іконок:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="980"/>
         <source>Customize...</source>
-        <translation type="unfinished"></translation>
+        <translation>Налаштувати...</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>За замовчанням</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
         <source>16x16</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="44"/>
         <source>22x22</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="45"/>
         <source>32x32</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="46"/>
         <source>48x48</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="47"/>
         <source>64x64</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>

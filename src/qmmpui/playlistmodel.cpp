@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright(C) 2006-2016 by Ilya Kotov                                  *
+ *   Copyright(C) 2006-2017 by Ilya Kotov                                  *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -928,8 +928,14 @@ void PlayListModel::onTaskFinished()
 
 void PlayListModel::doCurrentVisibleRequest()
 {
-    if(!m_container->isEmpty())
-        emit currentVisibleRequest();
+    if(!m_container->isEmpty() && m_current >= 0)
+        emit scrollToRequest(currentIndex());
+}
+
+void PlayListModel::scrollTo(int index)
+{
+    if(index >= 0 && index < m_container->count())
+        emit scrollToRequest(index);
 }
 
 void PlayListModel::loadPlaylist(const QString &f_name)

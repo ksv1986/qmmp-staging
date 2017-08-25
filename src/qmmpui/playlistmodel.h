@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -65,7 +65,7 @@ struct SimpleSelection
      */
     inline void dump()const
     {
-        qWarning("top: %d\tbotom: %d", m_top, m_bottom);
+        qDebug("top: %d\tbotom: %d", m_top, m_bottom);
     }
     /*!
      * Returns number of selected items.
@@ -365,10 +365,8 @@ signals:
      * Emitted when playlist loader thread has finished.
      */
     void loaderFinished();
-    /*!
-     * Emitted to ensure that the current track is visible.
-     */
-    void currentVisibleRequest();
+
+    void scrollToRequest(int index);
     /*!
      * Emitted when sorting by column is finished.
      * @param column Column index.
@@ -476,6 +474,7 @@ public slots:
      * Ensures that the current track is visible.
      */
     void doCurrentVisibleRequest();
+    void scrollTo(int index);
     /*!
      * Randomly changes items order.
      */

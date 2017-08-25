@@ -71,7 +71,7 @@ public slots:
     void readSettings();
     void updateList(int flags);
     void scroll(int); //0-99
-    void recenterCurrent();
+
 
 signals:
     void selectionChanged();
@@ -98,13 +98,16 @@ private slots:
     void updateSkin();
     void autoscroll();
     void updateRepeatIndicator();
-    void scrollToCurrent();
+    void scrollTo(int index);
 
 private:
+
     enum ScrollDirection
     {
         NONE = 0,TOP,DOWN
     };
+
+    void recenterTo(int index);
     /*!
      * Returns string with queue number or(and) repeate flag for the item number \b i.
      */

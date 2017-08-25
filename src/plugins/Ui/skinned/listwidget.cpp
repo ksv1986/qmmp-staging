@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -306,7 +306,7 @@ void ListWidget::updateList(int flags)
         flags |= PlayListModel::STRUCTURE;
 
     if(flags & PlayListModel::CURRENT)
-        recenterCurrent();
+        recenterTo(m_model->currentIndex());
 
     QList<PlayListItem *> items;
 
@@ -428,9 +428,13 @@ void ListWidget::updateRepeatIndicator()
     updateList(PlayListModel::CURRENT | PlayListModel::STRUCTURE);
 }
 
-void ListWidget::scrollToCurrent()
+void ListWidget::scrollTo(int index)
 {
-    updateList(PlayListModel::CURRENT | PlayListModel::STRUCTURE);
+    if (m_row_count)
+    {
+        recenterTo(index);
+        updateList(PlayListModel::STRUCTURE);
+    }
 }
 
 void ListWidget::setModel(PlayListModel *selected, PlayListModel *previous)
@@ -454,7 +458,7 @@ void ListWidget::setModel(PlayListModel *selected, PlayListModel *previous)
         m_first = 0;
         updateList(PlayListModel::STRUCTURE | PlayListModel::CURRENT);
     }
-    connect (m_model, SIGNAL(currentVisibleRequest()), SLOT(scrollToCurrent()));
+    connect (m_model, SIGNAL(scrollToRequest(int)), SLOT(scrollTo(int)));
     connect (m_model, SIGNAL(listChanged(int)), SLOT(updateList(int)));
     connect (m_model, SIGNAL(sortingByColumnFinished(int,bool)), m_header, SLOT(showSortIndicator(int,bool)));
 }
@@ -640,14 +644,13 @@ void ListWidget::contextMenuEvent(QContextMenuEvent * event)
         menu()->exec(event->globalPos());
 }
 
-void ListWidget::recenterCurrent()
+void ListWidget::recenterTo(int index)
 {
     if (m_row_count)
     {
-        if (m_first + m_row_count < m_model->currentIndex() + 1)
-            m_first = qMin(m_model->count() - m_row_count,
-                           m_model->currentIndex() - m_row_count/2);
-        else if (m_first > m_model->currentIndex())
-            m_first = qMax (m_model->currentIndex() - m_row_count/2, 0);
+        if (m_first + m_row_count < index + 1)
+            m_first = qMin(m_model->count() - m_row_count, index - m_row_count/2);
+        else if (m_first > index)
+            m_first = qMax (index - m_row_count/2, 0);
     }
 }

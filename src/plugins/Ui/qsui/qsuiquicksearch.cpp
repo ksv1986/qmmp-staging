@@ -42,6 +42,20 @@ QSUIQuickSearch::QSUIQuickSearch(ListWidget *listWidget, QWidget *parent) :
     layout->addWidget(m_lineEdit);
     m_lineEdit->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     connect(m_lineEdit, SIGNAL(textEdited(QString)), m_listWidget, SLOT(setFilterString(QString)));
+    connect(m_lineEdit, SIGNAL(textChanged(QString)), SLOT(onTextChanged(QString)));
     connect(m_manager, SIGNAL(selectedPlayListChanged(PlayListModel*,PlayListModel*)), m_lineEdit, SLOT(clear()));
     connect(m_listWidget, SIGNAL(doubleClicked()), m_lineEdit, SLOT(clear()));
+
+    m_clearButton = new QToolButton(this);
+    m_clearButton->setVisible(false);
+    m_clearButton->setAutoRaise(true);
+    m_clearButton->setIcon(QIcon::fromTheme("edit-clear"));
+    layout->addWidget(m_clearButton);
+    connect(m_clearButton, SIGNAL(clicked()), m_lineEdit, SLOT(clear()));
+    connect(m_clearButton, SIGNAL(clicked()), m_listWidget, SLOT(setFilterString()));
+}
+
+void QSUIQuickSearch::onTextChanged(const QString &str)
+{
+    m_clearButton->setVisible(!str.isEmpty());
 }

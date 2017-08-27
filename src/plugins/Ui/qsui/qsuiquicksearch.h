@@ -27,6 +27,7 @@
 class QLineEdit;
 class PlayListManager;
 class ListWidget;
+class QToolButton;
 
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -38,12 +39,13 @@ public:
     explicit QSUIQuickSearch(ListWidget *listWidget, QWidget *parent = 0);
 
 private slots:
-    void onTextEdited(const QString &str);
+    void onTextChanged(const QString &str);
 
 private:
     QLineEdit *m_lineEdit;
     PlayListManager *m_manager;
     ListWidget *m_listWidget;
+    QToolButton *m_clearButton;
 
 };
 

@@ -69,11 +69,11 @@ public:
 public slots:
     void readSettings();
     void updateList(int flags);
-    void scroll(int);
+    void setViewPosition(int);
     void setModel(PlayListModel *selected, PlayListModel *previous = 0);
 
 signals:
-    void selectionChanged();
+    void doubleClicked();
     void positionChanged(int, int); //current position, maximum value
 
 protected:

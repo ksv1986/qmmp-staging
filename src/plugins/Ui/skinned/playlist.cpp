@@ -105,7 +105,7 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
     m_current_time = new SymbolDisplay (this,6);
     m_keyboardManager = new KeyboardManager (m_listWidget);
 
-    connect (m_listWidget, SIGNAL (selectionChanged()), parent, SLOT (replay()));
+    connect (m_listWidget, SIGNAL (doubleClicked()), parent, SLOT (replay()));
 
     connect (m_plslider, SIGNAL (sliderMoved (int)), m_listWidget, SLOT (scroll (int)));
     connect (m_listWidget, SIGNAL (positionChanged (int, int)), m_plslider,

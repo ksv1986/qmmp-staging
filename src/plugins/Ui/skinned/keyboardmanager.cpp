@@ -139,7 +139,7 @@ void KeyboardManager::keyUp (QKeyEvent * ke)
 
     if(m_listWidget->anchorIndex() < first_visible)
     {
-        m_listWidget->scroll (m_listWidget->firstVisibleIndex() - 1);
+        m_listWidget->setViewPosition (m_listWidget->firstVisibleIndex() - 1);
     }
 }
 
@@ -214,7 +214,7 @@ void KeyboardManager::keyDown (QKeyEvent * ke)
 
     if(m_listWidget->anchorIndex() > last_visible)
     {
-        m_listWidget->scroll (m_listWidget->firstVisibleIndex() + 1);
+        m_listWidget->setViewPosition (m_listWidget->firstVisibleIndex() + 1);
     }
 }
 
@@ -223,7 +223,7 @@ void KeyboardManager::keyPgUp (QKeyEvent *)
     int page_size = m_listWidget->visibleRows();
     int first = m_listWidget->firstVisibleIndex();
     int offset = qMax(first - page_size, 0);
-    m_listWidget->scroll (offset);
+    m_listWidget->setViewPosition (offset);
 
     m_listWidget->model()->clearSelection();
     if(m_listWidget->firstVisibleIndex() == first)
@@ -238,7 +238,7 @@ void KeyboardManager::keyPgDown (QKeyEvent *)
     int page_size = m_listWidget->visibleRows();
     int first = m_listWidget->firstVisibleIndex();
     int offset = qMin(first + page_size, m_listWidget->model()->count() - 1);
-    m_listWidget->scroll (offset);
+    m_listWidget->setViewPosition (offset);
 
     m_listWidget->model()->clearSelection();
     if(m_listWidget->firstVisibleIndex() == first)
@@ -262,7 +262,7 @@ void KeyboardManager::keyEnter (QKeyEvent *)
 
 void KeyboardManager::keyHome(QKeyEvent *ke)
 {
-    m_listWidget->scroll (0);
+    m_listWidget->setViewPosition (0);
     if(ke->modifiers() & Qt::ShiftModifier)
     {
         m_listWidget->model()->setSelected (0, m_listWidget->anchorIndex(), true);
@@ -278,7 +278,7 @@ void KeyboardManager::keyHome(QKeyEvent *ke)
 void KeyboardManager::keyEnd(QKeyEvent *ke)
 {
    int scroll_to = qMax(m_listWidget->model()->count() - m_listWidget->visibleRows(), 0);
-   m_listWidget->scroll(scroll_to);
+   m_listWidget->setViewPosition(scroll_to);
    if(ke->modifiers() & Qt::ShiftModifier)
    {
        m_listWidget->model()->setSelected (m_listWidget->anchorIndex(), m_listWidget->model()->count() - 1, true);

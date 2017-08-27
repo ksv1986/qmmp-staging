@@ -72,7 +72,7 @@ ListWidget::ListWidget(QWidget *parent)
     connect(m_skin, SIGNAL(skinChanged()), SLOT(updateSkin()));
     connect(m_ui_settings, SIGNAL(repeatableTrackChanged(bool)), SLOT(updateRepeatIndicator()));
     connect(m_timer, SIGNAL(timeout()), SLOT(autoscroll()));
-    connect(m_hslider, SIGNAL(sliderMoved(int)), m_header, SLOT(scroll(int)));
+    connect(m_hslider, SIGNAL(sliderMoved(int)), m_header, SLOT(setViewPosition(int)));
     connect(m_hslider, SIGNAL(sliderMoved(int)), this, SLOT(update()));
     SET_ACTION(ActionManager::PL_SHOW_HEADER, this, SLOT(readSettings()));
 }
@@ -184,7 +184,7 @@ void ListWidget::mouseDoubleClickEvent (QMouseEvent *e)
     if (INVALID_INDEX != index)
     {
         m_model->setCurrent(index);
-        emit selectionChanged();
+        emit doubleClicked();
         update();
     }
 }
@@ -463,7 +463,7 @@ void ListWidget::setModel(PlayListModel *selected, PlayListModel *previous)
     connect (m_model, SIGNAL(sortingByColumnFinished(int,bool)), m_header, SLOT(showSortIndicator(int,bool)));
 }
 
-void ListWidget::scroll(int sc)
+void ListWidget::setViewPosition(int sc)
 {
     if (m_model->count() <= m_row_count)
         return;

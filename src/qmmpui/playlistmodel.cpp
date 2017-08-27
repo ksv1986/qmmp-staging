@@ -425,6 +425,25 @@ PlayListTrack *PlayListModel::findTrack(int track_index) const
     return m_container->findTrack(track_index);
 }
 
+QList<PlayListItem *> PlayListModel::findTracks(const QString &str) const
+{
+    QList<PlayListItem *> items;
+    PlayListItem *item = 0;
+    if(str.isEmpty())
+        return items;
+
+    for(int i = 0; i < m_container->count(); ++i)
+    {
+        item = m_container->item(i);
+        if(item->isGroup())
+            continue;
+
+        if(!item->formattedTitles().filter(str, Qt::CaseInsensitive).isEmpty())
+            items.append(item);
+    }
+    return items;
+}
+
 void PlayListModel::setSelected(int index, bool selected)
 {
     m_container->setSelected(index, selected);

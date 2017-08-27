@@ -332,6 +332,8 @@ public:
      * Return null pointer if playlist does not contain track with index \b track_index.
      */
     PlayListTrack *findTrack(int track_index) const;
+
+    QList<PlayListItem *> findTracks(const QString &str) const;
     /*!
      * Enum of the playlist update flags.
      */

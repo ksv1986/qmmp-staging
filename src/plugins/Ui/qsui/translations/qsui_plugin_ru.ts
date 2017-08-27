@@ -719,7 +719,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="457"/>
         <source>Quick Search</source>
-        <translation type="unfinished">Быстрый поиск</translation>
+        <translation>Быстрый поиск</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="511"/>
@@ -1539,7 +1539,7 @@
     <message>
         <location filename="../volumeslider.cpp" line="91"/>
         <source>%1%</source>
-        <translation type="unfinished"></translation>
+        <translation>%1%</translation>
     </message>
 </context>
 </TS>

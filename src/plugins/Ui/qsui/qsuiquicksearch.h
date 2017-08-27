@@ -26,6 +26,7 @@
 
 class QLineEdit;
 class PlayListManager;
+class ListWidget;
 
 /**
     @author Ilya Kotov <forkotov02@hotmail.ru>
@@ -34,20 +35,15 @@ class QSUIQuickSearch : public QWidget
 {
     Q_OBJECT
 public:
-    explicit QSUIQuickSearch(QWidget *parent = 0);
+    explicit QSUIQuickSearch(ListWidget *listWidget, QWidget *parent = 0);
 
 private slots:
-    void onFocusChanged(QWidget *old, QWidget *now);
     void onTextEdited(const QString &str);
-    void onSearchUpClicked();
-    void onSearchDownClicked();
 
 private:
-    void search(const QString &str);
-    void updateSelection();
     QLineEdit *m_lineEdit;
     PlayListManager *m_manager;
-    QList<int> m_indexes;
+    ListWidget *m_listWidget;
 
 };
 

@@ -145,7 +145,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_volumeSlider->setValue(m_core->volume());
     updateVolumeIcon();
     //quick search
-    m_quickSearch = new QSUIQuickSearch(this);
+    m_quickSearch = new QSUIQuickSearch(m_listWidget, this);
     m_quickSearch->setMaximumWidth(250);
     //visualization
     m_analyzer = new QSUiAnalyzer(this);

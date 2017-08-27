@@ -65,16 +65,17 @@ public:
     QMenu *menu();
     void setMenu(QMenu *menu);
     PlayListModel *model();
+    bool filterMode() const;
 
 public slots:
     void setModel(PlayListModel *selected, PlayListModel *previous);
     void readSettings();
     void updateList(int flags);
-    void scroll(int); //0-99
-
+    void setViewPosition(int sc);
+    void setFilterString(const QString &str = QString());
 
 signals:
-    void selectionChanged();
+    void doubleClicked();
     void positionChanged(int, int); //current position, maximum value
 
 protected:
@@ -109,9 +110,9 @@ private:
 
     void recenterTo(int index);
     /*!
-     * Returns string with queue number or(and) repeate flag for the item number \b i.
+     * Returns string with queue number or(and) repeate flag for the \b item.
      */
-    const QString getExtraString(int i);
+    const QString getExtraString(PlayListItem *item);
 
     bool updateRowCount();
     void updateScrollBars();
@@ -138,6 +139,11 @@ private:
     ListWidgetDrawer m_drawer;
     PlayListHeader *m_header;
     QScrollBar *m_hslider;
+
+    QString m_filterString;
+    bool m_filterMode;
+    QList<PlayListItem *> m_filteredItems;
+
 };
 
 #endif

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -60,7 +60,7 @@ QList<QAction *> KeyboardManager::actions()
 
 void KeyboardManager::processUp()
 {
-    if(!m_listWidget)
+    if(!m_listWidget || m_listWidget->filterMode())
         return;
 
     int keys = qobject_cast<QAction *>(sender())->shortcut()[0];
@@ -131,13 +131,13 @@ void KeyboardManager::processUp()
 
     if(m_listWidget->anchorIndex() < first_visible)
     {
-        m_listWidget->scroll (m_listWidget->firstVisibleIndex() - 1);
+        m_listWidget->setViewPosition (m_listWidget->firstVisibleIndex() - 1);
     }
 }
 
 void KeyboardManager::processDown()
 {
-    if(!m_listWidget)
+    if(!m_listWidget || m_listWidget->filterMode())
         return;
 
     int keys = qobject_cast<QAction *>(sender())->shortcut()[0];
@@ -209,7 +209,7 @@ void KeyboardManager::processDown()
 
     if(m_listWidget->anchorIndex() > last_visible)
     {
-        m_listWidget->scroll (m_listWidget->firstVisibleIndex() + 1);
+        m_listWidget->setViewPosition (m_listWidget->firstVisibleIndex() + 1);
     }
 }
 
@@ -220,7 +220,7 @@ void KeyboardManager::setListWidget(ListWidget *listWidget)
 
 void KeyboardManager::processEnter()
 {
-    if(!m_listWidget)
+    if(!m_listWidget || m_listWidget->filterMode())
         return;
     QList<int> rows = m_listWidget->model()->selectedIndexes();
     if(rows.isEmpty())
@@ -233,12 +233,12 @@ void KeyboardManager::processEnter()
 
 void KeyboardManager::processPgUp()
 {
-    if(!m_listWidget)
+    if(!m_listWidget || m_listWidget->filterMode())
         return;
 
     int first = m_listWidget->firstVisibleIndex();
     int offset = qMax(m_listWidget->firstVisibleIndex() - m_listWidget->visibleRows(), 0);
-    m_listWidget->scroll (offset);
+    m_listWidget->setViewPosition (offset);
 
     m_listWidget->model()->clearSelection();
     if(m_listWidget->firstVisibleIndex() == first)
@@ -250,13 +250,13 @@ void KeyboardManager::processPgUp()
 
 void KeyboardManager::processPgDown()
 {
-    if(!m_listWidget)
+    if(!m_listWidget || m_listWidget->filterMode())
         return;
 
     int first = m_listWidget->firstVisibleIndex();
     int offset = qMin(first + m_listWidget->visibleRows(),
                       m_listWidget->model()->count() - 1);
-    m_listWidget->scroll (offset);
+    m_listWidget->setViewPosition (offset);
 
     m_listWidget->model()->clearSelection();
     if(m_listWidget->firstVisibleIndex() == first)
@@ -268,10 +268,10 @@ void KeyboardManager::processPgDown()
 
 void KeyboardManager::processHome()
 {
-    if(!m_listWidget)
+    if(!m_listWidget || m_listWidget->filterMode())
         return;
     int keys = qobject_cast<QAction *>(sender())->shortcut()[0];
-    m_listWidget->scroll (0);
+    m_listWidget->setViewPosition (0);
     if(keys & Qt::ShiftModifier)
     {
         m_listWidget->model()->setSelected (0, m_listWidget->anchorIndex(), true);
@@ -286,13 +286,13 @@ void KeyboardManager::processHome()
 
 void KeyboardManager::processEnd()
 {
-    if(!m_listWidget)
+    if(!m_listWidget || m_listWidget->filterMode())
         return;
 
     int keys = qobject_cast<QAction *>(sender())->shortcut()[0];
     int scroll_to = m_listWidget->model()->count() - m_listWidget->visibleRows();
     if(scroll_to >= 0)
-        m_listWidget->scroll(scroll_to);
+        m_listWidget->setViewPosition(scroll_to);
 
     if(keys & Qt::ShiftModifier)
     {

@@ -105,6 +105,8 @@ public:
      */
     static bool isEnabled(EffectFactory* factory);
 
+    static EffectFactory *findFactory(const QString &shortName);
+
 private:
     EffectFactory *m_factory;
     quint32 m_freq;

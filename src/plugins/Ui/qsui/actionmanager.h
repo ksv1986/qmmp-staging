@@ -53,6 +53,7 @@ public:
         PLAY_PAUSE,
         JUMP,
         EJECT,
+        RECORD,
 
         REPEAT_ALL,
         REPEAT_TRACK,

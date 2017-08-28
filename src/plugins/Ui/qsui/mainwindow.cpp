@@ -30,6 +30,7 @@
 #include <qmmp/soundcore.h>
 #include <qmmp/decoder.h>
 #include <qmmp/metadatamanager.h>
+#include <qmmp/effect.h>
 #include <qmmpui/general.h>
 #include <qmmpui/playlistparser.h>
 #include <qmmpui/playlistformat.h>
@@ -183,6 +184,13 @@ void MainWindow::playFiles()
     m_uiHelper->playFiles(this);
 }
 
+void MainWindow::record(bool enabled)
+{
+    EffectFactory *fileWriterFactory = Effect::findFactory("filewriter");
+    if(fileWriterFactory)
+        Effect::setEnabled(fileWriterFactory, enabled);
+}
+
 void MainWindow::addUrl()
 {
     m_uiHelper->addUrl(this);
@@ -229,7 +237,6 @@ void MainWindow::showState(Qmmp::State state)
         m_positionSlider->setValue(0);
         m_analyzer->clearCover();
         qobject_cast<CoverWidget *>(m_ui.coverDockWidget->widget())->clearCover();
-        //setWindowTitle("Qmmp");
         break;
     default:
         ;
@@ -461,7 +468,8 @@ void MainWindow::createActions()
     SET_ACTION(ActionManager::PAUSE, m_core, SLOT(pause()));
     SET_ACTION(ActionManager::STOP, m_player, SLOT(stop()));
     SET_ACTION(ActionManager::NEXT, m_player, SLOT(next()));
-    SET_ACTION(ActionManager::EJECT,this, SLOT(playFiles()));
+    SET_ACTION(ActionManager::EJECT, this, SLOT(playFiles()));
+    SET_ACTION(ActionManager::RECORD, this, SLOT(record(bool)));
 
     //file menu
     m_ui.menuFile->addAction(SET_ACTION(ActionManager::PL_ADD_FILE, this, SLOT(addFiles())));
@@ -811,6 +819,19 @@ void MainWindow::readSettings()
     settings.endGroup();
     addActions(m_uiHelper->actions(UiHelper::TOOLS_MENU));
     addActions(m_uiHelper->actions(UiHelper::PLAYLIST_MENU));
+
+    //record action
+    EffectFactory *fileWriterFactory = Effect::findFactory("filewriter");
+    if(fileWriterFactory)
+    {
+        ACTION(ActionManager::RECORD)->setEnabled(true);
+        ACTION(ActionManager::RECORD)->setChecked(Effect::isEnabled(fileWriterFactory));
+    }
+    else
+    {
+        ACTION(ActionManager::RECORD)->setEnabled(false);
+        ACTION(ActionManager::RECORD)->setChecked(false);
+    }
 }
 
 void MainWindow::showTabMenu(QPoint pos)

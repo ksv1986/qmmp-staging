@@ -59,6 +59,7 @@ private slots:
     void addDir();
     void addFiles();
     void playFiles();
+    void record(bool enabled);
     void addUrl();
     void updatePosition(qint64 pos);
     void seek();

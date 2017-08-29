@@ -1,19 +1,9 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/General/converter
 
-TARGET =$$PLUGINS_PREFIX/General/converter
-unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libconverter.so
 
-LIBS += -lqmmpui
 
-PKGCONFIG += taglib
-
-RESOURCES = translations/translations.qrc presets.qrc
-
-unix{
-target.path = $$LIB_DIR/qmmp/General
-INSTALLS += target
-}
 HEADERS += converterfactory.h \
     converterhelper.h \
     converterdialog.h \
@@ -28,3 +18,13 @@ SOURCES += converterfactory.cpp \
 
 FORMS += converterdialog.ui \
     preseteditor.ui
+
+RESOURCES = translations/translations.qrc presets.qrc
+
+LIBS += -lqmmpui
+PKGCONFIG += taglib
+
+unix{
+    target.path = $$LIB_DIR/qmmp/General
+    INSTALLS += target
+}

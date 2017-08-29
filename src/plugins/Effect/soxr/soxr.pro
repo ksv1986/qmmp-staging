@@ -1,5 +1,7 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/Effect/soxr
+
 HEADERS += soxresampler.h \
  effectsoxrfactory.h \
  settingsdialog.h
@@ -8,8 +10,7 @@ SOURCES += soxresampler.cpp \
  effectsoxrfactory.cpp \
  settingsdialog.cpp
 
-TARGET=$$PLUGINS_PREFIX/Effect/soxr
-QMAKE_CLEAN =$$PLUGINS_PREFIX/Effect/libsoxr.so
+FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
 
@@ -23,6 +24,3 @@ unix {
 win32 {
     LIBS += -lsoxr
 }
-
-FORMS += settingsdialog.ui
-

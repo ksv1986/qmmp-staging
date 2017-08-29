@@ -1,15 +1,8 @@
 include(../../plugins.pri)
 
-QT += dbus
-
 TARGET = $$PLUGINS_PREFIX/General/udisks2
-QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libudisks2.so
 
-RESOURCES = translations/translations.qrc
-
-target.path = $$LIB_DIR/qmmp/General
-INSTALLS += target
-
+QT += dbus
 
 HEADERS += udisks2factory.h \
            udisks2plugin.h \
@@ -23,6 +16,11 @@ SOURCES += udisks2factory.cpp \
            udisks2device.cpp \
            settingsdialog.cpp
 
+FORMS += settingsdialog.ui
+
+RESOURCES = translations/translations.qrc
+
 LIBS += -lqmmpui
 
-FORMS += settingsdialog.ui
+target.path = $$LIB_DIR/qmmp/General
+INSTALLS += target

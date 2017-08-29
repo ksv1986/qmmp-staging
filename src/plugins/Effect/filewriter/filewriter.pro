@@ -1,31 +1,28 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/Effect/filewriter
+
 HEADERS += effectfilewriterfactory.h \
-    filewriterplugin.h \
-    settingsdialog.h
+           filewriterplugin.h \
+           settingsdialog.h
 
 SOURCES += effectfilewriterfactory.cpp \
-    filewriterplugin.cpp \
-    settingsdialog.cpp
+           filewriterplugin.cpp \
+           settingsdialog.cpp
 
-TARGET =$$PLUGINS_PREFIX/Effect/filewriter
+FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
+
+LIBS += -lqmmpui
 
 unix {
     target.path = $$LIB_DIR/qmmp/Effect
     INSTALLS += target
-
-    LIBS += -lqmmp -lqmmpui
-    QMAKE_CLEAN =$$PLUGINS_PREFIX/Effect/libfilewriter.so
     PKGCONFIG += ogg vorbis vorbisenc
 }
 
 win32 {
-    LIBS += -lqmmp0 -lqmmpui0 -lvorbisfile -lvorbis -logg -lvorbisenc
+    LIBS += -lvorbisfile -lvorbis -logg -lvorbisenc
     LD_FLAGS += -no-undefined
 }
-
-FORMS += \
-    settingsdialog.ui
-

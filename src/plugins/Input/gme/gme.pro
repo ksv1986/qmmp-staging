@@ -1,9 +1,12 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/Input/gme
+
 HEADERS += decodergmefactory.h \
     decoder_gme.h \
     gmehelper.h \
     settingsdialog.h
+
 SOURCES += decoder_gme.cpp \
     decodergmefactory.cpp \
     gmehelper.cpp \
@@ -11,12 +14,7 @@ SOURCES += decoder_gme.cpp \
 
 FORMS += settingsdialog.ui
 
-TARGET = $$PLUGINS_PREFIX/Input/gme
-QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libgme.so
-
 RESOURCES = translations/translations.qrc
-
-LIBS += -lqmmp
 
 unix{
     target.path = $$LIB_DIR/qmmp/Input

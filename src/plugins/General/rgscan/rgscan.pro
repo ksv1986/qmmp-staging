@@ -1,16 +1,7 @@
 include(../../plugins.pri)
 
-TARGET =$$PLUGINS_PREFIX/General/rgscan
-unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/General/librgscan.so
+TARGET = $$PLUGINS_PREFIX/General/rgscan
 
-LIBS += -lqmmpui
-
-RESOURCES = translations/translations.qrc
-unix{
-  PKGCONFIG += taglib
-  target.path = $$LIB_DIR/qmmp/General
-  INSTALLS += target
-}
 HEADERS += rgscanfactory.h \
     rgscanhelper.h \
     rgscandialog.h \
@@ -24,3 +15,13 @@ SOURCES += rgscanfactory.cpp \
     rgscanner.cpp
 
 FORMS += rgscandialog.ui
+
+RESOURCES = translations/translations.qrc
+
+LIBS += -lqmmpui
+
+unix {
+    PKGCONFIG += taglib
+    target.path = $$LIB_DIR/qmmp/General
+    INSTALLS += target
+}

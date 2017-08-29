@@ -1,15 +1,7 @@
 include(../../plugins.pri)
 
-TARGET =$$PLUGINS_PREFIX/General/trackchange
-unix : QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libtrackchange.so
+TARGET = $$PLUGINS_PREFIX/General/trackchange
 
-LIBS += -lqmmpui
-
-RESOURCES = translations/translations.qrc
-unix {
-    target.path = $$LIB_DIR/qmmp/General
-    INSTALLS += target
-}
 HEADERS += trackchangefactory.h \
            trackchange.h \
            settingsdialog.h
@@ -19,3 +11,12 @@ SOURCES += trackchangefactory.cpp \
            settingsdialog.cpp
 
 FORMS += settingsdialog.ui
+
+RESOURCES = translations/translations.qrc
+
+LIBS += -lqmmpui
+
+unix {
+    target.path = $$LIB_DIR/qmmp/General
+    INSTALLS += target
+}

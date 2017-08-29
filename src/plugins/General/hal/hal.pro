@@ -1,15 +1,8 @@
 include(../../plugins.pri)
 
-QT += dbus
-
 TARGET = $$PLUGINS_PREFIX/General/hal
-QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libhal.so
 
-RESOURCES = translations/translations.qrc
-
-target.path = $$LIB_DIR/qmmp/General
-INSTALLS += target
-
+QT += dbus
 
 HEADERS += halfactory.h \
            halplugin.h \
@@ -23,6 +16,12 @@ SOURCES += halfactory.cpp \
            haldevice.cpp \
            settingsdialog.cpp
 
+FORMS += settingsdialog.ui
+
+
+RESOURCES = translations/translations.qrc
+
 LIBS += -lqmmpui
 
-FORMS += settingsdialog.ui
+target.path = $$LIB_DIR/qmmp/General
+INSTALLS += target

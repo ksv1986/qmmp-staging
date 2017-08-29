@@ -1,5 +1,7 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/Output/qtmultimedia
+
 QT += multimedia
 
 FORMS += settingsdialog.ui
@@ -12,13 +14,9 @@ SOURCES += outputqtmultimediafactory.cpp \
            outputqtmultimedia.cpp \
            settingsdialog.cpp
 
-TARGET=$$PLUGINS_PREFIX/Output/qtmultimedia
-
-
 RESOURCES = translations/translations.qrc
 
 unix {
     target.path = $$LIB_DIR/qmmp/Output
     INSTALLS += target
-    QMAKE_CLEAN =$$PLUGINS_PREFIX/Output/libqtmultimedia.so
 }

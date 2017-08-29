@@ -1,5 +1,7 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/Input/archive
+
 HEADERS += \
     archiveinputdevice.h \
     decoderarchivefactory.h \
@@ -14,16 +16,10 @@ SOURCES += \
     archivetagreader.cpp \
     archivemetadatamodel.cpp
 
-TARGET=$$PLUGINS_PREFIX/Input/archive
-
-LIBS += -lqmmp
-
 RESOURCES = translations/translations.qrc
 
 unix {
     target.path = $$LIB_DIR/qmmp/Input
     INSTALLS += target
-
     PKGCONFIG += libarchive taglib
-    QMAKE_CLEAN =$$PLUGINS_PREFIX/Input/libarc.so
 }

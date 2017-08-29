@@ -1,15 +1,14 @@
 include(../../plugins.pri)
 
-TARGET =$$PLUGINS_PREFIX/CommandLineOptions/incdecvolumeoption
-QMAKE_CLEAN =$$PLUGINS_PREFIX/CommandLineOptions/libincdecvolumeoption.so
-
-RESOURCES = translations/translations.qrc
-
-target.path = $$LIB_DIR/qmmp/CommandLineOptions
-INSTALLS += target
-
-LIBS += -lqmmpui
+TARGET = $$PLUGINS_PREFIX/CommandLineOptions/incdecvolumeoption
 
 HEADERS += incdecvolumeoption.h
 
 SOURCES += incdecvolumeoption.cpp
+
+RESOURCES = translations/translations.qrc
+
+LIBS += -lqmmpui
+
+target.path = $$LIB_DIR/qmmp/CommandLineOptions
+INSTALLS += target

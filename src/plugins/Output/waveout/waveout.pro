@@ -1,16 +1,16 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/Output/waveout
+
 HEADERS += outputwaveoutfactory.h \
            outputwaveout.h
 
 SOURCES += outputwaveoutfactory.cpp \
            outputwaveout.cpp
 
-TARGET=$$PLUGINS_PREFIX/Output/waveout
+RESOURCES = translations/translations.qrc
 
 LIBS += -lwinmm
-
-RESOURCES = translations/translations.qrc
 
 target.path = $$LIB_DIR/qmmp/Output
 INSTALLS += target

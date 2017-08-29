@@ -1,29 +1,26 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/General/notifier
 
-TARGET =$$PLUGINS_PREFIX/General/notifier
-unix:QMAKE_CLEAN =$$PLUGINS_PREFIX/General/libnotifier.so
+HEADERS += notifierfactory.h \
+           notifier.h \
+           popupwidget.h \
+           settingsdialog.h
 
-LIBS += -lqmmpui
+SOURCES += notifierfactory.cpp \
+           notifier.cpp \
+           popupwidget.cpp \
+           settingsdialog.cpp
+
+FORMS += settingsdialog.ui
 
 RESOURCES = notifier_images.qrc \
             translations/translations.qrc
+
+LIBS += -lqmmpui
 
 unix {
   PKGCONFIG += x11
   target.path = $$LIB_DIR/qmmp/General
   INSTALLS += target
 }
-
-HEADERS += notifierfactory.h \
- notifier.h \
- popupwidget.h \
- settingsdialog.h
-win32:HEADERS += ../../../../src/qmmpui/general.h
-SOURCES += notifierfactory.cpp \
- notifier.cpp \
- popupwidget.cpp \
- settingsdialog.cpp
-
-FORMS += settingsdialog.ui
-

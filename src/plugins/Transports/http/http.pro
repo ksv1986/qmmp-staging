@@ -1,17 +1,28 @@
 include(../../plugins.pri)
+
+TARGET = $$PLUGINS_PREFIX/Transports/http
+
 HEADERS += \
     httpinputfactory.h \
     httpinputsource.h \
     settingsdialog.h \
     httpstreamreader.h
+
 SOURCES += \
     httpinputfactory.cpp \
     httpinputsource.cpp \
     settingsdialog.cpp \
     httpstreamreader.cpp
 
-TARGET = $$PLUGINS_PREFIX/Transports/http
-unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libhttp.so
+FORMS += settingsdialog.ui
+
+RESOURCES = translations/translations.qrc
+
+contains(CONFIG, WITH_ENCA){
+   DEFINES += WITH_ENCA
+   unix:PKGCONFIG += enca
+   win32:LIBS += -lenca.dll
+}
 
 unix {
     LIBS += -L/usr/lib
@@ -23,13 +34,4 @@ win32 {
     LIBS += -lcurldll
 }
 
-contains(CONFIG, WITH_ENCA){
-   DEFINES += WITH_ENCA
-   unix:PKGCONFIG += enca
-   win32:LIBS += -lenca.dll
 
-}
-
-FORMS += settingsdialog.ui
-
-RESOURCES = translations/translations.qrc

@@ -1,5 +1,7 @@
 include(../../plugins.pri)
-FORMS +=
+
+TARGET = $$PLUGINS_PREFIX/Input/opus
+
 HEADERS += decoderopusfactory.h \
     decoder_opus.h \
     opusmetadatamodel.h \
@@ -7,6 +9,7 @@ HEADERS += decoderopusfactory.h \
     opusproperties.h \
     opusfile.h \
     tdebug.h
+
 SOURCES += decoder_opus.cpp \
     decoderopusfactory.cpp \
     opusmetadatamodel.cpp \
@@ -14,7 +17,6 @@ SOURCES += decoder_opus.cpp \
     opusproperties.cpp \
     opusfile.cpp \
     tdebug.cpp
-TARGET = $$PLUGINS_PREFIX/Input/opus
 
 
 RESOURCES = translations/translations.qrc
@@ -22,9 +24,7 @@ RESOURCES = translations/translations.qrc
 unix {
     target.path = $$LIB_DIR/qmmp/Input
     INSTALLS += target
-
     PKGCONFIG += taglib opus opusfile
-    QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libopus.so
 }
 
 win32 {

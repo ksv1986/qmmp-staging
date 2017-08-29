@@ -1,5 +1,7 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/Output/alsa
+
 HEADERS += outputalsa.h \
            outputalsafactory.h  \
            settingsdialog.h
@@ -7,14 +9,11 @@ SOURCES += outputalsa.cpp \
            outputalsafactory.cpp  \
            settingsdialog.cpp
 
-TARGET=$$PLUGINS_PREFIX/Output/alsa
-QMAKE_CLEAN =$$PLUGINS_PREFIX/Output/libalsa.so
-
-PKGCONFIG += alsa
-
 FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
+
+PKGCONFIG += alsa
 
 target.path = $$LIB_DIR/qmmp/Output
 INSTALLS += target

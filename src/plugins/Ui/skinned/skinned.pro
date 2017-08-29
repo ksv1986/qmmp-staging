@@ -1,11 +1,7 @@
 include(../../plugins.pri)
-FORMS += \
-    forms/preseteditor.ui \
-    forms/playlistbrowser.ui \
-    forms/popupsettings.ui \
-    forms/shortcutdialog.ui \
-    forms/skinnedsettings.ui \
-    forms/hotkeyeditor.ui
+
+TARGET = $$PLUGINS_PREFIX/Ui/skinned
+
 HEADERS += mainwindow.h \
     button.h \
     display.h \
@@ -58,6 +54,7 @@ HEADERS += mainwindow.h \
     listwidgetdrawer.h \
     playlistheader.h \
     horizontalslider.h
+
 SOURCES += mainwindow.cpp \
     button.cpp \
     display.cpp \
@@ -110,16 +107,22 @@ SOURCES += mainwindow.cpp \
     playlistheader.cpp \
     horizontalslider.cpp
 
+FORMS += \
+    forms/preseteditor.ui \
+    forms/playlistbrowser.ui \
+    forms/popupsettings.ui \
+    forms/shortcutdialog.ui \
+    forms/skinnedsettings.ui \
+    forms/hotkeyeditor.ui
+
+RESOURCES = resources/resources.qrc \
+            glare/glare.qrc \
+            translations/translations.qrc
+
 LIBS += -lqmmpui
 
-TARGET = $$PLUGINS_PREFIX/Ui/skinned
-
-RESOURCES = resources/resources.qrc glare/glare.qrc
-
 unix {
- target.path = $$LIB_DIR/qmmp/Ui
- INSTALLS += target
- PKGCONFIG += x11
+   target.path = $$LIB_DIR/qmmp/Ui
+   INSTALLS += target
+   PKGCONFIG += x11
 }
-
-RESOURCES += translations/translations.qrc

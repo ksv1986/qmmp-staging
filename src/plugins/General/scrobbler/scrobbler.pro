@@ -1,13 +1,9 @@
 include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/General/scrobbler
-unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libscrobbler.so
 
-RESOURCES = translations/translations.qrc
-unix {
-    target.path = $$LIB_DIR/qmmp/General
-    INSTALLS += target
-}
+QT += network
+
 HEADERS += scrobblerfactory.h \
     settingsdialog.h \
     scrobblerhandler.h \
@@ -23,19 +19,11 @@ SOURCES += scrobblerfactory.cpp \
 
 FORMS += settingsdialog.ui
 
-QT += network
+RESOURCES = translations/translations.qrc
 
 LIBS += -lqmmpui
 
-
-
-
-
-
-
-
-
-
-
-
-
+unix {
+    target.path = $$LIB_DIR/qmmp/General
+    INSTALLS += target
+}

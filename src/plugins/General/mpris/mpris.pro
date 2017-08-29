@@ -1,14 +1,8 @@
 include(../../plugins.pri)
 
+TARGET = $$PLUGINS_PREFIX/General/mpris
+
 QT += dbus
-
-TARGET =$$PLUGINS_PREFIX/General/mpris
-QMAKE_CLEAN =$$PLUGINS_PREFIX/General/libmpris.so
-
-RESOURCES = translations/translations.qrc
-
-target.path = $$LIB_DIR/qmmp/General
-INSTALLS += target
 
 HEADERS += mprisfactory.h \
            mpris.h  \
@@ -26,4 +20,9 @@ SOURCES += mprisfactory.cpp \
            mpris2/root2object.cpp \
            mpris2/player2object.cpp
 
+RESOURCES = translations/translations.qrc
+
 LIBS += -lqmmpui
+
+target.path = $$LIB_DIR/qmmp/General
+INSTALLS += target

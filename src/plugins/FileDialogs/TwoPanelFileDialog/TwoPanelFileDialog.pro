@@ -1,7 +1,6 @@
 include(../../plugins.pri)
 
-TARGET =$$PLUGINS_PREFIX/FileDialogs/twopanelfiledialog
-
+TARGET = $$PLUGINS_PREFIX/FileDialogs/twopanelfiledialog
 
 HEADERS += twopanelfiledialog.h \
            twopanelfiledialogimpl.h
@@ -19,7 +18,4 @@ RESOURCES += translations/translations.qrc
 unix {
     target.path = $$LIB_DIR/qmmp/FileDialogs
     INSTALLS += target
-
-    QMAKE_CLEAN =$$PLUGINS_PREFIX/FileDialogs/libtwopanelfiledialog.so
-
 }

@@ -1,21 +1,20 @@
 include(../../plugins.pri)
-FORMS += settingsdialog.ui
+
+TARGET = $$PLUGINS_PREFIX/Output/oss4
 
 HEADERS += outputoss4factory.h \
            outputoss4.h \
            settingsdialog.h
 
-
 SOURCES += outputoss4factory.cpp \
            outputoss4.cpp \
            settingsdialog.cpp
 
-TARGET=$$PLUGINS_PREFIX/Output/oss4
-QMAKE_CLEAN =$$PLUGINS_PREFIX/Output/liboss4.so
-
-DEFINES += HAVE_SYS_SOUNDCARD_H
+FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
+
+DEFINES += HAVE_SYS_SOUNDCARD_H
 
 target.path = $$LIB_DIR/qmmp/Output
 INSTALLS += target

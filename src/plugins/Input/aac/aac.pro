@@ -1,5 +1,7 @@
 include(../../plugins.pri)
-FORMS +=
+
+TARGET = $$PLUGINS_PREFIX/Input/aac
+
 HEADERS += decoderaacfactory.h \
     decoder_aac.h \
     aacfile.h \
@@ -8,13 +10,13 @@ SOURCES += decoder_aac.cpp \
     decoderaacfactory.cpp \
     aacfile.cpp \
     aacmetadatamodel.cpp
-TARGET = $$PLUGINS_PREFIX/Input/aac
-QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libaac.so
+
+RESOURCES = translations/translations.qrc
+
 LIBS += -lfaad \
     -L/usr/lib \
     -I/usr/include
 PKGCONFIG += taglib
 
-RESOURCES = translations/translations.qrc
 target.path = $$LIB_DIR/qmmp/Input
 INSTALLS += target

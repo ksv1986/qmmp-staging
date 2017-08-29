@@ -1,4 +1,7 @@
 include(../../plugins.pri)
+
+TARGET = $$PLUGINS_PREFIX/Effect/ladspa
+
 HEADERS += ladspahost.h \
     effectladspafactory.h \
     settingsdialog.h \
@@ -6,6 +9,7 @@ HEADERS += ladspahost.h \
     ladspa.h \
     ladspahelper.h \
     ladspabutton.h
+
 SOURCES += ladspahost.cpp \
     effectladspafactory.cpp \
     settingsdialog.cpp \
@@ -13,14 +17,12 @@ SOURCES += ladspahost.cpp \
     ladspahelper.cpp \
     ladspabutton.cpp
 
-TARGET = $$PLUGINS_PREFIX/Effect/ladspa
-QMAKE_CLEAN = $$PLUGINS_PREFIX/Effect/libladspa.so
-
-LIBS += -L/usr/lib -I/usr/include
-
-linux-g++|linux-g++-32|linux-g++-64:LIBS += -ldl
+FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
+
+LIBS += -L/usr/lib -I/usr/include
+linux-g++|linux-g++-32|linux-g++-64:LIBS += -ldl
+
 target.path = $$LIB_DIR/qmmp/Effect
 INSTALLS += target
-FORMS += settingsdialog.ui

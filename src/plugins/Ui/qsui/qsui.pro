@@ -79,11 +79,11 @@ RESOURCES += translations/translations.qrc resources/qsui_resources.qrc txt/qsui
 
 LIBS += -lqmmpui
 
-unix{
+unix {
   target.path = $$LIB_DIR/qmmp/Ui
   INSTALLS += target
 }
 
-win32{
+win32 {
   INCLUDEPATH += ./
 }

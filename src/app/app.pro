@@ -13,11 +13,7 @@ SOURCES += \
     qmmpapplication.cpp
 
 
-
 # Some conf to redirect intermediate stuff in separate dirs
-UI_DIR = ./.build/ui/
-MOC_DIR = ./.build/moc/
-OBJECTS_DIR = ./.build/obj
 QT += network
 unix:TARGET = ../../bin/qmmp
 win32:TARGET = ../../../bin/qmmp

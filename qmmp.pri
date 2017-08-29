@@ -1,6 +1,14 @@
 #Common settings for Qmmp build
 
+#Extra clean target
+
+unix {
+    QMAKE_DISTCLEAN += -r .build
+    QMAKE_DISTCLEAN += translations/*.qm
+}
+
 #Some conf to redirect intermediate stuff in separate dirs
+
 UI_DIR=./.build/ui/
 MOC_DIR=./.build/moc/
 OBJECTS_DIR=./.build/obj

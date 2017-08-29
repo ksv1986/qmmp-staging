@@ -181,4 +181,5 @@ unix {
     QMAKE_PKGCONFIG_DESCRIPTION = qmmp user interface library
     QMAKE_PKGCONFIG_REQUIRES = QtCore QtGui QtNetwork qmmp
     QMAKE_PKGCONFIG_DESTDIR = pkgconfig
+    QMAKE_DISTCLEAN += -r pkgconfig
 }

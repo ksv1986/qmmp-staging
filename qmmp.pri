@@ -2,10 +2,7 @@
 
 #Extra clean target
 
-unix {
-    QMAKE_DISTCLEAN += -r .build
-    QMAKE_DISTCLEAN += translations/*.qm
-}
+unix: QMAKE_DISTCLEAN += -r .build
 
 #Some conf to redirect intermediate stuff in separate dirs
 

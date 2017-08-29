@@ -15,12 +15,6 @@ contains(CONFIG, WITH_NEW_JACK){
     DEFINES += JACK_NEW_API
 }
 
-CONFIG += warn_on \
-thread \
-plugin \
-link_pkgconfig
-TEMPLATE = lib
-LIBS += -lqmmp
 PKGCONFIG += jack soxr
 
 RESOURCES = translations/translations.qrc

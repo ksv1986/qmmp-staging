@@ -12,15 +12,11 @@ SOURCES += ladspahost.cpp \
     ladspaslider.cpp \
     ladspahelper.cpp \
     ladspabutton.cpp
+
 TARGET = $$PLUGINS_PREFIX/Effect/ladspa
 QMAKE_CLEAN = $$PLUGINS_PREFIX/Effect/libladspa.so
-CONFIG += warn_on \
-    plugin \
-    link_pkgconfig
-TEMPLATE = lib
-LIBS += -lqmmp \
-    -L/usr/lib \
-    -I/usr/include
+
+LIBS += -L/usr/lib -I/usr/include
 
 linux-g++|linux-g++-32|linux-g++-64:LIBS += -ldl
 

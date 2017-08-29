@@ -10,14 +10,6 @@ SOURCES += outputpulseaudiofactory.cpp \
 TARGET=$$PLUGINS_PREFIX/Output/pulseaudio
 QMAKE_CLEAN =$$PLUGINS_PREFIX/Output/libpulseaudio.so
 
-CONFIG += warn_on \
-thread \
-plugin \
-link_pkgconfig
-
-TEMPLATE = lib
-LIBS += -lqmmp
-
 PKGCONFIG += libpulse-simple
 
 RESOURCES = translations/translations.qrc

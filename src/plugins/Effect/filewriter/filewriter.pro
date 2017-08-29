@@ -10,10 +10,6 @@ SOURCES += effectfilewriterfactory.cpp \
 
 TARGET =$$PLUGINS_PREFIX/Effect/filewriter
 
-CONFIG += warn_on plugin link_pkgconfig
-
-TEMPLATE = lib
-
 RESOURCES = translations/translations.qrc
 
 unix {

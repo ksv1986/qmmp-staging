@@ -10,11 +10,6 @@ SOURCES += decoder_vorbis.cpp \
     replaygainreader.cpp
 TARGET = $$PLUGINS_PREFIX/Input/vorbis
 
-CONFIG += warn_on \
-    plugin \
-    link_pkgconfig
-TEMPLATE = lib
-
 RESOURCES = translations/translations.qrc
 
 unix {
@@ -22,13 +17,10 @@ unix {
     INSTALLS += target
 
     PKGCONFIG += taglib ogg vorbisfile vorbis
-    LIBS += -lqmmp
     QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libvorbis.so
 }
 
 win32 {
-    HEADERS += ../../../../src/qmmp/metadatamodel.h \
-               ../../../../src/qmmp/decoderfactory.h
-    LIBS += -lqmmp0 -lvorbisfile -lvorbis -logg -ltag.dll -lm
+    LIBS += -lvorbisfile -lvorbis -logg -ltag.dll -lm
     LD_FLAGS += -no-undefined
 }

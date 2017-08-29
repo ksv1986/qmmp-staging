@@ -10,12 +10,7 @@ SOURCES += decoder_aac.cpp \
     aacmetadatamodel.cpp
 TARGET = $$PLUGINS_PREFIX/Input/aac
 QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libaac.so
-CONFIG += warn_on \
-    plugin \
-    link_pkgconfig
-TEMPLATE = lib
-LIBS += -lqmmp \
-    -lfaad \
+LIBS += -lfaad \
     -L/usr/lib \
     -I/usr/include
 PKGCONFIG += taglib

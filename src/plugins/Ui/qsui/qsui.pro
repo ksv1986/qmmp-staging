@@ -2,11 +2,6 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/Ui/qsui
 
-CONFIG += warn_on \
-    plugin
-
-TEMPLATE = lib
-
 SOURCES += \
     mainwindow.cpp \
     listwidget.cpp \
@@ -82,20 +77,13 @@ FORMS += forms/mainwindow.ui \
 
 RESOURCES += translations/translations.qrc resources/qsui_resources.qrc txt/qsui_txt.qrc
 
-TEMPLATE = lib
-
-CONFIG += warn_on \
-          plugin
-
-TARGET = $$PLUGINS_PREFIX/Ui/qsui
+LIBS += -lqmmpui
 
 unix{
-  LIBS += -lqmmpui -lqmmp
   target.path = $$LIB_DIR/qmmp/Ui
   INSTALLS += target
 }
 
 win32{
-   LIBS += -lqmmpui0 -lqmmp0
-   INCLUDEPATH += ./
+  INCLUDEPATH += ./
 }

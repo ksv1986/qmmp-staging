@@ -10,12 +10,6 @@ SOURCES += bs2bplugin.cpp \
 
 TARGET =$$PLUGINS_PREFIX/Effect/bs2b
 
-CONFIG += warn_on \
-plugin \
-link_pkgconfig
-
-TEMPLATE = lib
-
 RESOURCES = translations/translations.qrc
 
 FORMS += settingsdialog.ui

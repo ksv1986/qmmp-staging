@@ -1,14 +1,9 @@
 include(../../plugins.pri)
 
-CONFIG += warn_on \
-plugin  \
- lib \
- qdbus
+QT += dbus
 
 TARGET = $$PLUGINS_PREFIX/General/hal
 QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libhal.so
-
-TEMPLATE = lib
 
 RESOURCES = translations/translations.qrc
 
@@ -28,6 +23,6 @@ SOURCES += halfactory.cpp \
            haldevice.cpp \
            settingsdialog.cpp
 
-LIBS += -lqmmpui -lqmmp
+LIBS += -lqmmpui
 
 FORMS += settingsdialog.ui

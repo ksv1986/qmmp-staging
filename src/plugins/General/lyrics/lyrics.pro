@@ -1,16 +1,9 @@
 include(../../plugins.pri)
 
-CONFIG += warn_on \
-plugin
-
 TARGET =$$PLUGINS_PREFIX/General/lyrics
 unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/General/liblyrics.so
 
-
-TEMPLATE = lib
-unix:LIBS += -lqmmpui -lqmmp
-
-win32:LIBS += -lqmmpui0 -lqmmp0
+LIBS += -lqmmpui
 
 RESOURCES = translations/translations.qrc
 

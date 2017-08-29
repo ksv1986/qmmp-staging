@@ -1,7 +1,7 @@
 include(../../plugins.pri)
 
 contains(CONFIG, WITH_PROJECTM20){
-DEFINES += PROJECTM_20
+  DEFINES += PROJECTM_20
 }
 
 TARGET =$$PLUGINS_PREFIX/Visual/projectm
@@ -10,16 +10,12 @@ QMAKE_CLEAN =$$PLUGINS_PREFIX/Visual/libprojectm.so
 HEADERS += projectmwidget.h \
            visualprojectmfactory.h \
            projectmplugin.h \
-    projectmwrapper.h
+           projectmwrapper.h
 SOURCES += projectmplugin.cpp \
            visualprojectmfactory.cpp \
            projectmwidget.cpp \
-    projectmwrapper.cpp
-CONFIG += warn_on \
-plugin \
-link_pkgconfig
+           projectmwrapper.cpp
 
-TEMPLATE = lib
 QT += opengl
 
 TRANSLATIONS = translations/projectm_plugin_cs.ts \
@@ -43,7 +39,7 @@ unix {
   PKGCONFIG += libprojectM
   target.path = $$LIB_DIR/qmmp/Visual
   INSTALLS += target
-  LIBS += -lqmmp -L/usr/lib -I/usr/include
+  LIBS += -L/usr/lib -I/usr/include
   #projectM config path
   PROJECTM_CONFIG_FILES = /usr/share/projectM/config.inp \
                           /usr/local/share/projectM/config.inp
@@ -56,5 +52,5 @@ unix {
 }
 
 win32 {
-    LIBS += -lqmmp0 -lprojectM.dll
+    LIBS += -lprojectM.dll
 }

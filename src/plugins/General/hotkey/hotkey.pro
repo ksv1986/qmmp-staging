@@ -1,15 +1,6 @@
 include(../../plugins.pri)
 
-CONFIG += warn_on \
-plugin  \
- lib  \
- link_pkgconfig
-
-
 TARGET = $$PLUGINS_PREFIX/General/hotkey
-
-
-TEMPLATE = lib
 
 RESOURCES = translations/translations.qrc
 
@@ -35,9 +26,8 @@ unix {
     QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libhotkey.so
     PKGCONFIG += x11
     DEFINES += HAVE_XKBLIB_H
-    LIBS += -lqmmpui -lqmmp
 }
 
-win32 {
-    LIBS += -lqmmpui0 -lqmmp0
-}
+
+LIBS += -lqmmpui
+

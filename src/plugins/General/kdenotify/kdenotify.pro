@@ -3,15 +3,11 @@
 # -------------------------------------------------
 include(../../plugins.pri)
 QT += dbus
-CONFIG += warn_on \
-    plugin
-unix:TARGET = $$PLUGINS_PREFIX/General/kdenotify
-unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libkdenotify.so
-TEMPLATE = lib
-unix {
-    LIBS += -lqmmpui \
-        -lqmmp
-}
+
+TARGET = $$PLUGINS_PREFIX/General/kdenotify
+QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libkdenotify.so
+LIBS += -lqmmpui
+
 unix {
     target.path = $$LIB_DIR/qmmp/General
     INSTALLS += target

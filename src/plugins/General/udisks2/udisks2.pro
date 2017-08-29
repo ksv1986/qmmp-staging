@@ -1,14 +1,9 @@
 include(../../plugins.pri)
 
-CONFIG += warn_on \
-plugin  \
- lib \
- qdbus
+QT += dbus
 
 TARGET = $$PLUGINS_PREFIX/General/udisks2
 QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libudisks2.so
-
-TEMPLATE = lib
 
 RESOURCES = translations/translations.qrc
 
@@ -28,6 +23,6 @@ SOURCES += udisks2factory.cpp \
            udisks2device.cpp \
            settingsdialog.cpp
 
-LIBS += -lqmmpui -lqmmp
+LIBS += -lqmmpui
 
 FORMS += settingsdialog.ui

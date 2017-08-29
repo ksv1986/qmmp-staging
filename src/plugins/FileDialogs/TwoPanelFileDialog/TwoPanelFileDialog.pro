@@ -12,9 +12,7 @@ SOURCES += twopanelfiledialog.cpp \
 
 FORMS += twopanelfiledialog.ui
 
-CONFIG += warn_on plugin
-
-TEMPLATE = lib
+LIBS += -lqmmpui
 
 RESOURCES += translations/translations.qrc
 
@@ -23,9 +21,5 @@ unix {
     INSTALLS += target
 
     QMAKE_CLEAN =$$PLUGINS_PREFIX/FileDialogs/libtwopanelfiledialog.so
-    LIBS += -lqmmpui -lqmmp
-}
 
-win32 {
-    LIBS += -lqmmpui0 -lqmmp0
 }

@@ -110,26 +110,16 @@ SOURCES += mainwindow.cpp \
     playlistheader.cpp \
     horizontalslider.cpp
 
-TEMPLATE = lib
-unix:LIBS += -lqmmpui -lqmmp
-
-win32:LIBS += -lqmmpui0 -lqmmp0
-
-CONFIG += warn_on \
-          plugin
+LIBS += -lqmmpui
 
 TARGET = $$PLUGINS_PREFIX/Ui/skinned
-
-unix:LIBS += -lqmmp -lqmmpui
-win32:LIBS += -lqmmp0 -lqmmpui0
 
 RESOURCES = resources/resources.qrc glare/glare.qrc
 
 unix {
-target.path = $$LIB_DIR/qmmp/Ui
-INSTALLS += target
-CONFIG += link_pkgconfig
-PKGCONFIG += x11
+ target.path = $$LIB_DIR/qmmp/Ui
+ INSTALLS += target
+ PKGCONFIG += x11
 }
 
 RESOURCES += translations/translations.qrc

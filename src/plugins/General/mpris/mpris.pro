@@ -1,14 +1,9 @@
 include(../../plugins.pri)
 
-CONFIG += warn_on \
-plugin  \
- lib \
- qdbus
+QT += dbus
 
 TARGET =$$PLUGINS_PREFIX/General/mpris
 QMAKE_CLEAN =$$PLUGINS_PREFIX/General/libmpris.so
-
-TEMPLATE = lib
 
 RESOURCES = translations/translations.qrc
 
@@ -31,4 +26,4 @@ SOURCES += mprisfactory.cpp \
            mpris2/root2object.cpp \
            mpris2/player2object.cpp
 
-LIBS += -lqmmpui -lqmmp
+LIBS += -lqmmpui

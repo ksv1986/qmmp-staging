@@ -12,23 +12,18 @@ SOURCES += decoder_flac.cpp \
     replaygainreader.cpp
 TARGET = $$PLUGINS_PREFIX/Input/flac
 
-CONFIG += warn_on \
-    plugin \
-    link_pkgconfig
-TEMPLATE = lib
-
 RESOURCES = translations/translations.qrc
+
+LIBS += -lqmmp
 
 unix {
     target.path = $$LIB_DIR/qmmp/Input
     INSTALLS += target
     PKGCONFIG += taglib flac
-    LIBS += -lqmmp
+
     QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libflac.so
 }
 
 win32 {
-    HEADERS += ../../../../src/qmmp/metadatamodel.h \
-               ../../../../src/qmmp/decoderfactory.h
-    LIBS += -lqmmp0 -lflac -logg -ltag.dll -lm
+    LIBS += -lflac -logg -ltag.dll -lm
 }

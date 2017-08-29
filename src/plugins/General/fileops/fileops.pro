@@ -1,16 +1,9 @@
 include(../../plugins.pri)
 
-CONFIG += warn_on \
-plugin
-
 TARGET =$$PLUGINS_PREFIX/General/fileops
 unix : QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libfileops.so
 
-
-TEMPLATE = lib
-unix : LIBS += -lqmmpui -lqmmp
-
-win32 : LIBS += -lqmmpui0 -lqmmp0
+LIBS += -lqmmpui
 
 RESOURCES = translations/translations.qrc
 unix {
@@ -21,7 +14,7 @@ HEADERS += fileopsfactory.h \
            fileops.h \
            settingsdialog.h \
            hotkeydialog.h
-win32 : HEADERS += ../../../../src/qmmpui/general.h
+
 SOURCES += fileopsfactory.cpp \
            fileops.cpp \
            settingsdialog.cpp \

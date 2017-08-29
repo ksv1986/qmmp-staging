@@ -9,14 +9,9 @@ SOURCES += \
     mmsinputsource.cpp \
     settingsdialog.cpp \
     mmsstreamreader.cpp
-win32:HEADERS += ../../../../src/qmmp/inputsource.h \
-    ../../../../src/qmmp/inputsourcefactory.h
+
 TARGET = $$PLUGINS_PREFIX/Transports/mms
 unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libmms.so
-CONFIG += warn_on \
-    plugin \
-    link_pkgconfig
-TEMPLATE = lib
 
 LIBS += -lqmmp -L/usr/lib
 PKGCONFIG += libmms

@@ -12,18 +12,11 @@ SOURCES += decoder_wavpack.cpp \
     replaygainreader.cpp
 TARGET = $$PLUGINS_PREFIX/Input/wavpack
 
-CONFIG += warn_on \
-    plugin \
-    link_pkgconfig
-TEMPLATE = lib
-
 RESOURCES = translations/translations.qrc
 
 unix {
     target.path = $$LIB_DIR/qmmp/Input
     INSTALLS += target
-
-    LIBS += -lqmmp
     PKGCONFIG += wavpack
     QMAKE_CLEAN = $$PLUGINS_PREFIX/Input/libwavpack.so
 }
@@ -31,5 +24,5 @@ unix {
 win32 {
     HEADERS += ../../../../src/qmmp/metadatamodel.h \
                ../../../../src/qmmp/decoderfactory.h
-    LIBS += -lqmmp0 -lwavpack
+    LIBS += -lwavpack
 }

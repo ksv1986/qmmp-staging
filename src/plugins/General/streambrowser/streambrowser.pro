@@ -1,22 +1,15 @@
 include(../../plugins.pri)
 
-CONFIG += warn_on \
-plugin
-
 TARGET =$$PLUGINS_PREFIX/General/streambrowser
 unix:QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libstreambrowser.so
 
-
-TEMPLATE = lib
-unix:LIBS += -lqmmpui -lqmmp
-
-win32:LIBS += -lqmmpui0 -lqmmp0
+LIBS += -lqmmpui
 
 RESOURCES = translations/translations.qrc
 
 unix {
-target.path = $$LIB_DIR/qmmp/General
-INSTALLS += target
+  target.path = $$LIB_DIR/qmmp/General
+  INSTALLS += target
 }
 HEADERS += streambrowserfactory.h \
            streambrowser.h \

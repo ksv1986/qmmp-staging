@@ -13,3 +13,8 @@ unix {
     }
     PLUGINS_PREFIX=../../../../lib/qmmp
 }
+
+CONFIG += warn_on plugin lib thread link_pkgconfig
+TEMPLATE = lib
+
+LIBS += -lqmmp

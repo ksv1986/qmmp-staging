@@ -6,17 +6,9 @@ HEADERS += outputwaveoutfactory.h \
 SOURCES += outputwaveoutfactory.cpp \
            outputwaveout.cpp
 
-HEADERS += ../../../../src/qmmp/output.h
-
-
 TARGET=$$PLUGINS_PREFIX/Output/waveout
 
-CONFIG += warn_on \
-thread \
-plugin
-
-TEMPLATE = lib
-LIBS += -lqmmp0 -lwinmm
+LIBS += -lwinmm
 
 RESOURCES = translations/translations.qrc
 

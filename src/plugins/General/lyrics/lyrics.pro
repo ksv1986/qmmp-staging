@@ -3,6 +3,7 @@ include(../../plugins.pri)
 TARGET = $$PLUGINS_PREFIX/General/lyrics
 
 QT += network
+CONFIG += link_qmmpui
 
 HEADERS += lyricsfactory.h \
            lyrics.h \
@@ -15,8 +16,6 @@ SOURCES += lyricsfactory.cpp \
 FORMS += lyricswindow.ui
 
 RESOURCES = translations/translations.qrc
-
-LIBS += -lqmmpui
 
 unix {
     target.path = $$LIB_DIR/qmmp/General

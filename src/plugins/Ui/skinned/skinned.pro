@@ -2,6 +2,8 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/Ui/skinned
 
+CONFIG += link_qmmpui
+
 HEADERS += mainwindow.h \
     button.h \
     display.h \
@@ -118,8 +120,6 @@ FORMS += \
 RESOURCES = resources/resources.qrc \
             glare/glare.qrc \
             translations/translations.qrc
-
-LIBS += -lqmmpui
 
 unix {
    target.path = $$LIB_DIR/qmmp/Ui

@@ -2,11 +2,11 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/CommandLineOptions/seekoption
 
+CONFIG += link_qmmpui
+
 HEADERS += seekoption.h
 
 SOURCES += seekoption.cpp
-
-LIBS += -lqmmpui
 
 RESOURCES = translations/translations.qrc
 

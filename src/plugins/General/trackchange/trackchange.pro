@@ -2,6 +2,8 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/General/trackchange
 
+CONFIG += link_qmmpui
+
 HEADERS += trackchangefactory.h \
            trackchange.h \
            settingsdialog.h
@@ -13,8 +15,6 @@ SOURCES += trackchangefactory.cpp \
 FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
-
-LIBS += -lqmmpui
 
 unix {
     target.path = $$LIB_DIR/qmmp/General

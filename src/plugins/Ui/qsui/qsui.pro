@@ -1,6 +1,7 @@
 include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/Ui/qsui
+CONFIG += link_qmmpui
 
 SOURCES += \
     mainwindow.cpp \
@@ -76,8 +77,6 @@ FORMS += forms/mainwindow.ui \
     forms/hotkeyeditor.ui
 
 RESOURCES += translations/translations.qrc resources/qsui_resources.qrc txt/qsui_txt.qrc
-
-LIBS += -lqmmpui
 
 unix {
   target.path = $$LIB_DIR/qmmp/Ui

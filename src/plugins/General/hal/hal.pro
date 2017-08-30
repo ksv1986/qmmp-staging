@@ -3,6 +3,7 @@ include(../../plugins.pri)
 TARGET = $$PLUGINS_PREFIX/General/hal
 
 QT += dbus
+CONFIG += link_qmmpui
 
 HEADERS += halfactory.h \
            halplugin.h \
@@ -20,8 +21,6 @@ FORMS += settingsdialog.ui
 
 
 RESOURCES = translations/translations.qrc
-
-LIBS += -lqmmpui
 
 target.path = $$LIB_DIR/qmmp/General
 INSTALLS += target

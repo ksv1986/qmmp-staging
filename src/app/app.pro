@@ -21,9 +21,10 @@ SOURCES += qmmpstarter.cpp \
 RESOURCES = images/images.qrc translations/qmmp_locales.qrc
 
 INCLUDEPATH += ../
-LIBS += -lqmmp -lqmmpui
+
 
 unix {
+    LIBS += -lqmmp -lqmmpui
     QMAKE_LIBDIR += ../../lib
     target.path = /bin
     desktop.files = qmmp.desktop \
@@ -48,6 +49,7 @@ unix {
 }
 
 win32 {
+    LIBS += -lqmmp0 -lqmmpui0
     QMAKE_LIBDIR += ../../bin
     RC_FILE = qmmp.rc
 }

@@ -3,6 +3,7 @@ include(../../plugins.pri)
 TARGET = $$PLUGINS_PREFIX/General/udisks2
 
 QT += dbus
+CONFIG += link_qmmpui
 
 HEADERS += udisks2factory.h \
            udisks2plugin.h \
@@ -19,8 +20,6 @@ SOURCES += udisks2factory.cpp \
 FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
-
-LIBS += -lqmmpui
 
 target.path = $$LIB_DIR/qmmp/General
 INSTALLS += target

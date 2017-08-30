@@ -2,6 +2,8 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/FileDialogs/qmmpfiledialog
 
+CONFIG += link_qmmpui
+
 HEADERS += qmmpfiledialog.h \
            qmmpfiledialogimpl.h
 
@@ -11,8 +13,6 @@ SOURCES += qmmpfiledialog.cpp \
 FORMS += qmmpfiledialog.ui
 
 RESOURCES += translations/translations.qrc
-
-LIBS += -lqmmpui
 
 unix {
     target.path = $$LIB_DIR/qmmp/FileDialogs

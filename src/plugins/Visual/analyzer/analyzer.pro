@@ -22,3 +22,5 @@ unix{
    target.path = $$LIB_DIR/qmmp/Visual
    INSTALLS += target
 }
+
+INCLUDEPATH += ./

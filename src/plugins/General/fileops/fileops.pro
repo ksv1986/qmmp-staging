@@ -17,7 +17,7 @@ FORMS += settingsdialog.ui \
 
 RESOURCES = translations/translations.qrc
 
-LIBS += -lqmmpui
+LIBS += $$QMMPUI_LIB
 
 unix {
     target.path = $$LIB_DIR/qmmp/General

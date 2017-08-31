@@ -11,7 +11,7 @@ SOURCES += twopanelfiledialog.cpp \
 
 FORMS += twopanelfiledialog.ui
 
-LIBS += -lqmmpui
+LIBS += $$QMMPUI_LIB
 
 RESOURCES += translations/translations.qrc
 

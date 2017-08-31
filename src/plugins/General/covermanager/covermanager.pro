@@ -15,7 +15,7 @@ SOURCES += covermanagerfactory.cpp \
 RESOURCES = translations/translations.qrc \
             images/cm_images.qrc
 
-LIBS += -lqmmpui
+LIBS += $$QMMPUI_LIB
 
 unix {
     target.path = $$LIB_DIR/qmmp/General

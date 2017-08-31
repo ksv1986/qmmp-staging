@@ -14,8 +14,6 @@ FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
 
-LIBS += -lqmmp
-
 unix {
   LIBS += -L/usr/lib  -I/usr/include
   PKGCONFIG += libcdio libcdio_cdda libcdio_paranoia libcddb

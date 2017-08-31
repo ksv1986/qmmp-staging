@@ -2,8 +2,6 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/General/converter
 
-
-
 HEADERS += converterfactory.h \
     converterhelper.h \
     converterdialog.h \
@@ -21,7 +19,7 @@ FORMS += converterdialog.ui \
 
 RESOURCES = translations/translations.qrc presets.qrc
 
-LIBS += -lqmmpui
+LIBS += $$QMMPUI_LIB
 PKGCONFIG += taglib
 
 unix{

@@ -16,8 +16,6 @@ SOURCES += decoder_flac.cpp \
 
 RESOURCES = translations/translations.qrc
 
-LIBS += -lqmmp
-
 unix {
     target.path = $$LIB_DIR/qmmp/Input
     INSTALLS += target

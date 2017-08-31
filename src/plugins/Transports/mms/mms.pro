@@ -18,7 +18,7 @@ FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
 
-LIBS += -lqmmp -L/usr/lib
+LIBS += -L/usr/lib
 PKGCONFIG += libmms
 
 target.path = $$LIB_DIR/qmmp/Transports

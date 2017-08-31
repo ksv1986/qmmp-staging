@@ -12,7 +12,7 @@ SOURCES += gnomehotkeyfactory.cpp \
 
 RESOURCES = translations/translations.qrc
 
-LIBS += -lqmmpui
+LIBS += $$QMMPUI_LIB
 
 target.path = $$LIB_DIR/qmmp/General
 INSTALLS += target

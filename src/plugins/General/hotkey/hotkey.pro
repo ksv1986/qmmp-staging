@@ -2,8 +2,6 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/General/hotkey
 
-CONFIG += link_qmmpui
-
 HEADERS += hotkeyfactory.h \
            hotkeymanager.h \
            settingsdialog.h \
@@ -19,6 +17,8 @@ FORMS += settingsdialog.ui \
          hotkeydialog.ui
 
 RESOURCES = translations/translations.qrc
+
+LIBS += $$QMMPUI_LIB
 
 unix {
     target.path = $$LIB_DIR/qmmp/General

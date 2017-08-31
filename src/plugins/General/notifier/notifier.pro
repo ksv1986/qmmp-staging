@@ -1,7 +1,6 @@
 include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/General/notifier
-CONFIG += link_qmmpui
 
 HEADERS += notifierfactory.h \
            notifier.h \
@@ -17,6 +16,8 @@ FORMS += settingsdialog.ui
 
 RESOURCES = notifier_images.qrc \
             translations/translations.qrc
+
+LIBS += $$QMMPUI_LIB
 
 unix {
   PKGCONFIG += x11

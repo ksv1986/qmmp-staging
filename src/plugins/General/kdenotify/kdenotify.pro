@@ -6,7 +6,6 @@ include(../../plugins.pri)
 TARGET = $$PLUGINS_PREFIX/General/kdenotify
 
 QT += dbus
-CONFIG += link_qmmpui
 
 SOURCES += kdenotifyfactory.cpp \
     kdenotify.cpp \
@@ -19,6 +18,8 @@ HEADERS += kdenotifyfactory.h \
 FORMS += settingsdialog.ui
 
 RESOURCES += translations/translations.qrc
+
+LIBS += $$QMMPUI_LIB
 
 target.path = $$LIB_DIR/qmmp/General
 images.files = images/app_icon.png \

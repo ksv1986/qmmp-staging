@@ -1,7 +1,6 @@
 include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/General/rgscan
-CONFIG += link_qmmpui
 
 HEADERS += rgscanfactory.h \
     rgscanhelper.h \
@@ -18,6 +17,8 @@ SOURCES += rgscanfactory.cpp \
 FORMS += rgscandialog.ui
 
 RESOURCES = translations/translations.qrc
+
+LIBS += $$QMMPUI_LIB
 
 unix {
     PKGCONFIG += taglib

@@ -1,7 +1,6 @@
 include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/General/statusicon
-CONFIG += link_qmmpui
 
 HEADERS += statusiconfactory.h \
     statusicon.h \
@@ -21,6 +20,8 @@ FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc \
             images/tray_images.qrc
+
+LIBS += $$QMMPUI_LIB
 
 unix {
     target.path = $$LIB_DIR/qmmp/General

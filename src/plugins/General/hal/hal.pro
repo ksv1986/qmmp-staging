@@ -3,7 +3,6 @@ include(../../plugins.pri)
 TARGET = $$PLUGINS_PREFIX/General/hal
 
 QT += dbus
-CONFIG += link_qmmpui
 
 HEADERS += halfactory.h \
            halplugin.h \
@@ -19,6 +18,7 @@ SOURCES += halfactory.cpp \
 
 FORMS += settingsdialog.ui
 
+LIBS += $$QMMPUI_LIB
 
 RESOURCES = translations/translations.qrc
 

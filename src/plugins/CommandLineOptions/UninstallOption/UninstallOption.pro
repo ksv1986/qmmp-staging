@@ -2,10 +2,10 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/CommandLineOptions/uninstalloption
 
-CONFIG += link_qmmpui
-
 HEADERS += uninstalloption.h
 
 SOURCES += uninstalloption.cpp
+
+LIBS += $$QMMPUI_LIB
 
 RESOURCES = translations/translations.qrc

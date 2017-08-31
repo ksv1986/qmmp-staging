@@ -25,3 +25,7 @@ unix {
     target.path = $$LIB_DIR/qmmp/General
     INSTALLS += target
 }
+
+win32 {
+    LIBS += -ltag.dll
+}

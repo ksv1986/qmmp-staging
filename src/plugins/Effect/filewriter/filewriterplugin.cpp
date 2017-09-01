@@ -133,7 +133,7 @@ void FileWriterPlugin::init(const QMap<Qmmp::MetaData, QString> &metaData)
     while(m_file.exists())
     {
         m_file.setFileName(outDir + "/" + fileName.left(fileName.count() - 4) +
-                           QString("-%1.ogg").arg(j));
+                           QString("-%1.ogg").arg(j++));
     }
 
     qDebug("FileWriterPlugin: writing file '%s'", qPrintable(m_file.fileName()));

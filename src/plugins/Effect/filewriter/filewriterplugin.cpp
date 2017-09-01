@@ -48,7 +48,7 @@ void FileWriterPlugin::applyEffect(Buffer *b)
     if(!b->metaData.isNull())
         init(*b->metaData);
 
-    if(!m_inited)
+    if(!m_inited || !b->samples)
         return;
 
     int frames = b->samples / channels();

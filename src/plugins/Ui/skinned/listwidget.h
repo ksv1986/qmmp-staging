@@ -69,7 +69,7 @@ public:
 public slots:
     void readSettings();
     void updateList(int flags);
-    void setViewPosition(int);
+    void setViewPosition(int sc);
     void setModel(PlayListModel *selected, PlayListModel *previous = 0);
 
 signals:

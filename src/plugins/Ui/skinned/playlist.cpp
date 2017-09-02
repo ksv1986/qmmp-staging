@@ -107,7 +107,7 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
 
     connect (m_listWidget, SIGNAL (doubleClicked()), parent, SLOT (replay()));
 
-    connect (m_plslider, SIGNAL (sliderMoved (int)), m_listWidget, SLOT (scroll (int)));
+    connect (m_plslider, SIGNAL (sliderMoved (int)), m_listWidget, SLOT (setViewPosition(int)));
     connect (m_listWidget, SIGNAL (positionChanged (int, int)), m_plslider,
              SLOT (setPos (int, int)));
     connect (m_skin, SIGNAL (skinChanged()), this, SLOT (updateSkin()));

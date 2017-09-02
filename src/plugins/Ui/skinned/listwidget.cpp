@@ -72,7 +72,7 @@ ListWidget::ListWidget(QWidget *parent)
     connect(m_skin, SIGNAL(skinChanged()), SLOT(updateSkin()));
     connect(m_ui_settings, SIGNAL(repeatableTrackChanged(bool)), SLOT(updateRepeatIndicator()));
     connect(m_timer, SIGNAL(timeout()), SLOT(autoscroll()));
-    connect(m_hslider, SIGNAL(sliderMoved(int)), m_header, SLOT(setViewPosition(int)));
+    connect(m_hslider, SIGNAL(sliderMoved(int)), m_header, SLOT(scroll(int)));
     connect(m_hslider, SIGNAL(sliderMoved(int)), this, SLOT(update()));
     SET_ACTION(ActionManager::PL_SHOW_HEADER, this, SLOT(readSettings()));
 }

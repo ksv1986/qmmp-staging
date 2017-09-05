@@ -32,7 +32,7 @@
         <translation>OSS4 插件设置</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="52"/>
+        <location filename="../settingsdialog.ui" line="61"/>
         <source>Device:</source>
         <translation>设备：</translation>
     </message>

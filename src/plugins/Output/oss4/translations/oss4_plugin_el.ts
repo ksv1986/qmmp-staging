@@ -32,7 +32,7 @@
         <translation>Ρυθμίσεις πρόσθετου OSS4</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="52"/>
+        <location filename="../settingsdialog.ui" line="61"/>
         <source>Device:</source>
         <translation>Συσκευή:</translation>
     </message>

@@ -7,24 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>276</width>
-    <height>64</height>
+    <height>68</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>WASAPI Plugin Settings</string>
+   <string>OSS4 Plugin Settings</string>
   </property>
   <layout class="QGridLayout">
-   <property name="leftMargin">
-    <number>6</number>
-   </property>
-   <property name="topMargin">
+   <property name="margin">
     <number>9</number>
-   </property>
-   <property name="rightMargin">
-    <number>6</number>
-   </property>
-   <property name="bottomMargin">
-    <number>6</number>
    </property>
    <property name="spacing">
     <number>6</number>

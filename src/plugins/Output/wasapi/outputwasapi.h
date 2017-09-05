@@ -68,6 +68,7 @@ private:
 
     UINT32 m_bufferFrames;
     int m_frameSize;
+    QString m_id;
 
     typedef struct
     {

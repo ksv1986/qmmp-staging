@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>WASAPI Plugin Settings</string>
+   <string>OSS4 Plugin Settings</string>
   </property>
   <layout class="QGridLayout">
    <property name="leftMargin">

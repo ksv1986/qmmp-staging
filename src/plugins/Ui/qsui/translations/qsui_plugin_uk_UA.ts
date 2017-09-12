@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>AboutQSUIDialog</name>
     <message>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
         <source>&amp;Record</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Запис</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
@@ -725,7 +725,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="464"/>
         <source>Quick Search</source>
-        <translation type="unfinished">Швидкий пошук</translation>
+        <translation>Швидкий пошук</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="519"/>

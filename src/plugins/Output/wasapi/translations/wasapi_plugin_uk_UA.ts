@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>OutputWASAPIFactory</name>
     <message>
@@ -29,17 +29,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WASAPI Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Налаштування модуля WASAPI</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Пристрій:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="56"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>За замовчанням</translation>
     </message>
 </context>
 </TS>

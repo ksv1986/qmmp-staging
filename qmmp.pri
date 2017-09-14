@@ -11,6 +11,10 @@ MOC_DIR=./.build/moc/
 OBJECTS_DIR=./.build/obj
 RCC_DIR=./.build/rcc
 
+#Defines
+
+DEFINES += QT_NO_CAST_FROM_BYTEARRAY QT_STRICT_ITERATORS
+
 #Version
 
 QMMP_VERSION = 0.11.0

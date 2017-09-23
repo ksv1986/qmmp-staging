@@ -1,10 +1,5 @@
 project(libqsui)
 
-
-if(COMMAND cmake_policy)
-    cmake_policy(SET CMP0005 OLD)
-endif(COMMAND cmake_policy)
-
 # qt plugin
 ADD_DEFINITIONS( -Wall )
 ADD_DEFINITIONS(${QT_DEFINITIONS})

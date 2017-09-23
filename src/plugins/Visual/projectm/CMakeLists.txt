@@ -1,13 +1,8 @@
 project(libprojectm)
 
-
 SET (QT_USE_QTOPENGL TRUE)
 INCLUDE(FindQt4)
 include(${QT_USE_FILE})
-
-if(COMMAND cmake_policy)
-  cmake_policy(SET CMP0005 OLD)
-endif(COMMAND cmake_policy)
 
 # qt plugin
 ADD_DEFINITIONS( -Wall )
@@ -41,7 +36,7 @@ find_file(PROJECTM_CONFIG config.inp
           PATHS "/usr/share/projectM/" "/usr/local/share/projectM/")
 
 IF(PROJECTM_CONFIG)
-ADD_DEFINITIONS(-DPROJECTM_CONFIG=\\\"${PROJECTM_CONFIG}\\\")
+SET(libprojecm_DEFINES PROJECTM_CONFIG=\"${PROJECTM_CONFIG}\")
 MESSAGE(STATUS "Found projectM configuration: ${PROJECTM_CONFIG}")
 ENDIF(PROJECTM_CONFIG)
 
@@ -61,6 +56,7 @@ QT4_ADD_RESOURCES(libprojectm_RCC_SRCS ${libprojectm_RCCS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 IF(PROJECTM_FOUND)
 ADD_LIBRARY(projectm MODULE ${libprojectm_SRCS} ${libprojectm_RCC_SRCS})
+SET_TARGET_PROPERTIES(projectm PROPERTIES COMPILE_DEFINITIONS "${libprojectm_DEFINES}")
 add_dependencies(projectm qmmp)
 target_link_libraries(projectm ${QT_LIBRARIES} libqmmp ${PROJECTM_LDFLAGS} -lGL)
 install(TARGETS projectm DESTINATION ${LIB_DIR}/qmmp/Visual)

@@ -1,9 +1,5 @@
 project(libqmmpui)
 
-if(COMMAND cmake_policy)
-cmake_policy(SET CMP0005 OLD)
-endif(COMMAND cmake_policy)
-
 SET(QT_USE_QTNETWORK TRUE)
 INCLUDE(FindQt4)
 include(${QT_USE_FILE})

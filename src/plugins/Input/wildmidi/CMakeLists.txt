@@ -1,10 +1,5 @@
 project(libwildmidi)
 
-
-if(COMMAND cmake_policy)
-    cmake_policy(SET CMP0005 NEW)
-endif(COMMAND cmake_policy)
-
 INCLUDE(CheckIncludeFile)
 
 # qt plugin

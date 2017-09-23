@@ -36,7 +36,7 @@ find_file(PROJECTM_CONFIG config.inp
           PATHS "/usr/share/projectM/" "/usr/local/share/projectM/")
 
 IF(PROJECTM_CONFIG)
-SET(libprojecm_DEFINES PROJECTM_CONFIG=\"${PROJECTM_CONFIG}\")
+SET(libprojectm_DEFINES PROJECTM_CONFIG=\"${PROJECTM_CONFIG}\")
 MESSAGE(STATUS "Found projectM configuration: ${PROJECTM_CONFIG}")
 ENDIF(PROJECTM_CONFIG)
 

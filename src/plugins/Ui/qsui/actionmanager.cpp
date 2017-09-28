@@ -306,7 +306,10 @@ QList<ActionManager::ToolBarInfo> ActionManager::readToolBarSettings() const
     }
     settings.endArray();
     if(list.isEmpty())
+    {
         list << defaultToolBar();
+        list.last().iconSize = QSize(iconSize, iconSize);
+    }
     return list;
 }
 

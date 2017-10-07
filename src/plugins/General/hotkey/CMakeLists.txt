@@ -61,6 +61,7 @@ QT4_WRAP_UI(libhotkey_UIS_H ${libhotkey_UIS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(X11_FOUND)
+set_property(SOURCE hotkeymanager_x11.cpp PROPERTY SKIP_AUTOMOC ON)
 ADD_LIBRARY(hotkey MODULE ${libhotkey_SRCS} ${libhotkey_UIS_H} ${libhotkey_RCC_SRCS})
 add_dependencies(hotkey qmmpui)
 target_link_libraries(hotkey ${QT_LIBRARIES} qmmpui libqmmp ${X11_LDFLAGS})

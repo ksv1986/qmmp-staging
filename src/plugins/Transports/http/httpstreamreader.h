@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -38,7 +38,7 @@ class DownloadThread;
 class HTTPInputSource;
 
 /*! @internal
- *   @author Ilya Kotov <forkotov02@hotmail.ru>
+ *   @author Ilya Kotov <forkotov02@ya.ru>
  */
 struct HttpStreamData
 {
@@ -52,7 +52,7 @@ struct HttpStreamData
 };
 
 /*! @internal
- *   @author Ilya Kotov <forkotov02@hotmail.ru>
+ *   @author Ilya Kotov <forkotov02@ya.ru>
  */
 class HttpStreamReader : public QIODevice
 {

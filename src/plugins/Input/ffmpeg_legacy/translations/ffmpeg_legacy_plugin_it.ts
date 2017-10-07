@@ -15,8 +15,8 @@
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="213"/>
-        <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
+        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="94"/>

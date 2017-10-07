@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -281,7 +281,7 @@ void DecoderMADFactory::showAbout(QWidget *parent)
                         QString("%1.%2.%3%4").arg(MAD_VERSION_MAJOR)
                         .arg(MAD_VERSION_MINOR)
                         .arg(MAD_VERSION_PATCH).arg(MAD_VERSION_EXTRA)+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>")+"\n"+
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Source code based on mq3 and madplay projects")
                        );
 }

@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2012-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -51,7 +51,7 @@ void StreamBrowserFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Stream Browser Plugin"),
                         tr("Qmmp Stream Browser Plugin")+"\n"+
                         tr("This plugin allows one to add stream from IceCast stream directory")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *StreamBrowserFactory::createTranslator(QObject *parent)

@@ -74,10 +74,10 @@
         <location filename="../qmmpfiledialog.cpp" line="80"/>
         <source>Written by:
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
-Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
+Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>制作:
 Владимир Кузнецов (Vladimir Kuznetsov) &lt;vovanec@gmail.com&gt;
-Илья Котов (Ilya Kotov) &lt;forkotov02@hotmail.ru&gt;</translation>
+Илья Котов (Ilya Kotov) &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="83"/>

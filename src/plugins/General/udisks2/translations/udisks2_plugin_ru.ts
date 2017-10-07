@@ -63,7 +63,7 @@
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="55"/>
-        <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
+        <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Разработчик: Илья Котов</translation>
     </message>
 </context>

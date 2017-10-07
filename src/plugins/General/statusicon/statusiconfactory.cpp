@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -51,7 +51,7 @@ void StatusIconFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Status Icon Plugin"),
                         tr("Qmmp Status Icon Plugin")+"\n"+
                         tr("Written by:") + "\n"+
-                        tr("Ilya Kotov <forkotov02@hotmail.ru>")+"\n"+
+                        tr("Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Artur Guzik <a.guzik88@gmail.com>"));
 }
 

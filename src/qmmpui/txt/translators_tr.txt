@@ -25,7 +25,7 @@ Polonyaca:
     Grzegorz Gibas <amigib@gmail.com>
 
 Rusça:
-    Ilya Kotov <forkotov02@hotmail.ru>
+    Ilya Kotov <forkotov02@ya.ru>
 
 Türkçe:
     Mustafa GUNAY <mustafagunay@gmail.com>

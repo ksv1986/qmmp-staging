@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2007-2015 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *
  *   Copyright (C) 2005-2006 by XMMS2 Team                                 *

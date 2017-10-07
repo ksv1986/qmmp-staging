@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Ilya Kotov                                      *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -57,8 +57,8 @@ void EffectBs2bFactory::showAbout(QWidget *parent)
                         .arg("<a href=\"http://bs2b.sourceforge.net/\">http://bs2b.sourceforge.net/</a>")+
                         QString("<p>" + tr("Compiled against libbs2b-%1") + "</p>").arg(BS2B_VERSION_STR)+
                         "<p>"+tr("Developers:")+"<br>"+
-                        tr("Ilya Kotov") + " &lt;forkotov02@hotmail.ru&gt;"+"<br>"+
-                        tr("Sebastian Pipping") + " &lt;sebastian@pipping.org&gt;"+"</p>");
+                        tr("Ilya Kotov <forkotov02@ya.ru>")+"<br>"+
+                        tr("Sebastian Pipping <sebastian@pipping.org>")+"</p>");
 }
 
 QTranslator *EffectBs2bFactory::createTranslator(QObject *parent)

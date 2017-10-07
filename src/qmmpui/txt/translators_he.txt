@@ -65,7 +65,7 @@ Bulgarian:
     Sérgio Marques <smarquespt@gmail.com>
 
 רוסית:
-    Ilya Kotov <forkotov02@hotmail.ru>
+    Ilya Kotov <forkotov02@ya.ru>
 
 סרבית:
     Mladen Pejaković <pejakm@autistici.org>

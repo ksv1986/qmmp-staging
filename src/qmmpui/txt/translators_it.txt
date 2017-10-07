@@ -21,7 +21,7 @@ Polacco:
     Grzegorz Gibas <amigib@gmail.com>
 
 Russo:
-    Ilya Kotov <forkotov02@hotmail.ru>
+    Ilya Kotov <forkotov02@ya.ru>
 
 Tedesco:
     Stefan Koelling <stefankoelling.ext@googlemail.com>

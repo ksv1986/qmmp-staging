@@ -1159,8 +1159,8 @@
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="49"/>
-        <source>Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>Илья Котов (Ilya Kotov) &lt;forkotov02@hotmail.ru&gt;</translation>
+        <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
+        <translation>Илья Котов (Ilya Kotov) &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="50"/>

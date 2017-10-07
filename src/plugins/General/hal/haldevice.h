@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Ilya Kotov                                      *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Copyright (C) 2006 by Kevin Ottens <ervin@kde.org>                    *
  *                                                                         *
@@ -40,7 +40,7 @@ struct ChangeDescription
 };
 
 /**
-    @author Ilya Kotov <forkotov02@hotmail.ru>
+    @author Ilya Kotov <forkotov02@ya.ru>
 */
 class HalDevice : public QObject
 {

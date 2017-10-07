@@ -1,8 +1,8 @@
 Développeurs principaux : 
 
-    Ilya Kotov <forkotov02@hotmail.ru> - idée et base du code
+    Ilya Kotov <forkotov02@ya.ru> - idée et base du code
 
-Précédents développeurs :
+Précédents développeurs :
 
     Artur Guzik <aguzik88@gmail.com> - greffon de notification kde4, améliorations de l'icône de barre des tâches
     Vladimir Kuznetsov <vovanec@gmail.com> - apparence et de nombreuses améliorations

@@ -36,7 +36,7 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="60"/>
         <source>Ilya Kotov</source>
-        <translation>Ілля Котов &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>Ілля Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="61"/>

@@ -1,6 +1,6 @@
 Desenvolvedores principais:
 
-    Ilya Kotov <forkotov02@hotmail.ru> (idea e código base)
+    Ilya Kotov <forkotov02@ya.ru> (idea e código base)
     Vladimir Kuznetsov <vovanec@gmail.com> (estilo e moitas melloras)
 
 Desenvolvedores de módulos:

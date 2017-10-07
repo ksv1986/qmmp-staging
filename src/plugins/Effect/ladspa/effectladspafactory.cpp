@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Ilya Kotov                                      *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -51,7 +51,7 @@ void EffectLADSPAFactory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About LADSPA Host for Qmmp"),
                         tr("LADSPA Host for Qmmp")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>")+"\n"+
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Based on the LADSPA Host for BMP")+"\n"+
                         tr("BMP-ladspa developers:")+"\n"+
                         tr("Nick Lamb <njl195@zepler.org.uk>")+"\n"+

@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -119,7 +119,7 @@ void DecoderModPlugFactory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About ModPlug Audio Plugin"),
                         tr("Qmmp ModPlug Audio Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>")+"\n"+
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Based on the Modplug Plugin for Xmms")+"\n"+
                         tr("Modplug Plugin developers:")+"\n"+
                         tr("Olivier Lapicque <olivierl@jps.net>")+"\n"+

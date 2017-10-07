@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -156,7 +156,7 @@ void DecoderWavPackFactory::showAbout(QWidget *parent)
                         tr("Qmmp WavPack Audio Plugin")+"\n"+
                         tr("WavPack library version:") +
                         QString(" %1").arg(WavpackGetLibraryVersionString ())+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *DecoderWavPackFactory::createTranslator(QObject *parent)

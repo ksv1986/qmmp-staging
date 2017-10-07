@@ -1,6 +1,6 @@
 Pengembang Inti:
 
-    Ilya Kotov <forkotov02@hotmail.ru> - gagasan dan kode dasar
+    Ilya Kotov <forkotov02@ya.ru> - gagasan dan kode dasar
 
 Pengembang Yang Dahulu:
 

@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -116,7 +116,7 @@ void DecoderSIDFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About SID Audio Plugin"),
                         tr("Qmmp SID Audio Plugin")+"\n"+
                         tr("This plugin plays Commodore 64 music files using libsidplayfp library")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *DecoderSIDFactory::createTranslator(QObject *parent)

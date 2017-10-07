@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -61,7 +61,7 @@ void OutputWaveOutFactory::showAbout(QWidget *parent)
 {
    QMessageBox::about (parent, tr("About WaveOut Output Plugin"),
                         tr("Qmmp WaveOut Output Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>") + "\n" +
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>") + "\n" +
                         tr("Based on aacDECdrop player"));
 }
 

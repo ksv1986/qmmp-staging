@@ -57,7 +57,7 @@ void OutputOSS4Factory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About OSS4 Output Plugin"),
                         tr("Qmmp OSS4 Output Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *OutputOSS4Factory::createTranslator(QObject *parent)

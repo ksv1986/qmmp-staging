@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -50,7 +50,7 @@ void CoverManagerFactory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About Cover Manager Plugin"),
                         tr("Qmmp Cover Manager Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *CoverManagerFactory::createTranslator(QObject *parent)

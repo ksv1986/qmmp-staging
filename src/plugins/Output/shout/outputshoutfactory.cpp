@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2017 by Ilya Kotov                                      *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -66,7 +66,7 @@ void OutputShoutFactory::showAbout(QWidget *parent)
    QMessageBox::about (parent, tr("About Icecast Output Plugin"),
                        tr("Qmmp Icecast Output Plugin")+"\n"+
                        tr("Compiled against libshout-%1").arg(shout_version(0,0,0))+"\n"+
-                       tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                       tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *OutputShoutFactory::createTranslator(QObject *parent)

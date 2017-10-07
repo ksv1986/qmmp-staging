@@ -40,7 +40,7 @@ Pools:
     Grzegorz Gibas <amigib@gmail.com>
 
 Russisch:
-    Ilya Kotov <forkotov02@hotmail.ru>
+    Ilya Kotov <forkotov02@ya.ru>
 
 Slowaak:
     Ján Ďanovský <dagsoftware@yahoo.com>

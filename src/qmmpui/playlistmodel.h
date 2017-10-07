@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -81,7 +81,7 @@ struct SimpleSelection
 /*! @brief The PlayListModel class provides a data model for the playlist.
  *
  * @author Vladimir Kuznetsov <vovanec@gmail.com>
- * @author Ilya Kotov <forkotov02@hotmail.ru>
+ * @author Ilya Kotov <forkotov02@ya.ru>
  *
  *         Playlist Structure
  *      -----------------------

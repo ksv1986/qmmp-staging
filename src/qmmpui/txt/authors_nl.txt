@@ -1,6 +1,6 @@
 Ontwikkelaars:
 
-    Ilya Kotov <forkotov02@hotmail.ru> (idea and base code)
+    Ilya Kotov <forkotov02@ya.ru> (idea and base code)
     Vladimir Kuznetsov <vovanec@gmail.com> (look&feel and many improvements)
 
 Plugin Ontwikkelaars:

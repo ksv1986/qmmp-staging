@@ -1,6 +1,6 @@
 Programos autoriai:
 
-    Ilya Kotov <forkotov02@hotmail.ru> (Idėja ir pagrindinis kodas)
+    Ilya Kotov <forkotov02@ya.ru> (Idėja ir pagrindinis kodas)
     Vladimir Kuznetsov <vovanec@gmail.com> (Išvaizda ir daugybė patobulinimų)
 
 Įskiepiai:

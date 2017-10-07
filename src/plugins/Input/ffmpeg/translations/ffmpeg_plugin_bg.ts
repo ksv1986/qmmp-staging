@@ -30,7 +30,7 @@
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="274"/>
-        <source>Written by: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
+        <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

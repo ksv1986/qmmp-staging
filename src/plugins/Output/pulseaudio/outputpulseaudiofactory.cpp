@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -55,7 +55,7 @@ void OutputPulseAudioFactory::showAbout(QWidget *parent)
 {
    QMessageBox::about (parent, tr("About PulseAudio Output Plugin"),
                         tr("Qmmp PulseAudio Output Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *OutputPulseAudioFactory::createTranslator(QObject *parent)

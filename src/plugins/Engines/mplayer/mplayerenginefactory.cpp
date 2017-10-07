@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -84,7 +84,7 @@ void MplayerEngineFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About MPlayer Plugin"),
                         tr("Qmmp MPlayer Plugin")+"\n"+
                         tr("This plugin uses MPlayer as backend")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *MplayerEngineFactory::createTranslator(QObject *parent)

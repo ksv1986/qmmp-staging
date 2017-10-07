@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -51,7 +51,7 @@ void TrackChangeFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Track Change Plugin"),
                         tr("Qmmp Track Change Plugin")+"\n"+
                         tr("This plugin executes external command when current track is changed") + "\n" +
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *TrackChangeFactory::createTranslator(QObject *parent)

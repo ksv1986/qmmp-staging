@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -54,7 +54,7 @@ void HTTPInputFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About HTTP Transport Plugin"),
                         tr("Qmmp HTTP Transport Plugin")+"\n"+
                         tr("Compiled against libcurl-%1").arg(LIBCURL_VERSION) + "\n" +
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *HTTPInputFactory::createTranslator(QObject *parent)

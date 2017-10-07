@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Copyright (C) 2003-2007 by Justin Karneges and Michail Pishchagin     *
  *                                                                         *

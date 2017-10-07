@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -107,7 +107,7 @@ void DecoderGmeFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About GME Audio Plugin"),
                         tr("Qmmp GME Audio Plugin")+"\n"+
                         tr("This plugin uses Game_Music_Emu library to play game music files")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *DecoderGmeFactory::createTranslator(QObject *parent)

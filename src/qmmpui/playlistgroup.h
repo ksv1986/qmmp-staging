@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2013-2014 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -27,7 +27,7 @@
 class GroupedContainer;
 
 /** @brief The PlayListTrack class provides a group for use with the PlayListModel class.
- * @author Ilya Kotov <forkotov02@hotmail.ru>
+ * @author Ilya Kotov <forkotov02@ya.ru>
  */
 class PlayListGroup : public PlayListItem
 {

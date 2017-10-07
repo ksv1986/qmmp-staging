@@ -37,7 +37,7 @@ Polaco:
     Grzegorz Gibas <amigib@gmail.com>
 
 Ruso:
-    Ilya Kotov <forkotov02@hotmail.ru>
+    Ilya Kotov <forkotov02@ya.ru>
 
 Turco:
     Mustafa GUNAY <mustafagunay@pgmail.com>

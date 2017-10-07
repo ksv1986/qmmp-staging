@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2014-2017 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -53,7 +53,7 @@ void OutputDirectSoundFactory::showAbout(QWidget *parent)
 {
    QMessageBox::about (parent, tr("About DirectSound Output Plugin"),
                         tr("Qmmp DirectSound Output Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *OutputDirectSoundFactory::createTranslator(QObject *parent)

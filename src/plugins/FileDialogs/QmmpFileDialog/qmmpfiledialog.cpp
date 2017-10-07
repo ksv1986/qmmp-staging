@@ -1,6 +1,6 @@
 /**************************************************************************
 *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
-*   forkotov02@hotmail.ru                                                 *
+*   forkotov02@ya.ru                                                      *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
 *   it under the terms of the GNU General Public License as published by  *
@@ -79,7 +79,7 @@ void QmmpFileDialogFactory::showAbout(QWidget *parent)
                         tr("Qmmp File Dialog")+"\n"+
                         tr("Written by:\n"
                            "Vladimir Kuznetsov <vovanec@gmail.com>\n"
-                           "Ilya Kotov <forkotov02@hotmail.ru>")+"\n"+
+                           "Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Some code is copied from the Qt library"));
 
 }

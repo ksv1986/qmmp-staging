@@ -66,7 +66,7 @@ Portuguese:
     Sérgio Marques <smarquespt@gmail.com>
 
 Russian:
-    Ilya Kotov <forkotov02@hotmail.ru>
+    Ilya Kotov <forkotov02@ya.ru>
 
 Serbian:
     Mladen Pejaković <pejakm@autistici.org>

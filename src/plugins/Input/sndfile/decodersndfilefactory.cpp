@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -155,7 +155,7 @@ void DecoderSndFileFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Sndfile Audio Plugin"),
                         tr("Qmmp Sndfile Audio Plugin")+"\n"+
                         tr("Compiled against")+" "+QString(version)+"\n" +
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *DecoderSndFileFactory::createTranslator(QObject *parent)

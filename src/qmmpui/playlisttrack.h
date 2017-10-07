@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2013-2014 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -31,7 +31,7 @@ class PlayListHeaderModel;
 class MetaDataHelper;
 
 /** @brief The PlayListTrack class provides a track for use with the PlayListModel class.
- * @author Ilya Kotov <forkotov02@hotmail.ru>
+ * @author Ilya Kotov <forkotov02@ya.ru>
  */
 class PlayListTrack : public QMap <Qmmp::MetaData, QString>, public PlayListItem
 {

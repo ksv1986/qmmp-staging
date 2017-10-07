@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -32,7 +32,7 @@ class VisualFactory;
 class VisualBuffer;
 
 /*! @brief The Visual class provides the base interface class of visualizations.
- *  @author Ilya Kotov <forkotov02@hotmail.ru>
+ *  @author Ilya Kotov <forkotov02@ya.ru>
  */
 class Visual : public QWidget
 {

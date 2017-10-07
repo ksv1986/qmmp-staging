@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -29,7 +29,7 @@
 
 /*! @internal
  * @brief Base class of playlist containers.
- * @author Ilya Kotov <forkotov02@hotmail.ru>
+ * @author Ilya Kotov <forkotov02@ya.ru>
  * @author Vladimir Kuznetsov <vovanec@gmail.com>
  */
 class PlayListContainer

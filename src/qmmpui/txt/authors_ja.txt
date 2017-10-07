@@ -1,6 +1,6 @@
 中心的な開発者:
 
-    Илья Котов (Ilya Kotov) <forkotov02@hotmail.ru> (発案と基礎コード)
+    Илья Котов (Ilya Kotov) <forkotov02@ya.ru> (発案と基礎コード)
 
 これまでの開発者:
 

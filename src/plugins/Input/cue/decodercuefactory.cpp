@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -92,7 +92,7 @@ void DecoderCUEFactory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About CUE Audio Plugin"),
                         tr("Qmmp CUE Audio Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *DecoderCUEFactory::createTranslator(QObject *parent)

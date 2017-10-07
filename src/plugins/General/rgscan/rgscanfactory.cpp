@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -51,7 +51,7 @@ void RGScanFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About ReplayGain Scanner Plugin"),
                         tr("ReplayGain Scanner Plugin for Qmmp")+"\n"+
                         tr("This plugin scans audio files and gives information for volume normalization") + "\n" +
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>") + "\n" +
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>") + "\n" +
                         tr("Based on source code by:") + "\n" +
                         tr("David Robinson <David@Robinson.org>") + "\n" +
                         tr("Glen Sawyer <mp3gain@hotmail.com>") + "\n" +

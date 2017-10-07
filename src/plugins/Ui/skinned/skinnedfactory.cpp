@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -46,7 +46,7 @@ void SkinnedFactory::showAbout(QWidget *parent)
                         tr("Simple user interface with Winamp-2.x/XMMS skins support") + "\n" +
                         tr("Written by:")+"\n"+
                         tr("Vladimir Kuznetsov <vovanec@gmail.com>")+"\n"+
-                        tr("Ilya Kotov <forkotov02@hotmail.ru>")+"\n"+
+                        tr("Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Artwork:")+"\n"+
                         tr("Andrey Adreev <andreev00@gmail.com>")+"\n"+
                         tr("sixixfive <http://sixsixfive.deviantart.com/>"));

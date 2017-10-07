@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -52,7 +52,7 @@ void HotkeyFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Global Hotkey Plugin"),
                         tr("Qmmp Global Hotkey Plugin")+"\n"+
                         tr("This plugin adds support for multimedia keys or global key combinations")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *HotkeyFactory::createTranslator(QObject *parent)

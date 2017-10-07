@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -38,7 +38,6 @@ PopupSettings::PopupSettings(QWidget *parent)
     settings.endGroup();
     createMenu();
 }
-
 
 PopupSettings::~PopupSettings()
 {}

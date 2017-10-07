@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2014 by Ilya Kotov                                      *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -52,7 +52,7 @@ void GnomeHotkeyFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Gnome Hotkey Plugin"),
                         tr("Qmmp Gnome Hotkey Plugin") + "\n" +
                         tr("This plugin adds support of the GNOME/Cinnamon hotkeys") + "\n" +
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *GnomeHotkeyFactory::createTranslator(QObject *parent)

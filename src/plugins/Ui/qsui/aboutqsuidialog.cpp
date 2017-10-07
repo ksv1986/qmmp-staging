@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -44,7 +44,7 @@ QString AboutQSUIDialog::loadAbout()
     text.append(tr("Simple user interface based on standard widgets set."));
     text.append("</p>");
     text.append("<b>" + tr("Developers:") + "</b>");
-    text.append("<p>" + tr("Ilya Kotov <forkotov02@hotmail.ru>") + "</p>");
+    text.append("<p>" + tr("Ilya Kotov <forkotov02@ya.ru>") + "</p>");
 
     text.append("<b>" + tr("Translators:") + "</b>");
     text.append("<p>");

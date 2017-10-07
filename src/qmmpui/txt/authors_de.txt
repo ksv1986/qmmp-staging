@@ -1,6 +1,6 @@
 Kernentwickler:
 
-    Ilya Kotov <forkotov02@hotmail.ru> - Idee und Basiscode
+    Ilya Kotov <forkotov02@ya.ru> - Idee und Basiscode
 
 Frühere Entwickler:
 

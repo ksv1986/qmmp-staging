@@ -2,7 +2,7 @@
  * Based on smplayer - GUI front-end for mplayer                           *
  *                                                                         *
  * Copyright (C) 2006-2014 Ricardo Villalba <rvm@users.sourceforge.net>    *
- * Copyright (C) 2014 Ilya Kotov forkotov02@hotmail.ru                     *
+ * Copyright (C) 2014 Ilya Kotov forkotov02@ya.ru                          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -34,8 +34,8 @@ WinFileAssocPage::WinFileAssocPage(QWidget *parent): QWidget(parent)
     m_ui->setupUi(this);
 
     if (QSysInfo::WindowsVersion >= QSysInfo::WV_VISTA)
-	{
-		//Hide Select None - One cannot restore an association in Vista. Go figure.
+    {
+        //Hide Select None - One cannot restore an association in Vista. Go figure.
         m_ui->selectNone->hide();
     }
 
@@ -70,73 +70,73 @@ void WinFileAssocPage::on_selectNone_clicked()
 
 void WinFileAssocPage::loadAssociations()
 {
-	m_regExtensions.clear(); 
+    m_regExtensions.clear();
     WinFileAssoc ().GetRegisteredExtensions(m_extensions, m_regExtensions);
 
     for (int k = 0; k < m_ui->listWidget->count(); k++)
-	{
+    {
         QListWidgetItem* pItem = m_ui->listWidget->item(k);
-		if (pItem)
-		{
-			pItem->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
+        if (pItem)
+        {
+            pItem->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
 
             if (m_regExtensions.contains(pItem->text()))
-			{
-				pItem->setCheckState(Qt::Checked);
-				//Don't allow de-selection in windows VISTA if extension is registered.
-				//VISTA doesn't seem to support extension 'restoration' in the API.
+            {
+                pItem->setCheckState(Qt::Checked);
+                //Don't allow de-selection in windows VISTA if extension is registered.
+                //VISTA doesn't seem to support extension 'restoration' in the API.
                 if (QSysInfo::WindowsVersion >= QSysInfo::WV_VISTA)
                 {
-					pItem->setFlags(0);
-				}
-			}
-			else
-			{
-				pItem->setCheckState(Qt::Unchecked);
-			}
-		}
-	}
+                    pItem->setFlags(0);
+                }
+            }
+            else
+            {
+                pItem->setCheckState(Qt::Unchecked);
+            }
+        }
+    }
 }
 
 int WinFileAssocPage::ProcessAssociations(QStringList& current, QStringList& old)
 {
-	WinFileAssoc RegAssoc; 
+    WinFileAssoc RegAssoc;
 
-	QStringList toRestore; 
+    QStringList toRestore;
 
-	//Restore unselected associations
-	foreach(const QString& ext, old)
-	{
-		if (!current.contains(ext))
-			toRestore.append(ext); 
-	}
+    //Restore unselected associations
+    foreach(const QString& ext, old)
+    {
+        if (!current.contains(ext))
+            toRestore.append(ext);
+    }
 
-	RegAssoc.RestoreFileAssociations(toRestore); 
-	return RegAssoc.CreateFileAssociations(current); 
+    RegAssoc.RestoreFileAssociations(toRestore);
+    return RegAssoc.CreateFileAssociations(current);
 }
 
 void WinFileAssocPage::saveAssociations()
 {
-	QStringList extensions; 
+    QStringList extensions;
 
     for (int k = 0; k < m_ui->listWidget->count(); k++)
-	{
+    {
         QListWidgetItem* pItem = m_ui->listWidget->item(k);
-		if (pItem && pItem->checkState() == Qt::Checked)
-			extensions.append(pItem->text()); 
-	}
+        if (pItem && pItem->checkState() == Qt::Checked)
+            extensions.append(pItem->text());
+    }
 
     if(extensions == m_regExtensions)
         return;
 
-	int processed = ProcessAssociations(extensions, m_regExtensions); 
+    int processed = ProcessAssociations(extensions, m_regExtensions);
 
-	if (processed != extensions.count())
-	{
-		QMessageBox::warning(this, tr("Warning"), 
+    if (processed != extensions.count())
+    {
+        QMessageBox::warning(this, tr("Warning"),
             tr("Not all files could be associated. Please check your "
                "security permissions and retry."), QMessageBox::Ok);
-	}
+    }
 }
 
 void WinFileAssocPage::createHelp()

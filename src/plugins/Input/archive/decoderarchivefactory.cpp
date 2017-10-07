@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2016 by Ilya Kotov                                      *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -141,7 +141,7 @@ void DecoderArchiveFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Archive Reader Plugin"),
                         tr("Qmmp Archive Reader Plugin")+"\n"+
                         tr("Compiled against %1").arg(ARCHIVE_VERSION_STRING)+"\n" +
-                        tr("Written by: Ilya Kotov <forkotov02@hotmail.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
 QTranslator *DecoderArchiveFactory::createTranslator(QObject *parent)

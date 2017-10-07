@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -38,7 +38,7 @@ class QmmpUiSettings;
  * processes file list in separate thread and emits
  * \b newPlayListItem(PlayListItem*) signal for every newly
  * created media file.
- * @author Ilya Kotov <forkotov02@hotmail.ru>
+ * @author Ilya Kotov <forkotov02@ya.ru>
  */
 class FileLoader : public QThread
 {

@@ -1,6 +1,6 @@
 Главни програмери:
 
-    Ilya Kotov <forkotov02@hotmail.ru> (идеја и основни кôд)
+    Ilya Kotov <forkotov02@ya.ru> (идеја и основни кôд)
     Vladimir Kuznetsov <vovanec@gmail.com> (изглед и многа побољшања)
 
 Програмери прикључака:

@@ -1,6 +1,6 @@
 Sviluppatori del programma base:
 
-    Ilya Kotov <forkotov02@hotmail.ru> (idea e codice di base)
+    Ilya Kotov <forkotov02@ya.ru> (idea e codice di base)
     Vladimir Kuznetsov <vovanec@gmail.com> (aspetto e molti miglioramenti)
 
 Sviluppatori dei moduli:

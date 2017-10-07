@@ -25,8 +25,8 @@
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="47"/>
-        <source>Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</source>
-        <translation>Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="49"/>

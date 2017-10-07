@@ -1,6 +1,6 @@
 Çekirdek Geliştiriciler:
 
-    Ilya Kotov <forkotov02@hotmail.ru> (fikirler ve temel kod)
+    Ilya Kotov <forkotov02@ya.ru> (fikirler ve temel kod)
     Vladimir Kuznetsov <vovanec@gmail.com> (görünüm ve birçok iyileştirme)
 
 Eklenti Geliştiricileri:

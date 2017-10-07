@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Ilya Kotov                                      *
- *   forkotov02@hotmail.ru                                                 *
+ *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Copyright (C) 2006 by Kevin Ottens <ervin@kde.org>                    *
  *                                                                         *

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@hotmail.ru                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -36,7 +36,7 @@ using namespace PlayListPopup;
 PopupWidget::PopupWidget(QWidget *parent)
         : QWidget(parent)
 {
-    setWindowFlags(Qt::X11BypassWindowManagerHint | Qt::Dialog | Qt::FramelessWindowHint);
+    setWindowFlags(Qt::ToolTip | Qt::BypassGraphicsProxyWidget);
     //setFrameStyle(QFrame::Box | QFrame::Plain);
     setAttribute(Qt::WA_QuitOnClose, false);
     QHBoxLayout *hlayout = new QHBoxLayout(this); //layout

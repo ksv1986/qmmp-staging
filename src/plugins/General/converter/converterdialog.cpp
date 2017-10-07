@@ -272,7 +272,7 @@ void ConverterDialog::readPresets(const QString &path)
     QList <QVariantMap> dataList;
     while(!file.atEnd())
     {
-        QString line = QString::fromUtf8(file.readLine().trimmed());
+        QString line = QString::fromUtf8(file.readLine().trimmed().constData());
         if(!line.contains("="))
             continue;
         QString key = line.split("=").at(0);

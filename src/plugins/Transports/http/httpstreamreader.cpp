@@ -75,7 +75,7 @@ static size_t curl_header(void *data, size_t size, size_t nmemb,
     }
     else
     {
-        QString key = QString::fromLatin1(header.left(header.indexOf(":")).trimmed().toLower());
+        QString key = QString::fromLatin1(header.left(header.indexOf(":")).trimmed().toLower().constData());
         QByteArray value = header.right(header.size() - header.indexOf(":") - 1).trimmed();
         dl->stream()->header.insert(key, value);
         qDebug("HttpStreamReader: key=%s, value=%s",qPrintable(key), value.constData());

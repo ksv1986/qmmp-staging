@@ -35,7 +35,7 @@ const PlayListFormatProperties PLSPlaylistFormat::properties() const
 QList<PlayListTrack *> PLSPlaylistFormat::decode(const QByteArray &contents)
 {
     QList<PlayListTrack *> out;
-    QStringList splitted = QString::fromUtf8(contents).split("\n");
+    QStringList splitted = QString::fromUtf8(contents.constData()).split("\n");
 
     if(splitted.isEmpty())
     {

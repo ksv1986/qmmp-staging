@@ -241,17 +241,17 @@ QList <CDATrack> DecoderCDAudio::generateTrackList(const QString &device)
             if (settings.value("cddb_http", false).toBool())
             {
                 cddb_http_enable (cddb_conn);
-                cddb_set_http_path_query (cddb_conn, settings.value("cddb_path").toByteArray());
+                cddb_set_http_path_query (cddb_conn, settings.value("cddb_path").toByteArray().constData());
                 if (QmmpSettings::instance()->isProxyEnabled())
                 {
                     QUrl proxy = QmmpSettings::instance()->proxy();
                     cddb_http_proxy_enable (cddb_conn);
-                    cddb_set_http_proxy_server_name (cddb_conn, proxy.host().toLatin1 ());
+                    cddb_set_http_proxy_server_name (cddb_conn, proxy.host().toLatin1().constData());
                     cddb_set_http_proxy_server_port (cddb_conn, proxy.port());
                     if(QmmpSettings::instance()->useProxyAuth())
                     {
-                        cddb_set_http_proxy_username (cddb_conn, proxy.userName().toLatin1());
-                        cddb_set_http_proxy_password (cddb_conn, proxy.password().toLatin1());
+                        cddb_set_http_proxy_username (cddb_conn, proxy.userName().toLatin1().constData());
+                        cddb_set_http_proxy_password (cddb_conn, proxy.password().toLatin1().constData());
                     }
                 }
             }

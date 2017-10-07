@@ -64,7 +64,7 @@ QHash<QString, QString> MplayerMetaDataModel::audioProperties()
     QProcess mplayer_process;
     mplayer_process.start("mplayer", args);
     mplayer_process.waitForFinished();
-    QString str = QString::fromLocal8Bit(mplayer_process.readAll()).trimmed();
+    QString str = QString::fromLocal8Bit(mplayer_process.readAll().constData()).trimmed();
     QStringList lines = str.split("\n");
     int height = 0, width = 0;
     //mplayer std output parsing

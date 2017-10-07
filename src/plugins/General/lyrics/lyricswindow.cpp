@@ -189,7 +189,7 @@ QString LyricsWindow::cacheFilePath() const
 {
     QString name = m_ui.artistLineEdit->text() + "_" + m_ui.titleLineEdit->text();
     QByteArray hash = QCryptographicHash::hash(name.toUtf8(), QCryptographicHash::Md5);
-    return m_cachePath + QString::fromLatin1(hash.toHex()) + ".html";
+    return m_cachePath + QString::fromLatin1(hash.toHex().constData()) + ".html";
 }
 
 bool LyricsWindow::loadFromCache()
@@ -205,7 +205,7 @@ bool LyricsWindow::loadFromCache()
         return false;
     }
 
-    m_ui.textBrowser->setHtml(QString::fromUtf8(file.readAll()));
+    m_ui.textBrowser->setHtml(QString::fromUtf8(file.readAll().constData()));
     m_ui.stateLabel->setText(tr("Done"));
     return true;
 }

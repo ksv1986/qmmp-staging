@@ -103,7 +103,7 @@ QStringList UDisks2Device::mountPoints() const
 
 QString UDisks2Device::deviceFile() const
 {
-    return QString::fromAscii(m_block_interface->property("Device").toByteArray());
+    return QString::fromAscii(m_block_interface->property("Device").toByteArray().constData());
 }
 
 QDBusObjectPath UDisks2Device::objectPath() const

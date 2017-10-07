@@ -56,7 +56,7 @@ FileInfo *MplayerInfo::createFileInfo(const QString &path)
     mplayer_process.start("mplayer", args);
     mplayer_process.waitForFinished(1500);
     mplayer_process.kill();
-    QString str = QString::fromLocal8Bit(mplayer_process.readAll()).trimmed();
+    QString str = QString::fromLocal8Bit(mplayer_process.readAll().constData()).trimmed();
     FileInfo *info = new FileInfo(path);
     QStringList lines = str.split("\n");
     foreach(QString line, lines)
@@ -194,7 +194,7 @@ void MplayerEngine::setMuted(bool muted)
 
 void MplayerEngine::readStdOut()
 {
-    QString line = QString::fromLocal8Bit(m_process->readAll ()).trimmed();
+    QString line = QString::fromLocal8Bit(m_process->readAll().constData()).trimmed();
     QStringList lines = line.split("\n");
     foreach(line, lines)
     {

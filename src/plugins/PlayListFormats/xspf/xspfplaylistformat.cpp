@@ -41,7 +41,7 @@ QList<PlayListTrack*> XSPFPlaylistFormat::decode(const QByteArray &contents)
 {
     QList<PlayListTrack*> out;
     QString currentTag;
-    QString contents_copy = QString::fromUtf8(contents);
+    QString contents_copy = QString::fromUtf8(contents.constData());
 
     //remove control symbols to avoid xml errors
     for(int i = 0; i < contents_copy.size(); ++i)

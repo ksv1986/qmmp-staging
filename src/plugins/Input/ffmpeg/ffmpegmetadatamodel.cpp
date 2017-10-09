@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -77,6 +77,8 @@ QHash<QString, QString> FFmpegMetaDataModel::audioProperties()
 
 QPixmap FFmpegMetaDataModel::cover()
 {
+    if(!m_in)
+        return QPixmap();
 #if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(48<<8)+0)) //ffmpeg-3.1:  57.48.101
     AVCodecParameters *c = 0;
 #else

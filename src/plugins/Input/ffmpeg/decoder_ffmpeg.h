@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -54,7 +54,7 @@ private:
     AVFormatContext *ic;
     AVCodecContext *c;
 
-    int m_bitrate, wma_idx;
+    int m_bitrate, audioIndex;
 
     QString m_path;
     qint64 m_totalTime;

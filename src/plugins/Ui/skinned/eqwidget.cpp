@@ -155,6 +155,7 @@ void EqWidget::readSettings()
     }
     move (pos); //geometry
     readEq();
+    m_autoButton->setChecked(settings.value("Skinned/eq_auto", false).toBool());
     //equalizer presets
     QString preset_path = Qmmp::configDir() + "eq.preset";
     if(!QFile::exists(preset_path))
@@ -198,6 +199,7 @@ void EqWidget::writeSettings()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue ("Skinned/eq_pos", this->pos()); //geometry
+    settings.setValue ("Skinned/eq_auto", m_autoButton->isChecked());
     //equalizer presets
     QSettings eq_preset (Qmmp::configDir() + "eq.preset", QSettings::IniFormat);
     eq_preset.clear ();

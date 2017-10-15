@@ -48,8 +48,18 @@
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="51"/>
-        <source>KB</source>
-        <translation>千字节</translation>
+        <source>%1 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
+        <source>%1 kbps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ffmpegmetadatamodel.cpp" line="63"/>
+        <source>%1 Hz</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
@@ -57,22 +67,12 @@
         <translation>比特率</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
-        <source>kbps</source>
-        <translation>千比特每秒</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="72"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="63"/>
         <source>Sample rate</source>
         <translation>取样率</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="72"/>
-        <source>Hz</source>
-        <translation>赫兹</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="73"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="64"/>
         <source>Channels</source>
         <translation>声音通道</translation>
     </message>

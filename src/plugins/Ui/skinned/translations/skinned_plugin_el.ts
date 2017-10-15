@@ -452,53 +452,53 @@
         <translation>Ισοσταθμιστής</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="166"/>
-        <location filename="../eqwidget.cpp" line="183"/>
+        <location filename="../eqwidget.cpp" line="167"/>
+        <location filename="../eqwidget.cpp" line="184"/>
         <source>preset</source>
         <translation>προρύθμιση</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="266"/>
+        <location filename="../eqwidget.cpp" line="268"/>
         <source>&amp;Load/Delete</source>
         <translation>&amp;Φόρτωση/Διαγραφή</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="268"/>
+        <location filename="../eqwidget.cpp" line="270"/>
         <source>&amp;Save Preset</source>
         <translation>&amp;Αποθήκευση προρύθμισης</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="270"/>
+        <location filename="../eqwidget.cpp" line="272"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>&amp;Αποθήκευσης αυτόματης φόρτωσης προρύθμισης</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="272"/>
+        <location filename="../eqwidget.cpp" line="274"/>
         <source>&amp;Import</source>
         <translation>&amp;Εισαγωγή</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="275"/>
+        <location filename="../eqwidget.cpp" line="277"/>
         <source>&amp;Clear</source>
         <translation>&amp;Καθαρισμός</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="304"/>
+        <location filename="../eqwidget.cpp" line="306"/>
         <source>Saving Preset</source>
         <translation>Αποθήκευση προρύθμισης</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="305"/>
+        <location filename="../eqwidget.cpp" line="307"/>
         <source>Preset name:</source>
         <translation>Όνομα προρύθμισης:</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="306"/>
+        <location filename="../eqwidget.cpp" line="308"/>
         <source>preset #</source>
         <translation>προρύθμιση #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="397"/>
+        <location filename="../eqwidget.cpp" line="399"/>
         <source>Import Preset</source>
         <translation>Εισαγωγή προρύθμισης</translation>
     </message>

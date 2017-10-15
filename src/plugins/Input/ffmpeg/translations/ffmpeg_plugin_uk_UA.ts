@@ -48,8 +48,18 @@
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="51"/>
-        <source>KB</source>
-        <translation>Кб</translation>
+        <source>%1 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
+        <source>%1 kbps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ffmpegmetadatamodel.cpp" line="63"/>
+        <source>%1 Hz</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
@@ -57,22 +67,12 @@
         <translation>Бітрейт</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
-        <source>kbps</source>
-        <translation>Кб/с</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="72"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="63"/>
         <source>Sample rate</source>
         <translation>Частота</translation>
     </message>
     <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="72"/>
-        <source>Hz</source>
-        <translation>Гц</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="73"/>
+        <location filename="../ffmpegmetadatamodel.cpp" line="64"/>
         <source>Channels</source>
         <translation>Канали</translation>
     </message>

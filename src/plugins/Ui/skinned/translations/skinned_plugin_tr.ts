@@ -447,48 +447,48 @@
 <context>
     <name>EqWidget</name>
     <message>
-        <location filename="../eqwidget.cpp" line="166"/>
-        <location filename="../eqwidget.cpp" line="183"/>
+        <location filename="../eqwidget.cpp" line="167"/>
+        <location filename="../eqwidget.cpp" line="184"/>
         <source>preset</source>
         <translation>tanımlanmış ayar</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="266"/>
+        <location filename="../eqwidget.cpp" line="268"/>
         <source>&amp;Load/Delete</source>
         <translation>&amp;Yükle/Sil</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="268"/>
+        <location filename="../eqwidget.cpp" line="270"/>
         <source>&amp;Save Preset</source>
         <translation>Tanımlanmış &amp;Ayarları Kaydet</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="270"/>
+        <location filename="../eqwidget.cpp" line="272"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>&amp;Otomatik Tanımlanmış Ayarları Kaydet</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="275"/>
+        <location filename="../eqwidget.cpp" line="277"/>
         <source>&amp;Clear</source>
         <translation>&amp;Temizle</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="304"/>
+        <location filename="../eqwidget.cpp" line="306"/>
         <source>Saving Preset</source>
         <translation>Tanımlanmış Ayarla Kaydediliyor</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="305"/>
+        <location filename="../eqwidget.cpp" line="307"/>
         <source>Preset name:</source>
         <translation>Tanımlanmış ayar adı:</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="306"/>
+        <location filename="../eqwidget.cpp" line="308"/>
         <source>preset #</source>
         <translation>tanımlanmış ayar #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="272"/>
+        <location filename="../eqwidget.cpp" line="274"/>
         <source>&amp;Import</source>
         <translation>&amp;İçe Aktar</translation>
     </message>
@@ -498,7 +498,7 @@
         <translation type="unfinished">Ekolayzır</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="397"/>
+        <location filename="../eqwidget.cpp" line="399"/>
         <source>Import Preset</source>
         <translation>Tanımlanmış Ayarları Al</translation>
     </message>

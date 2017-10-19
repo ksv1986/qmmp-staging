@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -281,6 +281,9 @@ void MpegFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
     {
         if(m_codec->name().contains("UTF") && !m_using_rusxmms) //utf is unsupported
             return;
+
+        if(m_using_rusxmms)
+            type = TagLib::String::UTF8;
     }
     else if (m_tagType == TagLib::MPEG::File::ID3v2)
     {

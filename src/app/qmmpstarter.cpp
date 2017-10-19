@@ -44,7 +44,11 @@
 #ifdef Q_OS_WIN
 #include <sstream>
 #include <QMessageBox>
+#else
+#include <sys/stat.h>
 #endif
+
+
 
 #ifdef Q_OS_WIN
 #define UDS_PATH QString("qmmp")
@@ -138,6 +142,9 @@ QMMPStarter::QMMPStarter() : QObject()
 #else
     if(!noStart && m_server->listen (UDS_PATH)) //trying to create server
     {
+#ifndef Q_OS_WIN
+        chmod(UDS_PATH, S_IRUSR | S_IWUSR);
+#endif
         startPlayer();
     }
     else if(QFile::exists(UDS_PATH))
@@ -161,7 +168,12 @@ QMMPStarter::QMMPStarter() : QObject()
                 return;
             }
             else if(m_server->listen (UDS_PATH))
+            {
+#ifndef Q_OS_WIN
+                chmod(UDS_PATH, S_IRUSR | S_IWUSR);
+#endif
                 startPlayer();
+            }
             else
             {
                 qWarning("QMMPStarter: server error: %s", qPrintable(m_server->errorString()));

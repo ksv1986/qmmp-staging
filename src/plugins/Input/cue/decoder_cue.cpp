@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -99,11 +99,10 @@ bool DecoderCUE::initialize()
     configure(m_decoder->audioParameters());
     setReplayGainInfo(m_parser->replayGain(m_track));
     length_in_bytes = audioParameters().sampleRate() *
-                      audioParameters().channels() *
-                      audioParameters().sampleSize() * m_length/1000;
+                      audioParameters().frameSize() * m_length/1000;
     m_totalBytes = 0;
 
-    m_sz = audioParameters().sampleSize() * audioParameters().channels();
+    m_sz = audioParameters().frameSize();
 
     addMetaData(m_parser->info(m_track)->metaData());
     return true;
@@ -118,8 +117,7 @@ void DecoderCUE::seek(qint64 pos)
 {
      m_decoder->seek(m_offset + pos);
      m_totalBytes = audioParameters().sampleRate() *
-                    audioParameters().channels() *
-                    audioParameters().sampleSize() * pos/1000;
+                    audioParameters().frameSize() * pos/1000;
 }
 
 qint64 DecoderCUE::read(unsigned char *data, qint64 size)
@@ -187,8 +185,7 @@ void DecoderCUE::next()
         m_length = m_parser->length(m_track);
         m_offset = m_parser->offset(m_track);
         length_in_bytes = audioParameters().sampleRate() *
-                          audioParameters().channels() *
-                          audioParameters().sampleSize() * m_length/1000;
+                          audioParameters().frameSize() * m_length/1000;
         addMetaData(m_parser->info(m_track)->metaData());
         setReplayGainInfo(m_parser->replayGain(m_track));
         m_totalBytes = 0;

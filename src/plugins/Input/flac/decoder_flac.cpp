@@ -462,13 +462,12 @@ bool DecoderFLAC::initialize()
         m_length = m_parser->length(m_track);
         m_offset = m_parser->offset(m_track);
         length_in_bytes = audioParameters().sampleRate() *
-                          audioParameters().channels() *
-                          audioParameters().sampleSize() * m_length/1000;
+                          audioParameters().frameSize() * m_length/1000;
         setReplayGainInfo(m_parser->replayGain(m_track));
         seek(0);
     }
     m_totalBytes = 0;
-    m_sz = audioParameters().sampleSize() * audioParameters().channels();
+    m_sz = audioParameters().frameSize();
 
     qDebug("DecoderFLAC: initialize succes");
     return true;

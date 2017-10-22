@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -144,13 +144,12 @@ bool DecoderWavPack::initialize()
         m_length = m_parser->length(m_track);
         m_offset = m_parser->offset(m_track);
         m_length_in_bytes = audioParameters().sampleRate() *
-                          audioParameters().channels() *
-                          audioParameters().sampleSize() * m_length/1000;
+                          audioParameters().frameSize() * m_length/1000;
         setReplayGainInfo(m_parser->replayGain(m_track));
         seek(0);
     }
     m_totalBytes = 0;
-    m_frame_size = audioParameters().sampleSize() * audioParameters().channels();
+    m_frame_size = audioParameters().frameSize();
     qDebug("DecoderWavPack: initialize succes");
     return true;
 }

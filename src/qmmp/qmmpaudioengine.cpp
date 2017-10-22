@@ -645,7 +645,7 @@ void QmmpAudioEngine::prepareEffects(Decoder *d)
     //output buffer for decoder
     if(m_output_buf)
         delete [] m_output_buf;
-    m_bks = QMMP_BLOCK_FRAMES * m_ap.channels() * m_ap.sampleSize(); //block size
+    m_bks = QMMP_BLOCK_FRAMES * m_ap.frameSize(); //block size
     m_output_size = m_bks * 4;
     m_sample_size = m_ap.sampleSize();
     m_output_buf = new unsigned char[m_output_size];

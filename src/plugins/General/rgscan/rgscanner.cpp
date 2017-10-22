@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -182,7 +182,7 @@ void RGScanner::run()
     //buffers
     double out_left[BUFFER_FRAMES], out_right[BUFFER_FRAMES]; //replay gain buffers
     float float_buf[BUFFER_FRAMES*ap.channels()]; //float buffer
-    qint64 buf_size = BUFFER_FRAMES*ap.channels()*ap.sampleSize();
+    qint64 buf_size = BUFFER_FRAMES*ap.frameSize();
     unsigned char char_buf[buf_size]; //char buffer
 
 

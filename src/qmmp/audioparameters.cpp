@@ -26,6 +26,7 @@ AudioParameters::AudioParameters()
     m_srate = 0;
     m_format = Qmmp::PCM_S16LE;
     m_sz = 2;
+    m_precision = 16;
 }
 
 AudioParameters::AudioParameters(const AudioParameters &other)
@@ -34,6 +35,7 @@ AudioParameters::AudioParameters(const AudioParameters &other)
     m_chan_map = other.channelMap();
     m_format = other.format();
     m_sz = other.sampleSize();
+    m_precision = other.validBitsPerSample();
 }
 
 AudioParameters::AudioParameters(quint32 srate, const ChannelMap &map, Qmmp::AudioFormat format)
@@ -42,6 +44,7 @@ AudioParameters::AudioParameters(quint32 srate, const ChannelMap &map, Qmmp::Aud
     m_chan_map = map;
     m_format = format;
     m_sz = sampleSize(format);
+    m_precision = validBitsPerSample(format);
 }
 
 AudioParameters &AudioParameters::operator=(const AudioParameters &p)
@@ -50,12 +53,14 @@ AudioParameters &AudioParameters::operator=(const AudioParameters &p)
     m_chan_map = p.channelMap();
     m_format = p.format();
     m_sz = p.sampleSize();
+    m_precision = p.validBitsPerSample();
     return *this;
 }
 
 bool AudioParameters::operator==(const AudioParameters &p) const
 {
-    return m_srate == p.sampleRate() && m_chan_map == p.channelMap() && m_format == p.format();
+    return m_srate == p.sampleRate() && m_chan_map == p.channelMap() && m_format == p.format()
+            && m_precision == p.validBitsPerSample();
 }
 
 bool AudioParameters::operator!=(const AudioParameters &p) const
@@ -86,6 +91,21 @@ Qmmp::AudioFormat AudioParameters::format() const
 int AudioParameters::sampleSize() const
 {
     return m_sz;
+}
+
+int AudioParameters::frameSize() const
+{
+    return m_sz * m_chan_map.count();
+}
+
+int AudioParameters::bitsPerSample() const
+{
+    return m_sz * 8;
+}
+
+int AudioParameters::validBitsPerSample() const
+{
+    return m_precision;
 }
 
 const QString AudioParameters::toString() const
@@ -154,4 +174,37 @@ int AudioParameters::sampleSize(Qmmp::AudioFormat format)
         return 4;
     }
     return 2;
+}
+
+int AudioParameters::bitsPerSample(Qmmp::AudioFormat format)
+{
+    return sampleSize(format) * 8;
+}
+
+int AudioParameters::validBitsPerSample(Qmmp::AudioFormat format)
+{
+    switch(format)
+    {
+    case Qmmp::PCM_S8:
+    case Qmmp::PCM_U8:
+        return 8;
+    case Qmmp::PCM_UNKNOWM:
+    case Qmmp::PCM_S16LE:
+    case Qmmp::PCM_S16BE:
+    case Qmmp::PCM_U16LE:
+    case Qmmp::PCM_U16BE:
+        return 16;
+    case Qmmp::PCM_S24LE:
+    case Qmmp::PCM_S24BE:
+    case Qmmp::PCM_U24LE:
+    case Qmmp::PCM_U24BE:
+        return 24;
+    case Qmmp::PCM_S32LE:
+    case Qmmp::PCM_S32BE:
+    case Qmmp::PCM_U32LE:
+    case Qmmp::PCM_U32BE:
+    case Qmmp::PCM_FLOAT:
+        return 32;
+    }
+    return 16;
 }

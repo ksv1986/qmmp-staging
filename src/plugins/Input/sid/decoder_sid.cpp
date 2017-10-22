@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -142,8 +142,7 @@ bool DecoderSID::initialize()
 
     configure(44100, 2);
     m_length_in_bytes = audioParameters().sampleRate() *
-            audioParameters().channels() *
-            audioParameters().sampleSize() * m_length;
+            audioParameters().frameSize() * m_length;
     qDebug("DecoderSID: initialize succes");
     return true;
 }

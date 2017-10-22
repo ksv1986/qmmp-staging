@@ -1173,6 +1173,110 @@ Version 0.10.0
 * updated Russian translation
 * updated Ukrainian translation (Gennadi Motsyo)
 
+Version 0.10.1
+* added ffmpeg 3.1 support
+* added portable mode for Windows
+* fixed GNOME3/MATE/Cinnamon support
+* fixed Russian translation
+* updated Ukrainian translation (Gennadi Motsyo)
+* updated Portuguese translation (Sérgio Marques)
+
+Version 0.10.2
+* fixed path to equalizer presets file in the qsui plugin (Ryota Shimamoto)
+* fixed buffer overflow
+
+Version 0.10.3
+* added xesam:contentCreated field in the mpris plugin
+* improved ape/tta detection
+* fixed random stop bug
+* fixed duration calculation in the mpeg plugin
+* fixed ADTS parser in the aac plugin
+* fixed librcc database path in the portable mode
+* updated Brazilian Portuguese translation (Vitor Pereira)
+* updated German translation (Ettore Atalan)
+
+Version 0.10.4
+* fixed support of skins with UTF-16 encoded pledit.txt
+* fixed 'index out of range' warning
+* fixed typo in the qsui plugin
+
+Version 0.10.5
+* added ffmpeg 3.2 support
+* fixed file downloading issue in the http plugin
+* fixed directory selection in the qsui plugin
+* fixed possible segmentation fault
+* fixed command line option '--pl-repeat-toggle'
+* fixed some cppcheck warnings
+* changed file dialog form
+
+Version 0.10.6
+* using http header 'icy-name' as fallback title
+* enabled AAC by default in the ffmpeg plugin
+* fixed ADTS parser in the aac plugin
+* fixed possible segmentation fault
+* fixed Ogg Opus streams support
+* updated Chinese Simplified translation (Mingcong Bai)
+
+Version 0.10.7
+* improved stream format determination in the ffmpeg plugin
+* fixed GCC 6.x support
+* fixed possible segmentation fault
+* updated Brazilian Portuguese translation (Vítor Pereira Barros)
+
+Version 0.10.8
+* fixed PCM Wave support
+* fixed Game Boy support in the gme plugin
+* fixed Xing header detection in the mpeg plugin
+* fixed output of the '--status' command line option
+* fixed maximum year in the tag editor
+
+Version 0.10.9
+* using relative skin path for portable configuration
+* improved WASAPI support
+* fixed cursors support in the skinned user interface
+* fixed freezing when using DirectSound output
+* fixed documentation
+* fixed issue with 'jump to track' dialog when single click activation is enabled
+* fixed FLAC bitrate calculation
+* fixed segmentation fault in the ffmpeg plugin
+* fixed Russian translation
+* updated French translation (Adrien Vigneron)
+
+Version 0.10.10
+* added feature to download playlist from https
+* increased DirectSound buffer size
+* decreased waiting time in the WASAPI plugin
+* improved plugin list in the settings dialog
+* fixed regression in the 'jump to track' dialog
+* fixed possible segmentation fault
+* fixed seeking in the ffmpeg plugin
+* fixed null pointer dereference in the mpeg plugin
+* fixed gcc warnings
+* fixed dithering settings
+* fixed 24 bits support in the WASAPI plugin
+* fixed segmentation fault on Ogg FLAC streams
+* fixed XPM skins support
+* updated documentation
+* updated Galician translation (Delio Docampo Cordeiro)
+
+Version 0.10.11
+* added AAC mime types to the qmmp.desktop
+* added album artist support in the cue parsers
+* using game name as album tag in the gme plugin (Chris Spiegel)
+* fixed seeking in the mpris plugin
+* fixed issue with untracked property in the mpris plugin
+* fixed possible segmentation fault
+* fixed cmake warnings
+* fixed cmake 3.10 support
+* fixed file size calculation in the ffmpeg plugin
+* fixed possible segmentation fault in the ffmpeg plugin
+* fixed saving of the equalizer 'auto' mode option
+* fixed control socket permissions (Andrey A. Rys)
+* fixed rusxmms support
+* updated Spanish translation (Joel Barrios)
+* updated Portuguese translation (Sérgio Marques)
+* updated Greek translation (Dimitrios Glentadakis)
+
 Version 0.11.0
 * added archive reader plugin (requires TagLib 1.11 or higher)
 * added file writer plugin
@@ -1201,5 +1305,3 @@ Version 0.11.0
   - reduced memory usage
   - added quick search to the file system browser
   - added feature to change toolbar icon size
-
-

@@ -21,6 +21,7 @@
 #include <QStringList>
 #include <QApplication>
 #include <QMutexLocker>
+#include <QMetaType>
 #include "soundcore.h"
 #include "qmmpevents_p.h"
 #include "statehandler.h"
@@ -35,13 +36,11 @@ StateHandler::StateHandler(QObject *parent)
 {
     if(m_instance)
         qFatal("StateHandler: only one instance is allowed");
+    qRegisterMetaType<AudioParameters>("AudioParameters");
     m_instance = this;
     m_elapsed = -1;
     m_length = 0;
     m_bitrate = 0;
-    m_frequency = 0;
-    m_precision = 0;
-    m_channels = 0;
     m_sendAboutToFinish = true;
     m_state = Qmmp::Stopped;
 }
@@ -51,7 +50,7 @@ StateHandler::~StateHandler()
     m_instance = 0;
 }
 
-void StateHandler::dispatch(qint64 elapsed, int bitrate, quint32 frequency, int precision, int channels)
+void StateHandler::dispatch(qint64 elapsed, int bitrate)
 {
     m_mutex.lock();
     if (qAbs(m_elapsed - elapsed) > TICK_INTERVAL)
@@ -72,20 +71,16 @@ void StateHandler::dispatch(qint64 elapsed, int bitrate, quint32 frequency, int 
                 qApp->postEvent(parent(), new QEvent(EVENT_NEXT_TRACK_REQUEST));
         }
     }
-    if (m_frequency != frequency)
+    m_mutex.unlock();
+}
+
+void StateHandler::dispatch(const AudioParameters &p)
+{
+    m_mutex.lock();
+    if(m_audioParameters != p)
     {
-        m_frequency = frequency;
-        emit frequencyChanged(frequency);
-    }
-    if (m_precision != precision)
-    {
-        m_precision = precision;
-        emit sampleSizeChanged(precision);
-    }
-    if (m_channels != channels)
-    {
-        m_channels = channels;
-        emit channelsChanged(channels);
+        m_audioParameters = p;
+        emit audioParametersChanged(p);
     }
     m_mutex.unlock();
 }
@@ -157,11 +152,9 @@ void StateHandler::dispatch(Qmmp::State state)
     {
         m_elapsed = -1;
         m_bitrate = 0;
-        m_frequency = 0;
-        m_precision = 0;
-        m_channels = 0;
         m_metaData.clear();
         m_streamInfo.clear();
+        m_audioParameters = AudioParameters();
         m_sendAboutToFinish = true;
     }
     if (m_state != state)
@@ -197,22 +190,14 @@ qint64 StateHandler::totalTime() const
 
 int StateHandler::bitrate() const
 {
+    QMutexLocker locker(&m_mutex);
     return m_bitrate;
 }
 
-int StateHandler::frequency() const
+AudioParameters StateHandler::audioParameters() const
 {
-    return m_frequency;
-}
-
-int StateHandler::sampleSize() const
-{
-    return m_precision;
-}
-
-int StateHandler::channels() const
-{
-    return m_channels;
+    QMutexLocker locker(&m_mutex);
+    return m_audioParameters;
 }
 
 Qmmp::State StateHandler::state() const

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -122,8 +122,7 @@ MainDisplay::MainDisplay (MainWindow *parent)
     m_core = SoundCore::instance();
     connect(m_core, SIGNAL(elapsedChanged(qint64)), SLOT(setTime(qint64)));
     connect(m_core, SIGNAL(bitrateChanged(int)), m_kbps, SLOT(display(int)));
-    connect(m_core, SIGNAL(frequencyChanged(quint32)), SLOT(setSampleRate(quint32)));
-    connect(m_core, SIGNAL(channelsChanged(int)), m_monoster, SLOT(setChannels(int)));
+    connect(m_core, SIGNAL(audioParametersChanged(AudioParameters)), SLOT(onAudioPatametersChanged(AudioParameters)));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(setState(Qmmp::State)));
     connect(m_core, SIGNAL(volumeChanged(int)), m_volumeBar, SLOT(setValue(int)));
     connect(m_core, SIGNAL(balanceChanged(int)), m_balanceBar, SLOT(setValue(int)));
@@ -205,6 +204,12 @@ void MainDisplay::setState(Qmmp::State state)
     }
 }
 
+void MainDisplay::onAudioPatametersChanged(const AudioParameters &p)
+{
+    m_monoster->setChannels(p.channels());
+    m_freq->display(int(p.sampleRate()) / 1000);
+}
+
 void MainDisplay::updateSkin()
 {
     setPixmap (m_skin->getMain());
@@ -240,10 +245,6 @@ void MainDisplay::setActive(bool b)
     m_titlebar->setActive(b);
 }
 
-void MainDisplay::setSampleRate(quint32 rate)
-{
-    m_freq->display((int) rate/1000);
-}
 //TODO optimize this connections
 void MainDisplay::setEQ (QWidget* w)
 {

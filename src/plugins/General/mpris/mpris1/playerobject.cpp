@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -143,7 +143,7 @@ QVariantMap PlayerObject::GetMetadata()
     map.insert("genre", m_core->metaData(Qmmp::GENRE));
     map.insert("comment", m_core->metaData(Qmmp::COMMENT));
     map.insert("audio-bitrate", (quint32)m_core->bitrate());
-    map.insert("audio-samplerate", (quint32)m_core->frequency());
+    map.insert("audio-samplerate", (quint32)m_core->audioParameters().sampleRate());
     map.insert("year", m_core->metaData(Qmmp::YEAR).toUInt());
     return map;
 }

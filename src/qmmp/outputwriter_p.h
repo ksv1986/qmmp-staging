@@ -110,12 +110,9 @@ public:
 private:
     void run(); //thread run function
     void status();
-    void dispatch(qint64 elapsed,
-                  int bitrate,
-                  int frequency,
-                  int bits,
-                  int channels);
+    void dispatch(qint64 elapsed, int bitrate);
     void dispatch(const Qmmp::State &state);
+    void dispatch(const AudioParameters &p);
     void dispatchVisual(Buffer *buffer);
     bool prepareConverters();
     void startVisualization();

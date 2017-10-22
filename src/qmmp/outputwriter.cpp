@@ -244,20 +244,22 @@ void OutputWriter::stopVisualization()
     }
 }
 
-void OutputWriter::dispatch(qint64 elapsed,
-                      int bitrate,
-                      int frequency,
-                      int precision,
-                      int channels)
+void OutputWriter::dispatch(qint64 elapsed, int bitrate)
 {
     if (m_handler)
-        m_handler->dispatch(elapsed, bitrate, frequency, precision, channels);
+        m_handler->dispatch(elapsed, bitrate);
 }
 
 void OutputWriter::dispatch(const Qmmp::State &state)
 {
     if (m_handler)
         m_handler->dispatch(state);
+}
+
+void OutputWriter::dispatch(const AudioParameters &p)
+{
+    if (m_handler)
+        m_handler->dispatch(p);
 }
 
 void OutputWriter::run()
@@ -279,6 +281,7 @@ void OutputWriter::run()
     unsigned char *tmp = 0;
 
     dispatch(Qmmp::Playing);
+    dispatch(m_output->audioParameters());
     startVisualization();
 
     while (!done)
@@ -420,8 +423,7 @@ void OutputWriter::status()
     if (ct > m_currentMilliseconds)
     {
         m_currentMilliseconds = ct;
-        dispatch(m_currentMilliseconds, m_kbps,
-                 m_frequency, AudioParameters::sampleSize(m_format)*8, m_channels);
+        dispatch(m_currentMilliseconds, m_kbps);
     }
 }
 

@@ -51,9 +51,7 @@ SoundCore::SoundCore(QObject *parent)
     m_volumeControl = new VolumeControl(this);
     connect(m_handler, SIGNAL(elapsedChanged(qint64)), SIGNAL(elapsedChanged(qint64)));
     connect(m_handler, SIGNAL(bitrateChanged(int)), SIGNAL(bitrateChanged(int)));
-    connect(m_handler, SIGNAL(frequencyChanged(quint32)), SIGNAL(frequencyChanged(quint32)));
-    connect(m_handler, SIGNAL(sampleSizeChanged(int)), SIGNAL(sampleSizeChanged(int)));
-    connect(m_handler, SIGNAL(channelsChanged(int)), SIGNAL(channelsChanged(int)));
+    connect(m_handler, SIGNAL(audioParametersChanged(AudioParameters)), SIGNAL(audioParametersChanged(AudioParameters)));
     connect(m_handler, SIGNAL(bufferingProgress(int)), SIGNAL(bufferingProgress(int)));
     connect(QmmpSettings::instance(), SIGNAL(eqSettingsChanged()), SIGNAL(eqSettingsChanged()));
     connect(QmmpSettings::instance(), SIGNAL(audioSettingsChanged()), m_volumeControl, SLOT(reload()));
@@ -232,19 +230,9 @@ int SoundCore::bitrate() const
     return m_handler->bitrate();
 }
 
-quint32 SoundCore::frequency() const
+AudioParameters SoundCore::audioParameters() const
 {
-    return m_handler->frequency();
-}
-
-int SoundCore::sampleSize() const
-{
-    return m_handler->sampleSize();
-}
-
-int SoundCore::channels() const
-{
-    return m_handler->channels();
+    return m_handler->audioParameters();
 }
 
 Qmmp::State SoundCore::state() const

@@ -369,11 +369,12 @@ void MainWindow::updateStatus()
 
     if(m_core->state() == Qmmp::Playing || m_core->state() == Qmmp::Paused)
     {
+        AudioParameters ap = m_core->audioParameters();
         m_statusLabel->setText(tr("<b>%1</b>|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|")
                                .arg(m_core->state() == Qmmp::Playing ? tr("Playing") : tr("Paused"))
-                               .arg(m_core->sampleSize())
-                               .arg(m_core->channels())
-                               .arg(m_core->frequency())
+                               .arg(ap.validBitsPerSample())
+                               .arg(ap.channels())
+                               .arg(ap.sampleRate())
                                .arg(tracks)
                                .arg(MetaDataFormatter::formatLength(length, false))
                                .arg(m_core->bitrate()));

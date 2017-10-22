@@ -31,6 +31,12 @@
 class AudioParameters
 {
 public:
+
+    enum ByteOrder
+    {
+        LittleEndian = 0,
+        BigEndian
+    };
     /*!
      * Constructor.
      */
@@ -92,6 +98,8 @@ public:
      * less or equal to the value returned by \b bitsPerSample().
      */
     int validBitsPerSample() const;
+
+    ByteOrder byteOrder() const;
     /*!
      * Returns string represention of the audio parameters.
      * May be useful for debug purposes.
@@ -110,6 +118,8 @@ public:
      * of the given pcm data \b format.
      */
     static int validBitsPerSample(Qmmp::AudioFormat format);
+
+    static Qmmp::AudioFormat findAudioFormat(int bits, ByteOrder byteOrder = LittleEndian);
 
 private:
     quint32 m_srate;

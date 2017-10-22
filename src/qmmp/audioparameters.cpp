@@ -108,6 +108,19 @@ int AudioParameters::validBitsPerSample() const
     return m_precision;
 }
 
+AudioParameters::ByteOrder AudioParameters::byteOrder() const
+{
+    switch(m_format)
+    {
+    case Qmmp::PCM_S16BE:
+    case Qmmp::PCM_S24BE:
+    case Qmmp::PCM_S32BE:
+        return BigEndian;
+    default:
+        return LittleEndian;
+    }
+}
+
 const QString AudioParameters::toString() const
 {
     static const struct
@@ -156,7 +169,6 @@ int AudioParameters::sampleSize(Qmmp::AudioFormat format)
     case Qmmp::PCM_S8:
     case Qmmp::PCM_U8:
         return 1;
-    case Qmmp::PCM_UNKNOWM:
     case Qmmp::PCM_S16LE:
     case Qmmp::PCM_S16BE:
     case Qmmp::PCM_U16LE:
@@ -172,8 +184,9 @@ int AudioParameters::sampleSize(Qmmp::AudioFormat format)
     case Qmmp::PCM_U32BE:
     case Qmmp::PCM_FLOAT:
         return 4;
+    default:
+        return 0;
     }
-    return 2;
 }
 
 int AudioParameters::bitsPerSample(Qmmp::AudioFormat format)
@@ -188,7 +201,6 @@ int AudioParameters::validBitsPerSample(Qmmp::AudioFormat format)
     case Qmmp::PCM_S8:
     case Qmmp::PCM_U8:
         return 8;
-    case Qmmp::PCM_UNKNOWM:
     case Qmmp::PCM_S16LE:
     case Qmmp::PCM_S16BE:
     case Qmmp::PCM_U16LE:
@@ -205,6 +217,24 @@ int AudioParameters::validBitsPerSample(Qmmp::AudioFormat format)
     case Qmmp::PCM_U32BE:
     case Qmmp::PCM_FLOAT:
         return 32;
+    default:
+        return 0;
     }
-    return 16;
+}
+
+Qmmp::AudioFormat AudioParameters::findAudioFormat(int bits, ByteOrder byteOrder)
+{
+    switch (bits)
+    {
+    case 8:
+        return Qmmp::PCM_U8;
+    case 16:
+        return (byteOrder == LittleEndian) ? Qmmp::PCM_U16LE : Qmmp::PCM_U16BE;
+    case 24:
+        return (byteOrder == LittleEndian) ? Qmmp::PCM_U24LE : Qmmp::PCM_U24BE;
+    case 32:
+        return (byteOrder == LittleEndian) ? Qmmp::PCM_U32LE : Qmmp::PCM_U32BE;
+    default:
+        return Qmmp::PCM_UNKNOWM;
+    }
 }

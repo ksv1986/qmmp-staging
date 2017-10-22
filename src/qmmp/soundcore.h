@@ -29,6 +29,7 @@
 #include "visual.h"
 #include "qmmp.h"
 #include "qmmpsettings.h"
+#include "audioparameters.h"
 #include "eqsettings.h"
 
 class VolumeControl;
@@ -92,18 +93,9 @@ public:
      * Returns current bitrate (in kbps)
      */
     int bitrate() const;
-    /*!
-     * Returns current sample rate (in Hz).
-     */
-    quint32 frequency() const;
-    /*!
-     * Returns sample size (in bits).
-     */
-    int sampleSize() const;
-    /*!
-     * Returns channels number.
-     */
-    int channels() const;
+
+    AudioParameters audioParameters() const;
+
     /*!
      * Returns the current state.
      */
@@ -203,21 +195,8 @@ signals:
      * @param bitrate New bitrate (in kbps)
      */
     void bitrateChanged(int bitrate);
-    /*!
-     * Emitted when samplerate has changed.
-     * @param frequency New sample rate (in Hz)
-     */
-    void frequencyChanged(quint32 frequency);
-    /*!
-     * Emitted when sample size has changed.
-     * @param size New sample size (in bits)
-     */
-    void sampleSizeChanged(int size);
-    /*!
-     * Emitted when channels number has changed.
-     * @param channels New channels number.
-     */
-    void channelsChanged(int channels);
+
+    void audioParametersChanged(const AudioParameters &p);
     /*!
      * Emitted when new metadata is available.
      */

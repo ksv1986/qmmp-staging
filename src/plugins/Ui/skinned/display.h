@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,6 +22,7 @@
 
 #include <QPixmap>
 #include <qmmp/statehandler.h>
+#include <qmmp/audioparameters.h>
 #include "pixmapwidget.h"
 
 class TimeIndicator;
@@ -81,9 +82,9 @@ private slots:
     void displayVolume();
     void showPosition();
     void updatePosition();
-    void setSampleRate(quint32 rate);
     void setTime(qint64);
     void setState(Qmmp::State state);
+    void onAudioPatametersChanged(const AudioParameters &p);
 
 private:
     void updatePositions();

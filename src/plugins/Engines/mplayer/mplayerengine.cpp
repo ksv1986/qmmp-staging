@@ -202,11 +202,7 @@ void MplayerEngine::readStdOut()
         {
             StateHandler::instance()->dispatch(Qmmp::Playing);
             m_currentTime = (qint64) rx_av.cap(1).toDouble();
-            StateHandler::instance()->dispatch(m_currentTime * 1000,
-                                               m_bitrate,
-                                               m_samplerate,
-                                               m_bitsPerSample,
-                                               m_channels);
+            StateHandler::instance()->dispatch(m_currentTime * 1000, m_bitrate);
         }
         else if (rx_pause.indexIn(line) > -1)
         {
@@ -244,6 +240,8 @@ void MplayerEngine::readStdOut()
             m_channels = rx_audio.cap(2).toInt();
             m_bitsPerSample = rx_audio.cap(3).toDouble();
             m_bitrate = rx_audio.cap(4).toDouble();
+            AudioParameters ap(m_samplerate, ChannelMap(m_channels), AudioParameters::findAudioFormat(m_bitsPerSample));
+            StateHandler::instance()->dispatch(ap);
         }
 #ifdef MPLAYER_DEBUG
         else

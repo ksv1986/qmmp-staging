@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,28 +25,31 @@
 #include "commandlineoption.h"
 
 
-/*! @brief Helper class used for handle command line plugins
+/*! @brief Helper class used for handle command line plugins.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
 class CommandLineManager
 {
 public:
     /*!
-     * Executes command \b opt_str
-     * @param opt_str Command line option string
-     * @param args Command arguments
-     * @return Command output result
+     * Executes command \b opt_str.
+     * @param opt_str Command line option string.
+     * @param args Command arguments.
+     * @return Command output result.
      */
     static QString executeCommand(const QString& opt_str, const QStringList &args = QStringList());
     /*!
-     * Return \b true if command \b opt_str is supported, otherwise returns \b false
+     * Return \b true if command \b opt_str is supported, otherwise returns \b false.
      */
     static bool hasOption(const QString &opt_str);
     /*!
-     * Prints usage to stdout
+     * Prints usage to stdout.
      */
     static void printUsage();
-
+    /*!
+     * Prepares help string for output.
+     * @param line Specially formatted help string. Example: "--command||description".
+     */
     static QString formatHelpString(const QString &line);
 
 private:

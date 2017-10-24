@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -39,9 +39,11 @@ public:
      * Returns a list of the supported files name filters, i.e. "*.m3u *.pls"
      */
     static QStringList nameFilters();
-
+    /*!
+     * Returns \b true if file \b url is playlist. Otherwise returns \b false.
+     * \param url Local file path or URL.
+     */
     static bool isPlayList(const QString &url);
-
     /*!
      * Returns PlayListFormat pointer which supports mime type \b mime
      * or \b 0 if mime type \b mime is unsupported
@@ -64,13 +66,18 @@ public:
      */
     static void savePlayList(QList<PlayListTrack *> tracks, const QString &f_name);
     /*!
-     * Loads playlist from file \b f_name
+     * Loads playlist from file \b f_name.
      * @param f_name File name.
-     * @return A list of URLs or file paths.
+     * @return A list of tracks.
      */
     static QList<PlayListTrack *> loadPlaylist(const QString &f_name);
-
-    static QList<PlayListTrack *> loadPlaylist(const QString &fmt, const QByteArray &contents);
+    /*!
+     * Loads playlist from content \b content.
+     * @param fmt Playlist format (short name).
+     * @param content Playlist content.
+     * @return A list of tracks.
+     */
+    static QList<PlayListTrack *> loadPlaylist(const QString &fmt, const QByteArray &content);
     /*!
      * Loads all playlist plugins. Should be called before usage from another thread.
      */

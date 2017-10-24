@@ -93,9 +93,10 @@ public:
      * Returns current bitrate (in kbps)
      */
     int bitrate() const;
-
+    /*!
+     * Returns output audio parameters.
+     */
     AudioParameters audioParameters() const;
-
     /*!
      * Returns the current state.
      */
@@ -195,7 +196,10 @@ signals:
      * @param bitrate New bitrate (in kbps)
      */
     void bitrateChanged(int bitrate);
-
+    /*!
+     * Emitted when audio parameters have changed.
+     * @param p New audio parameters for output.
+     */
     void audioParametersChanged(const AudioParameters &p);
     /*!
      * Emitted when new metadata is available.

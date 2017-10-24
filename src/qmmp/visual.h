@@ -95,15 +95,26 @@ public:
     static void showSettings(VisualFactory *factory, QWidget *parent);
     /*!
      * Adds data for visualization.
-     * @param ocm Audio data.
+     * @param pcm Audio data.
      * @param samples Number of samples.
-     * @param chan Number of channels.
+     * @param channels Number of channels.
+     * @param ts Elapsed time (in milliseconds).
+     * @param delay Audio output delay.
      */
     static void addAudio(float *pcm, int samples, int channels, qint64 ts, qint64 delay);
+    /*!
+     * Clears visualization buffer.
+     */
     static void clearBuffer();
 
 public slots:
+    /*!
+     * Starts visualization.
+     */
     virtual void start() = 0;
+    /*!
+     * Stops visualization.
+     */
     virtual void stop() = 0;
 
 signals:
@@ -118,7 +129,13 @@ protected:
      * @param event QCloseEvent insatance.
      */
     virtual void closeEvent (QCloseEvent *event);
-
+    /*!
+     * Takes visualization data. Caller should allocate \b QMMP_VISUAL_NODE_SIZE
+     * bytes for each channel. If buffer for right channel is not specified,
+     * this function will average data from left and right channels.
+     * @param left Left channel buffer.
+     * @param right Right channel buffer.
+     */
     bool takeData(float *left, float *right = 0);
 
 private:

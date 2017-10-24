@@ -214,8 +214,11 @@ public:
      * @param selected Selection state (\b true - select, \b false - unselect).
      */
     void setSelected(int first, int last, bool selected = true);
-
-
+    /*!
+     * Sets the selected state of the items with \b indexes to \b select
+     * @param indexes List of item \b indexes.
+     * @param selected Selection state (\b true - select, \b false - unselect)
+     */
     void setSelected(QList<int> indexes, bool selected = true);
     /*!
      * Advances to the next item. Returns \b false if next iten doesn't exist,
@@ -290,7 +293,11 @@ public:
      * Loads playlist with \b f_name name.
      */
     void loadPlaylist(const QString& f_name);
-
+    /*!
+     * Loads playlist from content.
+     * @param fmt Playlist format (short name).
+     * @param data Content of the playlist file.
+     */
     void loadPlaylist(const QString &fmt, const QByteArray &data);
     /*!
      * Saves current songs to the playlist with \b f_name name.
@@ -329,10 +336,13 @@ public:
     int indexOfTrack(int index) const;
     /*!
      * Finds track with index \b track_index.
-     * Return null pointer if playlist does not contain track with index \b track_index.
+     * Returns null pointer if playlist does not contain track with index \b track_index.
      */
     PlayListTrack *findTrack(int track_index) const;
-
+    /*!
+     * Finds tracks by string \b str. The search is case insensitive.
+     * Returns a list of \b PlayListItem pointers.
+     */
     QList<PlayListItem *> findTracks(const QString &str) const;
     /*!
      * Enum of the playlist update flags.
@@ -367,7 +377,9 @@ signals:
      * Emitted when playlist loader thread has finished.
      */
     void loaderFinished();
-
+    /*!
+     * Tells playlist widget to show item at index \b index.
+     */
     void scrollToRequest(int index);
     /*!
      * Emitted when sorting by column is finished.
@@ -476,6 +488,9 @@ public slots:
      * Ensures that the current track is visible.
      */
     void doCurrentVisibleRequest();
+    /*!
+     * Ensures that the playlist item at \b index is visible.
+     */
     void scrollTo(int index);
     /*!
      * Randomly changes items order.

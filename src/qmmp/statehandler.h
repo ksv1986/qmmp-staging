@@ -50,9 +50,11 @@ public:
      * @param bitrate Current bitrate (in kbps).
      */
     void dispatch(qint64 elapsed, int bitrate);
-
+    /*!
+     * Sends information about audio parameters.
+     * @param p Output audio patameters.
+     */
     void dispatch(const AudioParameters &p);
-
     /*!
      * Sends information about song length
      * @param length song length in milliseconds
@@ -87,7 +89,9 @@ public:
      * Returns current bitrate (in kbps)
      */
     int bitrate() const;
-
+    /*!
+     * Returns output audio parameters.
+     */
     AudioParameters audioParameters() const;
     /*!
      * Returns the current state.
@@ -117,9 +121,11 @@ signals:
      * @param bitrate New bitrate (in kbps)
      */
     void bitrateChanged(int bitrate);
-
+    /*!
+     * Emitted when audio parameters have changed.
+     * @param p New audio parameters for output.
+     */
     void audioParametersChanged(const AudioParameters &p);
-
      /*!
      * This signal is emitted when the stream reader fills it's buffer.
      * The argument \b progress indicates the current percentage of buffering completed.

@@ -104,7 +104,10 @@ public:
      * @param factory Effect plugin factory.
      */
     static bool isEnabled(EffectFactory* factory);
-
+    /*!
+     * Finds effect factory object by short name \b shortName. Returns effect factory pointer.
+     * If no match is found, 0 is returned. The search is case sensitive.
+     */
     static EffectFactory *findFactory(const QString &shortName);
 
 private:

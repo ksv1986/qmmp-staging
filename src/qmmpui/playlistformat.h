@@ -58,6 +58,7 @@ public:
      * Takes the list of \b PlayListTrack objects, should return content of
      * encoded playlist file.
      * @param path Playlist file path (May be used to adjust playlist content).
+     * @param contents A list of \b PlayListTrack pointers.
      */
     virtual QByteArray encode(const QList<PlayListTrack*> &contents, const QString &path) = 0;
 };

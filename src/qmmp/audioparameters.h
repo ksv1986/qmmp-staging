@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,10 +32,13 @@ class AudioParameters
 {
 public:
 
+    /*!
+     * Byte order of samples.
+     */
     enum ByteOrder
     {
-        LittleEndian = 0,
-        BigEndian
+        LittleEndian = 0, /*!< Samples are in little-endian byte order */
+        BigEndian         /*!< Samples are in big-endian byte order */
     };
     /*!
      * Constructor.
@@ -98,7 +101,9 @@ public:
      * less or equal to the value returned by \b bitsPerSample().
      */
     int validBitsPerSample() const;
-
+    /*!
+     * Returns byte order for selected audio format.
+     */
     ByteOrder byteOrder() const;
     /*!
      * Returns string represention of the audio parameters.
@@ -118,7 +123,12 @@ public:
      * of the given pcm data \b format.
      */
     static int validBitsPerSample(Qmmp::AudioFormat format);
-
+    /*!
+     * Find audio format by number of bits and byte  order.
+     * Returns \b Qmmp::UNKNOWN if format is not found.
+     * @param bits Number of used bits in the sample (precision).
+     * @param byteOrder Byte order.
+     */
     static Qmmp::AudioFormat findAudioFormat(int bits, ByteOrder byteOrder = LittleEndian);
 
 private:

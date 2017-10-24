@@ -147,12 +147,12 @@ QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &f_name)
     return tracks;
 }
 
-QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &fmt, const QByteArray &contents)
+QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &fmt, const QByteArray &content)
 {
     foreach (PlayListFormat *p, *m_formats)
     {
         if(p->properties().shortName == fmt)
-            return p->decode(contents);
+            return p->decode(content);
     }
     return QList<PlayListTrack *>();
 }

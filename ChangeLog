@@ -1283,13 +1283,13 @@ Version 0.11.0
 * added icecast output plugin
 * added feature to disable notifications when another application is in the full screen mode
 * added cover tab to the track details dialog
-* added stream input to the sndfile plugin
 * added '--volume-status' command-line option
 * added '--mute-status' command-line option
 * added feature to change user interface from command line
 * added parent directory name to the title formatting fields
 * added cache to the lyrics plugin
-* added feature to clear window title when playback is finished 
+* added feature to clear window title when playback is finished
+* added 'Raise' method implementation to the mpris plugin
 * improved plugin API
 * improved cover cache
 * improved visualization support
@@ -1297,11 +1297,15 @@ Version 0.11.0
 * improved audio format determination in the ffmpeg plugin
 * improved m3u, pls and xspf support
 * improved DirectSound and WASAPI support
+* improved sndfile plugin
 * improved mpeg plugin:
   - added lame header support
   - added gapless support
   - improved file type determination
 * improved qsui plugin:
-  - reduced memory usage
   - added quick search to the file system browser
+  - added quick search to the playlist
   - added feature to change toolbar icon size
+  - added record button
+  - reduced memory usage
+  - improved settings

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -98,7 +98,7 @@ void SettingsDialog::getSoftDevices()
     if(snd_device_name_hint(-1, "pcm", &hints) < 0)
         return;
 
-    while(hints[i])
+    while(hints && hints[i])
     {
         char *type = snd_device_name_get_hint (hints[i], "IOID");
         if (!type || !strcmp (type, "Output"))

@@ -116,21 +116,21 @@ void Logo::updateLetters()
         m_value = m_elapsed / 100;
         processPreset1();
     }
-    else if (m_elapsed >= 2000 && m_elapsed < 6000)
+    else if (m_elapsed < 6000)
     {
         m_value++;
         processPreset2();
     }
-    else if(m_elapsed >= 6000 && m_elapsed < 9000)
+    else if(m_elapsed < 9000)
     {
         m_value++;
         processPreset3();
     }
-    else if(m_elapsed >= 9000 && m_elapsed < 12000)
+    else if(m_elapsed < 12000)
     {
         processPreset4();
     }
-    else if(m_elapsed >= 12000)
+    else
     {
        m_value = 0;
        m_elapsed = 0;

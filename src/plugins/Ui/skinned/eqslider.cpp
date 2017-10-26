@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2009 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,11 +21,8 @@
 #include <QPainter>
 #include <QWheelEvent>
 #include <math.h>
-
 #include "skin.h"
-
 #include "eqslider.h"
-
 
 EqSlider::EqSlider(QWidget *parent): PixmapWidget(parent)
 {
@@ -144,7 +141,7 @@ double EqSlider::convert(int p)
 
 void EqSlider::wheelEvent(QWheelEvent *e)
 {
-    m_value -= e->delta()/60;
+    m_value -= double(e->delta())/60;
     m_value = m_value > m_max ? m_max : m_value;
     m_value = m_value < m_min ? m_min : m_value;
     draw(false);

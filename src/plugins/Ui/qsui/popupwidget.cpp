@@ -83,15 +83,15 @@ void PopupWidget::mouseMoveEvent (QMouseEvent *)
 void PopupWidget::prepare(PlayListTrack *track, QPoint pos)
 {
     pos += QPoint(15,10);
-
-    m_url = track->url();
     hide();
     if(!track)
     {
+        m_url.clear();
         m_timer->stop();
         return;
     }
 
+    m_url = track->url();
     m_label1->setText(m_formatter.format(track));
     qApp->processEvents();
     updateGeometry ();

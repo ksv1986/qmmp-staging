@@ -58,7 +58,6 @@ QList<FileInfo *> DecoderWavPackFactory::createPlayList(const QString &fileName,
     QList <FileInfo*> list;
     char err[80];
     int cue_len=0;
-    FileInfo *info;
     //extract metadata of one cue track
     if(fileName.contains("://"))
     {
@@ -90,7 +89,7 @@ QList<FileInfo *> DecoderWavPackFactory::createPlayList(const QString &fileName,
         qWarning("DecoderWavPackFactory: error: %s", err);
         return list;
     }
-    info = new FileInfo(fileName);
+    FileInfo *info = new FileInfo(fileName);
     if (useMetaData)
     {
         cue_len = WavpackGetTagItem (ctx, "cuesheet", NULL, 0);

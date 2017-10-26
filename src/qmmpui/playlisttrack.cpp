@@ -81,6 +81,7 @@ PlayListTrack &PlayListTrack::operator=(const PlayListTrack &other)
     setSelected(other.isSelected());
     m_length = other.m_length;
     m_formattedLength = other.m_formattedLength;
+    return *this;
 }
 
 void PlayListTrack::updateMetaData(const QMap <Qmmp::MetaData, QString> &metaData)

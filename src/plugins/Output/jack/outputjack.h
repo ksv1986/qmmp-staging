@@ -48,7 +48,7 @@ public:
 private:
     // helper functions
     void uninitialize();
-    qint64 m, m_wait_time;
+    qint64 m_wait_time;
     bool m_inited;
     int jack_device;
 };

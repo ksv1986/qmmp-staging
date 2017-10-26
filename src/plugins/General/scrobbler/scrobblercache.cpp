@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,12 +24,14 @@
 SongInfo::SongInfo()
 {
     m_length = 0;
+    m_start_ts = 0;
 }
 
 SongInfo::SongInfo(const QMap <Qmmp::MetaData, QString> metadata, qint64 length)
 {
     m_metadata = metadata;
     m_length = length;
+    m_start_ts = 0;
 }
 
 SongInfo::SongInfo(const SongInfo &other)

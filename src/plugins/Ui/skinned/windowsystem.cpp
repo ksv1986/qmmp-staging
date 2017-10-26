@@ -1,7 +1,7 @@
 /***************************************************************************
  *   Based on Licq                                                         *
  *   Copyright (C) 2006-2009 Licq developers                               *
- *   Copyright (C) 2011-2016 Ilya Kotov                                    *
+ *   Copyright (C) 2011-2017 Ilya Kotov                                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -180,7 +180,6 @@ unsigned char* WindowSystem::getWindowProperty(WId win, const char* prop)
     return NULL;
 
   // These are not needed for now.
-  retCheck = None;
   retFormat = 0;
   retItems = 0UL;
 
@@ -219,7 +218,7 @@ void WindowSystem::revertGravity(WId win)
         sh.win_gravity = NorthWestGravity;
     else
         return;
-    sh.win_gravity = NorthWestGravity;
+
     XSetWMNormalHints(dsp, win, &sh);
 
     XSetWindowAttributes xs;

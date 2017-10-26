@@ -343,7 +343,7 @@ void MainWindow::updateVolumeIcon()
         iconName = "audio-volume-muted";
     else if(maxVol < 30)
         iconName = "audio-volume-low";
-    else if(maxVol >= 30 && maxVol < 60)
+    else if(maxVol < 60)
         iconName = "audio-volume-medium";
 
     ACTION(ActionManager::VOL_MUTE)->setIcon(QIcon::fromTheme(iconName, QIcon(QString(":/qsui/") + iconName + ".png")));

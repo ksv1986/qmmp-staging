@@ -347,7 +347,7 @@ bool Converter::convert(Decoder *decoder, FILE *file, bool use16bit)
                 emit progress(percent);
             }
         }
-        else if (len <= 0)
+        else
         {
             emit progress(100);
             qDebug("Converter: total written: %lld bytes", total);

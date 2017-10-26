@@ -40,6 +40,7 @@ struct ListWidgetRow
         lengthColumnWidth = 0;
         trackStateColumn = -1;
         autoResize = false;
+        number = 0;
     }
     QStringList titles;
     QList<int> sizes;

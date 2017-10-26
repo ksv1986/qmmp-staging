@@ -51,6 +51,7 @@ bool OutputJACK::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat form
 {
     qDebug("OutputJACK: initialize");
     int bits = 0;
+    unsigned long f = freq;
     Qmmp::AudioFormat input_format = Qmmp::PCM_S8;
     switch(format)
     {
@@ -64,13 +65,13 @@ bool OutputJACK::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat form
     }
 
 
-    if(JACK_Open(&jack_device, bits, (unsigned long *)&freq, map.count()))
+    if(JACK_Open(&jack_device, bits, &f, map.count()))
     {
         m_inited = false;
         return false;
     }
     m_inited = true;
-    configure(freq, map, input_format);
+    configure(f, map, input_format);
     return true;
 }
 
@@ -83,7 +84,7 @@ qint64 OutputJACK::writeAudio(unsigned char *data, qint64 maxSize)
 {
     if(!m_inited)
          return -1;
-    m = JACK_Write(jack_device, (unsigned char*)data, maxSize);
+    qint64 l = JACK_Write(jack_device, (unsigned char*)data, maxSize);
 
     if(JACK_GetState(jack_device) != PLAYING && JACK_GetState(jack_device) != RESET)
     {
@@ -91,7 +92,7 @@ qint64 OutputJACK::writeAudio(unsigned char *data, qint64 maxSize)
         return -1;
     }
 
-    if (m == 0)
+    if (l == 0)
     {
         usleep(2000);
         m_wait_time += 2000;
@@ -104,7 +105,7 @@ qint64 OutputJACK::writeAudio(unsigned char *data, qint64 maxSize)
     }
     else
         m_wait_time = 0;
-    return m;
+    return l;
 }
 
 void OutputJACK::reset()

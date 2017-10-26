@@ -78,6 +78,7 @@ bool DecoderSID::initialize()
     if(!tune->getStatus())
     {
         qWarning("DecoderSID: error: %s", tune->statusString());
+        delete tune;
         return false;
     }
 

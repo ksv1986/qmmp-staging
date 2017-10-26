@@ -46,7 +46,6 @@ private:
     bool event(QEvent *e);
     void wheelEvent(QWheelEvent *e);
     void showToolTip();
-    bool m_showNiceToolTip;
     QPointer<StatusIconPopupWidget> m_popupWidget;
     QString m_message;
 #endif

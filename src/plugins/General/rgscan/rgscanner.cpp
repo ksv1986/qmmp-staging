@@ -180,7 +180,7 @@ void RGScanner::run()
     AudioConverter converter;
     converter.configure(ap.format());
     //buffers
-    double out_left[BUFFER_FRAMES], out_right[BUFFER_FRAMES]; //replay gain buffers
+    double out_left[BUFFER_FRAMES] = {0}, out_right[BUFFER_FRAMES] = {0}; //replay gain buffers
     float float_buf[BUFFER_FRAMES*ap.channels()]; //float buffer
     qint64 buf_size = BUFFER_FRAMES*ap.frameSize();
     unsigned char char_buf[buf_size]; //char buffer

@@ -82,6 +82,7 @@ DecoderFFmpeg::DecoderFFmpeg(const QString &path, QIODevice *i)
     m_channels = 0;
     c = 0;
     audioIndex = 0;
+    m_seekTime = -1;
     av_init_packet(&m_pkt);
     av_init_packet(&m_temp_pkt);
 }

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -94,17 +94,17 @@ QList<FileInfo *> DecoderWavPackFactory::createPlayList(const QString &fileName,
     if (useMetaData)
     {
         cue_len = WavpackGetTagItem (ctx, "cuesheet", NULL, 0);
-        char *value;
         if (cue_len)
         {
-            value = (char*)malloc (cue_len * 2 + 1);
+            char *value = (char*)malloc (cue_len * 2 + 1);
             WavpackGetTagItem (ctx, "cuesheet", value, cue_len + 1);
             CUEParser parser(value, fileName);
             list = parser.createPlayList();
+            delete info;
+            info = 0;
         }
         else
         {
-
             char value[200];
             memset(value,0,sizeof(value));
             WavpackGetTagItem (ctx, "Album", value, sizeof(value));
@@ -130,7 +130,7 @@ QList<FileInfo *> DecoderWavPackFactory::createPlayList(const QString &fileName,
         }
     }
 
-    if (cue_len==0)
+    if (info)
     {
         info->setLength((int) WavpackGetNumSamples(ctx)/WavpackGetSampleRate(ctx));
         list << info;

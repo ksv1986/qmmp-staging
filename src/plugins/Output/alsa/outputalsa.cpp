@@ -44,6 +44,7 @@ OutputALSA::OutputALSA() : m_inited(false)
     m_prebuf_size = 0;
     m_prebuf_fill = 0;
     m_can_pause = false;
+    m_chunk_size = 0;
 #if (SND_LIB_VERSION >= 0x01001B)
     m_alsa_channels[SND_CHMAP_NA] =   Qmmp::CHAN_NULL;
     m_alsa_channels[SND_CHMAP_MONO] = Qmmp::CHAN_FRONT_CENTER;

@@ -21,6 +21,15 @@
 #include <QtGlobal>
 #include "eqsettings.h"
 
+EqSettings::EqSettings(const EqSettings &other)
+{
+    m_preamp = other.m_preamp;
+    m_is_enabled = other.m_is_enabled;
+    m_bands = other.m_bands;
+    for(int i = 0; i < 31; ++i)
+        m_gains[i] = other.m_gains[i];
+}
+
 EqSettings::EqSettings(int bands)
 {
     if(bands != 10 && bands != 15 && bands != 25 && bands != 31)
@@ -28,7 +37,7 @@ EqSettings::EqSettings(int bands)
         qWarning("EqSettings: invalid number of bands (%d), using 10 bands as fallback", bands);
         bands = 10;
     }
-    for(int i = 0; i < bands; ++i)
+    for(int i = 0; i < 31; ++i)
         m_gains[i] = 0;
     m_bands = bands;
     m_preamp = 0;

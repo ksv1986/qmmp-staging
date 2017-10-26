@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,9 +41,9 @@ public:
      */
     PlayListTrack();
     /*!
-     * Constructs a new PlayListTrack that is a copy of the given \b item
+     * Constructs a new PlayListTrack that is a copy of the given track \b other
      */
-    PlayListTrack(const PlayListTrack &item);
+    PlayListTrack(const PlayListTrack &other);
     /*!
      * Constructs plalist item with given metadata.
      * @param info Media file information.
@@ -53,6 +53,10 @@ public:
      * Object destructor.
      */
     virtual ~PlayListTrack();
+    /*!
+     * Assigns \b other to this track and returns a reference to this track.
+     */
+    PlayListTrack &operator=(const PlayListTrack &other);
     /*!
      * Returns formatted title of the item.
      * @param column Number of column.

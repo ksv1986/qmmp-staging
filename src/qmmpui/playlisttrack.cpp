@@ -71,6 +71,18 @@ PlayListTrack::~PlayListTrack()
         qWarning("PlayListTrack: deleting busy track");
 }
 
+PlayListTrack &PlayListTrack::operator=(const PlayListTrack &other)
+{
+    m_formattedTitles = other.m_formattedTitles;
+    m_group = other.m_group;
+    m_formattedLength = other.m_formattedLength;
+    m_titleFormats = other.m_titleFormats;
+    m_groupFormat = other.m_groupFormat;
+    setSelected(other.isSelected());
+    m_length = other.m_length;
+    m_formattedLength = other.m_formattedLength;
+}
+
 void PlayListTrack::updateMetaData(const QMap <Qmmp::MetaData, QString> &metaData)
 {
     QMap <Qmmp::MetaData, QString>::operator =(metaData);

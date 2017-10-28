@@ -31,7 +31,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_ui.setupUi(this);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Tray");
-    m_ui.messageGroupBox->setChecked(settings.value("show_message",true).toBool());
+    m_ui.messageGroupBox->setChecked(settings.value("show_message",false).toBool());
     m_ui.messageDelaySpinBox->setValue(settings.value("message_delay", 2000).toInt());
     m_ui.niceTooltipGroupBox->setChecked(settings.value("show_tooltip", true).toBool());
 #ifdef Q_WS_X11

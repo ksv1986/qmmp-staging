@@ -42,7 +42,7 @@ StatusIcon::StatusIcon(QObject *parent) : QObject(parent)
     m_player = MediaPlayer::instance();
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Tray");
-    m_showMessage = settings.value("show_message",true).toBool();
+    m_showMessage = settings.value("show_message",false).toBool();
     m_messageDelay = settings.value("message_delay", 2000).toInt();
     m_hideToTray = settings.value("hide_on_close", false).toBool();
     m_useStandardIcons = settings.value("use_standard_icons",false).toBool();

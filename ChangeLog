@@ -1309,3 +1309,5 @@ Version 0.11.0
   - added record button
   - reduced memory usage
   - improved settings
+* fixed FVWM support in the skinned user interface (Andrey A. Rys)
+* fixed memory leaks

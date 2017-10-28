@@ -84,7 +84,7 @@ qint64 OutputJACK::writeAudio(unsigned char *data, qint64 maxSize)
 {
     if(!m_inited)
          return -1;
-    qint64 l = JACK_Write(jack_device, (unsigned char*)data, maxSize);
+    qint64 l = JACK_Write(jack_device, data, maxSize);
 
     if(JACK_GetState(jack_device) != PLAYING && JACK_GetState(jack_device) != RESET)
     {

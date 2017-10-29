@@ -35,14 +35,9 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.ui" line="388"/>
-        <source>Psi Notification</source>
-        <translation>Avisos Psi</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="400"/>
-        <source>Enable Psi notification</source>
-        <translation>Habilitar avisos Psi</translation>
+        <location filename="../settingsdialog.ui" line="14"/>
+        <source>Notifier Plugin Settings</source>
+        <translation>Configuración del módulo de avisos</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -50,9 +45,20 @@
         <translation>Avisos en el escritorio</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="332"/>
-        <source>Delay (ms):</source>
-        <translation>Retardo (ms):</translation>
+        <location filename="../settingsdialog.ui" line="51"/>
+        <source>Font:</source>
+        <translation>Tipografía:</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="71"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="78"/>
+        <location filename="../settingsdialog.ui" line="279"/>
+        <source>0</source>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="85"/>
@@ -70,29 +76,9 @@
         <translation>Editar la plantilla</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="375"/>
-        <source>Disable notifications when another application is in the Full Screen Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="378"/>
-        <source>Disable for full screen windows</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="14"/>
-        <source>Notifier Plugin Settings</source>
-        <translation>Configuración del módulo de avisos</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="361"/>
-        <source>Playback resume notification</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="368"/>
-        <source>Song change notification</source>
-        <translation>Aviso de cambio de canción</translation>
+        <location filename="../settingsdialog.ui" line="299"/>
+        <source>Cover size:</source>
+        <translation>Tamaño de la carátula:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="325"/>
@@ -100,30 +86,44 @@
         <translation>Aviso de cambio de volumen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="78"/>
-        <location filename="../settingsdialog.ui" line="279"/>
-        <source>0</source>
-        <translation>0</translation>
+        <location filename="../settingsdialog.ui" line="332"/>
+        <source>Delay (ms):</source>
+        <translation>Retardo (ms):</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="361"/>
+        <source>Playback resume notification</source>
+        <translation>Notificación de reanudación de reproducción</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="368"/>
+        <source>Song change notification</source>
+        <translation>Aviso de cambio de canción</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="375"/>
+        <source>Disable notifications when another application is in the Full Screen Mode</source>
+        <translation>Deshabilitar notificaciones cuando otra aplicación está en modo de Pantalla Completa</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="378"/>
+        <source>Disable for full screen windows</source>
+        <translation>Deshabilitar para ventanas en pantalla completa</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="388"/>
+        <source>Psi Notification</source>
+        <translation>Avisos Psi</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="400"/>
+        <source>Enable Psi notification</source>
+        <translation>Habilitar avisos Psi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="109"/>
         <source>Notification Template</source>
         <translation>Plantilla de avisos</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="51"/>
-        <source>Font:</source>
-        <translation>Tipografía:</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="299"/>
-        <source>Cover size:</source>
-        <translation>Tamaño de la carátula:</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="71"/>
-        <source>...</source>
-        <translation>...</translation>
     </message>
 </context>
 </TS>

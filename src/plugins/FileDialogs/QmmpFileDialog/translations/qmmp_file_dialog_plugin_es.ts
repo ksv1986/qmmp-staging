@@ -75,7 +75,7 @@
         <source>Written by:
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
 Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Escrito por:
+        <translation>Escrito por
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
 Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

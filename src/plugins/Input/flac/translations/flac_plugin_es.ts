@@ -26,7 +26,7 @@
     <message>
         <location filename="../decoderflacfactory.cpp" line="201"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Escrito por: Ilja Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

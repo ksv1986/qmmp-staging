@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.0" language="es">
 <context>
     <name>GnomeHotkeyFactory</name>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="31"/>
         <source>Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Módulo Acceso Rápido de GNOME</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="52"/>
         <source>About Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca del Módulo Acceso Rápido de GNOME</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="53"/>
         <source>Qmmp Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Módulo Acceso Rápido de GNOME de Qmmp</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="54"/>
         <source>This plugin adds support of the GNOME/Cinnamon hotkeys</source>
-        <translation type="unfinished"></translation>
+        <translation>El módulo añade soporte para los accesos rápidos de GNOME/Cinnamon</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

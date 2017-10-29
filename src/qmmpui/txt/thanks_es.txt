@@ -1,17 +1,31 @@
 Gracias a:
 
     Adria Arrufat <swiftscythe@gmail.com> - reporte de errores
-    Adrian Knoth <adi@drcomp.erfurt.thur.de> - arreglos en el módulo jack, reporte de errores
-    Csaba Hruska <csaba.hruska@gmail.com> - arreglos en el módulo ffmpeg
-    Dmitry Kostin <kostindima@gmail.com> - soporte iso.wv
-    Gennadi Motsyo <drool@altlinux.ru> - reporte de errores
-    Vadim Kalinnikov <moose@ylsoftware.com> - alojamiento del proyecto
-    Erik Ölsar <erlk.ozlr@gmail.com> - temas de cursores, mejoras en el interfaz
-    Funda Wang <fundawang@gmail.com> - arreglos en los archivos cmake
-    Michail Zheludkov <zheludkovm@mail.ru> - arreglos en el módulo ffmpeg
-    Panagiotis Papadopoulos <pano_90@gmx.net> - arreglos en el interfaz, reporte de errores
-    Pino Toscano <toscano.pino@tiscali.it> - parches de portabilidad
-    Karel Volný <kvolny@redhat.com> - varios arreglos
+    Adrian Knoth <adi@drcomp.erfurt.thur.de> - correcciones de módulo JACK, reporte de errores
+    Anton Petrusevich <casus@casus.us> - mejoras de la reproducción aleatoria
+    Avihay Baratz <avihayb@gmail.com> - función de auto-detener, correcciones de errores
+    Brice Videau <brice.videau@gmail.com> - correcciones de errores
+    Cristian Rodríguez <judas.iscariote@gmail.com> - correcciones para módulo scrobbler
+    Csaba Hruska <csaba.hruska@gmail.com> - correcciones de módulo FFmpeg
+    Dmitry Kostin <kostindima@gmail.com> - soporte para iso.wv
+    Dmitry Misharov <Dmitry.Misharov@gmail.com> - soporte para etiqueta de artista de álbum
+    Evgeny Gleyzerman <evgley@gmail.com> - mejoras en el análisis de cue
+    Ferdinand Vesely <erdofves@gmail.com> - mejoras de módulo scrobbler
+    Gennadi Motsyo <drool@altlinux.ru> - Reporte de errores
+    Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - optimización
+    Vadim Kalinnikov <moose@ylsoftware.com> - hospedaje del proyecto
+    Erik Ölsar <erlk.ozlr@gmail.com> - cursores de pieles, mejoras de interfaz de usuario
+    Funda Wang <fundawang@gmail.com> - correcciones en archivos cmake
+    Ivan Ponomarev ivantrue@gmail.com - salida QtMultimedia, portación hacia MacOS X
+    Karel Volný <kvolny@redhat.com> - varias correcciones
+    Makis Kalofolias <makskafl@gmail.com> - soporte para EAC3, DTS y Dolby TrueHD
+    Michail Zheludkov <zheludkovm@mail.ru> - correcciones de módulo FFmpeg
+    Michał Grosicki <grosik88@o2.pl> - correcciones de módulo ALSA
+    Panagiotis Papadopoulos <pano_90@gmx.net> - correcciones para interfaz de usuario, reporte de errores
+    Pino Toscano <toscano.pino@tiscali.it> - parches para portabilidad
+    Ryota Shimamoto <liangtai.s16@gmail.com> - parches para FreeBSD
     Sebastian Pipping <webmaster@hartwork.org> - parches para bs2b
-    Stefan Koelling <stefankoelling.ext@googlemail.com> - algunos arreglos en la compilación
+    Stefan Koelling <stefankoelling.ext@googlemail.com> - algunas correcciones de errores
+    Thomas Perl - mejoras de interfaz gráfica de usuario
+    Ville Skyttä - mejoras de módulo ModPlug
     Yaakov Selkowitz <yselkowitz@gmail.com> - parches para cygwin

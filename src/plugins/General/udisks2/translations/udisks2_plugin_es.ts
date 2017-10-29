@@ -44,27 +44,27 @@
     <message>
         <location filename="../udisks2factory.cpp" line="32"/>
         <source>UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Módulo UDisks2</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="52"/>
         <source>About UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca del Módulo UDisks2</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="53"/>
         <source>Qmmp UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Módulo UDisks2 de Qmmp</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="54"/>
         <source>This plugin provides removable devices detection using UDisks2</source>
-        <translation type="unfinished"></translation>
+        <translation>Este módulo proporciona detección de dispositivos extraíbles mediante UDisks2</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisks2plugin.cpp" line="130"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">Añadir CD &quot;%1&quot;</translation>
+        <translation>Añadir CD &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../udisks2plugin.cpp" line="138"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">Añadir volumen &quot;%1&quot;</translation>
+        <translation>Añadir volumen &quot;%1&quot;</translation>
     </message>
 </context>
 </TS>

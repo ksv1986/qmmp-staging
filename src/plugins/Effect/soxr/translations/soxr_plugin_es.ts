@@ -6,22 +6,22 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="32"/>
         <source>SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Módulo Recalculador SoX</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>About SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca del Módulo Recalculador SoX</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="54"/>
         <source>Qmmp SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Módulo Recalculador SoX de Qmmp</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>SoX Resampler Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuración de Recalculador SoX</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -39,32 +39,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="49"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Calidad:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Quick</source>
-        <translation type="unfinished"></translation>
+        <translation>Rápido</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="35"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Baja</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Media</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>Alta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
         <source>Very High</source>
-        <translation type="unfinished"></translation>
+        <translation>Muy Alta</translation>
     </message>
 </context>
 </TS>

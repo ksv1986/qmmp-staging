@@ -1,31 +1,59 @@
-Portugués de Brasil:
+Portugués Brasil:
+    Vitor Pereira
     Klaos Lacerda
     Bruno Gonçalves
+    Heitor Thury Barreiros Barbosa <hthury@gmail.com>
 
-Chino tradicional:
-    lon <lon83129@126.com>
+Búlgaro:
+    Kiril Kirilov
 
-Chino simplificado:
+Chino Tradicional:
     lon <lon83129@126.com>
+    Jeff Huang
+
+Chino Simplificado:
+    lon <lon83129@126.com>
+    mabier
+    Mingcong Bai
+    Mingye Wang
 
 Checo:
     Karel Volný <kvolny@redhat.com>
+    Jaroslav Lichtblau
 
-Holandés:
+Neerlandés:
     Ronald Uitermark <ronald645@gmail.com>
 
 Francés:
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
+    Sébastien Aperghis-Tramoni (maddingue)
     Stanislas Zeller <uncensored.assault@gmail.com>
 
+Gallego:
+    Óscar Pereira <oscarpereira1989@gmail.com>
+
 Alemán:
+    Ettore Atalan
     Stefan Koelling <stefankoelling.ext@googlemail.com>
     Panagiotis Papadopoulos <pano_90@gmx.net>
+
+Griego:
+    Dimitrios Glentadakis
+
+Hebreo:
+    Genghis Khan <genghiskhan@gmx.ca>
 
 Húngaro:
     Németh Gábor <sutee84@freemail.hu>
 
+Indonesio:
+    Wantoyo <wantoyek@gmail.com>
+
 Italiano:
     Gian Paolo Renello <emmerkar@gmail.com>
+
+Japonés:
+    Ryota Shimamoto <liangtai.s16@gmail.com>
 
 Kazajo:
     Baurzhan Muftakhidinov <baurthefirst@gmail.com>
@@ -34,14 +62,29 @@ Lituano:
     Algirdas Butkus <butkus.algirdas@gmail.com>
 
 Polaco:
+    Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
+
+Portugués:
+    Sérgio Marques <smarquespt@gmail.com>
 
 Ruso:
     Ilya Kotov <forkotov02@ya.ru>
 
+Serbio:
+    Mladen Pejaković <pejakm@autistici.org>
+
+Eslovaco:
+    Ján Ďanovský <dagsoftware@yahoo.com>
+
+Español:
+    Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
+
 Turco:
     Mustafa GUNAY <mustafagunay@pgmail.com>
     Bilgesu Güngör <h.ibrahim.gungor@gmail.com>
+    Uğur KUYU
 
 Ucraniano:
     Gennadi Motsyo <drool@altlinux.ru>

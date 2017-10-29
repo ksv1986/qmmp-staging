@@ -4,6 +4,16 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
+        <location filename="../decoderffmpegfactory.cpp" line="150"/>
+        <source>FFmpeg Plugin</source>
+        <translation>Módulo FFmpeg</translation>
+    </message>
+    <message>
+        <location filename="../decoderffmpegfactory.cpp" line="152"/>
+        <source>FFmpeg Formats</source>
+        <translation>Formatos FFmpeg</translation>
+    </message>
+    <message>
         <location filename="../decoderffmpegfactory.cpp" line="259"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>Acerca del módulo de audio FFmpeg</translation>
@@ -16,22 +26,12 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="261"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Compilado contra:</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="274"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
-    </message>
-    <message>
-        <location filename="../decoderffmpegfactory.cpp" line="150"/>
-        <source>FFmpeg Plugin</source>
-        <translation>Módulo FFmpeg</translation>
-    </message>
-    <message>
-        <location filename="../decoderffmpegfactory.cpp" line="152"/>
-        <source>FFmpeg Formats</source>
-        <translation>Formatos FFmpeg</translation>
     </message>
 </context>
 <context>
@@ -49,17 +49,17 @@
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="51"/>
         <source>%1 KB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 KB</translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
         <source>%1 kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kbps</translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="63"/>
         <source>%1 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Hz</translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
@@ -80,6 +80,11 @@
 <context>
     <name>SettingsDialog</name>
     <message>
+        <location filename="../settingsdialog.ui" line="14"/>
+        <source>FFmpeg Plugin Settings</source>
+        <translation>Configuración del módulo FFmpeg</translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Formats</source>
         <translation>Formatos</translation>
@@ -88,6 +93,11 @@
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Windows Media Audio</source>
         <translation>Windows Media Audio</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="68"/>
+        <source>Monkey&apos;s Audio (APE)</source>
+        <translation>Monkey&apos;s Audio (APE)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="75"/>
@@ -100,9 +110,14 @@
         <translation>ADTS AAC</translation>
     </message>
     <message>
+        <location filename="../settingsdialog.ui" line="89"/>
+        <source>MP3 (MPEG audio layer 3)</source>
+        <translation>MP3 (MPEG Audio Layer 3)</translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="96"/>
         <source>MPEG-4 AAC/ALAC</source>
-        <translation type="unfinished"></translation>
+        <translation>MPEG-4 AAC/ALAC</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
@@ -117,37 +132,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="117"/>
         <source>AC3/EAC</source>
-        <translation type="unfinished"></translation>
+        <translation>AC3/EAC</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="124"/>
         <source>DTS/DTS-Core</source>
-        <translation type="unfinished"></translation>
+        <translation>DTS/DTS-Core</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="131"/>
         <source>Matroska Audio (Dolby TrueHD Lossless)</source>
-        <translation type="unfinished"></translation>
+        <translation>Matroska Audio (Dolby TrueHD sin pérdida)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="138"/>
         <source>VQF</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="14"/>
-        <source>FFmpeg Plugin Settings</source>
-        <translation>Configuración del módulo FFmpeg</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="68"/>
-        <source>Monkey&apos;s Audio (APE)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="89"/>
-        <source>MP3 (MPEG audio layer 3)</source>
-        <translation>MP3 (MPEG Audio Layer 3)</translation>
+        <translation>VQF</translation>
     </message>
 </context>
 </TS>

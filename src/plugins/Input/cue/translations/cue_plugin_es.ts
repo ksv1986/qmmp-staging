@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Load incorrect cue sheets if possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargar referencias incorrectas si es posible</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Language:</source>
-        <translation>Lenguaje:</translation>
+        <translation>Idioma:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="81"/>

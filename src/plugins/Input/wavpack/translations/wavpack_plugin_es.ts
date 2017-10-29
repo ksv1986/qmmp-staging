@@ -9,6 +9,11 @@
         <translation>Módulo WavPack</translation>
     </message>
     <message>
+        <location filename="../decoderwavpackfactory.cpp" line="41"/>
+        <source>WavPack Files</source>
+        <translation>Archivos WavPack</translation>
+    </message>
+    <message>
         <location filename="../decoderwavpackfactory.cpp" line="154"/>
         <source>About WavPack Audio Plugin</source>
         <translation>Acerca del módulo de sonido WavPack</translation>
@@ -27,11 +32,6 @@
         <location filename="../decoderwavpackfactory.cpp" line="158"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
-    </message>
-    <message>
-        <location filename="../decoderwavpackfactory.cpp" line="41"/>
-        <source>WavPack Files</source>
-        <translation>Archivos WavPack</translation>
     </message>
 </context>
 <context>

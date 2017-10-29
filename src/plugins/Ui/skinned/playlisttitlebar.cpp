@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -231,7 +231,7 @@ void PlayListTitleBar::readSettings()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     m_font.fromString(settings.value("Skinned/pl_font", QApplication::font().toString()).toString());
-    m_font.setPointSize(6);
+    m_font.setPixelSize(12 * m_ratio);
 }
 
 void PlayListTitleBar::updateSkin()
@@ -240,6 +240,7 @@ void PlayListTitleBar::updateSkin()
     if(m_ratio != m_skin->ratio())
     {
         m_ratio = m_skin->ratio();
+        m_font.setPixelSize(12 * m_ratio);
         setMinimumWidth(275*m_ratio);
         updatePositions();
     }

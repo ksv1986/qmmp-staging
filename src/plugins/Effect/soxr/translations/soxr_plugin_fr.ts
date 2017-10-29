@@ -21,7 +21,7 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ecrit par: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

@@ -46,7 +46,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>
         <source>Print volume level</source>
-        <translation type="unfinished"></translation>
+        <translation>Voir le niveau du volume</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="80"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="81"/>
         <source>Print mute status</source>
-        <translation type="unfinished"></translation>
+        <translation>Voir le statut silencieux</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="82"/>
@@ -109,12 +109,12 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="374"/>
         <source>Start qmmp with the specified user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Démarrer Qmmp avec l&apos;interface spécifiée</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="375"/>
         <source>List all available user interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Lister toutes les interfaces disponibles</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="376"/>
@@ -134,17 +134,17 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="380"/>
         <source>Home page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Page d&apos;accueil: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="381"/>
         <source>Development page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Page du développement: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="382"/>
         <source>Bug tracker: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Traqueur de bugs: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="387"/>
@@ -174,7 +174,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="422"/>
         <source>User Interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Interfaces utilisateur</translation>
     </message>
 </context>
 </TS>

@@ -217,7 +217,7 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Répertoire Parent</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
@@ -485,7 +485,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="823"/>
         <source>Volume adjustment step:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustement du volume par palier:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="764"/>
@@ -693,17 +693,17 @@
     <message>
         <location filename="../coverviewer.cpp" line="30"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enregistrer sous…</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="54"/>
         <source>Save Cover As</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer la couverture sous…</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="56"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Images</translation>
     </message>
 </context>
 <context>
@@ -736,7 +736,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="152"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Couverture</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="186"/>
@@ -845,87 +845,87 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished">Artiste</translation>
+        <translation>Artiste</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation type="unfinished">Album</translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
         <source>Album Artist</source>
-        <translation type="unfinished">Artiste d&apos;album</translation>
+        <translation>Artiste d&apos;album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished">Titre</translation>
+        <translation>Titre</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
         <source>Track Number</source>
-        <translation type="unfinished">Numéro de piste</translation>
+        <translation>Numéro de piste</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="33"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished">Numéro de piste à deux chiffres</translation>
+        <translation>Numéro de piste à deux chiffres</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="35"/>
         <source>Genre</source>
-        <translation type="unfinished">Genre</translation>
+        <translation>Genre</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="36"/>
         <source>Comment</source>
-        <translation type="unfinished">Commentaire</translation>
+        <translation>Commentaire</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Composer</source>
-        <translation type="unfinished">Compositeur</translation>
+        <translation>Compositeur</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="38"/>
         <source>Duration</source>
-        <translation type="unfinished">Durée</translation>
+        <translation>Durée</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Disc Number</source>
-        <translation type="unfinished">Numéro de disque</translation>
+        <translation>Numéro de disque</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
         <source>File Name</source>
-        <translation type="unfinished">Nom du fichier</translation>
+        <translation>Nom du fichier</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>File Path</source>
-        <translation type="unfinished">Chemin du fichier</translation>
+        <translation>Chemin du fichier</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="45"/>
         <source>Year</source>
-        <translation type="unfinished">Année</translation>
+        <translation>Année</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Condition</source>
-        <translation type="unfinished">Condition</translation>
+        <translation>Condition</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="47"/>
         <source>Artist - Title</source>
-        <translation type="unfinished">Artiste - Titre</translation>
+        <translation>Artiste - Titre</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="48"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom du Répertoire Parent</translation>
     </message>
 </context>
 <context>

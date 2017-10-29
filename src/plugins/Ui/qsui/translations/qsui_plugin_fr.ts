@@ -124,7 +124,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
         <source>&amp;Record</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enregistrer</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
@@ -484,7 +484,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="283"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre d&apos;outils</translation>
     </message>
 </context>
 <context>
@@ -593,7 +593,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="99"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Recherche rapide</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="173"/>
@@ -876,12 +876,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="465"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Recherche rapideR</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="520"/>
         <source>Edit Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Editer la barre des outils</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="522"/>
@@ -1298,17 +1298,17 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="947"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Barres d&apos;outils</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="955"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille d&apos;icône :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="980"/>
         <source>Customize...</source>
-        <translation type="unfinished"></translation>
+        <translation>Personnaliser...</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="404"/>
@@ -1348,32 +1348,32 @@
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Défaut</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
         <source>16x16</source>
-        <translation type="unfinished"></translation>
+        <translation>16x16</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="44"/>
         <source>22x22</source>
-        <translation type="unfinished"></translation>
+        <translation>22x22</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="45"/>
         <source>32x32</source>
-        <translation type="unfinished"></translation>
+        <translation>32x32</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="46"/>
         <source>48x48</source>
-        <translation type="unfinished"></translation>
+        <translation>48x48</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="47"/>
         <source>64x64</source>
-        <translation type="unfinished"></translation>
+        <translation>64x64</translation>
     </message>
 </context>
 <context>
@@ -1487,17 +1487,17 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="199"/>
         <source>Toolbar:</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre d&apos;outils:</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="222"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Créer</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="238"/>
         <source>Re&amp;name</source>
-        <translation type="unfinished"></translation>
+        <translation>Re&amp;nommer</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
@@ -1513,22 +1513,22 @@
     <message>
         <location filename="../toolbareditor.cpp" line="248"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre d&apos;outils</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="250"/>
         <source>Toolbar %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre des outils %&amp;</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Rename Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Renommer la barre des outils</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Toolbar name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de la barre des outils:</translation>
     </message>
 </context>
 <context>
@@ -1544,7 +1544,7 @@
     <message>
         <location filename="../volumeslider.cpp" line="91"/>
         <source>%1%</source>
-        <translation type="unfinished"></translation>
+        <translation>%1%</translation>
     </message>
 </context>
 </TS>

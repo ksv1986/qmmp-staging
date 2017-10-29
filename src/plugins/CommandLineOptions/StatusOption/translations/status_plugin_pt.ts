@@ -101,7 +101,7 @@
     <message>
         <location filename="../statusoption.cpp" line="103"/>
         <source>%dir(n) - directory name located on n levels above</source>
-        <translation type="unfinished"></translation>
+        <translation>%dir(n) - nome do diretório localizado em &apos;n&apos; níveis acima</translation>
     </message>
 </context>
 </TS>

@@ -152,7 +152,7 @@
         <location filename="../settingsdialog.cpp" line="61"/>
         <location filename="../settingsdialog.cpp" line="62"/>
         <source>default</source>
-        <translation>pré-definido</translation>
+        <translation>padrão</translation>
     </message>
 </context>
 </TS>

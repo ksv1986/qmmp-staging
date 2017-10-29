@@ -217,7 +217,7 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Diretório superior</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
@@ -460,7 +460,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="696"/>
         <source>Default gain:</source>
-        <translation>Ganho pré-definido:</translation>
+        <translation>Ganho padrão:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="748"/>
@@ -693,17 +693,17 @@
     <message>
         <location filename="../coverviewer.cpp" line="30"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Guardar como...</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="54"/>
         <source>Save Cover As</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar capa como</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="56"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Imagens</translation>
     </message>
 </context>
 <context>
@@ -736,7 +736,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="152"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Capa de álbum</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="186"/>
@@ -845,87 +845,87 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished">Artista</translation>
+        <translation>Artista</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation type="unfinished">Álbum</translation>
+        <translation>Álbum</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
         <source>Album Artist</source>
-        <translation type="unfinished">Artista do álbum</translation>
+        <translation>Artista do álbum</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished">Título</translation>
+        <translation>Título</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
         <source>Track Number</source>
-        <translation type="unfinished">Número da faixa</translation>
+        <translation>Número da faixa</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="33"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished">Número da faixa com 2 dígitos</translation>
+        <translation>Número da faixa com 2 dígitos</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="35"/>
         <source>Genre</source>
-        <translation type="unfinished">Género</translation>
+        <translation>Género</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="36"/>
         <source>Comment</source>
-        <translation type="unfinished">Comentário</translation>
+        <translation>Comentário</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Composer</source>
-        <translation type="unfinished">Compositor</translation>
+        <translation>Compositor</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="38"/>
         <source>Duration</source>
-        <translation type="unfinished">Duração</translation>
+        <translation>Duração</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Disc Number</source>
-        <translation type="unfinished">Número do disco</translation>
+        <translation>Número do disco</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
         <source>File Name</source>
-        <translation type="unfinished">Nome do ficheiro</translation>
+        <translation>Nome do ficheiro</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>File Path</source>
-        <translation type="unfinished">Caminho do ficheiro</translation>
+        <translation>Caminho do ficheiro</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="45"/>
         <source>Year</source>
-        <translation type="unfinished">Ano</translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Condition</source>
-        <translation type="unfinished">Condição</translation>
+        <translation>Condição</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="47"/>
         <source>Artist - Title</source>
-        <translation type="unfinished">Artista - Título</translation>
+        <translation>Artista - Título</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="48"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do diretório superior</translation>
     </message>
 </context>
 <context>

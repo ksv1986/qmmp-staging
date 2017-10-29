@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Default</source>
-        <translation>Pré-definido</translation>
+        <translation>Padrão</translation>
     </message>
 </context>
 </TS>

@@ -29,17 +29,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WASAPI Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Definições</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="56"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Padrão</translation>
     </message>
 </context>
 </TS>

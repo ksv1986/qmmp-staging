@@ -101,7 +101,7 @@
     <message>
         <location filename="../statusoption.cpp" line="103"/>
         <source>%dir(n) - directory name located on n levels above</source>
-        <translation type="unfinished"></translation>
+        <translation>%dir(n) - το όνομα του καταλόγου έγκειται n επίπεδα πάνω</translation>
     </message>
 </context>
 </TS>

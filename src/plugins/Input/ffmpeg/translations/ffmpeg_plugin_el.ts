@@ -31,7 +31,7 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="274"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -49,17 +49,17 @@
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="51"/>
         <source>%1 KB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 KB</translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
         <source>%1 kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kbps</translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="63"/>
         <source>%1 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Hz</translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="52"/>

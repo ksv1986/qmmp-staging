@@ -21,7 +21,7 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,17 +29,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WASAPI Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ρυθμίσεις πρόσθετου WASAPI</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Συσκευή:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="56"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξ ορισμού</translation>
     </message>
 </context>
 </TS>

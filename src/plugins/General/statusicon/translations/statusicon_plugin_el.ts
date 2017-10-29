@@ -105,7 +105,7 @@
     <message>
         <location filename="../statusicon.cpp" line="119"/>
         <source>Stopped</source>
-        <translation type="unfinished">Σταματημένο</translation>
+        <translation>Σταματημένο</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="144"/>

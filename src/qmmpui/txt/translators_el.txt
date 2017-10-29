@@ -1,4 +1,5 @@
 Πορτογαλικά Βραζιλίας
+    Vitor Pereira
     Klaos Lacerda
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
@@ -45,6 +46,9 @@
 Ουγγρικά
     Németh Gábor <sutee84@freemail.hu>
 
+Ινδονησιακά:
+    Wantoyo <wantoyek@gmail.com>
+
 Ιταλικά
     Gian Paolo Renello <emmerkar@gmail.com>
 
@@ -75,6 +79,7 @@
 
 Ισπανικά
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
 Τουρκικά
     Mustafa GUNAY <mustafagunay@pgmail.com>

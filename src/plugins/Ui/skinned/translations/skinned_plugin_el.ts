@@ -817,7 +817,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="542"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp</translation>
     </message>
 </context>
 <context>

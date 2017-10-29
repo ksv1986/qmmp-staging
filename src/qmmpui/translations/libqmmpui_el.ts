@@ -217,7 +217,7 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Γονικός κατάλογος</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
@@ -693,17 +693,17 @@
     <message>
         <location filename="../coverviewer.cpp" line="30"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αποθήκευση ως...</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="54"/>
         <source>Save Cover As</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση εξώφυλλου ως</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="56"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Εικόνες</translation>
     </message>
 </context>
 <context>
@@ -736,7 +736,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="152"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξώφυλλο</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="186"/>
@@ -845,87 +845,87 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished">Καλλιτέχνης</translation>
+        <translation>Καλλιτέχνης</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation type="unfinished">Άλμπουμ</translation>
+        <translation>Άλμπουμ</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
         <source>Album Artist</source>
-        <translation type="unfinished">Καλλιτέχνης άλμπουμ</translation>
+        <translation>Καλλιτέχνης άλμπουμ</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished">Τίτλος</translation>
+        <translation>Τίτλος</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
         <source>Track Number</source>
-        <translation type="unfinished">Αριθμός κομματιού</translation>
+        <translation>Αριθμός κομματιού</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="33"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished">Διψήφιος αριθμός κομματιού</translation>
+        <translation>Διψήφιος αριθμός κομματιού</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="35"/>
         <source>Genre</source>
-        <translation type="unfinished">Είδος</translation>
+        <translation>Είδος</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="36"/>
         <source>Comment</source>
-        <translation type="unfinished">Σχόλιο</translation>
+        <translation>Σχόλιο</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Composer</source>
-        <translation type="unfinished">Συνθέτης</translation>
+        <translation>Συνθέτης</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="38"/>
         <source>Duration</source>
-        <translation type="unfinished">Διάρκεια</translation>
+        <translation>Διάρκεια</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Disc Number</source>
-        <translation type="unfinished">Αριθμός δίσκου</translation>
+        <translation>Αριθμός δίσκου</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
         <source>File Name</source>
-        <translation type="unfinished">Όνομα αρχείου</translation>
+        <translation>Όνομα αρχείου</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>File Path</source>
-        <translation type="unfinished">Διαδρομή αρχείου</translation>
+        <translation>Διαδρομή αρχείου</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="45"/>
         <source>Year</source>
-        <translation type="unfinished">Έτος</translation>
+        <translation>Έτος</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Condition</source>
-        <translation type="unfinished">Συνθήκη</translation>
+        <translation>Συνθήκη</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="47"/>
         <source>Artist - Title</source>
-        <translation type="unfinished">Καλλιτέχνης - Τίτλος</translation>
+        <translation>Καλλιτέχνης - Τίτλος</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="48"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Όνομα γονικού καταλόγου</translation>
     </message>
 </context>
 <context>

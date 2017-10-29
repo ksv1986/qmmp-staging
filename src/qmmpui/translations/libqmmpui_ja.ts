@@ -966,12 +966,12 @@
 <context>
     <name>PlayListTrack</name>
     <message>
-        <location filename="../playlisttrack.cpp" line="261"/>
+        <location filename="../playlisttrack.cpp" line="274"/>
         <source>Streams</source>
         <translation>ストリーム(放送)</translation>
     </message>
     <message>
-        <location filename="../playlisttrack.cpp" line="266"/>
+        <location filename="../playlisttrack.cpp" line="279"/>
         <source>Empty group</source>
         <translation>空のグループ</translation>
     </message>

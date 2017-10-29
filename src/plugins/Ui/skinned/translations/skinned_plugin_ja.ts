@@ -624,27 +624,27 @@
         <translation>バランス</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="295"/>
+        <location filename="../display.cpp" line="296"/>
         <source>Volume: %1%</source>
         <translation>音量: %1%</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="299"/>
+        <location filename="../display.cpp" line="300"/>
         <source>Balance: %1% right</source>
         <translation>バランス: %1% 右へ</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="301"/>
+        <location filename="../display.cpp" line="302"/>
         <source>Balance: %1% left</source>
         <translation>バランス: %1% 左へ</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="303"/>
+        <location filename="../display.cpp" line="304"/>
         <source>Balance: center</source>
         <translation>バランス: 中央に</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="309"/>
+        <location filename="../display.cpp" line="310"/>
         <source>Seek to: %1</source>
         <translation>%1 に移動</translation>
     </message>
@@ -786,37 +786,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="434"/>
         <source>Playlist</source>
         <translation>プレイリスト</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="353"/>
+        <location filename="../mainwindow.cpp" line="354"/>
         <source>Appearance</source>
         <translation>外観</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="354"/>
+        <location filename="../mainwindow.cpp" line="355"/>
         <source>Shortcuts</source>
         <translation>ショートカット</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="424"/>
+        <location filename="../mainwindow.cpp" line="425"/>
         <source>View</source>
         <translation>観容</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="451"/>
+        <location filename="../mainwindow.cpp" line="452"/>
         <source>Audio</source>
         <translation>音響</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="459"/>
+        <location filename="../mainwindow.cpp" line="460"/>
         <source>Tools</source>
         <translation>ツール</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="541"/>
+        <location filename="../mainwindow.cpp" line="542"/>
         <source>Qmmp</source>
         <translation type="unfinished"></translation>
     </message>

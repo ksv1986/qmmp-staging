@@ -624,27 +624,27 @@
         <translation>Equilíbrio</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="295"/>
+        <location filename="../display.cpp" line="296"/>
         <source>Volume: %1%</source>
         <translation>Volume: %1%</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="299"/>
+        <location filename="../display.cpp" line="300"/>
         <source>Balance: %1% right</source>
         <translation>Equilíbrio: %1% à direita</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="301"/>
+        <location filename="../display.cpp" line="302"/>
         <source>Balance: %1% left</source>
         <translation>Equilíbrio: %1% à esquerda</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="303"/>
+        <location filename="../display.cpp" line="304"/>
         <source>Balance: center</source>
         <translation>Equilíbrio: centrar</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="309"/>
+        <location filename="../display.cpp" line="310"/>
         <source>Seek to: %1</source>
         <translation>Procurar a: %1</translation>
     </message>
@@ -785,37 +785,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="353"/>
+        <location filename="../mainwindow.cpp" line="354"/>
         <source>Appearance</source>
         <translation>Aparência</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="354"/>
+        <location filename="../mainwindow.cpp" line="355"/>
         <source>Shortcuts</source>
         <translation>Atalhos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="424"/>
+        <location filename="../mainwindow.cpp" line="425"/>
         <source>View</source>
         <translation>Ver</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="434"/>
         <source>Playlist</source>
         <translation>Lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="451"/>
+        <location filename="../mainwindow.cpp" line="452"/>
         <source>Audio</source>
         <translation>Áudio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="459"/>
+        <location filename="../mainwindow.cpp" line="460"/>
         <source>Tools</source>
         <translation>Ferramentas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="541"/>
+        <location filename="../mainwindow.cpp" line="542"/>
         <source>Qmmp</source>
         <translation type="unfinished"></translation>
     </message>

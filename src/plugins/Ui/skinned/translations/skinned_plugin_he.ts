@@ -624,27 +624,27 @@
         <translation>איזון</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="295"/>
+        <location filename="../display.cpp" line="296"/>
         <source>Volume: %1%</source>
         <translation>עצמת קול: %1%</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="299"/>
+        <location filename="../display.cpp" line="300"/>
         <source>Balance: %1% right</source>
         <translation>איזון: %1% ימינה</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="301"/>
+        <location filename="../display.cpp" line="302"/>
         <source>Balance: %1% left</source>
         <translation>איזון: %1% שמאלה</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="303"/>
+        <location filename="../display.cpp" line="304"/>
         <source>Balance: center</source>
         <translation>איזון: מרכז</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="309"/>
+        <location filename="../display.cpp" line="310"/>
         <source>Seek to: %1</source>
         <translation>מעבר אל: %1</translation>
     </message>
@@ -785,37 +785,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="353"/>
+        <location filename="../mainwindow.cpp" line="354"/>
         <source>Appearance</source>
         <translation>הופעה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="354"/>
+        <location filename="../mainwindow.cpp" line="355"/>
         <source>Shortcuts</source>
         <translation>קיצורי דרך</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="424"/>
+        <location filename="../mainwindow.cpp" line="425"/>
         <source>View</source>
         <translation>תצוגה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="434"/>
         <source>Playlist</source>
         <translation>רשימת נגינה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="451"/>
+        <location filename="../mainwindow.cpp" line="452"/>
         <source>Audio</source>
         <translation>שמע</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="459"/>
+        <location filename="../mainwindow.cpp" line="460"/>
         <source>Tools</source>
         <translation>כלים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="541"/>
+        <location filename="../mainwindow.cpp" line="542"/>
         <source>Qmmp</source>
         <translation type="unfinished"></translation>
     </message>

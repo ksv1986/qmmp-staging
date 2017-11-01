@@ -21,7 +21,7 @@ class QmmpPluginCache;
 
 /*! @brief The Output class provides the base interface class of audio outputs.
  * @author Brad Hughes <bhughes@trolltech.com>
- * @author Ilya Kotov <forkotov@hotmail.ru>
+ * @author Ilya Kotov <forkotov02@ya.ru>
  */
 class Output
 {

@@ -98,6 +98,9 @@ void SoundCore::stop()
 {
     qApp->sendPostedEvents(this, 0);
     m_url.clear();
+    qDeleteAll(m_sources);
+    m_sources.clear();
+    m_nextState = NO_ENGINE;
     if(m_engine)
     {
         m_engine->stop();
@@ -105,9 +108,6 @@ void SoundCore::stop()
         //m_engine->deleteLater();
         //m_engine = 0;
     }
-    qDeleteAll(m_sources);
-    m_sources.clear();
-    m_nextState = NO_ENGINE;
     m_volumeControl->reload();
     if(state() == Qmmp::NormalError || state() == Qmmp::FatalError || state() == Qmmp::Buffering)
         StateHandler::instance()->dispatch(Qmmp::Stopped); //clear error and buffering state

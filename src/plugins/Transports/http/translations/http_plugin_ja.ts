@@ -21,7 +21,7 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="56"/>
         <source>Compiled against libcurl-%1</source>
-        <translation>libcurl-%1 対応でコンパイル</translation>
+        <translation>libcurl-%1 を使用してコンパイル</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="57"/>

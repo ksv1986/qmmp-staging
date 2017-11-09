@@ -26,7 +26,7 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="206"/>
         <source>Compiled against libavformat-%1.%2.%3 and libavcodec-%4.%5.%6</source>
-        <translation>libavformat-%1.%2.%3 と libavcodec-%4.%5.%6 対応でコンパイル</translation>
+        <translation>libavformat-%1.%2.%3 と libavcodec-%4.%5.%6 を使用してコンパイル</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="213"/>

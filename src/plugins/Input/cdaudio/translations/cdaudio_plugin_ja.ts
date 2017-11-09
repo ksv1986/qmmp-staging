@@ -21,7 +21,7 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="89"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
-        <translation>libcdio-%1 と libcddb-%2 対応でコンパイル</translation>
+        <translation>libcdio-%1 と libcddb-%2 を使用してコンパイル</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="91"/>

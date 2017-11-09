@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Instrument configuration: </source>
-        <translation>楽器編成:</translation>
+        <translation>楽器編成ファイル(.cfg)のフルパス:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="43"/>

@@ -16,13 +16,15 @@
     Вадим Калинников (Vadim Kalinnikov) <moose@ylsoftware.com> - ホスト提供
     Erik Ölsar <erlk.ozlr@gmail.com> - スキン化カーソル, UI 改良
     Funda Wang <fundawang@gmail.com> - cmake ファイル改修
+    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia 出力, MacOS X 移植
+    Karel Volný <kvolny@redhat.com> - 各種改修
     Makis Kalofolias <makskafl@gmail.com> - EAC3, DTS, Dolby TrueHD のサポート
     Михаил Желудков (Michail Zheludkov) <zheludkovm@mail.ru> - FFmpeg プラグイン改修
     Michał Grosicki <grosik88@o2.pl> - ALSA プラグイン改修
     Panagiotis Papadopoulos <pano_90@gmx.net> - UI 改修, バグ報告
     Pino Toscano <toscano.pino@tiscali.it> - 移植適用パッチ
-    Karel Volný <kvolny@redhat.com> - 各種改修
     Sebastian Pipping <webmaster@hartwork.org> - bs2b パッチ
     Stefan Koelling <stefankoelling.ext@googlemail.com> - ビルド改修
+    Thomas Perl - GUI 改良
     Ville Skyttä - ModPlug プラグイン改良
     Yaakov Selkowitz <yselkowitz@gmail.com> - cygwin パッチ

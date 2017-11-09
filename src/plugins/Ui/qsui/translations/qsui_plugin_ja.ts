@@ -199,7 +199,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
         <source>&amp;Record</source>
-        <translation type="unfinished"></translation>
+        <translation>録音(&amp;R)</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
@@ -588,7 +588,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="99"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>絞り込み検索</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="173"/>
@@ -724,7 +724,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="465"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>絞り込み検索</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="520"/>
@@ -1333,47 +1333,47 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="947"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>ツールバー</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="955"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>アイコンの大きさ:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="980"/>
         <source>Customize...</source>
-        <translation type="unfinished"></translation>
+        <translation>調達...</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>初期設定</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
         <source>16x16</source>
-        <translation type="unfinished"></translation>
+        <translation>16×16</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="44"/>
         <source>22x22</source>
-        <translation type="unfinished"></translation>
+        <translation>22×22</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="45"/>
         <source>32x32</source>
-        <translation type="unfinished"></translation>
+        <translation>32×32</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="46"/>
         <source>48x48</source>
-        <translation type="unfinished"></translation>
+        <translation>48×40</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="47"/>
         <source>64x64</source>
-        <translation type="unfinished"></translation>
+        <translation>64×64</translation>
     </message>
 </context>
 <context>

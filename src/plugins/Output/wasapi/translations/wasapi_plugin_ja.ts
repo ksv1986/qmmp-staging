@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="31"/>
         <source>WASAPI Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>WASAPI プラグイン</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="56"/>
         <source>About WASAPI Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>WASAPI プラグインについて</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="57"/>
         <source>Qmmp WASAPI Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>QMMP WASAPI 出力プラグイン</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>制作: Илья Котов (Ilya Kotov) &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,17 +29,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WASAPI Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>WASAPI プラグイン設定</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>出力デバイス:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="56"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>標準</translation>
     </message>
 </context>
 </TS>

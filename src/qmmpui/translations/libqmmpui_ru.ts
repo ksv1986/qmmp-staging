@@ -696,12 +696,12 @@
         <translation>&amp;Сохранить как...</translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="54"/>
+        <location filename="../coverviewer.cpp" line="57"/>
         <source>Save Cover As</source>
         <translation>Сохранить обложку как</translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="56"/>
+        <location filename="../coverviewer.cpp" line="59"/>
         <source>Images</source>
         <translation>Изображения</translation>
     </message>

@@ -696,12 +696,12 @@
         <translation>&amp;Guardar como...</translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="54"/>
+        <location filename="../coverviewer.cpp" line="57"/>
         <source>Save Cover As</source>
         <translation>Guardar capa como</translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="56"/>
+        <location filename="../coverviewer.cpp" line="59"/>
         <source>Images</source>
         <translation>Imagens</translation>
     </message>

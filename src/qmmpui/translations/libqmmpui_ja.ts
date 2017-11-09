@@ -696,12 +696,12 @@
         <translation>名前を付けて保存(&amp;S)...</translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="54"/>
+        <location filename="../coverviewer.cpp" line="57"/>
         <source>Save Cover As</source>
         <translation>カバー画像に名前を付けて保存</translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="56"/>
+        <location filename="../coverviewer.cpp" line="59"/>
         <source>Images</source>
         <translation>画像</translation>
     </message>

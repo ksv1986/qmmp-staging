@@ -41,7 +41,7 @@ public:
     void setPixmap(const QPixmap&);
 
 protected:
-    void paintEvent(QPaintEvent *event);
+    void paintEvent(QPaintEvent *);
 
 private slots:
     void saveAs();

@@ -42,11 +42,14 @@ void CoverViewer::setPixmap(const QPixmap &pixmap)
     update();
 }
 
-void CoverViewer::paintEvent(QPaintEvent *p)
+void CoverViewer::paintEvent(QPaintEvent *)
 {
-    QPainter paint(this);
     if(!m_pixmap.isNull())
-        paint.drawPixmap(0,0, m_pixmap.scaled(p->rect().size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    {
+        QPainter paint(this);
+        QPixmap pixmap = m_pixmap.scaled(size().width() - 20, size().height() - 20, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        paint.drawPixmap((width() - pixmap.width()) / 2, (height() - pixmap.height()) / 2, pixmap);
+    }
 }
 
 void CoverViewer::saveAs()

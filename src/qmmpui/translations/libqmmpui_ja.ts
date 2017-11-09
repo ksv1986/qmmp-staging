@@ -874,7 +874,7 @@
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="35"/>
-        source>Genre</source>
+        <source>Genre</source>
         <translation>ジャンル</translation>
     </message>
     <message>

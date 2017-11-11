@@ -1281,7 +1281,8 @@ Version 0.11.0
 * added archive reader plugin (requires TagLib 1.11 or higher)
 * added file writer plugin
 * added icecast output plugin
-* added feature to disable notifications when another application is in the full screen mode
+* added feature to disable notifications when another application is in 
+  the full screen mode
 * added cover tab to the track details dialog
 * added '--volume-status' command-line option
 * added '--mute-status' command-line option
@@ -1307,6 +1308,7 @@ Version 0.11.0
   - added quick search to the playlist
   - added feature to change toolbar icon size
   - added record button
+  - added cover image alignment
   - reduced memory usage
   - improved settings
 * fixed FVWM support in the skinned user interface (Andrey A. Rys)

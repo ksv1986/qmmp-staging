@@ -46,6 +46,9 @@ Hebraico:
 Húngaro:
     Németh Gábor <sutee84@freemail.hu>
 
+Indonésio:
+    Wantoyo <wantoyek@gmail.com>
+
 Italiano:
     Gian Paolo Renello <emmerkar@gmail.com>
 
@@ -76,6 +79,7 @@ Eslovaco:
 
 Espanhol:
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
 Turco:
     Mustafa GUNAY <mustafagunay@pgmail.com>

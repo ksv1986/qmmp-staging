@@ -34,22 +34,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasta de destino:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="59"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do arquivo de destino:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qualidade:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Choose a directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Escolha uma pasta</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 Principais programadores:
 
-    Ilya Kotov <forkotov02@ya.ru> Ideia e código base
+    Ilya Kotov <forkotov02@ya.ru> - idea and base code
 
 Programadores anteriores:
 

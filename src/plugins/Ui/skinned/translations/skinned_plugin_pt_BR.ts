@@ -241,7 +241,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>&amp;Remove Selected</source>
-        <translation>&amp;Remover seleção</translation>
+        <translation>&amp;Remover selecionados</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
@@ -817,7 +817,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="542"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp</translation>
     </message>
 </context>
 <context>
@@ -830,7 +830,7 @@
     <message>
         <location filename="../playlist.cpp" line="198"/>
         <source>&amp;Copy Selection To</source>
-        <translation>&amp;Copiar seleção para</translation>
+        <translation>&amp;Copiar selecionados para</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="228"/>
@@ -1129,17 +1129,17 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="31"/>
         <source>Skinned User Interface</source>
-        <translation>Skinned User Interface</translation>
+        <translation> Interface de usuário com tema</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="44"/>
         <source>About Qmmp Skinned User Interface</source>
-        <translation>Sobre Qmmp Skinned User Interface</translation>
+        <translation>Sobre Interface de usuário Qmmp com tema</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="45"/>
         <source>Qmmp Skinned User Interface</source>
-        <translation>Qmmp Skinned User Interface</translation>
+        <translation>Interface de usuário Qmmp com tema</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="46"/>
@@ -1159,7 +1159,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="49"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="50"/>

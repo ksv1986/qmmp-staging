@@ -103,12 +103,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="375"/>
         <source>Disable notifications when another application is in the Full Screen Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Benachrichtigungen deaktivieren, wenn sich eine andere Anwendung im Vollbildmodus befindet</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="378"/>
         <source>Disable for full screen windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Für Vollbildfenster deaktivieren</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="388"/>

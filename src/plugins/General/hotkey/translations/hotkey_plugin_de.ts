@@ -44,7 +44,7 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autor: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

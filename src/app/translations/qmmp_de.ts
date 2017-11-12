@@ -46,7 +46,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>
         <source>Print volume level</source>
-        <translation type="unfinished"></translation>
+        <translation>Lautstärke ausgeben</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="80"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="81"/>
         <source>Print mute status</source>
-        <translation type="unfinished"></translation>
+        <translation>Stummschaltstatus ausgeben</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="82"/>
@@ -109,12 +109,12 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="374"/>
         <source>Start qmmp with the specified user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>qmmp mit der angegebenen Benutzeroberfläche starten</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="375"/>
         <source>List all available user interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste aller verfügbaren Benutzeroberflächen</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="376"/>
@@ -134,12 +134,12 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="380"/>
         <source>Home page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Homepage: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="381"/>
         <source>Development page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Entwicklungsseite: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="382"/>
@@ -174,7 +174,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="422"/>
         <source>User Interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Benutzeroberflächen</translation>
     </message>
 </context>
 </TS>

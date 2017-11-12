@@ -36,12 +36,12 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="60"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="61"/>
         <source>Sebastian Pipping &lt;sebastian@pipping.org&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Sebastian Pipping &lt;sebastian@pipping.org&gt;</translation>
     </message>
 </context>
 <context>

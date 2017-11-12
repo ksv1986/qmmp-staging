@@ -1,4 +1,5 @@
 Brasilianisches Portugiesisch:
+    Vitor Pereira
     Klaos Lacerda
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
@@ -45,6 +46,9 @@ Hebräisch:
 Ungarisch:
     Németh Gábor <sutee84@freemail.hu>
 
+Indonesisch:
+    Wantoyo <wantoyek@gmail.com>
+
 Italienisch:
     Gian Paolo Renello <emmerkar@gmail.com>
 
@@ -75,6 +79,7 @@ Slowakisch:
 
 Spanisch:
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
 Türkisch:
     Mustafa GUNAY <mustafagunay@pgmail.com>

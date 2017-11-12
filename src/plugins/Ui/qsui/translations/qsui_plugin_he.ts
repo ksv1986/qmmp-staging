@@ -1348,7 +1348,7 @@
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>משתמט</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>

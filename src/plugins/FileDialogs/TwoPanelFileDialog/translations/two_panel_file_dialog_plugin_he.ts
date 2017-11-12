@@ -50,7 +50,7 @@
     <message>
         <location filename="../twopanelfiledialog.cpp" line="79"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@ya.ru&gt;‎</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="80"/>

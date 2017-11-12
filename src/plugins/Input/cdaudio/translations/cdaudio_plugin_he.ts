@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="91"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>חובר על ידי: Ilya Kotov &lt;forkotov02@ya.ru&gt;‎</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="92"/>

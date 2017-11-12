@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="he_IL">
+<TS version="2.0" language="he">
 <context>
     <name>EffectFileWriterFactory</name>
     <message>
@@ -34,22 +34,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>פלט מדור:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="59"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>פלט שם קובץ:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>איכות:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Choose a directory</source>
-        <translation type="unfinished"></translation>
+        <translation>בחר מדור</translation>
     </message>
 </context>
 </TS>

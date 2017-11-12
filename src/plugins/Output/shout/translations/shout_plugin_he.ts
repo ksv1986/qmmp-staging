@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="he_IL">
+<TS version="2.0" language="he">
 <context>
     <name>OutputShoutFactory</name>
     <message>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation>פורט:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="56"/>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="86"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>איכות:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="106"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>שיעור דגימה:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="136"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>הרץ</translation>
     </message>
 </context>
 </TS>

@@ -1,4 +1,5 @@
 ברזילאית פורטוגזית:
+    Vitor Pereira
     Klaos Lacerda
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
@@ -45,6 +46,9 @@ Bulgarian:
 הונגרית:
     Németh Gábor <sutee84@freemail.hu>
 
+Indonesian:
+    Wantoyo <wantoyek@gmail.com>
+
 איטלקית:
     Gian Paolo Renello <emmerkar@gmail.com>
 
@@ -75,6 +79,7 @@ Bulgarian:
 
 ספרדית:
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
 טורקית:
     Mustafa GUNAY <mustafagunay@pgmail.com>

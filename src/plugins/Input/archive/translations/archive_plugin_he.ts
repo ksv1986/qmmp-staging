@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="he_IL">
+<TS version="2.0" language="he">
 <context>
     <name>ArchiveMetaDataModel</name>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="54"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>אריכות</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="55"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>שיעור דגימה</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="55"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>הרץ</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="56"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>ערוצים</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="57"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>שיעור סיביות</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="57"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../archivemetadatamodel.cpp" line="58"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>גודל קובץ</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="58"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>ק״ב</translation>
     </message>
 </context>
 <context>

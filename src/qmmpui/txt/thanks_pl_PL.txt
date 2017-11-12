@@ -16,14 +16,16 @@ Podziękowania:
     Vadim Kalinnikov <moose@ylsoftware.com> - hosting projektu
     Erik Ölsar <erlk.ozlr@gmail.com> - wsparcie dla kursorów z motywu, udoskonalenia dla ui
     Funda Wang <fundawang@gmail.com> - poprawki plików cmake
+    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia output, MacOS X port
+    Karel Volný <kvolny@redhat.com> - różne poprawki
     Makis Kalofolias <makskafl@gmail.com> - wsparcie dla EAC3, DTS, oraz Dolby TrueHD
     Michail Zheludkov <zheludkovm@mail.ru> - FFmpeg plugin fixes
     Michał Grosicki <grosik88@o2.pl> - ALSA plugin fixes
     Panagiotis Papadopoulos <pano_90@gmx.net> - poprawki ui, raporty błędów
     Pino Toscano <toscano.pino@tiscali.it> - poprawki dotyczące przenośności programu
-    Karel Volný <kvolny@redhat.com> - różne poprawki
     Ryota Shimamoto <liangtai.s16@gmail.com> - FreeBSD patches
     Sebastian Pipping <webmaster@hartwork.org> - poprawki bs2b
     Stefan Koelling <stefankoelling.ext@googlemail.com> - poprawki błędów kompilacji
+    Thomas Perl - gui improvements
     Ville Skyttä - ModPlug plugin improvements
     Yaakov Selkowitz <yselkowitz@gmail.com> - poprawki cygwin

@@ -38,7 +38,7 @@
         <location filename="../fileops.cpp" line="154"/>
         <location filename="../fileops.cpp" line="244"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatrzymaj</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="199"/>
@@ -90,7 +90,7 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autor: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -159,7 +159,7 @@
         <location filename="../settingsdialog.ui" line="126"/>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="133"/>

@@ -69,7 +69,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="106"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Próbkowanie:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="136"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
 </context>
 </TS>

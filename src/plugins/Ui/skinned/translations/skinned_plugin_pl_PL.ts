@@ -81,7 +81,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished">Odśwież</translation>
+        <translation>Odśwież</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -356,7 +356,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>&amp;Rename List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zmień nazwę listy</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished">Przywróć</translation>
+        <translation>Resetuj</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
@@ -714,22 +714,22 @@
     <message>
         <location filename="../mainvisual.cpp" line="252"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 klatek</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="253"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 klatek</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="254"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 klatek</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="255"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 klatek</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="262"/>
@@ -931,12 +931,12 @@
     <message>
         <location filename="../playlist.cpp" line="617"/>
         <source>Rename Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmień nazwę listy</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="617"/>
         <source>Playlist name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa listy odtwarzania:</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="638"/>
@@ -1075,7 +1075,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
 </context>
 <context>
@@ -1149,7 +1149,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="47"/>
         <source>Written by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="48"/>
@@ -1164,7 +1164,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="50"/>
         <source>Artwork:</source>
-        <translation type="unfinished"></translation>
+        <translation>Artwork:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="51"/>
@@ -1227,7 +1227,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="456"/>
         <source>Playlist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista odtwarzania:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="492"/>
@@ -1272,7 +1272,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="89"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogólne</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="146"/>

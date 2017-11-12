@@ -21,7 +21,7 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="46"/>
         <source>Developers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Autorzy:</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="47"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation>9</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
@@ -304,7 +304,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Odśwież</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
@@ -548,7 +548,7 @@
     <message>
         <location filename="../equalizer.cpp" line="83"/>
         <source>Preamp</source>
-        <translation type="unfinished"></translation>
+        <translation>Wzmocnienie sygnału</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="100"/>
@@ -606,22 +606,22 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetuj</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Akcja</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="59"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrót klawiszowy</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="33"/>
         <source>Change shortcut...</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmień skrót...</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="55"/>
@@ -636,27 +636,27 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="68"/>
         <source>Playback</source>
-        <translation type="unfinished">Odtwarzanie</translation>
+        <translation>Odtwarzanie</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="74"/>
         <source>View</source>
-        <translation type="unfinished">Wygląd</translation>
+        <translation>Wygląd</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="80"/>
         <source>Volume</source>
-        <translation type="unfinished">Głośność</translation>
+        <translation>Głośność</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="86"/>
         <source>Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista odtwarzania</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="92"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Różne</translation>
     </message>
 </context>
 <context>
@@ -851,7 +851,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="328"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Skróty klawiszowe</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
@@ -871,7 +871,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="461"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozycja</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="465"/>
@@ -1092,7 +1092,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
 </context>
 <context>
@@ -1133,7 +1133,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="776"/>
         <source>Playlist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista odtwarzania:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="756"/>
@@ -1233,7 +1233,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="178"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolory</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="190"/>
@@ -1293,7 +1293,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="583"/>
         <source>Highlighted text:</source>
-        <translation>Uwydatniony tekst:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="947"/>
@@ -1348,7 +1348,7 @@
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślne</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
@@ -1396,22 +1396,22 @@
     <message>
         <location filename="../qsuianalyzer.cpp" line="237"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 klatek</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="238"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 klatek</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="239"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 klatek</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="240"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 klatek</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="247"/>
@@ -1502,7 +1502,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Usuń</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="100"/>

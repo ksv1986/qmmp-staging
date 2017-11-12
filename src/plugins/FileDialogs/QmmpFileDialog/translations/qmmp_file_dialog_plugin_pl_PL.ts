@@ -19,7 +19,7 @@
         <location filename="../qmmpfiledialog.ui" line="79"/>
         <location filename="../qmmpfiledialog.ui" line="104"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="57"/>
@@ -75,9 +75,7 @@
         <source>Written by:
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
 Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autor:
-Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
-Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="83"/>

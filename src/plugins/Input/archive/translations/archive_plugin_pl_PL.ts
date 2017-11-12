@@ -6,27 +6,27 @@
     <message>
         <location filename="../archivemetadatamodel.cpp" line="54"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Długość</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="55"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Próbkowanie</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="55"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="56"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanały</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="57"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Szybkość transmisji</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="57"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../archivemetadatamodel.cpp" line="58"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Wielkość pliku</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="58"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>KB</translation>
     </message>
 </context>
 <context>

@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalog wyjściowy:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="59"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa pliku wyjściowego:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Choose a directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz katalog</translation>
     </message>
 </context>
 </TS>

@@ -31,7 +31,7 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="213"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autor: Ilja Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="49"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>KB</translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="50"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="66"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../ffmpegmetadatamodel.cpp" line="67"/>

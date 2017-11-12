@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Urządzenie:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślne</translation>
     </message>
 </context>
 </TS>

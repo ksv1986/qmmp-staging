@@ -6,32 +6,32 @@
     <message>
         <location filename="../twopanelfiledialog.ui" line="14"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj pliki</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="70"/>
         <source>File name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa pliku:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="80"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Typy plików:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="117"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Odtwarzaj</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="130"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zamknij</translation>
     </message>
 </context>
 <context>
@@ -64,23 +64,24 @@
         <location filename="../twopanelfiledialogimpl.cpp" line="326"/>
         <location filename="../twopanelfiledialogimpl.cpp" line="342"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="344"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalogi</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="356"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="463"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 już istnieje.
+Chcesz nadpisać?</translation>
     </message>
 </context>
 </TS>

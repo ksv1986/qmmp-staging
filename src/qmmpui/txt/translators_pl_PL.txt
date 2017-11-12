@@ -1,13 +1,21 @@
 Brazilian Portuguese:
+    Vitor Pereira
     Klaos Lacerda
     Bruno Gonçalves
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
 
+Bulgarian:
+    Kiril Kirilov
+
 Chinese Traditional:
     lon <lon83129@126.com>
+    Jeff Huang
 
 Chinese Simplified:
     lon <lon83129@126.com>
+    mabier
+    Mingcong Bai
+    Mingye Wang
 
 Czech:
     Karel Volný <kvolny@redhat.com>
@@ -17,6 +25,7 @@ Dutch:
     Ronald Uitermark <ronald645@gmail.com>
 
 French:
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
     Sébastien Aperghis-Tramoni (maddingue)
     Stanislas Zeller <uncensored.assault@gmail.com>
 
@@ -36,6 +45,9 @@ Hebrew:
 
 Hungarian:
     Németh Gábor <sutee84@freemail.hu>
+
+Indonesian:
+    Wantoyo <wantoyek@gmail.com>
 
 Italian:
     Gian Paolo Renello <emmerkar@gmail.com>
@@ -67,6 +79,7 @@ Slovak:
 
 Spanish:
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
 Turkish:
     Mustafa GUNAY <mustafagunay@pgmail.com>

@@ -21,12 +21,12 @@
     <message>
         <location filename="../decodermpcfactory.cpp" line="128"/>
         <source>Qmmp Musepack Audio Plugin</source>
-        <translation>Qmmp Plugin Audio Musepack</translation>
+        <translation>Plugin Audio Musepack Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="129"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

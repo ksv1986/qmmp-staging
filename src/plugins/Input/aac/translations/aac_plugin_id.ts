@@ -59,12 +59,12 @@
     <message>
         <location filename="../decoderaacfactory.cpp" line="85"/>
         <source>Qmmp AAC Audio Plugin</source>
-        <translation>Qmmp Plugin Audio AAC</translation>
+        <translation>Plugin Audio AAC Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="86"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

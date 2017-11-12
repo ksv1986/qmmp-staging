@@ -693,17 +693,17 @@
     <message>
         <location filename="../coverviewer.cpp" line="30"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Simpan Sebagai...</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="57"/>
         <source>Save Cover As</source>
-        <translation type="unfinished"></translation>
+        <translation>Simpan Sampul Sebagai</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="59"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Citra</translation>
     </message>
 </context>
 <context>
@@ -736,7 +736,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="152"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Sampul</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="186"/>
@@ -845,82 +845,82 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished">Artist</translation>
+        <translation>Artist</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation type="unfinished">Album</translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
         <source>Album Artist</source>
-        <translation type="unfinished">Album Artist</translation>
+        <translation>Album Artist</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished">Judul</translation>
+        <translation>Judul</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
         <source>Track Number</source>
-        <translation type="unfinished">Nomor track</translation>
+        <translation>Nomor track</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="33"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished">Nomor Track Dua-digit</translation>
+        <translation>Nomor Track Dua-digit</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="35"/>
         <source>Genre</source>
-        <translation type="unfinished">Genre</translation>
+        <translation>Genre</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="36"/>
         <source>Comment</source>
-        <translation type="unfinished">Komentar</translation>
+        <translation>Komentar</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Composer</source>
-        <translation type="unfinished">Pengarang</translation>
+        <translation>Pengarang</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="38"/>
         <source>Duration</source>
-        <translation type="unfinished">Durasi</translation>
+        <translation>Durasi</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Disc Number</source>
-        <translation type="unfinished">Nomor Cakram</translation>
+        <translation>Nomor Cakram</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
         <source>File Name</source>
-        <translation type="unfinished">Nama File</translation>
+        <translation>Nama File</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>File Path</source>
-        <translation type="unfinished">Alur File</translation>
+        <translation>Alur File</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="45"/>
         <source>Year</source>
-        <translation type="unfinished">Tahun</translation>
+        <translation>Tahun</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Condition</source>
-        <translation type="unfinished">Kondisi</translation>
+        <translation>Kondisi</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="47"/>
         <source>Artist - Title</source>
-        <translation type="unfinished">Artist - Judul</translation>
+        <translation>Artist - Judul</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="48"/>

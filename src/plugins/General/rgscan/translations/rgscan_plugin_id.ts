@@ -103,7 +103,7 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="55"/>

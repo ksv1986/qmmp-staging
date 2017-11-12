@@ -75,9 +75,7 @@
         <source>Written by:
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
 Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: 
-Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
-Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="83"/>

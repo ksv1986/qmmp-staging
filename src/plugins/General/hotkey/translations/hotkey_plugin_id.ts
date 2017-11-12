@@ -34,7 +34,7 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="53"/>
         <source>Qmmp Global Hotkey Plugin</source>
-        <translation>Qmmp Plugin Hotkey Global</translation>
+        <translation>Plugin Hotkey Global Qmmp</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="54"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

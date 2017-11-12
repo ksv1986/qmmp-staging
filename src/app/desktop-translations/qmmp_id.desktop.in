@@ -1,7 +1,7 @@
 [Desktop Entry]
 X-Desktop-File-Install-Version=0.11
 Name=Qmmp
-Comment=Qt4-based Multimedia Player
+Comment=Qt-based Multimedia Player
 GenericName=Audio player
 Keywords=player;audio;video;multimedia;
 Exec=qmmp %F
@@ -9,7 +9,7 @@ Icon=qmmp
 Terminal=false
 Type=Application
 Categories=AudioVideo;Player;Audio;Qt;
-MimeType=application/x-ogg;audio/mp3;audio/mpeg;audio/flac;audio/x-mp3;audio/x-mpeg;audio/x-ms-wma;audio/x-musepack;application/ogg;audio/x-vorbis+ogg;audio/x-scpls;audio/x-mpegurl;audio/x-it;audio/x-mod;audio/x-s3m;audio/x-stm;audio/x-xm;audio/x-ape;application/x-cue;x-content/audio-cdda;audio/x-ffmpeg-shorten;
+MimeType=application/x-ogg;audio/mp3;audio/mpeg;audio/flac;audio/x-mp3;audio/x-mpeg;audio/x-ms-wma;audio/x-musepack;application/ogg;audio/x-vorbis+ogg;audio/x-scpls;audio/x-mpegurl;audio/x-it;audio/x-mod;audio/x-s3m;audio/x-stm;audio/x-xm;audio/x-ape;application/x-cue;x-content/audio-cdda;audio/x-ffmpeg-shorten;audio/aac;audio/x-aac;audio/m4a;audio/x-m4a;
 X-KDE-StartupNotify=false
 Actions=Play;Pause;Stop;Previous;Next;
 
@@ -35,7 +35,6 @@ Exec=qmmp --no-start --next
 
 
 # Translations
-Comment[id]=Pemain Multimedia Berbasis-Qt4
 GenericName[id]=Pemain audio
 Name[id]=Qmmp
 Icon[id]=qmmp

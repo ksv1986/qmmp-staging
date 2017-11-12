@@ -16,12 +16,12 @@
     <message>
         <location filename="../mmsinputfactory.cpp" line="54"/>
         <source>Qmmp MMS Transport Plugin</source>
-        <translation>Qmmp Plugin Transport MMS</translation>
+        <translation>Plugin Transport MMS Qmmp</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

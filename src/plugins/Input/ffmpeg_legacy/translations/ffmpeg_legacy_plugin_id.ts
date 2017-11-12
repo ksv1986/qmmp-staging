@@ -21,7 +21,7 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="205"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
-        <translation>Qmmp Plugin Audio FFmpeg</translation>
+        <translation>Plugin Audio FFmpeg Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="206"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="213"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

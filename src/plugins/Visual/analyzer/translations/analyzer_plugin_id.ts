@@ -160,12 +160,12 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="52"/>
         <source>Qmmp Analyzer Visual Plugin</source>
-        <translation>Qmmp Plugin Visual Analyzer</translation>
+        <translation>Plugin Visual Analyzer Qmmp</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -54,7 +54,7 @@
     <message>
         <location filename="../udisks2factory.cpp" line="53"/>
         <source>Qmmp UDisks2 Plugin</source>
-        <translation>Qmmp Plugin UDisks</translation>
+        <translation>Plugin UDisks Qmmp</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="54"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../udisks2factory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

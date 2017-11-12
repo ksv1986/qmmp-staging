@@ -16,7 +16,7 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="55"/>
         <source>Qmmp HTTP Transport Plugin</source>
-        <translation>Qmmp Plugin Transport HTTP</translation>
+        <translation>Plugin Transport HTTP Qmmp</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="56"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="57"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

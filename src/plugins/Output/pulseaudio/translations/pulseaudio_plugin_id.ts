@@ -16,12 +16,12 @@
     <message>
         <location filename="../outputpulseaudiofactory.cpp" line="57"/>
         <source>Qmmp PulseAudio Output Plugin</source>
-        <translation>Qmmp Plugin Keluaran PulseAudio</translation>
+        <translation>Plugin Keluaran PulseAudio Qmmp</translation>
     </message>
     <message>
         <location filename="../outputpulseaudiofactory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

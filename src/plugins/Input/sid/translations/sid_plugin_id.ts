@@ -21,7 +21,7 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="117"/>
         <source>Qmmp SID Audio Plugin</source>
-        <translation>Qmmp Plugin Audio SID</translation>
+        <translation>Plugin Audio SID Qmmp</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="118"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="119"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt; </translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

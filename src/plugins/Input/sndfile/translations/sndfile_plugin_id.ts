@@ -21,7 +21,7 @@
     <message>
         <location filename="../decodersndfilefactory.cpp" line="156"/>
         <source>Qmmp Sndfile Audio Plugin</source>
-        <translation>Qmmp Plugin Audio Sndfile</translation>
+        <translation>Plugin Audio Sndfile Qmmp</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="157"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodersndfilefactory.cpp" line="158"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -81,12 +81,12 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="52"/>
         <source>Qmmp File Operations Plugin</source>
-        <translation>Qmmp Plugin Operasi File</translation>
+        <translation>Plugin Operasi File Qmmp</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

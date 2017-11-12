@@ -117,7 +117,7 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="52"/>
         <source>Qmmp ProjectM Visual Plugin</source>
-        <translation>Qmmp Plugin Visual ProjectM</translation>
+        <translation>Plugin Visual ProjectM Qmmp</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="53"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="55"/>

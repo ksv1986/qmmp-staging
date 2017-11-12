@@ -16,12 +16,12 @@
     <message>
         <location filename="../effectstereofactory.cpp" line="53"/>
         <source>Qmmp Extra Stereo Plugin</source>
-        <translation>Qmmp Plugin Stereo Extra</translation>
+        <translation>Plugin Stereo Extra Qmmp</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="55"/>

@@ -64,7 +64,7 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="142"/>
         <source>Qmmp Archive Reader Plugin</source>
-        <translation>Qmmp Plugin Archive Reader</translation>
+        <translation>Plugin Archive Reader Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="143"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="144"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

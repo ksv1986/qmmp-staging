@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="id_ID">
+<TS version="2.0" language="id">
 <context>
     <name>EffectFileWriterFactory</name>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="32"/>
         <source>File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin File Writer</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="53"/>
         <source>About File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentang Plugin File Writer</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="54"/>
         <source>Qmmp File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin File Writer Qmmp</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="55"/>
@@ -29,27 +29,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Writer Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Setelan Plugin File Writer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Direktori keluaran:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="59"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nama file keluaran:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kualitas:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Choose a directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memilih sebuah direktori</translation>
     </message>
 </context>
 </TS>

@@ -16,12 +16,12 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="54"/>
         <source>Qmmp SoX Resampler Plugin</source>
-        <translation>Qmmp Plugin Resampler SoX</translation>
+        <translation>Plugin Resampler SoX Qmmp</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

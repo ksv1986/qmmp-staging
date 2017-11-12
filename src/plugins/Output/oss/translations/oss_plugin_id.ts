@@ -16,7 +16,7 @@
     <message>
         <location filename="../outputossfactory.cpp" line="59"/>
         <source>Qmmp OSS Output Plugin</source>
-        <translation>Qmmp Plugin Keluaran OSS</translation>
+        <translation>Plugin Keluaran OSS Qmmp</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="60"/>

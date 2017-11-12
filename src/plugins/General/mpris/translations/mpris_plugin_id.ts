@@ -16,12 +16,12 @@
     <message>
         <location filename="../mprisfactory.cpp" line="52"/>
         <source>Qmmp MPRIS Plugin</source>
-        <translation>Qmmp Plugin MPRIS</translation>
+        <translation>Plugin MPRIS Qmmp</translation>
     </message>
     <message>
         <location filename="../mprisfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

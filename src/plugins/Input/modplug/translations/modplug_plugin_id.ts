@@ -21,12 +21,12 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="121"/>
         <source>Qmmp ModPlug Audio Plugin</source>
-        <translation>Qmmp Plugin Audio ModPlug</translation>
+        <translation>Plugin Audio ModPlug Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="122"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="123"/>

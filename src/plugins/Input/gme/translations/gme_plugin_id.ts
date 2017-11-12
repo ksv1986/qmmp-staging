@@ -21,7 +21,7 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="108"/>
         <source>Qmmp GME Audio Plugin</source>
-        <translation>Qmmp Plugin Audio GME</translation>
+        <translation>Plugin Audio GME Qmmp</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="109"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="110"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -16,12 +16,12 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="53"/>
         <source>Qmmp AudioScrobbler Plugin</source>
-        <translation>Qmmp Plugin AudioScrobbler</translation>
+        <translation>Plugin AudioScrobbler Qmmp</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

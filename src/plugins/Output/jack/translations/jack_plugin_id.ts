@@ -16,7 +16,7 @@
     <message>
         <location filename="../outputjackfactory.cpp" line="57"/>
         <source>Qmmp Jack Output Plugin</source>
-        <translation>Qmmp Plugin Keluaran Jack</translation>
+        <translation>Plugin Keluaran Jack Qmmp</translation>
     </message>
     <message>
         <location filename="../outputjackfactory.cpp" line="58"/>

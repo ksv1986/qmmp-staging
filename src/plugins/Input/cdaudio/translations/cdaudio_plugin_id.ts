@@ -16,7 +16,7 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="88"/>
         <source>Qmmp CD Audio Plugin</source>
-        <translation>Qmmp Plugin Audio CD</translation>
+        <translation>Plugin Audio CD Qmmp</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="89"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="91"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="92"/>

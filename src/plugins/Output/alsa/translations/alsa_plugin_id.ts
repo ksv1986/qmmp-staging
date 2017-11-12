@@ -16,12 +16,12 @@
     <message>
         <location filename="../outputalsafactory.cpp" line="59"/>
         <source>Qmmp ALSA Output Plugin</source>
-        <translation>Qmmp Plugin Keluaran ALSA</translation>
+        <translation>Plugin Keluaran ALSA Qmmp</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -21,7 +21,7 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="111"/>
         <source>Qmmp WildMidi Audio Plugin</source>
-        <translation>Qmmp Plugin Audio WildMidi</translation>
+        <translation>Plugin Audio WildMidi Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="112"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="113"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

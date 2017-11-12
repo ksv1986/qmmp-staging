@@ -49,7 +49,7 @@
     <message>
         <location filename="../copypastefactory.cpp" line="51"/>
         <source>Qmmp Copy/Paste Plugin</source>
-        <translation>Qmmp Plugin Salin/Tempel</translation>
+        <translation>Plugin Salin/Tempel Qmmp</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="52"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../copypastefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

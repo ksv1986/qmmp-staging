@@ -16,12 +16,12 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="57"/>
         <source>Qmmp WASAPI Output Plugin</source>
-        <translation>Qmmp Plugin Keluaran WASAPI</translation>
+        <translation>Plugin Keluaran WASAPI Qmmp</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Perangkat:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="56"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Baku</translation>
     </message>
 </context>
 </TS>

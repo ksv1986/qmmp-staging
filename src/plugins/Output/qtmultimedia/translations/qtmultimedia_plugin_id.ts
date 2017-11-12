@@ -16,7 +16,7 @@
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="60"/>
         <source>Qmmp Qt Multimedia Output Plugin</source>
-        <translation>Qmmp Plugin Keluaran Multimedia Qt</translation>
+        <translation>Plugin Keluaran Multimedia Qt Qmmp</translation>
     </message>
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="61"/>

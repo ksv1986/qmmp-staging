@@ -21,7 +21,7 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="155"/>
         <source>Qmmp WavPack Audio Plugin</source>
-        <translation>Qmmp Plugin Audio WavPack</translation>
+        <translation>Plugin Audio WavPack Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="156"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="158"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

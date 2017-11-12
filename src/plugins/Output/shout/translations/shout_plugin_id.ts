@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="id_ID">
+<TS version="2.0" language="id">
 <context>
     <name>OutputShoutFactory</name>
     <message>
         <location filename="../outputshoutfactory.cpp" line="41"/>
         <source>Icecast Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Icecast</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="66"/>
         <source>About Icecast Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentang Plugin Keluaran Icecast</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="67"/>
         <source>Qmmp Icecast Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin Keluaran Icecast Qmmp</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="68"/>
         <source>Compiled against libshout-%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Dikompilasi terhadap libshout-%1</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="69"/>
@@ -34,52 +34,52 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Connection Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Setelan Sambungan</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
         <source>Host:</source>
-        <translation type="unfinished"></translation>
+        <translation>Host:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Port:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="56"/>
         <source>Mount point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Titik kait:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
         <source>User:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pengguna:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sandi:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="86"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kualitas:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="106"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sample rate:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="136"/>
         <source>Public</source>
-        <translation type="unfinished"></translation>
+        <translation>Publik</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
 </context>
 </TS>

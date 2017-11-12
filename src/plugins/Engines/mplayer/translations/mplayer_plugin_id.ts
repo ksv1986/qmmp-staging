@@ -21,7 +21,7 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="85"/>
         <source>Qmmp MPlayer Plugin</source>
-        <translation>Qmmp Plugin Mplayer</translation>
+        <translation>Plugin Mplayer Qmmp</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="86"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -21,7 +21,7 @@
     <message>
         <location filename="../decodermadfactory.cpp" line="279"/>
         <source>Qmmp MPEG Audio Plugin</source>
-        <translation>Qmmp Plugin Audio MPEG</translation>
+        <translation>Plugin Audio MPEG Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermadfactory.cpp" line="280"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodermadfactory.cpp" line="284"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decodermadfactory.cpp" line="285"/>

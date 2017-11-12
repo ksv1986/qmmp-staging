@@ -16,12 +16,12 @@
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="55"/>
         <source>Qmmp DirectSound Output Plugin</source>
-        <translation>Qmmp Plugin Keluaran DirectSound</translation>
+        <translation>Plugin Keluaran DirectSound Qmmp</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -817,7 +817,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="542"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp</translation>
     </message>
 </context>
 <context>
@@ -1134,12 +1134,12 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="44"/>
         <source>About Qmmp Skinned User Interface</source>
-        <translation>Tentang Qmmp Skinned Antarmuka Pengguna</translation>
+        <translation>Tentang Antarmuka Pengguna Skin Qmmp</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="45"/>
         <source>Qmmp Skinned User Interface</source>
-        <translation>Qmmp Skinned Antarmuka Pengguna</translation>
+        <translation>Antarmuka Pengguna Skin Qmmp</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="46"/>
@@ -1159,7 +1159,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="49"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="50"/>

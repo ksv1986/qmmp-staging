@@ -105,7 +105,7 @@
     <message>
         <location filename="../statusicon.cpp" line="119"/>
         <source>Stopped</source>
-        <translation type="unfinished">Terhenti</translation>
+        <translation>Dihentikan</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="144"/>
@@ -128,7 +128,7 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="52"/>
         <source>Qmmp Status Icon Plugin</source>
-        <translation>Qmmp Plugin Icon Status</translation>
+        <translation>Plugin Icon Status Qmmp</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="53"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="54"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="55"/>

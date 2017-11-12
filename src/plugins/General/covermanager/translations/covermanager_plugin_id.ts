@@ -29,12 +29,12 @@
     <message>
         <location filename="../covermanagerfactory.cpp" line="52"/>
         <source>Qmmp Cover Manager Plugin</source>
-        <translation>Qmmp Plugin Manager Cover</translation>
+        <translation>Plugin Manager Cover Qmmp</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

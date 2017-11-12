@@ -16,12 +16,12 @@
     <message>
         <location filename="../notifierfactory.cpp" line="52"/>
         <source>Qmmp Notifier Plugin</source>
-        <translation>Qmmp Plugin Notifier</translation>
+        <translation>Plugin Notifier Qmmp</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

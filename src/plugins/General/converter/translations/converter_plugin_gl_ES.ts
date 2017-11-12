@@ -7,28 +7,28 @@
         <location filename="../converter.cpp" line="131"/>
         <location filename="../converter.cpp" line="231"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelado</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="146"/>
         <location filename="../converter.cpp" line="213"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="178"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertendo</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="242"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Codificando</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="280"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Rematado</translation>
     </message>
 </context>
 <context>
@@ -36,17 +36,17 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversor de audio</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progreso</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Estado</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
@@ -71,12 +71,12 @@
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished">Converter</translation>
+        <translation>Converter</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Deter</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="108"/>
@@ -91,19 +91,19 @@
     <message>
         <location filename="../converterdialog.cpp" line="198"/>
         <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Crear unha copia</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="129"/>
         <location filename="../converterdialog.cpp" line="353"/>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Esperando</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="196"/>
@@ -123,12 +123,12 @@
     <message>
         <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Non se pode executar &quot;%1&quot;. Non se atopou o programa.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Proceso &quot;%1&quot; rematou con erros.</translation>
     </message>
 </context>
 <context>
@@ -156,7 +156,7 @@
     <message>
         <location filename="../converterfactory.cpp" line="55"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

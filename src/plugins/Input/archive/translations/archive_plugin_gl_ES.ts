@@ -6,42 +6,42 @@
     <message>
         <location filename="../archivemetadatamodel.cpp" line="54"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Lonxitude</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="55"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Frecuencia de mostra</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="55"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="56"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Canais</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="57"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de bits</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="57"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="58"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño do ficheiro</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="58"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>KB</translation>
     </message>
 </context>
 <context>
@@ -49,27 +49,29 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="42"/>
         <source>Archive Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Plugin</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="44"/>
         <source>Archives</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivos</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="141"/>
         <source>About Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca do engadido de lector de arquivos</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="142"/>
         <source>Qmmp Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Archive Reader Plugin
+
+Engadido lector arquivos Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="143"/>
         <source>Compiled against %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Compilado con %1</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="144"/>

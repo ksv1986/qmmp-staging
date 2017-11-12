@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="30"/>
         <source>DirectSound Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido DirectSound</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="54"/>
         <source>About DirectSound Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca do engadido de saida DirectSound</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="55"/>
         <source>Qmmp DirectSound Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido de saida DirectSound Qmmp</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

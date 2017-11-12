@@ -6,17 +6,17 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="31"/>
         <source>WASAPI Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin WASAPI</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="56"/>
         <source>About WASAPI Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca da saida do plugin WASAPI</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="57"/>
         <source>Qmmp WASAPI Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Saida do plugin Qmmp WASAPI</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="58"/>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="56"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Por defecto</translation>
     </message>
 </context>
 </TS>

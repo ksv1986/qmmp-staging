@@ -1,14 +1,14 @@
-Desenvolvedores principais:
+Desenroladores/as do nÃºcleo:
 
-    Ilya Kotov <forkotov02@ya.ru> (idea e código base)
-    Vladimir Kuznetsov <vovanec@gmail.com> (estilo e moitas melloras)
+    Ilya Kotov <forkotov02@ya.ru> - idea and base code
 
-Desenvolvedores de módulos:
+Antig@s desenroladores/as:
 
-    Artur Guzik <aguzik88@gmail.com> (módulo de notificación kde4, melloras no icono de estado)
-    Yuriy Zhuravlev <stalkerg@gmail.com> (módulos para jack e oss)
+    Artur Guzik <aguzik88@gmail.com> - kde4 engadido de notificaciÃ³n, melloras na icona da bandexa
+    Vladimir Kuznetsov <vovanec@gmail.com> - aparencia e moitas melloras
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - engadidos JACK e OSS
 
-Material gráfico:
+IlustraciÃ³ns:
 
-    Andrey Adreev <andreev00@gmail.com>
-
+    Andrey Adreev <andreev00@gmail.com> - iconas e tema por defecto (para as versiÃ³ns 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - tema por defecto

@@ -46,17 +46,17 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>
         <source>Print volume level</source>
-        <translation type="unfinished"></translation>
+        <translation>Amosar nivel de volume</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="80"/>
         <source>Mute/Restore volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Silenciar/Restaurar volume</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="81"/>
         <source>Print mute status</source>
-        <translation type="unfinished"></translation>
+        <translation>Amosar o estado de silencio</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="82"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="85"/>
         <source>Show main window</source>
-        <translation type="unfinished"></translation>
+        <translation>Amosar a xanela principal</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="86"/>
@@ -109,12 +109,12 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="374"/>
         <source>Start qmmp with the specified user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar Qmmp coa interface de usuario especificada</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="375"/>
         <source>List all available user interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Listar tódalas interfaces de usuario dispoñibles</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="376"/>
@@ -134,22 +134,22 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="380"/>
         <source>Home page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Páxina de inicio: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="381"/>
         <source>Development page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Páxina de desenrolo: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="382"/>
         <source>Bug tracker: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Seguimento de faios: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="387"/>
         <source>Command Line Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Axuda en liña de comandos</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="400"/>
@@ -169,12 +169,12 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="405"/>
         <source>Qmmp Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versión de Qmmp</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="422"/>
         <source>User Interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Interfaces de usuario</translation>
     </message>
 </context>
 </TS>

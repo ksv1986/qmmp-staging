@@ -21,7 +21,7 @@
     <message>
         <location filename="../outputalsafactory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -84,8 +84,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="213"/>
         <source>Use snd_pcm_pause function</source>
-        <translation type="unfinished">
-Usar a función snd_pcm_pause</translation>
+        <translation>Usar a función snd_pcm_pause</translation>
     </message>
 </context>
 </TS>

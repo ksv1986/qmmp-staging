@@ -36,7 +36,7 @@
     <message>
         <location filename="../statusoption.cpp" line="90"/>
         <source>%aa - album artist</source>
-        <translation type="unfinished"></translation>
+        <translation>%aa - Artista do álbum</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="91"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../statusoption.cpp" line="103"/>
         <source>%dir(n) - directory name located on n levels above</source>
-        <translation type="unfinished"></translation>
+        <translation>%dir(n) - Nome do directorio que está n niveis por enriba</translation>
     </message>
 </context>
 </TS>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="31"/>
         <source>Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido teclas de acceso rápido para Gnome</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="52"/>
         <source>About Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca do engadido de teclas de acceso rápido para Gnome</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="53"/>
         <source>Qmmp Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido Qmmp teclas de acceso rápido para Gnome</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="54"/>
         <source>This plugin adds support of the GNOME/Cinnamon hotkeys</source>
-        <translation type="unfinished"></translation>
+        <translation>Este engadido engade soporte para as teclas de acceso rápido de GNOME/Cinnamon</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="55"/>

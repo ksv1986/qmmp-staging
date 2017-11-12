@@ -21,7 +21,7 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="88"/>
         <source>2. Allow Qmmp to scrobble tracks to your %1 account</source>
-        <translation type="unfinished"></translation>
+        <translation>2. Permitir a Qmmp &quot;scrobblear&quot; pistas a túa conta %1</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="90"/>

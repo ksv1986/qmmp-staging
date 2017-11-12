@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="91"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="92"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Override device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Anular dispositivo:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>

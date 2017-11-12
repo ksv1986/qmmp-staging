@@ -1,0 +1,78 @@
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.0">
+<context>
+    <name>HTTPInputFactory</name>
+    <message>
+        <location filename="../httpinputfactory.cpp" line="34"/>
+        <source>HTTP Plugin</source>
+        <translation>HTTP-liitännäinen</translation>
+    </message>
+    <message>
+        <location filename="../httpinputfactory.cpp" line="54"/>
+        <source>About HTTP Transport Plugin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../httpinputfactory.cpp" line="55"/>
+        <source>Qmmp HTTP Transport Plugin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../httpinputfactory.cpp" line="56"/>
+        <source>Compiled against libcurl-%1</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../httpinputfactory.cpp" line="57"/>
+        <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
+        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsDialog</name>
+    <message>
+        <location filename="../settingsdialog.ui" line="14"/>
+        <source>HTTP Plugin Settings</source>
+        <translation>HTTP-liitännäisen asetukset</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="29"/>
+        <source>Buffer size:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="64"/>
+        <source>KB</source>
+        <translation>kt</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="78"/>
+        <source>Metadata encoding</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="84"/>
+        <source>Automatic charset detection</source>
+        <translation>Automaattinen merkistön havaitseminen</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="94"/>
+        <source>Language:</source>
+        <translation>Kieli:</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="114"/>
+        <source>Default encoding:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="137"/>
+        <source>User Agent:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="151"/>
+        <source>Change User Agent</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+</TS>

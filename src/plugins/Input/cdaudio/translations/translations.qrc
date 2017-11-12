@@ -27,5 +27,6 @@
     <file>cdaudio_plugin_bg.qm</file>
     <file>cdaudio_plugin_el.qm</file>
     <file>cdaudio_plugin_id.qm</file>
+    <file>cdaudio_plugin_fi.qm</file>
   </qresource>
 </RCC>

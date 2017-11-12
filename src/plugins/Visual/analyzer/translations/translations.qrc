@@ -27,5 +27,6 @@
     <file>analyzer_plugin_bg.qm</file>
     <file>analyzer_plugin_el.qm</file>
     <file>analyzer_plugin_id.qm</file>
+    <file>analyzer_plugin_fi.qm</file>
   </qresource>
 </RCC>

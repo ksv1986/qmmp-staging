@@ -27,5 +27,6 @@
     <file>hotkey_plugin_bg.qm</file>
     <file>hotkey_plugin_el.qm</file>
     <file>hotkey_plugin_id.qm</file>
+    <file>hotkey_plugin_fi.qm</file>
   </qresource>
 </RCC>

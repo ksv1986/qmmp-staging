@@ -27,5 +27,6 @@
     <file>qmmp_bg.qm</file>
     <file>qmmp_el.qm</file>
     <file>qmmp_id.qm</file>
+    <file>qmmp_fi.qm</file>
   </qresource>
 </RCC>

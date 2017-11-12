@@ -27,5 +27,6 @@
     <file>sid_plugin_bg.qm</file>
     <file>sid_plugin_el.qm</file>
     <file>sid_plugin_id.qm</file>
+    <file>sid_plugin_fi.qm</file>
   </qresource>
 </RCC>

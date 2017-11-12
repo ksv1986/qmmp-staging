@@ -27,5 +27,6 @@
     <file>statusicon_plugin_bg.qm</file>
     <file>statusicon_plugin_el.qm</file>
     <file>statusicon_plugin_id.qm</file>
+    <file>statusicon_plugin_fi.qm</file>
   </qresource>
 </RCC>

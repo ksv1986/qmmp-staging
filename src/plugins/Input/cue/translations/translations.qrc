@@ -27,5 +27,6 @@
     <file>cue_plugin_bg.qm</file>
     <file>cue_plugin_el.qm</file>
     <file>cue_plugin_id.qm</file>
+    <file>cue_plugin_fi.qm</file>
   </qresource>
 </RCC>

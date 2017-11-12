@@ -27,5 +27,6 @@
     <file>ffmpeg_legacy_plugin_bg.qm</file>
     <file>ffmpeg_legacy_plugin_el.qm</file>
     <file>ffmpeg_legacy_plugin_id.qm</file>
+    <file>ffmpeg_legacy_plugin_fi.qm</file>
   </qresource>
 </RCC>

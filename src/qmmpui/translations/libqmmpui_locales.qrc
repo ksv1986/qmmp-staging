@@ -27,5 +27,6 @@
     <file>libqmmpui_bg.qm</file>
     <file>libqmmpui_el.qm</file>
     <file>libqmmpui_id.qm</file>
+    <file>libqmmpui_fi.qm</file>
   </qresource>
 </RCC>

@@ -1,0 +1,131 @@
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.0">
+<context>
+    <name>StreamBrowser</name>
+    <message>
+        <location filename="../streambrowser.cpp" line="33"/>
+        <source>Stream Browser</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../streambrowser.cpp" line="35"/>
+        <source>Ctrl+U</source>
+        <translation>Ctrl+U</translation>
+    </message>
+</context>
+<context>
+    <name>StreamBrowserFactory</name>
+    <message>
+        <location filename="../streambrowserfactory.cpp" line="30"/>
+        <source>Stream Browser Plugin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../streambrowserfactory.cpp" line="51"/>
+        <source>About Stream Browser Plugin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../streambrowserfactory.cpp" line="52"/>
+        <source>Qmmp Stream Browser Plugin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../streambrowserfactory.cpp" line="53"/>
+        <source>This plugin allows one to add stream from IceCast stream directory</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../streambrowserfactory.cpp" line="54"/>
+        <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
+        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>StreamWindow</name>
+    <message>
+        <location filename="../streamwindow.ui" line="14"/>
+        <source>Stream Browser</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../streamwindow.ui" line="31"/>
+        <source>Filter:</source>
+        <translation>Suodata:</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.ui" line="47"/>
+        <source>Favorites</source>
+        <translation>Suosikit</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.ui" line="73"/>
+        <source>IceCast</source>
+        <translation>IceCast</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.ui" line="102"/>
+        <source>Add</source>
+        <translation>Lisää</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.ui" line="109"/>
+        <source>Update</source>
+        <translation>Päivitä</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="51"/>
+        <location filename="../streamwindow.cpp" line="69"/>
+        <source>Name</source>
+        <translation>Nimi</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="52"/>
+        <location filename="../streamwindow.cpp" line="70"/>
+        <source>Genre</source>
+        <translation>Tyylilaji</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="53"/>
+        <location filename="../streamwindow.cpp" line="71"/>
+        <source>Bitrate</source>
+        <translation>Bittinopeus</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="54"/>
+        <location filename="../streamwindow.cpp" line="72"/>
+        <source>Format</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="125"/>
+        <source>&amp;Add to favorites</source>
+        <translation>&amp;Lisää suosikkeihin</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="126"/>
+        <source>&amp;Add to playlist</source>
+        <translation>&amp;Lisää soittolistaan</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="131"/>
+        <source>&amp;Remove</source>
+        <translation>Poi&amp;sta</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="141"/>
+        <source>Done</source>
+        <translation>Valmis</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="144"/>
+        <location filename="../streamwindow.cpp" line="145"/>
+        <source>Error</source>
+        <translation>Virhe</translation>
+    </message>
+    <message>
+        <location filename="../streamwindow.cpp" line="164"/>
+        <source>Receiving</source>
+        <translation>Vastaanotetaan</translation>
+    </message>
+</context>
+</TS>

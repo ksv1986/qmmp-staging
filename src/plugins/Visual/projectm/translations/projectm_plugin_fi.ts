@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="fi">
 <context>
     <name>ProjectMPlugin</name>
     <message>
@@ -22,7 +24,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="161"/>
         <source>&amp;Show Song Title</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="161"/>
@@ -32,7 +34,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="162"/>
         <source>&amp;Show Preset Name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="162"/>
@@ -52,17 +54,17 @@
     <message>
         <location filename="../projectmwidget.cpp" line="165"/>
         <source>&amp;Next Preset</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="165"/>
         <source>N</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="166"/>
         <source>&amp;Previous Preset</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="166"/>
@@ -72,7 +74,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="167"/>
         <source>&amp;Random Preset</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="167"/>
@@ -82,7 +84,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="168"/>
         <source>&amp;Lock Preset</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="168"/>
@@ -110,17 +112,17 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="51"/>
         <source>About ProjectM Visual Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="52"/>
         <source>Qmmp ProjectM Visual Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="53"/>
         <source>This plugin adds projectM visualization</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="54"/>
@@ -130,7 +132,7 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="55"/>
         <source>Based on libprojectM-qt library</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -1,15 +1,17 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="fi">
 <context>
     <name>Analyzer</name>
     <message>
         <location filename="../analyzer.cpp" line="44"/>
         <source>Qmmp Analyzer</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="332"/>
         <source>Peaks</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="335"/>
@@ -39,7 +41,7 @@
     <message>
         <location filename="../analyzer.cpp" line="348"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="351"/>
@@ -74,7 +76,7 @@
     <message>
         <location filename="../analyzer.cpp" line="362"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>
@@ -100,7 +102,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Analyzer Plugin Settings</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -110,7 +112,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>Cells size:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="101"/>
@@ -120,12 +122,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="107"/>
         <source>Peaks:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="139"/>
         <source>Analyzer #1:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="171"/>
@@ -135,12 +137,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="203"/>
         <source>Analyzer #2:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="248"/>
         <source>Analyzer #3:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -148,17 +150,17 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="32"/>
         <source>Analyzer Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="51"/>
         <source>About Analyzer Visual Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="52"/>
         <source>Qmmp Analyzer Visual Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="53"/>

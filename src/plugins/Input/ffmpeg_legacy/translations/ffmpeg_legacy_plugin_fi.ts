@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="fi">
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
@@ -9,22 +11,22 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="96"/>
         <source>FFmpeg Formats</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="203"/>
         <source>About FFmpeg Audio Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="205"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="206"/>
         <source>Compiled against libavformat-%1.%2.%3 and libavcodec-%4.%5.%6</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="213"/>
@@ -85,7 +87,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Formats</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
@@ -125,7 +127,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="110"/>
         <source>Shorten</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="117"/>

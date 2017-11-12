@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="fi">
 <context>
     <name>CopyPaste</name>
     <message>
@@ -42,17 +44,17 @@
     <message>
         <location filename="../copypastefactory.cpp" line="50"/>
         <source>About Copy/Paste Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="51"/>
         <source>Qmmp Copy/Paste Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="52"/>
         <source>This plugin allows one to copy selected tracks from one playlist to another</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="53"/>

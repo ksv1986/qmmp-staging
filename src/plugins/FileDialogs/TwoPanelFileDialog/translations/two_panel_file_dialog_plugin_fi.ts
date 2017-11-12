@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="fi">
 <context>
     <name>TwoPanelFileDialog</name>
     <message>
@@ -14,7 +16,7 @@
     <message>
         <location filename="../twopanelfiledialog.ui" line="80"/>
         <source>Files of type:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="117"/>
@@ -38,12 +40,12 @@
         <location filename="../twopanelfiledialog.cpp" line="68"/>
         <location filename="../twopanelfiledialog.cpp" line="78"/>
         <source>Two-panel File Dialog</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="77"/>
         <source>About Two-panel File Dialog</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="79"/>

@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="fi">
 <context>
     <name>ArchiveMetaDataModel</name>
     <message>
@@ -47,27 +49,27 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="42"/>
         <source>Archive Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="44"/>
         <source>Archives</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="141"/>
         <source>About Archive Reader Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="142"/>
         <source>Qmmp Archive Reader Plugin</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="143"/>
         <source>Compiled against %1</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="144"/>

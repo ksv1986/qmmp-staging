@@ -105,7 +105,7 @@
     <message>
         <location filename="../statusicon.cpp" line="119"/>
         <source>Stopped</source>
-        <translation type="unfinished">已停止</translation>
+        <translation>被停止</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="144"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="54"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="55"/>

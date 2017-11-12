@@ -1,4 +1,5 @@
 巴西葡萄牙语：
+    Vitor Pereira
     Klaos Lacerda
     Bruno Goncalves
     Heitor Thury Barreiros Barbosa<hthury@gmail.com>
@@ -45,6 +46,9 @@
 匈牙利语：
     Németh Gábor <sutee84@freemail.hu>
 
+印度尼西亚语：
+    Wantoyo <wantoyek@gmail.com>
+
 意大利语：
     Gian Paolo Renello <emmerkar@gmail.com>
 
@@ -75,6 +79,7 @@
 
 西班牙语：
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
 土耳其语：
     Mustafa GUNAY <mustafagunay@pgmail.com>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="32"/>
         <source>File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>文件写入插件</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="53"/>
         <source>About File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>关于文件写入插件</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="54"/>
         <source>Qmmp File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp 文件写入插件</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="55"/>
@@ -29,27 +29,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Writer Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>文件写入插件设置</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>输出文件夹：</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="59"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>输入文档名称：</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>质量：</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Choose a directory</source>
-        <translation type="unfinished"></translation>
+        <translation>选择文件夹</translation>
     </message>
 </context>
 </TS>

@@ -174,7 +174,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="422"/>
         <source>User Interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Uživatelská rozhraní</translation>
     </message>
 </context>
 </TS>

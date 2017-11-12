@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodermpcfactory.cpp" line="129"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autor: Ilja Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

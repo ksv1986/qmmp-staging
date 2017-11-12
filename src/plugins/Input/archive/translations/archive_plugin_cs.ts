@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="cs_CZ">
+<TS version="2.0" language="cs">
 <context>
     <name>ArchiveMetaDataModel</name>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="54"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Délka</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="55"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzorkovací frekvence</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="55"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="56"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Počet kanálů</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="57"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Datový tok</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="57"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="58"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost souboru</translation>
     </message>
     <message>
         <location filename="../archivemetadatamodel.cpp" line="58"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
 </context>
 <context>

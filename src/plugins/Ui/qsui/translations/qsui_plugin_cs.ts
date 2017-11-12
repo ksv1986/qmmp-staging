@@ -21,7 +21,7 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="46"/>
         <source>Developers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vývojáři:</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="47"/>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">9</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
@@ -304,7 +304,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Obnovit</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
@@ -394,7 +394,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="99"/>
@@ -500,17 +500,17 @@
     <message>
         <location filename="../coverwidget.cpp" line="32"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Uložit j&amp;ako...</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="65"/>
         <source>Save Cover As</source>
-        <translation type="unfinished"></translation>
+        <translation>Uložit obal jako</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="67"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrázky</translation>
     </message>
 </context>
 <context>
@@ -606,22 +606,22 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished">Obnovit</translation>
+        <translation>Obnovit</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Akce</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="59"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Zkratka</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="33"/>
         <source>Change shortcut...</source>
-        <translation type="unfinished"></translation>
+        <translation>Změnit zkratku...</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="55"/>
@@ -636,27 +636,27 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="68"/>
         <source>Playback</source>
-        <translation type="unfinished">Přehrávání</translation>
+        <translation>Přehrávání</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="74"/>
         <source>View</source>
-        <translation type="unfinished">Zobrazení</translation>
+        <translation>Zobrazení</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="80"/>
         <source>Volume</source>
-        <translation type="unfinished">Hlasitost</translation>
+        <translation>Hlasitost</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="86"/>
         <source>Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam skladeb</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="92"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Různé</translation>
     </message>
 </context>
 <context>
@@ -710,7 +710,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="114"/>
         <source>Cover</source>
-        <translation type="unfinished">Obal</translation>
+        <translation>Obal</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="123"/>
@@ -851,7 +851,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="328"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Zkratky</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
@@ -866,12 +866,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="459"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation>P</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="461"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Umístění</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="465"/>
@@ -1133,7 +1133,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="776"/>
         <source>Playlist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam skladeb:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="756"/>
@@ -1233,7 +1233,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="178"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Barvy</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="190"/>
@@ -1293,7 +1293,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="583"/>
         <source>Highlighted text:</source>
-        <translation>Zvýrazněný text:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="947"/>
@@ -1343,12 +1343,12 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="937"/>
         <source>Show &apos;New Playlist&apos; button</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit tlačítko ‚Nový seznam skladeb‘</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
@@ -1482,7 +1482,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="62"/>
         <source>Reset</source>
-        <translation type="unfinished">Obnovit</translation>
+        <translation>Obnovit</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="199"/>
@@ -1502,7 +1502,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Odst&amp;ranit</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="100"/>

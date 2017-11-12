@@ -11,72 +11,72 @@
     <message>
         <location filename="../analyzer.cpp" line="332"/>
         <source>Peaks</source>
-        <translation type="unfinished"></translation>
+        <translation>Špičky</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="335"/>
         <source>Refresh Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Obnovovací frekvence</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="338"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 s/s</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="339"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 s/s</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="340"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 s/s</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="341"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 s/s</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="348"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokles analyzéru</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="351"/>
         <location filename="../analyzer.cpp" line="365"/>
         <source>Slowest</source>
-        <translation type="unfinished"></translation>
+        <translation>Nejpomalejší</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="352"/>
         <location filename="../analyzer.cpp" line="366"/>
         <source>Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomalý</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="353"/>
         <location filename="../analyzer.cpp" line="367"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Střední</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="354"/>
         <location filename="../analyzer.cpp" line="368"/>
         <source>Fast</source>
-        <translation type="unfinished"></translation>
+        <translation>Rychlý</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="355"/>
         <location filename="../analyzer.cpp" line="369"/>
         <source>Fastest</source>
-        <translation type="unfinished"></translation>
+        <translation>Nejrychlejší</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="362"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokles špiček</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>
@@ -165,7 +165,7 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autor: Ilja Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

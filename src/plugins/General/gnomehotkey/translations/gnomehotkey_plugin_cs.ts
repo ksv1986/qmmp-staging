@@ -16,7 +16,7 @@
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="53"/>
         <source>Qmmp Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Modul Qmmp Gnome pro klávesové zkratky</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="54"/>

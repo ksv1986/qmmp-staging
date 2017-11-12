@@ -186,7 +186,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished">Obnovit</translation>
+        <translation>Obnovit</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -356,12 +356,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>&amp;Rename List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Přejmenovat seznam</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished">Původní</translation>
+        <translation>Obnovit</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
@@ -538,7 +538,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="69"/>
         <source>Volume</source>
-        <translation type="unfinished">Hlasitost</translation>
+        <translation>Hlasitost</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="75"/>
@@ -807,7 +807,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="452"/>
         <source>Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvuk</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="460"/>
@@ -817,7 +817,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="542"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp</translation>
     </message>
 </context>
 <context>
@@ -931,12 +931,12 @@
     <message>
         <location filename="../playlist.cpp" line="617"/>
         <source>Rename Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Přejmenovat seznam skladeb</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="617"/>
         <source>Playlist name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Název seznamu skladeb:</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="638"/>
@@ -954,7 +954,7 @@
     <message>
         <location filename="../forms/playlistbrowser.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtr:</translation>
     </message>
     <message>
         <location filename="../forms/playlistbrowser.ui" line="43"/>
@@ -1149,7 +1149,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="47"/>
         <source>Written by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Autoři:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="48"/>
@@ -1227,7 +1227,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="456"/>
         <source>Playlist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam skladeb:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="492"/>
@@ -1272,7 +1272,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="89"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Obecné</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="146"/>

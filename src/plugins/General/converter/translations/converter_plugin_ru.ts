@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru_RU">
+<TS version="2.0" language="ru">
 <context>
     <name>Converter</name>
     <message>
@@ -89,6 +89,11 @@
         <translation>Название</translation>
     </message>
     <message>
+        <location filename="../converterdialog.cpp" line="198"/>
+        <source>Create a Copy</source>
+        <translation>Сделать копию</translation>
+    </message>
+    <message>
         <location filename="../converterdialog.cpp" line="129"/>
         <location filename="../converterdialog.cpp" line="353"/>
         <location filename="../converterdialog.cpp" line="359"/>
@@ -109,11 +114,6 @@
         <location filename="../converterdialog.cpp" line="197"/>
         <source>Edit</source>
         <translation>Изменить</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="198"/>
-        <source>Create a Copy</source>
-        <translation>Сделать копию</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="199"/>
@@ -169,7 +169,7 @@
     <message>
         <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+C</translation>
     </message>
 </context>
 <context>

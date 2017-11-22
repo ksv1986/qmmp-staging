@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru_RU">
+<TS version="2.0" language="ru">
 <context>
     <name>AboutQSUIDialog</name>
     <message>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>C</source>
-        <translation type="unfinished"></translation>
+        <translation>C</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>B</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
@@ -99,12 +99,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../actionmanager.cpp" line="46"/>
-        <source>J</source>
-        <translation type="unfinished"></translation>
+        <translation>Пробел</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
@@ -112,9 +107,24 @@
         <translation>&amp;Перейти к треку</translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="46"/>
+        <source>J</source>
+        <translation>J</translation>
+    </message>
+    <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>&amp;Play Files</source>
         <translation>&amp;Воспроизвести файлы</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="47"/>
+        <source>E</source>
+        <translation>E</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="48"/>
+        <source>&amp;Record</source>
+        <translation>&amp;Записать</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
@@ -124,7 +134,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
@@ -134,7 +144,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="53"/>
@@ -144,7 +154,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="53"/>
         <source>S</source>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
@@ -154,7 +164,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="56"/>
@@ -164,7 +174,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="57"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="58"/>
@@ -174,7 +184,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="58"/>
         <source>Alt+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="60"/>
@@ -185,21 +195,6 @@
         <location filename="../actionmanager.cpp" line="61"/>
         <source>Put on All Workspaces</source>
         <translation>Разместить на всех рабочих столах</translation>
-    </message>
-    <message>
-        <location filename="../actionmanager.cpp" line="74"/>
-        <source>&amp;Add File</source>
-        <translation>&amp;Добавить файл</translation>
-    </message>
-    <message>
-        <location filename="../actionmanager.cpp" line="47"/>
-        <source>E</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../actionmanager.cpp" line="48"/>
-        <source>&amp;Record</source>
-        <translation>&amp;Записать</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
@@ -224,7 +219,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
@@ -234,7 +229,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation>9</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
@@ -244,12 +239,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="74"/>
+        <source>&amp;Add File</source>
+        <translation>&amp;Добавить файл</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation>F</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>D</source>
-        <translation type="unfinished"></translation>
+        <translation>D</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation>U</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -314,7 +314,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
@@ -334,7 +334,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
@@ -344,7 +344,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
         <source>Alt+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+I</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
@@ -354,7 +354,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
@@ -364,7 +364,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
@@ -374,7 +374,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
@@ -384,7 +384,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
         <source>Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
@@ -394,7 +394,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="99"/>
@@ -404,7 +404,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Ctrl+PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+PgDown</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
@@ -414,12 +414,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
         <source>Ctrl+PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+PgUp</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>Ctrl+G</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+G</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
@@ -429,7 +429,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
@@ -444,7 +444,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
         <source>Ctrl+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
@@ -454,7 +454,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
@@ -479,7 +479,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="283"/>
@@ -586,6 +586,11 @@
         <translation>Добавить к списку воспроизведения</translation>
     </message>
     <message>
+        <location filename="../filesystembrowser.cpp" line="97"/>
+        <source>Change Directory</source>
+        <translation>Сменить директорию</translation>
+    </message>
+    <message>
         <location filename="../filesystembrowser.cpp" line="99"/>
         <source>Quick Search</source>
         <translation>Быстрый поиск</translation>
@@ -594,11 +599,6 @@
         <location filename="../filesystembrowser.cpp" line="173"/>
         <source>Select Directory</source>
         <translation>Выберите директорию</translation>
-    </message>
-    <message>
-        <location filename="../filesystembrowser.cpp" line="97"/>
-        <source>Change Directory</source>
-        <translation>Сменить директорию</translation>
     </message>
 </context>
 <context>
@@ -662,192 +662,10 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="463"/>
-        <source>Volume</source>
-        <translation>Громкость</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="373"/>
-        <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;|%2 бит|%3 к.|%4 Гц|треков: %5|общее время: %6|%7 кбит/с|</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="374"/>
-        <source>Paused</source>
-        <translation>Пауза</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="384"/>
-        <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;|треков: %2|общее время: %3|</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="385"/>
-        <source>Stopped</source>
-        <translation>Стоп</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="286"/>
-        <source>Playlist name:</source>
-        <translation>Имя списка:</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="327"/>
-        <source>Appearance</source>
-        <translation>Внешний вид</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="328"/>
-        <source>Shortcuts</source>
-        <translation>Сочетания клавиш</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="374"/>
-        <source>Playing</source>
-        <translation>Воспр.</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="453"/>
-        <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="459"/>
-        <source>P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="461"/>
-        <source>Position</source>
-        <translation>Позиция</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="465"/>
-        <source>Quick Search</source>
-        <translation>Быстрый поиск</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="520"/>
-        <source>Edit Toolbars</source>
-        <translation>Изменить панели инструментов</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="522"/>
-        <source>Sort List</source>
-        <translation>Сортировать</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="525"/>
-        <location filename="../mainwindow.cpp" line="580"/>
-        <source>By Title</source>
-        <translation>По названию</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="529"/>
-        <location filename="../mainwindow.cpp" line="584"/>
-        <source>By Album</source>
-        <translation>По альбому</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="533"/>
-        <location filename="../mainwindow.cpp" line="588"/>
-        <source>By Artist</source>
-        <translation>По исполнителю</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="537"/>
-        <location filename="../mainwindow.cpp" line="592"/>
-        <source>By Album Artist</source>
-        <translation>По исполнителю альбома</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="541"/>
-        <location filename="../mainwindow.cpp" line="596"/>
-        <source>By Filename</source>
-        <translation>По имени файла</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="545"/>
-        <location filename="../mainwindow.cpp" line="600"/>
-        <source>By Path + Filename</source>
-        <translation>По пути и файлу</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="549"/>
-        <location filename="../mainwindow.cpp" line="604"/>
-        <source>By Date</source>
-        <translation>По дате</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="553"/>
-        <location filename="../mainwindow.cpp" line="608"/>
-        <source>By Track Number</source>
-        <translation>По номеру трека</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="557"/>
-        <location filename="../mainwindow.cpp" line="612"/>
-        <source>By Disc Number</source>
-        <translation>По номеру диска</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="561"/>
-        <location filename="../mainwindow.cpp" line="616"/>
-        <source>By File Creation Date</source>
-        <translation>По дате создания файла</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="565"/>
-        <location filename="../mainwindow.cpp" line="620"/>
-        <source>By File Modification Date</source>
-        <translation>По дате изменения файла</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="569"/>
-        <source>By Group</source>
-        <translation>По группе</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="577"/>
-        <source>Sort Selection</source>
-        <translation>Сортировать выделенное</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="627"/>
-        <source>Randomize List</source>
-        <translation>Перемешать</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="629"/>
-        <source>Reverse List</source>
-        <translation>Перевернуть</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="636"/>
-        <location filename="../mainwindow.cpp" line="677"/>
-        <source>Actions</source>
-        <translation>Действия</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="418"/>
-        <source>Add new playlist</source>
-        <translation>Добавить новый список воспроизведения</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="424"/>
-        <source>Show all tabs</source>
-        <translation>Показать все вкладки</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="873"/>
-        <source>Buffering: %1%</source>
-        <translation>Буферизация: %1%</translation>
-    </message>
-    <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="964"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="32"/>
@@ -995,6 +813,188 @@
         <source>Rename Playlist</source>
         <translation>Переименовать список</translation>
     </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="463"/>
+        <source>Volume</source>
+        <translation>Громкость</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="373"/>
+        <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt;|%2 бит|%3 к.|%4 Гц|треков: %5|общее время: %6|%7 кбит/с|</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="374"/>
+        <source>Paused</source>
+        <translation>Пауза</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="384"/>
+        <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt;|треков: %2|общее время: %3|</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="385"/>
+        <source>Stopped</source>
+        <translation>Стоп</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="286"/>
+        <source>Playlist name:</source>
+        <translation>Имя списка:</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="327"/>
+        <source>Appearance</source>
+        <translation>Внешний вид</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="328"/>
+        <source>Shortcuts</source>
+        <translation>Сочетания клавиш</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="374"/>
+        <source>Playing</source>
+        <translation>Воспр.</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="453"/>
+        <source>Ctrl+0</source>
+        <translation>Ctrl+0</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="459"/>
+        <source>P</source>
+        <translation>P</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="461"/>
+        <source>Position</source>
+        <translation>Позиция</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="465"/>
+        <source>Quick Search</source>
+        <translation>Быстрый поиск</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="520"/>
+        <source>Edit Toolbars</source>
+        <translation>Изменить панели инструментов</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="522"/>
+        <source>Sort List</source>
+        <translation>Сортировать</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="525"/>
+        <location filename="../mainwindow.cpp" line="580"/>
+        <source>By Title</source>
+        <translation>По названию</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="584"/>
+        <source>By Album</source>
+        <translation>По альбому</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="533"/>
+        <location filename="../mainwindow.cpp" line="588"/>
+        <source>By Artist</source>
+        <translation>По исполнителю</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="537"/>
+        <location filename="../mainwindow.cpp" line="592"/>
+        <source>By Album Artist</source>
+        <translation>По исполнителю альбома</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="541"/>
+        <location filename="../mainwindow.cpp" line="596"/>
+        <source>By Filename</source>
+        <translation>По имени файла</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="545"/>
+        <location filename="../mainwindow.cpp" line="600"/>
+        <source>By Path + Filename</source>
+        <translation>По пути и файлу</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="549"/>
+        <location filename="../mainwindow.cpp" line="604"/>
+        <source>By Date</source>
+        <translation>По дате</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="553"/>
+        <location filename="../mainwindow.cpp" line="608"/>
+        <source>By Track Number</source>
+        <translation>По номеру трека</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="557"/>
+        <location filename="../mainwindow.cpp" line="612"/>
+        <source>By Disc Number</source>
+        <translation>По номеру диска</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="561"/>
+        <location filename="../mainwindow.cpp" line="616"/>
+        <source>By File Creation Date</source>
+        <translation>По дате создания файла</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="565"/>
+        <location filename="../mainwindow.cpp" line="620"/>
+        <source>By File Modification Date</source>
+        <translation>По дате изменения файла</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="569"/>
+        <source>By Group</source>
+        <translation>По группе</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="577"/>
+        <source>Sort Selection</source>
+        <translation>Сортировать выделенное</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="627"/>
+        <source>Randomize List</source>
+        <translation>Перемешать</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="629"/>
+        <source>Reverse List</source>
+        <translation>Перевернуть</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="636"/>
+        <location filename="../mainwindow.cpp" line="677"/>
+        <source>Actions</source>
+        <translation>Действия</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="418"/>
+        <source>Add new playlist</source>
+        <translation>Добавить новый список воспроизведения</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="424"/>
+        <source>Show all tabs</source>
+        <translation>Показать все вкладки</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="873"/>
+        <source>Buffering: %1%</source>
+        <translation>Буферизация: %1%</translation>
+    </message>
 </context>
 <context>
     <name>PlayListHeader</name>
@@ -1055,9 +1055,29 @@
         <translation>Настройки всплывающей информации</translation>
     </message>
     <message>
+        <location filename="../forms/popupsettings.ui" line="29"/>
+        <source>Template</source>
+        <translation>Шаблон</translation>
+    </message>
+    <message>
+        <location filename="../forms/popupsettings.ui" line="58"/>
+        <source>Reset</source>
+        <translation>Сброс</translation>
+    </message>
+    <message>
+        <location filename="../forms/popupsettings.ui" line="65"/>
+        <source>Insert</source>
+        <translation>Вставить</translation>
+    </message>
+    <message>
         <location filename="../forms/popupsettings.ui" line="75"/>
         <source>Show cover</source>
         <translation>Показывать обложку</translation>
+    </message>
+    <message>
+        <location filename="../forms/popupsettings.ui" line="89"/>
+        <source>Cover size:</source>
+        <translation>Размер обложки:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="115"/>
@@ -1073,26 +1093,6 @@
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
         <translation>мс</translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="89"/>
-        <source>Cover size:</source>
-        <translation>Размер обложки:</translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="29"/>
-        <source>Template</source>
-        <translation>Шаблон</translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="58"/>
-        <source>Reset</source>
-        <translation>Сброс</translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="65"/>
-        <source>Insert</source>
-        <translation>Вставить</translation>
     </message>
 </context>
 <context>
@@ -1201,16 +1201,6 @@
         <translation>Редактировать шаблон</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="178"/>
-        <source>Colors</source>
-        <translation>Цвета</translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="618"/>
-        <source>Group background:</source>
-        <translation>Фон группы:</translation>
-    </message>
-    <message>
         <location filename="../forms/qsuisettings.ui" line="869"/>
         <source>Reset fonts</source>
         <translation>Сбросить шрифты</translation>
@@ -1226,34 +1216,14 @@
         <translation>Названия вкладок:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="647"/>
-        <source>Group text:</source>
-        <translation>Текст группы:</translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="917"/>
-        <source>Tabs</source>
-        <translation>Вкладки</translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="923"/>
-        <source>Show close buttons</source>
-        <translation>Показывать кнопки закрытия</translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="930"/>
-        <source>Show tab list menu</source>
-        <translation>Показывать меню со списком вкладок</translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="937"/>
-        <source>Show &apos;New Playlist&apos; button</source>
-        <translation>Показывать кнопку &quot;Новый список&quot;</translation>
-    </message>
-    <message>
         <location filename="../forms/qsuisettings.ui" line="911"/>
         <source>Miscellaneous</source>
         <translation>Разное</translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="184"/>
+        <source>Analyzer Colors</source>
+        <translation>Цвета анализатора</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="131"/>
@@ -1261,9 +1231,9 @@
         <translation>Режим одной колонки</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="184"/>
-        <source>Analyzer Colors</source>
-        <translation>Цвета анализатора</translation>
+        <location filename="../forms/qsuisettings.ui" line="178"/>
+        <source>Colors</source>
+        <translation>Цвета</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="190"/>
@@ -1294,11 +1264,6 @@
         <location filename="../forms/qsuisettings.ui" line="398"/>
         <source>Playlist Colors</source>
         <translation>Цвета списка воспроиведения</translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="404"/>
-        <source>Use system colors</source>
-        <translation>Использовать системные цвета</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="423"/>
@@ -1344,6 +1309,41 @@
         <location filename="../forms/qsuisettings.ui" line="980"/>
         <source>Customize...</source>
         <translation>Настроить...</translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="404"/>
+        <source>Use system colors</source>
+        <translation>Использовать системные цвета</translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="618"/>
+        <source>Group background:</source>
+        <translation>Фон группы:</translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="647"/>
+        <source>Group text:</source>
+        <translation>Текст группы:</translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="917"/>
+        <source>Tabs</source>
+        <translation>Вкладки</translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="923"/>
+        <source>Show close buttons</source>
+        <translation>Показывать кнопки закрытия</translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="930"/>
+        <source>Show tab list menu</source>
+        <translation>Показывать меню со списком вкладок</translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="937"/>
+        <source>Show &apos;New Playlist&apos; button</source>
+        <translation>Показывать кнопку &quot;Новый список&quot;</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>

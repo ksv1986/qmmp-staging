@@ -1313,3 +1313,18 @@ Version 0.11.0
   - improved settings
 * fixed FVWM support in the skinned user interface (Andrey A. Rys)
 * fixed memory leaks
+* added Finnish translation (Jiri Grönroos)
+* updated Brazilian Portuguese translation (Vitor Pereira)
+* updated Chezh translation (Jaroslav Lichtblau)
+* updated Chinese Simplified translation (Mingcong Bai)
+* updated French translation (Adrien Vigneron and Sébastien Aperghis-Tramoni)
+* updated Galician translation (Delio Docampo Cordeiro)
+* updated German translation (Ettore Atalan)
+* updated Greek translation (Dimitrios Glentadakis)
+* updated Indonesian translation (Wantoyo)
+* updated Polish translation (Daniel Krawczyk)
+* updated Portuguese translation (Sérgio Marques)
+* updated Russian translation (Alexey Loginov)
+* updated Spanish translation (Joel Barrios and Bohdan Shuba)
+* updated Japanese translation (RyoTa SimaMoto)
+* updated Ukrainian translation (Gennady Motsio)

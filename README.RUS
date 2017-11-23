@@ -2,6 +2,8 @@ Qmmp - Qt-based multimedia player
 
 Программа является аудио-плеером, написанным с использованием библиотеки Qt.
 Официальная домашняя страница: http://qmmp.ylsoftware.com/
+Разработка: https://sourceforge.net/projects/qmmp-dev/
+Перевод: https://www.transifex.com/qmmp-development-team/
 
 Поддерживаемые операционные системы:
 - GNU/Linux

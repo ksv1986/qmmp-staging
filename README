@@ -2,6 +2,8 @@ Qmmp - Qt-based multimedia player
 
 This program is an audio-player, written with the help of the Qt library.
 Official home page: http://qmmp.ylsoftware.com/
+Development: https://sourceforge.net/projects/qmmp-dev/
+Translation: https://www.transifex.com/qmmp-development-team/
 
 Supported operating systems:
 - GNU/Linux
@@ -182,5 +184,5 @@ or
 cmake ./ -DLIB_DIR=lib64
 
 
-All patches, bug reports, ideas etc. send to bug tracker https://sourceforge.net/p/qmmp-dev/tickets/ or 
+All patches, bug reports, ideas etc. send to bug tracker https://sourceforge.net/p/qmmp-dev/tickets/ or
 forkotov02@ya.ru

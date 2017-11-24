@@ -1,8 +1,8 @@
 Πορτογαλικά Βραζιλίας
-    Vitor Pereira
-    Klaos Lacerda
     Bruno Gonçalves
+    Klaos Lacerda
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
 
 Βουλγαρικά:
     Kiril Kirilov
@@ -18,11 +18,14 @@
     Mingye Wang
 
 Τσέχικα
-    Karel Volný <kvolny@redhat.com>
     Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
 
 Ολλανδικά
     Ronald Uitermark <ronald645@gmail.com>
+
+Φιλανδικά:
+    Jiri Grönroos
 
 Γαλλικά
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>
@@ -30,6 +33,7 @@
     Stanislas Zeller <uncensored.assault@gmail.com>
 
 Γαλικιανά
+    Delio Docampo Cordeiro
     Óscar Pereira <oscarpereira1989@gmail.com>
 
 Γερμανικά
@@ -69,6 +73,7 @@
     Sérgio Marques <smarquespt@gmail.com>
 
 Ρωσικά
+    Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
 
 Σέρβικα
@@ -78,6 +83,7 @@
     Ján Ďanovský <dagsoftware@yahoo.com>
 
 Ισπανικά
+    Bohdan Shuba
     Félix Medrano <xukosky@yahoo.es>
     Joel Barrios <darkshram@gmail.com>
 

@@ -1,8 +1,8 @@
 Portugués Brasil:
-    Vitor Pereira
-    Klaos Lacerda
     Bruno Gonçalves
+    Klaos Lacerda
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
 
 Búlgaro:
     Kiril Kirilov
@@ -18,11 +18,14 @@ Chino Simplificado:
     Mingye Wang
 
 Checo:
-    Karel Volný <kvolny@redhat.com>
     Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
 
 Neerlandés:
     Ronald Uitermark <ronald645@gmail.com>
+
+Finlandés:
+    Jiri Grönroos
 
 Francés:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>
@@ -30,6 +33,7 @@ Francés:
     Stanislas Zeller <uncensored.assault@gmail.com>
 
 Gallego:
+    Delio Docampo Cordeiro
     Óscar Pereira <oscarpereira1989@gmail.com>
 
 Alemán:
@@ -69,6 +73,7 @@ Portugués:
     Sérgio Marques <smarquespt@gmail.com>
 
 Ruso:
+    Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
 
 Serbio:
@@ -78,6 +83,7 @@ Eslovaco:
     Ján Ďanovský <dagsoftware@yahoo.com>
 
 Español:
+    Bohdan Shuba
     Félix Medrano <xukosky@yahoo.es>
     Joel Barrios <darkshram@gmail.com>
 

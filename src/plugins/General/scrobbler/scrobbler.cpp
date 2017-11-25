@@ -26,6 +26,7 @@
 #include <QCryptographicHash>
 #include <QXmlStreamReader>
 #include <QUrl>
+#include <QUrlQuery>
 #include <QTime>
 #include <QTimer>
 #include <QDateTime>
@@ -312,7 +313,7 @@ void Scrobbler::submit()
     QUrl url(m_scrobblerUrl);
     url.setPort(m_scrobblerUrl.startsWith("https") ? 443 : 80);
 
-    QUrl body("");
+    QUrlQuery body("");
     QByteArray data;
     foreach (QString key, params.keys())
     {
@@ -321,7 +322,7 @@ void Scrobbler::submit()
     }
     data.append(SECRET);
     body.addQueryItem("api_sig", QCryptographicHash::hash(data, QCryptographicHash::Md5).toHex());
-    QByteArray bodyData = body.toEncoded().remove(0,1);
+    QByteArray bodyData = body.query(QUrl::FullyEncoded).toUtf8();
     bodyData.replace("+", QUrl::toPercentEncoding("+"));
 
     QNetworkRequest request(url);
@@ -361,7 +362,7 @@ void Scrobbler::sendNotification(const SongInfo &info)
     QUrl url(m_scrobblerUrl);
     url.setPort(m_scrobblerUrl.startsWith("https") ? 443 : 80);
 
-    QUrl body("");
+    QUrlQuery body("");
     QByteArray data;
     foreach (QString key, params.keys())
     {
@@ -370,7 +371,7 @@ void Scrobbler::sendNotification(const SongInfo &info)
     }
     data.append(SECRET);
     body.addQueryItem("api_sig", QCryptographicHash::hash(data, QCryptographicHash::Md5).toHex());
-    QByteArray bodyData =  body.toEncoded().remove(0,1);
+    QByteArray bodyData = body.query(QUrl::FullyEncoded).toUtf8();
     bodyData.replace("+", QUrl::toPercentEncoding("+"));
 
     QNetworkRequest request(url);
@@ -415,14 +416,16 @@ void ScrobblerAuth::getToken()
     m_session.clear();
     QUrl url(m_scrobblerUrl + "?");
     url.setPort(m_scrobblerUrl.startsWith("https") ? 443 : 80);
-    url.addQueryItem("method", "auth.getToken");
-    url.addQueryItem("api_key", API_KEY);
+    QUrlQuery q;
+    q.addQueryItem("method", "auth.getToken");
+    q.addQueryItem("api_key", API_KEY);
 
     QByteArray data;
     data.append("api_key" API_KEY);
     data.append("methodauth.getToken");
     data.append(SECRET);
-    url.addQueryItem("api_sig", QCryptographicHash::hash(data,QCryptographicHash::Md5).toHex());
+    q.addQueryItem("api_sig", QCryptographicHash::hash(data,QCryptographicHash::Md5).toHex());
+    url.setQuery(q);
 
     QNetworkRequest request(url);
     request.setRawHeader("User-Agent",  m_ua);
@@ -436,16 +439,18 @@ void ScrobblerAuth::getSession()
     qDebug("ScrobblerAuth[%s]: new session request", qPrintable(m_name));
     QUrl url(m_scrobblerUrl + "?");
     url.setPort(m_scrobblerUrl.startsWith("https") ? 443 : 80);
-    url.addQueryItem("api_key", API_KEY);
-    url.addQueryItem("method", "auth.getSession");
-    url.addQueryItem("token", m_token);
+    QUrlQuery q;
+    q.addQueryItem("api_key", API_KEY);
+    q.addQueryItem("method", "auth.getSession");
+    q.addQueryItem("token", m_token);
 
     QByteArray data;
     data.append("api_key" API_KEY);
     data.append("methodauth.getSession");
     data.append("token" + m_token.toUtf8());
     data.append(SECRET);
-    url.addQueryItem("api_sig", QCryptographicHash::hash(data, QCryptographicHash::Md5).toHex());
+    q.addQueryItem("api_sig", QCryptographicHash::hash(data, QCryptographicHash::Md5).toHex());
+    url.setQuery(q);
 
     QNetworkRequest request(url);
     request.setRawHeader("User-Agent",  m_ua);
@@ -466,7 +471,7 @@ void ScrobblerAuth::checkSession(const QString &session)
     QUrl url(m_scrobblerUrl);
     url.setPort(m_scrobblerUrl.startsWith("https") ? 443 : 80);
 
-    QUrl body("");
+    QUrlQuery body("");
     QByteArray data;
     foreach (QString key, params.keys())
     {
@@ -475,7 +480,7 @@ void ScrobblerAuth::checkSession(const QString &session)
     }
     data.append(SECRET);
     body.addQueryItem("api_sig", QCryptographicHash::hash(data, QCryptographicHash::Md5).toHex());
-    QByteArray bodyData =  body.toEncoded().remove(0,1);
+    QByteArray bodyData = body.query(QUrl::FullyEncoded).toUtf8();
     bodyData.replace("+", QUrl::toPercentEncoding("+"));
 
     QNetworkRequest request(url);

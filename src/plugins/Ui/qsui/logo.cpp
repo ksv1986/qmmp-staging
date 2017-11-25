@@ -184,7 +184,7 @@ void Logo::processPreset2()
 void Logo::processPreset3()
 {
     m_lines.clear();
-    QString str = QString("...%1...").arg(Qmmp::strVersion().left(6));
+    QString str = QString("...%1...").arg(Qmmp::strVersion().left(5));
     int at = m_value % str.size();
 
     foreach(QString line, m_source_lines)

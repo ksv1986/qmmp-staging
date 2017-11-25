@@ -4,37 +4,37 @@
 <context>
     <name>DecoderMADFactory</name>
     <message>
-        <location filename="../decodermadfactory.cpp" line="119"/>
+        <location filename="../decodermadfactory.cpp" line="116"/>
         <source>MPEG Plugin</source>
         <translation>Модуль MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="122"/>
+        <location filename="../decodermadfactory.cpp" line="119"/>
         <source>MPEG Files</source>
         <translation>Файлы MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="278"/>
+        <location filename="../decodermadfactory.cpp" line="271"/>
         <source>About MPEG Audio Plugin</source>
         <translation>Об аудио-модуле MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="279"/>
+        <location filename="../decodermadfactory.cpp" line="272"/>
         <source>Qmmp MPEG Audio Plugin</source>
         <translation>Аудио-модуль MPEG для Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="280"/>
+        <location filename="../decodermadfactory.cpp" line="273"/>
         <source>Compiled against libmad version:</source>
         <translation>Собрано с версией libmad:</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="284"/>
+        <location filename="../decodermadfactory.cpp" line="277"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Разработчик: Илья Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="285"/>
+        <location filename="../decodermadfactory.cpp" line="278"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Исходный код снован на проектах mq3 и madplay</translation>
     </message>

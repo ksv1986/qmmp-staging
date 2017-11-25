@@ -1,21 +1,6 @@
 project(libcopypaste)
 
-include(${QT_USE_FILE})
-
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 
 # libqmmpui & libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
@@ -30,7 +15,7 @@ SET(libcopypaste_SRCS
 SET(libcopypaste_RCCS 
     translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libcopypaste_RCC_SRCS ${libcopypaste_RCCS})
+QT5_ADD_RESOURCES(libcopypaste_RCC_SRCS ${libcopypaste_RCCS})
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
@@ -38,5 +23,5 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(copypaste MODULE ${libcopypaste_SRCS} ${libcopypaste_UIS_H} ${libcopypaste_RCC_SRCS})
 add_dependencies(copypaste qmmpui)
-target_link_libraries(copypaste ${QT_LIBRARIES} qmmpui libqmmp)
+target_link_libraries(copypaste Qt5::Widgets -lqmmpui -lqmmp)
 install(TARGETS copypaste DESTINATION ${LIB_DIR}/qmmp/General)

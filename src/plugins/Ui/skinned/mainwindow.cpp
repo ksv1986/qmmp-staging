@@ -17,11 +17,13 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+
 #include <QFileDialog>
 #include <QDir>
 #include <QAction>
 #include <QMenu>
 #include <QDesktopWidget>
+#include <QSignalMapper>
 #include <math.h>
 #include <qmmp/soundcore.h>
 #include <qmmp/visual.h>
@@ -54,13 +56,26 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     qDebug("MainWindow: detected wm: %s", qPrintable(WindowSystem::netWindowManagerName()));
 #endif
     m_vis = 0;
     m_update = false;
-    setWindowFlags(Qt::Window | Qt::FramelessWindowHint |
-                   Qt::WindowCloseButtonHint | Qt::WindowMinMaxButtonsHint | Qt::WindowSystemMenuHint);
+
+#ifdef QMMP_WS_X11
+    QString wm_name = WindowSystem::netWindowManagerName();
+    if(wm_name.contains("Marco", Qt::CaseInsensitive) ||
+            wm_name.contains("Metacity", Qt::CaseInsensitive) ||
+            wm_name.contains("Mutter", Qt::CaseInsensitive) ||
+            wm_name.contains("GNOME", Qt::CaseInsensitive))
+    {
+        setWindowFlags(Qt::Window | Qt::FramelessWindowHint |
+                       Qt::WindowCloseButtonHint | Qt::WindowSystemMenuHint);
+    }
+    else
+#endif
+        setWindowFlags(Qt::Window | Qt::FramelessWindowHint |
+                       Qt::WindowCloseButtonHint | Qt::WindowMinMaxButtonsHint | Qt::WindowSystemMenuHint);
 
     restoreWindowTitle();
 
@@ -76,17 +91,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
     //user interface
     m_skin = new Skin(this);
-#ifdef Q_WS_X11
-    QString wm_name = WindowSystem::netWindowManagerName();
-    if(wm_name.contains("metacity", Qt::CaseInsensitive) ||
-            wm_name.contains("marko", Qt::CaseInsensitive) ||
-            wm_name.contains("mutter", Qt::CaseInsensitive) ||
-            wm_name.contains("gnome", Qt::CaseInsensitive) ||
-            wm_name.contains("fvwm", Qt::CaseInsensitive))
-        resize(275 * m_skin->ratio(),116 * m_skin->ratio());
-    else
-#endif
-        setFixedSize(275 * m_skin->ratio(),116 * m_skin->ratio());
+    setFixedSize(275 * m_skin->ratio(),116 * m_skin->ratio());
 
     Dock *dock = new Dock(this);
     dock->setMainWidget(this);
@@ -309,7 +314,7 @@ void MainWindow::readSettings()
         ACTION(ActionManager::NO_PL_ADVANCE)->setChecked(m_ui_settings->isNoPlayListAdvance());
         m_update = true;
     }
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     WindowSystem::changeWinSticky(winId(), ACTION(ActionManager::WM_STICKY)->isChecked());
     WindowSystem::setWinHint(winId(), "player", "Qmmp");
 #endif
@@ -369,7 +374,7 @@ void MainWindow::toggleVisibility()
         activateWindow();
         m_playlist->setVisible(m_display->isPlaylistVisible());
         m_equalizer->setVisible(m_display->isEqualizerVisible());
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
         if(WindowSystem::netWindowManagerName() == "Metacity")
         {
             m_playlist->activateWindow();
@@ -382,7 +387,7 @@ void MainWindow::toggleVisibility()
         {
             showNormal();
         }
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
         WindowSystem::changeWinSticky(winId(), ACTION(ActionManager::WM_STICKY)->isChecked());
         WindowSystem::setWinHint(winId(), "player", "Qmmp");
         raise();

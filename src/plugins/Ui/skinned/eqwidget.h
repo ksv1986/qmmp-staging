@@ -80,7 +80,7 @@ private:
     void keyPressEvent (QKeyEvent *);
     void changeEvent(QEvent*);
     void closeEvent(QCloseEvent*);
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     bool event (QEvent *event);
 #endif
 

@@ -40,27 +40,27 @@
 <context>
     <name>TrackChangeFactory</name>
     <message>
-        <location filename="../trackchangefactory.cpp" line="31"/>
+        <location filename="../trackchangefactory.cpp" line="30"/>
         <source>Track Change Plugin</source>
         <translation>Greffon de suivi de changements</translation>
     </message>
     <message>
-        <location filename="../trackchangefactory.cpp" line="51"/>
+        <location filename="../trackchangefactory.cpp" line="50"/>
         <source>About Track Change Plugin</source>
         <translation>À propos du greffon de suivi de changements</translation>
     </message>
     <message>
-        <location filename="../trackchangefactory.cpp" line="52"/>
+        <location filename="../trackchangefactory.cpp" line="51"/>
         <source>Qmmp Track Change Plugin</source>
         <translation>Greffon de suivi de changements pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../trackchangefactory.cpp" line="53"/>
+        <location filename="../trackchangefactory.cpp" line="52"/>
         <source>This plugin executes external command when current track is changed</source>
         <translation>Ce greffon exécute des commandes externes quand le morceau courant change</translation>
     </message>
     <message>
-        <location filename="../trackchangefactory.cpp" line="54"/>
+        <location filename="../trackchangefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

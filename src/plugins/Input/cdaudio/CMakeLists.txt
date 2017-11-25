@@ -1,13 +1,5 @@
 project(libcdaudio)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 # libqmmp
@@ -33,7 +25,7 @@ SET(libcdaudio_HDRS
 
 SET(libcdaudio_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libcdaudio_RCC_SRCS ${libcdaudio_RCCS})
+QT5_ADD_RESOURCES(libcdaudio_RCC_SRCS ${libcdaudio_RCCS})
 
 # user interface
 
@@ -41,7 +33,7 @@ SET(libcdaudio_UIS
     settingsdialog.ui
 )
 
-QT4_WRAP_UI(libcdaudio_UIS_H ${libcdaudio_UIS})
+QT5_WRAP_UI(libcdaudio_UIS_H ${libcdaudio_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -50,6 +42,6 @@ IF(CDIO_FOUND)
 ADD_LIBRARY(cdaudio MODULE ${libcdaudio_SRCS} ${libcdaudio_UIS_H} ${libcdaudio_RCC_SRCS}
 ${libcdaudio_HDRS})
 add_dependencies(cdaudio qmmp)
-target_link_libraries(cdaudio ${QT_LIBRARIES} libqmmp ${CDIO_LDFLAGS})
+target_link_libraries(cdaudio Qt5::Widgets -lqmmp ${CDIO_LDFLAGS})
 install(TARGETS cdaudio DESTINATION ${LIB_DIR}/qmmp/Input)
 ENDIF(CDIO_FOUND)

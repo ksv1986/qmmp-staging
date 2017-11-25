@@ -89,15 +89,15 @@ const QString Qmmp::pluginsPath()
     QByteArray path = qgetenv("QMMP_PLUGINS");
     if (!path.isEmpty())
        return path;
-#ifdef Q_OS_MAC
-    QDir dir(qApp->applicationDirPath() + "/../Frameworks/qmmp");
-#elif defined (QMMP_INSTALL_PREFIX)
+#ifdef QMMP_INSTALL_PREFIX
     QDir dir(QMMP_INSTALL_PREFIX "/" LIB_DIR "/qmmp");
     //qDebug(QMMP_INSTALL_PREFIX"/"LIB_DIR"/qmmp");
-#elif defined(Q_OS_WIN) && !defined(Q_OS_CYGWIN)
+#else
+#if defined(Q_OS_WIN) && !defined(Q_OS_CYGWIN)
     QDir dir(qApp->applicationDirPath() + "/plugins");
 #else
     QDir dir(qApp->applicationDirPath() + "/../" LIB_DIR "/qmmp");
+#endif
 #endif
     return dir.canonicalPath();
 }

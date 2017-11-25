@@ -4,37 +4,37 @@
 <context>
     <name>DecoderMADFactory</name>
     <message>
-        <location filename="../decodermadfactory.cpp" line="119"/>
+        <location filename="../decodermadfactory.cpp" line="116"/>
         <source>MPEG Plugin</source>
         <translation>Módulo MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="122"/>
+        <location filename="../decodermadfactory.cpp" line="119"/>
         <source>MPEG Files</source>
         <translation>Archivos MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="278"/>
+        <location filename="../decodermadfactory.cpp" line="271"/>
         <source>About MPEG Audio Plugin</source>
         <translation>Acerca del módulo de audio MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="279"/>
+        <location filename="../decodermadfactory.cpp" line="272"/>
         <source>Qmmp MPEG Audio Plugin</source>
         <translation>Módulo de audio MPEG para Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="280"/>
+        <location filename="../decodermadfactory.cpp" line="273"/>
         <source>Compiled against libmad version:</source>
         <translation>Compilado con libmad version:</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="284"/>
+        <location filename="../decodermadfactory.cpp" line="277"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Escrito por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="285"/>
+        <location filename="../decodermadfactory.cpp" line="278"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Código fuente basado sobre proyectos mq3 y madplay</translation>
     </message>

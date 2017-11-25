@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.6 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8.11 FATAL_ERROR)
 
 #freebsd support
 include_directories(SYSTEM /usr/local/include)
@@ -6,12 +6,15 @@ SET(CMAKE_REQUIRED_INCLUDES ${CMAKE_REQUIRED_INCLUDES} /usr/local/include)
 
 #macports support
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-	SET(CMAKE_REQUIRED_INCLUDES ${CMAKE_REQUIRED_INCLUDES} /opt/local/include)
+  SET(CMAKE_REQUIRED_INCLUDES ${CMAKE_REQUIRED_INCLUDES} /opt/local/include)
 ENDIF()
 
 if(POLICY CMP0071)
   cmake_policy(SET CMP0071 NEW)
 endif()
+
+#Qt5 modules
+SET(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/qt56/lib/cmake)
 
 #extract version from qmmp.h
 FILE(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/src/qmmp/qmmp.h"
@@ -41,24 +44,18 @@ CONFIGURE_FILE(
 ADD_CUSTOM_TARGET(uninstall
   "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
 
-SET(QT_MIN_VERSION 4.6.0)
-INCLUDE(FindQt4)
-INCLUDE(${QT_USE_FILE})
 INCLUDE(FindPkgConfig)
-SET(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+find_package(Qt5Widgets 5.4.0 REQUIRED)
+find_package(Qt5LinguistTools 5.4.0 REQUIRED)
+find_package(Qt5Network 5.4.0 REQUIRED)
+find_package(Qt5X11Extras 5.4.0)
+find_package(Qt5DBus 5.4.0)
+find_package(Qt5Multimedia 5.4.0)
+ADD_DEFINITIONS(-DQMMP_WS_X11)
 
-IF(NOT QT_LRELEASE_EXECUTABLE)
-FIND_PROGRAM(QT_LRELEASE_EXECUTABLE
-    NAMES lrelease
-    PATHS ${QT_BINARY_DIR}
-    NO_DEFAULT_PATH
-)
-ENDIF(NOT QT_LRELEASE_EXECUTABLE)
-
-#debian hack
-IF(EXISTS ${QT_BINARY_DIR}/lrelease-qt4)
-SET(QT_LRELEASE_EXECUTABLE ${QT_BINARY_DIR}/lrelease-qt4)
-ENDIF(EXISTS ${QT_BINARY_DIR}/lrelease-qt4)
+get_target_property(QT_LRELEASE_EXECUTABLE Qt5::lrelease IMPORTED_LOCATION)
 
 IF(QT_LRELEASE_EXECUTABLE)
 MESSAGE(STATUS "Found lrelease executable: " ${QT_LRELEASE_EXECUTABLE})
@@ -73,18 +70,16 @@ ELSE(SVN_VERSION)
 execute_process(COMMAND find ${CMAKE_CURRENT_SOURCE_DIR} -name *.ts COMMAND xargs ${QT_LRELEASE_EXECUTABLE} -silent)
 ENDIF(SVN_VERSION)
 
+get_target_property(QT_LIBRARY_DIR Qt5::Core LOCATION)
+get_filename_component(QT_LIBRARY_DIR ${QT_LIBRARY_DIR} PATH)
+
 IF(NOT LIB_SUFFIX)
 IF("${QT_LIBRARY_DIR}" MATCHES lib64)
 set(LIB_SUFFIX 64)
 ENDIF("${QT_LIBRARY_DIR}" MATCHES lib64)
 ENDIF(NOT LIB_SUFFIX)
 
-IF(${CMAKE_SYSTEM_NAME} MATCHES Darwin)
-	SET(LIB_DIR "qmmp.app/Contents/Frameworks" CACHE STRING "library path")
-ELSE()
-	SET(LIB_DIR "lib${LIB_SUFFIX}" CACHE STRING "library path")
-ENDIF()
-
+SET(LIB_DIR "lib${LIB_SUFFIX}" CACHE STRING "library path")
 SET(USE_SKINNED TRUE CACHE BOOL "enable/disable standard skinned user interface")
 SET(USE_DIR_ASSOC TRUE CACHE BOOL "enable/disable inode/directory mime type association")
 
@@ -94,10 +89,6 @@ add_subdirectory(src/qmmp)
 add_subdirectory(src/qmmpui)
 add_subdirectory(src/plugins)
 add_subdirectory(src/app)
-IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-	#Hack for MacOS X to run fix_mac_libs.sh script after installation
-	add_subdirectory(src/mac)
-ENDIF()
 
 MACRO(PRINT_SUMMARY str USE FOUND)
 IF(${USE} AND ${FOUND})
@@ -133,9 +124,13 @@ ADD_CUSTOM_COMMAND(
     COMMAND find
     ARGS ${CMAKE_CURRENT_BINARY_DIR} -name "moc_*.cpp" | xargs rm -rf
     COMMAND find
+    ARGS ${CMAKE_CURRENT_BINARY_DIR} -name "qrc_*.cxx" | xargs rm -rf
+    COMMAND find
     ARGS ${CMAKE_CURRENT_BINARY_DIR} -name "*_automoc.cpp" | xargs rm -rf
     COMMAND rm
     ARGS -rf ${CMAKE_CURRENT_BINARY_DIR}/install_manifest.txt
+    COMMAND find
+    ARGS ${CMAKE_CURRENT_BINARY_DIR} -name *_automoc.dir | xargs rm -rf
     TARGET  distclean
 )
 ENDIF(UNIX)
@@ -156,7 +151,6 @@ PRINT_SUMMARY ("MOD support ......................." USE_MODPLUG MODPLUG_FOUND)
 PRINT_SUMMARY ("Wave support ......................" USE_SNDFILE SNDFILE_FOUND)
 PRINT_SUMMARY ("WavPack support ..................." USE_WAVPACK WAVPACK_FOUND)
 PRINT_SUMMARY ("FFmpeg/Libav support .............." USE_FFMPEG FFMPEG_FOUND)
-PRINT_SUMMARY ("FFmpeg 0.6-0.8 support ............" USE_FFMPEG_LEGACY FFMPEG_LEGACY_FOUND)
 PRINT_SUMMARY ("AAC support ......................." USE_AAC FAAD_FOUND)
 PRINT_SUMMARY ("CUE sheet support ................." USE_CUE 1)
 PRINT_SUMMARY ("Mplayer support ..................." USE_MPLAYER 1)
@@ -178,7 +172,7 @@ PRINT_SUMMARY ("Null output support ..............." USE_NULL 1)
 PRINT_SUMMARY ("Win32 Waveout support ............." USE_WAVEOUT WINDOWS_H_FOUND)
 PRINT_SUMMARY ("Win32 DirectSound support ........." USE_DSOUND DSOUND_H_FOUND)
 PRINT_SUMMARY ("Win32 WASAPI support .............." USE_WASAPI WASAPI_FOUND)
-PRINT_SUMMARY ("Qt Multimedia support ............." USE_QTMULTIMEDIA QT_QTMULTIMEDIA_FOUND)
+PRINT_SUMMARY ("Qt Multimedia support ............." USE_QTMULTIMEDIA Qt5Multimedia_FOUND)
 PRINT_SUMMARY ("Icecast support ..................." USE_SHOUT SHOUT_FOUND)
 
 MESSAGE("")
@@ -197,19 +191,18 @@ PRINT_SUMMARY ("ProjectM .........................." USE_PROJECTM PROJECTM_FOUND
 
 MESSAGE("")
 MESSAGE("General Plugins:")
-PRINT_SUMMARY ("MPRIS support ....................." USE_MPRIS 1)
+PRINT_SUMMARY ("MPRIS support ....................." USE_MPRIS Qt5DBus_FOUND)
 PRINT_SUMMARY ("Scrobbler ........................." USE_SCROBBLER 1)
 PRINT_SUMMARY ("Tray support ......................" USE_STATICON 1)
 PRINT_SUMMARY ("Notifier support .................." USE_NOTIFIER 1)
 PRINT_SUMMARY ("Lyrics support ...................." USE_LYRICS 1)
-PRINT_SUMMARY ("HAL support ......................." USE_HAL 1)
-PRINT_SUMMARY ("UDisks2 support ..................." USE_UDISKS2 1)
-PRINT_SUMMARY ("UDisks support ...................." USE_UDISKS 1)
-PRINT_SUMMARY ("Global hotkey support ............." USE_HOTKEY X11_FOUND)
-PRINT_SUMMARY ("GNOME/Cinnamon hotkey support ....." USE_GNOMEHOTKEY 1)
+PRINT_SUMMARY ("HAL support ......................." USE_HAL Qt5DBus_FOUND)
+PRINT_SUMMARY ("UDisks2 support ..................." USE_UDISKS2 Qt5DBus_FOUND)
+PRINT_SUMMARY ("Global hotkey support ............." USE_HOTKEY X11_FOUND AND Qt5X11Extras_FOUND)
+PRINT_SUMMARY ("GNOME/Cinnamon hotkey support ....." USE_GNOMEHOTKEY Qt5DBus_FOUND)
 PRINT_SUMMARY ("File operations ..................." USE_FILEOPS 1)
 PRINT_SUMMARY ("Cover manager ....................." USE_COVER 1)
-PRINT_SUMMARY ("KDE4 notifications support ........" USE_KDENOTIFY 1)
+PRINT_SUMMARY ("KDE4 notifications support ........" USE_KDENOTIFY Qt5DBus_FOUND)
 PRINT_SUMMARY ("Audio converter ..................." USE_CONVERTER TAGLIB_FOUND)
 PRINT_SUMMARY ("ReplayGain Scanner ................" USE_RGSCAN TAGLIB_FOUND)
 PRINT_SUMMARY ("Stream browser ...................." USE_SB 1)
@@ -223,7 +216,7 @@ PRINT_SUMMARY ("Two-panel File File Dialog ........" USE_TWO_PANEL_DIALOG 1)
 
 MESSAGE("")
 MESSAGE("Advanced:")
-PRINT_SUMMARY ("Skinned user interface ............" USE_SKINNED X11_FOUND)
+PRINT_SUMMARY ("Skinned user interface ............" USE_SKINNED X11_FOUND AND Qt5X11Extras_FOUND)
 PRINT_SUMMARY ("Simple user interface (QSUI) ......" USE_QSUI 1)
 PRINT_SUMMARY ("Automatic charset detection ......." USE_ENCA ENCA_FOUND)
 PRINT_SUMMARY ("Directory association ............." USE_DIR_ASSOC 1)

@@ -85,7 +85,7 @@ PlayListFormat *PlayListParser::findByPath(const QString &filePath)
 
 PlayListFormat *PlayListParser::findByUrl(const QUrl &url)
 {
-    QString path = url.encodedPath();
+    QString path = url.path(QUrl::FullyEncoded);
     return findByPath(path);
 }
 

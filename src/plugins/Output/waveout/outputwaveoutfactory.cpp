@@ -18,9 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMessageBox>
-#include <QTranslator>
-#include <QtPlugin>
+
 #include "outputwaveout.h"
 #include "outputwaveoutfactory.h"
 
@@ -73,4 +71,4 @@ QTranslator *OutputWaveOutFactory::createTranslator(QObject *parent)
     return translator;
 }
 
-Q_EXPORT_PLUGIN2(waveout,OutputWaveOutFactory)
+

@@ -1,16 +1,5 @@
 project(libqmmpui)
 
-SET(QT_USE_QTNETWORK TRUE)
-INCLUDE(FindQt4)
-include(${QT_USE_FILE})
-
-# qt lib
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # libqmmp
@@ -124,22 +113,20 @@ SET(libqmmpui_UIS
     forms/columneditor.ui
 )
 
-QT4_WRAP_UI(libqmmpui_UIS_H ${libqmmpui_UIS})
+QT5_WRAP_UI(libqmmpui_UIS_H ${libqmmpui_UIS})
 
-QT4_ADD_RESOURCES(libqmmpui_RCC_SRCS translations/libqmmpui_locales.qrc txt/txt.qrc images/qmmpui_images.qrc)
+QT5_ADD_RESOURCES(libqmmpui_RCC_SRCS translations/libqmmpui_locales.qrc txt/txt.qrc images/qmmpui_images.qrc)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(qmmpui SHARED ${libqmmpui_SRCS} ${libqmmpui_RCC_SRCS} ${libqmmpui_UIS_H} ${libqmmpui_HDRS})
-target_link_libraries(qmmpui ${QT_LIBRARIES} libqmmp)
+target_link_libraries(qmmpui Qt5::Widgets Qt5::Network -lqmmp)
 add_dependencies(qmmpui libqmmp)
 SET_TARGET_PROPERTIES(qmmpui PROPERTIES VERSION ${QMMP_VERSION} SOVERSION ${QMMP_SOVERSION})
 install(TARGETS qmmpui LIBRARY DESTINATION ${LIB_DIR}
                        RUNTIME DESTINATION bin
                        ARCHIVE DESTINATION ${LIB_DIR})
-IF(NOT ${CMAKE_SYSTEM_NAME} MATCHES Darwin)
-    install(FILES ${libqmmpui_DEVEL_HDRS} DESTINATION include/qmmpui)
+install(FILES ${libqmmpui_DEVEL_HDRS} DESTINATION include/qmmpui)
 
-    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qmmpui.pc.in ${CMAKE_CURRENT_BINARY_DIR}/qmmpui.pc @ONLY)
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qmmpui.pc DESTINATION ${LIB_DIR}/pkgconfig)
-ENDIF()
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qmmpui.pc.in ${CMAKE_CURRENT_BINARY_DIR}/qmmpui.pc @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qmmpui.pc DESTINATION ${LIB_DIR}/pkgconfig)

@@ -18,10 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMessageBox>
 #include <QTranslator>
-#include <QSettings>
-#include <QtPlugin>
+#include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "outputjack.h"
 #include "outputjackfactory.h"
@@ -65,5 +63,3 @@ QTranslator *OutputJACKFactory::createTranslator(QObject *parent)
     translator->load(QString(":/jack_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(jack,OutputJACKFactory)

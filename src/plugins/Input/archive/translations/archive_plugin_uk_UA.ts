@@ -47,32 +47,32 @@
 <context>
     <name>DecoderArchiveFactory</name>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="42"/>
+        <location filename="../decoderarchivefactory.cpp" line="41"/>
         <source>Archive Plugin</source>
         <translation>Мордуль архівів</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="44"/>
+        <location filename="../decoderarchivefactory.cpp" line="43"/>
         <source>Archives</source>
         <translation>Архіви</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="141"/>
+        <location filename="../decoderarchivefactory.cpp" line="140"/>
         <source>About Archive Reader Plugin</source>
         <translation>Про модуль читання архівів</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="142"/>
+        <location filename="../decoderarchivefactory.cpp" line="141"/>
         <source>Qmmp Archive Reader Plugin</source>
         <translation>Модуль читання архівів для Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="143"/>
+        <location filename="../decoderarchivefactory.cpp" line="142"/>
         <source>Compiled against %1</source>
         <translation>Зібрано з %1</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="144"/>
+        <location filename="../decoderarchivefactory.cpp" line="143"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Розробник: Ілля Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>

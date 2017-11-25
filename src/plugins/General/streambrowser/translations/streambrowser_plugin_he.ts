@@ -17,27 +17,27 @@
 <context>
     <name>StreamBrowserFactory</name>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="30"/>
+        <location filename="../streambrowserfactory.cpp" line="29"/>
         <source>Stream Browser Plugin</source>
         <translation>תוסף Stream Browser</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="51"/>
+        <location filename="../streambrowserfactory.cpp" line="50"/>
         <source>About Stream Browser Plugin</source>
         <translation>אודות תוסף Stream Browser</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="52"/>
+        <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>Qmmp Stream Browser Plugin</source>
         <translation>תוסף Stream Browser של Qmmp</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="53"/>
+        <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>This plugin allows one to add stream from IceCast stream directory</source>
         <translation>תוסף זה מתיר לך להוסיף זרם מתוך ספריית זרם IceCast</translation>
     </message>
     <message>
-        <location filename="../streambrowserfactory.cpp" line="54"/>
+        <location filename="../streambrowserfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -75,57 +75,57 @@
         <translation>עדכן</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="51"/>
-        <location filename="../streamwindow.cpp" line="69"/>
+        <location filename="../streamwindow.cpp" line="52"/>
+        <location filename="../streamwindow.cpp" line="70"/>
         <source>Name</source>
         <translation>שם</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="52"/>
-        <location filename="../streamwindow.cpp" line="70"/>
+        <location filename="../streamwindow.cpp" line="53"/>
+        <location filename="../streamwindow.cpp" line="71"/>
         <source>Genre</source>
         <translation>ז׳אנר</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="53"/>
-        <location filename="../streamwindow.cpp" line="71"/>
+        <location filename="../streamwindow.cpp" line="54"/>
+        <location filename="../streamwindow.cpp" line="72"/>
         <source>Bitrate</source>
         <translation>שיעור סיביות</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="54"/>
-        <location filename="../streamwindow.cpp" line="72"/>
+        <location filename="../streamwindow.cpp" line="55"/>
+        <location filename="../streamwindow.cpp" line="73"/>
         <source>Format</source>
         <translation>פורמט</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="125"/>
+        <location filename="../streamwindow.cpp" line="126"/>
         <source>&amp;Add to favorites</source>
         <translation>הוסף אל &amp;מועדפים</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="126"/>
+        <location filename="../streamwindow.cpp" line="127"/>
         <source>&amp;Add to playlist</source>
         <translation>הוסף אל &amp;רשימת נגינה</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="131"/>
+        <location filename="../streamwindow.cpp" line="132"/>
         <source>&amp;Remove</source>
         <translation>הס&amp;ר</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="141"/>
+        <location filename="../streamwindow.cpp" line="142"/>
         <source>Done</source>
         <translation>סיום</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="144"/>
         <location filename="../streamwindow.cpp" line="145"/>
+        <location filename="../streamwindow.cpp" line="146"/>
         <source>Error</source>
         <translation>שגיאה</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="164"/>
+        <location filename="../streamwindow.cpp" line="165"/>
         <source>Receiving</source>
         <translation>קבלה</translation>
     </message>

@@ -21,9 +21,9 @@
 #ifndef VORBISMETADATAMODEL_H
 #define VORBISMETADATAMODEL_H
 
+#include <qmmp/metadatamodel.h>
 #include <taglib/vorbisfile.h>
 #include <taglib/xiphcomment.h>
-#include <qmmp/metadatamodel.h>
 
 class VorbisCommentModel;
 

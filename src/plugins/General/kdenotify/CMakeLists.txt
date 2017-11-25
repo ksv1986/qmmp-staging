@@ -1,22 +1,5 @@
 project(libkdenotify)
 
-
-SET (QT_USE_QTDBUS TRUE)
-
-INCLUDE(FindQt4)
-
-include(${QT_USE_FILE})
-
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
-
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 # libqmmpui & libqmmp
@@ -32,25 +15,23 @@ SET(libkdenotify_SRCS
 
 SET(libkdenotify_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libkdenotify_RCC_SRCS ${libkdenotify_RCCS})
+QT5_ADD_RESOURCES(libkdenotify_RCC_SRCS ${libkdenotify_RCCS})
 
 # user interface
 SET(libkdenotify_UIS
     settingsdialog.ui
 )
 
-QT4_WRAP_UI(libkdenotify_UIS_H ${libkdenotify_UIS})
+QT5_WRAP_UI(libkdenotify_UIS_H ${libkdenotify_UIS})
 
-# QT4_WRAP_UI(libkdenotify_UIS_H ${libkdenotify_UIS})
+# QT5_WRAP_UI(libkdenotify_UIS_H ${libkdenotify_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(kdenotify MODULE ${libkdenotify_SRCS} ${libkdenotify_RCC_SRCS} ${libkdenotify_UIS_H})
 add_dependencies(kdenotify qmmpui)
-target_link_libraries(kdenotify ${QT_LIBRARIES} qmmpui libqmmp)
+target_link_libraries(kdenotify Qt5::Widgets Qt5::DBus -lqmmpui -lqmmp)
 install(TARGETS kdenotify DESTINATION ${LIB_DIR}/qmmp/General)
-IF(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-	install(FILES images/empty_cover.png DESTINATION share/qmmp/images)
-	install(FILES images/app_icon.png DESTINATION share/qmmp/images)
-ENDIF()
+install(FILES images/empty_cover.png DESTINATION share/qmmp/images)
+install(FILES images/app_icon.png DESTINATION share/qmmp/images)

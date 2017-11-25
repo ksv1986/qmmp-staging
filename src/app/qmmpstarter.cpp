@@ -38,7 +38,6 @@
 #include <qmmpui/uiloader.h>
 #include <qmmpui/qmmpuisettings.h>
 #include "qmmpstarter.h"
-#include "lxdesupport.h"
 #include "builtincommandlineoption.h"
 
 #ifdef Q_OS_WIN
@@ -47,8 +46,6 @@
 #else
 #include <sys/stat.h>
 #endif
-
-
 
 #ifdef Q_OS_WIN
 #define UDS_PATH QString("qmmp")
@@ -65,6 +62,9 @@ QMMPStarter::QMMPStarter() : QObject()
     m_ui = 0;
     m_finished = false;
     m_exit_code = EXIT_SUCCESS;
+#ifndef QT_NO_SESSIONMANAGER
+    connect(qApp, SIGNAL(commitDataRequest(QSessionManager&)), SLOT(commitData(QSessionManager&)), Qt::DirectConnection);
+#endif
 #ifdef Q_OS_WIN
     m_named_mutex = 0;
 #endif
@@ -227,9 +227,6 @@ void QMMPStarter::startPlayer()
     theme_paths << share_path + "/icons";
     theme_paths.removeDuplicates();
     QIcon::setThemeSearchPaths(theme_paths);
-
-    //load lxde icons
-    LXDESupport::load();
 #endif
 
     //prepare libqmmp and libqmmpui libraries for usage
@@ -273,6 +270,15 @@ void QMMPStarter::savePosition()
     settings.setValue("resume_playback_time", m_core->totalTime() > 0 ? m_core->elapsed() : 0);
     settings.endGroup();
     m_core->stop();
+}
+
+void QMMPStarter::commitData(QSessionManager &manager)
+{
+    if(UiHelper::instance())
+        UiHelper::instance()->exit();
+#ifndef QT_NO_SESSIONMANAGER
+    manager.release();
+#endif
 }
 
 void QMMPStarter::writeCommand()

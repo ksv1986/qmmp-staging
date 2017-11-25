@@ -21,11 +21,12 @@
 #include <QEvent>
 #include <QWheelEvent>
 #include <QMouseEvent>
-#include <QApplication>
+#include <QGuiApplication>
+#include <QWindow>
 #include <qmmp/soundcore.h>
 
 #include "qmmptrayicon.h"
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 #include "statusiconpopupwidget.h"
 #endif
 
@@ -41,19 +42,24 @@ QmmpTrayIcon::~QmmpTrayIcon()
 
 void QmmpTrayIcon::setToolTip(const QString &tip)
 {
-#ifdef Q_WS_X11
-    m_message = tip;
-    if(m_popupWidget)
-        showToolTip();
+#ifdef QMMP_WS_X11
+    if(hasToolTipEvent())
+    {
+        m_message = tip;
+        if(m_popupWidget)
+            showToolTip();
+    }
+    else
+        QSystemTrayIcon::setToolTip(tip);
 #else
     QSystemTrayIcon::setToolTip(tip);
 #endif
 }
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 bool QmmpTrayIcon::event(QEvent *e)
 {
-    if (e->type() == QEvent::Wheel)
+    if (e->type() == QEvent::Wheel )
     {
         wheelEvent((QWheelEvent *) e);
         e->accept();
@@ -66,6 +72,18 @@ bool QmmpTrayIcon::event(QEvent *e)
         return true;
     }
     return QSystemTrayIcon::event(e);
+}
+
+bool QmmpTrayIcon::hasToolTipEvent()
+{
+    //checking for XEmbed system tray implementation
+    //only this implementation is able to send QHelpEvent
+    foreach (QWindow *w, qApp->allWindows())
+    {
+        if(w->objectName() == "QSystemTrayIconSysWindow")
+            return true;
+    }
+    return false;
 }
 
 void QmmpTrayIcon::wheelEvent(QWheelEvent *e)

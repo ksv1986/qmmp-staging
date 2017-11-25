@@ -24,8 +24,8 @@
 #ifndef STATUSICONPOPUPWIDGET_H
 #define STATUSICONPOPUPWIDGET_H
 
-#include <QtGlobal>
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
+
 #include <QFrame>
 #include <QWidget>
 #include <QProgressBar>

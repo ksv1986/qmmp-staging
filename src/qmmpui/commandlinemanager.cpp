@@ -18,11 +18,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QDir>
+#include <QPluginLoader>
 #include <QObject>
 #include <QList>
 #include <QApplication>
-#include <QDir>
-#include <QPluginLoader>
 #include <cstdlib>
 #include <iostream>
 #include <qmmp/qmmp.h>

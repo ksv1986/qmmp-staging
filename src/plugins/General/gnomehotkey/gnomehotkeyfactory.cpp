@@ -18,9 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+
 #include <QMessageBox>
-#include <QTranslator>
-#include <QtPlugin>
 #include <qmmp/qmmp.h>
 #include "mediakeys.h"
 #include "gnomehotkeyfactory.h"
@@ -62,5 +61,3 @@ QTranslator *GnomeHotkeyFactory::createTranslator(QObject *parent)
     translator->load(QString(":/gnomehotkey_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(gnomehotkey, GnomeHotkeyFactory)

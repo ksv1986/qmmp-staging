@@ -116,32 +116,32 @@
 <context>
     <name>StatusIconFactory</name>
     <message>
-        <location filename="../statusiconfactory.cpp" line="31"/>
+        <location filename="../statusiconfactory.cpp" line="30"/>
         <source>Status Icon Plugin</source>
         <translation>Модуль Status Icon</translation>
     </message>
     <message>
-        <location filename="../statusiconfactory.cpp" line="51"/>
+        <location filename="../statusiconfactory.cpp" line="50"/>
         <source>About Status Icon Plugin</source>
         <translation>О модуле Status Icon</translation>
     </message>
     <message>
-        <location filename="../statusiconfactory.cpp" line="52"/>
+        <location filename="../statusiconfactory.cpp" line="51"/>
         <source>Qmmp Status Icon Plugin</source>
         <translation>Модуль Status Icon для Qmmp</translation>
     </message>
     <message>
-        <location filename="../statusiconfactory.cpp" line="53"/>
+        <location filename="../statusiconfactory.cpp" line="52"/>
         <source>Written by:</source>
         <translation>Разработчики:</translation>
     </message>
     <message>
-        <location filename="../statusiconfactory.cpp" line="54"/>
+        <location filename="../statusiconfactory.cpp" line="53"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Илья Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../statusiconfactory.cpp" line="55"/>
+        <location filename="../statusiconfactory.cpp" line="54"/>
         <source>Artur Guzik &lt;a.guzik88@gmail.com&gt;</source>
         <translation>Artur Guzik &lt;a.guzik88@gmail.com&gt;</translation>
     </message>

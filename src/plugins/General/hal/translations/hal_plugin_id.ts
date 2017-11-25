@@ -4,32 +4,32 @@
 <context>
     <name>HalFactory</name>
     <message>
-        <location filename="../halfactory.cpp" line="32"/>
+        <location filename="../halfactory.cpp" line="31"/>
         <source>HAL Plugin</source>
         <translation>Plugin HAL</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="52"/>
+        <location filename="../halfactory.cpp" line="51"/>
         <source>About HAL Plugin</source>
         <translation>Tentang Plugin HAL</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="53"/>
+        <location filename="../halfactory.cpp" line="52"/>
         <source>Qmmp HAL Plugin</source>
         <translation>Plugin HAL Qmmp</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="54"/>
+        <location filename="../halfactory.cpp" line="53"/>
         <source>This plugin provides removable devices detection using HAL</source>
         <translation>Plugin ini menyediakan deteksi perangkat dapat-dilepas menggunakan HAL</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="55"/>
+        <location filename="../halfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="56"/>
+        <location filename="../halfactory.cpp" line="55"/>
         <source>Based on Solid (KDE hardware library)</source>
         <translation>Berdasarkan pada Solid (pustaka hardware KDE)</translation>
     </message>

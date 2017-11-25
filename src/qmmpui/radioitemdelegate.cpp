@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2016 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,7 +32,7 @@ void RadioItemDelegate::paint(QPainter *painter,
 {
     if (hasRadioButton(index))
     {
-        QStyleOptionViewItemV4 opt = option;
+        QStyleOptionViewItem opt = option;
 
         initStyleOption(&opt, index);
 

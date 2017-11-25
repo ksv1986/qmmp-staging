@@ -18,9 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+
 #include <QMessageBox>
-#include <QTranslator>
-#include <QtPlugin>
 #include "converterhelper.h"
 #include "converterfactory.h"
 
@@ -62,5 +61,3 @@ QTranslator *ConverterFactory::createTranslator(QObject *parent)
     translator->load(QString(":/converter_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(converter, ConverterFactory)

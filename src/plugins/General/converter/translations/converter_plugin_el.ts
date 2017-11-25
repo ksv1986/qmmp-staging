@@ -4,29 +4,29 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../converter.cpp" line="131"/>
-        <location filename="../converter.cpp" line="231"/>
+        <location filename="../converter.cpp" line="129"/>
+        <location filename="../converter.cpp" line="229"/>
         <source>Cancelled</source>
         <translation>Ακυρώθηκε</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="146"/>
-        <location filename="../converter.cpp" line="213"/>
+        <location filename="../converter.cpp" line="144"/>
+        <location filename="../converter.cpp" line="211"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="178"/>
+        <location filename="../converter.cpp" line="176"/>
         <source>Converting</source>
         <translation>Μετατρέπεται</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="242"/>
+        <location filename="../converter.cpp" line="240"/>
         <source>Encoding</source>
         <translation>Κωδικοποίηση</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="280"/>
+        <location filename="../converter.cpp" line="278"/>
         <source>Finished</source>
         <translation>Ολοκληρώθηκε</translation>
     </message>
@@ -134,27 +134,27 @@
 <context>
     <name>ConverterFactory</name>
     <message>
-        <location filename="../converterfactory.cpp" line="30"/>
+        <location filename="../converterfactory.cpp" line="29"/>
         <source>Converter Plugin</source>
         <translation>Πρόσθετο Μετατροπέας</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="51"/>
+        <location filename="../converterfactory.cpp" line="50"/>
         <source>About Converter Plugin</source>
         <translation>Σχετικά με το πρόσθετο Μετατροπέας</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="52"/>
+        <location filename="../converterfactory.cpp" line="51"/>
         <source>Qmmp Converter Plugin</source>
         <translation>Qmmp πρόσθετο Μετατροπέας</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="53"/>
+        <location filename="../converterfactory.cpp" line="52"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
         <translation>Αυτό το πρόσθετο μετατρέπει υποστηριζόμενους τύπους αρχείων ήχου σε άλλες μορφές χρησιμοποιώντας κωδικοποιητές της γραμμής εντολών </translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="55"/>
+        <location filename="../converterfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

@@ -1,13 +1,5 @@
 project(libsoxr)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 SET(QT_INCLUDES
@@ -37,7 +29,7 @@ SET(libsoxr_HDRS
 
 SET(libsoxr_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libsoxr_RCC_SRCS ${libsoxr_RCCS})
+QT5_ADD_RESOURCES(libsoxr_RCC_SRCS ${libsoxr_RCCS})
 
 # user interface
 
@@ -45,7 +37,7 @@ SET(libsoxr_UIS
     settingsdialog.ui
 )
 
-QT4_WRAP_UI(libsoxr_UIS_H ${libsoxr_UIS})
+QT5_WRAP_UI(libsoxr_UIS_H ${libsoxr_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -53,6 +45,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 IF(SOXR_FOUND)
 ADD_LIBRARY(soxr MODULE ${libsoxr_SRCS} ${libsoxr_UIS_H} ${libsoxr_RCC_SRCS} ${libsoxr_HDRS})
 add_dependencies(soxr qmmp)
-target_link_libraries(soxr ${QT_LIBRARIES} libqmmp ${SOXR_LDFLAGS})
+target_link_libraries(soxr Qt5::Widgets -lqmmp ${SOXR_LDFLAGS})
 install(TARGETS soxr DESTINATION ${LIB_DIR}/qmmp/Effect)
 ENDIF(SOXR_FOUND)

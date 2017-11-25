@@ -4,22 +4,22 @@
 <context>
     <name>OutputALSAFactory</name>
     <message>
-        <location filename="../outputalsafactory.cpp" line="33"/>
+        <location filename="../outputalsafactory.cpp" line="32"/>
         <source>ALSA Plugin</source>
         <translation>ALSA 外掛</translation>
     </message>
     <message>
-        <location filename="../outputalsafactory.cpp" line="58"/>
+        <location filename="../outputalsafactory.cpp" line="57"/>
         <source>About ALSA Output Plugin</source>
         <translation>關於 ALSA 匯出插件</translation>
     </message>
     <message>
-        <location filename="../outputalsafactory.cpp" line="59"/>
+        <location filename="../outputalsafactory.cpp" line="58"/>
         <source>Qmmp ALSA Output Plugin</source>
         <translation>Qmmp ALSA 匯出插件</translation>
     </message>
     <message>
-        <location filename="../outputalsafactory.cpp" line="60"/>
+        <location filename="../outputalsafactory.cpp" line="59"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

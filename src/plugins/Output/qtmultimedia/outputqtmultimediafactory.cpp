@@ -18,12 +18,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include "outputqtmultimediafactory.h"
 #include "settingsdialog.h"
+
 #include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
 #include <qmmp/qmmp.h>
 #include "outputqtmultimedia.h"
 
@@ -68,5 +67,3 @@ QTranslator *OutputQtMultimediaFactory::createTranslator(QObject *parent)
     translator->load(QString(":/qtmultimedia_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(qtmultimedia, OutputQtMultimediaFactory)

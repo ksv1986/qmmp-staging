@@ -4,22 +4,22 @@
 <context>
     <name>EffectCrossfadeFactory</name>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="32"/>
+        <location filename="../effectcrossfadefactory.cpp" line="31"/>
         <source>Crossfade Plugin</source>
         <translation>Modul prolínání</translation>
     </message>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="53"/>
+        <location filename="../effectcrossfadefactory.cpp" line="52"/>
         <source>About Crossfade Plugin</source>
         <translation>O modulu prolínání</translation>
     </message>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="54"/>
+        <location filename="../effectcrossfadefactory.cpp" line="53"/>
         <source>Qmmp Crossfade Plugin</source>
         <translation>Modul prolínání Qmmp</translation>
     </message>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="55"/>
+        <location filename="../effectcrossfadefactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

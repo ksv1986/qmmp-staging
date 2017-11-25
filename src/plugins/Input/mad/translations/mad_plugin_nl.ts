@@ -4,37 +4,37 @@
 <context>
     <name>DecoderMADFactory</name>
     <message>
-        <location filename="../decodermadfactory.cpp" line="119"/>
+        <location filename="../decodermadfactory.cpp" line="116"/>
         <source>MPEG Plugin</source>
         <translation>MPEG Module</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="122"/>
+        <location filename="../decodermadfactory.cpp" line="119"/>
         <source>MPEG Files</source>
         <translation>MPEG Bestanden</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="278"/>
+        <location filename="../decodermadfactory.cpp" line="271"/>
         <source>About MPEG Audio Plugin</source>
         <translation>Over de MPEG Audio Module</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="279"/>
+        <location filename="../decodermadfactory.cpp" line="272"/>
         <source>Qmmp MPEG Audio Plugin</source>
         <translation>MPEG Audio Module voor Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="280"/>
+        <location filename="../decodermadfactory.cpp" line="273"/>
         <source>Compiled against libmad version:</source>
         <translation>Gecompileerd tegen libmad met versie:</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="284"/>
+        <location filename="../decodermadfactory.cpp" line="277"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="285"/>
+        <location filename="../decodermadfactory.cpp" line="278"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Broncode gebasseerd op &apos;mq3&apos; en &apos;madplay&apos; projecten</translation>
     </message>

@@ -148,22 +148,22 @@
 <context>
     <name>VisualAnalyzerFactory</name>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="32"/>
+        <location filename="../visualanalyzerfactory.cpp" line="31"/>
         <source>Analyzer Plugin</source>
         <translation>可視化解析器插件</translation>
     </message>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="51"/>
+        <location filename="../visualanalyzerfactory.cpp" line="50"/>
         <source>About Analyzer Visual Plugin</source>
         <translation>關於可視化解析器外掛</translation>
     </message>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="52"/>
+        <location filename="../visualanalyzerfactory.cpp" line="51"/>
         <source>Qmmp Analyzer Visual Plugin</source>
         <translation>Qmmp 可視化解析器插件</translation>
     </message>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="53"/>
+        <location filename="../visualanalyzerfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

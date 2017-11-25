@@ -29,7 +29,6 @@
 #include "settingsdialog.h"
 #include "outputshoutfactory.h"
 
-
 OutputShoutFactory::OutputShoutFactory()
 {
     m_connection = new ShoutClient(qApp);
@@ -76,5 +75,3 @@ QTranslator *OutputShoutFactory::createTranslator(QObject *parent)
     translator->load(QString(":/shout_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(shout, OutputShoutFactory)

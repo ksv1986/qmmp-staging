@@ -75,24 +75,25 @@ Qmmp - Qt-based multimedia player
 - запись аудио
 
 Требования:
-- Qt >= 4.6
+- Qt >= 5.4 (qtbase, qtx11extras и qttools для сборки)
 - tar, unzip, bzip2, gzip
 - libmad
 - libvorbis
 - libogg
 - libalsa >= 1.0.1
-- taglib >= 1.6 (рекомендуется 1.11 и выше)
+- taglib >= 1.10 (рекомендуется 1.11 и выше)
 - curl >= 7.16
+- qtmultimedia >= 5.4 (опционально)
 - libmms >= 0.4 (опционально)
 - flac >= 1.1.3 (опционально)
 - libmpcdec >= 1.2.6 (опционально)
-- jackit >= 0.102.5 (опционально)
+- jackit1 >= 0.121.0 или jackit2 >= 1.9.8 (опционально)
 - soxr >= 0.1.0 (опционально)
 - libmodplug >= 0.8.4 (опционально)
-- libsndfile >= 1.0.17 (опционально)
+- libsndfile >= 1.0.21 (опционально)
 - wavpack >= 4.41 (опционально)
 - pulseaudio >= 0.9.15 (опционально)
-- ffmpeg >= 0.9.1 или libav >= 0.8.0 (опционально)
+- ffmpeg >= 2.0 или libav >= 0.9 (опционально)
 - libcdio >= 0.80 (опционально)
 - libcdio-paranoia >= 10.2 (начиная с libcdio 0.90)
 - libcddb >= 1.3.1 (опционально)
@@ -103,12 +104,12 @@ Qmmp - Qt-based multimedia player
 - libWildMidi >= 0.2.3.4 (опционально)
 - libsidplayfp >= 1.0.3 (опционально)
 - libbs2b >= 3.0.0 (опционально)
-- libprojectM >= 1.2.0 (опционально)
+- libprojectM >= 2.0.0 (опционально)
 - libenca >= 1.9 (опционально)
 - libarchive >= 3.2.0 (опционально)
 - libshout (опционально)
 - mplayer (опционально)
-- cmake >= 2.8.6 (только для сборки)
+- cmake >= 2.8.11 (только для сборки)
 
 Внимание! Для сборки Qmmp нужна утилита lrelease.
 
@@ -127,13 +128,13 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 Доступные опции:
 - USE_CURL, USE_MMS (транспортные модули);
 - USE_MAD, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
-  USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_FFMPEG_LEGACY, USE_OPUS, USE_SID, USE_ARCHIVE (декодеры);
+  USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_OPUS, USE_SID, USE_ARCHIVE (декодеры);
 - USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_NULL, USE_OSS4, USE_WAVEOUT, USE_DSOUND, USE_QTMULTIMEDIA,
   USE_WASAPI, USE_SHOUT (модули  вывода);
 - USE_SOXR, USE_BS2B, USE_LADSPA, USE_CROSSFADE, USE_STEREO, USE_FILEWRITER (эффекты);
 - USE_ANALYZER, USE_PROJECTM (визуализация);
 - USE_MPRIS, USE_SCROBBLER, USE_STATICON, USE_NOTIFIER, USE_LYRICS, USE_HAL, USE_HOTKEY, USE_FILEOPS, USE_COVER,
-  USE_KDENOTIFY, USE_UDISKS2, USE_UDISKS, USE_CONVERTER, USE_RGSCAN, USE_SB, USE_TRACKCHANGE, USE_COPYPASTE,
+  USE_KDENOTIFY, USE_UDISKS2, USE_CONVERTER, USE_RGSCAN, USE_SB, USE_TRACKCHANGE, USE_COPYPASTE,
   USE_GNOMEHOTKEY (модули общего назначения);
 - USE_QMMP_DIALOG, USE_TWO_PANEL_DIALOG (файловые диалоги);
 - USE_ENCA (автоматическое определение кодировки);
@@ -146,12 +147,12 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 По умолчанию программа будет установлена в /usr/local. Вы можете изменить этот путь командой:
 cmake ./ -DCMAKE_INSTALL_PREFIX=другой_путь
 
-Поддержка OSS3 и Udisks.
-Модули OSS3 и UDisks устарели и отключёны по умолчанию.
-Для их включения выполните 'cmake ./ -DUSE_OSS:BOOL=TRUE' или 'cmake ./ -DUSE_OSS:UDISKS=TRUE' перед сборкой.
+Поддержка OSS3.
+Модуль OSS3 устарел и отключён по умолчанию.
+Для его включения выполните 'cmake ./ -DUSE_OSS:BOOL=TRUE' перед сборкой.
 
 Поддержка UDisks2 и FreeBSD.
-Под FreeBSD есть возможность использовать модуль Udisks2. Для этого вы также должны установить порт 
+Под FreeBSD есть возможность использовать модуль Udisks2. Для этого вы также должны установить порт
 sysutils/bsdisks. Bsdisks является реализацией сервиса UDisks2 для FreeBSD.
 
 В некоторых случаях вы можете использовать qmake для сборки и установки.
@@ -174,7 +175,7 @@ qmake DISABLED_PLUGINS+=JACK_PLUGIN DISABLED_PLUGINS+=OSS_PLUGIN
 
 Изменение пути установки разделяемых библиотек и модулей (для некоторых 64-битных дистрибутивов).
 По умолчанию все библиотеки и модули будут установлены в $(INSTALL PREFIX)/lib. Вы можете сменить "lib"
-на "lib64" запустив qmake (qmake-qt4), или cmake со специальным параметром:
+на "lib64" запустив qmake или cmake со специальным параметром:
 qmake LIB_DIR=/lib64
 или
 cmake ./ -DLIB_DIR=lib64

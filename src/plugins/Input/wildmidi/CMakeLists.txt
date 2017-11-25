@@ -2,20 +2,7 @@ project(libwildmidi)
 
 INCLUDE(CheckIncludeFile)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 
 # libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
@@ -46,16 +33,14 @@ ENDIF(WILDMIDI_HEADER_FOUND AND (NOT WILDMIDI_LIB MATCHES "^.*-NOTFOUND"))
 
 SET(libwildmidi_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libwildmidi_RCC_SRCS ${libwildmidi_RCCS})
+QT5_ADD_RESOURCES(libwildmidi_RCC_SRCS ${libwildmidi_RCCS})
 
 # user interface
-
-
 SET(libwildmidi_UIS
     settingsdialog.ui
 )
 
-QT4_WRAP_UI(libwildmidi_UIS_H ${libwildmidi_UIS})
+QT5_WRAP_UI(libwildmidi_UIS_H ${libwildmidi_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -64,6 +49,6 @@ IF(WILDMIDI_FOUND)
 ADD_LIBRARY(wildmidi MODULE ${libwildmidi_SRCS} ${libwildmidi_UIS_H} ${libwildmidi_RCC_SRCS}
 ${libwildmidi_HDRS})
 add_dependencies(wildmidi qmmp)
-target_link_libraries(wildmidi ${QT_LIBRARIES} libqmmp ${WILDMIDI_LIB})
+target_link_libraries(wildmidi Qt5::Widgets -lqmmp ${WILDMIDI_LIB})
 install(TARGETS wildmidi DESTINATION ${LIB_DIR}/qmmp/Input)
 ENDIF(WILDMIDI_FOUND)

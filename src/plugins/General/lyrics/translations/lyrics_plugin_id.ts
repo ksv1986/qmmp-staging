@@ -17,27 +17,27 @@
 <context>
     <name>LyricsFactory</name>
     <message>
-        <location filename="../lyricsfactory.cpp" line="30"/>
+        <location filename="../lyricsfactory.cpp" line="29"/>
         <source>Lyrics Plugin</source>
         <translation>Plugin Lyrics</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="51"/>
+        <location filename="../lyricsfactory.cpp" line="50"/>
         <source>About Lyrics Plugin</source>
         <translation>Tentang Plugin Lyrics</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="52"/>
+        <location filename="../lyricsfactory.cpp" line="51"/>
         <source>Qmmp Lyrics Plugin</source>
         <translation>Plugin Lyrics Qmmp</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="53"/>
+        <location filename="../lyricsfactory.cpp" line="52"/>
         <source>This plugin retrieves lyrics from LyricWiki</source>
         <translation>Plugin ini menarik lirik dari LyricWiki</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="54"/>
+        <location filename="../lyricsfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

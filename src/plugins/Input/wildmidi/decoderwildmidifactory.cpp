@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,9 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
+#include <QMessageBox>
 #include "wildmidihelper.h"
 #include "decoder_wildmidi.h"
 #include "settingsdialog.h"
@@ -120,4 +119,3 @@ QTranslator *DecoderWildMidiFactory::createTranslator(QObject *parent)
     translator->load(QString(":/wildmidi_plugin_") + locale);
     return translator;
 }
-Q_EXPORT_PLUGIN2(wildmidi,DecoderWildMidiFactory)

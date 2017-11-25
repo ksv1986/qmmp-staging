@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -93,7 +93,10 @@ QStringList UDisks2Device::mountPoints() const
     foreach (QVariant arg, args)
     {
         QByteArrayList list;
-        arg.value<QDBusVariant>().variant().value<QDBusArgument>() >> list;
+        QDBusArgument a = arg.value<QDBusVariant>().variant().value<QDBusArgument>();
+        if(a.currentType() != QDBusArgument::ArrayType)
+            continue;
+        a >> list;
 
         foreach (QByteArray p, list)
             points.append(p);
@@ -103,7 +106,7 @@ QStringList UDisks2Device::mountPoints() const
 
 QString UDisks2Device::deviceFile() const
 {
-    return QString::fromAscii(m_block_interface->property("Device").toByteArray().constData());
+    return QString::fromLatin1(m_block_interface->property("Device").toByteArray());
 }
 
 QDBusObjectPath UDisks2Device::objectPath() const

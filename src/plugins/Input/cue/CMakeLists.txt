@@ -1,19 +1,6 @@
 project(libcue)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_BINARY_DIR}/../../../
-)
 
 # libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
@@ -41,7 +28,7 @@ SET(libcue_HDRS
 
 SET(libcue_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libcue_RCC_SRCS ${libcue_RCCS})
+QT5_ADD_RESOURCES(libcue_RCC_SRCS ${libcue_RCCS})
 
 # user interface
 
@@ -50,7 +37,7 @@ SET(libcue_UIS
     settingsdialog.ui
 )
 
-QT4_WRAP_UI(libcue_UIS_H ${libcue_UIS})
+QT5_WRAP_UI(libcue_UIS_H ${libcue_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -58,8 +45,8 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 ADD_LIBRARY(cue MODULE ${libcue_SRCS} ${libcue_RCC_SRCS} ${libcue_UIS_H} ${libcue_HDRS})
 add_dependencies(cue qmmp)
 IF(USE_ENCA AND ENCA_FOUND)
-target_link_libraries(cue ${QT_LIBRARIES} libqmmp ${ENCA_LDFLAGS})
+target_link_libraries(cue Qt5::Widgets -lqmmp ${ENCA_LDFLAGS})
 ELSE(USE_ENCA AND ENCA_FOUND)
-target_link_libraries(cue ${QT_LIBRARIES} libqmmp)
+target_link_libraries(cue Qt5::Widgets -lqmmp)
 ENDIF(USE_ENCA AND ENCA_FOUND)
 install(TARGETS cue DESTINATION ${LIB_DIR}/qmmp/Input)

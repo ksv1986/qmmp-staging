@@ -21,7 +21,7 @@
  ***************************************************************************/
 
 #include <QtGlobal>
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 #include <QSettings>
 #include <QX11Info>
 #include <QEvent>
@@ -80,6 +80,12 @@ quint32 Hotkey::defaultKey(int act)
 
 HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+    //Workaround Qt regression of no longer delivering events for the root window
+    //See qtbase commit 2b34aefcf02f09253473b096eb4faffd3e62b5f4
+    //More information: https://bugs.kde.org/show_bug.cgi?id=360841
+    qApp->desktop()->winId();
+#endif
     QCoreApplication::instance()->installEventFilter(this);
     WId rootWindow = QX11Info::appRootWindow();
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat); //load settings
@@ -138,8 +144,7 @@ const QString HotkeyManager::getKeyString(quint32 key, quint32 modifiers)
 
 bool HotkeyManager::eventFilter(QObject* o, QEvent* e)
 {
-    //receive events from active and root windows only
-    if (e->type() == QEvent::KeyPress && (o == qApp->desktop () || o == qApp->activeWindow ()))
+    if (e->type() == QEvent::KeyPress)
     {
         QKeyEvent* k = static_cast<QKeyEvent*>(e);
         quint32 key = keycodeToKeysym(k->nativeScanCode());
@@ -198,7 +203,7 @@ bool HotkeyManager::eventFilter(QObject* o, QEvent* e)
                 break;
 
             }
-            qApp->processEvents();
+            return true;
         }
     }
     return QObject::eventFilter(o, e);

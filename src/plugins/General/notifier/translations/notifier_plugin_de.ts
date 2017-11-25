@@ -4,22 +4,22 @@
 <context>
     <name>NotifierFactory</name>
     <message>
-        <location filename="../notifierfactory.cpp" line="31"/>
+        <location filename="../notifierfactory.cpp" line="30"/>
         <source>Notifier Plugin</source>
         <translation>Benachrichtigungsmodul</translation>
     </message>
     <message>
-        <location filename="../notifierfactory.cpp" line="51"/>
+        <location filename="../notifierfactory.cpp" line="50"/>
         <source>About Notifier Plugin</source>
         <translation>Über Benachrichtigungsmodul</translation>
     </message>
     <message>
-        <location filename="../notifierfactory.cpp" line="52"/>
+        <location filename="../notifierfactory.cpp" line="51"/>
         <source>Qmmp Notifier Plugin</source>
         <translation>Qmmp Benachrichtigungsmodul</translation>
     </message>
     <message>
-        <location filename="../notifierfactory.cpp" line="53"/>
+        <location filename="../notifierfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

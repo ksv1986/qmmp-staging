@@ -1,18 +1,5 @@
 project(libcovermanager)
 
-SET(QT_USE_QTNETWORK TRUE)
-INCLUDE(FindQt4)
-
-include(${QT_USE_FILE})
-
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -33,7 +20,7 @@ SET(libcovermanager_RCCS
     images/cm_images.qrc
 )
 
-QT4_ADD_RESOURCES(libcovermanager_RCC_SRCS ${libcovermanager_RCCS})
+QT5_ADD_RESOURCES(libcovermanager_RCC_SRCS ${libcovermanager_RCCS})
 
 # user interface
 
@@ -41,7 +28,7 @@ QT4_ADD_RESOURCES(libcovermanager_RCC_SRCS ${libcovermanager_RCCS})
 SET(libcovermanager_UIS
 )
 
-QT4_WRAP_UI(libcovermanager_UIS_H ${libcovermanager_UIS})
+QT5_WRAP_UI(libcovermanager_UIS_H ${libcovermanager_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -49,5 +36,5 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 ADD_LIBRARY(covermanager MODULE ${libcovermanager_SRCS} ${libcovermanager_UIS_H}
   ${libcovermanager_RCC_SRCS})
 add_dependencies(covermanager qmmpui)
-target_link_libraries(covermanager ${QT_LIBRARIES} qmmpui libqmmp)
+target_link_libraries(covermanager Qt5::Widgets -lqmmpui -lqmmp)
 install(TARGETS covermanager DESTINATION ${LIB_DIR}/qmmp/General)

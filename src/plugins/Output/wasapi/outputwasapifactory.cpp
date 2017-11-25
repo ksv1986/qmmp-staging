@@ -20,7 +20,6 @@
 
 #include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
 #include "settingsdialog.h"
 #include "outputwasapi.h"
 #include "outputwasapifactory.h"
@@ -65,5 +64,3 @@ QTranslator *OutputWASAPIFactory::createTranslator(QObject *parent)
     translator->load(QString(":/wasapi_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(wasapi,OutputWASAPIFactory)

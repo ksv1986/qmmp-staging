@@ -2,20 +2,7 @@ project(libgme)
 
 INCLUDE(CheckIncludeFileCXX)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 
 # libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
@@ -47,16 +34,15 @@ SET(libgme_HDRS
 
 SET(libgme_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libgme_RCC_SRCS ${libgme_RCCS})
+QT5_ADD_RESOURCES(libgme_RCC_SRCS ${libgme_RCCS})
 
 # user interface
-
 
 SET(libgme_UIS
     settingsdialog.ui
 )
 
-QT4_WRAP_UI(libgme_UIS_H ${libgme_UIS})
+QT5_WRAP_UI(libgme_UIS_H ${libgme_UIS})
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
@@ -65,6 +51,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 IF(GME_FOUND)
 ADD_LIBRARY(gme MODULE ${libgme_SRCS} ${libgme_RCC_SRCS} ${libgme_HDRS} ${libgme_UIS_H})
 add_dependencies(gme qmmp)
-target_link_libraries(gme ${QT_LIBRARIES} libqmmp ${GME_LIB})
+target_link_libraries(gme Qt5::Widgets -lqmmp ${GME_LIB})
 install(TARGETS gme DESTINATION ${LIB_DIR}/qmmp/Input)
 ENDIF(GME_FOUND)

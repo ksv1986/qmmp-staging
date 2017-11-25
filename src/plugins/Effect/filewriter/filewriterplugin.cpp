@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 #include <QSettings>
-#include <QDesktopServices>
+#include <QStandardPaths>
 #include <time.h>
 #include <qmmp/soundcore.h>
 #include <qmmpui/metadataformatter.h>
@@ -116,7 +116,7 @@ void FileWriterPlugin::init(const QMap<Qmmp::MetaData, QString> &metaData)
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     float quality = settings.value("FileWriter/vorbis_quality", 0.8).toFloat();
-    QString outDir = QDesktopServices::storageLocation(QDesktopServices::MusicLocation);
+    QString outDir = QStandardPaths::writableLocation(QStandardPaths::MusicLocation);
     outDir = settings.value("FileWriter/out_dir", outDir).toString();
     QString fileName = settings.value("FileWriter/file_name", "%p%if(%p&%t, - ,)%t").toString();
     if(fileName.isEmpty())

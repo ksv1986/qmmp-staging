@@ -48,7 +48,7 @@ StatusIcon::StatusIcon(QObject *parent) : QObject(parent)
     m_useStandardIcons = settings.value("use_standard_icons",false).toBool();
     m_showToolTip = settings.value("show_tooltip",true).toBool();
     m_splitFileName = settings.value("split_file_name",true).toBool();
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     m_toolTipTemplate = settings.value("tooltip_template", DEFAULT_TEMPLATE).toString();
 #else
     m_toolTipTemplate = "%p%if(%p&%t, - ,)%t";

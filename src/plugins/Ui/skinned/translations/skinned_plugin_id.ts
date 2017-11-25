@@ -785,37 +785,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="354"/>
+        <location filename="../mainwindow.cpp" line="359"/>
         <source>Appearance</source>
         <translation>Tampilan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="355"/>
+        <location filename="../mainwindow.cpp" line="360"/>
         <source>Shortcuts</source>
         <translation>Pintasan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="425"/>
+        <location filename="../mainwindow.cpp" line="430"/>
         <source>View</source>
         <translation>Tinjau</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="434"/>
+        <location filename="../mainwindow.cpp" line="439"/>
         <source>Playlist</source>
         <translation>Daftarmain</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="457"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="460"/>
+        <location filename="../mainwindow.cpp" line="465"/>
         <source>Tools</source>
         <translation>Alat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="542"/>
+        <location filename="../mainwindow.cpp" line="547"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -929,17 +929,17 @@
         <translation>Tindakan</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="617"/>
+        <location filename="../playlist.cpp" line="611"/>
         <source>Rename Playlist</source>
         <translation>Ubah-nama Daftarmain</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="617"/>
+        <location filename="../playlist.cpp" line="611"/>
         <source>Playlist name:</source>
         <translation>Nama daftarmain:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="638"/>
+        <location filename="../playlist.cpp" line="632"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Daftarmain Baru</translation>
     </message>

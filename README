@@ -76,24 +76,25 @@ Other features:
 - audio recording
 
 Requirements:
-- Qt >= 4.6
+- Qt >= 5.4 (qtbase, qtx11extras and qttools for build)
 - tar, unzip, bzip2, gzip
 - libmad
 - libvorbis
 - libogg
 - libalsa >= 1.0.1
-- taglib >= 1.6 (1.11 or higher is recommended)
+- taglib >= 1.10 (1.11 or higher is recommended)
 - curl >= 7.16
+- qtmultimedia >= 5.4 (optional)
 - libmms >= 0.4 (optional)
 - flac >= 1.1.3 (optional)
 - libmpcdec >= 1.2.6 (optional)
-- jackit >= 0.102.5 (optional)
+- jackit1 >= 0.121.0 or jackit2 >= 1.9.8 (optional)
 - libsoxr >= 0.1.0 (optional)
 - libmodplug >= 0.8.4 (optional)
-- libsndfile >= 1.0.17 (optional)
+- libsndfile >= 1.0.21 (optional)
 - wavpack >= 4.41 (optional)
 - pulseaudio >= 0.9.15 (optional)
-- ffmpeg >= 0.9.1 or libav >= 0.8.0 (optional)
+- ffmpeg >= 2.0 or libav >= 0.9 (optional)
 - libcdio >= 0.80 (optional)
 - libcdio-paranoia >= 10.2 (since libcdio 0.90)
 - libcddb >= 1.3.1 (optional)
@@ -104,12 +105,12 @@ Requirements:
 - libWildMidi >= 0.2.3.4 (optional)
 - libsidplayfp >= 1.0.3 (optional)
 - libbs2b >= 3.0.0 (optional)
-- libprojectM >= 1.2.0 (optional)
+- libprojectM >= 2.0.0 (optional)
 - libenca >= 1.9 (optional)
 - libarchive >= 3.2.0 (optional)
 - libshout (optional)
 - mplayer (optional)
-- cmake >= 2.8.6 (for build only)
+- cmake >= 2.8.11 (for build only)
 
 Attention! Qmmp build needs lrelease installed.
 
@@ -129,13 +130,13 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 Available options:
 - USE_CURL, USE_MMS (transports);
 - USE_MAD, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
-  USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_FFMPEG_LEGACY, USE_OPUS, USE_SID, USE_ARCHIVE (decoders);
+  USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_OPUS, USE_SID, USE_ARCHIVE (decoders);
 - USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_NULL, USE_OSS4, USE_WAVEOUT, UDE_DSOUND, USE_QTMULTIMEDIA,
   USE_WASAPI, USE_SHOUT (output plugins);
 - USE_SOXR, USE_BS2B, USE_LADSPA, USE_CROSSFADE, USE_STEREO, USE_FILEWRITER (effects);
 - USE_ANALYZER, USE_PROJECTM (visualization);
 - USE_MPRIS, USE_SCROBBLER, USE_STATICON, USE_NOTIFIER, USE_LYRICS, USE_HAL, USE_HOTKEY, USE_FILEOPS, USE_COVER,
-  USE_KDENOTIFY, USE_UDISKS2, USE_UDISKS, USE_CONVERTER, USE_RGSCAN, USE_SB, USE_TRACKCHANGE, USE_COPYPASTE,
+  USE_KDENOTIFY, USE_UDISKS2, USE_CONVERTER, USE_SB, USE_RGSCAN, USE_TRACKCHANGE, USE_COPYPASTE,
   USE_GNOMEHOTKEY (general plugins);
 - USE_QMMP_DIALOG, USE_TWO_PANEL_DIALOG (file dialogs);
 - USE_ENCA (automatic charset detection);
@@ -148,9 +149,9 @@ Also you can use ccmake for changing plugins configuration.
 By default program will be installed in /usr/local. You can change default path by running:
 cmake ./ -DCMAKE_INSTALL_PREFIX=custom_path
 
-OSS3 and UDisks support.
-OSS3 and UDisks plugins are deprecated and disabled by default.
-To enable them, run 'cmake ./ -DUSE_OSS:BOOL=TRUE' or 'cmake ./ -DUSE_OSS:UDISKS=TRUE' before compilation.
+OSS3 support.
+OSS3 plugin is deprecated and disabled by default.
+To enable it, run 'cmake ./ -DUSE_OSS:BOOL=TRUE' before compilation.
 
 UDisks2 support and FreeBSD.
 Under FreeBSD you are able to use UDisks2 plugin. Also, you should install port sysutils/bsdisks. 
@@ -178,7 +179,7 @@ Attention! By default all plugins are enabled by default.
 
 Changing shared library install path (for some 64-bit distributions).
 By default, all libraries and plugins will be installed to $(INSTALL PREFIX)/lib. You can change "lib"
-to "lib64" by running qmake (qmake-qt4) or cmake with the special parameter:
+to "lib64" by running qmake or cmake with the special parameter:
 qmake LIB_DIR=/lib64
 or
 cmake ./ -DLIB_DIR=lib64

@@ -21,8 +21,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QtGlobal>
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include <QFileDialog>
+#include <QCoreApplication>
 #include "qtfiledialog_p.h"
 
 
@@ -54,6 +55,7 @@ QtFileDialog::~QtFileDialog()
 QStringList QtFileDialog::exec(QWidget *parent, const QString &dir, FileDialog::Mode mode,
                                const QString &caption, const QString &filter, QString *selectedFilter)
 {
+    QCoreApplication::sendPostedEvents(Q_NULLPTR, QEvent::LanguageChange); //prevents crash when using KDE file dialog
     QStringList list;
     if(mode == AddFile)
     {

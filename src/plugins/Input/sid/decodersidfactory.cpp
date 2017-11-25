@@ -18,11 +18,10 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMessageBox>
-#include <QTranslator>
-#include <QtPlugin>
-#include <QRegExp>
 #include <QSettings>
+#include <QTranslator>
+#include <QRegExp>
+#include <QMessageBox>
 #include <QFile>
 #include <sidplayfp/SidTune.h>
 #include <sidplayfp/SidTuneInfo.h>
@@ -126,4 +125,3 @@ QTranslator *DecoderSIDFactory::createTranslator(QObject *parent)
     translator->load(QString(":/sid_plugin_") + locale);
     return translator;
 }
-Q_EXPORT_PLUGIN2(sid,DecoderSIDFactory)

@@ -18,9 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
+#include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
 #include "outputoss.h"
@@ -68,5 +67,3 @@ QTranslator *OutputOSSFactory::createTranslator(QObject *parent)
     translator->load(QString(":/oss_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(oss,OutputOSSFactory)

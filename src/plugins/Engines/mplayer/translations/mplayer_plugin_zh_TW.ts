@@ -4,32 +4,32 @@
 <context>
     <name>MplayerEngineFactory</name>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="35"/>
+        <location filename="../mplayerenginefactory.cpp" line="34"/>
         <source>Mplayer Plugin</source>
         <translation>Mplayer 外掛</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="38"/>
+        <location filename="../mplayerenginefactory.cpp" line="37"/>
         <source>Video Files</source>
         <translation>視頻文件</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="84"/>
+        <location filename="../mplayerenginefactory.cpp" line="83"/>
         <source>About MPlayer Plugin</source>
         <translation>關於 Mplayer 外掛</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="85"/>
+        <location filename="../mplayerenginefactory.cpp" line="84"/>
         <source>Qmmp MPlayer Plugin</source>
         <translation>Qmmp Mplayer 外掛</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="86"/>
+        <location filename="../mplayerenginefactory.cpp" line="85"/>
         <source>This plugin uses MPlayer as backend</source>
         <translation>此插件使用 Mplayer 後端</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="87"/>
+        <location filename="../mplayerenginefactory.cpp" line="86"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

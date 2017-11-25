@@ -2,20 +2,7 @@ project(libmpc)
 
 INCLUDE(CheckIncludeFileCXX)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 
 # libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
@@ -53,13 +40,13 @@ SET(libmpc_HDRS
 
 SET(libmpc_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libmpc_RCC_SRCS ${libmpc_RCCS})
+QT5_ADD_RESOURCES(libmpc_RCC_SRCS ${libmpc_RCCS})
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(MPC_FOUND)
 ADD_LIBRARY(mpc MODULE ${libmpc_SRCS} ${libmpc_RCC_SRCS} ${libmpc_HDRS})
 add_dependencies(mpc qmmp)
-target_link_libraries(mpc ${QT_LIBRARIES} libqmmp ${MPC_LIB} ${TAGLIB_LDFLAGS})
+target_link_libraries(mpc Qt5::Widgets -lqmmp ${MPC_LIB} ${TAGLIB_LDFLAGS})
 install(TARGETS mpc DESTINATION ${LIB_DIR}/qmmp/Input)
 ENDIF(MPC_FOUND)

@@ -27,7 +27,8 @@
 #include <QSettings>
 #include <QMessageBox>
 #include <QHeaderView>
-
+#include <QStorageInfo>
+#include <QStyle>
 #include <qmmp/qmmp.h>
 
 #define HISTORY_SIZE 8
@@ -94,6 +95,11 @@ QmmpFileDialogImpl::QmmpFileDialogImpl(QWidget * parent, Qt::WindowFlags f) : QD
         addPushButton->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOpenButton));
         closePushButton->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogCloseButton));
     }
+
+    splitter->setStretchFactor(0, 0);
+    splitter->setStretchFactor(1, 10);
+    splitter->setSizes(QList<int>() << 150 << width() - 150);
+    splitter->restoreState(settings.value("QMMPFileDialog/splitter_state").toByteArray());
 }
 
 QmmpFileDialogImpl::~QmmpFileDialogImpl()
@@ -115,6 +121,12 @@ QStringList QmmpFileDialogImpl::selectedFiles ()
         l << m_model->filePath(i);
     }
     return l;
+}
+
+void QmmpFileDialogImpl::on_mountPointsListWidget_itemClicked(QListWidgetItem *item)
+{
+    lookInComboBox->setEditText(item->data(Qt::UserRole).toString());
+    on_lookInComboBox_activated(item->data(Qt::UserRole).toString());
 }
 
 void QmmpFileDialogImpl::on_lookInComboBox_activated(const QString &path)
@@ -300,6 +312,23 @@ void QmmpFileDialogImpl::setModeAndMask(const QString& d,FileDialog::Mode m, con
     lookInComboBox->setEditText(QDir::cleanPath(path));
 }
 
+void QmmpFileDialogImpl::loadMountedVolumes()
+{
+    mountPointsListWidget->clear();
+    foreach (QStorageInfo i, QStorageInfo::mountedVolumes())
+    {
+        if(i.fileSystemType() == "tmpfs")
+            continue;
+        QString name = i.displayName();
+        name.replace("\\x20", " ");
+        QListWidgetItem *item = new QListWidgetItem(name);
+        item->setData(Qt::UserRole, i.rootPath());
+        item->setToolTip(i.rootPath());
+        item->setIcon(style()->standardIcon(QStyle::SP_DirIcon));
+        mountPointsListWidget->addItem(item);
+    }
+}
+
 void QmmpFileDialogImpl::on_listToolButton_toggled(bool yes)
 {
     if (yes)
@@ -327,6 +356,7 @@ void QmmpFileDialogImpl::hideEvent (QHideEvent *event)
     settings.setValue("QMMPFileDialog/close_on_add", closeOnAddToolButton->isChecked());
     settings.setValue("QMMPFileDialog/geometry", saveGeometry());
     settings.setValue("QMMPFileDialog/history", m_history);
+    settings.setValue("QMMPFileDialog/splitter_state", splitter->saveState());
     QWidget::hideEvent(event);
 }
 

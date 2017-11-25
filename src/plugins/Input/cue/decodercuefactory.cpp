@@ -20,13 +20,11 @@
 
 #include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
 #include "decoder_cue.h"
 #include "cuemetadatamodel.h"
 #include "cueparser.h"
 #include "settingsdialog.h"
 #include "decodercuefactory.h"
-
 
 // DecoderCUEFactory
 
@@ -102,5 +100,3 @@ QTranslator *DecoderCUEFactory::createTranslator(QObject *parent)
     translator->load(QString(":/cue_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(cue,DecoderCUEFactory)

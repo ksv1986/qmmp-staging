@@ -18,10 +18,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QRegExp>
-#include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
+#include <QMessageBox>
+#include <QRegExp>
 #include "settingsdialog.h"
 #include "gmehelper.h"
 #include "decoder_gme.h"
@@ -117,4 +116,3 @@ QTranslator *DecoderGmeFactory::createTranslator(QObject *parent)
     translator->load(QString(":/gme_plugin_") + locale);
     return translator;
 }
-Q_EXPORT_PLUGIN2(gme,DecoderGmeFactory)

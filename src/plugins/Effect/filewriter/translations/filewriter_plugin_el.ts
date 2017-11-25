@@ -4,22 +4,22 @@
 <context>
     <name>EffectFileWriterFactory</name>
     <message>
-        <location filename="../effectfilewriterfactory.cpp" line="32"/>
+        <location filename="../effectfilewriterfactory.cpp" line="31"/>
         <source>File Writer Plugin</source>
         <translation>Πρόσθετο εγγραφής αρχείων</translation>
     </message>
     <message>
-        <location filename="../effectfilewriterfactory.cpp" line="53"/>
+        <location filename="../effectfilewriterfactory.cpp" line="52"/>
         <source>About File Writer Plugin</source>
         <translation>Σχετικά με το πρόσθετο εγγραφής αρχείων</translation>
     </message>
     <message>
-        <location filename="../effectfilewriterfactory.cpp" line="54"/>
+        <location filename="../effectfilewriterfactory.cpp" line="53"/>
         <source>Qmmp File Writer Plugin</source>
         <translation>Πρόσθετο εγγραφής αρχείων Qmmp</translation>
     </message>
     <message>
-        <location filename="../effectfilewriterfactory.cpp" line="55"/>
+        <location filename="../effectfilewriterfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

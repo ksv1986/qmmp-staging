@@ -21,7 +21,6 @@
 #include <QRegExp>
 #include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
 #include <archive.h>
 #include <archive_entry.h>
 #include "decoder_archive.h"
@@ -151,5 +150,3 @@ QTranslator *DecoderArchiveFactory::createTranslator(QObject *parent)
     translator->load(QString(":/archive_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(archive, DecoderArchiveFactory)

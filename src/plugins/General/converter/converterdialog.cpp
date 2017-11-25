@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 #include <QSettings>
-#include <QDesktopServices>
+#include <QStandardPaths>
 #include <QMenu>
 #include <QFile>
 #include <QDir>
@@ -40,7 +40,7 @@ ConverterDialog::ConverterDialog(QList <PlayListTrack *> tracks,  QWidget *paren
 {
     m_ui.setupUi(this);
     m_ui.tableWidget->verticalHeader()->setDefaultSectionSize(fontMetrics().height() + 3);
-    m_ui.tableWidget->verticalHeader()->setResizeMode(QHeaderView::Fixed);
+    m_ui.tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
 
     QStringList paths;
     MetaDataFormatter formatter("%if(%p&%t,%p - %t,%f) - %l");
@@ -72,7 +72,7 @@ ConverterDialog::ConverterDialog(QList <PlayListTrack *> tracks,  QWidget *paren
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Converter");
-    QString music_path = QDesktopServices::storageLocation(QDesktopServices::MusicLocation);
+    QString music_path = QStandardPaths::writableLocation(QStandardPaths::MusicLocation);
     m_ui.outDirEdit->setText(settings.value("out_dir", music_path).toString());
     m_ui.outFileEdit->setText(settings.value("file_name","%p - %t").toString());
     m_ui.overwriteCheckBox->setChecked(settings.value("overwrite",false).toBool());
@@ -272,7 +272,7 @@ void ConverterDialog::readPresets(const QString &path)
     QList <QVariantMap> dataList;
     while(!file.atEnd())
     {
-        QString line = QString::fromUtf8(file.readLine().trimmed().constData());
+        QString line = QString::fromUtf8(file.readLine().trimmed());
         if(!line.contains("="))
             continue;
         QString key = line.split("=").at(0);

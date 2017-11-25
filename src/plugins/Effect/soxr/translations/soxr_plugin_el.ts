@@ -4,22 +4,22 @@
 <context>
     <name>EffectSoXRFactory</name>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="32"/>
+        <location filename="../effectsoxrfactory.cpp" line="31"/>
         <source>SoX Resampler Plugin</source>
         <translation>Πρόσθετο επαναδειγματοληψίας SoX</translation>
     </message>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="53"/>
+        <location filename="../effectsoxrfactory.cpp" line="52"/>
         <source>About SoX Resampler Plugin</source>
         <translation>Περί του Πρόσθετου επαναδειγματοληψίας SoX</translation>
     </message>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="54"/>
+        <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>Qmmp SoX Resampler Plugin</source>
         <translation>Qmmp πρόσθετο επαναδειγματοληψίας SoX</translation>
     </message>
     <message>
-        <location filename="../effectsoxrfactory.cpp" line="55"/>
+        <location filename="../effectsoxrfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
@@ -28,16 +28,16 @@
     <name>SettingsDialog</name>
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
-        <source>SoX Resampler Settings</source>
-        <translation>Ρυθμίσεις του πρόσθετου επαναδειγματοληψίας SoX</translation>
+        <source>Sample Rate Converter Plugin Settings</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="29"/>
+        <location filename="../settingsdialog.ui" line="20"/>
         <source>Sample Rate (Hz):</source>
         <translation>Ρυθμός δειγματοληψίας (Hz):</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="49"/>
+        <location filename="../settingsdialog.ui" line="40"/>
         <source>Quality:</source>
         <translation>Ποιότητα:</translation>
     </message>

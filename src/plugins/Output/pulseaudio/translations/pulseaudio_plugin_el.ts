@@ -4,22 +4,22 @@
 <context>
     <name>OutputPulseAudioFactory</name>
     <message>
-        <location filename="../outputpulseaudiofactory.cpp" line="32"/>
+        <location filename="../outputpulseaudiofactory.cpp" line="31"/>
         <source>PulseAudio Plugin</source>
         <translation>Πρόσθετο PulseAudio</translation>
     </message>
     <message>
-        <location filename="../outputpulseaudiofactory.cpp" line="56"/>
+        <location filename="../outputpulseaudiofactory.cpp" line="55"/>
         <source>About PulseAudio Output Plugin</source>
         <translation>Σχετικά με το πρόσθετο εξόδου PulseAudio</translation>
     </message>
     <message>
-        <location filename="../outputpulseaudiofactory.cpp" line="57"/>
+        <location filename="../outputpulseaudiofactory.cpp" line="56"/>
         <source>Qmmp PulseAudio Output Plugin</source>
         <translation>Qmmp πρόσθετο εξόδου PulseAudio</translation>
     </message>
     <message>
-        <location filename="../outputpulseaudiofactory.cpp" line="58"/>
+        <location filename="../outputpulseaudiofactory.cpp" line="57"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

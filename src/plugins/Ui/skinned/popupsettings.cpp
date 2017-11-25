@@ -39,6 +39,7 @@ PopupSettings::PopupSettings(QWidget *parent)
     createMenu();
 }
 
+
 PopupSettings::~PopupSettings()
 {}
 

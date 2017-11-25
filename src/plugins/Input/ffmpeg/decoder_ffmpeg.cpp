@@ -270,13 +270,8 @@ bool DecoderFFmpeg::initialize()
 
     m_totalTime = input()->isSequential() ? 0 : ic->duration * 1000 / AV_TIME_BASE;
 
-#if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav 10
     if(c->codec_id == AV_CODEC_ID_SHORTEN) //ffmpeg bug workaround
         m_totalTime = 0;
-#else
-    if(c->codec_id == CODEC_ID_SHORTEN) //ffmpeg bug workaround
-        m_totalTime = 0;
-#endif
 
     Qmmp::AudioFormat format = Qmmp::PCM_UNKNOWM;
 
@@ -467,11 +462,8 @@ void DecoderFFmpeg::fillBuffer()
                 m_temp_pkt.size = 0;
                 continue;
             }
-#if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav 10
+
             if(m_seekTime && c->codec_id == AV_CODEC_ID_APE)
-#else
-            if(m_seekTime && c->codec_id == CODEC_ID_APE)
-#endif
             {
                 int64_t rescaledPts = av_rescale(m_pkt.pts,
                                                  AV_TIME_BASE * (int64_t)
@@ -481,11 +473,8 @@ void DecoderFFmpeg::fillBuffer()
             }
             m_seekTime = 0;
         }
-#if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav 10
+
         if(m_skipBytes > 0 && c->codec_id == AV_CODEC_ID_APE)
-#else
-        if(m_skipBytes > 0 && c->codec_id == CODEC_ID_APE)
-#endif
         {
             while (m_skipBytes > 0)
             {
@@ -524,11 +513,7 @@ void DecoderFFmpeg::fillBuffer()
             m_output_at = 0;
             m_temp_pkt.size = 0;
 
-#if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav 10
             if(c->codec_id == AV_CODEC_ID_SHORTEN || c->codec_id == AV_CODEC_ID_TWINVQ)
-#else
-            if(c->codec_id == CODEC_ID_SHORTEN || c->codec_id == CODEC_ID_TWINVQ)
-#endif
             {
                 if(m_pkt.data)
 #if (LIBAVCODEC_VERSION_INT >= ((57<<16)+(24<<8)+102)) //ffmpeg-3.0

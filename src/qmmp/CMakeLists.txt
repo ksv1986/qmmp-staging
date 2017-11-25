@@ -1,12 +1,5 @@
 project(libqmmp)
 
-# qt lib
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 SET(libqmmp_DEFINES
     LIB_DIR="/${LIB_DIR}"
     QMMP_INSTALL_PREFIX="${CMAKE_INSTALL_PREFIX}"
@@ -29,7 +22,6 @@ IF(QMMP_DEFAULT_OUTPUT)
     SET(libqmmp_DEFINES ${libqmmp_DEFINES} QMMP_DEFAULT_OUTPUT="${QMMP_DEFAULT_OUTPUT}")
     MESSAGE(STATUS "Default output: ${QMMP_DEFAULT_OUTPUT}")
 ENDIF(QMMP_DEFAULT_OUTPUT)
-
 
 
 SET(libqmmp_SRCS
@@ -134,15 +126,14 @@ SET(libqmmp_DEVEL_HDRS
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(libqmmp SHARED ${libqmmp_SRCS} ${libqmmp_HDRS})
-target_link_libraries(libqmmp ${QT_LIBRARIES})
-SET_TARGET_PROPERTIES(libqmmp PROPERTIES COMPILE_DEFINITIONS "${libqmmp_DEFINES}")
+target_link_libraries(libqmmp Qt5::Widgets)
 SET_TARGET_PROPERTIES(libqmmp PROPERTIES VERSION ${QMMP_VERSION} SOVERSION ${QMMP_SOVERSION} OUTPUT_NAME qmmp)
+target_compile_definitions(libqmmp PRIVATE ${libqmmp_DEFINES})
 install(TARGETS libqmmp LIBRARY DESTINATION ${LIB_DIR}
                         RUNTIME DESTINATION bin
                         ARCHIVE DESTINATION ${LIB_DIR})
+install(FILES ${libqmmp_DEVEL_HDRS} DESTINATION include/qmmp)
 
-IF(NOT ${CMAKE_SYSTEM_NAME} MATCHES Darwin)
-	install(FILES ${libqmmp_DEVEL_HDRS} DESTINATION include/qmmp)
-	configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qmmp.pc.in ${CMAKE_CURRENT_BINARY_DIR}/qmmp.pc @ONLY)
-	install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qmmp.pc DESTINATION ${LIB_DIR}/pkgconfig)
-ENDIF()
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qmmp.pc.in ${CMAKE_CURRENT_BINARY_DIR}/qmmp.pc @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qmmp.pc DESTINATION ${LIB_DIR}/pkgconfig)

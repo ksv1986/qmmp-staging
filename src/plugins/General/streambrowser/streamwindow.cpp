@@ -31,6 +31,7 @@
 #include <QMenu>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
+#include <algorithm>
 #include <qmmp/qmmpsettings.h>
 #include <qmmp/qmmp.h>
 #include <qmmpui/playlistmanager.h>
@@ -59,7 +60,7 @@ StreamWindow::StreamWindow(QWidget *parent) : QWidget(parent)
     //icecast table
     ui.icecastTableView->setModel(m_iceCastFilterModel);
     ui.icecastTableView->verticalHeader()->setDefaultSectionSize(fontMetrics().height() + 3);
-    ui.icecastTableView->verticalHeader()->setResizeMode(QHeaderView::Fixed);
+    ui.icecastTableView->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui.icecastTableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui.icecastTableView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui.icecastTableView, SIGNAL(customContextMenuRequested(QPoint)),
@@ -77,7 +78,7 @@ StreamWindow::StreamWindow(QWidget *parent) : QWidget(parent)
     //favorites table
     ui.favoritesTableView->setModel(m_favoritesFilterModel);
     ui.favoritesTableView->verticalHeader()->setDefaultSectionSize(fontMetrics().height() + 3);
-    ui.favoritesTableView->verticalHeader()->setResizeMode(QHeaderView::Fixed);
+    ui.favoritesTableView->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui.favoritesTableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui.favoritesTableView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui.favoritesTableView, SIGNAL(customContextMenuRequested(QPoint)),
@@ -231,7 +232,7 @@ void StreamWindow::removeFromFavorites()
     {
         rows_to_remove.append(m_favoritesFilterModel->mapToSource(index).row());
     }
-    qStableSort(rows_to_remove);
+    std::stable_sort(rows_to_remove.begin(), rows_to_remove.end());
     int prev_row = -1;
     for(int i = rows_to_remove.count() - 1; i >= 0; i -= 1 )
     {

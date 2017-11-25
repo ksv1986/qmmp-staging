@@ -1,19 +1,6 @@
 project(libopus)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 
 # libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
@@ -31,26 +18,20 @@ SET(libopus_SRCS
   decoderopusfactory.cpp
   opusmetadatamodel.cpp
   replaygainreader.cpp
-  opusfile.cpp
-  opusproperties.cpp
-  tdebug.cpp
 )
 
 SET(libopus_HDRS
   decoder_opus.h
   replaygainreader.h
-  opusfile.h
-  opusproperties.h
-  tdebug.h
 )
 
 SET(libopus_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libopus_RCC_SRCS ${libopus_RCCS})
+QT5_ADD_RESOURCES(libopus_RCC_SRCS ${libopus_RCCS})
 
 # user interface
 
-QT4_WRAP_UI(libopus_UIS_H ${libopus_UIS})
+QT5_WRAP_UI(libopus_UIS_H ${libopus_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -58,6 +39,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 IF(OPUS_FOUND)
 ADD_LIBRARY(opus MODULE ${libopus_SRCS} ${libopus_RCC_SRCS} ${libopus_HDRS})
 add_dependencies(opus qmmp)
-target_link_libraries(opus ${QT_LIBRARIES} libqmmp ${OPUS_LDFLAGS} ${TAGLIB_LDFLAGS})
+target_link_libraries(opus Qt5::Widgets -lqmmp ${OPUS_LDFLAGS} ${TAGLIB_LDFLAGS})
 install(TARGETS opus DESTINATION ${LIB_DIR}/qmmp/Input)
 ENDIF(OPUS_FOUND)

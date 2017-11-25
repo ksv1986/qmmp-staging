@@ -4,37 +4,37 @@
 <context>
     <name>DecoderMADFactory</name>
     <message>
-        <location filename="../decodermadfactory.cpp" line="119"/>
+        <location filename="../decodermadfactory.cpp" line="116"/>
         <source>MPEG Plugin</source>
         <translation>Wtyczka MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="122"/>
+        <location filename="../decodermadfactory.cpp" line="119"/>
         <source>MPEG Files</source>
         <translation>Pliki MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="278"/>
+        <location filename="../decodermadfactory.cpp" line="271"/>
         <source>About MPEG Audio Plugin</source>
         <translation>O wtyczce Audio MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="279"/>
+        <location filename="../decodermadfactory.cpp" line="272"/>
         <source>Qmmp MPEG Audio Plugin</source>
         <translation>Wtyczka MPEG Audio dla Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="280"/>
+        <location filename="../decodermadfactory.cpp" line="273"/>
         <source>Compiled against libmad version:</source>
         <translation>Skompilowane przy użyciu biblioteki libmad w wersji:</translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="284"/>
+        <location filename="../decodermadfactory.cpp" line="277"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermadfactory.cpp" line="285"/>
+        <location filename="../decodermadfactory.cpp" line="278"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Kod źródłowy oparty na projektach mq3 oraz madplay</translation>
     </message>

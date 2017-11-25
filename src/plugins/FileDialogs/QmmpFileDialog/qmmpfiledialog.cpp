@@ -41,6 +41,7 @@ void QmmpFileDialog::raise(const QString &dir, Mode mode, const QString &caption
 {
     m_dialog->setModeAndMask(dir, mode, mask);
     m_dialog->setWindowTitle(caption);
+    m_dialog->loadMountedVolumes();
     m_dialog->show();
     m_dialog->raise();
 }
@@ -91,5 +92,3 @@ QTranslator *QmmpFileDialogFactory::createTranslator(QObject *parent)
     translator->load(QString(":/qmmp_file_dialog_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(qmmpfiledialog, QmmpFileDialogFactory)

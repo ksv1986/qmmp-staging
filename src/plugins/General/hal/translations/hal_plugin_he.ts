@@ -4,32 +4,32 @@
 <context>
     <name>HalFactory</name>
     <message>
-        <location filename="../halfactory.cpp" line="32"/>
+        <location filename="../halfactory.cpp" line="31"/>
         <source>HAL Plugin</source>
         <translation>תוסף HAL</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="52"/>
+        <location filename="../halfactory.cpp" line="51"/>
         <source>About HAL Plugin</source>
         <translation>אודות תוסף HAL</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="53"/>
+        <location filename="../halfactory.cpp" line="52"/>
         <source>Qmmp HAL Plugin</source>
         <translation>תוסף HAL של Qmmp</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="54"/>
+        <location filename="../halfactory.cpp" line="53"/>
         <source>This plugin provides removable devices detection using HAL</source>
         <translation>תוסף זה מספק איתור של התקנים נשלפים באמצעות HAL</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="55"/>
+        <location filename="../halfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="56"/>
+        <location filename="../halfactory.cpp" line="55"/>
         <source>Based on Solid (KDE hardware library)</source>
         <translation>מבוססת על Solid (ספריית קושחה של KDE)</translation>
     </message>

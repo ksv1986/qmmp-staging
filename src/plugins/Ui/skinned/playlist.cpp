@@ -64,7 +64,7 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
     m_pl_browser = 0;
     m_pl_selector = 0;
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     QString wm_name = WindowSystem::netWindowManagerName();
     m_compiz = wm_name.contains("compiz", Qt::CaseInsensitive);
     if(wm_name.contains("metacity", Qt::CaseInsensitive) ||
@@ -74,7 +74,7 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
 #endif
         setWindowFlags (Qt::Dialog | Qt::FramelessWindowHint);
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     if(m_compiz)
     {
         setFixedSize(275*m_ratio, 116*m_ratio);
@@ -422,37 +422,28 @@ void PlayList::mouseMoveEvent (QMouseEvent *e)
 {
     if (m_resize)
     {
-#ifdef Q_WS_X11
+        int dx = m_ratio * 25;
+        int dy = m_ratio * 29;
+
+        int sx = ((e->x() - 275 * m_ratio) + 14) / dx;
+        int sy = ((e->y() - 116 * m_ratio) + 14) / dy;
+
+        sx = qMax(sx, 0);
+        sy = qMax(sy, 0);
+
+#ifdef QMMP_WS_X11
         if(m_compiz)
-#endif
-        {
-            int dx = m_ratio * 25;
-            int dy = m_ratio * 29;
-
-            int sx = ((e->x() - 275 * m_ratio) + 14) / dx;
-            int sy = ((e->y() - 116 * m_ratio) + 14) / dy;
-
-            sx = qMax(sx, 0);
-            sy = qMax(sy, 0);
-
-#ifdef Q_OS_WIN
-            resize(275 * m_ratio + dx * sx, 116 * m_ratio + dy * sy);
-#else
             setFixedSize(275 * m_ratio + dx * sx, 116 * m_ratio + dy * sy);
-#endif
-        }
-#ifdef Q_WS_X11
         else
-            resize (e->x() +25, e->y() +25);
 #endif
+            resize(275 * m_ratio + dx * sx, 116 * m_ratio + dy * sy);
 
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
         //avoid right corner moving during resize
         if(layoutDirection() == Qt::RightToLeft)
             WindowSystem::revertGravity(winId());
 #endif
-
     }
 }
 
@@ -517,10 +508,13 @@ void PlayList::readSettings()
     }
 }
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 bool PlayList::event (QEvent *event)
 {
-    if(event->type() == QEvent::WinIdChange || event->type() == QEvent::Show)
+    if(event->type() == QEvent::WinIdChange ||
+            event->type() == QEvent::WindowActivate ||
+            event->type() == QEvent::Show ||
+            event->type() == QEvent::ShowToParent)
     {
         WindowSystem::ghostWindow(winId());
         WindowSystem::setWinHint(winId(), "playlist", "Qmmp");
@@ -536,7 +530,7 @@ void PlayList::writeSettings()
     settings.setValue ("Skinned/pl_pos", this->pos());
 }
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 bool PlayList::useCompiz() const
 {
     return m_compiz;
@@ -686,7 +680,7 @@ void PlayList::setMinimalMode(bool b)
         m_height = height();
     m_shaded = b;
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     if(m_compiz)
     {
         if(m_shaded)

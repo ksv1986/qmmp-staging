@@ -27,6 +27,7 @@
 #include <QMenu>
 #include <QApplication>
 #include <QListWidget>
+#include <QOpenGLContext>
 #include <qmmp/soundcore.h>
 #include <qmmp/qmmp.h>
 #include "projectmwrapper.h"
@@ -37,21 +38,15 @@
 #endif
 
 ProjectMWidget::ProjectMWidget(QListWidget *listWidget, QWidget *parent)
-        : QGLWidget(parent)
+        : QOpenGLWidget(parent)
 {
     setMouseTracking(true);
     m_listWidget = listWidget;
     m_projectM = 0;
     m_menu = new QMenu(this);
     connect(SoundCore::instance(), SIGNAL(metaDataChanged()), SLOT(updateTitle()));
-#if QT_VERSION >= 0x040700
-    qDebug("ProjectMWidget: opengl version: %d.%d",
-           context()->format().majorVersion(),
-           context()->format().minorVersion());
     createActions();
-#endif
 }
-
 
 ProjectMWidget::~ProjectMWidget()
 {}
@@ -113,18 +108,13 @@ void ProjectMWidget::initializeGL()
         QStringList filters;
         filters << "*.prjm" << "*.milk";
         QFileInfoList l = presetDir.entryInfoList(filters);
-#ifdef PROJECTM_20
+
         RatingList list;
         list.push_back(3);
         list.push_back(3);
-#endif
         foreach (QFileInfo info, l)
         {
-#ifdef PROJECTM_20
             m_projectM->addPresetURL (info.absoluteFilePath().toStdString(), info.fileName().toStdString(), list);
-#else
-            m_projectM->addPresetURL (info.absoluteFilePath().toStdString(), info.fileName().toStdString(), 1);
-#endif
             m_listWidget->addItem(info.fileName());
             m_listWidget->setCurrentRow(0,QItemSelectionModel::Select);
         }

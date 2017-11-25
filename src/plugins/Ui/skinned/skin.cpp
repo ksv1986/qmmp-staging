@@ -566,7 +566,7 @@ void Skin::loadVisColor()
     {
         j++;
         QByteArray line = file.readLine ();
-        QString tmp = QString::fromLatin1(line.constData());
+        QString tmp = QString::fromLatin1(line);
         tmp = tmp.trimmed ();
         tmp.remove("\"");
         int i = tmp.indexOf ("//");

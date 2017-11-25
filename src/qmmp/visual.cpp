@@ -18,14 +18,14 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QCloseEvent>
+#include <QSettings>
+#include <QDir>
 #include <QObject>
 #include <QList>
 #include <QMetaObject>
 #include <QApplication>
-#include <QCloseEvent>
-#include <QSettings>
 #include <QDialog>
-#include <QDir>
 #include <QPluginLoader>
 #include "statehandler.h"
 #include "visualfactory.h"

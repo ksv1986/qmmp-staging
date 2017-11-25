@@ -31,7 +31,6 @@
 #include <winuser.h>
 #endif
 #include <qmmp/qmmp.h>
-#include "qmmpapplication.h"
 #include "qmmpstarter.h"
 
 int main(int argc, char *argv[])
@@ -40,7 +39,7 @@ int main(int argc, char *argv[])
     //allows to activate main window from other instances
     AllowSetForegroundWindow(ASFW_ANY);
 #endif
-    QmmpApplication a (argc, argv );
+    QApplication a (argc, argv );
     a.setApplicationName("qmmp");
     QIcon icon;
     icon.addFile(":/16x16/qmmp.png");
@@ -59,7 +58,7 @@ int main(int argc, char *argv[])
     a.installTranslator(&translator);
 
     QTranslator qt_translator;
-    qt_translator.load(QLibraryInfo::location (QLibraryInfo::TranslationsPath) + "/qt_" + locale);
+    qt_translator.load(QLibraryInfo::location (QLibraryInfo::TranslationsPath) + "/qtbase_" + locale);
     a.installTranslator(&qt_translator);
 
     QMMPStarter starter;

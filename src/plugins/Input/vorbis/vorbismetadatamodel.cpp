@@ -18,15 +18,13 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QtGlobal>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/vorbisfile.h>
 #include <taglib/xiphcomment.h>
 #include <taglib/tmap.h>
 #include "vorbismetadatamodel.h"
-
-#define QStringToTString_qt4(s) TagLib::String(s.toUtf8().constData(), TagLib::String::UTF8)
-#define TStringToQString_qt4(s) QString::fromUtf8(s.toCString(true)).trimmed()
 
 VorbisMetaDataModel::VorbisMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
 {
@@ -79,7 +77,7 @@ QPixmap VorbisMetaDataModel::cover()
     for(uint i = 0; i < list.size(); ++i)
     {
         TagLib::String value = list[i];
-        QByteArray block = QByteArray::fromBase64(TStringToQString_qt4(value).toLatin1());
+        QByteArray block = QByteArray::fromBase64(TStringToQString(value).toLatin1());
         if(block.size() < 32)
             continue;
         qint64 pos = 0;
@@ -136,25 +134,25 @@ const QString VorbisCommentModel::value(Qmmp::MetaData key)
     switch((int) key)
     {
     case Qmmp::TITLE:
-        return TStringToQString_qt4(tag->title());
+        return TStringToQString(tag->title());
     case Qmmp::ARTIST:
-        return TStringToQString_qt4(tag->artist());
+        return TStringToQString(tag->artist());
     case Qmmp::ALBUMARTIST:
         if(tag->fieldListMap()["ALBUMARTIST"].isEmpty())
             return QString();
         else
-            return TStringToQString_qt4(tag->fieldListMap()["ALBUMARTIST"].front());
+            return TStringToQString(tag->fieldListMap()["ALBUMARTIST"].front());
     case Qmmp::ALBUM:
-        return TStringToQString_qt4(tag->album());
+        return TStringToQString(tag->album());
     case Qmmp::COMMENT:
-        return TStringToQString_qt4(tag->comment());
+        return TStringToQString(tag->comment());
     case Qmmp::GENRE:
-        return TStringToQString_qt4(tag->genre());
+        return TStringToQString(tag->genre());
     case Qmmp::COMPOSER:
         if(tag->fieldListMap()["COMPOSER"].isEmpty())
             return QString();
         else
-            return TStringToQString_qt4(tag->fieldListMap()["COMPOSER"].front());
+            return TStringToQString(tag->fieldListMap()["COMPOSER"].front());
     case Qmmp::YEAR:
         return QString::number(tag->year());
     case Qmmp::TRACK:
@@ -163,7 +161,7 @@ const QString VorbisCommentModel::value(Qmmp::MetaData key)
         if(tag->fieldListMap()["DISCNUMBER"].isEmpty())
             return QString();
         else
-            return TStringToQString_qt4(tag->fieldListMap()["DISCNUMBER"].front());
+            return TStringToQString(tag->fieldListMap()["DISCNUMBER"].front());
     }
     return QString();
 }
@@ -175,7 +173,7 @@ void VorbisCommentModel::setValue(Qmmp::MetaData key, const QString &value)
 
     TagLib::Ogg::XiphComment *tag = m_model->m_tag;
 
-    TagLib::String str = QStringToTString_qt4(value);
+    TagLib::String str = QStringToTString(value);
 
     switch((int) key)
     {

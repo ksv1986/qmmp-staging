@@ -18,11 +18,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QTranslator>
 #include <QSettings>
 #include <QMessageBox>
-#include <QTranslator>
-#include <QtPlugin>
-
 extern "C"{
 #include <libavformat/avformat.h>
 #include <libavcodec/avcodec.h>
@@ -92,8 +90,6 @@ const DecoderProperties DecoderFFmpegFactory::properties() const
     filters << "*.wma" << "*.ape" << "*.tta" << "*.m4a" << "*.aac" << "*.ra" << "*.shn" << "*.vqf" << "*.ac3";
     filters = settings.value("FFMPEG/filters", filters).toStringList();
 
-    //remove unsupported filters
-#if (LIBAVCODEC_VERSION_INT >= ((54<<16) + (51<<8) + 100)) //libav 10
     if(!avcodec_find_decoder(AV_CODEC_ID_WMAV1))
         filters.removeAll("*.wma");
     if(!avcodec_find_decoder(AV_CODEC_ID_APE))
@@ -118,33 +114,6 @@ const DecoderProperties DecoderFFmpegFactory::properties() const
         filters.removeAll("*.mka");
     if(!avcodec_find_decoder(AV_CODEC_ID_TWINVQ))
         filters.removeAll("*.vqf");
-#else
-    if(!avcodec_find_decoder(CODEC_ID_WMAV1))
-        filters.removeAll("*.wma");
-    if(!avcodec_find_decoder(CODEC_ID_APE))
-        filters.removeAll("*.ape");
-    if(!avcodec_find_decoder(CODEC_ID_TTA))
-        filters.removeAll("*.tta");
-    if(!avcodec_find_decoder(CODEC_ID_AAC))
-        filters.removeAll("*.aac");
-    if(!avcodec_find_decoder(CODEC_ID_MP3))
-        filters.removeAll("*.mp3");
-    if(!avcodec_find_decoder(CODEC_ID_AAC) && !avcodec_find_decoder(CODEC_ID_ALAC))
-        filters.removeAll("*.m4a");
-    if(!avcodec_find_decoder(CODEC_ID_RA_288))
-        filters.removeAll("*.ra");
-    if(!avcodec_find_decoder(CODEC_ID_SHORTEN))
-        filters.removeAll("*.shn");
-    if(!avcodec_find_decoder(CODEC_ID_EAC3))
-        filters.removeAll("*.ac3");
-    if(!avcodec_find_decoder(CODEC_ID_DTS))
-        filters.removeAll("*.dts");
-    if(!avcodec_find_decoder(CODEC_ID_TRUEHD))
-        filters.removeAll("*.mka");
-    if(!avcodec_find_decoder(CODEC_ID_TWINVQ))
-        filters.removeAll("*.vqf");
-#endif
-
 
     DecoderProperties properties;
     properties.name = tr("FFmpeg Plugin");
@@ -281,5 +250,3 @@ QTranslator *DecoderFFmpegFactory::createTranslator(QObject *parent)
     translator->load(QString(":/ffmpeg_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(ffmpeg,DecoderFFmpegFactory)

@@ -56,7 +56,7 @@ class PlayList : public QWidget
         void setMinimalMode(bool b = true);
         void writeSettings();
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
         bool useCompiz() const;
 #endif
 
@@ -102,7 +102,7 @@ class PlayList : public QWidget
         void changeEvent (QEvent*);
         void closeEvent (QCloseEvent*);
         void keyPressEvent (QKeyEvent*);
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
         bool event (QEvent *event);
 #endif
         QMenu *m_addMenu;
@@ -134,7 +134,7 @@ class PlayList : public QWidget
         KeyboardManager* m_keyboardManager;
         QPointer <PlayListBrowser> m_pl_browser;
         PlayListSelector *m_pl_selector;
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
         bool m_compiz;
 #endif
 };

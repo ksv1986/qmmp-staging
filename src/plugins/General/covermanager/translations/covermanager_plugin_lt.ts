@@ -17,22 +17,22 @@
 <context>
     <name>CoverManagerFactory</name>
     <message>
-        <location filename="../covermanagerfactory.cpp" line="31"/>
+        <location filename="../covermanagerfactory.cpp" line="30"/>
         <source>Cover Manager Plugin</source>
         <translation>Viršelų tvarkyklės įskiepis</translation>
     </message>
     <message>
-        <location filename="../covermanagerfactory.cpp" line="51"/>
+        <location filename="../covermanagerfactory.cpp" line="50"/>
         <source>About Cover Manager Plugin</source>
         <translation>Apie viršelių tvarkyklės įskiepį</translation>
     </message>
     <message>
-        <location filename="../covermanagerfactory.cpp" line="52"/>
+        <location filename="../covermanagerfactory.cpp" line="51"/>
         <source>Qmmp Cover Manager Plugin</source>
         <translation>Qmmp viršelių tvarkyklės įskiepis</translation>
     </message>
     <message>
-        <location filename="../covermanagerfactory.cpp" line="53"/>
+        <location filename="../covermanagerfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Sukūrė: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

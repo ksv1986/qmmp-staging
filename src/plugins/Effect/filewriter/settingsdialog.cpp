@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 #include <QSettings>
-#include <QDesktopServices>
+#include <QStandardPaths>
 #include <qmmp/qmmp.h>
 #include <qmmpui/filedialog.h>
 #include <qmmpui/metadataformattermenu.h>
@@ -37,7 +37,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     connect(fileNameMenu, SIGNAL(patternSelected(QString)), SLOT(addTitleString(QString)));
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    QString outDir = QDesktopServices::storageLocation(QDesktopServices::MusicLocation);
+    QString outDir = QStandardPaths::writableLocation(QStandardPaths::MusicLocation);
     m_ui.outDirEdit->setText(settings.value("FileWriter/out_dir", outDir).toString());
     m_ui.outFileEdit->setText(settings.value("FileWriter/file_name", "%p%if(%p&%t, - ,)%t").toString());
     m_ui.qualitySpinBox->setValue(settings.value("FileWriter/vorbis_quality", 0.8).toFloat());

@@ -8,15 +8,11 @@ win32:TARGET = ../../../bin/qmmp
 QT += network
 
 HEADERS += qmmpstarter.h \
-           builtincommandlineoption.h \
-           lxdesupport.h \
-           qmmpapplication.h
+           builtincommandlineoption.h
 
 SOURCES += qmmpstarter.cpp \
            builtincommandlineoption.cpp \
-           lxdesupport.cpp \
-           main.cpp \
-           qmmpapplication.cpp
+           main.cpp
 
 RESOURCES = images/images.qrc translations/qmmp_locales.qrc
 

@@ -75,7 +75,7 @@ EqWidget::EqWidget (QWidget *parent)
     createActions();
     updatePositions();
     updateMask();
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     QString wm_name = WindowSystem::netWindowManagerName();
     if(wm_name.contains("metacity", Qt::CaseInsensitive) ||
        wm_name.contains("openbox", Qt::CaseInsensitive))
@@ -403,12 +403,12 @@ void EqWidget::importWinampEQF()
     QFile file(path);
     file.open(QIODevice::ReadOnly);
     file.read (header, 31);
-    if (QString::fromAscii(header).contains("Winamp EQ library file v1.1"))
+    if (QString::fromLatin1(header).contains("Winamp EQ library file v1.1"))
     {
         while (file.read (name, 257))
         {
             EQPreset* preset = new EQPreset;
-            preset->setText(QString::fromAscii(name));
+            preset->setText(QString::fromLatin1(name));
 
             file.read(bands,11);
 
@@ -431,10 +431,13 @@ void EqWidget::keyPressEvent (QKeyEvent *ke)
     QApplication::sendEvent(qobject_cast<MainWindow*>(parent())->playlist(), &event);
 }
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 bool EqWidget::event (QEvent *event)
 {
-    if(event->type() == QEvent::WinIdChange || event->type() == QEvent::Show)
+    if(event->type() == QEvent::WinIdChange ||
+            event->type() == QEvent::WindowActivate ||
+            event->type() == QEvent::Show ||
+            event->type() == QEvent::ShowToParent)
     {
         WindowSystem::ghostWindow(winId());
         WindowSystem::setWinHint(winId(), "equalizer", "Qmmp");

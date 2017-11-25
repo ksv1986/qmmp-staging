@@ -18,16 +18,13 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
+#include <QMessageBox>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/mpcfile.h>
 #include <taglib/apetag.h>
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
 #include <taglib/tfilestream.h>
-#endif
 #include "mpcmetadatamodel.h"
 #include "decoder_mpc.h"
 #include "decodermpcfactory.h"
@@ -72,13 +69,8 @@ QList<FileInfo *> DecoderMPCFactory::createPlayList(const QString &fileName, boo
 {
     FileInfo *info = new FileInfo(fileName);
 
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
     TagLib::FileStream stream(QStringToFileName(fileName), true);
     TagLib::MPC::File fileRef(&stream);
-#else
-    TagLib::MPC::File fileRef(QStringToFileName(fileName));
-#endif
-
     TagLib::APE::Tag *tag = useMetaData ? fileRef.APETag() : 0;
     if (tag && !tag->isEmpty())
     {
@@ -136,5 +128,3 @@ QTranslator *DecoderMPCFactory::createTranslator(QObject *parent)
     translator->load(QString(":/mpc_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(mpc,DecoderMPCFactory)

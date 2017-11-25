@@ -1,19 +1,6 @@
 project(libarchive)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 
 # libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
@@ -41,13 +28,13 @@ SET(libarchive_HDRS
 
 SET(libarchive_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libarchive_RCC_SRCS ${libarchive_RCCS})
+QT5_ADD_RESOURCES(libarchive_RCC_SRCS ${libarchive_RCCS})
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(LIBARCHIVE_FOUND)
 ADD_LIBRARY(archive MODULE ${libarchive_SRCS} ${libarchive_RCC_SRCS} ${libarchive_HDRS})
 add_dependencies(archive qmmp)
-target_link_libraries(archive ${QT_LIBRARIES} libqmmp ${LIBARCHIVE_LDFLAGS} ${TAGLIB_LDFLAGS})
+target_link_libraries(archive Qt5::Widgets libqmmp ${LIBARCHIVE_LDFLAGS} ${TAGLIB_LDFLAGS})
 install(TARGETS archive DESTINATION ${LIB_DIR}/qmmp/Input)
 ENDIF(LIBARCHIVE_FOUND)

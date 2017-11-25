@@ -24,7 +24,6 @@
 #include <QDialog>
 #include <QStringList>
 #include <qmmp/qmmp.h>
-#include <taglib/taglib.h>
 #include <taglib/tstring.h>
 #include <taglib/tstringlist.h>
 #include "ui_rgscandialog.h"
@@ -49,12 +48,10 @@ namespace TagLib
     {
         class XiphComment;
     }
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
     namespace MP4
     {
         class Tag;
     }
-#endif
 }
 
 /**
@@ -84,9 +81,7 @@ private:
     void writeAPETag(TagLib::APE::Tag *tag, ReplayGainInfoItem *item);
     void writeID3v2Tag(TagLib::ID3v2::Tag *tag, ReplayGainInfoItem *item);
     void writeVorbisComment(TagLib::Ogg::XiphComment *tag, ReplayGainInfoItem *item);
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
     void writeMP4Tag(TagLib::MP4::Tag *tag, ReplayGainInfoItem *item);
-#endif
     Ui::RGScanDialog m_ui;
     QList<RGScanner *> m_scanners;
     QList<ReplayGainInfoItem*> m_replayGainItemList;

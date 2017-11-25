@@ -92,82 +92,82 @@
 <context>
     <name>QMMPStarter</name>
     <message>
-        <location filename="../qmmpstarter.cpp" line="367"/>
+        <location filename="../qmmpstarter.cpp" line="373"/>
         <source>Usage: qmmp [options] [files]</source>
         <translation>Употреба: qmmp [опције] [фајлови]</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="368"/>
+        <location filename="../qmmpstarter.cpp" line="374"/>
         <source>Options:</source>
         <translation>Опције:</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="374"/>
+        <location filename="../qmmpstarter.cpp" line="380"/>
         <source>Start qmmp with the specified user interface</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="375"/>
+        <location filename="../qmmpstarter.cpp" line="381"/>
         <source>List all available user interfaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="376"/>
+        <location filename="../qmmpstarter.cpp" line="382"/>
         <source>Don&apos;t start the application</source>
         <translation>Не покрећи програм</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="378"/>
+        <location filename="../qmmpstarter.cpp" line="384"/>
         <source>Print version number and exit</source>
         <translation>Прикажи издање и изађи</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="380"/>
+        <location filename="../qmmpstarter.cpp" line="386"/>
         <source>Home page: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="381"/>
+        <location filename="../qmmpstarter.cpp" line="387"/>
         <source>Development page: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="382"/>
+        <location filename="../qmmpstarter.cpp" line="388"/>
         <source>Bug tracker: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="387"/>
+        <location filename="../qmmpstarter.cpp" line="393"/>
         <source>Command Line Help</source>
         <translation>Помоћ командне линије</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="400"/>
+        <location filename="../qmmpstarter.cpp" line="406"/>
         <source>QMMP version: %1</source>
         <translation>КуМП: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="401"/>
+        <location filename="../qmmpstarter.cpp" line="407"/>
         <source>Compiled with Qt version: %1</source>
         <translation>Комилован Кут издањем: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="402"/>
+        <location filename="../qmmpstarter.cpp" line="408"/>
         <source>Using Qt version: %1</source>
         <translation>Користим Кут издање: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="405"/>
+        <location filename="../qmmpstarter.cpp" line="411"/>
         <source>Qmmp Version</source>
         <translation>Издање Кумпа</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="422"/>
+        <location filename="../qmmpstarter.cpp" line="428"/>
         <source>User Interfaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="377"/>
+        <location filename="../qmmpstarter.cpp" line="383"/>
         <source>Display this text and exit</source>
         <translation>Прикажи овај текст и изађи</translation>
     </message>

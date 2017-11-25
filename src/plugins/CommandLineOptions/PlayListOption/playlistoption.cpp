@@ -161,5 +161,3 @@ QString PlayListOption::boolToText(bool enabled)
 {
     return QString(enabled ? "[+]" : "[-]");
 }
-
-Q_EXPORT_PLUGIN2(playlistoption, PlayListOption)

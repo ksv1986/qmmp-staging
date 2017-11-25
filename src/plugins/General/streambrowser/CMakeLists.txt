@@ -1,25 +1,6 @@
 project(libstreambrowser)
 
-
-SET(QT_USE_QTNETWORK TRUE)
-INCLUDE(FindQt4)
-
-include(${QT_USE_FILE})
-
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 
 # libqmmpui & libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
@@ -35,7 +16,7 @@ SET(libstreambrowser_SRCS
 SET(libstreambrowser_RCCS 
     translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libstreambrowser_RCC_SRCS ${libstreambrowser_RCCS})
+QT5_ADD_RESOURCES(libstreambrowser_RCC_SRCS ${libstreambrowser_RCCS})
 
 # user interface
 
@@ -43,12 +24,12 @@ SET(libstreambrowser_UIS
     streamwindow.ui
 )
 
-QT4_WRAP_UI(libstreambrowser_UIS_H ${libstreambrowser_UIS})
+QT5_WRAP_UI(libstreambrowser_UIS_H ${libstreambrowser_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(streambrowser MODULE ${libstreambrowser_SRCS} ${libstreambrowser_UIS_H} ${libstreambrowser_RCC_SRCS})
 add_dependencies(streambrowser qmmpui)
-target_link_libraries(streambrowser ${QT_LIBRARIES} qmmpui libqmmp)
+target_link_libraries(streambrowser Qt5::Widgets Qt5::Network -lqmmpui -lqmmp)
 install(TARGETS streambrowser DESTINATION ${LIB_DIR}/qmmp/General)

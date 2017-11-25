@@ -99,7 +99,7 @@ void ProjectMPlugin::onTimeout()
         m_projectMWidget->projectMInstance()->pcm()->addPCM16(m_buf);
     }
 
-    m_projectMWidget->updateGL();
+    m_projectMWidget->update();
 }
 
 void ProjectMPlugin::setFullScreen(bool yes)

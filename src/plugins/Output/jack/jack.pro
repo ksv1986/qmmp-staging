@@ -12,10 +12,6 @@ SOURCES += outputjackfactory.cpp \
 
 RESOURCES = translations/translations.qrc
 
-contains(CONFIG, WITH_NEW_JACK){
-    DEFINES += JACK_NEW_API
-}
-
 PKGCONFIG += jack soxr
 
 target.path = $$LIB_DIR/qmmp/Output

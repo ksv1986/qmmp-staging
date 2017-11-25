@@ -1,22 +1,5 @@
 project(libmpris)
 
-
-SET (QT_USE_QTDBUS TRUE)
-
-INCLUDE(FindQt4)
-
-include(${QT_USE_FILE})
-
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
-
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 # libqmmpui & libqmmp
@@ -36,17 +19,17 @@ SET(libmpris_SRCS
 
 SET(libmpris_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libmpris_RCC_SRCS ${libmpris_RCCS})
+QT5_ADD_RESOURCES(libmpris_RCC_SRCS ${libmpris_RCCS})
 
 # user interface
 
 
-# QT4_WRAP_UI(libmpris_UIS_H ${libmpris_UIS})
+# QT5_WRAP_UI(libmpris_UIS_H ${libmpris_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(mpris MODULE ${libmpris_SRCS} ${libmpris_RCC_SRCS})
 add_dependencies(mpris qmmpui)
-target_link_libraries(mpris ${QT_LIBRARIES} qmmpui libqmmp)
+target_link_libraries(mpris Qt5::Widgets Qt5::DBus -lqmmpui -lqmmp)
 install(TARGETS mpris DESTINATION ${LIB_DIR}/qmmp/General)

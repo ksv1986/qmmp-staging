@@ -4,22 +4,22 @@
 <context>
     <name>MPRISFactory</name>
     <message>
-        <location filename="../mprisfactory.cpp" line="31"/>
+        <location filename="../mprisfactory.cpp" line="30"/>
         <source>MPRIS Plugin</source>
         <translation>MPRIS 外掛</translation>
     </message>
     <message>
-        <location filename="../mprisfactory.cpp" line="51"/>
+        <location filename="../mprisfactory.cpp" line="50"/>
         <source>About MPRIS Plugin</source>
         <translation>關於 MPRIS 外掛</translation>
     </message>
     <message>
-        <location filename="../mprisfactory.cpp" line="52"/>
+        <location filename="../mprisfactory.cpp" line="51"/>
         <source>Qmmp MPRIS Plugin</source>
         <translation>Qmmp MPRIS 外掛</translation>
     </message>
     <message>
-        <location filename="../mprisfactory.cpp" line="53"/>
+        <location filename="../mprisfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

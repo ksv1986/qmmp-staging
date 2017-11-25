@@ -54,6 +54,7 @@ private:
 class TwoPanelFileDialogFactory : public QObject, public FileDialogFactory
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.FileDialogFactoryInterface.1.0")
     Q_INTERFACES(FileDialogFactory)
 public:
     FileDialog* create();

@@ -71,22 +71,22 @@
 <context>
     <name>FileOpsFactory</name>
     <message>
-        <location filename="../fileopsfactory.cpp" line="31"/>
+        <location filename="../fileopsfactory.cpp" line="30"/>
         <source>File Operations Plugin</source>
         <translation>Πρόσθετο λειτουργιών αρχείων</translation>
     </message>
     <message>
-        <location filename="../fileopsfactory.cpp" line="51"/>
+        <location filename="../fileopsfactory.cpp" line="50"/>
         <source>About File Operations Plugin</source>
         <translation>Σχετικά με το πρόσθετο λειτουργιών αρχείων</translation>
     </message>
     <message>
-        <location filename="../fileopsfactory.cpp" line="52"/>
+        <location filename="../fileopsfactory.cpp" line="51"/>
         <source>Qmmp File Operations Plugin</source>
         <translation>Qmmp πρόσθετο λειτουργιών αρχείων</translation>
     </message>
     <message>
-        <location filename="../fileopsfactory.cpp" line="53"/>
+        <location filename="../fileopsfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

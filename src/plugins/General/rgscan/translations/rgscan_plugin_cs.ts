@@ -64,16 +64,16 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="130"/>
-        <location filename="../rgscandialog.cpp" line="241"/>
+        <location filename="../rgscandialog.cpp" line="122"/>
+        <location filename="../rgscandialog.cpp" line="233"/>
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="140"/>
-        <location filename="../rgscandialog.cpp" line="141"/>
-        <location filename="../rgscandialog.cpp" line="165"/>
-        <location filename="../rgscandialog.cpp" line="236"/>
+        <location filename="../rgscandialog.cpp" line="132"/>
+        <location filename="../rgscandialog.cpp" line="133"/>
+        <location filename="../rgscandialog.cpp" line="157"/>
+        <location filename="../rgscandialog.cpp" line="228"/>
         <source>%1 dB</source>
         <translation>%1 dB</translation>
     </message>
@@ -81,47 +81,47 @@
 <context>
     <name>RGScanFactory</name>
     <message>
-        <location filename="../rgscanfactory.cpp" line="30"/>
+        <location filename="../rgscanfactory.cpp" line="29"/>
         <source>ReplayGain Scanner Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="51"/>
+        <location filename="../rgscanfactory.cpp" line="50"/>
         <source>About ReplayGain Scanner Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="52"/>
+        <location filename="../rgscanfactory.cpp" line="51"/>
         <source>ReplayGain Scanner Plugin for Qmmp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="53"/>
+        <location filename="../rgscanfactory.cpp" line="52"/>
         <source>This plugin scans audio files and gives information for volume normalization</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="54"/>
+        <location filename="../rgscanfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="55"/>
+        <location filename="../rgscanfactory.cpp" line="54"/>
         <source>Based on source code by:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="56"/>
+        <location filename="../rgscanfactory.cpp" line="55"/>
         <source>David Robinson &lt;David@Robinson.org&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="57"/>
+        <location filename="../rgscanfactory.cpp" line="56"/>
         <source>Glen Sawyer &lt;mp3gain@hotmail.com&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../rgscanfactory.cpp" line="58"/>
+        <location filename="../rgscanfactory.cpp" line="57"/>
         <source>Frank Klemm</source>
         <translation type="unfinished"></translation>
     </message>

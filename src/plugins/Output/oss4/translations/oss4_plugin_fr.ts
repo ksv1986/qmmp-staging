@@ -4,22 +4,22 @@
 <context>
     <name>OutputOSS4Factory</name>
     <message>
-        <location filename="../outputoss4factory.cpp" line="38"/>
+        <location filename="../outputoss4factory.cpp" line="37"/>
         <source>OSS4 Plugin</source>
         <translation>Greffon OSS4</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="58"/>
+        <location filename="../outputoss4factory.cpp" line="57"/>
         <source>About OSS4 Output Plugin</source>
         <translation>À propos du greffon de sortie OSS4</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="59"/>
+        <location filename="../outputoss4factory.cpp" line="58"/>
         <source>Qmmp OSS4 Output Plugin</source>
         <translation>Greffon de sortie OSS4 pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="60"/>
+        <location filename="../outputoss4factory.cpp" line="59"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

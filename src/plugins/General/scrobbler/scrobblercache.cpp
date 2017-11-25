@@ -125,7 +125,7 @@ QList<SongInfo> ScrobblerCache::load()
 
     while (!file.atEnd())
     {
-        line = QString::fromUtf8(file.readLine().constData()).trimmed();
+        line = QString::fromUtf8(file.readLine()).trimmed();
         if ((s = line.indexOf("=")) < 0)
             continue;
 

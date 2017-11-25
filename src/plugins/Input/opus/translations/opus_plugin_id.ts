@@ -4,75 +4,70 @@
 <context>
     <name>DecoderOpusFactory</name>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="45"/>
+        <location filename="../decoderopusfactory.cpp" line="44"/>
         <source>Opus Plugin</source>
         <translation>Plugin Opus</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="48"/>
+        <location filename="../decoderopusfactory.cpp" line="47"/>
         <source>Ogg Opus Files</source>
         <translation>File Opus Ogg</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="122"/>
+        <location filename="../decoderopusfactory.cpp" line="121"/>
         <source>About Opus Audio Plugin</source>
         <translation>Tentang Plugin Audio Opus</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="123"/>
+        <location filename="../decoderopusfactory.cpp" line="122"/>
         <source>Qmmp Opus Audio Plugin</source>
         <translation>Plugin Audio Opus Qmmp </translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="124"/>
+        <location filename="../decoderopusfactory.cpp" line="123"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../decoderopusfactory.cpp" line="125"/>
-        <source>This plugin includes code from TagLib library</source>
-        <translation>Plugin ini mencakup kode dari pustaka TagLib</translation>
     </message>
 </context>
 <context>
     <name>OpusMetaDataModel</name>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="54"/>
+        <location filename="../opusmetadatamodel.cpp" line="55"/>
         <source>Length</source>
         <translation>Panjang</translation>
     </message>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="55"/>
+        <location filename="../opusmetadatamodel.cpp" line="56"/>
         <source>Sample rate</source>
         <translation>Sample rate</translation>
     </message>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="55"/>
+        <location filename="../opusmetadatamodel.cpp" line="56"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="56"/>
+        <location filename="../opusmetadatamodel.cpp" line="57"/>
         <source>Channels</source>
         <translation>Saluran</translation>
     </message>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="57"/>
+        <location filename="../opusmetadatamodel.cpp" line="58"/>
         <source>Bitrate</source>
         <translation>Bitrate</translation>
     </message>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="57"/>
+        <location filename="../opusmetadatamodel.cpp" line="58"/>
         <source>kbps</source>
         <translation>kbps</translation>
     </message>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="58"/>
+        <location filename="../opusmetadatamodel.cpp" line="59"/>
         <source>File size</source>
         <translation>Ukuran file</translation>
     </message>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="58"/>
+        <location filename="../opusmetadatamodel.cpp" line="59"/>
         <source>KB</source>
         <translation>KB</translation>
     </message>

@@ -38,9 +38,11 @@ public:
     ~QmmpFileDialogImpl();
 
     void setModeAndMask(const QString&,FileDialog::Mode m, const QStringList& mask = QStringList());
+    void loadMountedVolumes();
     QStringList selectedFiles ();
 
 protected slots:
+    void on_mountPointsListWidget_itemClicked(QListWidgetItem *item);
     void on_lookInComboBox_activated(const QString&);
     void on_upToolButton_clicked();
     void on_fileListView_doubleClicked(const QModelIndex&);

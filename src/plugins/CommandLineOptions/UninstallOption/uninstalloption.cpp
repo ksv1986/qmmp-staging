@@ -71,5 +71,3 @@ QTranslator *UninstallOption::createTranslator(QObject *parent)
     translator->load(QString(":/uninstall_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(uninstalloption, UninstallOption)

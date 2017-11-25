@@ -21,12 +21,14 @@
 #include <QtGlobal>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
-#include "opusfile.h"
+#include <taglib/opusfile.h>
+#include <taglib/tfilestream.h>
 #include "replaygainreader.h"
 
 ReplayGainReader::ReplayGainReader(const QString &path)
 {
-    TagLib::Ogg::Opus::File fileRef(QStringToFileName(path));
+    TagLib::FileStream stream(QStringToFileName(path), true);
+    TagLib::Ogg::Opus::File fileRef(&stream);
     if(fileRef.tag())
         readVorbisComment(fileRef.tag());
 }

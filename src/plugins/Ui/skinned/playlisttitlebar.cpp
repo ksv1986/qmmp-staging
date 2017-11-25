@@ -59,7 +59,7 @@ PlayListTitleBar::PlayListTitleBar(QWidget *parent)
 
     readSettings();
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     if(m_pl->useCompiz())
         m_pl->setFixedSize(settings.value ("Skinned/pl_size", QSize (m_ratio*275, m_ratio*116)).toSize());
     else
@@ -189,7 +189,7 @@ void PlayListTitleBar::mouseMoveEvent(QMouseEvent* event)
     QPoint npos = event->globalPos()-pos;
     if (m_shaded && m_resize)
     {
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
         //avoid right corner moving during resize
         if(layoutDirection() == Qt::RightToLeft)
             WindowSystem::revertGravity(m_pl->winId());
@@ -200,7 +200,7 @@ void PlayListTitleBar::mouseMoveEvent(QMouseEvent* event)
         sx = qMax(sx, 0);
         resize(275 * m_ratio + dx * sx, height());
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
         if(m_pl->useCompiz())
 
             m_pl->setFixedSize(275 * m_ratio + dx * sx, m_pl->height());

@@ -1,20 +1,5 @@
 project(libgnomehotkey)
 
-
-SET (QT_USE_QTDBUS TRUE)
-
-INCLUDE(FindQt4)
-
-include(${QT_USE_FILE})
-
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 # libqmmpui & libqmmp
@@ -29,7 +14,7 @@ SET(libgnomehotkey_SRCS
 
 SET(libgnomehotkey_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libgnomehotkey_RCC_SRCS ${libgnomehotkey_RCCS})
+QT5_ADD_RESOURCES(libgnomehotkey_RCC_SRCS ${libgnomehotkey_RCCS})
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
@@ -37,5 +22,5 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(gnomehotkey MODULE ${libgnomehotkey_SRCS} ${libgnomehotkey_RCC_SRCS})
 add_dependencies(gnomehotkey qmmpui)
-target_link_libraries(gnomehotkey ${QT_LIBRARIES} qmmpui libqmmp)
+target_link_libraries(gnomehotkey Qt5::Widgets Qt5::DBus -lqmmpui -lqmmp)
 install(TARGETS gnomehotkey DESTINATION ${LIB_DIR}/qmmp/General)

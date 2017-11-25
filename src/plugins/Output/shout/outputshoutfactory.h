@@ -32,6 +32,7 @@ class ShoutClient;
 class OutputShoutFactory : public QObject, OutputFactory
 {
 Q_OBJECT
+Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.OutputFactoryInterface.1.0")
 Q_INTERFACES(OutputFactory)
 
 public:

@@ -37,27 +37,27 @@
 <context>
     <name>CopyPasteFactory</name>
     <message>
-        <location filename="../copypastefactory.cpp" line="30"/>
+        <location filename="../copypastefactory.cpp" line="29"/>
         <source>Copy/Paste Plugin</source>
         <translation>Plugin Salin/Tempel</translation>
     </message>
     <message>
-        <location filename="../copypastefactory.cpp" line="50"/>
+        <location filename="../copypastefactory.cpp" line="49"/>
         <source>About Copy/Paste Plugin</source>
         <translation>Tentang Plugin Salin/Tempel</translation>
     </message>
     <message>
-        <location filename="../copypastefactory.cpp" line="51"/>
+        <location filename="../copypastefactory.cpp" line="50"/>
         <source>Qmmp Copy/Paste Plugin</source>
         <translation>Plugin Salin/Tempel Qmmp</translation>
     </message>
     <message>
-        <location filename="../copypastefactory.cpp" line="52"/>
+        <location filename="../copypastefactory.cpp" line="51"/>
         <source>This plugin allows one to copy selected tracks from one playlist to another</source>
         <translation>Plugin ini membolehkan untuk menyalin track terpilih dari salah satu daftarmain ke yang lain</translation>
     </message>
     <message>
-        <location filename="../copypastefactory.cpp" line="53"/>
+        <location filename="../copypastefactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

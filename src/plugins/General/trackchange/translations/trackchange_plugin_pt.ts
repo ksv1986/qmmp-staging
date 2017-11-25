@@ -40,27 +40,27 @@
 <context>
     <name>TrackChangeFactory</name>
     <message>
-        <location filename="../trackchangefactory.cpp" line="31"/>
+        <location filename="../trackchangefactory.cpp" line="30"/>
         <source>Track Change Plugin</source>
         <translation>Suplemento Track Change</translation>
     </message>
     <message>
-        <location filename="../trackchangefactory.cpp" line="51"/>
+        <location filename="../trackchangefactory.cpp" line="50"/>
         <source>About Track Change Plugin</source>
         <translation>Sobre o suplemento Track Change</translation>
     </message>
     <message>
-        <location filename="../trackchangefactory.cpp" line="52"/>
+        <location filename="../trackchangefactory.cpp" line="51"/>
         <source>Qmmp Track Change Plugin</source>
         <translation>Suplemento Qmmp Track Change</translation>
     </message>
     <message>
-        <location filename="../trackchangefactory.cpp" line="53"/>
+        <location filename="../trackchangefactory.cpp" line="52"/>
         <source>This plugin executes external command when current track is changed</source>
         <translation>Este suplemento executa comandos externos se a faixa em reprodução for alterada</translation>
     </message>
     <message>
-        <location filename="../trackchangefactory.cpp" line="54"/>
+        <location filename="../trackchangefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

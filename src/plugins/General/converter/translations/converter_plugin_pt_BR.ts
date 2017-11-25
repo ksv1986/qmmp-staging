@@ -4,29 +4,29 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../converter.cpp" line="131"/>
-        <location filename="../converter.cpp" line="231"/>
+        <location filename="../converter.cpp" line="129"/>
+        <location filename="../converter.cpp" line="229"/>
         <source>Cancelled</source>
         <translation>Cancelada</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="146"/>
-        <location filename="../converter.cpp" line="213"/>
+        <location filename="../converter.cpp" line="144"/>
+        <location filename="../converter.cpp" line="211"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="178"/>
+        <location filename="../converter.cpp" line="176"/>
         <source>Converting</source>
         <translation>Conversão</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="242"/>
+        <location filename="../converter.cpp" line="240"/>
         <source>Encoding</source>
         <translation>Codificação</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="280"/>
+        <location filename="../converter.cpp" line="278"/>
         <source>Finished</source>
         <translation>Terminada</translation>
     </message>
@@ -134,27 +134,27 @@
 <context>
     <name>ConverterFactory</name>
     <message>
-        <location filename="../converterfactory.cpp" line="30"/>
+        <location filename="../converterfactory.cpp" line="29"/>
         <source>Converter Plugin</source>
         <translation>Plugin Converter</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="51"/>
+        <location filename="../converterfactory.cpp" line="50"/>
         <source>About Converter Plugin</source>
         <translation>Sobre o plugin Converter</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="52"/>
+        <location filename="../converterfactory.cpp" line="51"/>
         <source>Qmmp Converter Plugin</source>
         <translation>Plugin Qmmp Converter</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="53"/>
+        <location filename="../converterfactory.cpp" line="52"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
         <translation>Este plugin converte os arquivos de áudio suportados para outros formatos através da utilização de codificadores externos</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="55"/>
+        <location filename="../converterfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

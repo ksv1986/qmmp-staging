@@ -18,9 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
+#include <QMessageBox>
 #include "wavpackmetadatamodel.h"
 #include "decoder_wavpack.h"
 #include "decoderwavpackfactory.h"
@@ -165,5 +164,3 @@ QTranslator *DecoderWavPackFactory::createTranslator(QObject *parent)
     translator->load(QString(":/wavpack_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(wavpack,DecoderWavPackFactory)

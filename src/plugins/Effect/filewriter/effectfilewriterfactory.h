@@ -30,6 +30,7 @@
 class EffectFileWriterFactory : public QObject, public EffectFactory
 {
 Q_OBJECT
+Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.EffectFactoryInterface.1.0")
 Q_INTERFACES(EffectFactory)
 
 public:

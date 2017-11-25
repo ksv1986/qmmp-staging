@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,7 +20,6 @@
 
 #include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
 #include "mplayermetadatamodel.h"
 #include "settingsdialog.h"
 #include "mplayerengine.h"
@@ -94,5 +93,3 @@ QTranslator *MplayerEngineFactory::createTranslator(QObject *parent)
     translator->load(QString(":/mplayer_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(mplayer,MplayerEngineFactory)

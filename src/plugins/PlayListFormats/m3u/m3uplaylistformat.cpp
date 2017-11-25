@@ -35,7 +35,7 @@ const PlayListFormatProperties M3UPlaylistFormat::properties() const
 QList<PlayListTrack *> M3UPlaylistFormat::decode(const QByteArray &contents)
 {
     QList<PlayListTrack*> out;
-    QStringList splitted = QString::fromUtf8(contents.constData()).split("\n");
+    QStringList splitted = QString::fromUtf8(contents).split("\n");
     if(splitted.isEmpty())
         return out;
 
@@ -100,5 +100,3 @@ QByteArray M3UPlaylistFormat::encode(const QList<PlayListTrack*> &contents, cons
     }
     return out.join("\n").toUtf8();
 }
-
-Q_EXPORT_PLUGIN2(m3uplaylistformat,M3UPlaylistFormat)

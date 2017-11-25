@@ -4,27 +4,27 @@
 <context>
     <name>OutputWaveOutFactory</name>
     <message>
-        <location filename="../outputwaveoutfactory.cpp" line="31"/>
+        <location filename="../outputwaveoutfactory.cpp" line="29"/>
         <source>WaveOut Plugin</source>
         <translation>Modul WaveOut</translation>
     </message>
     <message>
-        <location filename="../outputwaveoutfactory.cpp" line="62"/>
+        <location filename="../outputwaveoutfactory.cpp" line="60"/>
         <source>About WaveOut Output Plugin</source>
         <translation>O výstupním modulu WaveOut</translation>
     </message>
     <message>
-        <location filename="../outputwaveoutfactory.cpp" line="63"/>
+        <location filename="../outputwaveoutfactory.cpp" line="61"/>
         <source>Qmmp WaveOut Output Plugin</source>
         <translation>Výstupní modul Qmmp WaveOut</translation>
     </message>
     <message>
-        <location filename="../outputwaveoutfactory.cpp" line="64"/>
+        <location filename="../outputwaveoutfactory.cpp" line="62"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../outputwaveoutfactory.cpp" line="65"/>
+        <location filename="../outputwaveoutfactory.cpp" line="63"/>
         <source>Based on aacDECdrop player</source>
         <translation>Založeno na přehrávači aacDECdrop</translation>
     </message>

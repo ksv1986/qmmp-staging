@@ -20,11 +20,10 @@
 
 #include <QDialog>
 #include <QMessageBox>
-#include <QFile>
-#include <QTextCodec>
 #include <QSettings>
 #include <QTranslator>
-#include <QtPlugin>
+#include <QFile>
+#include <QTextCodec>
 #include <mad.h>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
@@ -33,9 +32,7 @@
 #include <taglib/apetag.h>
 #include <taglib/tfile.h>
 #include <taglib/mpegfile.h>
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
 #include <taglib/tfilestream.h>
-#endif
 #include "mpegmetadatamodel.h"
 #include "replaygainreader.h"
 #include "settingsdialog.h"
@@ -142,12 +139,8 @@ QList<FileInfo *> DecoderMADFactory::createPlayList(const QString &fileName, boo
     FileInfo *info = new FileInfo(fileName);
     TagLib::Tag *tag = 0;
 
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
     TagLib::FileStream stream(QStringToFileName(fileName), true);
     TagLib::MPEG::File fileRef(&stream, TagLib::ID3v2::FrameFactory::instance());
-#else
-    TagLib::MPEG::File fileRef(QStringToFileName(fileName));
-#endif
 
     if (useMetaData)
     {
@@ -293,5 +286,3 @@ QTranslator *DecoderMADFactory::createTranslator(QObject *parent)
     translator->load(QString(":/mad_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(mad, DecoderMADFactory)

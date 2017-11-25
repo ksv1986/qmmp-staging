@@ -83,12 +83,7 @@ QPixmap FFmpegMetaDataModel::cover()
 #else
         c = m_in->streams[idx]->codec;
 #endif
-
-#if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav 10
         if (c->codec_type == AVMEDIA_TYPE_VIDEO && c->codec_id == AV_CODEC_ID_MJPEG)
-#else
-        if (c->codec_type == AVMEDIA_TYPE_VIDEO && c->codec_id == CODEC_ID_MJPEG)
-#endif
             break;
     }
     if (c)

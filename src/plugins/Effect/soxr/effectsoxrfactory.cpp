@@ -20,7 +20,6 @@
 
 #include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
 #include "soxresampler.h"
@@ -62,5 +61,3 @@ QTranslator *EffectSoXRFactory::createTranslator(QObject *parent)
     translator->load(QString(":/soxr_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(soxr, EffectSoXRFactory)

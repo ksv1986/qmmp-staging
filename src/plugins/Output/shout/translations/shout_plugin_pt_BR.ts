@@ -4,27 +4,27 @@
 <context>
     <name>OutputShoutFactory</name>
     <message>
-        <location filename="../outputshoutfactory.cpp" line="41"/>
+        <location filename="../outputshoutfactory.cpp" line="40"/>
         <source>Icecast Plugin</source>
         <translation>Plugin Icecast</translation>
     </message>
     <message>
-        <location filename="../outputshoutfactory.cpp" line="66"/>
+        <location filename="../outputshoutfactory.cpp" line="65"/>
         <source>About Icecast Output Plugin</source>
         <translation>Sobre o plugin de saída Icecast</translation>
     </message>
     <message>
-        <location filename="../outputshoutfactory.cpp" line="67"/>
+        <location filename="../outputshoutfactory.cpp" line="66"/>
         <source>Qmmp Icecast Output Plugin</source>
         <translation>Plugin de saída Icecast</translation>
     </message>
     <message>
-        <location filename="../outputshoutfactory.cpp" line="68"/>
+        <location filename="../outputshoutfactory.cpp" line="67"/>
         <source>Compiled against libshout-%1</source>
         <translation>Compilado com libshout-%1</translation>
     </message>
     <message>
-        <location filename="../outputshoutfactory.cpp" line="69"/>
+        <location filename="../outputshoutfactory.cpp" line="68"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

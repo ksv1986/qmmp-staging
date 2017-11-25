@@ -4,32 +4,32 @@
 <context>
     <name>DecoderVorbisFactory</name>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="49"/>
+        <location filename="../decodervorbisfactory.cpp" line="46"/>
         <source>Ogg Vorbis Plugin</source>
         <translation>Ogg Vorbis įskiepis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="52"/>
+        <location filename="../decodervorbisfactory.cpp" line="49"/>
         <source>Ogg Vorbis Files</source>
         <translation>Ogg Vorbis bylos</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="131"/>
+        <location filename="../decodervorbisfactory.cpp" line="124"/>
         <source>About Ogg Vorbis Audio Plugin</source>
         <translation>Apie Ogg Vorbis audio įskiepį</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="132"/>
+        <location filename="../decodervorbisfactory.cpp" line="125"/>
         <source>Qmmp Ogg Vorbis Audio Plugin</source>
         <translation>Qmmp Ogg Vorbis audio įskiepis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="133"/>
+        <location filename="../decodervorbisfactory.cpp" line="126"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Sukūrė: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="134"/>
+        <location filename="../decodervorbisfactory.cpp" line="127"/>
         <source>Source code based on mq3 project</source>
         <translation>Išvesties kodas sukurtas mq3 pagrindu</translation>
     </message>
@@ -37,42 +37,42 @@
 <context>
     <name>VorbisMetaDataModel</name>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="58"/>
+        <location filename="../vorbismetadatamodel.cpp" line="56"/>
         <source>Length</source>
         <translation>Trukmė</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="59"/>
+        <location filename="../vorbismetadatamodel.cpp" line="57"/>
         <source>Sample rate</source>
         <translation>Dažnis</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="59"/>
+        <location filename="../vorbismetadatamodel.cpp" line="57"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="60"/>
+        <location filename="../vorbismetadatamodel.cpp" line="58"/>
         <source>Channels</source>
         <translation>Kanalai</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="61"/>
+        <location filename="../vorbismetadatamodel.cpp" line="59"/>
         <source>Bitrate</source>
         <translation>Kokybė</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="61"/>
+        <location filename="../vorbismetadatamodel.cpp" line="59"/>
         <source>kbps</source>
         <translation>kbps</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="62"/>
+        <location filename="../vorbismetadatamodel.cpp" line="60"/>
         <source>File size</source>
         <translation>Bylos dydis</translation>
     </message>
     <message>
-        <location filename="../vorbismetadatamodel.cpp" line="62"/>
+        <location filename="../vorbismetadatamodel.cpp" line="60"/>
         <source>KB</source>
         <translation>KB</translation>
     </message>

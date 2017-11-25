@@ -19,11 +19,10 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QTranslator>
-#include <QtPlugin>
 #include "kdenotifyfactory.h"
 #include "kdenotify.h"
 #include "settingsdialog.h"
+
 
 
 const GeneralProperties KdeNotifyFactory::properties() const
@@ -61,5 +60,3 @@ QTranslator *KdeNotifyFactory::createTranslator(QObject *parent)
     translator->load(QString(":/kdenotify_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(kdenotify, KdeNotifyFactory)

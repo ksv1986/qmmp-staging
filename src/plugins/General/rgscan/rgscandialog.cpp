@@ -35,15 +35,11 @@
 #include <taglib/wavpackfile.h>
 #include <taglib/id3v2tag.h>
 #include <taglib/textidentificationframe.h>
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
 #include <taglib/mp4file.h>
-#endif
-#include <taglib/taglib.h>
 #include "rgscanner.h"
 #include "gain_analysis.h"
 #include "rgscandialog.h"
 
-#define QStringToTString_qt4(s) TagLib::String(s.toUtf8().constData(), TagLib::String::UTF8)
 #define FILE_SKIPPED (Qt::UserRole + 1)
 
 struct ReplayGainInfoItem
@@ -57,7 +53,7 @@ RGScanDialog::RGScanDialog(QList <PlayListTrack *> tracks,  QWidget *parent) : Q
 {
     m_ui.setupUi(this);
     m_ui.tableWidget->verticalHeader()->setDefaultSectionSize(fontMetrics().height() + 3);
-    m_ui.tableWidget->verticalHeader()->setResizeMode(QHeaderView::Fixed);
+    m_ui.tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
 
     QStringList paths;
     MetaDataFormatter formatter("%if(%p&%t,%p - %t,%f) - %l");
@@ -79,12 +75,8 @@ RGScanDialog::RGScanDialog(QList <PlayListTrack *> tracks,  QWidget *parent) : Q
                 ext == "flac" || //native flac
                 ext == "oga" || //ogg flac
                 ext == "ogg" ||  //ogg vorbis
-                ext == "wv"  //wavpack
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
-                || ext == "m4a") //aac (mp4 container)
-#else
-                )
-#endif
+                ext == "wv" || //wavpack
+                ext == "m4a") //aac (mp4 container)
         {
             paths.append(track->url());
             QString name = formatter.format(track);
@@ -293,12 +285,12 @@ QString RGScanDialog::getAlbumName(const QString &url)
 
 TagLib::String RGScanDialog::gainToString(double value)
 {
-    return QStringToTString_qt4(QString("%1 dB").arg(value, 0, 'f', 2));
+    return QStringToTString(QString("%1 dB").arg(value, 0, 'f', 2));
 }
 
 TagLib::String RGScanDialog::peakToString(double value)
 {
-    return QStringToTString_qt4(QString("%1").arg(value, 0, 'f', 6));
+    return QStringToTString(QString("%1").arg(value, 0, 'f', 6));
 }
 
 TagLib::StringList RGScanDialog::gainToStringList(double value)
@@ -376,10 +368,8 @@ void RGScanDialog::writeVorbisComment(TagLib::Ogg::XiphComment *tag, ReplayGainI
     }
 }
 
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
 void RGScanDialog::writeMP4Tag(TagLib::MP4::Tag *tag, ReplayGainInfoItem *item)
 {
-
     if(m_ui.trackCheckBox->isChecked())
     {
         tag->setItem("----:com.apple.iTunes:replaygain_track_gain",
@@ -395,7 +385,6 @@ void RGScanDialog::writeMP4Tag(TagLib::MP4::Tag *tag, ReplayGainInfoItem *item)
                      gainToStringList(item->info[Qmmp::REPLAYGAIN_ALBUM_PEAK]));
     }
 }
-#endif
 
 void RGScanDialog::on_writeButton_clicked()
 {
@@ -439,13 +428,11 @@ void RGScanDialog::on_writeButton_clicked()
             writeAPETag(file.APETag(true), item);
             file.save();
         }
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 10))
         else if(ext == "m4a") //MPEG-4 Part 14
         {
             TagLib::MP4::File file(qPrintable(item->url));
             writeMP4Tag(file.tag(), item);
             file.save();
         }
-#endif
     }
 }

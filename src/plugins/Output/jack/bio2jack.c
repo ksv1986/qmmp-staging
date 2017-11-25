@@ -1662,13 +1662,9 @@ JACK_OpenEx(int *deviceID, unsigned int bits_per_channel,
   /* FIXME: maybe we should keep different latency values for input vs output? */
   if(drv->num_output_channels > 0)
   {
-#ifdef JACK_NEW_API
     jack_latency_range_t range;
     jack_port_get_latency_range(drv->output_port[0], JackPlaybackLatency, &range);
     periods = range.max / periodSize;
-#else
-    periods = jack_port_get_total_latency(drv->client, drv->output_port[0]) / periodSize;
-#endif
 
     drv->latencyMS = periodSize * periods * 1000 / (drv->jack_sample_rate *
                                                     (drv->bits_per_channel / 8 *
@@ -1676,13 +1672,10 @@ JACK_OpenEx(int *deviceID, unsigned int bits_per_channel,
   }
   else if(drv->num_input_channels > 0)
   {
-#ifdef JACK_NEW_API
     jack_latency_range_t range;
     jack_port_get_latency_range(drv->output_port[0], JackPlaybackLatency, &range);
     periods = range.max / periodSize;
-#else
-    periods = jack_port_get_total_latency(drv->client, drv->output_port[0]) / periodSize;
-#endif
+
     drv->latencyMS =
       periodSize * periods * 1000 / (drv->jack_sample_rate *
                                      (drv->bits_per_channel / 8 *
@@ -2576,13 +2569,9 @@ JACK_GetJackOutputLatency(int deviceID)
 
   if(drv->client && drv->num_input_channels)
   {
-#ifdef JACK_NEW_API
     jack_latency_range_t range;
     jack_port_get_latency_range(drv->output_port[0], JackCaptureLatency, &range);
     return_val = range.max;
-#else
-    return_val = jack_port_get_total_latency(drv->client, drv->output_port[0]);
-#endif
   }
 
   TRACE("got latency of %ld frames\n", return_val);
@@ -2600,14 +2589,9 @@ JACK_GetJackInputLatency(int deviceID)
 
   if(drv->client && drv->num_input_channels)
   {
-#ifdef JACK_NEW_API
     jack_latency_range_t range;
     jack_port_get_latency_range(drv->output_port[0], JackPlaybackLatency, &range);
     return_val = range.max;
-#else
-    return_val = jack_port_get_total_latency(drv->client, drv->output_port[0]);
-#endif
-
   }
   TRACE("got latency of %ld frames\n", return_val);
 

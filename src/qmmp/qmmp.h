@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,9 +22,9 @@
 
 #include <QString>
 
-#define QMMP_VERSION_MAJOR 0
-#define QMMP_VERSION_MINOR 11
-#define QMMP_VERSION_PATCH 0
+#define QMMP_VERSION_MAJOR 1
+#define QMMP_VERSION_MINOR 2
+#define QMMP_VERSION_PATCH 1
 #define QMMP_VERSION_STABLE 0
 
 #define QMMP_VERSION_INT (QMMP_VERSION_MAJOR<<16 | QMMP_VERSION_MINOR<<8 | QMMP_VERSION_PATCH)

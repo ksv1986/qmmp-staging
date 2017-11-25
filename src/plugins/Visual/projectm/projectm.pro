@@ -2,8 +2,6 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/Visual/projectm
 
-QT += opengl
-
 HEADERS += projectmwidget.h \
            visualprojectmfactory.h \
            projectmplugin.h \
@@ -14,10 +12,6 @@ SOURCES += projectmplugin.cpp \
            projectmwrapper.cpp
 
 RESOURCES = translations/translations.qrc
-
-contains(CONFIG, WITH_PROJECTM20){
-    DEFINES += PROJECTM_20
-}
 
 unix {
     PKGCONFIG += libprojectM

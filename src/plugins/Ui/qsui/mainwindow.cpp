@@ -132,6 +132,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_ui.statusbar->addPermanentWidget(m_timeLabel, 1);
     m_ui.statusbar->setMinimumWidth(2);
     m_statusLabel->setMinimumWidth(2);
+    m_ui.statusbar->setStyleSheet("QStatusBar::item { border: 0px solid black };");
     //volume
     m_volumeSlider = new VolumeSlider(this);
     m_volumeSlider->setFocusPolicy(Qt::NoFocus);

@@ -25,7 +25,7 @@
 
 class QEvent;
 class QWheelEvent;
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 class StatusIconPopupWidget;
 #endif
 
@@ -41,11 +41,13 @@ public:
 
      void setToolTip(const QString &tip);
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 private:
     bool event(QEvent *e);
     void wheelEvent(QWheelEvent *e);
     void showToolTip();
+    
+    bool hasToolTipEvent();
     QPointer<StatusIconPopupWidget> m_popupWidget;
     QString m_message;
 #endif

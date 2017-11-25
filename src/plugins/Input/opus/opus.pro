@@ -5,19 +5,12 @@ TARGET = $$PLUGINS_PREFIX/Input/opus
 HEADERS += decoderopusfactory.h \
     decoder_opus.h \
     opusmetadatamodel.h \
-    replaygainreader.h \
-    opusproperties.h \
-    opusfile.h \
-    tdebug.h
+    replaygainreader.h
 
 SOURCES += decoder_opus.cpp \
     decoderopusfactory.cpp \
     opusmetadatamodel.cpp \
-    replaygainreader.cpp \
-    opusproperties.cpp \
-    opusfile.cpp \
-    tdebug.cpp
-
+    replaygainreader.cpp
 
 RESOURCES = translations/translations.qrc
 

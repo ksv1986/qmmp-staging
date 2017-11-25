@@ -4,42 +4,42 @@
 <context>
     <name>EffectLADSPAFactory</name>
     <message>
-        <location filename="../effectladspafactory.cpp" line="32"/>
+        <location filename="../effectladspafactory.cpp" line="31"/>
         <source>LADSPA Plugin</source>
         <translation>תוסף LADSPA</translation>
     </message>
     <message>
-        <location filename="../effectladspafactory.cpp" line="52"/>
+        <location filename="../effectladspafactory.cpp" line="51"/>
         <source>About LADSPA Host for Qmmp</source>
         <translation>אודות מארח LADSPA עבור Qmmp</translation>
     </message>
     <message>
-        <location filename="../effectladspafactory.cpp" line="53"/>
+        <location filename="../effectladspafactory.cpp" line="52"/>
         <source>LADSPA Host for Qmmp</source>
         <translation>מארח LADSPA עבור Qmmp</translation>
     </message>
     <message>
-        <location filename="../effectladspafactory.cpp" line="54"/>
+        <location filename="../effectladspafactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../effectladspafactory.cpp" line="55"/>
+        <location filename="../effectladspafactory.cpp" line="54"/>
         <source>Based on the LADSPA Host for BMP</source>
         <translation>מבוסס על LADSPA Host עבור BMP</translation>
     </message>
     <message>
-        <location filename="../effectladspafactory.cpp" line="56"/>
+        <location filename="../effectladspafactory.cpp" line="55"/>
         <source>BMP-ladspa developers:</source>
         <translation>מפתחי BMP-ladspa:</translation>
     </message>
     <message>
-        <location filename="../effectladspafactory.cpp" line="57"/>
+        <location filename="../effectladspafactory.cpp" line="56"/>
         <source>Nick Lamb &lt;njl195@zepler.org.uk&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../effectladspafactory.cpp" line="58"/>
+        <location filename="../effectladspafactory.cpp" line="57"/>
         <source>Giacomo Lozito &lt;city_hunter@users.sf.net&gt;</source>
         <translation type="unfinished"></translation>
     </message>

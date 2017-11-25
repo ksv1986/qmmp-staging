@@ -1,7 +1,7 @@
 [Desktop Entry]
 X-Desktop-File-Install-Version=0.11
 Name=Qmmp
-Comment=Qt-based Multimedia Player
+Comment=Qt4-based Multimedia Player
 GenericName=Audio player
 Exec=qmmp %F
 Icon=qmmp
@@ -14,6 +14,5 @@ X-KDE-StartupNotify=false
 
 
 # Translations
+Comment[he]=נגן מולטימדיה מבוסס Qt4
 GenericName[he]=נגן שמע
-Name[he]=Qmmp
-Icon[he]=qmmp

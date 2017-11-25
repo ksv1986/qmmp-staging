@@ -61,23 +61,23 @@
 <context>
     <name>TwoPanelFileDialogImpl</name>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="326"/>
-        <location filename="../twopanelfiledialogimpl.cpp" line="342"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="322"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="338"/>
         <source>Add</source>
         <translation>Προσθήκη</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="344"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="340"/>
         <source>Directories</source>
         <translation>Καταλόγοι</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="356"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="352"/>
         <source>Save</source>
         <translation>Αποθήκευση</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="463"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="459"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>Το %1 υπάρχει ήδη.

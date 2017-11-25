@@ -3,20 +3,8 @@ project(liboss4)
 INCLUDE(CheckIncludeFile)
 INCLUDE(CheckCXXSourceCompiles)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 #oss4
 include_directories(/usr/lib/oss/include /usr/local/lib/oss/include)
 CHECK_INCLUDE_FILE(sys/soundcard.h SYS_SOUNDCARD_H_FOUND)
@@ -73,17 +61,17 @@ SET(liboss4_HDRS
 
 SET(liboss4_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(liboss4_RCC_SRCS ${liboss4_RCCS})
+QT5_ADD_RESOURCES(liboss4_RCC_SRCS ${liboss4_RCCS})
 
 SET(liboss4_UIS
     settingsdialog.ui
 )
 
 IF(OSS4_FOUND)
-QT4_WRAP_UI(liboss4_UIS_H ${liboss4_UIS})
+QT5_WRAP_UI(liboss4_UIS_H ${liboss4_UIS})
 
 ADD_LIBRARY(oss4 MODULE ${liboss4_SRCS} ${liboss4_UIS_H} ${liboss4_RCC_SRCS} ${liboss4_HDRS})
 add_dependencies(oss4 qmmp)
-target_link_libraries(oss4 ${QT_LIBRARIES} libqmmp)
+target_link_libraries(oss4 Qt5::Widgets -lqmmp)
 install(TARGETS oss4 DESTINATION ${LIB_DIR}/qmmp/Output)
 ENDIF(OSS4_FOUND)

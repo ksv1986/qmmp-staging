@@ -20,13 +20,10 @@
 
 #include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/vorbisfile.h>
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
 #include <taglib/tfilestream.h>
-#endif
 #include "replaygainreader.h"
 #include "decoder_vorbis.h"
 #include "vorbismetadatamodel.h"
@@ -77,12 +74,8 @@ QList<FileInfo *> DecoderVorbisFactory::createPlayList(const QString &fileName, 
 {
     FileInfo *info = new FileInfo(fileName);
 
-#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 8))
     TagLib::FileStream stream(QStringToFileName(fileName), true);
     TagLib::Ogg::Vorbis::File fileRef(&stream);
-#else
-    TagLib::Ogg::Vorbis::File fileRef(QStringToFileName(fileName));
-#endif
     TagLib::Ogg::XiphComment *tag = useMetaData ? fileRef.tag() : 0;
 
     if (tag && !tag->isEmpty())
@@ -142,5 +135,3 @@ QTranslator *DecoderVorbisFactory::createTranslator(QObject *parent)
     translator->load(QString(":/vorbis_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(vorbis,DecoderVorbisFactory)

@@ -4,32 +4,32 @@
 <context>
     <name>MplayerEngineFactory</name>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="35"/>
+        <location filename="../mplayerenginefactory.cpp" line="34"/>
         <source>Mplayer Plugin</source>
         <translation>Πρόσθετο Mplayer</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="38"/>
+        <location filename="../mplayerenginefactory.cpp" line="37"/>
         <source>Video Files</source>
         <translation>Αρχεία βίντεο</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="84"/>
+        <location filename="../mplayerenginefactory.cpp" line="83"/>
         <source>About MPlayer Plugin</source>
         <translation>Σχετικά με το πρόσθετο MPlayer</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="85"/>
+        <location filename="../mplayerenginefactory.cpp" line="84"/>
         <source>Qmmp MPlayer Plugin</source>
         <translation>Qmmp πρόσθετο MPlayer</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="86"/>
+        <location filename="../mplayerenginefactory.cpp" line="85"/>
         <source>This plugin uses MPlayer as backend</source>
         <translation>Αυτό το πρόσθετο χρησιμοποιεί το MPlayer ως σύστημα υποστήριξης</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="87"/>
+        <location filename="../mplayerenginefactory.cpp" line="86"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

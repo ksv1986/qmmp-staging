@@ -22,27 +22,27 @@
 <context>
     <name>HotkeyFactory</name>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="32"/>
+        <location filename="../hotkeyfactory.cpp" line="31"/>
         <source>Global Hotkey Plugin</source>
         <translation>Greffon de raccourci clavier global</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="52"/>
+        <location filename="../hotkeyfactory.cpp" line="51"/>
         <source>About Global Hotkey Plugin</source>
         <translation>À propos du greffon de raccourci clavier global</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="53"/>
+        <location filename="../hotkeyfactory.cpp" line="52"/>
         <source>Qmmp Global Hotkey Plugin</source>
         <translation>Greffon de raccourci clavier global pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="54"/>
+        <location filename="../hotkeyfactory.cpp" line="53"/>
         <source>This plugin adds support for multimedia keys or global key combinations</source>
         <translation>Ce greffon ajoute un support pour des touches multimédia ou des combinaisons globales de touches</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="55"/>
+        <location filename="../hotkeyfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

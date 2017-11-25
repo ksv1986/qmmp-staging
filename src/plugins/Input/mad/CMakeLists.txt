@@ -1,19 +1,6 @@
 project(libmad)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 
 # libqmmp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
@@ -43,7 +30,7 @@ SET(libmad_HDRS
 
 SET(libmad_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libmad_RCC_SRCS ${libmad_RCCS})
+QT5_ADD_RESOURCES(libmad_RCC_SRCS ${libmad_RCCS})
 
 # user interface
 
@@ -52,7 +39,7 @@ SET(libmad_UIS
     settingsdialog.ui
 )
 
-QT4_WRAP_UI(libmad_UIS_H ${libmad_UIS})
+QT5_WRAP_UI(libmad_UIS_H ${libmad_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -60,6 +47,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 IF(MAD_FOUND)
 ADD_LIBRARY(mad MODULE ${libmad_SRCS} ${libmad_UIS_H} ${libmad_RCC_SRCS} ${libmad_HDRS})
 add_dependencies(mad qmmp)
-target_link_libraries(mad ${QT_LIBRARIES} libqmmp ${MAD_LDFLAGS} ${TAGLIB_LDFLAGS})
+target_link_libraries(mad Qt5::Widgets -lqmmp ${MAD_LDFLAGS} ${TAGLIB_LDFLAGS})
 install(TARGETS mad DESTINATION ${LIB_DIR}/qmmp/Input)
 ENDIF(MAD_FOUND)

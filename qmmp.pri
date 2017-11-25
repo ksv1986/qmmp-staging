@@ -5,7 +5,6 @@
 unix: QMAKE_DISTCLEAN += -r .build
 
 #Some conf to redirect intermediate stuff in separate dirs
-
 UI_DIR=./.build/ui/
 MOC_DIR=./.build/moc/
 OBJECTS_DIR=./.build/obj
@@ -14,10 +13,17 @@ RCC_DIR=./.build/rcc
 #Defines
 
 DEFINES += QT_NO_CAST_FROM_BYTEARRAY QT_STRICT_ITERATORS
+DEFINES += QMMP_WS_X11
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x050400
+
+#Configuration
+
+CONFIG -= depend_includepath
+QT += widgets
 
 #Version
 
-QMMP_VERSION = 0.11.0
+QMMP_VERSION = 1.2.1
 
 #Comment/uncomment this if you want to change plugins list
 
@@ -42,7 +48,6 @@ CONFIG += SOXR_PLUGIN
 CONFIG += LADSPA_PLUGIN
 CONFIG += FILEWRITER_PLUGIN
 CONFIG += PROJECTM_PLUGIN
-CONFIG += UDISKS_PLUGIN #deprecated
 CONFIG += UDISKS2_PLUGIN
 CONFIG += HAL_PLUGIN
 CONFIG += SID_PLUGIN
@@ -52,10 +57,7 @@ CONFIG += SHOUT_PLUGIN
 #additional features
 
 CONFIG += WITH_ENCA
-CONFIG += WITH_PROJECTM20
 CONFIG += WITH_SKINNED
 CONFIG += WITH_QSUI
-CONFIG += WITH_NEW_JACK
-#CONFIG += FFMPEG_LEGACY #uncomment for ffmpeg < 0.9 or libav < 0.8
 
 CONFIG -= $$DISABLED_PLUGINS

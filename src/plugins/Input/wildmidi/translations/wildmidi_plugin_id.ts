@@ -4,32 +4,32 @@
 <context>
     <name>DecoderWildMidiFactory</name>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="51"/>
+        <location filename="../decoderwildmidifactory.cpp" line="50"/>
         <source>WildMidi Plugin</source>
         <translation>Plugin WildMidi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="56"/>
+        <location filename="../decoderwildmidifactory.cpp" line="55"/>
         <source>Midi Files</source>
         <translation>File Midi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="110"/>
+        <location filename="../decoderwildmidifactory.cpp" line="109"/>
         <source>About WildMidi Audio Plugin</source>
         <translation>Tentang Plugin Audio WildMidi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="111"/>
+        <location filename="../decoderwildmidifactory.cpp" line="110"/>
         <source>Qmmp WildMidi Audio Plugin</source>
         <translation>Plugin Audio WildMidi Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="112"/>
+        <location filename="../decoderwildmidifactory.cpp" line="111"/>
         <source>This plugin uses WildMidi library to play midi files</source>
         <translation>Plugin ini menggunakan pustaka WildMidi untuk memainkan file midi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="113"/>
+        <location filename="../decoderwildmidifactory.cpp" line="112"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

@@ -20,7 +20,6 @@
 
 #include <QMessageBox>
 #include <QTranslator>
-#include <QtPlugin>
 #include <qmmp/qmmp.h>
 #include "filewriterplugin.h"
 #include "settingsdialog.h"
@@ -62,5 +61,3 @@ QTranslator *EffectFileWriterFactory::createTranslator(QObject *parent)
     translator->load(QString(":/filewriter_plugin_") + locale);
     return translator;
 }
-
-Q_EXPORT_PLUGIN2(filewriter,EffectFileWriterFactory)

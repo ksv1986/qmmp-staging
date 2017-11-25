@@ -2,21 +2,7 @@ project(libhotkey)
 
 INCLUDE(CheckIncludeFile)
 
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-ADD_DEFINITIONS(${X11_CFLAGS})
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-SET(QT_INCLUDES
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../
-)
 
 include_directories(${X11_INCLUDE_DIRS})
 link_directories(${X11_LIBRARY_DIRS})
@@ -45,7 +31,7 @@ SET(libhotkey_RCCS
     translations/translations.qrc
 )
 
-QT4_ADD_RESOURCES(libhotkey_RCC_SRCS ${libhotkey_RCCS})
+QT5_ADD_RESOURCES(libhotkey_RCC_SRCS ${libhotkey_RCCS})
 
 # user interface
 
@@ -55,7 +41,7 @@ SET(libhotkey_UIS
     hotkeydialog.ui
 )
 
-QT4_WRAP_UI(libhotkey_UIS_H ${libhotkey_UIS})
+QT5_WRAP_UI(libhotkey_UIS_H ${libhotkey_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -64,6 +50,6 @@ IF(X11_FOUND)
 set_property(SOURCE hotkeymanager_x11.cpp PROPERTY SKIP_AUTOMOC ON)
 ADD_LIBRARY(hotkey MODULE ${libhotkey_SRCS} ${libhotkey_UIS_H} ${libhotkey_RCC_SRCS})
 add_dependencies(hotkey qmmpui)
-target_link_libraries(hotkey ${QT_LIBRARIES} qmmpui libqmmp ${X11_LDFLAGS})
+target_link_libraries(hotkey Qt5::Widgets Qt5::X11Extras -lqmmpui -lqmmp ${X11_LDFLAGS})
 install(TARGETS hotkey DESTINATION ${LIB_DIR}/qmmp/General)
 ENDIF(X11_FOUND)

@@ -20,6 +20,7 @@
 #ifndef HOTKEYMANAGER_H
 #define HOTKEYMANAGER_H
 
+#include <QObject>
 #include <QString>
 #include <QTableWidgetItem>
 #include <QList>
@@ -80,13 +81,13 @@ public:
     static QList<long> ignModifiersList();
     static quint32 keycodeToKeysym(quint32 keycode);
 
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
 protected:
     virtual bool eventFilter(QObject* o, QEvent* e);
 #endif
 
 private:
-#ifdef Q_WS_X11
+#ifdef QMMP_WS_X11
     static void ensureModifiers();
     QList <Hotkey *> m_grabbedKeys;
     static long m_alt_mask;

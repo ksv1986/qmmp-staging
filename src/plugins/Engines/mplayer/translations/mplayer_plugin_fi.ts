@@ -4,32 +4,32 @@
 <context>
     <name>MplayerEngineFactory</name>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="35"/>
+        <location filename="../mplayerenginefactory.cpp" line="34"/>
         <source>Mplayer Plugin</source>
         <translation>Mplayer-liitännäinen</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="38"/>
+        <location filename="../mplayerenginefactory.cpp" line="37"/>
         <source>Video Files</source>
         <translation>Videotiedostot</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="84"/>
+        <location filename="../mplayerenginefactory.cpp" line="83"/>
         <source>About MPlayer Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="85"/>
+        <location filename="../mplayerenginefactory.cpp" line="84"/>
         <source>Qmmp MPlayer Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="86"/>
+        <location filename="../mplayerenginefactory.cpp" line="85"/>
         <source>This plugin uses MPlayer as backend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="87"/>
+        <location filename="../mplayerenginefactory.cpp" line="86"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

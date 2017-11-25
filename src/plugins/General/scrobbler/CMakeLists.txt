@@ -1,20 +1,5 @@
 project(libscrobbler)
 
-
-
-SET(QT_USE_QTNETWORK TRUE)
-INCLUDE(FindQt4)
-
-include(${QT_USE_FILE})
-
-# qt plugin
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-ADD_DEFINITIONS(-DQT_PLUGIN)
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_SHARED)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 # libqmmpui
@@ -38,7 +23,7 @@ SET(libscrobbler_HDRS
 
 SET(libscrobbler_RCCS translations/translations.qrc)
 
-QT4_ADD_RESOURCES(libscrobbler_RCC_SRCS ${libscrobbler_RCCS})
+QT5_ADD_RESOURCES(libscrobbler_RCC_SRCS ${libscrobbler_RCCS})
 
 # user interface
 
@@ -47,7 +32,7 @@ SET(libscrobbler_UIS
     settingsdialog.ui
 )
 
-QT4_WRAP_UI(libscrobbler_UIS_H ${libscrobbler_UIS})
+QT5_WRAP_UI(libscrobbler_UIS_H ${libscrobbler_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -55,5 +40,5 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 ADD_LIBRARY(scrobbler MODULE ${libscrobbler_SRCS} ${libscrobbler_UIS_H}
   ${libscrobbler_RCC_SRCS} ${libscrobbler_HDRS})
 add_dependencies(scrobbler qmmpui)
-target_link_libraries(scrobbler ${QT_LIBRARIES} qmmpui libqmmp)
+target_link_libraries(scrobbler Qt5::Widgets Qt5::Network -lqmmpui -lqmmp)
 install(TARGETS scrobbler DESTINATION ${LIB_DIR}/qmmp/General)

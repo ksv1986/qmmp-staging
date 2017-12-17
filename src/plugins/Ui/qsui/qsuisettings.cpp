@@ -161,6 +161,7 @@ void QSUISettings::readSettings()
     m_ui.lengthsCheckBox->setChecked(settings.value("pl_show_lengths", true).toBool());
     m_ui.alignCheckBox->setChecked(settings.value("pl_align_numbers", false).toBool());
     m_ui.anchorCheckBox->setChecked(settings.value("pl_show_anchor", false).toBool());
+    m_ui.showSplittersCheckBox->setChecked(settings.value("pl_show_splitters", true).toBool());
     m_ui.popupCheckBox->setChecked(settings.value("pl_show_popup", false).toBool());
     //tabs
     m_ui.tabsClosableCheckBox->setChecked(settings.value("pl_tabs_closable", false).toBool());
@@ -193,6 +194,7 @@ void QSUISettings::readSettings()
     m_ui.plTextCurrentColor->setColor(settings.value("pl_current_text_color", current).toString());
     m_ui.plTextHlCurrentColor->setColor(settings.value("pl_hl_text_color", highlighted).toString());
     m_ui.plGrBgColor->setColor(settings.value("pl_group_bg", group_bg).toString());
+    m_ui.plSplitterColor->setColor(settings.value("pl_splitter_color", normal).toString());
     m_ui.plGrTextColor->setColor(settings.value("pl_group_text", group_text).toString());
     //toolbar
     int index = m_ui.toolBarIconSizeComboBox->findData(settings.value("toolbar_icon_size", -1).toInt());
@@ -209,6 +211,7 @@ void QSUISettings::writeSettings()
     settings.setValue("pl_show_lengths", m_ui.lengthsCheckBox->isChecked());
     settings.setValue("pl_align_numbers", m_ui.alignCheckBox->isChecked());
     settings.setValue("pl_show_anchor", m_ui.anchorCheckBox->isChecked());
+    settings.setValue("pl_show_splitters", m_ui.showSplittersCheckBox->isChecked());
     settings.setValue("pl_show_popup", m_ui.popupCheckBox->isChecked());
     settings.setValue("pl_tabs_closable", m_ui.tabsClosableCheckBox->isChecked());
     settings.setValue("pl_show_new_pl_button", m_ui.showNewPLCheckBox->isChecked());
@@ -229,6 +232,7 @@ void QSUISettings::writeSettings()
     settings.setValue("pl_current_text_color", m_ui.plTextCurrentColor->colorName());
     settings.setValue("pl_hl_text_color", m_ui.plTextHlCurrentColor->colorName());
     settings.setValue("pl_group_bg", m_ui.plGrBgColor->colorName());
+    settings.setValue("pl_splitter_color", m_ui.plSplitterColor->colorName());
     settings.setValue("pl_group_text", m_ui.plGrTextColor->colorName());
     settings.setValue("pl_font", m_ui.plFontLabel->font().toString());
     settings.setValue("pl_tabs_font", m_ui.tabsFontLabel->font().toString());

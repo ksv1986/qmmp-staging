@@ -452,53 +452,53 @@
         <translation>Ecualizador</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="167"/>
-        <location filename="../eqwidget.cpp" line="184"/>
+        <location filename="../eqwidget.cpp" line="168"/>
+        <location filename="../eqwidget.cpp" line="185"/>
         <source>preset</source>
         <translation>preprogramado</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="268"/>
+        <location filename="../eqwidget.cpp" line="269"/>
         <source>&amp;Load/Delete</source>
         <translation>&amp;Cargar/Eliminar</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="270"/>
+        <location filename="../eqwidget.cpp" line="271"/>
         <source>&amp;Save Preset</source>
         <translation>&amp;Guardar preprogramado</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="272"/>
+        <location filename="../eqwidget.cpp" line="273"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>&amp;Guardar preprogramado autocargable</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="274"/>
+        <location filename="../eqwidget.cpp" line="275"/>
         <source>&amp;Import</source>
         <translation>&amp;Importar</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="277"/>
+        <location filename="../eqwidget.cpp" line="278"/>
         <source>&amp;Clear</source>
         <translation>&amp;Limpiar</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="306"/>
+        <location filename="../eqwidget.cpp" line="307"/>
         <source>Saving Preset</source>
         <translation>Guardando preprogramado</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="307"/>
+        <location filename="../eqwidget.cpp" line="308"/>
         <source>Preset name:</source>
         <translation>Nombre del preprogramado:</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="308"/>
+        <location filename="../eqwidget.cpp" line="309"/>
         <source>preset #</source>
         <translation>Preprogramado nº</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="399"/>
+        <location filename="../eqwidget.cpp" line="400"/>
         <source>Import Preset</source>
         <translation>Importar preprogramado</translation>
     </message>
@@ -828,118 +828,118 @@
         <translation>Lista de reproducción</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="198"/>
+        <location filename="../playlist.cpp" line="199"/>
         <source>&amp;Copy Selection To</source>
         <translation>&amp;Copiar la selección a</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="228"/>
+        <location filename="../playlist.cpp" line="229"/>
         <source>Sort List</source>
         <translation>Ordenar la lista</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="231"/>
-        <location filename="../playlist.cpp" line="286"/>
+        <location filename="../playlist.cpp" line="232"/>
+        <location filename="../playlist.cpp" line="287"/>
         <source>By Title</source>
         <translation>Por título</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="235"/>
-        <location filename="../playlist.cpp" line="290"/>
+        <location filename="../playlist.cpp" line="236"/>
+        <location filename="../playlist.cpp" line="291"/>
         <source>By Album</source>
         <translation>Por álbum</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="239"/>
-        <location filename="../playlist.cpp" line="294"/>
+        <location filename="../playlist.cpp" line="240"/>
+        <location filename="../playlist.cpp" line="295"/>
         <source>By Disc Number</source>
         <translation>Por Número de Disco</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="243"/>
-        <location filename="../playlist.cpp" line="298"/>
+        <location filename="../playlist.cpp" line="244"/>
+        <location filename="../playlist.cpp" line="299"/>
         <source>By Artist</source>
         <translation>Por intérprete</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="247"/>
-        <location filename="../playlist.cpp" line="302"/>
+        <location filename="../playlist.cpp" line="248"/>
+        <location filename="../playlist.cpp" line="303"/>
         <source>By Album Artist</source>
         <translation>Por Artista del Álbum</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="251"/>
-        <location filename="../playlist.cpp" line="306"/>
+        <location filename="../playlist.cpp" line="252"/>
+        <location filename="../playlist.cpp" line="307"/>
         <source>By Filename</source>
         <translation>Por nombre de archivo</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="255"/>
-        <location filename="../playlist.cpp" line="310"/>
+        <location filename="../playlist.cpp" line="256"/>
+        <location filename="../playlist.cpp" line="311"/>
         <source>By Path + Filename</source>
         <translation>Por ruta + nombre</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="259"/>
-        <location filename="../playlist.cpp" line="314"/>
+        <location filename="../playlist.cpp" line="260"/>
+        <location filename="../playlist.cpp" line="315"/>
         <source>By Date</source>
         <translation>Por fecha</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="263"/>
-        <location filename="../playlist.cpp" line="318"/>
+        <location filename="../playlist.cpp" line="264"/>
+        <location filename="../playlist.cpp" line="319"/>
         <source>By Track Number</source>
         <translation>Por número de pista</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="267"/>
-        <location filename="../playlist.cpp" line="322"/>
+        <location filename="../playlist.cpp" line="268"/>
+        <location filename="../playlist.cpp" line="323"/>
         <source>By File Creation Date</source>
         <translation>Por Fecha de Creación de Archivo</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="271"/>
-        <location filename="../playlist.cpp" line="326"/>
+        <location filename="../playlist.cpp" line="272"/>
+        <location filename="../playlist.cpp" line="327"/>
         <source>By File Modification Date</source>
         <translation>Por Fecha de Modificación de Archivo</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="275"/>
+        <location filename="../playlist.cpp" line="276"/>
         <source>By Group</source>
         <translation>Por Grupo</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="283"/>
+        <location filename="../playlist.cpp" line="284"/>
         <source>Sort Selection</source>
         <translation>Ordenar la selección</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="334"/>
+        <location filename="../playlist.cpp" line="335"/>
         <source>Randomize List</source>
         <translation>Lista aleatoria</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="336"/>
+        <location filename="../playlist.cpp" line="337"/>
         <source>Reverse List</source>
         <translation>Invertir la lista</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="347"/>
+        <location filename="../playlist.cpp" line="348"/>
         <source>Actions</source>
         <translation>Acciones</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="611"/>
+        <location filename="../playlist.cpp" line="612"/>
         <source>Rename Playlist</source>
         <translation>Renombrar lista</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="611"/>
+        <location filename="../playlist.cpp" line="612"/>
         <source>Playlist name:</source>
         <translation>Nombre de la lista:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="632"/>
+        <location filename="../playlist.cpp" line="633"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Lista nueva</translation>
     </message>
@@ -1220,47 +1220,57 @@
         <translation>Modalidad de Columna Única</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="402"/>
+        <location filename="../forms/skinnedsettings.ui" line="307"/>
+        <source>Show splitters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="314"/>
+        <source>Alternate splitter color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="416"/>
         <source>Fonts</source>
         <translation>Tipografías</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="456"/>
+        <location filename="../forms/skinnedsettings.ui" line="470"/>
         <source>Playlist:</source>
         <translation>Lista de Reproducción:</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="492"/>
+        <location filename="../forms/skinnedsettings.ui" line="506"/>
         <source>Column headers:</source>
         <translation>Cabeceras de columna:</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="414"/>
+        <location filename="../forms/skinnedsettings.ui" line="428"/>
         <source>Player:</source>
         <translation>Reproductor</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="436"/>
-        <location filename="../forms/skinnedsettings.ui" line="478"/>
-        <location filename="../forms/skinnedsettings.ui" line="505"/>
+        <location filename="../forms/skinnedsettings.ui" line="450"/>
+        <location filename="../forms/skinnedsettings.ui" line="492"/>
+        <location filename="../forms/skinnedsettings.ui" line="519"/>
         <source>???</source>
         <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="134"/>
-        <location filename="../forms/skinnedsettings.ui" line="443"/>
-        <location filename="../forms/skinnedsettings.ui" line="485"/>
-        <location filename="../forms/skinnedsettings.ui" line="512"/>
+        <location filename="../forms/skinnedsettings.ui" line="457"/>
+        <location filename="../forms/skinnedsettings.ui" line="499"/>
+        <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="534"/>
+        <location filename="../forms/skinnedsettings.ui" line="548"/>
         <source>Reset fonts</source>
         <translation>Restaurar tipografías</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="543"/>
+        <location filename="../forms/skinnedsettings.ui" line="557"/>
         <source>Use bitmap font if available</source>
         <translation>Usar tipografías de mapa de bits si es posible</translation>
     </message>
@@ -1337,22 +1347,22 @@
         <translation>Mostrar listas de reproducción</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="354"/>
+        <location filename="../forms/skinnedsettings.ui" line="368"/>
         <source>Show popup information</source>
         <translation>Mostrar información en ventana emergente</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="366"/>
+        <location filename="../forms/skinnedsettings.ui" line="380"/>
         <source>Edit template</source>
         <translation>Editar la plantilla</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="319"/>
+        <location filename="../forms/skinnedsettings.ui" line="333"/>
         <source>Playlist separator:</source>
         <translation>Separador de listas de reproducción</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="310"/>
+        <location filename="../forms/skinnedsettings.ui" line="324"/>
         <source>Show &apos;New Playlist&apos; button</source>
         <translation>Mostrar botón &apos;Nueva Lista de Reproducción&apos;</translation>
     </message>

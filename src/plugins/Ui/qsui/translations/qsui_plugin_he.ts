@@ -1121,32 +1121,32 @@
         <translation>התחל מוסתר</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="722"/>
+        <location filename="../forms/qsuisettings.ui" line="770"/>
         <source>Fonts</source>
         <translation>גופנים</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="728"/>
+        <location filename="../forms/qsuisettings.ui" line="776"/>
         <source>Use system fonts</source>
         <translation>השתמש בגופני מערכת</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="776"/>
+        <location filename="../forms/qsuisettings.ui" line="824"/>
         <source>Playlist:</source>
         <translation>רשימת נגינה:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="756"/>
-        <location filename="../forms/qsuisettings.ui" line="821"/>
-        <location filename="../forms/qsuisettings.ui" line="840"/>
+        <location filename="../forms/qsuisettings.ui" line="804"/>
+        <location filename="../forms/qsuisettings.ui" line="869"/>
+        <location filename="../forms/qsuisettings.ui" line="888"/>
         <source>???</source>
         <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="62"/>
-        <location filename="../forms/qsuisettings.ui" line="763"/>
-        <location filename="../forms/qsuisettings.ui" line="786"/>
-        <location filename="../forms/qsuisettings.ui" line="847"/>
+        <location filename="../forms/qsuisettings.ui" line="811"/>
+        <location filename="../forms/qsuisettings.ui" line="834"/>
+        <location filename="../forms/qsuisettings.ui" line="895"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -1171,17 +1171,17 @@
         <translation>הצג פרוטוקול</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="137"/>
+        <location filename="../forms/qsuisettings.ui" line="144"/>
         <source>Show song numbers</source>
         <translation>הצג מספרי שיר</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="144"/>
+        <location filename="../forms/qsuisettings.ui" line="151"/>
         <source>Show song lengths</source>
         <translation>הצג אורך שיר</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="154"/>
+        <location filename="../forms/qsuisettings.ui" line="161"/>
         <source>Align song numbers</source>
         <translation>ישר מספרי שורות</translation>
     </message>
@@ -1191,157 +1191,167 @@
         <translation>הצג עוגן</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="94"/>
+        <location filename="../forms/qsuisettings.ui" line="101"/>
         <source>Show popup information</source>
         <translation>הצג מידע מוקפץ</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="106"/>
+        <location filename="../forms/qsuisettings.ui" line="113"/>
         <source>Edit template</source>
         <translation>ערוך תבנית</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="869"/>
+        <location filename="../forms/qsuisettings.ui" line="917"/>
         <source>Reset fonts</source>
         <translation>אפס גופנים</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="884"/>
+        <location filename="../forms/qsuisettings.ui" line="932"/>
         <source>Column headers:</source>
         <translation>תקורות טור:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="799"/>
+        <location filename="../forms/qsuisettings.ui" line="847"/>
         <source>Tab names:</source>
         <translation>שמות כרטיסייה:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="911"/>
+        <location filename="../forms/qsuisettings.ui" line="959"/>
         <source>Miscellaneous</source>
         <translation>שונות</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="184"/>
+        <location filename="../forms/qsuisettings.ui" line="191"/>
         <source>Analyzer Colors</source>
         <translation>צבעי מאבחן</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="131"/>
+        <location filename="../forms/qsuisettings.ui" line="94"/>
+        <source>Show splitters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="138"/>
         <source>Single Column Mode</source>
         <translation>מצב שורה בודדת</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="178"/>
+        <location filename="../forms/qsuisettings.ui" line="185"/>
         <source>Colors</source>
         <translation>צבעים</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="190"/>
+        <location filename="../forms/qsuisettings.ui" line="197"/>
         <source>Analyzer #1:</source>
         <translation>מאבחן ראשון:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="225"/>
+        <location filename="../forms/qsuisettings.ui" line="232"/>
         <source>Peaks:</source>
         <translation>שיאים:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="257"/>
+        <location filename="../forms/qsuisettings.ui" line="264"/>
         <source>Analyzer #2:</source>
         <translation>מאבחן שני:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="289"/>
+        <location filename="../forms/qsuisettings.ui" line="296"/>
         <source>Background:</source>
         <translation>רקע אחורי:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="321"/>
+        <location filename="../forms/qsuisettings.ui" line="328"/>
         <source>Analyzer #3:</source>
         <translation>מאבחן שלישי:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="398"/>
+        <location filename="../forms/qsuisettings.ui" line="405"/>
         <source>Playlist Colors</source>
         <translation>צבעי רשימת נגינה</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="423"/>
+        <location filename="../forms/qsuisettings.ui" line="477"/>
         <source>Background #1:</source>
         <translation>רקע ראשון:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="455"/>
+        <location filename="../forms/qsuisettings.ui" line="537"/>
         <source>Normal text:</source>
         <translation>טקסט רגיל:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="487"/>
+        <location filename="../forms/qsuisettings.ui" line="645"/>
         <source>Background #2:</source>
         <translation>רקע שני:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="519"/>
+        <location filename="../forms/qsuisettings.ui" line="652"/>
         <source>Current text:</source>
         <translation>טקסט נוכחי:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="551"/>
+        <location filename="../forms/qsuisettings.ui" line="530"/>
         <source>Highlighted background:</source>
         <translation>רקע אחורי מודגש:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="583"/>
+        <location filename="../forms/qsuisettings.ui" line="484"/>
         <source>Highlighted text:</source>
         <translation>טקסט מודגש:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="947"/>
+        <location filename="../forms/qsuisettings.ui" line="995"/>
         <source>Toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="955"/>
+        <location filename="../forms/qsuisettings.ui" line="1003"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="980"/>
+        <location filename="../forms/qsuisettings.ui" line="1028"/>
         <source>Customize...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="404"/>
+        <location filename="../forms/qsuisettings.ui" line="411"/>
         <source>Use system colors</source>
         <translation>השתמש בצבעי מערכת</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="618"/>
+        <location filename="../forms/qsuisettings.ui" line="516"/>
         <source>Group background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="647"/>
+        <location filename="../forms/qsuisettings.ui" line="523"/>
         <source>Group text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="917"/>
+        <location filename="../forms/qsuisettings.ui" line="709"/>
+        <source>Splitter:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="965"/>
         <source>Tabs</source>
         <translation>כרטיסיות</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="923"/>
+        <location filename="../forms/qsuisettings.ui" line="971"/>
         <source>Show close buttons</source>
         <translation>הצג לחצני סגירה</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="930"/>
+        <location filename="../forms/qsuisettings.ui" line="978"/>
         <source>Show tab list menu</source>
         <translation>הצג תפריט רשימת כרטיסייה</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="937"/>
+        <location filename="../forms/qsuisettings.ui" line="985"/>
         <source>Show &apos;New Playlist&apos; button</source>
         <translation>הצג לחצן &apos;רשימת נגינה חדשה&apos;</translation>
     </message>

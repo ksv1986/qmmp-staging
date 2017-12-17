@@ -1121,32 +1121,32 @@
         <translation>Запускать скрытым</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="722"/>
+        <location filename="../forms/qsuisettings.ui" line="770"/>
         <source>Fonts</source>
         <translation>Шрифты</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="728"/>
+        <location filename="../forms/qsuisettings.ui" line="776"/>
         <source>Use system fonts</source>
         <translation>Использовать системные шрифты</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="776"/>
+        <location filename="../forms/qsuisettings.ui" line="824"/>
         <source>Playlist:</source>
         <translation>Список:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="756"/>
-        <location filename="../forms/qsuisettings.ui" line="821"/>
-        <location filename="../forms/qsuisettings.ui" line="840"/>
+        <location filename="../forms/qsuisettings.ui" line="804"/>
+        <location filename="../forms/qsuisettings.ui" line="869"/>
+        <location filename="../forms/qsuisettings.ui" line="888"/>
         <source>???</source>
         <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="62"/>
-        <location filename="../forms/qsuisettings.ui" line="763"/>
-        <location filename="../forms/qsuisettings.ui" line="786"/>
-        <location filename="../forms/qsuisettings.ui" line="847"/>
+        <location filename="../forms/qsuisettings.ui" line="811"/>
+        <location filename="../forms/qsuisettings.ui" line="834"/>
+        <location filename="../forms/qsuisettings.ui" line="895"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -1171,17 +1171,17 @@
         <translation>Показывать протокол</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="137"/>
+        <location filename="../forms/qsuisettings.ui" line="144"/>
         <source>Show song numbers</source>
         <translation>Показывать номера фрагментов</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="144"/>
+        <location filename="../forms/qsuisettings.ui" line="151"/>
         <source>Show song lengths</source>
         <translation>Показывать длительности фрагментов</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="154"/>
+        <location filename="../forms/qsuisettings.ui" line="161"/>
         <source>Align song numbers</source>
         <translation>Выравнивать номера фрагментов</translation>
     </message>
@@ -1191,157 +1191,167 @@
         <translation>Показывать &quot;якорь&quot;</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="94"/>
+        <location filename="../forms/qsuisettings.ui" line="101"/>
         <source>Show popup information</source>
         <translation>Показывать всплывающее окно с информацией</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="106"/>
+        <location filename="../forms/qsuisettings.ui" line="113"/>
         <source>Edit template</source>
         <translation>Редактировать шаблон</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="869"/>
+        <location filename="../forms/qsuisettings.ui" line="917"/>
         <source>Reset fonts</source>
         <translation>Сбросить шрифты</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="884"/>
+        <location filename="../forms/qsuisettings.ui" line="932"/>
         <source>Column headers:</source>
         <translation>Названия колонок:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="799"/>
+        <location filename="../forms/qsuisettings.ui" line="847"/>
         <source>Tab names:</source>
         <translation>Названия вкладок:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="911"/>
+        <location filename="../forms/qsuisettings.ui" line="959"/>
         <source>Miscellaneous</source>
         <translation>Разное</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="184"/>
+        <location filename="../forms/qsuisettings.ui" line="191"/>
         <source>Analyzer Colors</source>
         <translation>Цвета анализатора</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="131"/>
+        <location filename="../forms/qsuisettings.ui" line="94"/>
+        <source>Show splitters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="138"/>
         <source>Single Column Mode</source>
         <translation>Режим одной колонки</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="178"/>
+        <location filename="../forms/qsuisettings.ui" line="185"/>
         <source>Colors</source>
         <translation>Цвета</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="190"/>
+        <location filename="../forms/qsuisettings.ui" line="197"/>
         <source>Analyzer #1:</source>
         <translation>Анализатор #1:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="225"/>
+        <location filename="../forms/qsuisettings.ui" line="232"/>
         <source>Peaks:</source>
         <translation>Пики:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="257"/>
+        <location filename="../forms/qsuisettings.ui" line="264"/>
         <source>Analyzer #2:</source>
         <translation>Анализатор #2:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="289"/>
+        <location filename="../forms/qsuisettings.ui" line="296"/>
         <source>Background:</source>
         <translation>Фон:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="321"/>
+        <location filename="../forms/qsuisettings.ui" line="328"/>
         <source>Analyzer #3:</source>
         <translation>Анализатор #3:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="398"/>
+        <location filename="../forms/qsuisettings.ui" line="405"/>
         <source>Playlist Colors</source>
         <translation>Цвета списка воспроиведения</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="423"/>
+        <location filename="../forms/qsuisettings.ui" line="477"/>
         <source>Background #1:</source>
         <translation>Фон #1:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="455"/>
+        <location filename="../forms/qsuisettings.ui" line="537"/>
         <source>Normal text:</source>
         <translation>Обычный текст:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="487"/>
+        <location filename="../forms/qsuisettings.ui" line="645"/>
         <source>Background #2:</source>
         <translation>Фон #2:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="519"/>
+        <location filename="../forms/qsuisettings.ui" line="652"/>
         <source>Current text:</source>
         <translation>Текущий текст:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="551"/>
+        <location filename="../forms/qsuisettings.ui" line="530"/>
         <source>Highlighted background:</source>
         <translation>Выделенный фон:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="583"/>
+        <location filename="../forms/qsuisettings.ui" line="484"/>
         <source>Highlighted text:</source>
         <translation>Выделенный текст:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="947"/>
+        <location filename="../forms/qsuisettings.ui" line="995"/>
         <source>Toolbars</source>
         <translation>Панели инструментов</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="955"/>
+        <location filename="../forms/qsuisettings.ui" line="1003"/>
         <source>Icon size:</source>
         <translation>Размер иконок:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="980"/>
+        <location filename="../forms/qsuisettings.ui" line="1028"/>
         <source>Customize...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="404"/>
+        <location filename="../forms/qsuisettings.ui" line="411"/>
         <source>Use system colors</source>
         <translation>Использовать системные цвета</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="618"/>
+        <location filename="../forms/qsuisettings.ui" line="516"/>
         <source>Group background:</source>
         <translation>Фон группы:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="647"/>
+        <location filename="../forms/qsuisettings.ui" line="523"/>
         <source>Group text:</source>
         <translation>Текст группы:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="917"/>
+        <location filename="../forms/qsuisettings.ui" line="709"/>
+        <source>Splitter:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="965"/>
         <source>Tabs</source>
         <translation>Вкладки</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="923"/>
+        <location filename="../forms/qsuisettings.ui" line="971"/>
         <source>Show close buttons</source>
         <translation>Показывать кнопки закрытия</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="930"/>
+        <location filename="../forms/qsuisettings.ui" line="978"/>
         <source>Show tab list menu</source>
         <translation>Показывать меню со списком вкладок</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="937"/>
+        <location filename="../forms/qsuisettings.ui" line="985"/>
         <source>Show &apos;New Playlist&apos; button</source>
         <translation>Показывать кнопку &quot;Новый список&quot;</translation>
     </message>

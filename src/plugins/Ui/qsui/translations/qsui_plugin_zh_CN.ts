@@ -1121,32 +1121,32 @@
         <translation>启动后隐藏</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="722"/>
+        <location filename="../forms/qsuisettings.ui" line="770"/>
         <source>Fonts</source>
         <translation>字体</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="728"/>
+        <location filename="../forms/qsuisettings.ui" line="776"/>
         <source>Use system fonts</source>
         <translation>使用系统字体</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="776"/>
+        <location filename="../forms/qsuisettings.ui" line="824"/>
         <source>Playlist:</source>
         <translation>播放列表：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="756"/>
-        <location filename="../forms/qsuisettings.ui" line="821"/>
-        <location filename="../forms/qsuisettings.ui" line="840"/>
+        <location filename="../forms/qsuisettings.ui" line="804"/>
+        <location filename="../forms/qsuisettings.ui" line="869"/>
+        <location filename="../forms/qsuisettings.ui" line="888"/>
         <source>???</source>
         <translation>？？？</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="62"/>
-        <location filename="../forms/qsuisettings.ui" line="763"/>
-        <location filename="../forms/qsuisettings.ui" line="786"/>
-        <location filename="../forms/qsuisettings.ui" line="847"/>
+        <location filename="../forms/qsuisettings.ui" line="811"/>
+        <location filename="../forms/qsuisettings.ui" line="834"/>
+        <location filename="../forms/qsuisettings.ui" line="895"/>
         <source>...</source>
         <translation>…</translation>
     </message>
@@ -1171,17 +1171,17 @@
         <translation>显示协议</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="137"/>
+        <location filename="../forms/qsuisettings.ui" line="144"/>
         <source>Show song numbers</source>
         <translation>显示歌曲号</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="144"/>
+        <location filename="../forms/qsuisettings.ui" line="151"/>
         <source>Show song lengths</source>
         <translation>显示歌曲长度</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="154"/>
+        <location filename="../forms/qsuisettings.ui" line="161"/>
         <source>Align song numbers</source>
         <translation>排列歌曲号</translation>
     </message>
@@ -1191,157 +1191,167 @@
         <translation>显示定位锚</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="94"/>
+        <location filename="../forms/qsuisettings.ui" line="101"/>
         <source>Show popup information</source>
         <translation>显示弹出信息</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="106"/>
+        <location filename="../forms/qsuisettings.ui" line="113"/>
         <source>Edit template</source>
         <translation>编辑模板</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="869"/>
+        <location filename="../forms/qsuisettings.ui" line="917"/>
         <source>Reset fonts</source>
         <translation>重置字体</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="884"/>
+        <location filename="../forms/qsuisettings.ui" line="932"/>
         <source>Column headers:</source>
         <translation>n列题眉：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="799"/>
+        <location filename="../forms/qsuisettings.ui" line="847"/>
         <source>Tab names:</source>
         <translation>分页标签名：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="911"/>
+        <location filename="../forms/qsuisettings.ui" line="959"/>
         <source>Miscellaneous</source>
         <translation>其他杂项</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="184"/>
+        <location filename="../forms/qsuisettings.ui" line="191"/>
         <source>Analyzer Colors</source>
         <translation>分析器颜色</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="131"/>
+        <location filename="../forms/qsuisettings.ui" line="94"/>
+        <source>Show splitters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="138"/>
         <source>Single Column Mode</source>
         <translation>单列模式</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="178"/>
+        <location filename="../forms/qsuisettings.ui" line="185"/>
         <source>Colors</source>
         <translation>颜色</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="190"/>
+        <location filename="../forms/qsuisettings.ui" line="197"/>
         <source>Analyzer #1:</source>
         <translation>分析器#1：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="225"/>
+        <location filename="../forms/qsuisettings.ui" line="232"/>
         <source>Peaks:</source>
         <translation>峰值：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="257"/>
+        <location filename="../forms/qsuisettings.ui" line="264"/>
         <source>Analyzer #2:</source>
         <translation>分析器#2：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="289"/>
+        <location filename="../forms/qsuisettings.ui" line="296"/>
         <source>Background:</source>
         <translation>背景：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="321"/>
+        <location filename="../forms/qsuisettings.ui" line="328"/>
         <source>Analyzer #3:</source>
         <translation>分析器#3：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="398"/>
+        <location filename="../forms/qsuisettings.ui" line="405"/>
         <source>Playlist Colors</source>
         <translation>播放列表颜色</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="423"/>
+        <location filename="../forms/qsuisettings.ui" line="477"/>
         <source>Background #1:</source>
         <translation>背景#1：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="455"/>
+        <location filename="../forms/qsuisettings.ui" line="537"/>
         <source>Normal text:</source>
         <translation>正常文本：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="487"/>
+        <location filename="../forms/qsuisettings.ui" line="645"/>
         <source>Background #2:</source>
         <translation>背景#2：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="519"/>
+        <location filename="../forms/qsuisettings.ui" line="652"/>
         <source>Current text:</source>
         <translation>当前文本：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="551"/>
+        <location filename="../forms/qsuisettings.ui" line="530"/>
         <source>Highlighted background:</source>
         <translation>高亮显示的背景：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="583"/>
+        <location filename="../forms/qsuisettings.ui" line="484"/>
         <source>Highlighted text:</source>
         <translation>高亮显示的文本：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="947"/>
+        <location filename="../forms/qsuisettings.ui" line="995"/>
         <source>Toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="955"/>
+        <location filename="../forms/qsuisettings.ui" line="1003"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="980"/>
+        <location filename="../forms/qsuisettings.ui" line="1028"/>
         <source>Customize...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="404"/>
+        <location filename="../forms/qsuisettings.ui" line="411"/>
         <source>Use system colors</source>
         <translation>使用系统颜色</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="618"/>
+        <location filename="../forms/qsuisettings.ui" line="516"/>
         <source>Group background:</source>
         <translation>分组背景：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="647"/>
+        <location filename="../forms/qsuisettings.ui" line="523"/>
         <source>Group text:</source>
         <translation>分组文本：</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="917"/>
+        <location filename="../forms/qsuisettings.ui" line="709"/>
+        <source>Splitter:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="965"/>
         <source>Tabs</source>
         <translation>分页标签</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="923"/>
+        <location filename="../forms/qsuisettings.ui" line="971"/>
         <source>Show close buttons</source>
         <translation>显示关闭按钮</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="930"/>
+        <location filename="../forms/qsuisettings.ui" line="978"/>
         <source>Show tab list menu</source>
         <translation>显示分页标签列表清单</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="937"/>
+        <location filename="../forms/qsuisettings.ui" line="985"/>
         <source>Show &apos;New Playlist&apos; button</source>
         <translation>显示’新播放列表中‘按钮</translation>
     </message>

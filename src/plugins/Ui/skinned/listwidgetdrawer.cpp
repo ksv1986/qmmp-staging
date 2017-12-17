@@ -265,8 +265,12 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);
                 QString number = QString("%1").arg(row->number);
                 painter->drawText(sx + m_padding, sy, number);
-                painter->setPen(m_normal);
-                painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
+                if(m_show_splitters)
+                {
+                    painter->setPen(m_alternate_splitter_color ? m_current : m_normal);
+                    painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
+                    painter->setPen(m_normal);
+                }
             }
 
             sx -= m_metrics->width(row->titles[0]);
@@ -342,8 +346,12 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);
                 QString number = QString("%1").arg(row->number);
                 painter->drawText(sx - m_padding - m_metrics->width(number), sy, number);
-                painter->setPen(m_normal);
-                painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
+                if(m_show_splitters)
+                {
+                    painter->setPen(m_alternate_splitter_color ? m_current : m_normal);
+                    painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
+                    painter->setPen(m_normal);
+                }
             }
 
             painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);

@@ -233,7 +233,7 @@ void SkinnedSettings::addWindowTitleString(const QString &str)
     if (m_ui.windowTitleLineEdit->cursorPosition () < 1)
         m_ui.windowTitleLineEdit->insert(str);
     else
-        m_ui.windowTitleLineEdit->insert(" - "+str);
+        m_ui.windowTitleLineEdit->insert(" - " + str);
 }
 
 void SkinnedSettings::readSettings()
@@ -247,6 +247,8 @@ void SkinnedSettings::readSettings()
     m_ui.alignCheckBox->setChecked(settings.value("pl_align_numbers", false).toBool());
     m_ui.anchorCheckBox->setChecked(settings.value("pl_show_anchor", false).toBool());
     m_ui.playlistsCheckBox->setChecked(settings.value("pl_show_plalists", false).toBool());
+    m_ui.showSplittersCheckBox->setChecked(settings.value("pl_show_splitters", true).toBool());
+    m_ui.alternateSplitterColorCheckBox->setChecked(settings.value("pl_alt_splitter_color", false).toBool());
     m_ui.popupCheckBox->setChecked(settings.value("pl_show_popup", false).toBool());
     m_ui.plSeplineEdit->setText(settings.value("pl_separator", "::").toString());
     m_ui.showNewPLCheckBox->setChecked(settings.value("pl_show_create_button", false).toBool());
@@ -273,6 +275,8 @@ void SkinnedSettings::writeSettings()
     settings.setValue ("pl_align_numbers", m_ui.alignCheckBox->isChecked());
     settings.setValue ("pl_show_anchor", m_ui.anchorCheckBox->isChecked());
     settings.setValue ("pl_show_plalists", m_ui.playlistsCheckBox->isChecked());
+    settings.setValue ("pl_show_splitters", m_ui.showSplittersCheckBox->isChecked());
+    settings.setValue ("pl_alt_splitter_color", m_ui.alternateSplitterColorCheckBox->isChecked());
     settings.setValue ("pl_show_popup", m_ui.popupCheckBox->isChecked());
     settings.setValue ("pl_separator", m_ui.plSeplineEdit->text());
     settings.setValue ("pl_show_create_button", m_ui.showNewPLCheckBox->isChecked());

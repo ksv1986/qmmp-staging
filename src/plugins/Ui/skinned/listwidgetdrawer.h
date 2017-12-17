@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -102,11 +102,13 @@ private:
     QFontMetrics *m_extra_metrics;
     QFont m_font, m_extra_font;
     bool m_update;
-    bool m_show_number;
+    bool m_show_numbers;
     bool m_show_anchor;
     bool m_align_numbers;
     bool m_show_lengths;
     bool m_single_column;
+    bool m_show_splitters;
+    bool m_alternate_splitter_color;
     int m_padding;
     int m_number_width;
     int m_row_height;

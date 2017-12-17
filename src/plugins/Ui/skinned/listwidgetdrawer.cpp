@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,12 +32,14 @@ ListWidgetDrawer::ListWidgetDrawer()
     m_skin = Skin::instance();
     m_update = false;
     m_show_anchor = false;
-    m_show_number = false;
+    m_show_numbers = false;
     m_align_numbers = false;
     m_show_lengths = false;
     m_single_column = true;
     m_row_height = 0;
     m_number_width = 0;
+    m_show_splitters = false;
+    m_alternate_splitter_color = false;
     m_padding = 0;
     m_metrics = 0;
     m_extra_metrics = 0;
@@ -58,7 +60,9 @@ void ListWidgetDrawer::readSettings()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Skinned");
     m_show_anchor = settings.value("pl_show_anchor", false).toBool();
-    m_show_number = settings.value ("pl_show_numbers", true).toBool();
+    m_show_numbers = settings.value ("pl_show_numbers", true).toBool();
+    m_show_splitters = settings.value("pl_show_splitters", true).toBool();
+    m_alternate_splitter_color = settings.value("pl_alt_splitter_color", false).toBool();
     m_show_lengths = settings.value ("pl_show_lengths", true).toBool();
     m_align_numbers = settings.value ("pl_align_numbers", false).toBool();
     m_font.fromString(settings.value ("pl_font", qApp->font().toString()).toString());
@@ -97,7 +101,7 @@ int ListWidgetDrawer::numberWidth() const
 void ListWidgetDrawer::calculateNumberWidth(int count)
 {
     //song numbers width
-    if(m_show_number && m_align_numbers && count)
+    if(m_show_numbers && m_align_numbers && count)
         m_number_width = m_metrics->width("9") * QString::number(count).size();
     else
         m_number_width = 0;
@@ -124,7 +128,7 @@ void ListWidgetDrawer::prepareRow(ListWidgetRow *row)
 
     if(row->titles.count() == 1)
     {
-        if(m_show_number && !m_align_numbers)
+        if(m_show_numbers && !m_align_numbers)
             row->titles[0].prepend(QString("%1").arg(row->number)+". ");
 
         if((m_show_lengths && !row->length.isEmpty()) || !row->extraString.isEmpty())
@@ -214,13 +218,15 @@ void ListWidgetDrawer::drawSeparator(QPainter *painter, ListWidgetRow *row, bool
 
     sy -= (m_metrics->lineSpacing()/2 - 2);
 
+    painter->setPen(m_normal);
     if(rtl)
     {
         painter->drawLine(row->rect.x() + 5, sy, sx - 5, sy);
         painter->drawLine(sx + m_metrics->width(row->titles[0]) + 5, sy,
                           row->rect.right() - row->numberColumnWidth - m_padding, sy);
-        if(row->numberColumnWidth)
+        if(m_show_splitters && row->numberColumnWidth)
         {
+            painter->setPen(m_alternate_splitter_color ? m_current : m_normal);
             painter->drawLine(row->rect.right() - row->numberColumnWidth, row->rect.top(),
                               row->rect.right() - row->numberColumnWidth, row->rect.bottom() + 1);
         }
@@ -230,8 +236,9 @@ void ListWidgetDrawer::drawSeparator(QPainter *painter, ListWidgetRow *row, bool
         painter->drawLine(sx - 45, sy, sx - 5, sy);
         painter->drawLine(sx + m_metrics->width(row->titles[0]) + 5, sy,
                           row->rect.width(), sy);
-        if(row->numberColumnWidth)
+        if(m_show_splitters && row->numberColumnWidth)
         {
+            painter->setPen(m_alternate_splitter_color ? m_current : m_normal);
             painter->drawLine(row->rect.left() + row->numberColumnWidth, row->rect.top(),
                               row->rect.left() + row->numberColumnWidth, row->rect.bottom() + 1);
         }
@@ -316,9 +323,9 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
 
                 sx -= row->sizes[i];
 
-                painter->setPen(m_normal);
-                if(!row->autoResize || i < row->sizes.count() - 1) //do not draw last vertical line
+                if(m_show_splitters && (!row->autoResize || i < row->sizes.count() - 1)) //do not draw last vertical line
                 {
+                    painter->setPen(m_alternate_splitter_color ? m_current : m_normal);
                     painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
                 }
             }
@@ -393,9 +400,9 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
 
                 sx += row->sizes[i];
 
-                painter->setPen(m_normal);
-                if(!row->autoResize || i < row->sizes.count() - 1) //do not draw last vertical line
+                if(m_show_splitters && (!row->autoResize || i < row->sizes.count() - 1)) //do not draw last vertical line
                 {
+                    painter->setPen(m_alternate_splitter_color ? m_current : m_normal);
                     painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
                 }
             }

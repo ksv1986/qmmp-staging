@@ -302,6 +302,20 @@
         </widget>
        </item>
        <item>
+        <widget class="QCheckBox" name="showSplittersCheckBox">
+         <property name="text">
+          <string>Show splitters</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="alternateSplitterColorCheckBox">
+         <property name="text">
+          <string>Alternate splitter color</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QCheckBox" name="showNewPLCheckBox">
          <property name="enabled">
           <bool>false</bool>

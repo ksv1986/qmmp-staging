@@ -16,9 +16,9 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 
-	Winfileassoc.h
-	Handles file associations in Windows
-	Author: Florin Braghis (florin@libertv.ro)
+    Winfileassoc.h
+    Handles file associations in Windows
+    Author: Florin Braghis (florin@libertv.ro)
 */
 
 #ifndef WINFILEASSOC_H
@@ -26,29 +26,29 @@
 
 #include <QString>
 #include <QStringList>
-
+#include "qmmpui_export.h"
 
 /**
     @internal
 */
-class WinFileAssoc
+class QMMPUI_EXPORT WinFileAssoc
 {
 protected:
-	QString m_ClassId; //Application ClassId
+    QString m_ClassId; //Application ClassId
     QString m_ClassId2; //The ClassId created by explorer if user selects 'Open With...', usually qmmp.exe
-	QString m_AppName;
+    QString m_AppName;
 
 protected:
-	bool CreateClassId(const QString& executablePath, const QString& friendlyName); 
-	bool VistaGetDefaultApps(const QStringList &extensions, QStringList& registeredExt);
-	int  VistaSetAppsAsDefault(const QStringList& extensions);
+    bool CreateClassId(const QString& executablePath, const QString& friendlyName);
+    bool VistaGetDefaultApps(const QStringList &extensions, QStringList& registeredExt);
+    int  VistaSetAppsAsDefault(const QStringList& extensions);
 public:
     WinFileAssoc(const QString ClassId = "QmmpFileAudio", const QString AppName="Qmmp");
-	//Checks the registry to see which extensions are registered with SMPlayer
-	bool GetRegisteredExtensions(const QStringList& extensionsToCheck, QStringList& registeredExtensions);
+    //Checks the registry to see which extensions are registered with SMPlayer
+    bool GetRegisteredExtensions(const QStringList& extensionsToCheck, QStringList& registeredExtensions);
     bool RemoveClassId();
-	int CreateFileAssociations(const QStringList& fileExtensions); 
-	int RestoreFileAssociations(const QStringList& fileExtensions);
+    int CreateFileAssociations(const QStringList& fileExtensions);
+    int RestoreFileAssociations(const QStringList& fileExtensions);
 };
 
 #endif

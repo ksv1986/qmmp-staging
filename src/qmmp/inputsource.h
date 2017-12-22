@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,7 +35,7 @@ class QmmpPluginCache;
 /*! @brief The InputSource class provides the base interface class of transports.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class InputSource : public QObject
+class  QMMP_EXPORT InputSource : public QObject
 {
 Q_OBJECT
 public:

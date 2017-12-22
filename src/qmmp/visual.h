@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,6 +25,7 @@
 #include <QWidget>
 #include <QHash>
 #include <stddef.h>
+#include "qmmp_export.h"
 
 #define QMMP_VISUAL_NODE_SIZE 512 //samples
 
@@ -34,7 +35,7 @@ class VisualBuffer;
 /*! @brief The Visual class provides the base interface class of visualizations.
  *  @author Ilya Kotov <forkotov02@ya.ru>
  */
-class Visual : public QWidget
+class QMMP_EXPORT Visual : public QWidget
 {
     Q_OBJECT
 public:

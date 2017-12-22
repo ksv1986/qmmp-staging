@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,6 +30,7 @@
 #include "playlistitem.h"
 #include "playlisttrack.h"
 #include "playlistgroup.h"
+#include "qmmpui_export.h"
 
 class FileLoader;
 class PlayState;
@@ -98,7 +99,7 @@ struct SimpleSelection
  *     |  7    |  5    | track |
  *     |  8    |  6    | track |
  */
-class PlayListModel : public QObject
+class QMMPUI_EXPORT PlayListModel : public QObject
 {
     Q_OBJECT
 public:

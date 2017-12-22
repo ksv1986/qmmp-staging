@@ -23,7 +23,7 @@ class QmmpPluginCache;
  * @author Brad Hughes <bhughes@trolltech.com>
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class Decoder
+class QMMP_EXPORT Decoder
 {
 public:
     /*!

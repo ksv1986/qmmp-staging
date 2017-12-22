@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,6 +19,8 @@
  ***************************************************************************/
 #ifndef FILEDIALOGFACTORY_H
 #define FILEDIALOGFACTORY_H
+
+#include "qmmpui_export.h"
 
 class QObject;
 class QTranslator;
@@ -49,7 +51,7 @@ public:
 /*! @brief File dialog plugin interface.
  * @author Vladimir Kuznetsov <vovanec@gmail.com>
  */
-class FileDialogFactory
+class QMMPUI_EXPORT FileDialogFactory
 {
 public:
     /*!

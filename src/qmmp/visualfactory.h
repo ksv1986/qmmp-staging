@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,6 +20,8 @@
 
 #ifndef VISUALFACTORY_H
 #define VISUALFACTORY_H
+
+#include "qmmp_export.h"
 
 class QObject;
 class QWidget;
@@ -49,7 +51,7 @@ public:
 /*! @brief %Visual plugin interface (visual factory).
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class VisualFactory
+class QMMP_EXPORT VisualFactory
 {
 public:
     /*!

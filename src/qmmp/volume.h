@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,6 +22,7 @@
 #define VOLUME_H
 
 #include <QObject>
+#include "qmmp_export.h"
 
 /*! @brief The VolumeSettings structure stores volume levels
  * @author Ilya Kotov <forkotov02@ya.ru>
@@ -44,7 +45,7 @@ struct VolumeSettings
 /*! @brief The Volume class provides asbtract volume interface
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class Volume : public QObject
+class QMMP_EXPORT Volume : public QObject
 {
     Q_OBJECT
 public:

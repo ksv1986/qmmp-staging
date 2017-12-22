@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,12 +23,13 @@
 #include <QMap>
 #include <qmmp/fileinfo.h>
 #include <qmmp/qmmp.h>
+#include "qmmpui_export.h"
 
 
 /** @brief The PlayListItem class provides an item for use with the PlayListModel class.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class PlayListItem
+class QMMPUI_EXPORT PlayListItem
 {
 public:
     /*!

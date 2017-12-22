@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2015-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -27,11 +27,12 @@
 #include <qmmpui/playlisttrack.h>
 #include <qmmp/qmmp.h>
 #include <qmmp/fileinfo.h>
+#include "qmmpui_export.h"
 
 /*! @brief The MetaDataFormatter formats metadata using templates.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class MetaDataFormatter
+class QMMPUI_EXPORT MetaDataFormatter
 {
 public:
     /*!

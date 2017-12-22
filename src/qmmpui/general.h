@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,13 +24,14 @@
 #include <QStringList>
 #include <QHash>
 #include "generalfactory.h"
+#include "qmmpui_export.h"
 
 class QmmpUiPluginCache;
 
 /*! @brief The General class provides simple access to general plugins
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class General
+class QMMPUI_EXPORT General
 {
 public:
     /*!

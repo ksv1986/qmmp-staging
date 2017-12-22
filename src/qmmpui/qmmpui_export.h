@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2017-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,42 +17,13 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+#ifndef QMMPUI_EXPORT_H
+#define QMMPUI_EXPORT_H
 
-#ifndef WINFILEASSOCPAGE_P_H
-#define WINFILEASSOCPAGE_P_H
-
-#include <QWidget>
-#include <QStringList>
-#include "qmmpui_export.h"
-
-namespace Ui {
-class WinFileAssocPage;
-}
-
-class QListWidgetItem;
-
-/*! @internal
- */
-class QMMPUI_EXPORT WinFileAssocPage : public QWidget
-{
-    Q_OBJECT
-public:
-    WinFileAssocPage(QWidget *parent = 0);
-    virtual ~WinFileAssocPage();
-
-
-private slots:
-    void on_selectAll_clicked();
-    void on_selectNone_clicked();
-
-private:
-    void loadAssociations();
-    void saveAssociations();
-    int ProcessAssociations(QStringList& current, QStringList& old);
-    void createHelp();
-    QStringList m_extensions;
-    QStringList m_regExtensions;
-    Ui::WinFileAssocPage *m_ui;
-};
+#ifdef QMMPUI_LIBRARY
+#    define QMMPUI_EXPORT Q_DECL_EXPORT
+#else
+#    define QMMPUI_EXPORT Q_DECL_IMPORT
+#endif
 
 #endif

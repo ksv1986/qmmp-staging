@@ -3,6 +3,7 @@ include(../../qmmp.pri)
 VERSION = $$QMMP_VERSION
 INCLUDEPATH += ../
 TEMPLATE = lib
+DEFINES += QMMPUI_LIBRARY
 QT += network
 
 CONFIG += warn_on \
@@ -72,7 +73,8 @@ HEADERS += general.h \
     playlistheadermodel.h \
     metadatahelper_p.h \
     coverviewer_p.h \
-    metadataformattermenu.h
+    metadataformattermenu.h \
+    qmmpui_export.h
 
 SOURCES += general.cpp \
     playlistparser.cpp \
@@ -168,7 +170,8 @@ unix {
     playlisttrack.h \
     metadataformatter.h \
     playlistheadermodel.h \
-    metadataformattermenu.h
+    metadataformattermenu.h \
+    qmmpui_export.h
 
     devel.path = /include/qmmpui
     INSTALLS += target \

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,6 +24,7 @@
 #include <QList>
 #include <QMap>
 #include <qmmp/qmmp.h>
+#include "qmmpui_export.h"
 
 class QTextCodec;
 class QAbstractButton;
@@ -37,7 +38,7 @@ namespace Ui {
 /** @brief The DetailsDialog class provides dialog to show/edit metadata.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class DetailsDialog : public QDialog
+class QMMPUI_EXPORT DetailsDialog : public QDialog
 {
     Q_OBJECT
 public:

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,13 +23,14 @@
 
 #include "playlisttrack.h"
 #include "playlistitem.h"
+#include "qmmpui_export.h"
 
 class GroupedContainer;
 
 /** @brief The PlayListTrack class provides a group for use with the PlayListModel class.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class PlayListGroup : public PlayListItem
+class QMMPUI_EXPORT PlayListGroup : public PlayListItem
 {
 public:
     /*!

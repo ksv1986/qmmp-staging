@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,6 +22,7 @@
 #define INPUTSOURCEFACTORY_H
 
 #include <QObject>
+#include "qmmp_export.h"
 
 class QTranslator;
 class QStringList;
@@ -30,7 +31,7 @@ class InputSource;
 /*! @brief Helper class to store transport plugin properies.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class InputSourceProperties
+class QMMP_EXPORT InputSourceProperties
 {
 public:
     /*!

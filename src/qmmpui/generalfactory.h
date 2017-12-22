@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,6 +20,8 @@
 #ifndef GENERALFACTORY_H
 #define GENERALFACTORY_H
 
+#include "qmmpui_export.h"
+
 class QObject;
 class QTranslator;
 class QDialog;
@@ -30,7 +32,7 @@ class General;
 
 /*! @brief Helper class to store general plugin properies.
  */
-class GeneralProperties
+class QMMPUI_EXPORT GeneralProperties
 {
 public:
     /*!

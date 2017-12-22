@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+*   Copyright (C) 2008-2018 by Ilya Kotov                                 *
 *   forkotov02@ya.ru                                                      *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -25,6 +25,7 @@
 #include <QStringList>
 #include <QFileDialog>
 #include <QHash>
+#include "qmmpui_export.h"
 #include "filedialogfactory.h"
 
 class QmmpUiPluginCache;
@@ -32,7 +33,7 @@ class QmmpUiPluginCache;
 /*! @brief The FileDialog class is the base interface class of the file dialogs.
  * @author Vladimir Kuznetsov <vovanec@gmail.com>
  */
-class FileDialog : public QObject
+class QMMPUI_EXPORT FileDialog : public QObject
 {
     Q_OBJECT
 public:

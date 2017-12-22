@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,6 +21,7 @@
 #define EFFECTFACTORY_H
 
 #include <QObject>
+#include "qmmp_export.h"
 
 class QObject;
 class QWidget;
@@ -30,7 +31,7 @@ class Effect;
 /*! @brief Helper class to store effect plugin properties.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class EffectProperties
+class QMMP_EXPORT EffectProperties
 {
 public:
     /*!

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,12 +23,13 @@
 #include <QHash>
 #include "general.h"
 #include "commandlineoption.h"
+#include "qmmpui_export.h"
 
 
 /*! @brief Helper class used for handle command line plugins.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class CommandLineManager
+class QMMPUI_EXPORT CommandLineManager
 {
 public:
     /*!

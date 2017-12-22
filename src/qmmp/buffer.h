@@ -17,7 +17,7 @@
 /*! @brief Audio buffer class.
  * @author Brad Hughes <bhughes@trolltech.com>
  */
-class Buffer
+class QMMP_EXPORT Buffer
 {
 public:
     /*!

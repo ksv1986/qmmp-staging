@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,6 +23,7 @@
 #include <QObject>
 #include "playlistheadermodel.h"
 #include "playlistmodel.h"
+#include "qmmpui_export.h"
 
 class QTimer;
 class QmmpUiSettings;
@@ -30,7 +31,7 @@ class QmmpUiSettings;
 /*! @brief The PlayListManager class is used to handle multiple playlists.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class PlayListManager : public QObject
+class QMMPUI_EXPORT PlayListManager : public QObject
 {
 Q_OBJECT
 public:

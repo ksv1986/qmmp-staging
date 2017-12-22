@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,6 +25,7 @@
 #include <qmmp/fileinfo.h>
 #include <qmmp/qmmp.h>
 #include "playlistitem.h"
+#include "qmmpui_export.h"
 
 class QmmpUiSettings;
 class PlayListHeaderModel;
@@ -33,7 +34,7 @@ class MetaDataHelper;
 /** @brief The PlayListTrack class provides a track for use with the PlayListModel class.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class PlayListTrack : public QMap <Qmmp::MetaData, QString>, public PlayListItem
+class QMMPUI_EXPORT PlayListTrack : public QMap <Qmmp::MetaData, QString>, public PlayListItem
 {
 public:
     /*!

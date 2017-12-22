@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,6 +25,7 @@
 #include <QStringList>
 #include "playlistheadermodel.h"
 #include "metadataformatter.h"
+#include "qmmpui_export.h"
 
 class QTimer;
 class MetaDataHelper;
@@ -32,7 +33,7 @@ class MetaDataHelper;
 /*! @brief The QmmpUiSettings class provides access to global libqmmpui library settings.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QmmpUiSettings : public QObject
+class QMMPUI_EXPORT QmmpUiSettings : public QObject
 {
     Q_OBJECT
 public:

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,7 +32,7 @@ class QTimer;
 /*! @brief The QmmpSettings class provides access to global settings.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QmmpSettings : public QObject
+class QMMP_EXPORT QmmpSettings : public QObject
 {
 Q_OBJECT
 public:

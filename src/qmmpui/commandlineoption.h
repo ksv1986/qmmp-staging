@@ -20,6 +20,7 @@
 #ifndef COMMANDLINEOPTION_H
 #define COMMANDLINEOPTION_H
 
+#include "qmmpui_export.h"
 
 class CommandLineManager;
 class QTranslator;
@@ -30,7 +31,7 @@ class QStringList;
 /*! @brief Abstract base class of the command line plugins.
  * @author Vladimir Kuznetsov <vovanec@gmail.ru>
  */
-class CommandLineOption
+class QMMPUI_EXPORT CommandLineOption
 {
 public:
     /*!

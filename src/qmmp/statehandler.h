@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,7 +31,7 @@
 /*! @brief The StateHandler class allows one to track information about playback progress.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class StateHandler : public QObject
+class QMMP_EXPORT StateHandler : public QObject
 {
     Q_OBJECT
 public:

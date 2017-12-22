@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,8 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef UiHelper_H
-#define UiHelper_H
+#ifndef UIHELPER_H
+#define UIHELPER_H
 
 #include <QObject>
 #include <QMap>
@@ -29,6 +29,7 @@
 #include <QPointer>
 #include "playlistmanager.h"
 #include "playlistmodel.h"
+#include "qmmpui_export.h"
 
 class QAction;
 class QMenu;
@@ -40,7 +41,7 @@ class JumpToTrackDialog;
 /*! @brief The UiHelper class provides simple api to access general plugins and some gui features.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class UiHelper : public QObject
+class QMMPUI_EXPORT  UiHelper : public QObject
 {
     Q_OBJECT
 public:

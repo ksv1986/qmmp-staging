@@ -40,7 +40,8 @@ HEADERS += \
     channelconverter_p.h \
     audioconverter.h \
     dithering_p.h \
-    visualbuffer_p.h
+    visualbuffer_p.h \
+    qmmp_export.h
 SOURCES += recycler.cpp \
     decoder.cpp \
     output.cpp \
@@ -84,6 +85,7 @@ CONFIG += shared \
     thread
 TEMPLATE = lib
 VERSION = $$QMMP_VERSION
+DEFINES += QMMP_LIBRARY
 
 unix {
   isEmpty(LIB_DIR):LIB_DIR = /lib
@@ -104,7 +106,6 @@ win32 {
     DEFINES += SVN_REVISION=\\\"$$SVN_REVISION\\\"
   }
 }
-
 
 unix {
     target.path = $$LIB_DIR
@@ -134,7 +135,8 @@ unix {
         tagmodel.h \
         visualfactory.h \
         visual.h \
-        volume.h
+        volume.h \
+        qmmp_export.h
 
     devel.path = /include/qmmp
     INSTALLS += target \

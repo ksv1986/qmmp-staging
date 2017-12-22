@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,6 +21,8 @@
 #ifndef EMGINEFACTORY_H
 #define EMGINEFACTORY_H
 
+#include "qmmp_export.h"
+
 class QObject;
 class QString;
 class QIODevice;
@@ -34,7 +36,7 @@ class AbstractEngine;
 /*! @brief Helper class to store custom audio engine properies.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class EngineProperties
+class QMMP_EXPORT EngineProperties
 {
 public:
     /*!

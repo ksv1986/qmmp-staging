@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,7 +38,7 @@ class QmmpSettings;
 /*! @brief The MetaDataManager class is the base class for metadata access.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class MetaDataManager
+class QMMP_EXPORT MetaDataManager
 {
 public:
     /*!

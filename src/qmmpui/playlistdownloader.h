@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,6 +25,7 @@
 #include <QUrl>
 #include <QPointer>
 #include "playlistmodel.h"
+#include "qmmpui_export.h"
 
 class QNetworkAccessManager;
 class QNetworkReply;
@@ -32,7 +33,7 @@ class QNetworkReply;
 /*! @brief The PlayListDownloader class downloads playlist from remote URL and extracts tracks
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class PlayListDownloader : public QObject
+class QMMPUI_EXPORT PlayListDownloader : public QObject
 {
     Q_OBJECT
 public:

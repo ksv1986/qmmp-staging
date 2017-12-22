@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,7 +23,7 @@
 #include <QObject>
 #include <qmmp/soundcore.h>
 #include "playlistmanager.h"
-
+#include "qmmpui_export.h"
 
 class QmmpUiSettings;
 class QTimer;
@@ -32,7 +32,7 @@ class QTimer;
 /*! @brief The MediaPlayer class provides a simple way to use SoundCore and PlayListModel together.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class MediaPlayer : public QObject
+class QMMPUI_EXPORT MediaPlayer : public QObject
 {
     Q_OBJECT
 public:

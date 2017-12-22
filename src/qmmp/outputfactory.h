@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,6 +21,8 @@
 #ifndef OUTPUTFACTORY_H
 #define OUTPUTFACTORY_H
 
+#include "qmmp_export.h"
+
 class QObject;
 class QString;
 class QIODevice;
@@ -33,7 +35,7 @@ class Output;
 /*! @brief Helper class to store output plugin properies.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class OutputProperties
+class QMMP_EXPORT OutputProperties
 {
 public:
     /*!

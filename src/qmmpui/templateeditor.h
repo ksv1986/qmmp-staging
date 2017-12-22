@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,6 +22,7 @@
 #define TEMPLATEEDITOR_H
 
 #include <QDialog>
+#include "qmmpui_export.h"
 
 namespace Ui {
     class TemplateEditor;
@@ -30,7 +31,7 @@ namespace Ui {
 /*! @brief The TemplateEditor class provides simple template editor dialog.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class TemplateEditor : public QDialog
+class QMMPUI_EXPORT TemplateEditor : public QDialog
 {
 Q_OBJECT
 public:

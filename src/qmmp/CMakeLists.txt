@@ -90,6 +90,7 @@ SET(libqmmp_HDRS
     channelconverter_p.h
     dithering_p.h
     visualbuffer_p.h
+    qmmp_export.h
 )
 
 SET(libqmmp_DEVEL_HDRS
@@ -119,6 +120,7 @@ SET(libqmmp_DEVEL_HDRS
     visualfactory.h
     visual.h
     volume.h
+    qmmp_export.h
 )
 
 # Don't forget to include output directory, otherwise

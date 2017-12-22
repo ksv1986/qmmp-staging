@@ -9,9 +9,13 @@ IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
   SET(CMAKE_REQUIRED_INCLUDES ${CMAKE_REQUIRED_INCLUDES} /opt/local/include)
 ENDIF()
 
-if(POLICY CMP0071)
+IF(POLICY CMP0071)
   cmake_policy(SET CMP0071 NEW)
-endif()
+ENDIF()
+
+IF(POLICY CMP0063)
+cmake_policy(SET CMP0063 NEW)
+ENDIF()
 
 #Qt5 modules
 SET(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/qt56/lib/cmake)
@@ -54,6 +58,8 @@ find_package(Qt5X11Extras 5.4.0)
 find_package(Qt5DBus 5.4.0)
 find_package(Qt5Multimedia 5.4.0)
 ADD_DEFINITIONS(-DQMMP_WS_X11)
+set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
 
 get_target_property(QT_LRELEASE_EXECUTABLE Qt5::lrelease IMPORTED_LOCATION)
 

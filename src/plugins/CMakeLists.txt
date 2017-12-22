@@ -1,6 +1,5 @@
 SET(USE_ENCA TRUE CACHE BOOL "enable/disable libenca support")
 include(FindPkgConfig)
-set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 pkg_search_module(ENCA enca>=1.9)
 pkg_search_module(TAGLIB taglib>=1.10)
 add_subdirectory(Input)

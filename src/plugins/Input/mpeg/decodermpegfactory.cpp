@@ -292,11 +292,20 @@ void DecoderMPEGFactory::showSettings(QWidget *parent)
 void DecoderMPEGFactory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About MPEG Audio Plugin"),
-                        tr("Qmmp MPEG Audio Plugin")+"\n"+
-                        tr("Compiled against libmad version:")+" "+
-                        QString("%1.%2.%3%4").arg(MAD_VERSION_MAJOR)
+                        tr("MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder")+"\n"+
+                        tr("Compiled against:") + "\n" +
+#ifdef WITH_MAD
+                        QString("libmad-%1.%2.%3%4")
+                        .arg(MAD_VERSION_MAJOR)
                         .arg(MAD_VERSION_MINOR)
-                        .arg(MAD_VERSION_PATCH).arg(MAD_VERSION_EXTRA)+"\n"+
+                        .arg(MAD_VERSION_PATCH)
+                        .arg(MAD_VERSION_EXTRA) + "\n" +
+#endif
+#ifdef WITH_MAD
+                        tr("mpg123, API version: %1")
+                        .arg(MPG123_API_VERSION) + "\n" +
+#endif
+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Source code based on mq3 and madplay projects")
                        );

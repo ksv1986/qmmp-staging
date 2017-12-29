@@ -76,10 +76,6 @@ public:
      */
     virtual void setMuted(bool muted) = 0;
     /*!
-     * Returns mutex pointer.
-     */
-    QMutex *mutex();
-    /*!
      * Creates Engine object.
      * @param s InputSource object.
      * @param parent Parent object.
@@ -119,6 +115,12 @@ public:
      * This fuction ignores disabled engines.
      */
     static QStringList protocols();
+
+protected:
+    /*!
+     * Returns mutex pointer.
+     */
+    QMutex *mutex();
 
 private:
     QMutex m_mutex;

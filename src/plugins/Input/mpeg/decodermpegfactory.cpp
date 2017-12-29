@@ -36,8 +36,12 @@
 #include "mpegmetadatamodel.h"
 #include "replaygainreader.h"
 #include "settingsdialog.h"
+#ifdef WITH_MAD
 #include "decoder_mad.h"
+#endif
+#ifdef WITH_MPG123
 #include "decoder_mpg123.h"
+#endif
 #include "decodermpegfactory.h"
 
 // DecoderMPEGFactory
@@ -126,8 +130,9 @@ const DecoderProperties DecoderMPEGFactory::properties() const
 
 Decoder *DecoderMPEGFactory::create(const QString &url, QIODevice *input)
 {
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     Decoder *d = 0;
+#if defined(WITH_MAD) && defined(WITH_MPG123)
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     if(settings.value("MPEG/decoder", "mad").toString() == "mpg123")
     {
         qDebug("DecoderMPEGFactory: using mpg123 decoder");
@@ -138,8 +143,13 @@ Decoder *DecoderMPEGFactory::create(const QString &url, QIODevice *input)
         qDebug("DecoderMPEGFactory: using MAD decoder");
         d = new DecoderMAD(input);
     }
+#elif defined(WITH_MAD)
+    d = new DecoderMAD(input);
+#elif defined(WITH_MPG123)
+    d = new DecoderMPG123(input);
+#endif
 
-    if(!url.contains("://")) //local file
+    if(d && !url.contains("://")) //local file
     {
         ReplayGainReader rg(url);
         d->setReplayGainInfo(rg.replayGainInfo());

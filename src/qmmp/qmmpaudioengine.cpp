@@ -225,9 +225,7 @@ void QmmpAudioEngine::seek(qint64 time)
 {
     if (m_output && m_output->isRunning())
     {
-        m_output->mutex()->lock ();
         m_output->seek(time, true);
-        m_output->mutex()->unlock();
         if (isRunning())
         {
             mutex()->lock ();
@@ -255,17 +253,13 @@ void QmmpAudioEngine::setMuted(bool muted)
     m_muted = muted;
     if(m_output)
     {
-        m_output->mutex()->lock();
         m_output->setMuted(muted);
-        m_output->mutex()->unlock();
     }
 }
 
 void QmmpAudioEngine::stop()
 {
-    mutex()->lock ();
     m_user_stop = true;
-    mutex()->unlock();
 
     if (m_output)
         m_output->recycler()->cond()->wakeAll();
@@ -309,11 +303,9 @@ qint64 QmmpAudioEngine::produceSound(unsigned char *data, qint64 size, quint32 b
 
 void QmmpAudioEngine::finish()
 {
-    if (m_output)
+    if(m_output)
     {
-        m_output->mutex()->lock ();
         m_output->finish();
-        m_output->mutex()->unlock();
     }
     StateHandler::instance()->sendFinished();
 }
@@ -407,9 +399,7 @@ void QmmpAudioEngine::run()
             mutex()->unlock();
             msleep(5);
             delay += 5;
-            mutex()->lock();
-            m_done = m_user_stop;
-            mutex()->unlock();
+            m_done = m_user_stop.load();
             if(delay > TRANSPORT_TIMEOUT)
             {
                 qWarning("QmmpAudioEngine: unable to receive more data");
@@ -445,9 +435,7 @@ void QmmpAudioEngine::run()
                 m_decoder->next();
                 StateHandler::instance()->dispatch(m_decoder->totalTime());
                 m_replayGain->setReplayGainInfo(m_decoder->replayGainInfo());
-                m_output->mutex()->lock();
                 m_output->seek(0); //reset counter
-                m_output->mutex()->unlock();
                 addOffset(); //offset
                 StateHandler::instance()->dispatch(Qmmp::Playing);
                 mutex()->unlock();
@@ -468,9 +456,7 @@ void QmmpAudioEngine::run()
                     StateHandler::instance()->dispatch(Qmmp::Stopped); //fake stop/start cycle
                     StateHandler::instance()->dispatch(Qmmp::Buffering);
                     StateHandler::instance()->dispatch(m_decoder->totalTime());
-                    m_output->mutex()->lock();
                     m_output->seek(0); //reset counter
-                    m_output->mutex()->unlock();
                     StateHandler::instance()->dispatch(Qmmp::Playing);
                     mutex()->unlock();
                     sendMetaData();
@@ -536,21 +522,16 @@ void QmmpAudioEngine::run()
     if (m_finish)
         finish();
     if(m_output)
-    {
-        m_output->mutex()->lock();
         m_output->recycler()->cond()->wakeAll();
-        m_output->mutex()->unlock();
-    }
+
     mutex()->unlock();
 
     if (m_output)
     {
         if(m_user_stop || (m_done && !m_finish))
         {
-            m_output->mutex()->lock ();
             m_output->stop();
             m_output->recycler()->cond()->wakeAll();
-            m_output->mutex()->unlock();
         }
 
         if(m_output->isRunning())
@@ -579,7 +560,7 @@ void QmmpAudioEngine::flush(bool final)
             mutex()->unlock();
             m_output->recycler()->cond()->wait(m_output->recycler()->mutex());
             mutex()->lock ();
-            m_done = m_user_stop;
+            m_done = m_user_stop.load();
         }
 
         if (m_user_stop || m_finish)

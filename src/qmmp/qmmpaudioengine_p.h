@@ -23,6 +23,7 @@
 
 #include <QQueue>
 #include <QHash>
+#include <atomic>
 #include <QSharedPointer>
 #include "abstractengine.h"
 #include "audioparameters.h"
@@ -79,11 +80,11 @@ private:
     void prepareEffects(Decoder *d);
 
     DecoderFactory *m_factory;
-    QList <Effect*> m_effects;
-    QList <Effect*> m_blockedEffects;
+    QList<Effect*> m_effects;
+    QList<Effect*> m_blockedEffects;
     OutputWriter *m_output;
 
-    bool m_done, m_finish, m_user_stop;
+    std::atomic_bool m_done, m_finish, m_user_stop;
     uint m_bks, m_sample_size;
     qint64 m_seekTime;
     quint64 m_output_at, m_output_size;

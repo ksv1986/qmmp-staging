@@ -103,6 +103,12 @@ source_lang = en
 source_file = src/plugins/Input/flac/translations/flac_plugin_en.ts
 type = QT
 
+[qmmp.mpeg]
+file_filter = src/plugins/Input/mpeg/translations/mpeg_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/Input/mpeg/translations/mpeg_plugin_en.ts
+type = QT
+
 [qmmp.opus]
 file_filter = src/plugins/Input/opus/translations/opus_plugin_<lang>.ts
 source_lang = en

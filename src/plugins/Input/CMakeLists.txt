@@ -1,4 +1,5 @@
-SET(USE_MAD            TRUE CACHE BOOL "enable/disable mad plugin")
+SET(USE_MAD            TRUE CACHE BOOL "enable/disable mad decoder (mpeg plugin)")
+SET(USE_MPG123         TRUE CACHE BOOL "enable/disable mpg123 decoder (mpeg plugin)")
 SET(USE_FLAC           TRUE CACHE BOOL "enable/disable flac plugin")
 SET(USE_VORBIS         TRUE CACHE BOOL "enable/disable ogg vorbis plugin")
 SET(USE_FFMPEG         TRUE CACHE BOOL "enable/disable ffmpeg plugin")
@@ -16,9 +17,9 @@ SET(USE_SID            TRUE CACHE BOOL "enable/disable sid plugin")
 SET(USE_ARCHIVE        TRUE CACHE BOOL "enable/disable archive plugin")
 
 
-IF(USE_MAD AND TAGLIB_FOUND)
-add_subdirectory(mad)
-ENDIF(USE_MAD AND TAGLIB_FOUND)
+IF((USE_MAD OR USE_MPG123) AND TAGLIB_FOUND)
+add_subdirectory(mpeg)
+ENDIF((USE_MAD OR USE_MPG123) AND TAGLIB_FOUND)
 
 IF(USE_FLAC AND TAGLIB_FOUND)
 add_subdirectory(flac)

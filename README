@@ -84,6 +84,7 @@ Requirements:
 - libalsa >= 1.0.1
 - taglib >= 1.10 (1.11 or higher is recommended)
 - curl >= 7.16
+- libmpg123 >= 1.13.0 (optional)
 - qtmultimedia >= 5.4 (optional)
 - libmms >= 0.4 (optional)
 - flac >= 1.1.3 (optional)
@@ -129,7 +130,7 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 
 Available options:
 - USE_CURL, USE_MMS (transports);
-- USE_MAD, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
+- USE_MAD, USE_MPG123, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
   USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_OPUS, USE_SID, USE_ARCHIVE (decoders);
 - USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_NULL, USE_OSS4, USE_WAVEOUT, UDE_DSOUND, USE_QTMULTIMEDIA,
   USE_WASAPI, USE_SHOUT (output plugins);

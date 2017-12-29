@@ -83,6 +83,7 @@ Qmmp - Qt-based multimedia player
 - libalsa >= 1.0.1
 - taglib >= 1.10 (рекомендуется 1.11 и выше)
 - curl >= 7.16
+- libmpg123 >= 1.13.0 (опционально)
 - qtmultimedia >= 5.4 (опционально)
 - libmms >= 0.4 (опционально)
 - flac >= 1.1.3 (опционально)
@@ -127,7 +128,7 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 
 Доступные опции:
 - USE_CURL, USE_MMS (транспортные модули);
-- USE_MAD, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
+- USE_MAD, USE_MPG123, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
   USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_OPUS, USE_SID, USE_ARCHIVE (декодеры);
 - USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_NULL, USE_OSS4, USE_WAVEOUT, USE_DSOUND, USE_QTMULTIMEDIA,
   USE_WASAPI, USE_SHOUT (модули  вывода);

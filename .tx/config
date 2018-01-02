@@ -79,12 +79,6 @@ source_lang = en
 source_file = src/plugins/Input/gme/translations/gme_plugin_en.ts
 type = QT
 
-[qmmp.mad]
-file_filter = src/plugins/Input/mad/translations/mad_plugin_<lang>.ts
-source_lang = en
-source_file = src/plugins/Input/mad/translations/mad_plugin_en.ts
-type = QT
-
 [qmmp.mpc]
 file_filter = src/plugins/Input/mpc/translations/mpc_plugin_<lang>.ts
 source_lang = en

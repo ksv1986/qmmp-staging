@@ -4,37 +4,42 @@
 <context>
     <name>DecoderMPEGFactory</name>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="117"/>
+        <location filename="../decodermpegfactory.cpp" line="121"/>
         <source>MPEG Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="120"/>
+        <location filename="../decodermpegfactory.cpp" line="124"/>
         <source>MPEG Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="284"/>
+        <location filename="../decodermpegfactory.cpp" line="294"/>
         <source>About MPEG Audio Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="285"/>
-        <source>Qmmp MPEG Audio Plugin</source>
+        <location filename="../decodermpegfactory.cpp" line="295"/>
+        <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="286"/>
-        <source>Compiled against libmad version:</source>
+        <location filename="../decodermpegfactory.cpp" line="296"/>
+        <source>Compiled against:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="290"/>
+        <location filename="../decodermpegfactory.cpp" line="305"/>
+        <source>mpg123, API version: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../decodermpegfactory.cpp" line="309"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="291"/>
+        <location filename="../decodermpegfactory.cpp" line="310"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -125,80 +130,80 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="29"/>
+        <location filename="../settingsdialog.ui" line="35"/>
         <source>Decoder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="35"/>
+        <location filename="../settingsdialog.ui" line="41"/>
         <source>MAD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="42"/>
+        <location filename="../settingsdialog.ui" line="48"/>
         <source>MPG123</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="52"/>
+        <location filename="../settingsdialog.ui" line="77"/>
         <source>Tag Priority</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="64"/>
+        <location filename="../settingsdialog.ui" line="89"/>
         <source>First:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="84"/>
-        <location filename="../settingsdialog.ui" line="133"/>
-        <location filename="../settingsdialog.ui" line="182"/>
+        <location filename="../settingsdialog.ui" line="109"/>
+        <location filename="../settingsdialog.ui" line="158"/>
+        <location filename="../settingsdialog.ui" line="207"/>
         <source>ID3v1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="89"/>
-        <location filename="../settingsdialog.ui" line="138"/>
-        <location filename="../settingsdialog.ui" line="187"/>
+        <location filename="../settingsdialog.ui" line="114"/>
+        <location filename="../settingsdialog.ui" line="163"/>
+        <location filename="../settingsdialog.ui" line="212"/>
         <source>ID3v2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="94"/>
-        <location filename="../settingsdialog.ui" line="143"/>
-        <location filename="../settingsdialog.ui" line="192"/>
+        <location filename="../settingsdialog.ui" line="119"/>
+        <location filename="../settingsdialog.ui" line="168"/>
+        <location filename="../settingsdialog.ui" line="217"/>
         <source>APE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="99"/>
-        <location filename="../settingsdialog.ui" line="148"/>
-        <location filename="../settingsdialog.ui" line="197"/>
+        <location filename="../settingsdialog.ui" line="124"/>
+        <location filename="../settingsdialog.ui" line="173"/>
+        <location filename="../settingsdialog.ui" line="222"/>
         <source>Disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="113"/>
+        <location filename="../settingsdialog.ui" line="138"/>
         <source>Second:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="162"/>
+        <location filename="../settingsdialog.ui" line="187"/>
         <source>Third:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="221"/>
+        <location filename="../settingsdialog.ui" line="252"/>
         <source>Encodings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="233"/>
+        <location filename="../settingsdialog.ui" line="264"/>
         <source>ID3v1 encoding:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="259"/>
+        <location filename="../settingsdialog.ui" line="290"/>
         <source>ID3v2 encoding:</source>
         <translation type="unfinished"></translation>
     </message>

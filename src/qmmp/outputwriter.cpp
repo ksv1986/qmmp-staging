@@ -288,6 +288,7 @@ void OutputWriter::run()
             {
                 Visual::clearBuffer();
                 m_output->suspend();
+                m_mutex.unlock();
                 m_prev_pause = m_pause;
                 continue;
             }

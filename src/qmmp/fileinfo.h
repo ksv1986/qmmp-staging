@@ -51,11 +51,11 @@ public:
     /*!
      * Returns \b true if this FileInfo object refers to \b info; otherwise returns \b false.
      */
-    bool operator==(const FileInfo &info);
+    bool operator==(const FileInfo &info) const;
     /*!
      * Returns \b false if this FileInfo object refers to \b info; otherwise returns \b true.
      */
-    bool operator!=(const FileInfo &info);
+    bool operator!=(const FileInfo &info) const;
     /*!
      * Returnds file duration in seconds.
      */
@@ -63,11 +63,11 @@ public:
     /*!
      * Returns the metdata string associated with the given \b key.
      */
-    const QString metaData (Qmmp::MetaData key) const;
+    const QString metaData(Qmmp::MetaData key) const;
     /*!
      * Returns all meta data in map.
      */
-    const QMap<Qmmp::MetaData, QString>  metaData () const;
+    const QMap<Qmmp::MetaData, QString> &metaData() const;
     /*!
      * Returns \b true if stream/file has no metadata, otherwise returns \b false
      */
@@ -98,7 +98,7 @@ public:
     void setPath(const QString &path);
 
 private:
-    QMap <Qmmp::MetaData, QString> m_metaData;
+    QMap<Qmmp::MetaData, QString> m_metaData;
     qint64 m_length;
     QString m_path;
 };

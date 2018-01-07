@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -42,14 +42,14 @@ FileInfo &FileInfo::operator=(const FileInfo &info)
     return *this;
 }
 
-bool FileInfo::operator==(const FileInfo &info)
+bool FileInfo::operator==(const FileInfo &info) const
 {
     return metaData () == info.metaData () &&
             length () == info.length () &&
             path() == info.path();
 }
 
-bool FileInfo::operator!=(const FileInfo &info)
+bool FileInfo::operator!=(const FileInfo &info) const
 {
     return !operator==(info);
 }
@@ -59,12 +59,12 @@ qint64 FileInfo::length () const
     return m_length;
 }
 
-const QString FileInfo::metaData (Qmmp::MetaData key) const
+const QString FileInfo::metaData(Qmmp::MetaData key) const
 {
     return m_metaData[key];
 }
 
-const QMap<Qmmp::MetaData, QString>  FileInfo::metaData () const
+const QMap<Qmmp::MetaData, QString> &FileInfo::metaData() const
 {
     return m_metaData;
 }

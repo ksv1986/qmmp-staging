@@ -315,6 +315,6 @@ QTranslator *DecoderMPEGFactory::createTranslator(QObject *parent)
 {
     QTranslator *translator = new QTranslator(parent);
     QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/mad_plugin_") + locale);
+    translator->load(QString(":/mpeg_plugin_") + locale);
     return translator;
 }

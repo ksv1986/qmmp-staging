@@ -27,7 +27,5 @@ unix {
 }
 
 win32 {
-    HEADERS += ../../../../src/qmmp/metadatamodel.h \
-               ../../../../src/qmmp/decoderfactory.h
     LIBS += -lavcodec.dll -lavformat.dll -lavutil.dll
 }

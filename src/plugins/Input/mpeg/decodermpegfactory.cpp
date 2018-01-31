@@ -301,7 +301,7 @@ void DecoderMPEGFactory::showAbout(QWidget *parent)
                         .arg(MAD_VERSION_PATCH)
                         .arg(MAD_VERSION_EXTRA) + "\n" +
 #endif
-#ifdef WITH_MAD
+#ifdef WITH_MPG123
                         tr("mpg123, API version: %1")
                         .arg(MPG123_API_VERSION) + "\n" +
 #endif

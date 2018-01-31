@@ -20,7 +20,7 @@ contains(CONFIG, WITH_MAD){
     DEFINES += WITH_MAD
 }
 
-contains(CONFIG, WITH_MPG123){
+unix:contains(CONFIG, WITH_MPG123){
     HEADERS += decoder_mpg123.h
     SOURCES += decoder_mpg123.cpp
     DEFINES += WITH_MPG123

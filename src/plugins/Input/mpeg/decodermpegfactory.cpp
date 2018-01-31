@@ -63,7 +63,7 @@ DecoderMPEGFactory::DecoderMPEGFactory()
 bool DecoderMPEGFactory::canDecode(QIODevice *input) const
 {
     char buf[8192];
-    qint64 buf_at = sizeof(buf);
+    qint64 dataSize = sizeof(buf);
 
     if(input->peek(buf, sizeof(buf)) != sizeof(buf))
         return false;
@@ -76,27 +76,41 @@ bool DecoderMPEGFactory::canDecode(QIODevice *input) const
 
     if(!memcmp(buf, "ID3", 3))
     {
-        TagLib::ByteVector byteVector(buf, sizeof(buf));
+        TagLib::ByteVector byteVector(buf, dataSize);
         TagLib::ID3v2::Header header(byteVector);
 
         //skip id3v2tag if possible
         if(input->isSequential())
         {
-            if(header.tagSize() >= sizeof(buf))
+            if(header.tagSize() >= dataSize)
                 return false;
 
-            buf_at = sizeof(buf) - header.tagSize();
-            memmove(buf, buf + header.tagSize() + header.tagSize(), sizeof(buf) - header.tagSize());
+            dataSize -= header.tagSize();
+            memmove(buf, buf + header.tagSize(), dataSize);
         }
         else
         {
             input->seek(header.tagSize());
-            buf_at = input->read(buf, sizeof(buf));
-            input->seek(0); //restore inital position
+            dataSize = input->read(buf, sizeof(buf));
+            input->seek(0); //restore initial position
         }
     }
 
-    if(buf_at > 0)
+    if(dataSize <= 0)
+        return false;
+
+    QString decoderName;
+#if defined(WITH_MAD) && defined(WITH_MPG123)
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    decoderName = settings.value("MPEG/decoder", "mad").toString();
+#elif defined(WITH_MAD)
+    decoderName = "mpg123";
+#elif defined(WITH_MPG123)
+    decoderName = "mad";
+#endif
+
+#ifdef WITH_MAD
+    if(decoderName == "mpg123")
     {
         struct mad_stream stream;
         struct mad_header header;
@@ -104,7 +118,7 @@ bool DecoderMPEGFactory::canDecode(QIODevice *input) const
 
         mad_stream_init (&stream);
         mad_header_init (&header);
-        mad_stream_buffer (&stream, (unsigned char *) buf, buf_at);
+        mad_stream_buffer (&stream, (unsigned char *) buf, dataSize);
         stream.error = MAD_ERROR_NONE;
 
         while ((dec_res = mad_header_decode(&header, &stream)) == -1
@@ -112,6 +126,33 @@ bool DecoderMPEGFactory::canDecode(QIODevice *input) const
             ;
         return dec_res != -1 ? true: false;
     }
+#endif
+
+#ifdef WITH_MPG123
+    if (decoderName != "mpg123")
+    {
+        mpg123_init();
+        mpg123_handle *handle = mpg123_new(0, 0);
+        if (!handle)
+            return false;
+        if(mpg123_open_feed(handle) != MPG123_OK)
+        {
+            mpg123_delete(handle);
+            return false;
+        }
+        if (mpg123_format(handle, 44100, MPG123_STEREO, MPG123_ENC_SIGNED_16) != MPG123_OK)
+        {
+            mpg123_close(handle);
+            mpg123_delete(handle);
+            return false;
+        }
+        size_t out_size = 0;
+        int ret = mpg123_decode(handle, (unsigned char*) buf, dataSize, 0, 0, &out_size);
+        mpg123_close(handle);
+        mpg123_delete(handle);
+        return ret == MPG123_DONE || ret == MPG123_NEW_FORMAT;
+    }
+#endif
     return false;
 }
 

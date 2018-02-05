@@ -49,6 +49,7 @@ private:
     qint64 m_totalTime;
     long m_rate;
     int m_mpg123_encoding;
+    int m_resync_errors;
 };
 
 

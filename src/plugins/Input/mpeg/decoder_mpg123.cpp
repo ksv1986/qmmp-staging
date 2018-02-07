@@ -67,7 +67,7 @@ DecoderMPG123::DecoderMPG123(QIODevice *i) : Decoder(i)
     m_frame_info.bitrate = 0;
     m_mpg123_encoding = MPG123_ENC_SIGNED_16;
     m_handle = 0;
-    m_resync_errors = 0;
+    m_errors = 0;
 }
 
 DecoderMPG123::~DecoderMPG123()
@@ -78,7 +78,7 @@ DecoderMPG123::~DecoderMPG123()
 
 bool DecoderMPG123::initialize()
 {
-    m_resync_errors = 0;
+    m_errors = 0;
     if (input()->isSequential ()) //for streams only
     {
         TagExtractor extractor(input());
@@ -166,14 +166,17 @@ qint64 DecoderMPG123::read(unsigned char *data, qint64 size)
     if(err < 0)
     {
         err = mpg123_errcode(m_handle);
-        if(err == MPG123_RESYNC_FAIL && m_resync_errors < 10)
+        if(!m_errors)
+            qWarning("DecoderMPG123: decoder error: %s", mpg123_plain_strerror(err));
+
+        if(m_errors < 10)
         {
             qWarning("DecoderMPG123: skipping resync error...");
-            m_resync_errors++;
+            m_errors++;
+            if(err == MPG123_RESYNC_FAIL && done > 0)
+                memset(data, 0, done);
             return done;
         }
-
-        qWarning("DecoderMPG123: decoder error: %s", mpg123_plain_strerror(err));
         return -1;
     }
     else if(err != MPG123_DONE && err != MPG123_OK)
@@ -181,7 +184,7 @@ qint64 DecoderMPG123::read(unsigned char *data, qint64 size)
         qWarning("DecoderMPG123: decoder error: %s", mpg123_plain_strerror(err));
         return -1;
     }
-    m_resync_errors = 0;
+    m_errors = 0;
     mpg123_info(m_handle, &m_frame_info);
     return done;
 }

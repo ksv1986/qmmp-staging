@@ -171,7 +171,6 @@ qint64 DecoderMPG123::read(unsigned char *data, qint64 size)
 
         if(m_errors < 10)
         {
-            qWarning("DecoderMPG123: skipping resync error...");
             m_errors++;
             if(err == MPG123_RESYNC_FAIL && done > 0)
                 memset(data, 0, done);

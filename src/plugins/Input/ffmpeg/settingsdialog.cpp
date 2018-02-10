@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,7 +38,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     QStringList filters;
     filters << "*.wma" << "*.ape" << "*.tta" << "*.m4a" << "*.aac" << "*.ra" << "*.shn" << "*.vqf" << "*.ac3";
     filters = settings.value("FFMPEG/filters", filters).toStringList();
-#if (LIBAVCODEC_VERSION_INT >= ((55<<16)+(34<<8)+0)) //libav 10
+#if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(55,34,0)) //libav 10
     ui.wmaCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_WMAV1));
     ui.wmaCheckBox->setChecked(filters.contains("*.wma") && avcodec_find_decoder(AV_CODEC_ID_WMAV1));
     ui.apeCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_APE));

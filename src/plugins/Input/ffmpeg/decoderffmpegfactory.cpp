@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,9 +38,11 @@ extern "C"{
 
 DecoderFFmpegFactory::DecoderFFmpegFactory()
 {
+#if (LIBAVCODEC_VERSION_INT < AV_VERSION_INT(58,10,100)) //ffmpeg-3.5
     avcodec_register_all();
     avformat_network_init();
     av_register_all();
+#endif
 }
 
 bool DecoderFFmpegFactory::canDecode(QIODevice *i) const

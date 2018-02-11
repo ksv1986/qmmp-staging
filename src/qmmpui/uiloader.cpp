@@ -105,7 +105,11 @@ UiFactory *UiLoader::selected()
 {
     loadPlugins();
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
+#ifdef QMMP_DEFAULT_UI
+    QString name = settings.value("Ui/current_plugin", QMMP_DEFAULT_UI).toString();
+#else
     QString name = settings.value("Ui/current_plugin", "skinned").toString();
+#endif
     foreach(QmmpUiPluginCache *item, *m_cache)
     {
         if(item->shortName() == name && item->uiFactory())

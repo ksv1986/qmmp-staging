@@ -142,7 +142,8 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 - USE_SKINNED (стандартный пользовательский интерфейс);
 - USE_QSUI (простой интерфейс);
 - USE_DIR_ASSOC (привязка к mime-типу inode/directory);
-- QMMP_DEFAULT_OUTPUT (модуль вывода по умолчанию, пример использования: -DQMMP_DEFAULT_OUTPUT=pulse).
+- QMMP_DEFAULT_OUTPUT (модуль вывода по умолчанию, пример использования: -DQMMP_DEFAULT_OUTPUT=pulse);
+- QMMP_DEFAULT_UI (интерфейс пользователя по умолчанию, пример использования: -DQMMP_DEFAULT_UI=qsui).
 
 Также вы можете использовать ccmake для изменения конфигурации модулей.
 По умолчанию программа будет установлена в /usr/local. Вы можете изменить этот путь командой:

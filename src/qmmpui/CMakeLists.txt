@@ -10,6 +10,13 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../)
 link_directories(${CMAKE_INSTALL_PREFIX}/${LIB_DIR})
 link_directories(${CMAKE_CURRENT_BINARY_DIR}/../qmmp)
 
+SET(QMMP_DEFAULT_UI "" CACHE STRING "default user interface")
+IF(QMMP_DEFAULT_UI)
+    SET(libqmmpui_DEFINES ${libqmmpui_DEFINES} QMMP_DEFAULT_UI="${QMMP_DEFAULT_OUTPUT}")
+    MESSAGE(STATUS "Default user interface: ${QMMP_DEFAULT_UI}")
+ENDIF(QMMP_DEFAULT_UI)
+
+
 SET(libqmmpui_SRCS
     general.cpp
     uihelper.cpp
@@ -127,6 +134,7 @@ ADD_LIBRARY(qmmpui SHARED ${libqmmpui_SRCS} ${libqmmpui_RCC_SRCS} ${libqmmpui_UI
 target_link_libraries(qmmpui Qt5::Widgets Qt5::Network -lqmmp)
 add_dependencies(qmmpui libqmmp)
 SET_TARGET_PROPERTIES(qmmpui PROPERTIES VERSION ${QMMP_VERSION} SOVERSION ${QMMP_SOVERSION})
+target_compile_definitions(qmmpui PRIVATE ${libqmmpui_DEFINES})
 install(TARGETS qmmpui LIBRARY DESTINATION ${LIB_DIR}
                        RUNTIME DESTINATION bin
                        ARCHIVE DESTINATION ${LIB_DIR})

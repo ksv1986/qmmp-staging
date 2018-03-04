@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -202,6 +202,7 @@ void PlayListSelector::mousePressEvent (QMouseEvent *e)
     }
 
     bool selected = false;
+    m_moving = false;
     int index = findPlayList(e->pos());
     if(index != -1)
     {
@@ -215,17 +216,15 @@ void PlayListSelector::mousePressEvent (QMouseEvent *e)
 
     if(e->button() == Qt::RightButton)
     {
-        m_moving = false;
         update();
         m_menu->exec(e->globalPos());
         return;
     }
     else if(e->button() == Qt::MidButton && selected)
     {
-        m_moving = false;
         m_pl_manager->removePlayList(m_pl_manager->selectedPlayList());
     }
-    else if(e->button() == Qt::LeftButton)
+    else if(e->button() == Qt::LeftButton && selected)
     {
         m_moving = true;
         m_mouse_pos = e->pos();

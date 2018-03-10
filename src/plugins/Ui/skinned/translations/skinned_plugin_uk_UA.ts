@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>ActionManager</name>
     <message>
@@ -1222,12 +1222,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="307"/>
         <source>Show splitters</source>
-        <translation type="unfinished"></translation>
+        <translation>Показати ділителі</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="314"/>
         <source>Alternate splitter color</source>
-        <translation type="unfinished"></translation>
+        <translation>Альтернативний колір ділителя</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="416"/>

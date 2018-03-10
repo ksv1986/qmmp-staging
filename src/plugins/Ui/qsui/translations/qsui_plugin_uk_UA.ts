@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>AboutQSUIDialog</name>
     <message>
@@ -1215,7 +1215,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="709"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ділитель:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="917"/>
@@ -1265,7 +1265,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="94"/>
         <source>Show splitters</source>
-        <translation type="unfinished"></translation>
+        <translation>Показати ділителі</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="138"/>

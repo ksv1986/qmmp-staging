@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>EffectSoXRFactory</name>
     <message>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Sample Rate Converter Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Налаштування модуля перетворювача частоти</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="20"/>

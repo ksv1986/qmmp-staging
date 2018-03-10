@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>DecoderMPEGFactory</name>
     <message>
         <location filename="../decodermpegfactory.cpp" line="121"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">Модуль MPEG</translation>
+        <translation>Модуль MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="124"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">Файли MPEG</translation>
+        <translation>Файли MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="294"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">Про аудіо-модуль MPEG</translation>
+        <translation>Про аудіо-модуль MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="295"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>MPEG 1.0/2.0/2.5 layer 1/2/3 аудіо декодер</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="296"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Зібрано з:</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="305"/>
         <source>mpg123, API version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>mpg123, версія API: %1</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="309"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Розробник: Ілля Котов &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Розробник: Ілля Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="310"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">Вихідні коди базуються на проектах mq3 та madplay</translation>
+        <translation>Вихідні коди базуються на проектах mq3 та madplay</translation>
     </message>
 </context>
 <context>
@@ -156,17 +156,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Декодер</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>MAD</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>MPG123</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="77"/>

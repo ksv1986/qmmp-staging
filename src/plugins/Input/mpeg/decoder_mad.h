@@ -21,19 +21,12 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#ifndef   DECODER_MAD_H
-#define   DECODER_MAD_H
+#ifndef DECODER_MAD_H
+#define DECODER_MAD_H
 
-class QIODevice;
-class DecoderMAD;
-
+#include <mad.h>
 #include <qmmp/decoder.h>
 #include "decodermpegfactory.h"
-
-extern "C"
-{
-#include <mad.h>
-}
 
 class DecoderMAD : public Decoder
 {

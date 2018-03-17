@@ -24,7 +24,6 @@
 #include <QTranslator>
 #include <QFile>
 #include <QTextCodec>
-#include <mad.h>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/id3v1tag.h>

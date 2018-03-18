@@ -1,3 +1,31 @@
-Grazie a:
+Ringraziamenti:
 
-    Vadim Kalinnikov <moose@ylsoftware.com> (spazio ospite del progetto)
+    Adria Arrufat <swiftscythe@gmail.com> - segnalazione di bug
+    Adrian Knoth <adi@drcomp.erfurt.thur.de> - correzioni all'estensione JACK, segnalazione di bug
+    Anton Petrusevich <casus@casus.us> - miglioramenti alla riproduzione casuale
+    Avihay Baratz <avihayb@gmail.com> - funzione di fine riproduzione automatica, correzione di bug
+    Brice Videau <brice.videau@gmail.com> - correzione di bug
+    Cristian Rodríguez <judas.iscariote@gmail.com> - scrobbler fixes
+    Csaba Hruska <csaba.hruska@gmail.com> - correzioni all'estensione FFmpeg
+    Dmitry Kostin <kostindima@gmail.com> - supporto per iso.wv
+    Dmitry Misharov <Dmitry.Misharov@gmail.com> - album artist tag support
+    Evgeny Gleyzerman <evgley@gmail.com> - miglioramenti all'analisi di file cue
+    Ferdinand Vesely <erdofves@gmail.com> - scrobbler improvements
+    Gennadi Motsyo <drool@altlinux.ru> - segnalazione di bug
+    Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - ottimizzazione
+    Vadim Kalinnikov <moose@ylsoftware.com> - project hosting
+    Erik Ölsar <erlk.ozlr@gmail.com> - cursori nei temi, miglioramenti all'interfaccia
+    Funda Wang <fundawang@gmail.com> - correzioni ai file cmake
+    Ivan Ponomarev ivantrue@gmail.com - uscita QtMultimedia, conversione a MacOS X
+    Karel Volný <kvolny@redhat.com> - correzioni varie
+    Makis Kalofolias <makskafl@gmail.com> - supporto per EAC3, DTS e Dolby TrueHD
+    Michail Zheludkov <zheludkovm@mail.ru> - correzioni all'estensione FFmpeg
+    Michał Grosicki <grosik88@o2.pl> - correzioni all'estensione ALSA
+    Panagiotis Papadopoulos <pano_90@gmx.net> - correzioni all'interfaccia, segnalazione di bug
+    Pino Toscano <toscano.pino@tiscali.it> - correzioni per la portabilità
+    Ryota Shimamoto <liangtai.s16@gmail.com> - correzioni per FreeBSD
+    Sebastian Pipping <webmaster@hartwork.org> - correzioni per bs2b
+    Stefan Koelling <stefankoelling.ext@googlemail.com> - alcune correzioni al processo di compilazione
+    Thomas Perl - miglioramenti all'interfaccia
+    Ville Skyttä - miglioramenti all'estensione ModPlug
+    Yaakov Selkowitz <yselkowitz@gmail.com> - correzioni per cygwin

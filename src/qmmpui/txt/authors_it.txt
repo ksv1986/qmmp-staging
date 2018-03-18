@@ -1,13 +1,14 @@
-Sviluppatori del programma base:
+Sviluppatori principali:
 
-    Ilya Kotov <forkotov02@ya.ru> (idea e codice di base)
-    Vladimir Kuznetsov <vovanec@gmail.com> (aspetto e molti miglioramenti)
+    Ilya Kotov <forkotov02@ya.ru> - idea e codice iniziale
 
-Sviluppatori dei moduli:
+Sviluppatori precedenti:
 
-    Yuriy Zhuravlev <stalkerg@gmail.com> (moduli  & oss jack)
+    Artur Guzik <aguzik88@gmail.com> - estensione di notifica per kde4, miglioramenti all'icona del vassoio di sistema
+    Vladimir Kuznetsov <vovanec@gmail.com> - aspetto e vari miglioramenti
+    Yuriy Zhuravlev <stalkerg@gmail.com> - estensioni JACK e OSS
 
-Grafica:
+Grafica
 
-    Andrey Adreev <andreev00@gmail.com>
-
+    Andrey Adreev <andreev00@gmail.com> - icone e tema predefinito (per le versioni 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - tema predefinito

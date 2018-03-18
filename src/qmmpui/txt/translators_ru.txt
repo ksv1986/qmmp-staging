@@ -45,12 +45,13 @@
 
 Венгерский:
     Németh Gábor <sutee84@freemail.hu>
-    
+
 Индонезийский:
     Wantoyo <wantoyek@gmail.com>
 
 Итальянский:
     Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
 
 Японский:
     Рёта Симамото <liangtai.s16@gmail.com>

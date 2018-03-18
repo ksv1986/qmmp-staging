@@ -1,7 +1,7 @@
 #include <winver.h>
 
-#define QMMP_FILEVERSION 1,2,1,0
-#define QMMP_PRODUCTVERSION "1.2.1.0"
+#define QMMP_FILEVERSION 1,3,0,0
+#define QMMP_PRODUCTVERSION "1.3.0.0"
 
 IDI_ICON1		ICON		DISCARDABLE	"images\\ico\\qmmp.ico"
 IDI_ICON2		ICON		DISCARDABLE	"images\\ico\\qmmp_file.ico"
@@ -22,7 +22,7 @@ BEGIN
             VALUE "CompanyName", "Qmmp Development Team"
             VALUE "FileDescription", "Qt-based Multimedia Player"
             VALUE "FileVersion", QMMP_PRODUCTVERSION
-            VALUE "LegalCopyright", "Copyright (C) 2006-2017 Qmmp Development Team"
+            VALUE "LegalCopyright", "Copyright (C) 2006-2018 Qmmp Development Team"
             VALUE "InternalName", "qmmp"
             VALUE "OriginalFilename", "qmmp.exe"
             VALUE "ProductName", "Qmmp"

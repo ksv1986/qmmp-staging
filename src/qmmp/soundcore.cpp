@@ -135,9 +135,9 @@ bool SoundCore::nextTrackAccepted() const
     return m_nextState == SAME_ENGINE;
 }
 
-qint64 SoundCore::totalTime() const
+qint64 SoundCore::duration() const
 {
-    return m_handler->totalTime();
+    return m_handler->duration();
 }
 
 EqSettings SoundCore::eqSettings() const

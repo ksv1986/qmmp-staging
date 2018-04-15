@@ -56,7 +56,7 @@ public:
     /*!
      * Returns length in milliseconds
      */
-    qint64 totalTime() const;
+    qint64 duration() const;
     /*!
      * Returns equalizer settings
      */

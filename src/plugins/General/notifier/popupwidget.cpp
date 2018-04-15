@@ -84,7 +84,7 @@ void PopupWidget::showMetaData()
     m_timer->stop();
     SoundCore *core = SoundCore::instance();
 
-    QString title = m_formatter.format(core->metaData(), core->totalTime() / 1000);
+    QString title = m_formatter.format(core->metaData(), core->duration() / 1000);
 
     m_label1->setText(title);
 

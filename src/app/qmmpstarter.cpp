@@ -267,7 +267,7 @@ void QMMPStarter::savePosition()
     settings.beginGroup("General");
     settings.setValue("resume_playback",m_core->state() == Qmmp::Playing &&
                       QmmpUiSettings::instance()->resumeOnStartup());
-    settings.setValue("resume_playback_time", m_core->totalTime() > 0 ? m_core->elapsed() : 0);
+    settings.setValue("resume_playback_time", m_core->duration() > 0 ? m_core->elapsed() : 0);
     settings.endGroup();
     m_core->stop();
 }

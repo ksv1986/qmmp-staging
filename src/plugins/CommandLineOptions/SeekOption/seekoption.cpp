@@ -43,7 +43,7 @@ const QStringList SeekOption::helpString() const
 QString SeekOption::executeCommand(const QString &opt_str, const QStringList &args)
 {
     SoundCore *core = SoundCore::instance();
-    if(core->state() != Qmmp::Playing && core->totalTime())
+    if(core->state() != Qmmp::Playing && core->duration())
         return QString();
     if(args.isEmpty())
         return QString();
@@ -68,7 +68,7 @@ QString SeekOption::executeCommand(const QString &opt_str, const QStringList &ar
         seek_pos = elapsed - seek_pos;
     qDebug("SeekOption: position = %d", seek_pos);
 
-    if(seek_pos >= 0 && seek_pos < core->totalTime())
+    if(seek_pos >= 0 && seek_pos < core->duration())
         core->seek(seek_pos * 1000);
     else
         return QString();

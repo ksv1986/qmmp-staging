@@ -190,7 +190,7 @@ void MainDisplay::setState(Qmmp::State state)
     case Qmmp::Playing:
         m_playstatus->setStatus(PlayStatus::PLAY);
         m_timeIndicatorModel->setVisible(true);
-        setDuration(m_core->totalTime());
+        setDuration(m_core->duration());
         break;
     case Qmmp::Paused:
         m_playstatus->setStatus(PlayStatus::PAUSE);

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -39,7 +39,7 @@ StateHandler::StateHandler(QObject *parent)
     qRegisterMetaType<AudioParameters>("AudioParameters");
     m_instance = this;
     m_elapsed = -1;
-    m_length = 0;
+    m_duration = 0;
     m_bitrate = 0;
     m_sendAboutToFinish = true;
     m_state = Qmmp::Stopped;
@@ -62,12 +62,12 @@ void StateHandler::dispatch(qint64 elapsed, int bitrate)
             m_bitrate = bitrate;
             emit (bitrateChanged(bitrate));
         }
-        if((SoundCore::instance()->totalTime() > PREFINISH_TIME)
-                 && (m_length - m_elapsed < PREFINISH_TIME)
+        if((SoundCore::instance()->duration() > PREFINISH_TIME)
+                 && (m_duration - m_elapsed < PREFINISH_TIME)
                  && m_sendAboutToFinish)
         {
             m_sendAboutToFinish = false;
-            if(m_length - m_elapsed > PREFINISH_TIME/2)
+            if(m_duration - m_elapsed > PREFINISH_TIME/2)
                 qApp->postEvent(parent(), new QEvent(EVENT_NEXT_TRACK_REQUEST));
         }
     }
@@ -88,7 +88,7 @@ void StateHandler::dispatch(const AudioParameters &p)
 void StateHandler::dispatch(qint64 length)
 {
     m_mutex.lock();
-    m_length = length;
+    m_duration = length;
     m_mutex.unlock();
 }
 
@@ -182,10 +182,10 @@ qint64 StateHandler::elapsed() const
     return m_elapsed;
 }
 
-qint64 StateHandler::totalTime() const
+qint64 StateHandler::duration() const
 {
     QMutexLocker locker(&m_mutex);
-    return m_length;
+    return m_duration;
 }
 
 int StateHandler::bitrate() const

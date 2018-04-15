@@ -57,9 +57,9 @@ public:
     void dispatch(const AudioParameters &p);
     /*!
      * Sends information about song length
-     * @param length song length in milliseconds
+     * @param duration track length in milliseconds
      */
-    void dispatch(qint64 length);
+    void dispatch(qint64 duration);
     /*!
      * Sends metadata \b metaData
      */
@@ -82,9 +82,9 @@ public:
      */
     qint64 elapsed() const;
     /*!
-     * Returns length in milliseconds
+     * Returns duration in milliseconds
      */
-    qint64 totalTime() const;
+    qint64 duration() const;
     /*!
      * Returns current bitrate (in kbps)
      */
@@ -135,7 +135,7 @@ signals:
 
 private:
     qint64 m_elapsed;
-    qint64 m_length;
+    qint64 m_duration;
     bool m_sendAboutToFinish;
     int m_bitrate;
     static StateHandler* m_instance;

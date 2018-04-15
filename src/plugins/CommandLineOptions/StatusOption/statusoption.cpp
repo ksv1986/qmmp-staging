@@ -71,7 +71,7 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
             out += "TRACK = %n\n";
             out += "FILE = %f";
             MetaDataFormatter formatter(out);
-            out = formatter.format(core->metaData(), core->totalTime());
+            out = formatter.format(core->metaData(), core->duration());
         }
         out += "\n";
     }
@@ -79,7 +79,7 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
     {
         QString t = args.join(" ");
         MetaDataFormatter formatter(t);
-        out = formatter.format(core->metaData(), core->totalTime());
+        out = formatter.format(core->metaData(), core->duration());
         out += "\n";
     }
     else if(opt_str == "--nowplaying-syntax")
@@ -121,15 +121,15 @@ QTranslator *StatusOption::createTranslator(QObject *parent)
 QString StatusOption::genProgressBar()
 {
     SoundCore *core = SoundCore::instance();
-    QString totalTime = QString("%1:%2").arg(core->totalTime()/60000)
-            .arg(core->totalTime()%60000/1000, 2, 10, QChar('0'));
+    QString totalTime = QString("%1:%2").arg(core->duration()/60000)
+            .arg(core->duration()%60000/1000, 2, 10, QChar('0'));
     QString currentTime = QString("%1:%2").arg(core->elapsed()/60000)
             .arg(core->elapsed()%60000/1000, 2, 10, QChar('0'));
     QString out = currentTime;
-    if(core->totalTime())
+    if(core->duration())
     {
         out.clear();
-        int played_count = 22 * (double)core->elapsed()/core->totalTime();
+        int played_count = 22 * (double)core->elapsed()/core->duration();
         for(int i = 0; i < played_count; ++i)
             out += "=";
         out += "#";

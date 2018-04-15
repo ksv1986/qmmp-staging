@@ -126,7 +126,7 @@ void StatusIconPopupWidget::updateMetaData(const QString &message)
 
 void StatusIconPopupWidget::updateTime(qint64 elapsed)
 {
-    m_bar->setMaximum(SoundCore::instance()->totalTime()/1000);
+    m_bar->setMaximum(SoundCore::instance()->duration()/1000);
     m_bar->setValue(elapsed/1000);
     m_bar->update();
 }

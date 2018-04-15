@@ -199,15 +199,15 @@ void MainWindow::addUrl()
 
 void MainWindow::updatePosition(qint64 pos)
 {
-    m_positionSlider->setMaximum(m_core->totalTime()/1000);
+    m_positionSlider->setMaximum(m_core->duration()/1000);
     if(!m_positionSlider->isSliderDown())
         m_positionSlider->setValue(pos/1000);
 
     QString text = MetaDataFormatter::formatLength(pos/1000, false);
-    if(m_core->totalTime() > 1000)
+    if(m_core->duration() > 1000)
     {
         text.append("/");
-        text.append(MetaDataFormatter::formatLength(m_core->totalTime()/1000));
+        text.append(MetaDataFormatter::formatLength(m_core->duration()/1000));
     }
     m_timeLabel->setText(text);
 }

@@ -136,7 +136,7 @@ void Notifier::showMetaData()
     data.append(m_core->metaData(Qmmp::ARTIST).toUtf8()+"\n");
     data.append(m_core->metaData(Qmmp::ALBUM).toUtf8()+"\n");
     data.append(m_core->metaData(Qmmp::TRACK).toUtf8()+"\n");
-    data.append(QString("%1").arg(m_core->totalTime()/1000).toUtf8()+"\n");
+    data.append(QString("%1").arg(m_core->duration()/1000).toUtf8()+"\n");
 
     foreach(QString path, m_psiTuneFiles)
     {

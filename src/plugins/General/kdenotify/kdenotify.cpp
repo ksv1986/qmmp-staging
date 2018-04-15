@@ -95,7 +95,7 @@ KdeNotify::~KdeNotify()
 
 QString KdeNotify::totalTimeString()
 {
-    int time = SoundCore::instance()->totalTime()/1000;
+    int time = SoundCore::instance()->duration()/1000;
 
     if(time >= 3600)
     {
@@ -121,7 +121,7 @@ QList<QVariant> KdeNotify::prepareNotification()
     args.append(tr("Qmmp now playing:")); //summary (notification title)
 
     MetaDataFormatter f(m_template);
-    QString body = f.format(core->metaData(), core->totalTime()/1000);
+    QString body = f.format(core->metaData(), core->duration()/1000);
 
     QString coverPath;
     if(m_showCovers)

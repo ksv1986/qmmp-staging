@@ -83,7 +83,7 @@ bool Player2Object::canPlay() const
 
 bool Player2Object::canSeek() const
 {
-    return m_core->totalTime() > 0;
+    return m_core->duration() > 0;
 }
 
 QString Player2Object::loopStatus() const
@@ -126,7 +126,7 @@ QVariantMap Player2Object::metadata() const
     if(!track || m_core->metaData(Qmmp::URL).isEmpty())
         return QVariantMap();
     QVariantMap map;
-    map["mpris:length"] = qMax(m_core->totalTime() * 1000 , qint64(0));
+    map["mpris:length"] = qMax(m_core->duration() * 1000 , qint64(0));
     if(!MetaDataManager::instance()->getCoverPath(m_core->metaData(Qmmp::URL)).isEmpty())
     {
         map["mpris:artUrl"] = QUrl::fromLocalFile(

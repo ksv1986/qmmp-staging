@@ -138,8 +138,8 @@ QVariantMap PlayerObject::GetMetadata()
     map.insert("albumartist", m_core->metaData(Qmmp::ALBUMARTIST));
     map.insert("album", m_core->metaData(Qmmp::ALBUM));
     map.insert("tracknumber", m_core->metaData(Qmmp::TRACK));
-    map.insert("time", (quint32)m_core->totalTime()/1000);
-    map.insert("mtime", (quint32)m_core->totalTime());
+    map.insert("time", (quint32)m_core->duration()/1000);
+    map.insert("mtime", (quint32)m_core->duration());
     map.insert("genre", m_core->metaData(Qmmp::GENRE));
     map.insert("comment", m_core->metaData(Qmmp::COMMENT));
     map.insert("audio-bitrate", (quint32)m_core->bitrate());
@@ -155,7 +155,7 @@ int PlayerObject::GetCaps()
         caps |= CAN_PAUSE;
     else
         caps |= CAN_PLAY;
-    if ((GetStatus().state < 2) && (m_core->totalTime() > 0))
+    if ((GetStatus().state < 2) && (m_core->duration() > 0))
         caps |= CAN_SEEK;
     caps |= CAN_GO_NEXT;
     caps |= CAN_GO_PREV;

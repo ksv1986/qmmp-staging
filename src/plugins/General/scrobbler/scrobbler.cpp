@@ -178,7 +178,7 @@ void Scrobbler::updateMetaData()
 
     if(!metadata.value(Qmmp::TITLE).isEmpty() && !metadata.value(Qmmp::ARTIST).isEmpty())
     {
-        m_song = SongInfo(metadata, m_core->totalTime()/1000);
+        m_song = SongInfo(metadata, m_core->duration()/1000);
         m_song.setTimeStamp(QDateTime::currentDateTime().toTime_t());
         sendNotification(m_song);
     }

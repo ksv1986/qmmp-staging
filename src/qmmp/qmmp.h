@@ -77,6 +77,19 @@ public:
         URL        /*!< Stream url or local file path */
     };
     /*!
+     * Track properties
+     */
+    enum TrackProperty
+    {
+        BITRATE = 0,
+        SAMPLERATE,
+        CHANNELS,
+        BITS_PER_SAMPLE,
+        FORMAT_NAME,
+        DECODER,
+        FILE_SIZE
+    };
+    /*!
      * Keys of ReplayGain information
      */
     enum ReplayGainKey

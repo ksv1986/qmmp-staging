@@ -22,8 +22,8 @@
 
 #include <QMap>
 #include <QStringList>
-#include <qmmp/fileinfo.h>
 #include <qmmp/qmmp.h>
+#include <qmmp/trackinfo.h>
 #include "playlistitem.h"
 #include "qmmpui_export.h"
 
@@ -49,7 +49,7 @@ public:
      * Constructs plalist item with given metadata.
      * @param info Media file information.
      */
-    PlayListTrack(FileInfo *info);
+    PlayListTrack(TrackInfo *info);
     /*!
      * Object destructor.
      */
@@ -90,9 +90,9 @@ public:
     void updateMetaData(const QMap <Qmmp::MetaData, QString> &metaData);
     /*!
      *  Updates current metadata.
-     *  @param info Media file information.
+     *  @param info Track information.
      */
-    void updateMetaData(FileInfo *info);
+    void updateMetaData(TrackInfo *info);
     /*!
      * Gets new metadata from file (works for local files only).
      */

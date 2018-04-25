@@ -596,7 +596,7 @@ void QmmpAudioEngine::sendMetaData()
     QString url = m_inputs.value(m_decoder)->url();
     if (QFile::exists(url)) //send metadata for local files only
     {
-        QList <FileInfo *> list = MetaDataManager::instance()->createPlayList(url, true);
+        QList <TrackInfo *> list = MetaDataManager::instance()->createPlayList(url, TrackInfo::MetaData);
         if (!list.isEmpty())
         {
             StateHandler::instance()->dispatch(list[0]->metaData());

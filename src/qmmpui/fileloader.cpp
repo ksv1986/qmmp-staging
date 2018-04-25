@@ -44,9 +44,9 @@ FileLoader::~FileLoader()
 QList<PlayListTrack *> FileLoader::processFile(const QString &path, QStringList *ignoredPaths)
 {
     QList<PlayListTrack *> tracks;
-    QList <FileInfo *> infoList = MetaDataManager::instance()->createPlayList(path, m_use_meta, ignoredPaths);
+    QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, TrackInfo::MetaData, ignoredPaths);
 
-    foreach (FileInfo *info, infoList)
+    foreach (TrackInfo *info, infoList)
     {
         tracks.append(new PlayListTrack(info));
     }
@@ -61,7 +61,8 @@ void FileLoader::insertPlayList(const QString &fmt, const QByteArray &contents, 
     while (!tracks.isEmpty() && !m_finished)
     {
         PlayListTrack *t = tracks.takeFirst();
-        QList <FileInfo *> infoList = MetaDataManager::instance()->createPlayList(t->url(), m_use_meta);
+        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->url(),
+                                                                                   m_use_meta ? TrackInfo::MetaData : TrackInfo::NoParts);
         if(infoList.count() != 1) //invalid or unsupported track
         {
             qDeleteAll(infoList);
@@ -70,8 +71,8 @@ void FileLoader::insertPlayList(const QString &fmt, const QByteArray &contents, 
             continue;
         }
 
-        FileInfo *info = infoList.first();
-        if(!info->metaData(Qmmp::ALBUM).isEmpty() && !info->metaData(Qmmp::ARTIST).isEmpty())
+        TrackInfo *info = infoList.first();
+        if(!info->value(Qmmp::ALBUM).isEmpty() && !info->value(Qmmp::ARTIST).isEmpty())
             t->updateMetaData(infoList.first());
 
         emit newTracksToInsert(before, QList<PlayListTrack *>() << t);
@@ -89,7 +90,7 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
     while (!tracks.isEmpty() && !m_finished)
     {
         PlayListTrack *t = tracks.takeFirst();
-        QList <FileInfo *> infoList = MetaDataManager::instance()->createPlayList(t->url(), m_use_meta);
+        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->url(), m_use_meta ? TrackInfo::MetaData : TrackInfo::NoParts);
         if(infoList.count() != 1) //invalid or unsupported track
         {
             qDeleteAll(infoList);
@@ -98,8 +99,8 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
             continue;
         }
 
-        FileInfo *info = infoList.first();
-        if(!info->metaData(Qmmp::ALBUM).isEmpty() && !info->metaData(Qmmp::ARTIST).isEmpty())
+        TrackInfo *info = infoList.first();
+        if(!info->value(Qmmp::ALBUM).isEmpty() && !info->value(Qmmp::ARTIST).isEmpty())
             t->updateMetaData(infoList.first());
 
         emit newTracksToInsert(before, QList<PlayListTrack *>() << t);

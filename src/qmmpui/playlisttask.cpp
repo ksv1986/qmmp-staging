@@ -448,8 +448,8 @@ void PlayListTask::run()
         foreach (QFileInfo f, l)
         {
             QStringList ignored;
-            foreach (FileInfo *info, mm->createPlayList(f.canonicalFilePath(),
-                                                        QmmpUiSettings::instance()->useMetadata(),
+            foreach (TrackInfo *info, mm->createPlayList(f.canonicalFilePath(),
+                                                        QmmpUiSettings::instance()->useMetadata() ? TrackInfo::MetaData : TrackInfo::NoParts,
                                                         &ignored))
             {
                 m_new_tracks << new PlayListTrack(info);

@@ -76,17 +76,17 @@ const QString TrackInfo::path() const
     return m_path;
 }
 
-const QString &TrackInfo::operator [](Qmmp::MetaData key) const
+const QString &TrackInfo::value(Qmmp::MetaData key) const
 {
     return m_metaData.find(key).value();
 }
 
-const QString &TrackInfo::operator [](Qmmp::TrackProperty key) const
+const QString &TrackInfo::value(Qmmp::TrackProperty key) const
 {
     return m_properties.find(key).value();
 }
 
-const double &TrackInfo::operator [](Qmmp::ReplayGainKey key) const
+const double &TrackInfo::value(Qmmp::ReplayGainKey key) const
 {
     return m_replayGainInfo.find(key).value();
 }

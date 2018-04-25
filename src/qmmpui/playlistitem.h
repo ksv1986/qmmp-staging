@@ -21,7 +21,6 @@
 #define PLAYLISTITEM_H
 
 #include <QMap>
-#include <qmmp/fileinfo.h>
 #include <qmmp/qmmp.h>
 #include "qmmpui_export.h"
 

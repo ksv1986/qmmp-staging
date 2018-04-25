@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -47,9 +47,9 @@ MetaDataManager::~MetaDataManager()
     m_instance = 0;
 }
 
-QList <FileInfo *> MetaDataManager::createPlayList(const QString &fileName, bool useMetaData, QStringList *ignoredPaths) const
+QList<TrackInfo *> MetaDataManager::createPlayList(const QString &fileName, TrackInfo::Parts parts, QStringList *ignoredPaths) const
 {
-    QList <FileInfo *> list;
+    QList <TrackInfo *> list;
     DecoderFactory *fact = 0;
     EngineFactory *efact = 0;
     QStringList dummyList;
@@ -61,9 +61,9 @@ QList <FileInfo *> MetaDataManager::createPlayList(const QString &fileName, bool
         if(!QFile::exists(fileName))
             return list;
         else if((fact = Decoder::findByFilePath(fileName, m_settings->determineFileTypeByContent())))
-            return fact->createPlayList(fileName, useMetaData, ignoredPaths);
+            return fact->createPlayList(fileName, parts, ignoredPaths);
         else if((efact = AbstractEngine::findByFilePath(fileName)))
-            return efact->createPlayList(fileName, useMetaData, ignoredPaths);
+            return efact->createPlayList(fileName, parts, ignoredPaths);
         return list;
     }
     else
@@ -71,13 +71,13 @@ QList <FileInfo *> MetaDataManager::createPlayList(const QString &fileName, bool
         QString scheme = fileName.section("://",0,0);
         if(InputSource::protocols().contains(scheme))
         {
-            list << new FileInfo(fileName);
+            list << new TrackInfo(fileName);
             return list;
         }
         foreach(fact, Decoder::factories())
         {
             if(fact->properties().protocols.contains(scheme) && Decoder::isEnabled(fact))
-                return fact->createPlayList(fileName, useMetaData, ignoredPaths);
+                return fact->createPlayList(fileName, parts, ignoredPaths);
         }
     }
     return list;

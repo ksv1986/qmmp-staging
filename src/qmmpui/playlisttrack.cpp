@@ -53,13 +53,13 @@ PlayListTrack::PlayListTrack(const PlayListTrack &other) : QMap<Qmmp::MetaData, 
     m_formattedLength = other.m_formattedLength;
 }
 
-PlayListTrack::PlayListTrack(FileInfo *info) :  QMap<Qmmp::MetaData, QString>(info->metaData()),
+PlayListTrack::PlayListTrack(TrackInfo *info) :  QMap<Qmmp::MetaData, QString>(info->metaData()),
     PlayListItem()
 {
     m_track_index = -1;
     m_settings = QmmpUiSettings::instance();
     m_helper = MetaDataHelper::instance();
-    m_length = info->length();
+    m_length = info->duration();
     insert(Qmmp::URL, info->path());
     m_refCount = 0;
     m_sheduledForDeletion = false;
@@ -91,9 +91,9 @@ void PlayListTrack::updateMetaData(const QMap <Qmmp::MetaData, QString> &metaDat
     formatGroup();
 }
 
-void PlayListTrack::updateMetaData(FileInfo *info)
+void PlayListTrack::updateMetaData(TrackInfo *info)
 {
-    m_length = info->length();
+    m_length = info->duration();
     QMap <Qmmp::MetaData, QString>::operator =(info->metaData());
     insert(Qmmp::URL, info->path());
     m_formattedTitles.clear();
@@ -103,10 +103,10 @@ void PlayListTrack::updateMetaData(FileInfo *info)
 
 void PlayListTrack::updateMetaData()
 {
-    QList <FileInfo *> list =  MetaDataManager::instance()->createPlayList(value(Qmmp::URL));
+    QList <TrackInfo *> list =  MetaDataManager::instance()->createPlayList(value(Qmmp::URL));
     if(!list.isEmpty() && !list.at(0)->path().contains("://"))
     {
-        FileInfo *info = list.at(0);
+        TrackInfo *info = list.at(0);
         updateMetaData(info);
     }
     qDeleteAll(list);

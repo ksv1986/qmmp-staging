@@ -21,16 +21,17 @@
 #ifndef EMGINEFACTORY_H
 #define EMGINEFACTORY_H
 
+#include <QStringList>
+#include <QList>
+#include <QMap>
+#include <QIODevice>
+#include <QTranslator>
 #include "qmmp_export.h"
+#include "qmmp.h"
+#include "trackinfo.h"
+#include "abstractengine.h"
+#include "metadatamodel.h"
 
-class QObject;
-class QString;
-class QIODevice;
-class QWidget;
-class QTranslator;
-class QStringList;
-class MetaDataModel;
-class FileInfo;
 class AbstractEngine;
 
 /*! @brief Helper class to store custom audio engine properies.
@@ -83,11 +84,10 @@ public:
      * Extracts metadata and audio information from file \b path and returns a list of FileInfo items.
      * One file may contain several playlist items (for example: cda disk or flac with embedded cue)
      * @param fileName File path.
-     * @param useMetaData Metadata usage (\b true - use, \b - do not use)
      * @param ignoredPaths Pointer to a list of the files which should be ignored by the recursive search
      * (useful to exclude cue data files from playlist)
      */
-    virtual QList<FileInfo *> createPlayList(const QString &fileName, bool useMetaData, QStringList *ignoredPaths) = 0;
+    virtual QList<TrackInfo *> createPlayList(const QString &fileName, TrackInfo::Parts parts, QStringList *ignoredPaths) = 0;
     /*!
      * Creats metadata object, which provides full access to file tags.
      * @param path File path.

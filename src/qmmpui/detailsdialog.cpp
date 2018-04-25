@@ -137,7 +137,7 @@ void DetailsDialog::updatePage()
     m_ui->pathEdit->setText(m_path);
 
     //load metadata and create metadata model
-    QList <FileInfo *> flist = MetaDataManager::instance()->createPlayList(m_path, true);
+    QList <TrackInfo *> flist = MetaDataManager::instance()->createPlayList(m_path, TrackInfo::MetaData);
     if(!flist.isEmpty() && QFile::exists(m_track->url()))
         m_metaData = flist.at(0)->metaData();
     else

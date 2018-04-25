@@ -26,7 +26,7 @@
 #include <QPixmap>
 #include <QDir>
 #include <QMutex>
-#include "fileinfo.h"
+#include "trackinfo.h"
 #include "metadatamodel.h"
 
 class DecoderFactory;
@@ -53,11 +53,10 @@ public:
      * Extracts metadata and audio information from file \b path and returns a list of FileInfo items.
      * One file may contain several playlist items (for example: cda disk or flac with embedded cue)
      * @param path Source file path.
-     * @param useMetaData Metadata usage (\b true - use, \b - do not use)
      * @param ignoredPaths Pointer to a list of the files which should be ignored by the recursive search
      * (useful to exclude cue data files from playlist)
      */
-    QList <FileInfo *> createPlayList(const QString &path, bool useMetaData = true, QStringList *ignoredPaths = 0) const;
+    QList <TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts = TrackInfo::MetaData, QStringList *ignoredPaths = 0) const;
     /*!
      * Creats metadata object, which provides full access to file tags.
      * @param url File path or URL.

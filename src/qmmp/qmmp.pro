@@ -15,7 +15,6 @@ HEADERS += \
     effectfactory.h \
     statehandler.h \
     qmmp.h \
-    fileinfo.h \
     metadatamodel.h \
     tagmodel.h \
     abstractengine.h \
@@ -41,7 +40,8 @@ HEADERS += \
     audioconverter.h \
     dithering_p.h \
     visualbuffer_p.h \
-    qmmp_export.h
+    qmmp_export.h \
+    trackinfo.h
 SOURCES += recycler.cpp \
     decoder.cpp \
     output.cpp \
@@ -53,7 +53,6 @@ SOURCES += recycler.cpp \
     effect.cpp \
     statehandler.cpp \
     qmmp.cpp \
-    fileinfo.cpp \
     volumecontrol.cpp \
     metadatamodel.cpp \
     tagmodel.cpp \
@@ -75,7 +74,8 @@ SOURCES += recycler.cpp \
     channelconverter.cpp \
     volume.cpp \
     dithering.cpp \
-    visualbuffer.cpp
+    visualbuffer.cpp \
+    trackinfo.cpp
 
 unix:TARGET = ../../lib/qmmp
 win32:TARGET = ../../../bin/qmmp

@@ -22,6 +22,7 @@
 
 #include <QMap>
 #include <QString>
+#include <QVariant>
 #include "qmmp.h"
 
 class QMMP_EXPORT TrackInfo
@@ -36,7 +37,7 @@ public:
         NoParts = 0x0,
         MetaData = 0x1,
         Properties = 0x2,
-        ReplayGain = 0x4
+        ReplayGainInfo = 0x4
     };
 
     Q_DECLARE_FLAGS(Parts, Part)
@@ -47,9 +48,9 @@ public:
     qint64 duration () const;
     bool isEmpty() const;
     const QString path() const;
-    const QString &operator [](Qmmp::MetaData key) const;
-    const QString &operator [](Qmmp::TrackProperty key) const;
-    const double &operator [](Qmmp::ReplayGainKey key) const;
+    const QString &value(Qmmp::MetaData key) const;
+    const QString &value(Qmmp::TrackProperty key) const;
+    const double &value(Qmmp::ReplayGainKey key) const;
     const QMap<Qmmp::MetaData, QString> &metaData() const;
     const QMap<Qmmp::TrackProperty, QString> &properties() const;
     const QMap<Qmmp::ReplayGainKey, double> &replayGainInfo() const;

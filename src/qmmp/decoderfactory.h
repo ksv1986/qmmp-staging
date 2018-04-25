@@ -21,24 +21,20 @@
 #ifndef DECODERFACTORY_H
 #define DECODERFACTORY_H
 
+#include <QObject>
+#include <QString>
+#include <QIODevice>
+#include <QTranslator>
+#include <QStringList>
 #include "qmmp_export.h"
-
-class QObject;
-class QString;
-class QIODevice;
-class QWidget;
-class QTranslator;
-class QStringList;
-
-class Decoder;
-class Output;
-class FileInfo;
-class MetaDataModel;
+#include "decoder.h"
+#include "metadatamodel.h"
+#include "trackinfo.h"
 
 /*! @brief Helper class to store input plugin properties.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QMMP_EXPORT DecoderProperties
+class DecoderProperties
 {
 public:
     /*!
@@ -88,14 +84,14 @@ public:
      */
     virtual Decoder *create(const QString &path, QIODevice *input = 0) = 0;
     /*!
-     * Extracts metadata and audio information from file \b path and returns a list of FileInfo items.
+     * Extracts metadata and audio information from file \b path and returns a list of \b TrackInfo items.
      * One file may contain several playlist items (for example: cda disk or flac with embedded cue)
      * @param fileName File path.
-     * @param useMetaData Metadata usage (\b true - use, \b - do not use)
+     * @param parts parts of metadata which should be extracted from file
      * @param ignoredPaths Pointer to a list of the files which should be ignored by the recursive search
      * (useful to exclude cue data files from playlist)
      */
-    virtual QList<FileInfo *> createPlayList(const QString &fileName, bool useMetaData, QStringList *ignoredPaths) = 0;
+    virtual QList<TrackInfo *> createPlayList(const QString &fileName, TrackInfo::Parts parts, QStringList *ignoredPaths) = 0;
     /*!
      * Creats metadata object, which provides full access to file tags.
      * @param path File path.

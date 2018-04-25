@@ -26,7 +26,6 @@
 #include <QList>
 #include <qmmpui/playlisttrack.h>
 #include <qmmp/qmmp.h>
-#include <qmmp/fileinfo.h>
 #include "qmmpui_export.h"
 
 /*! @brief The MetaDataFormatter formats metadata using templates.
@@ -79,11 +78,11 @@ public:
      */
     QString format(const QMap<Qmmp::MetaData, QString> &metaData, qint64 length = 0, int track = 0) const;
     /*!
-     * Converts metadata of \b FileInfo pointer \b info to one string using template.
-     * \param info pointer to \b FileInfo object.
+     * Converts metadata of \b TrackInfo pointer \b info to one string using template.
+     * \param info pointer to \b TrackInfo object.
      * \param track Index of track.
      */
-    QString format(const FileInfo *info, int track = 0) const;
+    QString format(const TrackInfo *info, int track = 0) const;
     /*!
      * Returns formatted length (example: 05:02:03).
      * \param length Length in seconds.

@@ -27,6 +27,7 @@
 #include <QQueue>
 #include <QPointer>
 #include <QVector>
+#include <QUrl>
 #include "playlistitem.h"
 #include "playlisttrack.h"
 #include "playlistgroup.h"

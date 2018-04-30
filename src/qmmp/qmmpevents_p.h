@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,6 +24,7 @@
 #include <QMap>
 #include <QHash>
 #include <QEvent>
+#include "trackinfo.h"
 #include "qmmp.h"
 
 #define EVENT_STATE_CHANGED (QEvent::Type(QEvent::User)) /*!< @internal */
@@ -31,6 +32,7 @@
 #define EVENT_FINISHED (QEvent::Type(QEvent::User + 2)) /*!< @internal */
 #define EVENT_METADATA_CHANGED (QEvent::Type(QEvent::User + 3)) /*!< @internal */
 #define EVENT_STREAM_INFO_CHANGED (QEvent::Type(QEvent::User + 4)) /*!< @internal */
+#define EVENT_TRACK_INFO_CHANGED (QEvent::Type(QEvent::User + 5)) /*!< @internal */
 
 /*! @internal
  * @author Ilya Kotov <forkotov02@ya.ru>
@@ -86,6 +88,18 @@ public:
 
 private:
     QHash<QString, QString> m_streamInfo;
+};
+
+class TrackInfoEvent : QEvent
+{
+public:
+    TrackInfoEvent(const TrackInfo &info);
+    virtual ~TrackInfoEvent();
+
+    const TrackInfo &trackInfo() const;
+
+private:
+    TrackInfo m_info;
 };
 
 #endif // QMMPEVENTS_P_H

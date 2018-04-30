@@ -28,6 +28,7 @@
 class QMMP_EXPORT TrackInfo
 {
 public:
+    TrackInfo();
     TrackInfo(const QString &path);
     TrackInfo(const TrackInfo &other);
     ~TrackInfo();
@@ -70,6 +71,7 @@ public:
     void setPath(const QString &path);
     void setParts(Parts parts);
     void clear(Parts parts);
+    void clear();
 
 private:
     QMap<Qmmp::MetaData, QString> m_metaData;

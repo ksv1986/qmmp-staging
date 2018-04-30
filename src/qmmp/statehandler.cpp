@@ -122,6 +122,15 @@ void StateHandler::dispatch(const QMap<Qmmp::MetaData, QString> &metaData)
             qApp->postEvent(parent(), new MetaDataChangedEvent(m_metaData));
         }
     }
+    if(m_info.isEmpty() || m_info.path() == metaData.value(Qmmp::URL))
+    {
+        if(m_info.metaData() != tmp)
+        {
+            m_info.setValues(tmp);
+            m_info.setPath(metaData.value(Qmmp::URL));
+        }
+    }
+
     m_mutex.unlock();
 }
 
@@ -152,7 +161,7 @@ void StateHandler::dispatch(Qmmp::State state)
     {
         m_elapsed = -1;
         m_bitrate = 0;
-        m_metaData.clear();
+        m_info.clear();
         m_streamInfo.clear();
         m_audioParameters = AudioParameters();
         m_sendAboutToFinish = true;

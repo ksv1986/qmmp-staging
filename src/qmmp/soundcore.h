@@ -31,6 +31,7 @@
 #include "qmmpsettings.h"
 #include "audioparameters.h"
 #include "eqsettings.h"
+#include "trackinfo.h"
 
 class VolumeControl;
 class AbstractEngine;
@@ -113,6 +114,7 @@ public:
      * Returns a hash of stream information if available
      */
     QHash<QString, QString> streamInfo() const;
+    const TrackInfo &trackInfo() const;
     /*!
      *  Indicates that the current active engine will be used for the next queued track.
      *  May be useful for some effect plugins.
@@ -209,6 +211,7 @@ signals:
      * Emitted when new stream information is available.
      */
     void streamInfoChanged();
+    void trackInfoChanged();
     /*!
      * This signal is emitted when the state of the SoundCore has changed.
      */
@@ -262,6 +265,7 @@ private:
     };
     QMap <Qmmp::MetaData, QString> m_metaData;
     QHash <QString, QString> m_streamInfo;
+    TrackInfo m_info;
     QString m_url;
     static SoundCore* m_instance;
     StateHandler *m_handler;

@@ -255,6 +255,11 @@ QHash<QString, QString> SoundCore::streamInfo() const
     return m_streamInfo;
 }
 
+const TrackInfo &SoundCore::trackInfo() const
+{
+    return m_info;
+}
+
 void SoundCore::startNextSource()
 {
     if(m_sources.isEmpty())
@@ -370,6 +375,11 @@ bool SoundCore::event(QEvent *e)
     {
         m_streamInfo = ((StreamInfoChangedEvent *) e)->streamInfo();
         emit streamInfoChanged();
+    }
+    else if(e->type() == EVENT_TRACK_INFO_CHANGED)
+    {
+        m_info = ((TrackInfoEvent *) e)->trackInfo();
+        emit trackInfoChanged();
     }
     else if(e->type() == EVENT_NEXT_TRACK_REQUEST)
         emit nextTrackRequest();

@@ -140,6 +140,7 @@ private:
     int m_bitrate;
     static StateHandler* m_instance;
     QMap <Qmmp::MetaData, QString> m_metaData;
+    TrackInfo m_info;
     QHash <QString, QString> m_streamInfo;
     Qmmp::State m_state;
     AudioParameters m_audioParameters;

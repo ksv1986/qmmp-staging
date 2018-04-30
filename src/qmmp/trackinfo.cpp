@@ -21,6 +21,12 @@
 #include <QRegExp>
 #include "trackinfo.h"
 
+TrackInfo::TrackInfo()
+{
+    m_duration = 0;
+    m_parts = NoParts;
+}
+
 TrackInfo::TrackInfo(const QString &path)
 {
     m_path = path;
@@ -212,4 +218,11 @@ void TrackInfo::clear(Parts parts)
     if(parts & ReplayGainInfo)
         m_replayGainInfo.clear();
     m_parts &= ~parts;
+}
+
+void TrackInfo::clear()
+{
+    clear(AllParts);
+    m_path.clear();
+    m_duration = 0;
 }

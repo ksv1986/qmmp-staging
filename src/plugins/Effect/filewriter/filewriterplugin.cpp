@@ -123,7 +123,7 @@ void FileWriterPlugin::init(const QMap<Qmmp::MetaData, QString> &metaData)
         fileName = metaData[Qmmp::URL].section("/", 1);
 
     MetaDataFormatter formatter(fileName);
-    fileName = formatter.format(metaData, SoundCore::instance()->duration() / 1000);
+    fileName = formatter.format(metaData, SoundCore::instance()->duration());
     if(!fileName.endsWith(".ogg", Qt::CaseInsensitive))
         fileName.append(".ogg");
 

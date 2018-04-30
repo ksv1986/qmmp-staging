@@ -136,7 +136,7 @@ void StatusIcon::showMetaData()
         }
     }
 
-    QString message = m_messageFormatter.format(meta, m_core->duration() / 1000);
+    QString message = m_messageFormatter.format(meta, m_core->duration());
     if (message.isEmpty())
         message = meta[Qmmp::URL].section('/',-1);
 
@@ -146,7 +146,7 @@ void StatusIcon::showMetaData()
 
     if(m_showToolTip)
     {
-        message = m_toolTipFormatter.format(meta, m_core->duration() / 1000);
+        message = m_toolTipFormatter.format(meta, m_core->duration());
         if(message.isEmpty())
             message = meta[Qmmp::URL].section('/',-1);
         m_tray->setToolTip(message);

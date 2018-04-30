@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -366,7 +366,7 @@ void MainWindow::playPause()
 void MainWindow::updateStatus()
 {
     int tracks = m_pl_manager->currentPlayList()->trackCount();
-    int duration = m_pl_manager->currentPlayList()->totalDuration();
+    qint64 duration = m_pl_manager->currentPlayList()->totalDuration();
 
     if(m_core->state() == Qmmp::Playing || m_core->state() == Qmmp::Paused)
     {
@@ -385,7 +385,7 @@ void MainWindow::updateStatus()
         m_statusLabel->setText(tr("<b>%1</b>|tracks: %2|total time: %3|")
                                .arg(tr("Stopped"))
                                .arg(tracks)
-                               .arg(MetaDataFormatter::formatDuration(duration )));
+                               .arg(MetaDataFormatter::formatDuration(duration)));
     }
     else
         m_statusLabel->clear();

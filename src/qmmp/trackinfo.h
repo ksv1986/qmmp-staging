@@ -37,7 +37,8 @@ public:
         NoParts = 0x0,
         MetaData = 0x1,
         Properties = 0x2,
-        ReplayGainInfo = 0x4
+        ReplayGainInfo = 0x4,
+        AllParts = MetaData | Properties | ReplayGainInfo
     };
 
     Q_DECLARE_FLAGS(Parts, Part)
@@ -55,7 +56,7 @@ public:
     const QMap<Qmmp::TrackProperty, QString> &properties() const;
     const QMap<Qmmp::ReplayGainKey, double> &replayGainInfo() const;
     Parts parts() const;
-    void setDuration(qint64 length);
+    void setDuration(qint64 duration);
     void setValue(Qmmp::MetaData key, const QVariant &value);
     void setValue(Qmmp::TrackProperty key, const QVariant &value);
     void setValue(Qmmp::ReplayGainKey key, double value);

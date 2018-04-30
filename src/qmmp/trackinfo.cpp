@@ -111,9 +111,9 @@ TrackInfo::Parts TrackInfo::parts() const
     return m_parts;
 }
 
-void TrackInfo::setDuration(qint64 length)
+void TrackInfo::setDuration(qint64 duration)
 {
-    m_duration = length;
+    m_duration = duration;
 }
 
 void TrackInfo::setValue(Qmmp::MetaData key, const QVariant &value)

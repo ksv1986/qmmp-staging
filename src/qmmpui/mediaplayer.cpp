@@ -82,7 +82,7 @@ void MediaPlayer::play(qint64 offset)
     if (m_pl_manager->currentPlayList()->count() == 0)
         return;
 
-    QString s = m_pl_manager->currentPlayList()->currentTrack()->url();
+    QString s = m_pl_manager->currentPlayList()->currentTrack()->path();
     if (s.isEmpty())
     {
         m_nextUrl.clear();
@@ -150,10 +150,10 @@ void MediaPlayer::updateNextUrl()
 
     if(track)
     {
-        bool ok = m_core->play(track->url(), true);
+        bool ok = m_core->play(track->path(), true);
         if(ok)
         {
-            m_nextUrl = track->url();
+            m_nextUrl = track->path();
             qDebug("MediaPlayer: next track state: received");
         }
         else
@@ -207,7 +207,7 @@ void MediaPlayer::updateMetaData()
     qDebug("== end of metadata ==");
 
     PlayListModel *pl = m_pl_manager->currentPlayList();
-    if (pl->currentTrack() && pl->currentTrack()->url() == m_core->metaData().value(Qmmp::URL))
+    if (pl->currentTrack() && pl->currentTrack()->path() == m_core->metaData().value(Qmmp::URL))
     {
         pl->currentTrack()->updateMetaData(m_core->metaData());
         pl->updateMetaData();

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,17 +24,16 @@
 #include "metadatahelper_p.h"
 #include "playlisttrack.h"
 
-PlayListTrack::PlayListTrack() : QMap<Qmmp::MetaData, QString>(), PlayListItem()
+PlayListTrack::PlayListTrack() : TrackInfo(), PlayListItem()
 {
     m_track_index = -1;
     m_settings = QmmpUiSettings::instance();
     m_helper = MetaDataHelper::instance();
-    m_length = 0;
     m_refCount = 0;
     m_sheduledForDeletion = false;
 }
 
-PlayListTrack::PlayListTrack(const PlayListTrack &other) : QMap<Qmmp::MetaData, QString>(other),
+PlayListTrack::PlayListTrack(const PlayListTrack &other) : TrackInfo(other),
     PlayListItem()
 {
     m_track_index = -1;
@@ -49,18 +48,15 @@ PlayListTrack::PlayListTrack(const PlayListTrack &other) : QMap<Qmmp::MetaData, 
     m_titleFormats = other.m_titleFormats;
     m_groupFormat = other.m_groupFormat;
     setSelected(other.isSelected());
-    m_length = other.m_length;
     m_formattedLength = other.m_formattedLength;
 }
 
-PlayListTrack::PlayListTrack(TrackInfo *info) :  QMap<Qmmp::MetaData, QString>(info->metaData()),
+PlayListTrack::PlayListTrack(TrackInfo *info) : TrackInfo(*info),
     PlayListItem()
 {
     m_track_index = -1;
     m_settings = QmmpUiSettings::instance();
     m_helper = MetaDataHelper::instance();
-    m_length = info->duration();
-    insert(Qmmp::URL, info->path());
     m_refCount = 0;
     m_sheduledForDeletion = false;
 }
@@ -73,29 +69,28 @@ PlayListTrack::~PlayListTrack()
 
 PlayListTrack &PlayListTrack::operator=(const PlayListTrack &other)
 {
+    TrackInfo::operator =(other);
     m_formattedTitles = other.m_formattedTitles;
     m_group = other.m_group;
     m_formattedLength = other.m_formattedLength;
     m_titleFormats = other.m_titleFormats;
     m_groupFormat = other.m_groupFormat;
     setSelected(other.isSelected());
-    m_length = other.m_length;
     m_formattedLength = other.m_formattedLength;
     return *this;
 }
 
 void PlayListTrack::updateMetaData(const QMap <Qmmp::MetaData, QString> &metaData)
 {
-    QMap <Qmmp::MetaData, QString>::operator =(metaData);
+    setValues(metaData);
     m_formattedTitles.clear();
     formatGroup();
 }
 
 void PlayListTrack::updateMetaData(TrackInfo *info)
 {
-    m_length = info->duration();
-    QMap <Qmmp::MetaData, QString>::operator =(info->metaData());
-    insert(Qmmp::URL, info->path());
+    setValues(info->metaData());
+    setPath(info->path());
     m_formattedTitles.clear();
     m_formattedLength.clear();
     formatGroup();
@@ -226,29 +221,11 @@ const QStringList PlayListTrack::formattedTitles()
 
 const QString PlayListTrack::formattedLength()
 {
-    if(m_length > 0 && m_formattedLength.isEmpty())
-    {
-        m_formattedLength = MetaDataFormatter::formatDuration(m_length);
-    }
-    else if(m_length == 0)
+    if(duration() > 0 && m_formattedLength.isEmpty())
+        m_formattedLength = MetaDataFormatter::formatDuration(duration());
+    else if(duration() <= 0 && !m_formattedLength.isEmpty())
         m_formattedLength.clear();
     return m_formattedLength;
-}
-
-qint64 PlayListTrack::length() const
-{
-    return m_length;
-}
-
-void PlayListTrack::setLength(qint64 length)
-{
-    m_length = qMax(length, 0LL);
-    m_formattedLength.clear();
-}
-
-const QString PlayListTrack::url() const
-{
-    return value(Qmmp::URL);
 }
 
 void PlayListTrack::formatTitle(int column)
@@ -269,7 +246,7 @@ void PlayListTrack::formatTitle(int column)
 
 void PlayListTrack::formatGroup()
 {
-    if(length() == 0 && url().contains("://"))
+    if(duration() <= 0 && path().contains("://"))
     {
         m_group = qApp->translate("PlayListTrack", "Streams");
         return;

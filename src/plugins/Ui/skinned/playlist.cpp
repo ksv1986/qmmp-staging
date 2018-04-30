@@ -576,8 +576,8 @@ void PlayList::setTime(qint64 time)
 
     if (SoundCore::instance())
     {
-        QString str_length = formatTime (m_pl_manager->currentPlayList()->totalLength()) +
-                             "/" + formatTime (SoundCore::instance()->duration()/1000);
+        QString str_length = formatTime (m_pl_manager->currentPlayList()->totalDuration() / 1000) +
+                             "/" + formatTime (SoundCore::instance()->duration() / 1000);
         m_length_totalLength->display (str_length);
         m_length_totalLength->update();
     }

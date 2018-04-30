@@ -288,9 +288,9 @@ public:
      */
     int firstSelectedLower(int row);
     /*!
-     * Returns total lenght in seconds of all songs.
+     * Returns total duration in milliseconds of all songs.
      */
-    int totalLength() const;
+    int totalDuration() const;
     /*!
      * Loads playlist with \b f_name name.
      */
@@ -592,7 +592,7 @@ private:
     SimpleSelection m_selection;  /*!< This flyweight object represents current selection. */
     QQueue <PlayListTrack*> m_queued_songs; /*!< Songs in play queue. */
     PlayState* m_play_state; /*!< Current playing state (Normal or Shuffle) */
-    int m_total_length;
+    qint64 m_total_duration;
     FileLoader *m_loader;
     QString m_name;
     PlayListContainer *m_container;

@@ -20,7 +20,6 @@
 #ifndef PLAYLISTTRACK_H
 #define PLAYLISTTRACK_H
 
-#include <QMap>
 #include <QStringList>
 #include <qmmp/qmmp.h>
 #include <qmmp/trackinfo.h>
@@ -34,7 +33,7 @@ class MetaDataHelper;
 /** @brief The PlayListTrack class provides a track for use with the PlayListModel class.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QMMPUI_EXPORT PlayListTrack : public QMap <Qmmp::MetaData, QString>, public PlayListItem
+class QMMPUI_EXPORT PlayListTrack : public TrackInfo, public PlayListItem
 {
 public:
     /*!
@@ -71,18 +70,6 @@ public:
      *  Returns formatted length of the item.
      */
     const QString formattedLength();
-    /*!
-     * Returns song length in seconds.
-     */
-    qint64 length() const;
-    /*!
-     * Sets length in seconds.
-     */
-    void setLength(qint64 length);
-    /*!
-     * Same as url()
-     */
-    const QString url() const;
     /*!
      * Updates current metadata.
      * @param metaData Map with metadata values.
@@ -147,7 +134,6 @@ private:
     QStringList m_titleFormats;
     QString m_groupFormat;
     QmmpUiSettings *m_settings;
-    qint64 m_length;
     int m_refCount;
     int m_track_index;
     bool m_sheduledForDeletion;

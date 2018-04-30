@@ -43,7 +43,7 @@ PlayListModel::PlayListModel(const QString &name, QObject *parent)
 {
     qsrand(time(0));
     m_ui_settings = QmmpUiSettings::instance();
-    m_total_length = 0;
+    m_total_duration = 0;
     m_current = 0;
     m_stop_track = 0;
     m_name = name;
@@ -92,7 +92,7 @@ void PlayListModel::setName(const QString &name)
 void PlayListModel::add(PlayListTrack *track)
 {
     m_container->addTrack(track);
-    m_total_length += track->length();
+    m_total_duration += track->duration();
     int flags = 0;
 
     if(m_container->trackCount() == 1)
@@ -133,7 +133,7 @@ void PlayListModel::add(QList<PlayListTrack *> tracks)
 
     foreach(PlayListTrack *track, tracks)
     {
-        m_total_length += track->length();
+        m_total_duration += track->duration();
         emit trackAdded(track);
     }
     preparePlayState();
@@ -154,7 +154,7 @@ void PlayListModel::add(const QStringList &paths)
 void PlayListModel::insert(int index, PlayListTrack *track)
 {
     m_container->insertTrack(index, track);
-    m_total_length += track->length();
+    m_total_duration += track->duration();
 
     int flags = 0;
 
@@ -192,7 +192,7 @@ void PlayListModel::insert(int index, QList<PlayListTrack *> tracks)
     foreach(PlayListTrack *track, tracks)
     {
         m_container->insertTrack(index, track);
-        m_total_length += track->length();
+        m_total_duration += track->duration();
         if(m_container->trackCount() == 1)
         {
             m_current_track = track;
@@ -381,7 +381,7 @@ void PlayListModel::clear()
     m_stop_track = 0;
     m_container->clear();
     m_queued_songs.clear();
-    m_total_length = 0;
+    m_total_duration = 0;
     m_play_state->resetState();
     emit listChanged(STRUCTURE | QUEUE | STOP_AFTER | CURRENT | SELECTION);
 }
@@ -409,7 +409,7 @@ bool PlayListModel::contains(const QString &url)
         PlayListTrack *t = track(i);
         if(!t)
             continue;
-        if(t->url() == url)
+        if(t->path() == url)
             return true;
     }
     return false;
@@ -567,8 +567,8 @@ int PlayListModel::removeTrackInternal(int i)
     if(track->isSelected())
         flags |= SELECTION;
 
-    m_total_length -= track->length();
-    m_total_length = qMax(0, m_total_length);
+    m_total_duration -= track->duration();
+    m_total_duration = qMax(Q_INT64_C(0), m_total_duration);
 
     if(m_current_track == track)
     {
@@ -667,9 +667,9 @@ int PlayListModel::firstSelectedLower(int row)
     return -1;
 }
 
-int PlayListModel::totalLength() const
+int PlayListModel::totalDuration() const
 {
-    return m_total_length;
+    return m_total_duration;
 }
 
 void PlayListModel::moveItems(int from, int to)

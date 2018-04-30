@@ -61,7 +61,7 @@ void FileLoader::insertPlayList(const QString &fmt, const QByteArray &contents, 
     while (!tracks.isEmpty() && !m_finished)
     {
         PlayListTrack *t = tracks.takeFirst();
-        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->url(),
+        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(),
                                                                                    m_use_meta ? TrackInfo::MetaData : TrackInfo::NoParts);
         if(infoList.count() != 1) //invalid or unsupported track
         {
@@ -90,7 +90,7 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
     while (!tracks.isEmpty() && !m_finished)
     {
         PlayListTrack *t = tracks.takeFirst();
-        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->url(), m_use_meta ? TrackInfo::MetaData : TrackInfo::NoParts);
+        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(), m_use_meta ? TrackInfo::MetaData : TrackInfo::NoParts);
         if(infoList.count() != 1) //invalid or unsupported track
         {
             qDeleteAll(infoList);
@@ -319,7 +319,7 @@ void FileLoader::removeIgnoredTracks(QList<PlayListTrack *> *tracks, const QStri
 
     foreach(PlayListTrack *track, *tracks)
     {
-        if(ignoredPaths.contains(track->url()))
+        if(ignoredPaths.contains(track->path()))
         {
             tracks->removeAll(track);
             delete track;

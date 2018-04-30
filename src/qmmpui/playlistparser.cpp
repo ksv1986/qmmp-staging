@@ -142,7 +142,7 @@ QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &f_name)
 
         url.replace("\\","/");
         url.replace("//","/");
-        t->insert(Qmmp::URL, url);
+        t->setValue(Qmmp::URL, url);
     }
     return tracks;
 }

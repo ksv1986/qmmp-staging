@@ -243,7 +243,7 @@ void HalPlugin::addPath(const QString &path)
     {
         if(item->isGroup())
             continue;
-        if (dynamic_cast<PlayListTrack *>(item)->url().startsWith(path))
+        if (dynamic_cast<PlayListTrack *>(item)->path().startsWith(path))
             return;
     }
 
@@ -267,7 +267,7 @@ void HalPlugin::removePath(const QString &path)
     int i = 0;
     while (model->count() > 0 && i < model->count())
     {
-        if (model->isTrack(i) && model->track(i)->url().startsWith(path))
+        if (model->isTrack(i) && model->track(i)->path().startsWith(path))
             model->removeTrack(i);
         else
             ++i;

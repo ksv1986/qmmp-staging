@@ -276,32 +276,34 @@ void PlayListManager::readPlayLists()
         else if (param == "file")
         {
             tracks << new PlayListTrack();
-            tracks.last()->insert(Qmmp::URL, value);
+            tracks.last()->setPath(value);
         }
         else if (tracks.isEmpty())
             continue;
         else if (param == "title")
-            tracks.last()->insert(Qmmp::TITLE, value);
+            tracks.last()->setValue(Qmmp::TITLE, value);
         else if (param == "artist")
-            tracks.last()->insert(Qmmp::ARTIST, value);
+            tracks.last()->setValue(Qmmp::ARTIST, value);
         else if (param == "albumartist")
-            tracks.last()->insert(Qmmp::ALBUMARTIST, value);
+            tracks.last()->setValue(Qmmp::ALBUMARTIST, value);
         else if (param == "album")
-            tracks.last()->insert(Qmmp::ALBUM, value);
+            tracks.last()->setValue(Qmmp::ALBUM, value);
         else if (param == "comment")
-            tracks.last()->insert(Qmmp::COMMENT, value);
+            tracks.last()->setValue(Qmmp::COMMENT, value);
         else if (param == "genre")
-            tracks.last()->insert(Qmmp::GENRE, value);
+            tracks.last()->setValue(Qmmp::GENRE, value);
         else if (param == "composer")
-            tracks.last()->insert(Qmmp::COMPOSER, value);
+            tracks.last()->setValue(Qmmp::COMPOSER, value);
         else if (param == "year")
-            tracks.last()->insert(Qmmp::YEAR, value);
+            tracks.last()->setValue(Qmmp::YEAR, value);
         else if (param == "track")
-            tracks.last()->insert(Qmmp::TRACK, value);
+            tracks.last()->setValue(Qmmp::TRACK, value);
         else if (param == "disc")
-            tracks.last()->insert(Qmmp::DISCNUMBER, value);
+            tracks.last()->setValue(Qmmp::DISCNUMBER, value);
+        else if (param == "duration")
+            tracks.last()->setDuration(value.toInt());
         else if (param == "length")
-            tracks.last()->setLength(value.toInt());
+            tracks.last()->setDuration(value.toInt() * 1000);
     }
     buffer.close();
     if(m_models.isEmpty())
@@ -348,7 +350,7 @@ void PlayListManager::writePlayLists()
             if(m->isGroup())
                 continue;
             PlayListTrack *t = dynamic_cast<PlayListTrack *>(m);
-            tmpFile.write(QString("file=%1\n").arg(t->url()).toUtf8());
+            tmpFile.write(QString("file=%1\n").arg(t->path()).toUtf8());
             tmpFile.write(QString("title=%1\n").arg(t->value(Qmmp::TITLE)).toUtf8());
             tmpFile.write(QString("artist=%1\n").arg(t->value(Qmmp::ARTIST)).toUtf8());
             tmpFile.write(QString("albumartist=%1\n").arg(t->value(Qmmp::ALBUMARTIST)).toUtf8());
@@ -359,7 +361,7 @@ void PlayListManager::writePlayLists()
             tmpFile.write(QString("year=%1\n").arg(t->value(Qmmp::YEAR)).toUtf8());
             tmpFile.write(QString("track=%1\n").arg(t->value(Qmmp::TRACK)).toUtf8());
             tmpFile.write(QString("disc=%1\n").arg(t->value(Qmmp::DISCNUMBER)).toUtf8());
-            tmpFile.write(QString("length=%1\n").arg(t->length()).toUtf8());
+            tmpFile.write(QString("duration=%1\n").arg(t->duration()).toUtf8());
         }
     }
     if(tmpFile.error() != QFile::NoError)

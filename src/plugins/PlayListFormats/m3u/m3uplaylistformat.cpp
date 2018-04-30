@@ -62,13 +62,13 @@ QList<PlayListTrack *> M3UPlaylistFormat::decode(const QByteArray &contents)
             continue;
 
         out << new PlayListTrack();
-        out.last()->insert(Qmmp::URL, str);
+        out.last()->setPath(str);
 
         if(hasExtInf)
         {
-            out.last()->setLength(length);
-            out.last()->insert(Qmmp::ARTIST, artist);
-            out.last()->insert(Qmmp::TITLE, title);
+            out.last()->setDuration(length * 1000);
+            out.last()->setValue(Qmmp::ARTIST, artist);
+            out.last()->setValue(Qmmp::TITLE, title);
             hasExtInf = false;
         }
     }
@@ -84,19 +84,19 @@ QByteArray M3UPlaylistFormat::encode(const QList<PlayListTrack*> &contents, cons
 
     foreach(PlayListTrack* f, contents)
     {
-        QString info = "#EXTINF:" + QString::number(f->length()) + "," + formatter.format(f);
+        QString info = "#EXTINF:" + QString::number(f->duration() / 1000) + "," + formatter.format(f);
         out.append(info);
 
-        if(!f->url().contains("://") && f->url().startsWith(m3uDir))
+        if(!f->path().contains("://") && f->path().startsWith(m3uDir))
         {
-            QString p = f->url();
+            QString p = f->path();
             p.remove(0, m3uDir.size());
             if(p.startsWith("/"))
                 p.remove(0, 1);
             out.append(p);
         }
         else
-            out.append(f->url());
+            out.append(f->path());
     }
     return out.join("\n").toUtf8();
 }

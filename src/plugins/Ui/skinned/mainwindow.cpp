@@ -190,7 +190,7 @@ void MainWindow::showState(Qmmp::State state)
     {
     case Qmmp::Playing:
         if (m_pl_manager->currentPlayList()->currentTrack())
-            m_equalizer->loadPreset(m_pl_manager->currentPlayList()->currentTrack()->url().section("/",-1));
+            m_equalizer->loadPreset(m_pl_manager->currentPlayList()->currentTrack()->path().section("/",-1));
         break;
     case Qmmp::Paused:
         break;
@@ -203,7 +203,7 @@ void MainWindow::showState(Qmmp::State state)
 void MainWindow::showMetaData()
 {
     PlayListTrack *track = m_pl_manager->currentPlayList()->currentTrack();
-    if (track && track->url() == m_core->metaData().value(Qmmp::URL))
+    if (track && track->path() == m_core->metaData().value(Qmmp::URL))
     {
         setWindowTitle(m_titleFormatter.format(track));
     }

@@ -73,10 +73,10 @@ public:
     /*!
      * Converts metadata to one string using template.
      * @param metaData Metadata array.
-     * @param length Length in seconds.
+     * @param duration Duration in milliseconds seconds.
      * @param track Index of track.
      */
-    QString format(const QMap<Qmmp::MetaData, QString> &metaData, qint64 length = 0, int track = 0) const;
+    QString format(const QMap<Qmmp::MetaData, QString> &metaData, qint64 duration = 0, int track = 0) const;
     /*!
      * Converts metadata of \b TrackInfo pointer \b info to one string using template.
      * \param info pointer to \b TrackInfo object.

@@ -460,8 +460,8 @@ void PlayListTask::run()
         //this code prevents re-addition of cue tracks
         foreach (PlayListTrack *t, m_new_tracks)
         {
-            if((t->url().contains("://") && urls.contains(t->url())) ||
-                    ignoredFiles.contains(t->url()))
+            if((t->path().contains("://") && urls.contains(t->path())) ||
+                    ignoredFiles.contains(t->path()))
             {
                 m_new_tracks.removeAll(t);
                 delete t;

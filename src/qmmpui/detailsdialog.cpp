@@ -132,16 +132,16 @@ void DetailsDialog::updatePage()
 
     m_ui->pageLabel->setText(tr("%1/%2").arg(m_page + 1).arg(m_tracks.count()));
     m_track = m_tracks.at(m_page);
-    m_path = m_track->url();
+    m_path = m_track->path();
     setWindowTitle (m_path.section('/',-1));
     m_ui->pathEdit->setText(m_path);
 
     //load metadata and create metadata model
     QList <TrackInfo *> flist = MetaDataManager::instance()->createPlayList(m_path, TrackInfo::MetaData);
-    if(!flist.isEmpty() && QFile::exists(m_track->url()))
+    if(!flist.isEmpty() && QFile::exists(m_track->path()))
         m_metaData = flist.at(0)->metaData();
     else
-        m_metaData = *m_track;
+        m_metaData = m_track->metaData();
     qDeleteAll(flist);
 
     QPixmap cover = MetaDataManager::instance()->getCover(m_path);

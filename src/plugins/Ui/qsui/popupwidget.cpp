@@ -91,7 +91,7 @@ void PopupWidget::prepare(PlayListTrack *track, QPoint pos)
         return;
     }
 
-    m_url = track->url();
+    m_url = track->path();
     m_label1->setText(m_formatter.format(track));
     qApp->processEvents();
     updateGeometry ();

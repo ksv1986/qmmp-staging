@@ -98,12 +98,12 @@ const QString MetaDataFormatter::pattern() const
 
 QString MetaDataFormatter::format(const PlayListTrack *item) const
 {
-    return format(*item, item->length(), item->trackIndex());
+    return format(item->metaData(), item->duration(), item->trackIndex());
 }
 
-QString MetaDataFormatter::format(const QMap<Qmmp::MetaData, QString> &metaData, qint64 length, int track) const
+QString MetaDataFormatter::format(const QMap<Qmmp::MetaData, QString> &metaData, qint64 duration, int track) const
 {
-    return evalute(&m_nodes, &metaData, length, track).trimmed();
+    return evalute(&m_nodes, &metaData, duration, track).trimmed();
 }
 
 QString MetaDataFormatter::format(const TrackInfo *info, int track) const

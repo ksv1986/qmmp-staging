@@ -50,9 +50,9 @@ public:
     qint64 duration () const;
     bool isEmpty() const;
     const QString path() const;
-    const QString &value(Qmmp::MetaData key) const;
-    const QString &value(Qmmp::TrackProperty key) const;
-    const double &value(Qmmp::ReplayGainKey key) const;
+    const QString value(Qmmp::MetaData key) const;
+    const QString value(Qmmp::TrackProperty key) const;
+    double value(Qmmp::ReplayGainKey key) const;
     const QMap<Qmmp::MetaData, QString> &metaData() const;
     const QMap<Qmmp::TrackProperty, QString> &properties() const;
     const QMap<Qmmp::ReplayGainKey, double> &replayGainInfo() const;

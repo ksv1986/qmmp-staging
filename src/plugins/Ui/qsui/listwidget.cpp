@@ -619,8 +619,8 @@ const QString ListWidget::getExtraString(PlayListItem *item)
     QString extra_string;
     PlayListTrack *track = static_cast<PlayListTrack *>(item);
 
-    if (m_show_protocol && track->url().contains("://"))
-        extra_string = "[" + track->url().split("://").at(0) + "]";
+    if (m_show_protocol && track->path().contains("://"))
+        extra_string = "[" + track->path().split("://").at(0) + "]";
 
     if (m_model->isQueued(track))
     {
@@ -721,7 +721,7 @@ void ListWidget::mouseMoveEvent(QMouseEvent *e)
     else if(m_popupWidget)
     {
         int index = indexAt(e->y());
-        if(index < 0 || !m_model->isTrack(index) || m_popupWidget->url() != m_model->track(index)->url())
+        if(index < 0 || !m_model->isTrack(index) || m_popupWidget->url() != m_model->track(index)->path())
             m_popupWidget->deactivate();
     }
 }

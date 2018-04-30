@@ -366,7 +366,7 @@ void MainWindow::playPause()
 void MainWindow::updateStatus()
 {
     int tracks = m_pl_manager->currentPlayList()->trackCount();
-    int length = m_pl_manager->currentPlayList()->totalLength();
+    int duration = m_pl_manager->currentPlayList()->totalDuration();
 
     if(m_core->state() == Qmmp::Playing || m_core->state() == Qmmp::Paused)
     {
@@ -377,7 +377,7 @@ void MainWindow::updateStatus()
                                .arg(ap.channels())
                                .arg(ap.sampleRate())
                                .arg(tracks)
-                               .arg(MetaDataFormatter::formatDuration(length * 1000, false)) //TODO use milliseconds
+                               .arg(MetaDataFormatter::formatDuration(duration, false))
                                .arg(m_core->bitrate()));
     }
     else if(m_core->state() == Qmmp::Stopped)
@@ -385,7 +385,7 @@ void MainWindow::updateStatus()
         m_statusLabel->setText(tr("<b>%1</b>|tracks: %2|total time: %3|")
                                .arg(tr("Stopped"))
                                .arg(tracks)
-                               .arg(MetaDataFormatter::formatDuration(length * 1000))); //TODO use milliseconds
+                               .arg(MetaDataFormatter::formatDuration(duration )));
     }
     else
         m_statusLabel->clear();
@@ -894,7 +894,7 @@ void MainWindow::showMetaData()
 {
     PlayListModel *model = m_pl_manager->currentPlayList();
     PlayListTrack *track = model->currentTrack();
-    if(track && track->url() == m_core->metaData().value(Qmmp::URL))
+    if(track && track->path() == m_core->metaData().value(Qmmp::URL))
     {
         setWindowTitle(m_titleFormatter.format(track));
     }

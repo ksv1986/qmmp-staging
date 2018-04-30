@@ -65,7 +65,7 @@ QList<PlayListTrack *> PLSPlaylistFormat::decode(const QByteArray &contents)
             {
                 while(number > out.count())
                     out << new PlayListTrack();
-                out[number - 1]->insert(Qmmp::URL, fileRegExp.cap(2));
+                out[number - 1]->setPath(fileRegExp.cap(2));
             }
             else
                 error = true;
@@ -76,8 +76,8 @@ QList<PlayListTrack *> PLSPlaylistFormat::decode(const QByteArray &contents)
             {
                 while(number > out.count())
                     out << new PlayListTrack();
-                out[number - 1]->insert(Qmmp::ARTIST, fullTitleRegExp.cap(2));
-                out[number - 1]->insert(Qmmp::TITLE, fullTitleRegExp.cap(3));
+                out[number - 1]->setValue(Qmmp::ARTIST, fullTitleRegExp.cap(2));
+                out[number - 1]->setValue(Qmmp::TITLE, fullTitleRegExp.cap(3));
             }
             else
                 error = true;
@@ -88,7 +88,7 @@ QList<PlayListTrack *> PLSPlaylistFormat::decode(const QByteArray &contents)
             {
                 while(number > out.count())
                     out << new PlayListTrack();
-                out[number - 1]->insert(Qmmp::TITLE, titleRegExp.cap(2));
+                out[number - 1]->setValue(Qmmp::TITLE, titleRegExp.cap(2));
             }
             else
                 error = true;
@@ -99,7 +99,7 @@ QList<PlayListTrack *> PLSPlaylistFormat::decode(const QByteArray &contents)
             {
                 while(number > out.count())
                     out << new PlayListTrack();
-                out[number - 1]->setLength(lengthRegExp.cap(2).toInt());
+                out[number - 1]->setDuration(lengthRegExp.cap(2).toInt() * 1000);
             }
             else
                 error = true;
@@ -127,11 +127,11 @@ QByteArray PLSPlaylistFormat::encode(const QList<PlayListTrack *> &contents, con
     foreach(PlayListTrack *f, contents)
     {
         QString begin = "File" + QString::number(counter) + "=";
-        out.append(begin + f->url());
+        out.append(begin + f->path());
         begin = "Title" + QString::number(counter) + "=";
         out.append(begin + formatter.format(f));
         begin = "Length" + QString::number(counter) + "=";
-        out.append(begin + QString::number(f->length()));
+        out.append(begin + QString::number(f->duration() / 1000));
         counter++;
     }
     out << "NumberOfEntries=" + QString::number(contents.count());

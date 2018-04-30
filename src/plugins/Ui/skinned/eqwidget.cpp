@@ -333,12 +333,12 @@ void EqWidget::saveAutoPreset()
     if (!track)
         return;
     //delete preset if it already exists
-    EQPreset* preset = findPreset(track->url().section("/",-1));
+    EQPreset* preset = findPreset(track->path().section("/",-1));
     if (preset)
         deletePreset(preset);
     //create new preset
     preset = new EQPreset();
-    preset->setText(track->url().section("/",-1));
+    preset->setText(track->path().section("/",-1));
     preset->setPreamp(m_preamp->value());
     for (int i = 0; i<10; ++i)
     {

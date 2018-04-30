@@ -84,13 +84,13 @@ public:
      */
     QString format(const TrackInfo *info, int track = 0) const;
     /*!
-     * Returns formatted length (example: 05:02:03).
-     * \param length Length in seconds.
+     * Returns formatted duration (example: 05:02:03).
+     * \param duration Duration in milliseconds.
      * \param hideZero Setting for zero values output.
      * If \b hideZero is \b true, then the function outputs empty string for zero length,
      * otherwise outputs "0:00".
      */
-    static QString formatLength(qint64 length, bool hideZero = true);
+    static QString formatDuration(qint64 duration, bool hideZero = true, bool showMs = false);
 
 private:
     struct Node;

@@ -111,17 +111,26 @@ QString MetaDataFormatter::format(const TrackInfo *info, int track) const
     return format(info->metaData(), info->duration(), track);
 }
 
-QString MetaDataFormatter::formatLength(qint64 length, bool hideZero)
+QString MetaDataFormatter::formatDuration(qint64 duration, bool hideZero, bool showMs)
 {
-    if(length <= 0)
-        return hideZero ? QString() : "0:00";
-    QString str;
-    if(length >= 3600)
-        str = QString("%1:%2").arg(length/3600).arg(length%3600/60, 2, 10, QChar('0'));
+    if(duration <= 0)
+    {
+        if(hideZero)
+            return QString();
+        else
+            return showMs ? QLatin1String("0:00.000") : QLatin1String("0:00");
+    }
+
+    QString out;
+    qint64 durationInSeconds = duration / 1000;
+    if(durationInSeconds >= 3600)
+        out = QString("%1:%2").arg(durationInSeconds / 3600).arg(duration % 3600 / 60, 2, 10, QChar('0'));
     else
-        str = QString("%1").arg(length%3600/60);
-    str += QString(":%1").arg(length%60, 2, 10, QChar('0'));
-    return str;
+        out = QString("%1").arg(durationInSeconds % 3600 / 60);
+    out += QString(":%1").arg(durationInSeconds % 60, 2, 10, QChar('0'));
+    if(showMs)
+        out += QString(".%1").arg(duration % 1000, 3, 10, QChar('0'));
+    return out;
 }
 
 bool MetaDataFormatter::parseField(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end)
@@ -481,7 +490,7 @@ QString MetaDataFormatter::printField(int field, const QMap<Qmmp::MetaData, QStr
     }
     else if(field == Param::DURATION)
     {
-        return formatLength(length);
+        return formatDuration(length);
     }
     else if(field == Param::FILE_NAME)
     {

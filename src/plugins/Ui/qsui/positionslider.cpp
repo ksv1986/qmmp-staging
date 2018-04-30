@@ -83,5 +83,5 @@ void PositionSlider::onSliderMoved(int pos)
     initStyleOption(&opt);
     QRect rect = style()->subControlRect(QStyle::CC_Slider, &opt, QStyle::SC_SliderHandle, this);
     rect.moveTo(rect.x() - 10 , rect.y() - 45);
-    QToolTip::showText(mapToGlobal(rect.topLeft()), MetaDataFormatter::formatLength(pos), this, QRect());
+    QToolTip::showText(mapToGlobal(rect.topLeft()), MetaDataFormatter::formatDuration(pos * 1000), this, QRect());
 }

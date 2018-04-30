@@ -203,11 +203,11 @@ void MainWindow::updatePosition(qint64 pos)
     if(!m_positionSlider->isSliderDown())
         m_positionSlider->setValue(pos/1000);
 
-    QString text = MetaDataFormatter::formatLength(pos/1000, false);
+    QString text = MetaDataFormatter::formatDuration(pos, false);
     if(m_core->duration() > 1000)
     {
         text.append("/");
-        text.append(MetaDataFormatter::formatLength(m_core->duration()/1000));
+        text.append(MetaDataFormatter::formatDuration(m_core->duration()));
     }
     m_timeLabel->setText(text);
 }
@@ -377,7 +377,7 @@ void MainWindow::updateStatus()
                                .arg(ap.channels())
                                .arg(ap.sampleRate())
                                .arg(tracks)
-                               .arg(MetaDataFormatter::formatLength(length, false))
+                               .arg(MetaDataFormatter::formatDuration(length * 1000, false)) //TODO use milliseconds
                                .arg(m_core->bitrate()));
     }
     else if(m_core->state() == Qmmp::Stopped)
@@ -385,7 +385,7 @@ void MainWindow::updateStatus()
         m_statusLabel->setText(tr("<b>%1</b>|tracks: %2|total time: %3|")
                                .arg(tr("Stopped"))
                                .arg(tracks)
-                               .arg(MetaDataFormatter::formatLength(length)));
+                               .arg(MetaDataFormatter::formatDuration(length * 1000))); //TODO use milliseconds
     }
     else
         m_statusLabel->clear();

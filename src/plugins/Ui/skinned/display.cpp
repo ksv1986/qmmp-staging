@@ -307,7 +307,7 @@ void MainDisplay::displayVolume()
 
 void MainDisplay::showPosition()
 {
-    m_text->setText(tr("Seek to: %1").arg(MetaDataFormatter::formatLength(m_posbar->value() / 1000, false)));
+    m_text->setText(tr("Seek to: %1").arg(MetaDataFormatter::formatDuration(m_posbar->value(), false)));
 }
 
 void MainDisplay::updatePosition()

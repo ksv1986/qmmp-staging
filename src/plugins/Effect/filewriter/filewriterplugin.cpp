@@ -40,13 +40,13 @@ void FileWriterPlugin::configure(quint32 srate, ChannelMap map)
 {
     Effect::configure(srate, map);
     if(SoundCore::instance()->state() == Qmmp::Playing ||  SoundCore::instance()->state() == Qmmp::Paused)
-        init(SoundCore::instance()->metaData());
+        init(SoundCore::instance()->trackInfo());
 }
 
 void FileWriterPlugin::applyEffect(Buffer *b)
 {
-    if(!b->metaData.isNull())
-        init(*b->metaData);
+    if(!b->trackInfo.isNull())
+        init(*b->trackInfo);
 
     if(!m_inited || !b->samples)
         return;
@@ -110,7 +110,7 @@ void FileWriterPlugin::applyEffect(Buffer *b)
     }
 }
 
-void FileWriterPlugin::init(const QMap<Qmmp::MetaData, QString> &metaData)
+void FileWriterPlugin::init(const TrackInfo &info)
 {
     deinit();
 
@@ -120,10 +120,10 @@ void FileWriterPlugin::init(const QMap<Qmmp::MetaData, QString> &metaData)
     outDir = settings.value("FileWriter/out_dir", outDir).toString();
     QString fileName = settings.value("FileWriter/file_name", "%p%if(%p&%t, - ,)%t").toString();
     if(fileName.isEmpty())
-        fileName = metaData[Qmmp::URL].section("/", 1);
+        fileName = info.path().section("/", 1);
 
     MetaDataFormatter formatter(fileName);
-    fileName = formatter.format(metaData, SoundCore::instance()->duration());
+    fileName = formatter.format(&info);
     if(!fileName.endsWith(".ogg", Qt::CaseInsensitive))
         fileName.append(".ogg");
 
@@ -173,8 +173,8 @@ void FileWriterPlugin::init(const QMap<Qmmp::MetaData, QString> &metaData)
     int i = 0;
     while(tag_map[i].key != Qmmp::UNKNOWN)
     {
-        if(!metaData[tag_map[i].key].isEmpty())
-            vorbis_comment_add_tag(&m_vc, tag_map[i].tag, metaData.value(tag_map[i].key).toUtf8().constData());
+        if(!info.value(tag_map[i].key).isEmpty())
+            vorbis_comment_add_tag(&m_vc, tag_map[i].tag, info.value(tag_map[i].key).toUtf8().constData());
         i++;
     }
 

@@ -73,8 +73,7 @@ public:
         COMPOSER,  /*!< Composer */
         YEAR,      /*!< Year */
         TRACK,     /*!< Track number */
-        DISCNUMBER,/*!< Disc number */
-        URL        /*!< Stream url or local file path */
+        DISCNUMBER /*!< Disc number */
     };
     /*!
      * Track properties

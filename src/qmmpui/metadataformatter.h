@@ -76,7 +76,7 @@ public:
      * @param duration Duration in milliseconds seconds.
      * @param track Index of track.
      */
-    QString format(const QMap<Qmmp::MetaData, QString> &metaData, qint64 duration = 0, int track = 0) const;
+    QString format(const QMap<Qmmp::MetaData, QString> &metaData, const QString &path, qint64 duration = 0, int track = 0) const;
     /*!
      * Converts metadata of \b TrackInfo pointer \b info to one string using template.
      * \param info pointer to \b TrackInfo object.
@@ -121,7 +121,8 @@ private:
         //extra fields
         enum
         {
-            TWO_DIGIT_TRACK = Qmmp::URL + 1,
+            PATH = Qmmp::DISCNUMBER + 1,
+            TWO_DIGIT_TRACK,
             DURATION,
             FILE_NAME,
             TRACK_INDEX
@@ -139,9 +140,9 @@ private:
     void parseText(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
     void parseEscape(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
 
-    QString evalute(const QList<Node> *nodes, const QMap<Qmmp::MetaData, QString> *metaData, qint64 length, int track) const;
-    QString printParam(Param *p, const QMap<Qmmp::MetaData, QString> *metaData, qint64 length, int track) const;
-    QString printField(int field, const QMap<Qmmp::MetaData, QString> *metaData, qint64 length, int track) const;
+    QString evalute(const QList<Node> *nodes, const QMap<Qmmp::MetaData, QString> *metaData, const QString *path, qint64 length, int track) const;
+    QString printParam(Param *p, const QMap<Qmmp::MetaData, QString> *metaData, const QString *path, qint64 length, int track) const;
+    QString printField(int field, const QMap<Qmmp::MetaData, QString> *metaData, const QString *path, qint64 length, int track) const;
 
     QString dumpNode(Node node) const;
 

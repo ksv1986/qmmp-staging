@@ -63,7 +63,8 @@ public:
     /*!
      * Sends metadata \b metaData
      */
-    void dispatch(const QMap<Qmmp::MetaData, QString> &metaData);
+    //void dispatch(const QMap<Qmmp::MetaData, QString> &metaData);
+    void dispatch(const TrackInfo &info);
     /*!
      * Sends stream information \b info
      */

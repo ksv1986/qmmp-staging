@@ -196,7 +196,7 @@ void ShoutOutput::drain()
 void ShoutOutput::reset()
 {}
 
-void ShoutOutput::setMetaData(const QMap<Qmmp::MetaData, QString> &metaData)
+void ShoutOutput::setTrackInfo(const QMap<Qmmp::MetaData, QString> &metaData)
 {
     vorbis_comment_clear(&m_vc);
 

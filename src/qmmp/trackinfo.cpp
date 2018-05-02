@@ -32,7 +32,6 @@ TrackInfo::TrackInfo(const QString &path)
     m_path = path;
     m_duration = 0;
     m_parts = NoParts;
-    m_metaData.insert(Qmmp::URL, path);
 }
 
 TrackInfo::TrackInfo(const TrackInfo &other)
@@ -56,7 +55,9 @@ TrackInfo &TrackInfo::operator=(const TrackInfo &info)
 
 bool TrackInfo::operator==(const TrackInfo &info) const
 {
-    return m_metaData == info.metaData () &&
+    return m_duration == info.duration() &&
+            m_path == info.path() &&
+            m_metaData == info.metaData () &&
             m_properties == info.properties() &&
             m_replayGainInfo == info.replayGainInfo() &&
             m_parts == info.parts();
@@ -201,7 +202,6 @@ void TrackInfo::updateValues(const QMap<Qmmp::ReplayGainKey, double> &replayGain
 void TrackInfo::setPath(const QString &path)
 {
     m_path = path;
-    m_metaData.insert(Qmmp::URL, path);
 }
 
 void TrackInfo::setParts(Parts parts)

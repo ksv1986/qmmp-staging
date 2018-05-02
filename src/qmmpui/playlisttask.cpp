@@ -116,12 +116,12 @@ PlayListTask::PlayListTask(QObject *parent) : QThread(parent)
     m_sort_keys.insert(PlayListModel::ALBUM, Qmmp::ALBUM);
     m_sort_keys.insert(PlayListModel::ARTIST, Qmmp::ARTIST);
     m_sort_keys.insert(PlayListModel::ALBUMARTIST, Qmmp::ALBUMARTIST);
-    m_sort_keys.insert(PlayListModel::FILENAME, Qmmp::URL);
-    m_sort_keys.insert(PlayListModel::PATH_AND_FILENAME, Qmmp::URL);
+    m_sort_keys.insert(PlayListModel::FILENAME, Qmmp::UNKNOWN);
+    m_sort_keys.insert(PlayListModel::PATH_AND_FILENAME, Qmmp::UNKNOWN);
     m_sort_keys.insert(PlayListModel::DATE, Qmmp::YEAR);
     m_sort_keys.insert(PlayListModel::TRACK, Qmmp::TRACK);
-    m_sort_keys.insert(PlayListModel::FILE_CREATION_DATE, Qmmp::URL);
-    m_sort_keys.insert(PlayListModel::FILE_MODIFICATION_DATE, Qmmp::URL);
+    m_sort_keys.insert(PlayListModel::FILE_CREATION_DATE, Qmmp::UNKNOWN);
+    m_sort_keys.insert(PlayListModel::FILE_MODIFICATION_DATE, Qmmp::UNKNOWN);
 }
 
 PlayListTask::~PlayListTask()
@@ -146,7 +146,12 @@ void PlayListTask::sort(QList<PlayListTrack *> tracks, int mode)
     {
         TrackField *f = new TrackField;
         f->track = t;
-        f->value = (mode == PlayListModel::GROUP) ? t->groupName() : t->value(key);
+        if(mode == PlayListModel::GROUP)
+            f->value = t->groupName();
+        else if(key == Qmmp::UNKNOWN)
+            f->value = t->path();
+        else
+            f->value = t->value(key);
         if(m_align_groups)
             f->groupName = t->groupName();
         m_fields.append(f);
@@ -174,7 +179,12 @@ void PlayListTask::sortSelection(QList<PlayListTrack *> tracks, int mode)
 
         TrackField *f = new TrackField;
         f->track = tracks[i];
-        f->value = (mode == PlayListModel::GROUP) ? f->track->groupName() : f->track->value(key);
+        if(mode == PlayListModel::GROUP)
+            f->value = f->track->groupName();
+        else if(key == Qmmp::UNKNOWN)
+            f->value = f->track->path();
+        else
+            f->value = f->track->value(key);
         m_fields.append(f);
         m_indexes.append(i);
     }
@@ -221,7 +231,7 @@ void PlayListTask::removeInvalidTracks(QList<PlayListTrack *> tracks, PlayListTr
     {
         TrackField *f = new TrackField;
         f->track = tracks[i];
-        f->value = f->track->value(Qmmp::URL);
+        f->value = f->track->path();
         m_fields.append(f);
     }
     MetaDataManager::instance()->prepareForAnotherThread();
@@ -242,7 +252,7 @@ void PlayListTask::removeDuplicates(QList<PlayListTrack *> tracks, PlayListTrack
     {
         TrackField *f = new TrackField;
         f->track = tracks[i];
-        f->value = f->track->value(Qmmp::URL);
+        f->value = f->track->path();
         m_fields.append(f);
     }
     MetaDataManager::instance()->prepareForAnotherThread();
@@ -263,7 +273,7 @@ void PlayListTask::refresh(QList<PlayListTrack *> tracks, PlayListTrack *current
     {
         TrackField *f = new TrackField;
         f->track = tracks[i];
-        f->value = f->track->value(Qmmp::URL);
+        f->value = f->track->path();
         m_fields.append(f);
     }
     MetaDataManager::instance()->prepareForAnotherThread();

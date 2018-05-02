@@ -199,9 +199,9 @@ void MMSStreamReader::checkBuffer()
     {
         m_ready = true;
         qDebug("MMSStreamReader: ready");
-        QMap<Qmmp::MetaData, QString> metaData;
+        /*QMap<Qmmp::MetaData, QString> metaData;
         metaData.insert(Qmmp::URL, m_url);
-        m_parent->addMetaData(metaData);
+        m_parent->addMetaData(metaData);*/
         emit ready();
     }
     else if (!m_ready)

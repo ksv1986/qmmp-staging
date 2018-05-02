@@ -894,7 +894,7 @@ void MainWindow::showMetaData()
 {
     PlayListModel *model = m_pl_manager->currentPlayList();
     PlayListTrack *track = model->currentTrack();
-    if(track && track->path() == m_core->metaData().value(Qmmp::URL))
+    if(track && track->path() == m_core->trackInfo().path())
     {
         setWindowTitle(m_titleFormatter.format(track));
     }

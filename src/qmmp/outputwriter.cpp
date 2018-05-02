@@ -315,8 +315,8 @@ void OutputWriter::run()
             {
                 if(b->rate)
                     m_kbps = b->rate;
-                if(b->metaData)
-                    m_output->setMetaData(*b->metaData);
+                if(b->trackInfo)
+                    m_output->setTrackInfo(*b->trackInfo);
             }
         }
 

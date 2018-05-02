@@ -129,20 +129,20 @@ QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &f_name)
         return tracks;
     }
 
-    QString url;
+    QString path;
     foreach (PlayListTrack *t, tracks)
     {
-        url = t->value(Qmmp::URL);
+        path = t->path();
 
-        if(url.contains("://"))
+        if(path.contains("://"))
             continue;
 
-        if(QFileInfo(url).isRelative())
-            url.prepend(QFileInfo(f_name).canonicalPath () + "/");
+        if(QFileInfo(path).isRelative())
+            path.prepend(QFileInfo(f_name).canonicalPath () + "/");
 
-        url.replace("\\","/");
-        url.replace("//","/");
-        t->setValue(Qmmp::URL, url);
+        path.replace("\\","/");
+        path.replace("//","/");
+        t->setPath(path);
     }
     return tracks;
 }

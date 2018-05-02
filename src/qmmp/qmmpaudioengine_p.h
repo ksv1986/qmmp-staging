@@ -26,6 +26,7 @@
 #include <atomic>
 #include <QSharedPointer>
 #include "abstractengine.h"
+#include "trackinfo.h"
 #include "audioparameters.h"
 
 class QIODevice;
@@ -96,7 +97,7 @@ private:
     AudioParameters m_ap;
     bool m_next;
     bool m_muted;
-    QSharedPointer<QMap<Qmmp::MetaData, QString> > m_metaData;
+    QSharedPointer<TrackInfo> m_trackInfo;
     static QmmpAudioEngine *m_instance;
     ReplayGain *m_replayGain;
     QmmpSettings *m_settings;

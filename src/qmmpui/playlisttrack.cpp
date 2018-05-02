@@ -98,10 +98,10 @@ void PlayListTrack::updateMetaData(TrackInfo *info)
 
 void PlayListTrack::updateMetaData()
 {
-    QList <TrackInfo *> list =  MetaDataManager::instance()->createPlayList(value(Qmmp::URL));
-    if(!list.isEmpty() && !list.at(0)->path().contains("://"))
+    QList <TrackInfo *> list =  MetaDataManager::instance()->createPlayList(path());
+    if(!list.isEmpty() && !list.first()->path().contains("://"))
     {
-        TrackInfo *info = list.at(0);
+        TrackInfo *info = list.first();
         updateMetaData(info);
     }
     qDeleteAll(list);
@@ -234,9 +234,9 @@ void PlayListTrack::formatTitle(int column)
     if(m_formattedTitles.count() == 1)
     {
         if (m_formattedTitles[column].isEmpty())
-            m_formattedTitles[column] = value(Qmmp::URL).section('/',-1);
+            m_formattedTitles[column] = path().section('/',-1);
         if (m_formattedTitles[column].isEmpty())
-            m_formattedTitles[column] = value(Qmmp::URL);
+            m_formattedTitles[column] = path();
     }
     if (m_settings->convertUnderscore())
         m_formattedTitles[column].replace("_", " ");

@@ -207,7 +207,7 @@ void MediaPlayer::updateMetaData()
     qDebug("== end of metadata ==");
 
     PlayListModel *pl = m_pl_manager->currentPlayList();
-    if (pl->currentTrack() && pl->currentTrack()->path() == m_core->metaData().value(Qmmp::URL))
+    if (pl->currentTrack() && pl->currentTrack()->path() == m_core->trackInfo().path())
     {
         pl->currentTrack()->updateMetaData(m_core->metaData());
         pl->updateMetaData();

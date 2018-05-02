@@ -90,7 +90,7 @@ private:
     QHash<QString, QString> m_streamInfo;
 };
 
-class TrackInfoEvent : QEvent
+class TrackInfoEvent : public QEvent
 {
 public:
     TrackInfoEvent(const TrackInfo &info);

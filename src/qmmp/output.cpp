@@ -65,9 +65,9 @@ void Output::suspend()
 void Output::resume()
 {}
 
-void Output::setMetaData(const QMap<Qmmp::MetaData, QString> &metaData)
+void Output::setTrackInfo(const TrackInfo &info)
 {
-    Q_UNUSED(metaData);
+    Q_UNUSED(info);
 }
 
 Output::~Output()

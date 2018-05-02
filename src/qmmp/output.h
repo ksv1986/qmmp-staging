@@ -13,6 +13,7 @@
 #include <QMap>
 #include "outputfactory.h"
 #include "audioparameters.h"
+#include "trackinfo.h"
 #include "channelmap.h"
 
 class QTimer;
@@ -75,12 +76,8 @@ public:
      * Resumes processing audio data.
      */
     virtual void resume();
-    /*!
-     * Sets metadata for output.
-     * Default implementation does nothing.
-     * Reimplement this function to receive metadata.
-     */
-    virtual void setMetaData(const QMap<Qmmp::MetaData, QString> &metaData);
+
+    virtual void setTrackInfo(const TrackInfo &info);
     /*!
      * Returns selected audio parameters.
      */

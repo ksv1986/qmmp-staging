@@ -124,21 +124,21 @@ void StatusIcon::setState(Qmmp::State state)
 
 void StatusIcon::showMetaData()
 {
-    QMap<Qmmp::MetaData, QString> meta = m_core->metaData();
-    if(m_splitFileName && meta[Qmmp::TITLE].isEmpty() && !meta[Qmmp::URL].contains("://"))
+    TrackInfo info = m_core->trackInfo();
+    if(m_splitFileName && info.value(Qmmp::TITLE).isEmpty() && !info.path().contains("://"))
     {
-        QString name = QFileInfo(meta[Qmmp::URL]).completeBaseName();
+        QString name = QFileInfo(info.path()).completeBaseName();
         if(name.contains("-"))
         {
-            meta[Qmmp::TITLE] = name.section('-',1,1).trimmed();
-            if(meta[Qmmp::ARTIST].isEmpty())
-                meta[Qmmp::ARTIST] = name.section('-',0,0).trimmed();
+            info.setValue(Qmmp::TITLE, name.section('-',1,1).trimmed());
+            if(info.value(Qmmp::ARTIST).isEmpty())
+                info.setValue(Qmmp::ARTIST, name.section('-',0,0).trimmed());
         }
     }
 
-    QString message = m_messageFormatter.format(meta, m_core->duration());
+    QString message = m_messageFormatter.format(&info);
     if (message.isEmpty())
-        message = meta[Qmmp::URL].section('/',-1);
+        message = info.path().section('/',-1);
 
     if (m_showMessage)
         m_tray->showMessage (tr("Now Playing"), message,
@@ -146,9 +146,9 @@ void StatusIcon::showMetaData()
 
     if(m_showToolTip)
     {
-        message = m_toolTipFormatter.format(meta, m_core->duration());
+        message = m_toolTipFormatter.format(&info);
         if(message.isEmpty())
-            message = meta[Qmmp::URL].section('/',-1);
+            message = info.path().section('/',-1);
         m_tray->setToolTip(message);
     }
 }

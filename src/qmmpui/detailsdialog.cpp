@@ -197,7 +197,7 @@ void DetailsDialog::printInfo()
     if(m_metaData[Qmmp::DISCNUMBER] != "0")
         formattedText += formatRow(tr("Disc number"), m_metaData[Qmmp::DISCNUMBER]);
     //stream information
-    if(core->state() == Qmmp::Playing && core->url() == m_metaData.value(Qmmp::URL))
+    /*if(core->state() == Qmmp::Playing && core->url() == m_metaData.value(Qmmp::URL))
     {
         if(!core->streamInfo().isEmpty())
         {
@@ -210,7 +210,7 @@ void DetailsDialog::printInfo()
             foreach(QString key, core->streamInfo().keys())
                 formattedText += formatRow(key, core->streamInfo().value(key));
         }
-    }
+    }*/
     //audio info
     if(!m_metaDataModel)
     {

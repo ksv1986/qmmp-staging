@@ -37,7 +37,7 @@ public:
     void applyEffect(Buffer *b);
 
 private:
-    void init(const QMap<Qmmp::MetaData, QString> &metaData);
+    void init(const TrackInfo &info);
     void deinit();
     void sendHeader();
 

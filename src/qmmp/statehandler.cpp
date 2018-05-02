@@ -92,7 +92,39 @@ void StateHandler::dispatch(qint64 length)
     m_mutex.unlock();
 }
 
-void StateHandler::dispatch(const QMap<Qmmp::MetaData, QString> &metaData)
+void StateHandler::dispatch(const TrackInfo &info)
+{
+    QMutexLocker locker(&m_mutex);
+    if(info.isEmpty())
+    {
+        qWarning("StateHandler: empty metadata");
+        return;
+    }
+    if(m_state != Qmmp::Playing && m_state != Qmmp::Paused)
+    {
+        qWarning("StateHandler: metadata is ignored");
+        return;
+    }
+
+    if(m_info.isEmpty() || m_info.path() == info.path())
+    {
+        TrackInfo tmp = m_info;
+        if(info.parts() & TrackInfo::MetaData)
+            tmp.setValues(info.metaData());
+        if(info.parts() & TrackInfo::Properties)
+            tmp.setValues(info.properties());
+        if(info.parts() & TrackInfo::ReplayGainInfo)
+            tmp.setValues(info.replayGainInfo());
+
+        if(m_info != tmp)
+        {
+            m_info = tmp;
+            qApp->postEvent(parent(), new TrackInfoEvent(m_info));
+        }
+    }
+}
+
+/*void StateHandler::dispatch(const QMap<Qmmp::MetaData, QString> &metaData)
 {
     m_mutex.lock();
     QMap<Qmmp::MetaData, QString> tmp = metaData;
@@ -132,7 +164,7 @@ void StateHandler::dispatch(const QMap<Qmmp::MetaData, QString> &metaData)
     }
 
     m_mutex.unlock();
-}
+}*/
 
 void StateHandler::dispatch(const QHash<QString, QString> &info)
 {

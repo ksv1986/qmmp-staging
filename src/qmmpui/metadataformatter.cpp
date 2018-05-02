@@ -98,17 +98,12 @@ const QString MetaDataFormatter::pattern() const
 
 QString MetaDataFormatter::format(const PlayListTrack *item) const
 {
-    return format(item->metaData(), item->path(), item->duration(), item->trackIndex());
+    return evalute(&m_nodes, item, item->trackIndex());
 }
 
-QString MetaDataFormatter::format(const QMap<Qmmp::MetaData, QString> &metaData, const QString &path, qint64 duration, int track) const
+QString MetaDataFormatter::format(const TrackInfo &info, int trackIndex) const
 {
-    return evalute(&m_nodes, &metaData, &path, duration, track).trimmed();
-}
-
-QString MetaDataFormatter::format(const TrackInfo *info, int track) const
-{
-    return format(info->metaData(), info->path(), info->duration(), track);
+    return evalute(&m_nodes, &info, trackIndex);
 }
 
 QString MetaDataFormatter::formatDuration(qint64 duration, bool hideZero, bool showMs)
@@ -398,8 +393,7 @@ void MetaDataFormatter::parseEscape(QList<MetaDataFormatter::Node> *nodes, QStri
     nodes->append(node);
 }
 
-QString MetaDataFormatter::evalute(const QList<Node> *nodes, const QMap<Qmmp::MetaData, QString> *metaData,
-                                   const QString *path, qint64 length, int track) const
+QString MetaDataFormatter::evalute(const QList<Node> *nodes, const TrackInfo *info, int trackIndex) const
 {
     QString out;
     for(int i = 0; i < nodes->count(); ++i)
@@ -408,57 +402,56 @@ QString MetaDataFormatter::evalute(const QList<Node> *nodes, const QMap<Qmmp::Me
         if(node.command == Node::PRINT_TEXT)
         {
             Param p = node.params.first();
-            out.append(printParam(&p, metaData, path, length, track));
+            out.append(printParam(&p, info, trackIndex));
 
         }
         else if(node.command == Node::IF_KEYWORD)
         {
-            QString var1 = printParam(&node.params[0], metaData, path, length, track);
+            QString var1 = printParam(&node.params[0], info, trackIndex);
             if(var1.isEmpty() || var1 == "0")
-                out.append(printParam(&node.params[2], metaData, path, length, track));
+                out.append(printParam(&node.params[2], info, trackIndex));
             else
-                out.append(printParam(&node.params[1], metaData, path, length, track));
+                out.append(printParam(&node.params[1], info, trackIndex));
         }
         else if(node.command == Node::AND_OPERATOR)
         {
-            QString var1 = printParam(&node.params[0], metaData, path, length, track);
-            QString var2 = printParam(&node.params[1], metaData, path, length, track);
+            QString var1 = printParam(&node.params[0], info, trackIndex);
+            QString var2 = printParam(&node.params[1], info, trackIndex);
             if(!var1.isEmpty() && !var2.isEmpty())
                 out.append("1");
         }
         else if(node.command == Node::OR_OPERATOR)
         {
-            QString var1 = printParam(&node.params[0], metaData, path, length, track);
+            QString var1 = printParam(&node.params[0], info, trackIndex);
             if(!var1.isEmpty())
                 out.append("1");
             else
             {
-                QString var2 = printParam(&node.params[1], metaData, path, length, track);
+                QString var2 = printParam(&node.params[1], info, trackIndex);
                 if(!var2.isEmpty())
                     out.append("1");
             }
         }
         else if(node.command == Node::DIR_FUNCTION)
         {
-            out.append(path->section('/', -node.params[0].number - 2, -node.params[0].number - 2));
+            out.append(info->path().section('/', -node.params[0].number - 2, -node.params[0].number - 2));
         }
     }
     return out;
 }
 
-QString MetaDataFormatter::printParam(MetaDataFormatter::Param *p, const QMap<Qmmp::MetaData, QString> *metaData,
-                                      const QString *path, qint64 length, int track) const
+QString MetaDataFormatter::printParam(MetaDataFormatter::Param *p, const TrackInfo *info, int trackIndex) const
 {
     switch (p->type)
     {
     case Param::FIELD:
-        return printField(p->field, metaData, path, length, track);
+        return printField(p->field, info, trackIndex);
         break;
     case Param::TEXT:
         return p->text;
         break;
     case Param::NODES:
-        return evalute(&p->children, metaData, path, length, track);
+        return evalute(&p->children, info, trackIndex);
         break;
     default:
         break;
@@ -466,46 +459,45 @@ QString MetaDataFormatter::printParam(MetaDataFormatter::Param *p, const QMap<Qm
     return QString();
 }
 
-QString MetaDataFormatter::printField(int field, const QMap<Qmmp::MetaData, QString> *metaData,
-                                      const QString *path, qint64 length, int track) const
+QString MetaDataFormatter::printField(int field, const TrackInfo *info, int trackIndex) const
 {
     if(field >= Qmmp::TITLE && field <= Qmmp::DISCNUMBER)
     {
         if(field == Qmmp::TITLE)
         {
-            QString title = metaData->value(Qmmp::TITLE);
+            QString title = info->value(Qmmp::TITLE);
             if(title.isEmpty()) //using file name if title is empty
             {
-                title = path->section('/',-1);
+                title = info->path().section('/',-1);
                 title = title.left(title.lastIndexOf('.'));
             }
 
             if(title.isEmpty()) //using full path if file name is empty
-                title = *path;
+                title = info->path();
 
             return title;
         }
-        return metaData->value((Qmmp::MetaData) field);
+        return info->value((Qmmp::MetaData) field);
     }
     else if(field == Param::PATH)
     {
-        return *path;
+        return info->path();
     }
     else if(field == Param::TWO_DIGIT_TRACK)
     {
-        return QString("%1").arg(metaData->value(Qmmp::TRACK),2,'0');
+        return QString("%1").arg(info->value(Qmmp::TRACK),2,'0');
     }
     else if(field == Param::DURATION)
     {
-        return formatDuration(length);
+        return formatDuration(info->duration());
     }
     else if(field == Param::FILE_NAME)
     {
-        return path->section('/',-1);
+        return info->path().section('/',-1);
     }
     else if(field == Param::TRACK_INDEX)
     {
-        return QString::number(track + 1);
+        return QString::number(trackIndex + 1);
     }
     return QString();
 }

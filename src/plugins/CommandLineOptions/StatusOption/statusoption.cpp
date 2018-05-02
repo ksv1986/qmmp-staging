@@ -71,7 +71,7 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
             out += "TRACK = %n\n";
             out += "FILE = %f";
             MetaDataFormatter formatter(out);
-            out = formatter.format(&core->trackInfo());
+            out = formatter.format(core->trackInfo());
         }
         out += "\n";
     }
@@ -79,7 +79,7 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
     {
         QString t = args.join(" ");
         MetaDataFormatter formatter(t);
-        out = formatter.format(&core->trackInfo());
+        out = formatter.format(core->trackInfo());
         out += "\n";
     }
     else if(opt_str == "--nowplaying-syntax")

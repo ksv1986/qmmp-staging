@@ -123,7 +123,7 @@ void FileWriterPlugin::init(const TrackInfo &info)
         fileName = info.path().section("/", 1);
 
     MetaDataFormatter formatter(fileName);
-    fileName = formatter.format(&info);
+    fileName = formatter.format(info);
     if(!fileName.endsWith(".ogg", Qt::CaseInsensitive))
         fileName.append(".ogg");
 

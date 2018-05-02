@@ -71,18 +71,11 @@ public:
      */
     QString format(const PlayListTrack *item) const;
     /*!
-     * Converts metadata to one string using template.
-     * @param metaData Metadata array.
-     * @param duration Duration in milliseconds seconds.
-     * @param track Index of track.
-     */
-    QString format(const QMap<Qmmp::MetaData, QString> &metaData, const QString &path, qint64 duration = 0, int track = 0) const;
-    /*!
      * Converts metadata of \b TrackInfo pointer \b info to one string using template.
      * \param info pointer to \b TrackInfo object.
      * \param track Index of track.
      */
-    QString format(const TrackInfo *info, int track = 0) const;
+    QString format(const TrackInfo &info, int trackIndex = 0) const;
     /*!
      * Returns formatted duration (example: 05:02:03).
      * \param duration Duration in milliseconds.
@@ -140,9 +133,9 @@ private:
     void parseText(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
     void parseEscape(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
 
-    QString evalute(const QList<Node> *nodes, const QMap<Qmmp::MetaData, QString> *metaData, const QString *path, qint64 length, int track) const;
-    QString printParam(Param *p, const QMap<Qmmp::MetaData, QString> *metaData, const QString *path, qint64 length, int track) const;
-    QString printField(int field, const QMap<Qmmp::MetaData, QString> *metaData, const QString *path, qint64 length, int track) const;
+    QString evalute(const QList<Node> *nodes, const TrackInfo *info, int trackIndex) const;
+    QString printParam(Param *p, const TrackInfo *info, int trackIndex) const;
+    QString printField(int field, const TrackInfo *info, int trackIndex) const;
 
     QString dumpNode(Node node) const;
 

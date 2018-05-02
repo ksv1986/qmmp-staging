@@ -253,7 +253,7 @@ void TextScroller::processMetaData()
 {
     if(m_core->state() == Qmmp::Playing)
     {
-        m_titleText = m_formater.format(&m_core->trackInfo());
+        m_titleText = m_formater.format(m_core->trackInfo());
         updateText();
     }
 }

@@ -136,7 +136,7 @@ void StatusIcon::showMetaData()
         }
     }
 
-    QString message = m_messageFormatter.format(&info);
+    QString message = m_messageFormatter.format(info);
     if (message.isEmpty())
         message = info.path().section('/',-1);
 
@@ -146,7 +146,7 @@ void StatusIcon::showMetaData()
 
     if(m_showToolTip)
     {
-        message = m_toolTipFormatter.format(&info);
+        message = m_toolTipFormatter.format(info);
         if(message.isEmpty())
             message = info.path().section('/',-1);
         m_tray->setToolTip(message);

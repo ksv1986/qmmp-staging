@@ -39,24 +39,6 @@ Qmmp::State StateChangedEvent::previousState() const
     return m_prevState;
 }
 
-MetaDataChangedEvent::MetaDataChangedEvent(const QMap<Qmmp::MetaData, QString> &metaData)
-    : QEvent (EVENT_METADATA_CHANGED)
-{
-    m_metaData = metaData;
-}
-
-MetaDataChangedEvent::~MetaDataChangedEvent(){}
-
-QMap<Qmmp::MetaData, QString>MetaDataChangedEvent::metaData() const
-{
-    return m_metaData;
-}
-
-QString MetaDataChangedEvent::metaData(Qmmp::MetaData key) const
-{
-    return m_metaData.value(key);
-}
-
 StreamInfoChangedEvent::StreamInfoChangedEvent(const QHash<QString, QString> &info)
     : QEvent (EVENT_STREAM_INFO_CHANGED)
 {

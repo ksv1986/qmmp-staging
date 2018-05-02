@@ -87,7 +87,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(showState(Qmmp::State)));
     connect(m_core, SIGNAL(bitrateChanged(int)), SLOT(updateStatus()));
     connect(m_core, SIGNAL(bufferingProgress(int)), SLOT(showBuffering(int)));
-    connect(m_core, SIGNAL(metaDataChanged()), SLOT(showMetaData()));
+    connect(m_core, SIGNAL(trackInfoChanged()), SLOT(showMetaData()));
     //keyboard manager
     m_key_manager = new KeyboardManager(this);
     //create tabs

@@ -105,7 +105,7 @@ public:
     /*!
      * Returns all meta data in map.
      */
-    QMap <Qmmp::MetaData, QString> metaData() const;
+    const QMap<Qmmp::MetaData, QString> &metaData() const;
     /*!
      * Returns the metdata string associated with the given \b key.
      */
@@ -204,10 +204,6 @@ signals:
      */
     void audioParametersChanged(const AudioParameters &p);
     /*!
-     * Emitted when new metadata is available.
-     */
-    void metaDataChanged ();
-    /*!
      * Emitted when new stream information is available.
      */
     void streamInfoChanged();
@@ -263,7 +259,6 @@ private:
         ANOTHER_ENGINE,
         INVALID_SOURCE
     };
-    QMap <Qmmp::MetaData, QString> m_metaData;
     QHash <QString, QString> m_streamInfo;
     TrackInfo m_info;
     QString m_url;

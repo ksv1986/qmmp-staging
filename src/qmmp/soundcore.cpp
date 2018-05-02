@@ -240,14 +240,14 @@ Qmmp::State SoundCore::state() const
     return m_handler->state();
 }
 
-QMap <Qmmp::MetaData, QString> SoundCore::metaData() const
+const QMap<Qmmp::MetaData, QString> &SoundCore::metaData() const
 {
-    return m_metaData;
+    return m_info.metaData();
 }
 
 QString SoundCore::metaData(Qmmp::MetaData key) const
 {
-    return m_metaData[key];
+    return m_info.value(key);
 }
 
 QHash<QString, QString> SoundCore::streamInfo() const
@@ -365,11 +365,6 @@ bool SoundCore::event(QEvent *e)
             m_streamInfo.clear();
             startNextEngine();
         }
-    }
-    else if(e->type() == EVENT_METADATA_CHANGED)
-    {
-        m_metaData = ((MetaDataChangedEvent *) e)->metaData();
-        emit metaDataChanged();
     }
     else if(e->type() == EVENT_STREAM_INFO_CHANGED)
     {

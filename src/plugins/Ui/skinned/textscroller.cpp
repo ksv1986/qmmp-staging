@@ -62,7 +62,7 @@ TextScroller::TextScroller (QWidget *parent) : QWidget (parent)
     connect(m_timer, SIGNAL (timeout()), SLOT (addOffset()));
     connect(m_skin, SIGNAL(skinChanged()), SLOT(updateSkin()));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(processState(Qmmp::State)));
-    connect(m_core, SIGNAL(metaDataChanged()), SLOT(processMetaData()));
+    connect(m_core, SIGNAL(trackInfoChanged()), SLOT(processMetaData()));
     connect(MediaPlayer::instance(), SIGNAL(playbackFinished()), SLOT(clearText()));
     updateSkin();
 }

@@ -30,9 +30,8 @@
 #define EVENT_STATE_CHANGED (QEvent::Type(QEvent::User)) /*!< @internal */
 #define EVENT_NEXT_TRACK_REQUEST (QEvent::Type(QEvent::User + 1)) /*!< @internal */
 #define EVENT_FINISHED (QEvent::Type(QEvent::User + 2)) /*!< @internal */
-#define EVENT_METADATA_CHANGED (QEvent::Type(QEvent::User + 3)) /*!< @internal */
+#define  EVENT_TRACK_INFO_CHANGED (QEvent::Type(QEvent::User + 3)) /*!< @internal */
 #define EVENT_STREAM_INFO_CHANGED (QEvent::Type(QEvent::User + 4)) /*!< @internal */
-#define EVENT_TRACK_INFO_CHANGED (QEvent::Type(QEvent::User + 5)) /*!< @internal */
 
 /*! @internal
  * @author Ilya Kotov <forkotov02@ya.ru>
@@ -55,27 +54,6 @@ private:
 /*! @internal
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class MetaDataChangedEvent : public QEvent
-{
-public:
-    MetaDataChangedEvent(const QMap<Qmmp::MetaData, QString> &metaData);
-    virtual ~MetaDataChangedEvent();
-    /*!
-     * Returns all meta data in map.
-     */
-    QMap <Qmmp::MetaData, QString> metaData() const;
-    /*!
-     * Returns the metdata string associated with the given \b key.
-     */
-    QString metaData(Qmmp::MetaData key) const;
-
-private:
-    QMap<Qmmp::MetaData, QString> m_metaData;
-};
-
-/*! @internal
- * @author Ilya Kotov <forkotov02@ya.ru>
- */
 class StreamInfoChangedEvent : public QEvent
 {
 public:
@@ -90,6 +68,9 @@ private:
     QHash<QString, QString> m_streamInfo;
 };
 
+/*! @internal
+ * @author Ilya Kotov <forkotov02@ya.ru>
+ */
 class TrackInfoEvent : public QEvent
 {
 public:

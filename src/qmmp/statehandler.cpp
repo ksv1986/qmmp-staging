@@ -151,7 +151,7 @@ void StateHandler::dispatch(const TrackInfo &info)
         if (m_metaData != tmp)
         {
             m_metaData = tmp;
-            qApp->postEvent(parent(), new MetaDataChangedEvent(m_metaData));
+            qApp->postEvent(parent(), new trackInfoChangedEvent(m_metaData));
         }
     }
     if(m_info.isEmpty() || m_info.path() == metaData.value(Qmmp::URL))

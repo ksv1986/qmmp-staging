@@ -77,7 +77,7 @@ StatusIcon::StatusIcon(QObject *parent) : QObject(parent)
     m_menu->addAction(tr("Exit"), UiHelper::instance(), SLOT(exit()));
     m_tray->setContextMenu(m_menu);
     m_tray->show();
-    connect (m_core, SIGNAL(metaDataChanged ()), SLOT(showMetaData()));
+    connect (m_core, SIGNAL(trackInfoChanged ()), SLOT(showMetaData()));
     connect (m_core, SIGNAL(stateChanged (Qmmp::State)), SLOT(setState(Qmmp::State)));
     setState(m_core->state()); //update state
     if (m_core->state() == Qmmp::Playing) //show test message

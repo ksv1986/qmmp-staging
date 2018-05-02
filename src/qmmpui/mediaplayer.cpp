@@ -52,7 +52,7 @@ MediaPlayer::MediaPlayer(QObject *parent)
     connect(m_core, SIGNAL(nextTrackRequest()), SLOT(updateNextUrl()));
     connect(m_core, SIGNAL(finished()), SLOT(playNext()));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(processState(Qmmp::State)));
-    connect(m_core, SIGNAL(metaDataChanged()),SLOT(updateMetaData()));
+    connect(m_core, SIGNAL(trackInfoChanged()),SLOT(updateMetaData()));
 }
 
 MediaPlayer::~MediaPlayer()

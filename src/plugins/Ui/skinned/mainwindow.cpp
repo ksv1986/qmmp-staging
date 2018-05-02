@@ -126,7 +126,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(showState(Qmmp::State)));
     connect(m_core, SIGNAL(elapsedChanged(qint64)),m_playlist, SLOT(setTime(qint64)));
-    connect(m_core, SIGNAL(metaDataChanged()),SLOT(showMetaData()));
+    connect(m_core, SIGNAL(trackInfoChanged()),SLOT(showMetaData()));
     connect(m_uiHelper, SIGNAL(toggleVisibilityCalled()), SLOT(toggleVisibility()));
     connect(m_uiHelper, SIGNAL(showMainWindowCalled()), SLOT(showAndRaise()));
 

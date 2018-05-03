@@ -124,48 +124,6 @@ void StateHandler::dispatch(const TrackInfo &info)
     }
 }
 
-/*void StateHandler::dispatch(const QMap<Qmmp::MetaData, QString> &metaData)
-{
-    m_mutex.lock();
-    QMap<Qmmp::MetaData, QString> tmp = metaData;
-    foreach(QString value, tmp.values()) //remove empty keys
-    {
-        if (value.isEmpty() || value == "0")
-            tmp.remove(tmp.key(value));
-    }
-    if(tmp.isEmpty() || tmp.value(Qmmp::URL).isEmpty()) //skip empty tags
-    {
-        qWarning("StateHandler: empty metadata");
-        m_mutex.unlock();
-        return;
-    }
-    if(m_state != Qmmp::Playing && m_state != Qmmp::Paused)
-    {
-        qWarning("StateHandler: metadata is ignored");
-        m_mutex.unlock();
-        return;
-    }
-
-    if(m_metaData.isEmpty() || m_metaData.value(Qmmp::URL) == metaData.value(Qmmp::URL))
-    {
-        if (m_metaData != tmp)
-        {
-            m_metaData = tmp;
-            qApp->postEvent(parent(), new trackInfoChangedEvent(m_metaData));
-        }
-    }
-    if(m_info.isEmpty() || m_info.path() == metaData.value(Qmmp::URL))
-    {
-        if(m_info.metaData() != tmp)
-        {
-            m_info.setValues(tmp);
-            m_info.setPath(metaData.value(Qmmp::URL));
-        }
-    }
-
-    m_mutex.unlock();
-}*/
-
 void StateHandler::dispatch(const QHash<QString, QString> &info)
 {
     m_mutex.lock();

@@ -127,29 +127,29 @@ void TrackInfo::setValue(Qmmp::MetaData key, const QVariant &value)
 {
     QString strValue = value.toString();
     if(strValue.isEmpty() || strValue == "0")
-        return;
-
-    m_parts |= MetaData;
-    m_metaData[key] = strValue;
+        m_metaData.remove(key);
+    else
+        m_metaData[key] = strValue;
+    m_metaData.isEmpty() ? (m_parts &= ~MetaData) : (m_parts |= MetaData);
 }
 
 void TrackInfo::setValue(Qmmp::TrackProperty key, const QVariant &value)
 {
     QString strValue = value.toString();
     if(strValue.isEmpty() || strValue == "0")
-        return;
-
-    m_parts |= Properties;
-    m_properties[key] = strValue;
+        m_properties.remove(key);
+    else
+        m_properties[key] = strValue;
+    m_properties.isEmpty() ? (m_parts &= ~Properties) : (m_parts |= Properties);
 }
 
 void TrackInfo::setValue(Qmmp::ReplayGainKey key, double value)
 {
-    if(!qFuzzyIsNull(value))
-        return;
-
-    m_parts |= ReplayGainInfo;
-    m_replayGainInfo[key] = value;
+    if(qFuzzyIsNull(value))
+        m_replayGainInfo[key] = value;
+    else
+        m_replayGainInfo.remove(key);
+    m_replayGainInfo.isEmpty() ? (m_parts &= ~ReplayGainInfo) : (m_parts |= ReplayGainInfo);
 }
 
 void TrackInfo::setValue(Qmmp::ReplayGainKey key, const QString &value)

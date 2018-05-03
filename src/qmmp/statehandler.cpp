@@ -108,7 +108,7 @@ void StateHandler::dispatch(const TrackInfo &info)
 
     if(m_info.isEmpty() || m_info.path() == info.path())
     {
-        TrackInfo tmp = m_info;
+        TrackInfo tmp = info;
         if(info.parts() & TrackInfo::MetaData)
             tmp.setValues(info.metaData());
         if(info.parts() & TrackInfo::Properties)

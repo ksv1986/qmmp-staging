@@ -1,6 +1,6 @@
 include(../../../qmmp.pri)
 
-SUBDIRS += statusicon
+SUBDIRS += statusicon \
 #           notifier \
 #           lyrics \
 #           scrobbler \
@@ -8,7 +8,7 @@ SUBDIRS += statusicon
 #           covermanager \
 #           streambrowser \
 #           trackchange \
-#           hotkey \
+            hotkey
 #           copypaste \
 #           rgscan
 #unix:SUBDIRS += mpris \

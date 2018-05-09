@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -97,7 +97,7 @@ bool SoundCore::play(const QString &source, bool queue, qint64 offset)
 void SoundCore::stop()
 {
     qApp->sendPostedEvents(this, 0);
-    m_url.clear();
+    m_path.clear();
     qDeleteAll(m_sources);
     m_sources.clear();
     m_nextState = NO_ENGINE;
@@ -125,9 +125,9 @@ void SoundCore::seek(qint64 pos)
         m_engine->seek(pos);
 }
 
-const QString SoundCore::url() const
+const QString SoundCore::path() const
 {
-    return m_url;
+    return m_path;
 }
 
 bool SoundCore::nextTrackAccepted() const
@@ -266,12 +266,12 @@ void SoundCore::startNextSource()
         return;
 
     InputSource *s = m_sources.dequeue();
-    m_url = s->url();
+    m_path = s->url();
 
     if(s->ioDevice() && !s->ioDevice()->isOpen() && !s->ioDevice()->open(QIODevice::ReadOnly))
     {
         qWarning("SoundCore: input error: %s", qPrintable(s->ioDevice()->errorString()));
-        m_url.clear();
+        m_path.clear();
         s->deleteLater();
         m_nextState = INVALID_SOURCE;
         if(m_handler->state() == Qmmp::Stopped || m_handler->state() == Qmmp::Buffering)

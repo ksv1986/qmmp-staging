@@ -180,7 +180,7 @@ public slots:
     /*!
      *  This function returns file path or stream url.
      */
-    const QString url() const;
+    const QString path() const;
 
 signals:
     /*!
@@ -261,7 +261,7 @@ private:
     };
     QHash <QString, QString> m_streamInfo;
     TrackInfo m_info;
-    QString m_url;
+    QString m_path;
     static SoundCore* m_instance;
     StateHandler *m_handler;
     VolumeControl *m_volumeControl;

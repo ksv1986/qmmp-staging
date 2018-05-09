@@ -1,7 +1,7 @@
 include(../../../qmmp.pri)
 
 SUBDIRS += statusicon \
-#           notifier \
+           notifier \
 #           lyrics \
 #           scrobbler \
 #           fileops \

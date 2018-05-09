@@ -69,7 +69,6 @@ public:
     void updateValues(const QMap<Qmmp::TrackProperty, QString> &properties);
     void updateValues(const QMap<Qmmp::ReplayGainKey, double> &replayGainInfo);
     void setPath(const QString &path);
-    void setParts(Parts parts);
     void clear(Parts parts);
     void clear();
 

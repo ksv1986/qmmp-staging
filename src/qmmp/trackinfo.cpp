@@ -49,7 +49,6 @@ TrackInfo &TrackInfo::operator=(const TrackInfo &info)
     setValues(info.properties());
     setValues(info.replayGainInfo());
     setPath(info.path());
-    setParts(info.parts());
     return *this;
 }
 
@@ -165,20 +164,20 @@ void TrackInfo::setValue(Qmmp::ReplayGainKey key, const QString &value)
 
 void TrackInfo::setValues(const QMap<Qmmp::MetaData, QString> &metaData)
 {
-    m_parts |= MetaData;
-    m_metaData = metaData;
+   m_metaData.clear();
+   updateValues(metaData);
 }
 
 void TrackInfo::setValues(const QMap<Qmmp::TrackProperty, QString> &properties)
 {
-    m_parts |= Properties;
-    m_properties = properties;
+    m_properties.clear();
+    updateValues(properties);
 }
 
 void TrackInfo::setValues(const QMap<Qmmp::ReplayGainKey, double> &replayGainInfo)
 {
-    m_parts |= ReplayGainInfo;
-    m_replayGainInfo = replayGainInfo;
+    m_replayGainInfo.clear();
+    updateValues(replayGainInfo);
 }
 
 void TrackInfo::updateValues(const QMap<Qmmp::MetaData, QString> &metaData)
@@ -202,11 +201,6 @@ void TrackInfo::updateValues(const QMap<Qmmp::ReplayGainKey, double> &replayGain
 void TrackInfo::setPath(const QString &path)
 {
     m_path = path;
-}
-
-void TrackInfo::setParts(Parts parts)
-{
-    m_parts = parts;
 }
 
 void TrackInfo::clear(Parts parts)

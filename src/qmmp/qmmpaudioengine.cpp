@@ -119,7 +119,7 @@ bool QmmpAudioEngine::play()
 bool QmmpAudioEngine::enqueue(InputSource *source)
 {
     mutex()->lock();
-    if(m_decoder && m_decoder->nextURL() == source->url())
+    if(m_decoder && m_decoder->nextURL() == source->path())
     {
         m_inputs.value(m_decoder)->setOffset(source->offset());
         delete source;
@@ -131,16 +131,16 @@ bool QmmpAudioEngine::enqueue(InputSource *source)
 
     DecoderFactory *factory = 0;
 
-    if(!source->url().contains("://"))
-        factory = Decoder::findByFilePath(source->url(), m_settings->determineFileTypeByContent());
+    if(!source->path().contains("://"))
+        factory = Decoder::findByFilePath(source->path(), m_settings->determineFileTypeByContent());
     if(!factory)
         factory = Decoder::findByMime(source->contentType());
-    if(factory && !factory->properties().noInput && source->ioDevice() && source->url().contains("://"))
+    if(factory && !factory->properties().noInput && source->ioDevice() && source->path().contains("://"))
         factory = (factory->canDecode(source->ioDevice()) ? factory : 0);
-    if(!factory && source->ioDevice() && source->url().contains("://")) //ignore content of local files
+    if(!factory && source->ioDevice() && source->path().contains("://")) //ignore content of local files
         factory = Decoder::findByContent(source->ioDevice());
-    if(!factory && source->url().contains("://"))
-        factory = Decoder::findByProtocol(source->url().section("://",0,0));
+    if(!factory && source->path().contains("://"))
+        factory = Decoder::findByProtocol(source->path().section("://",0,0));
     if(!factory)
     {
         qWarning("QmmpAudioEngine: unsupported file format");
@@ -149,7 +149,7 @@ bool QmmpAudioEngine::enqueue(InputSource *source)
     qDebug("QmmpAudioEngine: selected decoder: %s",qPrintable(factory->properties().shortName));
     if(factory->properties().noInput && source->ioDevice())
         source->ioDevice()->close();
-    Decoder *decoder = factory->create(source->url(), source->ioDevice());
+    Decoder *decoder = factory->create(source->path(), source->ioDevice());
     if(!decoder->initialize())
     {
         qWarning("QmmpAudioEngine: invalid file format");
@@ -380,7 +380,7 @@ void QmmpAudioEngine::run()
         if(m_decoder->hasMetaData())
         {
             QMap<Qmmp::MetaData, QString> m = m_decoder->takeMetaData();
-            TrackInfo info(m_inputs[m_decoder]->url());
+            TrackInfo info(m_inputs[m_decoder]->path());
             info.setValues(m);
             StateHandler::instance()->dispatch(info);
             m_trackInfo = QSharedPointer<TrackInfo>(new TrackInfo(info));
@@ -389,7 +389,7 @@ void QmmpAudioEngine::run()
         if(m_inputs[m_decoder]->hasMetaData())
         {
             QMap<Qmmp::MetaData, QString> m = m_inputs[m_decoder]->takeMetaData();
-            TrackInfo info(m_inputs[m_decoder]->url());
+            TrackInfo info(m_inputs[m_decoder]->path());
             info.setValues(m);
             StateHandler::instance()->dispatch(info);
             m_trackInfo = QSharedPointer<TrackInfo>(new TrackInfo(info));
@@ -596,7 +596,7 @@ void QmmpAudioEngine::sendMetaData()
 {
     if(!m_decoder || m_inputs.isEmpty())
         return;
-    QString url = m_inputs.value(m_decoder)->url();
+    QString url = m_inputs.value(m_decoder)->path();
     if (QFile::exists(url)) //send metadata for local files only
     {
         QList <TrackInfo *> list = MetaDataManager::instance()->createPlayList(url, TrackInfo::MetaData);

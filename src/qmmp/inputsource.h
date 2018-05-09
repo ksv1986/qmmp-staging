@@ -44,7 +44,7 @@ public:
      * @param url Input source path or url.
      * @param parent Parent object.
      */
-    InputSource(const QString &url, QObject *parent = 0);
+    InputSource(const QString &path, QObject *parent = 0);
     /*!
      * Returns QIODevice-based object for I/O operations.
      * Subclass shoud reimplement this function.
@@ -72,7 +72,7 @@ public:
     /*!
      * Returns input source path or url.
      */
-    const QString url() const;
+    const QString path() const;
     /*!
      * Returns start position in ms;
      */
@@ -117,7 +117,7 @@ public:
      * @param parent Parent object.
      * Returns \b 0 if the given url is not supported.
      */
-    static InputSource *create(const QString &url, QObject *parent = 0);
+    static InputSource *create(const QString &path, QObject *parent = 0);
     /*!
      * Returns a list of transport factories.
      */
@@ -158,7 +158,7 @@ signals:
     void error();
 
 private:
-    QString m_url;
+    QString m_path;
     qint64 m_offset;
     QMap<Qmmp::MetaData, QString> m_metaData;
     QHash<QString, QString> m_streamInfo;

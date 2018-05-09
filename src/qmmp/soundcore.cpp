@@ -266,7 +266,7 @@ void SoundCore::startNextSource()
         return;
 
     InputSource *s = m_sources.dequeue();
-    m_path = s->url();
+    m_path = s->path();
 
     if(s->ioDevice() && !s->ioDevice()->isOpen() && !s->ioDevice()->open(QIODevice::ReadOnly))
     {

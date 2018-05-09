@@ -28,7 +28,7 @@
 
 InputSource::InputSource(const QString &source, QObject *parent) : QObject(parent)
 {
-    m_url = source;
+    m_path = source;
     m_offset = -1;
     m_hasMetaData = false;
     m_hasStreamInfo = false;
@@ -44,9 +44,9 @@ QString InputSource::contentType() const
     return QString();
 }
 
-const QString InputSource::url() const
+const QString InputSource::path() const
 {
-    return m_url;
+    return m_path;
 }
 
 qint64 InputSource::offset() const

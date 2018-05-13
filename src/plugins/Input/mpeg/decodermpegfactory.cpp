@@ -307,7 +307,7 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &fileName, T
         }
     }
 
-    if(parts & TrackInfo::Properties)
+    if((parts & TrackInfo::Properties) && fileRef.audioProperties())
     {
         info->setValue(Qmmp::BITRATE, fileRef.audioProperties()->bitrate());
         info->setValue(Qmmp::SAMPLERATE, fileRef.audioProperties()->sampleRate());

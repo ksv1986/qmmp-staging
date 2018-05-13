@@ -44,7 +44,7 @@ void CoverManager::showWindow()
     if (!tracks.isEmpty())
     {
         CoverWidget *w = new CoverWidget(qApp->activeWindow ());
-        QPixmap pix = MetaDataManager::instance()->getCover(tracks.at(0)->url());
+        QPixmap pix = MetaDataManager::instance()->getCover(tracks.first()->path());
         if(pix.isNull())
             pix = QPixmap(":/cm_no_cover.png");
         w->setPixmap(pix);

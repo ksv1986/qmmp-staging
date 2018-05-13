@@ -4,12 +4,12 @@ SUBDIRS += statusicon \
            notifier \
            lyrics \
 #           scrobbler \
-#           fileops \
-#           covermanager \
+           fileops \
+           covermanager \
            streambrowser \
 #           trackchange \
-            hotkey
-#           copypaste \
+           hotkey \
+           copypaste
 #           rgscan
 #unix:SUBDIRS += mpris \
 #                kdenotify \

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -119,7 +119,7 @@ void FileOps::execAction(int n)
 
         foreach(PlayListTrack *track, tracks)
         {
-            if (QFile::exists(track->url()) && QFile::remove(track->url()))
+            if (QFile::exists(track->path()) && QFile::remove(track->path()))
                 model->removeTrack(track);
         }
         break;
@@ -157,12 +157,12 @@ void FileOps::copy(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
     int i  = 0;
     foreach(PlayListTrack *track, tracks)
     {
-        if (!QFile::exists(track->url()))
+        if (!QFile::exists(track->path()))
             continue;
 
         QString fileName = formatter->format(track); //generate file name
 
-        QString ext = QString(".") + track->url().section(".", -1).toLower();
+        QString ext = QString(".") + track->path().section(".", -1).toLower();
         if (!ext.isEmpty() && !fileName.endsWith(ext, Qt::CaseInsensitive))
             fileName += ext; //append extension
 
@@ -177,11 +177,11 @@ void FileOps::copy(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
                 continue;
             }
         }
-        if(track->url() == path)
+        if(track->path() == path)
             continue;
 
         //copy file
-        QFile in(track->url());
+        QFile in(track->path());
         QFile out(path);
         if (!in.open(QIODevice::ReadOnly))
         {
@@ -213,22 +213,22 @@ void FileOps::copy(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
 
 void FileOps::rename(QList<PlayListTrack *> tracks, MetaDataFormatter *formatter, PlayListModel *model)
 {
-    foreach(PlayListTrack *item, tracks)
+    foreach(PlayListTrack *track, tracks)
     {
-        if (!QFile::exists(item->url())) //is it file?
+        if (!QFile::exists(track->path())) //is it file?
             continue;
 
-        QString fileName = formatter->format(item); //generate file name
+        QString fileName = formatter->format(track); //generate file name
 
-        QString ext = QString(".") + item->url().section(".", -1).toLower();
+        QString ext = QString(".") + track->path().section(".", -1).toLower();
         if (!ext.isEmpty() && !fileName.endsWith(ext, Qt::CaseInsensitive))
             fileName += ext; //append extension
         //rename file
-        QFile file(item->url());
-        QString dest = QFileInfo(item->url()).absolutePath ();
+        QFile file(track->path());
+        QString dest = QFileInfo(track->path()).absolutePath ();
         if (file.rename(dest + "/" + fileName))
         {
-            item->insert(Qmmp::URL, dest + "/" + fileName);
+            track->setPath(dest + "/" + fileName);
             model->doCurrentVisibleRequest();
         }
         else
@@ -245,20 +245,20 @@ void FileOps::move(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
     progress.show();
     progress.setAutoClose (false);
     int i  = 0;
-    foreach(PlayListTrack *item, tracks)
+    foreach(PlayListTrack *track, tracks)
     {
-        if (!QFile::exists(item->url()))
+        if (!QFile::exists(track->path()))
             continue;
 
-        QString fileName = formatter->format(item); //generate file name
+        QString fileName = formatter->format(track); //generate file name
 
-        QString ext = QString(".") + item->url().section(".", -1).toLower();
+        QString ext = QString(".") + track->path().section(".", -1).toLower();
         if (!ext.isEmpty() && !fileName.endsWith(ext, Qt::CaseInsensitive))
             fileName += ext;  //append extension
         //create destination path
         QString path = dest + "/" + fileName;
         //skip moved files
-        if(path == item->url())
+        if(path == track->path())
             continue;
 
         QDir dir = QFileInfo(path).dir();
@@ -276,15 +276,15 @@ void FileOps::move(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
         progress.setLabelText (QString(tr("Moving file %1/%2")).arg(++i).arg(tracks.size()));
         progress.update();
         //try to rename file first
-        if(QFile::rename(item->url(), path))
+        if(QFile::rename(track->path(), path))
         {
             progress.setValue(100);
-            item->insert(Qmmp::URL, path);
+            track->setPath(path);
             model->doCurrentVisibleRequest();
             continue;
         }
         //copy file
-        QFile in(item->url());
+        QFile in(track->path());
         QFile out(path);
         if (!in.open(QIODevice::ReadOnly))
         {
@@ -311,10 +311,10 @@ void FileOps::move(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
 
         in.close();
 
-        if(!QFile::remove(item->url()))
-            qWarning("FileOps: unable to remove file '%s'", qPrintable(item->url()));
+        if(!QFile::remove(track->path()))
+            qWarning("FileOps: unable to remove file '%s'", qPrintable(track->path()));
 
-        item->insert(Qmmp::URL, path);
+        track->setPath(path);
         model->doCurrentVisibleRequest();
 
         if(progress.wasCanceled())

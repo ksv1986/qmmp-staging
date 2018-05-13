@@ -2,11 +2,11 @@ include(../../../qmmp.pri)
 
 SUBDIRS += statusicon \
            notifier \
-#           lyrics \
+           lyrics \
 #           scrobbler \
 #           fileops \
 #           covermanager \
-#           streambrowser \
+           streambrowser \
 #           trackchange \
             hotkey
 #           copypaste \

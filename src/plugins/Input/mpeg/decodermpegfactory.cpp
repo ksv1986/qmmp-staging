@@ -215,7 +215,7 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &fileName, T
     if(fileRef.audioProperties())
         info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
 
-    if (parts && TrackInfo::MetaData)
+    if (parts & TrackInfo::MetaData)
     {
         QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
         settings.beginGroup("MPEG");

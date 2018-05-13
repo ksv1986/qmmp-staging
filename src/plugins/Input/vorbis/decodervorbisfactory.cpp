@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -70,50 +70,58 @@ MetaDataModel* DecoderVorbisFactory::createMetaDataModel(const QString &path, QO
     return new VorbisMetaDataModel(path, parent);
 }
 
-QList<FileInfo *> DecoderVorbisFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *)
+QList<TrackInfo *> DecoderVorbisFactory::createPlayList(const QString &fileName, TrackInfo::Parts parts, QStringList *)
 {
-    FileInfo *info = new FileInfo(fileName);
+    TrackInfo *info = new TrackInfo(fileName);
 
     TagLib::FileStream stream(QStringToFileName(fileName), true);
     TagLib::Ogg::Vorbis::File fileRef(&stream);
-    TagLib::Ogg::XiphComment *tag = useMetaData ? fileRef.tag() : 0;
 
-    if (tag && !tag->isEmpty())
+    if(fileRef.audioProperties())
+        info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
+
+    if(parts & TrackInfo::MetaData)
     {
-        info->setMetaData(Qmmp::ALBUM,
-                          QString::fromUtf8(tag->album().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::ARTIST,
-                          QString::fromUtf8(tag->artist().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::COMMENT,
-                          QString::fromUtf8(tag->comment().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::GENRE,
-                          QString::fromUtf8(tag->genre().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::TITLE,
-                          QString::fromUtf8(tag->title().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::YEAR, tag->year());
-        info->setMetaData(Qmmp::TRACK, tag->track());
+        TagLib::Ogg::XiphComment *tag = fileRef.tag();
+        if (tag && !tag->isEmpty())
+        {
+            info->setValue(Qmmp::ALBUM, QString::fromUtf8(tag->album().toCString(true)).trimmed());
+            info->setValue(Qmmp::ARTIST, QString::fromUtf8(tag->artist().toCString(true)).trimmed());
+            info->setValue(Qmmp::COMMENT, QString::fromUtf8(tag->comment().toCString(true)).trimmed());
+            info->setValue(Qmmp::GENRE, QString::fromUtf8(tag->genre().toCString(true)).trimmed());
+            info->setValue(Qmmp::TITLE, QString::fromUtf8(tag->title().toCString(true)).trimmed());
+            info->setValue(Qmmp::YEAR, tag->year());
+            info->setValue(Qmmp::TRACK, tag->track());
+        }
     }
 
-    if (fileRef.audioProperties())
-        info->setLength(fileRef.audioProperties()->length());
-    //additional metadata
-    if(tag)
+    if(parts & TrackInfo::Properties)
     {
-        TagLib::StringList fld;
-        if(!(fld = tag->fieldListMap()["ALBUMARTIST"]).isEmpty())
-            info->setMetaData(Qmmp::ALBUMARTIST,
-                              QString::fromUtf8(fld.front().toCString(true)).trimmed());
-        if(!(fld = tag->fieldListMap()["COMPOSER"]).isEmpty())
-            info->setMetaData(Qmmp::COMPOSER,
-                              QString::fromUtf8(fld.front().toCString(true)).trimmed());
-        if(!(fld = tag->fieldListMap()["DISCNUMBER"]).isEmpty())
-            info->setMetaData(Qmmp::DISCNUMBER,
-                              QString::fromUtf8(fld.front().toCString(true)).trimmed());
+        info->setValue(Qmmp::BITRATE, fileRef.audioProperties()->bitrate());
+        info->setValue(Qmmp::SAMPLERATE, fileRef.audioProperties()->sampleRate());
+        info->setValue(Qmmp::CHANNELS, fileRef.audioProperties()->channels());
+        info->setValue(Qmmp::BITS_PER_SAMPLE, 16);
+        info->setValue(Qmmp::FORMAT_NAME, "Ogg Vorbis");
     }
 
-    QList <FileInfo*> list;
-    list << info;
-    return list;
+    if(parts & TrackInfo::ReplayGainInfo)
+    {
+        TagLib::Ogg::XiphComment *tag = fileRef.tag();
+        if(tag)
+        {
+            TagLib::Ogg::FieldListMap items = tag->fieldListMap();
+            if(items.contains("REPLAYGAIN_TRACK_GAIN"))
+                info->setValue(Qmmp::REPLAYGAIN_TRACK_GAIN,TStringToQString(items["REPLAYGAIN_TRACK_GAIN"].front()));
+            if(items.contains("REPLAYGAIN_TRACK_PEAK"))
+                info->setValue(Qmmp::REPLAYGAIN_TRACK_PEAK,TStringToQString(items["REPLAYGAIN_TRACK_PEAK"].front()));
+            if(items.contains("REPLAYGAIN_ALBUM_GAIN"))
+                info->setValue(Qmmp::REPLAYGAIN_ALBUM_GAIN,TStringToQString(items["REPLAYGAIN_ALBUM_GAIN"].front()));
+            if(items.contains("REPLAYGAIN_ALBUM_PEAK"))
+                info->setValue(Qmmp::REPLAYGAIN_ALBUM_PEAK,TStringToQString(items["REPLAYGAIN_ALBUM_PEAK"].front()));
+        }
+    }
+
+    return QList<TrackInfo*>() << info;
 }
 
 void DecoderVorbisFactory::showSettings(QWidget *)

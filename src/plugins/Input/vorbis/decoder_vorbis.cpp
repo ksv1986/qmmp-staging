@@ -7,7 +7,6 @@
 
 #include <qmmp/buffer.h>
 #include <qmmp/output.h>
-#include <qmmp/fileinfo.h>
 #include <stdlib.h>
 #include <string.h>
 #include <QObject>
@@ -212,7 +211,6 @@ void DecoderVorbis::updateTags()
             metaData.insert(Qmmp::DISCNUMBER, QString::number(atoi(comments->user_comments[i]
                             + strlen ("discnumber="))));
     }
-    metaData.insert(Qmmp::URL, m_url);
     addMetaData(metaData);
 }
 

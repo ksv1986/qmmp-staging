@@ -61,7 +61,7 @@ public:
      */
     void dispatch(qint64 duration);
 
-    void dispatch(const TrackInfo &info);
+    bool dispatch(const TrackInfo &info);
     /*!
      * Sends stream information \b info
      */

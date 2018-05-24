@@ -92,18 +92,18 @@ void StateHandler::dispatch(qint64 length)
     m_mutex.unlock();
 }
 
-void StateHandler::dispatch(const TrackInfo &info)
+bool StateHandler::dispatch(const TrackInfo &info)
 {
     QMutexLocker locker(&m_mutex);
     if(info.isEmpty())
     {
         qWarning("StateHandler: empty metadata");
-        return;
+        return false;
     }
     if(m_state != Qmmp::Playing && m_state != Qmmp::Paused)
     {
         qWarning("StateHandler: metadata is ignored");
-        return;
+        return false;
     }
 
     if(m_info.isEmpty() || m_info.path() == info.path())
@@ -120,8 +120,10 @@ void StateHandler::dispatch(const TrackInfo &info)
         {
             m_info = tmp;
             qApp->postEvent(parent(), new TrackInfoEvent(m_info));
+            return true;
         }
     }
+    return false;
 }
 
 void StateHandler::dispatch(const QHash<QString, QString> &info)

@@ -357,7 +357,6 @@ void QmmpAudioEngine::run()
     addOffset(); //offset
     mutex()->unlock();
     m_output->start();
-    m_dithering->setFormats(m_decoder->audioParameters().format(), m_output->format());
     StateHandler::instance()->dispatch(Qmmp::Buffering);
     StateHandler::instance()->dispatch(m_decoder->totalTime());
     StateHandler::instance()->dispatch(Qmmp::Playing);
@@ -384,7 +383,6 @@ void QmmpAudioEngine::run()
             info.setValues(m);
             StateHandler::instance()->dispatch(info);
             m_trackInfo = QSharedPointer<TrackInfo>(new TrackInfo(info));
-
         }
         if(m_inputs[m_decoder]->hasMetaData())
         {
@@ -486,16 +484,15 @@ void QmmpAudioEngine::run()
                         addOffset(); //offset
                     }
                 }
-                if(m_output)
-                {
-                    m_dithering->setFormats(m_decoder->audioParameters().format(), m_output->format());
-                    continue;
-                }
+                if(!m_output)
+                    m_done = true;
+
+                continue;
             }
 
-            flush(true);
             if (m_output)
             {
+                flush(true);
                 m_output->recycler()->mutex()->lock ();
                 // end of stream
                 while (!m_output->recycler()->empty() && !m_user_stop)
@@ -596,10 +593,10 @@ void QmmpAudioEngine::sendMetaData()
 {
     if(!m_decoder || m_inputs.isEmpty())
         return;
-    QString url = m_inputs.value(m_decoder)->path();
-    if (QFile::exists(url)) //send metadata for local files only
+    QString path = m_inputs.value(m_decoder)->path();
+    if (QFileInfo(path).isFile()) //send metadata for local files only
     {
-        QList <TrackInfo *> list = MetaDataManager::instance()->createPlayList(url, TrackInfo::MetaData);
+        QList <TrackInfo *> list = MetaDataManager::instance()->createPlayList(path, TrackInfo::AllParts);
         if (!list.isEmpty())
         {
             StateHandler::instance()->dispatch(*list.first());
@@ -705,6 +702,8 @@ void QmmpAudioEngine::prepareEffects(Decoder *d)
         m_effects << effect;
         tmp_effects.removeAll(effect);
     }
+
+    m_dithering->setFormats(d->audioParameters().format(), m_ap.format());
 }
 
 //static members

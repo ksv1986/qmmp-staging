@@ -108,13 +108,16 @@ bool StateHandler::dispatch(const TrackInfo &info)
 
     if(m_info.isEmpty() || m_info.path() == info.path())
     {
-        TrackInfo tmp = info;
+        TrackInfo tmp = m_info;
+        tmp.setPath(info.path());
         if(info.parts() & TrackInfo::MetaData)
             tmp.setValues(info.metaData());
         if(info.parts() & TrackInfo::Properties)
             tmp.setValues(info.properties());
         if(info.parts() & TrackInfo::ReplayGainInfo)
             tmp.setValues(info.replayGainInfo());
+        if(info.duration() > 0)
+            tmp.setDuration(info.duration());
 
         if(m_info != tmp)
         {

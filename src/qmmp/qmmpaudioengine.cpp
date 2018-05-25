@@ -376,24 +376,21 @@ void QmmpAudioEngine::run()
             m_output_at = 0;
         }
         //metadata
+        if(m_inputs[m_decoder]->hasMetaData())
+            m_decoder->addMetaData(m_inputs[m_decoder]->takeMetaData());
+
+        if(m_inputs[m_decoder]->hasStreamInfo())
+            StateHandler::instance()->dispatch(m_inputs[m_decoder]->takeStreamInfo());
+
         if(m_decoder->hasMetaData())
         {
             QMap<Qmmp::MetaData, QString> m = m_decoder->takeMetaData();
             TrackInfo info(m_inputs[m_decoder]->path());
             info.setValues(m);
-            StateHandler::instance()->dispatch(info);
-            m_trackInfo = QSharedPointer<TrackInfo>(new TrackInfo(info));
+            info.setDuration(m_decoder->totalTime());
+            if(StateHandler::instance()->dispatch(info))
+                m_trackInfo = QSharedPointer<TrackInfo>(new TrackInfo(info));
         }
-        if(m_inputs[m_decoder]->hasMetaData())
-        {
-            QMap<Qmmp::MetaData, QString> m = m_inputs[m_decoder]->takeMetaData();
-            TrackInfo info(m_inputs[m_decoder]->path());
-            info.setValues(m);
-            StateHandler::instance()->dispatch(info);
-            m_trackInfo = QSharedPointer<TrackInfo>(new TrackInfo(info));
-        }
-        if(m_inputs[m_decoder]->hasStreamInfo())
-            StateHandler::instance()->dispatch(m_inputs[m_decoder]->takeStreamInfo());
         //wait more data
         if(m_inputs[m_decoder]->isWaiting())
         {

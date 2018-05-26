@@ -156,6 +156,7 @@ bool QmmpAudioEngine::enqueue(InputSource *source)
         delete decoder;
         return false;
     }
+    attachMetaData(decoder, factory, source);
     mutex()->lock();
     m_decoders.enqueue(decoder);
     m_inputs.insert(decoder, source);
@@ -360,7 +361,6 @@ void QmmpAudioEngine::run()
     StateHandler::instance()->dispatch(Qmmp::Buffering);
     StateHandler::instance()->dispatch(m_decoder->totalTime());
     StateHandler::instance()->dispatch(Qmmp::Playing);
-    sendMetaData();
 
     while (!m_done && !m_finish)
     {
@@ -387,6 +387,7 @@ void QmmpAudioEngine::run()
             QMap<Qmmp::MetaData, QString> m = m_decoder->takeMetaData();
             TrackInfo info(m_inputs[m_decoder]->path());
             info.setValues(m);
+            info.setValues(m_decoder->properties());
             info.setDuration(m_decoder->totalTime());
             if(StateHandler::instance()->dispatch(info))
                 m_trackInfo = QSharedPointer<TrackInfo>(new TrackInfo(info));
@@ -457,7 +458,6 @@ void QmmpAudioEngine::run()
                     m_output->seek(0); //reset counter
                     StateHandler::instance()->dispatch(Qmmp::Playing);
                     mutex()->unlock();
-                    sendMetaData();
                     addOffset(); //offset
                 }
                 else
@@ -477,7 +477,6 @@ void QmmpAudioEngine::run()
                         m_output->start();
                         StateHandler::instance()->dispatch(Qmmp::Playing);
                         StateHandler::instance()->dispatch(m_decoder->totalTime());
-                        sendMetaData();
                         addOffset(); //offset
                     }
                 }
@@ -586,21 +585,37 @@ void QmmpAudioEngine::addOffset()
     }
 }
 
-void QmmpAudioEngine::sendMetaData()
+void QmmpAudioEngine::attachMetaData(Decoder *decoder, DecoderFactory *factory, InputSource *source)
 {
-    if(!m_decoder || m_inputs.isEmpty())
-        return;
-    QString path = m_inputs.value(m_decoder)->path();
-    if (QFileInfo(path).isFile()) //send metadata for local files only
+    QString path = source->path();
+    QString scheme = path.section("://",0,0);
+    QFileInfo fileInfo(path);
+
+    if(fileInfo.isFile() || factory->properties().protocols.contains(scheme))
     {
-        QList <TrackInfo *> list = MetaDataManager::instance()->createPlayList(path, TrackInfo::AllParts);
-        if (!list.isEmpty())
+        QStringList ignoredPaths;
+        QList<TrackInfo *> list = factory->createPlayList(path, TrackInfo::AllParts, &ignoredPaths);
+        if(!list.isEmpty())
         {
-            StateHandler::instance()->dispatch(*list.first());
-            m_trackInfo = QSharedPointer<TrackInfo>(list.first());
-            while(list.size() > 1)
-                delete list.takeLast();
+            TrackInfo *info = list.takeFirst();
+            qDeleteAll(list);
+            list.clear();
+            decoder->addMetaData(info->metaData());
+            if(info->parts() & TrackInfo::ReplayGainInfo)
+                decoder->setReplayGainInfo(info->replayGainInfo());
+            info->updateValues(decoder->properties());
+            info->setValue(Qmmp::DECODER, factory->properties().shortName);
+            if(QFileInfo(path).isFile() && !info->value(Qmmp::FILE_SIZE).isEmpty())
+                info->setValue(Qmmp::FILE_SIZE, fileInfo.size());
+            decoder->setProperties(info->properties());
+            delete info;
         }
+    }
+    else
+    {
+        decoder->setProperty(Qmmp::DECODER, factory->properties().shortName);
+        if(!decoder->hasMetaData())
+            decoder->addMetaData(QMap<Qmmp::MetaData, QString>()); //add empty metadata to trigger track info update
     }
 }
 

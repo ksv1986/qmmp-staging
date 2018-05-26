@@ -76,7 +76,7 @@ private:
     void flush(bool = false);
     void addOffset();
     qint64 produceSound(unsigned char *data, qint64 size, quint32 brate);
-    void sendMetaData();
+    void attachMetaData(Decoder *decoder, DecoderFactory *factory, InputSource *source);
     OutputWriter *createOutput();
     void prepareEffects(Decoder *d);
 

@@ -47,7 +47,7 @@ MetaDataManager::~MetaDataManager()
     m_instance = 0;
 }
 
-QList<TrackInfo *> MetaDataManager::createPlayList(const QString &fileName, TrackInfo::Parts parts, QStringList *ignoredPaths) const
+QList<TrackInfo *> MetaDataManager::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredPaths) const
 {
     QList <TrackInfo *> list;
     DecoderFactory *fact = 0;
@@ -56,29 +56,42 @@ QList<TrackInfo *> MetaDataManager::createPlayList(const QString &fileName, Trac
     if(!ignoredPaths)
         ignoredPaths = &dummyList;
 
-    if (!fileName.contains("://")) //local file
+    if (!path.contains("://")) //local file
     {
-        if(!QFile::exists(fileName))
+        if(!QFile::exists(path))
             return list;
-        else if((fact = Decoder::findByFilePath(fileName, m_settings->determineFileTypeByContent())))
-            return fact->createPlayList(fileName, parts, ignoredPaths);
-        else if((efact = AbstractEngine::findByFilePath(fileName)))
-            return efact->createPlayList(fileName, parts, ignoredPaths);
-        return list;
+
+        if(!(fact = Decoder::findByFilePath(path, m_settings->determineFileTypeByContent())))
+            efact = AbstractEngine::findByFilePath(path);
     }
     else
     {
-        QString scheme = fileName.section("://",0,0);
+        QString scheme = path.section("://",0,0);
         if(InputSource::protocols().contains(scheme))
         {
-            list << new TrackInfo(fileName);
-            return list;
+            list << new TrackInfo(path);
         }
-        foreach(fact, Decoder::factories())
+        else
         {
-            if(fact->properties().protocols.contains(scheme) && Decoder::isEnabled(fact))
-                return fact->createPlayList(fileName, parts, ignoredPaths);
+            foreach(fact, Decoder::factories())
+            {
+                if(fact->properties().protocols.contains(scheme) && Decoder::isEnabled(fact))
+                    break;
+            }
         }
+    }
+
+    if(fact)
+        list = fact->createPlayList(path, parts, ignoredPaths);
+    else if(efact)
+        list = efact->createPlayList(path, parts, ignoredPaths);
+
+    foreach(TrackInfo *info, list)
+    {
+        if(info->value(Qmmp::DECODER).isEmpty() && (fact || efact))
+            info->setValue(Qmmp::DECODER, fact ? fact->properties().shortName : efact->properties().shortName);
+        if(info->value(Qmmp::FILE_SIZE).isEmpty() && !path.contains("://"))
+            info->setValue(Qmmp::FILE_SIZE, QFileInfo(path).size());
     }
     return list;
 }

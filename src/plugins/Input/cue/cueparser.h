@@ -25,7 +25,7 @@
 #include <QString>
 #include <QStringList>
 #include <qmmp/qmmp.h>
-#include <qmmp/fileinfo.h>
+#include <qmmp/trackinfo.h>
 
 
 /**
@@ -34,29 +34,28 @@
 class CUEParser
 {
 public:
-    CUEParser(const QString &url);
+    CUEParser(const QString &path, TrackInfo::Parts parts);
 
     ~CUEParser();
 
-    QList<FileInfo*> createPlayList();
+    QList<TrackInfo*> createPlayList();
     const QString filePath(int track) const;
     const QStringList dataFiles() const;
     qint64 offset(int track) const;
-    qint64 length(int track) const;
+    qint64 duration(int track) const;
     int count() const;
-    FileInfo *info(int track);
+    TrackInfo *info(int track);
     const QString trackURL(int track) const;
     const QMap<Qmmp::ReplayGainKey, double> replayGain(int track) const;
 
 private:
     struct CUETrack
     {
-        FileInfo info;
+        TrackInfo info;
         qint64 offset;
         QString file;
-        QMap<Qmmp::ReplayGainKey, double> replayGain;
     };
-    QList <CUETrack * > m_tracks;
+    QList <CUETrack *> m_tracks;
     bool m_dirty;
     QStringList splitLine(const QString &line);
     qint64 getLength(const QString &str);

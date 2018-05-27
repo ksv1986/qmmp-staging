@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,7 +24,7 @@
 
 CUEMetaDataModel::CUEMetaDataModel(const QString &url, QObject *parent) : MetaDataModel(parent)
 {
-    m_parser = new CUEParser(url);
+    m_parser = new CUEParser(url, TrackInfo::AllParts);
     if (m_parser->count() == 0)
     {
         qWarning("CUEMetaDataModel: invalid cue file");

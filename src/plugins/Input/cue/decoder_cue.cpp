@@ -22,7 +22,7 @@
 #include <QStringList>
 #include <qmmp/buffer.h>
 #include <qmmp/output.h>
-#include <qmmp/fileinfo.h>
+#include <qmmp/trackinfo.h>
 #include <qmmp/decoderfactory.h>
 #include <qmmp/soundcore.h>
 #include "cueparser.h"
@@ -58,7 +58,7 @@ DecoderCUE::~DecoderCUE()
 
 bool DecoderCUE::initialize()
 {
-    m_parser = new CUEParser(m_path);
+    m_parser = new CUEParser(m_path, TrackInfo::MetaData);
     if (m_parser->count() == 0)
     {
         qWarning("DecoderCUE: invalid cue file");
@@ -77,7 +77,7 @@ bool DecoderCUE::initialize()
         qWarning("DecoderCUE: unsupported file format");
         return false;
     }
-    m_length = m_parser->length(m_track);
+    m_length = m_parser->duration(m_track);
     m_offset = m_parser->offset(m_track);
     if(!df->properties().noInput)
     {
@@ -182,7 +182,7 @@ void DecoderCUE::next()
     if(m_track +1 <= m_parser->count())
     {
         m_track++;
-        m_length = m_parser->length(m_track);
+        m_length = m_parser->duration(m_track);
         m_offset = m_parser->offset(m_track);
         length_in_bytes = audioParameters().sampleRate() *
                           audioParameters().frameSize() * m_length/1000;

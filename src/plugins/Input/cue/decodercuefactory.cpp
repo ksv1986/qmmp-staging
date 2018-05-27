@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -53,20 +53,19 @@ Decoder *DecoderCUEFactory::create(const QString &path, QIODevice *input)
     return new DecoderCUE(path);
 }
 
-QList<FileInfo *> DecoderCUEFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *ignoredPaths)
+QList<TrackInfo *> DecoderCUEFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredPaths)
 {
-    Q_UNUSED(useMetaData);
-    CUEParser parser(fileName);
-    if(fileName.contains("://"))
+    CUEParser parser(path, parts);
+    if(path.contains("://"))
     {
-        QList<FileInfo *> list;
-        int track = fileName.section("#", -1).toInt();
+        QList<TrackInfo *> list;
+        int track = path.section("#", -1).toInt();
         if (!parser.count() || track <= 0 || track > parser.count())
             return list;
         list = parser.createPlayList();
-        FileInfo *info = list.takeAt(track - 1);
+        TrackInfo *info = list.takeAt(track - 1);
         qDeleteAll(list);
-        return QList<FileInfo *>() << info;
+        return QList<TrackInfo *>() << info;
     }
     else
     {

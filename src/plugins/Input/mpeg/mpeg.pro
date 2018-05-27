@@ -5,14 +5,12 @@ TARGET = $$PLUGINS_PREFIX/Input/mpeg
 HEADERS += decodermpegfactory.h \
     settingsdialog.h \
     tagextractor.h \
-    mpegmetadatamodel.h \
-    replaygainreader.h
+    mpegmetadatamodel.h
 
 SOURCES += decodermpegfactory.cpp \
     settingsdialog.cpp \
     tagextractor.cpp \
-    mpegmetadatamodel.cpp \
-    replaygainreader.cpp
+    mpegmetadatamodel.cpp
 
 contains(CONFIG, WITH_MAD){
     HEADERS += decoder_mad.h

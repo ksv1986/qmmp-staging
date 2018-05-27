@@ -4,13 +4,11 @@ TARGET = $$PLUGINS_PREFIX/Input/vorbis
 
 HEADERS += decodervorbisfactory.h \
     decoder_vorbis.h \
-    vorbismetadatamodel.h \
-    replaygainreader.h
+    vorbismetadatamodel.h
 
 SOURCES += decoder_vorbis.cpp \
     decodervorbisfactory.cpp \
-    vorbismetadatamodel.cpp \
-    replaygainreader.cpp
+    vorbismetadatamodel.cpp
 
 RESOURCES = translations/translations.qrc
 

@@ -68,14 +68,13 @@ static long oggtell(void *src)
 
 // Decoder class
 
-DecoderVorbis::DecoderVorbis(const QString &url, QIODevice *i)
+DecoderVorbis::DecoderVorbis(QIODevice *i)
         : Decoder(i)
 {
     m_inited = false;
     m_totalTime = 0;
     m_last_section = -1;
     m_bitrate = 0;
-    m_url = url;
     len = 0;
     memset(&oggfile, 0, sizeof(OggVorbis_File));
 }

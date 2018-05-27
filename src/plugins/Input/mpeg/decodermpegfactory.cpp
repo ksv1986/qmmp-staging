@@ -37,7 +37,6 @@
 #include <taglib/textidentificationframe.h>
 #include <taglib/id3v2framefactory.h>
 #include "mpegmetadatamodel.h"
-#include "replaygainreader.h"
 #include "settingsdialog.h"
 #ifdef WITH_MAD
 #include "decoder_mad.h"
@@ -175,7 +174,7 @@ const DecoderProperties DecoderMPEGFactory::properties() const
     return properties;
 }
 
-Decoder *DecoderMPEGFactory::create(const QString &url, QIODevice *input)
+Decoder *DecoderMPEGFactory::create(const QString &, QIODevice *input)
 {
     Decoder *d = 0;
 #if defined(WITH_MAD) && defined(WITH_MPG123)
@@ -195,12 +194,6 @@ Decoder *DecoderMPEGFactory::create(const QString &url, QIODevice *input)
 #elif defined(WITH_MPG123)
     d = new DecoderMPG123(input);
 #endif
-
-    if(d && !url.contains("://")) //local file
-    {
-        ReplayGainReader rg(url);
-        d->setReplayGainInfo(rg.replayGainInfo());
-    }
     return d;
 }
 

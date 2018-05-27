@@ -35,7 +35,7 @@ Q_INTERFACES(DecoderFactory)
 public:
     bool canDecode(QIODevice *input) const;
     const DecoderProperties properties() const;
-    Decoder *create(const QString &path, QIODevice *input);
+    Decoder *create(const QString &, QIODevice *input);
     MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
     QList<TrackInfo *> createPlayList(const QString &fileName, TrackInfo::Parts parts, QStringList *);
     QObject* showDetails(QWidget *parent, const QString &path);

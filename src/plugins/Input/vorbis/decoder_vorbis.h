@@ -15,7 +15,7 @@
 class DecoderVorbis : public Decoder
 {
 public:
-    DecoderVorbis(const QString &url, QIODevice *i);
+    DecoderVorbis(QIODevice *i);
     virtual ~DecoderVorbis();
 
     // Standard Decoder API
@@ -39,7 +39,6 @@ private:
     int m_last_section;
     int m_bitrate;
     bool m_inited;
-    QString m_url;
 };
 
 

@@ -24,7 +24,6 @@
 #include <taglib/fileref.h>
 #include <taglib/vorbisfile.h>
 #include <taglib/tfilestream.h>
-#include "replaygainreader.h"
 #include "decoder_vorbis.h"
 #include "vorbismetadatamodel.h"
 #include "decodervorbisfactory.h"
@@ -54,15 +53,9 @@ const DecoderProperties DecoderVorbisFactory::properties() const
     return properties;
 }
 
-Decoder *DecoderVorbisFactory::create(const QString &url, QIODevice *input)
+Decoder *DecoderVorbisFactory::create(const QString &, QIODevice *input)
 {
-    Decoder *d = new DecoderVorbis(url, input);
-    if(!url.contains("://")) //local file
-    {
-        ReplayGainReader rg(url);
-        d->setReplayGainInfo(rg.replayGainInfo());
-    }
-    return d;
+    return new DecoderVorbis(input);
 }
 
 MetaDataModel* DecoderVorbisFactory::createMetaDataModel(const QString &path, QObject *parent)
@@ -106,13 +99,13 @@ QList<TrackInfo *> DecoderVorbisFactory::createPlayList(const QString &fileName,
         TagLib::Ogg::XiphComment *tag = fileRef.tag();
         TagLib::Ogg::FieldListMap items = tag->fieldListMap();
         if(items.contains("REPLAYGAIN_TRACK_GAIN"))
-            info->setValue(Qmmp::REPLAYGAIN_TRACK_GAIN,TStringToQString(items["REPLAYGAIN_TRACK_GAIN"].front()));
+            info->setValue(Qmmp::REPLAYGAIN_TRACK_GAIN, TStringToQString(items["REPLAYGAIN_TRACK_GAIN"].front()));
         if(items.contains("REPLAYGAIN_TRACK_PEAK"))
-            info->setValue(Qmmp::REPLAYGAIN_TRACK_PEAK,TStringToQString(items["REPLAYGAIN_TRACK_PEAK"].front()));
+            info->setValue(Qmmp::REPLAYGAIN_TRACK_PEAK, TStringToQString(items["REPLAYGAIN_TRACK_PEAK"].front()));
         if(items.contains("REPLAYGAIN_ALBUM_GAIN"))
-            info->setValue(Qmmp::REPLAYGAIN_ALBUM_GAIN,TStringToQString(items["REPLAYGAIN_ALBUM_GAIN"].front()));
+            info->setValue(Qmmp::REPLAYGAIN_ALBUM_GAIN, TStringToQString(items["REPLAYGAIN_ALBUM_GAIN"].front()));
         if(items.contains("REPLAYGAIN_ALBUM_PEAK"))
-            info->setValue(Qmmp::REPLAYGAIN_ALBUM_PEAK,TStringToQString(items["REPLAYGAIN_ALBUM_PEAK"].front()));
+            info->setValue(Qmmp::REPLAYGAIN_ALBUM_PEAK, TStringToQString(items["REPLAYGAIN_ALBUM_PEAK"].front()));
     }
 
     return QList<TrackInfo*>() << info;

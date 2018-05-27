@@ -8,7 +8,7 @@ contains(CONFIG, WITH_MAD)|contains(CONFIG, WITH_MPG123){
 }
 
 contains(CONFIG, FLAC_PLUGIN){
-    #SUBDIRS += flac
+    SUBDIRS += flac
 }
 
 contains(CONFIG, MUSEPACK_PLUGIN){

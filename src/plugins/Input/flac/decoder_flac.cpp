@@ -34,7 +34,6 @@
 #include <QIODevice>
 #include <FLAC/all.h>
 #include <stdint.h>
-#include "replaygainreader.h"
 #include "cueparser.h"
 #include "decoder_flac.h"
 
@@ -325,8 +324,7 @@ bool DecoderFLAC::initialize()
                     TagLib::StringList fld = xiph_comment->fieldListMap()["DISCNUMBER"];
                     for(int i = 1; i <= m_parser->count(); i++)
                     {
-                        m_parser->info(i)->setMetaData(Qmmp::DISCNUMBER,
-                                  QString::fromUtf8(fld.toString().toCString(true)).trimmed());
+                        m_parser->info(i)->setValue(Qmmp::DISCNUMBER, TStringToQString(fld.toString()));
                     }
                 }
                 QMap<Qmmp::MetaData, QString> metaData = m_parser->info(m_track)->metaData();
@@ -451,15 +449,10 @@ bool DecoderFLAC::initialize()
     default:
         return false;
     }
-    if(!m_path.contains("://"))
-    {
-        ReplayGainReader rg(m_path);
-        setReplayGainInfo(rg.replayGainInfo());
-    }
 
     if(m_parser)
     {
-        m_length = m_parser->length(m_track);
+        m_length = m_parser->duration(m_track);
         m_offset = m_parser->offset(m_track);
         length_in_bytes = audioParameters().sampleRate() *
                           audioParameters().frameSize() * m_length/1000;
@@ -574,8 +567,8 @@ void DecoderFLAC::next()
     if(m_parser && m_track +1 <= m_parser->count())
     {
         m_track++;
-        m_offset = m_parser->length(m_track);
-        m_length = m_parser->length(m_track);
+        m_offset = m_parser->duration(m_track);
+        m_length = m_parser->duration(m_track);
         length_in_bytes = audioParameters().sampleRate() *
                           audioParameters().channels() *
                           audioParameters().sampleSize() * m_length/1000;

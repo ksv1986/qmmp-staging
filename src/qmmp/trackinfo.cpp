@@ -124,7 +124,7 @@ void TrackInfo::setDuration(qint64 duration)
 
 void TrackInfo::setValue(Qmmp::MetaData key, const QVariant &value)
 {
-    QString strValue = value.toString();
+    QString strValue = value.toString().trimmed();
     if(strValue.isEmpty() || strValue == "0")
         m_metaData.remove(key);
     else

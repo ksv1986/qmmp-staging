@@ -78,11 +78,11 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
     //extract metadata of the one cue track
     if(path.contains("://"))
     {
-        QString path = path;
-        path.remove("flac://");
-        path.remove(QRegExp("#\\d+$"));
-        int track = path.section("#", -1).toInt();
-        list = createPlayList(path, parts, ignoredFiles);
+        QString filePath = path;
+        filePath.remove("flac://");
+        filePath.remove(QRegExp("#\\d+$"));
+        int track = filePath.section("#", -1).toInt();
+        list = createPlayList(filePath, parts, ignoredFiles);
         if (list.isEmpty() || track <= 0 || track > list.count())
         {
             qDeleteAll(list);
@@ -112,7 +112,7 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
         return list;
 
     TrackInfo *info = new TrackInfo(path);
-    if(tag && !tag->isEmpty())
+    if((parts & TrackInfo::MetaData) && tag && !tag->isEmpty())
     {
         if (tag->fieldListMap().contains("CUESHEET"))
         {
@@ -134,24 +134,22 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
             return list;
         }
 
-        if(parts & TrackInfo::MetaData)
-        {
-            info->setValue(Qmmp::ALBUM, TStringToQString(tag->album()));
-            info->setValue(Qmmp::ARTIST, TStringToQString(tag->artist()));
-            info->setValue(Qmmp::COMMENT, TStringToQString(tag->comment()));
-            info->setValue(Qmmp::GENRE, TStringToQString(tag->genre()));
-            info->setValue(Qmmp::TITLE, TStringToQString(tag->title()));
-            info->setValue(Qmmp::YEAR, tag->year());
-            info->setValue(Qmmp::TRACK, tag->track());
-            //additional metadata
-            TagLib::StringList fld;
-            if(!(fld = tag->fieldListMap()["ALBUMARTIST"]).isEmpty())
-                info->setValue(Qmmp::ALBUMARTIST, TStringToQString(fld.front()));
-            if(!(fld = tag->fieldListMap()["COMPOSER"]).isEmpty())
-                info->setValue(Qmmp::COMPOSER, TStringToQString(fld.front()));
-            if(!(fld = tag->fieldListMap()["DISCNUMBER"]).isEmpty())
-                info->setValue(Qmmp::DISCNUMBER, TStringToQString(fld.front()));
-        }
+        info->setValue(Qmmp::ALBUM, TStringToQString(tag->album()));
+        info->setValue(Qmmp::ARTIST, TStringToQString(tag->artist()));
+        info->setValue(Qmmp::COMMENT, TStringToQString(tag->comment()));
+        info->setValue(Qmmp::GENRE, TStringToQString(tag->genre()));
+        info->setValue(Qmmp::TITLE, TStringToQString(tag->title()));
+        info->setValue(Qmmp::YEAR, tag->year());
+        info->setValue(Qmmp::TRACK, tag->track());
+        //additional metadata
+        TagLib::StringList fld;
+        if(!(fld = tag->fieldListMap()["ALBUMARTIST"]).isEmpty())
+            info->setValue(Qmmp::ALBUMARTIST, TStringToQString(fld.front()));
+        if(!(fld = tag->fieldListMap()["COMPOSER"]).isEmpty())
+            info->setValue(Qmmp::COMPOSER, TStringToQString(fld.front()));
+        if(!(fld = tag->fieldListMap()["DISCNUMBER"]).isEmpty())
+            info->setValue(Qmmp::DISCNUMBER, TStringToQString(fld.front()));
+
     }
     if(ap)
     {

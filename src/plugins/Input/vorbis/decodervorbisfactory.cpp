@@ -76,11 +76,11 @@ QList<TrackInfo *> DecoderVorbisFactory::createPlayList(const QString &fileName,
     if((parts & TrackInfo::MetaData) && fileRef.tag() && !fileRef.tag()->isEmpty())
     {
         TagLib::Ogg::XiphComment *tag = fileRef.tag();
-        info->setValue(Qmmp::ALBUM, QString::fromUtf8(tag->album().toCString(true)).trimmed());
-        info->setValue(Qmmp::ARTIST, QString::fromUtf8(tag->artist().toCString(true)).trimmed());
-        info->setValue(Qmmp::COMMENT, QString::fromUtf8(tag->comment().toCString(true)).trimmed());
-        info->setValue(Qmmp::GENRE, QString::fromUtf8(tag->genre().toCString(true)).trimmed());
-        info->setValue(Qmmp::TITLE, QString::fromUtf8(tag->title().toCString(true)).trimmed());
+        info->setValue(Qmmp::ALBUM, TStringToQString(tag->album()));
+        info->setValue(Qmmp::ARTIST, TStringToQString(tag->artist()));
+        info->setValue(Qmmp::COMMENT, TStringToQString(tag->comment()));
+        info->setValue(Qmmp::GENRE, TStringToQString(tag->genre()));
+        info->setValue(Qmmp::TITLE, TStringToQString(tag->title()));
         info->setValue(Qmmp::YEAR, tag->year());
         info->setValue(Qmmp::TRACK, tag->track());
     }

@@ -200,7 +200,6 @@ bool DecoderFFmpeg::initialize()
             metaData.insert(Qmmp::YEAR, year->value);
         if(track)
             metaData.insert(Qmmp::TRACK, track->value);
-        metaData.insert(Qmmp::URL, m_path);
         addMetaData(metaData);
     }
 

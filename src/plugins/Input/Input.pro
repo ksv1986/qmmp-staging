@@ -20,7 +20,7 @@ contains(CONFIG, MODPLUG_PLUGIN){
 }
 
 contains(CONFIG, FFMPEG_PLUGIN){
-    #SUBDIRS += ffmpeg
+    SUBDIRS += ffmpeg
 }
 
 contains(CONFIG, GME_PLUGIN){

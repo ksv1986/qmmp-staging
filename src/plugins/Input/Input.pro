@@ -16,7 +16,7 @@ contains(CONFIG, MUSEPACK_PLUGIN){
 }
 
 contains(CONFIG, MODPLUG_PLUGIN){
-    #SUBDIRS += modplug
+    SUBDIRS += modplug
 }
 
 contains(CONFIG, FFMPEG_PLUGIN){

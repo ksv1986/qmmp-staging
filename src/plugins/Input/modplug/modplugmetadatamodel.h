@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -34,6 +34,7 @@ public:
     ~ModPlugMetaDataModel();
     QHash<QString, QString> audioProperties();
     QHash<QString, QString> descriptions();
+    static QString getTypeName(quint32 type);
 
 private:
     CSoundFile* m_soundFile;

@@ -66,40 +66,57 @@ Decoder *DecoderModPlugFactory::create(const QString &path, QIODevice *input)
     return new DecoderModPlug(path);
 }
 
-QList<FileInfo *> DecoderModPlugFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *)
+QList<TrackInfo *> DecoderModPlugFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    QList <FileInfo*> list;
+    QList <TrackInfo*> list;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    if (!useMetaData || settings.value("UseFileName", false).toBool())
-    {
-        list << new FileInfo(fileName);
-        list.at(0)->setMetaData(Qmmp::TITLE, fileName.section('/',-1));
-        return list;
-    }
-    ArchiveReader reader(0);
+    bool useFileName = settings.value("UseFileName", false).toBool();
+
     QByteArray buffer;
-    if (reader.isSupported(fileName))
+
+    ArchiveReader reader(0);
+    if (reader.isSupported(path))
     {
-        buffer = reader.unpack(fileName);
+        buffer = reader.unpack(path);
     }
     else
     {
-        QFile file(fileName);
+        QFile file(path);
         if (!file.open(QIODevice::ReadOnly))
         {
-            qWarning("DecoderModPlugFactory: error: %s", qPrintable(file.errorString ()));
+            qWarning("DecoderModPlugFactory: error: %s", qPrintable(file.errorString()));
             return list;
         }
         buffer = file.readAll();
         file.close();
     }
-    CSoundFile* soundFile = new CSoundFile();
-    soundFile->Create((uchar*) buffer.data(), buffer.size()+1);
-    list << new FileInfo(fileName);
-    list.at(0)->setLength((int) soundFile->GetSongTime());
-    list.at(0)->setMetaData(Qmmp::TITLE, QString::fromUtf8(soundFile->GetTitle()));
-    soundFile->Destroy();
-    delete soundFile;
+
+    if(!buffer.isEmpty())
+    {
+        CSoundFile *soundFile = new CSoundFile();
+        soundFile->Create((uchar*) buffer.data(), buffer.size() + 1);
+        TrackInfo *info = new TrackInfo(path);
+        info->setDuration((qint64)soundFile->GetSongTime() * 1000);
+
+        if(parts & TrackInfo::MetaData)
+        {
+            info->setValue(Qmmp::TITLE, useFileName ? path.section('/',-1) :
+                                                      QString::fromUtf8(soundFile->GetTitle()));
+        }
+
+        if(parts & TrackInfo::Properties)
+        {
+            //info->setValue(Qmmp::BITRATE);
+            //info->setValue(Qmmp::SAMPLERATE);
+            //info->setValue(Qmmp::CHANNELS);
+            //info->setValue(Qmmp::BITS_PER_SAMPLE);
+            info->setValue(Qmmp::FORMAT_NAME, ModPlugMetaDataModel::getTypeName(soundFile->GetType()));
+        }
+
+        list << info;
+        soundFile->Destroy();
+        delete soundFile;
+    }
     return list;
 }
 

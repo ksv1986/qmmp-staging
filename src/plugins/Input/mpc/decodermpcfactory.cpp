@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -65,43 +65,42 @@ Decoder *DecoderMPCFactory::create(const QString &, QIODevice *i)
     return new DecoderMPC(i);
 }
 
-QList<FileInfo *> DecoderMPCFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *)
+QList<TrackInfo *> DecoderMPCFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    FileInfo *info = new FileInfo(fileName);
-
-    TagLib::FileStream stream(QStringToFileName(fileName), true);
+    TrackInfo *info = new TrackInfo(path);
+    TagLib::FileStream stream(QStringToFileName(path), true);
     TagLib::MPC::File fileRef(&stream);
-    TagLib::APE::Tag *tag = useMetaData ? fileRef.APETag() : 0;
-    if (tag && !tag->isEmpty())
-    {
-        info->setMetaData(Qmmp::ALBUM,
-                       QString::fromUtf8(tag->album().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::ARTIST,
-                       QString::fromUtf8(tag->artist().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::COMMENT,
-                       QString::fromUtf8(tag->comment().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::GENRE,
-                       QString::fromUtf8(tag->genre().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::TITLE,
-                       QString::fromUtf8(tag->title().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::YEAR, tag->year());
-        info->setMetaData(Qmmp::TRACK, tag->track());
-    }
+
     if (fileRef.audioProperties())
-        info->setLength(fileRef.audioProperties()->length());
-    //additional metadata
-    if(tag)
+        info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
+
+    if((parts & TrackInfo::MetaData) && fileRef.APETag() && !fileRef.APETag()->isEmpty())
     {
+        TagLib::APE::Tag *tag = fileRef.APETag();
+        info->setValue(Qmmp::ALBUM, TStringToQString(tag->album()));
+        info->setValue(Qmmp::ARTIST, TStringToQString(tag->artist()));
+        info->setValue(Qmmp::COMMENT, TStringToQString(tag->comment()));
+        info->setValue(Qmmp::GENRE, TStringToQString(tag->genre()));
+        info->setValue(Qmmp::TITLE, TStringToQString(tag->title()));
+        info->setValue(Qmmp::YEAR, tag->year());
+        info->setValue(Qmmp::TRACK, tag->track());
         TagLib::APE::Item fld;
         if(!(fld = tag->itemListMap()["ALBUM ARTIST"]).isEmpty())
-            info->setMetaData(Qmmp::ALBUMARTIST,
-                              QString::fromUtf8(fld.toString().toCString(true)).trimmed());
+            info->setValue(Qmmp::ALBUMARTIST, TStringToQString(fld.toString()));
         if(!(fld = tag->itemListMap()["COMPOSER"]).isEmpty())
-            info->setMetaData(Qmmp::COMPOSER,
-                              QString::fromUtf8(fld.toString().toCString(true)).trimmed());
+            info->setValue(Qmmp::COMPOSER, TStringToQString(fld.toString()));
     }
 
-    QList <FileInfo*> list;
+    if((parts & TrackInfo::Properties) && fileRef.audioProperties())
+    {
+        info->setValue(Qmmp::BITRATE, fileRef.audioProperties()->bitrate());
+        info->setValue(Qmmp::SAMPLERATE, fileRef.audioProperties()->sampleRate());
+        info->setValue(Qmmp::CHANNELS, fileRef.audioProperties()->channels());
+        info->setValue(Qmmp::BITS_PER_SAMPLE, 16);
+        info->setValue(Qmmp::FORMAT_NAME, QString("Musepack SV%1").arg(fileRef.audioProperties()->mpcVersion()));
+    }
+
+    QList <TrackInfo*> list;
     list << info;
     return list;
 }

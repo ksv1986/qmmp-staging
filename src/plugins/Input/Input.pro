@@ -12,7 +12,7 @@ contains(CONFIG, FLAC_PLUGIN){
 }
 
 contains(CONFIG, MUSEPACK_PLUGIN){
-    #SUBDIRS += mpc
+    SUBDIRS += mpc
 }
 
 contains(CONFIG, MODPLUG_PLUGIN){

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,21 +20,9 @@
 #ifndef DECODERMPCFACTORY_H
 #define DECODERMPCFACTORY_H
 
-#include <QObject>
-#include <QString>
-#include <QIODevice>
-#include <QWidget>
-
-#include <qmmp/decoder.h>
-#include <qmmp/output.h>
 #include <qmmp/decoderfactory.h>
-#include <qmmp/fileinfo.h>
 
-
-
-
-class DecoderMPCFactory : public QObject,
-                          DecoderFactory
+class DecoderMPCFactory : public QObject, DecoderFactory
 {
 Q_OBJECT
 Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.DecoderFactoryInterface.1.0")
@@ -44,7 +32,7 @@ public:
     bool canDecode(QIODevice *input) const;
     const DecoderProperties properties() const;
     Decoder *create(const QString &url, QIODevice *i);
-    QList<FileInfo *> createPlayList(const QString &fileName, bool useMetaData, QStringList *);
+    QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *);
     MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);

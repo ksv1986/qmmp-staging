@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -47,20 +47,20 @@ ConverterDialog::ConverterDialog(QList <PlayListTrack *> tracks,  QWidget *paren
     foreach(PlayListTrack *track, tracks)
     {
         //skip streams
-        if(track->length() == 0 || track->url().contains("://"))
+        if(track->duration() == 0 || track->path().contains("://"))
             continue;
         //skip duplicates
-        if(paths.contains(track->url()))
+        if(paths.contains(track->path()))
             continue;
         //skip unsupported files
-        if(!MetaDataManager::instance()->supports(track->url()))
+        if(!MetaDataManager::instance()->supports(track->path()))
             continue;
 
-        paths.append(track->url());
+        paths.append(track->path());
         QString name = formatter.format(track);
         QTableWidgetItem *item = new QTableWidgetItem(name);
-        item->setData(Qt::UserRole, track->url());
-        item->setData(Qt::ToolTipRole, track->url());
+        item->setData(Qt::UserRole, track->path());
+        item->setData(Qt::ToolTipRole, track->path());
         m_ui.tableWidget->insertRow(m_ui.tableWidget->rowCount());
         m_ui.tableWidget->setItem(m_ui.tableWidget->rowCount() - 1, 0, item);
         QProgressBar *progressBar = new QProgressBar(this);

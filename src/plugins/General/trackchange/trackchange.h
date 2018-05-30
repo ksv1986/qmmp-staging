@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,9 +20,9 @@
 #ifndef TRACKCHANGE_H
 #define TRACKCHANGE_H
 
-#include <QMap>
 #include <qmmpui/general.h>
 #include <qmmp/qmmp.h>
+#include <qmmp/trackinfo.h>
 
 class QAction;
 class SoundCore;
@@ -42,18 +42,18 @@ public:
 
 private slots:
     void onStateChanged(Qmmp::State state);
-    void onMetaDataChanged();
+    void onTrackInfoChanged();
     void onFinised();
 
 private:
-    bool executeCommand(const QMap <Qmmp::MetaData, QString> &metaData, const QString &format);
+    bool executeCommand(const TrackInfo &info, const QString &format);
     QString m_newTrackCommand;
     QString m_endOfTrackCommand;
     QString m_endOfPlCommand;
     QString m_titleChangeCommand;
     SoundCore *m_core;
     PlayListManager *m_plManager;
-    QMap <Qmmp::MetaData, QString> m_prevMetaData;
+    TrackInfo m_prevInfo;
 };
 
 #endif

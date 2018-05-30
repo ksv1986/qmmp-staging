@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,8 +38,8 @@ Player2Object::Player2Object(QObject *parent) : QDBusAbstractAdaptor(parent)
     m_player = MediaPlayer::instance();
     m_pl_manager =  m_player->playListManager();
     m_ui_settings = QmmpUiSettings::instance();
-    connect(m_core, SIGNAL(metaDataChanged ()), SLOT(updateId()));
-    connect(m_core, SIGNAL(metaDataChanged ()), SLOT(emitPropertiesChanged()));
+    connect(m_core, SIGNAL(trackInfoChanged()), SLOT(updateId()));
+    connect(m_core, SIGNAL(trackInfoChanged()), SLOT(emitPropertiesChanged()));
     connect(m_core, SIGNAL(stateChanged (Qmmp::State)), SLOT(checkState(Qmmp::State)));
     connect(m_core, SIGNAL(stateChanged (Qmmp::State)), SLOT(emitPropertiesChanged()));
     connect(m_core, SIGNAL(volumeChanged(int,int)), SLOT(emitPropertiesChanged()));
@@ -123,40 +123,41 @@ double Player2Object::maximumRate() const
 QVariantMap Player2Object::metadata() const
 {
     PlayListTrack *track = m_pl_manager->currentPlayList()->currentTrack();
-    if(!track || m_core->metaData(Qmmp::URL).isEmpty())
+    if(!track || m_core->path().isEmpty())
         return QVariantMap();
     QVariantMap map;
+    TrackInfo info = m_core->trackInfo();
     map["mpris:length"] = qMax(m_core->duration() * 1000 , qint64(0));
-    if(!MetaDataManager::instance()->getCoverPath(m_core->metaData(Qmmp::URL)).isEmpty())
+    if(!MetaDataManager::instance()->getCoverPath(info.path()).isEmpty())
     {
         map["mpris:artUrl"] = QUrl::fromLocalFile(
-                    MetaDataManager::instance()->getCoverPath(m_core->metaData(Qmmp::URL))).toString();
+                    MetaDataManager::instance()->getCoverPath(info.path())).toString();
     }
-    if(!m_core->metaData(Qmmp::ALBUM).isEmpty())
-        map["xesam:album"] = m_core->metaData(Qmmp::ALBUM);
-    if(!m_core->metaData(Qmmp::ARTIST).isEmpty())
-        map["xesam:artist"] = QStringList() << m_core->metaData(Qmmp::ARTIST);
-    if(!m_core->metaData(Qmmp::ALBUMARTIST).isEmpty())
-        map["xesam:albumArtist"] = QStringList() << m_core->metaData(Qmmp::ALBUMARTIST);
-    if(!m_core->metaData(Qmmp::COMMENT).isEmpty())
-        map["xesam:comment"] = QStringList() << m_core->metaData(Qmmp::COMMENT);
-    if(!m_core->metaData(Qmmp::COMPOSER).isEmpty())
-        map["xesam:composer"] = QStringList() << m_core->metaData(Qmmp::COMPOSER);
-    if(!m_core->metaData(Qmmp::DISCNUMBER).isEmpty())
-        map["xesam:discNumber"] = m_core->metaData(Qmmp::DISCNUMBER).toInt();
-    if(!m_core->metaData(Qmmp::GENRE).isEmpty())
-        map["xesam:genre"] = QStringList() << m_core->metaData(Qmmp::GENRE);
-    if(!m_core->metaData(Qmmp::TITLE).isEmpty())
-        map["xesam:title"] = m_core->metaData(Qmmp::TITLE);
-    if(!m_core->metaData(Qmmp::TRACK).isEmpty())
-        map["xesam:trackNumber"] = m_core->metaData(Qmmp::TRACK).toInt();
-    if(!m_core->metaData(Qmmp::YEAR).isEmpty())
-        map["xesam:contentCreated"] = m_core->metaData(Qmmp::YEAR);
+    if(!info.value(Qmmp::ALBUM).isEmpty())
+        map["xesam:album"] = info.value(Qmmp::ALBUM);
+    if(!info.value(Qmmp::ARTIST).isEmpty())
+        map["xesam:artist"] = QStringList() << info.value(Qmmp::ARTIST);
+    if(!info.value(Qmmp::ALBUMARTIST).isEmpty())
+        map["xesam:albumArtist"] = QStringList() << info.value(Qmmp::ALBUMARTIST);
+    if(!info.value(Qmmp::COMMENT).isEmpty())
+        map["xesam:comment"] = QStringList() << info.value(Qmmp::COMMENT);
+    if(!info.value(Qmmp::COMPOSER).isEmpty())
+        map["xesam:composer"] = QStringList() << info.value(Qmmp::COMPOSER);
+    if(!info.value(Qmmp::DISCNUMBER).isEmpty())
+        map["xesam:discNumber"] = info.value(Qmmp::DISCNUMBER).toInt();
+    if(!info.value(Qmmp::GENRE).isEmpty())
+        map["xesam:genre"] = QStringList() << info.value(Qmmp::GENRE);
+    if(!info.value(Qmmp::TITLE).isEmpty())
+        map["xesam:title"] = info.value(Qmmp::TITLE);
+    if(!info.value(Qmmp::TRACK).isEmpty())
+        map["xesam:trackNumber"] = info.value(Qmmp::TRACK).toInt();
+    if(!info.value(Qmmp::YEAR).isEmpty())
+        map["xesam:contentCreated"] = info.value(Qmmp::YEAR);
     map["mpris:trackid"] = QVariant::fromValue<QDBusObjectPath>(m_trackID);
-    if(m_core->metaData(Qmmp::URL).startsWith("/"))
-        map["xesam:url"] =  QUrl::fromLocalFile(m_core->metaData(Qmmp::URL)).toString();
+    if(info.path().startsWith("/"))
+        map["xesam:url"] =  QUrl::fromLocalFile(info.path()).toString();
     else
-        map["xesam:url"] = m_core->metaData(Qmmp::URL);
+        map["xesam:url"] = info.path();
     return map;
 }
 

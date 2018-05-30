@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -61,7 +61,7 @@ PlayerObject::PlayerObject(QObject *parent) : QObject(parent)
     m_pl_manager =  m_player->playListManager();
     m_ui_settings = QmmpUiSettings::instance();
     connect(m_core, SIGNAL(stateChanged (Qmmp::State)), SLOT(updateCaps()));
-    connect(m_core, SIGNAL(metaDataChanged ()), SLOT(updateTrack()));
+    connect(m_core, SIGNAL(trackInfoChanged()), SLOT(updateTrack()));
     connect(m_core, SIGNAL(stateChanged (Qmmp::State)), SLOT(updateStatus()));
     connect(m_ui_settings, SIGNAL(repeatableListChanged(bool)), SLOT(updateStatus()));
     connect(m_ui_settings, SIGNAL(shuffleChanged(bool)), SLOT(updateStatus()));
@@ -126,25 +126,26 @@ PlayerStatus PlayerObject::GetStatus()
 
 QVariantMap PlayerObject::GetMetadata()
 {
+    TrackInfo info = m_core->trackInfo();
     QVariantMap map;
 
-    if (m_core->metaData(Qmmp::URL).contains("://"))
-        map.insert("location", m_core->metaData(Qmmp::URL));
+    if (info.path().contains("://"))
+        map.insert("location", info.path());
     else
-        map.insert("location", "file://" + m_core->metaData(Qmmp::URL));
-    map.insert("arturl", MetaDataManager::instance()->getCoverPath(m_core->metaData(Qmmp::URL)));
-    map.insert("title", m_core->metaData(Qmmp::TITLE));
-    map.insert("artist", m_core->metaData(Qmmp::ARTIST));
-    map.insert("albumartist", m_core->metaData(Qmmp::ALBUMARTIST));
-    map.insert("album", m_core->metaData(Qmmp::ALBUM));
-    map.insert("tracknumber", m_core->metaData(Qmmp::TRACK));
-    map.insert("time", (quint32)m_core->duration()/1000);
-    map.insert("mtime", (quint32)m_core->duration());
-    map.insert("genre", m_core->metaData(Qmmp::GENRE));
-    map.insert("comment", m_core->metaData(Qmmp::COMMENT));
-    map.insert("audio-bitrate", (quint32)m_core->bitrate());
-    map.insert("audio-samplerate", (quint32)m_core->audioParameters().sampleRate());
-    map.insert("year", m_core->metaData(Qmmp::YEAR).toUInt());
+        map.insert("location", "file://" + info.path());
+    map.insert("arturl", MetaDataManager::instance()->getCoverPath(info.path()));
+    map.insert("title", info.value(Qmmp::TITLE));
+    map.insert("artist", info.value(Qmmp::ARTIST));
+    map.insert("albumartist", info.value(Qmmp::ALBUMARTIST));
+    map.insert("album", info.value(Qmmp::ALBUM));
+    map.insert("tracknumber", info.value(Qmmp::TRACK));
+    map.insert("time", (quint32)info.duration()/1000);
+    map.insert("mtime", (quint32)info.duration());
+    map.insert("genre", info.value(Qmmp::GENRE));
+    map.insert("comment", info.value(Qmmp::COMMENT));
+    map.insert("audio-bitrate", (quint32)info.value(Qmmp::BITRATE).toInt());
+    map.insert("audio-samplerate", (quint32)info.value(Qmmp::SAMPLERATE).toInt());
+    map.insert("year", info.value(Qmmp::YEAR).toUInt());
     return map;
 }
 

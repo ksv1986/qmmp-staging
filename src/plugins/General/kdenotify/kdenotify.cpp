@@ -74,7 +74,7 @@ KdeNotify::KdeNotify(QObject *parent) : QObject(parent),m_useFreedesktopSpec(fal
 
     if(m_updateNotify)
     {
-        connect(SoundCore::instance(),SIGNAL(metaDataChanged()),SLOT(showMetaData()));
+        connect(SoundCore::instance(),SIGNAL(trackInfoChanged()),SLOT(showMetaData()));
         connect(m_notifier,SIGNAL(NotificationClosed(uint,uint)),this,SLOT(notificationClosed(uint,uint)));
     }
     else
@@ -83,7 +83,7 @@ KdeNotify::KdeNotify(QObject *parent) : QObject(parent),m_useFreedesktopSpec(fal
         timer->setSingleShot(true);
         timer->setInterval(NOTIFY_DELAY); //after that notification will be showed.
         connect(timer,SIGNAL(timeout()),SLOT(showMetaData()));
-        connect(SoundCore::instance(),SIGNAL(metaDataChanged()),timer, SLOT(start()));
+        connect(SoundCore::instance(),SIGNAL(trackInfoChanged()),timer, SLOT(start()));
     }
 }
 
@@ -108,7 +108,8 @@ QString KdeNotify::totalTimeString()
 QList<QVariant> KdeNotify::prepareNotification()
 {
     SoundCore *core = SoundCore::instance();
-    if(core->metaData(Qmmp::URL).isEmpty()) //prevent show empty notification
+    TrackInfo info = core->trackInfo();
+    if(info.isEmpty()) //prevent show empty notification
     {
         return QList<QVariant>();
     }
@@ -121,12 +122,12 @@ QList<QVariant> KdeNotify::prepareNotification()
     args.append(tr("Qmmp now playing:")); //summary (notification title)
 
     MetaDataFormatter f(m_template);
-    QString body = f.format(core->metaData(), core->duration()/1000);
+    QString body = f.format(info);
 
     QString coverPath;
     if(m_showCovers)
     {
-        QPixmap cover = MetaDataManager::instance()->getCover(core->metaData(Qmmp::URL));
+        QPixmap cover = MetaDataManager::instance()->getCover(info.path());
         if(!cover.isNull())
         {
             coverPath = m_coverPath;

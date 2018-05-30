@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -84,17 +84,17 @@ QVariantMap TrackListObject::GetMetadata(int in0)
 
     if (track)
     {
-        if (track->url().contains("://"))
-            map.insert("location", track->url());
+        if (track->path().contains("://"))
+            map.insert("location", track->path());
         else
-            map.insert("location", "file://" + track->url());
+            map.insert("location", "file://" + track->path());
         map.insert("title", track->value(Qmmp::TITLE));
         map.insert("artist", track->value(Qmmp::ARTIST));
         map.insert("albumartist", track->value(Qmmp::ALBUMARTIST));
         map.insert("album", track->value(Qmmp::ALBUM));
         map.insert("tracknumber", track->value(Qmmp::TRACK));
-        map.insert("time", (quint32)track->length());
-        map.insert("mtime", (quint32)track->length() * 1000);
+        map.insert("time", (quint32)track->duration() / 1000);
+        map.insert("mtime", (quint32)track->duration());
         map.insert("genre", track->value(Qmmp::GENRE));
         map.insert("comment", track->value(Qmmp::COMMENT));
         map.insert("year", track->value(Qmmp::YEAR).toUInt());

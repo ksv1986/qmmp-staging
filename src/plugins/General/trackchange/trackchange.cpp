@@ -27,6 +27,7 @@
 #include <QFile>
 #include <QDir>
 #include <QProcess>
+#include <QMap>
 #include <qmmp/soundcore.h>
 #include <qmmpui/uihelper.h>
 #include <qmmpui/playlistmodel.h>
@@ -41,7 +42,7 @@ TrackChange::TrackChange(QObject *parent) : QObject(parent)
     m_core = SoundCore::instance();
     m_plManager = PlayListManager::instance();
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(onStateChanged(Qmmp::State)));
-    connect(m_core, SIGNAL(metaDataChanged()), SLOT(onMetaDataChanged()));
+    connect(m_core, SIGNAL(trackInfoChanged()), SLOT(onTrackInfoChanged()));
     connect(m_core, SIGNAL(finished()), SLOT(onFinised()));
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_newTrackCommand = settings.value("TrackChange/new_track_command").toString();
@@ -60,21 +61,21 @@ void TrackChange::onStateChanged(Qmmp::State state)
     case Qmmp::Playing:
         break;
     default:
-        m_prevMetaData.clear();
+        m_prevInfo.clear();
     }
 }
 
-void TrackChange::onMetaDataChanged()
+void TrackChange::onTrackInfoChanged()
 {
-    QMap <Qmmp::MetaData, QString> metaData = m_core->metaData();
-    if(m_prevMetaData != metaData)
+    TrackInfo info = m_core->trackInfo();
+    if(m_prevInfo.metaData() != info.metaData())
     {
-        if(m_prevMetaData[Qmmp::URL] == metaData[Qmmp::URL])
+        if(m_prevInfo.path() == info.path())
         {
             if(!m_titleChangeCommand.isEmpty())
             {
                 qDebug("TrackChange: starting title change command..");
-                executeCommand(metaData, m_titleChangeCommand);
+                executeCommand(info, m_titleChangeCommand);
             }
         }
         else
@@ -82,11 +83,11 @@ void TrackChange::onMetaDataChanged()
             if(!m_newTrackCommand.isEmpty())
             {
                 qDebug("TrackChange: starting new track command..");
-                executeCommand(metaData, m_newTrackCommand);
+                executeCommand(info, m_newTrackCommand);
             }
         }
     }
-    m_prevMetaData = metaData;
+    m_prevInfo = info;
 }
 
 void TrackChange::onFinised()
@@ -94,19 +95,19 @@ void TrackChange::onFinised()
     if(!m_endOfTrackCommand.isEmpty())
     {
         qDebug("TrackChange: starting end of track command..");
-        executeCommand(m_prevMetaData, m_endOfTrackCommand);
+        executeCommand(m_prevInfo, m_endOfTrackCommand);
     }
     if(!m_endOfPlCommand.isEmpty() && !m_plManager->currentPlayList()->nextTrack())
     {
         qDebug("TrackChange: starting end of playlist command..");
-        executeCommand(m_prevMetaData, m_endOfPlCommand);
+        executeCommand(m_prevInfo, m_endOfPlCommand);
     }
 }
 
-bool TrackChange::executeCommand(const QMap<Qmmp::MetaData, QString> &metaData, const QString &format)
+bool TrackChange::executeCommand(const TrackInfo &info, const QString &format)
 {
     MetaDataFormatter formatter(format);
-    QString command = formatter.format(metaData);
+    QString command = formatter.format(info);
 #ifdef Q_OS_WIN
     bool ok = QProcess::startDetached(QString("cmd.exe \"%1\"").arg(command));
 #else

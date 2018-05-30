@@ -106,6 +106,11 @@ QString MetaDataFormatter::format(const TrackInfo &info, int trackIndex) const
     return evalute(&m_nodes, &info, trackIndex);
 }
 
+QString MetaDataFormatter::format(const TrackInfo *info, int trackIndex) const
+{
+    return format(*info, trackIndex);
+}
+
 QString MetaDataFormatter::formatDuration(qint64 duration, bool hideZero, bool showMs)
 {
     if(duration <= 0)

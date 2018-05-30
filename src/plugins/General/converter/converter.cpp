@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -80,14 +80,14 @@ bool Converter::prepare(const QString &url, int row, const QVariantMap &preset)
 
     DecoderFactory *factory = 0;
 
-    if(!source->url().contains("://"))
-        factory = Decoder::findByFilePath(source->url());
+    if(!source->path().contains("://"))
+        factory = Decoder::findByFilePath(source->path());
     if(!factory)
         factory = Decoder::findByMime(source->contentType());
-    if(!factory && source->ioDevice() && source->url().contains("://")) //ignore content of local files
+    if(!factory && source->ioDevice() && source->path().contains("://")) //ignore content of local files
         factory = Decoder::findByContent(source->ioDevice());
-    if(!factory && source->url().contains("://"))
-        factory = Decoder::findByProtocol(source->url().section("://",0,0));
+    if(!factory && source->path().contains("://"))
+        factory = Decoder::findByProtocol(source->path().section("://",0,0));
     if(!factory)
     {
         qWarning("Converter: unsupported file format");
@@ -97,7 +97,7 @@ bool Converter::prepare(const QString &url, int row, const QVariantMap &preset)
     qDebug("Converter: selected decoder: %s",qPrintable(factory->properties().shortName));
     if(factory->properties().noInput && source->ioDevice())
         source->ioDevice()->close();
-    Decoder *decoder = factory->create(source->url(), source->ioDevice());
+    Decoder *decoder = factory->create(source->path(), source->ioDevice());
     if(!decoder->initialize())
     {
         qWarning("Converter: invalid file format");
@@ -132,11 +132,11 @@ void Converter::run()
     }
 
     AudioParameters ap = m_decoder->audioParameters();
-    QString url = m_input->url();
+    QString path = m_input->path();
     QString out_path = m_preset["out_dir"].toString();
     QString pattern = m_preset["file_name"].toString();
 
-    QList <FileInfo *> list = MetaDataManager::instance()->createPlayList(url);
+    QList<TrackInfo *> list = MetaDataManager::instance()->createPlayList(path);
 
     if(list.isEmpty() || out_path.isEmpty() || pattern.isEmpty())
     {
@@ -145,10 +145,13 @@ void Converter::run()
         return;
     }
 
-    QMap<Qmmp::MetaData, QString> metadata = list[0]->metaData();
+    TrackInfo info = *list.first();
+    qDeleteAll(list);
+    list.clear();
     MetaDataFormatter formatter(pattern);
 
-    QString name = formatter.format(list[0]->metaData(), list[0]->length());
+
+    QString name = formatter.format(list.first());
     QString full_path = out_path + "/" + name + "." + m_preset["ext"].toString();
 
     if(QFile::exists(full_path))
@@ -174,9 +177,6 @@ void Converter::run()
 
     qDebug("Converter: starting task '%s'", qPrintable(m_preset["name"].toString()));
     emit message(m_row, tr("Converting"));
-
-    qDeleteAll(list);
-    list.clear();
 
     char wave_header[] = { 0x52, 0x49, 0x46, 0x46, //"RIFF"
                            0x00, 0x00, 0x00, 0x00, //(file size) - 8
@@ -256,13 +256,13 @@ void Converter::run()
         TagLib::FileRef file(qPrintable(full_path));
         if(file.tag())
         {
-            file.tag()->setTitle(QStringToTString(metadata[Qmmp::TITLE]));
-            file.tag()->setArtist(QStringToTString(metadata[Qmmp::ARTIST]));
-            file.tag()->setAlbum(QStringToTString(metadata[Qmmp::ALBUM]));
-            file.tag()->setGenre(QStringToTString(metadata[Qmmp::GENRE]));
-            file.tag()->setComment(QStringToTString(metadata[Qmmp::COMMENT]));
-            file.tag()->setYear(metadata[Qmmp::YEAR].toUInt());
-            file.tag()->setTrack(metadata[Qmmp::TRACK].toUInt());
+            file.tag()->setTitle(QStringToTString(info.value(Qmmp::TITLE)));
+            file.tag()->setArtist(QStringToTString(info.value(Qmmp::ARTIST)));
+            file.tag()->setAlbum(QStringToTString(info.value(Qmmp::ALBUM)));
+            file.tag()->setGenre(QStringToTString(info.value(Qmmp::GENRE)));
+            file.tag()->setComment(QStringToTString(info.value(Qmmp::COMMENT)));
+            file.tag()->setYear(info.value(Qmmp::YEAR).toUInt());
+            file.tag()->setTrack(info.value(Qmmp::TRACK).toUInt());
 
             if(full_path.endsWith(".mp3", Qt::CaseInsensitive))
             {

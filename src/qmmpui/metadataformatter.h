@@ -76,6 +76,8 @@ public:
      * \param track Index of track.
      */
     QString format(const TrackInfo &info, int trackIndex = 0) const;
+
+    QString format(const TrackInfo *info, int trackIndex = 0) const;
     /*!
      * Returns formatted duration (example: 05:02:03).
      * \param duration Duration in milliseconds.

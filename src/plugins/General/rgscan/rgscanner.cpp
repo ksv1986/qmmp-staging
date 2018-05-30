@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -74,7 +74,7 @@ bool RGScanner::prepare(const QString &url)
         return false;
     }
 
-    DecoderFactory *factory = Decoder::findByFilePath(source->url());
+    DecoderFactory *factory = Decoder::findByFilePath(source->path());
 
     if(!factory)
     {
@@ -88,7 +88,7 @@ bool RGScanner::prepare(const QString &url)
     if(factory->properties().noInput && source->ioDevice())
         source->ioDevice()->close();
 
-    Decoder *decoder = factory->create(source->url(), source->ioDevice());
+    Decoder *decoder = factory->create(source->path(), source->ioDevice());
     if(!decoder->initialize())
     {
         qWarning("RGScanner: [%s] invalid file format", qPrintable(name));

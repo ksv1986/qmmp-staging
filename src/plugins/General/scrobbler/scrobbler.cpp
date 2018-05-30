@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -99,7 +99,7 @@ Scrobbler::Scrobbler(const QString &scrobblerUrl, const QString &name, QObject *
 
     connect(m_http, SIGNAL(finished (QNetworkReply *)), SLOT(processResponse(QNetworkReply *)));
     connect(QmmpSettings::instance(), SIGNAL(networkSettingsChanged()), SLOT(setupProxy()));
-    connect(m_core, SIGNAL(metaDataChanged()), SLOT(updateMetaData()));
+    connect(m_core, SIGNAL(trackInfoChanged()), SLOT(updateMetaData()));
     connect(m_core, SIGNAL(stateChanged (Qmmp::State)), SLOT(setState(Qmmp::State)));
 
     setupProxy();

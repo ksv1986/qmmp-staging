@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -60,16 +60,16 @@ RGScanDialog::RGScanDialog(QList <PlayListTrack *> tracks,  QWidget *parent) : Q
     foreach(PlayListTrack *track, tracks)
     {
         //skip streams
-        if(track->length() == 0 || track->url().contains("://"))
+        if(track->duration() == 0 || track->path().contains("://"))
             continue;
         //skip duplicates
-        if(paths.contains(track->url()))
+        if(paths.contains(track->path()))
             continue;
         //skip unsupported files
-        if(!MetaDataManager::instance()->supports(track->url()))
+        if(!MetaDataManager::instance()->supports(track->path()))
             continue;
 
-        QString ext = track->url().section(".", -1).toLower();
+        QString ext = track->path().section(".", -1).toLower();
 
         if((ext == "mp3") || //mpeg 1 layer 3
                 ext == "flac" || //native flac
@@ -78,11 +78,11 @@ RGScanDialog::RGScanDialog(QList <PlayListTrack *> tracks,  QWidget *parent) : Q
                 ext == "wv" || //wavpack
                 ext == "m4a") //aac (mp4 container)
         {
-            paths.append(track->url());
+            paths.append(track->path());
             QString name = formatter.format(track);
             QTableWidgetItem *item = new QTableWidgetItem(name);
-            item->setData(Qt::UserRole, track->url());
-            item->setData(Qt::ToolTipRole, track->url());
+            item->setData(Qt::UserRole, track->path());
+            item->setData(Qt::ToolTipRole, track->path());
             m_ui.tableWidget->insertRow(m_ui.tableWidget->rowCount());
             m_ui.tableWidget->setItem(m_ui.tableWidget->rowCount() - 1, 0, item);
             QProgressBar *progressBar = new QProgressBar(this);
@@ -275,10 +275,10 @@ RGScanner *RGScanDialog::findScannerByUrl(const QString &url)
 
 QString RGScanDialog::getAlbumName(const QString &url)
 {
-    QList <FileInfo *> infoList = MetaDataManager::instance()->createPlayList(url);
+    QList<TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(url);
     if(infoList.isEmpty())
         return QString();
-    QString album = infoList.first()->metaData(Qmmp::ALBUM);
+    QString album = infoList.first()->value(Qmmp::ALBUM);
     qDeleteAll(infoList);
     return album;
 }

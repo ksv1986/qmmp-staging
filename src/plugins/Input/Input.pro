@@ -24,7 +24,7 @@ contains(CONFIG, FFMPEG_PLUGIN){
 }
 
 contains(CONFIG, GME_PLUGIN){
-    #SUBDIRS += gme
+    SUBDIRS += gme
 }
 
 contains(CONFIG, OPUS_PLUGIN){

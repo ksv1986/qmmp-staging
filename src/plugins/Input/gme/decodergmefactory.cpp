@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -55,37 +55,35 @@ Decoder *DecoderGmeFactory::create(const QString &path, QIODevice *input)
     return new DecoderGme(path);
 }
 
-QList<FileInfo *> DecoderGmeFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *ignoredFiles)
+QList<TrackInfo *> DecoderGmeFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredFiles)
 {
-    QList <FileInfo*> list;
     GmeHelper helper;
     //is it one track?
-    if(fileName.contains("://"))
+    if(path.contains("://"))
     {
-        QString path = fileName;
-        path.remove("gme://");
-        path.remove(QRegExp("#\\d+$"));
-        int track = fileName.section("#", -1).toInt();
-        list = createPlayList(path, true, ignoredFiles);
+        QString filePath = path;
+        filePath.remove("gme://");
+        filePath.remove(QRegExp("#\\d+$"));
+        int track = path.section("#", -1).toInt();
+        QList<TrackInfo *> list = createPlayList(filePath, parts, ignoredFiles);
         if (list.isEmpty() || track <= 0 || track > list.count())
         {
             qDeleteAll(list);
             list.clear();
             return list;
         }
-        FileInfo *info = list.takeAt(track - 1);
+        TrackInfo *info = list.takeAt(track - 1);
         qDeleteAll(list);
-        return QList<FileInfo *>() << info;
+        return QList<TrackInfo *>() << info;
     }
 
-    Music_Emu *emu = helper.load(fileName);
+    Music_Emu *emu = helper.load(path);
     if(!emu)
     {
         qWarning("DecoderGmeFactory: unable to open file");
-        return list;
+        return QList<TrackInfo *>();
     }
-    list = helper.createPlayList(useMetaData);
-    return list;
+    return helper.createPlayList(parts);
 }
 
 MetaDataModel* DecoderGmeFactory::createMetaDataModel(const QString &path, QObject *parent)

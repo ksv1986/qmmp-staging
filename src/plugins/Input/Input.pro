@@ -36,7 +36,7 @@ contains(CONFIG, CDAUDIO_PLUGIN){
 }
 
 contains(CONFIG, SID_PLUGIN){
-    #SUBDIRS += sid
+    SUBDIRS += sid
 }
 
 unix{

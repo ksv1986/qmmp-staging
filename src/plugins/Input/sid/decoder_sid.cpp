@@ -85,7 +85,6 @@ bool DecoderSID::initialize()
     metadata.insert(Qmmp::ARTIST, tune_info->infoString(1));
     metadata.insert(Qmmp::COMMENT, tune_info->commentString(0));
     metadata.insert(Qmmp::TRACK, QString("%1").arg(track));
-    metadata.insert(Qmmp::URL, m_url);
     addMetaData(metadata);
 
     //read settings

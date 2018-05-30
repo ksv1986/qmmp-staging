@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -74,25 +74,25 @@ Decoder *DecoderSIDFactory::create(const QString &path, QIODevice *input)
     return new DecoderSID(&m_db, path);
 }
 
-QList<FileInfo *> DecoderSIDFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *)
+QList<TrackInfo *> DecoderSIDFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
     SIDHelper helper(&m_db);
-    helper.load(fileName);
-    QList <FileInfo*> list = helper.createPlayList(useMetaData);
+    helper.load(path);
+    QList<TrackInfo*> list = helper.createPlayList(parts);
     if(list.isEmpty())
         return list;
-    if(fileName.contains("://")) //is it url?
+    if(path.contains("://")) //is it url?
     {
-        int track = fileName.section("#", -1).toInt();
+        int track = path.section("#", -1).toInt();
         if(track > list.count() || track < 1)
         {
             qDeleteAll(list);
             list.clear();
             return list;
         }
-        FileInfo *info = list.takeAt(track - 1);
+        TrackInfo *info = list.takeAt(track - 1);
         qDeleteAll(list);
-        return QList<FileInfo *>() << info;
+        return QList<TrackInfo *>() << info;
     }
     return list;
 }

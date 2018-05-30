@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -68,20 +68,20 @@ Decoder *DecoderWildMidiFactory::create(const QString &path, QIODevice *input)
     return new DecoderWildMidi(path);
 }
 
-QList<FileInfo *> DecoderWildMidiFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *)
+QList<TrackInfo *> DecoderWildMidiFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    Q_UNUSED(useMetaData);
-    QList <FileInfo*> list;
-    FileInfo *info = new FileInfo(fileName);
+    Q_UNUSED(parts);
+    QList<TrackInfo*> list;
+    TrackInfo *info = new TrackInfo(path);
 
     if(WildMidiHelper::instance()->initialize() && WildMidiHelper::instance()->sampleRate())
     {
-        void *midi_ptr = WildMidi_Open (fileName.toLocal8Bit().constData());
+        void *midi_ptr = WildMidi_Open (path.toLocal8Bit().constData());
         if(midi_ptr)
         {
             WildMidiHelper::instance()->addPtr(midi_ptr);
             _WM_Info *wm_info = WildMidi_GetInfo(midi_ptr);
-            info->setLength((qint64)wm_info->approx_total_samples
+            info->setDuration((qint64)wm_info->approx_total_samples * 1000
                             / WildMidiHelper::instance()->sampleRate());
             WildMidi_Close(midi_ptr);
             WildMidiHelper::instance()->removePtr(midi_ptr);

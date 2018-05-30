@@ -17,12 +17,10 @@ SET(libvorbis_SRCS
   decoder_vorbis.cpp
   decodervorbisfactory.cpp
   vorbismetadatamodel.cpp
-  replaygainreader.cpp
 )
 
 SET(libvorbis_HDRS
   decoder_vorbis.h
-  replaygainreader.h
 )
 
 SET(libvorbis_RCCS translations/translations.qrc)

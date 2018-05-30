@@ -18,13 +18,11 @@ SET(libwavpack_SRCS
   decoderwavpackfactory.cpp
   wavpackmetadatamodel.cpp
   cueparser.cpp
-  replaygainreader.cpp
 )
 
 SET(libwavpack_HDRS
   decoder_wavpack.h
   cueparser.h
-  replaygainreader.h
 )
 
 SET(libwavpack_RCCS translations/translations.qrc)

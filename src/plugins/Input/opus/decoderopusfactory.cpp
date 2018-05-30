@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -23,7 +23,6 @@
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/opusfile.h>
-#include "replaygainreader.h"
 #include "decoder_opus.h"
 #include "opusmetadatamodel.h"
 #include "decoderopusfactory.h"
@@ -54,13 +53,7 @@ const DecoderProperties DecoderOpusFactory::properties() const
 
 Decoder *DecoderOpusFactory::create(const QString &url, QIODevice *input)
 {
-    Decoder *d = new DecoderOpus(url, input);
-    if(!url.contains("://")) //local file
-    {
-        ReplayGainReader rg(url);
-        d->setReplayGainInfo(rg.replayGainInfo());
-    }
-    return d;
+    return new DecoderOpus(url, input);
 }
 
 MetaDataModel* DecoderOpusFactory::createMetaDataModel(const QString &path, QObject *parent)
@@ -68,49 +61,52 @@ MetaDataModel* DecoderOpusFactory::createMetaDataModel(const QString &path, QObj
     return new OpusMetaDataModel(path, parent);
 }
 
-QList<FileInfo *> DecoderOpusFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *)
+QList<TrackInfo *> DecoderOpusFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    FileInfo *info = new FileInfo(fileName);
+    TrackInfo *info = new TrackInfo(path);
 
-    TagLib::Ogg::Opus::File fileRef(QStringToFileName(fileName));
-    TagLib::Ogg::XiphComment *tag = useMetaData ? fileRef.tag() : 0;
+    TagLib::Ogg::Opus::File fileRef(QStringToFileName(path));
 
-    if (tag && !tag->isEmpty())
+
+    if(fileRef.audioProperties())
+        info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
+
+    if((parts & TrackInfo::MetaData) && fileRef.tag() && !fileRef.tag()->isEmpty())
     {
-        info->setMetaData(Qmmp::ALBUM,
-                          QString::fromUtf8(tag->album().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::ARTIST,
-                          QString::fromUtf8(tag->artist().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::COMMENT,
-                          QString::fromUtf8(tag->comment().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::GENRE,
-                          QString::fromUtf8(tag->genre().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::TITLE,
-                          QString::fromUtf8(tag->title().toCString(true)).trimmed());
-        info->setMetaData(Qmmp::YEAR, tag->year());
-        info->setMetaData(Qmmp::TRACK, tag->track());
+        TagLib::Ogg::XiphComment *tag = fileRef.tag();
+        info->setValue(Qmmp::ALBUM, TStringToQString(tag->album()));
+        info->setValue(Qmmp::ARTIST, TStringToQString(tag->artist()));
+        info->setValue(Qmmp::COMMENT, TStringToQString(tag->comment()));
+        info->setValue(Qmmp::GENRE, TStringToQString(tag->genre()));
+        info->setValue(Qmmp::TITLE, TStringToQString(tag->title()));
+        info->setValue(Qmmp::YEAR, tag->year());
+        info->setValue(Qmmp::TRACK, tag->track());
     }
 
-    if (fileRef.audioProperties())
-        info->setLength(fileRef.audioProperties()->length());
-    //additional metadata
-    if(tag)
+    if((parts & TrackInfo::Properties) && fileRef.audioProperties())
     {
-        TagLib::StringList fld;
-        if(!(fld = tag->fieldListMap()["ALBUMARTIST"]).isEmpty())
-            info->setMetaData(Qmmp::ALBUMARTIST,
-                              QString::fromUtf8(fld.front().toCString(true)).trimmed());
-        if(!(fld = tag->fieldListMap()["COMPOSER"]).isEmpty())
-            info->setMetaData(Qmmp::COMPOSER,
-                              QString::fromUtf8(fld.front().toCString(true)).trimmed());
-        if(!(fld = tag->fieldListMap()["DISCNUMBER"]).isEmpty())
-            info->setMetaData(Qmmp::DISCNUMBER,
-                              QString::fromUtf8(fld.front().toCString(true)).trimmed());
+        info->setValue(Qmmp::BITRATE, fileRef.audioProperties()->bitrate());
+        info->setValue(Qmmp::SAMPLERATE, fileRef.audioProperties()->sampleRate());
+        info->setValue(Qmmp::CHANNELS, fileRef.audioProperties()->channels());
+        info->setValue(Qmmp::BITS_PER_SAMPLE, 16);
+        info->setValue(Qmmp::FORMAT_NAME, "Ogg Vorbis");
     }
 
-    QList <FileInfo*> list;
-    list << info;
-    return list;
+    if((parts & TrackInfo::ReplayGainInfo) && fileRef.tag() && !fileRef.tag()->isEmpty())
+    {
+        TagLib::Ogg::XiphComment *tag = fileRef.tag();
+        TagLib::Ogg::FieldListMap items = tag->fieldListMap();
+        if(items.contains("REPLAYGAIN_TRACK_GAIN"))
+            info->setValue(Qmmp::REPLAYGAIN_TRACK_GAIN, TStringToQString(items["REPLAYGAIN_TRACK_GAIN"].front()));
+        if(items.contains("REPLAYGAIN_TRACK_PEAK"))
+            info->setValue(Qmmp::REPLAYGAIN_TRACK_PEAK, TStringToQString(items["REPLAYGAIN_TRACK_PEAK"].front()));
+        if(items.contains("REPLAYGAIN_ALBUM_GAIN"))
+            info->setValue(Qmmp::REPLAYGAIN_ALBUM_GAIN, TStringToQString(items["REPLAYGAIN_ALBUM_GAIN"].front()));
+        if(items.contains("REPLAYGAIN_ALBUM_PEAK"))
+            info->setValue(Qmmp::REPLAYGAIN_ALBUM_PEAK, TStringToQString(items["REPLAYGAIN_ALBUM_PEAK"].front()));
+    }
+
+    return QList<TrackInfo*>() << info;
 }
 
 void DecoderOpusFactory::showSettings(QWidget *)

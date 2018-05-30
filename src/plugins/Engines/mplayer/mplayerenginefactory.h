@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,15 +20,7 @@
 #ifndef MPLAYERENGINEFACTORY_H
 #define MPLAYERENGINEFACTORY_H
 
-#include <QObject>
-#include <QString>
-#include <QIODevice>
-#include <QWidget>
-
-#include <qmmp/abstractengine.h>
 #include <qmmp/enginefactory.h>
-#include <qmmp/fileinfo.h>
-#include <qmmp/metadatamodel.h>
 
 class MplayerEngineFactory : public QObject, EngineFactory
 {
@@ -40,7 +32,7 @@ public:
     const EngineProperties properties() const;
     bool supports(const QString &source) const;
     AbstractEngine *create(QObject *parent = 0);
-    QList<FileInfo *> createPlayList(const QString &fileName, bool useMetaData, QStringList *);
+    QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *);
     MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);

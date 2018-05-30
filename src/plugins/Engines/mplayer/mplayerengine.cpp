@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,7 +26,7 @@
 #include <QMenu>
 #include <QRegExp>
 #include <QSettings>
-#include <qmmp/fileinfo.h>
+#include <qmmp/trackinfo.h>
 #include <qmmp/inputsource.h>
 #include "mplayerengine.h"
 
@@ -39,7 +39,7 @@ static QRegExp rx_quit("^(.*)Quit(.*)");
 static QRegExp rx_audio("^AUDIO: *([0-9,.]+) *Hz.*([0-9,.]+) *ch.*([0-9]+).* ([0-9,.]+) *kbit.*");
 
 
-FileInfo *MplayerInfo::createFileInfo(const QString &path)
+TrackInfo *MplayerInfo::createTrackInfo(const QString &path)
 {
     QRegExp rx_id_length("^ID_LENGTH=([0-9,.]+)*");
     QStringList args;
@@ -57,12 +57,12 @@ FileInfo *MplayerInfo::createFileInfo(const QString &path)
     mplayer_process.waitForFinished(1500);
     mplayer_process.kill();
     QString str = QString::fromLocal8Bit(mplayer_process.readAll()).trimmed();
-    FileInfo *info = new FileInfo(path);
+    TrackInfo *info = new TrackInfo(path);
     QStringList lines = str.split("\n");
     foreach(QString line, lines)
     {
         if (rx_id_length.indexIn(line) > -1)
-            info->setLength((qint64) rx_id_length.cap(1).toDouble());
+            info->setDuration((qint64) rx_id_length.cap(1).toDouble() * 1000);
     }
 #ifdef MPLAYER_DEBUG
     qDebug("%s",qPrintable(str));
@@ -118,7 +118,7 @@ bool MplayerEngine::enqueue(InputSource *source)
     foreach(QString filter, filters)
     {
         QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        supports = regexp.exactMatch(source->url());
+        supports = regexp.exactMatch(source->path());
         if(supports)
             break;
     }
@@ -134,8 +134,8 @@ bool MplayerEngine::enqueue(InputSource *source)
 
 bool MplayerEngine::initialize()
 {
-    FileInfo *info = MplayerInfo::createFileInfo(m_source->url());
-    m_length = info->length();
+    TrackInfo *info = MplayerInfo::createTrackInfo(m_source->path());
+    m_length = info->duration();
     delete info;
     m_args.clear();
     m_args << "-slave";
@@ -154,7 +154,7 @@ bool MplayerEngine::initialize()
 
     if(m_source->offset() > 0)
         m_args << "-ss" << QString("%1").arg(m_source->offset()/1000);
-    m_args << m_source->url();
+    m_args << m_source->path();
     return true;
 }
 
@@ -268,8 +268,8 @@ void MplayerEngine::startMplayerProcess()
     m_process->start ("mplayer", m_args);
     StateHandler::instance()->dispatch(Qmmp::Playing);
     StateHandler::instance()->dispatch(m_length * 1000);
-    FileInfo *info = MplayerInfo::createFileInfo(m_source->url());
-    StateHandler::instance()->dispatch(info->metaData());
+    TrackInfo *info = MplayerInfo::createTrackInfo(m_source->path());
+    StateHandler::instance()->dispatch(*info);
     delete info;
     m_source->deleteLater();
     m_source = 0;

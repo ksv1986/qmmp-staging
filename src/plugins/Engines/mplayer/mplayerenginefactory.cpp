@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -59,11 +59,11 @@ AbstractEngine *MplayerEngineFactory::create(QObject *parent)
     return new MplayerEngine(parent);
 }
 
-QList<FileInfo *> MplayerEngineFactory::createPlayList(const QString &fileName, bool useMetaData, QStringList *)
+QList<TrackInfo *> MplayerEngineFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    Q_UNUSED(useMetaData);
-    QList<FileInfo *> info;
-    info << MplayerInfo::createFileInfo(fileName);
+    Q_UNUSED(parts);
+    QList<TrackInfo *> info;
+    info << MplayerInfo::createTrackInfo(path);
     return info;
 }
 

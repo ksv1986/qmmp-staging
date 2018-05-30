@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -53,17 +53,16 @@ Decoder *DecoderCDAudioFactory::create(const QString &url, QIODevice *input)
     return new DecoderCDAudio(url);
 }
 
-QList<FileInfo *> DecoderCDAudioFactory::createPlayList(const QString &url, bool useMetaData, QStringList *)
+QList<TrackInfo *> DecoderCDAudioFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    Q_UNUSED(useMetaData);
-    QList <FileInfo*> list;
-    QString device_path = url;
+    QList<TrackInfo*> list;
+    QString device_path = path;
     device_path.remove("cdda://");
     device_path.remove(QRegExp("#\\d+$"));
-    QList <CDATrack> tracks = DecoderCDAudio::generateTrackList(device_path);
+    QList <CDATrack> tracks = DecoderCDAudio::generateTrackList(device_path, parts);
     foreach(CDATrack t, tracks)
     {
-        list << new FileInfo(t.info);
+        list << new TrackInfo(t.info);
     }
     return list;
 }

@@ -32,7 +32,7 @@ contains(CONFIG, OPUS_PLUGIN){
 }
 
 contains(CONFIG, CDAUDIO_PLUGIN){
-    #SUBDIRS += cdaudio
+    SUBDIRS += cdaudio
 }
 
 contains(CONFIG, SID_PLUGIN){

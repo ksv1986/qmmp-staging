@@ -25,6 +25,7 @@
 #include <cdio/cdio.h>
 #include <QMultiHash>
 #include <qmmp/decoder.h>
+#include <qmmp/trackinfo.h>
 
 class CDATrack
 {
@@ -35,7 +36,7 @@ public:
         last_sector = 0;
     }
 
-    FileInfo info;
+    TrackInfo info;
     lsn_t first_sector;
     lsn_t last_sector;
 };
@@ -46,7 +47,7 @@ public:
     DecoderCDAudio(const QString &url);
     virtual ~DecoderCDAudio();
 
-    static QList <CDATrack> generateTrackList(const QString &device);
+    static QList <CDATrack> generateTrackList(const QString &device, TrackInfo::Parts parts = TrackInfo::AllParts);
     static qint64 calculateTrackLength(lsn_t startlsn, lsn_t endlsn);
     static void clearTrackCache();
 

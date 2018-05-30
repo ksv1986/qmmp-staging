@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 by Ilya Kotov                                      *
+ *   Copyright (C) 2016-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -55,9 +55,9 @@ Decoder *DecoderArchiveFactory::create(const QString &url, QIODevice *)
     return new DecoderArchive(url);
 }
 
-QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &path, bool useMetaData, QStringList *)
+QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    QList <FileInfo *> list;
+    QList<TrackInfo *> list;
     struct archive_entry *entry = 0;
 
     struct archive *a = archive_read_new();
@@ -106,7 +106,7 @@ QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &path, boo
 
             if(!filtered.isEmpty())
             {
-                list << new FileInfo(QString("%1://%2#%3")
+                list << new TrackInfo(QString("%1://%2#%3")
                                      .arg(archivePath.section(".", -1)).toLower()
                                      .arg(archivePath)
                                      .arg(filePath));
@@ -114,10 +114,20 @@ QList<FileInfo *> DecoderArchiveFactory::createPlayList(const QString &path, boo
                 ArchiveInputDevice dev(a, entry, 0);
                 ArchiveTagReader reader(&dev, list.last()->path());
 
-                if(useMetaData)
-                    list.last()->setMetaData(reader.metaData());
-                if(reader.audioProperties())
-                    list.last()->setLength(reader.audioProperties()->length());
+                if(parts & TrackInfo::MetaData)
+                    list.last()->setValues(reader.metaData());
+
+                TagLib::AudioProperties *ap = reader.audioProperties();
+
+                if((parts & TrackInfo::Properties) && ap)
+                {
+                    list.last()->setValue(Qmmp::BITRATE, ap->bitrate());
+                    list.last()->setValue(Qmmp::SAMPLERATE, ap->sampleRate());
+                    list.last()->setValue(Qmmp::CHANNELS, ap->channels());
+                }
+
+                if(ap)
+                    list.last()->setDuration(reader.audioProperties()->lengthInMilliseconds());
             }
         }
         archive_read_data_skip(a);

@@ -57,7 +57,7 @@ contains(CONFIG, ARCHIVE_PLUGIN){
   TAGLIB_VER_MIN = $$member(TAGLIB_VERSION, 1)
 
   greaterThan(TAGLIB_VER_MAJ, 1) | equals(TAGLIB_VER_MAJ, 1) {
-    #greaterThan(TAGLIB_VER_MIN, 10):SUBDIRS += archive
+    greaterThan(TAGLIB_VER_MIN, 10):SUBDIRS += archive
   } else {
     message("Archive plugin requires at least TagLib 1.11")
   }

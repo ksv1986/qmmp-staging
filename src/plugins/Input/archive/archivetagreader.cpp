@@ -120,7 +120,6 @@ const QMap<Qmmp::MetaData, QString> ArchiveTagReader::metaData() const
         m[Qmmp::YEAR] = QString::number(tag->year());
         m[Qmmp::TRACK] = QString::number(tag->track());
     }
-    m[Qmmp::URL] = m_url;
     return m;
 }
 

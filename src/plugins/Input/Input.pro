@@ -42,7 +42,7 @@ contains(CONFIG, SID_PLUGIN){
 unix{
 
 contains(CONFIG, AAC_PLUGIN){
-    #SUBDIRS += aac
+    SUBDIRS += aac
 }
 
 

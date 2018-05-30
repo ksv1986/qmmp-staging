@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,8 +38,8 @@ QHash<QString, QString> AACMetaDataModel::audioProperties()
         return ap;
     AACFile f(&input);
     QString text;
-    text = QString("%1").arg(f.length()/60);
-    text +=":"+QString("%1").arg(f.length()%60,2,10,QChar('0'));
+    text = QString("%1").arg(f.duration()/60000);
+    text +=":"+QString("%1").arg((f.duration()/1000)%60,2,10,QChar('0'));
     ap.insert(tr("Length"), text);
     text = QString("%1").arg(f.samplerate());
     ap.insert(tr("Sample rate"), text+" "+tr("Hz"));

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -46,17 +46,17 @@ public:
 
     ~AACFile();
 
-    qint64 length();
-    quint32 bitrate();
-    quint32 samplerate();
+    qint64 duration() const;
+    quint32 bitrate() const;
+    quint32 samplerate() const;
     int offset() const;
-    bool isValid();
-    const QMap<Qmmp::MetaData, QString> metaData();
+    bool isValid() const;
+    const QMap<Qmmp::MetaData, QString> &metaData();
 
 private:
     void parseADTS();
     void parseID3v2(const QByteArray &data);
-    qint64 m_length;
+    qint64 m_duration;
     quint32 m_bitrate;
     int m_offset;
     QIODevice *m_input;
@@ -71,7 +71,7 @@ public:
     ID3v2Tag(const QByteArray &array);
 
 protected:
-    void read ();
+    void read();
 
 private:
     QByteArray m_buf;

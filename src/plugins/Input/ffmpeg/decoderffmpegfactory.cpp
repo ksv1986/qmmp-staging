@@ -219,7 +219,7 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
     #else
             AVCodecContext *c = in->streams[idx]->codec;
     #endif
-            info->setValue(Qmmp::BITRATE, c->bit_rate);
+            info->setValue(Qmmp::BITRATE, int(c->bit_rate) / 1000);
             info->setValue(Qmmp::SAMPLERATE, c->sample_rate);
             info->setValue(Qmmp::CHANNELS, c->channels);
             info->setValue(Qmmp::BITS_PER_SAMPLE, c->bits_per_raw_sample);

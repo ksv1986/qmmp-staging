@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -34,7 +34,7 @@ FileLoader::FileLoader(QObject *parent) : QThread(parent)
     qRegisterMetaType<QList<PlayListTrack*> >("QList<PlayListTrack*>");
     m_settings = QmmpUiSettings::instance();
     m_finished = false;
-    m_use_meta = false;
+    m_parts = TrackInfo::NoParts;
     connect(qApp, SIGNAL(aboutToQuit()), SLOT(finish()));
 }
 
@@ -44,7 +44,7 @@ FileLoader::~FileLoader()
 QList<PlayListTrack *> FileLoader::processFile(const QString &path, QStringList *ignoredPaths)
 {
     QList<PlayListTrack *> tracks;
-    QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, TrackInfo::MetaData, ignoredPaths);
+    QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, m_parts, ignoredPaths);
 
     foreach (TrackInfo *info, infoList)
     {
@@ -62,7 +62,7 @@ void FileLoader::insertPlayList(const QString &fmt, const QByteArray &contents, 
     {
         PlayListTrack *t = tracks.takeFirst();
         QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(),
-                                                                                   m_use_meta ? TrackInfo::MetaData : TrackInfo::NoParts);
+                                                                                   m_parts ? TrackInfo::MetaData : TrackInfo::NoParts);
         if(infoList.count() != 1) //invalid or unsupported track
         {
             qDeleteAll(infoList);
@@ -90,7 +90,7 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
     while (!tracks.isEmpty() && !m_finished)
     {
         PlayListTrack *t = tracks.takeFirst();
-        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(), m_use_meta ? TrackInfo::MetaData : TrackInfo::NoParts);
+        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(), m_parts ? TrackInfo::MetaData : TrackInfo::NoParts);
         if(infoList.count() != 1) //invalid or unsupported track
         {
             qDeleteAll(infoList);
@@ -246,7 +246,7 @@ void FileLoader::addPlayList(const QString &fmt, const QByteArray &data)
         MetaDataManager::instance()->prepareForAnotherThread();
         PlayListParser::loadFormats();
         m_filters = MetaDataManager::instance()->nameFilters();
-        m_use_meta = m_settings->useMetadata();
+        m_parts = m_settings->useMetadata() ? TrackInfo::AllParts : TrackInfo::NoParts;
     }
     start(QThread::IdlePriority);
 }
@@ -272,7 +272,7 @@ void FileLoader::insert(PlayListItem *before, const QStringList &paths)
     {
         MetaDataManager::instance()->prepareForAnotherThread();
         m_filters = MetaDataManager::instance()->nameFilters();
-        m_use_meta = m_settings->useMetadata();
+        m_parts = m_settings->useMetadata() ? TrackInfo::AllParts : TrackInfo::NoParts;
     }
     start(QThread::IdlePriority);
 }

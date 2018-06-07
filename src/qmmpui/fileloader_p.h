@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,6 +26,7 @@
 #include <QFileInfo>
 #include <QMutex>
 #include <QThread>
+#include <qmmp/trackinfo.h>
 
 class PlayListTrack;
 class PlayListItem;
@@ -100,7 +101,7 @@ private:
     QStringList m_filters;
     QmmpUiSettings *m_settings;
     bool m_finished;
-    bool m_use_meta;
+    TrackInfo::Parts m_parts;
     QMutex m_mutex;
 
 };

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,7 +31,7 @@
 #endif
 #include "cueparser.h"
 
-CUEParser::CUEParser(const QString &path, TrackInfo::Parts parts)
+CUEParser::CUEParser(const QString &path)
 {
     QString fileName = path;
     if(path.contains("://"))
@@ -179,13 +179,12 @@ CUEParser::CUEParser(const QString &path, TrackInfo::Parts parts)
         if(i == 0 || m_tracks[i - 1]->file != m_tracks[i]->file)
         {
             qDeleteAll(f_list);
-            f_list = MetaDataManager::instance()->createPlayList(m_tracks[i]->file, (parts & TrackInfo::Properties)
-                                                                 ? TrackInfo::NoParts : TrackInfo::Properties);
+            f_list = MetaDataManager::instance()->createPlayList(m_tracks[i]->file, TrackInfo::Properties);
         }
         if(!f_list.isEmpty())
             m_tracks[i]->info.setValues(f_list.first()->properties());
 
-        if((i < m_tracks.count() - 1) && ( m_tracks[i]->file == m_tracks[i+1]->file))
+        if((i < m_tracks.count() - 1) && (m_tracks[i]->file == m_tracks[i+1]->file))
             m_tracks[i]->info.setDuration(m_tracks[i+1]->offset - m_tracks[i]->offset);
         else if(!f_list.isEmpty())
             m_tracks[i]->info.setDuration(qMax(0LL, f_list.first()->duration() - m_tracks[i]->offset));

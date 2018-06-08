@@ -24,7 +24,7 @@
 
 CUEMetaDataModel::CUEMetaDataModel(const QString &url, QObject *parent) : MetaDataModel(parent)
 {
-    m_parser = new CUEParser(url, TrackInfo::AllParts);
+    m_parser = new CUEParser(url);
     if (m_parser->count() == 0)
     {
         qWarning("CUEMetaDataModel: invalid cue file");

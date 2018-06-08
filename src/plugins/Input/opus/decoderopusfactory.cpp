@@ -65,11 +65,10 @@ QList<TrackInfo *> DecoderOpusFactory::createPlayList(const QString &path, Track
 {
     TrackInfo *info = new TrackInfo(path);
 
+    if(parts == TrackInfo::NoParts)
+        return QList<TrackInfo*>() << info;
+
     TagLib::Ogg::Opus::File fileRef(QStringToFileName(path));
-
-
-    if(fileRef.audioProperties())
-        info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
 
     if((parts & TrackInfo::MetaData) && fileRef.tag() && !fileRef.tag()->isEmpty())
     {
@@ -88,8 +87,9 @@ QList<TrackInfo *> DecoderOpusFactory::createPlayList(const QString &path, Track
         info->setValue(Qmmp::BITRATE, fileRef.audioProperties()->bitrate());
         info->setValue(Qmmp::SAMPLERATE, fileRef.audioProperties()->sampleRate());
         info->setValue(Qmmp::CHANNELS, fileRef.audioProperties()->channels());
-        info->setValue(Qmmp::BITS_PER_SAMPLE, 16);
-        info->setValue(Qmmp::FORMAT_NAME, "Ogg Vorbis");
+        info->setValue(Qmmp::BITS_PER_SAMPLE, 32); //float
+        info->setValue(Qmmp::FORMAT_NAME, "Ogg Opus");
+        info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
     }
 
     if((parts & TrackInfo::ReplayGainInfo) && fileRef.tag() && !fileRef.tag()->isEmpty())

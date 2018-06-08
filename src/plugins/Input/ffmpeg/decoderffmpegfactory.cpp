@@ -156,7 +156,11 @@ Decoder *DecoderFFmpegFactory::create(const QString &path, QIODevice *input)
 
 QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    QList <TrackInfo*> list;
+    TrackInfo *info = new TrackInfo(path);
+
+    if(parts == TrackInfo::NoParts)
+        return QList<TrackInfo*>() << info;
+
     AVFormatContext *in = 0;
 
 #ifdef Q_OS_WIN
@@ -166,9 +170,10 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
 #endif
     {
         qDebug("DecoderFFmpegFactory: unable to open file");
-        return list;
+        delete info;
+        return  QList<TrackInfo*>();
     }
-    TrackInfo *info = new TrackInfo(path);
+
     avformat_find_stream_info(in, 0);
 
     if(parts & TrackInfo::MetaData)
@@ -225,14 +230,12 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
             info->setValue(Qmmp::BITS_PER_SAMPLE, c->bits_per_raw_sample);
 
             //info->setValue(Qmmp::FORMAT_NAME, QString::fromLatin1(avcodec_get_name(c->codec_id)));
-
+            info->setDuration(in->duration * 1000 / AV_TIME_BASE);
         }
     }
 
-    info->setDuration(in->duration * 1000 / AV_TIME_BASE);
     avformat_close_input(&in);
-    list << info;
-    return list;
+    return QList<TrackInfo*>() << info;
 }
 
 MetaDataModel* DecoderFFmpegFactory::createMetaDataModel(const QString &path, QObject *parent)

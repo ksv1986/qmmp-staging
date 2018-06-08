@@ -20,7 +20,6 @@
 
 #include <QIODevice>
 #include <QBuffer>
-#include <QTextCodec>
 #include <taglib/id3v2tag.h>
 #include <neaacdec.h>
 
@@ -247,23 +246,13 @@ void AACFile::parseID3v2(const QByteArray &data)
     TagLib::String genre = taglib_tag.genre();
     TagLib::String title = taglib_tag.title();
 
-    QTextCodec *codec = QTextCodec::codecForName ("UTF-8");
-    bool utf = true;
-
-    m_metaData.insert(Qmmp::ALBUM,
-                      codec->toUnicode(album.toCString(utf)).trimmed());
-    m_metaData.insert(Qmmp::ARTIST,
-                      codec->toUnicode(artist.toCString(utf)).trimmed());
-    m_metaData.insert(Qmmp::COMMENT,
-                      codec->toUnicode(comment.toCString(utf)).trimmed());
-    m_metaData.insert(Qmmp::GENRE,
-                      codec->toUnicode(genre.toCString(utf)).trimmed());
-    m_metaData.insert(Qmmp::TITLE,
-                      codec->toUnicode(title.toCString(utf)).trimmed());
-    m_metaData.insert(Qmmp::YEAR,
-                      QString::number(taglib_tag.year()));
-    m_metaData.insert(Qmmp::TRACK,
-                      QString::number(taglib_tag.track()));
+    m_metaData.insert(Qmmp::ALBUM, TStringToQString(album).trimmed());
+    m_metaData.insert(Qmmp::ARTIST, TStringToQString(artist).trimmed());
+    m_metaData.insert(Qmmp::COMMENT, TStringToQString(comment).trimmed());
+    m_metaData.insert(Qmmp::GENRE, TStringToQString(genre).trimmed());
+    m_metaData.insert(Qmmp::TITLE, TStringToQString(title).trimmed());
+    m_metaData.insert(Qmmp::YEAR, QString::number(taglib_tag.year()));
+    m_metaData.insert(Qmmp::TRACK, QString::number(taglib_tag.track()));
 }
 
 ID3v2Tag::ID3v2Tag(const QByteArray &array) : TagLib::ID3v2::Tag()

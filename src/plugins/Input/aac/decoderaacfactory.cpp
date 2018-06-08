@@ -55,27 +55,39 @@ Decoder *DecoderAACFactory::create(const QString &, QIODevice *input)
 
 QList<TrackInfo *> DecoderAACFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
+    TrackInfo *info = new TrackInfo(path);
+
+    if(parts == TrackInfo::NoParts)
+        return QList<TrackInfo*>() << info;
+
     QFile file(path);
-    if (file.open(QIODevice::ReadOnly))
+    if(!file.open(QIODevice::ReadOnly))
     {
-        TrackInfo *info = new TrackInfo(path);
-        AACFile aac_file(&file, parts);
-
-        if(parts & TrackInfo::MetaData)
-            info->setValues(aac_file.metaData());
-
-        if(parts & TrackInfo::Properties)
-        {
-            info->setValue(Qmmp::BITRATE, aac_file.bitrate());
-            info->setValue(Qmmp::SAMPLERATE, aac_file.samplerate());
-            //info->setValue(Qmmp::CHANNELS, aac_file.
-            info->setValue(Qmmp::FORMAT_NAME, "AAC");
-        }
-
-        info->setDuration(aac_file.duration());
+        delete info;
         return QList<TrackInfo*>() << info;
     }
-    return QList<TrackInfo *>();
+
+    AACFile aac_file(&file, parts & TrackInfo::MetaData);
+
+    if(!aac_file.isValid())
+    {
+        delete info;
+        return QList<TrackInfo *>();
+    }
+
+    if(parts & TrackInfo::MetaData)
+        info->setValues(aac_file.metaData());
+
+    if(parts & TrackInfo::Properties)
+    {
+        info->setValue(Qmmp::BITRATE, aac_file.bitrate());
+        info->setValue(Qmmp::SAMPLERATE, aac_file.samplerate());
+        //info->setValue(Qmmp::CHANNELS, aac_file.
+        info->setValue(Qmmp::FORMAT_NAME, "AAC");
+        info->setDuration(aac_file.duration());
+    }
+
+    return QList<TrackInfo*>() << info;
 }
 
 MetaDataModel* DecoderAACFactory::createMetaDataModel(const QString &path, QObject *parent)

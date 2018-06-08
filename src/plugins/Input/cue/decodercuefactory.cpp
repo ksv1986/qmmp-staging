@@ -55,7 +55,8 @@ Decoder *DecoderCUEFactory::create(const QString &path, QIODevice *input)
 
 QList<TrackInfo *> DecoderCUEFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredPaths)
 {
-    CUEParser parser(path, parts);
+    Q_UNUSED(parts);
+    CUEParser parser(path);
     if(path.contains("://"))
     {
         QList<TrackInfo *> list;

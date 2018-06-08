@@ -58,7 +58,7 @@ DecoderCUE::~DecoderCUE()
 
 bool DecoderCUE::initialize()
 {
-    m_parser = new CUEParser(m_path, TrackInfo::MetaData);
+    m_parser = new CUEParser(m_path);
     if (m_parser->count() == 0)
     {
         qWarning("DecoderCUE: invalid cue file");

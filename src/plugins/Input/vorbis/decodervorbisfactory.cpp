@@ -63,14 +63,14 @@ MetaDataModel* DecoderVorbisFactory::createMetaDataModel(const QString &path, QO
     return new VorbisMetaDataModel(path, parent);
 }
 
-QList<TrackInfo *> DecoderVorbisFactory::createPlayList(const QString &fileName, TrackInfo::Parts parts, QStringList *)
+QList<TrackInfo *> DecoderVorbisFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    TrackInfo *info = new TrackInfo(fileName);
+    TrackInfo *info = new TrackInfo(path);
 
     if(parts == TrackInfo::NoParts)
         return QList<TrackInfo*>() << info;
 
-    TagLib::FileStream stream(QStringToFileName(fileName), true);
+    TagLib::FileStream stream(QStringToFileName(path), true);
     TagLib::Ogg::Vorbis::File fileRef(&stream);
 
     if((parts & TrackInfo::MetaData) && fileRef.tag() && !fileRef.tag()->isEmpty())

@@ -34,7 +34,7 @@ public:
     bool canDecode(QIODevice *input) const;
     const DecoderProperties properties() const;
     Decoder *create(const QString &, QIODevice *input);
-    QList<TrackInfo *> createPlayList(const QString &fileName, TrackInfo::Parts parts, QStringList *);
+    QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *);
     MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);

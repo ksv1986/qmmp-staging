@@ -197,16 +197,16 @@ Decoder *DecoderMPEGFactory::create(const QString &, QIODevice *input)
     return d;
 }
 
-QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &fileName, TrackInfo::Parts parts, QStringList *)
+QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    TrackInfo *info = new TrackInfo(fileName);
+    TrackInfo *info = new TrackInfo(path);
+
+    if(parts == TrackInfo::NoParts)
+        return QList<TrackInfo*>() << info;
+
     TagLib::Tag *tag = 0;
-
-    TagLib::FileStream stream(QStringToFileName(fileName), true);
+    TagLib::FileStream stream(QStringToFileName(path), true);
     TagLib::MPEG::File fileRef(&stream, TagLib::ID3v2::FrameFactory::instance());
-
-    if(fileRef.audioProperties())
-        info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
 
     if (parts & TrackInfo::MetaData)
     {
@@ -317,6 +317,7 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &fileName, T
         case TagLib::MPEG::Header::Version2_5:
             info->setValue(Qmmp::FORMAT_NAME, QString("MPEG-2.5 layer %1").arg(fileRef.audioProperties()->layer()));
         }
+        info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
     }
 
     if(parts & TrackInfo::ReplayGainInfo)

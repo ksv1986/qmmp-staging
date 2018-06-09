@@ -68,11 +68,12 @@ Decoder *DecoderMPCFactory::create(const QString &, QIODevice *i)
 QList<TrackInfo *> DecoderMPCFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
     TrackInfo *info = new TrackInfo(path);
+
+    if(parts == TrackInfo::NoParts)
+        return QList<TrackInfo*>() << info;
+
     TagLib::FileStream stream(QStringToFileName(path), true);
     TagLib::MPC::File fileRef(&stream);
-
-    if (fileRef.audioProperties())
-        info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
 
     if((parts & TrackInfo::MetaData) && fileRef.APETag() && !fileRef.APETag()->isEmpty())
     {
@@ -98,11 +99,10 @@ QList<TrackInfo *> DecoderMPCFactory::createPlayList(const QString &path, TrackI
         info->setValue(Qmmp::CHANNELS, fileRef.audioProperties()->channels());
         info->setValue(Qmmp::BITS_PER_SAMPLE, 16);
         info->setValue(Qmmp::FORMAT_NAME, QString("Musepack SV%1").arg(fileRef.audioProperties()->mpcVersion()));
+        info->setDuration(fileRef.audioProperties()->lengthInMilliseconds());
     }
 
-    QList <TrackInfo*> list;
-    list << info;
-    return list;
+    return QList<TrackInfo*>() << info;
 }
 
 MetaDataModel* DecoderMPCFactory::createMetaDataModel(const QString &path, QObject *parent)

@@ -102,20 +102,25 @@ Decoder *DecoderSndFileFactory::create(const QString &, QIODevice *input)
 
 QList<TrackInfo *> DecoderSndFileFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
+    TrackInfo *info = new TrackInfo(path);
+
+    if(parts == TrackInfo::NoParts)
+        return QList<TrackInfo*>() << info;
+
     SF_INFO snd_info;
     SNDFILE *sndfile = 0;
-    memset (&snd_info, 0, sizeof(snd_info));
+    memset(&snd_info, 0, sizeof(snd_info));
     snd_info.format = 0;
 #ifdef Q_OS_WIN
         sndfile = sf_wchar_open(reinterpret_cast<LPCWSTR>(fileName.utf16()), SFM_READ, &snd_info);
 #else
         sndfile = sf_open(path.toLocal8Bit().constData(), SFM_READ, &snd_info);
 #endif
-    if (!sndfile)
+    if(!sndfile)
+    {
+        delete info;
         return QList<TrackInfo *>();
-
-    TrackInfo *info = new TrackInfo(path);
-    info->setDuration(int(snd_info.frames * 1000 / snd_info.samplerate));
+    }
 
     if(parts & TrackInfo::MetaData)
     {
@@ -165,6 +170,7 @@ QList<TrackInfo *> DecoderSndFileFactory::createPlayList(const QString &path, Tr
         format_info.format = (snd_info.format & SF_FORMAT_TYPEMASK);
         sf_command(0, SFC_GET_FORMAT_INFO, &format_info, sizeof(format_info));
         info->setValue(Qmmp::FORMAT_NAME, QString::fromLatin1(format_info.name));
+        info->setDuration(int(snd_info.frames * 1000 / snd_info.samplerate));
     }
 
     sf_close(sndfile);

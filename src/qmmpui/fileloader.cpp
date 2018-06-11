@@ -61,8 +61,7 @@ void FileLoader::insertPlayList(const QString &fmt, const QByteArray &contents, 
     while (!tracks.isEmpty() && !m_finished)
     {
         PlayListTrack *t = tracks.takeFirst();
-        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(),
-                                                                                   m_parts ? TrackInfo::MetaData : TrackInfo::NoParts);
+        QList<TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(), m_parts);
         if(infoList.count() != 1) //invalid or unsupported track
         {
             qDeleteAll(infoList);
@@ -90,7 +89,7 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
     while (!tracks.isEmpty() && !m_finished)
     {
         PlayListTrack *t = tracks.takeFirst();
-        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(), m_parts ? TrackInfo::MetaData : TrackInfo::NoParts);
+        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(), m_parts);
         if(infoList.count() != 1) //invalid or unsupported track
         {
             qDeleteAll(infoList);
@@ -99,11 +98,11 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
             continue;
         }
 
-        TrackInfo *info = infoList.first();
+        TrackInfo *info = infoList.takeFirst();
         if(!info->value(Qmmp::ALBUM).isEmpty() && !info->value(Qmmp::ARTIST).isEmpty())
-            t->updateMetaData(infoList.first());
+            t->updateMetaData(info);
 
-        emit newTracksToInsert(before, QList<PlayListTrack *>() << t);
+        emit newTracksToInsert(before, QList<PlayListTrack *>() << t); //TODO optimization
         delete info;
     }
     //clear remaining tracks

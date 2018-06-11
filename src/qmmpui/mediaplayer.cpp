@@ -205,6 +205,7 @@ void MediaPlayer::updateMetaData()
     qDebug("GENRE = %s", qPrintable(info.value(Qmmp::GENRE)));
     qDebug("YEAR = %s", qPrintable(info.value(Qmmp::YEAR)));
     qDebug("TRACK = %s", qPrintable(info.value(Qmmp::TRACK)));
+    qDebug("DISCNUMBER = %s", qPrintable(info.value(Qmmp::DISCNUMBER)));
     qDebug("---------------------");
     qDebug("BITRATE = %s", qPrintable(info.value(Qmmp::BITRATE)));
     qDebug("SAMPLERATE = %s", qPrintable(info.value(Qmmp::SAMPLERATE)));
@@ -218,6 +219,8 @@ void MediaPlayer::updateMetaData()
     qDebug("REPLAYGAIN_TRACK_PEAK = %f", info.value(Qmmp::REPLAYGAIN_TRACK_PEAK));
     qDebug("REPLAYGAIN_ALBUM_GAIN = %f", info.value(Qmmp::REPLAYGAIN_ALBUM_GAIN));
     qDebug("REPLAYGAIN_ALBUM_PEAK = %f", info.value(Qmmp::REPLAYGAIN_ALBUM_PEAK));
+    qDebug("---------------------");
+    qDebug("DURATION = %lld", info.duration());
     qDebug("== end of metadata ==");
 
     PlayListModel *pl = m_pl_manager->currentPlayList();

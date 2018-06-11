@@ -83,6 +83,11 @@ PlayListTrack &PlayListTrack::operator=(const PlayListTrack &other)
 void PlayListTrack::updateMetaData(const TrackInfo *info)
 {
     setValues(info->metaData());
+    if(info->parts() & TrackInfo::Properties)
+        setValues(info->properties());
+    if(info->parts() & TrackInfo::ReplayGainInfo)
+        setValues(info->replayGainInfo());
+    setDuration(info->duration());
     setPath(info->path());
     m_formattedTitles.clear();
     m_formattedLength.clear();

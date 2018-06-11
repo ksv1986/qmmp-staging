@@ -241,7 +241,7 @@ void PlayListManager::readPlayLists()
     QString line, param, value;
     int s = 0, current = 0, pl = 0;
     QList <PlayListTrack *> tracks;
-    QFile file(Qmmp::configDir() + "playlist.txt");
+    QFile file(Qmmp::configDir() + "/playlist.txt");
     file.open(QIODevice::ReadOnly);
     QByteArray array = file.readAll();
     file.close();
@@ -330,7 +330,7 @@ void PlayListManager::readPlayLists()
 void PlayListManager::writePlayLists()
 {
     qDebug("PlayListManager: saving playlists...");
-    QString plFilePath = Qmmp::configDir() + "playlist.txt";
+    QString plFilePath = Qmmp::configDir() + "/playlist.txt";
     QSaveFile plFile(plFilePath);
     if(!plFile.open(QIODevice::WriteOnly))
     {

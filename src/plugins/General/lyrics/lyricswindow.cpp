@@ -38,7 +38,7 @@ LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget 
     setAttribute(Qt::WA_DeleteOnClose);
     setAttribute(Qt::WA_QuitOnClose, false);
     m_requestReply = 0;
-    m_cachePath = Qmmp::configDir() + "lyrics/";
+    m_cachePath = Qmmp::configDir() + "/lyrics/";
     m_ui.artistLineEdit->setText(artist);
     m_ui.titleLineEdit->setText(title);
     m_http = new QNetworkAccessManager(this);

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,7 +41,7 @@ QString Qmmp::m_appDir;
 
 const QString Qmmp::configFile()
 {
-    return configDir() + "qmmprc";
+    return configDir() + "/qmmprc";
 }
 
 const QString Qmmp::configDir()
@@ -50,22 +50,20 @@ const QString Qmmp::configDir()
     if(m_configDir.isEmpty())
     {
         if(isPortable())
-            return m_appDir + "/.qmmp/";
+            return m_appDir + "/.qmmp";
         else
-            return  QDir::homePath() +"/.qmmp/";
+            return  QDir::homePath() +"/.qmmp";
     }
     else
         return m_configDir;
 #else
-    return m_configDir.isEmpty() ? QDir::homePath() +"/.qmmp/" : m_configDir;
+    return m_configDir.isEmpty() ? QDir::homePath() +"/.qmmp" : m_configDir;
 #endif
 }
 
 void Qmmp::setConfigDir(const QString &path)
 {
     m_configDir = path;
-    if(!m_configDir.endsWith('/'))
-        m_configDir.append('/');
 }
 
 const QString Qmmp::strVersion()

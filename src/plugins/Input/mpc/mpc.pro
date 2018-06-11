@@ -17,11 +17,9 @@ unix {
     target.path = $$LIB_DIR/qmmp/Input
     INSTALLS += target
     PKGCONFIG += taglib
-    LIBS += -lmpcdec  -I/usr/include
-    exists(/usr/include/mpcdec/mpcdec.h):DEFINES += MPC_OLD_API
+    LIBS += -lmpcdec -I/usr/include
 }
 
 win32 {
     LIBS += -lmpcdec -ltag.dll
-    #DEFINES += MPC_OLD_API
 }

@@ -605,7 +605,7 @@ void QmmpAudioEngine::attachMetaData(Decoder *decoder, DecoderFactory *factory, 
                 decoder->setReplayGainInfo(info->replayGainInfo());
             info->updateValues(decoder->properties());
             info->setValue(Qmmp::DECODER, factory->properties().shortName);
-            if(QFileInfo(path).isFile() && !info->value(Qmmp::FILE_SIZE).isEmpty())
+            if(fileInfo.isFile() && info->value(Qmmp::FILE_SIZE).isEmpty())
                 info->setValue(Qmmp::FILE_SIZE, fileInfo.size());
             decoder->setProperties(info->properties());
             delete info;

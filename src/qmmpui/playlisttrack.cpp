@@ -80,14 +80,7 @@ PlayListTrack &PlayListTrack::operator=(const PlayListTrack &other)
     return *this;
 }
 
-void PlayListTrack::updateMetaData(const QMap <Qmmp::MetaData, QString> &metaData)
-{
-    setValues(metaData);
-    m_formattedTitles.clear();
-    formatGroup();
-}
-
-void PlayListTrack::updateMetaData(TrackInfo *info)
+void PlayListTrack::updateMetaData(const TrackInfo *info)
 {
     setValues(info->metaData());
     setPath(info->path());

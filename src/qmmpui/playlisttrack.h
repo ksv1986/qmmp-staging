@@ -71,15 +71,10 @@ public:
      */
     const QString formattedLength();
     /*!
-     * Updates current metadata.
-     * @param metaData Map with metadata values.
-     */
-    void updateMetaData(const QMap <Qmmp::MetaData, QString> &metaData);
-    /*!
      *  Updates current metadata.
      *  @param info Track information.
      */
-    void updateMetaData(TrackInfo *info);
+    void updateMetaData(const TrackInfo *info);
     /*!
      * Gets new metadata from file (works for local files only).
      */

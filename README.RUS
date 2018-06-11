@@ -87,7 +87,7 @@ Qmmp - Qt-based multimedia player
 - qtmultimedia >= 5.4 (опционально)
 - libmms >= 0.4 (опционально)
 - flac >= 1.1.3 (опционально)
-- libmpcdec >= 1.2.6 (опционально)
+- libmpcdec >= 1.3.0 (опционально)
 - jackit1 >= 0.121.0 или jackit2 >= 1.9.8 (опционально)
 - soxr >= 0.1.0 (опционально)
 - libmodplug >= 0.8.4 (опционально)

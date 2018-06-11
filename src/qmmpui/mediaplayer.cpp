@@ -195,21 +195,35 @@ void MediaPlayer::processState(Qmmp::State state)
 
 void MediaPlayer::updateMetaData()
 {
+    TrackInfo info = m_core->trackInfo();
     qDebug("===== metadata ======");
-    qDebug("ARTIST = %s", qPrintable(m_core->metaData(Qmmp::ARTIST)));
-    qDebug("TITLE = %s", qPrintable(m_core->metaData(Qmmp::TITLE)));
-    qDebug("ALBUMARTIST = %s", qPrintable(m_core->metaData(Qmmp::ALBUMARTIST)));
-    qDebug("ALBUM = %s", qPrintable(m_core->metaData(Qmmp::ALBUM)));
-    qDebug("COMMENT = %s", qPrintable(m_core->metaData(Qmmp::COMMENT)));
-    qDebug("GENRE = %s", qPrintable(m_core->metaData(Qmmp::GENRE)));
-    qDebug("YEAR = %s", qPrintable(m_core->metaData(Qmmp::YEAR)));
-    qDebug("TRACK = %s", qPrintable(m_core->metaData(Qmmp::TRACK)));
+    qDebug("ARTIST = %s", qPrintable(info.value(Qmmp::ARTIST)));
+    qDebug("TITLE = %s", qPrintable(info.value(Qmmp::TITLE)));
+    qDebug("ALBUMARTIST = %s", qPrintable(info.value(Qmmp::ALBUMARTIST)));
+    qDebug("ALBUM = %s", qPrintable(info.value(Qmmp::ALBUM)));
+    qDebug("COMMENT = %s", qPrintable(info.value(Qmmp::COMMENT)));
+    qDebug("GENRE = %s", qPrintable(info.value(Qmmp::GENRE)));
+    qDebug("YEAR = %s", qPrintable(info.value(Qmmp::YEAR)));
+    qDebug("TRACK = %s", qPrintable(info.value(Qmmp::TRACK)));
+    qDebug("---------------------");
+    qDebug("BITRATE = %s", qPrintable(info.value(Qmmp::BITRATE)));
+    qDebug("SAMPLERATE = %s", qPrintable(info.value(Qmmp::SAMPLERATE)));
+    qDebug("CHANNELS = %s", qPrintable(info.value(Qmmp::CHANNELS)));
+    qDebug("BITS_PER_SAMPLE = %s", qPrintable(info.value(Qmmp::BITS_PER_SAMPLE)));
+    qDebug("FORMAT_NAME = %s", qPrintable(info.value(Qmmp::FORMAT_NAME)));
+    qDebug("DECODER = %s", qPrintable(info.value(Qmmp::DECODER)));
+    qDebug("FILE_SIZE = %s", qPrintable(info.value(Qmmp::FILE_SIZE)));
+    qDebug("---------------------");
+    qDebug("REPLAYGAIN_TRACK_GAIN = %f", info.value(Qmmp::REPLAYGAIN_TRACK_GAIN));
+    qDebug("REPLAYGAIN_TRACK_PEAK = %f", info.value(Qmmp::REPLAYGAIN_TRACK_PEAK));
+    qDebug("REPLAYGAIN_ALBUM_GAIN = %f", info.value(Qmmp::REPLAYGAIN_ALBUM_GAIN));
+    qDebug("REPLAYGAIN_ALBUM_PEAK = %f", info.value(Qmmp::REPLAYGAIN_ALBUM_PEAK));
     qDebug("== end of metadata ==");
 
     PlayListModel *pl = m_pl_manager->currentPlayList();
-    if (pl->currentTrack() && pl->currentTrack()->path() == m_core->trackInfo().path())
+    if (pl->currentTrack() && pl->currentTrack()->path() == info.path())
     {
-        pl->currentTrack()->updateMetaData(m_core->metaData());
+        pl->currentTrack()->updateMetaData(&info);
         pl->updateMetaData();
     }
 }

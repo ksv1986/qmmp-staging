@@ -2,7 +2,7 @@
  *   Copyright (C) 2009 by Artur Guzik                                     *
  *   a.guzik88@gmail.com                                                   *
  *                                                                         *
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,7 +30,7 @@
 #include <QPixmap>
 #include <QFileInfo>
 #include <QApplication>
-#include <QDesktopWidget>
+#include <QScreen>
 #include <QSpacerItem>
 #include <QProgressBar>
 #include <QSettings>
@@ -133,7 +133,7 @@ void StatusIconPopupWidget::updateTime(qint64 elapsed)
 
 void StatusIconPopupWidget::updatePosition(int trayx, int trayy)
 {
-    QRect screenGeometry = QApplication::desktop()->availableGeometry();
+    QRect screenGeometry = QGuiApplication::primaryScreen()->availableGeometry();
     int xpos = 0;
     int ypos = 0;
 

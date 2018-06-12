@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,7 +26,6 @@
 #include <QKeyEvent>
 #include <QCoreApplication>
 #include <QApplication>
-#include <QDesktopWidget>
 #include <windows.h>
 #include <winuser.h>
 #include <commctrl.h>

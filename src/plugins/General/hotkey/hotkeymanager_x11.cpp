@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Copyright (C) 2003-2007 by Justin Karneges and Michail Pishchagin     *
@@ -28,7 +28,6 @@
 #include <QKeyEvent>
 #include <QCoreApplication>
 #include <QApplication>
-#include <QDesktopWidget>
 #define Visual XVisual
 extern "C"
 {

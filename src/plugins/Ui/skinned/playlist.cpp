@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,7 +25,7 @@
 #include <QSignalMapper>
 #include <QCloseEvent>
 #include <QInputDialog>
-#include <QDesktopWidget>
+#include <QScreen>
 #include <qmmpui/playlistitem.h>
 #include <qmmpui/playlistmodel.h>
 #include <qmmpui/playlistmanager.h>
@@ -496,7 +496,7 @@ void PlayList::readSettings()
     }
     else
     {
-        QDesktopWidget *desktop = qApp->desktop();
+        QScreen *desktop = QGuiApplication::primaryScreen();
         QPoint pos = settings.value ("Skinned/pl_pos", QPoint (100, 332)).toPoint();
         if(!desktop->availableGeometry().contains(pos))
         {

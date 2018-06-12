@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,7 +21,7 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QApplication>
-#include <QDesktopWidget>
+#include <QScreen>
 #include <QTimer>
 #include <QPalette>
 #include <QSettings>
@@ -126,7 +126,7 @@ void PopupWidget::showVolume(int v)
 void PopupWidget::updatePosition()
 {
     //calculate widget position
-    QRect desktopRect = QApplication::desktop()->availableGeometry();
+    QRect desktopRect = QGuiApplication::primaryScreen()->availableGeometry();
     int x = desktopRect.x() + 5, y = desktopRect.y() + 5;
     if (m_pos == LEFT || m_pos == RIGHT || m_pos == CENTER)
         y =  desktopRect.y() + desktopRect.height()/2 - height()/2 + 5;

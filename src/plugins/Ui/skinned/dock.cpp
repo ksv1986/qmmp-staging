@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,7 +19,9 @@
  ***************************************************************************/
 
 #include <QAction>
-#include <QDesktopWidget>
+#include <QScreen>
+#include <QWindow>
+#include <QtDebug>
 #include <QApplication>
 #include "dock.h"
 
@@ -53,7 +55,10 @@ void Dock::setMainWidget (QWidget *widget)
 
 QPoint Dock::snapDesktop(QPoint npos, QWidget* mv)
 {
-    QRect desktopRect = QApplication::desktop()->availableGeometry(mv);
+    if(!mv->isVisible())
+        return npos;
+
+    QRect desktopRect = mv->window()->windowHandle()->screen()->availableGeometry();
     int nx = abs (npos.x() - desktopRect.x()); //left-top
     int ny = abs (npos.y() - desktopRect.y());
 

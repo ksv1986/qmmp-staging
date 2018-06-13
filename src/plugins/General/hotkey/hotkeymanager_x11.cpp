@@ -28,6 +28,7 @@
 #include <QKeyEvent>
 #include <QCoreApplication>
 #include <QApplication>
+#include <QDesktopWidget>
 #define Visual XVisual
 extern "C"
 {

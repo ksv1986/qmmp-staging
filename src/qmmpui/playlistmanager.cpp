@@ -305,6 +305,20 @@ void PlayListManager::readPlayLists()
             tracks.last()->setDuration(value.toInt());
         else if (param == "length")
             tracks.last()->setDuration(value.toInt() * 1000);
+        else if (param == "bitrate")
+            tracks.last()->setValue(Qmmp::BITRATE, value);
+        else if (param == "samplerate")
+            tracks.last()->setValue(Qmmp::SAMPLERATE, value);
+        else if (param == "channels")
+            tracks.last()->setValue(Qmmp::CHANNELS, value);
+        else if (param == "bits_per_sample")
+            tracks.last()->setValue(Qmmp::BITS_PER_SAMPLE, value);
+        else if (param == "format_name")
+            tracks.last()->setValue(Qmmp::FORMAT_NAME, value);
+        else if (param == "decoder")
+            tracks.last()->setValue(Qmmp::DECODER, value);
+        else if (param == "file_size")
+            tracks.last()->setValue(Qmmp::FILE_SIZE, value);
     }
     buffer.close();
     if(m_models.isEmpty())
@@ -358,10 +372,17 @@ void PlayListManager::writePlayLists()
             plFile.write(QString("comment=%1\n").arg(t->value(Qmmp::COMMENT)).toUtf8());
             plFile.write(QString("genre=%1\n").arg(t->value(Qmmp::GENRE)).toUtf8());
             plFile.write(QString("composer=%1\n").arg(t->value(Qmmp::COMPOSER)).toUtf8());
-            plFile.write(QString("year=%1\n").arg(t->value(Qmmp::YEAR)).toUtf8());
-            plFile.write(QString("track=%1\n").arg(t->value(Qmmp::TRACK)).toUtf8());
-            plFile.write(QString("disc=%1\n").arg(t->value(Qmmp::DISCNUMBER)).toUtf8());
-            plFile.write(QString("duration=%1\n").arg(t->duration()).toUtf8());
+            plFile.write(QString("year=%1\n").arg(t->value(Qmmp::YEAR)).toLatin1());
+            plFile.write(QString("track=%1\n").arg(t->value(Qmmp::TRACK)).toLatin1());
+            plFile.write(QString("disc=%1\n").arg(t->value(Qmmp::DISCNUMBER)).toLatin1());
+            plFile.write(QString("duration=%1\n").arg(t->duration()).toLatin1());
+            plFile.write(QString("bitrate=%1\n").arg(t->value(Qmmp::BITRATE)).toLatin1());
+            plFile.write(QString("samplerate=%1\n").arg(t->value(Qmmp::SAMPLERATE)).toLatin1());
+            plFile.write(QString("channels=%1\n").arg(t->value(Qmmp::CHANNELS)).toLatin1());
+            plFile.write(QString("bits_per_sample=%1\n").arg(t->value(Qmmp::BITS_PER_SAMPLE)).toLatin1());
+            plFile.write(QString("format_name=%1\n").arg(t->value(Qmmp::FORMAT_NAME)).toLatin1());
+            plFile.write(QString("decoder=%1\n").arg(t->value(Qmmp::DECODER)).toLatin1());
+            plFile.write(QString("file_size=%1\n").arg(t->value(Qmmp::FILE_SIZE)).toLatin1());
         }
     }
     plFile.commit();

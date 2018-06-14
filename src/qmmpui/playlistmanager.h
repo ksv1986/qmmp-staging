@@ -21,6 +21,8 @@
 #define PLAYLISTMANAGER_H
 
 #include <QObject>
+#include <QMap>
+#include <qmmp/qmmp.h>
 #include "playlistheadermodel.h"
 #include "playlistmodel.h"
 #include "qmmpui_export.h"
@@ -263,6 +265,8 @@ private:
     QTimer *m_timer;
     PlayListHeaderModel *m_header;
     QmmpUiSettings *m_ui_settings;
+    QMap<QString, Qmmp::TrackProperty> m_propKeys;
+    QMap<QString, Qmmp::MetaData> m_metaKeys;
 };
 
 #endif // PLAYLISTMANAGER_H

@@ -24,6 +24,7 @@
 #include <QDir>
 #include <QTimer>
 #include <QSettings>
+#include <QMap>
 #include <QSaveFile>
 #include <qmmp/trackinfo.h>
 #include "qmmpuisettings.h"
@@ -44,6 +45,23 @@ PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
     m_timer->setInterval(5000);
     m_timer->setSingleShot(true);
     connect(m_timer, SIGNAL(timeout()), SLOT(writePlayLists()));
+    //key names
+    m_metaKeys.insert("title", Qmmp::TITLE);
+    m_metaKeys.insert("artist", Qmmp::ARTIST);
+    m_metaKeys.insert("albumartist", Qmmp::ALBUMARTIST);
+    m_metaKeys.insert("album", Qmmp::ALBUM);
+    m_metaKeys.insert("comment", Qmmp::COMMENT);
+    m_metaKeys.insert("genre", Qmmp::GENRE);
+    m_metaKeys.insert("composer", Qmmp::COMPOSER);
+    m_metaKeys.insert("year", Qmmp::YEAR);
+    m_metaKeys.insert("track", Qmmp::TRACK);
+    m_metaKeys.insert("disk", Qmmp::DISCNUMBER);
+    m_propKeys.insert("samplerate", Qmmp::SAMPLERATE);
+    m_propKeys.insert("channels", Qmmp::CHANNELS);
+    m_propKeys.insert("bits_per_sample", Qmmp::BITS_PER_SAMPLE);
+    m_propKeys.insert("format_name", Qmmp::FORMAT_NAME);
+    m_propKeys.insert("decoder", Qmmp::DECODER);
+    m_propKeys.insert("file_size", Qmmp::FILE_SIZE);
     readPlayLists(); //read playlists
 }
 
@@ -238,7 +256,9 @@ PlayListHeaderModel *PlayListManager::headerModel()
 
 void PlayListManager::readPlayLists()
 {
-    QString line, param, value;
+    Qmmp::MetaData metaKey;
+    Qmmp::TrackProperty propKey;
+    QString line, key, value;
     int s = 0, current = 0, pl = 0;
     QList <PlayListTrack *> tracks;
     QFile file(Qmmp::configDir() + "/playlist.txt");
@@ -254,12 +274,12 @@ void PlayListManager::readPlayLists()
         if ((s = line.indexOf("=")) < 0)
             continue;
 
-        param = line.left(s);
+        key = line.left(s);
         value = line.right(line.size() - s - 1);
 
-        if(param == "current_playlist")
+        if(key == "current_playlist")
             pl = value.toInt();
-        else if(param == "playlist")
+        else if(key == "playlist")
         {
             if(!m_models.isEmpty() && !tracks.isEmpty())
             {
@@ -270,55 +290,25 @@ void PlayListManager::readPlayLists()
             current = 0;
             m_models << new PlayListModel(value, this);
         }
-        else if (param == "current")
+        else if (key == "current")
         {
             current = value.toInt();
         }
-        else if (param == "file")
+        else if (key == "file")
         {
             tracks << new PlayListTrack();
             tracks.last()->setPath(value);
         }
         else if (tracks.isEmpty())
             continue;
-        else if (param == "title")
-            tracks.last()->setValue(Qmmp::TITLE, value);
-        else if (param == "artist")
-            tracks.last()->setValue(Qmmp::ARTIST, value);
-        else if (param == "albumartist")
-            tracks.last()->setValue(Qmmp::ALBUMARTIST, value);
-        else if (param == "album")
-            tracks.last()->setValue(Qmmp::ALBUM, value);
-        else if (param == "comment")
-            tracks.last()->setValue(Qmmp::COMMENT, value);
-        else if (param == "genre")
-            tracks.last()->setValue(Qmmp::GENRE, value);
-        else if (param == "composer")
-            tracks.last()->setValue(Qmmp::COMPOSER, value);
-        else if (param == "year")
-            tracks.last()->setValue(Qmmp::YEAR, value);
-        else if (param == "track")
-            tracks.last()->setValue(Qmmp::TRACK, value);
-        else if (param == "disc")
-            tracks.last()->setValue(Qmmp::DISCNUMBER, value);
-        else if (param == "duration")
+        else if (key == "duration")
             tracks.last()->setDuration(value.toInt());
-        else if (param == "length")
+        else if (key == "length")
             tracks.last()->setDuration(value.toInt() * 1000);
-        else if (param == "bitrate")
-            tracks.last()->setValue(Qmmp::BITRATE, value);
-        else if (param == "samplerate")
-            tracks.last()->setValue(Qmmp::SAMPLERATE, value);
-        else if (param == "channels")
-            tracks.last()->setValue(Qmmp::CHANNELS, value);
-        else if (param == "bits_per_sample")
-            tracks.last()->setValue(Qmmp::BITS_PER_SAMPLE, value);
-        else if (param == "format_name")
-            tracks.last()->setValue(Qmmp::FORMAT_NAME, value);
-        else if (param == "decoder")
-            tracks.last()->setValue(Qmmp::DECODER, value);
-        else if (param == "file_size")
-            tracks.last()->setValue(Qmmp::FILE_SIZE, value);
+        else if((metaKey = m_metaKeys.value(key, Qmmp::UNKNOWN)) != Qmmp::UNKNOWN)
+            tracks.last()->setValue(metaKey, value);
+        else if((propKey = m_propKeys.value(key, Qmmp::UNKNOWN_PROPERTY)) != Qmmp::UNKNOWN_PROPERTY)
+            tracks.last()->setValue(propKey, value);
     }
     buffer.close();
     if(m_models.isEmpty())
@@ -344,6 +334,7 @@ void PlayListManager::readPlayLists()
 void PlayListManager::writePlayLists()
 {
     qDebug("PlayListManager: saving playlists...");
+    QString value;
     QString plFilePath = Qmmp::configDir() + "/playlist.txt";
     QSaveFile plFile(plFilePath);
     if(!plFile.open(QIODevice::WriteOnly))
@@ -365,24 +356,21 @@ void PlayListManager::writePlayLists()
                 continue;
             PlayListTrack *t = dynamic_cast<PlayListTrack *>(m);
             plFile.write(QString("file=%1\n").arg(t->path()).toUtf8());
-            plFile.write(QString("title=%1\n").arg(t->value(Qmmp::TITLE)).toUtf8());
-            plFile.write(QString("artist=%1\n").arg(t->value(Qmmp::ARTIST)).toUtf8());
-            plFile.write(QString("albumartist=%1\n").arg(t->value(Qmmp::ALBUMARTIST)).toUtf8());
-            plFile.write(QString("album=%1\n").arg(t->value(Qmmp::ALBUM)).toUtf8());
-            plFile.write(QString("comment=%1\n").arg(t->value(Qmmp::COMMENT)).toUtf8());
-            plFile.write(QString("genre=%1\n").arg(t->value(Qmmp::GENRE)).toUtf8());
-            plFile.write(QString("composer=%1\n").arg(t->value(Qmmp::COMPOSER)).toUtf8());
-            plFile.write(QString("year=%1\n").arg(t->value(Qmmp::YEAR)).toLatin1());
-            plFile.write(QString("track=%1\n").arg(t->value(Qmmp::TRACK)).toLatin1());
-            plFile.write(QString("disc=%1\n").arg(t->value(Qmmp::DISCNUMBER)).toLatin1());
-            plFile.write(QString("duration=%1\n").arg(t->duration()).toLatin1());
-            plFile.write(QString("bitrate=%1\n").arg(t->value(Qmmp::BITRATE)).toLatin1());
-            plFile.write(QString("samplerate=%1\n").arg(t->value(Qmmp::SAMPLERATE)).toLatin1());
-            plFile.write(QString("channels=%1\n").arg(t->value(Qmmp::CHANNELS)).toLatin1());
-            plFile.write(QString("bits_per_sample=%1\n").arg(t->value(Qmmp::BITS_PER_SAMPLE)).toLatin1());
-            plFile.write(QString("format_name=%1\n").arg(t->value(Qmmp::FORMAT_NAME)).toLatin1());
-            plFile.write(QString("decoder=%1\n").arg(t->value(Qmmp::DECODER)).toLatin1());
-            plFile.write(QString("file_size=%1\n").arg(t->value(Qmmp::FILE_SIZE)).toLatin1());
+
+            foreach(Qmmp::MetaData metaKey, m_metaKeys.values())
+            {
+                if(!(value = t->value(metaKey)).isEmpty())
+                    plFile.write(QString("%1=%2\n").arg(m_metaKeys.key(metaKey)).arg(value).toUtf8());
+            }
+
+            foreach(Qmmp::TrackProperty propKey, m_propKeys.values())
+            {
+                if(!(value = t->value(propKey)).isEmpty())
+                    plFile.write(QString("%1=%2\n").arg(m_propKeys.key(propKey)).arg(value).toLatin1());
+            }
+
+            if(t->duration() > 0)
+                plFile.write(QString("duration=%1\n").arg(t->duration()).toLatin1());
         }
     }
     plFile.commit();

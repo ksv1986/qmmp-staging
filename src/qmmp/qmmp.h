@@ -80,6 +80,7 @@ public:
      */
     enum TrackProperty
     {
+        UNKNOWN_PROPERTY = -1,
         BITRATE = 0,
         SAMPLERATE,
         CHANNELS,

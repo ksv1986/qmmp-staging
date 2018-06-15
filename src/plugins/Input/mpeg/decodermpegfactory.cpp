@@ -305,7 +305,7 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
         info->setValue(Qmmp::BITRATE, fileRef.audioProperties()->bitrate());
         info->setValue(Qmmp::SAMPLERATE, fileRef.audioProperties()->sampleRate());
         info->setValue(Qmmp::CHANNELS, fileRef.audioProperties()->channels());
-        info->setValue(Qmmp::BITS_PER_SAMPLE, 16);
+        info->setValue(Qmmp::BITS_PER_SAMPLE, 32); //float
         switch(fileRef.audioProperties()->version())
         {
         case TagLib::MPEG::Header::Version1:

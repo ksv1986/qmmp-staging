@@ -82,7 +82,7 @@ QList<TrackInfo *> DecoderWavPackFactory::createPlayList(const QString &path, Tr
     int cue_len = 0;
 
 #if defined(Q_OS_WIN) && defined(OPEN_FILE_UTF8)
-    WavpackContext *ctx = WavpackOpenFileInput (fileName.toUtf8().constData(),
+    WavpackContext *ctx = WavpackOpenFileInput (path.toUtf8().constData(),
                                                 err, OPEN_WVC | OPEN_TAGS | OPEN_FILE_UTF8, 0);
 #else
     WavpackContext *ctx = WavpackOpenFileInput (path.toLocal8Bit().constData(),

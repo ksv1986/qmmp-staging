@@ -75,7 +75,7 @@ do
     echo "" >> ${TX_CONFIG}
 done
 
-for RESOURCE_NAME in qmmp qmmp_dir qmmp_enqueue
+for RESOURCE_NAME in qmmp qmmp-dir qmmp-enqueue
 do
     echo "[${PROJECT_NAME}.${RESOURCE_NAME}-desktop]" >> ${TX_CONFIG}
     echo "file_filter = src/app/desktop-translations/${RESOURCE_NAME}_<lang>.desktop.in" >> ${TX_CONFIG}

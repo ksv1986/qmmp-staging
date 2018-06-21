@@ -427,15 +427,15 @@ source_lang = en
 source_file = src/app/qmmp.desktop
 type = DESKTOP
 
-[qmmp.qmmp_dir-desktop]
-file_filter = src/app/desktop-translations/qmmp_dir_<lang>.desktop.in
+[qmmp.qmmp-dir-desktop]
+file_filter = src/app/desktop-translations/qmmp-dir_<lang>.desktop.in
 source_lang = en
-source_file = src/app/qmmp_dir.desktop
+source_file = src/app/qmmp-dir.desktop
 type = DESKTOP
 
-[qmmp.qmmp_enqueue-desktop]
-file_filter = src/app/desktop-translations/qmmp_enqueue_<lang>.desktop.in
+[qmmp.qmmp-enqueue-desktop]
+file_filter = src/app/desktop-translations/qmmp-enqueue_<lang>.desktop.in
 source_lang = en
-source_file = src/app/qmmp_enqueue.desktop
+source_file = src/app/qmmp-enqueue.desktop
 type = DESKTOP
 

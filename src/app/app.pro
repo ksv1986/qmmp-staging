@@ -24,8 +24,8 @@ unix {
     QMAKE_LIBDIR += ../../lib
     target.path = /bin
     desktop.files = qmmp.desktop \
-        qmmp_enqueue.desktop \
-        qmmp_dir.desktop
+        qmmp-enqueue.desktop \
+        qmmp-dir.desktop
     desktop.path = /share/applications
     icon16.files = images/16x16/qmmp.png
     icon32.files = images/32x32/qmmp.png

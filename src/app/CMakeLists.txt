@@ -41,6 +41,6 @@ install(FILES images/48x48/qmmp.png DESTINATION share/icons/hicolor/48x48/apps)
 install(FILES images/scalable/qmmp.svgz images/scalable/qmmp-simple.svgz DESTINATION share/icons/hicolor/scalable/apps)
 
 IF(USE_DIR_ASSOC)
-install(FILES qmmp_enqueue.desktop DESTINATION share/applications)
-install(FILES qmmp_dir.desktop DESTINATION share/applications)
+install(FILES qmmp-enqueue.desktop DESTINATION share/applications)
+install(FILES qmmp-dir.desktop DESTINATION share/applications)
 ENDIF(USE_DIR_ASSOC)

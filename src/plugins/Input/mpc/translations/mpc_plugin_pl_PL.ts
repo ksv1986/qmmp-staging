@@ -14,17 +14,17 @@
         <translation>Pliki Musepack</translation>
     </message>
     <message>
-        <location filename="../decodermpcfactory.cpp" line="119"/>
+        <location filename="../decodermpcfactory.cpp" line="118"/>
         <source>About Musepack Audio Plugin</source>
         <translation>O wtyczce Musepack Audio</translation>
     </message>
     <message>
-        <location filename="../decodermpcfactory.cpp" line="120"/>
+        <location filename="../decodermpcfactory.cpp" line="119"/>
         <source>Qmmp Musepack Audio Plugin</source>
         <translation>Wtyczka Musepack Audio dla Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodermpcfactory.cpp" line="121"/>
+        <location filename="../decodermpcfactory.cpp" line="120"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

@@ -14,22 +14,22 @@
         <translation>Αρχεία Midi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="109"/>
+        <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>About WildMidi Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου WildMidi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="110"/>
+        <location filename="../decoderwildmidifactory.cpp" line="108"/>
         <source>Qmmp WildMidi Audio Plugin</source>
         <translation>Qmmp πρόσθετο ήχου WildMidi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="111"/>
+        <location filename="../decoderwildmidifactory.cpp" line="109"/>
         <source>This plugin uses WildMidi library to play midi files</source>
         <translation>Αυτό το πρόσθετο χρησιμοποιεί τη βιβλιοθήκη WildMidi για την αναπαραγωγή αρχείων midi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="112"/>
+        <location filename="../decoderwildmidifactory.cpp" line="110"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

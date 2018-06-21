@@ -14,42 +14,42 @@
         <translation>ModPlug bylos</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="119"/>
+        <location filename="../decodermodplugfactory.cpp" line="136"/>
         <source>About ModPlug Audio Plugin</source>
         <translation>Apie ModPlug audio įskiepį</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="120"/>
+        <location filename="../decodermodplugfactory.cpp" line="137"/>
         <source>Qmmp ModPlug Audio Plugin</source>
         <translation>Qmmp ModPlug audio įskiepis</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="121"/>
+        <location filename="../decodermodplugfactory.cpp" line="138"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Sukūrė: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="122"/>
+        <location filename="../decodermodplugfactory.cpp" line="139"/>
         <source>Based on the Modplug Plugin for Xmms</source>
         <translation>Sukurta Xmms Modplug įskiepio pagrindu</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="123"/>
+        <location filename="../decodermodplugfactory.cpp" line="140"/>
         <source>Modplug Plugin developers:</source>
         <translation>Modplug įskiepio kūrėjai:</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="124"/>
+        <location filename="../decodermodplugfactory.cpp" line="141"/>
         <source>Olivier Lapicque &lt;olivierl@jps.net&gt;</source>
         <translation>Olivier Lapicque &lt;olivierl@jps.net&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="125"/>
+        <location filename="../decodermodplugfactory.cpp" line="142"/>
         <source>Kenton Varda &lt;temporal@gauge3d.org&gt;</source>
         <translation>Kenton Varda &lt;temporal@gauge3d.org&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="126"/>
+        <location filename="../decodermodplugfactory.cpp" line="143"/>
         <source>Konstanty Bialkowski &lt;konstanty@ieee.org&gt;</source>
         <translation>Konstanty Bialkowski &lt;konstanty@ieee.org&gt;</translation>
     </message>
@@ -62,49 +62,49 @@
         <translation>Bylos pavadinimas</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="142"/>
+        <location filename="../modplugmetadatamodel.cpp" line="73"/>
         <source>Type</source>
         <translation>Tipas</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="147"/>
+        <location filename="../modplugmetadatamodel.cpp" line="77"/>
         <source>Length</source>
         <translation>Trukmė</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="148"/>
+        <location filename="../modplugmetadatamodel.cpp" line="78"/>
         <source>Speed</source>
         <translation>Greitis</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="149"/>
+        <location filename="../modplugmetadatamodel.cpp" line="79"/>
         <source>Tempo</source>
         <translation>Tempas</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="150"/>
-        <location filename="../modplugmetadatamodel.cpp" line="171"/>
+        <location filename="../modplugmetadatamodel.cpp" line="80"/>
+        <location filename="../modplugmetadatamodel.cpp" line="101"/>
         <source>Samples</source>
         <translation>Pavyzdžiai</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="151"/>
-        <location filename="../modplugmetadatamodel.cpp" line="180"/>
+        <location filename="../modplugmetadatamodel.cpp" line="81"/>
+        <location filename="../modplugmetadatamodel.cpp" line="110"/>
         <source>Instruments</source>
         <translation>Instrumentai</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="152"/>
+        <location filename="../modplugmetadatamodel.cpp" line="82"/>
         <source>Patterns</source>
         <translation>Pavyzdžiai</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="153"/>
+        <location filename="../modplugmetadatamodel.cpp" line="83"/>
         <source>Channels</source>
         <translation>Kanalai</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="185"/>
+        <location filename="../modplugmetadatamodel.cpp" line="115"/>
         <source>Comment</source>
         <translation>Komentaras</translation>
     </message>

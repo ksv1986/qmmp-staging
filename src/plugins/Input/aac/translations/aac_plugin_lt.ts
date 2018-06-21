@@ -52,17 +52,17 @@
         <translation>AAC bylos</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="83"/>
+        <location filename="../decoderaacfactory.cpp" line="103"/>
         <source>About AAC Audio Plugin</source>
         <translation>Apie AAC išvesties įrenginį</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="84"/>
+        <location filename="../decoderaacfactory.cpp" line="104"/>
         <source>Qmmp AAC Audio Plugin</source>
         <translation>Qmmp AAC įskiepis</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="85"/>
+        <location filename="../decoderaacfactory.cpp" line="105"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Sukūrė: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

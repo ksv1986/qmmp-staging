@@ -57,22 +57,22 @@
         <translation>Archives</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="140"/>
+        <location filename="../decoderarchivefactory.cpp" line="150"/>
         <source>About Archive Reader Plugin</source>
         <translation>À propos du plugin de lecture des archives</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="141"/>
+        <location filename="../decoderarchivefactory.cpp" line="151"/>
         <source>Qmmp Archive Reader Plugin</source>
         <translation>Plugin Qmmp de lecture des archives</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="142"/>
+        <location filename="../decoderarchivefactory.cpp" line="152"/>
         <source>Compiled against %1</source>
         <translation>Compilé avec la mauvaise version %1</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="143"/>
+        <location filename="../decoderarchivefactory.cpp" line="153"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

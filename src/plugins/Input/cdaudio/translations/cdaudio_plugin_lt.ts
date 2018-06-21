@@ -9,27 +9,27 @@
         <translation>CD Audio Įskiepis</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="86"/>
+        <location filename="../decodercdaudiofactory.cpp" line="85"/>
         <source>About CD Audio Plugin</source>
         <translation>Apie CD Audio įskiepį</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="87"/>
+        <location filename="../decodercdaudiofactory.cpp" line="86"/>
         <source>Qmmp CD Audio Plugin</source>
         <translation>Apie CD Audio Qmmp įskiepį</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="88"/>
+        <location filename="../decodercdaudiofactory.cpp" line="87"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
         <translation>Sukompiliuota su libcdio-%1 ir libcddb-%2</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="90"/>
+        <location filename="../decodercdaudiofactory.cpp" line="89"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Sukūrė: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="91"/>
+        <location filename="../decodercdaudiofactory.cpp" line="90"/>
         <source>Usage: open cdda:/// using Add URL dialog or command line</source>
         <translation>Naudojimas: atverti cdda:/// naudojant Prideti interneto adresą arba komandinė eilutę</translation>
     </message>

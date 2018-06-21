@@ -52,17 +52,17 @@
         <translation>Αρχεία AAC</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="83"/>
+        <location filename="../decoderaacfactory.cpp" line="103"/>
         <source>About AAC Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου AAC</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="84"/>
+        <location filename="../decoderaacfactory.cpp" line="104"/>
         <source>Qmmp AAC Audio Plugin</source>
         <translation>Πρόσθετο ήχου AAC Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="85"/>
+        <location filename="../decoderaacfactory.cpp" line="105"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

@@ -16,7 +16,7 @@
         <translation>エラーです</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="176"/>
+        <location filename="../converter.cpp" line="179"/>
         <source>Converting</source>
         <translation>転換しています</translation>
     </message>

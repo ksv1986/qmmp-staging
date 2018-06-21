@@ -52,17 +52,17 @@
         <translation>ААЦ фајлови</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="83"/>
+        <location filename="../decoderaacfactory.cpp" line="103"/>
         <source>About AAC Audio Plugin</source>
         <translation>О ААЦ прикључку</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="84"/>
+        <location filename="../decoderaacfactory.cpp" line="104"/>
         <source>Qmmp AAC Audio Plugin</source>
         <translation>Кумп ААЦ прикључак</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="85"/>
+        <location filename="../decoderaacfactory.cpp" line="105"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Аутор: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

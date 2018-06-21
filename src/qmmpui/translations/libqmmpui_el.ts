@@ -729,62 +729,62 @@
         <translation>Σύνοψη</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="133"/>
+        <location filename="../detailsdialog.cpp" line="134"/>
         <source>%1/%2</source>
         <translation>%1/%2</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="152"/>
+        <location filename="../detailsdialog.cpp" line="153"/>
         <source>Cover</source>
         <translation>Εξώφυλλο</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="186"/>
+        <location filename="../detailsdialog.cpp" line="187"/>
         <source>Title</source>
         <translation>Τίτλος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="187"/>
+        <location filename="../detailsdialog.cpp" line="188"/>
         <source>Artist</source>
         <translation>Καλλιτέχνης</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="188"/>
+        <location filename="../detailsdialog.cpp" line="189"/>
         <source>Album artist</source>
         <translation>Καλλιτέχνης άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="189"/>
+        <location filename="../detailsdialog.cpp" line="190"/>
         <source>Album</source>
         <translation>Άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="190"/>
+        <location filename="../detailsdialog.cpp" line="191"/>
         <source>Comment</source>
         <translation>Σχόλιο</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="191"/>
+        <location filename="../detailsdialog.cpp" line="192"/>
         <source>Genre</source>
         <translation>Είδος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="192"/>
+        <location filename="../detailsdialog.cpp" line="193"/>
         <source>Composer</source>
         <translation>Συνθέτης</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="194"/>
+        <location filename="../detailsdialog.cpp" line="195"/>
         <source>Year</source>
         <translation>Έτος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="196"/>
+        <location filename="../detailsdialog.cpp" line="197"/>
         <source>Track</source>
         <translation>Κομμάτι</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="198"/>
+        <location filename="../detailsdialog.cpp" line="199"/>
         <source>Disc number</source>
         <translation>Αριθμός δίσκου</translation>
     </message>
@@ -957,8 +957,8 @@
 <context>
     <name>PlayListManager</name>
     <message>
-        <location filename="../playlistmanager.cpp" line="152"/>
-        <location filename="../playlistmanager.cpp" line="309"/>
+        <location filename="../playlistmanager.cpp" line="171"/>
+        <location filename="../playlistmanager.cpp" line="316"/>
         <source>Playlist</source>
         <translation>Λίστα αναπαραγωγής</translation>
     </message>
@@ -966,12 +966,12 @@
 <context>
     <name>PlayListTrack</name>
     <message>
-        <location filename="../playlisttrack.cpp" line="274"/>
+        <location filename="../playlisttrack.cpp" line="249"/>
         <source>Streams</source>
         <translation>Ροές</translation>
     </message>
     <message>
-        <location filename="../playlisttrack.cpp" line="279"/>
+        <location filename="../playlisttrack.cpp" line="254"/>
         <source>Empty group</source>
         <translation>Κενή ομάδα</translation>
     </message>

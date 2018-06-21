@@ -14,17 +14,17 @@
         <translation>Soubory FLAC</translation>
     </message>
     <message>
-        <location filename="../decoderflacfactory.cpp" line="186"/>
+        <location filename="../decoderflacfactory.cpp" line="212"/>
         <source>About FLAC Audio Plugin</source>
         <translation>O modulu FLAC</translation>
     </message>
     <message>
-        <location filename="../decoderflacfactory.cpp" line="187"/>
+        <location filename="../decoderflacfactory.cpp" line="213"/>
         <source>Qmmp FLAC Audio Plugin</source>
         <translation>Vstupní modul Qmmp FLAC</translation>
     </message>
     <message>
-        <location filename="../decoderflacfactory.cpp" line="188"/>
+        <location filename="../decoderflacfactory.cpp" line="214"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

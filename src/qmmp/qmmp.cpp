@@ -25,10 +25,8 @@
 #include <QFile>
 #include <QByteArray>
 
-#ifndef LIB_DIR
-#define LIB_DIR "/lib"
-#endif
-
+#define STR_HELPER(x) #x
+#define STR(x) STR_HELPER(x)
 #define DEV_SUFFIX "dev"
 
 #include "qmmp.h"
@@ -87,15 +85,12 @@ const QString Qmmp::pluginsPath()
     QByteArray path = qgetenv("QMMP_PLUGINS");
     if (!path.isEmpty())
        return path;
-#ifdef QMMP_INSTALL_PREFIX
-    QDir dir(QMMP_INSTALL_PREFIX "/" LIB_DIR "/qmmp");
-    //qDebug(QMMP_INSTALL_PREFIX"/"LIB_DIR"/qmmp");
-#else
-#if defined(Q_OS_WIN) && !defined(Q_OS_CYGWIN)
+#ifdef QMMP_PLUGIN_DIR
+    QDir dir(QMMP_PLUGIN_DIR "/" STR(QMMP_VERSION_MAJOR) "." STR(QMMP_VERSION_MINOR));
+#elif defined(Q_OS_WIN) && !defined(Q_OS_CYGWIN)
     QDir dir(qApp->applicationDirPath() + "/plugins");
 #else
-    QDir dir(qApp->applicationDirPath() + "/../" LIB_DIR "/qmmp");
-#endif
+    QDir dir(qApp->applicationDirPath() + "/../lib/qmmp-" STR(QMMP_VERSION_MAJOR) "." STR(QMMP_VERSION_MINOR));
 #endif
     return dir.canonicalPath();
 }

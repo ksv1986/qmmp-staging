@@ -39,4 +39,4 @@ ADD_LIBRARY(oss MODULE ${liboss_SRCS} ${liboss_UIS_H}
   ${liboss_RCC_SRCS} ${liboss_HDRS})
 add_dependencies(oss qmmp)
 target_link_libraries(oss Qt5::Widgets -lqmmp)
-install(TARGETS oss DESTINATION ${LIB_DIR}/qmmp/Output)
+install(TARGETS oss DESTINATION ${PLUGIN_DIR}/Output)

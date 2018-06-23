@@ -29,6 +29,6 @@ IF(WINDOWS_H_FOUND)
 ADD_LIBRARY(waveout MODULE ${libwaveout_SRCS} ${libwaveout_RCC_SRCS} ${libwaveout_HDRS})
 add_dependencies(waveout qmmp)
 target_link_libraries(waveout Qt5::Widgets -lqmmp -lwinmm)
-install(TARGETS waveout DESTINATION ${LIB_DIR}/qmmp/Output)
+install(TARGETS waveout DESTINATION ${PLUGIN_DIR}/Output)
 ENDIF(WINDOWS_H_FOUND)
 

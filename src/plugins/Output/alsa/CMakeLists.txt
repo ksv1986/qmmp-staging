@@ -37,6 +37,6 @@ IF(ALSA_FOUND)
 ADD_LIBRARY(alsa MODULE ${libalsa_SRCS} ${libalsa_UIS_H} ${libalsa_RCC_SRCS})
 add_dependencies(alsa qmmp)
 target_link_libraries(alsa Qt5::Widgets -lqmmp ${ALSA_LDFLAGS})
-install(TARGETS alsa DESTINATION ${LIB_DIR}/qmmp/Output)
+install(TARGETS alsa DESTINATION ${PLUGIN_DIR}/Output)
 ENDIF(ALSA_FOUND)
 

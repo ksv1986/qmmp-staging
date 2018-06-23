@@ -33,5 +33,5 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 ADD_LIBRARY(mplayer MODULE ${libmplayer_SRCS} ${libmplayer_RCC_SRCS} ${libmplayer_UIS_H})
 add_dependencies(mplayer qmmp)
 target_link_libraries(mplayer Qt5::Widgets -lqmmp)
-install(TARGETS mplayer DESTINATION ${LIB_DIR}/qmmp/Engines)
+install(TARGETS mplayer DESTINATION ${PLUGIN_DIR}/Engines)
 

@@ -42,5 +42,5 @@ ADD_LIBRARY(bs2b MODULE ${libbs2b_SRCS} ${libbs2b_UIS_H}
   ${libbs2b_RCC_SRCS} ${libbs2b_HDRS})
 add_dependencies(bs2b qmmp)
 target_link_libraries(bs2b Qt5::Widgets -lqmmp ${BS2B_LDFLAGS})
-install(TARGETS bs2b DESTINATION ${LIB_DIR}/qmmp/Effect)
+install(TARGETS bs2b DESTINATION ${PLUGIN_DIR}/Effect)
 ENDIF(BS2B_FOUND)

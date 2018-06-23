@@ -51,5 +51,5 @@ target_link_libraries(http Qt5::Widgets -lqmmp ${CURL_LDFLAGS})
 ENDIF(USE_ENCA AND ENCA_FOUND)
 
 add_dependencies(http qmmp)
-install(TARGETS http DESTINATION ${LIB_DIR}/qmmp/Transports)
+install(TARGETS http DESTINATION ${PLUGIN_DIR}/Transports)
 ENDIF(CURL_FOUND)

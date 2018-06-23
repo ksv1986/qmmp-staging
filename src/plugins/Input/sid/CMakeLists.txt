@@ -47,5 +47,5 @@ ADD_LIBRARY(sid MODULE ${libsid_SRCS} ${libsid_UIS_H}
   ${libsid_RCC_SRCS} ${libsid_HDRS})
 add_dependencies(sid qmmp)
 target_link_libraries(sid Qt5::Widgets -lqmmp ${SIDPLAYFP_LDFLAGS})
-install(TARGETS sid DESTINATION ${LIB_DIR}/qmmp/Input)
+install(TARGETS sid DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(SIDPLAYFP_FOUND)

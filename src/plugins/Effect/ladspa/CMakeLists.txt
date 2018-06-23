@@ -38,5 +38,5 @@ ADD_LIBRARY(ladspa MODULE ${libladspa_SRCS} ${libladspa_UIS_H}
   ${libladspa_RCC_SRCS} ${libladspa_HDRS})
 add_dependencies(ladspa qmmp)
 target_link_libraries(ladspa Qt5::Widgets -lqmmp ${CMAKE_DL_LIBS})
-install(TARGETS ladspa DESTINATION ${LIB_DIR}/qmmp/Effect)
+install(TARGETS ladspa DESTINATION ${PLUGIN_DIR}/Effect)
 

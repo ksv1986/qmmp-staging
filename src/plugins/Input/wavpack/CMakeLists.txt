@@ -35,6 +35,6 @@ IF(WAVPACK_FOUND)
 ADD_LIBRARY(wavpack MODULE ${libwavpack_SRCS} ${libwavpack_RCC_SRCS} ${libwavpack_HDRS})
 add_dependencies(wavpack qmmp)
 target_link_libraries(wavpack Qt5::Widgets -lqmmp ${WAVPACK_LDFLAGS})
-install(TARGETS wavpack DESTINATION ${LIB_DIR}/qmmp/Input)
+install(TARGETS wavpack DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(WAVPACK_FOUND)
 

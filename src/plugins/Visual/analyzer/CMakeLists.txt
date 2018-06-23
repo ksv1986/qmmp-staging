@@ -39,4 +39,4 @@ ADD_LIBRARY(analyzer MODULE ${libanalyzer_SRCS} ${libanalyzer_UIS_H}
   ${libanalyzer_RCC_SRCS} ${libanalyzer_HDRS})
 add_dependencies(analyzer qmmp)
 target_link_libraries(analyzer Qt5::Widgets -lqmmp)
-install(TARGETS analyzer DESTINATION ${LIB_DIR}/qmmp/Visual)
+install(TARGETS analyzer DESTINATION ${PLUGIN_DIR}/Visual)

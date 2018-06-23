@@ -24,4 +24,4 @@ ADD_LIBRARY(playlistoption MODULE ${libplaylistoption_SRCS}
            ${libplaylistoption_RCC_SRCS})
 add_dependencies(playlistoption qmmpui)
 target_link_libraries(playlistoption Qt5::Widgets -lqmmpui -lqmmp)
-install(TARGETS playlistoption DESTINATION ${LIB_DIR}/qmmp/CommandLineOptions)
+install(TARGETS playlistoption DESTINATION ${PLUGIN_DIR}/CommandLineOptions)

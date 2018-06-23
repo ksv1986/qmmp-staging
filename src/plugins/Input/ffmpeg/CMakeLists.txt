@@ -51,5 +51,5 @@ ADD_LIBRARY(ffmpeg MODULE ${libffmpeg_SRCS} ${libffmpeg_UIS_H}
   ${libffmpeg_RCC_SRCS} ${libffmpeg_HDRS})
 add_dependencies(ffmpeg qmmp)
 target_link_libraries(ffmpeg Qt5::Widgets -lqmmp ${FFMPEG_LDFLAGS})
-install(TARGETS ffmpeg DESTINATION ${LIB_DIR}/qmmp/Input)
+install(TARGETS ffmpeg DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(FFMPEG_FOUND)

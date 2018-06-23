@@ -43,5 +43,5 @@ ADD_LIBRARY(cdaudio MODULE ${libcdaudio_SRCS} ${libcdaudio_UIS_H} ${libcdaudio_R
 ${libcdaudio_HDRS})
 add_dependencies(cdaudio qmmp)
 target_link_libraries(cdaudio Qt5::Widgets -lqmmp ${CDIO_LDFLAGS})
-install(TARGETS cdaudio DESTINATION ${LIB_DIR}/qmmp/Input)
+install(TARGETS cdaudio DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(CDIO_FOUND)

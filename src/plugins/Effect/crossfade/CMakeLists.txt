@@ -36,4 +36,4 @@ ADD_LIBRARY(crossfade MODULE ${libcrossfade_SRCS} ${libcrossfade_UIS_H} ${libcro
 ${libcrossfade_HDRS})
 add_dependencies(crossfade qmmp)
 target_link_libraries(crossfade Qt5::Widgets -lqmmp)
-install(TARGETS crossfade DESTINATION ${LIB_DIR}/qmmp/Effect)
+install(TARGETS crossfade DESTINATION ${PLUGIN_DIR}/Effect)

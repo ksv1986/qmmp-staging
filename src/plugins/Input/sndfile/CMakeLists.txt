@@ -35,7 +35,7 @@ ADD_LIBRARY(sndfile MODULE ${libsndfile_SRCS} ${libsndfile_UIS_H}
   ${libsndfile_RCC_SRCS} ${libsndfile_HDRS})
 add_dependencies(sndfile qmmp)
 target_link_libraries(sndfile Qt5::Widgets -lqmmp ${SNDFILE_LDFLAGS})
-install(TARGETS sndfile DESTINATION ${LIB_DIR}/qmmp/Input)
+install(TARGETS sndfile DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(SNDFILE_FOUND)
 
 

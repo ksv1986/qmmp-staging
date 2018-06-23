@@ -37,4 +37,4 @@ ADD_LIBRARY(covermanager MODULE ${libcovermanager_SRCS} ${libcovermanager_UIS_H}
   ${libcovermanager_RCC_SRCS})
 add_dependencies(covermanager qmmpui)
 target_link_libraries(covermanager Qt5::Widgets -lqmmpui -lqmmp)
-install(TARGETS covermanager DESTINATION ${LIB_DIR}/qmmp/General)
+install(TARGETS covermanager DESTINATION ${PLUGIN_DIR}/General)

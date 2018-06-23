@@ -27,7 +27,7 @@ contains(CONFIG, WITH_ENCA){
 unix {
     LIBS += -L/usr/lib
     PKGCONFIG += libcurl
-    target.path = $$LIB_DIR/qmmp/Transports
+    target.path = $$PLUGIN_DIR/Transports
     INSTALLS += target
 }
 win32 {

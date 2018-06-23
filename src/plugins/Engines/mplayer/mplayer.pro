@@ -16,5 +16,5 @@ FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc
 
-target.path = $$LIB_DIR/qmmp/Engines
+target.path = $$PLUGIN_DIR/Engines
 INSTALLS += target

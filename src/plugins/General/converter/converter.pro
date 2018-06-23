@@ -23,6 +23,6 @@ LIBS += $$QMMPUI_LIB
 PKGCONFIG += taglib
 
 unix{
-    target.path = $$LIB_DIR/qmmp/General
+    target.path = $$PLUGIN_DIR/General
     INSTALLS += target
 }

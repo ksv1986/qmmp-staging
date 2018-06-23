@@ -9,6 +9,6 @@ HEADERS += plsplaylistformat.h
 LIBS += $$QMMPUI_LIB
 
 unix {
-    target.path = $$LIB_DIR/qmmp/PlayListFormats
+    target.path = $$PLUGIN_DIR/PlayListFormats
     INSTALLS += target
 }

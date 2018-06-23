@@ -17,7 +17,7 @@ FORMS += settingsdialog.ui
 RESOURCES = translations/translations.qrc
 
 unix {
-    target.path = $$LIB_DIR/qmmp/Output
+    target.path = $$PLUGIN_DIR/Output
     INSTALLS += target
     PKGCONFIG += ogg vorbis vorbisenc shout soxr
 }

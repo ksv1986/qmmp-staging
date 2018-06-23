@@ -16,7 +16,7 @@ SOURCES += decoder_wavpack.cpp \
 RESOURCES = translations/translations.qrc
 
 unix {
-    target.path = $$LIB_DIR/qmmp/Input
+    target.path = $$PLUGIN_DIR/Input
     INSTALLS += target
     PKGCONFIG += wavpack
 }

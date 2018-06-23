@@ -21,7 +21,7 @@ RESOURCES = translations/translations.qrc
 DEFINES += __STDC_CONSTANT_MACROS
 
 unix {
-    target.path = $$LIB_DIR/qmmp/Input
+    target.path = $$PLUGIN_DIR/Input
     INSTALLS += target
     PKGCONFIG += libavcodec libavformat libavutil
 }

@@ -24,5 +24,5 @@ RESOURCES = translations/translations.qrc
 LIBS += -L/usr/lib -I/usr/include
 linux-g++|linux-g++-32|linux-g++-64:LIBS += -ldl
 
-target.path = $$LIB_DIR/qmmp/Effect
+target.path = $$PLUGIN_DIR/Effect
 INSTALLS += target

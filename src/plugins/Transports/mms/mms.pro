@@ -21,7 +21,7 @@ RESOURCES = translations/translations.qrc
 LIBS += -L/usr/lib
 PKGCONFIG += libmms
 
-target.path = $$LIB_DIR/qmmp/Transports
+target.path = $$PLUGIN_DIR/Transports
 INSTALLS += target
 
 QMAKE_CFLAGS_ISYSTEM='' #removes "-isystem /usr/include"  provided by libmms.pc

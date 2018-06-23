@@ -80,7 +80,7 @@ RESOURCES += translations/translations.qrc resources/qsui_resources.qrc txt/qsui
 LIBS += $$QMMPUI_LIB
 
 unix {
-  target.path = $$LIB_DIR/qmmp/Ui
+  target.path = $$PLUGIN_DIR/Ui
   INSTALLS += target
 }
 

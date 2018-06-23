@@ -20,7 +20,7 @@ RESOURCES = notifier_images.qrc \
 LIBS += $$QMMPUI_LIB
 
 unix {
-  target.path = $$LIB_DIR/qmmp/General
+  target.path = $$PLUGIN_DIR/General
   INSTALLS += target
   PKGCONFIG += x11
   QT += x11extras

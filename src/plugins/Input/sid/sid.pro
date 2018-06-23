@@ -17,7 +17,7 @@ RESOURCES = translations/translations.qrc
 FORMS += settingsdialog.ui
 
 unix{
-    target.path = $$LIB_DIR/qmmp/Input
+    target.path = $$PLUGIN_DIR/Input
     INSTALLS += target
     PKGCONFIG += libsidplayfp
 }

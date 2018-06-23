@@ -17,6 +17,6 @@ SOURCES += outputqtmultimediafactory.cpp \
 RESOURCES = translations/translations.qrc
 
 unix {
-    target.path = $$LIB_DIR/qmmp/Output
+    target.path = $$PLUGIN_DIR/Output
     INSTALLS += target
 }

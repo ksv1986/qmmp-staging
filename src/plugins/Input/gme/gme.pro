@@ -17,7 +17,7 @@ FORMS += settingsdialog.ui
 RESOURCES = translations/translations.qrc
 
 unix{
-    target.path = $$LIB_DIR/qmmp/Input
+    target.path = $$PLUGIN_DIR/Input
     INSTALLS += target
     LIBS += -L/usr/lib \
       -L/usr/local/lib \

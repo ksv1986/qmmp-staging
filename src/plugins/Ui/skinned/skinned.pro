@@ -122,7 +122,7 @@ RESOURCES = resources/resources.qrc \
 LIBS += $$QMMPUI_LIB
 
 unix {
-    target.path = $$LIB_DIR/qmmp/Ui
+    target.path = $$PLUGIN_DIR/Ui
     INSTALLS += target
     PKGCONFIG += x11
     DEFINES += QMMP_WS_X11

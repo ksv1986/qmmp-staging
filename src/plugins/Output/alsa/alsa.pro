@@ -15,5 +15,5 @@ RESOURCES = translations/translations.qrc
 
 PKGCONFIG += alsa
 
-target.path = $$LIB_DIR/qmmp/Output
+target.path = $$PLUGIN_DIR/Output
 INSTALLS += target

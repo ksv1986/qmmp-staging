@@ -14,7 +14,7 @@ win32 : LIBS += -lqmmpui0 -lqmmp0
 
 RESOURCES = translations/translations.qrc
 unix {
-    target.path = $$LIB_DIR/qmmp/General
+    target.path = $$PLUGIN_DIR/General
     INSTALLS += target
 }
 HEADERS += trackchangefactory.h \

@@ -88,7 +88,6 @@ VERSION = $$QMMP_VERSION
 DEFINES += QMMP_LIBRARY
 
 unix {
-  isEmpty(LIB_DIR):LIB_DIR = /lib
   DEFINES += LIB_DIR=\\\"$$LIB_DIR\\\"
   SVN_REVISION = $$system(./svn_revision.sh)
   !isEmpty(SVN_REVISION) {
@@ -138,7 +137,7 @@ unix {
         volume.h \
         qmmp_export.h
 
-    devel.path = /include/qmmp
+    devel.path = $$PREFIX/include/qmmp
     INSTALLS += target \
         devel
     DESTDIR = .

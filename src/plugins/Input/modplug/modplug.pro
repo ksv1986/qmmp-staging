@@ -22,7 +22,7 @@ DEFINES += HAVE_STDINT_H \
     HAVE_INTTYPES_H
 
 unix {
-    target.path = $$LIB_DIR/qmmp/Input
+    target.path = $$PLUGIN_DIR/Input
     INSTALLS += target
     PKGCONFIG += libmodplug
 }

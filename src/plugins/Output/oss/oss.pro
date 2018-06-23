@@ -16,5 +16,5 @@ RESOURCES = translations/translations.qrc
 
 DEFINES += HAVE_SYS_SOUNDCARD_H
 
-target.path = $$LIB_DIR/qmmp/Output
+target.path = $$PLUGIN_DIR/Output
 INSTALLS += target

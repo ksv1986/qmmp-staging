@@ -21,8 +21,8 @@ RESOURCES += translations/translations.qrc
 
 LIBS += $$QMMPUI_LIB
 
-target.path = $$LIB_DIR/qmmp/General
+target.path = $$PLUGIN_DIR/General
 images.files = images/app_icon.png \
                images/empty_cover.png
-images.path = /share/qmmp/images/
+images.path = $$DATA_DIR/qmmp/images/
 INSTALLS += target images

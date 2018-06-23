@@ -14,7 +14,7 @@ RESOURCES = translations/translations.qrc
 
 LIBS += -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -lksuser
 
-target.path = $$LIB_DIR/qmmp/Output
+target.path = $$PLUGIN_DIR/Output
 INSTALLS += target
 
 FORMS += \

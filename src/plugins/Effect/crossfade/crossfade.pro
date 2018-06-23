@@ -15,6 +15,6 @@ FORMS += settingsdialog.ui
 RESOURCES = translations/translations.qrc
 
 unix {
-    target.path = $$LIB_DIR/qmmp/Effect
+    target.path = $$PLUGIN_DIR/Effect
     INSTALLS += target
 }

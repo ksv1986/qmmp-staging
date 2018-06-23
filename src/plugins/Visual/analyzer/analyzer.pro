@@ -19,7 +19,7 @@ FORMS += settingsdialog.ui
 RESOURCES = translations/translations.qrc
 
 unix{
-   target.path = $$LIB_DIR/qmmp/Visual
+   target.path = $$PLUGIN_DIR/Visual
    INSTALLS += target
 }
 

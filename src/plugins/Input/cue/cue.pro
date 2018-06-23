@@ -24,6 +24,6 @@ contains(CONFIG, WITH_ENCA) {
     win32:LIBS += -lenca.dll
 }
 unix {
-    target.path = $$LIB_DIR/qmmp/Input
+    target.path = $$PLUGIN_DIR/Input
     INSTALLS += target
 }

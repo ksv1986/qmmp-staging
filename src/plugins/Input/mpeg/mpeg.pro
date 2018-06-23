@@ -29,7 +29,7 @@ FORMS += settingsdialog.ui
 RESOURCES = translations/translations.qrc
 
 unix {
-    target.path = $$LIB_DIR/qmmp/Input
+    target.path = $$PLUGIN_DIR/Input
     INSTALLS += target
     PKGCONFIG += taglib
     contains(CONFIG, WITH_MAD):PKGCONFIG += mad

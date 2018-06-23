@@ -39,4 +39,8 @@ win32:system(for /r %B in (*.ts) do $$LRELEASE_EXECUTABLE -compress %B)
 
 message("******* BUILD CONFIGURATION *******")
 for(out, CONFIG):message($$out)
+message(PREFIX=$$PREFIX)
+message(BIN_DIR=$$BIN_DIR)
+message(DATA_DIR=$$DATA_DIR)
+message(PLUGIN_DIR=$$PLUGIN_DIR)
 message("*** END OF BUILD CONFIGURATION ****")

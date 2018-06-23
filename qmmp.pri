@@ -26,6 +26,21 @@ QT += widgets
 
 QMMP_VERSION = 1.3.0
 
+#Install paths
+
+VERSIONS = $$split(QMMP_VERSION, ".")
+
+QMMP_VERSION_MAJOR = $$member(VERSIONS, 0)
+QMMP_VERSION_MINOR = $$member(VERSIONS, 1)
+
+unix {
+  isEmpty(PREFIX): PREFIX=/usr
+  isEmpty(BIN_DIR): BIN_DIR=$$PREFIX/bin
+  isEmpty(DATA_DIR): DATA_DIR=$$PREFIX/share
+  isEmpty(LIB_DIR): LIB_DIR=$$PREFIX/lib
+  isEmpty(PLUGIN_DIR): PLUGIN_DIR=$$LIB_DIR/qmmp-$${QMMP_VERSION_MAJOR}.$${QMMP_VERSION_MINOR}
+}
+
 #Comment/uncomment this if you want to change plugins list
 
 CONFIG += ARCHIVE_PLUGIN

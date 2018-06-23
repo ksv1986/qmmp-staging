@@ -20,5 +20,5 @@ LIBS += -L/usr/lib \
     -I/usr/include \
     -lWildMidi
 
-target.path = $$LIB_DIR/qmmp/Input
+target.path = $$PLUGIN_DIR/Input
 INSTALLS += target

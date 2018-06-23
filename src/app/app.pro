@@ -22,20 +22,20 @@ INCLUDEPATH += ../
 unix {
     LIBS += -lqmmp -lqmmpui
     QMAKE_LIBDIR += ../../lib
-    target.path = /bin
+    target.path = $$BIN_DIR
     desktop.files = qmmp.desktop \
         qmmp-enqueue.desktop \
         qmmp-dir.desktop
-    desktop.path = /share/applications
+    desktop.path = $$DATA_DIR/applications
     icon16.files = images/16x16/qmmp.png
     icon32.files = images/32x32/qmmp.png
     icon48.files = images/48x48/qmmp.png
     icon_svg.files = images/scalable/qmmp.svgz \
         images/scalable/qmmp-simple.svgz
-    icon16.path = /share/icons/hicolor/16x16/apps
-    icon32.path = /share/icons/hicolor/32x32/apps
-    icon48.path = /share/icons/hicolor/48x48/apps
-    icon_svg.path = /share/icons/hicolor/scalable/apps
+    icon16.path = $$DATA_DIR/icons/hicolor/16x16/apps
+    icon32.path = $$DATA_DIR/icons/hicolor/32x32/apps
+    icon48.path = $$DATA_DIR/icons/hicolor/48x48/apps
+    icon_svg.path = $$DATA_DIR/icons/hicolor/scalable/apps
     INSTALLS += desktop \
         target \
         icon16 \

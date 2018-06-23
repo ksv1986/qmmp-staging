@@ -18,5 +18,5 @@ LIBS += -lfaad \
     -I/usr/include
 PKGCONFIG += taglib
 
-target.path = $$LIB_DIR/qmmp/Input
+target.path = $$PLUGIN_DIR/Input
 INSTALLS += target

@@ -17,7 +17,6 @@ QMAKE_LIBDIR += ../../lib \
 unix {
     TARGET = ../../lib/qmmpui
     LIBS += -L../../lib -lqmmp
-    isEmpty(LIB_DIR):LIB_DIR = /lib
     target.path = $$LIB_DIR
 }
 
@@ -173,7 +172,7 @@ unix {
     metadataformattermenu.h \
     qmmpui_export.h
 
-    devel.path = /include/qmmpui
+    devel.path = $$PREFIX/include/qmmpui
     INSTALLS += target \
         devel
 }

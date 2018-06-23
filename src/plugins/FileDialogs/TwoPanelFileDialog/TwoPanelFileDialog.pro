@@ -16,6 +16,6 @@ LIBS += $$QMMPUI_LIB
 RESOURCES += translations/translations.qrc
 
 unix {
-    target.path = $$LIB_DIR/qmmp/FileDialogs
+    target.path = $$PLUGIN_DIR/FileDialogs
     INSTALLS += target
 }

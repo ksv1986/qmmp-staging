@@ -17,7 +17,7 @@ RESOURCES = translations/translations.qrc
 unix {
   LIBS += -L/usr/lib  -I/usr/include
   PKGCONFIG += libcdio libcdio_cdda libcdio_paranoia libcddb
-  target.path = $$LIB_DIR/qmmp/Input
+  target.path = $$PLUGIN_DIR/Input
   INSTALLS += target
 }
 

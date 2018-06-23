@@ -17,7 +17,7 @@ RESOURCES = translations/translations.qrc
 LIBS += $$QMMPUI_LIB
 
 unix {
-    target.path = $$LIB_DIR/qmmp/Effect
+    target.path = $$PLUGIN_DIR/Effect
     INSTALLS += target
     PKGCONFIG += ogg vorbis vorbisenc
 }

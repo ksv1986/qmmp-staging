@@ -22,5 +22,5 @@ RESOURCES = translations/translations.qrc
 
 LIBS += $$QMMPUI_LIB
 
-target.path = $$LIB_DIR/qmmp/General
+target.path = $$PLUGIN_DIR/General
 INSTALLS += target

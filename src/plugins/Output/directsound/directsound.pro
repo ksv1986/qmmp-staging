@@ -12,5 +12,5 @@ RESOURCES = translations/translations.qrc
 
 LIBS += -ldxguid -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -ldsound -lksuser
 
-target.path = $$LIB_DIR/qmmp/Output
+target.path = $$PLUGIN_DIR/Output
 INSTALLS += target

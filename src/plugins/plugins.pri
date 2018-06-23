@@ -10,9 +10,6 @@ win32 {
 }
 
 unix {
-    isEmpty(LIB_DIR){
-        LIB_DIR = /lib
-    }
     PLUGINS_PREFIX=../../../../lib/qmmp
     LIBS += -lqmmp
     QMMPUI_LIB = -lqmmpui

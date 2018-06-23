@@ -12,5 +12,5 @@ RESOURCES = translations/translations.qrc
 
 PKGCONFIG += libpulse-simple
 
-target.path = $$LIB_DIR/qmmp/Output
+target.path = $$PLUGIN_DIR/Output
 INSTALLS += target

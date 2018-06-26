@@ -322,4 +322,6 @@ quint32 HotkeyManager::keycodeToKeysym(quint32 keycode)
 #endif
 }
 
+#include "moc_hotkeymanager.cpp"
+
 #endif

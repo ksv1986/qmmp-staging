@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -244,16 +244,12 @@ void Visual::checkFactories()
         m_factories = new QList<VisualFactory *>;
         m_files = new QHash <VisualFactory*, QString>;
 
-        QDir pluginsDir (Qmmp::pluginsPath());
-        pluginsDir.cd("Visual");
-        QStringList filters;
-        filters << "*.dll" << "*.so";
-        foreach (QString fileName, pluginsDir.entryList(filters, QDir::Files))
+        foreach (QString filePath, Qmmp::findPlugins("Visual"))
         {
-            QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
+            QPluginLoader loader(filePath);
             QObject *plugin = loader.instance();
             if (loader.isLoaded())
-                qDebug("Visual: loaded plugin %s", qPrintable(fileName));
+                qDebug("Visual: loaded plugin %s", qPrintable(QFileInfo(filePath).fileName()));
             else
                 qWarning("Visual: %s", qPrintable(loader.errorString ()));
 
@@ -264,7 +260,7 @@ void Visual::checkFactories()
             if (factory)
             {
                 m_factories->append(factory);
-                m_files->insert(factory, pluginsDir.absoluteFilePath(fileName));
+                m_files->insert(factory, filePath);
                 qApp->installTranslator(factory->createTranslator(qApp));
             }
         }

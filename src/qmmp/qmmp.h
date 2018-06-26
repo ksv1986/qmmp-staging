@@ -142,11 +142,11 @@ public:
     /*!
      * Returns the configuration file name, including the path.
      */
-    static const QString configFile();
+    static QString configFile();
     /*!
      * Returns the configuration directory path.
      */
-    static const QString configDir();
+    static QString configDir();
     /*!
      * Overrides default configuration directory path.
      */
@@ -154,11 +154,13 @@ public:
     /*!
      * Returns %Qmmp library version.
      */
-    static const QString strVersion();
+    static QString strVersion();
     /*!
      * Returns the location of the installed Qmmp plugins.
      */
-    static const QString pluginsPath();
+    static QString pluginPath();
+    static QStringList findPlugins(const QString &prefix);
+
     /*!
      * Returns system language if uiLanguageID() is 'auto'. Otherwise returns uiLanguageID().
      */

@@ -93,6 +93,7 @@ unix {
   !isEmpty(SVN_REVISION) {
     DEFINES += SVN_REVISION=\\\"$$SVN_REVISION\\\"
   }
+  DEFINES += QMMP_PLUGIN_DIR=\\\"$$PLUGIN_DIR\\\"
 }
 
 win32 {

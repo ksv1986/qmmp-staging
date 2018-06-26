@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+*   Copyright (C) 2008-2018 by Ilya Kotov                                 *
 *   forkotov02@ya.ru                                                      *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -44,13 +44,9 @@ void FileDialog::loadPlugins()
     m_cache->append(new QmmpUiPluginCache(new QtFileDialogFactory));
 
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    QDir pluginsDir (Qmmp::pluginsPath());
-    pluginsDir.cd("FileDialogs");
-    QStringList filters;
-    filters << "*.dll" << "*.so";
-    foreach (QString fileName, pluginsDir.entryList(filters, QDir::Files))
+    foreach (QString filePath, Qmmp::findPlugins("FileDialogs"))
     {
-        QmmpUiPluginCache *item = new QmmpUiPluginCache(pluginsDir.absoluteFilePath(fileName), &settings);
+        QmmpUiPluginCache *item = new QmmpUiPluginCache(filePath, &settings);
         if(item->hasError())
         {
             delete item;

@@ -37,12 +37,12 @@ QString Qmmp::m_langID;
 QString Qmmp::m_appDir;
 #endif
 
-const QString Qmmp::configFile()
+QString Qmmp::configFile()
 {
     return configDir() + "/qmmprc";
 }
 
-const QString Qmmp::configDir()
+QString Qmmp::configDir()
 {
 #ifdef Q_OS_WIN
     if(m_configDir.isEmpty())
@@ -64,7 +64,7 @@ void Qmmp::setConfigDir(const QString &path)
     m_configDir = path;
 }
 
-const QString Qmmp::strVersion()
+QString Qmmp::strVersion()
 {
     QString ver = QString("%1.%2.%3")
             .arg(QMMP_VERSION_MAJOR)
@@ -80,19 +80,31 @@ const QString Qmmp::strVersion()
     return ver;
 }
 
-const QString Qmmp::pluginsPath()
+QString Qmmp::pluginPath()
 {
     QByteArray path = qgetenv("QMMP_PLUGINS");
-    if (!path.isEmpty())
-       return path;
+    if(!path.isEmpty())
+        return path;
+    QString fallbackPath = qApp->applicationDirPath() + "/../lib/qmmp-" STR(QMMP_VERSION_MAJOR) "." STR(QMMP_VERSION_MINOR);
 #ifdef QMMP_PLUGIN_DIR
-    QDir dir(QMMP_PLUGIN_DIR "/" STR(QMMP_VERSION_MAJOR) "." STR(QMMP_VERSION_MINOR));
+    QDir dir(QMMP_PLUGIN_DIR);
 #elif defined(Q_OS_WIN) && !defined(Q_OS_CYGWIN)
     QDir dir(qApp->applicationDirPath() + "/plugins");
 #else
-    QDir dir(qApp->applicationDirPath() + "/../lib/qmmp-" STR(QMMP_VERSION_MAJOR) "." STR(QMMP_VERSION_MINOR));
+    QDir dir(fallbackPath);
 #endif
+    if(!dir.exists())
+        dir = QDir(fallbackPath);
     return dir.canonicalPath();
+}
+
+QStringList Qmmp::findPlugins(const QString &prefix)
+{
+    QDir pluginDir(pluginPath() + "/" + prefix);
+    QStringList paths;
+    foreach (QFileInfo info,  pluginDir.entryInfoList(QStringList() << "*.dll" << "*.so", QDir::Files))
+        paths << info.canonicalFilePath();
+    return paths;
 }
 
 QString Qmmp::systemLanguageID()

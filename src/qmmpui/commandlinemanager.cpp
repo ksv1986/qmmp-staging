@@ -43,16 +43,12 @@ void CommandLineManager::checkOptions()
         m_options = new QList<CommandLineOption *>;
         m_files = new QHash<CommandLineOption*, QString>;
 
-        QDir pluginsDir (Qmmp::pluginsPath());
-        pluginsDir.cd("CommandLineOptions");
-        QStringList filters;
-        filters << "*.dll" << "*.so";
-        foreach (QString fileName, pluginsDir.entryList(filters, QDir::Files))
+        foreach (QString filePath, Qmmp::findPlugins("CommandLineOptions"))
         {
-            QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
+            QPluginLoader loader(filePath);
             QObject *plugin = loader.instance();
             if (loader.isLoaded())
-                /*qDebug("CommandLineManager: loaded plugin %s", qPrintable(fileName))*/;
+                /*qDebug("CommandLineManager: loaded plugin %s", qPrintable(QFileInfo(filePath).filePath()));*/;
             else
                 qWarning("CommandLineManager: %s", qPrintable(loader.errorString ()));
 
@@ -63,7 +59,7 @@ void CommandLineManager::checkOptions()
             if (option)
             {
                 m_options->append(option);
-                m_files->insert(option, pluginsDir.absoluteFilePath(fileName));
+                m_files->insert(option, filePath);
                 qApp->installTranslator(option->createTranslator(qApp));
             }
         }

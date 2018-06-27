@@ -183,4 +183,7 @@ unix {
     QMAKE_PKGCONFIG_DESCRIPTION = qmmp user interface library
     QMAKE_PKGCONFIG_REQUIRES = Qt5Core Qt5Gui Qt5Widgets Qt5Network qmmp
     QMAKE_PKGCONFIG_DESTDIR = pkgconfig
+    QMAKE_PKGCONFIG_PREFIX = $$PREFIX
+    QMAKE_PKGCONFIG_LIBDIR = $$target.path
+    QMAKE_PKGCONFIG_INCDIR = $$PREFIX/include
 }

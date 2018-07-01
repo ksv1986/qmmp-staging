@@ -39,6 +39,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(scrobbler MODULE ${libscrobbler_SRCS} ${libscrobbler_UIS_H}
   ${libscrobbler_RCC_SRCS} ${libscrobbler_HDRS})
-add_dependencies(scrobbler qmmpui)
-target_link_libraries(scrobbler Qt5::Widgets Qt5::Network -lqmmpui -lqmmp)
+add_dependencies(scrobbler libqmmpui)
+target_link_libraries(scrobbler Qt5::Widgets Qt5::Network libqmmpui libqmmp)
 install(TARGETS scrobbler DESTINATION ${PLUGIN_DIR}/General)

@@ -26,6 +26,6 @@ QT5_WRAP_UI(libqtmultimedia_UIS_H ${libqtmultimedia_UIS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(qtmultimedia MODULE ${libqtmultimedia_SRCS} ${libqtmultimedia_UIS_H} ${libqtmultimedia_RCC_SRCS})
-add_dependencies(qtmultimedia qmmp)
-target_link_libraries(qtmultimedia Qt5::Widgets Qt5::Multimedia -lqmmp)
+add_dependencies(qtmultimedia libqmmp)
+target_link_libraries(qtmultimedia Qt5::Widgets Qt5::Multimedia libqmmp)
 install(TARGETS qtmultimedia DESTINATION ${PLUGIN_DIR}/Output)

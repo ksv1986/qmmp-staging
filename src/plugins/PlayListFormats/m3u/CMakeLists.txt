@@ -17,6 +17,7 @@ QT5_ADD_RESOURCES(libm3uplaylistformat_RCC_SRCS ${libm3uplaylistformat_RCCS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(m3uplaylistformat MODULE ${libm3uplaylistformat_SRCS})
-add_dependencies(m3uplaylistformat qmmpui)
-target_link_libraries(m3uplaylistformat Qt5::Widgets -lqmmpui)
+
+add_dependencies(m3uplaylistformat libqmmpui)
+target_link_libraries(m3uplaylistformat Qt5::Widgets libqmmpui)
 install(TARGETS m3uplaylistformat DESTINATION ${PLUGIN_DIR}/PlayListFormats)

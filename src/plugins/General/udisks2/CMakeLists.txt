@@ -31,6 +31,6 @@ QT5_WRAP_UI(libudisks2_UIS_H ${libudisks2_UIS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(udisks2 MODULE ${libudisks2_SRCS} ${libudisks2_UIS_H} ${libudisks2_RCC_SRCS})
-add_dependencies(udisks2 qmmpui)
-target_link_libraries(udisks2 Qt5::Widgets Qt5::DBus -lqmmpui -lqmmp)
+add_dependencies(udisks2 libqmmpui)
+target_link_libraries(udisks2 Qt5::Widgets Qt5::DBus libqmmpui libqmmp)
 install(TARGETS udisks2 DESTINATION ${PLUGIN_DIR}/General)

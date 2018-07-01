@@ -22,6 +22,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(incdecvolumeoption MODULE ${libincdecvolumeoption_SRCS}
            ${libincdecvolumeoption_RCC_SRCS})
-add_dependencies(incdecvolumeoption qmmpui)
-target_link_libraries(incdecvolumeoption Qt5::Widgets -lqmmpui -lqmmp)
+add_dependencies(incdecvolumeoption libqmmpui)
+target_link_libraries(incdecvolumeoption Qt5::Widgets libqmmpui libqmmp)
 install(TARGETS incdecvolumeoption DESTINATION ${PLUGIN_DIR}/CommandLineOptions)

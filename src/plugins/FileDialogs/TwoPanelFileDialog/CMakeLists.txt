@@ -30,6 +30,6 @@ QT5_WRAP_UI(libtwopanelfiledialog_UIS_H ${libtwopanelfiledialog_UIS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(twopanelfiledialog MODULE ${libtwopanelfiledialog_SRCS} ${libtwopanelfiledialog_UIS_H} ${libtwopanelfiledialog_RCC_SRCS})
-add_dependencies(twopanelfiledialog qmmpui)
-target_link_libraries(twopanelfiledialog Qt5::Widgets -lqmmpui -lqmmp)
+add_dependencies(twopanelfiledialog libqmmpui)
+target_link_libraries(twopanelfiledialog Qt5::Widgets libqmmpui libqmmp)
 install(TARGETS twopanelfiledialog DESTINATION ${PLUGIN_DIR}/FileDialogs)

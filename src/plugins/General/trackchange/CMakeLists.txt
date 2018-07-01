@@ -29,6 +29,6 @@ QT5_WRAP_UI(libtrackchange_UIS_H ${libtrackchange_UIS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(trackchange MODULE ${libtrackchange_SRCS} ${libtrackchange_UIS_H} ${libtrackchange_RCC_SRCS})
-add_dependencies(trackchange qmmpui)
-target_link_libraries(trackchange Qt5::Widgets -lqmmpui -lqmmp)
+add_dependencies(trackchange libqmmpui)
+target_link_libraries(trackchange Qt5::Widgets libqmmpui libqmmp)
 install(TARGETS trackchange DESTINATION ${PLUGIN_DIR}/General)

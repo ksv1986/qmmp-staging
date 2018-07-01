@@ -132,13 +132,20 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(libqmmp SHARED ${libqmmp_SRCS} ${libqmmp_HDRS})
 target_link_libraries(libqmmp Qt5::Widgets)
-SET_TARGET_PROPERTIES(libqmmp PROPERTIES VERSION ${QMMP_VERSION} SOVERSION ${QMMP_SOVERSION} OUTPUT_NAME qmmp)
+SET_TARGET_PROPERTIES(libqmmp PROPERTIES VERSION ${QMMP_VERSION} SOVERSION ${QMMP_SOVERSION} OUTPUT_NAME qmmp${APP_NAME_SUFFIX})
 target_compile_definitions(libqmmp PRIVATE ${libqmmp_DEFINES})
 install(TARGETS libqmmp LIBRARY DESTINATION ${LIB_DIR}
                         RUNTIME DESTINATION bin
                         ARCHIVE DESTINATION ${LIB_DIR})
 install(FILES ${libqmmp_DEVEL_HDRS} DESTINATION include/qmmp)
 
+IF(APP_NAME_SUFFIX)
+    install(FILES ${libqmmp_DEVEL_HDRS} DESTINATION include/qmmp${APP_NAME_SUFFIX}/qmmp)
+    SET(QMMP_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include/qmmp${APP_NAME_SUFFIX})
+ELSE()
+    install(FILES ${libqmmp_DEVEL_HDRS} DESTINATION include/qmmp)
+    SET(QMMP_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include)
+ENDIF()
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qmmp.pc.in ${CMAKE_CURRENT_BINARY_DIR}/qmmp.pc @ONLY)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qmmp.pc DESTINATION ${LIB_DIR}/pkgconfig)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qmmp.pc.in ${CMAKE_CURRENT_BINARY_DIR}/qmmp${APP_NAME_SUFFIX}.pc @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qmmp${APP_NAME_SUFFIX}.pc DESTINATION ${LIB_DIR}/pkgconfig)

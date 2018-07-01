@@ -27,8 +27,8 @@ QT5_ADD_RESOURCES(libdirectsound_RCC_SRCS ${libdirectsound_RCCS})
 
 IF(DSOUND_H_FOUND)
 ADD_LIBRARY(directsound MODULE ${libdirectsound_SRCS} ${libdirectsound_RCC_SRCS} ${libdirectsound_HDRS})
-add_dependencies(directsound qmmp)
-target_link_libraries(directsound Qt5::Widgets -lqmmp -ldxguid -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -ldsound)
+add_dependencies(directsound libqmmp)
+target_link_libraries(directsound Qt5::Widgets libqmmp -ldxguid -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -ldsound)
 install(TARGETS directsound DESTINATION ${PLUGIN_DIR}/Output)
 ENDIF(DSOUND_H_FOUND)
 

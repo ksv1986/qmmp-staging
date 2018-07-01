@@ -33,6 +33,8 @@ VERSIONS = $$split(QMMP_VERSION, ".")
 QMMP_VERSION_MAJOR = $$member(VERSIONS, 0)
 QMMP_VERSION_MINOR = $$member(VERSIONS, 1)
 
+#APP_NAME_SUFFIX = "-1"
+
 unix {
   isEmpty(PREFIX): PREFIX=/usr
   isEmpty(BIN_DIR): BIN_DIR=$$PREFIX/bin

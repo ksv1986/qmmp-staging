@@ -21,6 +21,6 @@ QT5_ADD_RESOURCES(seekoption_RCC_SRCS ${seekoption_RCCS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(seekoption MODULE ${seekoption_SRCS} ${seekoption_RCC_SRCS})
-add_dependencies(seekoption qmmpui)
-target_link_libraries(seekoption Qt5::Widgets -lqmmpui -lqmmp)
+add_dependencies(seekoption libqmmpui)
+target_link_libraries(seekoption Qt5::Widgets libqmmpui libqmmp)
 install(TARGETS seekoption DESTINATION ${PLUGIN_DIR}/CommandLineOptions)

@@ -39,7 +39,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(WASAPI_FOUND)
 ADD_LIBRARY(wasapi MODULE ${libwasapi_SRCS} ${libwasapi_RCC_SRCS} ${libwasapi_HDRS} ${libwasapi_UIS_H})
-add_dependencies(wasapi qmmp)
+add_dependencies(wasapi libqmmp)
 target_link_libraries(wasapi Qt5::Widgets libqmmp -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -lksuser)
 install(TARGETS wasapi DESTINATION ${PLUGIN_DIR}/Output)
 ENDIF(WASAPI_FOUND)

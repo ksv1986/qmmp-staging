@@ -33,8 +33,8 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(WAVPACK_FOUND)
 ADD_LIBRARY(wavpack MODULE ${libwavpack_SRCS} ${libwavpack_RCC_SRCS} ${libwavpack_HDRS})
-add_dependencies(wavpack qmmp)
-target_link_libraries(wavpack Qt5::Widgets -lqmmp ${WAVPACK_LDFLAGS})
+add_dependencies(wavpack libqmmp)
+target_link_libraries(wavpack Qt5::Widgets libqmmp ${WAVPACK_LDFLAGS})
 install(TARGETS wavpack DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(WAVPACK_FOUND)
 

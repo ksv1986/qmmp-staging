@@ -60,7 +60,7 @@ KdeNotify::KdeNotify(QObject *parent) : QObject(parent),m_useFreedesktopSpec(fal
         dir.mkdir("kdenotifycache");
     dir.cd("kdenotifycache");
     m_coverPath = dir.absolutePath() + "/cover.jpg";
-    m_imagesDir = QDir(qApp->applicationFilePath () +"/../../share/qmmp/images").absolutePath();
+    m_imagesDir = QDir(qApp->applicationFilePath () + "/../../share/qmmp" APP_NAME_SUFFIX "/images").absolutePath();
 
     QSettings settings(Qmmp::configFile(),QSettings::IniFormat);
     settings.beginGroup("Kde_Notifier");

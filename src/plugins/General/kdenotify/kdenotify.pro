@@ -7,6 +7,8 @@ TARGET = $$PLUGINS_PREFIX/General/kdenotify
 
 QT += dbus
 
+DEFINES += APP_NAME_SUFFIX=\\\"$$APP_NAME_SUFFIX\\\"
+
 SOURCES += kdenotifyfactory.cpp \
     kdenotify.cpp \
     settingsdialog.cpp
@@ -24,5 +26,5 @@ LIBS += $$QMMPUI_LIB
 target.path = $$PLUGIN_DIR/General
 images.files = images/app_icon.png \
                images/empty_cover.png
-images.path = $$DATA_DIR/qmmp/images/
+images.path = $$DATA_DIR/qmmp$${APP_NAME_SUFFIX}/images/
 INSTALLS += target images

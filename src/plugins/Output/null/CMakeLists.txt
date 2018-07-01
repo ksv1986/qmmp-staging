@@ -25,6 +25,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 
 ADD_LIBRARY(null MODULE ${libnull_SRCS} ${libnull_UIS_H} ${libnull_RCC_SRCS} ${libnull_HDRS})
-add_dependencies(null qmmp)
-target_link_libraries(null Qt5::Widgets -lqmmp)
+add_dependencies(null libqmmp)
+target_link_libraries(null Qt5::Widgets libqmmp)
 install(TARGETS null DESTINATION ${PLUGIN_DIR}/Output)

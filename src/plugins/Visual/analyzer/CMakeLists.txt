@@ -37,6 +37,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(analyzer MODULE ${libanalyzer_SRCS} ${libanalyzer_UIS_H}
   ${libanalyzer_RCC_SRCS} ${libanalyzer_HDRS})
-add_dependencies(analyzer qmmp)
-target_link_libraries(analyzer Qt5::Widgets -lqmmp)
+add_dependencies(analyzer libqmmp)
+target_link_libraries(analyzer Qt5::Widgets libqmmp)
 install(TARGETS analyzer DESTINATION ${PLUGIN_DIR}/Visual)

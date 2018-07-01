@@ -1,11 +1,11 @@
 prefix=@CMAKE_INSTALL_PREFIX@
 exec_prefix=@CMAKE_INSTALL_PREFIX@
 libdir=@CMAKE_INSTALL_PREFIX@/@LIB_DIR@
-includedir=@CMAKE_INSTALL_PREFIX@/include
+includedir=@QMMP_INCLUDE_DIR@
 
-Name: qmmpui
+Name: qmmpui@APP_NAME_SUFFIX@
 Description: qmmp user interface library
 Version: @QMMP_VERSION@
-Requires: Qt5Core Qt5Gui Qt5Widgets Qt5Network qmmp
-Libs: -L${libdir} -lqmmpui
+Requires: Qt5Core Qt5Gui Qt5Widgets Qt5Network qmmp@APP_NAME_SUFFIX@
+Libs: -L${libdir} -lqmmpui@APP_NAME_SUFFIX@
 Cflags: -I${includedir}

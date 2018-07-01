@@ -21,6 +21,6 @@ QT5_ADD_RESOURCES(libgnomehotkey_RCC_SRCS ${libgnomehotkey_RCCS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(gnomehotkey MODULE ${libgnomehotkey_SRCS} ${libgnomehotkey_RCC_SRCS})
-add_dependencies(gnomehotkey qmmpui)
-target_link_libraries(gnomehotkey Qt5::Widgets Qt5::DBus -lqmmpui -lqmmp)
+add_dependencies(gnomehotkey libqmmpui)
+target_link_libraries(gnomehotkey Qt5::Widgets Qt5::DBus libqmmpui libqmmp)
 install(TARGETS gnomehotkey DESTINATION ${PLUGIN_DIR}/General)

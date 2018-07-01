@@ -37,6 +37,6 @@ QT5_WRAP_UI(liboss_UIS_H ${liboss_UIS})
 
 ADD_LIBRARY(oss MODULE ${liboss_SRCS} ${liboss_UIS_H}
   ${liboss_RCC_SRCS} ${liboss_HDRS})
-add_dependencies(oss qmmp)
-target_link_libraries(oss Qt5::Widgets -lqmmp)
+add_dependencies(oss libqmmp)
+target_link_libraries(oss Qt5::Widgets libqmmp)
 install(TARGETS oss DESTINATION ${PLUGIN_DIR}/Output)

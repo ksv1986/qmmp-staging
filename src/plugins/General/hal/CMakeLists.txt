@@ -31,6 +31,6 @@ QT5_WRAP_UI(libhal_UIS_H ${libhal_UIS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(hal MODULE ${libhal_SRCS} ${libhal_UIS_H} ${libhal_RCC_SRCS})
-add_dependencies(hal qmmpui)
-target_link_libraries(hal Qt5::Widgets Qt5::DBus -lqmmpui -lqmmp)
+add_dependencies(hal libqmmpui)
+target_link_libraries(hal Qt5::Widgets Qt5::DBus libqmmpui libqmmp)
 install(TARGETS hal DESTINATION ${PLUGIN_DIR}/General)

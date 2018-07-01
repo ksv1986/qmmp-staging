@@ -77,7 +77,7 @@ SOURCES += recycler.cpp \
     visualbuffer.cpp \
     trackinfo.cpp
 
-unix:TARGET = ../../lib/qmmp
+unix:TARGET = ../../lib/qmmp$$APP_NAME_SUFFIX
 win32:TARGET = ../../../bin/qmmp
 CONFIG += shared \
     warn_on \
@@ -138,7 +138,11 @@ unix {
         volume.h \
         qmmp_export.h
 
-    devel.path = $$PREFIX/include/qmmp
+    isEmpty(APP_NAME_SUFFIX) {
+        devel.path = $$PREFIX/include/qmmp
+    } else {
+        devel.path = $$PREFIX/include/qmmp$${APP_NAME_SUFFIX}/qmmp
+    }
     INSTALLS += target \
         devel
     DESTDIR = .
@@ -148,11 +152,15 @@ INCLUDEPATH += ./
 
 unix {
     CONFIG += create_pc create_prl no_install_prl
-    QMAKE_PKGCONFIG_NAME = qmmp
+    QMAKE_PKGCONFIG_NAME = qmmp$${APP_NAME_SUFFIX}
     QMAKE_PKGCONFIG_DESCRIPTION = qmmp core library
     QMAKE_PKGCONFIG_REQUIRES = Qt5Core Qt5Gui Qt5Widgets
     QMAKE_PKGCONFIG_DESTDIR = pkgconfig
     QMAKE_PKGCONFIG_PREFIX = $$PREFIX
     QMAKE_PKGCONFIG_LIBDIR = $$target.path
-    QMAKE_PKGCONFIG_INCDIR = $$PREFIX/include
+    isEmpty(APP_NAME_SUFFIX) {
+        QMAKE_PKGCONFIG_INCDIR = $$PREFIX/include
+    } else {
+        QMAKE_PKGCONFIG_INCDIR = $$PREFIX/include/qmmp$${APP_NAME_SUFFIX}
+    }
 }

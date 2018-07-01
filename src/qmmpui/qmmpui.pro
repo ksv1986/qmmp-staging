@@ -15,8 +15,8 @@ QMAKE_LIBDIR += ../../lib \
     qmmpui
 
 unix {
-    TARGET = ../../lib/qmmpui
-    LIBS += -L../../lib -lqmmp
+    TARGET = ../../lib/qmmpui$$APP_NAME_SUFFIX
+    LIBS += -L../../lib -lqmmp$$APP_NAME_SUFFIX
     target.path = $$LIB_DIR
 }
 
@@ -172,18 +172,26 @@ unix {
     metadataformattermenu.h \
     qmmpui_export.h
 
-    devel.path = $$PREFIX/include/qmmpui
+    isEmpty(APP_NAME_SUFFIX) {
+        devel.path = $$PREFIX/include/qmmpui
+    } else {
+        devel.path = $$PREFIX/include/qmmp$${APP_NAME_SUFFIX}/qmmpui
+    }
     INSTALLS += target \
         devel
 }
 
 unix {
     CONFIG += create_pc create_prl no_install_prl
-    QMAKE_PKGCONFIG_NAME = qmmpui
+    QMAKE_PKGCONFIG_NAME = qmmpui$${APP_NAME_SUFFIX}
     QMAKE_PKGCONFIG_DESCRIPTION = qmmp user interface library
-    QMAKE_PKGCONFIG_REQUIRES = Qt5Core Qt5Gui Qt5Widgets Qt5Network qmmp
+    QMAKE_PKGCONFIG_REQUIRES = Qt5Core Qt5Gui Qt5Widgets Qt5Network qmmp$${APP_NAME_SUFFIX}
     QMAKE_PKGCONFIG_DESTDIR = pkgconfig
     QMAKE_PKGCONFIG_PREFIX = $$PREFIX
     QMAKE_PKGCONFIG_LIBDIR = $$target.path
-    QMAKE_PKGCONFIG_INCDIR = $$PREFIX/include
+    isEmpty(APP_NAME_SUFFIX) {
+        QMAKE_PKGCONFIG_INCDIR = $$PREFIX/include
+    } else {
+        QMAKE_PKGCONFIG_INCDIR = $$PREFIX/include/qmmp$${APP_NAME_SUFFIX}
+    }
 }

@@ -30,6 +30,6 @@ QT5_WRAP_UI(liblyrics_UIS_H ${liblyrics_UIS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(lyrics MODULE ${liblyrics_SRCS} ${liblyrics_UIS_H} ${liblyrics_RCC_SRCS})
-add_dependencies(lyrics qmmpui)
-target_link_libraries(lyrics Qt5::Widgets Qt5::Network -lqmmpui -lqmmp)
+add_dependencies(lyrics libqmmpui)
+target_link_libraries(lyrics Qt5::Widgets Qt5::Network libqmmpui libqmmp)
 install(TARGETS lyrics DESTINATION ${PLUGIN_DIR}/General)

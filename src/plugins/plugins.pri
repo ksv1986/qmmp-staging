@@ -11,8 +11,8 @@ win32 {
 
 unix {
     PLUGINS_PREFIX=../../../../lib/qmmp-$${QMMP_VERSION_MAJOR}.$${QMMP_VERSION_MINOR}
-    LIBS += -lqmmp
-    QMMPUI_LIB = -lqmmpui
+    LIBS += -lqmmp$$APP_NAME_SUFFIX
+    QMMPUI_LIB = -lqmmpui$$APP_NAME_SUFFIX
 }
 
 

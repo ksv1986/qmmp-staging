@@ -159,8 +159,11 @@ sysutils/bsdisks. Bsdisks является реализацией сервиса
 
 В некоторых случаях вы можете использовать qmake для сборки и установки.
 
+Конфигурация:
+qmake PREFIX=путь_для_установки (по умолчанию: /usr)
+
 Сборка:
-qmake && make
+make
 
 Установка:
 make install INSTALL_ROOT=/usr/local

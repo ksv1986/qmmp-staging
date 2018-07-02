@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *
@@ -630,10 +630,10 @@ void Skin::loadLetters(void)
 {
     QPixmap *img = getPixmap("text");
 
-    QList<QList<QPixmap> > (letters);
+    QList<QList<QPixmap> > letters;
     for (int i = 0; i < 3; i++)
     {
-        QList<QPixmap> (l);
+        QList<QPixmap> l;
         for (int j = 0; j < 31; j++)
         {
             l.append (img->copy (j*5, i*6, 5, 6));

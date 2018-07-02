@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,9 +19,6 @@
  ***************************************************************************/
 
 #include <QtDBus>
-#include "mpris1/playerobject.h"
-#include "mpris1/rootobject.h"
-#include "mpris1/tracklistobject.h"
 #include "mpris2/root2object.h"
 #include "mpris2/player2object.h"
 #include "mpris.h"
@@ -29,15 +26,10 @@
 MPRIS::MPRIS(QObject *parent) : QObject(parent)
 {
     QDBusConnection connection = QDBusConnection::sessionBus();
-    //MPRISv1.0
-    connection.registerObject("/TrackList", new TrackListObject(this), QDBusConnection::ExportAllContents);
-    connection.registerObject("/Player", new PlayerObject(this), QDBusConnection::ExportAllContents);
-    connection.registerObject("/", new RootObject(this), QDBusConnection::ExportAllContents);
     //MPRISv2.0
     new Root2Object(this);
     new Player2Object(this);
     connection.registerObject("/org/mpris/MediaPlayer2", this);
-    connection.registerService("org.mpris.qmmp");
     connection.registerService("org.mpris.MediaPlayer2.qmmp");
 }
 

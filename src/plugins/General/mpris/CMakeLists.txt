@@ -10,9 +10,6 @@ link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 SET(libmpris_SRCS
     mpris.cpp
     mprisfactory.cpp
-    mpris1/rootobject.cpp
-    mpris1/playerobject.cpp
-    mpris1/tracklistobject.cpp
     mpris2/root2object.cpp
     mpris2/player2object.cpp
 )

@@ -8,9 +8,7 @@ unix : QMAKE_CLEAN = $$PLUGINS_PREFIX/General/libtrackchange.so
 
 
 TEMPLATE = lib
-unix : LIBS += -lqmmpui -lqmmp
-
-win32 : LIBS += -lqmmpui0 -lqmmp0
+LIBS += $${QMMPUI_LIB}
 
 RESOURCES = translations/translations.qrc
 unix {

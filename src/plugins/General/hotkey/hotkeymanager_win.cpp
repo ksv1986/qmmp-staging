@@ -21,7 +21,6 @@
 #include <QtGlobal>
 #ifdef Q_OS_WIN
 #include <QSettings>
-#include <QX11Info>
 #include <QEvent>
 #include <QKeyEvent>
 #include <QCoreApplication>

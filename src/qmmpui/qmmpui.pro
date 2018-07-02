@@ -22,7 +22,7 @@ unix {
 
 win32 {
     TARGET = ../../../bin/qmmpui
-    LIBS += -L../../bin -lqmmp0 -lole32
+    LIBS += -L../../bin -lqmmp1 -lole32
     HEADERS += winfileassoc.h \
                winfileassocpage_p.h
     SOURCES += winfileassoc.cpp \

@@ -24,6 +24,7 @@
 #include <QEvent>
 #include <QKeyEvent>
 #include <QCoreApplication>
+#include <QAbstractNativeEventFilter>
 #include <QApplication>
 #include <windows.h>
 #include <winuser.h>
@@ -96,10 +97,10 @@ quint32 Hotkey::defaultKey(int act)
     return keyMap[act];
 }
 
-class KeyFilterWidget : public QWidget
+class KeyFilter : public QAbstractNativeEventFilter
 {
 public:
-    KeyFilterWidget(const Hotkey &hotkey)
+    KeyFilter(const Hotkey &hotkey) : QAbstractNativeEventFilter()
     {
         m_hotkey = hotkey;
         m_mods = 0;
@@ -115,23 +116,29 @@ public:
             m_mods |= MOD_WIN;
 
 
-        if(RegisterHotKey(winId(), m_mods^m_hotkey.key,  m_mods, m_hotkey.key))
+        if(RegisterHotKey(NULL, m_mods^m_hotkey.key,  m_mods, m_hotkey.key))
         {
             m_id = m_mods^m_hotkey.key;
             qDebug("KeyFilterWidget: registered key=0x%x, mod=0x%x", hotkey.key, m_mods);
         }
         else
             qWarning("KeyFilterWidget: unable to register key=0x%x, mod=0x%x", hotkey.key, m_mods);
+
+        qApp->installNativeEventFilter(this);
     }
 
-    ~KeyFilterWidget()
+    virtual ~KeyFilter()
     {
+        qApp->removeNativeEventFilter(this);
         if(m_id)
-            UnregisterHotKey(winId(), m_id);
+            UnregisterHotKey(NULL, m_id);
     }
 
-    bool winEvent(MSG* m, long* result)
+    bool nativeEventFilter(const QByteArray &eventType, void *message, long *result)
     {
+        Q_UNUSED(eventType);
+        Q_UNUSED(result);
+        MSG* m = static_cast<MSG*>(message);
         if (m->message == WM_HOTKEY && m->wParam == m_id)
         {
             SoundCore *core = SoundCore::instance();
@@ -187,15 +194,13 @@ public:
             qApp->processEvents();
             return true;
         }
-        return QWidget::winEvent(m, result);
+        return false;
     }
 
 private:
     Hotkey m_hotkey;
     UINT m_mods;
     WPARAM m_id;
-
-
 };
 
 HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
@@ -218,7 +223,7 @@ HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
             hotkey.code = MapVirtualKey(key, 0);
             hotkey.mod = mod;
 
-            KeyFilterWidget *filerWidget = new KeyFilterWidget(hotkey);
+            KeyFilter *filerWidget = new KeyFilter(hotkey);
             m_filters << filerWidget;
         }
     }

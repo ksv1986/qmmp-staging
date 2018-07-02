@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,6 +24,9 @@
 #include <QString>
 #include <QTableWidgetItem>
 #include <QList>
+#ifdef Q_OS_WIN
+#include <QAbstractNativeEventFilter>
+#endif
 #include <qmmpui/general.h>
 
 class QEvent;
@@ -99,7 +102,7 @@ private:
 #endif
 
 #ifdef Q_OS_WIN
-    QList<QWidget *> m_filters;
+    QList<QAbstractNativeEventFilter *> m_filters;
 #endif
 };
 

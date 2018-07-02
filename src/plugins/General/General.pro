@@ -9,12 +9,12 @@ SUBDIRS += statusicon \
            streambrowser \
            trackchange \
            copypaste \
-           rgscan
+           rgscan \
+           hotkey
 unix:SUBDIRS += mpris \
                 kdenotify \
                 converter \
-                gnomehotkey \
-                hotkey
+                gnomehotkey
 
 contains(CONFIG, UDISKS2_PLUGIN){
     unix:SUBDIRS += udisks2

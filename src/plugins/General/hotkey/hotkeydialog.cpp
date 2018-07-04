@@ -42,7 +42,7 @@ void HotkeyDialog::keyPressEvent (QKeyEvent *event)
     m_key = HotkeyManager::keycodeToKeysym(event->nativeScanCode ());
     m_modifiers = event->nativeModifiers ();
     foreach(long mask_mod, HotkeyManager::ignModifiersList())
-        m_modifiers &= ~mask_mod; //remove ignoried modifiers (num lock, caps lock, etc)
+        m_modifiers &= ~mask_mod; //remove ignored modifiers (num lock, caps lock, etc)
 
     ui.keyLineEdit->setText(HotkeyManager::getKeyString(m_key, m_modifiers));
     QWidget::keyPressEvent(event);

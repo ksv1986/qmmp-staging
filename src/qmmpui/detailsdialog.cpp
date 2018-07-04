@@ -89,6 +89,13 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
     }
     else
         reject();
+
+    //close all files before closing dialog
+    if(m_metaDataModel)
+    {
+        delete m_metaDataModel;
+        m_metaDataModel = 0;
+    }
 }
 
 void DetailsDialog::on_tabWidget_currentChanged(int index)

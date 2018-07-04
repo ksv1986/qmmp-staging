@@ -23,6 +23,7 @@
 #include <QDialog>
 #include <QList>
 #include <QMap>
+#include <QCloseEvent>
 #include <qmmp/qmmp.h>
 #include "qmmpui_export.h"
 
@@ -62,6 +63,7 @@ private slots:
 
 private:
     Ui::DetailsDialog *m_ui;
+    void closeEvent(QCloseEvent *);
     void updatePage();
     void printInfo();
     QString formatRow(const QString key, const QString value);

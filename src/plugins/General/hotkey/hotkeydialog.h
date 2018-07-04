@@ -41,15 +41,15 @@ public:
     quint32 keySym () const;
 
 public slots:
-    virtual void accept();
-
-protected:
-    virtual void keyPressEvent (QKeyEvent *event);
+    void accept();
+    void reject();
 
 private:
+    void keyPressEvent (QKeyEvent *event);
+    void showEvent(QShowEvent *);
+
     Ui::HotkeyDialog m_ui;
     quint32 m_key, m_modifiers;
-
 };
 
 #endif

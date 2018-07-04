@@ -29,13 +29,10 @@ HotkeyDialog::HotkeyDialog(quint32 key, quint32 mod, QWidget *parent)
     m_key = key;
     m_modifiers = mod;
     m_ui.keyLineEdit->setText(HotkeyManager::getKeyString(m_key, m_modifiers));
-    grabKeyboard();
 }
 
 HotkeyDialog::~HotkeyDialog()
-{
-    releaseKeyboard();
-}
+{}
 
 void HotkeyDialog::keyPressEvent (QKeyEvent *event)
 {
@@ -45,7 +42,12 @@ void HotkeyDialog::keyPressEvent (QKeyEvent *event)
         m_modifiers &= ~mask_mod; //remove ignored modifiers (num lock, caps lock, etc)
 
     m_ui.keyLineEdit->setText(HotkeyManager::getKeyString(m_key, m_modifiers));
-    QWidget::keyPressEvent(event);
+    QDialog::keyPressEvent(event);
+}
+
+void HotkeyDialog::showEvent(QShowEvent *)
+{
+    grabKeyboard();
 }
 
 quint32 HotkeyDialog::nativeModifiers () const
@@ -65,5 +67,12 @@ void HotkeyDialog::accept()
         m_key = 0;
         m_modifiers = 0;
     }
+    releaseKeyboard();
     QDialog::accept();
+}
+
+void HotkeyDialog::reject()
+{
+    releaseKeyboard();
+    QDialog::reject();
 }

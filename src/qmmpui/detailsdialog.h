@@ -23,7 +23,6 @@
 #include <QDialog>
 #include <QList>
 #include <QMap>
-#include <QCloseEvent>
 #include <qmmp/qmmp.h>
 #include "qmmpui_export.h"
 

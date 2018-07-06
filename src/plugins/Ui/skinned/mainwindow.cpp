@@ -23,7 +23,6 @@
 #include <QAction>
 #include <QMenu>
 #include <QScreen>
-#include <QSignalMapper>
 #include <math.h>
 #include <qmmp/soundcore.h>
 #include <qmmp/visual.h>

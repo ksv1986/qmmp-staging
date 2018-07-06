@@ -21,7 +21,6 @@
 #include <QAction>
 #include <QSettings>
 #include <QApplication>
-#include <QSignalMapper>
 #include <QProgressDialog>
 #include <QMessageBox>
 #include <QFile>

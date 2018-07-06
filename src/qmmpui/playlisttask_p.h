@@ -51,8 +51,8 @@ public:
 
     ~PlayListTask();
 
-    void sort(QList<PlayListTrack *> tracks, int mode);
-    void sortSelection(QList<PlayListTrack *> tracks, int mode);
+    void sort(QList<PlayListTrack *> tracks, PlayListModel::SortMode mode);
+    void sortSelection(QList<PlayListTrack *> tracks, PlayListModel::SortMode mode);
     void sortByColumn(QList <PlayListTrack *> tracks, int column);
     void removeInvalidTracks(QList<PlayListTrack *> tracks, PlayListTrack *current_track);
     void removeDuplicates(QList<PlayListTrack *> tracks, PlayListTrack *current_track);

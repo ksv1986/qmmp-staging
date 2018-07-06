@@ -505,11 +505,11 @@ public slots:
     /*!
      * Sorts selected items in \b mode sort mode.
      */
-    void sortSelection(int mode);
+    void sortSelection(SortMode mode);
     /*!
      * Sorts items in \b mode sort mode.
      */
-    void sort(int mode);
+    void sort(SortMode mode);
     /*!
      * Sorts tracks by the column with index \b column.
      */
@@ -599,5 +599,7 @@ private:
     QmmpUiSettings *m_ui_settings;
     PlayListTask *m_task;
 };
+
+Q_DECLARE_METATYPE(PlayListModel::SortMode)
 
 #endif

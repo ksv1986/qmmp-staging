@@ -36,6 +36,7 @@ PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
 {
     if(m_instance)
         qFatal("PlayListManager: only one instance is allowed");
+    qRegisterMetaType<PlayListModel::SortMode>();
     m_instance = this;
     m_ui_settings = QmmpUiSettings::instance();
     m_header = new PlayListHeaderModel(this);
@@ -447,12 +448,12 @@ void PlayListManager::reverseList()
     m_selected->reverseList();
 }
 
-void PlayListManager::sortSelection(int mode)
+void PlayListManager::sortSelection(PlayListModel::SortMode mode)
 {
     m_selected->sortSelection(mode);
 }
 
-void PlayListManager::sort(int mode)
+void PlayListManager::sort(PlayListModel::SortMode mode)
 {
     m_selected->sort(mode);
 }

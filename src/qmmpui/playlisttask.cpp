@@ -129,7 +129,7 @@ PlayListTask::~PlayListTask()
     clear();
 }
 
-void PlayListTask::sort(QList<PlayListTrack *> tracks, int mode)
+void PlayListTask::sort(QList<PlayListTrack *> tracks, PlayListModel::SortMode mode)
 {
     if(isRunning())
         return;
@@ -160,7 +160,7 @@ void PlayListTask::sort(QList<PlayListTrack *> tracks, int mode)
     start();
 }
 
-void PlayListTask::sortSelection(QList<PlayListTrack *> tracks, int mode)
+void PlayListTask::sortSelection(QList<PlayListTrack *> tracks, PlayListModel::SortMode mode)
 {
     if(isRunning())
         return;

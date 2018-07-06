@@ -222,11 +222,11 @@ public slots:
     /*!
      * This is a convenience function and is the same as calling \b selectedPlayList()->sortSelection(mode)
      */
-    void sortSelection(int mode);
+    void sortSelection(PlayListModel::SortMode mode);
     /*!
      * This is a convenience function and is the same as calling \b selectedPlayList()->sort(mode)
      */
-    void sort(int mode);
+    void sort(PlayListModel::SortMode mode);
     /*!
      * This is a convenience function and is the same as calling \b selectedPlayList()->addToQueue()
      */

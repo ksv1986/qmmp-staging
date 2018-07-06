@@ -22,7 +22,6 @@
 #include <QSettings>
 #include <QMenu>
 #include <QAction>
-#include <QSignalMapper>
 #include <QCloseEvent>
 #include <QInputDialog>
 #include <QScreen>
@@ -227,109 +226,81 @@ void PlayList::createActions()
     m_sortMenu->addAction(SET_ACTION(ActionManager::PL_SHOW_INFO, m_pl_manager, SLOT (showDetails ())));
     m_sortMenu->addSeparator();
 
-    QMenu* sort_mode_menu = new QMenu (tr("Sort List"), m_sortMenu);
+    QMenu* sort_mode_menu = new QMenu (tr("Sort List"), this);
     sort_mode_menu->setIcon(QIcon::fromTheme("view-sort-ascending"));
-    QSignalMapper* signalMapper = new QSignalMapper (this);
-    QAction* titleAct = sort_mode_menu->addAction (tr ("By Title"));
-    connect (titleAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (titleAct, PlayListModel::TITLE);
 
-    QAction* albumAct = sort_mode_menu->addAction (tr ("By Album"));
-    connect (albumAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (albumAct, PlayListModel::ALBUM);
+    QAction *titleAct = sort_mode_menu->addAction(tr ("By Title"));
+    connect(titleAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::TITLE); } );
 
-    QAction* discnumberAct = sort_mode_menu->addAction (tr ("By Disc Number"));
-    connect (discnumberAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (discnumberAct, PlayListModel::DISCNUMBER);
+    QAction *albumAct = sort_mode_menu->addAction(tr ("By Album"));
+    connect(albumAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::ALBUM); } );
 
-    QAction* artistAct = sort_mode_menu->addAction (tr ("By Artist"));
-    connect (artistAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (artistAct, PlayListModel::ARTIST);
+    QAction *artistAct = sort_mode_menu->addAction(tr ("By Artist"));
+    connect(artistAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::ARTIST); } );
 
-    QAction* albumArtistAct = sort_mode_menu->addAction (tr ("By Album Artist"));
-    connect (albumArtistAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (albumArtistAct, PlayListModel::ALBUMARTIST);
+    QAction *albumArtistAct = sort_mode_menu->addAction(tr ("By Album Artist"));
+    connect(albumArtistAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::ALBUMARTIST); } );
 
-    QAction* nameAct = sort_mode_menu->addAction (tr ("By Filename"));
-    connect (nameAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (nameAct, PlayListModel::FILENAME);
+    QAction *nameAct = sort_mode_menu->addAction(tr ("By Filename"));
+    connect(nameAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::FILENAME); } );
 
-    QAction* pathnameAct = sort_mode_menu->addAction (tr ("By Path + Filename"));
-    connect (pathnameAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (pathnameAct, PlayListModel::PATH_AND_FILENAME);
+    QAction *pathnameAct = sort_mode_menu->addAction(tr ("By Path + Filename"));
+    connect(pathnameAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::PATH_AND_FILENAME); } );
 
-    QAction* dateAct = sort_mode_menu->addAction (tr ("By Date"));
-    connect (dateAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (dateAct, PlayListModel::DATE);
+    QAction *dateAct = sort_mode_menu->addAction(tr ("By Date"));
+    connect(dateAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::DATE); } );
 
-    QAction* trackAct = sort_mode_menu->addAction (tr("By Track Number"));
-    connect (trackAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (trackAct, PlayListModel::TRACK);
+    QAction *trackAct = sort_mode_menu->addAction(tr("By Track Number"));
+    connect(trackAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::TRACK); } );
 
-    QAction* fileCreationDateAct = sort_mode_menu->addAction (tr("By File Creation Date"));
-    connect (fileCreationDateAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (fileCreationDateAct, PlayListModel::FILE_CREATION_DATE);
+    QAction *discAct = sort_mode_menu->addAction(tr("By Disc Number"));
+    connect(discAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::DISCNUMBER); } );
 
-    QAction* fileModificationDateAct = sort_mode_menu->addAction (tr("By File Modification Date"));
-    connect (fileModificationDateAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (fileModificationDateAct, PlayListModel::FILE_MODIFICATION_DATE);
+    QAction *fileCreationDateAct = sort_mode_menu->addAction(tr("By File Creation Date"));
+    connect(fileCreationDateAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::FILE_CREATION_DATE); } );
 
-    QAction* groupAct = sort_mode_menu->addAction (tr("By Group"));
-    connect (groupAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (groupAct, PlayListModel::GROUP);
+    QAction *fileModificationDateAct = sort_mode_menu->addAction(tr("By File Modification Date"));
+    connect(fileModificationDateAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::FILE_MODIFICATION_DATE); } );
 
-    connect (signalMapper, SIGNAL (mapped (int)), m_pl_manager, SLOT (sort (int)));
+    QAction *groupAct = sort_mode_menu->addAction(tr("By Group"));
+    connect(groupAct, &QAction::triggered, [this]{ m_pl_manager->sort(PlayListModel::GROUP); } );
 
     m_sortMenu->addMenu (sort_mode_menu);
 
     sort_mode_menu = new QMenu (tr("Sort Selection"), m_sortMenu);
     sort_mode_menu->setIcon(QIcon::fromTheme("view-sort-ascending"));
-    signalMapper = new QSignalMapper (this);
-    titleAct = sort_mode_menu->addAction (tr ("By Title"));
-    connect (titleAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (titleAct, PlayListModel::TITLE);
+    titleAct = sort_mode_menu->addAction(tr ("By Title"));
+    connect(titleAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::TITLE); });
 
-    albumAct = sort_mode_menu->addAction (tr ("By Album"));
-    connect (albumAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (albumAct, PlayListModel::ALBUM);
+    albumAct = sort_mode_menu->addAction(tr ("By Album"));
+    connect(albumAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::ALBUM); });
 
-    discnumberAct = sort_mode_menu->addAction (tr ("By Disc Number"));
-    connect (discnumberAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (discnumberAct, PlayListModel::DISCNUMBER);
+    artistAct = sort_mode_menu->addAction(tr ("By Artist"));
+    connect(artistAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::ARTIST); });
 
-    artistAct = sort_mode_menu->addAction (tr ("By Artist"));
-    connect (artistAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (artistAct, PlayListModel::ARTIST);
+    albumArtistAct = sort_mode_menu->addAction(tr ("By Album Artist"));
+    connect(albumArtistAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::ALBUMARTIST); });
 
-    albumArtistAct = sort_mode_menu->addAction (tr ("By Album Artist"));
-    connect (albumArtistAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (albumArtistAct, PlayListModel::ALBUMARTIST);
+    nameAct = sort_mode_menu->addAction(tr ("By Filename"));
+    connect(nameAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::FILENAME); });
 
-    nameAct = sort_mode_menu->addAction (tr ("By Filename"));
-    connect (nameAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (nameAct, PlayListModel::FILENAME);
+    pathnameAct = sort_mode_menu->addAction(tr ("By Path + Filename"));
+    connect(pathnameAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::PATH_AND_FILENAME); });
 
-    pathnameAct = sort_mode_menu->addAction (tr ("By Path + Filename"));
-    connect (pathnameAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (pathnameAct, PlayListModel::PATH_AND_FILENAME);
+    dateAct = sort_mode_menu->addAction(tr ("By Date"));
+    connect(dateAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::DATE); });
 
-    dateAct = sort_mode_menu->addAction (tr ("By Date"));
-    connect (dateAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (dateAct, PlayListModel::DATE);
+    trackAct = sort_mode_menu->addAction(tr ("By Track Number"));
+    connect(trackAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::TRACK); });
 
-    trackAct = sort_mode_menu->addAction (tr ("By Track Number"));
-    connect (trackAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (trackAct, PlayListModel::TRACK);
+    discAct = sort_mode_menu->addAction(tr("By Disc Number"));
+    connect(discAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::DISCNUMBER); });
 
-    fileCreationDateAct = sort_mode_menu->addAction (tr("By File Creation Date"));
-    connect (fileCreationDateAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (fileCreationDateAct, PlayListModel::FILE_CREATION_DATE);
+    fileCreationDateAct = sort_mode_menu->addAction(tr("By File Creation Date"));
+    connect(fileCreationDateAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::FILE_CREATION_DATE); });
 
-    fileModificationDateAct = sort_mode_menu->addAction (tr("By File Modification Date"));
-    connect (fileModificationDateAct, SIGNAL (triggered (bool)), signalMapper, SLOT (map()));
-    signalMapper->setMapping (fileModificationDateAct, PlayListModel::FILE_MODIFICATION_DATE);
-
-    connect (signalMapper, SIGNAL (mapped (int)), m_pl_manager, SLOT (sortSelection (int)));
+    fileModificationDateAct = sort_mode_menu->addAction(tr("By File Modification Date"));
+    connect(fileModificationDateAct, &QAction::triggered, [this]{ m_pl_manager->sortSelection(PlayListModel::FILE_MODIFICATION_DATE ); });
 
     m_sortMenu->addMenu (sort_mode_menu);
     m_sortMenu->addSeparator();

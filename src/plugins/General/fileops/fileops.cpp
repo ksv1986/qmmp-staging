@@ -21,7 +21,6 @@
 #include <QAction>
 #include <QSettings>
 #include <QApplication>
-#include <QSignalMapper>
 #include <QProgressDialog>
 #include <QMessageBox>
 #include <QFile>
@@ -45,7 +44,6 @@ FileOps::FileOps(QObject *parent) : QObject(parent)
     QAction *separator2 = new QAction(this);
     separator2->setSeparator (true);
     //load settings
-    QSignalMapper *mapper = new QSignalMapper(this);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("FileOps");
     int count = settings.value("count", 0).toInt();
@@ -65,13 +63,11 @@ FileOps::FileOps(QObject *parent) : QObject(parent)
             m_destinations << settings.value(QString("destination_%1").arg(i)).toString();
             QAction *action = new QAction(name, this);
             action->setShortcut(settings.value(QString("hotkey_%1").arg(i)).toString());
-            connect (action, SIGNAL (triggered (bool)), mapper, SLOT (map()));
-            mapper->setMapping(action, i);
+            connect(action, &QAction::triggered, [i,this]{ execAction(i); });
             UiHelper::instance()->addAction(action, UiHelper::PLAYLIST_MENU);
         }
     }
     settings.endGroup();
-    connect(mapper, SIGNAL(mapped(int)), SLOT(execAction(int)));
     UiHelper::instance()->addAction(separator2, UiHelper::PLAYLIST_MENU);
 }
 

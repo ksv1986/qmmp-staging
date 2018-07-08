@@ -36,7 +36,7 @@ extern "C" {
 #include <X11/keysym.h>
 #include <X11/XF86keysym.h>
 #include <X11/XKBlib.h>
-#include <xcb/xcb_keysyms.h>
+#include <xcb/xcb.h>
 }
 #undef CursorShape
 #undef Status

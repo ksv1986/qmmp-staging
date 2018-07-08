@@ -24,9 +24,7 @@
 #include <QString>
 #include <QTableWidgetItem>
 #include <QList>
-#ifdef Q_OS_WIN
 #include <QAbstractNativeEventFilter>
-#endif
 #include <qmmpui/general.h>
 
 class QEvent;
@@ -72,7 +70,7 @@ public:
     static quint32 defaultKey(int act);
 };
 
-class HotkeyManager : public QObject
+class HotkeyManager : public QObject, public QAbstractNativeEventFilter
 {
     Q_OBJECT
 public:
@@ -84,21 +82,10 @@ public:
     static QList<long> ignModifiersList();
     static quint32 keycodeToKeysym(quint32 keycode);
 
-#ifdef QMMP_WS_X11
-protected:
-    virtual bool eventFilter(QObject* o, QEvent* e);
-#endif
-
 private:
+    bool nativeEventFilter(const QByteArray &eventType, void *message, long *result);
 #ifdef QMMP_WS_X11
-    static void ensureModifiers();
     QList <Hotkey *> m_grabbedKeys;
-    static long m_alt_mask;
-    static long m_meta_mask;
-    static long m_super_mask;
-    static long m_hyper_mask;
-    static long m_numlock_mask;
-    static bool m_haveMods;
 #endif
 
 #ifdef Q_OS_WIN

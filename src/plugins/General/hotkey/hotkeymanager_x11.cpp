@@ -24,21 +24,19 @@
 #ifdef QMMP_WS_X11
 #include <QSettings>
 #include <QX11Info>
+#include <QtDebug>
 #include <QEvent>
 #include <QKeyEvent>
 #include <QCoreApplication>
 #include <QApplication>
-#include <QDesktopWidget>
+#include <QAbstractEventDispatcher>
 #define Visual XVisual
-extern "C"
-{
+extern "C" {
 #include <X11/X.h>
-#include <X11/Xlib.h>
 #include <X11/keysym.h>
 #include <X11/XF86keysym.h>
-#ifdef HAVE_XKBLIB_H
 #include <X11/XKBlib.h>
-#endif
+#include <xcb/xcb_keysyms.h>
 }
 #undef CursorShape
 #undef Status
@@ -80,14 +78,8 @@ quint32 Hotkey::defaultKey(int act)
 
 HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-    //Workaround Qt regression of no longer delivering events for the root window
-    //See qtbase commit 2b34aefcf02f09253473b096eb4faffd3e62b5f4
-    //More information: https://bugs.kde.org/show_bug.cgi?id=360841
-    qApp->desktop()->winId();
-#endif
     QCoreApplication::instance()->installEventFilter(this);
-    WId rootWindow = QX11Info::appRootWindow();
+    WId rootWindow = DefaultRootWindow(QX11Info::display());
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat); //load settings
     settings.beginGroup("Hotkey");
     for (int i = Hotkey::PLAY, j = 0; i <= Hotkey::VOLUME_MUTE; ++i, ++j)
@@ -105,7 +97,8 @@ HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
                 hotkey->code = XKeysymToKeycode(QX11Info::display(), hotkey->key);
                 if(!hotkey->code)
                     continue;
-                XGrabKey(QX11Info::display(),  hotkey->code, mod | mask_mod, rootWindow, False,
+
+                XGrabKey(QX11Info::display(),  hotkey->code, mod | mask_mod, rootWindow, True,
                          GrabModeAsync, GrabModeAsync);
                 hotkey->mod = mod | mask_mod;
                 m_grabbedKeys << hotkey;
@@ -114,11 +107,13 @@ HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
     }
     settings.endGroup();
     XSync(QX11Info::display(), False);
-    //         XSetErrorHandler();
+    qApp->installNativeEventFilter(this);
 }
 
 HotkeyManager::~HotkeyManager()
 {
+    if(qApp && qApp->eventDispatcher())
+        qApp->removeNativeEventFilter(this);
     foreach(Hotkey *key, m_grabbedKeys)
     {
         if(key->code)
@@ -142,13 +137,17 @@ const QString HotkeyManager::getKeyString(quint32 key, quint32 modifiers)
     return keyStr;
 }
 
-bool HotkeyManager::eventFilter(QObject* o, QEvent* e)
+bool HotkeyManager::nativeEventFilter(const QByteArray &eventType, void *message, long *result)
 {
-    if (e->type() == QEvent::KeyPress)
+    Q_UNUSED(eventType);
+    Q_UNUSED(result);
+    xcb_generic_event_t *e = static_cast<xcb_generic_event_t*>(message);
+
+    if(e->response_type == XCB_KEY_PRESS)
     {
-        QKeyEvent* k = static_cast<QKeyEvent*>(e);
-        quint32 key = keycodeToKeysym(k->nativeScanCode());
-        quint32 mod = k->nativeModifiers ();
+        xcb_key_press_event_t *ke = (xcb_key_press_event_t*)e;
+        quint32 key = keycodeToKeysym(ke->detail);
+        quint32 mod = ke->state;
         SoundCore *core = SoundCore::instance();
         MediaPlayer *player = MediaPlayer::instance();
         foreach(Hotkey *hotkey, m_grabbedKeys)
@@ -203,123 +202,21 @@ bool HotkeyManager::eventFilter(QObject* o, QEvent* e)
                 break;
 
             }
-            return true;
+
         }
     }
-    return QObject::eventFilter(o, e);
-}
-long HotkeyManager::m_alt_mask = 0;
-long HotkeyManager::m_meta_mask = 0;
-long HotkeyManager::m_super_mask = 0;
-long HotkeyManager::m_hyper_mask = 0;
-long HotkeyManager::m_numlock_mask = 0;
-bool HotkeyManager::m_haveMods = false;
-
-//copied from globalshortcutmanager_x11.cpp by Justin Karneges and Michail Pishchagin (Psi project)
-void HotkeyManager::ensureModifiers()
-{
-    if (m_haveMods)
-        return;
-
-    Display* appDpy = QX11Info::display();
-    XModifierKeymap* map = XGetModifierMapping(appDpy);
-    if (map)
-    {
-        // XkbKeycodeToKeysym helper code adapeted from xmodmap
-        int min_keycode, max_keycode, keysyms_per_keycode = 1;
-        XDisplayKeycodes (appDpy, &min_keycode, &max_keycode);
-        XFree(XGetKeyboardMapping (appDpy, min_keycode, (max_keycode - min_keycode + 1), &keysyms_per_keycode));
-
-        int i, maskIndex = 0, mapIndex = 0;
-        for (maskIndex = 0; maskIndex < 8; maskIndex++)
-        {
-            for (i = 0; i < map->max_keypermod; i++)
-            {
-                if (map->modifiermap[mapIndex])
-                {
-                    KeySym sym;
-                    int symIndex = 0;
-                    do
-                    {
-#ifdef HAVE_XKBLIB_H
-                        sym = XkbKeycodeToKeysym(appDpy, map->modifiermap[mapIndex], symIndex, 0);
-#else
-                        sym = XKeycodeToKeysym(appDpy, map->modifiermap[mapIndex], symIndex);
-#endif
-                        symIndex++;
-                    }
-                    while ( !sym && symIndex < keysyms_per_keycode);
-                    if (!m_alt_mask && (sym == XK_Alt_L || sym == XK_Alt_R))
-                    {
-                        m_alt_mask = 1 << maskIndex;
-                    }
-                    if (!m_meta_mask && (sym == XK_Meta_L || sym == XK_Meta_R))
-                    {
-                        m_meta_mask = 1 << maskIndex;
-                    }
-                    if (!m_super_mask && (sym == XK_Super_L || sym == XK_Super_R))
-                    {
-                        m_super_mask = 1 << maskIndex;
-                    }
-                    if (!m_hyper_mask && (sym == XK_Hyper_L || sym == XK_Hyper_R))
-                    {
-                        m_hyper_mask = 1 << maskIndex;
-                    }
-                    if (!m_numlock_mask && (sym == XK_Num_Lock))
-                    {
-                        m_numlock_mask = 1 << maskIndex;
-                    }
-                }
-                mapIndex++;
-            }
-        }
-
-        XFreeModifiermap(map);
-
-        // logic from qt source see gui/kernel/qkeymapper_x11.cpp
-        if (!m_meta_mask || m_meta_mask == m_alt_mask)
-        {
-            // no meta keys... s,meta,super,
-            m_meta_mask = m_super_mask;
-            if (!m_meta_mask || m_meta_mask == m_alt_mask)
-            {
-                // no super keys either? guess we'll use hyper then
-                m_meta_mask = m_hyper_mask;
-            }
-        }
-    }
-    else
-    {
-        // assume defaults
-        m_alt_mask = Mod1Mask;
-        m_meta_mask = Mod4Mask;
-    }
-
-    m_haveMods = true;
+    return false;
 }
 
 QList<long> HotkeyManager::ignModifiersList()
 {
-    ensureModifiers();
-    QList<long> ret;
-    if (m_numlock_mask)
-    {
-        ret << 0 << LockMask << m_numlock_mask << (LockMask | m_numlock_mask);
-    }
-    else
-    {
-        ret << 0 << LockMask;
-    }
+    QList<long> ret = { 0, Mod2Mask, LockMask, (Mod2Mask | LockMask) };
     return ret;
 }
 
 quint32 HotkeyManager::keycodeToKeysym(quint32 keycode)
 {
-#ifdef HAVE_XKBLIB_H
     return XkbKeycodeToKeysym(QX11Info::display(), keycode, 0, 0);
-#else
-    return XKeycodeToKeysym(QX11Info::display(), keycode,0);
-#endif
 }
 
 #include "moc_hotkeymanager.cpp"

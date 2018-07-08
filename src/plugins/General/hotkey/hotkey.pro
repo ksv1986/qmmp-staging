@@ -24,6 +24,5 @@ unix {
     target.path = $$PLUGIN_DIR/General
     INSTALLS += target
     PKGCONFIG += x11
-    DEFINES += HAVE_XKBLIB_H
     QT += x11extras
 }

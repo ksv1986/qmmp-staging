@@ -219,7 +219,7 @@ PRINT_SUMMARY ("Global hotkey support ............." USE_HOTKEY X11_FOUND AND XC
 PRINT_SUMMARY ("GNOME/Cinnamon hotkey support ....." USE_GNOMEHOTKEY Qt5DBus_FOUND)
 PRINT_SUMMARY ("File operations ..................." USE_FILEOPS 1)
 PRINT_SUMMARY ("Cover manager ....................." USE_COVER 1)
-PRINT_SUMMARY ("KDE4 notifications support........." USE_KDENOTIFY Qt5DBus_FOUND)
+PRINT_SUMMARY ("KDE notifications support ........." USE_KDENOTIFY Qt5DBus_FOUND)
 PRINT_SUMMARY ("Audio converter ..................." USE_CONVERTER TAGLIB_FOUND)
 PRINT_SUMMARY ("ReplayGain Scanner ................" USE_RGSCAN TAGLIB_FOUND)
 PRINT_SUMMARY ("Stream browser ...................." USE_SB 1)

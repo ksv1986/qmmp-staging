@@ -21,10 +21,6 @@
 #include <QtGlobal>
 #ifdef Q_OS_WIN
 #include <QSettings>
-#include <QEvent>
-#include <QKeyEvent>
-#include <QCoreApplication>
-#include <QAbstractNativeEventFilter>
 #include <QApplication>
 #include <windows.h>
 #include <winuser.h>
@@ -97,117 +93,9 @@ quint32 Hotkey::defaultKey(int act)
     return keyMap[act];
 }
 
-class KeyFilter : public QAbstractNativeEventFilter
-{
-public:
-    KeyFilter(const Hotkey &hotkey) : QAbstractNativeEventFilter()
-    {
-        m_hotkey = hotkey;
-        m_mods = 0;
-        m_id = 0;
-
-        if(m_hotkey.mod & HOTKEYF_CONTROL)
-            m_mods |= MOD_CONTROL;
-        if(m_hotkey.mod & HOTKEYF_SHIFT)
-            m_mods |= MOD_SHIFT;
-        if(m_hotkey.mod & HOTKEYF_ALT)
-            m_mods |= MOD_ALT;
-        if(m_hotkey.mod & HOTKEYF_EXT)
-            m_mods |= MOD_WIN;
-
-
-        if(RegisterHotKey(NULL, m_mods^m_hotkey.key,  m_mods, m_hotkey.key))
-        {
-            m_id = m_mods^m_hotkey.key;
-            qDebug("KeyFilterWidget: registered key=0x%x, mod=0x%x", hotkey.key, m_mods);
-        }
-        else
-            qWarning("KeyFilterWidget: unable to register key=0x%x, mod=0x%x", hotkey.key, m_mods);
-
-        qApp->installNativeEventFilter(this);
-    }
-
-    virtual ~KeyFilter()
-    {
-        qApp->removeNativeEventFilter(this);
-        if(m_id)
-            UnregisterHotKey(NULL, m_id);
-    }
-
-    bool nativeEventFilter(const QByteArray &eventType, void *message, long *result)
-    {
-        Q_UNUSED(eventType);
-        Q_UNUSED(result);
-        MSG* m = static_cast<MSG*>(message);
-        if (m->message == WM_HOTKEY && m->wParam == m_id)
-        {
-            SoundCore *core = SoundCore::instance();
-            MediaPlayer *player = MediaPlayer::instance();
-            qDebug("KeyFilterWidget: [%s] pressed",
-                   qPrintable(HotkeyManager::getKeyString(m_hotkey.key, m_hotkey.mod)));
-
-            switch (m_hotkey.action)
-            {
-            case Hotkey::PLAY:
-                player->play();
-                break;
-            case Hotkey::STOP:
-                player->stop();
-                break;
-            case Hotkey::PAUSE:
-                core->pause();
-                break;
-            case Hotkey::PLAY_PAUSE:
-                if (core->state() == Qmmp::Stopped)
-                    player->play();
-                else if (core->state() != Qmmp::FatalError)
-                    core->pause();
-                break;
-            case Hotkey::NEXT:
-                player->next();
-                break;
-            case Hotkey::PREVIOUS:
-                player->previous();
-                break;
-            case Hotkey::SHOW_HIDE:
-                UiHelper::instance()->toggleVisibility();
-                break;
-            case Hotkey::VOLUME_UP:
-                core->volumeUp();
-                break;
-            case Hotkey::VOLUME_DOWN:
-                core->volumeDown();
-                break;
-            case Hotkey::FORWARD:
-                core->seek(core->elapsed() + 5000);
-                break;
-            case Hotkey::REWIND:
-                core->seek(qMax(qint64(0), core->elapsed() - 5000));
-                break;
-            case Hotkey::JUMP_TO_TRACK:
-                UiHelper::instance()->jumpToTrack();
-                break;
-            case Hotkey::VOLUME_MUTE:
-                SoundCore::instance()->setMuted(!SoundCore::instance()->isMuted());
-                break;
-            }
-            qApp->processEvents();
-            return true;
-        }
-        return false;
-    }
-
-private:
-    Hotkey m_hotkey;
-    UINT m_mods;
-    WPARAM m_id;
-};
-
 HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
 {
-    QCoreApplication::instance()->installEventFilter(this);
-
-
+    qApp->installNativeEventFilter(this);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat); //load settings
     settings.beginGroup("Hotkey");
     for (int i = Hotkey::PLAY; i <= Hotkey::JUMP_TO_TRACK; ++i)
@@ -217,14 +105,34 @@ HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
 
         if (key)
         {
-            Hotkey hotkey;
-            hotkey.action = i;
-            hotkey.key = key;
-            hotkey.code = MapVirtualKey(key, 0);
-            hotkey.mod = mod;
+            Hotkey *hotkey = new Hotkey;
+            hotkey->action = i;
+            hotkey->key = key;
+            hotkey->code = MapVirtualKey(key, 0);
+            hotkey->mod = mod;
 
-            KeyFilter *filerWidget = new KeyFilter(hotkey);
-            m_filters << filerWidget;
+            if(hotkey->mod & HOTKEYF_CONTROL)
+                hotkey->mods |= MOD_CONTROL;
+            if(hotkey->mod & HOTKEYF_SHIFT)
+                hotkey->mods |= MOD_SHIFT;
+            if(hotkey->mod & HOTKEYF_ALT)
+                hotkey->mods |= MOD_ALT;
+            if(hotkey->mod & HOTKEYF_EXT)
+                hotkey->mods |= MOD_WIN;
+
+            hotkey->id = hotkey->mods^hotkey->key;
+
+            if(RegisterHotKey(NULL, hotkey->id,  hotkey->mods, hotkey->key))
+            {
+                qDebug("HotkeyManager: registered key=0x%x, mod=0x%x", hotkey->key, hotkey->mods);
+            }
+            else
+            {
+                hotkey->id = 0;
+                qWarning("HotkeyManager: unable to register key=0x%x, mod=0x%x", hotkey->key, hotkey->mods);
+            }
+
+            m_grabbedKeys << hotkey;
         }
     }
     settings.endGroup();
@@ -232,7 +140,14 @@ HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
 
 HotkeyManager::~HotkeyManager()
 {
-    qDeleteAll(m_filters);
+    qApp->removeNativeEventFilter(this);
+    while(!m_grabbedKeys.isEmpty())
+    {
+        Hotkey *key = m_grabbedKeys.takeFirst ();
+        if(key->id)
+             UnregisterHotKey(NULL, key->id);
+        delete key;
+    }
 }
 
 const QString HotkeyManager::getKeyString(quint32 key, quint32 modifiers)
@@ -300,6 +215,74 @@ quint32 HotkeyManager::keycodeToKeysym(quint32 keycode)
             return keyMap[i].key;
     }
     return MapVirtualKey(keycode, 1);
+}
+
+bool HotkeyManager::nativeEventFilter(const QByteArray &eventType, void *message, long *result)
+{
+    Q_UNUSED(eventType);
+    Q_UNUSED(result);
+    MSG *m = static_cast<MSG*>(message);
+    if (m->message == WM_HOTKEY)
+    {
+        qDebug("++");
+        SoundCore *core = SoundCore::instance();
+        MediaPlayer *player = MediaPlayer::instance();
+        foreach(Hotkey *hotkey, m_grabbedKeys)
+        {
+            if(hotkey->id != m->wParam)
+                continue;
+
+            qDebug("KeyFilterWidget: [%s] pressed",
+                   qPrintable(HotkeyManager::getKeyString(hotkey->key, hotkey->mod)));
+
+            switch (hotkey->action)
+            {
+            case Hotkey::PLAY:
+                player->play();
+                break;
+            case Hotkey::STOP:
+                player->stop();
+                break;
+            case Hotkey::PAUSE:
+                core->pause();
+                break;
+            case Hotkey::PLAY_PAUSE:
+                if (core->state() == Qmmp::Stopped)
+                    player->play();
+                else if (core->state() != Qmmp::FatalError)
+                    core->pause();
+                break;
+            case Hotkey::NEXT:
+                player->next();
+                break;
+            case Hotkey::PREVIOUS:
+                player->previous();
+                break;
+            case Hotkey::SHOW_HIDE:
+                UiHelper::instance()->toggleVisibility();
+                break;
+            case Hotkey::VOLUME_UP:
+                core->volumeUp();
+                break;
+            case Hotkey::VOLUME_DOWN:
+                core->volumeDown();
+                break;
+            case Hotkey::FORWARD:
+                core->seek(core->elapsed() + 5000);
+                break;
+            case Hotkey::REWIND:
+                core->seek(qMax(qint64(0), core->elapsed() - 5000));
+                break;
+            case Hotkey::JUMP_TO_TRACK:
+                UiHelper::instance()->jumpToTrack();
+                break;
+            case Hotkey::VOLUME_MUTE:
+                SoundCore::instance()->setMuted(!SoundCore::instance()->isMuted());
+                break;
+            }
+        }
+    }
+    return false;
 }
 
 #include "moc_hotkeymanager.cpp"

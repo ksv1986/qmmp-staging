@@ -20,6 +20,7 @@ DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x050400
 
 CONFIG -= depend_includepath
 CONFIG += hide_symbols
+CONFIG += c++11
 QT += widgets
 
 #Version

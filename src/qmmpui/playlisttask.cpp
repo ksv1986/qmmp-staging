@@ -455,12 +455,11 @@ void PlayListTask::run()
 
         //create new playlist tracks
         QStringList ignoredFiles;
-        foreach (QFileInfo f, l)
+        TrackInfo::Parts parts = QmmpUiSettings::instance()->useMetadata() ? TrackInfo::AllParts : TrackInfo::NoParts;
+        foreach(QFileInfo f, l)
         {
             QStringList ignored;
-            foreach (TrackInfo *info, mm->createPlayList(f.canonicalFilePath(),
-                                                        QmmpUiSettings::instance()->useMetadata() ? TrackInfo::MetaData : TrackInfo::NoParts,
-                                                        &ignored))
+            foreach (TrackInfo *info, mm->createPlayList(f.canonicalFilePath(), parts, &ignored))
             {
                 m_new_tracks << new PlayListTrack(info);
             }
@@ -468,7 +467,7 @@ void PlayListTask::run()
         }
         //remove dublicate URLs and ignored files
         //this code prevents re-addition of cue tracks
-        foreach (PlayListTrack *t, m_new_tracks)
+        foreach(PlayListTrack *t, m_new_tracks)
         {
             if((t->path().contains("://") && urls.contains(t->path())) ||
                     ignoredFiles.contains(t->path()))

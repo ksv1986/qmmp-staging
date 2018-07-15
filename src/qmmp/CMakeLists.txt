@@ -120,6 +120,7 @@ SET(libqmmp_DEVEL_HDRS
     soundcore.h
     statehandler.h
     tagmodel.h
+    trackinfo.h
     visualfactory.h
     visual.h
     volume.h

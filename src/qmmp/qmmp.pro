@@ -133,6 +133,7 @@ unix {
         soundcore.h \
         statehandler.h \
         tagmodel.h \
+        trackinfo.h \
         visualfactory.h \
         visual.h \
         volume.h \

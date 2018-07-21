@@ -12,20 +12,19 @@
 <context>
     <name>KdeNotifyFactory</name>
     <message>
-        <location filename="../kdenotifyfactory.cpp" line="31"/>
-        <source>KDE 4 notification plugin</source>
-        <translation>Πρόσθετο ειδοποιήσεων του KDE4</translation>
+        <location filename="../kdenotifyfactory.cpp" line="29"/>
+        <source>KDE notification plugin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../kdenotifyfactory.cpp" line="51"/>
+        <location filename="../kdenotifyfactory.cpp" line="49"/>
         <source>About KDE Notification Plugin</source>
         <translation>Σχετικά με το πρόσθετο ειδοποιήσεων KDE</translation>
     </message>
     <message>
-        <location filename="../kdenotifyfactory.cpp" line="52"/>
-        <source>KDE 4 notification plugin for Qmmp 
-</source>
-        <translation>Qmmp πρόσθετο ειδοποιήσεων του KDE4</translation>
+        <location filename="../kdenotifyfactory.cpp" line="50"/>
+        <source>KDE notification plugin for Qmmp</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -42,26 +41,31 @@
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
-        <source>Notification delay [s]:</source>
-        <translation>Καθυστέρηση ειδοποίησης [s]:</translation>
+        <source>Notification delay:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="75"/>
+        <location filename="../settingsdialog.ui" line="52"/>
+        <source>s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="78"/>
         <source>Update visible notification instead create new</source>
         <translation>Ενημέρωση της ορατής ειδοποίησης αντί τη δημιουργία νέας</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="85"/>
+        <location filename="../settingsdialog.ui" line="88"/>
         <source>Appearance</source>
         <translation>Εμφάνιση</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="91"/>
+        <location filename="../settingsdialog.ui" line="94"/>
         <source>Show covers</source>
         <translation>Εμφάνιση εξώφυλλων</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="100"/>
+        <location filename="../settingsdialog.ui" line="103"/>
         <source>Edit template</source>
         <translation>Επεξεργασία πρότυπου</translation>
     </message>

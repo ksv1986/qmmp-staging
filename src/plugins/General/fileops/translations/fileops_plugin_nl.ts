@@ -4,24 +4,24 @@
 <context>
     <name>FileOps</name>
     <message>
-        <location filename="../fileops.cpp" line="98"/>
-        <location filename="../fileops.cpp" line="132"/>
+        <location filename="../fileops.cpp" line="94"/>
+        <location filename="../fileops.cpp" line="128"/>
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="99"/>
-        <location filename="../fileops.cpp" line="133"/>
+        <location filename="../fileops.cpp" line="95"/>
+        <location filename="../fileops.cpp" line="129"/>
         <source>Destination directory doesn&apos;t exist</source>
         <translation>Doelmap bestaat niet</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="136"/>
+        <location filename="../fileops.cpp" line="132"/>
         <source>Move Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../fileops.cpp" line="137"/>
+        <location filename="../fileops.cpp" line="133"/>
         <source>Are you sure you want to move %n file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -29,38 +29,38 @@
         </translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="153"/>
+        <location filename="../fileops.cpp" line="149"/>
         <source>Copying</source>
         <translation>Bezig met kopiëren</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="154"/>
-        <location filename="../fileops.cpp" line="244"/>
+        <location filename="../fileops.cpp" line="150"/>
+        <location filename="../fileops.cpp" line="240"/>
         <source>Stop</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="199"/>
+        <location filename="../fileops.cpp" line="195"/>
         <source>Copying file %1/%2</source>
         <translation>Kopiëer bestand: %1/%2</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="243"/>
+        <location filename="../fileops.cpp" line="239"/>
         <source>Moving</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="276"/>
+        <location filename="../fileops.cpp" line="272"/>
         <source>Moving file %1/%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="114"/>
+        <location filename="../fileops.cpp" line="110"/>
         <source>Remove Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../fileops.cpp" line="115"/>
+        <location filename="../fileops.cpp" line="111"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
         <translation>
             <numerusform>Weet u zeker dat u dit bestand wilt verwijderen?</numerusform>

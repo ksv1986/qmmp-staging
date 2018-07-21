@@ -12,21 +12,19 @@
 <context>
     <name>KdeNotifyFactory</name>
     <message>
-        <location filename="../kdenotifyfactory.cpp" line="31"/>
-        <source>KDE 4 notification plugin</source>
-        <translation>Greffon de notification KDE 4</translation>
+        <location filename="../kdenotifyfactory.cpp" line="29"/>
+        <source>KDE notification plugin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../kdenotifyfactory.cpp" line="51"/>
+        <location filename="../kdenotifyfactory.cpp" line="49"/>
         <source>About KDE Notification Plugin</source>
         <translation>À propos du greffon de notification KDE 4</translation>
     </message>
     <message>
-        <location filename="../kdenotifyfactory.cpp" line="52"/>
-        <source>KDE 4 notification plugin for Qmmp 
-</source>
-        <translation>Greffon de notification KDE 4 pour Qmmp
-</translation>
+        <location filename="../kdenotifyfactory.cpp" line="50"/>
+        <source>KDE notification plugin for Qmmp</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -43,26 +41,31 @@
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
-        <source>Notification delay [s]:</source>
-        <translation>Détail de notification [s] :</translation>
+        <source>Notification delay:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="75"/>
+        <location filename="../settingsdialog.ui" line="52"/>
+        <source>s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="78"/>
         <source>Update visible notification instead create new</source>
         <translation>Mettre à jour la notification visible au lieu d&apos;en créer une nouvelle</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="85"/>
+        <location filename="../settingsdialog.ui" line="88"/>
         <source>Appearance</source>
         <translation>Apparence</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="91"/>
+        <location filename="../settingsdialog.ui" line="94"/>
         <source>Show covers</source>
         <translation>Montrer les couvertures</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="100"/>
+        <location filename="../settingsdialog.ui" line="103"/>
         <source>Edit template</source>
         <translation>Éditer le patron</translation>
     </message>

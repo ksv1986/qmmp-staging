@@ -27,22 +27,22 @@
         <translation>Wtyczka klawiszów skrótowych</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="51"/>
+        <location filename="../hotkeyfactory.cpp" line="57"/>
         <source>About Global Hotkey Plugin</source>
         <translation>O wtyczce Klawisze Skrótowe</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="52"/>
+        <location filename="../hotkeyfactory.cpp" line="58"/>
         <source>Qmmp Global Hotkey Plugin</source>
         <translation>Wtyczka Skróŧy Klawiszowe dla Qmmp</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="53"/>
+        <location filename="../hotkeyfactory.cpp" line="59"/>
         <source>This plugin adds support for multimedia keys or global key combinations</source>
         <translation>Ta wtyczka obsługuje klawisze multimedialne oraz globalne kombinacje klawiszów skrótowych</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="54"/>
+        <location filename="../hotkeyfactory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

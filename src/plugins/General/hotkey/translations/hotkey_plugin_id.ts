@@ -27,22 +27,22 @@
         <translation>Plugin Hotkey Global</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="51"/>
+        <location filename="../hotkeyfactory.cpp" line="57"/>
         <source>About Global Hotkey Plugin</source>
         <translation>Tentang Plugin Hotkey Global</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="52"/>
+        <location filename="../hotkeyfactory.cpp" line="58"/>
         <source>Qmmp Global Hotkey Plugin</source>
         <translation>Plugin Hotkey Global Qmmp</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="53"/>
+        <location filename="../hotkeyfactory.cpp" line="59"/>
         <source>This plugin adds support for multimedia keys or global key combinations</source>
         <translation>Plugin ini menambahkan dukungan untuk tombol multimedia atau kombinasi tombol global</translation>
     </message>
     <message>
-        <location filename="../hotkeyfactory.cpp" line="54"/>
+        <location filename="../hotkeyfactory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

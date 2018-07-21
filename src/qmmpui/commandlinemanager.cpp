@@ -23,6 +23,7 @@
 #include <QObject>
 #include <QList>
 #include <QApplication>
+#include <QTranslator>
 #include <cstdlib>
 #include <iostream>
 #include <qmmp/qmmp.h>
@@ -60,7 +61,12 @@ void CommandLineManager::checkOptions()
             {
                 m_options->append(option);
                 m_files->insert(option, filePath);
-                //qApp->installTranslator(option->createTranslator(qApp));
+                if(!option->properties().translation.isEmpty())
+                {
+                    QTranslator *translator = new QTranslator(qApp);
+                    translator->load(option->properties().translation + Qmmp::systemLanguageID());
+                    qApp->installTranslator(translator);
+                }
             }
         }
     }
@@ -100,7 +106,7 @@ void CommandLineManager::printUsage()
     checkOptions();
     foreach(CommandLineOption *opt, *m_options)
     {
-        foreach (QString line, opt->helpString())
+        foreach(QString line, opt->properties().helpString)
         {
             QString str = formatHelpString(line);
             if(!str.isEmpty())

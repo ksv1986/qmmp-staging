@@ -27,6 +27,18 @@ class QString;
 class QObject;
 class QStringList;
 
+/*! @brief Helper class to store command line plugin properties.
+ * @author Ilya Kotov <forkotov02@ya.ru>
+ */
+class CommandLineProperties
+{
+public:
+    QString shortName;      /*!< Input plugin short name for internal usage */
+    QString translation;    /*!< Translation file path without locale code and extension */
+    QStringList helpString; /*!< A list of specially formatted help strings.
+                                 Example: "--help||Display this text and exit" */
+};
+
 /*! @brief Abstract base class of the command line plugins.
  * @author Vladimir Kuznetsov <vovanec@gmail.ru>
  */
@@ -34,19 +46,14 @@ class QMMPUI_EXPORT CommandLineOption
 {
 public:
     /*!
+     * Returns command line plugin properties.
+     */
+    virtual const CommandLineProperties properties() const = 0;
+    /*!
      * Returns \b true if \b opt_str string can be processed,
      * otherise \b false
      */
     virtual bool identify(const QString& opt_str) const = 0;
-    /*!
-     * Command line option name
-     */
-    virtual const QString name() const = 0;
-    /*!
-     * A list of specially formatted help strings.
-     * Example: "--help||Display this text and exit".
-     */
-    virtual const QStringList helpString() const = 0;
     /*!
      * Parses \b opt_str args(if needed), executes command.
      * @param opt_str Command to execute

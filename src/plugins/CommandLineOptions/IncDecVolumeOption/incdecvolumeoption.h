@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -34,9 +34,8 @@ Q_OBJECT
 Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.CommandLineOptionInterface.1.0")
 Q_INTERFACES(CommandLineOption)
 public:
+    virtual const CommandLineProperties properties() const;
     virtual bool identify(const QString& opt_str) const;
-    virtual const QString name() const;
-    virtual const QStringList helpString() const;
     virtual QString executeCommand(const QString& opt_str, const QStringList &args);
 };
 

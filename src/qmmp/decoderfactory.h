@@ -74,7 +74,7 @@ public:
      */
     virtual bool canDecode(QIODevice *d) const = 0;
     /*!
-     * Returns general plugin properties.
+     * Returns decoder plugin properties.
      */
     virtual const DecoderProperties properties() const = 0;
     /*!

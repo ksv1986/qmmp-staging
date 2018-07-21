@@ -53,7 +53,6 @@ public:
     virtual FileDialog* create();
     virtual const FileDialogProperties properties() const;
     virtual void showAbout(QWidget*);
-    virtual QTranslator *createTranslator(QObject *parent);
     virtual ~QmmpFileDialogFactory()
     {
         ;

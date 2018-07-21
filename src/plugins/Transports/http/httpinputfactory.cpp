@@ -20,7 +20,6 @@
 
 #include <QtPlugin>
 #include <QMessageBox>
-#include <QTranslator>
 #include <curl/curlver.h>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
@@ -29,13 +28,14 @@
 
 const InputSourceProperties HTTPInputFactory::properties() const
 {
-    InputSourceProperties p;
-    p.protocols << "http" << "https";
-    p.name = tr("HTTP Plugin");
-    p.shortName = "http";
-    p.hasAbout = true;
-    p.hasSettings = true;
-    return p;
+    InputSourceProperties properties;
+    properties.protocols << "http" << "https";
+    properties.name = tr("HTTP Plugin");
+    properties.shortName = "http";
+    properties.translation = QLatin1String(":/http_plugin_");
+    properties.hasAbout = true;
+    properties.hasSettings = true;
+    return properties;
 }
 
 InputSource *HTTPInputFactory::create(const QString &url, QObject *parent)
@@ -55,12 +55,4 @@ void HTTPInputFactory::showAbout(QWidget *parent)
                         tr("Qmmp HTTP Transport Plugin")+"\n"+
                         tr("Compiled against libcurl-%1").arg(LIBCURL_VERSION) + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *HTTPInputFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/http_plugin_") + locale);
-    return translator;
 }

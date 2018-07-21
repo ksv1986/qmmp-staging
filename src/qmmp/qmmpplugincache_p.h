@@ -54,6 +54,7 @@ public:
 
 private:
     QObject *instance();
+    void loadTranslation(const QString &translation);
     QString m_path;
     QString m_shortName;
     bool m_error;

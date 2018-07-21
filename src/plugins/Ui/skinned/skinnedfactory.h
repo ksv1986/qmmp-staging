@@ -21,9 +21,7 @@
 #define SKINNEDFACTORY_H
 
 #include <QObject>
-#include <QTranslator>
 #include <qmmpui/uifactory.h>
-
 
 /*!
  * @author Ilya Kotov <forkotov02@ya.ru>
@@ -37,7 +35,6 @@ public:
     const UiProperties properties() const;
     QObject *create();
     void showAbout(QWidget *parent);
-    QTranslator *createTranslator(QObject *parent);
 };
 
 #endif

@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "visualprojectmfactory.h"
@@ -29,6 +28,7 @@ const VisualProperties VisualProjectMFactory::properties() const
     VisualProperties properties;
     properties.name = tr("ProjectM");
     properties.shortName = "projectm";
+    properties.translation = QLatin1String(":/projectm_plugin_");
     properties.hasSettings = false;
     properties.hasAbout = true;
     return properties;
@@ -52,12 +52,4 @@ void VisualProjectMFactory::showAbout(QWidget *parent)
                         tr("This plugin adds projectM visualization")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Based on libprojectM-qt library"));
-}
-
-QTranslator *VisualProjectMFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/projectm_plugin_") + locale);
-    return translator;
 }

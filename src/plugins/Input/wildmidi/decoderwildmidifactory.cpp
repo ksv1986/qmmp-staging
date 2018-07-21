@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include "wildmidihelper.h"
 #include "decoder_wildmidi.h"
@@ -55,6 +54,7 @@ const DecoderProperties DecoderWildMidiFactory::properties() const
     properties.description = tr("Midi Files");
     //properties.contentType = ;
     properties.shortName = "wildmidi";
+    properties.translation = QLatin1String(":/wildmidi_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
@@ -108,12 +108,4 @@ void DecoderWildMidiFactory::showAbout(QWidget *parent)
                         tr("Qmmp WildMidi Audio Plugin")+"\n"+
                         tr("This plugin uses WildMidi library to play midi files")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderWildMidiFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/wildmidi_plugin_") + locale);
-    return translator;
 }

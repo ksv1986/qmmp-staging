@@ -24,8 +24,6 @@
     @author Ilya Kotov <forkotov02@ya.ru>
 */
 #include <QObject>
-#include <QTranslator>
-
 #include <qmmpui/general.h>
 #include <qmmpui/generalfactory.h>
 
@@ -39,7 +37,6 @@ public:
     QObject *create(QObject *parent);
     QDialog *createConfigDialog(QWidget *parent);
     void showAbout(QWidget *parent);
-    QTranslator *createTranslator(QObject *parent);
 };
 
 #endif

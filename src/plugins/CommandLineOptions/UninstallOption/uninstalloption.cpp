@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QtPlugin>
-#include <QTranslator>
 #include <QLocale>
 #include <QApplication>
 #include <qmmpui/winfileassoc.h>

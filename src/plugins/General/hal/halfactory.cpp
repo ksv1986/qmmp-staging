@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
@@ -30,6 +29,7 @@ const GeneralProperties HalFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("HAL Plugin");
     properties.shortName = "hal";
+    properties.translation = QLatin1String(":/hal_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -53,12 +53,4 @@ void HalFactory::showAbout(QWidget *parent)
                         tr("This plugin provides removable devices detection using HAL") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>") + "\n" +
                         tr("Based on Solid (KDE hardware library)"));
-}
-
-QTranslator *HalFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/hal_plugin_") + locale);
-    return translator;
 }

@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "outputpulseaudio.h"
@@ -32,6 +31,7 @@ const OutputProperties OutputPulseAudioFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.shortName = "pulse";
+    properties.translation = QLatin1String(":/pulseaudio_plugin_");
     return properties;
 }
 
@@ -55,12 +55,4 @@ void OutputPulseAudioFactory::showAbout(QWidget *parent)
    QMessageBox::about (parent, tr("About PulseAudio Output Plugin"),
                         tr("Qmmp PulseAudio Output Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *OutputPulseAudioFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/pulseaudio_plugin_") + locale);
-    return translator;
 }

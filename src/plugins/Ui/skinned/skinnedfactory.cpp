@@ -30,6 +30,7 @@ const UiProperties SkinnedFactory::properties() const
     props.hasAbout = true;
     props.name = tr("Skinned User Interface");
     props.shortName = "skinned";
+    props.translation = QLatin1String(":/skinned_plugin_");
     return props;
 }
 
@@ -51,12 +52,4 @@ void SkinnedFactory::showAbout(QWidget *parent)
                         tr("Andrey Adreev <andreev00@gmail.com>")+"\n"+
                         tr("sixixfive <http://sixsixfive.deviantart.com/>"));
 
-}
-
-QTranslator *SkinnedFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/skinned_plugin_") + locale);
-    return translator;
 }

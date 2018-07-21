@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
@@ -31,6 +30,7 @@ const OutputProperties OutputALSAFactory::properties() const
     OutputProperties properties;
     properties.name = tr("ALSA Plugin");
     properties.shortName = "alsa";
+    properties.translation = QLatin1String(":/alsa_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;
@@ -57,12 +57,4 @@ void OutputALSAFactory::showAbout(QWidget *parent)
    QMessageBox::about (parent, tr("About ALSA Output Plugin"),
                         tr("Qmmp ALSA Output Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *OutputALSAFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/alsa_plugin_") + locale);
-    return translator;
 }

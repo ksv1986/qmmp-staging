@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
@@ -30,6 +29,7 @@ const EffectProperties EffectLADSPAFactory::properties() const
     EffectProperties properties;
     properties.name = tr("LADSPA Plugin");
     properties.shortName = "ladspa";
+    properties.translation = QLatin1String(":/ladspa_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     return properties;
@@ -55,12 +55,4 @@ void EffectLADSPAFactory::showAbout(QWidget *parent)
                         tr("BMP-ladspa developers:")+"\n"+
                         tr("Nick Lamb <njl195@zepler.org.uk>")+"\n"+
                         tr("Giacomo Lozito <city_hunter@users.sf.net>"));
-}
-
-QTranslator *EffectLADSPAFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/ladspa_plugin_") + locale);
-    return translator;
 }

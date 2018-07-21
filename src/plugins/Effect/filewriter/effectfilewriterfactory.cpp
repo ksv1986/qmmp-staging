@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QTranslator>
 #include <qmmp/qmmp.h>
 #include "filewriterplugin.h"
 #include "settingsdialog.h"
@@ -30,6 +29,7 @@ const EffectProperties EffectFileWriterFactory::properties() const
     EffectProperties properties;
     properties.name = tr("File Writer Plugin");
     properties.shortName = "filewriter";
+    properties.translation = QLatin1String(":/filewriter_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     properties.priority = EffectProperties::EFFECT_PRIORITY_LOW;
@@ -52,12 +52,4 @@ void EffectFileWriterFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About File Writer Plugin"),
                        tr("Qmmp File Writer Plugin")+"\n"+
                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *EffectFileWriterFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/filewriter_plugin_") + locale);
-    return translator;
 }

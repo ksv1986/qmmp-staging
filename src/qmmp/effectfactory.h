@@ -25,7 +25,6 @@
 
 class QObject;
 class QWidget;
-class QTranslator;
 class Effect;
 
 /*! @brief Helper class to store effect plugin properties.
@@ -52,11 +51,12 @@ public:
         hasSettings = false;
         priority = EFFECT_PRIORITY_DEFAULT;
     }
-    QString name;      /*!< Effect plugin full name */
-    QString shortName; /*!< Effect plugin short name for internal usage */
-    bool hasAbout;     /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings;  /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
-    int priority;      /*!< Effect priority. Effecs with higher priority will be applied first */
+    QString name;        /*!< Effect plugin full name */
+    QString shortName;   /*!< Effect plugin short name for internal usage */
+    QString translation; /*!< Translation file path without locale code and extension */
+    bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    bool hasSettings;    /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    int priority;        /*!< Effect priority. Effecs with higher priority will be applied first */
 };
 /*! @brief Effect plugin interface (effect factory).
  * @author Ilya Kotov <forkotov02@ya.ru>
@@ -82,13 +82,8 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
-    /*!
-     * Creates QTranslator object of the system locale. Should return 0 if translation doesn't exist.
-     * @param parent Parent object.
-     */
-    virtual QTranslator *createTranslator(QObject *parent) = 0;
 };
 
-Q_DECLARE_INTERFACE(EffectFactory, "EffectFactory/1.0");
+Q_DECLARE_INTERFACE(EffectFactory, "EffectFactory/1.0")
 
 #endif

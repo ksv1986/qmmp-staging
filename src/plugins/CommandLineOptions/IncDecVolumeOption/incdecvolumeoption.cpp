@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QtPlugin>
-#include <QTranslator>
 #include <QLocale>
 #include <QPair>
 #include <qmmp/soundcore.h>
@@ -63,10 +62,10 @@ const QString IncDecVolumeCommandLineOption::name() const
     return "IncDecVolumeCommandLineOption";
 }
 
-QTranslator *IncDecVolumeCommandLineOption::createTranslator(QObject *parent)
+/*QTranslator *IncDecVolumeCommandLineOption::createTranslator(QObject *parent)
 {
     QTranslator *translator = new QTranslator(parent);
     QString locale = Qmmp::systemLanguageID();
     translator->load(QString(":/incdecvolume_plugin_") + locale);
     return translator;
-}
+}*/

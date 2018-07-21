@@ -30,6 +30,7 @@ const GeneralProperties ScrobblerFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("Scrobbler Plugin");
     properties.shortName = "scrobbler";
+    properties.translation = QLatin1String(":/scrobbler_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -51,12 +52,4 @@ void ScrobblerFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Scrobbler Plugin"),
                         tr("Qmmp AudioScrobbler Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *ScrobblerFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/scrobbler_plugin_") + locale);
-    return translator;
 }

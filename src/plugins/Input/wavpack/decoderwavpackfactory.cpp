@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include "wavpackmetadatamodel.h"
 #include "decoder_wavpack.h"
@@ -38,6 +37,7 @@ const DecoderProperties DecoderWavPackFactory::properties() const
     properties.name = tr("WavPack Plugin");
     properties.filters << "*.wv";
     properties.description = tr("WavPack Files");
+    properties.translation = QLatin1String(":/wavpack_plugin_");
     //properties.contentType = ;
     properties.shortName = "wavpack";
     properties.hasAbout = true;
@@ -179,12 +179,4 @@ void DecoderWavPackFactory::showAbout(QWidget *parent)
                         tr("WavPack library version:") +
                         QString(" %1").arg(WavpackGetLibraryVersionString ())+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderWavPackFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/wavpack_plugin_") + locale);
-    return translator;
 }

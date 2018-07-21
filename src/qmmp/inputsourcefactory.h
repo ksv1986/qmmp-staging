@@ -24,7 +24,6 @@
 #include <QObject>
 #include "qmmp_export.h"
 
-class QTranslator;
 class QStringList;
 class InputSource;
 
@@ -45,6 +44,7 @@ public:
 
     QString name;          /*!< Transport plugin full name */
     QString shortName;     /*!< Transport plugin name for internal usage */
+    QString translation;   /*!< Translation file path without locale code and extension */
     QStringList protocols; /*!< A list of supported protocols. */
     bool hasAbout;         /*!< Should be \b true if plugin has about dialog, otherwise \b false */
     bool hasSettings;      /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
@@ -77,11 +77,6 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
-    /*!
-     * Creates QTranslator object of the system locale. Should return 0 if translation doesn't exist.
-     * @param parent Parent object.
-     */
-    virtual QTranslator *createTranslator(QObject *parent) = 0;
 };
 
 Q_DECLARE_INTERFACE(InputSourceFactory, "InputSourceFactory/1.0")

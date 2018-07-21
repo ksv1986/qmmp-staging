@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
@@ -36,6 +35,7 @@ const OutputProperties OutputOSSFactory::properties() const
     OutputProperties properties;
     properties.name = tr("OSS Plugin");
     properties.shortName = "oss";
+    properties.translation = QLatin1String(":/oss_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;
@@ -58,12 +58,4 @@ QMessageBox::about (parent, tr("About OSS Output Plugin"),
                         tr("Qmmp OSS Output Plugin")+"\n"+
                         tr("Written by: Yuriy Zhuravlev <slalkerg@gmail.com>")+"\n"+
                         tr("Based on code by: Brad Hughes <bhughes@trolltech.com>"));
-}
-
-QTranslator *OutputOSSFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/oss_plugin_") + locale);
-    return translator;
 }

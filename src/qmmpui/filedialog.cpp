@@ -20,7 +20,6 @@
 
 #include <QFile>
 #include <QSettings>
-#include <QTranslator>
 #include <QApplication>
 #include <QPluginLoader>
 #include <QMetaObject>

@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QSettings>
-#include <QTranslator>
 #include <QRegExp>
 #include <QMessageBox>
 #include <QFile>
@@ -61,6 +60,7 @@ const DecoderProperties DecoderSIDFactory::properties() const
     properties.description = tr("SID Files");
     //properties.contentType = ;
     properties.shortName = "sid";
+    properties.translation = QLatin1String(":/sid_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
@@ -116,12 +116,4 @@ void DecoderSIDFactory::showAbout(QWidget *parent)
                         tr("Qmmp SID Audio Plugin")+"\n"+
                         tr("This plugin plays Commodore 64 music files using libsidplayfp library")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderSIDFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/sid_plugin_") + locale);
-    return translator;
 }

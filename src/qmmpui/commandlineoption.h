@@ -23,7 +23,6 @@
 #include "qmmpui_export.h"
 
 class CommandLineManager;
-class QTranslator;
 class QString;
 class QObject;
 class QStringList;
@@ -55,10 +54,6 @@ public:
      * @return Command output
      */
     virtual QString executeCommand(const QString &opt_str, const QStringList &args) = 0;
-    /*!
-     * Creates translator with parent object \b parent
-     */
-    virtual QTranslator *createTranslator(QObject *parent) = 0;
     /*!
      * Object destructor
      */

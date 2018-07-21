@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "effectcrossfadefactory.h"
@@ -30,6 +29,7 @@ const EffectProperties EffectCrossfadeFactory::properties() const
     EffectProperties properties;
     properties.name = tr("Crossfade Plugin");
     properties.shortName = "crossfade";
+    properties.translation = QLatin1String(":/crossfade_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     properties.priority = EffectProperties::EFFECT_PRIORITY_LOW;
@@ -52,12 +52,4 @@ void EffectCrossfadeFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Crossfade Plugin"),
                        tr("Qmmp Crossfade Plugin")+"\n"+
                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *EffectCrossfadeFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/crossfade_plugin_") + locale);
-    return translator;
 }

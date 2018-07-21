@@ -29,6 +29,7 @@ const GeneralProperties MPRISFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("MPRIS Plugin");
     properties.shortName = "mpris";
+    properties.translation = QLatin1String(":/mpris_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -50,12 +51,4 @@ void MPRISFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About MPRIS Plugin"),
                         tr("Qmmp MPRIS Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *MPRISFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/mpris_plugin_") + locale);
-    return translator;
 }

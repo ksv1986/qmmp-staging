@@ -28,6 +28,7 @@ const GeneralProperties KdeNotifyFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("KDE notification plugin");
     properties.shortName = "kdenotify_icon";
+    properties.translation = QLatin1String(":/kdenotify_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -49,12 +50,4 @@ void KdeNotifyFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About KDE Notification Plugin"),
                         tr("KDE notification plugin for Qmmp") + "<br>"
                         "Artur Guzik <a.guzik88@gmail.com>");
-}
-
-QTranslator *KdeNotifyFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/kdenotify_plugin_") + locale);
-    return translator;
 }

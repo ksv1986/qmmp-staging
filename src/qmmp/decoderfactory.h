@@ -24,7 +24,6 @@
 #include <QObject>
 #include <QString>
 #include <QIODevice>
-#include <QTranslator>
 #include <QStringList>
 #include "qmmp_export.h"
 #include "decoder.h"
@@ -49,6 +48,7 @@ public:
     }
     QString name;             /*!< Input plugin full name */
     QString shortName;        /*!< Input plugin short name for internal usage */
+    QString translation;      /*!< Translation file path without locale code and extension */
     QStringList filters;      /*!< File filters (example: "*.mp3") */
     QString description;      /*!< File filters description */
     QStringList contentTypes; /*!< Supported content types */
@@ -109,11 +109,6 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
-    /*!
-     * Creates QTranslator object of the system locale. Should return 0 if translation doesn't exist.
-     * @param parent Parent object.
-     */
-    virtual QTranslator *createTranslator(QObject *parent) = 0;
 };
 
 Q_DECLARE_INTERFACE(DecoderFactory, "DecoderFactory/1.0")

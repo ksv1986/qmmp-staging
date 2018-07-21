@@ -24,7 +24,6 @@
 #include <QString>
 #include <QIODevice>
 #include <QWidget>
-#include <QTranslator>
 #include <qmmp/output.h>
 #include <qmmp/outputfactory.h>
 

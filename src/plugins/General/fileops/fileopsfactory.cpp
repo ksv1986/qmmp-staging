@@ -29,6 +29,7 @@ const GeneralProperties FileOpsFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("File Operations Plugin");
     properties.shortName = "fileops";
+    properties.translation = QLatin1String(":/fileops_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -50,12 +51,4 @@ void FileOpsFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About File Operations Plugin"),
                         tr("Qmmp File Operations Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *FileOpsFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/fileops_plugin_") + locale);
-    return translator;
 }

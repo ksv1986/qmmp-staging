@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
@@ -30,6 +29,7 @@ const VisualProperties VisualAnalyzerFactory::properties() const
     VisualProperties properties;
     properties.name = tr("Analyzer Plugin");
     properties.shortName = "analyzer";
+    properties.translation = QLatin1String(":/analyzer_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     return properties;
@@ -50,12 +50,4 @@ void VisualAnalyzerFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Analyzer Visual Plugin"),
                         tr("Qmmp Analyzer Visual Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *VisualAnalyzerFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/analyzer_plugin_") + locale);
-    return translator;
 }

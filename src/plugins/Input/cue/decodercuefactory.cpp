@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QTranslator>
 #include "decoder_cue.h"
 #include "cuemetadatamodel.h"
 #include "cueparser.h"
@@ -38,6 +37,7 @@ const DecoderProperties DecoderCUEFactory::properties() const
     DecoderProperties properties;
     properties.name = tr("CUE Plugin");
     properties.shortName = "cue";
+    properties.translation = QLatin1String(":/cue_plugin_");
     properties.filters << "*.cue";
     properties.description = tr("CUE Files");
     properties.protocols << "cue";
@@ -91,12 +91,4 @@ void DecoderCUEFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About CUE Audio Plugin"),
                         tr("Qmmp CUE Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderCUEFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/cue_plugin_") + locale);
-    return translator;
 }

@@ -19,10 +19,10 @@
  ***************************************************************************/
 
 #include <QApplication>
-#include <QTranslator>
 #include <QLocale>
 #include <QLibraryInfo>
 #include <QIcon>
+#include <QTranslator>
 #include <stdio.h>
 #include <stdlib.h>
 #ifdef Q_OS_WIN

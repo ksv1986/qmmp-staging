@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QtPlugin>
-#include <QTranslator>
 #include <QLocale>
 #include <QMap>
 #include <qmmp/soundcore.h>
@@ -110,13 +109,13 @@ const QString StatusOption::name() const
     return "StatusOption";
 }
 
-QTranslator *StatusOption::createTranslator(QObject *parent)
+/*QTranslator *StatusOption::createTranslator(QObject *parent)
 {
     QTranslator *translator = new QTranslator(parent);
     QString locale = Qmmp::systemLanguageID();
     translator->load(QString(":/status_plugin_") + locale);
     return translator;
-}
+}*/
 
 QString StatusOption::genProgressBar()
 {

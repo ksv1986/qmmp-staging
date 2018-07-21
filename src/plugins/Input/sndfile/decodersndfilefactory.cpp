@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QTranslator>
 #include <QRegExp>
 #include <QFileInfo>
 #ifdef Q_OS_WIN
@@ -84,6 +83,7 @@ const DecoderProperties DecoderSndFileFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("Sndfile Plugin");
+    properties.translation = QLatin1String(":/sndfile_plugin_");
     properties.filters << "*.wav" << "*.au" << "*.snd" << "*.aif" << "*.aiff" << "*.8svx";
     properties.filters << "*.sph" << "*.sf" << "*.voc" << "*.w64";
     properties.description = tr("PCM Files");
@@ -187,18 +187,10 @@ void DecoderSndFileFactory::showSettings(QWidget *)
 
 void DecoderSndFileFactory::showAbout(QWidget *parent)
 {
-    char  version [128] ;
+    char version [128] = { 0 };
     sf_command (NULL, SFC_GET_LIB_VERSION, version, sizeof (version)) ;
     QMessageBox::about (parent, tr("About Sndfile Audio Plugin"),
                         tr("Qmmp Sndfile Audio Plugin")+"\n"+
                         tr("Compiled against")+" "+QString(version)+"\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderSndFileFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/sndfile_plugin_") + locale);
-    return translator;
 }

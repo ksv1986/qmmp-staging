@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QSettings>
 #include <QMessageBox>
 extern "C"{
@@ -142,6 +141,7 @@ const DecoderProperties DecoderFFmpegFactory::properties() const
     if(filters.contains("*.mka"))
         properties.contentTypes << "audio/true-hd" << "audio/x-matroska";
     properties.shortName = "ffmpeg";
+    properties.translation = QLatin1String(":/ffmpeg_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = false;
@@ -267,12 +267,4 @@ void DecoderFFmpegFactory::showAbout(QWidget *parent)
                         .arg(LIBAVUTIL_VERSION_MINOR)
                         .arg(LIBAVUTIL_VERSION_MICRO) +"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderFFmpegFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/ffmpeg_plugin_") + locale);
-    return translator;
 }

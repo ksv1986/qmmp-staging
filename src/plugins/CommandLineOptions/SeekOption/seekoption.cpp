@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QtPlugin>
-#include <QTranslator>
 #include <QLocale>
 #include <QRegExp>
 #include <qmmp/soundcore.h>
@@ -80,10 +79,10 @@ const QString SeekOption::name() const
     return "SeekOption";
 }
 
-QTranslator *SeekOption::createTranslator(QObject *parent)
+/*QTranslator *SeekOption::createTranslator(QObject *parent)
 {
     QTranslator *translator = new QTranslator(parent);
     QString locale = Qmmp::systemLanguageID();
     translator->load(QString(":/seek_plugin_") + locale);
     return translator;
-}
+}*/

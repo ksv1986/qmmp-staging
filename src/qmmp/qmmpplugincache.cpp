@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -135,7 +135,7 @@ DecoderFactory *QmmpPluginCache::decoderFactory()
     {
         m_decoderFactory = qobject_cast<DecoderFactory *> (instance());
         if(m_decoderFactory)
-            qApp->installTranslator(m_decoderFactory->createTranslator(qApp));
+            loadTranslation(m_decoderFactory->properties().translation);
     }
     return m_decoderFactory;
 }
@@ -146,7 +146,7 @@ OutputFactory *QmmpPluginCache::outputFactory()
     {
         m_outputFactory = qobject_cast<OutputFactory *> (instance());
         if(m_outputFactory)
-            qApp->installTranslator(m_outputFactory->createTranslator(qApp));
+            loadTranslation(m_outputFactory->properties().translation);
     }
     return m_outputFactory;
 }
@@ -157,7 +157,7 @@ EngineFactory *QmmpPluginCache::engineFactory()
     {
         m_engineFactory = qobject_cast<EngineFactory *> (instance());
         if(m_engineFactory)
-            qApp->installTranslator(m_engineFactory->createTranslator(qApp));
+            loadTranslation(m_engineFactory->properties().translation);
     }
     return m_engineFactory;
 }
@@ -168,7 +168,7 @@ EffectFactory *QmmpPluginCache::effectFactory()
     {
         m_effectFactory = qobject_cast<EffectFactory *> (instance());
         if(m_effectFactory)
-            qApp->installTranslator(m_effectFactory->createTranslator(qApp));
+            loadTranslation(m_effectFactory->properties().translation);
     }
     return m_effectFactory;
 }
@@ -179,7 +179,7 @@ InputSourceFactory *QmmpPluginCache::inputSourceFactory()
     {
         m_inputSourceFactory = qobject_cast<InputSourceFactory *> (instance());
         if(m_inputSourceFactory)
-            qApp->installTranslator(m_inputSourceFactory->createTranslator(qApp));
+            loadTranslation(m_inputSourceFactory->properties().translation);
     }
     return m_inputSourceFactory;
 }
@@ -205,6 +205,16 @@ QObject *QmmpPluginCache::instance()
         qWarning("QmmpPluginCache: error: %s", qPrintable(loader.errorString ()));
     }
     return m_instance;
+}
+
+void QmmpPluginCache::loadTranslation(const QString &translation)
+{
+    if(!translation.isEmpty())
+    {
+        QTranslator *translator = new QTranslator(qApp);
+        translator->load(translation + Qmmp::systemLanguageID());
+        qApp->installTranslator(translator);
+    }
 }
 
 void QmmpPluginCache::cleanup(QSettings *settings)

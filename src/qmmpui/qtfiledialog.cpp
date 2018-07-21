@@ -41,12 +41,6 @@ const FileDialogProperties QtFileDialogFactory::properties() const
 
 void QtFileDialogFactory::showAbout(QWidget*){}
 
-QTranslator *QtFileDialogFactory::createTranslator(QObject *parent)
-{
-    Q_UNUSED(parent)
-    return 0;
-}
-
 QtFileDialog::~QtFileDialog()
 {
     qDebug("QtFileDialog::~QtFileDialog()");

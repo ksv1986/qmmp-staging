@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <QRegExp>
 #include <cdio/version.h>
@@ -40,6 +39,7 @@ const DecoderProperties DecoderCDAudioFactory::properties() const
     DecoderProperties properties;
     properties.name = tr("CD Audio Plugin");
     properties.shortName = "cdaudio";
+    properties.translation = QLatin1String(":/cdaudio_plugin_");
     properties.protocols << "cdda";
     properties.hasAbout = true;
     properties.noInput = true;
@@ -88,12 +88,4 @@ void DecoderCDAudioFactory::showAbout(QWidget *parent)
                         .arg(CDDB_VERSION) + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Usage: open cdda:/// using Add URL dialog or command line"));
-}
-
-QTranslator *DecoderCDAudioFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/cdaudio_plugin_") + locale);
-    return translator;
 }

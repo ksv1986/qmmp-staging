@@ -21,7 +21,6 @@
 #include <QDialog>
 #include <QMessageBox>
 #include <QSettings>
-#include <QTranslator>
 #include <QFile>
 #include <QTextCodec>
 #include <taglib/tag.h>
@@ -169,6 +168,7 @@ const DecoderProperties DecoderMPEGFactory::properties() const
     properties.filters << "*.mp1" << "*.mp2" << "*.mp3" << "*.wav";
     properties.description = tr("MPEG Files");
     properties.contentTypes << "audio/mp3" << "audio/mpeg";
+    properties.translation = QLatin1String(":/mpeg_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;
@@ -393,12 +393,4 @@ void DecoderMPEGFactory::showAbout(QWidget *parent)
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Source code based on mq3 and madplay projects")
                        );
-}
-
-QTranslator *DecoderMPEGFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/mpeg_plugin_") + locale);
-    return translator;
 }

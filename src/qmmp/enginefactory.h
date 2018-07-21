@@ -25,7 +25,6 @@
 #include <QList>
 #include <QMap>
 #include <QIODevice>
-#include <QTranslator>
 #include "qmmp_export.h"
 #include "qmmp.h"
 #include "trackinfo.h"
@@ -48,14 +47,15 @@ public:
         hasAbout = false;
         hasSettings = false;
     }
-    QString name;          /*!< Input plugin full name */
-    QString shortName;     /*!< Input plugin short name for internal usage */
-    QStringList filters;   /*!< File filters (example: "*.mp3,*.ogg") */
-    QString description;   /*!< File filter description */
+    QString name;             /*!< Input plugin full name */
+    QString shortName;        /*!< Input plugin short name for internal usage */
+    QString translation;      /*!< Translation file path without locale code and extension */
+    QStringList filters;      /*!< File filters (example: "*.mp3,*.ogg") */
+    QString description;      /*!< File filter description */
     QStringList contentTypes; /*!< Supported content types */
-    QStringList protocols; /*!< Supported protocols. Should be empty if plugin uses stream input. */
-    bool hasAbout;         /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings;   /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    QStringList protocols;    /*!< Supported protocols. Should be empty if plugin uses stream input. */
+    bool hasAbout;            /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    bool hasSettings;         /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
 };
 /*! @brief Engine plugin interface.
  * @author Ilya Kotov <forkotov02@ya.ru>
@@ -105,11 +105,6 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
-    /*!
-     * Creates QTranslator object of the system locale. Should return 0 if translation doesn't exist.
-     * @param parent Parent object.
-     */
-    virtual QTranslator *createTranslator(QObject *parent) = 0;
 };
 
 Q_DECLARE_INTERFACE(EngineFactory, "EngineFactory/1.0")

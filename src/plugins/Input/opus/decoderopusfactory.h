@@ -41,7 +41,6 @@ public:
     QObject* showDetails(QWidget *parent, const QString &path);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);
-    QTranslator *createTranslator(QObject *parent);
 };
 
 #endif //DECODEROPUSFACTORY_H

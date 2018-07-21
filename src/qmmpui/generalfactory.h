@@ -23,7 +23,6 @@
 #include "qmmpui_export.h"
 
 class QObject;
-class QTranslator;
 class QDialog;
 class QString;
 class QWidget;
@@ -46,6 +45,7 @@ public:
     }
     QString name;           /*!< File dialog plugin full name */
     QString shortName;      /*!< File dialog short name for internal usage */
+    QString translation;    /*!< Translation file path without locale code and extension */
     bool hasAbout;          /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
     bool hasSettings;       /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
     bool visibilityControl; /*!< Should be \b true if plugin can show/hide main window of the player,
@@ -80,11 +80,6 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
-    /*!
-     * Creates QTranslator object of the system locale. Should return \b 0 if translation doesn't exist.
-     * @param parent Parent object.
-     */
-    virtual QTranslator *createTranslator(QObject *parent) = 0;
 };
 
 Q_DECLARE_INTERFACE(GeneralFactory, "GeneralFactory/1.0")

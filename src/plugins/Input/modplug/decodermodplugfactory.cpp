@@ -20,7 +20,6 @@
 
 #include <QSettings>
 #include <QFile>
-#include <QTranslator>
 #include <QMessageBox>
 #include <QStringList>
 #include <QRegExp>
@@ -53,6 +52,7 @@ const DecoderProperties DecoderModPlugFactory::properties() const
     properties.description = tr("ModPlug Files");
     //properties.contentType = ;
     properties.shortName = "modplug";
+    properties.translation = QLatin1String(":/modplug_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
@@ -141,12 +141,4 @@ void DecoderModPlugFactory::showAbout(QWidget *parent)
                         tr("Olivier Lapicque <olivierl@jps.net>")+"\n"+
                         tr("Kenton Varda <temporal@gauge3d.org>")+"\n"+
                         tr("Konstanty Bialkowski <konstanty@ieee.org>"));
-}
-
-QTranslator *DecoderModPlugFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/modplug_plugin_") + locale);
-    return translator;
 }

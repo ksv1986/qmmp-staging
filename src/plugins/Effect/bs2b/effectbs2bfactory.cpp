@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <bs2b/bs2bversion.h>
 #include <qmmp/qmmp.h>
@@ -31,6 +30,7 @@ const EffectProperties EffectBs2bFactory::properties() const
     EffectProperties properties;
     properties.name = tr("BS2B Plugin");
     properties.shortName = "bs2b";
+    properties.translation = QLatin1String(":/bs2b_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     return properties;
@@ -58,12 +58,4 @@ void EffectBs2bFactory::showAbout(QWidget *parent)
                         "<p>"+tr("Developers:")+"<br>"+
                         tr("Ilya Kotov <forkotov02@ya.ru>")+"<br>"+
                         tr("Sebastian Pipping <sebastian@pipping.org>")+"</p>");
-}
-
-QTranslator *EffectBs2bFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/bs2b_plugin_") + locale);
-    return translator;
 }

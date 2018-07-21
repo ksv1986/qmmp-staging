@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QTranslator>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/opusfile.h>
@@ -42,6 +41,7 @@ const DecoderProperties DecoderOpusFactory::properties() const
     DecoderProperties properties;
     properties.name = tr("Opus Plugin");
     properties.shortName = "opus";
+    properties.translation = QLatin1String(":/opus_plugin_");
     properties.filters << "*.opus";
     properties.description = tr("Ogg Opus Files");
     properties.contentTypes << "audio/opus";
@@ -117,12 +117,4 @@ void DecoderOpusFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Opus Audio Plugin"),
                         tr("Qmmp Opus Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderOpusFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/opus_plugin_") + locale);
-    return translator;
 }

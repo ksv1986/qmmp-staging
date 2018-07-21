@@ -28,6 +28,7 @@ const GeneralProperties LyricsFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("Lyrics Plugin");
     properties.shortName = "lyrics";
+    properties.translation = QLatin1String(":/lyrics_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -51,12 +52,4 @@ void LyricsFactory::showAbout(QWidget *parent)
                         tr("Qmmp Lyrics Plugin")+"\n"+
                         tr("This plugin retrieves lyrics from LyricWiki")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *LyricsFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/lyrics_plugin_") + locale);
-    return translator;
 }

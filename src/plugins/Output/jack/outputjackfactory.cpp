@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "outputjack.h"
@@ -32,6 +31,7 @@ const OutputProperties OutputJACKFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.shortName = "jack";
+    properties.translation = QLatin1String(":/jack_plugin_");
     return properties;
 }
 
@@ -54,12 +54,4 @@ void OutputJACKFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Jack Output Plugin"),
                         tr("Qmmp Jack Output Plugin")+"\n"+
                         tr("Written by: Yuriy Zhuravlev <slalkerg@gmail.com>"));
-}
-
-QTranslator *OutputJACKFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/jack_plugin_") + locale);
-    return translator;
 }

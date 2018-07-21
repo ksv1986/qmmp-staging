@@ -29,6 +29,7 @@ const GeneralProperties TrackChangeFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("Track Change Plugin");
     properties.shortName = "trackchange";
+    properties.translation = QLatin1String(":/trackchange_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -51,12 +52,4 @@ void TrackChangeFactory::showAbout(QWidget *parent)
                         tr("Qmmp Track Change Plugin")+"\n"+
                         tr("This plugin executes external command when current track is changed") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *TrackChangeFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/trackchange_plugin_") + locale);
-    return translator;
 }

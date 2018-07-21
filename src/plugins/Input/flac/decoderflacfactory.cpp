@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
@@ -55,6 +54,7 @@ const DecoderProperties DecoderFLACFactory::properties() const
     properties.description = tr("FLAC Files");
     properties.contentTypes << "audio/x-flac" << "audio/flac";
     properties.shortName = "flac";
+    properties.translation = QLatin1String(":/flac_plugin_");
     properties.protocols << "flac";
     properties.hasAbout = true;
     properties.hasSettings = false;
@@ -212,12 +212,4 @@ void DecoderFLACFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About FLAC Audio Plugin"),
                         tr("Qmmp FLAC Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderFLACFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/flac_plugin_") + locale);
-    return translator;
 }

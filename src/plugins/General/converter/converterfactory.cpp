@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include <QMessageBox>
 #include "converterhelper.h"
 #include "converterfactory.h"
@@ -28,6 +27,7 @@ const GeneralProperties ConverterFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("Converter Plugin");
     properties.shortName = "converter";
+    properties.translation = QLatin1String(":/converter_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -52,12 +52,4 @@ void ConverterFactory::showAbout(QWidget *parent)
                         tr("This plugin converts supported audio files to other file formats "
                            "using external command-line encoders") +"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *ConverterFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/converter_plugin_") + locale);
-    return translator;
 }

@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QTranslator>
 #include "settingsdialog.h"
 #include "outputwasapi.h"
 #include "outputwasapifactory.h"

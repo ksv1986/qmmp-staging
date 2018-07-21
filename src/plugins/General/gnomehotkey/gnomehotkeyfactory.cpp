@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "mediakeys.h"
@@ -29,6 +28,7 @@ const GeneralProperties GnomeHotkeyFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("Gnome Hotkey Plugin");
     properties.shortName = "gnomehotkey";
+    properties.translation = QLatin1String(":/gnomehotkey_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -52,12 +52,4 @@ void GnomeHotkeyFactory::showAbout(QWidget *parent)
                         tr("Qmmp Gnome Hotkey Plugin") + "\n" +
                         tr("This plugin adds support of the GNOME/Cinnamon hotkeys") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *GnomeHotkeyFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/gnomehotkey_plugin_") + locale);
-    return translator;
 }

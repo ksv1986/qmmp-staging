@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <QRegExp>
 #include "settingsdialog.h"
@@ -42,6 +41,7 @@ const DecoderProperties DecoderGmeFactory::properties() const
     properties.description = tr("Game Music Files");
     //properties.contentType = ;
     properties.shortName = "gme";
+    properties.translation = QLatin1String(":/gme_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
@@ -105,12 +105,4 @@ void DecoderGmeFactory::showAbout(QWidget *parent)
                         tr("Qmmp GME Audio Plugin")+"\n"+
                         tr("This plugin uses Game_Music_Emu library to play game music files")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderGmeFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/gme_plugin_") + locale);
-    return translator;
 }

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,6 +24,7 @@
 #include <QPluginLoader>
 #include <QApplication>
 #include <QTranslator>
+#include <qmmp/qmmp.h>
 #include "generalfactory.h"
 #include "uifactory.h"
 #include "filedialogfactory.h"
@@ -159,7 +160,7 @@ GeneralFactory *QmmpUiPluginCache::generalFactory()
     {
         m_generalFactory = qobject_cast<GeneralFactory *> (instance());
         if(m_generalFactory)
-            qApp->installTranslator(m_generalFactory->createTranslator(qApp));
+            loadTranslation(m_generalFactory->properties().translation);
     }
     return m_generalFactory;
 }
@@ -170,7 +171,7 @@ UiFactory *QmmpUiPluginCache::uiFactory()
     {
         m_uiFactory = qobject_cast<UiFactory *> (instance());
         if(m_uiFactory)
-            qApp->installTranslator(m_uiFactory->createTranslator(qApp));
+            loadTranslation(m_uiFactory->properties().translation);
     }
     return m_uiFactory;
 }
@@ -181,7 +182,7 @@ FileDialogFactory *QmmpUiPluginCache::fileDialogFactory()
     {
         m_fileDialogFactory = qobject_cast<FileDialogFactory *> (instance());
         if(m_fileDialogFactory)
-            qApp->installTranslator(m_fileDialogFactory->createTranslator(qApp));
+            loadTranslation(m_fileDialogFactory->properties().translation);
     }
     return m_fileDialogFactory;
 }
@@ -202,6 +203,16 @@ QObject *QmmpUiPluginCache::instance()
         qWarning("QmmpUiPluginCache: error: %s", qPrintable(loader.errorString ()));
     }
     return m_instance;
+}
+
+void QmmpUiPluginCache::loadTranslation(const QString &translation)
+{
+    if(!translation.isEmpty())
+    {
+        QTranslator *translator = new QTranslator(qApp);
+        translator->load(translation + Qmmp::systemLanguageID());
+        qApp->installTranslator(translator);
+    }
 }
 
 void QmmpUiPluginCache::cleanup(QSettings *settings)

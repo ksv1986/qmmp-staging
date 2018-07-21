@@ -28,6 +28,7 @@ const GeneralProperties StreamBrowserFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("Stream Browser Plugin");
     properties.shortName = "streambrowser";
+    properties.translation = QLatin1String(":/streambrowser_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -51,12 +52,4 @@ void StreamBrowserFactory::showAbout(QWidget *parent)
                         tr("Qmmp Stream Browser Plugin")+"\n"+
                         tr("This plugin allows one to add stream from IceCast stream directory")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *StreamBrowserFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/streambrowser_plugin_") + locale);
-    return translator;
 }

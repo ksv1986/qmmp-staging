@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QTranslator>
 #include <QtPlugin>
 #include <QApplication>
 #include <qmmp/qmmp.h>
@@ -41,6 +40,7 @@ const OutputProperties OutputShoutFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.shortName = "shout";
+    properties.translation = QLatin1String(":/shout_plugin_");
     return properties;
 }
 
@@ -66,12 +66,4 @@ void OutputShoutFactory::showAbout(QWidget *parent)
                        tr("Qmmp Icecast Output Plugin")+"\n"+
                        tr("Compiled against libshout-%1").arg(shout_version(0,0,0))+"\n"+
                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *OutputShoutFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/shout_plugin_") + locale);
-    return translator;
 }

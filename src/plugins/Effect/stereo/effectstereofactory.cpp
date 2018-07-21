@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "effectstereofactory.h"
@@ -30,6 +29,7 @@ const EffectProperties EffectStereoFactory::properties() const
     EffectProperties properties;
     properties.name = tr("Extra Stereo Plugin");
     properties.shortName = "stereo";
+    properties.translation = QLatin1String(":/stereo_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     return properties;
@@ -52,12 +52,4 @@ void EffectStereoFactory::showAbout(QWidget *parent)
                         tr("Qmmp Extra Stereo Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Based on the Extra Stereo Plugin for Xmms by Johan Levin"));
-}
-
-QTranslator *EffectStereoFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/stereo_plugin_") + locale);
-    return translator;
 }

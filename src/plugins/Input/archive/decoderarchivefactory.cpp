@@ -20,7 +20,6 @@
 
 #include <QRegExp>
 #include <QMessageBox>
-#include <QTranslator>
 #include <archive.h>
 #include <archive_entry.h>
 #include "decoder_archive.h"
@@ -43,6 +42,7 @@ const DecoderProperties DecoderArchiveFactory::properties() const
     properties.description = tr("Archives");
     properties.contentTypes << "application/zip" << "application/x-rar-compressed";
     properties.shortName = "archive";
+    properties.translation = QLatin1String(":/archive_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.noInput = true;
@@ -151,12 +151,4 @@ void DecoderArchiveFactory::showAbout(QWidget *parent)
                         tr("Qmmp Archive Reader Plugin")+"\n"+
                         tr("Compiled against %1").arg(ARCHIVE_VERSION_STRING)+"\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderArchiveFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/archive_plugin_") + locale);
-    return translator;
 }

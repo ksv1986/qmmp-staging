@@ -38,7 +38,6 @@ public:
     Visual *create(QWidget *parent);
     QDialog *createConfigDialog(QWidget *parent);
     void showAbout(QWidget *parent);
-    QTranslator *createTranslator(QObject *parent);
 };
 
 

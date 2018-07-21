@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "outputnull.h"
@@ -32,6 +31,7 @@ const OutputProperties OutputNullFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.shortName = "null";
+    properties.translation = QLatin1String(":/null_plugin_");
     return properties;
 }
 
@@ -55,12 +55,4 @@ void OutputNullFactory::showAbout(QWidget *parent)
    QMessageBox::about (parent, tr("About Null Output Plugin"),
                         tr("Qmmp Null Output Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *OutputNullFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/null_plugin_") + locale);
-    return translator;
 }

@@ -31,6 +31,7 @@ const UiProperties QSUIFactory::properties() const
     props.hasAbout = true;
     props.name = tr("Simple User Interface");
     props.shortName = "qsui";
+    props.translation = QLatin1String(":/qsui_plugin_");
     return props;
 }
 
@@ -44,12 +45,4 @@ void QSUIFactory::showAbout(QWidget *parent)
 {
     AboutQSUIDialog about(parent);
     about.exec();
-}
-
-QTranslator *QSUIFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/qsui_plugin_") + locale);
-    return translator;
 }

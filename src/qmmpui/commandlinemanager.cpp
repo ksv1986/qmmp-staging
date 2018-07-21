@@ -60,7 +60,7 @@ void CommandLineManager::checkOptions()
             {
                 m_options->append(option);
                 m_files->insert(option, filePath);
-                qApp->installTranslator(option->createTranslator(qApp));
+                //qApp->installTranslator(option->createTranslator(qApp));
             }
         }
     }

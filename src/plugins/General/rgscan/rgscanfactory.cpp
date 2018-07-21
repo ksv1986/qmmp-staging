@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include <QMessageBox>
 #include "rgscanhelper.h"
 #include "rgscanfactory.h"
@@ -28,6 +27,7 @@ const GeneralProperties RGScanFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("ReplayGain Scanner Plugin");
     properties.shortName = "rgscan";
+    properties.translation = QLatin1String(":/rgscan_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -56,12 +56,4 @@ void RGScanFactory::showAbout(QWidget *parent)
                         tr("Glen Sawyer <mp3gain@hotmail.com>") + "\n" +
                         tr("Frank Klemm"));
 
-}
-
-QTranslator *RGScanFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/rgscan_plugin_") + locale);
-    return translator;
 }

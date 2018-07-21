@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
@@ -30,6 +29,7 @@ const GeneralProperties UDisks2Factory::properties() const
     GeneralProperties properties;
     properties.name = tr("UDisks2 Plugin");
     properties.shortName = "udisks2";
+    properties.translation = QLatin1String(":/udisks2_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -52,12 +52,4 @@ void UDisks2Factory::showAbout(QWidget *parent)
                         tr("Qmmp UDisks2 Plugin") + "\n" +
                         tr("This plugin provides removable devices detection using UDisks2") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *UDisks2Factory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/udisks2_plugin_") + locale);
-    return translator;
 }

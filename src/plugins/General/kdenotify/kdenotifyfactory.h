@@ -22,7 +22,6 @@
 #define KDENOTIFYFACTORY_H
 
 #include <QObject>
-#include <QTranslator>
 #include <QDialog>
 
 #include <qmmpui/general.h>
@@ -38,7 +37,6 @@ public:
     QObject *create(QObject *parent);
     QDialog *createConfigDialog(QWidget *parent);
     void showAbout(QWidget *parent);
-    QTranslator *createTranslator(QObject *parent);
 };
 
 #endif // KDENOTIFYFACTORY_H

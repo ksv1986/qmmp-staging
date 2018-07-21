@@ -30,6 +30,7 @@ const GeneralProperties HotkeyFactory::properties() const
     GeneralProperties properties;
     properties.name = tr("Global Hotkey Plugin");
     properties.shortName = "hotkey";
+    properties.translation = QLatin1String(":/hotkey_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -58,12 +59,4 @@ void HotkeyFactory::showAbout(QWidget *parent)
                         tr("Qmmp Global Hotkey Plugin")+"\n"+
                         tr("This plugin adds support for multimedia keys or global key combinations")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *HotkeyFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/hotkey_plugin_") + locale);
-    return translator;
 }

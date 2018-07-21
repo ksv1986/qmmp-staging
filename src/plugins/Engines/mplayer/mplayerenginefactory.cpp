@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QTranslator>
 #include "mplayermetadatamodel.h"
 #include "settingsdialog.h"
 #include "mplayerengine.h"
@@ -33,6 +32,7 @@ const EngineProperties MplayerEngineFactory::properties() const
     EngineProperties properties;
     properties.name = tr("Mplayer Plugin");
     properties.shortName = "mplayer";
+    properties.translation = QLatin1String(":/mplayer_plugin_");
     properties.filters = MplayerInfo::filters();
     properties.description = tr("Video Files");
     //properties.contentType = "application/ogg;audio/x-vorbis+ogg";
@@ -84,12 +84,4 @@ void MplayerEngineFactory::showAbout(QWidget *parent)
                         tr("Qmmp MPlayer Plugin")+"\n"+
                         tr("This plugin uses MPlayer as backend")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *MplayerEngineFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/mplayer_plugin_") + locale);
-    return translator;
 }

@@ -27,7 +27,6 @@ class QObject;
 class QString;
 class QIODevice;
 class QWidget;
-class QTranslator;
 class Volume;
 class Decoder;
 class Output;
@@ -46,10 +45,11 @@ public:
         hasAbout = false;
         hasSettings = false;
     }
-    QString name;      /*!< Effect plugin full name */
-    QString shortName; /*!< Effect plugin short name for internal usage */
-    bool hasAbout;     /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings;  /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    QString name;        /*!< Effect plugin full name */
+    QString shortName;   /*!< Effect plugin short name for internal usage */
+    QString translation; /*!< Translation file path without locale code and extension */
+    bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    bool hasSettings;    /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
 };
 /*! @brief %Output plugin interface (output factory).
  * @author Ilya Kotov <forkotov02@ya.ru>
@@ -84,11 +84,6 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
-    /*!
-     * Creates QTranslator object of the system locale. Should return 0 if translation doesn't exist.
-     * @param parent Parent object.
-     */
-    virtual QTranslator *createTranslator(QObject *parent) = 0;
 };
 
 Q_DECLARE_INTERFACE(OutputFactory, "OutputFactory/1.0")

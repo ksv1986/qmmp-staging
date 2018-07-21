@@ -25,7 +25,6 @@
 
 class QObject;
 class QWidget;
-class QTranslator;
 class QDialog;
 class Visual;
 
@@ -43,10 +42,11 @@ public:
         hasAbout = false;
         hasSettings = false;
     }
-    QString name;      /*!< Effect plugin full name */
-    QString shortName; /*!< Effect plugin short name for internal usage */
-    bool hasAbout;     /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings;  /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    QString name;        /*!< Effect plugin full name */
+    QString shortName;   /*!< Effect plugin short name for internal usage */
+    QString translation; /*!< Translation file path without locale code and extension */
+    bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    bool hasSettings;    /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
 };
 /*! @brief %Visual plugin interface (visual factory).
  * @author Ilya Kotov <forkotov02@ya.ru>
@@ -78,11 +78,6 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
-    /*!
-     * Creates QTranslator object of the system locale. Should return \b 0 if translation doesn't exist.
-     * @param parent Parent object.
-     */
-    virtual QTranslator *createTranslator(QObject *parent) = 0;
 };
 
 Q_DECLARE_INTERFACE(VisualFactory, "VisualFactory/1.0")

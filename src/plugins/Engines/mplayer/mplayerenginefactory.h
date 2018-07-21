@@ -36,7 +36,6 @@ public:
     MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);
-    QTranslator *createTranslator(QObject *parent);
 };
 
 #endif

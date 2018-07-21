@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTranslator>
 #include <QFile>
 #include <QMessageBox>
 #include "aacfile.h"
@@ -43,6 +42,7 @@ const DecoderProperties DecoderAACFactory::properties() const
     properties.description = tr("AAC Files");
     properties.contentTypes << "audio/aacp" << "audio/aac";
     properties.shortName = "aac";
+    properties.translation = QLatin1String(":/aac_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     return properties;
@@ -103,12 +103,4 @@ void DecoderAACFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About AAC Audio Plugin"),
                         tr("Qmmp AAC Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *DecoderAACFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/aac_plugin_") + locale);
-    return translator;
 }

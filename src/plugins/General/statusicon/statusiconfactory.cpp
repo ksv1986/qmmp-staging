@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include <QMessageBox>
 #include "statusicon.h"
 #include "settingsdialog.h"
@@ -32,6 +31,7 @@ const GeneralProperties StatusIconFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = true;
+    properties.translation = QLatin1String(":/statusicon_plugin_");
     return properties;
 }
 
@@ -52,12 +52,4 @@ void StatusIconFactory::showAbout(QWidget *parent)
                         tr("Written by:") + "\n"+
                         tr("Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Artur Guzik <a.guzik88@gmail.com>"));
-}
-
-QTranslator *StatusIconFactory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/statusicon_plugin_") + locale);
-    return translator;
 }

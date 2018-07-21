@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QtPlugin>
-#include <QTranslator>
 #include <QLocale>
 #include <qmmp/soundcore.h>
 #include <qmmpui/playlistmanager.h>
@@ -149,13 +148,13 @@ const QString PlayListOption::name() const
     return "PlayListOption";
 }
 
-QTranslator *PlayListOption::createTranslator(QObject *parent)
+/*QTranslator *PlayListOption::createTranslator(QObject *parent)
 {
     QTranslator *translator = new QTranslator(parent);
     QString locale = Qmmp::systemLanguageID();
     translator->load(QString(":/playlist_plugin_") + locale);
     return translator;
-}
+}*/
 
 QString PlayListOption::boolToText(bool enabled)
 {

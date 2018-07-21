@@ -42,7 +42,6 @@ public:
     virtual Volume *createVolume();
     virtual void showSettings(QWidget* parent);
     virtual void showAbout(QWidget *parent);
-    virtual QTranslator *createTranslator(QObject *parent);
 };
 
 #endif

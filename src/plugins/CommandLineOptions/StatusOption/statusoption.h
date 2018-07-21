@@ -27,7 +27,6 @@
 #include <qmmpui/commandlineoption.h>
 #include <qmmpui/commandlinemanager.h>
 
-
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
@@ -41,7 +40,6 @@ public:
     virtual const QString name() const;
     virtual const QStringList helpString() const;
     virtual QString executeCommand(const QString& opt_str, const QStringList &args);
-    virtual QTranslator *createTranslator(QObject *parent);
 
 private:
     QString genProgressBar();

@@ -41,6 +41,7 @@ public:
     Volume *createVolume();
     void showSettings(QWidget* parent);
     void showAbout(QWidget *parent);
+    QString translation() const;
 };
 
 #endif

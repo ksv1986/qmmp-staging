@@ -22,7 +22,7 @@
 #include "outputdirectsound.h"
 #include "outputdirectsoundfactory.h"
 
-const OutputProperties OutputDirectSoundFactory::properties() const
+OutputProperties OutputDirectSoundFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("DirectSound Plugin");

@@ -24,14 +24,13 @@
 #include "outputpulseaudiofactory.h"
 
 
-const OutputProperties OutputPulseAudioFactory::properties() const
+OutputProperties OutputPulseAudioFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("PulseAudio Plugin");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.shortName = "pulse";
-    properties.translation = QLatin1String(":/pulseaudio_plugin_");
     return properties;
 }
 
@@ -54,5 +53,10 @@ void OutputPulseAudioFactory::showAbout(QWidget *parent)
 {
    QMessageBox::about (parent, tr("About PulseAudio Output Plugin"),
                         tr("Qmmp PulseAudio Output Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+                       tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString OutputPulseAudioFactory::translation() const
+{
+    return QLatin1String(":/pulseaudio_plugin_");
 }

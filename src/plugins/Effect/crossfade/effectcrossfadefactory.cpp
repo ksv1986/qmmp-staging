@@ -29,7 +29,6 @@ const EffectProperties EffectCrossfadeFactory::properties() const
     EffectProperties properties;
     properties.name = tr("Crossfade Plugin");
     properties.shortName = "crossfade";
-    properties.translation = QLatin1String(":/crossfade_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     properties.priority = EffectProperties::EFFECT_PRIORITY_LOW;
@@ -51,5 +50,10 @@ void EffectCrossfadeFactory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About Crossfade Plugin"),
                        tr("Qmmp Crossfade Plugin")+"\n"+
-                       tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString EffectCrossfadeFactory::translation() const
+{
+    return QLatin1String(":/crossfade_plugin_");
 }

@@ -22,12 +22,11 @@
 #include "rgscanhelper.h"
 #include "rgscanfactory.h"
 
-const GeneralProperties RGScanFactory::properties() const
+GeneralProperties RGScanFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("ReplayGain Scanner Plugin");
     properties.shortName = "rgscan";
-    properties.translation = QLatin1String(":/rgscan_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -56,4 +55,9 @@ void RGScanFactory::showAbout(QWidget *parent)
                         tr("Glen Sawyer <mp3gain@hotmail.com>") + "\n" +
                         tr("Frank Klemm"));
 
+}
+
+QString RGScanFactory::translation() const
+{
+    return QLatin1String(":/rgscan_plugin_");
 }

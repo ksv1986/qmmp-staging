@@ -49,7 +49,6 @@ public:
     }
     QString name;             /*!< Input plugin full name */
     QString shortName;        /*!< Input plugin short name for internal usage */
-    QString translation;      /*!< Translation file path without locale code and extension */
     QStringList filters;      /*!< File filters (example: "*.mp3,*.ogg") */
     QString description;      /*!< File filter description */
     QStringList contentTypes; /*!< Supported content types */
@@ -74,7 +73,7 @@ public:
     /*!
      * Returns general plugin properties.
      */
-    virtual const EngineProperties properties() const = 0;
+    virtual EngineProperties properties() const = 0;
     /*!
      * Creates engine object.
      * @param parent Parent object File path
@@ -105,6 +104,10 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
+    /*!
+     * Returns translation file path without locale code and extension
+     */
+    virtual QString translation() const = 0;
 };
 
 Q_DECLARE_INTERFACE(EngineFactory, "EngineFactory/1.0")

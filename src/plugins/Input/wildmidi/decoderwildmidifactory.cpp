@@ -43,7 +43,7 @@ bool DecoderWildMidiFactory::canDecode(QIODevice *input) const
 #endif
 }
 
-const DecoderProperties DecoderWildMidiFactory::properties() const
+DecoderProperties DecoderWildMidiFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("WildMidi Plugin");
@@ -54,7 +54,6 @@ const DecoderProperties DecoderWildMidiFactory::properties() const
     properties.description = tr("Midi Files");
     //properties.contentType = ;
     properties.shortName = "wildmidi";
-    properties.translation = QLatin1String(":/wildmidi_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
@@ -108,4 +107,9 @@ void DecoderWildMidiFactory::showAbout(QWidget *parent)
                         tr("Qmmp WildMidi Audio Plugin")+"\n"+
                         tr("This plugin uses WildMidi library to play midi files")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderWildMidiFactory::translation() const
+{
+    return QLatin1String(":/wildmidi_plugin_");
 }

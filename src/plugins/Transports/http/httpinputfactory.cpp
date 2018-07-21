@@ -26,13 +26,12 @@
 #include "httpinputsource.h"
 #include "httpinputfactory.h"
 
-const InputSourceProperties HTTPInputFactory::properties() const
+InputSourceProperties HTTPInputFactory::properties() const
 {
     InputSourceProperties properties;
     properties.protocols << "http" << "https";
     properties.name = tr("HTTP Plugin");
     properties.shortName = "http";
-    properties.translation = QLatin1String(":/http_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;
@@ -55,4 +54,9 @@ void HTTPInputFactory::showAbout(QWidget *parent)
                         tr("Qmmp HTTP Transport Plugin")+"\n"+
                         tr("Compiled against libcurl-%1").arg(LIBCURL_VERSION) + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString HTTPInputFactory::translation() const
+{
+    return QLatin1String(":/http_plugin_");
 }

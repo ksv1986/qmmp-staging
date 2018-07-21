@@ -30,7 +30,7 @@ Output* OutputOSS4Factory::create()
     return new OutputOSS4();
 }
 
-const OutputProperties OutputOSS4Factory::properties() const
+OutputProperties OutputOSS4Factory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("OSS4 Plugin");

@@ -36,7 +36,7 @@ Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.OutputFactoryInterface.1.0")
 Q_INTERFACES(OutputFactory)
 
 public:
-    const OutputProperties properties() const;
+    OutputProperties properties() const;
     Output* create();
     Volume *createVolume();
     void showSettings(QWidget* parent);

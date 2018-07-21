@@ -61,10 +61,10 @@ void CommandLineManager::checkOptions()
             {
                 m_options->append(option);
                 m_files->insert(option, filePath);
-                if(!option->properties().translation.isEmpty())
+                if(!option->translation().isEmpty())
                 {
                     QTranslator *translator = new QTranslator(qApp);
-                    translator->load(option->properties().translation + Qmmp::systemLanguageID());
+                    translator->load(option->translation() + Qmmp::systemLanguageID());
                     qApp->installTranslator(translator);
                 }
             }

@@ -34,7 +34,6 @@ class CommandLineProperties
 {
 public:
     QString shortName;      /*!< Input plugin short name for internal usage */
-    QString translation;    /*!< Translation file path without locale code and extension */
     QStringList helpString; /*!< A list of specially formatted help strings.
                                  Example: "--help||Display this text and exit" */
 };
@@ -48,7 +47,7 @@ public:
     /*!
      * Returns command line plugin properties.
      */
-    virtual const CommandLineProperties properties() const = 0;
+    virtual CommandLineProperties properties() const = 0;
     /*!
      * Returns \b true if \b opt_str string can be processed,
      * otherise \b false
@@ -65,6 +64,10 @@ public:
      * Object destructor
      */
     virtual ~CommandLineOption() {}
+    /*!
+     * Returns translation file path without locale code and extension
+     */
+    virtual QString translation() const = 0;
 };
 
 Q_DECLARE_INTERFACE(CommandLineOption,"CommandLineOptionInterface/1.0")

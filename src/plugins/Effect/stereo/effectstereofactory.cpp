@@ -29,7 +29,6 @@ const EffectProperties EffectStereoFactory::properties() const
     EffectProperties properties;
     properties.name = tr("Extra Stereo Plugin");
     properties.shortName = "stereo";
-    properties.translation = QLatin1String(":/stereo_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     return properties;
@@ -52,4 +51,9 @@ void EffectStereoFactory::showAbout(QWidget *parent)
                         tr("Qmmp Extra Stereo Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Based on the Extra Stereo Plugin for Xmms by Johan Levin"));
+}
+
+QString EffectStereoFactory::translation() const
+{
+    return QLatin1String(":/stereo_plugin_");
 }

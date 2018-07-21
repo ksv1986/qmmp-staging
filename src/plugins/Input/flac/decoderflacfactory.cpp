@@ -46,7 +46,7 @@ bool DecoderFLACFactory::canDecode(QIODevice *input) const
     return false;
 }
 
-const DecoderProperties DecoderFLACFactory::properties() const
+DecoderProperties DecoderFLACFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("FLAC Plugin");
@@ -54,7 +54,6 @@ const DecoderProperties DecoderFLACFactory::properties() const
     properties.description = tr("FLAC Files");
     properties.contentTypes << "audio/x-flac" << "audio/flac";
     properties.shortName = "flac";
-    properties.translation = QLatin1String(":/flac_plugin_");
     properties.protocols << "flac";
     properties.hasAbout = true;
     properties.hasSettings = false;
@@ -212,4 +211,9 @@ void DecoderFLACFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About FLAC Audio Plugin"),
                         tr("Qmmp FLAC Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderFLACFactory::translation() const
+{
+    return QLatin1String(":/flac_plugin_");
 }

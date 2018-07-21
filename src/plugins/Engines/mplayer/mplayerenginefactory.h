@@ -29,13 +29,14 @@ Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.EngineFactoryInterface.1.0")
 Q_INTERFACES(EngineFactory)
 
 public:
-    const EngineProperties properties() const;
+    EngineProperties properties() const;
     bool supports(const QString &source) const;
     AbstractEngine *create(QObject *parent = 0);
     QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *);
     MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);
+    QString translation() const;
 };
 
 #endif

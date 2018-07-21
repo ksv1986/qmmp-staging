@@ -34,10 +34,11 @@ Q_OBJECT
 Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.GeneralFactoryInterface.1.0")
 Q_INTERFACES(GeneralFactory)
 public:
-    const GeneralProperties properties() const;
+    GeneralProperties properties() const;
     QObject *create(QObject *parent);
     QDialog *createConfigDialog(QWidget *);
     void showAbout(QWidget *parent);
+    QString translation() const;
 };
 
 #endif // COPYPASTEFACTORY_H

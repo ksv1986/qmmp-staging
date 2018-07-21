@@ -33,14 +33,13 @@ OutputShoutFactory::OutputShoutFactory()
     m_connection = new ShoutClient(qApp);
 }
 
-const OutputProperties OutputShoutFactory::properties() const
+OutputProperties OutputShoutFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("Icecast Plugin");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.shortName = "shout";
-    properties.translation = QLatin1String(":/shout_plugin_");
     return properties;
 }
 
@@ -66,4 +65,9 @@ void OutputShoutFactory::showAbout(QWidget *parent)
                        tr("Qmmp Icecast Output Plugin")+"\n"+
                        tr("Compiled against libshout-%1").arg(shout_version(0,0,0))+"\n"+
                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString OutputShoutFactory::translation() const
+{
+    return QLatin1String(":/shout_plugin_");
 }

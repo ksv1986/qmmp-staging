@@ -32,7 +32,7 @@ bool DecoderGmeFactory::canDecode(QIODevice *) const
     return false;
 }
 
-const DecoderProperties DecoderGmeFactory::properties() const
+DecoderProperties DecoderGmeFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("GME Plugin");
@@ -41,7 +41,6 @@ const DecoderProperties DecoderGmeFactory::properties() const
     properties.description = tr("Game Music Files");
     //properties.contentType = ;
     properties.shortName = "gme";
-    properties.translation = QLatin1String(":/gme_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
@@ -105,4 +104,9 @@ void DecoderGmeFactory::showAbout(QWidget *parent)
                         tr("Qmmp GME Audio Plugin")+"\n"+
                         tr("This plugin uses Game_Music_Emu library to play game music files")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderGmeFactory::translation() const
+{
+    return QLatin1String(":/gme_plugin_");
 }

@@ -23,12 +23,11 @@
 #include "copypaste.h"
 #include "copypastefactory.h"
 
-const GeneralProperties CopyPasteFactory::properties() const
+GeneralProperties CopyPasteFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("Copy/Paste Plugin");
     properties.shortName = "copypaste";
-    properties.translation = QLatin1String(":/copypaste_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -51,4 +50,9 @@ void CopyPasteFactory::showAbout(QWidget *parent)
                         tr("Qmmp Copy/Paste Plugin")+"\n"+
                         tr("This plugin allows one to copy selected tracks from one playlist to another")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString CopyPasteFactory::translation() const
+{
+    return QLatin1String(":/copypaste_plugin_");
 }

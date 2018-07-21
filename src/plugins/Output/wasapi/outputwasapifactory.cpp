@@ -23,7 +23,7 @@
 #include "outputwasapi.h"
 #include "outputwasapifactory.h"
 
-const OutputProperties OutputWASAPIFactory::properties() const
+OutputProperties OutputWASAPIFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("WASAPI Plugin");

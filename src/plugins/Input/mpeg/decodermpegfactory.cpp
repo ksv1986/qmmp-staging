@@ -160,7 +160,7 @@ bool DecoderMPEGFactory::canDecode(QIODevice *input) const
     return false;
 }
 
-const DecoderProperties DecoderMPEGFactory::properties() const
+DecoderProperties DecoderMPEGFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("MPEG Plugin");
@@ -168,7 +168,6 @@ const DecoderProperties DecoderMPEGFactory::properties() const
     properties.filters << "*.mp1" << "*.mp2" << "*.mp3" << "*.wav";
     properties.description = tr("MPEG Files");
     properties.contentTypes << "audio/mp3" << "audio/mpeg";
-    properties.translation = QLatin1String(":/mpeg_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;
@@ -392,5 +391,10 @@ void DecoderMPEGFactory::showAbout(QWidget *parent)
 
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Source code based on mq3 and madplay projects")
-                       );
+                        );
+}
+
+QString DecoderMPEGFactory::translation() const
+{
+    return QLatin1String(":/mpeg_plugin_");
 }

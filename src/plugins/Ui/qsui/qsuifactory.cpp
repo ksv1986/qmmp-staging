@@ -25,13 +25,12 @@
 #include "aboutqsuidialog.h"
 #include "qsuifactory.h"
 
-const UiProperties QSUIFactory::properties() const
+UiProperties QSUIFactory::properties() const
 {
     UiProperties props;
     props.hasAbout = true;
     props.name = tr("Simple User Interface");
     props.shortName = "qsui";
-    props.translation = QLatin1String(":/qsui_plugin_");
     return props;
 }
 
@@ -45,4 +44,9 @@ void QSUIFactory::showAbout(QWidget *parent)
 {
     AboutQSUIDialog about(parent);
     about.exec();
+}
+
+QString QSUIFactory::translation() const
+{
+    return QLatin1String(":/qsui_plugin_");
 }

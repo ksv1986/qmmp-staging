@@ -26,14 +26,13 @@
 #include "outputqtmultimedia.h"
 
 
-const OutputProperties OutputQtMultimediaFactory::properties() const
+OutputProperties OutputQtMultimediaFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("Qt Multimedia Plugin");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.shortName = "qtmultimedia";
-    properties.translation = QLatin1String(":/qtmultimedia_plugin_");
     return properties;
 }
 
@@ -57,5 +56,10 @@ void OutputQtMultimediaFactory::showAbout(QWidget *parent)
 {
    QMessageBox::about (parent, tr("About Qt Multimedia Output Plugin"),
                         tr("Qmmp Qt Multimedia Output Plugin")+"\n"+
-                        tr("Written by: Ivan Ponomarev <ivantrue@gmail.com>"));
+                       tr("Written by: Ivan Ponomarev <ivantrue@gmail.com>"));
+}
+
+QString OutputQtMultimediaFactory::translation() const
+{
+    return QLatin1String(":/qtmultimedia_plugin_");
 }

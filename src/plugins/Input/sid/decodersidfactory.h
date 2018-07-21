@@ -37,12 +37,13 @@ public:
     DecoderSIDFactory();
 
     bool canDecode(QIODevice *input) const;
-    const DecoderProperties properties() const;
+    DecoderProperties properties() const;
     Decoder *create(const QString &path, QIODevice *input);
     QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *);
     MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);
+    QString translation() const;
 
 private:
     SidDatabase m_db;

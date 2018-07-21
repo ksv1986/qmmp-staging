@@ -37,11 +37,12 @@ Q_INTERFACES(OutputFactory)
 
 public:
     OutputShoutFactory();
-    const OutputProperties properties() const;
+    OutputProperties properties() const;
     Output* create();
     Volume *createVolume();
     void showSettings(QWidget* parent);
     void showAbout(QWidget *parent);
+    QString translation() const;
 
 private:
     ShoutClient *m_connection;

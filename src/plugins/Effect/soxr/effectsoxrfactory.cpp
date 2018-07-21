@@ -29,7 +29,6 @@ const EffectProperties EffectSoXRFactory::properties() const
     EffectProperties properties;
     properties.name = tr("SoX Resampler Plugin");
     properties.shortName = "soxr";
-    properties.translation = QLatin1String(":/soxr_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     properties.priority = EffectProperties::EFFECT_PRIORITY_HIGH;
@@ -51,5 +50,10 @@ void EffectSoXRFactory::showAbout(QWidget *parent)
 {
      QMessageBox::about (parent, tr("About SoX Resampler Plugin"),
                         tr("Qmmp SoX Resampler Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString EffectSoXRFactory::translation() const
+{
+    return QLatin1String(":/soxr_plugin_");
 }

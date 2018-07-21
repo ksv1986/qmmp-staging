@@ -28,11 +28,10 @@
 #include <qmmpui/commandlinemanager.h>
 #include "playlistoption.h"
 
-const CommandLineProperties PlayListOption::properties() const
+CommandLineProperties PlayListOption::properties() const
 {
     CommandLineProperties properties;
     properties.shortName = "PlayListOption";
-    properties.translation = QLatin1String(":/playlist_plugin_");
     properties.helpString << QString("--pl-help") + "||" + tr("Show playlist manipulation commands");
     return properties;
 }
@@ -144,6 +143,11 @@ QString PlayListOption::executeCommand(const QString& opt_str, const QStringList
         out += "NO PLAYLIST ADVANCE: " + boolToText(ui_settings->isNoPlayListAdvance()) + "\n";
     }
     return out;
+}
+
+QString PlayListOption::translation() const
+{
+    return QLatin1String(":/playlist_plugin_");
 }
 
 QString PlayListOption::boolToText(bool enabled)

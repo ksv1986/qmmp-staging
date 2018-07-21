@@ -24,12 +24,11 @@
 #include "visualanalyzerfactory.h"
 #include "analyzer.h"
 
-const VisualProperties VisualAnalyzerFactory::properties() const
+VisualProperties VisualAnalyzerFactory::properties() const
 {
     VisualProperties properties;
     properties.name = tr("Analyzer Plugin");
     properties.shortName = "analyzer";
-    properties.translation = QLatin1String(":/analyzer_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     return properties;
@@ -50,4 +49,9 @@ void VisualAnalyzerFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Analyzer Visual Plugin"),
                         tr("Qmmp Analyzer Visual Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString VisualAnalyzerFactory::translation() const
+{
+    return QLatin1String(":/analyzer_plugin_");
 }

@@ -23,7 +23,7 @@
 #include "settingsdialog.h"
 #include "statusiconfactory.h"
 
-const GeneralProperties StatusIconFactory::properties() const
+GeneralProperties StatusIconFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("Status Icon Plugin");
@@ -31,7 +31,6 @@ const GeneralProperties StatusIconFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = true;
-    properties.translation = QLatin1String(":/statusicon_plugin_");
     return properties;
 }
 
@@ -52,4 +51,9 @@ void StatusIconFactory::showAbout(QWidget *parent)
                         tr("Written by:") + "\n"+
                         tr("Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Artur Guzik <a.guzik88@gmail.com>"));
+}
+
+QString StatusIconFactory::translation() const
+{
+    return QLatin1String(":/statusicon_plugin_");
 }

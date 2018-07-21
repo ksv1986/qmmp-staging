@@ -24,12 +24,11 @@
 #include "halplugin.h"
 #include "halfactory.h"
 
-const GeneralProperties HalFactory::properties() const
+GeneralProperties HalFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("HAL Plugin");
     properties.shortName = "hal";
-    properties.translation = QLatin1String(":/hal_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -53,4 +52,9 @@ void HalFactory::showAbout(QWidget *parent)
                         tr("This plugin provides removable devices detection using HAL") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>") + "\n" +
                         tr("Based on Solid (KDE hardware library)"));
+}
+
+QString HalFactory::translation() const
+{
+    return QLatin1String(":/hal_plugin_");
 }

@@ -24,11 +24,10 @@
 #include <qmmp/soundcore.h>
 #include "seekoption.h"
 
-const CommandLineProperties SeekOption::properties() const
+CommandLineProperties SeekOption::properties() const
 {
     CommandLineProperties properties;
     properties.shortName = "SeekOption";
-    properties.translation = QLatin1String(":/seek_plugin_");
     properties.helpString << QString("--seek <time>") + "||" + tr("Seek to position in the current track")
                           << QString("--seek-fwd <time>") + "||" + tr("Seek forward")
                           << QString("--seek-bwd <time>") + "||" + tr("Seek backwards");
@@ -75,4 +74,9 @@ QString SeekOption::executeCommand(const QString &opt_str, const QStringList &ar
     else
         return QString();
     return QString();
+}
+
+QString SeekOption::translation() const
+{
+    return QLatin1String(":/seek_plugin_");
 }

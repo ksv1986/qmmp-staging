@@ -46,7 +46,7 @@ bool DecoderMPCFactory::canDecode(QIODevice *input) const
     return false;
 }
 
-const DecoderProperties DecoderMPCFactory::properties() const
+DecoderProperties DecoderMPCFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("Musepack Plugin");
@@ -54,7 +54,6 @@ const DecoderProperties DecoderMPCFactory::properties() const
     properties.description = tr("Musepack Files");
     //properties.contentType = ;
     properties.shortName = "mpc";
-    properties.translation = QLatin1String(":/mpc_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     return properties;
@@ -118,4 +117,9 @@ void DecoderMPCFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Musepack Audio Plugin"),
                         tr("Qmmp Musepack Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderMPCFactory::translation() const
+{
+    return QLatin1String(":/mpc_plugin_");
 }

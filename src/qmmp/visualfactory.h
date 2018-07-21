@@ -44,7 +44,6 @@ public:
     }
     QString name;        /*!< Effect plugin full name */
     QString shortName;   /*!< Effect plugin short name for internal usage */
-    QString translation; /*!< Translation file path without locale code and extension */
     bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
     bool hasSettings;    /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
 };
@@ -61,7 +60,7 @@ public:
      /*!
      * Returns visual plugin properties.
      */
-    virtual const VisualProperties properties() const = 0;
+    virtual VisualProperties properties() const = 0;
     /*!
      * Creates visualization provided by plugin.
      * @param parent Parent object.
@@ -78,6 +77,10 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
+    /*!
+     * Returns translation file path without locale code and extension
+     */
+    virtual QString translation() const = 0;
 };
 
 Q_DECLARE_INTERFACE(VisualFactory, "VisualFactory/1.0")

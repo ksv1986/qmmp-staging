@@ -34,12 +34,11 @@ bool DecoderCDAudioFactory::canDecode(QIODevice *) const
     return false;
 }
 
-const DecoderProperties DecoderCDAudioFactory::properties() const
+DecoderProperties DecoderCDAudioFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("CD Audio Plugin");
     properties.shortName = "cdaudio";
-    properties.translation = QLatin1String(":/cdaudio_plugin_");
     properties.protocols << "cdda";
     properties.hasAbout = true;
     properties.noInput = true;
@@ -88,4 +87,9 @@ void DecoderCDAudioFactory::showAbout(QWidget *parent)
                         .arg(CDDB_VERSION) + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Usage: open cdda:/// using Add URL dialog or command line"));
+}
+
+QString DecoderCDAudioFactory::translation() const
+{
+    return QLatin1String(":/cdaudio_plugin_");
 }

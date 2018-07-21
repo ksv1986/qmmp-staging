@@ -61,13 +61,12 @@ FileDialog* TwoPanelFileDialogFactory::create()
     return new TwoPanelFileDialog();
 }
 
-const FileDialogProperties TwoPanelFileDialogFactory::properties() const
+FileDialogProperties TwoPanelFileDialogFactory::properties() const
 {
     FileDialogProperties properties;
     properties.name = tr("Two-panel File Dialog");
     properties.shortName = "twopanel_dialog";
     properties.hasAbout = true;
-    properties.translation = QLatin1String(":/two_panel_file_dialog_plugin_");
     properties.modal = false;
     return properties;
 }
@@ -78,4 +77,9 @@ void TwoPanelFileDialogFactory::showAbout(QWidget *parent)
                         tr("Two-panel File Dialog") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>") + "\n" +
                         tr("Based on code from the Qt library"));
+}
+
+QString TwoPanelFileDialogFactory::translation() const
+{
+    return QLatin1String(":/two_panel_file_dialog_plugin_");
 }

@@ -43,7 +43,6 @@ public:
     }
     QString name;        /*!< File dialog plugin full name */
     QString shortName;   /*!< File dialog short name for internal usage */
-    QString translation; /*!< Translation file path without locale code and extension */
     bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
 };
 /*! @brief User interface plugin interface.
@@ -59,7 +58,7 @@ public:
     /*!
      * Returns user interface plugin properties.
      */
-    virtual const UiProperties properties() const = 0;
+    virtual UiProperties properties() const = 0;
     /*!
      * Creates user interface instance.
      */
@@ -69,6 +68,10 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
+    /*!
+     * Returns translation file path without locale code and extension
+     */
+    virtual QString translation() const = 0;
 };
 
 Q_DECLARE_INTERFACE(UiFactory, "UiFactory/1.0")

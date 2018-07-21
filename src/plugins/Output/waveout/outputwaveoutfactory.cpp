@@ -23,7 +23,7 @@
 #include "outputwaveoutfactory.h"
 
 
-const OutputProperties OutputWaveOutFactory::properties() const
+OutputProperties OutputWaveOutFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("WaveOut Plugin");

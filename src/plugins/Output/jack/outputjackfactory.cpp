@@ -24,14 +24,13 @@
 #include "outputjackfactory.h"
 
 
-const OutputProperties OutputJACKFactory::properties() const
+OutputProperties OutputJACKFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("JACK Plugin");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.shortName = "jack";
-    properties.translation = QLatin1String(":/jack_plugin_");
     return properties;
 }
 
@@ -54,4 +53,9 @@ void OutputJACKFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Jack Output Plugin"),
                         tr("Qmmp Jack Output Plugin")+"\n"+
                         tr("Written by: Yuriy Zhuravlev <slalkerg@gmail.com>"));
+}
+
+QString OutputJACKFactory::translation() const
+{
+    return QLatin1String(":/jack_plugin_");
 }

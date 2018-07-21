@@ -25,12 +25,11 @@
 #include "settingsdialog.h"
 #include "scrobblerfactory.h"
 
-const GeneralProperties ScrobblerFactory::properties() const
+GeneralProperties ScrobblerFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("Scrobbler Plugin");
     properties.shortName = "scrobbler";
-    properties.translation = QLatin1String(":/scrobbler_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -52,4 +51,9 @@ void ScrobblerFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Scrobbler Plugin"),
                         tr("Qmmp AudioScrobbler Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString ScrobblerFactory::translation() const
+{
+    return QLatin1String(":/scrobbler_plugin_");
 }

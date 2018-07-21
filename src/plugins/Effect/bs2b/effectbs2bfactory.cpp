@@ -30,7 +30,6 @@ const EffectProperties EffectBs2bFactory::properties() const
     EffectProperties properties;
     properties.name = tr("BS2B Plugin");
     properties.shortName = "bs2b";
-    properties.translation = QLatin1String(":/bs2b_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     return properties;
@@ -58,4 +57,9 @@ void EffectBs2bFactory::showAbout(QWidget *parent)
                         "<p>"+tr("Developers:")+"<br>"+
                         tr("Ilya Kotov <forkotov02@ya.ru>")+"<br>"+
                         tr("Sebastian Pipping <sebastian@pipping.org>")+"</p>");
+}
+
+QString EffectBs2bFactory::translation() const
+{
+    return QLatin1String(":/bs2b_plugin_");
 }

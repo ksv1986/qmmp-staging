@@ -79,11 +79,10 @@ bool DecoderSndFileFactory::canDecode(QIODevice *input) const
     return false;
 }
 
-const DecoderProperties DecoderSndFileFactory::properties() const
+DecoderProperties DecoderSndFileFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("Sndfile Plugin");
-    properties.translation = QLatin1String(":/sndfile_plugin_");
     properties.filters << "*.wav" << "*.au" << "*.snd" << "*.aif" << "*.aiff" << "*.8svx";
     properties.filters << "*.sph" << "*.sf" << "*.voc" << "*.w64";
     properties.description = tr("PCM Files");
@@ -193,4 +192,9 @@ void DecoderSndFileFactory::showAbout(QWidget *parent)
                         tr("Qmmp Sndfile Audio Plugin")+"\n"+
                         tr("Compiled against")+" "+QString(version)+"\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderSndFileFactory::translation() const
+{
+    return QLatin1String(":/sndfile_plugin_");
 }

@@ -25,12 +25,11 @@
 #include "hotkeymanager.h"
 #include "hotkeyfactory.h"
 
-const GeneralProperties HotkeyFactory::properties() const
+GeneralProperties HotkeyFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("Global Hotkey Plugin");
     properties.shortName = "hotkey";
-    properties.translation = QLatin1String(":/hotkey_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -59,4 +58,9 @@ void HotkeyFactory::showAbout(QWidget *parent)
                         tr("Qmmp Global Hotkey Plugin")+"\n"+
                         tr("This plugin adds support for multimedia keys or global key combinations")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString HotkeyFactory::translation() const
+{
+    return QLatin1String(":/hotkey_plugin_");
 }

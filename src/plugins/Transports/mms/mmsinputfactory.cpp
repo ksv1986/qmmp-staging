@@ -25,13 +25,12 @@
 #include "mmsinputsource.h"
 #include "mmsinputfactory.h"
 
-const InputSourceProperties MMSInputFactory::properties() const
+InputSourceProperties MMSInputFactory::properties() const
 {
     InputSourceProperties properties;
     properties.protocols << "mms" << "mmsh" << "mmst" << "mmsu";
     properties.name = tr("MMS Plugin");
     properties.shortName = "mms";
-    properties.translation = QLatin1String(":/mms_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;
@@ -53,4 +52,9 @@ void MMSInputFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About MMS Transport Plugin"),
                         tr("Qmmp MMS Transport Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString MMSInputFactory::translation() const
+{
+    return QLatin1String(":/mms_plugin_");
 }

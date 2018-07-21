@@ -22,12 +22,11 @@
 #include "converterhelper.h"
 #include "converterfactory.h"
 
-const GeneralProperties ConverterFactory::properties() const
+GeneralProperties ConverterFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("Converter Plugin");
     properties.shortName = "converter";
-    properties.translation = QLatin1String(":/converter_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -52,4 +51,9 @@ void ConverterFactory::showAbout(QWidget *parent)
                         tr("This plugin converts supported audio files to other file formats "
                            "using external command-line encoders") +"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString ConverterFactory::translation() const
+{
+    return QLatin1String(":/converter_plugin_");
 }

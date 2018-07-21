@@ -24,11 +24,10 @@
 #include <qmmp/soundcore.h>
 #include "incdecvolumeoption.h"
 
-const CommandLineProperties IncDecVolumeCommandLineOption::properties() const
+CommandLineProperties IncDecVolumeCommandLineOption::properties() const
 {
     CommandLineProperties properties;
     properties.shortName = "IncDecVolumeCommandLineOption";
-    properties.translation = QLatin1String(":/incdecvolume_plugin_");
     properties.helpString << QString("--volume-inc") + "||" + tr("Increase volume by 5 steps")
                           << QString("--volume-dec") + "||" + tr("Decrease volume by 5 steps");
     return properties;
@@ -52,4 +51,9 @@ QString IncDecVolumeCommandLineOption::executeCommand(const QString& opt_str, co
         SoundCore::instance()->volumeDown();
 
     return QString();
+}
+
+QString IncDecVolumeCommandLineOption::translation() const
+{
+    return QLatin1String(":/incdecvolume_plugin_");
 }

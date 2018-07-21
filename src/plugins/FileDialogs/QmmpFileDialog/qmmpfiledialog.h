@@ -51,8 +51,9 @@ Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.FileDialogFactoryInterface.1.0")
 Q_INTERFACES(FileDialogFactory)
 public:
     virtual FileDialog* create();
-    virtual const FileDialogProperties properties() const;
+    virtual FileDialogProperties properties() const;
     virtual void showAbout(QWidget*);
+    virtual QString translation() const;
     virtual ~QmmpFileDialogFactory()
     {
         ;

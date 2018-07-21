@@ -40,7 +40,7 @@ bool DecoderModPlugFactory::canDecode(QIODevice *) const
     return false;
 }
 
-const DecoderProperties DecoderModPlugFactory::properties() const
+DecoderProperties DecoderModPlugFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("ModPlug Plugin");
@@ -52,7 +52,6 @@ const DecoderProperties DecoderModPlugFactory::properties() const
     properties.description = tr("ModPlug Files");
     //properties.contentType = ;
     properties.shortName = "modplug";
-    properties.translation = QLatin1String(":/modplug_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
@@ -141,4 +140,9 @@ void DecoderModPlugFactory::showAbout(QWidget *parent)
                         tr("Olivier Lapicque <olivierl@jps.net>")+"\n"+
                         tr("Kenton Varda <temporal@gauge3d.org>")+"\n"+
                         tr("Konstanty Bialkowski <konstanty@ieee.org>"));
+}
+
+QString DecoderModPlugFactory::translation() const
+{
+    return QLatin1String(":/modplug_plugin_");
 }

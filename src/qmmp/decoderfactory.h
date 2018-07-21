@@ -48,7 +48,6 @@ public:
     }
     QString name;             /*!< Input plugin full name */
     QString shortName;        /*!< Input plugin short name for internal usage */
-    QString translation;      /*!< Translation file path without locale code and extension */
     QStringList filters;      /*!< File filters (example: "*.mp3") */
     QString description;      /*!< File filters description */
     QStringList contentTypes; /*!< Supported content types */
@@ -76,7 +75,7 @@ public:
     /*!
      * Returns decoder plugin properties.
      */
-    virtual const DecoderProperties properties() const = 0;
+    virtual DecoderProperties properties() const = 0;
     /*!
      * Creates decoder object.
      * @param path File path
@@ -109,6 +108,11 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
+    /*!
+     * Returns translation file path without locale code and extension
+     */
+    virtual QString translation() const = 0;
+
 };
 
 Q_DECLARE_INTERFACE(DecoderFactory, "DecoderFactory/1.0")

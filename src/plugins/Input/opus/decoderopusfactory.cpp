@@ -36,12 +36,11 @@ bool DecoderOpusFactory::canDecode(QIODevice *input) const
     return false;
 }
 
-const DecoderProperties DecoderOpusFactory::properties() const
+DecoderProperties DecoderOpusFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("Opus Plugin");
     properties.shortName = "opus";
-    properties.translation = QLatin1String(":/opus_plugin_");
     properties.filters << "*.opus";
     properties.description = tr("Ogg Opus Files");
     properties.contentTypes << "audio/opus";
@@ -117,4 +116,9 @@ void DecoderOpusFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Opus Audio Plugin"),
                         tr("Qmmp Opus Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderOpusFactory::translation() const
+{
+    return QLatin1String(":/opus_plugin_");
 }

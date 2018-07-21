@@ -23,12 +23,11 @@
 #include "streambrowser.h"
 #include "streambrowserfactory.h"
 
-const GeneralProperties StreamBrowserFactory::properties() const
+GeneralProperties StreamBrowserFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("Stream Browser Plugin");
     properties.shortName = "streambrowser";
-    properties.translation = QLatin1String(":/streambrowser_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -52,4 +51,9 @@ void StreamBrowserFactory::showAbout(QWidget *parent)
                         tr("Qmmp Stream Browser Plugin")+"\n"+
                         tr("This plugin allows one to add stream from IceCast stream directory")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString StreamBrowserFactory::translation() const
+{
+    return QLatin1String(":/streambrowser_plugin_");
 }

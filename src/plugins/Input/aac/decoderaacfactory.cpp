@@ -34,7 +34,7 @@ bool DecoderAACFactory::canDecode(QIODevice *input) const
     return aac_file.isValid();
 }
 
-const DecoderProperties DecoderAACFactory::properties() const
+DecoderProperties DecoderAACFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("AAC Plugin");
@@ -42,7 +42,6 @@ const DecoderProperties DecoderAACFactory::properties() const
     properties.description = tr("AAC Files");
     properties.contentTypes << "audio/aacp" << "audio/aac";
     properties.shortName = "aac";
-    properties.translation = QLatin1String(":/aac_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     return properties;
@@ -103,4 +102,9 @@ void DecoderAACFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About AAC Audio Plugin"),
                         tr("Qmmp AAC Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderAACFactory::translation() const
+{
+    return QLatin1String(":/aac_plugin_");
 }

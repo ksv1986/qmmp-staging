@@ -24,12 +24,11 @@
 #include "covermanager.h"
 #include "covermanagerfactory.h"
 
-const GeneralProperties CoverManagerFactory::properties() const
+GeneralProperties CoverManagerFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("Cover Manager Plugin");
     properties.shortName = "cover_manager";
-    properties.translation = QLatin1String(":/covermanager_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -51,4 +50,9 @@ void CoverManagerFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About Cover Manager Plugin"),
                         tr("Qmmp Cover Manager Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString CoverManagerFactory::translation() const
+{
+    return QLatin1String(":/covermanager_plugin_");
 }

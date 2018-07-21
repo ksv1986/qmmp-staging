@@ -52,7 +52,7 @@ bool DecoderSIDFactory::canDecode(QIODevice *input) const
     return (!memcmp(buf, "RSID", 4) || !memcmp(buf, "PSID", 4));
 }
 
-const DecoderProperties DecoderSIDFactory::properties() const
+DecoderProperties DecoderSIDFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("SID Plugin");
@@ -60,7 +60,6 @@ const DecoderProperties DecoderSIDFactory::properties() const
     properties.description = tr("SID Files");
     //properties.contentType = ;
     properties.shortName = "sid";
-    properties.translation = QLatin1String(":/sid_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
@@ -116,4 +115,9 @@ void DecoderSIDFactory::showAbout(QWidget *parent)
                         tr("Qmmp SID Audio Plugin")+"\n"+
                         tr("This plugin plays Commodore 64 music files using libsidplayfp library")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderSIDFactory::translation() const
+{
+    return QLatin1String(":/sid_plugin_");
 }

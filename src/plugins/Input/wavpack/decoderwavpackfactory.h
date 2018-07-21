@@ -31,12 +31,13 @@ class DecoderWavPackFactory : public QObject,
 
 public:
     bool canDecode(QIODevice *input) const;
-    const DecoderProperties properties() const;
+    DecoderProperties properties() const;
     Decoder *create(const QString &p, QIODevice *i);
     QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredFiles);
     MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);
+    QString translation() const;
 };
 
 #endif

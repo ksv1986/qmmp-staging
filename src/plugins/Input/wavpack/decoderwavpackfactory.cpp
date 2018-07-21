@@ -31,13 +31,12 @@ bool DecoderWavPackFactory::canDecode(QIODevice *input) const
     return (input->peek(buf, 4) == 4 && !memcmp(buf, "wvpk", 4));
 }
 
-const DecoderProperties DecoderWavPackFactory::properties() const
+DecoderProperties DecoderWavPackFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("WavPack Plugin");
     properties.filters << "*.wv";
     properties.description = tr("WavPack Files");
-    properties.translation = QLatin1String(":/wavpack_plugin_");
     //properties.contentType = ;
     properties.shortName = "wavpack";
     properties.hasAbout = true;
@@ -179,4 +178,9 @@ void DecoderWavPackFactory::showAbout(QWidget *parent)
                         tr("WavPack library version:") +
                         QString(" %1").arg(WavpackGetLibraryVersionString ())+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderWavPackFactory::translation() const
+{
+    return QLatin1String(":/wavpack_plugin_");
 }

@@ -32,12 +32,11 @@ bool DecoderCUEFactory::canDecode(QIODevice *) const
     return false;
 }
 
-const DecoderProperties DecoderCUEFactory::properties() const
+DecoderProperties DecoderCUEFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("CUE Plugin");
     properties.shortName = "cue";
-    properties.translation = QLatin1String(":/cue_plugin_");
     properties.filters << "*.cue";
     properties.description = tr("CUE Files");
     properties.protocols << "cue";
@@ -91,4 +90,9 @@ void DecoderCUEFactory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About CUE Audio Plugin"),
                         tr("Qmmp CUE Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderCUEFactory::translation() const
+{
+    return  QLatin1String(":/cue_plugin_");
 }

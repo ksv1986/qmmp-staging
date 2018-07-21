@@ -53,7 +53,6 @@ public:
     }
     QString name;        /*!< Effect plugin full name */
     QString shortName;   /*!< Effect plugin short name for internal usage */
-    QString translation; /*!< Translation file path without locale code and extension */
     bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
     bool hasSettings;    /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
     int priority;        /*!< Effect priority. Effecs with higher priority will be applied first */
@@ -82,6 +81,10 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
+    /*!
+     * Returns translation file path without locale code and extension
+     */
+    virtual QString translation() const = 0;
 };
 
 Q_DECLARE_INTERFACE(EffectFactory, "EffectFactory/1.0")

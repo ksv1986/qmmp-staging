@@ -25,12 +25,11 @@
 #include "outputalsafactory.h"
 
 
-const OutputProperties OutputALSAFactory::properties() const
+OutputProperties OutputALSAFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("ALSA Plugin");
     properties.shortName = "alsa";
-    properties.translation = QLatin1String(":/alsa_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;
@@ -54,7 +53,12 @@ void OutputALSAFactory::showSettings(QWidget* parent)
 
 void OutputALSAFactory::showAbout(QWidget *parent)
 {
-   QMessageBox::about (parent, tr("About ALSA Output Plugin"),
+    QMessageBox::about (parent, tr("About ALSA Output Plugin"),
                         tr("Qmmp ALSA Output Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString OutputALSAFactory::translation() const
+{
+    return QLatin1String(":/alsa_plugin_");
 }

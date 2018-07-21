@@ -24,13 +24,12 @@
 #include "mainwindow.h"
 #include "skinnedfactory.h"
 
-const UiProperties SkinnedFactory::properties() const
+UiProperties SkinnedFactory::properties() const
 {
     UiProperties props;
     props.hasAbout = true;
     props.name = tr("Skinned User Interface");
     props.shortName = "skinned";
-    props.translation = QLatin1String(":/skinned_plugin_");
     return props;
 }
 
@@ -52,4 +51,9 @@ void SkinnedFactory::showAbout(QWidget *parent)
                         tr("Andrey Adreev <andreev00@gmail.com>")+"\n"+
                         tr("sixixfive <http://sixsixfive.deviantart.com/>"));
 
+}
+
+QString SkinnedFactory::translation() const
+{
+    return QLatin1String(":/skinned_plugin_");
 }

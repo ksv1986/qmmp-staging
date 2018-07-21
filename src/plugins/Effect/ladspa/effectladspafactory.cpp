@@ -29,7 +29,6 @@ const EffectProperties EffectLADSPAFactory::properties() const
     EffectProperties properties;
     properties.name = tr("LADSPA Plugin");
     properties.shortName = "ladspa";
-    properties.translation = QLatin1String(":/ladspa_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     return properties;
@@ -55,4 +54,9 @@ void EffectLADSPAFactory::showAbout(QWidget *parent)
                         tr("BMP-ladspa developers:")+"\n"+
                         tr("Nick Lamb <njl195@zepler.org.uk>")+"\n"+
                         tr("Giacomo Lozito <city_hunter@users.sf.net>"));
+}
+
+QString EffectLADSPAFactory::translation() const
+{
+    return QLatin1String(":/ladspa_plugin_");
 }

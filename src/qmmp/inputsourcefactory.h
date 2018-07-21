@@ -44,7 +44,6 @@ public:
 
     QString name;          /*!< Transport plugin full name */
     QString shortName;     /*!< Transport plugin name for internal usage */
-    QString translation;   /*!< Translation file path without locale code and extension */
     QStringList protocols; /*!< A list of supported protocols. */
     bool hasAbout;         /*!< Should be \b true if plugin has about dialog, otherwise \b false */
     bool hasSettings;      /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
@@ -60,7 +59,7 @@ public:
     /*!
      * Returns transport plugin properties.
      */
-    virtual const InputSourceProperties properties() const = 0;
+    virtual InputSourceProperties properties() const = 0;
     /*!
      * Creates transport provided by plugin.
      * @param url URL of the stream.
@@ -77,6 +76,10 @@ public:
      * @param parent Parent widget.
      */
     virtual void showAbout(QWidget *parent) = 0;
+    /*!
+     * Returns translation file path without locale code and extension
+     */
+    virtual QString translation() const = 0;
 };
 
 Q_DECLARE_INTERFACE(InputSourceFactory, "InputSourceFactory/1.0")

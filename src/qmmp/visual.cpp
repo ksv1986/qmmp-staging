@@ -262,10 +262,10 @@ void Visual::checkFactories()
             {
                 m_factories->append(factory);
                 m_files->insert(factory, filePath);
-                if(!factory->properties().translation.isEmpty())
+                if(!factory->translation().isEmpty())
                 {
                     QTranslator *translator = new QTranslator(qApp);
-                    translator->load(factory->properties().translation + Qmmp::systemLanguageID());
+                    translator->load(factory->translation() + Qmmp::systemLanguageID());
                     qApp->installTranslator(translator);
                 }
             }

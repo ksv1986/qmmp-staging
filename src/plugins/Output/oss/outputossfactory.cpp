@@ -30,12 +30,11 @@ Output* OutputOSSFactory::create()
     return new OutputOSS();
 }
 
-const OutputProperties OutputOSSFactory::properties() const
+OutputProperties OutputOSSFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("OSS Plugin");
     properties.shortName = "oss";
-    properties.translation = QLatin1String(":/oss_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;
@@ -57,5 +56,10 @@ void OutputOSSFactory::showAbout(QWidget *parent)
 QMessageBox::about (parent, tr("About OSS Output Plugin"),
                         tr("Qmmp OSS Output Plugin")+"\n"+
                         tr("Written by: Yuriy Zhuravlev <slalkerg@gmail.com>")+"\n"+
-                        tr("Based on code by: Brad Hughes <bhughes@trolltech.com>"));
+                    tr("Based on code by: Brad Hughes <bhughes@trolltech.com>"));
+}
+
+QString OutputOSSFactory::translation() const
+{
+    return QLatin1String(":/oss_plugin_");
 }

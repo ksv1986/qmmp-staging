@@ -29,7 +29,6 @@ const EffectProperties EffectFileWriterFactory::properties() const
     EffectProperties properties;
     properties.name = tr("File Writer Plugin");
     properties.shortName = "filewriter";
-    properties.translation = QLatin1String(":/filewriter_plugin_");
     properties.hasSettings = true;
     properties.hasAbout = true;
     properties.priority = EffectProperties::EFFECT_PRIORITY_LOW;
@@ -51,5 +50,10 @@ void EffectFileWriterFactory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About File Writer Plugin"),
                        tr("Qmmp File Writer Plugin")+"\n"+
-                       tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString EffectFileWriterFactory::translation() const
+{
+    return QLatin1String(":/filewriter_plugin_");
 }

@@ -84,7 +84,7 @@ bool DecoderFFmpegFactory::canDecode(QIODevice *i) const
     return false;
 }
 
-const DecoderProperties DecoderFFmpegFactory::properties() const
+DecoderProperties DecoderFFmpegFactory::properties() const
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     QStringList filters;
@@ -141,7 +141,6 @@ const DecoderProperties DecoderFFmpegFactory::properties() const
     if(filters.contains("*.mka"))
         properties.contentTypes << "audio/true-hd" << "audio/x-matroska";
     properties.shortName = "ffmpeg";
-    properties.translation = QLatin1String(":/ffmpeg_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = false;
@@ -267,4 +266,9 @@ void DecoderFFmpegFactory::showAbout(QWidget *parent)
                         .arg(LIBAVUTIL_VERSION_MINOR)
                         .arg(LIBAVUTIL_VERSION_MICRO) +"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderFFmpegFactory::translation() const
+{
+    return QLatin1String(":/ffmpeg_plugin_");
 }

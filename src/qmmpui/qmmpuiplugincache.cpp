@@ -160,7 +160,7 @@ GeneralFactory *QmmpUiPluginCache::generalFactory()
     {
         m_generalFactory = qobject_cast<GeneralFactory *> (instance());
         if(m_generalFactory)
-            loadTranslation(m_generalFactory->properties().translation);
+            loadTranslation(m_generalFactory->translation());
     }
     return m_generalFactory;
 }
@@ -171,7 +171,7 @@ UiFactory *QmmpUiPluginCache::uiFactory()
     {
         m_uiFactory = qobject_cast<UiFactory *> (instance());
         if(m_uiFactory)
-            loadTranslation(m_uiFactory->properties().translation);
+            loadTranslation(m_uiFactory->translation());
     }
     return m_uiFactory;
 }
@@ -182,7 +182,7 @@ FileDialogFactory *QmmpUiPluginCache::fileDialogFactory()
     {
         m_fileDialogFactory = qobject_cast<FileDialogFactory *> (instance());
         if(m_fileDialogFactory)
-            loadTranslation(m_fileDialogFactory->properties().translation);
+            loadTranslation(m_fileDialogFactory->translation());
     }
     return m_fileDialogFactory;
 }

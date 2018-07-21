@@ -24,12 +24,11 @@
 #include "settingsdialog.h"
 #include "trackchangefactory.h"
 
-const GeneralProperties TrackChangeFactory::properties() const
+GeneralProperties TrackChangeFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("Track Change Plugin");
     properties.shortName = "trackchange";
-    properties.translation = QLatin1String(":/trackchange_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -52,4 +51,9 @@ void TrackChangeFactory::showAbout(QWidget *parent)
                         tr("Qmmp Track Change Plugin")+"\n"+
                         tr("This plugin executes external command when current track is changed") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString TrackChangeFactory::translation() const
+{
+    return QLatin1String(":/trackchange_plugin_");
 }

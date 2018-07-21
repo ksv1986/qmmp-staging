@@ -27,12 +27,11 @@
 
 // MplayerEngineFactory
 
-const EngineProperties MplayerEngineFactory::properties() const
+EngineProperties MplayerEngineFactory::properties() const
 {
     EngineProperties properties;
     properties.name = tr("Mplayer Plugin");
     properties.shortName = "mplayer";
-    properties.translation = QLatin1String(":/mplayer_plugin_");
     properties.filters = MplayerInfo::filters();
     properties.description = tr("Video Files");
     //properties.contentType = "application/ogg;audio/x-vorbis+ogg";
@@ -84,4 +83,9 @@ void MplayerEngineFactory::showAbout(QWidget *parent)
                         tr("Qmmp MPlayer Plugin")+"\n"+
                         tr("This plugin uses MPlayer as backend")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString MplayerEngineFactory::translation() const
+{
+    return QLatin1String(":/mplayer_plugin_");
 }

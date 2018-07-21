@@ -23,12 +23,11 @@
 #include "mediakeys.h"
 #include "gnomehotkeyfactory.h"
 
-const GeneralProperties GnomeHotkeyFactory::properties() const
+GeneralProperties GnomeHotkeyFactory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("Gnome Hotkey Plugin");
     properties.shortName = "gnomehotkey";
-    properties.translation = QLatin1String(":/gnomehotkey_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.visibilityControl = false;
@@ -52,4 +51,9 @@ void GnomeHotkeyFactory::showAbout(QWidget *parent)
                         tr("Qmmp Gnome Hotkey Plugin") + "\n" +
                         tr("This plugin adds support of the GNOME/Cinnamon hotkeys") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString GnomeHotkeyFactory::translation() const
+{
+    return QLatin1String(":/gnomehotkey_plugin_");
 }

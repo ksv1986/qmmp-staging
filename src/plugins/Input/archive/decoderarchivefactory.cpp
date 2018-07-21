@@ -34,7 +34,7 @@ bool DecoderArchiveFactory::canDecode(QIODevice *) const
     return false;
 }
 
-const DecoderProperties DecoderArchiveFactory::properties() const
+DecoderProperties DecoderArchiveFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("Archive Plugin");
@@ -42,7 +42,6 @@ const DecoderProperties DecoderArchiveFactory::properties() const
     properties.description = tr("Archives");
     properties.contentTypes << "application/zip" << "application/x-rar-compressed";
     properties.shortName = "archive";
-    properties.translation = QLatin1String(":/archive_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.noInput = true;
@@ -151,4 +150,9 @@ void DecoderArchiveFactory::showAbout(QWidget *parent)
                         tr("Qmmp Archive Reader Plugin")+"\n"+
                         tr("Compiled against %1").arg(ARCHIVE_VERSION_STRING)+"\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString DecoderArchiveFactory::translation() const
+{
+    return QLatin1String(":/archive_plugin_");
 }

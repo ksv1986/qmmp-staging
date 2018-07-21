@@ -38,12 +38,11 @@ bool DecoderVorbisFactory::canDecode(QIODevice *input) const
     return false;
 }
 
-const DecoderProperties DecoderVorbisFactory::properties() const
+DecoderProperties DecoderVorbisFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("Ogg Vorbis Plugin");
     properties.shortName = "vorbis";
-    properties.translation = QLatin1String(":/vorbis_plugin_");
     properties.filters << "*.ogg";
     properties.description = tr("Ogg Vorbis Files");
     properties.contentTypes << "application/ogg" << "audio/x-vorbis+ogg";
@@ -121,5 +120,10 @@ void DecoderVorbisFactory::showAbout(QWidget *parent)
                         tr("Qmmp Ogg Vorbis Audio Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Source code based on mq3 project")
-                       );
+                        );
+}
+
+QString DecoderVorbisFactory::translation() const
+{
+    return QLatin1String(":/vorbis_plugin_");
 }

@@ -24,12 +24,11 @@
 #include "udisks2plugin.h"
 #include "udisks2factory.h"
 
-const GeneralProperties UDisks2Factory::properties() const
+GeneralProperties UDisks2Factory::properties() const
 {
     GeneralProperties properties;
     properties.name = tr("UDisks2 Plugin");
     properties.shortName = "udisks2";
-    properties.translation = QLatin1String(":/udisks2_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
@@ -52,4 +51,9 @@ void UDisks2Factory::showAbout(QWidget *parent)
                         tr("Qmmp UDisks2 Plugin") + "\n" +
                         tr("This plugin provides removable devices detection using UDisks2") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString UDisks2Factory::translation() const
+{
+    return QLatin1String(":/udisks2_plugin_");
 }

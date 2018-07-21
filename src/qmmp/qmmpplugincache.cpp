@@ -135,7 +135,7 @@ DecoderFactory *QmmpPluginCache::decoderFactory()
     {
         m_decoderFactory = qobject_cast<DecoderFactory *> (instance());
         if(m_decoderFactory)
-            loadTranslation(m_decoderFactory->properties().translation);
+            loadTranslation(m_decoderFactory->translation());
     }
     return m_decoderFactory;
 }
@@ -146,7 +146,7 @@ OutputFactory *QmmpPluginCache::outputFactory()
     {
         m_outputFactory = qobject_cast<OutputFactory *> (instance());
         if(m_outputFactory)
-            loadTranslation(m_outputFactory->properties().translation);
+            loadTranslation(m_outputFactory->translation());
     }
     return m_outputFactory;
 }
@@ -157,7 +157,7 @@ EngineFactory *QmmpPluginCache::engineFactory()
     {
         m_engineFactory = qobject_cast<EngineFactory *> (instance());
         if(m_engineFactory)
-            loadTranslation(m_engineFactory->properties().translation);
+            loadTranslation(m_engineFactory->translation());
     }
     return m_engineFactory;
 }
@@ -168,7 +168,7 @@ EffectFactory *QmmpPluginCache::effectFactory()
     {
         m_effectFactory = qobject_cast<EffectFactory *> (instance());
         if(m_effectFactory)
-            loadTranslation(m_effectFactory->properties().translation);
+            loadTranslation(m_effectFactory->translation());
     }
     return m_effectFactory;
 }
@@ -179,7 +179,7 @@ InputSourceFactory *QmmpPluginCache::inputSourceFactory()
     {
         m_inputSourceFactory = qobject_cast<InputSourceFactory *> (instance());
         if(m_inputSourceFactory)
-            loadTranslation(m_inputSourceFactory->properties().translation);
+            loadTranslation(m_inputSourceFactory->translation());
     }
     return m_inputSourceFactory;
 }

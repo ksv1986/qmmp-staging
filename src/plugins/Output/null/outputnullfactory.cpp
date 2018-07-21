@@ -24,14 +24,13 @@
 #include "outputnullfactory.h"
 
 
-const OutputProperties OutputNullFactory::properties() const
+OutputProperties OutputNullFactory::properties() const
 {
     OutputProperties properties;
     properties.name = tr("Null Plugin");
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.shortName = "null";
-    properties.translation = QLatin1String(":/null_plugin_");
     return properties;
 }
 
@@ -54,5 +53,10 @@ void OutputNullFactory::showAbout(QWidget *parent)
 {
    QMessageBox::about (parent, tr("About Null Output Plugin"),
                         tr("Qmmp Null Output Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+                       tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+}
+
+QString OutputNullFactory::translation() const
+{
+    return QLatin1String(":/null_plugin_");
 }

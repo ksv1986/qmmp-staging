@@ -63,12 +63,11 @@ FileDialog* QmmpFileDialogFactory::create()
     return new QmmpFileDialog();
 }
 
-const FileDialogProperties QmmpFileDialogFactory::properties() const
+FileDialogProperties QmmpFileDialogFactory::properties() const
 {
     FileDialogProperties properties;
     properties.name = tr("Qmmp File Dialog");
     properties.shortName = "qmmp_dialog";
-    properties.translation = QLatin1String(":/qmmp_file_dialog_plugin_");
     properties.hasAbout = true;
     properties.modal = false;
     return properties;
@@ -83,4 +82,9 @@ void QmmpFileDialogFactory::showAbout(QWidget *parent)
                            "Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Some code is copied from the Qt library"));
 
+}
+
+QString QmmpFileDialogFactory::translation() const
+{
+    return QLatin1String(":/qmmp_file_dialog_plugin_");
 }

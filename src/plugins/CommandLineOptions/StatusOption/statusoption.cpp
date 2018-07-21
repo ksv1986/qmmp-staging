@@ -25,11 +25,10 @@
 #include <qmmpui/metadataformatter.h>
 #include "statusoption.h"
 
-const CommandLineProperties StatusOption::properties() const
+CommandLineProperties StatusOption::properties() const
 {
     CommandLineProperties properties;
     properties.shortName = "StatusOption";
-    properties.translation = QLatin1String(":/status_plugin_");
     properties.helpString << QString("--status") + "||" + tr("Print playback status")
                           << QString("--nowplaying <fmt>") + "||"
                              + tr("Print formatted track name (example: qmmp --nowplaying \"%t - %a\")")
@@ -105,6 +104,11 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
         out += tr("%dir(n) - directory name located on n levels above");
     }
     return out;
+}
+
+QString StatusOption::translation() const
+{
+    return QLatin1String(":/status_plugin_");
 }
 
 QString StatusOption::genProgressBar()

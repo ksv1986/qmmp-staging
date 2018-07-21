@@ -35,6 +35,7 @@ const OutputProperties OutputOSS4Factory::properties() const
     OutputProperties properties;
     properties.name = tr("OSS4 Plugin");
     properties.shortName = "oss4";
+    properties.translation = QLatin1String(":/oss4_plugin_");
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;
@@ -56,12 +57,4 @@ void OutputOSS4Factory::showAbout(QWidget *parent)
     QMessageBox::about (parent, tr("About OSS4 Output Plugin"),
                         tr("Qmmp OSS4 Output Plugin")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QTranslator *OutputOSS4Factory::createTranslator(QObject *parent)
-{
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/oss4_plugin_") + locale);
-    return translator;
 }

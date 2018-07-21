@@ -51,15 +51,10 @@ void OutputDirectSoundFactory::showAbout(QWidget *parent)
 {
    QMessageBox::about (parent, tr("About DirectSound Output Plugin"),
                         tr("Qmmp DirectSound Output Plugin")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
+                       tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
-QTranslator *OutputDirectSoundFactory::createTranslator(QObject *parent)
+QString OutputDirectSoundFactory::translation() const
 {
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/directsound_plugin_") + locale);
-    return translator;
+    return QLatin1String(":/directsound_plugin_");
 }
-
-

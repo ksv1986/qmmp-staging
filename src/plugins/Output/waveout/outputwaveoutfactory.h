@@ -40,7 +40,7 @@ public:
     Volume *createVolume();
     void showSettings(QWidget* parent);
     void showAbout(QWidget *parent);
-    QTranslator *createTranslator(QObject *parent);
+    QString translation() const;
 };
 
 #endif

@@ -63,12 +63,9 @@ void OutputWaveOutFactory::showAbout(QWidget *parent)
                         tr("Based on aacDECdrop player"));
 }
 
-QTranslator *OutputWaveOutFactory::createTranslator(QObject *parent)
+QString OutputWaveOutFactory::translation() const
 {
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/waveout_plugin_") + locale);
-    return translator;
+    return QLatin1String(":/waveout_plugin_");
 }
 
 

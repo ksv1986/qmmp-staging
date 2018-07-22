@@ -36,15 +36,19 @@ MetaDataFormatterMenu::MetaDataFormatterMenu(Type type, QWidget *parent) :
     addAction(tr("Comment"))->setData("%c");
     addAction(tr("Composer"))->setData("%C");
     addAction(tr("Disc Number"))->setData("%D");
+    addAction(tr("Year"))->setData("%y");
     if(type == TITLE_MENU)
     {
         addAction(tr("Duration"))->setData("%l");
         addAction(tr("File Name"))->setData("%f");
         addAction(tr("File Path"))->setData("%F");
+        addAction(tr("Artist - Title"))->setData("%if(%p,%p - %t,%t)");
+        addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
     }
-    addAction(tr("Year"))->setData("%y");
-    addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
-    addAction(tr("Artist - Title"))->setData("%if(%p,%p - %t,%t)");
+    else if(type == GROUP_MENU)
+    {
+        addAction(tr("Artist - [Year] Album"))->setData("%p%if(%p&%a, - %if(%y,[%y] ,),)%a");
+    }
     addAction(tr("Parent Directory Name"))->setData("%dir(0)");
     addSeparator();
     addAction(tr("Bitrate"))->setData("%{bitrate}");

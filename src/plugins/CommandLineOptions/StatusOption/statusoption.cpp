@@ -100,6 +100,13 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
         out += tr("%F - full path") + "\n";
         out += tr("%y - year") + "\n";
         out += tr("%l - duration") + "\n";
+        out += tr("%{bitrate} - bitrate") + "\n";
+        out += tr("%{samplerate} - sample rate") + "\n";
+        out += tr("%{channels} - number of channels") + "\n";
+        out += tr("%{samplesize} - bits per sample") + "\n";
+        out += tr("%{format} - format name") + "\n";
+        out += tr("%{decoder} - decoder name") + "\n";
+        out += tr("%{filesize} - file size") + "\n";
         out += tr("%if(A&B&C,D,E) - condition") + "\n";
         out += tr("%dir(n) - directory name located on n levels above");
     }

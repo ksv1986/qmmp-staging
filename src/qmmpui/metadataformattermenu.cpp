@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,10 +35,10 @@ MetaDataFormatterMenu::MetaDataFormatterMenu(Type type, QWidget *parent) :
     addAction(tr("Genre"))->setData("%g");
     addAction(tr("Comment"))->setData("%c");
     addAction(tr("Composer"))->setData("%C");
-    addAction(tr("Duration"))->setData("%l");
     addAction(tr("Disc Number"))->setData("%D");
     if(type == TITLE_MENU)
     {
+        addAction(tr("Duration"))->setData("%l");
         addAction(tr("File Name"))->setData("%f");
         addAction(tr("File Path"))->setData("%F");
     }
@@ -46,6 +46,17 @@ MetaDataFormatterMenu::MetaDataFormatterMenu(Type type, QWidget *parent) :
     addAction(tr("Condition"))->setData("%if(%p&%t,%p - %t,%f)");
     addAction(tr("Artist - Title"))->setData("%if(%p,%p - %t,%t)");
     addAction(tr("Parent Directory Name"))->setData("%dir(0)");
+    addSeparator();
+    addAction(tr("Bitrate"))->setData("%{bitrate}");
+    addAction(tr("Sample Rate"))->setData("%{samplerate}");
+    addAction(tr("Number of Channels"))->setData("%{channels}");
+    addAction(tr("Sample Size"))->setData("%{samplesize}");
+    addAction(tr("Format"))->setData("%{format}");
+    addAction(tr("Decoder"))->setData("%{decoder}");
+    if(type == TITLE_MENU)
+    {
+        addAction(tr("File Size"))->setData("%{filesize}");
+    }
 
     connect(this, SIGNAL(triggered (QAction *)), SLOT(onActionTriggered(QAction*)));
 }

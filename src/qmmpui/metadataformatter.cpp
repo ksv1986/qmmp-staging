@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2015-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,6 +37,13 @@ Syntax:
 %y - year,
 %l - duration,
 %I - track index,
+%{bitrate} - bitrate,
+%{samplerate} - sample rate,
+%{channels} - number of channels,
+%{samplesize} - bits per sample,
+%{format} - format name,
+%{decoder} - decoder name,
+%{filesize} - file size,
 %if(A,B,C) or %if(A&B&C,D,E) - condition,
 %dir(n) - Name of the directory located on n levels above.
 */
@@ -64,6 +71,13 @@ MetaDataFormatter::MetaDataFormatter(const QString &pattern)
     m_fieldNames.insert("l", Param::DURATION);
     m_fieldNames.insert("f", Param::FILE_NAME);
     m_fieldNames.insert("I", Param::TRACK_INDEX);
+    m_propertyNames.insert("bitrate", Qmmp::BITRATE);
+    m_propertyNames.insert("samplerate", Qmmp::SAMPLERATE);
+    m_propertyNames.insert("channels", Qmmp::CHANNELS);
+    m_propertyNames.insert("samplesize", Qmmp::BITS_PER_SAMPLE);
+    m_propertyNames.insert("format", Qmmp::FORMAT_NAME);
+    m_propertyNames.insert("decoder", Qmmp::DECODER);
+    m_propertyNames.insert("filesize", Qmmp::FILE_SIZE);
 
     if(!pattern.isEmpty())
         setPattern(pattern);
@@ -163,6 +177,39 @@ bool MetaDataFormatter::parseField(QList<Node> *nodes, QString::const_iterator *
         node.params.append(param);
         nodes->append(node);
         (*i) += fieldName.size() - 1;
+        return true;
+    }
+    return false;
+}
+
+bool MetaDataFormatter::parseProperty(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end)
+{
+    if((*i) + 1 == end || (*i) + 2 == end)
+        return false;
+
+    if((**i) != QChar('{'))
+        return false;
+
+    (*i)++; //skip '{'
+
+    QString propertyName;
+
+    while((*i) != end && (**i) != QChar('}'))
+    {
+        propertyName.append((**i));
+        (*i)++;
+    }
+
+    int field = m_propertyNames.value(propertyName, Qmmp::UNKNOWN);
+    if(field != Qmmp::UNKNOWN)
+    {
+        Node node;
+        node.command = Node::PRINT_TEXT;
+        Param param;
+        param.type = Param::PROPERTY;
+        param.field = field;
+        node.params.append(param);
+        nodes->append(node);
         return true;
     }
     return false;
@@ -452,6 +499,9 @@ QString MetaDataFormatter::printParam(MetaDataFormatter::Param *p, const TrackIn
     case Param::FIELD:
         return printField(p->field, info, trackIndex);
         break;
+    case Param::PROPERTY:
+        return printProperty(p->field, info);
+        break;
     case Param::TEXT:
         return p->text;
         break;
@@ -507,6 +557,11 @@ QString MetaDataFormatter::printField(int field, const TrackInfo *info, int trac
     return QString();
 }
 
+QString MetaDataFormatter::printProperty(int field, const TrackInfo *info) const
+{
+    return info->value((Qmmp::TrackProperty) field);
+}
+
 QString MetaDataFormatter::dumpNode(MetaDataFormatter::Node node) const
 {
     QString str;
@@ -524,6 +579,8 @@ QString MetaDataFormatter::dumpNode(MetaDataFormatter::Node node) const
     {
         if(p.type == Param::FIELD)
             params.append(QString("FIELD:%1").arg(p.field));
+        else if(p.type == Param::PROPERTY)
+            params.append(QString("PROPERTY:%1").arg(p.field));
         else if(p.type == Param::TEXT)
             params.append(QString("TEXT:%1").arg(p.text));
         else if(p.type == Param::NUMERIC)
@@ -563,6 +620,12 @@ QList<MetaDataFormatter::Node> MetaDataFormatter::compile(const QString &expr)
             }
 
             if(parseField(&nodes, &i, expr.constEnd()))
+            {
+                i++;
+                continue;
+            }
+
+            if(parseProperty(&nodes, &i, expr.constEnd()))
             {
                 i++;
                 continue;

@@ -53,6 +53,13 @@ public:
      * %y - year,
      * %l - duration,
      * %I - track index,
+     * %{bitrate} - bitrate,
+     * %{samplerate} - sample rate,
+     * %{channels} - number of channels,
+     * %{samplesize} - bits per sample,
+     * %{format} - format name,
+     * %{decoder} - decoder name,
+     * %{filesize} - file size,
      * %if(A,B,C) or %if(A&B&C,D,E) - condition,
      * %dir(n) - Name of the directory located on \b n levels above.
      */
@@ -108,6 +115,7 @@ private:
     {
         enum {
             FIELD = 0,
+            PROPERTY,
             TEXT,
             NUMERIC,
             NODES
@@ -130,6 +138,7 @@ private:
     };
 
     bool parseField(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
+    bool parseProperty(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
     bool parseIf(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
     bool parseDir(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
     void parseText(QList<Node> *nodes, QString::const_iterator *i, QString::const_iterator end);
@@ -138,6 +147,7 @@ private:
     QString evalute(const QList<Node> *nodes, const TrackInfo *info, int trackIndex) const;
     QString printParam(Param *p, const TrackInfo *info, int trackIndex) const;
     QString printField(int field, const TrackInfo *info, int trackIndex) const;
+    QString printProperty(int field, const TrackInfo *info) const;
 
     QString dumpNode(Node node) const;
 
@@ -145,6 +155,7 @@ private:
     QString m_pattern;
     QList<MetaDataFormatter::Node> m_nodes;
     QMap<QString, int> m_fieldNames;
+    QMap<QString, int> m_propertyNames;
 };
 
 #endif // METADATAFORMATTER2_H

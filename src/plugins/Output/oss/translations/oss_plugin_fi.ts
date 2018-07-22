@@ -4,27 +4,27 @@
 <context>
     <name>OutputOSSFactory</name>
     <message>
-        <location filename="../outputossfactory.cpp" line="37"/>
+        <location filename="../outputossfactory.cpp" line="36"/>
         <source>OSS Plugin</source>
         <translation>OSS-liitännäinen</translation>
     </message>
     <message>
-        <location filename="../outputossfactory.cpp" line="57"/>
+        <location filename="../outputossfactory.cpp" line="56"/>
         <source>About OSS Output Plugin</source>
         <translation>Tietoja - OSS-ulostuloliitännäinen</translation>
     </message>
     <message>
-        <location filename="../outputossfactory.cpp" line="58"/>
+        <location filename="../outputossfactory.cpp" line="57"/>
         <source>Qmmp OSS Output Plugin</source>
         <translation>Qmmp:n OSS-ulostuloliitännäinen</translation>
     </message>
     <message>
-        <location filename="../outputossfactory.cpp" line="59"/>
+        <location filename="../outputossfactory.cpp" line="58"/>
         <source>Written by: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</source>
         <translation>Toteutus: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../outputossfactory.cpp" line="60"/>
+        <location filename="../outputossfactory.cpp" line="59"/>
         <source>Based on code by: Brad Hughes &lt;bhughes@trolltech.com&gt;</source>
         <translation>Pohjautuu koodiin, jonka tuotti: Brad Hughes &lt;bhughes@trolltech.com&gt;</translation>
     </message>

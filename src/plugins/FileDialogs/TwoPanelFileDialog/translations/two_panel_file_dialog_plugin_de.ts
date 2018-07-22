@@ -37,23 +37,23 @@
 <context>
     <name>TwoPanelFileDialogFactory</name>
     <message>
-        <location filename="../twopanelfiledialog.cpp" line="68"/>
-        <location filename="../twopanelfiledialog.cpp" line="78"/>
+        <location filename="../twopanelfiledialog.cpp" line="67"/>
+        <location filename="../twopanelfiledialog.cpp" line="77"/>
         <source>Two-panel File Dialog</source>
         <translation>Zwei-Fenster-Dateidialog</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.cpp" line="77"/>
+        <location filename="../twopanelfiledialog.cpp" line="76"/>
         <source>About Two-panel File Dialog</source>
         <translation>Über Zwei-Fenster-Dateidialog</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.cpp" line="79"/>
+        <location filename="../twopanelfiledialog.cpp" line="78"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.cpp" line="80"/>
+        <location filename="../twopanelfiledialog.cpp" line="79"/>
         <source>Based on code from the Qt library</source>
         <translation>Basiert auf Code aus der Qt-Bibliothek</translation>
     </message>

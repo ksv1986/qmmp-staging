@@ -105,32 +105,32 @@
 <context>
     <name>VisualProjectMFactory</name>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="30"/>
+        <location filename="../visualprojectmfactory.cpp" line="29"/>
         <source>ProjectM</source>
         <translation>ProjectM</translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="50"/>
+        <location filename="../visualprojectmfactory.cpp" line="49"/>
         <source>About ProjectM Visual Plugin</source>
         <translation>O vizualizačním modulu ProjectM</translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="51"/>
+        <location filename="../visualprojectmfactory.cpp" line="50"/>
         <source>Qmmp ProjectM Visual Plugin</source>
         <translation>Vizualizační modul Qmmp ProjectM</translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="52"/>
+        <location filename="../visualprojectmfactory.cpp" line="51"/>
         <source>This plugin adds projectM visualization</source>
         <translation>Tento modul přidává vizualizaci ProjectM</translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="53"/>
+        <location filename="../visualprojectmfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../visualprojectmfactory.cpp" line="54"/>
+        <location filename="../visualprojectmfactory.cpp" line="53"/>
         <source>Based on libprojectM-qt library</source>
         <translation>Založeno na knihovně libprojectM-qt</translation>
     </message>

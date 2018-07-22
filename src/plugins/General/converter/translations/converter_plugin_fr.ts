@@ -135,27 +135,27 @@
 <context>
     <name>ConverterFactory</name>
     <message>
-        <location filename="../converterfactory.cpp" line="29"/>
+        <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
         <translation>Greffon de conversion</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="50"/>
+        <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
         <translation>À propos du greffon de conversion</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="51"/>
+        <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
         <translation>Greffon de conversion pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="52"/>
+        <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
         <translation>Ce greffon convertit les fichiers audio supportés dans d&apos;autres formats en utilisant des encodeurs en ligne de commande</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="54"/>
+        <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

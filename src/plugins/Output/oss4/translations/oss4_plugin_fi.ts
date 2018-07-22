@@ -4,22 +4,22 @@
 <context>
     <name>OutputOSS4Factory</name>
     <message>
-        <location filename="../outputoss4factory.cpp" line="37"/>
+        <location filename="../outputoss4factory.cpp" line="36"/>
         <source>OSS4 Plugin</source>
         <translation>OSS4-liitännäinen</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="57"/>
+        <location filename="../outputoss4factory.cpp" line="56"/>
         <source>About OSS4 Output Plugin</source>
         <translation>Tietoja - OSS4-ulostuloliitännäinen</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="58"/>
+        <location filename="../outputoss4factory.cpp" line="57"/>
         <source>Qmmp OSS4 Output Plugin</source>
         <translation>Qmmp:n OSS4-ulostuloliitännäinen</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="59"/>
+        <location filename="../outputoss4factory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

@@ -134,27 +134,27 @@
 <context>
     <name>ConverterFactory</name>
     <message>
-        <location filename="../converterfactory.cpp" line="29"/>
+        <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
         <translation>תוסף ממיר</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="50"/>
+        <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
         <translation>אודות תוסף ממיר</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="51"/>
+        <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
         <translation>תוסף ממיר של Qmmp</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="52"/>
+        <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
         <translation>תוסף זה ממיר קבצי שמע נתמכים לפורמט קובץ באמצעות שורת פקודה של מקודדים חיצוניים</translation>
     </message>
     <message>
-        <location filename="../converterfactory.cpp" line="54"/>
+        <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

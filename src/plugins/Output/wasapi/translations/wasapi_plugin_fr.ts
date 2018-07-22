@@ -4,22 +4,22 @@
 <context>
     <name>OutputWASAPIFactory</name>
     <message>
-        <location filename="../outputwasapifactory.cpp" line="30"/>
+        <location filename="../outputwasapifactory.cpp" line="29"/>
         <source>WASAPI Plugin</source>
         <translation>Greffon WASAPI</translation>
     </message>
     <message>
-        <location filename="../outputwasapifactory.cpp" line="55"/>
+        <location filename="../outputwasapifactory.cpp" line="54"/>
         <source>About WASAPI Output Plugin</source>
         <translation>À propos du greffon de sortie WASAPI</translation>
     </message>
     <message>
-        <location filename="../outputwasapifactory.cpp" line="56"/>
+        <location filename="../outputwasapifactory.cpp" line="55"/>
         <source>Qmmp WASAPI Output Plugin</source>
         <translation>Greffon de sortie WASAPI pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../outputwasapifactory.cpp" line="57"/>
+        <location filename="../outputwasapifactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

@@ -4,22 +4,22 @@
 <context>
     <name>EffectCrossfadeFactory</name>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="31"/>
+        <location filename="../effectcrossfadefactory.cpp" line="30"/>
         <source>Crossfade Plugin</source>
         <translation>Plugin Crossfade</translation>
     </message>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="52"/>
+        <location filename="../effectcrossfadefactory.cpp" line="51"/>
         <source>About Crossfade Plugin</source>
         <translation>Tentang Plugin Crossfade</translation>
     </message>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="53"/>
+        <location filename="../effectcrossfadefactory.cpp" line="52"/>
         <source>Qmmp Crossfade Plugin</source>
         <translation>Plugin Crossfade Qmmp</translation>
     </message>
     <message>
-        <location filename="../effectcrossfadefactory.cpp" line="54"/>
+        <location filename="../effectcrossfadefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

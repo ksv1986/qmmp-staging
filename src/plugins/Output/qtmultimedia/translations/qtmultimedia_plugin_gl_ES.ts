@@ -4,22 +4,22 @@
 <context>
     <name>OutputQtMultimediaFactory</name>
     <message>
-        <location filename="../outputqtmultimediafactory.cpp" line="33"/>
+        <location filename="../outputqtmultimediafactory.cpp" line="32"/>
         <source>Qt Multimedia Plugin</source>
         <translation>Plugin Qt Multimedia</translation>
     </message>
     <message>
-        <location filename="../outputqtmultimediafactory.cpp" line="58"/>
+        <location filename="../outputqtmultimediafactory.cpp" line="57"/>
         <source>About Qt Multimedia Output Plugin</source>
         <translation>Acerca da saida do plugin Qt Multimedia</translation>
     </message>
     <message>
-        <location filename="../outputqtmultimediafactory.cpp" line="59"/>
+        <location filename="../outputqtmultimediafactory.cpp" line="58"/>
         <source>Qmmp Qt Multimedia Output Plugin</source>
         <translation>Qmmp Qt Multimedia plugin de saida</translation>
     </message>
     <message>
-        <location filename="../outputqtmultimediafactory.cpp" line="60"/>
+        <location filename="../outputqtmultimediafactory.cpp" line="59"/>
         <source>Written by: Ivan Ponomarev &lt;ivantrue@gmail.com&gt;</source>
         <translation>Escrito por: Ivan Ponomarev &lt;ivantrue@gmail.com&gt;</translation>
     </message>

@@ -4,27 +4,27 @@
 <context>
     <name>DecoderOpusFactory</name>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="43"/>
+        <location filename="../decoderopusfactory.cpp" line="42"/>
         <source>Opus Plugin</source>
         <translation>Greffon Opus</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="46"/>
+        <location filename="../decoderopusfactory.cpp" line="45"/>
         <source>Ogg Opus Files</source>
         <translation>Fichiers Opus</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="117"/>
+        <location filename="../decoderopusfactory.cpp" line="116"/>
         <source>About Opus Audio Plugin</source>
         <translation>À propos du greffon audio Opus</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="118"/>
+        <location filename="../decoderopusfactory.cpp" line="117"/>
         <source>Qmmp Opus Audio Plugin</source>
         <translation>Greffon audio Opus pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="119"/>
+        <location filename="../decoderopusfactory.cpp" line="118"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

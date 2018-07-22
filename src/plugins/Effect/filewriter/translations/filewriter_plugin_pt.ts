@@ -4,22 +4,22 @@
 <context>
     <name>EffectFileWriterFactory</name>
     <message>
-        <location filename="../effectfilewriterfactory.cpp" line="31"/>
+        <location filename="../effectfilewriterfactory.cpp" line="30"/>
         <source>File Writer Plugin</source>
         <translation>Suplemento File Writer</translation>
     </message>
     <message>
-        <location filename="../effectfilewriterfactory.cpp" line="52"/>
+        <location filename="../effectfilewriterfactory.cpp" line="51"/>
         <source>About File Writer Plugin</source>
         <translation>Sobre o suplemento File Writer</translation>
     </message>
     <message>
-        <location filename="../effectfilewriterfactory.cpp" line="53"/>
+        <location filename="../effectfilewriterfactory.cpp" line="52"/>
         <source>Qmmp File Writer Plugin</source>
         <translation>Suplemento Qmmp File Writer</translation>
     </message>
     <message>
-        <location filename="../effectfilewriterfactory.cpp" line="54"/>
+        <location filename="../effectfilewriterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

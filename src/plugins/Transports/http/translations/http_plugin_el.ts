@@ -4,27 +4,27 @@
 <context>
     <name>HTTPInputFactory</name>
     <message>
-        <location filename="../httpinputfactory.cpp" line="34"/>
+        <location filename="../httpinputfactory.cpp" line="33"/>
         <source>HTTP Plugin</source>
         <translation>Πρόσθετο HTTP</translation>
     </message>
     <message>
-        <location filename="../httpinputfactory.cpp" line="54"/>
+        <location filename="../httpinputfactory.cpp" line="53"/>
         <source>About HTTP Transport Plugin</source>
         <translation>Σχετικά με το πρόσθετο HTTP</translation>
     </message>
     <message>
-        <location filename="../httpinputfactory.cpp" line="55"/>
+        <location filename="../httpinputfactory.cpp" line="54"/>
         <source>Qmmp HTTP Transport Plugin</source>
         <translation>Qmmp πρόσθετο μεταφοράς HTTP</translation>
     </message>
     <message>
-        <location filename="../httpinputfactory.cpp" line="56"/>
+        <location filename="../httpinputfactory.cpp" line="55"/>
         <source>Compiled against libcurl-%1</source>
         <translation>Μεταγλωττίστηκε χρησιμοποιώντας τη βιβλιοθήκη libcurl-%1</translation>
     </message>
     <message>
-        <location filename="../httpinputfactory.cpp" line="57"/>
+        <location filename="../httpinputfactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

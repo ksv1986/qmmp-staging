@@ -42,27 +42,27 @@
 <context>
     <name>UDisks2Factory</name>
     <message>
-        <location filename="../udisks2factory.cpp" line="31"/>
+        <location filename="../udisks2factory.cpp" line="30"/>
         <source>UDisks2 Plugin</source>
         <translation>UDisk2插件</translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="51"/>
+        <location filename="../udisks2factory.cpp" line="50"/>
         <source>About UDisks2 Plugin</source>
         <translation>关于UDisk2插件</translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="52"/>
+        <location filename="../udisks2factory.cpp" line="51"/>
         <source>Qmmp UDisks2 Plugin</source>
         <translation>Qmmp播放器UDisk2插件</translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="53"/>
+        <location filename="../udisks2factory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks2</source>
         <translation>本插件使用UDisk2提供对移动设备的探测功能</translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="54"/>
+        <location filename="../udisks2factory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

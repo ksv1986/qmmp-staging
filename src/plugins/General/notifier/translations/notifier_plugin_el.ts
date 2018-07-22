@@ -4,25 +4,25 @@
 <context>
     <name>NotifierFactory</name>
     <message>
-        <location filename="../notifierfactory.cpp" line="30"/>
+        <location filename="../notifierfactory.cpp" line="29"/>
         <source>Notifier Plugin</source>
         <translation>Πρόσθετο ειδοποιήσεων
 </translation>
     </message>
     <message>
-        <location filename="../notifierfactory.cpp" line="50"/>
+        <location filename="../notifierfactory.cpp" line="49"/>
         <source>About Notifier Plugin</source>
         <translation>Σχετικά με το πρόσθετο ειδοποιήσεων
 </translation>
     </message>
     <message>
-        <location filename="../notifierfactory.cpp" line="51"/>
+        <location filename="../notifierfactory.cpp" line="50"/>
         <source>Qmmp Notifier Plugin</source>
         <translation>Qmmp πρόσθετο ειδοποιήσεων
 </translation>
     </message>
     <message>
-        <location filename="../notifierfactory.cpp" line="52"/>
+        <location filename="../notifierfactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

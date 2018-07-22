@@ -4,27 +4,27 @@
 <context>
     <name>HTTPInputFactory</name>
     <message>
-        <location filename="../httpinputfactory.cpp" line="34"/>
+        <location filename="../httpinputfactory.cpp" line="33"/>
         <source>HTTP Plugin</source>
         <translation>HTTP įskiepis</translation>
     </message>
     <message>
-        <location filename="../httpinputfactory.cpp" line="54"/>
+        <location filename="../httpinputfactory.cpp" line="53"/>
         <source>About HTTP Transport Plugin</source>
         <translation>Apie HTTP transporto įskiepį</translation>
     </message>
     <message>
-        <location filename="../httpinputfactory.cpp" line="55"/>
+        <location filename="../httpinputfactory.cpp" line="54"/>
         <source>Qmmp HTTP Transport Plugin</source>
         <translation>Qmmp HTTP transporto įskiepis</translation>
     </message>
     <message>
-        <location filename="../httpinputfactory.cpp" line="56"/>
+        <location filename="../httpinputfactory.cpp" line="55"/>
         <source>Compiled against libcurl-%1</source>
         <translation>Sukompiliuota su libcurl-%1</translation>
     </message>
     <message>
-        <location filename="../httpinputfactory.cpp" line="57"/>
+        <location filename="../httpinputfactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Sukūrė: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

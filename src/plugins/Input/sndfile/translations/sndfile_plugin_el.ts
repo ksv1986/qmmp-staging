@@ -4,32 +4,32 @@
 <context>
     <name>DecoderSndFileFactory</name>
     <message>
-        <location filename="../decodersndfilefactory.cpp" line="86"/>
+        <location filename="../decodersndfilefactory.cpp" line="117"/>
         <source>Sndfile Plugin</source>
         <translation>Πρόσθετο Sndfile</translation>
     </message>
     <message>
-        <location filename="../decodersndfilefactory.cpp" line="89"/>
+        <location filename="../decodersndfilefactory.cpp" line="120"/>
         <source>PCM Files</source>
         <translation>Αρχεία PCM</translation>
     </message>
     <message>
-        <location filename="../decodersndfilefactory.cpp" line="192"/>
+        <location filename="../decodersndfilefactory.cpp" line="223"/>
         <source>About Sndfile Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου Sndfile</translation>
     </message>
     <message>
-        <location filename="../decodersndfilefactory.cpp" line="193"/>
+        <location filename="../decodersndfilefactory.cpp" line="224"/>
         <source>Qmmp Sndfile Audio Plugin</source>
         <translation>Qmmp πρόσθετο ήχου Sndfile</translation>
     </message>
     <message>
-        <location filename="../decodersndfilefactory.cpp" line="194"/>
+        <location filename="../decodersndfilefactory.cpp" line="225"/>
         <source>Compiled against</source>
         <translation>Μεταγλωττίστηκε χρησιμοποιώντας</translation>
     </message>
     <message>
-        <location filename="../decodersndfilefactory.cpp" line="195"/>
+        <location filename="../decodersndfilefactory.cpp" line="226"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

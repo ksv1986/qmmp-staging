@@ -4,22 +4,22 @@
 <context>
     <name>OutputOSS4Factory</name>
     <message>
-        <location filename="../outputoss4factory.cpp" line="37"/>
+        <location filename="../outputoss4factory.cpp" line="36"/>
         <source>OSS4 Plugin</source>
         <translation>Πρόσθετο OSS4</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="57"/>
+        <location filename="../outputoss4factory.cpp" line="56"/>
         <source>About OSS4 Output Plugin</source>
         <translation>Σχετικά με το πρόσθετο OSS4</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="58"/>
+        <location filename="../outputoss4factory.cpp" line="57"/>
         <source>Qmmp OSS4 Output Plugin</source>
         <translation>Qmmp σχετικά με το πρόσθετο OSS4</translation>
     </message>
     <message>
-        <location filename="../outputoss4factory.cpp" line="59"/>
+        <location filename="../outputoss4factory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

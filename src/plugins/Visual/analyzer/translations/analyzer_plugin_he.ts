@@ -148,22 +148,22 @@
 <context>
     <name>VisualAnalyzerFactory</name>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="31"/>
+        <location filename="../visualanalyzerfactory.cpp" line="30"/>
         <source>Analyzer Plugin</source>
         <translation>תוסף מאבחן</translation>
     </message>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="50"/>
+        <location filename="../visualanalyzerfactory.cpp" line="49"/>
         <source>About Analyzer Visual Plugin</source>
         <translation>אודות תוסף מאבחן חזותי</translation>
     </message>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="51"/>
+        <location filename="../visualanalyzerfactory.cpp" line="50"/>
         <source>Qmmp Analyzer Visual Plugin</source>
         <translation>תוסף מאבחן חזותי של Qmmp</translation>
     </message>
     <message>
-        <location filename="../visualanalyzerfactory.cpp" line="52"/>
+        <location filename="../visualanalyzerfactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

@@ -4,22 +4,22 @@
 <context>
     <name>OutputPulseAudioFactory</name>
     <message>
-        <location filename="../outputpulseaudiofactory.cpp" line="31"/>
+        <location filename="../outputpulseaudiofactory.cpp" line="30"/>
         <source>PulseAudio Plugin</source>
         <translation>Wtyczka PulseAudio</translation>
     </message>
     <message>
-        <location filename="../outputpulseaudiofactory.cpp" line="55"/>
+        <location filename="../outputpulseaudiofactory.cpp" line="54"/>
         <source>About PulseAudio Output Plugin</source>
         <translation>O wtyczce PulseAudio</translation>
     </message>
     <message>
-        <location filename="../outputpulseaudiofactory.cpp" line="56"/>
+        <location filename="../outputpulseaudiofactory.cpp" line="55"/>
         <source>Qmmp PulseAudio Output Plugin</source>
         <translation>Wtyczka PulseAudio dla Qmmp</translation>
     </message>
     <message>
-        <location filename="../outputpulseaudiofactory.cpp" line="57"/>
+        <location filename="../outputpulseaudiofactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

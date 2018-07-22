@@ -37,23 +37,23 @@
 <context>
     <name>TwoPanelFileDialogFactory</name>
     <message>
-        <location filename="../twopanelfiledialog.cpp" line="68"/>
-        <location filename="../twopanelfiledialog.cpp" line="78"/>
+        <location filename="../twopanelfiledialog.cpp" line="67"/>
+        <location filename="../twopanelfiledialog.cpp" line="77"/>
         <source>Two-panel File Dialog</source>
         <translation>Διάλογος αρχείων δυο πινάκων</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.cpp" line="77"/>
+        <location filename="../twopanelfiledialog.cpp" line="76"/>
         <source>About Two-panel File Dialog</source>
         <translation>Περί του Διαλόγου αρχείων δυο πινάκων</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.cpp" line="79"/>
+        <location filename="../twopanelfiledialog.cpp" line="78"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialog.cpp" line="80"/>
+        <location filename="../twopanelfiledialog.cpp" line="79"/>
         <source>Based on code from the Qt library</source>
         <translation>Βασισμένο στον κώδικα της βιβλιοθήκης Qt</translation>
     </message>

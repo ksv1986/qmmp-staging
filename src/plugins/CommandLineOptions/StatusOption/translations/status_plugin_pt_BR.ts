@@ -4,102 +4,137 @@
 <context>
     <name>StatusOption</name>
     <message>
-        <location filename="../statusoption.cpp" line="39"/>
+        <location filename="../statusoption.cpp" line="32"/>
         <source>Print playback status</source>
         <translation>Mostrar estado de reprodução</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="41"/>
+        <location filename="../statusoption.cpp" line="34"/>
         <source>Print formatted track name (example: qmmp --nowplaying &quot;%t - %a&quot;)</source>
         <translation>Mostrar nome de faixa formatado (exemplo: qmmp --nowplaying &quot;%t - %a&quot;)</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="42"/>
+        <location filename="../statusoption.cpp" line="35"/>
         <source>Print --nowplaying syntax</source>
         <translation>Mostrar sintaxe --nowplaying</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="87"/>
+        <location filename="../statusoption.cpp" line="88"/>
         <source>Syntax:</source>
         <translation>Sintaxe:</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="88"/>
+        <location filename="../statusoption.cpp" line="89"/>
         <source>%p - artist</source>
         <translation>%p - artista</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="89"/>
+        <location filename="../statusoption.cpp" line="90"/>
         <source>%a - album</source>
         <translation>%a - álbum</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="90"/>
+        <location filename="../statusoption.cpp" line="91"/>
         <source>%aa - album artist</source>
         <translation>%aa - artista do álbum</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="91"/>
+        <location filename="../statusoption.cpp" line="92"/>
         <source>%t - title</source>
         <translation>%t - título</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="92"/>
+        <location filename="../statusoption.cpp" line="93"/>
         <source>%n - track</source>
         <translation>%n - faixa</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="93"/>
+        <location filename="../statusoption.cpp" line="94"/>
         <source>%NN - 2-digit track</source>
         <translation>%NN - faixa com 2 dígitos</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="94"/>
+        <location filename="../statusoption.cpp" line="95"/>
         <source>%g - genre</source>
         <translation>%g - gênero</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="95"/>
+        <location filename="../statusoption.cpp" line="96"/>
         <source>%c - comment</source>
         <translation>%c - comentário</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="96"/>
+        <location filename="../statusoption.cpp" line="97"/>
         <source>%C - composer</source>
         <translation>%C - compositor</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="97"/>
+        <location filename="../statusoption.cpp" line="98"/>
         <source>%D - disc number</source>
         <translation>%D - número do disco</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="98"/>
+        <location filename="../statusoption.cpp" line="99"/>
         <source>%f - file name</source>
         <translation>%f - nome do arquivo</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="99"/>
+        <location filename="../statusoption.cpp" line="100"/>
         <source>%F - full path</source>
         <translation>%F - caminho completo</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="100"/>
+        <location filename="../statusoption.cpp" line="101"/>
         <source>%y - year</source>
         <translation>%y - ano</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="101"/>
+        <location filename="../statusoption.cpp" line="102"/>
         <source>%l - duration</source>
         <translation>%l - duração</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="102"/>
+        <location filename="../statusoption.cpp" line="103"/>
+        <source>%{bitrate} - bitrate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../statusoption.cpp" line="104"/>
+        <source>%{samplerate} - sample rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../statusoption.cpp" line="105"/>
+        <source>%{channels} - number of channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../statusoption.cpp" line="106"/>
+        <source>%{samplesize} - bits per sample</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../statusoption.cpp" line="107"/>
+        <source>%{format} - format name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../statusoption.cpp" line="108"/>
+        <source>%{decoder} - decoder name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../statusoption.cpp" line="109"/>
+        <source>%{filesize} - file size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../statusoption.cpp" line="110"/>
         <source>%if(A&amp;B&amp;C,D,E) - condition</source>
         <translation>%if(A&amp;B&amp;C,D,E) - condição</translation>
     </message>
     <message>
-        <location filename="../statusoption.cpp" line="103"/>
+        <location filename="../statusoption.cpp" line="111"/>
         <source>%dir(n) - directory name located on n levels above</source>
         <translation type="unfinished"></translation>
     </message>

@@ -4,27 +4,27 @@
 <context>
     <name>EffectStereoFactory</name>
     <message>
-        <location filename="../effectstereofactory.cpp" line="31"/>
+        <location filename="../effectstereofactory.cpp" line="30"/>
         <source>Extra Stereo Plugin</source>
         <translation>立体声扩展插件</translation>
     </message>
     <message>
-        <location filename="../effectstereofactory.cpp" line="51"/>
+        <location filename="../effectstereofactory.cpp" line="50"/>
         <source>About Extra Stereo Plugin</source>
         <translation>关于立体声扩展插件</translation>
     </message>
     <message>
-        <location filename="../effectstereofactory.cpp" line="52"/>
+        <location filename="../effectstereofactory.cpp" line="51"/>
         <source>Qmmp Extra Stereo Plugin</source>
         <translation>Qmmp 立体声扩展插件</translation>
     </message>
     <message>
-        <location filename="../effectstereofactory.cpp" line="53"/>
+        <location filename="../effectstereofactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../effectstereofactory.cpp" line="54"/>
+        <location filename="../effectstereofactory.cpp" line="53"/>
         <source>Based on the Extra Stereo Plugin for Xmms by Johan Levin</source>
         <translation>基于 Johan Levin 的 Xmms 立体声扩展插件</translation>
     </message>

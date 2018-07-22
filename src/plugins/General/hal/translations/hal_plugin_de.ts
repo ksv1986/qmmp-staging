@@ -4,32 +4,32 @@
 <context>
     <name>HalFactory</name>
     <message>
-        <location filename="../halfactory.cpp" line="31"/>
+        <location filename="../halfactory.cpp" line="30"/>
         <source>HAL Plugin</source>
         <translation>HAL-Modul</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="51"/>
+        <location filename="../halfactory.cpp" line="50"/>
         <source>About HAL Plugin</source>
         <translation>Über HAL-Modul</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="52"/>
+        <location filename="../halfactory.cpp" line="51"/>
         <source>Qmmp HAL Plugin</source>
         <translation>Qmmp HAL-Modul</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="53"/>
+        <location filename="../halfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using HAL</source>
         <translation>Dieses Modul bietet Wechsellaufwerkerkennung unter Verwendung von HAL</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="54"/>
+        <location filename="../halfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../halfactory.cpp" line="55"/>
+        <location filename="../halfactory.cpp" line="54"/>
         <source>Based on Solid (KDE hardware library)</source>
         <translation>Basiert auf Solid (KDE Hardware-Bibliothek)</translation>
     </message>

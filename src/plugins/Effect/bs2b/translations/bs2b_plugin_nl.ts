@@ -4,42 +4,42 @@
 <context>
     <name>EffectBs2bFactory</name>
     <message>
-        <location filename="../effectbs2bfactory.cpp" line="32"/>
+        <location filename="../effectbs2bfactory.cpp" line="31"/>
         <source>BS2B Plugin</source>
         <translation>BS2B Module</translation>
     </message>
     <message>
-        <location filename="../effectbs2bfactory.cpp" line="52"/>
+        <location filename="../effectbs2bfactory.cpp" line="51"/>
         <source>About BS2B Effect Plugin</source>
         <translation>Over de BS2B Effecten Module</translation>
     </message>
     <message>
-        <location filename="../effectbs2bfactory.cpp" line="53"/>
+        <location filename="../effectbs2bfactory.cpp" line="52"/>
         <source>This is the Qmmp plugin version of Boris Mikhaylov&apos;s headphone DSP effect &quot;Bauer stereophonic-to-binaural&quot;, abbreviated bs2b.</source>
         <translation>Dit is de Qmmp module versie van Boris Mikhaylov&apos;s &quot;Headset DSP effect&quot; Bauer stereofonisch-naar-&apos;binaural&apos;, afgekort bs2b.</translation>
     </message>
     <message>
-        <location filename="../effectbs2bfactory.cpp" line="55"/>
+        <location filename="../effectbs2bfactory.cpp" line="54"/>
         <source>Visit %1 for more details</source>
         <translation>Bezoek %1 voor meer details</translation>
     </message>
     <message>
-        <location filename="../effectbs2bfactory.cpp" line="57"/>
+        <location filename="../effectbs2bfactory.cpp" line="56"/>
         <source>Compiled against libbs2b-%1</source>
         <translation>Gecompileerd tegen libbs2b-%1</translation>
     </message>
     <message>
-        <location filename="../effectbs2bfactory.cpp" line="58"/>
+        <location filename="../effectbs2bfactory.cpp" line="57"/>
         <source>Developers:</source>
         <translation>Ontwikkelaars:</translation>
     </message>
     <message>
-        <location filename="../effectbs2bfactory.cpp" line="59"/>
+        <location filename="../effectbs2bfactory.cpp" line="58"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../effectbs2bfactory.cpp" line="60"/>
+        <location filename="../effectbs2bfactory.cpp" line="59"/>
         <source>Sebastian Pipping &lt;sebastian@pipping.org&gt;</source>
         <translation type="unfinished"></translation>
     </message>

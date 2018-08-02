@@ -103,15 +103,17 @@ bool DecoderArchive::initialize()
     }
 
     qDebug("DecoderArchive: selected decoder: %s", qPrintable(factory->properties().shortName));
+
+    ArchiveTagReader reader(m_input, m_url);
+    addMetaData(reader.metaData());
+
+    m_input->seek(0);
     m_decoder = factory->create(m_url, m_input);
     if(!m_decoder->initialize())
     {
         qWarning("DecoderArchive: unable to initialize decoder");
         return false;
     }
-
-    ArchiveTagReader reader(m_input, m_url);
-    addMetaData(reader.metaData());
     configure(m_decoder->audioParameters());
     return true;
 }

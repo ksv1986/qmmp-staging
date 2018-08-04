@@ -85,9 +85,10 @@ QList<TrackInfo *> DecoderGmeFactory::createPlayList(const QString &path, TrackI
     return helper.createPlayList(parts);
 }
 
-MetaDataModel* DecoderGmeFactory::createMetaDataModel(const QString &path, QObject *parent)
+MetaDataModel* DecoderGmeFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
 {
     Q_UNUSED(path);
+    Q_UNUSED(readOnly);
     Q_UNUSED(parent);
     return 0;
 }

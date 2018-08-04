@@ -24,7 +24,7 @@ contains(CONFIG, FFMPEG_PLUGIN){
 }
 
 contains(CONFIG, GME_PLUGIN){
-#    SUBDIRS += gme
+    SUBDIRS += gme
 }
 
 contains(CONFIG, OPUS_PLUGIN){
@@ -32,11 +32,11 @@ contains(CONFIG, OPUS_PLUGIN){
 }
 
 contains(CONFIG, CDAUDIO_PLUGIN){
-#    SUBDIRS += cdaudio
+    SUBDIRS += cdaudio
 }
 
 contains(CONFIG, SID_PLUGIN){
-#    SUBDIRS += sid
+    SUBDIRS += sid
 }
 
 unix{
@@ -47,7 +47,7 @@ contains(CONFIG, AAC_PLUGIN){
 
 
 contains(CONFIG, WILDMIDI_PLUGIN){
-#    SUBDIRS += wildmidi
+    SUBDIRS += wildmidi
 }
 
 contains(CONFIG, ARCHIVE_PLUGIN){

@@ -88,9 +88,10 @@ QList<TrackInfo *> DecoderWildMidiFactory::createPlayList(const QString &path, T
     return QList<TrackInfo *>() << info;
 }
 
-MetaDataModel* DecoderWildMidiFactory::createMetaDataModel(const QString &path, QObject *parent)
+MetaDataModel* DecoderWildMidiFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
 {
     Q_UNUSED(path);
+    Q_UNUSED(readOnly);
     Q_UNUSED(parent);
     return 0;
 }

@@ -57,9 +57,9 @@ Decoder *DecoderVorbisFactory::create(const QString &, QIODevice *input)
     return new DecoderVorbis(input);
 }
 
-MetaDataModel* DecoderVorbisFactory::createMetaDataModel(const QString &path, QObject *parent)
+MetaDataModel* DecoderVorbisFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
 {
-    return new VorbisMetaDataModel(path, parent);
+    return new VorbisMetaDataModel(path, readOnly, parent);
 }
 
 QList<TrackInfo *> DecoderVorbisFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)

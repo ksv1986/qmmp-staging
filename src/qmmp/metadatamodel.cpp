@@ -54,33 +54,60 @@ void MetaDataItem::setSuffix(const QString &suffix)
     m_suffix = suffix;
 }
 
-MetaDataModel::MetaDataModel(QObject *parent) : QObject(parent)
-{}
+MetaDataModel::MetaDataModel(bool readOnly, QObject *parent) : QObject(parent), m_readOnly(readOnly)
+{
+    m_dialogHints = NO_HINTS;
+}
 
 MetaDataModel::~MetaDataModel()
 {}
 
-QHash<QString, QString> MetaDataModel::audioProperties()
+QList<MetaDataItem> MetaDataModel::extraProperties() const
 {
-    return QHash<QString, QString> ();
+    return QList<MetaDataItem>();
 }
 
-QHash<QString, QString> MetaDataModel::descriptions()
+QList<MetaDataItem> MetaDataModel::descriptions() const
 {
-    return QHash<QString, QString> ();
+    return QList<MetaDataItem>();
 }
 
-QList<TagModel* > MetaDataModel::tags()
+QList<TagModel* > MetaDataModel::tags() const
 {
     return QList<TagModel* > ();
 }
 
-QPixmap MetaDataModel::cover()
+QPixmap MetaDataModel::cover() const
 {
     return QPixmap();
 }
 
-QString MetaDataModel::coverPath()
+QString MetaDataModel::coverPath() const
 {
     return QString();
+}
+
+void MetaDataModel::setCover(const QPixmap &cover)
+{
+    Q_UNUSED(cover);
+}
+
+bool MetaDataModel::isReadOnly() const
+{
+    return m_readOnly;
+}
+
+const MetaDataModel::DialogHints &MetaDataModel::dialogHints() const
+{
+    return m_dialogHints;
+}
+
+void MetaDataModel::setDialogHints(const DialogHints &hints)
+{
+    m_dialogHints = hints;
+}
+
+void MetaDataModel::setReadOnly(bool readOnly)
+{
+    m_readOnly = readOnly;
 }

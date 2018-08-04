@@ -1,18 +1,18 @@
 include(../../../qmmp.pri)
 
 TEMPLATE = subdirs
-SUBDIRS += vorbis cue sndfile wavpack
+SUBDIRS += vorbis #cue sndfile wavpack
 
 contains(CONFIG, WITH_MAD)|contains(CONFIG, WITH_MPG123){
     SUBDIRS += mpeg
 }
 
 contains(CONFIG, FLAC_PLUGIN){
-    SUBDIRS += flac
+#    SUBDIRS += flac
 }
 
 contains(CONFIG, MUSEPACK_PLUGIN){
-    SUBDIRS += mpc
+#    SUBDIRS += mpc
 }
 
 contains(CONFIG, MODPLUG_PLUGIN){
@@ -20,34 +20,34 @@ contains(CONFIG, MODPLUG_PLUGIN){
 }
 
 contains(CONFIG, FFMPEG_PLUGIN){
-    SUBDIRS += ffmpeg
+#    SUBDIRS += ffmpeg
 }
 
 contains(CONFIG, GME_PLUGIN){
-    SUBDIRS += gme
+#    SUBDIRS += gme
 }
 
 contains(CONFIG, OPUS_PLUGIN){
-    SUBDIRS += opus
+#    SUBDIRS += opus
 }
 
 contains(CONFIG, CDAUDIO_PLUGIN){
-    SUBDIRS += cdaudio
+#    SUBDIRS += cdaudio
 }
 
 contains(CONFIG, SID_PLUGIN){
-    SUBDIRS += sid
+#    SUBDIRS += sid
 }
 
 unix{
 
 contains(CONFIG, AAC_PLUGIN){
-    SUBDIRS += aac
+#    SUBDIRS += aac
 }
 
 
 contains(CONFIG, WILDMIDI_PLUGIN){
-    SUBDIRS += wildmidi
+#    SUBDIRS += wildmidi
 }
 
 contains(CONFIG, ARCHIVE_PLUGIN){
@@ -57,7 +57,7 @@ contains(CONFIG, ARCHIVE_PLUGIN){
   TAGLIB_VER_MIN = $$member(TAGLIB_VERSION, 1)
 
   greaterThan(TAGLIB_VER_MAJ, 1) | equals(TAGLIB_VER_MAJ, 1) {
-    greaterThan(TAGLIB_VER_MIN, 10):SUBDIRS += archive
+#    greaterThan(TAGLIB_VER_MIN, 10):SUBDIRS += archive
   } else {
     message("Archive plugin requires at least TagLib 1.11")
   }

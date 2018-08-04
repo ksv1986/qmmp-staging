@@ -22,8 +22,7 @@
 
 #include <qmmp/decoderfactory.h>
 
-class DecoderMPEGFactory : public QObject,
-                          DecoderFactory
+class DecoderMPEGFactory : public QObject, DecoderFactory
 {
 Q_OBJECT
 Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.DecoderFactoryInterface.1.0")
@@ -35,7 +34,7 @@ public:
     DecoderProperties properties() const;
     Decoder *create(const QString &, QIODevice *input);
     QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *);
-    MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
+    MetaDataModel* createMetaDataModel(const QString &path, bool readOnly = true, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);
     QString translation() const;

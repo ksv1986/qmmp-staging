@@ -29,7 +29,7 @@
 
 #define MAX_MESSAGE_LENGTH 4000
 
-ModPlugMetaDataModel::ModPlugMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
+ModPlugMetaDataModel::ModPlugMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(true, parent)
 {
     m_soundFile = 0;
     m_path = path;
@@ -62,31 +62,24 @@ ModPlugMetaDataModel::~ModPlugMetaDataModel()
     }
 }
 
-QHash<QString, QString> ModPlugMetaDataModel::audioProperties()
+QList<MetaDataItem> ModPlugMetaDataModel::extraProperties() const
 {
-    QHash<QString, QString> ap;
+    QList<MetaDataItem> ep;
     if(!m_soundFile)
-        return ap;
+        return ep;
 
-    ap.insert(tr("File name"), m_path.section('/',-1));
-    QString text = getTypeName(m_soundFile->GetType());
-    ap.insert(tr("Type"), text);
-    int lSongTime = m_soundFile->GetSongTime();
-    text = QString("%1").arg(lSongTime/60);
-    text +=":"+QString("%1").arg(lSongTime%60,2,10,QChar('0'));
-    ap.insert(tr("Length"), text);
-    ap.insert(tr("Speed"), QString::number(m_soundFile->GetMusicSpeed()));
-    ap.insert(tr("Tempo"), QString::number(m_soundFile->GetMusicTempo()));
-    ap.insert(tr("Samples"), QString::number(m_soundFile->GetNumSamples()));
-    ap.insert(tr("Instruments"), QString::number(m_soundFile->GetNumInstruments()));
-    ap.insert(tr("Patterns"), QString::number(m_soundFile->GetNumPatterns()));
-    ap.insert(tr("Channels"), QString::number(m_soundFile->GetNumChannels()));
-    return ap;
+    ep << MetaDataItem(tr("Speed"), m_soundFile->GetMusicSpeed());
+    ep << MetaDataItem(tr("Tempo"), m_soundFile->GetMusicTempo());
+    ep << MetaDataItem(tr("Samples"), m_soundFile->GetNumSamples());
+    ep << MetaDataItem(tr("Instruments"), m_soundFile->GetNumInstruments());
+    ep << MetaDataItem(tr("Patterns"), m_soundFile->GetNumPatterns());
+    ep << MetaDataItem(tr("Channels"), m_soundFile->GetNumChannels());
+    return ep;
 }
 
-QHash<QString, QString> ModPlugMetaDataModel::descriptions()
+QList<MetaDataItem> ModPlugMetaDataModel::descriptions() const
 {
-    QHash<QString, QString> desc;
+    QList<MetaDataItem> desc;
     if(!m_soundFile)
         return desc;
     char lBuffer[33];
@@ -98,7 +91,7 @@ QHash<QString, QString> ModPlugMetaDataModel::descriptions()
     }
     text = text.trimmed();
     if(!text.isEmpty())
-        desc.insert(tr("Samples"), text);
+        desc << MetaDataItem(tr("Samples"), text);
     text.clear();
     for(uint i = 0; i < m_soundFile->GetNumInstruments(); i++)
     {
@@ -107,12 +100,12 @@ QHash<QString, QString> ModPlugMetaDataModel::descriptions()
     }
     text = text.trimmed();
     if(!text.isEmpty())
-        desc.insert(tr("Instruments"), text);
+        desc << MetaDataItem(tr("Instruments"), text);
     text.clear();
     char message[MAX_MESSAGE_LENGTH];
     int length = m_soundFile->GetSongComments(message, MAX_MESSAGE_LENGTH, 80);
     if (length != 0)
-        desc.insert(tr("Comment"), QString::fromUtf8(message).trimmed ());
+        desc << MetaDataItem(tr("Comment"), QString::fromUtf8(message).trimmed ());
     return desc;
 }
 

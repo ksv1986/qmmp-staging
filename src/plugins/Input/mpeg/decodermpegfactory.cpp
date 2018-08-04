@@ -76,7 +76,7 @@ bool DecoderMPEGFactory::canDecode(QIODevice *input) const
         return false;
 
     if (!memcmp(buf + 8, "WAVE", 4))
-            return !memcmp(buf + 20, "U" ,1);
+        return !memcmp(buf + 20, "U" ,1);
 
     if(!memcmp(buf, "ID3", 3))
     {
@@ -361,9 +361,9 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
     return QList<TrackInfo*>() << info;
 }
 
-MetaDataModel* DecoderMPEGFactory::createMetaDataModel(const QString &path, QObject *parent)
+MetaDataModel* DecoderMPEGFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
 {
-   return new MPEGMetaDataModel(m_using_rusxmms, path, parent);
+   return new MPEGMetaDataModel(m_using_rusxmms, path, readOnly, parent);
 }
 
 void DecoderMPEGFactory::showSettings(QWidget *parent)

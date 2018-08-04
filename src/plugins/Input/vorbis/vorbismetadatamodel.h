@@ -24,6 +24,8 @@
 #include <qmmp/metadatamodel.h>
 #include <taglib/vorbisfile.h>
 #include <taglib/xiphcomment.h>
+#include <taglib/tfilestream.h>
+#include <taglib/tfilestream.h>
 
 class VorbisCommentModel;
 
@@ -31,20 +33,21 @@ class VorbisMetaDataModel : public MetaDataModel
 {
 Q_OBJECT
 public:
-    VorbisMetaDataModel(const QString &path, QObject *parent);
+    VorbisMetaDataModel(const QString &path, bool readOnly, QObject *parent);
     ~VorbisMetaDataModel();
     friend class VorbisCommentModel;
 
-    QHash<QString, QString> audioProperties();
-    QList<TagModel* > tags();
-    QPixmap cover();
+    QList<TagModel* > tags() const override;
+    QPixmap cover() const override;
 
 private:
+    ulong readPictureBlockField(QByteArray data, int offset) const;
+
     QString m_path;
     TagLib::Ogg::Vorbis::File *m_file;
     TagLib::Ogg::XiphComment *m_tag;
     QList<TagModel* > m_tags;
-    ulong readPictureBlockField(QByteArray data, int offset);
+    TagLib::FileStream *m_stream;
 };
 
 class VorbisCommentModel : public TagModel

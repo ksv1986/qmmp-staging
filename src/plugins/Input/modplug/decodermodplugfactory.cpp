@@ -119,8 +119,9 @@ QList<TrackInfo *> DecoderModPlugFactory::createPlayList(const QString &path, Tr
     return list;
 }
 
-MetaDataModel* DecoderModPlugFactory::createMetaDataModel(const QString &path, QObject *parent)
+MetaDataModel* DecoderModPlugFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
 {
+    Q_UNUSED(readOnly);
     return new ModPlugMetaDataModel(path, parent);
 }
 

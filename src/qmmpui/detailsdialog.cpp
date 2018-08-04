@@ -180,12 +180,12 @@ void DetailsDialog::updatePage()
                 m_ui->tabWidget->addTab(new TagEditor(tagModel, this), tagModel->name());
         }
 
-        foreach(QString title, m_metaDataModel->descriptions().keys())
+        foreach(MetaDataItem item, m_metaDataModel->descriptions())
         {
             QTextEdit *textEdit = new QTextEdit(this);
             textEdit->setReadOnly(true);
-            textEdit->setPlainText(m_metaDataModel->descriptions().value(title));
-            m_ui->tabWidget->addTab(textEdit, title);
+            textEdit->setPlainText(item.value().toString());
+            m_ui->tabWidget->addTab(textEdit, item.name());
         }
     }
     printInfo();
@@ -237,7 +237,7 @@ void DetailsDialog::printInfo()
         m_ui->textEdit->setHtml(formattedText);
         return;
     }
-    QHash <QString, QString> ap = m_metaDataModel->audioProperties();
+    QList<MetaDataItem> ap = m_metaDataModel->extraProperties();
     //line
     if(formattedText.contains("<tr>"))
     {
@@ -248,8 +248,8 @@ void DetailsDialog::printInfo()
         formattedText.append("</tr>");
     }
 
-    foreach(QString key, ap.keys())
-        formattedText += formatRow(key, ap.value(key));
+    foreach(MetaDataItem item, ap)
+        formattedText += formatRow(item.name(), item.value().toString());
 
     formattedText.append("</TABLE>");
     formattedText.append("</DIV>");

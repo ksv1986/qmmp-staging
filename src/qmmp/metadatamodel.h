@@ -26,7 +26,26 @@
 #include <QString>
 #include <QObject>
 #include <QPixmap>
+#include <QVariant>
 #include "tagmodel.h"
+
+
+class QMMP_EXPORT MetaDataItem
+{
+public:
+    MetaDataItem(const QString &name, const QVariant &value, const QString &suffix = QString());
+
+    const QString &name() const;
+    void setName(const QString &name);
+    const QVariant &value() const;
+    void setValue(const QString &value);
+    const QString &suffix() const;
+    void setSuffix(const QString &suffix);
+
+private:
+    QString m_name, m_suffix;
+    QVariant m_value;
+};
 
 /*! @brief The MetaDataModel is the base interface class of metadata access.
  * @author Ilya Kotov <forkotov02@ya.ru>

@@ -23,23 +23,25 @@
 
 #include <taglib/opusfile.h>
 #include <taglib/xiphcomment.h>
+#include <taglib/tfilestream.h>
 #include <qmmp/metadatamodel.h>
 
 class OpusMetaDataModel : public MetaDataModel
 {
 Q_OBJECT
 public:
-    OpusMetaDataModel(const QString &path, QObject *parent);
+    OpusMetaDataModel(const QString &path, bool readOnly, QObject *parent);
     ~OpusMetaDataModel();
-    QHash<QString, QString> audioProperties();
-    QList<TagModel* > tags();
-    QPixmap cover();
+    QList<MetaDataItem> extraProperties() const override;
+    QList<TagModel* > tags() const override;
+    QPixmap cover() const override;
 
 private:
+    ulong readPictureBlockField(QByteArray data, int offset) const;
     QString m_path;
     QList<TagModel* > m_tags;
     TagLib::Ogg::Opus::File *m_file;
-    ulong readPictureBlockField(QByteArray data, int offset);
+    TagLib::FileStream *m_stream;
 };
 
 class VorbisCommentModel : public TagModel

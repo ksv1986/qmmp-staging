@@ -28,7 +28,7 @@ contains(CONFIG, GME_PLUGIN){
 }
 
 contains(CONFIG, OPUS_PLUGIN){
-#    SUBDIRS += opus
+    SUBDIRS += opus
 }
 
 contains(CONFIG, CDAUDIO_PLUGIN){

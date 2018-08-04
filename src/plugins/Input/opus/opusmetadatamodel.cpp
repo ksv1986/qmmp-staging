@@ -26,10 +26,12 @@
 #include <taglib/tmap.h>
 #include "opusmetadatamodel.h"
 
-OpusMetaDataModel::OpusMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
+OpusMetaDataModel::OpusMetaDataModel(const QString &path, bool readOnly, QObject *parent)
+    : MetaDataModel(readOnly, parent)
 {
     m_path = path;
-    m_file = new TagLib::Ogg::Opus::File(QStringToFileName(m_path));
+    m_stream = new TagLib::FileStream(QStringToFileName(path), readOnly);
+    m_file = new TagLib::Ogg::Opus::File(m_stream);
     m_tags << new VorbisCommentModel(m_file);
 }
 
@@ -37,36 +39,28 @@ OpusMetaDataModel::~OpusMetaDataModel()
 {
     while(!m_tags.isEmpty())
         delete m_tags.takeFirst();
-    if(m_file)
-    {
-        delete m_file;
-        m_file = 0;
-    }
+
+    delete m_file;
+    delete m_stream;
 }
 
-QHash<QString, QString> OpusMetaDataModel::audioProperties()
+QList<MetaDataItem> OpusMetaDataModel::extraProperties() const
 {
-    QHash<QString, QString> ap;
-    TagLib::Ogg::Opus::File f (QStringToFileName(m_path));
-    if(m_file && m_file->isValid())
+    QList<MetaDataItem> ep;
+    TagLib::Ogg::Opus::Properties *ap = m_file->audioProperties();
+    if(ap)
     {
-        QString text = QString("%1").arg(m_file->audioProperties()->length()/60);
-        text +=":"+QString("%1").arg(m_file->audioProperties()->length()%60,2,10,QChar('0'));
-        ap.insert(tr("Length"), text);
-        ap.insert(tr("Sample rate"), QString("%1 " + tr("Hz")).arg(m_file->audioProperties()->sampleRate()));
-        ap.insert(tr("Channels"), QString("%1").arg(m_file->audioProperties()->channels()));
-        ap.insert(tr("Bitrate"), QString("%1 " + tr("kbps")).arg(m_file->audioProperties()->bitrate()));
-        ap.insert(tr("File size"), QString("%1 "+tr("KB")).arg(m_file->length()/1024));
+        ep << MetaDataItem(tr("Version"), ap->opusVersion());
     }
-    return ap;
+    return ep;
 }
 
-QList<TagModel* > OpusMetaDataModel::tags()
+QList<TagModel* > OpusMetaDataModel::tags() const
 {
     return m_tags;
 }
 
-QPixmap OpusMetaDataModel::cover()
+QPixmap OpusMetaDataModel::cover() const
 {
     if(!m_file || !m_file->isValid())
         return QPixmap();
@@ -106,7 +100,7 @@ QPixmap OpusMetaDataModel::cover()
     return QPixmap();
 }
 
-ulong OpusMetaDataModel::readPictureBlockField(QByteArray data, int offset)
+ulong OpusMetaDataModel::readPictureBlockField(QByteArray data, int offset) const
 {
     return (((uchar)data.data()[offset] & 0xff) << 24) |
            (((uchar)data.data()[offset+1] & 0xff) << 16) |

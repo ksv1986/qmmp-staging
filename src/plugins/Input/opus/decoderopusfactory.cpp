@@ -55,9 +55,9 @@ Decoder *DecoderOpusFactory::create(const QString &url, QIODevice *input)
     return new DecoderOpus(url, input);
 }
 
-MetaDataModel* DecoderOpusFactory::createMetaDataModel(const QString &path, QObject *parent)
+MetaDataModel* DecoderOpusFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
 {
-    return new OpusMetaDataModel(path, parent);
+    return new OpusMetaDataModel(path, readOnly, parent);
 }
 
 QList<TrackInfo *> DecoderOpusFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)

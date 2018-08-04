@@ -21,7 +21,7 @@
 #include <stdint.h>
 #include "ffmpegmetadatamodel.h"
 
-FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
+FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(true, parent)
 {
     m_in = 0;
 #ifdef Q_OS_WIN
@@ -40,33 +40,7 @@ FFmpegMetaDataModel::~FFmpegMetaDataModel()
         avformat_close_input(&m_in);
 }
 
-QHash<QString, QString> FFmpegMetaDataModel::audioProperties()
-{
-    QHash<QString, QString> ap;
-    if(!m_in)
-        return ap;
-    QString text = QString("%1").arg(int(m_in->duration/AV_TIME_BASE)/60);
-    text +=":"+QString("%1").arg(int(m_in->duration/AV_TIME_BASE)%60,2,10,QChar('0'));
-    ap.insert(tr("Length"), text);
-    ap.insert(tr("File size"), tr("%1 KB").arg(avio_size(m_in->pb) / 1000));
-    ap.insert(tr("Bitrate"), tr("%1 kbps").arg(m_in->bit_rate/1000));
-
-    int idx = av_find_best_stream(m_in, AVMEDIA_TYPE_AUDIO, -1, -1, 0, 0);
-
-    if(idx >= 0)
-    {
-#if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(57,48,0)) //ffmpeg-3.1:  57.48.101
-        AVCodecParameters *c = m_in->streams[idx]->codecpar;
-#else
-        AVCodecContext *c = m_in->streams[idx]->codec;
-#endif
-        ap.insert(tr("Sample rate"), tr("%1 Hz").arg(c->sample_rate));
-        ap.insert(tr("Channels"), QString("%1").arg(c->channels));
-    }
-    return ap;
-}
-
-QPixmap FFmpegMetaDataModel::cover()
+QPixmap FFmpegMetaDataModel::cover() const
 {
     if(!m_in)
         return QPixmap();

@@ -237,9 +237,10 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
     return QList<TrackInfo*>() << info;
 }
 
-MetaDataModel* DecoderFFmpegFactory::createMetaDataModel(const QString &path, QObject *parent)
+MetaDataModel* DecoderFFmpegFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
 {
-    return new FFmpegMetaDataModel(path,parent);
+    Q_UNUSED(readOnly);
+    return new FFmpegMetaDataModel(path, parent);
 }
 
 void DecoderFFmpegFactory::showSettings(QWidget *parent)

@@ -37,8 +37,7 @@ Q_OBJECT
 public:
     FFmpegMetaDataModel(const QString &path, QObject *parent);
     ~FFmpegMetaDataModel();
-    QHash<QString, QString> audioProperties();
-    QPixmap cover();
+    QPixmap cover() const override;
 
 private:
     AVFormatContext *m_in;

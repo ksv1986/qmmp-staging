@@ -104,9 +104,9 @@ QList<TrackInfo *> DecoderMPCFactory::createPlayList(const QString &path, TrackI
     return QList<TrackInfo*>() << info;
 }
 
-MetaDataModel* DecoderMPCFactory::createMetaDataModel(const QString &path, QObject *parent)
+MetaDataModel* DecoderMPCFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
 {
-    return new MPCMetaDataModel(path, parent);
+    return new MPCMetaDataModel(path, readOnly, parent);
 }
 
 void DecoderMPCFactory::showSettings(QWidget *)

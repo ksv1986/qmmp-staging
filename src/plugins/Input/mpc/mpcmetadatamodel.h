@@ -24,6 +24,7 @@
 #include <qmmp/metadatamodel.h>
 #include <taglib/tag.h>
 #include <taglib/mpcfile.h>
+#include <taglib/tfilestream.h>
 
 class QTextCodec;
 
@@ -31,14 +32,14 @@ class MPCMetaDataModel : public MetaDataModel
 {
 Q_OBJECT
 public:
-    MPCMetaDataModel(const QString &path, QObject *parent);
+    MPCMetaDataModel(const QString &path, bool readOnly, QObject *parent);
     ~MPCMetaDataModel();
-    QHash<QString, QString> audioProperties();
-    QList<TagModel* > tags();
+    QList<TagModel* > tags() const override;
 
 private:
     QList<TagModel* > m_tags;
     TagLib::MPC::File *m_file;
+    TagLib::FileStream *m_stream;
 };
 
 class MPCFileTagModel : public TagModel

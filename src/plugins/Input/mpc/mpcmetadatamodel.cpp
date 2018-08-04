@@ -24,9 +24,10 @@
 #include <taglib/apetag.h>
 #include "mpcmetadatamodel.h"
 
-MPCMetaDataModel::MPCMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
+MPCMetaDataModel::MPCMetaDataModel(const QString &path, bool readOnly, QObject *parent) : MetaDataModel(readOnly, parent)
 {
-    m_file = new TagLib::MPC::File (QStringToFileName(path));
+    m_stream = new TagLib::FileStream(QStringToFileName(path), readOnly);
+    m_file = new TagLib::MPC::File(m_stream);
     m_tags << new MPCFileTagModel(m_file, TagLib::MPC::File::ID3v1);
     m_tags << new MPCFileTagModel(m_file, TagLib::MPC::File::APE);
 }
@@ -35,23 +36,11 @@ MPCMetaDataModel::~MPCMetaDataModel()
 {
     while(!m_tags.isEmpty())
         delete m_tags.takeFirst();
-     delete m_file;
+    delete m_file;
+    delete m_stream;
 }
 
-QHash<QString, QString> MPCMetaDataModel::audioProperties()
-{
-    QHash<QString, QString> ap;
-    QString text = QString("%1").arg(m_file->audioProperties()->length()/60);
-    text +=":"+QString("%1").arg(m_file->audioProperties()->length()%60,2,10,QChar('0'));
-    ap.insert(tr("Length"), text);
-    ap.insert(tr("Sample rate"), QString("%1 " + tr("Hz")).arg(m_file->audioProperties()->sampleRate()));
-    ap.insert(tr("Channels"), QString("%1").arg(m_file->audioProperties()->channels()));
-    ap.insert(tr("Bitrate"), QString("%1 " + tr("kbps")).arg(m_file->audioProperties()->bitrate()));
-    ap.insert(tr("File size"), QString("%1 "+tr("KB")).arg(m_file->length()/1024));
-    return ap;
-}
-
-QList<TagModel* > MPCMetaDataModel::tags()
+QList<TagModel* > MPCMetaDataModel::tags() const
 {
     return m_tags;
 }

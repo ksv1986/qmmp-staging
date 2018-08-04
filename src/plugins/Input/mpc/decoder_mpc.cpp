@@ -72,14 +72,11 @@ DecoderMPC::DecoderMPC(QIODevice *i)
 DecoderMPC::~DecoderMPC()
 {
     m_len = 0;
-    if (data())
+    if(m_data)
     {
-#ifndef MPC_OLD_API
-        if (data()->demuxer)
-            mpc_demux_exit (data()->demuxer);
-        data()->demuxer = 0;
-#endif
-        delete data();
+        if(m_data->demuxer)
+            mpc_demux_exit(m_data->demuxer);
+        delete m_data;
         m_data = 0;
     }
 }

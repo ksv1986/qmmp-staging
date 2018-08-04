@@ -26,11 +26,7 @@
 
 struct mpc_data
 {
-#ifdef MPC_OLD_API
-    mpc_decoder decoder;
-#else
     mpc_demux *demuxer;
-#endif
     mpc_reader reader;
     mpc_streaminfo info;
 };

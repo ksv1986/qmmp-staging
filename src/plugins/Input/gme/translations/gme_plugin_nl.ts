@@ -14,22 +14,22 @@
         <translation>Spel Muziek Bestanden</translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="103"/>
+        <location filename="../decodergmefactory.cpp" line="104"/>
         <source>About GME Audio Plugin</source>
         <translation>Over de GME Audio Module</translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="104"/>
+        <location filename="../decodergmefactory.cpp" line="105"/>
         <source>Qmmp GME Audio Plugin</source>
         <translation>GME Audio Module voor Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="105"/>
+        <location filename="../decodergmefactory.cpp" line="106"/>
         <source>This plugin uses Game_Music_Emu library to play game music files</source>
         <translation>Deze module faciliteert in het afspelen van spelmuziek door gebruik van de Game_Music_Emu bibliotheek</translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="106"/>
+        <location filename="../decodergmefactory.cpp" line="107"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

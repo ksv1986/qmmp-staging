@@ -29,47 +29,4 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
-<context>
-    <name>MPCMetaDataModel</name>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="46"/>
-        <source>Length</source>
-        <translation>Długość</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Sample rate</source>
-        <translation>Próbkowanie</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="48"/>
-        <source>Channels</source>
-        <translation>Kanały</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>Bitrate</source>
-        <translation>Szybkość transmisji</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>kbps</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>File size</source>
-        <translation>Wielkość pliku</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>KB</source>
-        <translation>KB</translation>
-    </message>
-</context>
 </TS>

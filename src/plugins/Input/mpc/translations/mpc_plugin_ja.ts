@@ -29,47 +29,4 @@
         <translation>制作: Илья Котов (Ilya Kotov) &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
-<context>
-    <name>MPCMetaDataModel</name>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="46"/>
-        <source>Length</source>
-        <translation>長さ</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Sample rate</source>
-        <translation>サンプルレート</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="48"/>
-        <source>Channels</source>
-        <translation>チャンネル</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>Bitrate</source>
-        <translation>ビットレート</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>kbps</source>
-        <translation>キロビット毎秒</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>File size</source>
-        <translation>ファイルの大きさ</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>KB</source>
-        <translation>KiB</translation>
-    </message>
-</context>
 </TS>

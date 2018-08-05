@@ -29,47 +29,4 @@
         <translation>制作: Илья Котов (Ilya Kotov) &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
-<context>
-    <name>FLACMetaDataModel</name>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="89"/>
-        <source>Length</source>
-        <translation>長さ</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="90"/>
-        <source>Sample rate</source>
-        <translation>サンプルレート</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="90"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="91"/>
-        <source>Channels</source>
-        <translation>チャンネル</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="92"/>
-        <source>Bitrate</source>
-        <translation>ビットレート</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="92"/>
-        <source>kbps</source>
-        <translation>キロビット毎秒</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="93"/>
-        <source>File size</source>
-        <translation>ファイルの大きさ</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="93"/>
-        <source>KB</source>
-        <translation>KiB</translation>
-    </message>
-</context>
 </TS>

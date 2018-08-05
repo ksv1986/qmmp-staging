@@ -14,22 +14,22 @@
         <translation>Documenti video</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="82"/>
+        <location filename="../mplayerenginefactory.cpp" line="83"/>
         <source>About MPlayer Plugin</source>
         <translation>Info sul modulo MPlayer</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="83"/>
+        <location filename="../mplayerenginefactory.cpp" line="84"/>
         <source>Qmmp MPlayer Plugin</source>
         <translation>Modulo MPlayer per Qmmp</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="84"/>
+        <location filename="../mplayerenginefactory.cpp" line="85"/>
         <source>This plugin uses MPlayer as backend</source>
         <translation>Modulo che usa MPlayer come Backend</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="85"/>
+        <location filename="../mplayerenginefactory.cpp" line="86"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
@@ -37,72 +37,72 @@
 <context>
     <name>MplayerMetaDataModel</name>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="38"/>
+        <location filename="../mplayermetadatamodel.cpp" line="39"/>
         <source>Size</source>
         <translation>Dimensione</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="38"/>
-        <source>KB</source>
-        <translation>KB</translation>
+        <location filename="../mplayermetadatamodel.cpp" line="39"/>
+        <source>%1 KiB</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>Length</source>
         <translation>Durata</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="77"/>
+        <location filename="../mplayermetadatamodel.cpp" line="78"/>
         <source>Demuxer</source>
         <translation>Demuxer</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="80"/>
+        <location filename="../mplayermetadatamodel.cpp" line="81"/>
         <source>Video format</source>
         <translation>Formato Video</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="82"/>
+        <location filename="../mplayermetadatamodel.cpp" line="83"/>
         <source>FPS</source>
         <translation>FPS</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="84"/>
+        <location filename="../mplayermetadatamodel.cpp" line="85"/>
         <source>Video codec</source>
         <translation>Codec Video</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="86"/>
+        <location filename="../mplayermetadatamodel.cpp" line="87"/>
         <source>Aspect ratio</source>
         <translation>Rapporto dello schermo</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="88"/>
+        <location filename="../mplayermetadatamodel.cpp" line="89"/>
         <source>Video bitrate</source>
         <translation>bit al secondo Video</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="95"/>
+        <location filename="../mplayermetadatamodel.cpp" line="96"/>
         <source>Audio codec</source>
         <translation>Codec Audio</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="97"/>
+        <location filename="../mplayermetadatamodel.cpp" line="98"/>
         <source>Sample rate</source>
         <translation>Campionamento</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="99"/>
+        <location filename="../mplayermetadatamodel.cpp" line="100"/>
         <source>Audio bitrate</source>
         <translation>Bit al secondo Audio</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="101"/>
+        <location filename="../mplayermetadatamodel.cpp" line="102"/>
         <source>Channels</source>
         <translation>Canali</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="103"/>
+        <location filename="../mplayermetadatamodel.cpp" line="104"/>
         <source>Resolution</source>
         <translation>Risoluzione</translation>
     </message>

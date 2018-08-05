@@ -37,52 +37,12 @@
 <context>
     <name>WavPackMetaDataModel</name>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="70"/>
-        <source>Length</source>
-        <translation>長度</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
-        <source>Sample rate</source>
-        <translation>取樣率</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="72"/>
-        <source>Channels</source>
-        <translation>聲音通道</translation>
-    </message>
-    <message>
         <location filename="../wavpackmetadatamodel.cpp" line="73"/>
-        <source>Bitrate</source>
-        <translation>比特率</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="73"/>
-        <source>kbps</source>
-        <translation>kbps</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="75"/>
-        <source>File size</source>
-        <translation>文件大小</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="75"/>
-        <source>KB</source>
-        <translation>KB</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="76"/>
         <source>Ratio</source>
         <translation>比值</translation>
     </message>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="77"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="74"/>
         <source>Version</source>
         <translation>版本</translation>
     </message>

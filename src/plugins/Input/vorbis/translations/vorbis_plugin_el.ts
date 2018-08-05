@@ -34,47 +34,4 @@
         <translation>Ο πηγαίος κώδικας έχει βασιστεί στο έργο mq3</translation>
     </message>
 </context>
-<context>
-    <name>VorbisMetaDataModel</name>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="56"/>
-        <source>Length</source>
-        <translation>Διάρκεια</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="57"/>
-        <source>Sample rate</source>
-        <translation>Ρυθμός δειγματοληψίας</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="57"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="58"/>
-        <source>Channels</source>
-        <translation>Κανάλια</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="59"/>
-        <source>Bitrate</source>
-        <translation>Ρυθμός bit</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="59"/>
-        <source>kbps</source>
-        <translation>kbps</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="60"/>
-        <source>File size</source>
-        <translation>Μέγεθος αρχείου</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="60"/>
-        <source>KB</source>
-        <translation>KB</translation>
-    </message>
-</context>
 </TS>

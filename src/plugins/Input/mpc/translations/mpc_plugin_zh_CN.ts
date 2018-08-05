@@ -29,47 +29,4 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
-<context>
-    <name>MPCMetaDataModel</name>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="46"/>
-        <source>Length</source>
-        <translation>长度</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Sample rate</source>
-        <translation>取样率</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Hz</source>
-        <translation>赫兹</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="48"/>
-        <source>Channels</source>
-        <translation>声音通道</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>Bitrate</source>
-        <translation>比特率</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>kbps</source>
-        <translation>千比特每秒</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>File size</source>
-        <translation>文件大小</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>KB</source>
-        <translation>千字节</translation>
-    </message>
-</context>
 </TS>

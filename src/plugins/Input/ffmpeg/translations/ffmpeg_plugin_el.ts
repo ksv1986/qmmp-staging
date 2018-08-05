@@ -14,67 +14,24 @@
         <translation>Μορφές FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="253"/>
+        <location filename="../decoderffmpegfactory.cpp" line="254"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="254"/>
+        <location filename="../decoderffmpegfactory.cpp" line="255"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>Qmmp πρόσθετο ήχου FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="255"/>
+        <location filename="../decoderffmpegfactory.cpp" line="256"/>
         <source>Compiled against:</source>
         <translation>Μεταγλωττίστηκε χρησιμοποιώντας:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="268"/>
+        <location filename="../decoderffmpegfactory.cpp" line="269"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>FFmpegMetaDataModel</name>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="50"/>
-        <source>Length</source>
-        <translation>Διάρκεια</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="51"/>
-        <source>File size</source>
-        <translation>Μέγεθος αρχείου</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="51"/>
-        <source>%1 KB</source>
-        <translation>%1 KB</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
-        <source>%1 kbps</source>
-        <translation>%1 kbps</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="63"/>
-        <source>%1 Hz</source>
-        <translation>%1 Hz</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="52"/>
-        <source>Bitrate</source>
-        <translation>Ρυθμός bit</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="63"/>
-        <source>Sample rate</source>
-        <translation>Ρυθμός δειγματοληψίας</translation>
-    </message>
-    <message>
-        <location filename="../ffmpegmetadatamodel.cpp" line="64"/>
-        <source>Channels</source>
-        <translation>Κανάλια</translation>
     </message>
 </context>
 <context>

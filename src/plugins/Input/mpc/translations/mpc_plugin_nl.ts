@@ -29,47 +29,4 @@
         <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
-<context>
-    <name>MPCMetaDataModel</name>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="46"/>
-        <source>Length</source>
-        <translation>Duur</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Sample rate</source>
-        <translation>Sample frequentie</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Hz</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="48"/>
-        <source>Channels</source>
-        <translation>Kanalen</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>Bitrate</source>
-        <translation>Bitsnelheid</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>kbps</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>File size</source>
-        <translation>Bestandsgrootte</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>KB</source>
-        <translation></translation>
-    </message>
-</context>
 </TS>

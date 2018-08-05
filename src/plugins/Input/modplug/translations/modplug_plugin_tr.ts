@@ -14,42 +14,42 @@
         <translation>ModPlug Dosyaları</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="135"/>
+        <location filename="../decodermodplugfactory.cpp" line="136"/>
         <source>About ModPlug Audio Plugin</source>
         <translation>ModPlug Ses Eklentisi Hakkında</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="136"/>
+        <location filename="../decodermodplugfactory.cpp" line="137"/>
         <source>Qmmp ModPlug Audio Plugin</source>
         <translation>Qmmp ModPlug Ses Eklentisi</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="137"/>
+        <location filename="../decodermodplugfactory.cpp" line="138"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="138"/>
+        <location filename="../decodermodplugfactory.cpp" line="139"/>
         <source>Based on the Modplug Plugin for Xmms</source>
         <translation>Xmms için yazılan Modplug eklentisi temellidir</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="139"/>
+        <location filename="../decodermodplugfactory.cpp" line="140"/>
         <source>Modplug Plugin developers:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="140"/>
+        <location filename="../decodermodplugfactory.cpp" line="141"/>
         <source>Olivier Lapicque &lt;olivierl@jps.net&gt;</source>
         <translation>Olivier Lapicque &lt;olivierl@jps.net&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="141"/>
+        <location filename="../decodermodplugfactory.cpp" line="142"/>
         <source>Kenton Varda &lt;temporal@gauge3d.org&gt;</source>
         <translation>Kenton Varda &lt;temporal@gauge3d.org&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermodplugfactory.cpp" line="142"/>
+        <location filename="../decodermodplugfactory.cpp" line="143"/>
         <source>Konstanty Bialkowski &lt;konstanty@ieee.org&gt;</source>
         <translation>Konstanty Bialkowski &lt;konstanty@ieee.org&gt;</translation>
     </message>
@@ -58,53 +58,38 @@
     <name>ModPlugMetaDataModel</name>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="71"/>
-        <source>File name</source>
-        <translation type="unfinished">Dosya adı</translation>
-    </message>
-    <message>
-        <location filename="../modplugmetadatamodel.cpp" line="73"/>
-        <source>Type</source>
-        <translation type="unfinished">Tip</translation>
-    </message>
-    <message>
-        <location filename="../modplugmetadatamodel.cpp" line="77"/>
-        <source>Length</source>
-        <translation type="unfinished">Uzunluk</translation>
-    </message>
-    <message>
-        <location filename="../modplugmetadatamodel.cpp" line="78"/>
         <source>Speed</source>
         <translation type="unfinished">Hız</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="79"/>
+        <location filename="../modplugmetadatamodel.cpp" line="72"/>
         <source>Tempo</source>
         <translation type="unfinished">Tempo</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="80"/>
-        <location filename="../modplugmetadatamodel.cpp" line="101"/>
+        <location filename="../modplugmetadatamodel.cpp" line="73"/>
+        <location filename="../modplugmetadatamodel.cpp" line="94"/>
         <source>Samples</source>
         <translation type="unfinished">Örnekler</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="81"/>
-        <location filename="../modplugmetadatamodel.cpp" line="110"/>
+        <location filename="../modplugmetadatamodel.cpp" line="74"/>
+        <location filename="../modplugmetadatamodel.cpp" line="103"/>
         <source>Instruments</source>
         <translation type="unfinished">Enstrümanlar</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="82"/>
+        <location filename="../modplugmetadatamodel.cpp" line="75"/>
         <source>Patterns</source>
         <translation type="unfinished">Desenler</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="83"/>
+        <location filename="../modplugmetadatamodel.cpp" line="76"/>
         <source>Channels</source>
         <translation type="unfinished">Kanallar</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="115"/>
+        <location filename="../modplugmetadatamodel.cpp" line="108"/>
         <source>Comment</source>
         <translation type="unfinished"></translation>
     </message>

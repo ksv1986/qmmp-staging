@@ -37,52 +37,12 @@
 <context>
     <name>WavPackMetaDataModel</name>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="70"/>
-        <source>Length</source>
-        <translation>Дужина</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
-        <source>Sample rate</source>
-        <translation>Узорковање</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="72"/>
-        <source>Channels</source>
-        <translation>Канала</translation>
-    </message>
-    <message>
         <location filename="../wavpackmetadatamodel.cpp" line="73"/>
-        <source>Bitrate</source>
-        <translation>Битски проток</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="73"/>
-        <source>kbps</source>
-        <translation>kb/s</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="75"/>
-        <source>File size</source>
-        <translation>Величина</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="75"/>
-        <source>KB</source>
-        <translation>KB</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="76"/>
         <source>Ratio</source>
         <translation>Размјера</translation>
     </message>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="77"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="74"/>
         <source>Version</source>
         <translation>Издање</translation>
     </message>

@@ -29,47 +29,4 @@
         <translation>Розробник: Ілля Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
-<context>
-    <name>MPCMetaDataModel</name>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="46"/>
-        <source>Length</source>
-        <translation>Тривалість</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Sample rate</source>
-        <translation>Частота</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="47"/>
-        <source>Hz</source>
-        <translation>Гц</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="48"/>
-        <source>Channels</source>
-        <translation>Канали</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>Bitrate</source>
-        <translation>Бітрейт</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="49"/>
-        <source>kbps</source>
-        <translation>Кб/с</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>File size</source>
-        <translation>Розмір файлу</translation>
-    </message>
-    <message>
-        <location filename="../mpcmetadatamodel.cpp" line="50"/>
-        <source>KB</source>
-        <translation>Кб</translation>
-    </message>
-</context>
 </TS>

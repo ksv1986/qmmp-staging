@@ -34,47 +34,4 @@
         <translation>Заснован на mq3 пројекту</translation>
     </message>
 </context>
-<context>
-    <name>VorbisMetaDataModel</name>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="56"/>
-        <source>Length</source>
-        <translation>Дужина</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="57"/>
-        <source>Sample rate</source>
-        <translation>Узорковање</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="57"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="58"/>
-        <source>Channels</source>
-        <translation>Канала</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="59"/>
-        <source>Bitrate</source>
-        <translation>Битски проток</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="59"/>
-        <source>kbps</source>
-        <translation>kb/s</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="60"/>
-        <source>File size</source>
-        <translation>Величина</translation>
-    </message>
-    <message>
-        <location filename="../vorbismetadatamodel.cpp" line="60"/>
-        <source>KB</source>
-        <translation>KB</translation>
-    </message>
-</context>
 </TS>

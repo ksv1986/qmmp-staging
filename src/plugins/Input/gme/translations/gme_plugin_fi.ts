@@ -14,22 +14,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="103"/>
+        <location filename="../decodergmefactory.cpp" line="104"/>
         <source>About GME Audio Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="104"/>
+        <location filename="../decodergmefactory.cpp" line="105"/>
         <source>Qmmp GME Audio Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="105"/>
+        <location filename="../decodergmefactory.cpp" line="106"/>
         <source>This plugin uses Game_Music_Emu library to play game music files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodergmefactory.cpp" line="106"/>
+        <location filename="../decodergmefactory.cpp" line="107"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

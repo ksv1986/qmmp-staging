@@ -14,22 +14,22 @@
         <translation>Fichiers Midi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="106"/>
+        <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>About WildMidi Audio Plugin</source>
         <translation>À propos du greffon audio WildMidi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="107"/>
+        <location filename="../decoderwildmidifactory.cpp" line="108"/>
         <source>Qmmp WildMidi Audio Plugin</source>
         <translation>Greffon audio WildMidi pour Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="108"/>
+        <location filename="../decoderwildmidifactory.cpp" line="109"/>
         <source>This plugin uses WildMidi library to play midi files</source>
         <translation>Ce greffon utilise WildMidi pour jouer les fichiers Midi.</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="109"/>
+        <location filename="../decoderwildmidifactory.cpp" line="110"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

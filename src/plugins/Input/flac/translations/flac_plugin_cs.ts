@@ -29,47 +29,4 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
-<context>
-    <name>FLACMetaDataModel</name>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="89"/>
-        <source>Length</source>
-        <translation>Délka</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="90"/>
-        <source>Sample rate</source>
-        <translation>Vzorkovací frekvence</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="90"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="91"/>
-        <source>Channels</source>
-        <translation>Počet kanálů</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="92"/>
-        <source>Bitrate</source>
-        <translation>Datový tok</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="92"/>
-        <source>kbps</source>
-        <translation>kbps</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="93"/>
-        <source>File size</source>
-        <translation>Velikost souboru</translation>
-    </message>
-    <message>
-        <location filename="../flacmetadatamodel.cpp" line="93"/>
-        <source>KB</source>
-        <translation>KiB</translation>
-    </message>
-</context>
 </TS>

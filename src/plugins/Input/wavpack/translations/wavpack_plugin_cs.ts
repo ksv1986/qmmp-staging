@@ -37,52 +37,12 @@
 <context>
     <name>WavPackMetaDataModel</name>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="70"/>
-        <source>Length</source>
-        <translation>Délka</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
-        <source>Sample rate</source>
-        <translation>Vzorkovací frekvence</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="72"/>
-        <source>Channels</source>
-        <translation>Počet kanálů</translation>
-    </message>
-    <message>
         <location filename="../wavpackmetadatamodel.cpp" line="73"/>
-        <source>Bitrate</source>
-        <translation>Datový tok</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="73"/>
-        <source>kbps</source>
-        <translation>kbps</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="75"/>
-        <source>File size</source>
-        <translation>Velikost souboru</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="75"/>
-        <source>KB</source>
-        <translation>KiB</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="76"/>
         <source>Ratio</source>
         <translation>Poměr</translation>
     </message>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="77"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="74"/>
         <source>Version</source>
         <translation>Verze</translation>
     </message>

@@ -32,44 +32,9 @@
 <context>
     <name>OpusMetaDataModel</name>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="55"/>
-        <source>Length</source>
-        <translation>אריכות</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="56"/>
-        <source>Sample rate</source>
-        <translation>שיעור דגימה</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="56"/>
-        <source>Hz</source>
-        <translation>הרץ</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="57"/>
-        <source>Channels</source>
-        <translation>ערוצים</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="58"/>
-        <source>Bitrate</source>
-        <translation>שיעור סיביות</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="58"/>
-        <source>kbps</source>
+        <location filename="../opusmetadatamodel.cpp" line="53"/>
+        <source>Version</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="59"/>
-        <source>File size</source>
-        <translation>גודל קובץ</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="59"/>
-        <source>KB</source>
-        <translation>ק״ב</translation>
     </message>
 </context>
 </TS>

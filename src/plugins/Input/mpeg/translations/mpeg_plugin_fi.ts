@@ -47,77 +47,25 @@
 <context>
     <name>MPEGMetaDataModel</name>
     <message>
-        <location filename="../mpegmetadatamodel.cpp" line="70"/>
-        <source>Format</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location filename="../mpegmetadatamodel.cpp" line="63"/>
+        <location filename="../mpegmetadatamodel.cpp" line="66"/>
+        <location filename="../mpegmetadatamodel.cpp" line="69"/>
         <location filename="../mpegmetadatamodel.cpp" line="72"/>
-        <source>Bitrate</source>
-        <translation>Bittinopeus</translation>
-    </message>
-    <message>
-        <location filename="../mpegmetadatamodel.cpp" line="72"/>
-        <source>kbps</source>
-        <translation>kbps</translation>
-    </message>
-    <message>
-        <location filename="../mpegmetadatamodel.cpp" line="74"/>
-        <source>Sample rate</source>
-        <translation>Näytteenottotaajuus</translation>
-    </message>
-    <message>
-        <location filename="../mpegmetadatamodel.cpp" line="74"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../mpegmetadatamodel.cpp" line="78"/>
-        <location filename="../mpegmetadatamodel.cpp" line="81"/>
-        <location filename="../mpegmetadatamodel.cpp" line="84"/>
-        <location filename="../mpegmetadatamodel.cpp" line="87"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mpegmetadatamodel.cpp" line="90"/>
-        <source>KB</source>
-        <translation>kt</translation>
-    </message>
-    <message>
-        <location filename="../mpegmetadatamodel.cpp" line="91"/>
-        <source>File size</source>
-        <translation>Tiedostokoko</translation>
-    </message>
-    <message>
-        <location filename="../mpegmetadatamodel.cpp" line="93"/>
-        <location filename="../mpegmetadatamodel.cpp" line="95"/>
+        <location filename="../mpegmetadatamodel.cpp" line="75"/>
         <source>Protection</source>
         <translation>Suojaus</translation>
     </message>
     <message>
-        <location filename="../mpegmetadatamodel.cpp" line="93"/>
-        <location filename="../mpegmetadatamodel.cpp" line="97"/>
-        <location filename="../mpegmetadatamodel.cpp" line="101"/>
-        <source>Yes</source>
-        <translation>Kyllä</translation>
-    </message>
-    <message>
-        <location filename="../mpegmetadatamodel.cpp" line="95"/>
-        <location filename="../mpegmetadatamodel.cpp" line="99"/>
-        <location filename="../mpegmetadatamodel.cpp" line="103"/>
-        <source>No</source>
-        <translation>Ei</translation>
-    </message>
-    <message>
-        <location filename="../mpegmetadatamodel.cpp" line="97"/>
-        <location filename="../mpegmetadatamodel.cpp" line="99"/>
+        <location filename="../mpegmetadatamodel.cpp" line="76"/>
         <source>Copyright</source>
         <translation>Tekijänoikeus</translation>
     </message>
     <message>
-        <location filename="../mpegmetadatamodel.cpp" line="101"/>
-        <location filename="../mpegmetadatamodel.cpp" line="103"/>
+        <location filename="../mpegmetadatamodel.cpp" line="77"/>
         <source>Original</source>
         <translation>Alkuperäinen</translation>
     </message>

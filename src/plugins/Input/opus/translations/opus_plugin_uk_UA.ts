@@ -32,44 +32,9 @@
 <context>
     <name>OpusMetaDataModel</name>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="55"/>
-        <source>Length</source>
-        <translation>Тривалість</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="56"/>
-        <source>Sample rate</source>
-        <translation>Частота</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="56"/>
-        <source>Hz</source>
-        <translation>Гц</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="57"/>
-        <source>Channels</source>
-        <translation>Канали</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="58"/>
-        <source>Bitrate</source>
-        <translation>Бітрейт</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="58"/>
-        <source>kbps</source>
-        <translation>Кб/с</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="59"/>
-        <source>File size</source>
-        <translation>Розмір файлу</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="59"/>
-        <source>KB</source>
-        <translation>Кб</translation>
+        <location filename="../opusmetadatamodel.cpp" line="53"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

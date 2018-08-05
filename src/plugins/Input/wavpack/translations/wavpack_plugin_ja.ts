@@ -37,52 +37,12 @@
 <context>
     <name>WavPackMetaDataModel</name>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="70"/>
-        <source>Length</source>
-        <translation>長さ</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
-        <source>Sample rate</source>
-        <translation>サンプルレート</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="72"/>
-        <source>Channels</source>
-        <translation>チャンネル</translation>
-    </message>
-    <message>
         <location filename="../wavpackmetadatamodel.cpp" line="73"/>
-        <source>Bitrate</source>
-        <translation>ビットレート</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="73"/>
-        <source>kbps</source>
-        <translation>キロビット毎秒</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="75"/>
-        <source>File size</source>
-        <translation>ファイルの大きさ</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="75"/>
-        <source>KB</source>
-        <translation>KiB</translation>
-    </message>
-    <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="76"/>
         <source>Ratio</source>
         <translation>率</translation>
     </message>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="77"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="74"/>
         <source>Version</source>
         <translation>版</translation>
     </message>

@@ -729,64 +729,124 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="151"/>
+        <location filename="../detailsdialog.cpp" line="148"/>
         <source>%1/%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="170"/>
+        <location filename="../detailsdialog.cpp" line="168"/>
         <source>Cover</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="204"/>
+        <location filename="../detailsdialog.cpp" line="208"/>
         <source>Title</source>
         <translation type="unfinished">Názov</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="205"/>
+        <location filename="../detailsdialog.cpp" line="209"/>
         <source>Artist</source>
         <translation type="unfinished">Interprét</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="206"/>
+        <location filename="../detailsdialog.cpp" line="210"/>
         <source>Album artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="207"/>
+        <location filename="../detailsdialog.cpp" line="211"/>
         <source>Album</source>
         <translation type="unfinished">Album</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="208"/>
+        <location filename="../detailsdialog.cpp" line="212"/>
         <source>Comment</source>
         <translation type="unfinished">Poznámka</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="209"/>
+        <location filename="../detailsdialog.cpp" line="213"/>
         <source>Genre</source>
         <translation type="unfinished">Žáner</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="210"/>
+        <location filename="../detailsdialog.cpp" line="214"/>
         <source>Composer</source>
         <translation type="unfinished">Skladateľ</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="212"/>
+        <location filename="../detailsdialog.cpp" line="215"/>
         <source>Year</source>
         <translation type="unfinished">Rok</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="214"/>
+        <location filename="../detailsdialog.cpp" line="216"/>
         <source>Track</source>
         <translation type="unfinished">Skladba</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="216"/>
+        <location filename="../detailsdialog.cpp" line="217"/>
         <source>Disc number</source>
         <translation type="unfinished">Číslo disku</translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="236"/>
+        <source>Bitrate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="236"/>
+        <source>kbps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="237"/>
+        <source>Sample rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="237"/>
+        <source>Hz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="238"/>
+        <source>Channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="239"/>
+        <source>Sample size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="239"/>
+        <source>bits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="240"/>
+        <source>Format name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="241"/>
+        <source>File size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="241"/>
+        <source>KiB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="284"/>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../detailsdialog.cpp" line="284"/>
+        <source>No</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

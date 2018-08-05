@@ -32,44 +32,9 @@
 <context>
     <name>OpusMetaDataModel</name>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="55"/>
-        <source>Length</source>
-        <translation>Panjang</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="56"/>
-        <source>Sample rate</source>
-        <translation>Sample rate</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="56"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="57"/>
-        <source>Channels</source>
-        <translation>Saluran</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="58"/>
-        <source>Bitrate</source>
-        <translation>Bitrate</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="58"/>
-        <source>kbps</source>
-        <translation>kbps</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="59"/>
-        <source>File size</source>
-        <translation>Ukuran file</translation>
-    </message>
-    <message>
-        <location filename="../opusmetadatamodel.cpp" line="59"/>
-        <source>KB</source>
-        <translation>KB</translation>
+        <location filename="../opusmetadatamodel.cpp" line="53"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

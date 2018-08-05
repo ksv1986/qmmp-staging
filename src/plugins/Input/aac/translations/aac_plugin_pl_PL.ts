@@ -2,67 +2,29 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="pl_PL">
 <context>
-    <name>AACMetaDataModel</name>
-    <message>
-        <location filename="../aacmetadatamodel.cpp" line="43"/>
-        <source>Length</source>
-        <translation>Długość</translation>
-    </message>
-    <message>
-        <location filename="../aacmetadatamodel.cpp" line="45"/>
-        <source>Sample rate</source>
-        <translation>Próbkowanie</translation>
-    </message>
-    <message>
-        <location filename="../aacmetadatamodel.cpp" line="45"/>
-        <source>Hz</source>
-        <translation>Hz</translation>
-    </message>
-    <message>
-        <location filename="../aacmetadatamodel.cpp" line="47"/>
-        <source>Bitrate</source>
-        <translation>Szybkość transmisji</translation>
-    </message>
-    <message>
-        <location filename="../aacmetadatamodel.cpp" line="47"/>
-        <source>kbps</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../aacmetadatamodel.cpp" line="48"/>
-        <source>KB</source>
-        <translation>KB</translation>
-    </message>
-    <message>
-        <location filename="../aacmetadatamodel.cpp" line="49"/>
-        <source>File size</source>
-        <translation>Wilekość pliku</translation>
-    </message>
-</context>
-<context>
     <name>DecoderAACFactory</name>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="40"/>
+        <location filename="../decoderaacfactory.cpp" line="39"/>
         <source>AAC Plugin</source>
         <translation>Wtyczka AAC</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="42"/>
+        <location filename="../decoderaacfactory.cpp" line="41"/>
         <source>AAC Files</source>
         <translation>Pliki AAC</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="102"/>
+        <location filename="../decoderaacfactory.cpp" line="104"/>
         <source>About AAC Audio Plugin</source>
         <translation>O wtyczce dźwiękowej AAC</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="103"/>
+        <location filename="../decoderaacfactory.cpp" line="105"/>
         <source>Qmmp AAC Audio Plugin</source>
         <translation>Wtyczka AAC dla Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="104"/>
+        <location filename="../decoderaacfactory.cpp" line="106"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

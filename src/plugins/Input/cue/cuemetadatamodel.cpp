@@ -22,7 +22,7 @@
 #include "cueparser.h"
 #include "cuemetadatamodel.h"
 
-CUEMetaDataModel::CUEMetaDataModel(const QString &url, QObject *parent) : MetaDataModel(parent)
+CUEMetaDataModel::CUEMetaDataModel(const QString &url, QObject *parent) : MetaDataModel(true, parent)
 {
     m_parser = new CUEParser(url);
     if (m_parser->count() == 0)
@@ -39,19 +39,19 @@ CUEMetaDataModel::~CUEMetaDataModel()
     delete m_parser;
 }
 
-QHash<QString, QString> CUEMetaDataModel::audioProperties()
+QList<MetaDataItem> CUEMetaDataModel::extraProperties() const
 {
-    QHash <QString, QString> ap;
+    QList<MetaDataItem> ep;
     MetaDataModel *model = MetaDataManager::instance()->createMetaDataModel(m_path);
     if(model)
     {
-        ap = model->audioProperties();
-        model->deleteLater();
+        ep = model->extraProperties();
+        delete model;
     }
-    return ap;
+    return ep;
 }
 
-QString CUEMetaDataModel::coverPath()
+QString CUEMetaDataModel::coverPath() const
 {
     return MetaDataManager::instance()->findCoverFile(m_path);
 }

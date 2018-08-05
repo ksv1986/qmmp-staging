@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,23 +24,24 @@
 #include <taglib/flacfile.h>
 #include <taglib/oggflacfile.h>
 #include <taglib/xiphcomment.h>
+#include <taglib/tfilestream.h>
 #include <qmmp/metadatamodel.h>
 
 class FLACMetaDataModel : public MetaDataModel
 {
 Q_OBJECT
 public:
-    FLACMetaDataModel(const QString &path, QObject *parent);
+    FLACMetaDataModel(const QString &path, bool readOnly, QObject *parent);
     ~FLACMetaDataModel();
-    QHash<QString, QString> audioProperties();
-    QList<TagModel* > tags();
-    QPixmap cover();
-    QString coverPath();
+    QList<TagModel* > tags() const override;
+    QPixmap cover() const override;
+    QString coverPath() const override;
 
 private:
     QString m_path;
     QList<TagModel* > m_tags;
     TagLib::File *m_file;
+    TagLib::FileStream *m_stream;
 };
 
 class VorbisCommentModel : public TagModel

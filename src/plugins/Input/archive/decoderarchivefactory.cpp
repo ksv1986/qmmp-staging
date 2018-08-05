@@ -25,7 +25,6 @@
 #include "decoder_archive.h"
 #include "archivetagreader.h"
 #include "archiveinputdevice.h"
-#include "archivemetadatamodel.h"
 #include "decoderarchivefactory.h"
 
 // DecoderArchiveFactory
@@ -123,6 +122,7 @@ QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, Tr
                     list.last()->setValue(Qmmp::BITRATE, ap->bitrate());
                     list.last()->setValue(Qmmp::SAMPLERATE, ap->sampleRate());
                     list.last()->setValue(Qmmp::CHANNELS, ap->channels());
+                    list.last()->setValue(Qmmp::FILE_SIZE, dev.size());
                 }
 
                 if(ap)
@@ -136,9 +136,12 @@ QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, Tr
     return list;
 }
 
-MetaDataModel* DecoderArchiveFactory::createMetaDataModel(const QString &path, QObject *parent)
+MetaDataModel* DecoderArchiveFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
 {
-    return new ArchiveMetaDataModel(path, parent);
+    Q_UNUSED(path);
+    Q_UNUSED(readOnly);
+    Q_UNUSED(parent);
+    return 0;
 }
 
 void DecoderArchiveFactory::showSettings(QWidget *)

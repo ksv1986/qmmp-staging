@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,13 +22,15 @@
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/tmap.h>
+#include <taglib/id3v2framefactory.h>
 #include <FLAC/all.h>
 #include <qmmp/metadatamanager.h>
 #include "flacmetadatamodel.h"
 
-FLACMetaDataModel::FLACMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
+FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly, QObject *parent) : MetaDataModel(true, parent)
 {
     m_file = 0;
+    m_stream = 0;
 
     if(path.startsWith("flac://"))
     {
@@ -44,19 +46,24 @@ FLACMetaDataModel::FLACMetaDataModel(const QString &path, QObject *parent) : Met
 
     if(m_path.endsWith(".flac", Qt::CaseInsensitive))
     {
-        TagLib::FLAC::File *f = new TagLib::FLAC::File(QStringToFileName(m_path));
+        m_stream = new TagLib::FileStream(QStringToFileName(m_path), readOnly);
+        TagLib::FLAC::File *f = new TagLib::FLAC::File(m_stream, TagLib::ID3v2::FrameFactory::instance());
         tag = f->xiphComment();
         m_file = f;
     }
     else if(m_path.endsWith(".oga", Qt::CaseInsensitive))
     {
-        TagLib::Ogg::FLAC::File *f = new TagLib::Ogg::FLAC::File(QStringToFileName(m_path));
+        m_stream = new TagLib::FileStream(QStringToFileName(m_path), readOnly);
+        TagLib::Ogg::FLAC::File *f = new TagLib::Ogg::FLAC::File(m_stream);
         tag = f->tag();
         m_file = f;
     }
 
     if(m_file && m_file->isValid() && !path.startsWith("flac://"))
+    {
+        setReadOnly(readOnly);
         m_tags << new VorbisCommentModel(tag, m_file);
+    }
 }
 
 FLACMetaDataModel::~FLACMetaDataModel()
@@ -68,39 +75,16 @@ FLACMetaDataModel::~FLACMetaDataModel()
         delete m_file;
         m_file = 0;
     }
+    if(m_stream)
+        delete m_stream;
 }
 
-QHash<QString, QString> FLACMetaDataModel::audioProperties()
-{
-    QHash<QString, QString> ap;
-    TagLib::AudioProperties *taglib_ap = 0;
-    qint64 size = 0;
-
-    if(m_file && m_file->isValid())
-    {
-        taglib_ap =  m_file->audioProperties();
-        size = m_file->length();
-    }
-
-    if(taglib_ap)
-    {
-        QString text = QString("%1").arg(taglib_ap->length()/60);
-        text +=":"+QString("%1").arg(taglib_ap->length()%60,2,10,QChar('0'));
-        ap.insert(tr("Length"), text);
-        ap.insert(tr("Sample rate"), QString("%1 " + tr("Hz")).arg(taglib_ap->sampleRate()));
-        ap.insert(tr("Channels"), QString("%1").arg(taglib_ap->channels()));
-        ap.insert(tr("Bitrate"), QString("%1 " + tr("kbps")).arg(taglib_ap->bitrate()));
-        ap.insert(tr("File size"), QString("%1 "+tr("KB")).arg(size/1000));
-    }
-    return ap;
-}
-
-QList<TagModel* > FLACMetaDataModel::tags()
+QList<TagModel* > FLACMetaDataModel::tags() const
 {
     return m_tags;
 }
 
-QPixmap FLACMetaDataModel::cover()
+QPixmap FLACMetaDataModel::cover() const
 {
     //embedded cover
     QPixmap cover;
@@ -118,7 +102,7 @@ QPixmap FLACMetaDataModel::cover()
     return cover;
 }
 
-QString FLACMetaDataModel::coverPath()
+QString FLACMetaDataModel::coverPath() const
 {
     return MetaDataManager::instance()->findCoverFile(m_path);
 }

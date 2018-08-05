@@ -33,7 +33,7 @@ public:
     bool supports(const QString &source) const;
     AbstractEngine *create(QObject *parent = 0);
     QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *);
-    MetaDataModel* createMetaDataModel(const QString &path, QObject *parent = 0);
+    MetaDataModel* createMetaDataModel(const QString &path, bool readOnly = true, QObject *parent = 0);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);
     QString translation() const;

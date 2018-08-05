@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,18 +24,19 @@
 #include <QProcess>
 #include "mplayermetadatamodel.h"
 
-MplayerMetaDataModel::MplayerMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(parent)
+MplayerMetaDataModel::MplayerMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(true, parent)
 {
     m_path = path;
+    setDialogHints(MetaDataModel::COMPLETE_PROPERTY_LIST);
 }
 
 MplayerMetaDataModel::~MplayerMetaDataModel()
 {}
 
-QHash<QString, QString> MplayerMetaDataModel::audioProperties()
+QList<MetaDataItem> MplayerMetaDataModel::extraProperties() const
 {
-    QHash<QString, QString> ap;
-    ap.insert(tr("Size"), QString("%1 ").arg(QFileInfo(m_path).size ()/1024)+tr("KB"));
+    QList<MetaDataItem> ep;
+    ep << MetaDataItem(tr("Size"), tr("%1 KiB").arg(QFileInfo(m_path).size ()/1024));
     //regular expressions
     QRegExp rx_id_length("^ID_LENGTH=([0-9,.]+)*");
     QRegExp rx_id_demuxer("^ID_DEMUXER=(.*)");
@@ -72,34 +73,34 @@ QHash<QString, QString> MplayerMetaDataModel::audioProperties()
     {
         //general info
         if (rx_id_length.indexIn(line) > -1)
-            ap.insert(tr("Length"),rx_id_length.cap(1)); //TODO use hh:mm:ss format
+            ep << MetaDataItem(tr("Length"),rx_id_length.cap(1)); //TODO use hh:mm:ss format
         else if (rx_id_demuxer.indexIn(line) > -1)
-            ap.insert(tr("Demuxer"), rx_id_demuxer.cap(1));
+            ep << MetaDataItem(tr("Demuxer"), rx_id_demuxer.cap(1));
         //video info
         else if (rx_id_video_format.indexIn(line) > -1)
-            ap.insert(tr("Video format"), rx_id_video_format.cap(1));
+            ep << MetaDataItem(tr("Video format"), rx_id_video_format.cap(1));
         else if (rx_id_video_fps.indexIn(line) > -1)
-            ap.insert(tr("FPS"), rx_id_video_fps.cap(1));
+            ep << MetaDataItem(tr("FPS"), rx_id_video_fps.cap(1));
         else if (rx_id_video_codec.indexIn(line) > -1)
-            ap.insert(tr("Video codec"), rx_id_video_codec.cap(1));
+            ep << MetaDataItem(tr("Video codec"), rx_id_video_codec.cap(1));
         else if (rx_id_video_aspect.indexIn(line) > -1)
-            ap.insert(tr("Aspect ratio"),rx_id_video_aspect.cap(1));
+            ep << MetaDataItem(tr("Aspect ratio"),rx_id_video_aspect.cap(1));
         else if (rx_id_video_bitrate.indexIn(line) > -1)
-            ap.insert(tr("Video bitrate"), rx_id_video_bitrate.cap(1));
+            ep << MetaDataItem(tr("Video bitrate"), rx_id_video_bitrate.cap(1));
         else if (rx_id_width.indexIn(line) > -1)
             width = rx_id_width.cap(1).toInt();
         else if (rx_id_height.indexIn(line) > -1)
             height = rx_id_height.cap(1).toInt();
         //audio info
         else if (rx_id_audio_codec.indexIn(line) > -1)
-            ap.insert(tr("Audio codec"),rx_id_audio_codec.cap(1));
+            ep << MetaDataItem(tr("Audio codec"),rx_id_audio_codec.cap(1));
         else if (rx_id_audio_rate.indexIn(line) > -1)
-            ap.insert(tr("Sample rate"), rx_id_audio_rate.cap(1));
+            ep << MetaDataItem(tr("Sample rate"), rx_id_audio_rate.cap(1));
         else if (rx_id_audio_bitrate.indexIn(line) > -1)
-            ap.insert(tr("Audio bitrate"), rx_id_audio_bitrate.cap(1));
+            ep << MetaDataItem(tr("Audio bitrate"), rx_id_audio_bitrate.cap(1));
         else if (rx_id_audio_nch.indexIn(line) > -1)
-            ap.insert(tr("Channels"), rx_id_audio_nch.cap(1));
+            ep << MetaDataItem(tr("Channels"), rx_id_audio_nch.cap(1));
     }
-    ap.insert(tr("Resolution"), QString("%1x%2").arg(width).arg(height));
-    return ap;
+    ep << MetaDataItem(tr("Resolution"), QString("%1x%2").arg(width).arg(height));
+    return ep;
 }

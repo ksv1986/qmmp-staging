@@ -6,15 +6,13 @@ HEADERS += \
     archiveinputdevice.h \
     decoderarchivefactory.h \
     decoder_archive.h \
-    archivetagreader.h \
-    archivemetadatamodel.h
+    archivetagreader.h
 
 SOURCES += \
     archiveinputdevice.cpp \
     decoderarchivefactory.cpp \
     decoder_archive.cpp \
-    archivetagreader.cpp \
-    archivemetadatamodel.cpp
+    archivetagreader.cpp
 
 RESOURCES = translations/translations.qrc
 

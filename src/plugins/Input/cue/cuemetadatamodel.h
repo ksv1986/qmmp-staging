@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,8 +31,8 @@ Q_OBJECT
 public:
     CUEMetaDataModel(const QString &url, QObject *parent);
     ~CUEMetaDataModel();
-    QHash<QString, QString> audioProperties();
-    QString coverPath();
+    QList<MetaDataItem> extraProperties() const override;
+    QString coverPath() const override;
 
 private:
     CUEParser *m_parser;

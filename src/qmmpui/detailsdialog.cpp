@@ -60,11 +60,11 @@ DetailsDialog::~DetailsDialog()
 void DetailsDialog:: on_directoryButton_clicked()
 {
     QString dir_path;
-    if(!m_path.contains("://")) //local file
-        dir_path = QFileInfo(m_path).absolutePath();
-    else if (m_path.contains(":///")) //pseudo-protocol
+    if(!m_info.path().contains("://")) //local file
+        dir_path = QFileInfo(m_info.path()).absolutePath();
+    else if (m_info.path().contains(":///")) //pseudo-protocol
     {
-        dir_path = QUrl(m_path).path();
+        dir_path = QUrl(m_info.path()).path();
         dir_path.replace(QString(QUrl::toPercentEncoding("#")), "#");
         dir_path.replace(QString(QUrl::toPercentEncoding("?")), "?");
         dir_path.replace(QString(QUrl::toPercentEncoding("%")), "%");
@@ -98,7 +98,7 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
 void DetailsDialog::on_tabWidget_currentChanged(int index)
 {
     TagEditor *tab = qobject_cast<TagEditor *> (m_ui->tabWidget->widget(index));
-    m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(tab != 0);
+    m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(tab && m_metaDataModel && !m_metaDataModel->isReadOnly());
 }
 
 void DetailsDialog::on_prevButton_clicked()
@@ -146,20 +146,21 @@ void DetailsDialog::updatePage()
     }
 
     m_ui->pageLabel->setText(tr("%1/%2").arg(m_page + 1).arg(m_tracks.count()));
-    m_track = m_tracks.at(m_page);
-    m_path = m_track->path();
-    setWindowTitle (m_path.section('/',-1));
-    m_ui->pathEdit->setText(m_path);
+    m_info = *m_tracks.at(m_page);
+
+    setWindowTitle(m_info.path().section('/',-1));
+    m_ui->pathEdit->setText(m_info.path());
 
     //load metadata and create metadata model
-    QList <TrackInfo *> flist = MetaDataManager::instance()->createPlayList(m_path);
-    if(!flist.isEmpty() && QFile::exists(m_track->path()))
-        m_metaData = flist.at(0)->metaData();
-    else
-        m_metaData = m_track->metaData();
-    qDeleteAll(flist);
+    QList<TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(m_info.path());
+    if(!infoList.isEmpty())
+    {
+        m_info = *infoList.first();
+    }
+    qDeleteAll(infoList);
+    infoList.clear();
 
-    QPixmap cover = MetaDataManager::instance()->getCover(m_path);
+    QPixmap cover = MetaDataManager::instance()->getCover(m_info.path());
     if(!cover.isNull())
     {
         CoverViewer *coverViewer = new CoverViewer(this);
@@ -167,14 +168,23 @@ void DetailsDialog::updatePage()
         m_ui->tabWidget->addTab(coverViewer, tr("Cover"));
     }
 
-    m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_path, false, this);
+    if(m_info.path().contains("://")) //URL
+    {
+        m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), false, this);
+    }
+    else if(QFile::exists(m_info.path())) //local file
+    {
+        bool writable = QFileInfo(m_info.path()).isWritable();
+        m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), !writable, this);
+    }
 
     if(m_metaDataModel)
     {
-        if(QFile::exists(m_path) && QFileInfo(m_path).isWritable())
+        foreach(TagModel *tagModel, m_metaDataModel->tags())
         {
-            foreach(TagModel *tagModel, m_metaDataModel->tags())
-                m_ui->tabWidget->addTab(new TagEditor(tagModel, this), tagModel->name());
+            TagEditor *editor = new TagEditor(tagModel, this);
+            editor->setEnabled(!m_metaDataModel->isReadOnly());
+            m_ui->tabWidget->addTab(editor, tagModel->name());
         }
 
         foreach(MetaDataItem item, m_metaDataModel->descriptions())
@@ -191,71 +201,69 @@ void DetailsDialog::updatePage()
 void DetailsDialog::printInfo()
 {
     SoundCore *core = SoundCore::instance();
-    QString formattedText;
+    QString formattedText, metaDataRows, streamInfoRows, propertyRows;
+    QStringList tableParts;
+
+    //tags
+    metaDataRows += formatRow(tr("Title"), m_info.value(Qmmp::TITLE));
+    metaDataRows += formatRow(tr("Artist"), m_info.value(Qmmp::ARTIST));
+    metaDataRows += formatRow(tr("Album artist"), m_info.value(Qmmp::ALBUMARTIST));
+    metaDataRows += formatRow(tr("Album"), m_info.value(Qmmp::ALBUM));
+    metaDataRows += formatRow(tr("Comment"), m_info.value(Qmmp::COMMENT));
+    metaDataRows += formatRow(tr("Genre"), m_info.value(Qmmp::GENRE));
+    metaDataRows += formatRow(tr("Composer"), m_info.value(Qmmp::COMPOSER));
+    metaDataRows += formatRow(tr("Year"), m_info.value(Qmmp::YEAR));
+    metaDataRows += formatRow(tr("Track"), m_info.value(Qmmp::TRACK));
+    metaDataRows += formatRow(tr("Disc number"), m_info.value(Qmmp::DISCNUMBER));
+    metaDataRows = metaDataRows.trimmed();
+    if(!metaDataRows.isEmpty())
+        tableParts << metaDataRows;
+
+    //stream information
+    if(core->state() == Qmmp::Playing && core->path() == m_info.path())
+    {
+        foreach(QString key, core->streamInfo().keys())
+            streamInfoRows += formatRow(key, core->streamInfo().value(key));
+    }
+    streamInfoRows = streamInfoRows.trimmed();
+    if(!streamInfoRows.isEmpty())
+        tableParts << streamInfoRows;
+
+    //properties
+    QList<MetaDataItem> items;
+    if(!m_metaDataModel || !(m_metaDataModel->dialogHints() & MetaDataModel::COMPLETE_PROPERTY_LIST))
+    {
+        items << MetaDataItem(tr("Bitrate"), m_info.value(Qmmp::BITRATE).toInt(), tr("kbps"));
+        items << MetaDataItem(tr("Sample rate"), m_info.value(Qmmp::SAMPLERATE).toInt(), tr("Hz"));
+        items << MetaDataItem(tr("Channels"), m_info.value(Qmmp::CHANNELS).toInt());
+        items << MetaDataItem(tr("Sample size"), m_info.value(Qmmp::BITS_PER_SAMPLE).toInt(), tr("bits"));
+        items << MetaDataItem(tr("Format name"), m_info.value(Qmmp::FORMAT_NAME));
+        items << MetaDataItem(tr("File size"), m_info.value(Qmmp::FILE_SIZE).toInt() / 1024, tr("KiB"));
+    }
+    items << m_metaDataModel->extraProperties();
+    foreach (MetaDataItem item, items)
+        propertyRows += formatRow(item);
+    propertyRows = propertyRows.trimmed();
+    if(!propertyRows.isEmpty())
+        tableParts << propertyRows;
+
+    //create table
     if(layoutDirection() == Qt::RightToLeft)
         formattedText.append("<DIV align=\"right\" dir=\"rtl\">");
     else
         formattedText.append("<DIV>");
     formattedText.append("<TABLE>");
-    //tags
-    formattedText += formatRow(tr("Title"), m_metaData[Qmmp::TITLE]);
-    formattedText += formatRow(tr("Artist"), m_metaData[Qmmp::ARTIST]);
-    formattedText += formatRow(tr("Album artist"), m_metaData[Qmmp::ALBUMARTIST]);
-    formattedText += formatRow(tr("Album"), m_metaData[Qmmp::ALBUM]);
-    formattedText += formatRow(tr("Comment"), m_metaData[Qmmp::COMMENT]);
-    formattedText += formatRow(tr("Genre"), m_metaData[Qmmp::GENRE]);
-    formattedText += formatRow(tr("Composer"), m_metaData[Qmmp::COMPOSER]);
-    if(m_metaData[Qmmp::YEAR] != "0")
-        formattedText += formatRow(tr("Year"), m_metaData[Qmmp::YEAR]);
-    if(m_metaData[Qmmp::TRACK] != "0")
-        formattedText += formatRow(tr("Track"), m_metaData[Qmmp::TRACK]);
-    if(m_metaData[Qmmp::DISCNUMBER] != "0")
-        formattedText += formatRow(tr("Disc number"), m_metaData[Qmmp::DISCNUMBER]);
-    //stream information
-    /*if(core->state() == Qmmp::Playing && core->url() == m_metaData.value(Qmmp::URL))
-    {
-        if(!core->streamInfo().isEmpty())
-        {
-            formattedText.append("<tr>");
-            formattedText.append("<td colspan=2>");
-            formattedText.append("<hr>");
-            formattedText.append("</td>");
-            formattedText.append("</tr>");
 
-            foreach(QString key, core->streamInfo().keys())
-                formattedText += formatRow(key, core->streamInfo().value(key));
-        }
-    }*/
-    //audio info
-    if(!m_metaDataModel)
-    {
-        formattedText.append("</TABLE>");
-        formattedText.append("</DIV>");
-        m_ui->textEdit->setHtml(formattedText);
-        return;
-    }
-    QList<MetaDataItem> ap = m_metaDataModel->extraProperties();
-    //line
-    if(formattedText.contains("<tr>"))
-    {
-        formattedText.append("<tr>");
-        formattedText.append("<td colspan=2>");
-        formattedText.append("<hr>");
-        formattedText.append("</td>");
-        formattedText.append("</tr>");
-    }
-
-    foreach(MetaDataItem item, ap)
-        formattedText += formatRow(item.name(), item.value().toString());
+    formattedText += tableParts.join("<tr><td colspan=2><hr></td></tr>");
 
     formattedText.append("</TABLE>");
     formattedText.append("</DIV>");
     m_ui->textEdit->setHtml(formattedText);
 }
 
-QString DetailsDialog::formatRow(const QString key, const QString value)
+QString DetailsDialog::formatRow(const QString &key, const QString &value) const
 {
-    if(value.isEmpty())
+    if(value.isEmpty() || key.isEmpty())
         return QString();
     QString str("<tr>");
     if(layoutDirection() == Qt::RightToLeft)
@@ -264,4 +272,26 @@ QString DetailsDialog::formatRow(const QString key, const QString value)
         str.append("<td><b>" + key + "</b></td> <td style=\"padding-left: 15px;\">" + value + "</td>");
     str.append("</tr>");
     return str;
+}
+
+QString DetailsDialog::formatRow(const MetaDataItem &item) const
+{
+    if(item.value().isNull() || item.name().isEmpty())
+        return QString();
+
+    QString value;
+    if(item.value().type() == QVariant::Bool)
+        value = item.value().toBool() ? tr("Yes") : tr("No");
+    else if(item.value().type() == QVariant::Double)
+        value = QString("%1").arg(item.value().toDouble(), 0, 'f', 4);
+    else
+        value = item.value().toString();
+
+    if(value.isEmpty())
+        return QString();
+
+    if(!item.suffix().isEmpty())
+        value += QLatin1String(" ") + item.suffix();
+
+    return formatRow(item.name(), value);
 }

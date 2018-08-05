@@ -24,12 +24,14 @@
 #include <QList>
 #include <QMap>
 #include <qmmp/qmmp.h>
+#include <qmmp/trackinfo.h>
 #include "qmmpui_export.h"
 
 class QTextCodec;
 class QAbstractButton;
 class PlayListTrack;
 class MetaDataModel;
+class MetaDataItem;
 
 namespace Ui {
     class DetailsDialog;
@@ -65,12 +67,11 @@ private:
     void closeEvent(QCloseEvent *);
     void updatePage();
     void printInfo();
-    QString formatRow(const QString key, const QString value);
-    QString m_path;
+    QString formatRow(const QString &key, const QString &value) const;
+    QString formatRow(const MetaDataItem &item) const;
     MetaDataModel *m_metaDataModel;
-    PlayListTrack *m_track;
     QList<PlayListTrack *> m_tracks;
-    QMap <Qmmp::MetaData, QString> m_metaData;
+    TrackInfo m_info;
     int m_page;
 };
 

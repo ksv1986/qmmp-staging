@@ -167,7 +167,7 @@ void DetailsDialog::updatePage()
         m_ui->tabWidget->addTab(coverViewer, tr("Cover"));
     }
 
-    m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_path, this);
+    m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_path, false, this);
 
     if(m_metaDataModel)
     {

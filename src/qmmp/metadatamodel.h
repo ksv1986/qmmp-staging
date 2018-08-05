@@ -66,7 +66,7 @@ public:
      * Constructor.
      * @param parent Parent Object.
      */
-    MetaDataModel(bool readOnly = true, QObject *parent = 0);
+    MetaDataModel(bool readOnly, QObject *parent = 0);
     /*!
      * Destructor.
      */

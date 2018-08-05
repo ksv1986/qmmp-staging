@@ -96,7 +96,7 @@ QList<TrackInfo *> MetaDataManager::createPlayList(const QString &path, TrackInf
     return list;
 }
 
-MetaDataModel* MetaDataManager::createMetaDataModel(const QString &path, QObject *parent) const
+MetaDataModel* MetaDataManager::createMetaDataModel(const QString &path, bool readOnly, QObject *parent) const
 {
     DecoderFactory *fact = 0;
     EngineFactory *efact = 0;
@@ -106,9 +106,9 @@ MetaDataModel* MetaDataManager::createMetaDataModel(const QString &path, QObject
         if(!QFile::exists(path))
             return 0;
         else if((fact = Decoder::findByFilePath(path, m_settings->determineFileTypeByContent())))
-            return fact->createMetaDataModel(path, parent);
+            return fact->createMetaDataModel(path, readOnly, parent);
         else if((efact = AbstractEngine::findByFilePath(path)))
-            return efact->createMetaDataModel(path, parent);
+            return efact->createMetaDataModel(path, readOnly, parent);
         return 0;
     }
     else
@@ -117,12 +117,12 @@ MetaDataModel* MetaDataManager::createMetaDataModel(const QString &path, QObject
         MetaDataModel *model = 0;
         if((fact = Decoder::findByProtocol(scheme)))
         {
-            return fact->createMetaDataModel(path, parent);
+            return fact->createMetaDataModel(path, readOnly, parent);
         }
         foreach(efact, AbstractEngine::enabledFactories())
         {
             if(efact->properties().protocols.contains(scheme))
-                model = efact->createMetaDataModel(path, parent);
+                model = efact->createMetaDataModel(path, readOnly, parent);
             if(model)
                 return model;
         }
@@ -273,7 +273,7 @@ MetaDataManager::CoverCacheItem *MetaDataManager::createCoverCacheItem(const QSt
 {
     CoverCacheItem *item = new CoverCacheItem;
     item->url = url;
-    MetaDataModel *model = createMetaDataModel(url);
+    MetaDataModel *model = createMetaDataModel(url, true, nullptr);
     if(model)
     {
         item->coverPath = model->coverPath();

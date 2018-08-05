@@ -42,7 +42,7 @@ CUEMetaDataModel::~CUEMetaDataModel()
 QList<MetaDataItem> CUEMetaDataModel::extraProperties() const
 {
     QList<MetaDataItem> ep;
-    MetaDataModel *model = MetaDataManager::instance()->createMetaDataModel(m_path);
+    MetaDataModel *model = MetaDataManager::instance()->createMetaDataModel(m_path, true, nullptr);
     if(model)
     {
         ep = model->extraProperties();

@@ -97,7 +97,7 @@ public:
      * @param parent Parent object.
      * @return MetaDataModel pointer.
      */
-    virtual MetaDataModel* createMetaDataModel(const QString &path, bool readOnly = true, QObject *parent = 0) = 0;
+    virtual MetaDataModel* createMetaDataModel(const QString &path, bool readOnly, QObject *parent) = 0;
     /*!
      * Shows settings dialog.
      * @param parent Parent widget.

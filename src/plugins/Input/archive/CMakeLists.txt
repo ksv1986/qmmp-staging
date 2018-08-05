@@ -15,7 +15,6 @@ ADD_DEFINITIONS(${archive_CFLAGS} ${TAGLIB_CFLAGS})
 
 SET(libarchive_SRCS
   archiveinputdevice.cpp
-  archivemetadatamodel.cpp
   decoder_archive.cpp
   archivetagreader.cpp
   decoderarchivefactory.cpp

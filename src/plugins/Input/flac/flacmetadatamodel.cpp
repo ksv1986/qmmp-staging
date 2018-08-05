@@ -116,12 +116,12 @@ VorbisCommentModel::VorbisCommentModel(TagLib::Ogg::XiphComment *tag, TagLib::Fi
 VorbisCommentModel::~VorbisCommentModel()
 {}
 
-const QString VorbisCommentModel::name()
+QString VorbisCommentModel::name() const
 {
     return "Vorbis Comment";
 }
 
-const QString VorbisCommentModel::value(Qmmp::MetaData key)
+QString VorbisCommentModel::value(Qmmp::MetaData key) const
 {
     if(!m_tag)
         return QString();

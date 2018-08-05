@@ -155,7 +155,7 @@ MpegFileTagModel::MpegFileTagModel(bool using_rusxmms, TagLib::MPEG::File *file,
 MpegFileTagModel::~MpegFileTagModel()
 {}
 
-const QString MpegFileTagModel::name()
+QString MpegFileTagModel::name() const
 {
     if (m_tagType == TagLib::MPEG::File::ID3v1)
         return "ID3v1";
@@ -164,7 +164,7 @@ const QString MpegFileTagModel::name()
     return "APE";
 }
 
-QList<Qmmp::MetaData> MpegFileTagModel::keys()
+QList<Qmmp::MetaData> MpegFileTagModel::keys() const
 {
     QList<Qmmp::MetaData> list = TagModel::keys();
     if (m_tagType == TagLib::MPEG::File::ID3v2)
@@ -180,7 +180,7 @@ QList<Qmmp::MetaData> MpegFileTagModel::keys()
     return list;
 }
 
-const QString MpegFileTagModel::value(Qmmp::MetaData key)
+QString MpegFileTagModel::value(Qmmp::MetaData key) const
 {
     QTextCodec *codec = m_codec;
 
@@ -351,7 +351,7 @@ void MpegFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
     }
 }
 
-bool MpegFileTagModel::exists()
+bool MpegFileTagModel::exists() const
 {
     return (m_tag != 0);
 }

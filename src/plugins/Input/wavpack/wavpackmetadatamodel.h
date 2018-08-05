@@ -47,8 +47,8 @@ class WavPackFileTagModel : public TagModel
 public:
     WavPackFileTagModel(WavpackContext *ctx);
     ~WavPackFileTagModel();
-    const QString name();
-    const QString value(Qmmp::MetaData key);
+    QString name() const;
+    QString value(Qmmp::MetaData key) const;
     void setValue(Qmmp::MetaData key, const QString &value);
     void save();
 

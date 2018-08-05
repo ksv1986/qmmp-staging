@@ -65,14 +65,14 @@ MPCFileTagModel::MPCFileTagModel(TagLib::MPC::File *file, TagLib::MPC::File::Tag
 MPCFileTagModel::~MPCFileTagModel()
 {}
 
-const QString MPCFileTagModel::name()
+QString MPCFileTagModel::name() const
 {
     if (m_tagType == TagLib::MPC::File::ID3v1)
         return "ID3v1";
     return "APE";
 }
 
-QList<Qmmp::MetaData> MPCFileTagModel::keys()
+QList<Qmmp::MetaData> MPCFileTagModel::keys() const
 {
     QList<Qmmp::MetaData> list = TagModel::keys();
     list.removeAll(Qmmp::DISCNUMBER);
@@ -84,7 +84,7 @@ QList<Qmmp::MetaData> MPCFileTagModel::keys()
     return list;
 }
 
-const QString MPCFileTagModel::value(Qmmp::MetaData key)
+QString MPCFileTagModel::value(Qmmp::MetaData key) const
 {
     if (m_tag)
     {
@@ -172,7 +172,7 @@ void MPCFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
     }
 }
 
-bool MPCFileTagModel::exists()
+bool MPCFileTagModel::exists() const
 {
     return (m_tag != 0);
 }

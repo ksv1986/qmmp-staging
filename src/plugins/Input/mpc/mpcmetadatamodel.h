@@ -47,11 +47,11 @@ class MPCFileTagModel : public TagModel
 public:
     MPCFileTagModel(TagLib::MPC::File *file, TagLib::MPC::File::TagTypes tagType);
     ~MPCFileTagModel();
-    const QString name();
-    QList<Qmmp::MetaData> keys();
-    const QString value(Qmmp::MetaData key);
+    QString name() const;
+    QList<Qmmp::MetaData> keys() const override;
+    QString value(Qmmp::MetaData key) const;
     void setValue(Qmmp::MetaData key, const QString &value);
-    bool exists();
+    bool exists() const override;
     void create();
     void remove();
     void save();

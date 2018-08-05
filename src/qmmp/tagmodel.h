@@ -23,6 +23,7 @@
 
 #include <QString>
 #include <QList>
+#include <QFlags>
 #include "qmmp.h"
 
 /*! @brief The StateHandler class provides is the base interface class of tag editor.
@@ -34,17 +35,19 @@ public:
     /*!
      * This enum describes tag editor capabilities
      */
-    enum Caps
+    enum ModelCap
     {
         NoOptions = 0x0,    /*!< No capabilities */
         CreateRemove = 0x1, /*!< Can create/remove tag */
         Save = 0x2,         /*!< Can save changes */
+        DefaultCaps = CreateRemove | Save,
     };
+    Q_DECLARE_FLAGS(ModelCaps, ModelCap)
     /*!
      * Constructor.
      * @param f Capabilities.
      */
-    TagModel(int f = TagModel::CreateRemove | TagModel::Save);
+    TagModel(ModelCaps f = DefaultCaps);
     /*!
      * Destructor.
      */
@@ -53,16 +56,16 @@ public:
      * Returns tag name.
      * Subclass should reimplement this fucntion.
      */
-    virtual const QString name() = 0;
+    virtual QString name() const = 0;
     /*!
      * Returns available keys. Default implementations returns all possible keys.
      */
-    virtual QList<Qmmp::MetaData> keys();
+    virtual QList<Qmmp::MetaData> keys() const;
     /*!
      * Returns the metdata string associated with the given \b key.
      * Subclass should reimplement this fucntion.
      */
-    virtual const QString value(Qmmp::MetaData key) = 0;
+    virtual QString value(Qmmp::MetaData key) const = 0;
     /*!
      * Changes metadata string associated with the given \b key to \b value.
      * Subclass should reimplement this fucntion.
@@ -76,7 +79,7 @@ public:
     /*!
      * Returns \b true if this tag exists; otherwise returns \b false.
      */
-    virtual bool exists();
+    virtual bool exists() const;
     /*!
      * Creates tag.
      */
@@ -95,7 +98,7 @@ public:
     int caps();
 
 private:
-    int m_f;
+    ModelCaps m_f;
 };
 
 #endif // TAGMODEL_H

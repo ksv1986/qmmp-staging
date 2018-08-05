@@ -49,8 +49,8 @@ class VorbisCommentModel : public TagModel
 public:
     VorbisCommentModel(TagLib::Ogg::Opus::File *file);
     ~VorbisCommentModel();
-    const QString name();
-    const QString value(Qmmp::MetaData key);
+    QString name() const;
+    QString value(Qmmp::MetaData key) const;
     void setValue(Qmmp::MetaData key, const QString &value);
     void save();
 

@@ -103,12 +103,12 @@ VorbisCommentModel::VorbisCommentModel(VorbisMetaDataModel *model) : TagModel(Ta
 VorbisCommentModel::~VorbisCommentModel()
 {}
 
-const QString VorbisCommentModel::name()
+QString VorbisCommentModel::name() const
 {
     return "Vorbis Comment";
 }
 
-const QString VorbisCommentModel::value(Qmmp::MetaData key)
+QString VorbisCommentModel::value(Qmmp::MetaData key) const
 {
     if(!m_model->m_tag || m_model->m_tag->isEmpty())
         return QString();

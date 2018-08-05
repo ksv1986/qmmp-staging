@@ -93,12 +93,12 @@ WavPackFileTagModel::WavPackFileTagModel(WavpackContext *ctx) : TagModel(TagMode
 WavPackFileTagModel::~WavPackFileTagModel()
 {}
 
-const QString WavPackFileTagModel::name()
+QString WavPackFileTagModel::name() const
 {
     return "ID3v1/APEv2";
 }
 
-const QString WavPackFileTagModel::value(Qmmp::MetaData key)
+QString WavPackFileTagModel::value(Qmmp::MetaData key) const
 {
     char value[200];
     memset(value,0,sizeof(value));

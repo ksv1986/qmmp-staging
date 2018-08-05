@@ -48,11 +48,11 @@ class MpegFileTagModel : public TagModel
 public:
     MpegFileTagModel(bool using_rusxmms, TagLib::MPEG::File *file, TagLib::MPEG::File::TagTypes tagType);
     ~MpegFileTagModel();
-    const QString name();
-    QList<Qmmp::MetaData> keys();
-    const QString value(Qmmp::MetaData key);
+    QString name() const;
+    QList<Qmmp::MetaData> keys() const override;
+    QString value(Qmmp::MetaData key) const;
     void setValue(Qmmp::MetaData key, const QString &value);
-    bool exists();
+    bool exists() const override;
     void create();
     void remove();
     void save();

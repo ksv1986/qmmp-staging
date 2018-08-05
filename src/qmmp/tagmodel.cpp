@@ -20,7 +20,7 @@
 
 #include "tagmodel.h"
 
-TagModel::TagModel(int f)
+TagModel::TagModel(ModelCaps f)
 {
     m_f = f;
 }
@@ -33,7 +33,7 @@ void TagModel::setValue(Qmmp::MetaData key, int value)
     setValue(key, QString::number(value));
 }
 
-QList<Qmmp::MetaData> TagModel::keys()
+QList<Qmmp::MetaData> TagModel::keys() const
 {
     QList<Qmmp::MetaData> list;
     list << Qmmp::TITLE;
@@ -54,7 +54,7 @@ int TagModel::caps()
     return m_f;
 }
 
-bool TagModel::exists()
+bool TagModel::exists() const
 {
     return true;
 }

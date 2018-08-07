@@ -240,7 +240,8 @@ void DetailsDialog::printInfo()
         items << MetaDataItem(tr("Format name"), m_info.value(Qmmp::FORMAT_NAME));
         items << MetaDataItem(tr("File size"), m_info.value(Qmmp::FILE_SIZE).toInt() / 1024, tr("KiB"));
     }
-    items << m_metaDataModel->extraProperties();
+    if(m_metaDataModel)
+        items << m_metaDataModel->extraProperties();
     foreach (MetaDataItem item, items)
         propertyRows += formatRow(item);
     propertyRows = propertyRows.trimmed();

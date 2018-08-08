@@ -155,7 +155,13 @@ void DetailsDialog::updatePage()
     QList<TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(m_info.path());
     if(!infoList.isEmpty())
     {
-        m_info = *infoList.first();
+        if(infoList.first()->parts() && TrackInfo::MetaData)
+            m_info.setValues(infoList.first()->metaData());
+        if(infoList.first()->parts() && TrackInfo::Properties)
+        {
+            m_info.updateValues(infoList.first()->properties());
+            m_info.setDuration(infoList.first()->duration());
+        }
     }
     qDeleteAll(infoList);
     infoList.clear();
@@ -277,7 +283,7 @@ QString DetailsDialog::formatRow(const QString &key, const QString &value) const
 
 QString DetailsDialog::formatRow(const MetaDataItem &item) const
 {
-    if(item.value().isNull() || item.name().isEmpty())
+    if(item.value().isNull() || item.name().isEmpty() || !item.value().isValid())
         return QString();
 
     QString value;
@@ -288,7 +294,7 @@ QString DetailsDialog::formatRow(const MetaDataItem &item) const
     else
         value = item.value().toString();
 
-    if(value.isEmpty())
+    if(value.isEmpty() || value == "0" || value == "0.0000")
         return QString();
 
     if(!item.suffix().isEmpty())

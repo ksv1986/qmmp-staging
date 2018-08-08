@@ -42,7 +42,6 @@ public:
 private:
     IODeviceStream *m_stream;
     TagLib::FileRef *m_file;
-    QString m_url;
 };
 
 #endif // ARCHIVETAGREADER_H

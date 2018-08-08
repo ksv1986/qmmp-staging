@@ -96,7 +96,6 @@ ArchiveTagReader::ArchiveTagReader(QIODevice *input, const QString &url)
 {
     m_stream = new IODeviceStream(input, url);
     m_file = new TagLib::FileRef(m_stream);
-    m_url = url;
 }
 
 ArchiveTagReader::~ArchiveTagReader()

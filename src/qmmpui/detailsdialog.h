@@ -22,7 +22,6 @@
 
 #include <QDialog>
 #include <QList>
-#include <QMap>
 #include <qmmp/qmmp.h>
 #include <qmmp/trackinfo.h>
 #include "qmmpui_export.h"

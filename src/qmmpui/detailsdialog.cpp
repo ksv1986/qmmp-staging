@@ -18,11 +18,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 #include <QDesktopServices>
-#include <QTextCodec>
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
-#include <QProcess>
 #include <QPushButton>
 #include <QStyle>
 #include <qmmp/metadatamanager.h>

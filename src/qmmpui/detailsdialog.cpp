@@ -28,6 +28,7 @@
 #include <qmmp/tagmodel.h>
 #include <qmmp/soundcore.h>
 #include "ui_detailsdialog.h"
+#include "metadataformatter.h"
 #include "playlisttrack.h"
 #include "tageditor_p.h"
 #include "coverviewer_p.h"
@@ -235,6 +236,8 @@ void DetailsDialog::printInfo()
 
     //properties
     QList<MetaDataItem> items;
+    if(m_info.duration() > 0)
+        items << MetaDataItem(tr("Duration"), MetaDataFormatter::formatDuration(m_info.duration()));
     if(!m_metaDataModel || !(m_metaDataModel->dialogHints() & MetaDataModel::COMPLETE_PROPERTY_LIST))
     {
         items << MetaDataItem(tr("Bitrate"), m_info.value(Qmmp::BITRATE).toInt(), tr("kbps"));

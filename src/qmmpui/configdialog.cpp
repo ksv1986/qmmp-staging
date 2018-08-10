@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -331,8 +331,10 @@ void ConfigDialog::loadLanguages()
     l["fr"] = tr("French");
     l["gl_ES"] = tr("Galician");
     l["de"] = tr("German");
+    l["el"] = tr("Greek");
     l["he"] = tr("Hebrew");
     l["hu"] = tr("Hungarian");
+    l["id"] = tr("Indonesian");
     l["it"] = tr("Italian");
     l["ja"] = tr("Japanese");
     l["kk"] = tr("Kazakh");
@@ -340,6 +342,7 @@ void ConfigDialog::loadLanguages()
     l["pl_PL"] = tr("Polish");
     l["pt"] = tr("Portuguese");
     l["ru_RU"] = tr("Russian");
+    l["sr_RS"] = tr("Serbian");
     l["sk"] = tr("Slovak");
     l["es"] = tr("Spanish");
     l["tr"] = tr("Turkish");

@@ -615,7 +615,7 @@
     <message>
         <location filename="../configdialog.cpp" line="334"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>греческий</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="335"/>
@@ -630,7 +630,7 @@
     <message>
         <location filename="../configdialog.cpp" line="337"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>индонезийский</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="338"/>
@@ -670,7 +670,7 @@
     <message>
         <location filename="../configdialog.cpp" line="345"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>сербский</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="346"/>
@@ -806,67 +806,67 @@
     <message>
         <location filename="../detailsdialog.cpp" line="240"/>
         <source>Duration</source>
-        <translation type="unfinished">Длительность</translation>
+        <translation>Длительность</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="243"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Битовая частота</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="243"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>кбит/с</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="244"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота дискретизации</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="244"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Гц</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="245"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Каналов</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="246"/>
         <source>Sample size</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрядность</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="246"/>
         <source>bits</source>
-        <translation type="unfinished"></translation>
+        <translation>бит</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="247"/>
         <source>Format name</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="248"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер файла</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="248"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>КиБ</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="292"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Да</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="292"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет</translation>
     </message>
 </context>
 <context>
@@ -975,37 +975,37 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Битовая частота</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="55"/>
         <source>Sample Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота дискретизации</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="56"/>
         <source>Number of Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Число каналов</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="57"/>
         <source>Sample Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрядность</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Декодер</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер файла</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="38"/>
@@ -1040,7 +1040,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="50"/>
         <source>Artist - [Year] Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Исполнитель - [год] альбом</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="52"/>

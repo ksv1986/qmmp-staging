@@ -32,9 +32,9 @@ Q_OBJECT
 public:
     OpusMetaDataModel(const QString &path, bool readOnly, QObject *parent);
     ~OpusMetaDataModel();
-    QList<MetaDataItem> extraProperties() const override;
-    QList<TagModel* > tags() const override;
-    QPixmap cover() const override;
+    QList<MetaDataItem> extraProperties() const;
+    QList<TagModel* > tags() const;
+    QPixmap cover() const;
 
 private:
     ulong readPictureBlockField(QByteArray data, int offset) const;

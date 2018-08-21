@@ -29,7 +29,7 @@ Q_OBJECT
 public:
     MplayerMetaDataModel(const QString &path, QObject *parent);
     ~MplayerMetaDataModel();
-    QList<MetaDataItem> extraProperties() const override;
+    QList<MetaDataItem> extraProperties() const;
 
 private:
     QString m_path;

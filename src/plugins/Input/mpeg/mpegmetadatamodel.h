@@ -33,9 +33,9 @@ Q_OBJECT
 public:
     MPEGMetaDataModel(bool using_rusxmms, const QString &path, bool readOnly, QObject *parent);
     ~MPEGMetaDataModel();
-    QList<MetaDataItem> extraProperties() const override;
-    QList<TagModel* > tags() const override;
-    QPixmap cover() const override;
+    QList<MetaDataItem> extraProperties() const;
+    QList<TagModel* > tags() const;
+    QPixmap cover() const;
 
 private:
     QList<TagModel* > m_tags;
@@ -49,10 +49,10 @@ public:
     MpegFileTagModel(bool using_rusxmms, TagLib::MPEG::File *file, TagLib::MPEG::File::TagTypes tagType);
     ~MpegFileTagModel();
     QString name() const;
-    QList<Qmmp::MetaData> keys() const override;
+    QList<Qmmp::MetaData> keys() const;
     QString value(Qmmp::MetaData key) const;
     void setValue(Qmmp::MetaData key, const QString &value);
-    bool exists() const override;
+    bool exists() const;
     void create();
     void remove();
     void save();

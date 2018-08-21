@@ -32,9 +32,9 @@ Q_OBJECT
 public:
     WavPackMetaDataModel(const QString &path, bool readOnly, QObject *parent);
     ~WavPackMetaDataModel();
-    QList<MetaDataItem> extraProperties() const override;
-    QList<TagModel* > tags() const override;
-    QString coverPath() const override;
+    QList<MetaDataItem> extraProperties() const;
+    QList<TagModel* > tags() const;
+    QString coverPath() const;
 
 private:
     WavpackContext *m_ctx;

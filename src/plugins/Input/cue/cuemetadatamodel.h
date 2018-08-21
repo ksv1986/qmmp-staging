@@ -31,8 +31,8 @@ Q_OBJECT
 public:
     CUEMetaDataModel(const QString &url, QObject *parent);
     ~CUEMetaDataModel();
-    QList<MetaDataItem> extraProperties() const override;
-    QString coverPath() const override;
+    QList<MetaDataItem> extraProperties() const;
+    QString coverPath() const;
 
 private:
     CUEParser *m_parser;

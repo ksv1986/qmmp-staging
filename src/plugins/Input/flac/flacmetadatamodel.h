@@ -33,9 +33,9 @@ Q_OBJECT
 public:
     FLACMetaDataModel(const QString &path, bool readOnly, QObject *parent);
     ~FLACMetaDataModel();
-    QList<TagModel* > tags() const override;
-    QPixmap cover() const override;
-    QString coverPath() const override;
+    QList<TagModel* > tags() const;
+    QPixmap cover() const;
+    QString coverPath() const;
 
 private:
     QString m_path;

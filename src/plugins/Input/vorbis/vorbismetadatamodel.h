@@ -37,8 +37,8 @@ public:
     ~VorbisMetaDataModel();
     friend class VorbisCommentModel;
 
-    QList<TagModel* > tags() const override;
-    QPixmap cover() const override;
+    QList<TagModel* > tags() const;
+    QPixmap cover() const;
 
 private:
     ulong readPictureBlockField(QByteArray data, int offset) const;

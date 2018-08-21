@@ -34,7 +34,7 @@ Q_OBJECT
 public:
     MPCMetaDataModel(const QString &path, bool readOnly, QObject *parent);
     ~MPCMetaDataModel();
-    QList<TagModel* > tags() const override;
+    QList<TagModel* > tags() const;
 
 private:
     QList<TagModel* > m_tags;
@@ -48,10 +48,10 @@ public:
     MPCFileTagModel(TagLib::MPC::File *file, TagLib::MPC::File::TagTypes tagType);
     ~MPCFileTagModel();
     QString name() const;
-    QList<Qmmp::MetaData> keys() const override;
+    QList<Qmmp::MetaData> keys() const;
     QString value(Qmmp::MetaData key) const;
     void setValue(Qmmp::MetaData key, const QString &value);
-    bool exists() const override;
+    bool exists() const;
     void create();
     void remove();
     void save();

@@ -32,8 +32,8 @@ Q_OBJECT
 public:
     ModPlugMetaDataModel(const QString &path, QObject *parent);
     ~ModPlugMetaDataModel();
-    QList<MetaDataItem> extraProperties() const override;
-    QList<MetaDataItem> descriptions() const override;
+    QList<MetaDataItem> extraProperties() const;
+    QList<MetaDataItem> descriptions() const;
     static QString getTypeName(quint32 type);
 
 private:

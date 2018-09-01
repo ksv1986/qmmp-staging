@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -299,10 +299,9 @@ void HttpStreamReader::run()
                          strdup((QmmpSettings::instance()->proxy().host() + ":" +
                                  QString("%1").arg(QmmpSettings::instance()->proxy().port())).
                                 toLatin1 ().constData ()));
-#if LIBCURL_VERSION_NUM >= 0x071304
     else
         curl_easy_setopt(m_handle, CURLOPT_NOPROXY, "*");
-#endif
+
     if (QmmpSettings::instance()->useProxyAuth())
         curl_easy_setopt(m_handle, CURLOPT_PROXYUSERPWD,
                          strdup((QmmpSettings::instance()->proxy().userName() + ":" +

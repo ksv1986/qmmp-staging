@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -45,8 +45,7 @@ OutputALSA::OutputALSA() : m_inited(false)
     m_prebuf_fill = 0;
     m_can_pause = false;
     m_chunk_size = 0;
-#if (SND_LIB_VERSION >= 0x01001B)
-    m_alsa_channels[SND_CHMAP_NA] =   Qmmp::CHAN_NULL;
+    m_alsa_channels[SND_CHMAP_NA]   = Qmmp::CHAN_NULL;
     m_alsa_channels[SND_CHMAP_MONO] = Qmmp::CHAN_FRONT_CENTER;
     m_alsa_channels[SND_CHMAP_FL]   = Qmmp::CHAN_FRONT_LEFT;
     m_alsa_channels[SND_CHMAP_FR]   = Qmmp::CHAN_FRONT_RIGHT;
@@ -57,7 +56,6 @@ OutputALSA::OutputALSA() : m_inited(false)
     m_alsa_channels[SND_CHMAP_SL]   = Qmmp::CHAN_SIDE_LEFT;
     m_alsa_channels[SND_CHMAP_SR]   = Qmmp::CHAN_SIDE_RIGHT;
     m_alsa_channels[SND_CHMAP_RC]   = Qmmp::CHAN_REAR_CENTER;
-#endif
 }
 
 OutputALSA::~OutputALSA()
@@ -211,7 +209,6 @@ bool OutputALSA::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat form
     qDebug("OutputALSA: can pause: %d", m_can_pause);
 
     ChannelMap out_map = map;
-#if (SND_LIB_VERSION >= 0x01001B)
     //channel map configuration
     snd_pcm_chmap_t *chmap = snd_pcm_get_chmap(pcm_handle);
     if(chmap)
@@ -233,7 +230,7 @@ bool OutputALSA::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat form
     }
     else
         qWarning("OutputALSA: Unable to receive current channel map");
-#endif
+
     configure(exact_rate, out_map, format); //apply configuration
     //create alsa prebuffer;
     m_prebuf_size = 2 * snd_pcm_frames_to_bytes(pcm_handle, m_chunk_size); //buffer for two periods

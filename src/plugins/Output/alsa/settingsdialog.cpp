@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 #include <QSettings>
-
 #include <qmmp/qmmp.h>
 
 extern "C"
@@ -91,7 +90,6 @@ void SettingsDialog::getCards()
 
 void SettingsDialog::getSoftDevices()
 {
-#if SND_LIB_VERSION >= 0x010016 //1.0.22
     void **hints = 0;
     int i = 0;
 
@@ -120,7 +118,6 @@ void SettingsDialog::getSoftDevices()
 
     if (hints)
         snd_device_name_free_hint (hints);
-#endif
 }
 
 void SettingsDialog::getCardDevices(int card)

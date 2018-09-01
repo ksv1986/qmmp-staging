@@ -81,9 +81,9 @@ Requirements:
 - libmad
 - libvorbis
 - libogg
-- libalsa >= 1.0.1
+- libalsa >= 1.0.22
 - taglib >= 1.10 (1.11 or higher is recommended)
-- curl >= 7.16
+- curl >= 7.19.4
 - libmpg123 >= 1.13.0 (optional)
 - qtmultimedia >= 5.4 (optional)
 - libmms >= 0.4 (optional)

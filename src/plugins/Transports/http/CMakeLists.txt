@@ -7,7 +7,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
 link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
 # libcurl
-pkg_search_module(CURL libcurl)
+pkg_search_module(CURL libcurl >= 7.19.4)
 include_directories(${CURL_INCLUDE_DIRS})
 link_directories(${CURL_LIBRARY_DIRS})
 ADD_DEFINITIONS(${CURL_CFLAGS})

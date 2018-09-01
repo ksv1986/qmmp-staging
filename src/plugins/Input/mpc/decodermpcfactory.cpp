@@ -35,13 +35,8 @@ bool DecoderMPCFactory::canDecode(QIODevice *input) const
     if (input->peek(buf, 4) != 4)
         return false;
 
-    if(!memcmp(buf, "MP+", 3))
-            return true;
-
-#ifndef MPC_OLD_API
-    if(!memcmp(buf, "MPCK", 4))
+    if(!memcmp(buf, "MP+", 3) || !memcmp(buf, "MPCK", 4))
         return true;
-#endif
 
     return false;
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk_UA">
+<TS version="2.1" language="uk_UA">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -615,7 +615,7 @@
     <message>
         <location filename="../configdialog.cpp" line="334"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Грецька</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="335"/>
@@ -630,7 +630,7 @@
     <message>
         <location filename="../configdialog.cpp" line="337"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Індонезійська</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="338"/>
@@ -670,7 +670,7 @@
     <message>
         <location filename="../configdialog.cpp" line="345"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Сербська</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="346"/>
@@ -806,67 +806,67 @@
     <message>
         <location filename="../detailsdialog.cpp" line="240"/>
         <source>Duration</source>
-        <translation type="unfinished">Тривалість</translation>
+        <translation>Тривалість</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="243"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Бітрейт</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="243"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>кб/с</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="244"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота дискретизації</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="244"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Гц</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="245"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Канали</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="246"/>
         <source>Sample size</source>
-        <translation type="unfinished"></translation>
+        <translation>Розмір семпла</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="246"/>
         <source>bits</source>
-        <translation type="unfinished"></translation>
+        <translation>біт</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="247"/>
         <source>Format name</source>
-        <translation type="unfinished"></translation>
+        <translation>Назва формату</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="248"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Розмір файла</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="248"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>КіБ</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="292"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Так</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="292"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Ні</translation>
     </message>
 </context>
 <context>
@@ -975,37 +975,37 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Бітрейт</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="55"/>
         <source>Sample Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота дискретизації</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="56"/>
         <source>Number of Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Кількість каналів</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="57"/>
         <source>Sample Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Розмір семпла</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Декодер</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Розмір файла</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="38"/>
@@ -1040,7 +1040,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="50"/>
         <source>Artist - [Year] Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Виконавець - [Рік] Альбом</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="52"/>

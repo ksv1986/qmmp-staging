@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>MplayerEngineFactory</name>
     <message>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
         <source>%1 KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 КіБ</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>

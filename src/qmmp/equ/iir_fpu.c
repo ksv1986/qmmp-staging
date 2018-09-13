@@ -122,8 +122,8 @@ __inline__ int iir(float *d, int samples, int nch)
         data_history[channel][band].y[i] =
           (
            /* 		= alpha * [x(n)-x(n-2)] */
-           iir_cf[band].alpha * ( data_history[band][channel].x[i]
-             -  data_history[band][channel].x[k])
+           iir_cf[band].alpha * ( data_history[channel][band].x[i]
+             -  data_history[channel][band].x[k])
            /* 		+ gamma * y(n-1) */
            + iir_cf[band].gamma * data_history[channel][band].y[j]
            /* 		- beta * y(n-2) */

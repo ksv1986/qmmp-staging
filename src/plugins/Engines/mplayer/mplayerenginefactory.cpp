@@ -66,10 +66,10 @@ QList<TrackInfo *> MplayerEngineFactory::createPlayList(const QString &path, Tra
     return info;
 }
 
-MetaDataModel* MplayerEngineFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
+MetaDataModel* MplayerEngineFactory::createMetaDataModel(const QString &path, bool readOnly)
 {
     Q_UNUSED(readOnly);
-    return new MplayerMetaDataModel(path, parent);
+    return new MplayerMetaDataModel(path);
 }
 
 void MplayerEngineFactory::showSettings(QWidget *parent)

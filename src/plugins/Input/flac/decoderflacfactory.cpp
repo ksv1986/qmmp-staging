@@ -195,10 +195,10 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
     return QList<TrackInfo *>() << info;
 }
 
-MetaDataModel* DecoderFLACFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
+MetaDataModel* DecoderFLACFactory::createMetaDataModel(const QString &path, bool readOnly)
 {
     if (!path.contains("://") || path.startsWith("flac://"))
-        return new FLACMetaDataModel(path, readOnly, parent);
+        return new FLACMetaDataModel(path, readOnly);
     else
         return 0;
 }

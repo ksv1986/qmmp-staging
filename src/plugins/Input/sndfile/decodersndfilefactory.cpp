@@ -208,7 +208,7 @@ QList<TrackInfo *> DecoderSndFileFactory::createPlayList(const QString &path, Tr
     return QList<TrackInfo *>() << info;
 }
 
-MetaDataModel* DecoderSndFileFactory::createMetaDataModel(const QString&, bool, QObject *)
+MetaDataModel* DecoderSndFileFactory::createMetaDataModel(const QString&, bool)
 {
     return 0;
 }

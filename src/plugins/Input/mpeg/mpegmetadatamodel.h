@@ -29,9 +29,9 @@ class QTextCodec;
 
 class MPEGMetaDataModel : public MetaDataModel
 {
-Q_OBJECT
+    Q_DECLARE_TR_FUNCTIONS(MPEGMetaDataModel)
 public:
-    MPEGMetaDataModel(bool using_rusxmms, const QString &path, bool readOnly, QObject *parent);
+    MPEGMetaDataModel(bool using_rusxmms, const QString &path, bool readOnly);
     ~MPEGMetaDataModel();
     QList<MetaDataItem> extraProperties() const;
     QList<TagModel* > tags() const;

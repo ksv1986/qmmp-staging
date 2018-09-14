@@ -361,9 +361,9 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
     return QList<TrackInfo*>() << info;
 }
 
-MetaDataModel* DecoderMPEGFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
+MetaDataModel* DecoderMPEGFactory::createMetaDataModel(const QString &path, bool readOnly)
 {
-   return new MPEGMetaDataModel(m_using_rusxmms, path, readOnly, parent);
+   return new MPEGMetaDataModel(m_using_rusxmms, path, readOnly);
 }
 
 void DecoderMPEGFactory::showSettings(QWidget *parent)

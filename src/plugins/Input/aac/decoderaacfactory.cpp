@@ -88,11 +88,10 @@ QList<TrackInfo *> DecoderAACFactory::createPlayList(const QString &path, TrackI
     return QList<TrackInfo*>() << info;
 }
 
-MetaDataModel* DecoderAACFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
+MetaDataModel* DecoderAACFactory::createMetaDataModel(const QString &path, bool readOnly)
 {
     Q_UNUSED(path);
     Q_UNUSED(readOnly);
-    Q_UNUSED(parent);
     return 0;
 }
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,8 +26,8 @@
 #include <taglib/tmap.h>
 #include "opusmetadatamodel.h"
 
-OpusMetaDataModel::OpusMetaDataModel(const QString &path, bool readOnly, QObject *parent)
-    : MetaDataModel(readOnly, parent)
+OpusMetaDataModel::OpusMetaDataModel(const QString &path, bool readOnly)
+    : MetaDataModel(readOnly)
 {
     m_path = path;
     m_stream = new TagLib::FileStream(QStringToFileName(path), readOnly);

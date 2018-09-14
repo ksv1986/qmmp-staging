@@ -21,16 +21,15 @@
 #ifndef MODPLUGMETADATAMODEL_H
 #define MODPLUGMETADATAMODEL_H
 
-
 #include <qmmp/metadatamodel.h>
 
 class CSoundFile;
 
 class ModPlugMetaDataModel : public MetaDataModel
 {
-Q_OBJECT
+    Q_DECLARE_TR_FUNCTIONS(ModPlugMetaDataModel)
 public:
-    ModPlugMetaDataModel(const QString &path, QObject *parent);
+    ModPlugMetaDataModel(const QString &path);
     ~ModPlugMetaDataModel();
     QList<MetaDataItem> extraProperties() const;
     QList<MetaDataItem> descriptions() const;

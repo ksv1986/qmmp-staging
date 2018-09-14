@@ -53,6 +53,11 @@ DetailsDialog::DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent)
 
 DetailsDialog::~DetailsDialog()
 {
+    if(m_metaDataModel)
+    {
+        delete m_metaDataModel;
+        m_metaDataModel = 0;
+    }
     delete m_ui;
 }
 
@@ -175,12 +180,12 @@ void DetailsDialog::updatePage()
 
     if(m_info.path().contains("://")) //URL
     {
-        m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), false, this);
+        m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), false);
     }
     else if(QFile::exists(m_info.path())) //local file
     {
         bool writable = QFileInfo(m_info.path()).isWritable();
-        m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), !writable, this);
+        m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), !writable);
     }
 
     if(m_metaDataModel)

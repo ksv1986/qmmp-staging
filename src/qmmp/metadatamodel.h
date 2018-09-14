@@ -24,7 +24,7 @@
 #include <QHash>
 #include <QList>
 #include <QString>
-#include <QObject>
+#include <QCoreApplication>
 #include <QPixmap>
 #include <QVariant>
 #include <QFlags>
@@ -51,9 +51,8 @@ private:
 /*! @brief The MetaDataModel is the base interface class of metadata access.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QMMP_EXPORT MetaDataModel : public QObject
+class QMMP_EXPORT MetaDataModel
 {
-Q_OBJECT
 public:
     enum DialogHint
     {
@@ -64,9 +63,8 @@ public:
     Q_DECLARE_FLAGS(DialogHints, DialogHint)
     /*!
      * Constructor.
-     * @param parent Parent Object.
      */
-    MetaDataModel(bool readOnly, QObject *parent = 0);
+    MetaDataModel(bool readOnly);
     /*!
      * Destructor.
      */

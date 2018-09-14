@@ -28,9 +28,9 @@ extern "C"{
 
 class WavPackMetaDataModel : public MetaDataModel
 {
-Q_OBJECT
+    Q_DECLARE_TR_FUNCTIONS(WavPackMetaDataModel)
 public:
-    WavPackMetaDataModel(const QString &path, bool readOnly, QObject *parent);
+    WavPackMetaDataModel(const QString &path, bool readOnly);
     ~WavPackMetaDataModel();
     QList<MetaDataItem> extraProperties() const;
     QList<TagModel* > tags() const;

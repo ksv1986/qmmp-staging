@@ -25,9 +25,9 @@
 
 class MplayerMetaDataModel : public MetaDataModel
 {
-Q_OBJECT
+    Q_DECLARE_TR_FUNCTIONS(MplayerMetaDataModel)
 public:
-    MplayerMetaDataModel(const QString &path, QObject *parent);
+    MplayerMetaDataModel(const QString &path);
     ~MplayerMetaDataModel();
     QList<MetaDataItem> extraProperties() const;
 

@@ -27,9 +27,8 @@ class CUEParser;
 
 class CUEMetaDataModel : public MetaDataModel
 {
-Q_OBJECT
 public:
-    CUEMetaDataModel(const QString &url, QObject *parent);
+    CUEMetaDataModel(const QString &url);
     ~CUEMetaDataModel();
     QList<MetaDataItem> extraProperties() const;
     QString coverPath() const;

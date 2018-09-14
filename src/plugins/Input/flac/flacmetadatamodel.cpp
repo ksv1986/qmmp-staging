@@ -27,7 +27,7 @@
 #include <qmmp/metadatamanager.h>
 #include "flacmetadatamodel.h"
 
-FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly, QObject *parent) : MetaDataModel(true, parent)
+FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly) : MetaDataModel(true)
 {
     m_file = 0;
     m_stream = 0;

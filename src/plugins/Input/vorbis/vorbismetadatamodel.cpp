@@ -26,8 +26,8 @@
 #include <taglib/tmap.h>
 #include "vorbismetadatamodel.h"
 
-VorbisMetaDataModel::VorbisMetaDataModel(const QString &path, bool readOnly, QObject *parent)
-    : MetaDataModel(readOnly, parent)
+VorbisMetaDataModel::VorbisMetaDataModel(const QString &path, bool readOnly)
+    : MetaDataModel(readOnly)
 {
     m_path = path;
     m_stream = new TagLib::FileStream(QStringToFileName(path), readOnly);

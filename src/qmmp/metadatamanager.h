@@ -60,10 +60,9 @@ public:
     /*!
      * Creats metadata object, which provides full access to file tags.
      * @param url File path or URL.
-     * @param parent Parent object.
      * @return MetaDataModel pointer or null pointer.
      */
-    MetaDataModel* createMetaDataModel(const QString &url, bool readOnly, QObject *parent) const;
+    MetaDataModel* createMetaDataModel(const QString &url, bool readOnly) const;
     /*!
      * Returns a list of file name filters with description, i.e. "MPEG Files (*.mp3 *.mpg)"
      */

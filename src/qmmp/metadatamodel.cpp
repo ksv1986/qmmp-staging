@@ -54,7 +54,7 @@ void MetaDataItem::setSuffix(const QString &suffix)
     m_suffix = suffix;
 }
 
-MetaDataModel::MetaDataModel(bool readOnly, QObject *parent) : QObject(parent), m_readOnly(readOnly)
+MetaDataModel::MetaDataModel(bool readOnly) : m_readOnly(readOnly)
 {
     m_dialogHints = NO_HINTS;
 }

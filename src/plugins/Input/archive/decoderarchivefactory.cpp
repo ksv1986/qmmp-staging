@@ -136,11 +136,10 @@ QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, Tr
     return list;
 }
 
-MetaDataModel* DecoderArchiveFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
+MetaDataModel* DecoderArchiveFactory::createMetaDataModel(const QString &path, bool readOnly)
 {
     Q_UNUSED(path);
     Q_UNUSED(readOnly);
-    Q_UNUSED(parent);
     return 0;
 }
 

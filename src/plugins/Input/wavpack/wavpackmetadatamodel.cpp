@@ -22,8 +22,8 @@
 #include <qmmp/metadatamanager.h>
 #include "wavpackmetadatamodel.h"
 
-WavPackMetaDataModel::WavPackMetaDataModel(const QString &path, bool readOnly, QObject *parent)
-    : MetaDataModel(readOnly, parent)
+WavPackMetaDataModel::WavPackMetaDataModel(const QString &path, bool readOnly)
+    : MetaDataModel(readOnly)
 {
     if(path.contains("://"))
     {

@@ -29,11 +29,11 @@
 
 #define MAX_MESSAGE_LENGTH 4000
 
-ModPlugMetaDataModel::ModPlugMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(true, parent)
+ModPlugMetaDataModel::ModPlugMetaDataModel(const QString &path) : MetaDataModel(true)
 {
     m_soundFile = 0;
     m_path = path;
-    ArchiveReader reader(this);
+    ArchiveReader reader(nullptr);
     if(reader.isSupported(m_path))
     {
         m_buffer = reader.unpack(m_path);

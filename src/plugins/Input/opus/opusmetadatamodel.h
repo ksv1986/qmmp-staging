@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -28,9 +28,9 @@
 
 class OpusMetaDataModel : public MetaDataModel
 {
-Q_OBJECT
+    Q_DECLARE_TR_FUNCTIONS(OpusMetaDataModel)
 public:
-    OpusMetaDataModel(const QString &path, bool readOnly, QObject *parent);
+    OpusMetaDataModel(const QString &path, bool readOnly);
     ~OpusMetaDataModel();
     QList<MetaDataItem> extraProperties() const;
     QList<TagModel* > tags() const;

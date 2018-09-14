@@ -21,7 +21,7 @@
 #include <stdint.h>
 #include "ffmpegmetadatamodel.h"
 
-FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(true, parent)
+FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path) : MetaDataModel(true)
 {
     m_in = 0;
 #ifdef Q_OS_WIN

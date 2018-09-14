@@ -96,11 +96,10 @@ QList<TrackInfo *> DecoderSIDFactory::createPlayList(const QString &path, TrackI
     return list;
 }
 
-MetaDataModel* DecoderSIDFactory::createMetaDataModel(const QString &path, bool readOnly, QObject *parent)
+MetaDataModel* DecoderSIDFactory::createMetaDataModel(const QString &path, bool readOnly)
 {
     Q_UNUSED(path);
     Q_UNUSED(readOnly);
-    Q_UNUSED(parent);
     return 0;
 }
 

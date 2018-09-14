@@ -24,7 +24,7 @@
 #include <QProcess>
 #include "mplayermetadatamodel.h"
 
-MplayerMetaDataModel::MplayerMetaDataModel(const QString &path, QObject *parent) : MetaDataModel(true, parent)
+MplayerMetaDataModel::MplayerMetaDataModel(const QString &path) : MetaDataModel(true)
 {
     m_path = path;
     setDialogHints(MetaDataModel::COMPLETE_PROPERTY_LIST);

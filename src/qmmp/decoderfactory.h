@@ -94,10 +94,9 @@ public:
     /*!
      * Creats metadata object, which provides full access to file tags.
      * @param path File path.
-     * @param parent Parent object.
      * @return MetaDataModel pointer.
      */
-    virtual MetaDataModel* createMetaDataModel(const QString &path, bool readOnly, QObject *parent) = 0;
+    virtual MetaDataModel* createMetaDataModel(const QString &path, bool readOnly) = 0;
     /*!
      * Shows settings dialog.
      * @param parent Parent widget.

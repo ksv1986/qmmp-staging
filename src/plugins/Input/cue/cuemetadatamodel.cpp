@@ -22,7 +22,7 @@
 #include "cueparser.h"
 #include "cuemetadatamodel.h"
 
-CUEMetaDataModel::CUEMetaDataModel(const QString &url, QObject *parent) : MetaDataModel(true, parent)
+CUEMetaDataModel::CUEMetaDataModel(const QString &url) : MetaDataModel(true)
 {
     m_parser = new CUEParser(url);
     if (m_parser->count() == 0)
@@ -42,7 +42,7 @@ CUEMetaDataModel::~CUEMetaDataModel()
 QList<MetaDataItem> CUEMetaDataModel::extraProperties() const
 {
     QList<MetaDataItem> ep;
-    MetaDataModel *model = MetaDataManager::instance()->createMetaDataModel(m_path, true, nullptr);
+    MetaDataModel *model = MetaDataManager::instance()->createMetaDataModel(m_path, true);
     if(model)
     {
         ep = model->extraProperties();

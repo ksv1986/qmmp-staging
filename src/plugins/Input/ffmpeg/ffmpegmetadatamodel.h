@@ -33,9 +33,8 @@ extern "C"{
 
 class FFmpegMetaDataModel : public MetaDataModel
 {
-Q_OBJECT
 public:
-    FFmpegMetaDataModel(const QString &path, QObject *parent);
+    FFmpegMetaDataModel(const QString &path);
     ~FFmpegMetaDataModel();
     QPixmap cover() const;
 

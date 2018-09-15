@@ -82,6 +82,14 @@ QPixmap MetaDataModel::cover() const
     return QPixmap();
 }
 
+void MetaDataModel::setCover(const QPixmap &pix) const
+{
+    Q_UNUSED(pix);
+}
+
+void MetaDataModel::removeCover() const
+{}
+
 QString MetaDataModel::coverPath() const
 {
     return QString();

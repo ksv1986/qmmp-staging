@@ -31,7 +31,7 @@
 #include "metadataformatter.h"
 #include "playlisttrack.h"
 #include "tageditor_p.h"
-#include "coverviewer_p.h"
+#include "covereditor_p.h"
 #include "detailsdialog.h"
 
 DetailsDialog::DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent)
@@ -170,13 +170,17 @@ void DetailsDialog::updatePage()
     qDeleteAll(infoList);
     infoList.clear();
 
-    QPixmap cover = MetaDataManager::instance()->getCover(m_info.path());
-    if(!cover.isNull())
+    //QPixmap cover = MetaDataManager::instance()->getCover(m_info.path());
+    /*if(!cover.isNull())
     {
         CoverViewer *coverViewer = new CoverViewer(this);
         coverViewer->setPixmap(cover);
         m_ui->tabWidget->addTab(coverViewer, tr("Cover"));
-    }
+    }*/
+
+    CoverEditor *coverEditor = new CoverEditor(this);
+    m_ui->tabWidget->addTab(coverEditor, tr("Cover"));
+
 
     if(m_info.path().contains("://")) //URL
     {

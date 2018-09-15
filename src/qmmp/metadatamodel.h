@@ -82,6 +82,8 @@ public:
      * Subclass should reimplement this function. Default implementation returns empty pixmap.
      */
     virtual QPixmap cover() const;
+    virtual void setCover(const QPixmap &pix) const;
+    virtual void removeCover() const;
     /*!
      * Returns path to cover pixmap.
      */

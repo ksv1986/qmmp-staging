@@ -73,7 +73,8 @@ HEADERS += general.h \
     metadatahelper_p.h \
     coverviewer_p.h \
     metadataformattermenu.h \
-    qmmpui_export.h
+    qmmpui_export.h \
+    covereditor_p.h
 
 SOURCES += general.cpp \
     playlistparser.cpp \
@@ -112,7 +113,8 @@ SOURCES += general.cpp \
     playlistheadermodel.cpp \
     metadatahelper.cpp \
     coverviewer.cpp \
-    metadataformattermenu.cpp
+    metadataformattermenu.cpp \
+    covereditor.cpp
 
 FORMS += forms/detailsdialog.ui \
     forms/tageditor.ui \
@@ -121,7 +123,8 @@ FORMS += forms/detailsdialog.ui \
     forms/configdialog.ui \
     forms/aboutdialog.ui \
     forms/addurldialog.ui \
-    forms/columneditor.ui
+    forms/columneditor.ui \
+    forms/covereditor.ui
 
 unix:DESTDIR = .
 RESOURCES += translations/libqmmpui_locales.qrc \

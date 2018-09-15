@@ -95,7 +95,7 @@ public:
     /*!
      * Returns capability flags.
      */
-    int caps();
+    ModelCaps caps() const;
 
 private:
     ModelCaps m_f;

@@ -739,19 +739,25 @@
 <context>
     <name>CoverViewer</name>
     <message>
-        <location filename="../coverviewer.cpp" line="30"/>
+        <location filename="../coverviewer.cpp" line="35"/>
         <source>&amp;Save As...</source>
         <translation>&amp;Guardar como...</translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="52"/>
+        <location filename="../coverviewer.cpp" line="68"/>
         <source>Save Cover As</source>
         <translation>Guardar capa como</translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="54"/>
+        <location filename="../coverviewer.cpp" line="70"/>
+        <location filename="../coverviewer.cpp" line="83"/>
         <source>Images</source>
         <translation>Imagens</translation>
+    </message>
+    <message>
+        <location filename="../coverviewer.cpp" line="81"/>
+        <source>Open Image</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -777,127 +783,127 @@
         <translation>Resumo</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="152"/>
+        <location filename="../detailsdialog.cpp" line="162"/>
         <source>%1/%2</source>
         <translation>%1/%2</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="198"/>
+        <location filename="../detailsdialog.cpp" line="208"/>
         <source>Cover</source>
         <translation>Capa de álbum</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="228"/>
+        <location filename="../detailsdialog.cpp" line="238"/>
         <source>Title</source>
         <translation>Título</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="229"/>
+        <location filename="../detailsdialog.cpp" line="239"/>
         <source>Artist</source>
         <translation>Artista</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="230"/>
+        <location filename="../detailsdialog.cpp" line="240"/>
         <source>Album artist</source>
         <translation>Artista do álbum</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="231"/>
+        <location filename="../detailsdialog.cpp" line="241"/>
         <source>Album</source>
         <translation>Álbum</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="232"/>
+        <location filename="../detailsdialog.cpp" line="242"/>
         <source>Comment</source>
         <translation>Comentário</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="233"/>
+        <location filename="../detailsdialog.cpp" line="243"/>
         <source>Genre</source>
         <translation>Género</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="234"/>
+        <location filename="../detailsdialog.cpp" line="244"/>
         <source>Composer</source>
         <translation>Compositor</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="235"/>
+        <location filename="../detailsdialog.cpp" line="245"/>
         <source>Year</source>
         <translation>Ano</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="236"/>
+        <location filename="../detailsdialog.cpp" line="246"/>
         <source>Track</source>
         <translation>Faixa</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="237"/>
+        <location filename="../detailsdialog.cpp" line="247"/>
         <source>Disc number</source>
         <translation>Número do disco</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="255"/>
+        <location filename="../detailsdialog.cpp" line="265"/>
         <source>Duration</source>
         <translation type="unfinished">Duração</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="258"/>
+        <location filename="../detailsdialog.cpp" line="268"/>
         <source>Bitrate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="258"/>
+        <location filename="../detailsdialog.cpp" line="268"/>
         <source>kbps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="259"/>
+        <location filename="../detailsdialog.cpp" line="269"/>
         <source>Sample rate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="259"/>
+        <location filename="../detailsdialog.cpp" line="269"/>
         <source>Hz</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="260"/>
+        <location filename="../detailsdialog.cpp" line="270"/>
         <source>Channels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="261"/>
+        <location filename="../detailsdialog.cpp" line="271"/>
         <source>Sample size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="261"/>
+        <location filename="../detailsdialog.cpp" line="271"/>
         <source>bits</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="262"/>
+        <location filename="../detailsdialog.cpp" line="272"/>
         <source>Format name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="263"/>
+        <location filename="../detailsdialog.cpp" line="273"/>
         <source>File size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="263"/>
+        <location filename="../detailsdialog.cpp" line="273"/>
         <source>KiB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="307"/>
+        <location filename="../detailsdialog.cpp" line="317"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="307"/>
+        <location filename="../detailsdialog.cpp" line="317"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>

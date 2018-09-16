@@ -14,22 +14,22 @@
         <translation>Миди фајлови</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="107"/>
+        <location filename="../decoderwildmidifactory.cpp" line="106"/>
         <source>About WildMidi Audio Plugin</source>
         <translation>О ВајлдМиди прикључку</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="108"/>
+        <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>Qmmp WildMidi Audio Plugin</source>
         <translation>Кумп ВајлдМиди прикључак</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="109"/>
+        <location filename="../decoderwildmidifactory.cpp" line="108"/>
         <source>This plugin uses WildMidi library to play midi files</source>
         <translation>Користи WildMidi библиотеку за пуштање миди фајлова</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="110"/>
+        <location filename="../decoderwildmidifactory.cpp" line="109"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Аутор: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

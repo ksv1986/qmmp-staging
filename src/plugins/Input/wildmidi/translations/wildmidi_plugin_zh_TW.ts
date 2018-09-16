@@ -14,22 +14,22 @@
         <translation>Midi 文件</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="107"/>
+        <location filename="../decoderwildmidifactory.cpp" line="106"/>
         <source>About WildMidi Audio Plugin</source>
         <translation>關於 WildMidi 外掛</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="108"/>
+        <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>Qmmp WildMidi Audio Plugin</source>
         <translation>Qmmp WildMidi 外掛</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="109"/>
+        <location filename="../decoderwildmidifactory.cpp" line="108"/>
         <source>This plugin uses WildMidi library to play midi files</source>
         <translation>此插件使用 WildMidi 庫來播放 Midi 文件</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="110"/>
+        <location filename="../decoderwildmidifactory.cpp" line="109"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

@@ -9,27 +9,27 @@
         <translation>תוסף תקליטור שמע</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="85"/>
+        <location filename="../decodercdaudiofactory.cpp" line="84"/>
         <source>About CD Audio Plugin</source>
         <translation>אודות תוסף תקליטור שמע</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="86"/>
+        <location filename="../decodercdaudiofactory.cpp" line="85"/>
         <source>Qmmp CD Audio Plugin</source>
         <translation>תוסף תקליטור שמע של Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="87"/>
+        <location filename="../decodercdaudiofactory.cpp" line="86"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
         <translation>הודר כנגד libcdio-%1 וגם libcddb-%2</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="89"/>
+        <location filename="../decodercdaudiofactory.cpp" line="88"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="90"/>
+        <location filename="../decodercdaudiofactory.cpp" line="89"/>
         <source>Usage: open cdda:/// using Add URL dialog or command line</source>
         <translation>שימוש: פתח cdda‪:///‬ באמצעות דו שיח הוסף URL או שורת פקודה</translation>
     </message>

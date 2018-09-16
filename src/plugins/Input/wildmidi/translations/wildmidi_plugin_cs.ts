@@ -14,22 +14,22 @@
         <translation>Soubory Midi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="107"/>
+        <location filename="../decoderwildmidifactory.cpp" line="106"/>
         <source>About WildMidi Audio Plugin</source>
         <translation>O modulu WildMidi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="108"/>
+        <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>Qmmp WildMidi Audio Plugin</source>
         <translation>Modul Qmmp WildMidi</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="109"/>
+        <location filename="../decoderwildmidifactory.cpp" line="108"/>
         <source>This plugin uses WildMidi library to play midi files</source>
         <translation>Tento modul využívá knihovnu WildMidi pro přehrávání Midi souborů</translation>
     </message>
     <message>
-        <location filename="../decoderwildmidifactory.cpp" line="110"/>
+        <location filename="../decoderwildmidifactory.cpp" line="109"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

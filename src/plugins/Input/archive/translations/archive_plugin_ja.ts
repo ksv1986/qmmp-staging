@@ -14,22 +14,22 @@
         <translation>書庫形式</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="152"/>
+        <location filename="../decoderarchivefactory.cpp" line="151"/>
         <source>About Archive Reader Plugin</source>
         <translation>書庫プラグインについて</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="153"/>
+        <location filename="../decoderarchivefactory.cpp" line="152"/>
         <source>Qmmp Archive Reader Plugin</source>
         <translation>QMMP 書庫プラグイン</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="154"/>
+        <location filename="../decoderarchivefactory.cpp" line="153"/>
         <source>Compiled against %1</source>
         <translation>%1 を使用してコンパイル</translation>
     </message>
     <message>
-        <location filename="../decoderarchivefactory.cpp" line="155"/>
+        <location filename="../decoderarchivefactory.cpp" line="154"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>制作: Илья Котов (Ilya Kotov) &lt;forkotov02@ya.ru&gt;</translation>
     </message>

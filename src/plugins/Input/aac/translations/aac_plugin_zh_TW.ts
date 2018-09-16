@@ -14,17 +14,17 @@
         <translation>AAC 檔案</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="104"/>
+        <location filename="../decoderaacfactory.cpp" line="103"/>
         <source>About AAC Audio Plugin</source>
         <translation>關於 AAC 聲訊插件</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="105"/>
+        <location filename="../decoderaacfactory.cpp" line="104"/>
         <source>Qmmp AAC Audio Plugin</source>
         <translation>Qmmp AAC 聲訊插件</translation>
     </message>
     <message>
-        <location filename="../decoderaacfactory.cpp" line="106"/>
+        <location filename="../decoderaacfactory.cpp" line="105"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

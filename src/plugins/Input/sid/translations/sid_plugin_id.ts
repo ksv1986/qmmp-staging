@@ -14,22 +14,22 @@
         <translation>File SID</translation>
     </message>
     <message>
-        <location filename="../decodersidfactory.cpp" line="115"/>
+        <location filename="../decodersidfactory.cpp" line="114"/>
         <source>About SID Audio Plugin</source>
         <translation>Tentang Plugin Audio SID</translation>
     </message>
     <message>
-        <location filename="../decodersidfactory.cpp" line="116"/>
+        <location filename="../decodersidfactory.cpp" line="115"/>
         <source>Qmmp SID Audio Plugin</source>
         <translation>Plugin Audio SID Qmmp</translation>
     </message>
     <message>
-        <location filename="../decodersidfactory.cpp" line="117"/>
+        <location filename="../decodersidfactory.cpp" line="116"/>
         <source>This plugin plays Commodore 64 music files using libsidplayfp library</source>
         <translation>Plugin ini memutar file-file musik Commodore 64 menggunakan pustaka libsidplayfp</translation>
     </message>
     <message>
-        <location filename="../decodersidfactory.cpp" line="118"/>
+        <location filename="../decodersidfactory.cpp" line="117"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

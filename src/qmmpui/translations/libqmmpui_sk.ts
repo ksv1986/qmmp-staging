@@ -704,6 +704,39 @@
     </message>
 </context>
 <context>
+    <name>CoverEditor</name>
+    <message>
+        <location filename="../forms/covereditor.ui" line="22"/>
+        <source>Image source:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/covereditor.ui" line="76"/>
+        <source>Load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/covereditor.ui" line="83"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/covereditor.ui" line="90"/>
+        <source>Save as...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../covereditor.cpp" line="33"/>
+        <source>External file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../covereditor.cpp" line="34"/>
+        <source>Tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CoverViewer</name>
     <message>
         <location filename="../coverviewer.cpp" line="30"/>
@@ -711,12 +744,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="57"/>
+        <location filename="../coverviewer.cpp" line="52"/>
         <source>Save Cover As</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverviewer.cpp" line="59"/>
+        <location filename="../coverviewer.cpp" line="54"/>
         <source>Images</source>
         <translation type="unfinished"></translation>
     </message>
@@ -744,127 +777,127 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="147"/>
+        <location filename="../detailsdialog.cpp" line="152"/>
         <source>%1/%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="173"/>
+        <location filename="../detailsdialog.cpp" line="198"/>
         <source>Cover</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="213"/>
+        <location filename="../detailsdialog.cpp" line="228"/>
         <source>Title</source>
         <translation type="unfinished">Názov</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="214"/>
+        <location filename="../detailsdialog.cpp" line="229"/>
         <source>Artist</source>
         <translation type="unfinished">Interprét</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="215"/>
+        <location filename="../detailsdialog.cpp" line="230"/>
         <source>Album artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="216"/>
+        <location filename="../detailsdialog.cpp" line="231"/>
         <source>Album</source>
         <translation type="unfinished">Album</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="217"/>
+        <location filename="../detailsdialog.cpp" line="232"/>
         <source>Comment</source>
         <translation type="unfinished">Poznámka</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="218"/>
+        <location filename="../detailsdialog.cpp" line="233"/>
         <source>Genre</source>
         <translation type="unfinished">Žáner</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="219"/>
+        <location filename="../detailsdialog.cpp" line="234"/>
         <source>Composer</source>
         <translation type="unfinished">Skladateľ</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="220"/>
+        <location filename="../detailsdialog.cpp" line="235"/>
         <source>Year</source>
         <translation type="unfinished">Rok</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="221"/>
+        <location filename="../detailsdialog.cpp" line="236"/>
         <source>Track</source>
         <translation type="unfinished">Skladba</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="222"/>
+        <location filename="../detailsdialog.cpp" line="237"/>
         <source>Disc number</source>
         <translation type="unfinished">Číslo disku</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="240"/>
+        <location filename="../detailsdialog.cpp" line="255"/>
         <source>Duration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="243"/>
+        <location filename="../detailsdialog.cpp" line="258"/>
         <source>Bitrate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="243"/>
+        <location filename="../detailsdialog.cpp" line="258"/>
         <source>kbps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="244"/>
+        <location filename="../detailsdialog.cpp" line="259"/>
         <source>Sample rate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="244"/>
+        <location filename="../detailsdialog.cpp" line="259"/>
         <source>Hz</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="245"/>
+        <location filename="../detailsdialog.cpp" line="260"/>
         <source>Channels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="246"/>
+        <location filename="../detailsdialog.cpp" line="261"/>
         <source>Sample size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="246"/>
+        <location filename="../detailsdialog.cpp" line="261"/>
         <source>bits</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="247"/>
+        <location filename="../detailsdialog.cpp" line="262"/>
         <source>Format name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="248"/>
+        <location filename="../detailsdialog.cpp" line="263"/>
         <source>File size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="248"/>
+        <location filename="../detailsdialog.cpp" line="263"/>
         <source>KiB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="292"/>
+        <location filename="../detailsdialog.cpp" line="307"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="292"/>
+        <location filename="../detailsdialog.cpp" line="307"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>

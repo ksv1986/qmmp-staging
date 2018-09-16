@@ -40,13 +40,17 @@ public:
 
     void setPixmap(const QPixmap&);
     bool hasPixmap() const;
+    const QPixmap &pixmap() const;
 
 public slots:
     void saveAs();
+    void load();
+    void clear();
 
 private:
     void paintEvent(QPaintEvent *);
     QPixmap m_pixmap;
+    QString m_lastDir;
 };
 
 #endif

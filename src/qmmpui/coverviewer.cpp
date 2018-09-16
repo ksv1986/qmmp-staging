@@ -21,6 +21,11 @@
 #include <QPainter>
 #include <QPaintEvent>
 #include <QAction>
+#include <QSettings>
+#include <QStandardPaths>
+#include <QVariant>
+#include <QFileInfo>
+#include <qmmp/qmmp.h>
 #include "filedialog.h"
 #include "coverviewer_p.h"
 
@@ -31,10 +36,16 @@ CoverViewer::CoverViewer(QWidget *parent)
     connect(saveAsAction, SIGNAL(triggered()), SLOT(saveAs()));
     addAction(saveAsAction);
     setContextMenuPolicy(Qt::ActionsContextMenu);
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    m_lastDir = QStandardPaths::writableLocation(QStandardPaths::PicturesLocation);
+    m_lastDir = settings.value("CoverEditor/last_dir", m_lastDir).toString();
 }
 
 CoverViewer::~CoverViewer()
-{}
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.setValue("CoverEditor/last_dir", m_lastDir);
+}
 
 void CoverViewer::setPixmap(const QPixmap &pixmap)
 {
@@ -47,14 +58,43 @@ bool CoverViewer::hasPixmap() const
     return !m_pixmap.isNull();
 }
 
+const QPixmap &CoverViewer::pixmap() const
+{
+    return m_pixmap;
+}
+
 void CoverViewer::saveAs()
 {
     QString path = FileDialog::getSaveFileName(this, tr("Save Cover As"),
-                                               QDir::homePath() + "/cover.jpg",
+                                               m_lastDir + "/cover.jpg",
                                                tr("Images") +" (*.png *.jpg)");
 
     if (!path.isEmpty())
+    {
+        m_lastDir = QFileInfo(path).absoluteDir().path();
         m_pixmap.save(path);
+    }
+}
+
+void CoverViewer::load()
+{
+    QString path = FileDialog::getOpenFileName(this, tr("Open Image"),
+                                               m_lastDir,
+                                               tr("Images") +" (*.png *.jpg)");
+    if(!path.isEmpty())
+    {
+        m_lastDir = QFileInfo(path).absoluteDir().path();
+        m_pixmap.load(path);
+        if(m_pixmap.width() > 512)
+            m_pixmap = m_pixmap.scaled(512, 512, Qt::KeepAspectRatio);
+    }
+    update();
+}
+
+void CoverViewer::clear()
+{
+    m_pixmap = QPixmap();
+    update();
 }
 
 void CoverViewer::paintEvent(QPaintEvent *)

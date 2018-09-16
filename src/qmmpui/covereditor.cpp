@@ -56,7 +56,7 @@ bool CoverEditor::isEditable() const
 
 void CoverEditor::save()
 {
-
+    m_viewer->hasPixmap() ? m_model->setCover(m_viewer->pixmap()) : m_model->removeCover();
 }
 
 void CoverEditor::on_sourceComboBox_activated(int index)
@@ -79,12 +79,12 @@ void CoverEditor::on_sourceComboBox_activated(int index)
 
 void CoverEditor::on_loadButton_clicked()
 {
-
+    m_viewer->load();
 }
 
 void CoverEditor::on_deleteButton_clicked()
 {
-
+    m_viewer->clear();
 }
 
 void CoverEditor::on_saveAsButton_clicked()

@@ -40,6 +40,7 @@ public:
     explicit CoverEditor(MetaDataModel *model, const QString &coverPath, QWidget *parent = 0);
 
     bool isEditable() const;
+    void save();
 
 private slots:
     void on_sourceComboBox_activated(int index);

@@ -54,6 +54,11 @@ bool CoverEditor::isEditable() const
     return m_editable;
 }
 
+void CoverEditor::save()
+{
+
+}
+
 void CoverEditor::on_sourceComboBox_activated(int index)
 {
     if(index == 0)

@@ -84,25 +84,35 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
 {
     if(m_ui->buttonBox->standardButton(button) == QDialogButtonBox::Save)
     {
-        TagEditor *tab = qobject_cast<TagEditor *> (m_ui->tabWidget->currentWidget());
-        if(tab)
-            tab->save();
+        TagEditor *tagEditor = qobject_cast<TagEditor *>(m_ui->tabWidget->currentWidget());
+        CoverEditor *coverEditor = 0;
+        if(tagEditor)
+            tagEditor->save();
+        else if((coverEditor = qobject_cast<CoverEditor *>(m_ui->tabWidget->currentWidget())))
+            coverEditor->save();
     }
     else
-        reject();
-
-    //close all files before closing dialog
-    if(m_metaDataModel)
     {
-        delete m_metaDataModel;
-        m_metaDataModel = 0;
+        //close all files before closing dialog
+        if(m_metaDataModel)
+        {
+            delete m_metaDataModel;
+            m_metaDataModel = 0;
+        }
+        reject();
     }
 }
 
 void DetailsDialog::on_tabWidget_currentChanged(int index)
 {
-    TagEditor *tab = qobject_cast<TagEditor *> (m_ui->tabWidget->widget(index));
-    m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(tab && m_metaDataModel && !m_metaDataModel->isReadOnly());
+    TagEditor *tagEditor = qobject_cast<TagEditor *> (m_ui->tabWidget->widget(index));
+    CoverEditor *coverEditor = 0;
+    if(tagEditor)
+        m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(m_metaDataModel && !m_metaDataModel->isReadOnly());
+    else if((coverEditor = qobject_cast<CoverEditor *>(m_ui->tabWidget->currentWidget())))
+        m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(coverEditor->isEditable());
+    else
+        m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
 }
 
 void DetailsDialog::on_prevButton_clicked()

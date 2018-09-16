@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -39,14 +39,13 @@ public:
     ~CoverViewer();
 
     void setPixmap(const QPixmap&);
+    bool hasPixmap() const;
 
-protected:
-    void paintEvent(QPaintEvent *);
-
-private slots:
+public slots:
     void saveAs();
 
 private:
+    void paintEvent(QPaintEvent *);
     QPixmap m_pixmap;
 };
 

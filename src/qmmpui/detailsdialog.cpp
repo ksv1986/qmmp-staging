@@ -170,17 +170,8 @@ void DetailsDialog::updatePage()
     qDeleteAll(infoList);
     infoList.clear();
 
-    //QPixmap cover = MetaDataManager::instance()->getCover(m_info.path());
-    /*if(!cover.isNull())
-    {
-        CoverViewer *coverViewer = new CoverViewer(this);
-        coverViewer->setPixmap(cover);
-        m_ui->tabWidget->addTab(coverViewer, tr("Cover"));
-    }*/
-
-    CoverEditor *coverEditor = new CoverEditor(this);
-    m_ui->tabWidget->addTab(coverEditor, tr("Cover"));
-
+    QString coverPath;
+    QPixmap coverPixmap;
 
     if(m_info.path().contains("://")) //URL
     {
@@ -188,8 +179,23 @@ void DetailsDialog::updatePage()
     }
     else if(QFile::exists(m_info.path())) //local file
     {
+        coverPath = MetaDataManager::instance()->findCoverFile(m_info.path());
         bool writable = QFileInfo(m_info.path()).isWritable();
         m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), !writable);
+    }
+
+    if(m_metaDataModel)
+    {
+        coverPath = coverPath.isEmpty() ? m_metaDataModel->coverPath() : coverPath;
+        coverPixmap = m_metaDataModel->cover();
+    }
+
+    if((m_metaDataModel && (m_metaDataModel->dialogHints() & MetaDataModel::IS_COVER_EDITABLE)) ||
+            !coverPath.isEmpty() ||
+            !coverPixmap.isNull())
+    {
+        CoverEditor *coverEditor = new CoverEditor(m_metaDataModel, coverPath, this);
+        m_ui->tabWidget->addTab(coverEditor, tr("Cover"));
     }
 
     if(m_metaDataModel)

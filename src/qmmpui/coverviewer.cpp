@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -42,14 +42,9 @@ void CoverViewer::setPixmap(const QPixmap &pixmap)
     update();
 }
 
-void CoverViewer::paintEvent(QPaintEvent *)
+bool CoverViewer::hasPixmap() const
 {
-    if(!m_pixmap.isNull())
-    {
-        QPainter paint(this);
-        QPixmap pixmap = m_pixmap.scaled(size().width() - 20, size().height() - 20, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-        paint.drawPixmap((width() - pixmap.width()) / 2, (height() - pixmap.height()) / 2, pixmap);
-    }
+    return !m_pixmap.isNull();
 }
 
 void CoverViewer::saveAs()
@@ -60,4 +55,14 @@ void CoverViewer::saveAs()
 
     if (!path.isEmpty())
         m_pixmap.save(path);
+}
+
+void CoverViewer::paintEvent(QPaintEvent *)
+{
+    if(!m_pixmap.isNull())
+    {
+        QPainter paint(this);
+        QPixmap pixmap = m_pixmap.scaled(size().width() - 10, size().height() - 10, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        paint.drawPixmap((width() - pixmap.width()) / 2, (height() - pixmap.height()) / 2, pixmap);
+    }
 }

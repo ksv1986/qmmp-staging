@@ -274,20 +274,25 @@ void MainWindow::readSettings()
         m_playlist->setVisible(m_display->isPlaylistVisible());
         m_equalizer->setVisible(m_display->isEqualizerVisible());
 
-        if (m_pl_manager->currentPlayList()->currentTrack())
+        if(m_pl_manager->currentPlayList()->currentTrack())
             setWindowTitle(m_titleFormatter.format(m_pl_manager->currentPlayList()->currentTrack()));
     }
     else
     {
         QScreen *screen = QGuiApplication::primaryScreen();
+        QRect availableGeometry = screen->availableGeometry();
         QPoint pos = settings.value("mw_pos", QPoint(100, 100)).toPoint();
-        if(!screen->availableGeometry().contains(pos))
+        int r = m_skin->ratio();
+        foreach(QScreen *screen, QGuiApplication::screens())
         {
-            QRect availableGeometry = screen->availableGeometry();
-            int r = m_skin->ratio();
-            pos.setX(qBound(availableGeometry.left(), pos.x(), availableGeometry.right() - r*275));
-            pos.setY(qBound(availableGeometry.top(), pos.y(), availableGeometry.bottom() - r*116));
+            if(screen->availableGeometry().contains(pos))
+            {
+               availableGeometry = screen->availableGeometry();
+               break;
+            }
         }
+        pos.setX(qBound(availableGeometry.left(), pos.x(), availableGeometry.right() - r*275));
+        pos.setY(qBound(availableGeometry.top(), pos.y(), availableGeometry.bottom() - r*116));
         move(pos); //geometry
         m_startHidden = settings.value("start_hidden", false).toBool();
         if(settings.value("always_on_top", false).toBool())

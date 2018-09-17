@@ -147,15 +147,21 @@ void EqWidget::readSettings()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     QScreen *screen = QGuiApplication::primaryScreen();
+    QRect availableGeometry = screen->availableGeometry();
     QPoint pos = settings.value("Skinned/eq_pos", QPoint(100, 216)).toPoint();
-    if(!screen->availableGeometry().contains(pos))
+    int r = m_skin->ratio();
+    //TODO QGuiApplication::screenAt
+    foreach(QScreen *screen, QGuiApplication::screens())
     {
-        QRect availableGeometry = screen->availableGeometry();
-        int r = m_skin->ratio();
-        pos.setX(qBound(availableGeometry.left(), pos.x(), availableGeometry.right() - r*275));
-        pos.setY(qBound(availableGeometry.top(), pos.y(), availableGeometry.bottom() - r*116));
+        if(screen->availableGeometry().contains(pos))
+        {
+           availableGeometry = screen->availableGeometry();
+           break;
+        }
     }
-    move (pos); //geometry
+    pos.setX(qBound(availableGeometry.left(), pos.x(), availableGeometry.right() - r*275));
+    pos.setY(qBound(availableGeometry.top(), pos.y(), availableGeometry.bottom() - r*116));
+    move(pos); //geometry
     readEq();
     m_autoButton->setChecked(settings.value("Skinned/eq_auto", false).toBool());
     //equalizer presets

@@ -29,7 +29,9 @@
 #include "decoder_sndfile.h"
 #include "decodersndfilefactory.h"
 
+#ifndef WAVE_FORMAT_PCM
 #define WAVE_FORMAT_PCM 0x0001
+#endif
 #define WAVE_FORMAT_ADPCM 0x0002
 #define WAVE_FORMAT_IEEE_FLOAT 0x0003
 #define WAVE_FORMAT_ALAW 0x0006

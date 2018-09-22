@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -67,6 +67,7 @@ StatusIcon::StatusIcon(QObject *parent) : QObject(parent)
     QIcon stopIcon = QApplication::style()->standardIcon(QStyle::SP_MediaStop);
     QIcon nextIcon = QApplication::style()->standardIcon(QStyle::SP_MediaSkipForward);
     QIcon previousIcon = QApplication::style()->standardIcon(QStyle::SP_MediaSkipBackward);
+    QIcon exitIcon = QIcon::fromTheme("application-exit");
     m_menu->addAction(playIcon,tr("Play"), m_player, SLOT(play()));
     m_menu->addAction(pauseIcon,tr("Pause"), m_core, SLOT(pause()));
     m_menu->addAction(stopIcon,tr("Stop"), m_core, SLOT(stop()));
@@ -74,7 +75,7 @@ StatusIcon::StatusIcon(QObject *parent) : QObject(parent)
     m_menu->addAction(nextIcon, tr("Next"), m_player, SLOT(next()));
     m_menu->addAction(previousIcon, tr("Previous"), m_player, SLOT(previous()));
     m_menu->addSeparator();
-    m_menu->addAction(tr("Exit"), UiHelper::instance(), SLOT(exit()));
+    m_menu->addAction(exitIcon, tr("Exit"), UiHelper::instance(), SLOT(exit()));
     m_tray->setContextMenu(m_menu);
     m_tray->show();
     connect (m_core, SIGNAL(trackInfoChanged ()), SLOT(showMetaData()));

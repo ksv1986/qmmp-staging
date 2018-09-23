@@ -19,6 +19,8 @@
  ***************************************************************************/
 
 #include <QtGlobal>
+#include <QBuffer>
+#include <taglib/flacpicture.h>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/opusfile.h>
@@ -27,7 +29,7 @@
 #include "opusmetadatamodel.h"
 
 OpusMetaDataModel::OpusMetaDataModel(const QString &path, bool readOnly)
-    : MetaDataModel(readOnly)
+    : MetaDataModel(readOnly, MetaDataModel::IS_COVER_EDITABLE)
 {
     m_path = path;
     m_stream = new TagLib::FileStream(QStringToFileName(path), readOnly);
@@ -66,47 +68,62 @@ QPixmap OpusMetaDataModel::cover() const
         return QPixmap();
 
     TagLib::Ogg::XiphComment *tag = m_file->tag();
-    if(!tag)
+    if(!tag || tag->isEmpty())
         return QPixmap();
-    TagLib::StringList list = tag->fieldListMap()["METADATA_BLOCK_PICTURE"];
-    if(list.isEmpty())
-        return QPixmap();
+
+    TagLib::List<TagLib::FLAC::Picture *> list = tag->pictureList();
     for(uint i = 0; i < list.size(); ++i)
     {
-        TagLib::String value = list[i];
-        QByteArray block = QByteArray::fromBase64(TStringToQString(value).toLatin1());
-        if(block.size() < 32)
-            continue;
-        qint64 pos = 0;
-        if(readPictureBlockField(block, pos) != 3) //picture type, use front cover only
-            continue;
-        pos += 4;
-        int mimeLength = readPictureBlockField(block, pos); //mime type length
-        pos += 4;
-        pos += mimeLength; //skip mime type
-        int descLength = readPictureBlockField(block, pos); //description length
-        pos += 4;
-        pos += descLength; //skip description
-        pos += 4; //width
-        pos += 4; //height
-        pos += 4; //color depth
-        pos += 4; //the number of colors used
-        int length = readPictureBlockField(block, pos); //picture size
-        pos += 4;
-        QPixmap cover;
-        cover.loadFromData(block.mid(pos, length)); //read binary picture data
-        return cover;
+        if(list[i]->type() == TagLib::FLAC::Picture::FrontCover)
+        {
+            QPixmap cover;
+            cover.loadFromData(QByteArray(list[i]->data().data(), list[i]->data().size())); //read binary picture data
+            return cover;
+        }
     }
     return QPixmap();
 }
 
-ulong OpusMetaDataModel::readPictureBlockField(QByteArray data, int offset) const
+void OpusMetaDataModel::setCover(const QPixmap &pix)
 {
-    return (((uchar)data.data()[offset] & 0xff) << 24) |
-           (((uchar)data.data()[offset+1] & 0xff) << 16) |
-           (((uchar)data.data()[offset+2] & 0xff) << 16) |
-           ((uchar)data.data()[offset+3] & 0xff);
+    removeCover();
+    TagLib::Ogg::XiphComment *tag = m_file->tag();
+    if(tag)
+    {
+        TagLib::FLAC::Picture *picture = new TagLib::FLAC::Picture();
+        picture->setType(TagLib::FLAC::Picture::FrontCover);
 
+        QByteArray data;
+        QBuffer buffer(&data);
+        buffer.open(QIODevice::WriteOnly);
+        pix.save(&buffer, "JPEG");
+        picture->setMimeType("image/jpeg");
+        picture->setData(TagLib::ByteVector(data.constData(), data.size()));
+        tag->addPicture(picture);
+        m_file->save();
+    }
+}
+
+void OpusMetaDataModel::removeCover()
+{
+    TagLib::Ogg::XiphComment *tag = m_file->tag();
+    if(tag && !tag->isEmpty())
+    {
+        bool save = false;
+        TagLib::List<TagLib::FLAC::Picture *> list = tag->pictureList();
+        for(uint i = 0; i < list.size(); ++i)
+        {
+            if(list[i]->type() == TagLib::FLAC::Picture::FrontCover)
+            {
+                tag->removePicture(list[i], false);
+                save = true;
+            }
+        }
+        if(save)
+        {
+            m_file->save();
+        }
+    }
 }
 
 VorbisCommentModel::VorbisCommentModel(TagLib::Ogg::Opus::File *file) : TagModel(TagModel::Save)

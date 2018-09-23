@@ -38,10 +38,10 @@ public:
 
     QList<TagModel* > tags() const;
     QPixmap cover() const;
+    void setCover(const QPixmap &pix);
+    void removeCover();
 
 private:
-    ulong readPictureBlockField(QByteArray data, int offset) const;
-
     QString m_path;
     TagLib::Ogg::Vorbis::File *m_file;
     TagLib::Ogg::XiphComment *m_tag;

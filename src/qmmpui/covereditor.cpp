@@ -38,7 +38,7 @@ CoverEditor::CoverEditor(MetaDataModel *model, const QString &coverPath, QWidget
     layout->addWidget(m_viewer);
     m_ui.frame->setLayout(layout);
 
-    if(m_model && !m_model->cover().isNull())
+    if(m_model && (!m_model->cover().isNull() || m_editable))
         m_ui.sourceComboBox->setCurrentIndex(1);
     else
         m_ui.sourceComboBox->setCurrentIndex(0);
@@ -80,11 +80,15 @@ void CoverEditor::on_sourceComboBox_activated(int index)
 void CoverEditor::on_loadButton_clicked()
 {
     m_viewer->load();
+    m_ui.deleteButton->setEnabled(m_viewer->hasPixmap());
+    m_ui.saveAsButton->setEnabled(m_viewer->hasPixmap());
 }
 
 void CoverEditor::on_deleteButton_clicked()
 {
     m_viewer->clear();
+    m_ui.deleteButton->setEnabled(m_viewer->hasPixmap());
+    m_ui.saveAsButton->setEnabled(m_viewer->hasPixmap());
 }
 
 void CoverEditor::on_saveAsButton_clicked()

@@ -86,7 +86,7 @@ void CoverViewer::load()
         m_lastDir = QFileInfo(path).absoluteDir().path();
         m_pixmap.load(path);
         if(m_pixmap.width() > 512)
-            m_pixmap = m_pixmap.scaled(512, 512, Qt::KeepAspectRatio);
+            m_pixmap = m_pixmap.scaled(512, 512, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     }
     update();
 }

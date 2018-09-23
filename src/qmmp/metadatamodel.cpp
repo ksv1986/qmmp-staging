@@ -54,10 +54,10 @@ void MetaDataItem::setSuffix(const QString &suffix)
     m_suffix = suffix;
 }
 
-MetaDataModel::MetaDataModel(bool readOnly) : m_readOnly(readOnly)
-{
-    m_dialogHints = NO_HINTS;
-}
+MetaDataModel::MetaDataModel(bool readOnly, DialogHints hints) :
+    m_readOnly(readOnly),
+    m_dialogHints(hints)
+{}
 
 MetaDataModel::~MetaDataModel()
 {}
@@ -82,22 +82,17 @@ QPixmap MetaDataModel::cover() const
     return QPixmap();
 }
 
-void MetaDataModel::setCover(const QPixmap &pix) const
+void MetaDataModel::setCover(const QPixmap &pix)
 {
     Q_UNUSED(pix);
 }
 
-void MetaDataModel::removeCover() const
+void MetaDataModel::removeCover()
 {}
 
 QString MetaDataModel::coverPath() const
 {
     return QString();
-}
-
-void MetaDataModel::setCover(const QPixmap &cover)
-{
-    Q_UNUSED(cover);
 }
 
 bool MetaDataModel::isReadOnly() const

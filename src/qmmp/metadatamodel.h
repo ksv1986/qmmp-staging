@@ -64,7 +64,7 @@ public:
     /*!
      * Constructor.
      */
-    MetaDataModel(bool readOnly);
+    MetaDataModel(bool readOnly, DialogHints hints = NO_HINTS);
     /*!
      * Destructor.
      */
@@ -82,13 +82,12 @@ public:
      * Subclass should reimplement this function. Default implementation returns empty pixmap.
      */
     virtual QPixmap cover() const;
-    virtual void setCover(const QPixmap &pix) const;
-    virtual void removeCover() const;
+    virtual void setCover(const QPixmap &pix);
+    virtual void removeCover();
     /*!
      * Returns path to cover pixmap.
      */
     virtual QString coverPath() const;
-    void setCover(const QPixmap &cover);
     bool isReadOnly() const;
     const DialogHints &dialogHints() const;
 

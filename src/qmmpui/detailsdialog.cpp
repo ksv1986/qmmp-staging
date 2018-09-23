@@ -89,7 +89,10 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
         if(tagEditor)
             tagEditor->save();
         else if((coverEditor = qobject_cast<CoverEditor *>(m_ui->tabWidget->currentWidget())))
+        {
             coverEditor->save();
+            MetaDataManager::instance()->clearCoverCache();
+        }
     }
     else
     {
@@ -105,9 +108,8 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
 
 void DetailsDialog::on_tabWidget_currentChanged(int index)
 {
-    TagEditor *tagEditor = qobject_cast<TagEditor *> (m_ui->tabWidget->widget(index));
     CoverEditor *coverEditor = 0;
-    if(tagEditor)
+    if(qobject_cast<TagEditor *>(m_ui->tabWidget->widget(index)))
         m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(m_metaDataModel && !m_metaDataModel->isReadOnly());
     else if((coverEditor = qobject_cast<CoverEditor *>(m_ui->tabWidget->currentWidget())))
         m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(coverEditor->isEditable());

@@ -20,6 +20,8 @@
 
 #include <QTextCodec>
 #include <QSettings>
+#include <QByteArray>
+#include <QBuffer>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/id3v1tag.h>
@@ -35,7 +37,7 @@
 #include "mpegmetadatamodel.h"
 
 MPEGMetaDataModel::MPEGMetaDataModel(bool using_rusxmms, const QString &path, bool readOnly) :
-    MetaDataModel(readOnly)
+    MetaDataModel(readOnly, MetaDataModel::IS_COVER_EDITABLE)
 {
     m_stream = new TagLib::FileStream(QStringToFileName(path), readOnly);
     m_file = new TagLib::MPEG::File(m_stream, TagLib::ID3v2::FrameFactory::instance());
@@ -116,6 +118,31 @@ QPixmap MPEGMetaDataModel::cover() const
         }
     }
     return QPixmap();
+}
+
+void MPEGMetaDataModel::setCover(const QPixmap &pix)
+{
+    TagLib::ID3v2::Tag *tag = m_file->ID3v2Tag(true);
+    tag->removeFrames("APIC");
+    TagLib::ID3v2::AttachedPictureFrame *frame = new TagLib::ID3v2::AttachedPictureFrame;
+    frame->setType(TagLib::ID3v2::AttachedPictureFrame::FrontCover);
+    QByteArray data;
+    QBuffer buffer(&data);
+    buffer.open(QIODevice::WriteOnly);
+    pix.save(&buffer, "JPEG");
+    frame->setMimeType("image/jpeg");
+    frame->setPicture(TagLib::ByteVector(data.constData(), data.size()));
+    tag->addFrame(frame);
+    m_file->save(TagLib::MPEG::File::ID3v2);
+}
+
+void MPEGMetaDataModel::removeCover()
+{
+    if(m_file->ID3v2Tag())
+    {
+        m_file->ID3v2Tag()->removeFrames("APIC");
+        m_file->save(TagLib::MPEG::File::ID3v2);
+    }
 }
 
 MpegFileTagModel::MpegFileTagModel(bool using_rusxmms, TagLib::MPEG::File *file, TagLib::MPEG::File::TagTypes tagType)

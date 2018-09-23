@@ -73,42 +73,42 @@
 <context>
     <name>StatusIcon</name>
     <message>
-        <location filename="../statusicon.cpp" line="70"/>
+        <location filename="../statusicon.cpp" line="71"/>
         <source>Play</source>
         <translation>Esegui</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="71"/>
+        <location filename="../statusicon.cpp" line="72"/>
         <source>Pause</source>
         <translation>Pausa</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="72"/>
+        <location filename="../statusicon.cpp" line="73"/>
         <source>Stop</source>
         <translation>Ferma</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="74"/>
+        <location filename="../statusicon.cpp" line="75"/>
         <source>Next</source>
         <translation>Successivo</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="75"/>
+        <location filename="../statusicon.cpp" line="76"/>
         <source>Previous</source>
         <translation>Precedente</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="77"/>
+        <location filename="../statusicon.cpp" line="78"/>
         <source>Exit</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="119"/>
+        <location filename="../statusicon.cpp" line="120"/>
         <source>Stopped</source>
         <translation type="unfinished">Fermato</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="144"/>
+        <location filename="../statusicon.cpp" line="145"/>
         <source>Now Playing</source>
         <translation>Brano in esecuzione: </translation>
     </message>

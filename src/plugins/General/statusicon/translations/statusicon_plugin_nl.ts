@@ -73,42 +73,42 @@
 <context>
     <name>StatusIcon</name>
     <message>
-        <location filename="../statusicon.cpp" line="70"/>
+        <location filename="../statusicon.cpp" line="71"/>
         <source>Play</source>
         <translation>Afspelen</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="71"/>
+        <location filename="../statusicon.cpp" line="72"/>
         <source>Pause</source>
         <translation>Pauze</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="72"/>
+        <location filename="../statusicon.cpp" line="73"/>
         <source>Stop</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="74"/>
+        <location filename="../statusicon.cpp" line="75"/>
         <source>Next</source>
         <translation>Volgende</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="75"/>
+        <location filename="../statusicon.cpp" line="76"/>
         <source>Previous</source>
         <translation>Vorige</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="77"/>
+        <location filename="../statusicon.cpp" line="78"/>
         <source>Exit</source>
         <translation>Afsluiten</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="119"/>
+        <location filename="../statusicon.cpp" line="120"/>
         <source>Stopped</source>
         <translation type="unfinished">Gestopt</translation>
     </message>
     <message>
-        <location filename="../statusicon.cpp" line="144"/>
+        <location filename="../statusicon.cpp" line="145"/>
         <source>Now Playing</source>
         <translation>Huidig nummer</translation>
     </message>

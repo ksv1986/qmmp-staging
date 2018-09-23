@@ -32,7 +32,7 @@
 <context>
     <name>OpusMetaDataModel</name>
     <message>
-        <location filename="../opusmetadatamodel.cpp" line="53"/>
+        <location filename="../opusmetadatamodel.cpp" line="55"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>

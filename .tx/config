@@ -343,6 +343,12 @@ source_lang = en
 source_file = src/plugins/General/rgscan/translations/rgscan_plugin_en.ts
 type = QT
 
+[qmmp.history]
+file_filter = src/plugins/General/history/translations/history_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/General/history/translations/history_plugin_en.ts
+type = QT
+
 [qmmp.copypaste]
 file_filter = src/plugins/General/copypaste/translations/copypaste_plugin_<lang>.ts
 source_lang = en

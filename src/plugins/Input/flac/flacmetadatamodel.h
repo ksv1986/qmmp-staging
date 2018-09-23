@@ -35,10 +35,14 @@ public:
     QList<TagModel* > tags() const;
     QPixmap cover() const;
     QString coverPath() const;
+    void setCover(const QPixmap &pix);
+    void removeCover();
+
 
 private:
     QString m_path;
     QList<TagModel* > m_tags;
+    TagLib::Ogg::XiphComment *m_tag;
     TagLib::File *m_file;
     TagLib::FileStream *m_stream;
 };

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -29,7 +29,7 @@
 #include "vorbismetadatamodel.h"
 
 VorbisMetaDataModel::VorbisMetaDataModel(const QString &path, bool readOnly)
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
     : MetaDataModel(readOnly, MetaDataModel::IS_COVER_EDITABLE)
 #else
     : MetaDataModel(readOnly)
@@ -61,7 +61,7 @@ QPixmap VorbisMetaDataModel::cover() const
     if(!m_tag || m_tag->isEmpty())
         return QPixmap();
 
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
     TagLib::List<TagLib::FLAC::Picture *> list = m_tag->pictureList();
     for(uint i = 0; i < list.size(); ++i)
     {
@@ -91,7 +91,7 @@ QPixmap VorbisMetaDataModel::cover() const
     return QPixmap();
 }
 
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
 void VorbisMetaDataModel::setCover(const QPixmap &pix)
 {
     removeCover();

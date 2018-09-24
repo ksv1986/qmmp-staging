@@ -32,7 +32,7 @@
 #include "flacmetadatamodel.h"
 
 FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly)
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
     : MetaDataModel(true, MetaDataModel::IS_COVER_EDITABLE)
 #else
     : MetaDataModel(true)
@@ -94,7 +94,7 @@ QList<TagModel* > FLACMetaDataModel::tags() const
 
 QPixmap FLACMetaDataModel::cover() const
 {
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
     if(!m_tag || m_tag->isEmpty())
         return QPixmap();
 
@@ -132,7 +132,7 @@ QString FLACMetaDataModel::coverPath() const
     return MetaDataManager::instance()->findCoverFile(m_path);
 }
 
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
 void FLACMetaDataModel::setCover(const QPixmap &pix)
 {
     removeCover();

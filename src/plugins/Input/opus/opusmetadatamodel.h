@@ -27,7 +27,7 @@
 #include <qmmp/metadatamodel.h>
 
 #if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 11))
-#define IS_COVER_EDITABLE
+#define HAS_PICTURE_LIST
 #endif
 
 class OpusMetaDataModel : public MetaDataModel
@@ -39,7 +39,7 @@ public:
     QList<MetaDataItem> extraProperties() const;
     QList<TagModel* > tags() const;
     QPixmap cover() const;
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
     void setCover(const QPixmap &pix);
     void removeCover();
 #endif

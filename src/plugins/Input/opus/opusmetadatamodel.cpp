@@ -29,7 +29,7 @@
 #include "opusmetadatamodel.h"
 
 OpusMetaDataModel::OpusMetaDataModel(const QString &path, bool readOnly)
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
     : MetaDataModel(readOnly, MetaDataModel::IS_COVER_EDITABLE)
 #else
     : MetaDataModel(readOnly)
@@ -75,7 +75,7 @@ QPixmap OpusMetaDataModel::cover() const
     if(!tag || tag->isEmpty())
         return QPixmap();
 
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
     TagLib::List<TagLib::FLAC::Picture *> list = tag->pictureList();
     for(uint i = 0; i < list.size(); ++i)
     {
@@ -104,7 +104,7 @@ QPixmap OpusMetaDataModel::cover() const
     return QPixmap();
 }
 
-#ifdef IS_COVER_EDITABLE
+#ifdef HAS_PICTURE_LIST
 void OpusMetaDataModel::setCover(const QPixmap &pix)
 {
     removeCover();

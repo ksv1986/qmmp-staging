@@ -27,6 +27,10 @@
 #include <taglib/tfilestream.h>
 #include <taglib/tfilestream.h>
 
+#if (TAGLIB_MAJOR_VERSION > 1) || ((TAGLIB_MAJOR_VERSION == 1) && (TAGLIB_MINOR_VERSION >= 11))
+#define IS_COVER_EDITABLE
+#endif
+
 class VorbisCommentModel;
 
 class VorbisMetaDataModel : public MetaDataModel
@@ -38,8 +42,10 @@ public:
 
     QList<TagModel* > tags() const;
     QPixmap cover() const;
+#ifdef IS_COVER_EDITABLE
     void setCover(const QPixmap &pix);
     void removeCover();
+#endif
 
 private:
     QString m_path;

@@ -60,7 +60,8 @@ public:
     enum MenuType
     {
         TOOLS_MENU = 0, /*!< tools menu */
-        PLAYLIST_MENU   /*!< playlist context menu */
+        PLAYLIST_MENU,  /*!< playlist context menu */
+        ADD_MENU
     };
     /*!
      * Returns \b true if one of the general plugin can change visibility, otherwise returns \b false
@@ -88,6 +89,8 @@ public:
      * @param parent Parent widget
      */
     QMenu *createMenu(MenuType type, const QString &title = QString(), QWidget *parent = 0);
+    void registerMenu(MenuType type, QMenu *menu, QAction *before = 0);
+
     /*!
      * Opens 'Add Files' dialog
      * @param parent Parent widget
@@ -181,10 +184,13 @@ private slots:
 
 private:
     QMap <GeneralFactory*, General*> m_generals;
-    QList <QAction*> m_toolsActions;
-    QList <QAction*> m_playlistActions;
-    QPointer<QMenu> m_toolsMenu;
-    QPointer<QMenu> m_playlistMenu;
+    struct MenuData
+    {
+        QPointer<QMenu> menu;
+        QPointer<QAction> before;
+        QList<QAction*> actions;
+    };
+    QMap<MenuType, MenuData> m_menus;
     QString m_lastDir;
     QPointer <JumpToTrackDialog> m_jumpDialog;
     PlayListModel *m_model;

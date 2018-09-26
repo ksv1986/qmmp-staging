@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -44,8 +44,6 @@ UiHelper::UiHelper(QObject *parent)
         : QObject(parent)
 {
     m_instance = this;
-    m_toolsMenu = 0;
-    m_playlistMenu = 0;
     m_jumpDialog = 0;
     m_model = 0;
     General::create(parent);
@@ -73,64 +71,53 @@ bool UiHelper::visibilityControl()
 void UiHelper::addAction(QAction *action, MenuType type)
 {
     connect(action, SIGNAL(destroyed (QObject *)), SLOT(removeAction(QObject*)));
-    switch ((int) type)
+
+    if(!m_menus[type].actions.contains(action))
+        m_menus[type].actions.append(action);
+    if(m_menus[type].menu && !m_menus[type].menu->actions().contains(action))
     {
-    case TOOLS_MENU:
-        if (!m_toolsActions.contains(action))
-            m_toolsActions.append(action);
-        if (m_toolsMenu && !m_toolsMenu->actions ().contains(action))
-            m_toolsMenu->addAction(action);
-        break;
-    case PLAYLIST_MENU:
-        if (!m_playlistActions.contains(action))
-            m_playlistActions.append(action);
-        if (m_playlistMenu && !m_playlistMenu->actions ().contains(action))
-            m_playlistMenu->addAction(action);
+        if(m_menus[type].before)
+            m_menus[type].menu->insertAction(m_menus[type].before, action);
+        else
+            m_menus[type].menu->addAction(action);
     }
 }
 
 void UiHelper::removeAction(QAction *action)
 {
-    m_toolsActions.removeAll(action);
-    if (m_toolsMenu)
-        m_toolsMenu->removeAction(action);
-    m_playlistActions.removeAll(action);
-    if (m_playlistMenu)
-        m_playlistMenu->removeAction(action);
+    foreach(MenuType type, m_menus.keys())
+    {
+        m_menus[type].actions.removeAll(action);
+        if(m_menus[type].menu)
+            m_menus[type].menu->removeAction(action);
+    }
 }
 
 QList<QAction *> UiHelper::actions(MenuType type)
 {
-    if (type == TOOLS_MENU)
-        return m_toolsActions;
-    else
-        return m_playlistActions;
+    return m_menus[type].actions;
 }
 
 QMenu *UiHelper::createMenu(MenuType type, const QString &title, QWidget *parent)
 {
-    switch ((int) type)
+    if(m_menus[type].menu)
     {
-    case TOOLS_MENU:
-        if (!m_toolsMenu)
-        {
-            m_toolsMenu = new QMenu(title, parent);
-            m_toolsMenu->addActions(m_toolsActions);
-        }
-        else
-            m_toolsMenu->setTitle(title);
-        return m_toolsMenu;
-    case PLAYLIST_MENU:
-        if (!m_playlistMenu)
-        {
-            m_playlistMenu = new QMenu(title, parent);
-            m_playlistMenu->addActions(m_playlistActions);
-        }
-        else
-            m_playlistMenu->setTitle(title);
-        return m_playlistMenu;
+        m_menus[type].menu->setTitle(title);
+        return m_menus[type].menu;
     }
-    return 0;
+    m_menus[type].menu = new QMenu(title, parent);
+    m_menus[type].menu->addActions(m_menus[type].actions);
+    return m_menus[type].menu;
+}
+
+void UiHelper::registerMenu(UiHelper::MenuType type, QMenu *menu, QAction *before)
+{
+    m_menus[type].menu = menu;
+    m_menus[type].before = before;
+    if(before)
+        m_menus[type].menu->insertActions(before, m_menus[type].actions);
+    else
+        m_menus[type].menu->addActions(m_menus[type].actions);
 }
 
 void UiHelper::addFiles(QWidget *parent, PlayListModel *model)

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -179,7 +179,7 @@ void HalPlugin::updateActions()
                 action->setIcon(qApp->style()->standardIcon(QStyle::SP_DriveHDIcon));
 
             m_actions->addAction(action);
-            UiHelper::instance()->addAction(action, UiHelper::TOOLS_MENU);
+            UiHelper::instance()->addAction(action, UiHelper::ADD_MENU);
             addPath(dev_path);
         }
     }

@@ -210,6 +210,7 @@ void PlayList::createActions()
     m_addMenu->addAction(SET_ACTION(ActionManager::PL_ADD_FILE, parent(), SLOT(addFile())));
     m_addMenu->addAction(SET_ACTION(ActionManager::PL_ADD_DIRECTORY, parent(), SLOT(addDir())));
     m_addMenu->addAction(SET_ACTION(ActionManager::PL_ADD_URL, parent(), SLOT(addUrl())));
+    UiHelper::instance()->registerMenu(UiHelper::ADD_MENU, m_addMenu);
     //sub menu
     m_subMenu->addAction(SET_ACTION(ActionManager::PL_REMOVE_SELECTED, m_pl_manager, SLOT(removeSelected())));
     m_subMenu->addAction(SET_ACTION(ActionManager::PL_REMOVE_ALL, m_pl_manager, SLOT(clear())));

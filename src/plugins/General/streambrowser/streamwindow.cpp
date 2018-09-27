@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,18 +35,20 @@
 #include <qmmp/qmmpsettings.h>
 #include <qmmp/qmmp.h>
 #include <qmmpui/playlistmanager.h>
+#include "ui_streamwindow.h"
 #include "streamwindow.h"
 
-StreamWindow::StreamWindow(QWidget *parent) : QWidget(parent)
+StreamWindow::StreamWindow(QWidget *parent)
+    : QWidget(parent), m_ui(new Ui::StreamWindow)
 {
-    ui.setupUi(this);
+    m_ui->setupUi(this);
     setWindowFlags(Qt::Window);
     setAttribute(Qt::WA_DeleteOnClose);
     setAttribute(Qt::WA_QuitOnClose, false);
     m_requestReply = 0;
     //buttons
-    ui.addPushButton->setIcon(QIcon::fromTheme("list-add"));
-    ui.updatePushButton->setIcon(QIcon::fromTheme("view-refresh"));
+    m_ui->addPushButton->setIcon(QIcon::fromTheme("list-add"));
+    m_ui->updatePushButton->setIcon(QIcon::fromTheme("view-refresh"));
     //icecast model
     m_iceCastModel = new QStandardItemModel(this);
     m_iceCastModel->setHorizontalHeaderLabels(QStringList() << tr("Name")
@@ -58,12 +60,12 @@ StreamWindow::StreamWindow(QWidget *parent) : QWidget(parent)
     m_iceCastFilterModel->setDynamicSortFilter(true);
     m_iceCastFilterModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     //icecast table
-    ui.icecastTableView->setModel(m_iceCastFilterModel);
-    ui.icecastTableView->verticalHeader()->setDefaultSectionSize(fontMetrics().height() + 3);
-    ui.icecastTableView->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
-    ui.icecastTableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    ui.icecastTableView->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(ui.icecastTableView, SIGNAL(customContextMenuRequested(QPoint)),
+    m_ui->icecastTableView->setModel(m_iceCastFilterModel);
+    m_ui->icecastTableView->verticalHeader()->setDefaultSectionSize(fontMetrics().height() + 3);
+    m_ui->icecastTableView->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    m_ui->icecastTableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    m_ui->icecastTableView->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(m_ui->icecastTableView, SIGNAL(customContextMenuRequested(QPoint)),
             SLOT(execIceCastMenu(QPoint)));
     //favorites model
     m_favoritesModel = new QStandardItemModel(this);
@@ -76,15 +78,15 @@ StreamWindow::StreamWindow(QWidget *parent) : QWidget(parent)
     m_favoritesFilterModel->setDynamicSortFilter(true);
     m_favoritesFilterModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     //favorites table
-    ui.favoritesTableView->setModel(m_favoritesFilterModel);
-    ui.favoritesTableView->verticalHeader()->setDefaultSectionSize(fontMetrics().height() + 3);
-    ui.favoritesTableView->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
-    ui.favoritesTableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    ui.favoritesTableView->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(ui.favoritesTableView, SIGNAL(customContextMenuRequested(QPoint)),
+    m_ui->favoritesTableView->setModel(m_favoritesFilterModel);
+    m_ui->favoritesTableView->verticalHeader()->setDefaultSectionSize(fontMetrics().height() + 3);
+    m_ui->favoritesTableView->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    m_ui->favoritesTableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    m_ui->favoritesTableView->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(m_ui->favoritesTableView, SIGNAL(customContextMenuRequested(QPoint)),
             SLOT(execFavoritesMenu(QPoint)));
 
-    ui.statusLabel->hide();
+    m_ui->statusLabel->hide();
 
     m_http = new QNetworkAccessManager(this);
      //load global proxy settings
@@ -104,9 +106,9 @@ StreamWindow::StreamWindow(QWidget *parent) : QWidget(parent)
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("StreamBrowser");
     restoreGeometry(settings.value("geometry").toByteArray());
-    ui.icecastTableView->horizontalHeader()->restoreState(settings.value("icecast_headers").toByteArray());
-    ui.favoritesTableView->horizontalHeader()->restoreState(settings.value("favorites_headers").toByteArray());
-    ui.tabWidget->setCurrentIndex(settings.value("current_tab", 1).toInt());
+    m_ui->icecastTableView->horizontalHeader()->restoreState(settings.value("icecast_headers").toByteArray());
+    m_ui->favoritesTableView->horizontalHeader()->restoreState(settings.value("favorites_headers").toByteArray());
+    m_ui->tabWidget->setCurrentIndex(settings.value("current_tab", 1).toInt());
     settings.endGroup();
     //create cache dir
     QDir dir(Qmmp::configDir());
@@ -139,10 +141,10 @@ StreamWindow::~StreamWindow()
 
 void StreamWindow::showText(QNetworkReply *reply)
 {
-    ui.statusLabel->setText(tr("Done"));
+    m_ui->statusLabel->setText(tr("Done"));
     if (reply->error() != QNetworkReply::NoError)
     {
-        ui.statusLabel->setText(tr("Error"));
+        m_ui->statusLabel->setText(tr("Error"));
         QMessageBox::warning (this, tr("Error"), reply->errorString());
         m_requestReply = 0;
         reply->deleteLater();
@@ -162,16 +164,16 @@ void StreamWindow::on_updatePushButton_clicked()
     request.setUrl(QUrl("http://dir.xiph.org/yp.xml"));
     request.setRawHeader("User-Agent", QString("qmmp/%1").arg(Qmmp::strVersion()).toLatin1());
     m_requestReply = m_http->get(request);
-    ui.statusLabel->setText(tr("Receiving"));
-    ui.statusLabel->show();
+    m_ui->statusLabel->setText(tr("Receiving"));
+    m_ui->statusLabel->show();
 }
 
 void StreamWindow::on_addPushButton_clicked()
 {
     QStringList urls;
-    if(ui.tabWidget->currentIndex() == 0)
+    if(m_ui->tabWidget->currentIndex() == 0)
     {
-        QModelIndexList indexes = ui.favoritesTableView->selectionModel()->selectedRows(0);
+        QModelIndexList indexes = m_ui->favoritesTableView->selectionModel()->selectedRows(0);
         foreach(QModelIndex index, indexes)
         {
             QModelIndex source_index = m_favoritesFilterModel->mapToSource(index);
@@ -180,7 +182,7 @@ void StreamWindow::on_addPushButton_clicked()
     }
     else
     {
-        QModelIndexList indexes = ui.icecastTableView->selectionModel()->selectedRows(0);
+        QModelIndexList indexes = m_ui->icecastTableView->selectionModel()->selectedRows(0);
         foreach(QModelIndex index, indexes)
         {
             QModelIndex source_index = m_iceCastFilterModel->mapToSource(index);
@@ -199,17 +201,17 @@ void StreamWindow::on_filterLineEdit_textChanged(const QString &text)
 
 void StreamWindow::execIceCastMenu(const QPoint &pos)
 {
-    m_iceCastMenu->exec(ui.icecastTableView->viewport()->mapToGlobal(pos));
+    m_iceCastMenu->exec(m_ui->icecastTableView->viewport()->mapToGlobal(pos));
 }
 
 void StreamWindow::execFavoritesMenu(const QPoint &pos)
 {
-    m_favoritesMenu->exec(ui.favoritesTableView->viewport()->mapToGlobal(pos));
+    m_favoritesMenu->exec(m_ui->favoritesTableView->viewport()->mapToGlobal(pos));
 }
 
 void StreamWindow::addToFavorites()
 {
-    QModelIndexList indexes = ui.icecastTableView->selectionModel()->selectedRows(0);
+    QModelIndexList indexes = m_ui->icecastTableView->selectionModel()->selectedRows(0);
     foreach(QModelIndex index, indexes)
     {
         QModelIndex source_index = m_iceCastFilterModel->mapToSource(index);
@@ -224,9 +226,9 @@ void StreamWindow::addToFavorites()
 
 void StreamWindow::removeFromFavorites()
 {
-    if(ui.tabWidget->currentIndex() != 0)
+    if(m_ui->tabWidget->currentIndex() != 0)
         return;
-    QModelIndexList indexes = ui.favoritesTableView->selectionModel()->selectedRows(0);
+    QModelIndexList indexes = m_ui->favoritesTableView->selectionModel()->selectedRows(0);
     QList<int> rows_to_remove;
     foreach(QModelIndex index, indexes)
     {
@@ -250,9 +252,9 @@ void StreamWindow::closeEvent(QCloseEvent *)
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("StreamBrowser");
     settings.setValue("geometry", saveGeometry());
-    settings.setValue("icecast_headers", ui.icecastTableView->horizontalHeader()->saveState());
-    settings.setValue("favorites_headers", ui.favoritesTableView->horizontalHeader()->saveState());
-    settings.setValue("current_tab", ui.tabWidget->currentIndex());
+    settings.setValue("icecast_headers", m_ui->icecastTableView->horizontalHeader()->saveState());
+    settings.setValue("favorites_headers", m_ui->favoritesTableView->horizontalHeader()->saveState());
+    settings.setValue("current_tab", m_ui->tabWidget->currentIndex());
     settings.endGroup();
 
      //save icecast directory

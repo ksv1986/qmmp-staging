@@ -1250,39 +1250,39 @@
 <context>
     <name>UiHelper</name>
     <message>
-        <location filename="../uihelper.cpp" line="139"/>
-        <location filename="../uihelper.cpp" line="151"/>
+        <location filename="../uihelper.cpp" line="126"/>
+        <location filename="../uihelper.cpp" line="138"/>
         <source>All Supported Bitstreams</source>
         <translation>Все форматы</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="145"/>
+        <location filename="../uihelper.cpp" line="132"/>
         <source>Select one or more files to open</source>
         <translation>Выберите один или несколько файлов</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="157"/>
+        <location filename="../uihelper.cpp" line="144"/>
         <source>Select one or more files to play</source>
         <translation>Выберите один или несколько файлов для воспроизведения</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="165"/>
+        <location filename="../uihelper.cpp" line="152"/>
         <source>Choose a directory</source>
         <translation>Выберите директорию</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="181"/>
-        <location filename="../uihelper.cpp" line="205"/>
+        <location filename="../uihelper.cpp" line="168"/>
+        <location filename="../uihelper.cpp" line="192"/>
         <source>Playlist Files</source>
         <translation>Файлы списков</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="183"/>
+        <location filename="../uihelper.cpp" line="170"/>
         <source>Open Playlist</source>
         <translation>Открыть список</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="206"/>
+        <location filename="../uihelper.cpp" line="193"/>
         <source>Save Playlist</source>
         <translation>Сохранить список</translation>
     </message>

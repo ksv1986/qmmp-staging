@@ -833,113 +833,113 @@
         <translation>&amp;复制选项到</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="229"/>
+        <location filename="../playlist.cpp" line="230"/>
         <source>Sort List</source>
         <translation>列表排序</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="232"/>
-        <location filename="../playlist.cpp" line="272"/>
+        <location filename="../playlist.cpp" line="233"/>
+        <location filename="../playlist.cpp" line="273"/>
         <source>By Title</source>
         <translation>按标题</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="235"/>
-        <location filename="../playlist.cpp" line="275"/>
+        <location filename="../playlist.cpp" line="236"/>
+        <location filename="../playlist.cpp" line="276"/>
         <source>By Album</source>
         <translation>按专辑</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="256"/>
-        <location filename="../playlist.cpp" line="296"/>
+        <location filename="../playlist.cpp" line="257"/>
+        <location filename="../playlist.cpp" line="297"/>
         <source>By Disc Number</source>
         <translation>按光盘号</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="238"/>
-        <location filename="../playlist.cpp" line="278"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="279"/>
         <source>By Artist</source>
         <translation>按艺术家</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="241"/>
-        <location filename="../playlist.cpp" line="281"/>
+        <location filename="../playlist.cpp" line="242"/>
+        <location filename="../playlist.cpp" line="282"/>
         <source>By Album Artist</source>
         <translation>按专辑 艺术家</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="244"/>
-        <location filename="../playlist.cpp" line="284"/>
+        <location filename="../playlist.cpp" line="245"/>
+        <location filename="../playlist.cpp" line="285"/>
         <source>By Filename</source>
         <translation>按文件名</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="247"/>
-        <location filename="../playlist.cpp" line="287"/>
+        <location filename="../playlist.cpp" line="248"/>
+        <location filename="../playlist.cpp" line="288"/>
         <source>By Path + Filename</source>
         <translation>按路径+文件名</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="250"/>
-        <location filename="../playlist.cpp" line="290"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="291"/>
         <source>By Date</source>
         <translation>按日期</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="253"/>
-        <location filename="../playlist.cpp" line="293"/>
+        <location filename="../playlist.cpp" line="254"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Track Number</source>
         <translation>按音轨</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="259"/>
-        <location filename="../playlist.cpp" line="299"/>
+        <location filename="../playlist.cpp" line="260"/>
+        <location filename="../playlist.cpp" line="300"/>
         <source>By File Creation Date</source>
         <translation>按文件的创建日期</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="262"/>
-        <location filename="../playlist.cpp" line="302"/>
+        <location filename="../playlist.cpp" line="263"/>
+        <location filename="../playlist.cpp" line="303"/>
         <source>By File Modification Date</source>
         <translation>按文件的修改日期</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="265"/>
+        <location filename="../playlist.cpp" line="266"/>
         <source>By Group</source>
         <translation>按组</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="270"/>
+        <location filename="../playlist.cpp" line="271"/>
         <source>Sort Selection</source>
         <translation>选择排序</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="307"/>
+        <location filename="../playlist.cpp" line="308"/>
         <source>Randomize List</source>
         <translation>随机产生列表</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="309"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>Reverse List</source>
         <translation>逆序列表</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="320"/>
+        <location filename="../playlist.cpp" line="321"/>
         <source>Actions</source>
         <translation>动作</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="590"/>
+        <location filename="../playlist.cpp" line="591"/>
         <source>Rename Playlist</source>
         <translation>重命名播放列表</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="590"/>
+        <location filename="../playlist.cpp" line="591"/>
         <source>Playlist name:</source>
         <translation>播放列表名称：</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="611"/>
+        <location filename="../playlist.cpp" line="612"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;新播放列表</translation>
     </message>

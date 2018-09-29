@@ -1250,39 +1250,39 @@
 <context>
     <name>UiHelper</name>
     <message>
-        <location filename="../uihelper.cpp" line="139"/>
-        <location filename="../uihelper.cpp" line="151"/>
+        <location filename="../uihelper.cpp" line="126"/>
+        <location filename="../uihelper.cpp" line="138"/>
         <source>All Supported Bitstreams</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="145"/>
+        <location filename="../uihelper.cpp" line="132"/>
         <source>Select one or more files to open</source>
         <translation>Valitse yksi tai useampi tiedosto avausta varten</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="157"/>
+        <location filename="../uihelper.cpp" line="144"/>
         <source>Select one or more files to play</source>
         <translation>Valitse yksi tai useampi toistettava tiedosto</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="165"/>
+        <location filename="../uihelper.cpp" line="152"/>
         <source>Choose a directory</source>
         <translation>Valitse kansio</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="181"/>
-        <location filename="../uihelper.cpp" line="205"/>
+        <location filename="../uihelper.cpp" line="168"/>
+        <location filename="../uihelper.cpp" line="192"/>
         <source>Playlist Files</source>
         <translation>Soittolistatiedostot</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="183"/>
+        <location filename="../uihelper.cpp" line="170"/>
         <source>Open Playlist</source>
         <translation>Avaa soittolista</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="206"/>
+        <location filename="../uihelper.cpp" line="193"/>
         <source>Save Playlist</source>
         <translation>Tallenna soittolista</translation>
     </message>

@@ -1250,39 +1250,39 @@
 <context>
     <name>UiHelper</name>
     <message>
-        <location filename="../uihelper.cpp" line="139"/>
-        <location filename="../uihelper.cpp" line="151"/>
+        <location filename="../uihelper.cpp" line="126"/>
+        <location filename="../uihelper.cpp" line="138"/>
         <source>All Supported Bitstreams</source>
         <translation>Alle Ondersteunde Bitstromen</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="145"/>
+        <location filename="../uihelper.cpp" line="132"/>
         <source>Select one or more files to open</source>
         <translation>Kies één of meerdere bestanden om te openen</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="157"/>
+        <location filename="../uihelper.cpp" line="144"/>
         <source>Select one or more files to play</source>
         <translation type="unfinished">Kies één of meerdere bestanden om af te spelen</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="165"/>
+        <location filename="../uihelper.cpp" line="152"/>
         <source>Choose a directory</source>
         <translation>Kies een map</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="181"/>
-        <location filename="../uihelper.cpp" line="205"/>
+        <location filename="../uihelper.cpp" line="168"/>
+        <location filename="../uihelper.cpp" line="192"/>
         <source>Playlist Files</source>
         <translation>Afspeellijst Bestanden</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="183"/>
+        <location filename="../uihelper.cpp" line="170"/>
         <source>Open Playlist</source>
         <translation>Open Afspeellijst</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="206"/>
+        <location filename="../uihelper.cpp" line="193"/>
         <source>Save Playlist</source>
         <translation>Bewaar Afspeellijst</translation>
     </message>

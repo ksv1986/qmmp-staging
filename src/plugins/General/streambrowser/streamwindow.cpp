@@ -31,10 +31,12 @@
 #include <QMenu>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
+#include <QIcon>
 #include <algorithm>
 #include <qmmp/qmmpsettings.h>
 #include <qmmp/qmmp.h>
 #include <qmmpui/playlistmanager.h>
+#include "editstreamdialog.h"
 #include "ui_streamwindow.h"
 #include "streamwindow.h"
 
@@ -125,19 +127,24 @@ StreamWindow::StreamWindow(QWidget *parent)
         readXml(&file2, m_favoritesModel);
     //create menus
     m_iceCastMenu = new QMenu(this);
-    m_iceCastMenu->addAction(tr("&Add to favorites"), this, SLOT(addToFavorites()));
-    QAction *addAction = m_iceCastMenu->addAction(tr("&Add to playlist"), this,
-                                                  SLOT(on_addPushButton_clicked()));
+    m_addToFavoritesAction = m_iceCastMenu->addAction(QIcon::fromTheme("user-bookmarks"), tr("&Add to favorites"),
+                                                      this, SLOT(addToFavorites()));
+    m_addAction = m_iceCastMenu->addAction(QIcon::fromTheme("list-add"),
+                                           tr("&Add to playlist"), this, SLOT(on_addPushButton_clicked()));
     m_favoritesMenu = new QMenu(this);
-    m_favoritesMenu->addAction(addAction);
+    m_favoritesMenu->addAction(m_addAction);
+    m_favoritesMenu->addAction(QIcon::fromTheme("document-new"), tr("&Create"),
+                               this, SLOT(createStream()));
+    m_editAction = m_favoritesMenu->addAction(QIcon::fromTheme("document-properties"), tr("&Edit"),
+                                              this, SLOT(editStream()));
     m_favoritesMenu->addSeparator();
-    m_favoritesMenu->addAction(tr("&Remove"), this, SLOT(removeFromFavorites()), QKeySequence::Delete);
+    m_removeAction = m_favoritesMenu->addAction(QIcon::fromTheme("edit-delete"), tr("&Remove"),
+                                                this, SLOT(removeFromFavorites()), QKeySequence::Delete);
     addActions(m_favoritesMenu->actions());
 }
 
 StreamWindow::~StreamWindow()
-{
-}
+{}
 
 void StreamWindow::showText(QNetworkReply *reply)
 {
@@ -201,11 +208,17 @@ void StreamWindow::on_filterLineEdit_textChanged(const QString &text)
 
 void StreamWindow::execIceCastMenu(const QPoint &pos)
 {
+    QModelIndex index = m_ui->icecastTableView->selectionModel()->currentIndex();
+    m_addToFavoritesAction->setEnabled(index.isValid());
     m_iceCastMenu->exec(m_ui->icecastTableView->viewport()->mapToGlobal(pos));
 }
 
 void StreamWindow::execFavoritesMenu(const QPoint &pos)
 {
+    QModelIndex index = m_ui->favoritesTableView->selectionModel()->currentIndex();
+    m_addAction->setEnabled(index.isValid());
+    m_editAction->setEnabled(index.isValid());
+    m_removeAction->setEnabled(index.isValid());
     m_favoritesMenu->exec(m_ui->favoritesTableView->viewport()->mapToGlobal(pos));
 }
 
@@ -221,6 +234,62 @@ void StreamWindow::addToFavorites()
                                     << m_iceCastModel->item(row, 1)->clone()
                                     << m_iceCastModel->item(row, 2)->clone()
                                     << m_iceCastModel->item(row, 3)->clone());
+    }
+}
+
+void StreamWindow::createStream()
+{
+    EditStreamDialog dialog(this);
+    if(dialog.exec() == QDialog::Accepted)
+    {
+         QMap<EditStreamDialog::Key, QString> values = dialog.values();
+
+        if(values[EditStreamDialog::NAME].isEmpty())
+            values[EditStreamDialog::NAME] = values[EditStreamDialog::URL].section("/", -1);
+
+        m_favoritesModel->appendRow(QList<QStandardItem *> ()
+                                  << new QStandardItem(values[EditStreamDialog::NAME])
+                                  << new QStandardItem(values[EditStreamDialog::GENRE])
+                                  << new QStandardItem(values[EditStreamDialog::BITRATE])
+                                  << new QStandardItem(values[EditStreamDialog::TYPE]));
+
+        QStandardItem *item = m_favoritesModel->item(m_favoritesModel->rowCount()-1, 0);
+        item->setToolTip(values[EditStreamDialog::NAME] + "\n" + values[EditStreamDialog::URL]);
+        item->setData(values[EditStreamDialog::URL]);
+    }
+}
+
+void StreamWindow::editStream()
+{
+    QModelIndex index = m_ui->favoritesTableView->selectionModel()->currentIndex();
+    if(!index.isValid())
+        return;
+
+    int row = m_favoritesFilterModel->mapToSource(index).row();
+
+    EditStreamDialog dialog(this);
+    dialog.setWindowTitle(tr("Edit Stream"));
+    QMap<EditStreamDialog::Key, QString> values;
+    values[EditStreamDialog::URL] = m_favoritesModel->item(row, 0)->data().toString();
+    values[EditStreamDialog::NAME] = m_favoritesModel->item(row, 0)->text();
+    values[EditStreamDialog::GENRE] = m_favoritesModel->item(row, 1)->text();
+    values[EditStreamDialog::BITRATE] = m_favoritesModel->item(row, 2)->text();
+    values[EditStreamDialog::TYPE] = m_favoritesModel->item(row, 3)->text();
+    dialog.setValues(values);
+
+    if(dialog.exec() == QDialog::Accepted)
+    {
+        QMap<EditStreamDialog::Key, QString> values = dialog.values();
+
+        if(values[EditStreamDialog::NAME].isEmpty())
+            values[EditStreamDialog::NAME] = values[EditStreamDialog::URL].section("/", -1);
+
+        m_favoritesModel->item(row, 0)->setData(values[EditStreamDialog::URL]);
+        m_favoritesModel->item(row, 0)->setText(values[EditStreamDialog::NAME]);
+        m_favoritesModel->item(row, 1)->setText(values[EditStreamDialog::GENRE]);
+        m_favoritesModel->item(row, 2)->setText(values[EditStreamDialog::BITRATE]);
+        m_favoritesModel->item(row, 3)->setText(values[EditStreamDialog::TYPE]);
+        m_favoritesModel->item(row, 0)->setToolTip(values[EditStreamDialog::NAME] + "\n" + values[EditStreamDialog::URL]);
     }
 }
 

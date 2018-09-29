@@ -6,13 +6,16 @@ QT += network
 
 HEADERS += streambrowserfactory.h \
            streambrowser.h \
-           streamwindow.h
+           streamwindow.h \
+    editstreamdialog.h
 
 SOURCES += streambrowserfactory.cpp \
            streambrowser.cpp \
-           streamwindow.cpp
+           streamwindow.cpp \
+    editstreamdialog.cpp
 
-FORMS += streamwindow.ui
+FORMS += streamwindow.ui \
+    editstreamdialog.ui
 
 RESOURCES = translations/translations.qrc
 

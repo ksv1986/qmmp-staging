@@ -28,6 +28,7 @@ class QNetworkReply;
 class QStandardItemModel;
 class QSortFilterProxyModel;
 class QMenu;
+class QAction;
 class StreamsProxyModel;
 
 namespace Ui {
@@ -53,6 +54,8 @@ private slots:
     void execIceCastMenu(const QPoint &pos);
     void execFavoritesMenu(const QPoint &pos);
     void addToFavorites();
+    void createStream();
+    void editStream();
     void removeFromFavorites();
 
 private:
@@ -67,6 +70,7 @@ private:
     QSortFilterProxyModel *m_iceCastFilterModel, *m_favoritesFilterModel;
     QMenu *m_iceCastMenu;
     QMenu *m_favoritesMenu;
+    QAction *m_addAction, *m_editAction, *m_removeAction, *m_addToFavoritesAction;
 };
 
 /**

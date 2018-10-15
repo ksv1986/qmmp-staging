@@ -32,62 +32,66 @@ extern "C"{
 SettingsDialog::SettingsDialog(QWidget *parent)
         : QDialog(parent)
 {
-    ui.setupUi(this);
+    m_ui.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     QStringList filters;
-    filters << "*.wma" << "*.ape" << "*.tta" << "*.m4a" << "*.aac" << "*.ra" << "*.shn" << "*.vqf" << "*.ac3";
+    filters << "*.wma" << "*.ape" << "*.tta" << "*.m4a" << "*.aac" << "*.ra" << "*.shn" << "*.vqf" << "*.ac3" << "*.tak";
     filters = settings.value("FFMPEG/filters", filters).toStringList();
 #if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(55,34,0)) //libav 10
-    ui.wmaCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_WMAV1));
-    ui.wmaCheckBox->setChecked(filters.contains("*.wma") && avcodec_find_decoder(AV_CODEC_ID_WMAV1));
-    ui.apeCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_APE));
-    ui.apeCheckBox->setChecked(filters.contains("*.ape") && avcodec_find_decoder(AV_CODEC_ID_APE));
-    ui.ttaCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_TTA));
-    ui.ttaCheckBox->setChecked(filters.contains("*.tta") && avcodec_find_decoder(AV_CODEC_ID_TTA));
-    ui.aacCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_AAC));
-    ui.aacCheckBox->setChecked(filters.contains("*.aac") && avcodec_find_decoder(AV_CODEC_ID_AAC));
-    ui.mp3CheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_MP3));
-    ui.mp3CheckBox->setChecked(filters.contains("*.mp3") && avcodec_find_decoder(AV_CODEC_ID_MP3));
-    ui.mp4CheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_AAC));
-    ui.mp4CheckBox->setChecked(filters.contains("*.m4a") && (avcodec_find_decoder(AV_CODEC_ID_AAC)
-                                                             || avcodec_find_decoder(AV_CODEC_ID_ALAC)));
-    ui.raCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_RA_288));
-    ui.raCheckBox->setChecked(filters.contains("*.ra") && avcodec_find_decoder(AV_CODEC_ID_RA_288));
-    ui.shCheckBox->setChecked(filters.contains("*.shn") && avcodec_find_decoder(AV_CODEC_ID_SHORTEN));
-    ui.ac3CheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_EAC3));
-    ui.ac3CheckBox->setChecked(filters.contains("*.ac3") && avcodec_find_decoder(AV_CODEC_ID_EAC3));
-    ui.dtsCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_DTS));
-    ui.dtsCheckBox->setChecked(filters.contains("*.dts") && avcodec_find_decoder(AV_CODEC_ID_DTS));
-    ui.mkaCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_TRUEHD));
-    ui.mkaCheckBox->setChecked(filters.contains("*.mka") && avcodec_find_decoder(AV_CODEC_ID_TRUEHD));
-    ui.vqfCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_TWINVQ));
-    ui.vqfCheckBox->setChecked(filters.contains("*.vqf") && avcodec_find_decoder(AV_CODEC_ID_TWINVQ));
+    m_ui.wmaCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_WMAV1));
+    m_ui.wmaCheckBox->setChecked(filters.contains("*.wma") && avcodec_find_decoder(AV_CODEC_ID_WMAV1));
+    m_ui.apeCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_APE));
+    m_ui.apeCheckBox->setChecked(filters.contains("*.ape") && avcodec_find_decoder(AV_CODEC_ID_APE));
+    m_ui.ttaCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_TTA));
+    m_ui.ttaCheckBox->setChecked(filters.contains("*.tta") && avcodec_find_decoder(AV_CODEC_ID_TTA));
+    m_ui.aacCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_AAC));
+    m_ui.aacCheckBox->setChecked(filters.contains("*.aac") && avcodec_find_decoder(AV_CODEC_ID_AAC));
+    m_ui.mp3CheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_MP3));
+    m_ui.mp3CheckBox->setChecked(filters.contains("*.mp3") && avcodec_find_decoder(AV_CODEC_ID_MP3));
+    m_ui.mp4CheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_AAC));
+    m_ui.mp4CheckBox->setChecked(filters.contains("*.m4a") && (avcodec_find_decoder(AV_CODEC_ID_AAC)
+                                                               || avcodec_find_decoder(AV_CODEC_ID_ALAC)));
+    m_ui.raCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_RA_288));
+    m_ui.raCheckBox->setChecked(filters.contains("*.ra") && avcodec_find_decoder(AV_CODEC_ID_RA_288));
+    m_ui.shCheckBox->setChecked(filters.contains("*.shn") && avcodec_find_decoder(AV_CODEC_ID_SHORTEN));
+    m_ui.ac3CheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_EAC3));
+    m_ui.ac3CheckBox->setChecked(filters.contains("*.ac3") && avcodec_find_decoder(AV_CODEC_ID_EAC3));
+    m_ui.dtsCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_DTS));
+    m_ui.dtsCheckBox->setChecked(filters.contains("*.dts") && avcodec_find_decoder(AV_CODEC_ID_DTS));
+    m_ui.mkaCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_TRUEHD));
+    m_ui.mkaCheckBox->setChecked(filters.contains("*.mka") && avcodec_find_decoder(AV_CODEC_ID_TRUEHD));
+    m_ui.vqfCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_TWINVQ));
+    m_ui.vqfCheckBox->setChecked(filters.contains("*.vqf") && avcodec_find_decoder(AV_CODEC_ID_TWINVQ));
+    m_ui.takCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_TAK));
+    m_ui.takCheckBox->setChecked(filters.contains("*.tak") && avcodec_find_decoder(AV_CODEC_ID_TAK));
 #else
-    ui.wmaCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_WMAV1));
-    ui.wmaCheckBox->setChecked(filters.contains("*.wma") && avcodec_find_decoder(CODEC_ID_WMAV1));
-    ui.apeCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_APE));
-    ui.apeCheckBox->setChecked(filters.contains("*.ape") && avcodec_find_decoder(CODEC_ID_APE));
-    ui.ttaCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_TTA));
-    ui.ttaCheckBox->setChecked(filters.contains("*.tta") && avcodec_find_decoder(CODEC_ID_TTA));
-    ui.aacCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_AAC));
-    ui.aacCheckBox->setChecked(filters.contains("*.aac") && avcodec_find_decoder(CODEC_ID_AAC));
-    ui.mp3CheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_MP3));
-    ui.mp3CheckBox->setChecked(filters.contains("*.mp3") && avcodec_find_decoder(CODEC_ID_MP3));
-    ui.mp4CheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_AAC));
-    ui.mp4CheckBox->setChecked(filters.contains("*.m4a") && (avcodec_find_decoder(CODEC_ID_AAC)
+    m_ui.wmaCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_WMAV1));
+    m_ui.wmaCheckBox->setChecked(filters.contains("*.wma") && avcodec_find_decoder(CODEC_ID_WMAV1));
+    m_ui.apeCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_APE));
+    m_ui.apeCheckBox->setChecked(filters.contains("*.ape") && avcodec_find_decoder(CODEC_ID_APE));
+    m_ui.ttaCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_TTA));
+    m_ui.ttaCheckBox->setChecked(filters.contains("*.tta") && avcodec_find_decoder(CODEC_ID_TTA));
+    m_ui.aacCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_AAC));
+    m_ui.aacCheckBox->setChecked(filters.contains("*.aac") && avcodec_find_decoder(CODEC_ID_AAC));
+    m_ui.mp3CheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_MP3));
+    m_ui.mp3CheckBox->setChecked(filters.contains("*.mp3") && avcodec_find_decoder(CODEC_ID_MP3));
+    m_ui.mp4CheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_AAC));
+    m_ui.mp4CheckBox->setChecked(filters.contains("*.m4a") && (avcodec_find_decoder(CODEC_ID_AAC)
                                                              || avcodec_find_decoder(CODEC_ID_ALAC)));
-    ui.raCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_RA_288));
-    ui.raCheckBox->setChecked(filters.contains("*.ra") && avcodec_find_decoder(CODEC_ID_RA_288));
-    ui.shCheckBox->setChecked(filters.contains("*.shn") && avcodec_find_decoder(CODEC_ID_SHORTEN));
-    ui.ac3CheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_EAC3));
-    ui.ac3CheckBox->setChecked(filters.contains("*.ac3") && avcodec_find_decoder(CODEC_ID_EAC3));
-    ui.dtsCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_DTS));
-    ui.dtsCheckBox->setChecked(filters.contains("*.dts") && avcodec_find_decoder(CODEC_ID_DTS));
-    ui.mkaCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_TRUEHD));
-    ui.mkaCheckBox->setChecked(filters.contains("*.mka") && avcodec_find_decoder(CODEC_ID_TRUEHD));
-    ui.vqfCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_TWINVQ));
-    ui.vqfCheckBox->setChecked(filters.contains("*.vqf") && avcodec_find_decoder(CODEC_ID_TWINVQ));
+    m_ui.raCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_RA_288));
+    m_ui.raCheckBox->setChecked(filters.contains("*.ra") && avcodec_find_decoder(CODEC_ID_RA_288));
+    m_ui.shCheckBox->setChecked(filters.contains("*.shn") && avcodec_find_decoder(CODEC_ID_SHORTEN));
+    m_ui.ac3CheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_EAC3));
+    m_ui.ac3CheckBox->setChecked(filters.contains("*.ac3") && avcodec_find_decoder(CODEC_ID_EAC3));
+    m_ui.dtsCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_DTS));
+    m_ui.dtsCheckBox->setChecked(filters.contains("*.dts") && avcodec_find_decoder(CODEC_ID_DTS));
+    m_ui.mkaCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_TRUEHD));
+    m_ui.mkaCheckBox->setChecked(filters.contains("*.mka") && avcodec_find_decoder(CODEC_ID_TRUEHD));
+    m_ui.vqfCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_TWINVQ));
+    m_ui.vqfCheckBox->setChecked(filters.contains("*.vqf") && avcodec_find_decoder(CODEC_ID_TWINVQ));
+    m_ui.takCheckBox->setEnabled(avcodec_find_decoder(CODEC_ID_TAK));
+    m_ui.takCheckBox->setChecked(filters.contains("*.tak") && avcodec_find_decoder(CODEC_ID_TAK));
 #endif
 }
 
@@ -98,30 +102,32 @@ SettingsDialog::~SettingsDialog()
 void SettingsDialog::accept()
 {
     QStringList filters;
-    if (ui.mp3CheckBox->isChecked())
+    if (m_ui.mp3CheckBox->isChecked())
         filters << "*.mp3";
-    if (ui.wmaCheckBox->isChecked())
+    if (m_ui.wmaCheckBox->isChecked())
         filters << "*.wma";
-    if (ui.apeCheckBox->isChecked())
+    if (m_ui.apeCheckBox->isChecked())
         filters << "*.ape";
-    if (ui.ttaCheckBox->isChecked())
+    if (m_ui.ttaCheckBox->isChecked())
         filters << "*.tta";
-    if (ui.aacCheckBox->isChecked())
+    if (m_ui.aacCheckBox->isChecked())
         filters << "*.aac";
-    if (ui.mp4CheckBox->isChecked())
+    if (m_ui.mp4CheckBox->isChecked())
         filters << "*.m4a";
-    if (ui.raCheckBox->isChecked())
+    if (m_ui.raCheckBox->isChecked())
         filters << "*.ra";
-    if (ui.shCheckBox->isChecked())
+    if (m_ui.shCheckBox->isChecked())
         filters << "*.shn";
-    if (ui.ac3CheckBox->isChecked())
+    if (m_ui.ac3CheckBox->isChecked())
         filters << "*.ac3";
-    if (ui.dtsCheckBox->isChecked())
+    if (m_ui.dtsCheckBox->isChecked())
         filters << "*.dts";
-    if (ui.mkaCheckBox->isChecked())
+    if (m_ui.mkaCheckBox->isChecked())
         filters << "*.mka";
-    if (ui.vqfCheckBox->isChecked())
+    if (m_ui.vqfCheckBox->isChecked())
         filters << "*.vqf";
+    if (m_ui.takCheckBox->isChecked())
+        filters << "*.tak";
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("FFMPEG/filters", filters);
     QDialog::accept();

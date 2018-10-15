@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>308</width>
-    <height>328</height>
+    <width>337</width>
+    <height>447</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -136,6 +136,13 @@
        <widget class="QCheckBox" name="vqfCheckBox">
         <property name="text">
          <string>VQF</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="takCheckBox">
+        <property name="text">
+         <string>Tom's lossless Audio Kompressor (TAK)</string>
         </property>
        </widget>
       </item>

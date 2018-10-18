@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -102,7 +102,11 @@ bool RadioItemDelegate::editorEvent(QEvent *event, QAbstractItemModel *model,
                 QModelIndex parentItem = index.parent();
                 for (int i = 0; i < model->rowCount(parentItem); ++i)
                 {
-                    QModelIndex childIndex = parentItem.child(i,0);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 8, 0)
+                    QModelIndex childIndex = model->index(i, 0, parentItem);
+#else
+                    QModelIndex childIndex = parentItem.child(i, 0);
+#endif
                     if (childIndex != index)
                         model->setData(childIndex, Qt::Unchecked, Qt::CheckStateRole);
                 }

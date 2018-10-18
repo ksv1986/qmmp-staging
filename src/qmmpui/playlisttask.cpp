@@ -69,12 +69,20 @@ static bool _numberGreaterComparator(TrackField* s1, TrackField* s2)
 //by file creation date
 static bool _fileCreationDateLessComparator(TrackField* s1, TrackField* s2)
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    return QFileInfo(s1->value).birthTime() < QFileInfo(s2->value).birthTime();
+#else
     return QFileInfo(s1->value).created() < QFileInfo(s2->value).created();
+#endif
 }
 
 static bool _fileCreationDateGreaterComparator(TrackField* s1, TrackField* s2)
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    return QFileInfo(s1->value).birthTime() > QFileInfo(s2->value).birthTime();
+#else
     return QFileInfo(s1->value).created() > QFileInfo(s2->value).created();
+#endif
 }
 //by file modification date
 static bool _fileModificationDateLessComparator(TrackField* s1, TrackField* s2)

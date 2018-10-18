@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -609,6 +609,8 @@ void ListWidget::dragMoveEvent(QDragMoveEvent *event)
         m_drop_index = index;
         update();
     }
+    if (event->mimeData()->hasFormat("text/uri-list"))
+        event->acceptProposedAction();
 }
 
 const QString ListWidget::getExtraString(PlayListItem *item)

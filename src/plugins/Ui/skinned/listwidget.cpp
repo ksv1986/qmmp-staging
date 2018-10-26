@@ -320,7 +320,13 @@ void ListWidget::updateList(int flags)
         }
         else if(m_first + m_row_count >= m_model->count())
         {
-            m_first = qMax(0, m_model->count() - m_row_count);
+            //try to restore first visible first
+            if((m_count > 0) && (m_count != m_model->count()) && m_firstItem)
+            {
+                restoreFirstVisible();
+            }
+            if(m_first + m_row_count >= m_model->count())
+                m_first = qMax(0, m_model->count() - m_row_count);
             emit positionChanged(m_first, m_first);
         }
         else if((m_count > 0) && (m_count != m_model->count()) &&
@@ -580,14 +586,16 @@ bool ListWidget::updateRowCount()
 
 void ListWidget::restoreFirstVisible()
 {
-    if(m_first >= m_model->count() || m_firstItem == m_model->item(m_first))
+    if(m_first < m_model->count() && m_firstItem == m_model->item(m_first))
         return;
 
     int delta = m_model->count() - m_count;
 
+    //try to find and restore first visible index
     if(delta > 0)
     {
-        for(int i = m_first + 1; i <= qMin(m_model->count() - 1, m_first + delta); ++i)
+        int from = qMin(m_model->count() - 1, m_first + 1);
+        for(int i = from; i <= qMin(m_model->count() - 1, m_first + delta); ++i)
         {
             if(m_model->item(i) == m_firstItem)
             {
@@ -598,7 +606,8 @@ void ListWidget::restoreFirstVisible()
     }
     else
     {
-        for(int i = m_first - 1; i >= qMax(0, m_first + delta); --i)
+        int from = qMin(m_model->count() - 1, m_first - 1);
+        for(int i = from; i >= qMax(0, m_first + delta); --i)
         {
             if(m_model->item(i) == m_firstItem)
             {

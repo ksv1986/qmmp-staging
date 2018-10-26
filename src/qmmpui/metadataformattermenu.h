@@ -34,7 +34,8 @@ public:
     enum Type
     {
         TITLE_MENU = 0,
-        GROUP_MENU
+        GROUP_MENU,
+        COLUMN_MENU
     };
 
     explicit MetaDataFormatterMenu(Type type, QWidget *parent = 0);

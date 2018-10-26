@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2015-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -75,7 +75,7 @@ void ColumnEditor::on_formatLineEdit_textChanged(const QString &text)
 
 void ColumnEditor::createMenu()
 {
-    MetaDataFormatterMenu *menu = new MetaDataFormatterMenu(MetaDataFormatterMenu::TITLE_MENU, this);
+    MetaDataFormatterMenu *menu = new MetaDataFormatterMenu(MetaDataFormatterMenu::COLUMN_MENU, this);
     m_ui->formatButton->setMenu(menu);
     connect(menu, SIGNAL(patternSelected(QString)), SLOT(insertExpression(QString)));
 }

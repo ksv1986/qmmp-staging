@@ -26,18 +26,22 @@ MetaDataFormatterMenu::MetaDataFormatterMenu(Type type, QWidget *parent) :
     addAction(tr("Artist"))->setData("%p");
     addAction(tr("Album"))->setData("%a");
     addAction(tr("Album Artist"))->setData("%aa");
-    if(type == TITLE_MENU)
+    if(type == TITLE_MENU || type == COLUMN_MENU)
     {
         addAction(tr("Title"))->setData("%t");
         addAction(tr("Track Number"))->setData("%n");
         addAction(tr("Two-digit Track Number"))->setData("%NN");
+    }
+    if(type == COLUMN_MENU)
+    {
+        addAction(tr("Track Index"))->setData("%I");
     }
     addAction(tr("Genre"))->setData("%g");
     addAction(tr("Comment"))->setData("%c");
     addAction(tr("Composer"))->setData("%C");
     addAction(tr("Disc Number"))->setData("%D");
     addAction(tr("Year"))->setData("%y");
-    if(type == TITLE_MENU)
+    if(type == TITLE_MENU || type == COLUMN_MENU)
     {
         addAction(tr("Duration"))->setData("%l");
         addAction(tr("File Name"))->setData("%f");
@@ -57,7 +61,7 @@ MetaDataFormatterMenu::MetaDataFormatterMenu(Type type, QWidget *parent) :
     addAction(tr("Sample Size"))->setData("%{samplesize}");
     addAction(tr("Format"))->setData("%{format}");
     addAction(tr("Decoder"))->setData("%{decoder}");
-    if(type == TITLE_MENU)
+    if(type == TITLE_MENU || type == COLUMN_MENU)
     {
         addAction(tr("File Size"))->setData("%{filesize}");
     }

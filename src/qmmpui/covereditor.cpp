@@ -38,7 +38,7 @@ CoverEditor::CoverEditor(MetaDataModel *model, const QString &coverPath, QWidget
     layout->addWidget(m_viewer);
     m_ui.frame->setLayout(layout);
 
-    if(m_model && (!m_model->cover().isNull() || m_editable))
+    if(m_model && !m_model->cover().isNull())
         m_ui.sourceComboBox->setCurrentIndex(1);
     else
         m_ui.sourceComboBox->setCurrentIndex(0);

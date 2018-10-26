@@ -64,6 +64,8 @@ ListWidget::ListWidget(QWidget *parent)
     m_pressed_index = INVALID_INDEX;
     m_first = 0;
     m_row_count = 0;
+    m_count = 0;
+    m_firstItem = 0;
     m_select_on_release = false;
 
     setAcceptDrops(true);
@@ -321,9 +323,19 @@ void ListWidget::updateList(int flags)
             m_first = qMax(0, m_model->count() - m_row_count);
             emit positionChanged(m_first, m_first);
         }
-        else
+        else if((m_count > 0) && (m_count != m_model->count()) &&
+                m_firstItem && m_model->item(m_first) != m_firstItem)
+        {
+            restoreFirstVisible();
             emit positionChanged(m_first, m_model->count() - m_row_count);
+        }
+        else
+        {
+            emit positionChanged(m_first, m_model->count() - m_row_count);
+        }
 
+        m_firstItem = m_model->isEmpty() ? 0 : m_model->item(m_first);
+        m_count = m_model->count();
         items = m_model->mid(m_first, m_row_count);
 
         while(m_rows.count() < qMin(m_row_count, items.count()))
@@ -446,6 +458,8 @@ void ListWidget::setModel(PlayListModel *selected, PlayListModel *previous)
     }
     qApp->processEvents();
     m_model = selected;
+    m_count = m_model->count();
+    m_firstItem = 0;
 
     if(m_model->property("first_visible").isValid())
     {
@@ -562,6 +576,37 @@ bool ListWidget::updateRowCount()
         return true;
     }
     return false;
+}
+
+void ListWidget::restoreFirstVisible()
+{
+    if(m_first >= m_model->count() || m_firstItem == m_model->item(m_first))
+        return;
+
+    int delta = m_model->count() - m_count;
+
+    if(delta > 0)
+    {
+        for(int i = m_first + 1; i <= qMin(m_model->count() - 1, m_first + delta); ++i)
+        {
+            if(m_model->item(i) == m_firstItem)
+            {
+                m_first = i;
+                break;
+            }
+        }
+    }
+    else
+    {
+        for(int i = m_first - 1; i >= qMax(0, m_first + delta); --i)
+        {
+            if(m_model->item(i) == m_firstItem)
+            {
+                m_first = i;
+                break;
+            }
+        }
+    }
 }
 
 void ListWidget::mouseMoveEvent(QMouseEvent *e)

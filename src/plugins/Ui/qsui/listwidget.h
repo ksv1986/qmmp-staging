@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -113,18 +113,19 @@ private:
      * Returns string with queue number or(and) repeate flag for the \b item.
      */
     const QString getExtraString(PlayListItem *item);
-
     bool updateRowCount();
+    void restoreFirstVisible();
     void updateScrollBars();
 
     bool m_update;
     int m_pressed_index;
     QMenu *m_menu;
     PlayListModel *m_model;
-    int m_row_count, m_first;
+    int m_row_count, m_first, m_count; //visible rows, first visible index, total item count
+    PlayListItem *m_firstItem; //first visible item
     int m_anchor_index;
     /*!
-     * Scroll direction that is preforming in current moment.
+     * Scroll direction that is performing in current moment.
      */
     ScrollDirection m_scroll_direction;
     int m_prev_y;

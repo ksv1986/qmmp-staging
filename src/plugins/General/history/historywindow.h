@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -44,6 +44,7 @@ private slots:
     void on_lastMonthButton_clicked();
     void on_fromButton_clicked();
     void on_toButton_clicked();
+    void onSortIndicatorChanged(int index, Qt::SortOrder order);
 
 private:
     void loadHistory();
@@ -57,6 +58,7 @@ private:
     Ui::HistoryWindow *m_ui;
     QSqlDatabase m_db;
     MetaDataFormatter m_formatter;
+    Qt::SortOrder m_order;
 };
 
 #endif // HISTORYWINDOW_H

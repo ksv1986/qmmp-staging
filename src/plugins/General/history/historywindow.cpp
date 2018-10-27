@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,7 +40,6 @@ HistoryWindow::HistoryWindow(QSqlDatabase db, QWidget *parent) :
     setAttribute(Qt::WA_DeleteOnClose);
     setAttribute(Qt::WA_QuitOnClose, false);
     m_db = db;
-    readSettings();
 
     QDateTime t = QDateTime::currentDateTime();
     t.setTime(QTime(23, 59, 0 ,0));
@@ -52,6 +51,13 @@ HistoryWindow::HistoryWindow(QSqlDatabase db, QWidget *parent) :
     m_ui->topArtistsTreeWidget->setItemDelegate(new ProgressBarItemDelegate(this));
     m_ui->topSongsTreeWidget->setItemDelegate(new ProgressBarItemDelegate(this));
     m_ui->topGenresTreeWidget->setItemDelegate(new ProgressBarItemDelegate(this));
+    m_ui->historyTreeWidget->header()->setSortIndicator(0, Qt::AscendingOrder);
+    m_ui->historyTreeWidget->header()->setSortIndicatorShown(true);
+    m_ui->historyTreeWidget->header()->setSectionsClickable(true);
+    readSettings();
+    connect(m_ui->historyTreeWidget->header(), SIGNAL(sortIndicatorChanged(int, Qt::SortOrder)),
+            SLOT(onSortIndicatorChanged(int, Qt::SortOrder)));
+    m_order = m_ui->historyTreeWidget->header()->sortIndicatorOrder();
 
     on_executeButton_clicked();
 }
@@ -70,8 +76,16 @@ void HistoryWindow::loadHistory()
 
     QSqlQuery query(m_db);
 
-    query.prepare("SELECT Timestamp,Title,Artist,AlbumArtist,Album,Comment,Genre,Composer,Track,Year,Duration,URL "
-                  "FROM track_history WHERE Timestamp BETWEEN :from and :to");
+    if(m_ui->historyTreeWidget->header()->sortIndicatorOrder() == Qt::DescendingOrder)
+    {
+        query.prepare("SELECT Timestamp,Title,Artist,AlbumArtist,Album,Comment,Genre,Composer,Track,Year,Duration,URL "
+                      "FROM track_history WHERE Timestamp BETWEEN :from and :to ORDER BY id DESC");
+    }
+    else
+    {
+        query.prepare("SELECT Timestamp,Title,Artist,AlbumArtist,Album,Comment,Genre,Composer,Track,Year,Duration,URL "
+                      "FROM track_history WHERE Timestamp BETWEEN :from and :to");
+    }
     query.bindValue(":from", m_ui->fromDateEdit->dateTime().toUTC().toString("yyyy-MM-dd hh:mm:ss"));
     query.bindValue(":to", m_ui->toDateEdit->dateTime().toUTC().toString("yyyy-MM-dd hh:mm:ss"));
 
@@ -413,4 +427,18 @@ void HistoryWindow::on_toButton_clicked()
     d.setSelectedDate(m_ui->toDateEdit->date());
     if(d.exec() == QDialog::Accepted)
         m_ui->toDateEdit->setDate(d.selectedDate());
+}
+
+void HistoryWindow::onSortIndicatorChanged(int index, Qt::SortOrder order)
+{
+    if(index == 0)
+    {
+        m_order = order;
+        loadHistory();
+    }
+    else //ignore sorting for second section
+    {
+        //restore sort indicator order
+        m_ui->historyTreeWidget->header()->setSortIndicator(0, m_order);
+    }
 }

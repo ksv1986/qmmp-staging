@@ -4,32 +4,32 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="120"/>
+        <location filename="../decoderffmpegfactory.cpp" line="125"/>
         <source>FFmpeg Plugin</source>
         <translation>Suplemento FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="122"/>
+        <location filename="../decoderffmpegfactory.cpp" line="127"/>
         <source>FFmpeg Formats</source>
         <translation>Formatos FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="254"/>
+        <location filename="../decoderffmpegfactory.cpp" line="259"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>Sobre o suplemento FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="255"/>
+        <location filename="../decoderffmpegfactory.cpp" line="260"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>Suplemento Qmmp FFmpeg Audio</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="256"/>
+        <location filename="../decoderffmpegfactory.cpp" line="261"/>
         <source>Compiled against:</source>
         <translation>Compilado com:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="269"/>
+        <location filename="../decoderffmpegfactory.cpp" line="274"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
@@ -105,6 +105,11 @@
         <location filename="../settingsdialog.ui" line="138"/>
         <source>VQF</source>
         <translation>VQF</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="145"/>
+        <source>Tom&apos;s lossless Audio Kompressor (TAK)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

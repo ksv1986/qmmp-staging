@@ -992,97 +992,102 @@
         <translation>Подвійний номер трека</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="35"/>
+        <location filename="../metadataformattermenu.cpp" line="37"/>
+        <source>Track Index</source>
+        <translation type="unfinished">Індекс трека</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Genre</source>
         <translation>Жанр</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="36"/>
+        <location filename="../metadataformattermenu.cpp" line="40"/>
         <source>Comment</source>
         <translation>Коментар</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="37"/>
+        <location filename="../metadataformattermenu.cpp" line="41"/>
         <source>Composer</source>
         <translation>Композитор</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="42"/>
+        <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Duration</source>
         <translation>Тривалість</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="54"/>
+        <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
         <translation>Бітрейт</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="55"/>
+        <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Sample Rate</source>
         <translation>Частота дискретизації</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="56"/>
+        <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Number of Channels</source>
         <translation>Кількість каналів</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="57"/>
+        <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Sample Size</source>
         <translation>Розмір семпла</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="58"/>
+        <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
         <translation>Формат</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="59"/>
+        <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Decoder</source>
         <translation>Декодер</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="62"/>
+        <location filename="../metadataformattermenu.cpp" line="66"/>
         <source>File Size</source>
         <translation>Розмір файла</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="38"/>
+        <location filename="../metadataformattermenu.cpp" line="42"/>
         <source>Disc Number</source>
         <translation>Номер диску</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="43"/>
+        <location filename="../metadataformattermenu.cpp" line="47"/>
         <source>File Name</source>
         <translation>Ім&apos;я файлу</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="44"/>
+        <location filename="../metadataformattermenu.cpp" line="48"/>
         <source>File Path</source>
         <translation>Ім&apos;я файлу</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="39"/>
+        <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>Year</source>
         <translation>Рік</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="46"/>
+        <location filename="../metadataformattermenu.cpp" line="50"/>
         <source>Condition</source>
         <translation>Умова</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="45"/>
+        <location filename="../metadataformattermenu.cpp" line="49"/>
         <source>Artist - Title</source>
         <translation>Виконавець - Назва</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="50"/>
+        <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Artist - [Year] Album</source>
         <translation>Виконавець - [Рік] Альбом</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="52"/>
+        <location filename="../metadataformattermenu.cpp" line="56"/>
         <source>Parent Directory Name</source>
         <translation>Ім&apos;я батьківської теки</translation>
     </message>

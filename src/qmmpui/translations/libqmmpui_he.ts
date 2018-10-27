@@ -992,97 +992,102 @@
         <translation>מספר רצועה דו ספרתי</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="35"/>
+        <location filename="../metadataformattermenu.cpp" line="37"/>
+        <source>Track Index</source>
+        <translation type="unfinished">אינדקס רצועה</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Genre</source>
         <translation>ז׳אנר</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="36"/>
+        <location filename="../metadataformattermenu.cpp" line="40"/>
         <source>Comment</source>
         <translation>הערה</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="37"/>
+        <location filename="../metadataformattermenu.cpp" line="41"/>
         <source>Composer</source>
         <translation>מלחין</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="42"/>
+        <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Duration</source>
         <translation>משך</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="54"/>
+        <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="55"/>
+        <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Sample Rate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="56"/>
+        <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Number of Channels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="57"/>
+        <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Sample Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="58"/>
+        <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="59"/>
+        <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Decoder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="62"/>
+        <location filename="../metadataformattermenu.cpp" line="66"/>
         <source>File Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="38"/>
+        <location filename="../metadataformattermenu.cpp" line="42"/>
         <source>Disc Number</source>
         <translation>מספר תקליטור</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="43"/>
+        <location filename="../metadataformattermenu.cpp" line="47"/>
         <source>File Name</source>
         <translation>שם קובץ</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="44"/>
+        <location filename="../metadataformattermenu.cpp" line="48"/>
         <source>File Path</source>
         <translation>נתיב קובץ</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="39"/>
+        <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>Year</source>
         <translation>שנה</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="46"/>
+        <location filename="../metadataformattermenu.cpp" line="50"/>
         <source>Condition</source>
         <translation>תנאי</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="45"/>
+        <location filename="../metadataformattermenu.cpp" line="49"/>
         <source>Artist - Title</source>
         <translation>אמן - כותרת</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="50"/>
+        <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Artist - [Year] Album</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="52"/>
+        <location filename="../metadataformattermenu.cpp" line="56"/>
         <source>Parent Directory Name</source>
         <translation type="unfinished"></translation>
     </message>

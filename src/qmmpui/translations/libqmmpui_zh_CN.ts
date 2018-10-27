@@ -992,97 +992,102 @@
         <translation>两位单曲号</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="35"/>
+        <location filename="../metadataformattermenu.cpp" line="37"/>
+        <source>Track Index</source>
+        <translation type="unfinished">曲目索引</translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Genre</source>
         <translation>风格</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="36"/>
+        <location filename="../metadataformattermenu.cpp" line="40"/>
         <source>Comment</source>
         <translation>评论</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="37"/>
+        <location filename="../metadataformattermenu.cpp" line="41"/>
         <source>Composer</source>
         <translation>曲作者</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="42"/>
+        <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Duration</source>
         <translation>长度</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="54"/>
+        <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="55"/>
+        <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Sample Rate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="56"/>
+        <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Number of Channels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="57"/>
+        <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Sample Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="58"/>
+        <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="59"/>
+        <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Decoder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="62"/>
+        <location filename="../metadataformattermenu.cpp" line="66"/>
         <source>File Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="38"/>
+        <location filename="../metadataformattermenu.cpp" line="42"/>
         <source>Disc Number</source>
         <translation>碟片编号</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="43"/>
+        <location filename="../metadataformattermenu.cpp" line="47"/>
         <source>File Name</source>
         <translation>文件名</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="44"/>
+        <location filename="../metadataformattermenu.cpp" line="48"/>
         <source>File Path</source>
         <translation>文件路径</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="39"/>
+        <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>Year</source>
         <translation>年份</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="46"/>
+        <location filename="../metadataformattermenu.cpp" line="50"/>
         <source>Condition</source>
         <translation>条件</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="45"/>
+        <location filename="../metadataformattermenu.cpp" line="49"/>
         <source>Artist - Title</source>
         <translation>艺术家-题头</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="50"/>
+        <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Artist - [Year] Album</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="52"/>
+        <location filename="../metadataformattermenu.cpp" line="56"/>
         <source>Parent Directory Name</source>
         <translation>上级目录名</translation>
     </message>

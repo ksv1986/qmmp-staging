@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,9 +24,12 @@
 #include <QObject>
 #include <QHash>
 extern "C"{
-#include <pulse/simple.h>
+#include <pulse/pulseaudio.h>
 }
 #include <qmmp/output.h>
+#include <qmmp/volume.h>
+
+class VolumePulseAudio;
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
@@ -43,12 +46,48 @@ public:
     qint64 writeAudio(unsigned char *data, qint64 maxSize);
     void drain();
     void reset();
+    void setVolume(const VolumeSettings &v);
+
+    static OutputPulseAudio *instance;
+    static VolumePulseAudio *volumeControl;
 
 private:
     // helper functions
     void uninitialize();
-    pa_simple *m_connection;
+    bool isReady() const;
+    void poll();
+    //callbacks
+    static void subscribe_cb(pa_context *ctx, pa_subscription_event_type t, uint32_t index, void *data);
+    static void info_cb (pa_context *, const pa_sink_input_info * info, int, void * data);
+    static void context_success_cb (pa_context *, int success, void *data);
+    static void stream_success_cb (pa_stream *, int success, void *data);
+
+    //pa_simple *m_connection;
+    pa_mainloop *m_loop;
+    pa_context *m_ctx;
+    pa_stream *m_stream;
     QHash <Qmmp::ChannelPosition, pa_channel_position_t> m_pa_channels;
+    bool changed = false;
+    bool flushed = false;
+};
+
+/**
+    @author Ilya Kotov <forkotov02@ya.ru>
+*/
+class VolumePulseAudio : public Volume
+{
+public:
+    VolumePulseAudio();
+    ~VolumePulseAudio();
+
+    void updateVolume(const pa_cvolume &v);
+    void setVolume(const VolumeSettings &vol);
+    VolumeSettings volume() const;
+    void restore();
+    bool hasNotifySignal() const;
+
+private:
+    VolumeSettings m_volume;
 };
 
 #endif // OUTPUTPULSEAUDIO_H

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,7 +41,7 @@ Output* OutputPulseAudioFactory::create()
 
 Volume *OutputPulseAudioFactory::createVolume()
 {
-    return 0;
+    return new VolumePulseAudio;
 }
 
 void OutputPulseAudioFactory::showSettings(QWidget* parent)

@@ -46,6 +46,8 @@ public:
     qint64 writeAudio(unsigned char *data, qint64 maxSize);
     void drain();
     void reset();
+    void suspend();
+    void resume();
     void setVolume(const VolumeSettings &v);
 
     static OutputPulseAudio *instance;
@@ -56,13 +58,14 @@ private:
     void uninitialize();
     bool isReady() const;
     void poll();
+    bool process(pa_operation *op);
     //callbacks
     static void subscribe_cb(pa_context *ctx, pa_subscription_event_type t, uint32_t index, void *data);
-    static void info_cb (pa_context *ctx, const pa_sink_input_info * info, int, void * data);
-    static void context_success_cb (pa_context *, int success, void *data);
-    static void stream_success_cb (pa_stream *, int success, void *data);
+    static void info_cb(pa_context *ctx, const pa_sink_input_info * info, int, void * data);
+    //converters
+    static void context_success_cb(pa_context *, int success, void *data);
+    static void stream_success_cb(pa_stream *, int success, void *data);
 
-    //pa_simple *m_connection;
     pa_mainloop *m_loop;
     pa_context *m_ctx;
     pa_stream *m_stream;

@@ -157,40 +157,16 @@ bool OutputPulseAudio::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForma
 
     bool success = false;
     pa_operation *op = pa_context_subscribe(m_ctx, PA_SUBSCRIPTION_MASK_SINK_INPUT, OutputPulseAudio::context_success_cb, &success);
-    if(!op)
-    {
-        qWarning("OutputPulseAudio: pa_context_subscribe failed: %s", pa_strerror(pa_context_errno(m_ctx)));
-        return false;
-    }
-
-    pa_operation_state_t op_state;
-    while((op_state = pa_operation_get_state(op)) != PA_OPERATION_DONE && isReady())
-    {
-       poll();
-    }
-    pa_operation_unref(op);
-
-    if(op_state != PA_OPERATION_DONE || !success)
+    if(!process(op) || !success)
     {
         qWarning("OutputPulseAudio: pa_context_subscribe failed: %s", pa_strerror(pa_context_errno(m_ctx)));
         return false;
     }
     success = false;
-    if(!(op = pa_context_get_sink_input_info(m_ctx, pa_stream_get_index(m_stream), OutputPulseAudio::info_cb, &success)))
+    op = pa_context_get_sink_input_info(m_ctx, pa_stream_get_index(m_stream), OutputPulseAudio::info_cb, &success);
+    if(!process(op) || !success)
     {
-        qWarning("OutputPulseAudio: pa_context_get_sink_input_info failed: %s", pa_strerror(pa_context_errno(m_ctx)));
-        return false;
-    }
-
-    while((op_state = pa_operation_get_state(op)) != PA_OPERATION_DONE && isReady())
-    {
-        poll();
-    }
-    pa_operation_unref(op);
-
-    if(op_state != PA_OPERATION_DONE || !success)
-    {
-        qWarning("OutputPulseAudio: pa_context_get_sink_input_info failed: %s", pa_strerror(pa_context_errno(m_ctx)));
+        qWarning("OutputPulseAudio:pa_context_get_sink_input_info: %s", pa_strerror(pa_context_errno(m_ctx)));
         return false;
     }
 
@@ -226,23 +202,25 @@ qint64 OutputPulseAudio::writeAudio(unsigned char *data, qint64 maxSize)
 void OutputPulseAudio::drain()
 {
     pa_operation *op = pa_stream_drain(m_stream, OutputPulseAudio::stream_success_cb, 0);
-
-    while(pa_operation_get_state(op) != PA_OPERATION_DONE && isReady())
-    {
-        poll();
-    }
-    pa_operation_unref(op);
+    process(op);
 }
 
 void OutputPulseAudio::reset()
 {
     pa_operation *op = pa_stream_flush(m_stream, OutputPulseAudio::stream_success_cb, 0);
+    process(op);
+}
 
-    while(pa_operation_get_state(op) != PA_OPERATION_DONE && isReady())
-    {
-       poll();
-    }
-    pa_operation_unref(op);
+void OutputPulseAudio::suspend()
+{
+    pa_operation *op = pa_stream_cork(m_stream, 1, OutputPulseAudio::stream_success_cb, 0);
+    process(op);
+}
+
+void OutputPulseAudio::resume()
+{
+    pa_operation *op = pa_stream_cork(m_stream, 0, OutputPulseAudio::stream_success_cb, 0);
+    process(op);
 }
 
 void OutputPulseAudio::setVolume(const VolumeSettings &v)
@@ -288,6 +266,19 @@ void OutputPulseAudio::poll()
     pa_mainloop_prepare(m_loop, -1);
     pa_mainloop_poll(m_loop);
     pa_mainloop_dispatch(m_loop);
+}
+
+bool OutputPulseAudio::process(pa_operation *op)
+{
+    if(!op)
+        return false;
+
+    pa_operation_state_t state;
+    while((state = pa_operation_get_state(op)) != PA_OPERATION_DONE && isReady())
+       poll();
+
+    pa_operation_unref(op);
+    return (state == PA_OPERATION_DONE) && isReady();
 }
 //callbacks
 void OutputPulseAudio::subscribe_cb(pa_context *ctx, pa_subscription_event_type t, uint32_t index, void *data)

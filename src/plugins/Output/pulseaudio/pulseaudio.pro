@@ -10,7 +10,7 @@ SOURCES += outputpulseaudiofactory.cpp \
 
 RESOURCES = translations/translations.qrc
 
-PKGCONFIG += libpulse-simple
+PKGCONFIG += libpulse
 
 target.path = $$PLUGIN_DIR/Output
 INSTALLS += target

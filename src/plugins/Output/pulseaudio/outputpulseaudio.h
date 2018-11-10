@@ -58,7 +58,7 @@ private:
     void poll();
     //callbacks
     static void subscribe_cb(pa_context *ctx, pa_subscription_event_type t, uint32_t index, void *data);
-    static void info_cb (pa_context *, const pa_sink_input_info * info, int, void * data);
+    static void info_cb (pa_context *ctx, const pa_sink_input_info * info, int, void * data);
     static void context_success_cb (pa_context *, int success, void *data);
     static void stream_success_cb (pa_stream *, int success, void *data);
 
@@ -67,8 +67,6 @@ private:
     pa_context *m_ctx;
     pa_stream *m_stream;
     QHash <Qmmp::ChannelPosition, pa_channel_position_t> m_pa_channels;
-    bool changed = false;
-    bool flushed = false;
 };
 
 /**
@@ -83,8 +81,9 @@ public:
     void updateVolume(const pa_cvolume &v);
     void setVolume(const VolumeSettings &vol);
     VolumeSettings volume() const;
-    void restore();
     bool hasNotifySignal() const;
+    static VolumeSettings cvolumeToVolumeSettings(const pa_cvolume &v);
+    static pa_cvolume volumeSettingsToCvolume(const VolumeSettings &v, int channels);
 
 private:
     VolumeSettings m_volume;

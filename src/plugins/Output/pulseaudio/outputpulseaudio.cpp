@@ -22,8 +22,7 @@ extern "C"{
 #include <pulse/error.h>
 }
 #include <math.h>
-#include <QThread>
-#include <QMetaObject>
+#include <QSettings>
 #include "outputpulseaudio.h"
 
 OutputPulseAudio *OutputPulseAudio::instance = 0;
@@ -31,7 +30,6 @@ VolumePulseAudio *OutputPulseAudio::volumeControl = 0;
 
 OutputPulseAudio::OutputPulseAudio(): Output()
 {
-    //m_connection = 0;
     m_loop = 0;
     m_ctx = 0;
     m_stream = 0;
@@ -77,7 +75,7 @@ bool OutputPulseAudio::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForma
         return false;
     }
 
-    //waiting context connection
+    //waiting for context connection
     pa_context_state_t context_state = PA_CONTEXT_UNCONNECTED;
     while((context_state = pa_context_get_state(m_ctx)) != PA_CONTEXT_READY)
     {
@@ -125,19 +123,25 @@ bool OutputPulseAudio::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForma
 
     pa_buffer_attr attr;
     attr.maxlength = (uint32_t) -1;
-    attr.tlength = (uint32_t) -1;//pa_usec_to_bytes((pa_usec_t)50 * 1000, &ss); //50 ms
+    attr.tlength = (uint32_t) pa_usec_to_bytes((pa_usec_t)500 * 1000, &ss); //500 ms
     attr.prebuf = (uint32_t) -1;
     attr.minreq = (uint32_t) -1;
     attr.fragsize = attr.tlength;
 
     pa_stream_flags_t flags = pa_stream_flags_t(PA_STREAM_INTERPOLATE_TIMING | PA_STREAM_AUTO_TIMING_UPDATE);
-    if(pa_stream_connect_playback(m_stream, 0, &attr, flags, 0, 0) < 0)
+    pa_cvolume *pvol = 0;
+    pa_cvolume vol;
+    if(volumeControl)
+    {
+        vol = VolumePulseAudio::volumeSettingsToCvolume(volumeControl->volume(), map.count());
+        pvol = &vol;
+    }
+    if(pa_stream_connect_playback(m_stream, 0, &attr, flags, pvol, 0) < 0)
     {
         qWarning("OutputPulseAudio: unable to connect playback: %s", pa_strerror(pa_context_errno(m_ctx)));
         return false;
     }
-
-    //waiting stream connection
+    //waiting for stream connection
     pa_stream_state_t stream_state = PA_STREAM_UNCONNECTED;
     while((stream_state = pa_stream_get_state(m_stream)) != PA_STREAM_READY)
     {
@@ -205,18 +209,6 @@ qint64 OutputPulseAudio::latency()
 
 qint64 OutputPulseAudio::writeAudio(unsigned char *data, qint64 maxSize)
 {
-    /*bool success = false;
-    pa_operation *op = pa_stream_trigger(m_stream, OutputPulseAudio::stream_success_cb, &success);
-
-    while(pa_operation_get_state (op) != PA_OPERATION_DONE && isReady())
-    {
-        pa_mainloop_prepare(m_loop, -1);
-        pa_mainloop_poll(m_loop);
-        pa_mainloop_dispatch(m_loop);
-
-    }
-    pa_operation_unref (op);*/
-
     while(!pa_stream_writable_size(m_stream) || !isReady())
     {
         poll();
@@ -255,29 +247,9 @@ void OutputPulseAudio::reset()
 
 void OutputPulseAudio::setVolume(const VolumeSettings &v)
 {
-    pa_cvolume volume;
-
-    if(audioParameters().channels() == 2)
-    {
-        volume.values[0] = v.left * PA_VOLUME_NORM / 100;
-        volume.values[1] = v.right * PA_VOLUME_NORM / 100;
-        volume.channels = 2;
-    }
-    else
-    {
-        for(int i = 0; i < audioParameters().channels(); ++i)
-            volume.values[i] = qMax(v.left, v.right) * PA_VOLUME_NORM / 100;
-        volume.channels = audioParameters().channels();
-    }
-
-    pa_operation *op = pa_context_set_sink_input_volume(m_ctx, pa_stream_get_index(m_stream), &volume, OutputPulseAudio::context_success_cb, 0);
-
-    /*while(pa_operation_get_state(op) != PA_OPERATION_DONE && isReady())
-    {
-        pa_mainloop_prepare(m_loop, -1);
-        pa_mainloop_poll(m_loop);
-        pa_mainloop_dispatch(m_loop);
-    }*/
+    pa_cvolume volume = VolumePulseAudio::volumeSettingsToCvolume(v, audioParameters().channels());
+    pa_operation *op = pa_context_set_sink_input_volume(m_ctx, pa_stream_get_index(m_stream), &volume,
+                                                        OutputPulseAudio::context_success_cb, 0);
     pa_operation_unref(op);
 }
 
@@ -337,12 +309,12 @@ void OutputPulseAudio::subscribe_cb(pa_context *ctx, pa_subscription_event_type 
     pa_operation_unref(op);
 }
 
-void OutputPulseAudio::info_cb(pa_context *, const pa_sink_input_info *info, int, void *data)
+void OutputPulseAudio::info_cb(pa_context *ctx, const pa_sink_input_info *info, int, void *data)
 {
     if(!info)
         return;
 
-    if(volumeControl)
+    if(volumeControl && pa_context_get_state(ctx) == PA_CONTEXT_READY)
         volumeControl->updateVolume(info->volume);
 
     if(data)
@@ -365,25 +337,22 @@ void OutputPulseAudio::stream_success_cb(pa_stream *, int success, void *data)
 VolumePulseAudio::VolumePulseAudio()
 {
     OutputPulseAudio::volumeControl = this;
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    m_volume.left = settings.value("PulseAudio/left_volume", 100).toInt();
+    m_volume.right = settings.value("PulseAudio/right_volume", 100).toInt();
 }
 
 VolumePulseAudio::~VolumePulseAudio()
 {
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.setValue("PulseAudio/left_volume", m_volume.left);
+    settings.setValue("PulseAudio/right_volume", m_volume.right);
     OutputPulseAudio::volumeControl = 0;
 }
 
 void VolumePulseAudio::updateVolume(const pa_cvolume &v)
 {
-    if(v.channels == 2)
-    {
-        m_volume.left = ceilf(float(v.values[0]) * 100 / PA_VOLUME_NORM);
-        m_volume.right = ceilf(float(v.values[1]) * 100 / PA_VOLUME_NORM);
-    }
-    else
-    {
-        m_volume.left = ceilf(float(pa_cvolume_avg(&v)) * 100 / PA_VOLUME_NORM);
-        m_volume.right = m_volume.left;
-    }
+    m_volume = cvolumeToVolumeSettings(v);
     emit changed();
 }
 
@@ -391,6 +360,7 @@ void VolumePulseAudio::setVolume(const VolumeSettings &vol)
 {
     if(OutputPulseAudio::instance)
         OutputPulseAudio::instance->setVolume(vol);
+    m_volume = vol;
 }
 
 VolumeSettings VolumePulseAudio::volume() const
@@ -398,12 +368,43 @@ VolumeSettings VolumePulseAudio::volume() const
     return m_volume;
 }
 
-void VolumePulseAudio::restore()
-{
-
-}
-
 bool VolumePulseAudio::hasNotifySignal() const
 {
     return true;
+}
+
+VolumeSettings VolumePulseAudio::cvolumeToVolumeSettings(const pa_cvolume &v)
+{
+    VolumeSettings volume;
+    if(v.channels == 2)
+    {
+        volume.left = ceilf(float(v.values[0]) * 100 / PA_VOLUME_NORM);
+        volume.right = ceilf(float(v.values[1]) * 100 / PA_VOLUME_NORM);
+    }
+    else
+    {
+        volume.left = ceilf(float(pa_cvolume_avg(&v)) * 100 / PA_VOLUME_NORM);
+        volume.right = volume.left;
+    }
+    return volume;
+}
+
+pa_cvolume VolumePulseAudio::volumeSettingsToCvolume(const VolumeSettings &v, int channels)
+{
+    pa_cvolume volume;
+
+    if(channels == 2)
+    {
+        volume.values[0] = v.left * PA_VOLUME_NORM / 100;
+        volume.values[1] = v.right * PA_VOLUME_NORM / 100;
+        volume.channels = 2;
+    }
+    else
+    {
+        for(int i = 0; i < channels; ++i)
+            volume.values[i] = qMax(v.left, v.right) * PA_VOLUME_NORM / 100;
+        volume.channels = channels;
+    }
+
+    return volume;
 }

@@ -463,7 +463,7 @@ void PlayListTask::run()
 
         //create new playlist tracks
         QStringList ignoredFiles;
-        TrackInfo::Parts parts = QmmpUiSettings::instance()->useMetadata() ? TrackInfo::AllParts : TrackInfo::NoParts;
+        TrackInfo::Parts parts = QmmpUiSettings::instance()->useMetaData() ? TrackInfo::AllParts : TrackInfo::NoParts;
         foreach(QFileInfo f, l)
         {
             QStringList ignored;

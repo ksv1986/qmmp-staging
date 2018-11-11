@@ -58,7 +58,7 @@ public:
     /*!
      * Returns the state of metadata usage (\b true - use, \b false - not use).
      */
-    bool useMetadata() const;
+    bool useMetaData() const;
     /*!
      * Returns playlist group format.
      */
@@ -102,7 +102,7 @@ public:
      * Sets metadata usage option state to \b enabled
      * @param enabled Option state (\b true - enabled, \b false - disabled)
      */
-    void setUseMetadata(bool enabled);
+    void setUseMetaData(bool enabled);
     /*!
      * Returns \b true if option "Resume On Startup" is enabled, otherwise returns \b false
      */
@@ -248,7 +248,7 @@ private:
     //playlist
     QString m_group_format;
     bool m_convertUnderscore, m_convertTwenty;
-    bool m_useMetadata;
+    bool m_useMetaData;
     bool m_autosave_playlist;
     bool m_repeate_list;
     bool m_shuffle;

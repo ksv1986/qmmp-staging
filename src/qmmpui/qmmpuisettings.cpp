@@ -39,7 +39,7 @@ QmmpUiSettings::QmmpUiSettings(QObject *parent) : QObject(parent)
     m_group_format = s.value("group_format", "%p%if(%p&%a, - %if(%y,[%y] ,),)%a").toString();
     m_convertUnderscore = s.value ("convert_underscore", true).toBool();
     m_convertTwenty = s.value ("convert_twenty", true).toBool();
-    m_useMetadata = s.value ("load_metadata", true).toBool();
+    m_useMetaData = s.value ("load_metadata", true).toBool();
     m_autosave_playlist = s.value("autosave", true).toBool();
     m_repeate_list = s.value("repeate_list",false).toBool();
     m_shuffle = s.value("shuffle",false).toBool();
@@ -111,9 +111,9 @@ bool QmmpUiSettings::convertTwenty() const
     return m_convertTwenty;
 }
 
-bool QmmpUiSettings::useMetadata() const
+bool QmmpUiSettings::useMetaData() const
 {
-    return m_useMetadata;
+    return m_useMetaData;
 }
 
 void QmmpUiSettings::setConvertUnderscore(bool yes)
@@ -139,9 +139,9 @@ void QmmpUiSettings::setGroupFormat(const QString &groupFormat)
     }
 }
 
-void QmmpUiSettings::setUseMetadata(bool yes)
+void QmmpUiSettings::setUseMetaData(bool yes)
 {
-    m_useMetadata = yes;
+    m_useMetaData = yes;
 }
 
 bool QmmpUiSettings::resumeOnStartup() const
@@ -171,7 +171,7 @@ void QmmpUiSettings::sync()
     s.setValue("PlayList/group_format", m_group_format);
     s.setValue("PlayList/convert_underscore", m_convertUnderscore);
     s.setValue("PlayList/convert_twenty", m_convertTwenty);
-    s.setValue("PlayList/load_metadata", m_useMetadata);
+    s.setValue("PlayList/load_metadata", m_useMetaData);
     s.setValue("PlayList/autosave", m_autosave_playlist);
     s.setValue("PlayList/repeate_list", m_repeate_list);
     s.setValue("PlayList/shuffle", m_shuffle);

@@ -245,7 +245,7 @@ void FileLoader::addPlayList(const QString &fmt, const QByteArray &data)
         MetaDataManager::instance()->prepareForAnotherThread();
         PlayListParser::loadFormats();
         m_filters = MetaDataManager::instance()->nameFilters();
-        m_parts = m_settings->useMetadata() ? TrackInfo::AllParts : TrackInfo::NoParts;
+        m_parts = m_settings->useMetaData() ? TrackInfo::AllParts : TrackInfo::NoParts;
     }
     start(QThread::IdlePriority);
 }
@@ -271,7 +271,7 @@ void FileLoader::insert(PlayListItem *before, const QStringList &paths)
     {
         MetaDataManager::instance()->prepareForAnotherThread();
         m_filters = MetaDataManager::instance()->nameFilters();
-        m_parts = m_settings->useMetadata() ? TrackInfo::AllParts : TrackInfo::NoParts;
+        m_parts = m_settings->useMetaData() ? TrackInfo::AllParts : TrackInfo::NoParts;
     }
     start(QThread::IdlePriority);
 }

@@ -106,7 +106,8 @@ void ConfigDialog::readSettings()
         //playlist options
         QmmpUiSettings *guis = QmmpUiSettings::instance();
         m_ui->groupLineEdit->setText(guis->groupFormat());
-        m_ui->metadataCheckBox->setChecked(guis->useMetaData());
+        m_ui->metaDataCheckBox->setChecked(guis->useMetaData());
+        m_ui->plMetaDataCheckBox->setChecked(guis->readMetaDataForPlayLists());
         m_ui->underscoresCheckBox->setChecked(guis->convertUnderscore());
         m_ui->per20CheckBox->setChecked(guis->convertTwenty());
         m_ui->clearPrevPLCheckBox->setChecked(guis->clearPreviousPlayList());
@@ -376,7 +377,8 @@ void ConfigDialog::saveSettings()
     if (QmmpUiSettings *guis = QmmpUiSettings::instance())
     {
         guis->setGroupFormat(m_ui->groupLineEdit->text().trimmed());
-        guis->setUseMetaData(m_ui->metadataCheckBox->isChecked());
+        guis->setUseMetaData(m_ui->metaDataCheckBox->isChecked());
+        guis->setReadMetaDataForPlayLists(m_ui->plMetaDataCheckBox->isChecked());
         guis->setConvertUnderscore(m_ui->underscoresCheckBox->isChecked());
         guis->setConvertTwenty(m_ui->per20CheckBox->isChecked());
         guis->setClearPreviousPlayList(m_ui->clearPrevPLCheckBox->isChecked());

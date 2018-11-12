@@ -101,6 +101,7 @@ private:
     QStringList m_filters;
     QmmpUiSettings *m_settings;
     bool m_finished;
+    bool m_readMetaDataForPlayLists;
     TrackInfo::Parts m_parts;
     QMutex m_mutex;
 

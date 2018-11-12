@@ -159,7 +159,7 @@ public:
      */
     void setAutoSavePlayList(bool enabled);
     /*!
-     * Return the current setting for the playlist auto-save option.
+     * Returns the current setting for the playlist auto-save option.
      * @return \b true if the playlist should be saved automatically, \b false
      *         otherwise.
      */
@@ -170,11 +170,21 @@ public:
      */
     void setClearPreviousPlayList(bool enabled);
     /*!
-     * Return the current setting for the option to clear playlist  when opening new one.
+     * Returns the current setting for the option to clear playlist when opening new one.
      * @return \b true if the playlist should be saved automatically, \b false
      *         otherwise.
      */
     bool clearPreviousPlayList() const;
+    /*!
+     * Returns the current setting for the option to read tags when loading a playlist.
+     * \return \b true if tag reading is enabled, \b false otherwise.
+     */
+    bool readMetaDataForPlayLists() const;
+    /*!
+     * Enable/disable tag reading when loading a playlist.
+     * @param enabled New setting for this option (\b true to enable)
+     */
+    void setReadMetaDataForPlayLists(bool enabled);
     /*!
      * Returns a pointer to the QmmpUiSettings instance.
      */
@@ -256,6 +266,7 @@ private:
     bool m_repeat_track;
     bool m_no_pl_advance;
     bool m_clear_prev_playlist;
+    bool m_read_metadata_for_playlist;
     //general
     bool m_resume_on_startup;
     QStringList m_exclude_filters, m_restrict_filters;

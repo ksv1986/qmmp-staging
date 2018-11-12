@@ -34,6 +34,7 @@ FileLoader::FileLoader(QObject *parent) : QThread(parent)
     qRegisterMetaType<QList<PlayListTrack*> >("QList<PlayListTrack*>");
     m_settings = QmmpUiSettings::instance();
     m_finished = false;
+    m_readMetaDataForPlayLists = true;
     m_parts = TrackInfo::NoParts;
     connect(qApp, SIGNAL(aboutToQuit()), SLOT(finish()));
 }
@@ -86,24 +87,89 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
 {
     QList<PlayListTrack *> tracks = PlayListParser::loadPlaylist(path);
 
-    while (!tracks.isEmpty() && !m_finished)
+    if(m_readMetaDataForPlayLists)
     {
-        PlayListTrack *t = tracks.takeFirst();
-        QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(), m_parts);
-        if(infoList.count() != 1) //invalid or unsupported track
+        QList<PlayListTrack *> tmp;
+        while(!tracks.isEmpty() && !m_finished)
         {
-            qDeleteAll(infoList);
-            infoList.clear();
-            delete t;
-            continue;
+            PlayListTrack *t = tracks.takeFirst();
+            QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(t->path(), m_parts);
+            if(infoList.count() != 1) //invalid or unsupported track
+            {
+                qDeleteAll(infoList);
+                infoList.clear();
+                delete t;
+                continue;
+            }
+
+            if(!infoList.first()->value(Qmmp::ALBUM).isEmpty() && !infoList.first()->value(Qmmp::ARTIST).isEmpty())
+                t->updateMetaData(infoList.first());
+            delete infoList.takeFirst();
+            tmp << t;
+            if(tmp.count() > 30)
+            {
+                emit newTracksToInsert(before, tmp);
+                tmp.clear();
+            }
+        }
+        if(!tmp.isEmpty() && !m_finished)
+        {
+            emit newTracksToInsert(before, tmp);
+            tmp.clear();
         }
 
-        TrackInfo *info = infoList.takeFirst();
-        if(!info->value(Qmmp::ALBUM).isEmpty() && !info->value(Qmmp::ARTIST).isEmpty())
-            t->updateMetaData(info);
+        if(!tmp.isEmpty())
+        {
+            qDeleteAll(tmp);
+            tmp.clear();
+        }
+    }
+    else
+    {
+        QStringList protocols = MetaDataManager::instance()->protocols();
+        QList<QRegExp> filters;
+        foreach(const QString &pattern, MetaDataManager::instance()->nameFilters())
+            filters << QRegExp(pattern, Qt::CaseInsensitive, QRegExp::Wildcard);
 
-        emit newTracksToInsert(before, QList<PlayListTrack *>() << t); //TODO optimization
-        delete info;
+
+        foreach(PlayListTrack *t, tracks)
+        {
+            if(t->path().contains("://"))
+            {
+                if(!protocols.contains(t->path().section("://",0,0)))
+                {
+                    tracks.removeAll(t);
+                    delete t;
+                }
+            }
+            else if(!QFile::exists(t->path()))
+            {
+                tracks.removeAll(t);
+                delete t;
+            }
+            else
+            {
+                bool found = false;
+                foreach(const QRegExp &filter, filters)
+                {
+                    if(filter.exactMatch(t->path()))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if(!found)
+                {
+                    tracks.removeAll(t);
+                    delete t;
+                }
+            }
+        }
+        if(!m_finished && !tracks.isEmpty())
+        {
+            emit newTracksToInsert(before, tracks);
+            tracks.clear();
+        }
     }
     //clear remaining tracks
     qDeleteAll(tracks);
@@ -246,6 +312,7 @@ void FileLoader::addPlayList(const QString &fmt, const QByteArray &data)
         PlayListParser::loadFormats();
         m_filters = MetaDataManager::instance()->nameFilters();
         m_parts = m_settings->useMetaData() ? TrackInfo::AllParts : TrackInfo::NoParts;
+        m_readMetaDataForPlayLists = m_settings->readMetaDataForPlayLists();
     }
     start(QThread::IdlePriority);
 }
@@ -272,6 +339,7 @@ void FileLoader::insert(PlayListItem *before, const QStringList &paths)
         MetaDataManager::instance()->prepareForAnotherThread();
         m_filters = MetaDataManager::instance()->nameFilters();
         m_parts = m_settings->useMetaData() ? TrackInfo::AllParts : TrackInfo::NoParts;
+        m_readMetaDataForPlayLists = m_settings->readMetaDataForPlayLists();
     }
     start(QThread::IdlePriority);
 }

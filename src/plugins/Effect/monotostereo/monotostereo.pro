@@ -8,7 +8,7 @@ HEADERS += monotostereoplugin.h \
 SOURCES += monotostereoplugin.cpp \
            effectmonotostereofactory.cpp
 
-#RESOURCES = translations/translations.qrc
+RESOURCES = translations/translations.qrc
 
 unix {
     target.path = $$PLUGIN_DIR/Effect

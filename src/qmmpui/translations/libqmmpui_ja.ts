@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja_JP">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -254,7 +254,7 @@
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="94"/>
-        <location filename="../forms/configdialog.ui" line="758"/>
+        <location filename="../forms/configdialog.ui" line="768"/>
         <source>Audio</source>
         <translation>音響</translation>
     </message>
@@ -290,210 +290,215 @@
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="170"/>
+        <source>Read tags while loading a playlist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="180"/>
         <source>Directory Scanning Options</source>
         <translation>ディレクトリ探査のオプション</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="176"/>
+        <location filename="../forms/configdialog.ui" line="186"/>
         <source>Restrict files to:</source>
         <translation>ファイルを限定(拡張子による):</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="186"/>
-        <location filename="../forms/configdialog.ui" line="437"/>
+        <location filename="../forms/configdialog.ui" line="196"/>
+        <location filename="../forms/configdialog.ui" line="447"/>
         <source>Exclude files:</source>
         <translation>除外ファイル形式:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="199"/>
+        <location filename="../forms/configdialog.ui" line="209"/>
         <source>Miscellaneous</source>
         <translation>その他いろいろ</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="205"/>
+        <location filename="../forms/configdialog.ui" line="215"/>
         <source>Auto-save playlist when modified</source>
         <translation>プレイリストの変更を自動保存</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="212"/>
+        <location filename="../forms/configdialog.ui" line="222"/>
         <source>Clear previous playlist when opening new one</source>
         <translation>新たにプレイリストを開くとき現在のものを一掃する</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="260"/>
-        <location filename="../configdialog.cpp" line="311"/>
+        <location filename="../forms/configdialog.ui" line="270"/>
+        <location filename="../configdialog.cpp" line="312"/>
         <source>Preferences</source>
         <translation>プラグイン調整</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="273"/>
-        <location filename="../configdialog.cpp" line="314"/>
+        <location filename="../forms/configdialog.ui" line="283"/>
+        <location filename="../configdialog.cpp" line="315"/>
         <source>Information</source>
         <translation>情報</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="315"/>
+        <location filename="../forms/configdialog.ui" line="325"/>
         <source>Description</source>
         <translation>プラグイン分類</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="320"/>
+        <location filename="../forms/configdialog.ui" line="330"/>
         <source>Filename</source>
         <translation>ファイル名</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="332"/>
+        <location filename="../forms/configdialog.ui" line="342"/>
         <source>Look and Feel</source>
         <translation>外観と感触</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="338"/>
+        <location filename="../forms/configdialog.ui" line="348"/>
         <source>Language:</source>
         <translation>言語:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="374"/>
+        <location filename="../forms/configdialog.ui" line="384"/>
         <source>Playback</source>
         <translation>再生</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="380"/>
+        <location filename="../forms/configdialog.ui" line="390"/>
         <source>Continue playback on startup</source>
         <translation>前回終了時の曲から継続して再生</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="387"/>
+        <location filename="../forms/configdialog.ui" line="397"/>
         <source>Determine file type by content</source>
         <translation>ファイル内容をみて形式を判断</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="394"/>
+        <location filename="../forms/configdialog.ui" line="404"/>
         <source>Add files from command line to this playlist:</source>
         <translation>コマンド行からファイルを追加できるプレイリスト:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="411"/>
+        <location filename="../forms/configdialog.ui" line="421"/>
         <source>Cover Image Retrieve</source>
         <translation>アルバム表紙画像の取得</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="417"/>
+        <location filename="../forms/configdialog.ui" line="427"/>
         <source>Use separate image files</source>
         <translation>分割された画像ファイルを利用</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="427"/>
+        <location filename="../forms/configdialog.ui" line="437"/>
         <source>Include files:</source>
         <translation>対象ファイル形式:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="449"/>
+        <location filename="../forms/configdialog.ui" line="459"/>
         <source>Recursive search depth:</source>
         <translation>再帰検索の深度:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="481"/>
+        <location filename="../forms/configdialog.ui" line="491"/>
         <source>URL Dialog</source>
         <translation>URL ダイアログ</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="487"/>
+        <location filename="../forms/configdialog.ui" line="497"/>
         <source>Auto-paste URL from clipboard</source>
         <translation>クリップボードから URL を自動取り込み</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="526"/>
+        <location filename="../forms/configdialog.ui" line="536"/>
         <source>Proxy</source>
         <translation>代理</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="538"/>
+        <location filename="../forms/configdialog.ui" line="548"/>
         <source>Enable proxy usage</source>
         <translation>代理を利用する</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="545"/>
+        <location filename="../forms/configdialog.ui" line="555"/>
         <source>Proxy host name:</source>
         <translation>代理ホスト名:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="558"/>
+        <location filename="../forms/configdialog.ui" line="568"/>
         <source>Proxy port:</source>
         <translation>代理ポート:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="571"/>
+        <location filename="../forms/configdialog.ui" line="581"/>
         <source>Use authentication with proxy</source>
         <translation>代理経由の認証を利用</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="578"/>
+        <location filename="../forms/configdialog.ui" line="588"/>
         <source>Proxy user name:</source>
         <translation>代理者ユーザー名:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="591"/>
+        <location filename="../forms/configdialog.ui" line="601"/>
         <source>Proxy password:</source>
         <translation>代理者パスワード:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="628"/>
+        <location filename="../forms/configdialog.ui" line="638"/>
         <source>Replay Gain</source>
         <translation>リプレイゲイン</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="634"/>
+        <location filename="../forms/configdialog.ui" line="644"/>
         <source>Replay Gain mode:</source>
         <translation>リプレイゲインモード:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="651"/>
+        <location filename="../forms/configdialog.ui" line="661"/>
         <source>Preamp:</source>
         <translation>プリアンプ:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="683"/>
-        <location filename="../forms/configdialog.ui" line="728"/>
+        <location filename="../forms/configdialog.ui" line="693"/>
+        <location filename="../forms/configdialog.ui" line="738"/>
         <source>dB</source>
         <translation>dB</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="696"/>
+        <location filename="../forms/configdialog.ui" line="706"/>
         <source>Default gain:</source>
         <translation>デフォルトゲイン:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="748"/>
+        <location filename="../forms/configdialog.ui" line="758"/>
         <source>Use  peak info to prevent clipping</source>
         <translation>クリッピング現象を抑えるためピーク情報を使う</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="778"/>
+        <location filename="../forms/configdialog.ui" line="788"/>
         <source>Buffer size:</source>
         <translation>バッファーサイズ:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="797"/>
+        <location filename="../forms/configdialog.ui" line="807"/>
         <source>ms</source>
         <translation>ミリ秒</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="813"/>
+        <location filename="../forms/configdialog.ui" line="823"/>
         <source>Use software volume control</source>
         <translation>ソフトウェアによる音量制御を利用</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="823"/>
+        <location filename="../forms/configdialog.ui" line="833"/>
         <source>Volume adjustment step:</source>
         <translation>音量の単位変動率:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="764"/>
+        <location filename="../forms/configdialog.ui" line="774"/>
         <source>Output bit depth:</source>
         <translation>出力ビット深度:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="771"/>
+        <location filename="../forms/configdialog.ui" line="781"/>
         <source>Use dithering</source>
         <translation>ディザ効果を利用</translation>
     </message>
@@ -518,187 +523,187 @@
         <translation>ファイル形式</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="186"/>
+        <location filename="../configdialog.cpp" line="187"/>
         <source>Transports</source>
         <translation>搬送</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="197"/>
+        <location filename="../configdialog.cpp" line="198"/>
         <source>Decoders</source>
         <translation>デコーダー</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="208"/>
+        <location filename="../configdialog.cpp" line="209"/>
         <source>Engines</source>
         <translation>エンジン</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="219"/>
+        <location filename="../configdialog.cpp" line="220"/>
         <source>Effects</source>
         <translation>音響効果</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="230"/>
+        <location filename="../configdialog.cpp" line="231"/>
         <source>Visualization</source>
         <translation>視覚効果</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="241"/>
+        <location filename="../configdialog.cpp" line="242"/>
         <source>General</source>
         <translation>一般</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="252"/>
+        <location filename="../configdialog.cpp" line="253"/>
         <source>Output</source>
         <translation>出力</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="263"/>
+        <location filename="../configdialog.cpp" line="264"/>
         <source>File Dialogs</source>
         <translation>ファイルダイアログ</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="274"/>
+        <location filename="../configdialog.cpp" line="275"/>
         <source>User Interfaces</source>
         <translation>ユーザーインターフェイス</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="324"/>
+        <location filename="../configdialog.cpp" line="325"/>
         <source>&lt;Autodetect&gt;</source>
         <translation>&lt;自動判定&gt;</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="325"/>
+        <location filename="../configdialog.cpp" line="326"/>
         <source>Brazilian Portuguese</source>
         <translation>ブラジル ポルトガル語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="326"/>
+        <location filename="../configdialog.cpp" line="327"/>
         <source>Chinese Simplified</source>
         <translation>簡体字中国語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="327"/>
+        <location filename="../configdialog.cpp" line="328"/>
         <source>Chinese Traditional</source>
         <translation>繁体字中国語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="328"/>
+        <location filename="../configdialog.cpp" line="329"/>
         <source>Czech</source>
         <translation>チェコ語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="329"/>
+        <location filename="../configdialog.cpp" line="330"/>
         <source>Dutch</source>
         <translation>オランダ語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="330"/>
+        <location filename="../configdialog.cpp" line="331"/>
         <source>English</source>
         <translation>英語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="331"/>
+        <location filename="../configdialog.cpp" line="332"/>
         <source>French</source>
         <translation>フランス語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="332"/>
+        <location filename="../configdialog.cpp" line="333"/>
         <source>Galician</source>
         <translation>ガリシア語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="333"/>
+        <location filename="../configdialog.cpp" line="334"/>
         <source>German</source>
         <translation>ドイツ語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="334"/>
+        <location filename="../configdialog.cpp" line="335"/>
         <source>Greek</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="335"/>
+        <location filename="../configdialog.cpp" line="336"/>
         <source>Hebrew</source>
         <translation>ヘブライ語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="336"/>
+        <location filename="../configdialog.cpp" line="337"/>
         <source>Hungarian</source>
         <translation>ハンガリー語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="337"/>
+        <location filename="../configdialog.cpp" line="338"/>
         <source>Indonesian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="338"/>
+        <location filename="../configdialog.cpp" line="339"/>
         <source>Italian</source>
         <translation>イタリア語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="339"/>
+        <location filename="../configdialog.cpp" line="340"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="340"/>
+        <location filename="../configdialog.cpp" line="341"/>
         <source>Kazakh</source>
         <translation>カザフ語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="341"/>
+        <location filename="../configdialog.cpp" line="342"/>
         <source>Lithuanian</source>
         <translation>リトアニア語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="342"/>
+        <location filename="../configdialog.cpp" line="343"/>
         <source>Polish</source>
         <translation>ポーランド語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="343"/>
+        <location filename="../configdialog.cpp" line="344"/>
         <source>Portuguese</source>
         <translation>ポルトガル語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="344"/>
+        <location filename="../configdialog.cpp" line="345"/>
         <source>Russian</source>
         <translation>ロシア語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="345"/>
+        <location filename="../configdialog.cpp" line="346"/>
         <source>Serbian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="346"/>
+        <location filename="../configdialog.cpp" line="347"/>
         <source>Slovak</source>
         <translation>スロバキア語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="347"/>
+        <location filename="../configdialog.cpp" line="348"/>
         <source>Spanish</source>
         <translation>スペイン語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="348"/>
+        <location filename="../configdialog.cpp" line="349"/>
         <source>Turkish</source>
         <translation>トルコ語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="349"/>
+        <location filename="../configdialog.cpp" line="350"/>
         <source>Ukrainian</source>
         <translation>ウクライナ語</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="350"/>
+        <location filename="../configdialog.cpp" line="351"/>
         <source>Serbian (Ijekavian)</source>
         <translation>セルビア語 (Ijekavian)</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="351"/>
+        <location filename="../configdialog.cpp" line="352"/>
         <source>Serbian (Ekavian)</source>
         <translation>セルビア語 (Ekavian)</translation>
     </message>
@@ -1151,7 +1156,7 @@
 <context>
     <name>QmmpUiSettings</name>
     <message>
-        <location filename="../qmmpuisettings.cpp" line="56"/>
+        <location filename="../qmmpuisettings.cpp" line="57"/>
         <source>Playlist</source>
         <translation>プレイリスト</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="id_ID">
+<TS version="2.1" language="id_ID">
 <context>
     <name>DateInputDialog</name>
     <message>
@@ -151,22 +151,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="104"/>
+        <location filename="../historywindow.cpp" line="118"/>
         <source>dd MMMM yyyy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="105"/>
+        <location filename="../historywindow.cpp" line="119"/>
         <source>hh:mm:ss</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="179"/>
+        <location filename="../historywindow.cpp" line="193"/>
         <source>MM-yyyy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="180"/>
+        <location filename="../historywindow.cpp" line="194"/>
         <source>dd MMMM</source>
         <translation type="unfinished"></translation>
     </message>

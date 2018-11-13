@@ -4,6 +4,8 @@ LOCALES='en ru uk_UA zh_CN zh_TW tr cs pt_BR pt de pl_PL fr it kk lt hu nl ja sk
 
 echo "Locales: ${LOCALES}"
 
+export QT_SELECT=5
+
 for tr_dir in `find ../src/ -type d -name "translations"`
 do
 
@@ -67,7 +69,7 @@ do
         qrc_file="${tr_dir}/translations.qrc"
      fi
 
-     lupdate-qt4 -no-obsolete -silent -extensions "cpp,ui" ${tr_dir}/../ -ts ${ts_files}
+     lupdate -no-obsolete -silent -extensions "cpp,ui" ${tr_dir}/../ -ts ${ts_files}
 
 
 

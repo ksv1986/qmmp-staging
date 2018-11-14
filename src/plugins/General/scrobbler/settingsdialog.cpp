@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,19 +30,25 @@ SettingsDialog::SettingsDialog(QWidget *parent) : QDialog(parent)
     m_ui.setupUi(this);
     m_lastfmAuth = new ScrobblerAuth(SCROBBLER_LASTFM_URL, LASTFM_AUTH_URL, "lastfm", this);
     m_librefmAuth = new ScrobblerAuth(SCROBBLER_LIBREFM_URL, LIBREFM_AUTH_URL, "librefm", this);
+    m_listenbrainzAuth = new ScrobblerAuth(SCROBBLER_LISTENBRAINZ_URL, LISTENBRAINZ_AUTH_URL, "listenbrainz", this);
     connect(m_lastfmAuth, SIGNAL(tokenRequestFinished(int)), SLOT(processTokenResponse(int)));
     connect(m_lastfmAuth, SIGNAL(sessionRequestFinished(int)), SLOT(processSessionResponse(int)));
     connect(m_lastfmAuth, SIGNAL(checkSessionFinished(int)), SLOT(processCheckResponse(int)));
     connect(m_librefmAuth, SIGNAL(tokenRequestFinished(int)), SLOT(processTokenResponse(int)));
     connect(m_librefmAuth, SIGNAL(sessionRequestFinished(int)), SLOT(processSessionResponse(int)));
     connect(m_librefmAuth, SIGNAL(checkSessionFinished(int)), SLOT(processCheckResponse(int)));
+    connect(m_listenbrainzAuth, SIGNAL(tokenRequestFinished(int)), SLOT(processTokenResponse(int)));
+    connect(m_listenbrainzAuth, SIGNAL(sessionRequestFinished(int)), SLOT(processSessionResponse(int)));
+    connect(m_listenbrainzAuth, SIGNAL(checkSessionFinished(int)), SLOT(processCheckResponse(int)));
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Scrobbler");
     m_ui.lastfmGroupBox->setChecked(settings.value("use_lastfm", false).toBool());
     m_ui.librefmGroupBox->setChecked(settings.value("use_librefm", false).toBool());
+    m_ui.listenbrainzGroupBox->setChecked(settings.value("use_listenbrainz", false).toBool());
     m_ui.sessionLineEdit_lastfm->setText(settings.value("lastfm_session").toString());
     m_ui.sessionLineEdit_librefm->setText(settings.value("librefm_session").toString());
+    m_ui.sessionLineEdit_listenbrainz->setText(settings.value("listenbrainz_session").toString());
     settings.endGroup();
 }
 
@@ -55,8 +61,10 @@ void SettingsDialog::accept()
     settings.beginGroup("Scrobbler");
     settings.setValue("use_lastfm", m_ui.lastfmGroupBox->isChecked());
     settings.setValue("use_librefm", m_ui.librefmGroupBox->isChecked());
+    settings.setValue("use_listenbrainz", m_ui.listenbrainzGroupBox->isChecked());
     settings.setValue("lastfm_session",m_ui.sessionLineEdit_lastfm->text());
     settings.setValue("librefm_session",m_ui.sessionLineEdit_librefm->text());
+    settings.setValue("listenbrainz_session",m_ui.sessionLineEdit_listenbrainz->text());
     settings.endGroup();
     QDialog::accept();
 }
@@ -73,31 +81,54 @@ void SettingsDialog::on_newSessionButton_librefm_clicked()
     m_librefmAuth->getToken();
 }
 
+void SettingsDialog::on_newSessionButton_listenbrainz_clicked()
+{
+    m_ui.newSessionButton_listenbrainz->setEnabled(false);
+    m_listenbrainzAuth->getToken();
+}
+
 void SettingsDialog::processTokenResponse(int error)
 {
     if(sender() == m_lastfmAuth)
         m_ui.newSessionButton_lastfm->setEnabled(true);
     else if(sender() == m_librefmAuth)
         m_ui.newSessionButton_librefm->setEnabled(true);
+    else if(sender() == m_listenbrainzAuth)
+        m_ui.newSessionButton_listenbrainz->setEnabled(true);
     switch(error)
     {
     case ScrobblerAuth::NO_ERROR:
-        QMessageBox::information(this,
-                                 tr("Message"),
-                                 tr("1. Wait for browser startup") + "\n" +
-                                 tr("2. Allow Qmmp to scrobble tracks to your %1 account")
-                                 .arg((sender() == m_lastfmAuth) ? "Last.fm" : "Libre.fm") + "\n" +
-                                 tr("3. Press \"OK\""));
-        if(sender() == m_lastfmAuth)
+    {
+        ScrobblerAuth *auth = qobject_cast<ScrobblerAuth *>(sender());
+        QString name;
+
+        if(auth == m_lastfmAuth)
         {
             m_ui.newSessionButton_lastfm->setEnabled(false);
-            m_lastfmAuth->getSession();
+            name = QLatin1String("Last.fm");
         }
-        else if(sender() == m_librefmAuth)
+        else if(auth == m_librefmAuth)
         {
             m_ui.newSessionButton_librefm->setEnabled(false);
-            m_librefmAuth->getSession();
+            name = QLatin1String("Libre.fm");
         }
+        else if(auth == m_listenbrainzAuth)
+        {
+            m_ui.newSessionButton_listenbrainz->setEnabled(false);
+            name = QLatin1String("ListenBrainz");
+        }
+        else
+        {
+            qWarning("SettingsDialog: invalid sender");
+            return;
+        }
+
+        QMessageBox::information(this, tr("Message"),
+                                 tr("1. Wait for browser startup") + "\n" +
+                                 tr("2. Allow Qmmp to scrobble tracks to your %1 account").arg(name) + "\n" +
+                                 tr("3. Press \"OK\""));
+        auth->getSession();
+    }
         break;
     case ScrobblerAuth::NETWORK_ERROR:
         QMessageBox::warning(this, tr("Error"), tr("Network error"));
@@ -130,6 +161,11 @@ void SettingsDialog::processSessionResponse(int error)
             m_ui.sessionLineEdit_librefm->setText(m_librefmAuth->session());
             settings.setValue("Scrobbler/librefm_session",m_ui.sessionLineEdit_librefm->text());
         }
+        else if(sender() == m_listenbrainzAuth)
+        {
+            m_ui.sessionLineEdit_listenbrainz->setText(m_listenbrainzAuth->session());
+            settings.setValue("Scrobbler/listenbrainz_session",m_ui.sessionLineEdit_listenbrainz->text());
+        }
         break;
     }
     case ScrobblerAuth::NETWORK_ERROR:
@@ -159,6 +195,15 @@ void SettingsDialog::on_checkButton_librefm_clicked()
     }
 }
 
+void SettingsDialog::on_checkButton_listenbrainz_clicked()
+{
+    if(!m_ui.sessionLineEdit_listenbrainz->text().isEmpty())
+    {
+        m_ui.checkButton_listenbrainz->setEnabled(false);
+        m_listenbrainzAuth->checkSession(m_ui.sessionLineEdit_listenbrainz->text());
+    }
+}
+
 void SettingsDialog::processCheckResponse(int error)
 {
     if(sender() == m_lastfmAuth)
@@ -174,6 +219,8 @@ void SettingsDialog::processCheckResponse(int error)
             m_ui.sessionLineEdit_lastfm->setText(m_lastfmAuth->session());
         else if(sender() == m_librefmAuth)
             m_ui.sessionLineEdit_librefm->setText(m_librefmAuth->session());
+        else if(sender() == m_listenbrainzAuth)
+            m_ui.sessionLineEdit_listenbrainz->setText(m_listenbrainzAuth->session());
         break;
     }
     case ScrobblerAuth::NETWORK_ERROR:

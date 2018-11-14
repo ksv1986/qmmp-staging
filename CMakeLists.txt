@@ -201,6 +201,7 @@ PRINT_SUMMARY ("LADSPA Host ......................." USE_LADSPA 1)
 PRINT_SUMMARY ("Crossfade ........................." USE_CROSSFADE 1)
 PRINT_SUMMARY ("Extra Stereo ......................" USE_STEREO 1)
 PRINT_SUMMARY ("File Writer ......................." USE_FILEWRITER VORBISENC_FOUND)
+PRINT_SUMMARY ("Mono to Stereo Converter .........." USE_MONOTOSTEREO 1)
 
 MESSAGE("")
 MESSAGE("Visual Plugins:")

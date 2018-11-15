@@ -24,10 +24,10 @@
 #include <QProcess>
 #include "mplayermetadatamodel.h"
 
-MplayerMetaDataModel::MplayerMetaDataModel(const QString &path) : MetaDataModel(true)
+MplayerMetaDataModel::MplayerMetaDataModel(const QString &path)
+    : MetaDataModel(true, MetaDataModel::COMPLETE_PROPERTY_LIST)
 {
     m_path = path;
-    setDialogHints(MetaDataModel::COMPLETE_PROPERTY_LIST);
 }
 
 MplayerMetaDataModel::~MplayerMetaDataModel()
@@ -36,21 +36,7 @@ MplayerMetaDataModel::~MplayerMetaDataModel()
 QList<MetaDataItem> MplayerMetaDataModel::extraProperties() const
 {
     QList<MetaDataItem> ep;
-    ep << MetaDataItem(tr("Size"), tr("%1 KiB").arg(QFileInfo(m_path).size ()/1024));
-    //regular expressions
-    QRegExp rx_id_length("^ID_LENGTH=([0-9,.]+)*");
-    QRegExp rx_id_demuxer("^ID_DEMUXER=(.*)");
-    QRegExp rx_id_video_bitrate("^ID_VIDEO_BITRATE=([0-9,.]+)*");
-    QRegExp rx_id_width("^ID_VIDEO_WIDTH=([0-9,.]+)*");
-    QRegExp rx_id_height("^ID_VIDEO_HEIGHT=([0-9,.]+)*");
-    QRegExp rx_id_video_format("^ID_VIDEO_FORMAT=(.*)");
-    QRegExp rx_id_video_fps("^ID_VIDEO_FPS=([0-9,.]+)*");
-    QRegExp rx_id_video_codec("^ID_VIDEO_CODEC=(.*)");
-    QRegExp rx_id_video_aspect("^ID_VIDEO_ASPECT=([0-9,.]+)*");
-    QRegExp rx_id_audio_bitrate("^ID_AUDIO_BITRATE=([0-9,.]+)*");
-    QRegExp rx_id_audio_rate("^ID_AUDIO_RATE=([0-9,.]+)*");
-    QRegExp rx_id_audio_nch("^ID_AUDIO_NCH=([0-9,.]+)*");
-    QRegExp rx_id_audio_codec("^ID_AUDIO_CODEC=(.*)");
+    ep << MetaDataItem(tr("Size"), QFileInfo(m_path).size ()/1024, tr("KiB"));
     //prepare and start mplayer process
     QStringList args;
     args << "-slave";
@@ -67,40 +53,27 @@ QList<MetaDataItem> MplayerMetaDataModel::extraProperties() const
     mplayer_process.waitForFinished();
     QString str = QString::fromLocal8Bit(mplayer_process.readAll()).trimmed();
     QStringList lines = str.split("\n");
-    int height = 0, width = 0;
     //mplayer std output parsing
+    QRegExp rx_id("^(ID_.*)=(.*)");
+    QMap<QString, QString> params;
     foreach(QString line, lines)
     {
-        //general info
-        if (rx_id_length.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Length"),rx_id_length.cap(1)); //TODO use hh:mm:ss format
-        else if (rx_id_demuxer.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Demuxer"), rx_id_demuxer.cap(1));
-        //video info
-        else if (rx_id_video_format.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Video format"), rx_id_video_format.cap(1));
-        else if (rx_id_video_fps.indexIn(line) > -1)
-            ep << MetaDataItem(tr("FPS"), rx_id_video_fps.cap(1));
-        else if (rx_id_video_codec.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Video codec"), rx_id_video_codec.cap(1));
-        else if (rx_id_video_aspect.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Aspect ratio"),rx_id_video_aspect.cap(1));
-        else if (rx_id_video_bitrate.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Video bitrate"), rx_id_video_bitrate.cap(1));
-        else if (rx_id_width.indexIn(line) > -1)
-            width = rx_id_width.cap(1).toInt();
-        else if (rx_id_height.indexIn(line) > -1)
-            height = rx_id_height.cap(1).toInt();
-        //audio info
-        else if (rx_id_audio_codec.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Audio codec"),rx_id_audio_codec.cap(1));
-        else if (rx_id_audio_rate.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Sample rate"), rx_id_audio_rate.cap(1));
-        else if (rx_id_audio_bitrate.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Audio bitrate"), rx_id_audio_bitrate.cap(1));
-        else if (rx_id_audio_nch.indexIn(line) > -1)
-            ep << MetaDataItem(tr("Channels"), rx_id_audio_nch.cap(1));
+        if(rx_id.indexIn(line.trimmed()) > -1)
+            params.insert(rx_id.cap(1), rx_id.cap(2));
     }
-    ep << MetaDataItem(tr("Resolution"), QString("%1x%2").arg(width).arg(height));
+    //general info
+    ep << MetaDataItem(tr("Demuxer"), params["ID_DEMUXER"]);
+    //video info
+    ep << MetaDataItem(tr("Video format"), params["ID_VIDEO_FORMAT"]);
+    ep << MetaDataItem(tr("FPS"), params["ID_VIDEO_FPS"]);
+    ep << MetaDataItem(tr("Video codec"), params["ID_VIDEO_CODEC"]);
+    ep << MetaDataItem(tr("Aspect ratio"), params["ID_VIDEO_ASPECT"]);
+    ep << MetaDataItem(tr("Video bitrate"), params["ID_VIDEO_BITRATE"].toInt() / 1000, tr("kbps"));
+    ep << MetaDataItem(tr("Resolution"), QString("%1x%2").arg(params["ID_VIDEO_WIDTH"])
+          .arg(params["ID_VIDEO_HEIGHT"]));
+    ep << MetaDataItem(tr("Audio codec"), params["ID_AUDIO_CODEC"]);
+    ep << MetaDataItem(tr("Sample rate"), params["ID_AUDIO_RATE"], tr("Hz"));
+    ep << MetaDataItem(tr("Audio bitrate"), params["ID_AUDIO_BITRATE"].toInt() / 1000, tr("kbps"));
+    ep << MetaDataItem(tr("Channels"), params["ID_AUDIO_NCH"]);
     return ep;
 }

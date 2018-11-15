@@ -26,6 +26,7 @@
 #include <QMenu>
 #include <QRegExp>
 #include <QSettings>
+#include <QFileInfo>
 #include <qmmp/trackinfo.h>
 #include <qmmp/inputsource.h>
 #include "mplayerengine.h"
@@ -37,11 +38,15 @@ static QRegExp rx_pause("^(.*)=(.*)PAUSE(.*)");
 static QRegExp rx_end("^(.*)End of file(.*)");
 static QRegExp rx_quit("^(.*)Quit(.*)");
 static QRegExp rx_audio("^AUDIO: *([0-9,.]+) *Hz.*([0-9,.]+) *ch.*([0-9]+).* ([0-9,.]+) *kbit.*");
-
+static QRegExp rx_audio2("^AUDIO: *([0-9,.]+) *Hz.*([0-9,.]+) *ch.*([a-z]+).* ([0-9,.]+) *kbit.*");
 
 TrackInfo *MplayerInfo::createTrackInfo(const QString &path)
 {
     QRegExp rx_id_length("^ID_LENGTH=([0-9,.]+)*");
+    QRegExp rx_id_audio_bitrate("^ID_AUDIO_BITRATE=([0-9,.]+)*");
+    QRegExp rx_id_audio_rate("^ID_AUDIO_RATE=([0-9,.]+)*");
+    QRegExp rx_id_audio_nch("^ID_AUDIO_NCH=([0-9,.]+)*");
+    QRegExp rx_id_audio_codec("^ID_AUDIO_CODEC=(.*)");
     QStringList args;
     args << "-slave";
     args << "-identify";
@@ -61,9 +66,20 @@ TrackInfo *MplayerInfo::createTrackInfo(const QString &path)
     QStringList lines = str.split("\n");
     foreach(QString line, lines)
     {
-        if (rx_id_length.indexIn(line) > -1)
+        if(rx_id_length.indexIn(line) > -1)
             info->setDuration((qint64) rx_id_length.cap(1).toDouble() * 1000);
+        else if(rx_id_audio_bitrate.indexIn(line) > -1)
+            info->setValue(Qmmp::BITRATE, rx_id_audio_bitrate.cap(1).toDouble());
+        else if(rx_id_audio_rate.indexIn(line) > -1)
+            info->setValue(Qmmp::SAMPLERATE, rx_id_audio_rate.cap(1).toDouble());
+        else if(rx_id_audio_nch.indexIn(line) > -1)
+            info->setValue(Qmmp::CHANNELS, rx_id_audio_nch.cap(1).toInt());
+        else if(rx_id_audio_codec.indexIn(line) > -1)
+            info->setValue(Qmmp::FORMAT_NAME, rx_id_audio_codec.cap(1));
     }
+    info->setValue(Qmmp::BITS_PER_SAMPLE, 32);
+    info->setValue(Qmmp::DECODER, "mplayer");
+    info->setValue(Qmmp::FILE_SIZE, QFileInfo(path).size());
 #ifdef MPLAYER_DEBUG
     qDebug("%s",qPrintable(str));
 #endif
@@ -240,6 +256,15 @@ void MplayerEngine::readStdOut()
             m_channels = rx_audio.cap(2).toInt();
             m_bitsPerSample = rx_audio.cap(3).toDouble();
             m_bitrate = rx_audio.cap(4).toDouble();
+            AudioParameters ap(m_samplerate, ChannelMap(m_channels), AudioParameters::findAudioFormat(m_bitsPerSample));
+            StateHandler::instance()->dispatch(ap);
+        }
+        else if (rx_audio2.indexIn(line) > -1)
+        {
+            m_samplerate = rx_audio2.cap(1).toInt();
+            m_channels = rx_audio2.cap(2).toInt();
+            m_bitsPerSample = 32;
+            m_bitrate = rx_audio2.cap(4).toDouble();
             AudioParameters ap(m_samplerate, ChannelMap(m_channels), AudioParameters::findAudioFormat(m_bitsPerSample));
             StateHandler::instance()->dispatch(ap);
         }

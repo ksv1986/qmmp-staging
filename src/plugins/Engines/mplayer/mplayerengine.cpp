@@ -267,7 +267,7 @@ void MplayerEngine::startMplayerProcess()
     connect(m_process, SIGNAL(error(QProcess::ProcessError)), SLOT(onError(QProcess::ProcessError)));
     m_process->start ("mplayer", m_args);
     StateHandler::instance()->dispatch(Qmmp::Playing);
-    StateHandler::instance()->dispatch(m_length * 1000);
+    StateHandler::instance()->dispatch(m_length);
     TrackInfo *info = MplayerInfo::createTrackInfo(m_source->path());
     StateHandler::instance()->dispatch(*info);
     delete info;

@@ -87,6 +87,7 @@ AbstractEngine *AbstractEngine::create(InputSource *s, QObject *parent)
         if(!fact)
             continue;
         engine = fact->create(parent); //engine plugin
+        engine->setObjectName(item->shortName());
         if(!engine->enqueue(s))
         {
             engine->deleteLater();
@@ -138,7 +139,7 @@ EngineFactory *AbstractEngine::findByFilePath(const QString& source)
     return 0;
 }
 
-void AbstractEngine::setEnabled(EngineFactory* factory, bool enable)
+void AbstractEngine::setEnabled(EngineFactory *factory, bool enable)
 {
     loadPlugins();
     if (!factories().contains(factory))
@@ -157,10 +158,19 @@ void AbstractEngine::setEnabled(EngineFactory* factory, bool enable)
     settings.setValue("Engine/disabled_plugins", m_disabledNames);
 }
 
-bool AbstractEngine::isEnabled(EngineFactory* factory)
+bool AbstractEngine::isEnabled(EngineFactory *factory)
 {
     loadPlugins();
     return !m_disabledNames.contains(factory->properties().shortName);
+}
+
+bool AbstractEngine::isEnabled(AbstractEngine *engine)
+{
+    if(engine->objectName().isEmpty()) //qmmp engine
+        return true;
+
+    loadPlugins();
+    return !m_disabledNames.contains(engine->objectName());
 }
 
 QString AbstractEngine::file(EngineFactory *factory)

@@ -100,12 +100,13 @@ public:
      * @param factory Engine plugin factory.
      * @param enable Plugin enable state (\b true - enable, \b false - disable)
      */
-    static void setEnabled(EngineFactory* factory, bool enable = true);
+    static void setEnabled(EngineFactory *factory, bool enable = true);
     /*!
      * Returns \b true if engine is enabled, otherwise returns \b false
      * @param factory Engine plugin factory.
      */
-    static bool isEnabled(EngineFactory* factory);
+    static bool isEnabled(EngineFactory *factory);
+    static bool isEnabled(AbstractEngine *engine);
     /*!
      * Returns plugin file path.
      * @param factory Engine plugin factory.

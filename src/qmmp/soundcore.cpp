@@ -295,7 +295,7 @@ void SoundCore::startNextSource()
             return;
         }
     }
-    else if(m_engine->enqueue(s))
+    else if(AbstractEngine::isEnabled(m_engine) && m_engine->enqueue(s))
     {
         if(state() == Qmmp::Stopped || state() == Qmmp::Buffering)
         {

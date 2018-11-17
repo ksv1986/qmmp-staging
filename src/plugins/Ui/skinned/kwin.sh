@@ -2,6 +2,14 @@
 
 #This script adds kwin rules for qmmp windows
 
+if ! type kreadconfig5 &> /dev/null; then
+  exit 1
+fi
+
+if ! type kwriteconfig5 &> /dev/null; then
+  exit 1
+fi
+
 count=`kreadconfig5 --file kwinrulesrc --group General --key count`
 i=1
 found=0;

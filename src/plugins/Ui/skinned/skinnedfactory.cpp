@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,6 +20,10 @@
 
 #include <QtPlugin>
 #include <QMessageBox>
+#include <QProcess>
+#include <QApplication>
+#include <QFile>
+#include <QFileInfo>
 #include <qmmp/qmmpsettings.h>
 #include "mainwindow.h"
 #include "skinnedfactory.h"
@@ -35,6 +39,19 @@ UiProperties SkinnedFactory::properties() const
 
 QObject *SkinnedFactory::SkinnedFactory::create()
 {
+#ifdef QMMP_WS_X11
+    if(qgetenv("XDG_CURRENT_DESKTOP") == "KDE")
+    {
+        QString kwinScript = qApp->applicationFilePath () + "/../../share/qmmp" APP_NAME_SUFFIX "/scripts/kwin.sh";
+        if(!QFile::exists(kwinScript))
+            kwinScript = qApp->applicationDirPath() + "/../src/plugins/Ui/skinned/kwin.sh";
+        if(QFile::exists(kwinScript))
+        {
+            qDebug("SkinnedFactory: adding kwin rules...");
+            QProcess::execute(QString("sh %1").arg(QFileInfo(kwinScript).canonicalFilePath()));
+        }
+    }
+#endif
     QmmpSettings::instance()->readEqSettings(EqSettings::EQ_BANDS_10);
     return new MainWindow();
 }

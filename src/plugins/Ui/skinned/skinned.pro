@@ -122,7 +122,10 @@ RESOURCES = resources/resources.qrc \
 LIBS += $$QMMPUI_LIB
 
 unix {
+    DEFINES += APP_NAME_SUFFIX=\\\"$$APP_NAME_SUFFIX\\\"
     target.path = $$PLUGIN_DIR/Ui
+    scripts.files = kwin.sh
+    scripts.path = $$DATA_DIR/qmmp$${APP_NAME_SUFFIX}/scripts
     INSTALLS += target
     PKGCONFIG += x11
     DEFINES += QMMP_WS_X11

@@ -20,6 +20,9 @@ ENDIF()
 #Qt5 modules
 SET(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/qt56/lib/cmake)
 
+#installation paths
+include(GNUInstallDirs)
+
 #extract version from qmmp.h
 FILE(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/src/qmmp/qmmp.h"
      QMMP_VERSION_DATA REGEX "^#define[ \t]+QMMP_VERSION_[A-Z]+[ \t]+[0-9]+.*$")
@@ -81,14 +84,7 @@ ENDIF(SVN_VERSION)
 get_target_property(QT_LIBRARY_DIR Qt5::Core LOCATION)
 get_filename_component(QT_LIBRARY_DIR ${QT_LIBRARY_DIR} PATH)
 
-IF(NOT LIB_SUFFIX)
-IF("${QT_LIBRARY_DIR}" MATCHES lib64)
-set(LIB_SUFFIX 64)
-ENDIF("${QT_LIBRARY_DIR}" MATCHES lib64)
-ENDIF(NOT LIB_SUFFIX)
-
-SET(LIB_DIR "lib${LIB_SUFFIX}" CACHE STRING "library path")
-SET(PLUGIN_DIR "${LIB_DIR}/qmmp-${QMMP_VERSION_MAJOR}.${QMMP_VERSION_MINOR}" CACHE STRING "plugin path")
+SET(PLUGIN_DIR "${CMAKE_INSTALL_LIBDIR}/qmmp-${QMMP_VERSION_MAJOR}.${QMMP_VERSION_MINOR}" CACHE STRING "plugin path")
 SET(USE_SKINNED TRUE CACHE BOOL "enable/disable standard skinned user interface")
 SET(USE_DIR_ASSOC TRUE CACHE BOOL "enable/disable inode/directory mime type association")
 #SET(APP_NAME_SUFFIX "-1")

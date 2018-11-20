@@ -36,5 +36,5 @@ SET_TARGET_PROPERTIES(kdenotify PROPERTIES COMPILE_DEFINITIONS "${libkdenotify_D
 add_dependencies(kdenotify libqmmpui)
 target_link_libraries(kdenotify Qt5::Widgets Qt5::DBus libqmmpui libqmmp)
 install(TARGETS kdenotify DESTINATION ${PLUGIN_DIR}/General)
-install(FILES images/empty_cover.png DESTINATION share/qmmp${APP_NAME_SUFFIX}/images)
-install(FILES images/app_icon.png DESTINATION share/qmmp${APP_NAME_SUFFIX}/images)
+install(FILES images/empty_cover.png DESTINATION ${CMAKE_INSTALL_DATADIR}/qmmp${APP_NAME_SUFFIX}/images)
+install(FILES images/app_icon.png DESTINATION ${CMAKE_INSTALL_DATADIR}/qmmp${APP_NAME_SUFFIX}/images)

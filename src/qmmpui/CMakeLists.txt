@@ -137,7 +137,7 @@ ADD_LIBRARY(libqmmpui SHARED ${libqmmpui_SRCS} ${libqmmpui_RCC_SRCS} ${libqmmpui
 target_link_libraries(libqmmpui Qt5::Widgets Qt5::Network libqmmp)
 add_dependencies(libqmmpui libqmmp)
 SET_TARGET_PROPERTIES(libqmmpui PROPERTIES VERSION ${QMMP_VERSION} SOVERSION ${QMMP_SOVERSION} OUTPUT_NAME qmmpui${APP_NAME_SUFFIX})
-SET_TARGET_PROPERTIES(libqmmpui PROPERTIES COMPILE_DEFINITIONS "${libqmmpui_DEFINES}")
+target_compile_definitions(libqmmpui PRIVATE ${libqmmpui_DEFINES})
 install(TARGETS libqmmpui LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
                           RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
                           ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})

@@ -43,66 +43,72 @@
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
-        <source>%1 KiB</source>
+        <source>KiB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="76"/>
-        <source>Length</source>
-        <translation>Дужина</translation>
-    </message>
-    <message>
-        <location filename="../mplayermetadatamodel.cpp" line="78"/>
+        <location filename="../mplayermetadatamodel.cpp" line="65"/>
         <source>Demuxer</source>
         <translation>Демултиплексер</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="81"/>
+        <location filename="../mplayermetadatamodel.cpp" line="67"/>
         <source>Video format</source>
         <translation>Формат видеа</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="83"/>
+        <location filename="../mplayermetadatamodel.cpp" line="68"/>
         <source>FPS</source>
         <translation>Сличица у секунди</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="85"/>
+        <location filename="../mplayermetadatamodel.cpp" line="69"/>
         <source>Video codec</source>
         <translation>Видео кодек</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="87"/>
+        <location filename="../mplayermetadatamodel.cpp" line="70"/>
         <source>Aspect ratio</source>
         <translation>Размјера</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="89"/>
+        <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <source>Video bitrate</source>
         <translation>Битски проток видеа</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="96"/>
+        <location filename="../mplayermetadatamodel.cpp" line="71"/>
+        <location filename="../mplayermetadatamodel.cpp" line="76"/>
+        <source>kbps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mplayermetadatamodel.cpp" line="74"/>
         <source>Audio codec</source>
         <translation>Аудио кодек</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="98"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Sample rate</source>
         <translation>Узорковање</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="100"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <source>Hz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>Audio bitrate</source>
         <translation>Биткси проток звука</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="102"/>
+        <location filename="../mplayermetadatamodel.cpp" line="77"/>
         <source>Channels</source>
         <translation>Канала</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="104"/>
+        <location filename="../mplayermetadatamodel.cpp" line="72"/>
         <source>Resolution</source>
         <translation>Резолуција</translation>
     </message>

@@ -10,7 +10,7 @@ HEADERS += taskbarfactory.h \
 SOURCES += taskbarfactory.cpp \
            taskbarhelper.cpp 
 
-#RESOURCES = translations/translations.qrc
+RESOURCES = translations/translations.qrc
 
 LIBS += $$QMMPUI_LIB
 

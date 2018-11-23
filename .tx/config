@@ -241,6 +241,12 @@ source_lang = en
 source_file = src/plugins/General/trackchange/translations/trackchange_plugin_en.ts
 type = QT
 
+[qmmp.taskbar]
+file_filter = src/plugins/General/taskbar/translations/taskbar_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/General/taskbar/translations/taskbar_plugin_en.ts
+type = QT
+
 [qmmp.scrobbler]
 file_filter = src/plugins/General/scrobbler/translations/scrobbler_plugin_<lang>.ts
 source_lang = en

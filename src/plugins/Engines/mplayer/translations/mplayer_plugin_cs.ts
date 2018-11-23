@@ -43,66 +43,72 @@
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
-        <source>%1 KiB</source>
+        <source>KiB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="76"/>
-        <source>Length</source>
-        <translation>Délka</translation>
-    </message>
-    <message>
-        <location filename="../mplayermetadatamodel.cpp" line="78"/>
+        <location filename="../mplayermetadatamodel.cpp" line="65"/>
         <source>Demuxer</source>
         <translation>Demultiplexor</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="81"/>
+        <location filename="../mplayermetadatamodel.cpp" line="67"/>
         <source>Video format</source>
         <translation>Formát videa</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="83"/>
+        <location filename="../mplayermetadatamodel.cpp" line="68"/>
         <source>FPS</source>
         <translation>FPS</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="85"/>
+        <location filename="../mplayermetadatamodel.cpp" line="69"/>
         <source>Video codec</source>
         <translation>Videokodek</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="87"/>
+        <location filename="../mplayermetadatamodel.cpp" line="70"/>
         <source>Aspect ratio</source>
         <translation>Poměr stran</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="89"/>
+        <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <source>Video bitrate</source>
         <translation>Datový tok videa</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="96"/>
+        <location filename="../mplayermetadatamodel.cpp" line="71"/>
+        <location filename="../mplayermetadatamodel.cpp" line="76"/>
+        <source>kbps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mplayermetadatamodel.cpp" line="74"/>
         <source>Audio codec</source>
         <translation>Zvukový kodek</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="98"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Sample rate</source>
         <translation>Vzorkovací frekvence</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="100"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <source>Hz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>Audio bitrate</source>
         <translation>Datový tok audia</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="102"/>
+        <location filename="../mplayermetadatamodel.cpp" line="77"/>
         <source>Channels</source>
         <translation>Počet kanálů</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="104"/>
+        <location filename="../mplayermetadatamodel.cpp" line="72"/>
         <source>Resolution</source>
         <translation>Rozlišení</translation>
     </message>

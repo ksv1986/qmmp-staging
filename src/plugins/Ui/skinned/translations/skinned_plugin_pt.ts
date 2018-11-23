@@ -1127,52 +1127,52 @@
 <context>
     <name>SkinnedFactory</name>
     <message>
-        <location filename="../skinnedfactory.cpp" line="31"/>
+        <location filename="../skinnedfactory.cpp" line="35"/>
         <source>Skinned User Interface</source>
         <translation>Skinned User Interface</translation>
     </message>
     <message>
-        <location filename="../skinnedfactory.cpp" line="44"/>
+        <location filename="../skinnedfactory.cpp" line="61"/>
         <source>About Qmmp Skinned User Interface</source>
         <translation>Sobre Qmmp Skinned User Interface</translation>
     </message>
     <message>
-        <location filename="../skinnedfactory.cpp" line="45"/>
+        <location filename="../skinnedfactory.cpp" line="62"/>
         <source>Qmmp Skinned User Interface</source>
         <translation>Qmmp Skinned User Interface</translation>
     </message>
     <message>
-        <location filename="../skinnedfactory.cpp" line="46"/>
+        <location filename="../skinnedfactory.cpp" line="63"/>
         <source>Simple user interface with Winamp-2.x/XMMS skins support</source>
         <translation>Interface de utilizador com suporte a temas Winamp-2.x/XMMS</translation>
     </message>
     <message>
-        <location filename="../skinnedfactory.cpp" line="47"/>
+        <location filename="../skinnedfactory.cpp" line="64"/>
         <source>Written by:</source>
         <translation>Desenvolvido por:</translation>
     </message>
     <message>
-        <location filename="../skinnedfactory.cpp" line="48"/>
+        <location filename="../skinnedfactory.cpp" line="65"/>
         <source>Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;</source>
         <translation>Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../skinnedfactory.cpp" line="49"/>
+        <location filename="../skinnedfactory.cpp" line="66"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../skinnedfactory.cpp" line="50"/>
+        <location filename="../skinnedfactory.cpp" line="67"/>
         <source>Artwork:</source>
         <translation>Trabalho artístico:</translation>
     </message>
     <message>
-        <location filename="../skinnedfactory.cpp" line="51"/>
+        <location filename="../skinnedfactory.cpp" line="68"/>
         <source>Andrey Adreev &lt;andreev00@gmail.com&gt;</source>
         <translation>Andrey Adreev &lt;andreev00@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../skinnedfactory.cpp" line="52"/>
+        <location filename="../skinnedfactory.cpp" line="69"/>
         <source>sixixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
         <translation>sixixfive &lt;http://sixsixfive.deviantart.com/&gt;</translation>
     </message>

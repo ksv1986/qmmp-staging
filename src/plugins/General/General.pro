@@ -11,10 +11,13 @@ SUBDIRS += statusicon \
            copypaste \
            rgscan \
            hotkey
+
 unix:SUBDIRS += mpris \
                 kdenotify \
                 converter \
                 gnomehotkey
+
+win32:SUBDIRS += taskbar
 
 contains(CONFIG, UDISKS2_PLUGIN){
     unix:SUBDIRS += udisks2

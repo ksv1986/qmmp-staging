@@ -224,7 +224,6 @@ bool HotkeyManager::nativeEventFilter(const QByteArray &eventType, void *message
     MSG *m = static_cast<MSG*>(message);
     if (m->message == WM_HOTKEY)
     {
-        qDebug("++");
         SoundCore *core = SoundCore::instance();
         MediaPlayer *player = MediaPlayer::instance();
         foreach(Hotkey *hotkey, m_grabbedKeys)

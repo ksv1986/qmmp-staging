@@ -17,8 +17,6 @@ unix:SUBDIRS += mpris \
                 converter \
                 gnomehotkey
 
-win32:SUBDIRS += taskbar
-
 contains(CONFIG, UDISKS2_PLUGIN){
     unix:SUBDIRS += udisks2
 }
@@ -30,5 +28,8 @@ contains(CONFIG, HAL_PLUGIN){
 contains(CONFIG, HISTORY_PLUGIN){
     SUBDIRS += history
 }
+
+win32:SUBDIRS += taskbar #\
+                 #rdetect
 
 TEMPLATE = subdirs

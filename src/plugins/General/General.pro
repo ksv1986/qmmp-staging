@@ -29,7 +29,7 @@ contains(CONFIG, HISTORY_PLUGIN){
     SUBDIRS += history
 }
 
-win32:SUBDIRS += taskbar #\
-                 #rdetect
+win32:SUBDIRS += taskbar \
+                 rdetect
 
 TEMPLATE = subdirs

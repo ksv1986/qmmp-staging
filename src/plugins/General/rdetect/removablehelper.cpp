@@ -22,7 +22,7 @@
 #include <QActionGroup>
 #include <QtDebug>
 #include <QStyle>
-#include <qmmpui/mediaplayer.h>
+#include <qmmpui/playlistmanager.h>
 #include <windows.h>
 #include <dbt.h>
 #include <qmmpui/uihelper.h>
@@ -76,7 +76,7 @@ void RemovableHelper::processAction(QAction *action)
 {
     qDebug("RemovableHelper: action triggered: %s", qPrintable(action->data().toString()));
     QString path = action->data().toString();
-    MediaPlayer::instance()->playListManager()->selectedPlayList()->add(path);
+    PlayListManager::instance()->selectedPlayList()->add(path);
 }
 
 void RemovableHelper::updateActions()

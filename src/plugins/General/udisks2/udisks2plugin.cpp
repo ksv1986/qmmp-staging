@@ -23,7 +23,6 @@
 #include <QApplication>
 #include <QStyle>
 #include <qmmpui/uihelper.h>
-#include <qmmpui/mediaplayer.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/playlistitem.h>
 #include <qmmp/qmmp.h>
@@ -175,7 +174,7 @@ void UDisks2Plugin::processAction(QAction *action)
 {
     qDebug("UDisks2Plugin: action triggered: %s", qPrintable(action->data().toString()));
     QString path = action->data().toString();
-    MediaPlayer::instance()->playListManager()->selectedPlayList()->add(path);
+    PlayListManager::instance()->selectedPlayList()->add(path);
 }
 
 QAction *UDisks2Plugin::findAction(const QString &dev_path)

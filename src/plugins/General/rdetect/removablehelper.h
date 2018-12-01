@@ -41,7 +41,14 @@ private slots:
 private:
     void updateActions();
     QAction *findAction(const QString &dev_path);
+    void addPath(const QString &path);
+    void removePath(const QString &path);
+
     QActionGroup *m_actions;
+    bool m_detectCDA;
+    bool m_detectRemovable;
+    bool m_addTracks, m_removeTracks;
+    bool m_addFiles, m_removeFiles;
 
 };
 

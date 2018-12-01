@@ -17,43 +17,29 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+#ifndef SETTINGSDIALOG_H
+#define SETTINGSDIALOG_H
 
-#include <QMessageBox>
-#include <qmmp/qmmp.h>
-#include "settingsdialog.h"
-#include "removablehelper.h"
-#include "rdetectfactory.h"
+#include <QDialog>
+#include "ui_settingsdialog.h"
 
-GeneralProperties RDetectFactory::properties() const
+/**
+    @author Ilya Kotov <forkotov02@ya.ru>
+*/
+class SettingsDialog : public QDialog
 {
-    GeneralProperties properties;
-    properties.name = tr("Volume Detection Plugin");
-    properties.shortName = "rdetect";
-    properties.hasAbout = true;
-    properties.hasSettings = true;
-    properties.visibilityControl = false;
-    return properties;
-}
+Q_OBJECT
+public:
+    SettingsDialog(QWidget *parent = 0);
 
-QObject *RDetectFactory::create(QObject *parent)
-{
-    return new RemovableHelper(parent);
-}
+    ~SettingsDialog();
 
-QDialog *RDetectFactory::createConfigDialog(QWidget *parent)
-{
-    return new SettingsDialog(parent);
-}
 
-void RDetectFactory::showAbout(QWidget *parent)
-{
-    QMessageBox::about (parent, tr("About Volume Detection Plugin"),
-                        tr("Qmmp Removable Volume Detection Plugin") + "\n" +
-                        tr("This plugin provides removable volume detection") + "\n" +
-                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
+public slots:
+    virtual void accept();
 
-QString RDetectFactory::translation() const
-{
-    return QLatin1String(":/rdetect_plugin_");
-}
+private:
+    Ui::SettingsDialog m_ui;
+};
+
+#endif

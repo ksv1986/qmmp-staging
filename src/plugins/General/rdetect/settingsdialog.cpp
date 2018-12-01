@@ -17,43 +17,39 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-
-#include <QMessageBox>
+#include <QSettings>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
-#include "removablehelper.h"
-#include "rdetectfactory.h"
 
-GeneralProperties RDetectFactory::properties() const
+SettingsDialog::SettingsDialog(QWidget *parent)
+        : QDialog(parent)
 {
-    GeneralProperties properties;
-    properties.name = tr("Volume Detection Plugin");
-    properties.shortName = "rdetect";
-    properties.hasAbout = true;
-    properties.hasSettings = true;
-    properties.visibilityControl = false;
-    return properties;
+    m_ui.setupUi(this);
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginGroup("rdetect");
+    m_ui.cdGroupBox->setChecked(settings.value("cda", true).toBool());
+    m_ui.addTracksCheckBox->setChecked(settings.value("add_tracks", false).toBool());
+    m_ui.removeTracksCheckBox->setChecked(settings.value("remove_tracks", false).toBool());
+    m_ui.removableGroupBox->setChecked(settings.value("removable", true).toBool());
+    m_ui.addFilesCheckBox->setChecked(settings.value("add_files", false).toBool());
+    m_ui.removeFilesCheckBox->setChecked(settings.value("remove_files", false).toBool());
+    settings.endGroup();
 }
 
-QObject *RDetectFactory::create(QObject *parent)
-{
-    return new RemovableHelper(parent);
-}
 
-QDialog *RDetectFactory::createConfigDialog(QWidget *parent)
-{
-    return new SettingsDialog(parent);
-}
+SettingsDialog::~SettingsDialog()
+{}
 
-void RDetectFactory::showAbout(QWidget *parent)
+void SettingsDialog::accept()
 {
-    QMessageBox::about (parent, tr("About Volume Detection Plugin"),
-                        tr("Qmmp Removable Volume Detection Plugin") + "\n" +
-                        tr("This plugin provides removable volume detection") + "\n" +
-                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QString RDetectFactory::translation() const
-{
-    return QLatin1String(":/rdetect_plugin_");
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginGroup("rdetect");
+    settings.setValue("cda", m_ui.cdGroupBox->isChecked());
+    settings.setValue("add_tracks", m_ui.addTracksCheckBox->isChecked());
+    settings.setValue("remove_tracks", m_ui.removeTracksCheckBox->isChecked());
+    settings.setValue("removable", m_ui.removableGroupBox->isChecked());
+    settings.setValue("add_files", m_ui.addFilesCheckBox->isChecked());
+    settings.setValue("remove_files", m_ui.removeFilesCheckBox->isChecked());
+    settings.endGroup();
+    QDialog::accept();
 }

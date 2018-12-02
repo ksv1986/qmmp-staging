@@ -235,6 +235,12 @@ source_lang = en
 source_file = src/plugins/Output/waveout/translations/waveout_plugin_en.ts
 type = QT
 
+[qmmp.rdetect]
+file_filter = src/plugins/General/rdetect/translations/rdetect_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/General/rdetect/translations/rdetect_plugin_en.ts
+type = QT
+
 [qmmp.trackchange]
 file_filter = src/plugins/General/trackchange/translations/trackchange_plugin_<lang>.ts
 source_lang = en

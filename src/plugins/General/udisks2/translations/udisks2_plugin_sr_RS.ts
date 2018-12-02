@@ -70,12 +70,12 @@
 <context>
     <name>UDisks2Plugin</name>
     <message>
-        <location filename="../udisks2plugin.cpp" line="130"/>
+        <location filename="../udisks2plugin.cpp" line="129"/>
         <source>Add CD &quot;%1&quot;</source>
         <translation>Додај диск „%1“</translation>
     </message>
     <message>
-        <location filename="../udisks2plugin.cpp" line="138"/>
+        <location filename="../udisks2plugin.cpp" line="137"/>
         <source>Add Volume &quot;%1&quot;</source>
         <translation>Додај складишни простор „%1“</translation>
     </message>

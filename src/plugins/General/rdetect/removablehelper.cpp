@@ -20,8 +20,8 @@
 #include <QApplication>
 #include <QStorageInfo>
 #include <QActionGroup>
-#include <QtDebug>
 #include <QStyle>
+#include <QDir>
 #include <QSettings>
 #include <qmmpui/playlistmanager.h>
 #include <windows.h>
@@ -106,15 +106,21 @@ void RemovableHelper::updateActions()
 
         QString dev_path;
 
-        qDebug() << storage.fileSystemType();
-
         if(m_detectRemovable && storage.bytesTotal() < 40000000000LL &&
                 (storage.fileSystemType() == "NTFS" ||
                  storage.fileSystemType() == "FAT32" ||
-                 storage.fileSystemType() == "CDFS" ||
                  storage.fileSystemType() == "UDF"))
         {
             dev_path = storage.rootPath();
+        }
+        else if(storage.fileSystemType() == "CDFS")
+        {
+            dev_path = storage.rootPath();
+            if(isAudioCd(dev_path))
+            {
+                dev_path = QString("cdda://%1").arg(dev_path);
+                dev_path = dev_path.left(dev_path.size() - 1); //remove trailing '/'
+            }
         }
         else
             continue;
@@ -123,14 +129,15 @@ void RemovableHelper::updateActions()
         {
             QAction *action = new QAction(this);
             QString actionText;
-            /*if (device->isAudio())
+            if (dev_path.startsWith("cdda"))
             {
                 actionText = QString(tr("Add CD \"%1\"")).arg(storage.displayName());
             }
-            else*/
+            else
             {
                 actionText = QString(tr("Add Volume \"%1\"")).arg(storage.displayName());
             }
+
 
             if(storage.fileSystemType() == "CDFS")
                 action->setIcon(qApp->style()->standardIcon(QStyle::SP_DriveCDIcon));
@@ -154,7 +161,14 @@ void RemovableHelper::updateActions()
 
         foreach(const QStorageInfo &storage, volumes)
         {
-            if(storage.rootPath() == action->data().toString())
+            QString dev_path = storage.rootPath();
+            if(isAudioCd(dev_path))
+            {
+                dev_path = QString("cdda://%1").arg(dev_path);
+                dev_path = dev_path.left(dev_path.size() - 1); //remove trailing '/'
+            }
+
+            if(dev_path == action->data().toString())
             {
                 found = true;
                 break;
@@ -219,5 +233,11 @@ void RemovableHelper::removePath(const QString &path)
         else
             ++i;
     }
+}
+
+bool RemovableHelper::isAudioCd(const QString &path)
+{
+    QDir dir(path);
+    return !dir.entryInfoList(QStringList() << "*.cda").isEmpty();
 }
 

@@ -43,6 +43,7 @@ private:
     QAction *findAction(const QString &dev_path);
     void addPath(const QString &path);
     void removePath(const QString &path);
+    bool isAudioCd(const QString &path);
 
     QActionGroup *m_actions;
     bool m_detectCDA;

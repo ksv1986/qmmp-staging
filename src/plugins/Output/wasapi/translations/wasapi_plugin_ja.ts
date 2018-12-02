@@ -32,12 +32,17 @@
         <translation>WASAPI プラグイン設定</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="52"/>
+        <location filename="../settingsdialog.ui" line="61"/>
         <source>Device:</source>
         <translation>出力デバイス:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="56"/>
+        <location filename="../settingsdialog.ui" line="68"/>
+        <source>Exclusive mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="58"/>
         <source>Default</source>
         <translation>標準</translation>
     </message>

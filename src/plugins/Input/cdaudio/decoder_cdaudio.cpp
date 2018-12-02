@@ -462,6 +462,8 @@ bool DecoderCDAudio::initialize()
     m_current_sector = tracks[track_at].first_sector;
     m_last_sector = tracks[track_at].last_sector;
     addMetaData(tracks[track_at].info.metaData()); //send metadata
+    setProperty(Qmmp::FORMAT_NAME, "CDDA");
+    setProperty(Qmmp::BITRATE, m_bitrate);
     qDebug("DecoderCDAudio: initialize succes");
     return true;
 }

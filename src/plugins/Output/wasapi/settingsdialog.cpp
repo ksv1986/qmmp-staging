@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -39,6 +39,7 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     QString id = settings.value("WASAPI/device", "default").toString();
     int index = m_ui.deviceComboBox->findData(id);
+    m_ui.exclusiveModeCheckBox->setChecked(settings.value("WASAPI/exclusive_mode", false).toBool());
     m_ui.deviceComboBox->setCurrentIndex(qMax(index, 0));
 }
 
@@ -47,6 +48,7 @@ void SettingsDialog::accept()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     int index = m_ui.deviceComboBox->currentIndex();
     settings.setValue("WASAPI/device", m_ui.deviceComboBox->itemData(index).toString());
+    settings.setValue("WASAPI/exclusive_mode", m_ui.exclusiveModeCheckBox->isChecked());
     QDialog::accept();
 }
 

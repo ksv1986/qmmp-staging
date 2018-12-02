@@ -7,19 +7,35 @@
     <x>0</x>
     <y>0</y>
     <width>276</width>
-    <height>68</height>
+    <height>90</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>WASAPI Plugin Settings</string>
   </property>
   <layout class="QGridLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
     <number>9</number>
    </property>
    <property name="spacing">
     <number>6</number>
    </property>
+   <item row="2" column="0" colspan="3">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="1" colspan="2">
     <widget class="QComboBox" name="deviceComboBox">
      <property name="sizePolicy">
@@ -33,13 +49,6 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0" colspan="3">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="sizePolicy">
@@ -50,6 +59,13 @@
      </property>
      <property name="text">
       <string>Device:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="QCheckBox" name="exclusiveModeCheckBox">
+     <property name="text">
+      <string>Exclusive mode</string>
      </property>
     </widget>
    </item>

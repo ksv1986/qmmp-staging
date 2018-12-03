@@ -48,7 +48,6 @@ public:
     bool GetRegisteredExtensions(const QStringList& extensionsToCheck, QStringList& registeredExtensions);
     bool RemoveClassId();
     int CreateFileAssociations(const QStringList& fileExtensions);
-    int RestoreFileAssociations(const QStringList& fileExtensions);
 };
 
 #endif

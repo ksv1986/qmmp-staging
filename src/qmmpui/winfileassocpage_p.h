@@ -48,7 +48,7 @@ private slots:
 private:
     void loadAssociations();
     void saveAssociations();
-    int ProcessAssociations(QStringList& current, QStringList& old);
+    int ProcessAssociations(QStringList& current);
     void createHelp();
     QStringList m_extensions;
     QStringList m_regExtensions;

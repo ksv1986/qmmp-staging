@@ -98,20 +98,9 @@ void WinFileAssocPage::loadAssociations()
     }
 }
 
-int WinFileAssocPage::ProcessAssociations(QStringList& current, QStringList& old)
+int WinFileAssocPage::ProcessAssociations(QStringList& current)
 {
     WinFileAssoc RegAssoc;
-
-    QStringList toRestore;
-
-    //Restore unselected associations
-    foreach(const QString& ext, old)
-    {
-        if (!current.contains(ext))
-            toRestore.append(ext);
-    }
-
-    RegAssoc.RestoreFileAssociations(toRestore);
     return RegAssoc.CreateFileAssociations(current);
 }
 
@@ -129,7 +118,7 @@ void WinFileAssocPage::saveAssociations()
     if(extensions == m_regExtensions)
         return;
 
-    int processed = ProcessAssociations(extensions, m_regExtensions);
+    int processed = ProcessAssociations(extensions);
 
     if (processed != extensions.count())
     {

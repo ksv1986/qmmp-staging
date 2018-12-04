@@ -92,7 +92,7 @@ public:
      */
     static QList<EngineFactory*> enabledFactories();
     /*!
-     * Returns EngineFactory pointer which supports file \b path or 0 if file \b path is unsupported
+     * Returns EngineFactory pointer which supports file \b path or 0 if file \b path is unsupported.
      */
     static EngineFactory *findByFilePath(const QString &path);
     /*!
@@ -103,9 +103,14 @@ public:
     static void setEnabled(EngineFactory *factory, bool enable = true);
     /*!
      * Returns \b true if engine is enabled, otherwise returns \b false
+     * This function uses \b QObject::objectName() function.
      * @param factory Engine plugin factory.
      */
     static bool isEnabled(EngineFactory *factory);
+    /*!
+     * Returns \b true if engine is enabled, otherwise returns \b false
+     * @param engine Engine object.
+     */
     static bool isEnabled(AbstractEngine *engine);
     /*!
      * Returns plugin file path.

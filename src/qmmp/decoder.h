@@ -102,11 +102,23 @@ public:
     bool hasMetaData() const;
     /*!
      * Takes metadata out of decoder and returns it.
-     * Attention: hasMetaData() should return \b true before use of this fuction.
+     * Attention: hasMetaData() should return \b true before using of this fuction.
      */
     QMap<Qmmp::MetaData, QString> takeMetaData();
+    /*!
+     * Sets extra track property.
+     * \param key Property key.
+     * \param value Property value.
+     */
     void setProperty(Qmmp::TrackProperty key, const QVariant &value);
+    /*!
+     * Updates all extra track properties.
+     * \param properties New track properties.
+     */
     void setProperties(const QMap<Qmmp::TrackProperty, QString> &properties);
+    /*!
+     * Returns track properties
+     */
     const QMap<Qmmp::TrackProperty, QString> &properties() const;
     /*!
      * Returns DecoderFactory pointer which supports file \b path or 0 if file \b path is unsupported

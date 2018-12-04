@@ -76,7 +76,11 @@ public:
      * Resumes processing audio data.
      */
     virtual void resume();
-
+    /*!
+     * Sets track information for output.
+     * Default implementation does nothing.
+     * Reimplement this function to receive metadata.
+     */
     virtual void setTrackInfo(const TrackInfo &info);
     /*!
      * Returns selected audio parameters.

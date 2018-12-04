@@ -159,8 +159,11 @@ public:
      * Returns the location of the installed Qmmp plugins.
      */
     static QString pluginPath();
+    /*!
+     * Returns a list of found Qmmp plugins (full paths).
+     * @param prefix Plugin type or directory name (examples: Inpunt, Transport, Output).
+     */
     static QStringList findPlugins(const QString &prefix);
-
     /*!
      * Returns system language if uiLanguageID() is 'auto'. Otherwise returns uiLanguageID().
      */

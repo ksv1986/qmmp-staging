@@ -43,11 +43,11 @@ public:
         size = 0;
     }
 
-    float *data;         /*!< Audio data */
-    size_t samples;      /*!< Audio data size in samples */
-    size_t size;         /*!< Buffer size in samples */
-    unsigned int rate;   /*!< Buffer bitrate */
-    QSharedPointer<TrackInfo> trackInfo;
+    float *data;                         /*!< Audio data. */
+    size_t samples;                      /*!< Audio data size in samples. */
+    size_t size;                         /*!< Buffer size in samples. */
+    unsigned int rate;                   /*!< Buffer bitrate. */
+    QSharedPointer<TrackInfo> trackInfo; /*!< Attached track information. */
 };
 
 

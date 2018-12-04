@@ -60,7 +60,10 @@ public:
      * @param duration track length in milliseconds
      */
     void dispatch(qint64 duration);
-
+    /*!
+     * Sends track information.
+     * @param info track information.
+     */
     bool dispatch(const TrackInfo &info);
     /*!
      * Sends stream information \b info

@@ -41,7 +41,7 @@ Q_OBJECT
 public:
     /*!
      * Object contsructor.
-     * @param url Input source path or url.
+     * @param path Input source path or url.
      * @param parent Parent object.
      */
     InputSource(const QString &path, QObject *parent = 0);
@@ -113,7 +113,7 @@ public:
     QHash<QString, QString> takeStreamInfo();
     /*!
      * Creates InputSource object.
-     * @param url Input source path or url.
+     * @param path Input source path or url.
      * @param parent Parent object.
      * Returns \b 0 if the given url is not supported.
      */

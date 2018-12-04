@@ -53,6 +53,7 @@ public:
      * Extracts metadata and audio information from file \b path and returns a list of FileInfo items.
      * One file may contain several playlist items (for example: cda disk or flac with embedded cue)
      * @param path Local file path or URL.
+     * @param parts parts of metadata which should be extracted from file.
      * @param ignoredPaths Pointer to a list of the files which should be ignored by the recursive search
      * (useful to exclude cue data files from playlist)
      */
@@ -60,6 +61,7 @@ public:
     /*!
      * Creats metadata object, which provides full access to file tags.
      * @param url File path or URL.
+     * @param readOnly Open file in read-only mode (\b true - enabled, \b false - disable).
      * @return MetaDataModel pointer or null pointer.
      */
     MetaDataModel* createMetaDataModel(const QString &url, bool readOnly) const;

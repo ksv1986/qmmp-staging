@@ -78,12 +78,16 @@ public:
      */
     QString format(const PlayListTrack *item) const;
     /*!
-     * Converts metadata of \b TrackInfo pointer \b info to one string using template.
+     * Converts metadata of \b TrackInfo reference \b info to one string using template.
      * \param info pointer to \b TrackInfo object.
-     * \param track Index of track.
+     * \param trackIndex Index of track.
      */
     QString format(const TrackInfo &info, int trackIndex = 0) const;
-
+    /*!
+     * Converts metadata of \b TrackInfo pointer \b info to one string using template.
+     * \param info pointer to \b TrackInfo object.
+     * \param trackIndex Index of track.
+     */
     QString format(const TrackInfo *info, int trackIndex = 0) const;
     /*!
      * Returns formatted duration (example: 05:02:03).
@@ -91,6 +95,7 @@ public:
      * \param hideZero Setting for zero values output.
      * If \b hideZero is \b true, then the function outputs empty string for zero length,
      * otherwise outputs "0:00".
+     * \param showMs Adds milliseconds to the end of output (example: 05:02:03.324).
      */
     static QString formatDuration(qint64 duration, bool hideZero = true, bool showMs = false);
 

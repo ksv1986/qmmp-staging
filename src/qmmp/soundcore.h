@@ -114,6 +114,9 @@ public:
      * Returns a hash of stream information if available
      */
     QHash<QString, QString> streamInfo() const;
+    /*!
+     * Returns current track information.
+     */
     const TrackInfo &trackInfo() const;
     /*!
      *  Indicates that the current active engine will be used for the next queued track.
@@ -207,6 +210,9 @@ signals:
      * Emitted when new stream information is available.
      */
     void streamInfoChanged();
+    /*!
+     * Emitted when new track information is available.
+     */
     void trackInfoChanged();
     /*!
      * This signal is emitted when the state of the SoundCore has changed.

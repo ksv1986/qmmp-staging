@@ -61,7 +61,7 @@ public:
     {
         TOOLS_MENU = 0, /*!< tools menu */
         PLAYLIST_MENU,  /*!< playlist context menu */
-        ADD_MENU
+        ADD_MENU        /*!< "add"/"file" menu */
     };
     /*!
      * Returns \b true if one of the general plugin can change visibility, otherwise returns \b false
@@ -89,8 +89,13 @@ public:
      * @param parent Parent widget
      */
     QMenu *createMenu(MenuType type, const QString &title = QString(), QWidget *parent = 0);
+    /*!
+     * Registers existing menu for access from general plugins.
+     * @param type Menu type.
+     * @param menu Menu pointer.
+     * @param before An action, after which the rest are added.
+     */
     void registerMenu(MenuType type, QMenu *menu, QAction *before = 0);
-
     /*!
      * Opens 'Add Files' dialog
      * @param parent Parent widget

@@ -31,16 +31,42 @@
 #include "tagmodel.h"
 
 
+/*! @brief Container of extra file/track property.
+ * @author Ilya Kotov <forkotov02@ya.ru>
+ */
 class QMMP_EXPORT MetaDataItem
 {
 public:
+    /*!
+     * Constructor
+     * \param name Localized name of property.
+     * \param value Property value.
+     * \param suffix Localized suffix of property (i.e. kB, kB/s, etc).
+     */
     MetaDataItem(const QString &name, const QVariant &value, const QString &suffix = QString());
-
+    /*!
+     * Returns localized name of property.
+     */
     const QString &name() const;
+    /*!
+     * Changes localized name to \b name
+     */
     void setName(const QString &name);
+    /*!
+     * Returns property value.
+     */
     const QVariant &value() const;
+    /*!
+     * Returns value of property.
+     */
     void setValue(const QString &value);
+    /*!
+     * Returns suffix of property.
+     */
     const QString &suffix() const;
+    /*!
+     * Changes property suffix to \b suffixed
+     */
     void setSuffix(const QString &suffix);
 
 private:
@@ -54,23 +80,35 @@ private:
 class QMMP_EXPORT MetaDataModel
 {
 public:
+    /*!
+     * Details dialog settings.
+     */
     enum DialogHint
     {
-        NO_HINTS = 0x0,
-        IS_COVER_EDITABLE = 0x1,
-        COMPLETE_PROPERTY_LIST = 0x2
+        NO_HINTS = 0x0,               /*!< Default value. */
+        IS_COVER_EDITABLE = 0x1,      /*!< Enable cover editor. */
+        COMPLETE_PROPERTY_LIST = 0x2  /*!< Show properties from \b extraProperties() only (ignore other sources) */
     };
     Q_DECLARE_FLAGS(DialogHints, DialogHint)
     /*!
      * Constructor.
+     * @param readOnly Open file in read-only mode (\b true - enabled, \b false - disable).
+     * @param hints Details dialog settings.
      */
     MetaDataModel(bool readOnly, DialogHints hints = NO_HINTS);
     /*!
      * Destructor.
      */
     virtual ~MetaDataModel();
-
+    /*!
+     * Returns extra properties of the media source (in addition to the \b Qmmp::TrackProperty values).
+     * Default implemetation returns empty array.
+     */
     virtual QList<MetaDataItem> extraProperties() const;
+    /*!
+     * Returns a list of long descriptions.
+     * Default implemetation returns empty array.
+     */
     virtual QList<MetaDataItem> descriptions() const;
     /*!
      * Returns a list of available tags.
@@ -82,17 +120,39 @@ public:
      * Subclass should reimplement this function. Default implementation returns empty pixmap.
      */
     virtual QPixmap cover() const;
+    /*!
+     * Sets cover.
+     * @param pix Cover pixmap.
+     * Subclass should reimplement this function. Default implementation does nothing.
+     */
     virtual void setCover(const QPixmap &pix);
+    /*!
+     * Removes cover.
+     * Subclass should reimplement this function. Default implementation does nothing.
+     */
     virtual void removeCover();
     /*!
      * Returns path to cover pixmap.
      */
     virtual QString coverPath() const;
+    /*!
+     * Returns \b true if file is opened in read only mode. Otherwise returns \b false.
+     */
     bool isReadOnly() const;
+    /*!
+     * Returns details dialog hints.
+     */
     const DialogHints &dialogHints() const;
 
 protected:
+    /*!
+     * Changes details dialog hints to \b hints
+     */
     void setDialogHints(const DialogHints &hints);
+    /*!
+     * Enables/Disables read only mode (\b true - enabled, \b false - disable).
+     * @param readOnly read only mode (\b true - enabled, \b false - disable).
+     */
     void setReadOnly(bool readOnly);
 
 private:

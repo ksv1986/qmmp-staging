@@ -43,12 +43,12 @@ class HTTPInputSource;
 struct HttpStreamData
 {
     char *buf;
-    long buf_fill;
+    size_t buf_fill;
     QString content_type;
     bool aborted;
     QHash <QString, QByteArray> header;
     bool icy_meta_data;
-    int icy_metaint;
+    size_t icy_metaint;
 };
 
 /*! @internal
@@ -101,11 +101,11 @@ private:
     HttpStreamData m_stream;
     QString m_url;
     QString m_userAgent;
-    int m_metacount;
+    size_t m_metacount;
     QString m_title;
     bool m_ready;
     bool m_meta_sent;
-    long m_buffer_size;
+    size_t m_buffer_size;
     QTextCodec *m_codec;
     DownloadThread *m_thread;
     HTTPInputSource *m_parent;

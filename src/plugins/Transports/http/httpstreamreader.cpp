@@ -31,18 +31,28 @@
 #include "httpinputsource.h"
 #include "httpstreamreader.h"
 
+#define MAX_BUFFER_SIZE 150000000UL //bytes
+
 //curl callbacks
 static size_t curl_write_data(void *data, size_t size, size_t nmemb,
                               void *pointer)
 {
     HttpStreamReader *dl = (HttpStreamReader *)pointer;
-    dl->mutex()->lock ();
+    dl->mutex()->lock();
+
+    if(dl->stream()->buf_fill > MAX_BUFFER_SIZE)
+    {
+        qWarning("HttpStreamReader: buffer has reached the maximum size, disconnecting...");
+        dl->stream()->aborted = true;
+        dl->mutex()->unlock();
+        return 0;
+    }
+
     size_t buf_start = dl->stream()->buf_fill;
     size_t data_size = size * nmemb;
     dl->stream()->buf_fill += data_size;
-
-    dl->stream()->buf = (char *)realloc (dl->stream()->buf, dl->stream()->buf_fill);
-    memcpy (dl->stream()->buf + buf_start, data, data_size);
+    dl->stream()->buf = (char *)realloc(dl->stream()->buf, dl->stream()->buf_fill);
+    memcpy(dl->stream()->buf + buf_start, data, data_size);
     dl->mutex()->unlock();
     dl->checkBuffer();
     return data_size;
@@ -182,12 +192,15 @@ bool HttpStreamReader::isSequential () const
     return true;
 }
 
-bool HttpStreamReader::open (OpenMode mode)
+bool HttpStreamReader::open(OpenMode mode)
 {
-    if (mode != QIODevice::ReadOnly)
-        return false;
-    QIODevice::open(mode);
-    return m_ready;
+    if(m_ready && mode == QIODevice::ReadOnly)
+    {
+        QIODevice::open(mode);
+        return true;
+    }
+
+    return false;
 }
 
 bool HttpStreamReader::seek (qint64 pos)
@@ -220,11 +233,10 @@ qint64 HttpStreamReader::readData(char* data, qint64 maxlen)
         len = readBuffer(data, maxlen);
     else
     {
-        qint64 nread = 0;
-        qint64 to_read;
-        while (maxlen > nread && m_stream.buf_fill > nread)
+        size_t nread = 0;
+        while (size_t(maxlen) > nread && m_stream.buf_fill > nread)
         {
-            to_read = qMin<qint64>(m_stream.icy_metaint - m_metacount, maxlen - nread);
+            size_t to_read = qMin<size_t>(m_stream.icy_metaint - m_metacount, maxlen - nread);
             qint64 res = readBuffer(data + nread, to_read);
             nread += res;
             m_metacount += res;
@@ -371,14 +383,18 @@ qint64 HttpStreamReader::readBuffer(char* data, qint64 maxlen)
         memmove(m_stream.buf, m_stream.buf + len, m_stream.buf_fill);
         return len;
     }
-    return 0;
+    else if (m_stream.aborted)
+        return -1;
+    else
+        return 0;
 }
 
 void HttpStreamReader::checkBuffer()
 {
-    if(m_stream.aborted)
+    if(m_stream.aborted || m_ready)
         return;
-    if (m_stream.buf_fill > m_buffer_size && !m_ready)
+
+    if (m_stream.buf_fill > m_buffer_size)
     {
         m_ready  = true;
         qDebug("HttpStreamReader: ready");
@@ -395,7 +411,7 @@ void HttpStreamReader::checkBuffer()
         }
         emit ready();
     }
-    else if (!m_ready)
+    else
     {
         StateHandler::instance()->dispatchBuffer(100 * m_stream.buf_fill / m_buffer_size);
         qApp->processEvents();
@@ -417,7 +433,7 @@ void HttpStreamReader::readICYMetaData()
     readBuffer((char *)&packet_size, 1);
     if (packet_size != 0)
     {
-        int size = packet_size * 16;
+        size_t size = packet_size * 16;
         char packet[size];
         while (m_stream.buf_fill < size && m_thread->isRunning())
         {

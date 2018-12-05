@@ -44,6 +44,7 @@ struct HttpStreamData
 {
     char *buf;
     size_t buf_fill;
+    size_t buf_size;
     QString content_type;
     bool aborted;
     QHash <QString, QByteArray> header;
@@ -105,7 +106,7 @@ private:
     QString m_title;
     bool m_ready;
     bool m_meta_sent;
-    size_t m_buffer_size;
+    size_t m_prebuffer_size;
     QTextCodec *m_codec;
     DownloadThread *m_thread;
     HTTPInputSource *m_parent;

@@ -48,11 +48,27 @@ static size_t curl_write_data(void *data, size_t size, size_t nmemb,
         return 0;
     }
 
-    size_t buf_start = dl->stream()->buf_fill;
     size_t data_size = size * nmemb;
+    if(dl->stream()->buf_fill + data_size > dl->stream()->buf_size)
+    {
+        char *prev = dl->stream()->buf;
+        dl->stream()->buf = (char *)realloc(dl->stream()->buf, dl->stream()->buf_fill + data_size);
+        if(!dl->stream()->buf)
+        {
+            qWarning("HttpStreamReader: unable to allocate %lu bytes",  dl->stream()->buf_fill + data_size);
+            if(prev)
+                free(prev);
+
+            dl->stream()->buf_fill = 0;
+            dl->stream()->buf_size = 0;
+            dl->stream()->aborted = true;
+            dl->mutex()->unlock();
+            return 0;
+        }
+        dl->stream()->buf_size = dl->stream()->buf_fill + data_size;
+    }
+    memcpy(dl->stream()->buf + dl->stream()->buf_fill, data, data_size);
     dl->stream()->buf_fill += data_size;
-    dl->stream()->buf = (char *)realloc(dl->stream()->buf, dl->stream()->buf_fill);
-    memcpy(dl->stream()->buf + buf_start, data, data_size);
     dl->mutex()->unlock();
     dl->checkBuffer();
     return data_size;
@@ -125,6 +141,7 @@ HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) 
     m_url = url;
     curl_global_init(CURL_GLOBAL_ALL);
     m_stream.buf_fill = 0;
+    m_stream.buf_size = 0;
     m_stream.buf = 0;
     m_stream.icy_meta_data = false;
     m_stream.aborted = true;
@@ -137,7 +154,7 @@ HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("HTTP");
     m_codec = QTextCodec::codecForName(settings.value("icy_encoding","UTF-8").toByteArray ());
-    m_buffer_size = settings.value("buffer_size",384).toInt() * 1000;
+    m_prebuffer_size = settings.value("buffer_size",384).toInt() * 1000;
     if(settings.value("override_user_agent",false).toBool())
         m_userAgent = settings.value("user_agent").toString();
     if(m_userAgent.isEmpty())
@@ -161,6 +178,7 @@ HttpStreamReader::~HttpStreamReader()
     curl_global_cleanup();
     m_stream.aborted = true;
     m_stream.buf_fill = 0;
+    m_stream.buf_size = 0;
     if (m_stream.buf)
         free(m_stream.buf);
 
@@ -355,10 +373,16 @@ void HttpStreamReader::run()
     curl_easy_setopt(m_handle, CURLOPT_HTTP200ALIASES, http200_aliases);
     curl_easy_setopt(m_handle, CURLOPT_HTTPHEADER, http_headers);
     m_mutex.lock();
+    if(m_stream.buf)
+    {
+        free(m_stream.buf);
+        m_stream.buf = 0;
+    }
     m_stream.buf_fill = 0;
-    m_stream.buf = 0;
+    m_stream.buf_size = m_prebuffer_size * 2;
+    m_stream.buf = (char *)malloc(m_stream.buf_size); //initial buffer
     m_stream.aborted = false;
-    m_stream.header.clear ();
+    m_stream.header.clear();
     m_ready  = false;
     int return_code;
     qDebug("HttpStreamReader: starting libcurl");
@@ -394,7 +418,7 @@ void HttpStreamReader::checkBuffer()
     if(m_stream.aborted || m_ready)
         return;
 
-    if (m_stream.buf_fill > m_buffer_size)
+    if (m_stream.buf_fill > m_prebuffer_size)
     {
         m_ready  = true;
         qDebug("HttpStreamReader: ready");
@@ -413,7 +437,7 @@ void HttpStreamReader::checkBuffer()
     }
     else
     {
-        StateHandler::instance()->dispatchBuffer(100 * m_stream.buf_fill / m_buffer_size);
+        StateHandler::instance()->dispatchBuffer(100 * m_stream.buf_fill / m_prebuffer_size);
         qApp->processEvents();
     }
 }

@@ -55,7 +55,7 @@ static size_t curl_write_data(void *data, size_t size, size_t nmemb,
         dl->stream()->buf = (char *)realloc(dl->stream()->buf, dl->stream()->buf_fill + data_size);
         if(!dl->stream()->buf)
         {
-            qWarning("HttpStreamReader: unable to allocate %lu bytes",  dl->stream()->buf_fill + data_size);
+            qWarning("HttpStreamReader: unable to allocate %zu bytes",  dl->stream()->buf_fill + data_size);
             if(prev)
                 free(prev);
 

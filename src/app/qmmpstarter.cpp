@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -116,7 +116,7 @@ QMMPStarter::QMMPStarter() : QObject()
 
     m_server = new QLocalServer(this);
     m_socket = new QLocalSocket(this);
-    bool noStart = commands.keys().contains("--no-start");
+    bool noStart = commands.keys().contains("--no-start") || commands.keys().contains("--quit");
 
 #ifdef Q_OS_WIN
     //Windows IPC implementation (named mutex and named pipe)

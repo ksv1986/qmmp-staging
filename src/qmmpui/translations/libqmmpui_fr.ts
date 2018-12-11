@@ -1148,7 +1148,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../winfileassoc.cpp" line="278"/>
+        <location filename="../winfileassoc.cpp" line="104"/>
         <source>Enqueue in Qmmp</source>
         <translation>Mettre en queue dans Qmmp</translation>
     </message>
@@ -1315,32 +1315,32 @@
         <translation>Ne rien sélectionner</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="136"/>
+        <location filename="../winfileassocpage.cpp" line="125"/>
         <source>Warning</source>
         <translation>Attention</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="137"/>
+        <location filename="../winfileassocpage.cpp" line="126"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>Tous les fichiers ne peuvent être associés. Merci de vérifier vos permissions de sécurité et réessayer.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="144"/>
+        <location filename="../winfileassocpage.cpp" line="133"/>
         <source>Check all file types in the list</source>
         <translation>Cocher tous les types de fichier dans la liste</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="145"/>
+        <location filename="../winfileassocpage.cpp" line="134"/>
         <source>Uncheck all file types in the list</source>
         <translation>Décocher tous les types de fichier dans la liste</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="146"/>
+        <location filename="../winfileassocpage.cpp" line="135"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>Cocher les fichiers d&quot;extensions multimédias que vous voulez que Qmmp prenne en charge. Lorsque vous cliquez sur Appliquer, les fichiers cochés vont être associés avec Qmmp. Si vous décocher un type de média, l&apos;association de fichier sera restauré.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="150"/>
+        <location filename="../winfileassocpage.cpp" line="139"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;Note:&lt;/b&gt; La réstauration ne fonctionne pas sur Windows Vista/7</translation>
     </message>

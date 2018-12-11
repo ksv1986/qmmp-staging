@@ -1148,7 +1148,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../winfileassoc.cpp" line="278"/>
+        <location filename="../winfileassoc.cpp" line="104"/>
         <source>Enqueue in Qmmp</source>
         <translation>Стави у ред пуштања у Кумпу</translation>
     </message>
@@ -1315,32 +1315,32 @@
         <translation>Поништи избор</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="136"/>
+        <location filename="../winfileassocpage.cpp" line="125"/>
         <source>Warning</source>
         <translation>Упозорење</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="137"/>
+        <location filename="../winfileassocpage.cpp" line="126"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>Нису сви фајлови могли да се доделе. Проверите ваше дозволе и покушајте поново.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="144"/>
+        <location filename="../winfileassocpage.cpp" line="133"/>
         <source>Check all file types in the list</source>
         <translation>Изабери све типове фајлова са списка</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="145"/>
+        <location filename="../winfileassocpage.cpp" line="134"/>
         <source>Uncheck all file types in the list</source>
         <translation>Уклони избор са свих типова фајла са списка</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="146"/>
+        <location filename="../winfileassocpage.cpp" line="135"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>Изаберите типове медија фајлова којима желите да рукује Кумп. Кад притиснете дугме Примени, изабрани фајлови биће додељени Кумпу. Ако уклоните избор, уклонићете доделу Кумпу.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="150"/>
+        <location filename="../winfileassocpage.cpp" line="139"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;Напомена:&lt;/b&gt; Враћање оригиналних додела не ради на Виндоуз Висти/7.</translation>
     </message>

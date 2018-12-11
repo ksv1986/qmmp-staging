@@ -1148,7 +1148,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../winfileassoc.cpp" line="278"/>
+        <location filename="../winfileassoc.cpp" line="104"/>
         <source>Enqueue in Qmmp</source>
         <translation>Colocar na fila do Qmmp</translation>
     </message>
@@ -1315,32 +1315,32 @@
         <translation>Desmarcar todos</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="136"/>
+        <location filename="../winfileassocpage.cpp" line="125"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="137"/>
+        <location filename="../winfileassocpage.cpp" line="126"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>Nem todos os tipos de ficheiro foram associados. Verifique as suas permissões e tente novamente.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="144"/>
+        <location filename="../winfileassocpage.cpp" line="133"/>
         <source>Check all file types in the list</source>
         <translation>Marcar todos os tipos de ficheiro da lista</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="145"/>
+        <location filename="../winfileassocpage.cpp" line="134"/>
         <source>Uncheck all file types in the list</source>
         <translation>Desmarcar todos os tipos de ficheiro da lista</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="146"/>
+        <location filename="../winfileassocpage.cpp" line="135"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>Assinale as extensões de ficheiros que pretende gerir com o Qmmp. Se clicar em Aplicar, os tipos de ficheiro marcados serão associados. Se desmarcar um tipo, a associação original será restaurada.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="150"/>
+        <location filename="../winfileassocpage.cpp" line="139"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;Nota:&lt;/b&gt; o restauro não funciona nos sistemas Windows Vista/7.</translation>
     </message>

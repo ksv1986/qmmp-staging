@@ -38,8 +38,8 @@
     <name>StreamBrowser</name>
     <message>
         <location filename="../streambrowser.cpp" line="33"/>
-        <source>Stream Browser</source>
-        <translation>Прегледач токова</translation>
+        <source>Add Stream</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../streambrowser.cpp" line="35"/>

@@ -38,7 +38,7 @@
     <name>StreamBrowser</name>
     <message>
         <location filename="../streambrowser.cpp" line="33"/>
-        <source>Stream Browser</source>
+        <source>Add Stream</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

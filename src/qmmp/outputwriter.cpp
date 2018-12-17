@@ -156,26 +156,6 @@ AudioParameters OutputWriter::audioParameters() const
     return AudioParameters(m_frequency, m_chan_map, Qmmp::PCM_FLOAT);
 }
 
-quint32 OutputWriter::sampleRate()
-{
-    return m_frequency;
-}
-
-int OutputWriter::channels()
-{
-    return m_channels;
-}
-
-Qmmp::AudioFormat OutputWriter::format() const
-{
-    return m_format;
-}
-
-const ChannelMap OutputWriter::channelMap() const
-{
-    return m_chan_map;
-}
-
 int OutputWriter::sampleSize() const
 {
     return AudioParameters::sampleSize(m_format);

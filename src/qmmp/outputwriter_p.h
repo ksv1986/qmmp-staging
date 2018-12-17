@@ -86,19 +86,6 @@ public:
      */
     AudioParameters audioParameters() const;
     /*!
-     * Returns samplerate.
-     */
-    quint32 sampleRate();
-    /*!
-     * Returns channels number.
-     */
-    int channels();
-    /*!
-     * Returns input audio format.
-     */
-    Qmmp::AudioFormat format() const;
-    const ChannelMap channelMap() const;
-    /*!
      * Returns sample size in bytes.
      */
     int sampleSize() const;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,59 +17,76 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef COMMANDLINEOPTION_H
-#define COMMANDLINEOPTION_H
+#ifndef COMMANDLINEHANDLER_H
+#define COMMANDLINEHANDLER_H
 
+#include <QString>
+#include <QMap>
+#include <QStringList>
+#include <QtPlugin>
 #include "qmmpui_export.h"
+
 
 class CommandLineManager;
 class QString;
 class QObject;
 class QStringList;
 
-/*! @brief Helper class to store command line plugin properties.
- * @author Ilya Kotov <forkotov02@ya.ru>
- */
-class CommandLineProperties
-{
-public:
-    QString shortName;      /*!< Input plugin short name for internal usage */
-    QStringList helpString; /*!< A list of specially formatted help strings.
-                                 Example: "--help||Display this text and exit" */
-};
 
 /*! @brief Abstract base class of the command line plugins.
  * @author Vladimir Kuznetsov <vovanec@gmail.ru>
  */
-class QMMPUI_EXPORT CommandLineOption
+class QMMPUI_EXPORT CommandLineHandler
 {
 public:
     /*!
-     * Returns command line plugin properties.
+     * Object destructor
      */
-    virtual CommandLineProperties properties() const = 0;
+    virtual ~CommandLineHandler() {}
     /*!
-     * Returns \b true if \b opt_str string can be processed,
-     * otherise \b false
+     * Returns command line plugin short name for internal usage.
+     * Subclass should reimplement this function.
      */
-    virtual bool identify(const QString& opt_str) const = 0;
+    virtual QString shortName() const = 0;
     /*!
-     * Parses \b opt_str args(if needed), executes command.
-     * @param opt_str Command to execute
+     * Returns translation file path without locale code and extension.
+     * Subclass should reimplement this function.
+     */
+    virtual QString translation() const = 0;
+    /*!
+     * Executes given command.
+     * Subclass should reimplement this function.
+     * @param id Command id to execute
      * @param args Command arguments
      * @return Command output
      */
-    virtual QString executeCommand(const QString &opt_str, const QStringList &args) = 0;
-    /*!
-     * Object destructor
-     */
-    virtual ~CommandLineOption() {}
-    /*!
-     * Returns translation file path without locale code and extension
-     */
-    virtual QString translation() const = 0;
+    virtual QString executeCommand(int id, const QStringList &args) = 0;
+
+    QStringList helpString() const;
+    int identify(const QString &name) const;
+
+protected:
+    void registerOption(int id, const QStringList &names, const QString &helpString);
+    void registerOption(int id, const QStringList &names, const QStringList &values, const QString &helpString);
+
+private:
+    struct CommandLineOption
+    {
+        QStringList names;
+        QStringList values;
+        QString helpString;
+
+        inline bool operator == (const CommandLineOption &opt) const
+        {
+            return names == opt.names &&
+                    values == opt.values &&
+                    helpString == opt.helpString;
+        }
+    };
+
+    QMap<int, CommandLineOption> m_options;
 };
 
-Q_DECLARE_INTERFACE(CommandLineOption,"CommandLineOptionInterface/1.0")
+Q_DECLARE_INTERFACE(CommandLineHandler,"CommandLineHandlerInterface/1.0")
 
 #endif

@@ -34,15 +34,15 @@
 
 using namespace std;
 
-QList<CommandLineOption *> *CommandLineManager::m_options = 0;
-QHash<CommandLineOption*, QString> *CommandLineManager::m_files = 0;
+QList<CommandLineHandler *> *CommandLineManager::m_options = 0;
+QHash<CommandLineHandler*, QString> *CommandLineManager::m_files = 0;
 
 void CommandLineManager::checkOptions()
 {
     if (!m_options)
     {
-        m_options = new QList<CommandLineOption *>;
-        m_files = new QHash<CommandLineOption*, QString>;
+        m_options = new QList<CommandLineHandler *>;
+        m_files = new QHash<CommandLineHandler*, QString>;
 
         foreach (QString filePath, Qmmp::findPlugins("CommandLineOptions"))
         {
@@ -53,9 +53,9 @@ void CommandLineManager::checkOptions()
             else
                 qWarning("CommandLineManager: %s", qPrintable(loader.errorString ()));
 
-            CommandLineOption *option = 0;
+            CommandLineHandler *option = 0;
             if (plugin)
-                option = qobject_cast<CommandLineOption *>(plugin);
+                option = qobject_cast<CommandLineHandler *>(plugin);
 
             if (option)
             {
@@ -72,7 +72,7 @@ void CommandLineManager::checkOptions()
     }
 }
 
-QString CommandLineManager::executeCommand(const QString& opt_str, const QStringList &args)
+QString CommandLineManager::executeCommand(const QString &name, const QStringList &args)
 {
     checkOptions();
     if(!UiHelper::instance() || !SoundCore::instance() || !MediaPlayer::instance())
@@ -80,11 +80,12 @@ QString CommandLineManager::executeCommand(const QString& opt_str, const QString
         qWarning("CommandLineManager: player objects are not created");
         return QString();
     }
-    foreach(CommandLineOption *opt, *m_options)
+    foreach(CommandLineHandler *opt, *m_options)
     {
-        if (opt->identify(opt_str))
+        int id = opt->identify(name);
+        if(id >= 0)
         {
-            return opt->executeCommand(opt_str, args);
+            return opt->executeCommand(id, args);
         }
     }
     return QString();
@@ -93,9 +94,9 @@ QString CommandLineManager::executeCommand(const QString& opt_str, const QString
 bool CommandLineManager::hasOption(const QString &opt_str)
 {
     checkOptions();
-    foreach(CommandLineOption *opt, *m_options)
+    foreach(CommandLineHandler *opt, *m_options)
     {
-        if (opt->identify(opt_str))
+        if (opt->identify(opt_str) >= 0)
             return true;
     }
     return false;
@@ -104,9 +105,9 @@ bool CommandLineManager::hasOption(const QString &opt_str)
 void CommandLineManager::printUsage()
 {
     checkOptions();
-    foreach(CommandLineOption *opt, *m_options)
+    foreach(CommandLineHandler *opt, *m_options)
     {
-        foreach(QString line, opt->properties().helpString)
+        foreach(QString line, opt->helpString())
         {
             QString str = formatHelpString(line);
             if(!str.isEmpty())

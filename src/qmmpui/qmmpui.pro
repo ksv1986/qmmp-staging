@@ -35,7 +35,6 @@ HEADERS += general.h \
     playlistformat.h \
     playlistparser.h \
     commandlinemanager.h \
-    commandlineoption.h \
     filedialog.h \
     filedialogfactory.h \
     qtfiledialog_p.h \
@@ -74,7 +73,8 @@ HEADERS += general.h \
     coverviewer_p.h \
     metadataformattermenu.h \
     qmmpui_export.h \
-    covereditor_p.h
+    covereditor_p.h \
+    commandlinehandler.h
 
 SOURCES += general.cpp \
     playlistparser.cpp \
@@ -114,7 +114,8 @@ SOURCES += general.cpp \
     metadatahelper.cpp \
     coverviewer.cpp \
     metadataformattermenu.cpp \
-    covereditor.cpp
+    covereditor.cpp \
+    commandlinehandler.cpp
 
 FORMS += forms/detailsdialog.ui \
     forms/tageditor.ui \
@@ -148,12 +149,13 @@ TRANSLATIONS = translations/libqmmpui_ru.ts \
     translations/libqmmpui_sr_BA.ts \
     translations/libqmmpui_sr_RS.ts
 unix {
-    devel.files += general.h \
+    devel.files += \
+    commandlinehandler.h
+    general.h \
     generalfactory.h \
     playlistformat.h \
     playlistparser.h \
     commandlinemanager.h \
-    commandlineoption.h \
     filedialog.h \
     filedialogfactory.h \
     playlistitem.h \

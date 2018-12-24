@@ -17,46 +17,42 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef COMMANDLINEMANAGER_H
-#define COMMANDLINEMANAGER_H
 
-#include <QHash>
-#include "general.h"
 #include "commandlinehandler.h"
-#include "qmmpui_export.h"
 
-
-/*! @brief Helper class used for handle command line plugins.
- * @author Ilya Kotov <forkotov02@ya.ru>
- */
-class QMMPUI_EXPORT CommandLineManager
+QStringList CommandLineHandler::helpString() const
 {
-public:
-    /*!
-     * Executes command \b opt_str.
-     * @param name Command line option name.
-     * @param args Command arguments.
-     * @return Command output result.
-     */
-    static QString executeCommand(const QString& name, const QStringList &args = QStringList());
-    /*!
-     * Return \b true if command \b opt_str is supported, otherwise returns \b false.
-     */
-    static bool hasOption(const QString &opt_str);
-    /*!
-     * Prints usage to stdout.
-     */
-    static void printUsage();
-    /*!
-     * Prepares help string for output.
-     * @param line Specially formatted help string. Example: "--command||description".
-     */
-    static QString formatHelpString(const QString &line);
+    QStringList out;
+    foreach (const CommandLineOption &opt, m_options.values())
+    {
+        if(opt.values.isEmpty())
+            out << opt.names.join(", ") + "||" + opt.helpString;
+        else
+            out << opt.names.join(", ") + " <" + opt.values.join("> <") + ">||" + opt.helpString;
+    }
+    return out;
+}
 
-private:
-    static void checkOptions();
-    static QList<CommandLineHandler *> *m_options;
-    static QHash<CommandLineHandler*, QString> *m_files;
-};
+int CommandLineHandler::identify(const QString &name) const
+{
+    foreach (const CommandLineOption &opt, m_options.values())
+    {
+        if(opt.names.contains(name))
+            return m_options.key(opt);
+    }
+    return -1;
+}
 
-#endif
+void CommandLineHandler::registerOption(int id, const QStringList &names, const QString &helpString)
+{
+    registerOption(id, names, QStringList(), helpString);
+}
+
+void CommandLineHandler::registerOption(int id, const QStringList &names, const QStringList &values, const QString &helpString)
+{
+    CommandLineOption opt;
+    opt.names = names;
+    opt.values = values;
+    opt.helpString = helpString;
+    m_options.insert(id, opt);
+}

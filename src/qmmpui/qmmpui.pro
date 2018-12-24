@@ -150,7 +150,7 @@ TRANSLATIONS = translations/libqmmpui_ru.ts \
     translations/libqmmpui_sr_RS.ts
 unix {
     devel.files += \
-    commandlinehandler.h
+    commandlinehandler.h \
     general.h \
     generalfactory.h \
     playlistformat.h \

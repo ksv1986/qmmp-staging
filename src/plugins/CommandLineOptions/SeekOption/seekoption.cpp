@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,24 +24,24 @@
 #include <qmmp/soundcore.h>
 #include "seekoption.h"
 
-CommandLineProperties SeekOption::properties() const
+SeekOption::SeekOption()
 {
-    CommandLineProperties properties;
-    properties.shortName = "SeekOption";
-    properties.helpString << QString("--seek <time>") + "||" + tr("Seek to position in the current track")
-                          << QString("--seek-fwd <time>") + "||" + tr("Seek forward")
-                          << QString("--seek-bwd <time>") + "||" + tr("Seek backwards");
-    return properties;
+    registerOption(SEEK, "--seek", tr("Seek to position in the current track"), QStringList() << "time");
+    registerOption(SEEK_FWD, "--seek-fwd", tr("Seek forward"), QStringList() << "time");
+    registerOption(SEEK_BWD, "--seek-bwd", tr("Seek backwards"), QStringList() << "time");
 }
 
-bool SeekOption::identify(const QString &str) const
+QString SeekOption::shortName() const
 {
-    QStringList opts;
-    opts << "--seek" << "--seek-fwd" << "--seek-bwd";
-    return opts.contains(str);
+    return QLatin1String("SeekOption");
 }
 
-QString SeekOption::executeCommand(const QString &opt_str, const QStringList &args)
+QString SeekOption::translation() const
+{
+    return QLatin1String(":/seek_plugin_");
+}
+
+QString SeekOption::executeCommand(int id, const QStringList &args)
 {
     SoundCore *core = SoundCore::instance();
     if(core->state() != Qmmp::Playing && core->duration())
@@ -50,33 +50,33 @@ QString SeekOption::executeCommand(const QString &opt_str, const QStringList &ar
         return QString();
 
     int seek_pos = -1;
-    int elapsed = core->elapsed()/1000;
+    int elapsed = core->elapsed() / 1000;
 
     QRegExp seek_regexp1 ("^([0-9]{1,4})$");
     QRegExp seek_regexp2 ("^([0-9]{1,2}):([0-9]{1,2})$");
 
-    if(seek_regexp1.indexIn(args.at(0)) != -1)
+    if(seek_regexp1.indexIn(args.first()) != -1)
         seek_pos = seek_regexp1.cap(1).toInt();
-    else if(seek_regexp2.indexIn(args.at(0)) != -1)
+    else if(seek_regexp2.indexIn(args.first()) != -1)
         seek_pos = seek_regexp2.cap(1).toInt()*60 + seek_regexp2.cap(2).toInt();
 
-    //seek absolute
-    if(opt_str == "--seek")
-        ;
-    else if(opt_str == "--seek-fwd")
-            seek_pos += elapsed;
-    else if(opt_str == "--seek-bwd")
+    switch (id) {
+    case SEEK: //seek absolute
+        break;
+    case SEEK_FWD:
+        seek_pos += elapsed;
+        break;
+    case SEEK_BWD:
         seek_pos = elapsed - seek_pos;
+        break;
+    default:
+        break;
+    }
+
     qDebug("SeekOption: position = %d", seek_pos);
 
     if(seek_pos >= 0 && seek_pos < core->duration())
         core->seek(seek_pos * 1000);
-    else
-        return QString();
-    return QString();
-}
 
-QString SeekOption::translation() const
-{
-    return QLatin1String(":/seek_plugin_");
+    return QString();
 }

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -28,35 +28,39 @@
 #include <qmmpui/commandlinemanager.h>
 #include "playlistoption.h"
 
-CommandLineProperties PlayListOption::properties() const
+PlayListOption::PlayListOption()
 {
-    CommandLineProperties properties;
-    properties.shortName = "PlayListOption";
-    properties.helpString << QString("--pl-help") + "||" + tr("Show playlist manipulation commands");
-    return properties;
+    registerOption(PL_HELP, "--pl-help", tr("Show playlist manipulation commands"));
+    registerOption(PL_LIST, "--pl-list", tr("List all available playlists"));
+    registerOption(PL_DUMP, "--pl-dump", tr("Show playlist content"), QStringList() << "id");
+    registerOption(PL_PLAY, "--pl-play", tr("Play track <track> in playlist <id>"), QStringList() << "id" << "track");
+    registerOption(PL_CLEAR, "--pl-clear",  tr("Clear playlist"), QStringList() << "id");
+    registerOption(PL_REPEATE_TOGGLE, "--pl-repeat-toggle", tr("Toggle playlist repeat"));
+    registerOption(PL_SHUFFLE_TOGGLE, "--pl-shuffle-toggle", tr("Toggle playlist shuffle"));
+    registerOption(PL_STATE, "--pl-state", tr("Show playlist options"));
 }
 
-bool PlayListOption::identify(const QString & str) const
+QString PlayListOption::shortName() const
 {
-    return  str == QString("--pl-help") ||
-            str == QString("--pl-list") ||
-            str == QString("--pl-dump") ||
-            str == QString("--pl-play") ||
-            str == QString("--pl-clear") ||
-            str == QString("--pl-repeat-toggle") ||
-            str == QString("--pl-shuffle-toggle") ||
-            str == QString("--pl-state");
+    return QLatin1String("PlayListOption");
 }
 
-QString PlayListOption::executeCommand(const QString& opt_str, const QStringList &args)
+QString PlayListOption::translation() const
 {
-    Q_UNUSED(args);
+    return QLatin1String(":/playlist_plugin_");
+}
+
+QString PlayListOption::executeCommand(int id, const QStringList &args)
+{
     QString out;
     PlayListManager *pl_manager = PlayListManager::instance();
     MediaPlayer *player = MediaPlayer::instance();
     QmmpUiSettings *ui_settings = QmmpUiSettings::instance();
 
-    if(opt_str == "--pl-help")
+
+    switch (id)
+    {
+    case PL_HELP:
     {
         QStringList list = QStringList()
                 << QString("--pl-list") + "||" + tr("List all available playlists")
@@ -70,7 +74,8 @@ QString PlayListOption::executeCommand(const QString& opt_str, const QStringList
         foreach (QString line, list)
             out += CommandLineManager::formatHelpString(line) + "\n";
     }
-    else if(opt_str == "--pl-list")
+        break;
+    case PL_LIST:
     {
         QStringList names = pl_manager->playListNames();
         for(int i = 0; i <  names.count(); ++i)
@@ -81,7 +86,8 @@ QString PlayListOption::executeCommand(const QString& opt_str, const QStringList
                 out += QString("%1. %2\n").arg(i+1).arg(names.at(i));
         }
     }
-    else if(opt_str == "--pl-dump")
+        break;
+    case PL_DUMP:
     {
         MetaDataFormatter formatter("%p%if(%p&%t, - ,)%t%if(%p,,%if(%t,,%f))%if(%l, - %l,)");
         int id = args.isEmpty() ? pl_manager->currentPlayListIndex() : args.at(0).toInt() - 1;
@@ -99,7 +105,8 @@ QString PlayListOption::executeCommand(const QString& opt_str, const QStringList
             out += "\n";
         }
     }
-    else if(opt_str == "--pl-play")
+        break;
+    case PL_PLAY:
     {
         if(args.count() > 2 || args.isEmpty())
             return tr("Invalid number of arguments") + "\n";
@@ -119,7 +126,8 @@ QString PlayListOption::executeCommand(const QString& opt_str, const QStringList
         model->setCurrent(track);
         player->play();
     }
-    else if(opt_str == "--pl-clear")
+        break;
+    case PL_CLEAR:
     {
         int id = args.isEmpty() ? pl_manager->currentPlayListIndex() : args.at(0).toInt() - 1;
         PlayListModel *model = pl_manager->playListAt(id);
@@ -127,27 +135,23 @@ QString PlayListOption::executeCommand(const QString& opt_str, const QStringList
             return tr("Invalid playlist ID") + "\n";
         model->clear();
     }
-    else if(opt_str == "--pl-repeat-toggle")
-    {
+        break;
+    case PL_REPEATE_TOGGLE:
         ui_settings->setRepeatableList(!ui_settings->isRepeatableList());
-    }
-    else if(opt_str == "--pl-shuffle-toggle")
-    {
+        break;
+    case PL_SHUFFLE_TOGGLE:
         ui_settings->setShuffle(!ui_settings->isShuffle());
-    }
-    else if(opt_str == "--pl-state")
-    {
+        break;
+    case PL_STATE:
         out += "SHUFFLE:             " + boolToText(ui_settings->isShuffle()) + "\n";
         out += "REPEAT PLAYLIST:     " + boolToText(ui_settings->isRepeatableList()) + "\n";
         out += "REPEAT TRACK:        " + boolToText(ui_settings->isRepeatableTrack()) + "\n";
         out += "NO PLAYLIST ADVANCE: " + boolToText(ui_settings->isNoPlayListAdvance()) + "\n";
+        break;
+    default:
+        ;
     }
     return out;
-}
-
-QString PlayListOption::translation() const
-{
-    return QLatin1String(":/playlist_plugin_");
 }
 
 QString PlayListOption::boolToText(bool enabled)

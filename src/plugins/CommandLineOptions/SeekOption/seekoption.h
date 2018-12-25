@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,20 +24,33 @@
 #include <QString>
 #include <QObject>
 #include <QStringList>
-#include <qmmpui/commandlineoption.h>
+#include <qmmpui/commandlinehandler.h>
 #include <qmmpui/commandlinemanager.h>
 
 
-class SeekOption : public QObject, public CommandLineOption
+class SeekOption : public QObject, public CommandLineHandler
 {
 Q_OBJECT
-Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.CommandLineOptionInterface.1.0")
-Q_INTERFACES(CommandLineOption)
+Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.CommandLineHandlerInterface.1.0")
+Q_INTERFACES(CommandLineHandler)
 public:
-    virtual CommandLineProperties properties() const;
-    virtual bool identify(const QString &opt_str) const;
-    virtual QString executeCommand(const QString& opt_str, const QStringList &args);
-    virtual QString translation() const;
+    SeekOption();
+    QString shortName() const;
+    QString translation() const;
+    QString executeCommand(int id, const QStringList &args);
+
+    //virtual CommandLineProperties properties() const;
+    //virtual bool identify(const QString &opt_str) const;
+    //virtual QString executeCommand(const QString& opt_str, const QStringList &args);
+    //virtual QString translation() const;
+
+private:
+    enum Command
+    {
+        SEEK = 0,
+        SEEK_FWD,
+        SEEK_BWD
+    };
 };
 
 #endif

@@ -66,8 +66,8 @@ public:
     int identify(const QString &name) const;
 
 protected:
-    void registerOption(int id, const QStringList &names, const QString &helpString);
-    void registerOption(int id, const QStringList &names, const QStringList &values, const QString &helpString);
+    void registerOption(int id, const QString &name, const QString &helpString, const QStringList &values = QStringList());
+    void registerOption(int id, const QStringList &names, const QString &helpString, const QStringList &values = QStringList());
 
 private:
     struct CommandLineOption

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,24 +24,36 @@
 #include <QString>
 #include <QObject>
 #include <QStringList>
-#include <qmmpui/commandlineoption.h>
+#include <qmmpui/commandlinehandler.h>
 #include <qmmpui/commandlinemanager.h>
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class PlayListOption : public QObject, public CommandLineOption
+class PlayListOption : public QObject, public CommandLineHandler
 {
 Q_OBJECT
-Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.CommandLineOptionInterface.1.0")
-Q_INTERFACES(CommandLineOption)
+Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.CommandLineHandlerInterface.1.0")
+Q_INTERFACES(CommandLineHandler)
 public:
-    virtual CommandLineProperties properties() const;
-    virtual bool identify(const QString& opt_str) const;
-    virtual QString executeCommand(const QString& opt_str, const QStringList &args);
-    virtual QString translation() const;
+    PlayListOption();
+    QString shortName() const;
+    QString translation() const;
+    QString executeCommand(int id, const QStringList &args);
 
 private:
+    enum Command
+    {
+        PL_HELP = 0,
+        PL_LIST,
+        PL_DUMP,
+        PL_PLAY,
+        PL_CLEAR,
+        PL_REPEATE_TOGGLE,
+        PL_SHUFFLE_TOGGLE,
+        PL_STATE
+    };
+
     QString boolToText(bool enabled);
 };
 

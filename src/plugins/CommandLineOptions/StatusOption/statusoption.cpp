@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,29 +25,32 @@
 #include <qmmpui/metadataformatter.h>
 #include "statusoption.h"
 
-CommandLineProperties StatusOption::properties() const
+
+StatusOption::StatusOption()
 {
-    CommandLineProperties properties;
-    properties.shortName = "StatusOption";
-    properties.helpString << QString("--status") + "||" + tr("Print playback status")
-                          << QString("--nowplaying <fmt>") + "||"
-                             + tr("Print formatted track name (example: qmmp --nowplaying \"%t - %a\")")
-                          << QString("--nowplaying-syntax") + "||" + tr("Print --nowplaying syntax");
-    return properties;
+    registerOption(STATUS, "--status", tr("Print playback status"));
+    registerOption(NOW_PLAYING, "--nowplaying", tr("Print formatted track name (example: qmmp --nowplaying \"%t - %a\")"),
+                   QStringList() << "fmt");
+    registerOption(NOW_PLAYING_SYNTAX, "--nowplaying-syntax", tr("Print --nowplaying syntax"));
 }
 
-bool StatusOption::identify(const QString &str) const
+QString StatusOption::shortName() const
 {
-    QStringList opts;
-    opts << "--status" << "--nowplaying" << "--nowplaying-syntax";
-    return opts.contains(str);
+    return QLatin1String("StatusOption");
 }
 
-QString StatusOption::executeCommand(const QString &opt_str, const QStringList &args)
+QString StatusOption::translation() const
+{
+    return QLatin1String(":/status_plugin_");
+}
+
+QString StatusOption::executeCommand(int id, const QStringList &args)
 {
     SoundCore *core = SoundCore::instance();
     QString out;
-    if(opt_str == "--status")
+    switch (id)
+    {
+    case STATUS:
     {
         QMap<int, QString> state_names;
         state_names.insert(Qmmp::Playing, "[playing]");
@@ -76,14 +79,16 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
         }
         out += "\n";
     }
-    else if(opt_str == "--nowplaying")
+        break;
+    case NOW_PLAYING:
     {
         QString t = args.join(" ");
         MetaDataFormatter formatter(t);
         out = formatter.format(core->trackInfo());
         out += "\n";
     }
-    else if(opt_str == "--nowplaying-syntax")
+        break;
+    case NOW_PLAYING_SYNTAX:
     {
         out += tr("Syntax:") + "\n";
         out += tr("%p - artist") + "\n";
@@ -110,12 +115,12 @@ QString StatusOption::executeCommand(const QString &opt_str, const QStringList &
         out += tr("%if(A&B&C,D,E) - condition") + "\n";
         out += tr("%dir(n) - directory name located on n levels above");
     }
-    return out;
-}
+        break;
+    default:
+        ;
+    }
 
-QString StatusOption::translation() const
-{
-    return QLatin1String(":/status_plugin_");
+    return out;
 }
 
 QString StatusOption::genProgressBar()

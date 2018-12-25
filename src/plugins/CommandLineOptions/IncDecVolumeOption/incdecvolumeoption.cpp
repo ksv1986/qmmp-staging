@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,36 +24,37 @@
 #include <qmmp/soundcore.h>
 #include "incdecvolumeoption.h"
 
-CommandLineProperties IncDecVolumeCommandLineOption::properties() const
+IncDecVolumeCommandLineOption::IncDecVolumeCommandLineOption()
 {
-    CommandLineProperties properties;
-    properties.shortName = "IncDecVolumeCommandLineOption";
-    properties.helpString << QString("--volume-inc") + "||" + tr("Increase volume by 5 steps")
-                          << QString("--volume-dec") + "||" + tr("Decrease volume by 5 steps");
-    return properties;
+    registerOption(VOLUME_UP, "--volume-inc", tr("Increase volume by 5 steps"));
+    registerOption(VOLUME_DOWN, "--volume-dec", tr("Decrease volume by 5 steps"));
 }
 
-bool IncDecVolumeCommandLineOption::identify(const QString & str) const
+QString IncDecVolumeCommandLineOption::shortName() const
 {
-    if(str == QString("--volume-inc") || str == QString("--volume-dec"))
-        return true;
-
-    return false;
-}
-
-QString IncDecVolumeCommandLineOption::executeCommand(const QString& opt_str, const QStringList &args)
-{
-    Q_UNUSED(args);
-
-    if (opt_str == "--volume-inc")
-        SoundCore::instance()->volumeUp();
-    else if (opt_str == "--volume-dec")
-        SoundCore::instance()->volumeDown();
-
-    return QString();
+    return "IncDecVolumeCommandLineOption";
 }
 
 QString IncDecVolumeCommandLineOption::translation() const
 {
     return QLatin1String(":/incdecvolume_plugin_");
+}
+
+QString IncDecVolumeCommandLineOption::executeCommand(int id, const QStringList &args)
+{
+    Q_UNUSED(args);
+
+    switch (id)
+    {
+    case VOLUME_UP:
+        SoundCore::instance()->volumeUp();
+        break;
+    case VOLUME_DOWN:
+        SoundCore::instance()->volumeDown();
+        break;
+    default:
+        break;
+    }
+
+    return QString();
 }

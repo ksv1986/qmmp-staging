@@ -43,12 +43,12 @@ int CommandLineHandler::identify(const QString &name) const
     return -1;
 }
 
-void CommandLineHandler::registerOption(int id, const QStringList &names, const QString &helpString)
+void CommandLineHandler::registerOption(int id, const QString &name, const QString &helpString, const QStringList &values)
 {
-    registerOption(id, names, QStringList(), helpString);
+    registerOption(id, QStringList() << name, helpString, values);
 }
 
-void CommandLineHandler::registerOption(int id, const QStringList &names, const QStringList &values, const QString &helpString)
+void CommandLineHandler::registerOption(int id, const QStringList &names, const QString &helpString, const QStringList &values)
 {
     CommandLineOption opt;
     opt.names = names;

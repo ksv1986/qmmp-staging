@@ -24,7 +24,7 @@
 #include <qmmp/soundcore.h>
 #include "incdecvolumeoption.h"
 
-IncDecVolumeCommandLineOption::IncDecVolumeCommandLineOption()
+void IncDecVolumeCommandLineOption::registerOprions()
 {
     registerOption(VOLUME_UP, "--volume-inc", tr("Increase volume by 5 steps"));
     registerOption(VOLUME_DOWN, "--volume-dec", tr("Decrease volume by 5 steps"));

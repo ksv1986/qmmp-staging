@@ -67,6 +67,7 @@ void CommandLineManager::checkOptions()
                     translator->load(option->translation() + Qmmp::systemLanguageID());
                     qApp->installTranslator(translator);
                 }
+                option->registerOprions();
             }
         }
     }

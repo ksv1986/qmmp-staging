@@ -25,8 +25,7 @@
 #include <qmmpui/metadataformatter.h>
 #include "statusoption.h"
 
-
-StatusOption::StatusOption()
+void StatusOption::registerOprions()
 {
     registerOption(STATUS, "--status", tr("Print playback status"));
     registerOption(NOW_PLAYING, "--nowplaying", tr("Print formatted track name (example: qmmp --nowplaying \"%t - %a\")"),

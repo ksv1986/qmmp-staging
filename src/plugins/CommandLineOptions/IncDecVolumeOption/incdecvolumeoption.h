@@ -34,7 +34,7 @@ Q_OBJECT
 Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.CommandLineHandlerInterface.1.0")
 Q_INTERFACES(CommandLineHandler)
 public:
-    IncDecVolumeCommandLineOption();
+    void registerOprions();
     QString shortName() const;
     QString translation() const;
     QString executeCommand(int id, const QStringList &args);

@@ -28,7 +28,7 @@
 #include <qmmpui/commandlinemanager.h>
 #include "playlistoption.h"
 
-PlayListOption::PlayListOption()
+void PlayListOption::registerOprions()
 {
     registerOption(PL_HELP, "--pl-help", tr("Show playlist manipulation commands"));
     registerOption(PL_LIST, "--pl-list", tr("List all available playlists"));

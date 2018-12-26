@@ -24,7 +24,7 @@
 #include <qmmp/soundcore.h>
 #include "seekoption.h"
 
-SeekOption::SeekOption()
+void SeekOption::registerOprions()
 {
     registerOption(SEEK, "--seek", tr("Seek to position in the current track"), QStringList() << "time");
     registerOption(SEEK_FWD, "--seek-fwd", tr("Seek forward"), QStringList() << "time");

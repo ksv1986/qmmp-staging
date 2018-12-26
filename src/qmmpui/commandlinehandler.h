@@ -43,6 +43,7 @@ public:
      * Object destructor
      */
     virtual ~CommandLineHandler() {}
+    virtual void registerOprions() = 0;
     /*!
      * Returns command line plugin short name for internal usage.
      * Subclass should reimplement this function.

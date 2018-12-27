@@ -25,12 +25,22 @@ QStringList CommandLineHandler::helpString() const
     QStringList out;
     foreach (const CommandLineOption &opt, m_options.values())
     {
-        if(opt.values.isEmpty())
+        if(opt.flags & HIDDEN_FROM_HELP)
+            continue;
+        else if(opt.values.isEmpty())
             out << opt.names.join(", ") + "||" + opt.helpString;
         else
             out << opt.names.join(", ") + " <" + opt.values.join("> <") + ">||" + opt.helpString;
     }
     return out;
+}
+
+QString CommandLineHandler::helpString(int id) const
+{
+    if(m_options[id].values.isEmpty())
+        return m_options[id].names.join(", ") + "||" + m_options[id].helpString;
+    else
+        return m_options[id].names.join(", ") + " <" + m_options[id].values.join("> <") + ">||" + m_options[id].helpString;
 }
 
 int CommandLineHandler::identify(const QString &name) const
@@ -41,6 +51,11 @@ int CommandLineHandler::identify(const QString &name) const
             return m_options.key(opt);
     }
     return -1;
+}
+
+CommandLineHandler::OptionFlags CommandLineHandler::flags(int id) const
+{
+    return m_options.value(id).flags;
 }
 
 void CommandLineHandler::registerOption(int id, const QString &name, const QString &helpString, const QStringList &values)
@@ -55,4 +70,9 @@ void CommandLineHandler::registerOption(int id, const QStringList &names, const 
     opt.values = values;
     opt.helpString = helpString;
     m_options.insert(id, opt);
+}
+
+void CommandLineHandler::setOptionFlags(int id, OptionFlags flags)
+{
+    m_options[id].flags = flags;
 }

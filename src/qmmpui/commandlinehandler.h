@@ -24,6 +24,7 @@
 #include <QMap>
 #include <QStringList>
 #include <QtPlugin>
+#include <QFlags>
 #include "qmmpui_export.h"
 
 
@@ -64,11 +65,22 @@ public:
     virtual QString executeCommand(int id, const QStringList &args) = 0;
 
     QStringList helpString() const;
+    QString helpString(int id) const;
     int identify(const QString &name) const;
+
+    enum OptionFlag
+    {
+        HIDDEN_FROM_HELP = 0x1,
+        NO_START = 0x2
+    };
+    Q_DECLARE_FLAGS(OptionFlags, OptionFlag)
+
+    CommandLineHandler::OptionFlags flags(int id) const;
 
 protected:
     void registerOption(int id, const QString &name, const QString &helpString, const QStringList &values = QStringList());
     void registerOption(int id, const QStringList &names, const QString &helpString, const QStringList &values = QStringList());
+    void setOptionFlags(int id, OptionFlags flags);
 
 private:
     struct CommandLineOption
@@ -76,6 +88,7 @@ private:
         QStringList names;
         QStringList values;
         QString helpString;
+        OptionFlags flags;
 
         inline bool operator == (const CommandLineOption &opt) const
         {

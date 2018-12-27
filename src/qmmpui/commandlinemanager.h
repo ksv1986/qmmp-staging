@@ -38,7 +38,7 @@ public:
      * @param args Command arguments.
      * @return Command output result.
      */
-    static QString executeCommand(const QString& name, const QStringList &args = QStringList());
+    static QString executeCommand(const QString &name, const QStringList &args = QStringList());
     /*!
      * Return \b true if command \b opt_str is supported, otherwise returns \b false.
      */

@@ -38,6 +38,15 @@ void PlayListOption::registerOprions()
     registerOption(PL_REPEATE_TOGGLE, "--pl-repeat-toggle", tr("Toggle playlist repeat"));
     registerOption(PL_SHUFFLE_TOGGLE, "--pl-shuffle-toggle", tr("Toggle playlist shuffle"));
     registerOption(PL_STATE, "--pl-state", tr("Show playlist options"));
+
+    setOptionFlags(PL_HELP, NO_START);
+    setOptionFlags(PL_LIST, HIDDEN_FROM_HELP);
+    setOptionFlags(PL_DUMP, HIDDEN_FROM_HELP);
+    setOptionFlags(PL_PLAY, HIDDEN_FROM_HELP);
+    setOptionFlags(PL_CLEAR, HIDDEN_FROM_HELP);
+    setOptionFlags(PL_REPEATE_TOGGLE, HIDDEN_FROM_HELP);
+    setOptionFlags(PL_SHUFFLE_TOGGLE, HIDDEN_FROM_HELP);
+    setOptionFlags(PL_STATE, HIDDEN_FROM_HELP);
 }
 
 QString PlayListOption::shortName() const
@@ -63,13 +72,13 @@ QString PlayListOption::executeCommand(int id, const QStringList &args)
     case PL_HELP:
     {
         QStringList list = QStringList()
-                << QString("--pl-list") + "||" + tr("List all available playlists")
-                << QString("--pl-dump <id>") + "||" + tr("Show playlist content")
-                << QString("--pl-play <id> <track>") + "||" + tr("Play track <track> in playlist <id>")
-                << QString("--pl-clear <id>") + "||" + tr("Clear playlist")
-                << QString("--pl-repeat-toggle") + "||" + tr("Toggle playlist repeat")
-                << QString("--pl-shuffle-toggle") + "||" + tr("Toggle playlist shuffle")
-                << QString("--pl-state") + "||" + tr("Show playlist options");
+                << helpString(PL_LIST)
+                << helpString(PL_DUMP)
+                << helpString(PL_PLAY)
+                << helpString(PL_CLEAR)
+                << helpString(PL_REPEATE_TOGGLE)
+                << helpString(PL_SHUFFLE_TOGGLE)
+                << helpString(PL_STATE);
 
         foreach (QString line, list)
             out += CommandLineManager::formatHelpString(line) + "\n";

@@ -74,13 +74,13 @@ QMMPStarter::QMMPStarter() : QObject()
     argString = tmp.join("|||");
     QHash <QString, QStringList> commands = m_option_manager->splitArgs(tmp);
 
-    if(commands.keys().contains("--help"))
+    if(commands.keys().contains("--help") || commands.keys().contains("-h"))
     {
         printUsage();
         m_finished = true;
         return;
     }
-    if(commands.keys().contains("--version"))
+    if(commands.keys().contains("--version") || commands.keys().contains("-v"))
     {
         printVersion();
         m_finished = true;
@@ -403,8 +403,8 @@ void QMMPStarter::printUsage()
     extraHelp << QString("--ui <name>") + "||" + tr("Start qmmp with the specified user interface");
     extraHelp << QString("--ui-list") + "||" + tr("List all available user interfaces");
     extraHelp << QString("--no-start") + "||" + tr("Don't start the application");
-    extraHelp << QString("--help") + "||" + tr("Display this text and exit");
-    extraHelp << QString("--version") + "||" + tr("Print version number and exit");
+    extraHelp << QString("-h, --help") + "||" + tr("Display this text and exit");
+    extraHelp << QString("-v, --version") + "||" + tr("Print version number and exit");
     extraHelp << "";
     extraHelp << tr("Home page: %1").arg("http://qmmp.ylsoftware.com");
     extraHelp << tr("Development page: %1").arg("https://sourceforge.net/p/qmmp-dev");

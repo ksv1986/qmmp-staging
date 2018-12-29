@@ -44,8 +44,7 @@ public:
 
     bool identify(const QString& str) const;
     const QStringList helpString() const;
-    QString executeCommand(const QString& option, const QStringList &args,
-                        const QString &cwd);
+    QString executeCommand(const QString &option, const QStringList &args, const QString &cwd);
     QHash <QString, QStringList> splitArgs(const QStringList &args) const;
 
 private slots:

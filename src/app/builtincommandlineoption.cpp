@@ -87,9 +87,7 @@ const QStringList BuiltinCommandLineOption::helpString() const
             << QString("--add-dir") + "||" + tr("Display Add Directory dialog");
 }
 
-QString BuiltinCommandLineOption::executeCommand(const QString &option_string,
-                                              const QStringList &args,
-                                              const QString &cwd)
+QString BuiltinCommandLineOption::executeCommand(const QString &option_string, const QStringList &args, const QString &cwd)
 {
     SoundCore *core = SoundCore::instance();
     MediaPlayer *player = MediaPlayer::instance();

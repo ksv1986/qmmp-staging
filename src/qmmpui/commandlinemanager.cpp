@@ -32,8 +32,6 @@
 #include "mediaplayer.h"
 #include "commandlinemanager.h"
 
-using namespace std;
-
 QList<CommandLineHandler *> *CommandLineManager::m_options = 0;
 QHash<CommandLineHandler*, QString> *CommandLineManager::m_files = 0;
 
@@ -76,29 +74,41 @@ void CommandLineManager::checkOptions()
 QString CommandLineManager::executeCommand(const QString &name, const QStringList &args)
 {
     checkOptions();
-    if(!UiHelper::instance() || !SoundCore::instance() || !MediaPlayer::instance())
-    {
-        qWarning("CommandLineManager: player objects are not created");
-        return QString();
-    }
+    bool started = UiHelper::instance() && SoundCore::instance() && MediaPlayer::instance();
+
     foreach(CommandLineHandler *opt, *m_options)
     {
         int id = opt->identify(name);
-        if(id >= 0)
-        {
+        if(id < 0)
+            continue;
+
+        if(started || (opt->flags(id) & CommandLineHandler::NO_START))
             return opt->executeCommand(id, args);
+        else
+        {
+            qWarning("CommandLineManager: player objects are not created");
+            return QString();
         }
+
+
     }
     return QString();
 }
 
-bool CommandLineManager::hasOption(const QString &opt_str)
+bool CommandLineManager::hasOption(const QString &opt_str, CommandLineHandler::OptionFlags *flags)
 {
     checkOptions();
+    if(flags)
+        *flags = 0;
     foreach(CommandLineHandler *opt, *m_options)
     {
-        if (opt->identify(opt_str) >= 0)
+        int id = opt->identify(opt_str);
+        if(id >= 0)
+        {
+            if(flags)
+                *flags = opt->flags(id);
             return true;
+        }
     }
     return false;
 }
@@ -112,7 +122,7 @@ void CommandLineManager::printUsage()
         {
             QString str = formatHelpString(line);
             if(!str.isEmpty())
-                cout << qPrintable(str) << endl;
+                std::cout << qPrintable(str) << std::endl;
         }
     }
 }

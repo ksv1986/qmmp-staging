@@ -101,18 +101,41 @@ QMMPStarter::QMMPStarter() : QObject()
 
     if(!commands.isEmpty())
     {
-        foreach(QString arg, commands.keys())
+        foreach(QString key, commands.keys())
         {
-            if(!m_option_manager->identify(arg) && !CommandLineManager::hasOption(arg) &&
-                    arg != "--no-start" && arg != "--ui")
+            CommandLineHandler::OptionFlags flags;
+            if(!m_option_manager->identify(key) &&
+                    !CommandLineManager::hasOption(key, &flags) &&
+                    key != "--no-start" &&
+                    key != "--ui")
             {
                 cout << qPrintable(tr("Unknown command")) << endl;
                 m_exit_code = EXIT_FAILURE;
                 m_finished = true;
                 return;
             }
+
+            if(flags & CommandLineHandler::NO_START)
+            {
+                m_exit_code = EXIT_SUCCESS;
+                m_finished = true;
+                //show dialog with command line documentation under ms windows
+#ifdef Q_OS_WIN
+                stringstream tmp_stream;
+                tmp_stream.copyfmt(cout);
+                streambuf* old_stream = cout.rdbuf(tmp_stream.rdbuf());
+#endif
+                cout << qPrintable(CommandLineManager::executeCommand(key, commands.value(key)));
+#ifdef Q_OS_WIN
+                string text = tmp_stream.str();
+                QMessageBox::information(0, tr("Command Line Help"), QString::fromLocal8Bit(text.c_str()));
+                cout.rdbuf(old_stream); //restore old stream buffer
+#endif
+                return;
+            }
         }
     }
+
 
     m_server = new QLocalServer(this);
     m_socket = new QLocalSocket(this);

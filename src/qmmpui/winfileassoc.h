@@ -34,19 +34,16 @@
 class QMMPUI_EXPORT WinFileAssoc
 {
 protected:
-    QString m_ClassId; //Application ClassId
-    QString m_ClassId2; //The ClassId created by explorer if user selects 'Open With...', usually qmmp.exe
     QString m_AppName;
 
 protected:
-    bool CreateClassId(const QString& executablePath, const QString& friendlyName);
     bool VistaGetDefaultApps(const QStringList &extensions, QStringList& registeredExt);
     int  VistaSetAppsAsDefault(const QStringList& extensions);
+
 public:
-    WinFileAssoc(const QString ClassId = "QmmpFileAudio", const QString AppName="Qmmp");
+    WinFileAssoc(const QString AppName="Qmmp");
     //Checks the registry to see which extensions are registered with SMPlayer
     bool GetRegisteredExtensions(const QStringList& extensionsToCheck, QStringList& registeredExtensions);
-    bool RemoveClassId();
     int CreateFileAssociations(const QStringList& fileExtensions);
 };
 

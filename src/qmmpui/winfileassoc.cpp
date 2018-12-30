@@ -54,11 +54,9 @@
 #define SHCNE_ASSOCHANGED __MSABI_LONG(0x08000000)
 #endif
 
-WinFileAssoc::WinFileAssoc(const QString ClassId, const QString AppName)
+WinFileAssoc::WinFileAssoc(const QString AppName)
 {
-    m_ClassId = ClassId;
     m_AppName = AppName;
-    m_ClassId2 = QFileInfo(QApplication::applicationFilePath()).fileName();
 }
 
 // Associates all extensions in the fileExtensions list with current app.
@@ -75,62 +73,6 @@ bool WinFileAssoc::GetRegisteredExtensions(const QStringList &extensionsToCheck,
 {
     registeredExtensions.clear();
     return VistaGetDefaultApps(extensionsToCheck, registeredExtensions);
-}
-
-// Creates a ClassId for current application.
-// Note: It's better to create the classId from the installation program.
-bool WinFileAssoc::CreateClassId(const QString &executablePath, const QString &friendlyName)
-{
-    QString RootKeyName;
-    QString classId;
-
-    classId = "Software/Classes/" + m_ClassId;
-    RootKeyName = "HKEY_CURRENT_USER";
-
-    QSettings Reg(RootKeyName, QSettings::NativeFormat);
-
-    if (!Reg.isWritable() || Reg.status() != QSettings::NoError)
-        return false;
-
-    QString appPath = executablePath;
-    appPath.replace('/', '\\'); // Explorer gives 'Access Denied' if we write the path with forward slashes to the registry
-
-    // Add our ProgId to the HKCR classes
-    Reg.setValue(classId + "/shell/open/FriendlyAppName", friendlyName);
-    Reg.setValue(classId + "/shell/open/command/.", QString("\"%1\" \"%2\"").arg(appPath, "%1"));
-    Reg.setValue(classId + "/DefaultIcon/.", QString("\"%1\",1").arg(appPath));
-
-    // Add "Enqueue" command
-    Reg.setValue(classId + "/shell/enqueue/.", QObject::tr("Enqueue in Qmmp"));
-    Reg.setValue(classId + "/shell/enqueue/command/.", QString("\"%1\" -e \"%2\"").arg(appPath, "%1"));
-    return true;
-}
-
-// Remove ClassId from the registry.
-// Called when no associations exist. Note: It's better to do this in the Setup program.
-bool WinFileAssoc::RemoveClassId()
-{
-    QString RootKeyName;
-    QString classId;
-
-    classId = "Software/Classes/" + m_ClassId;
-    RootKeyName = "HKEY_CURRENT_USER";
-
-    QSettings RegCU(RootKeyName, QSettings::NativeFormat);
-
-    if (!RegCU.isWritable() || RegCU.status() != QSettings::NoError)
-        return false;
-
-    RegCU.remove(classId);
-
-    QSettings RegCR("HKEY_CLASSES_ROOT", QSettings::NativeFormat);
-
-    if(!RegCR.isWritable() || RegCU.status() != QSettings::NoError)
-        return false;
-
-    RegCR.remove("Applications/qmmp.exe");
-
-    return true;
 }
 
 // Windows Vista specific implementation

@@ -40,6 +40,7 @@
    main changes compared to SMPlayer:
      replaced SMPlayer by Qmmp
      added icon cache update
+     removed xp support
 */
 
 

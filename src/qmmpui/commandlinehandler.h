@@ -27,13 +27,6 @@
 #include <QFlags>
 #include "qmmpui_export.h"
 
-
-class CommandLineManager;
-class QString;
-class QObject;
-class QStringList;
-
-
 /*! @brief Abstract base class of the command line plugins.
  * @author Vladimir Kuznetsov <vovanec@gmail.ru>
  */

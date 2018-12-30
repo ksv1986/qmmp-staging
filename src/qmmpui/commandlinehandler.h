@@ -44,6 +44,9 @@ public:
      * Object destructor
      */
     virtual ~CommandLineHandler() {}
+    /*!
+     * Registers command line options. Subclass should implement this function
+     */
     virtual void registerOprions() = 0;
     /*!
      * Returns command line plugin short name for internal usage.
@@ -58,28 +61,65 @@ public:
     /*!
      * Executes given command.
      * Subclass should reimplement this function.
-     * @param id Command id to execute
+     * @param id Command identifier to execute
      * @param args Command arguments
      * @return Command output
      */
     virtual QString executeCommand(int id, const QStringList &args) = 0;
-
+    /*!
+     * Returns a list of help strings.
+     */
     QStringList helpString() const;
+    /*!
+     * Returns help string for specified option.
+     * \param id Command line option identifier.
+     * \return
+     */
     QString helpString(int id) const;
+    /*!
+     * Returtns identifier for specified option name or \b -1
+     * if option is not supported.
+     * \param name Command line option name.
+     */
     int identify(const QString &name) const;
-
+    /*!
+     * These flags describe attributes that change the behavior of command line option
+     * processing.
+     */
     enum OptionFlag
     {
-        HIDDEN_FROM_HELP = 0x1,
-        NO_START = 0x2
+        HIDDEN_FROM_HELP = 0x1, /*!< Hide this option in the user-visible help output. */
+        NO_START = 0x2          /*!< Do not start player instance (useful for extra help options). */
     };
     Q_DECLARE_FLAGS(OptionFlags, OptionFlag)
-
+    /*!
+     * Returtns flags for specified option identifier
+     * \param id Command line option identifier.
+     */
     CommandLineHandler::OptionFlags flags(int id) const;
 
 protected:
+    /*!
+     * Registers command line option. This function should be called inside \b registerOprions() implementation.
+     * \param id Option identifier.
+     * \param name Option name.
+     * \param helpString Option description.
+     * \param values Value name list (optional).
+     */
     void registerOption(int id, const QString &name, const QString &helpString, const QStringList &values = QStringList());
+    /*!
+     * Registers command line option. This function should be called inside \b registerOprions() implementation.
+     * \param id Option identifier.
+     * \param names Option names (i.e. short and long variants).
+     * \param helpString Option description.
+     * \param values Value name list (optional).
+     */
     void registerOption(int id, const QStringList &names, const QString &helpString, const QStringList &values = QStringList());
+    /*!
+     * Changes command line option flags.
+     * \param id Option identifier.
+     * \param flags Option flags.
+     */
     void setOptionFlags(int id, OptionFlags flags);
 
 private:
@@ -94,7 +134,8 @@ private:
         {
             return names == opt.names &&
                     values == opt.values &&
-                    helpString == opt.helpString;
+                    helpString == opt.helpString &&
+                    flags == opt.flags;
         }
     };
 

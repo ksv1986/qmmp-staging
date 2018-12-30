@@ -31,6 +31,8 @@ void StatusOption::registerOprions()
     registerOption(NOW_PLAYING, "--nowplaying", tr("Print formatted track name (example: qmmp --nowplaying \"%t - %a\")"),
                    QStringList() << "fmt");
     registerOption(NOW_PLAYING_SYNTAX, "--nowplaying-syntax", tr("Print --nowplaying syntax"));
+
+    setOptionFlags(NOW_PLAYING_SYNTAX, NO_START);
 }
 
 QString StatusOption::shortName() const

@@ -39,11 +39,6 @@ public:
     QString translation() const;
     QString executeCommand(int id, const QStringList &args);
 
-    //virtual CommandLineProperties properties() const;
-    //virtual bool identify(const QString &opt_str) const;
-    //virtual QString executeCommand(const QString& opt_str, const QStringList &args);
-    //virtual QString translation() const;
-
 private:
     enum Command
     {

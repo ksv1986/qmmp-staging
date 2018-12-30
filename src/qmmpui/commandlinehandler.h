@@ -101,6 +101,7 @@ private:
     QMap<int, CommandLineOption> m_options;
 };
 
+Q_DECLARE_OPERATORS_FOR_FLAGS(CommandLineHandler::OptionFlags)
 Q_DECLARE_INTERFACE(CommandLineHandler,"CommandLineHandlerInterface/1.0")
 
 #endif

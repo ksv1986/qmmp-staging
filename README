@@ -152,6 +152,9 @@ Also you can use ccmake for changing plugins configuration.
 By default program will be installed in /usr/local. You can change default path by running:
 cmake ./ -DCMAKE_INSTALL_PREFIX=custom_path
 
+For more information see GNUInstallDirs module documentation:
+https://cmake.org/cmake/help/latest/module/GNUInstallDirs.html
+
 OSS3 support.
 OSS3 plugin is deprecated and disabled by default.
 To enable it, run 'cmake ./ -DUSE_OSS:BOOL=TRUE' before compilation.
@@ -183,9 +186,9 @@ Attention! By default all plugins are enabled by default.
 Changing shared library install path (for some 64-bit distributions).
 By default, all libraries and plugins will be installed to $(INSTALL PREFIX)/lib. You can change "lib"
 to "lib64" by running qmake or cmake with the special parameter:
-qmake LIB_DIR=/lib64
+qmake LIB_DIR=/usr/lib64
 or
-cmake ./ -DLIB_DIR=lib64
+cmake ./ -DCMAKE_INSTALL_LIBDIR=lib64
 
 
 All patches, bug reports, ideas etc. send to bug tracker https://sourceforge.net/p/qmmp-dev/tickets/ or

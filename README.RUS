@@ -150,6 +150,9 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 По умолчанию программа будет установлена в /usr/local. Вы можете изменить этот путь командой:
 cmake ./ -DCMAKE_INSTALL_PREFIX=другой_путь
 
+Для получения дополнительной информации смотрите документацию модуля GNUInstallDirs:
+https://cmake.org/cmake/help/latest/module/GNUInstallDirs.html
+
 Поддержка OSS3.
 Модуль OSS3 устарел и отключён по умолчанию.
 Для его включения выполните 'cmake ./ -DUSE_OSS:BOOL=TRUE' перед сборкой.
@@ -167,7 +170,7 @@ qmake PREFIX=путь_для_установки (по умолчанию: /usr)
 make
 
 Установка:
-make install INSTALL_ROOT=/usr/local
+make install
 
 Исполняемый файл:
 ./bin/qmmp
@@ -182,9 +185,9 @@ qmake DISABLED_PLUGINS+=JACK_PLUGIN DISABLED_PLUGINS+=OSS_PLUGIN
 Изменение пути установки разделяемых библиотек и модулей (для некоторых 64-битных дистрибутивов).
 По умолчанию все библиотеки и модули будут установлены в $(INSTALL PREFIX)/lib. Вы можете сменить "lib"
 на "lib64" запустив qmake или cmake со специальным параметром:
-qmake LIB_DIR=/lib64
+qmake LIB_DIR=/usr/lib64
 или
-cmake ./ -DLIB_DIR=lib64
+cmake ./ -DCMAKE_INSTALL_LIBDIR=lib64
 
 
 Патчи, багрепорты, идеи и т.п.: https://sourceforge.net/p/qmmp-dev/tickets/ или forkotov02@ya.ru

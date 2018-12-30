@@ -1146,14 +1146,6 @@
     </message>
 </context>
 <context>
-    <name>QObject</name>
-    <message>
-        <location filename="../winfileassoc.cpp" line="104"/>
-        <source>Enqueue in Qmmp</source>
-        <translation>Kolejkuj w Qmmp</translation>
-    </message>
-</context>
-<context>
     <name>QmmpUiSettings</name>
     <message>
         <location filename="../qmmpuisettings.cpp" line="57"/>

@@ -4,17 +4,17 @@
 <context>
     <name>SeekOption</name>
     <message>
-        <location filename="../seekoption.cpp" line="31"/>
+        <location filename="../seekoption.cpp" line="29"/>
         <source>Seek to position in the current track</source>
         <translation>עבור אל מיקום בתוך רצועה נוכחית</translation>
     </message>
     <message>
-        <location filename="../seekoption.cpp" line="32"/>
+        <location filename="../seekoption.cpp" line="30"/>
         <source>Seek forward</source>
         <translation>עבור הלאה</translation>
     </message>
     <message>
-        <location filename="../seekoption.cpp" line="33"/>
+        <location filename="../seekoption.cpp" line="31"/>
         <source>Seek backwards</source>
         <translation>עבור אחורה</translation>
     </message>

@@ -4,59 +4,59 @@
 <context>
     <name>PlayListOption</name>
     <message>
-        <location filename="../playlistoption.cpp" line="35"/>
+        <location filename="../playlistoption.cpp" line="33"/>
         <source>Show playlist manipulation commands</source>
         <translation>Mostrar comandos para gerir listas de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="62"/>
+        <location filename="../playlistoption.cpp" line="34"/>
         <source>List all available playlists</source>
         <translation>Listar listas de reprodução disponíveis</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="63"/>
+        <location filename="../playlistoption.cpp" line="35"/>
         <source>Show playlist content</source>
         <translation>Mostrar conteúdo da lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="64"/>
+        <location filename="../playlistoption.cpp" line="36"/>
         <source>Play track &lt;track&gt; in playlist &lt;id&gt;</source>
         <translation>Reproduzir a faixa &lt;track&gt; da lista de reprodução &lt;id&gt;</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="65"/>
+        <location filename="../playlistoption.cpp" line="37"/>
         <source>Clear playlist</source>
         <translation>Limpar lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="66"/>
+        <location filename="../playlistoption.cpp" line="38"/>
         <source>Toggle playlist repeat</source>
         <translation>Alternar repetição da lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="67"/>
+        <location filename="../playlistoption.cpp" line="39"/>
         <source>Toggle playlist shuffle</source>
         <translation>Alternar embaralhamento da lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="68"/>
+        <location filename="../playlistoption.cpp" line="40"/>
         <source>Show playlist options</source>
         <translation>Mostrar opções da lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="90"/>
-        <location filename="../playlistoption.cpp" line="111"/>
-        <location filename="../playlistoption.cpp" line="127"/>
+        <location filename="../playlistoption.cpp" line="104"/>
+        <location filename="../playlistoption.cpp" line="126"/>
+        <location filename="../playlistoption.cpp" line="143"/>
         <source>Invalid playlist ID</source>
         <translation>ID inválida de lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="105"/>
+        <location filename="../playlistoption.cpp" line="120"/>
         <source>Invalid number of arguments</source>
         <translation>Número inválido de argumentos</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="115"/>
+        <location filename="../playlistoption.cpp" line="130"/>
         <source>Invalid track ID</source>
         <translation>ID de faixa inválida</translation>
     </message>

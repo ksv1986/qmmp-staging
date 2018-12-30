@@ -37,12 +37,6 @@ source_lang = en
 source_file = src/plugins/CommandLineOptions/IncDecVolumeOption/translations/incdecvolume_plugin_en.ts
 type = QT
 
-[qmmp.uninstall]
-file_filter = src/plugins/CommandLineOptions/UninstallOption/translations/uninstall_plugin_<lang>.ts
-source_lang = en
-source_file = src/plugins/CommandLineOptions/UninstallOption/translations/uninstall_plugin_en.ts
-type = QT
-
 [qmmp.seek]
 file_filter = src/plugins/CommandLineOptions/SeekOption/translations/seek_plugin_<lang>.ts
 source_lang = en

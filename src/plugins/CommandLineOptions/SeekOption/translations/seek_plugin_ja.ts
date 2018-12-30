@@ -4,17 +4,17 @@
 <context>
     <name>SeekOption</name>
     <message>
-        <location filename="../seekoption.cpp" line="31"/>
+        <location filename="../seekoption.cpp" line="29"/>
         <source>Seek to position in the current track</source>
         <translation>現行トラックの指定位置まで走査</translation>
     </message>
     <message>
-        <location filename="../seekoption.cpp" line="32"/>
+        <location filename="../seekoption.cpp" line="30"/>
         <source>Seek forward</source>
         <translation>前へ走査</translation>
     </message>
     <message>
-        <location filename="../seekoption.cpp" line="33"/>
+        <location filename="../seekoption.cpp" line="31"/>
         <source>Seek backwards</source>
         <translation>後ろへ走査</translation>
     </message>

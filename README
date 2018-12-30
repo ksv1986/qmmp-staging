@@ -74,6 +74,7 @@ Other features:
 - ReplayGain scanner
 - archive reader (RAR and 7z)
 - audio recording
+- listen history
 
 Requirements:
 - Qt >= 5.4 (qtbase, qtx11extras and qttools for build)

@@ -73,6 +73,7 @@ Qmmp - Qt-based multimedia player
 - сканер ReplayGain
 - чтение архивов (RAR и 7z)
 - запись аудио
+- история прослушивания
 
 Требования:
 - Qt >= 5.4 (qtbase, qtx11extras и qttools для сборки)

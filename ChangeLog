@@ -1352,3 +1352,51 @@ Version 1.2.0
 * updated Spanish translation (Joel Barrios and Bohdan Shuba)
 * updated Japanese translation (RyoTa SimaMoto)
 * updated Ukrainian translation (Gennady Motsyo)
+
+Version 1.2.1
+* added ffmpeg 4.0 support
+* added feature to change default user interface
+* fixed playlists moving
+* fixed openbox support
+* fixed kwin support
+* fixed mp3 detection
+* fixed seeking by mouse wheel
+* fixed build with Qt 5.11
+* updated Ukrainian translation (Gennady Motsyo)
+* updated Italian translation (Luigi Toscano)
+* updated Spanish translation (Joel Barrios)
+
+Version 1.2.2
+* fixed build with Qt 5.11
+* fixed memory leaks
+
+Version 1.2.3
+* added qmmp 0.12/1.3 config compatibility
+* disabling global shortcuts during configuration
+* improved global hotkey plugin
+* fixed some gcc warnings
+* fixed metadata updating issue
+* fixed build for windows
+* fixed issue caused by sending same metadata several times in a row
+
+Version 1.2.4
+* added equalizer optimization
+* updated translation list
+* improved PCM WAVE support
+* fixed segmentation fault
+* fixed tag reading in the archive plugin
+* fixed seeking in the archive plugin
+* fixed issue with multiscreen configuration
+* updated Polish translation (mrerexx)
+* updated Portuguese translation (Sérgio Marques)
+* updated Spanish translation (Joel Barrios)
+* updated Ukrainian translation (Gennady Motsyo)
+* updated Russian translation
+
+Version 1.2.5
+* added icon for 'exit' action in the tray icon menu
+* fixed drag-and-drop issue under Qt 5.12
+* fixed issue with 8-bit audio in the ffmpeg plugin
+* fixed latest mplayer output parsing
+* fixed '--quit' command line option processing
+* fixed issue with empty audio parameters

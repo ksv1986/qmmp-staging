@@ -93,7 +93,7 @@ Requirements:
 - jackit1 >= 0.121.0 or jackit2 >= 1.9.8 (optional)
 - libsoxr >= 0.1.0 (optional)
 - libmodplug >= 0.8.4 (optional)
-- libsndfile >= 1.0.21 (optional)
+- libsndfile >= 1.0.22 (optional)
 - wavpack >= 4.41 (optional)
 - pulseaudio >= 0.9.15 (optional)
 - ffmpeg >= 2.0 or libav >= 0.9 (optional)

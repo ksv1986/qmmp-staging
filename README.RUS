@@ -54,7 +54,7 @@ Qmmp - Qt-based multimedia player
 - 10-полосный эквалайзер
 - поддержка потоков MP3, Vorbis, AAC, AAC+
 - поддержка протокола MMS
-- MPRIS (1.0 и 2.0)
+- MPRIS
 - автоопределение съёмных устройств (с помощью HAL или UDisks)
 - воспроизведение видео с помощью Mplayer-а
 - получение текстов песен с lyrics.wikia.com
@@ -76,7 +76,7 @@ Qmmp - Qt-based multimedia player
 - история прослушивания
 
 Требования:
-- Qt >= 5.4 (qtbase, qtx11extras и qttools для сборки)
+- Qt >= 5.4 (qtbase, qtx11extras/qtwinextras и qttools для сборки)
 - tar, unzip, bzip2, gzip
 - libmad
 - libvorbis

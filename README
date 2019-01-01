@@ -54,7 +54,7 @@ Other features:
 - 10-band equalizer
 - MP3, Vorbis, AAC, AAC+ streams support
 - mms support
-- MPRIS (1.0 and 2.0)
+- MPRIS
 - removable device detection (via HAL or UDisks)
 - video playback via Mplayer
 - lyrics (using lyrics.wikia.com)
@@ -77,7 +77,7 @@ Other features:
 - listen history
 
 Requirements:
-- Qt >= 5.4 (qtbase, qtx11extras and qttools for build)
+- Qt >= 5.4 (qtbase, qtx11extras/qtwinextras and qttools for build)
 - tar, unzip, bzip2, gzip
 - libmad
 - libvorbis

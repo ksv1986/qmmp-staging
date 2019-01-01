@@ -13,7 +13,7 @@ ENDIF(USE_MAD)
 
 # libmpg123
 IF(USE_MPG123)
-pkg_search_module(MPG123 libmpg123)
+pkg_search_module(MPG123 libmpg123>=1.13.0)
 ENDIF(USE_MPG123)
 
 include_directories(${TAGLIB_INCLUDE_DIRS})

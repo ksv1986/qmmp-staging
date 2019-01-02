@@ -12,7 +12,7 @@ SOURCES += rdetectfactory.cpp \
 
 FORMS += settingsdialog.ui
 
-#RESOURCES = translations/translations.qrc
+RESOURCES = translations/translations.qrc
 
 LIBS += $$QMMPUI_LIB
 

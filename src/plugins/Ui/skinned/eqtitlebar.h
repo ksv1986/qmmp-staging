@@ -35,7 +35,7 @@ class EqTitleBar : public PixmapWidget
 {
 Q_OBJECT
 public:
-    EqTitleBar(QWidget *parent = 0);
+    EqTitleBar(QWidget *parent = nullptr);
 
     ~EqTitleBar();
 

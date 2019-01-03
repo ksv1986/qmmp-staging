@@ -90,7 +90,7 @@ void SettingsDialog::getCards()
 
 void SettingsDialog::getSoftDevices()
 {
-    void **hints = 0;
+    void **hints = nullptr;
     int i = 0;
 
     if(snd_device_name_hint(-1, "pcm", &hints) < 0)
@@ -247,7 +247,7 @@ int SettingsDialog::getMixer(snd_mixer_t **mixer, QString card)
                  "Attaching to mixer %s failed: %s", qPrintable(card), snd_strerror(-err));
         return -1;
     }
-    if ((err = snd_mixer_selem_register(*mixer, NULL, NULL)) < 0)
+    if ((err = snd_mixer_selem_register(*mixer, nullptr, nullptr)) < 0)
     {
         qWarning("SettingsDialog (ALSA): alsa_get_mixer(): "
                  "Failed to register mixer: %s", snd_strerror(-err));
@@ -260,7 +260,7 @@ int SettingsDialog::getMixer(snd_mixer_t **mixer, QString card)
         return -1;
     }
 
-    return (*mixer != NULL);
+    return (*mixer != nullptr);
 }
 
 void SettingsDialog::showMixerDevices(int d)

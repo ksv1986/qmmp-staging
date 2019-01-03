@@ -23,7 +23,7 @@
 #include "qmmpuiplugincache_p.h"
 #include "uiloader.h"
 
-QList<QmmpUiPluginCache*> *UiLoader::m_cache = 0;
+QList<QmmpUiPluginCache*> *UiLoader::m_cache = nullptr;
 
 void UiLoader::loadPlugins()
 {
@@ -113,5 +113,5 @@ UiFactory *UiLoader::selected()
     }
     if (!m_cache->isEmpty())
         return m_cache->at(0)->uiFactory();
-    return 0;
+    return nullptr;
 }

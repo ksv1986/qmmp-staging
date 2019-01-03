@@ -37,7 +37,7 @@ LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget 
     setWindowFlags(Qt::Dialog);
     setAttribute(Qt::WA_DeleteOnClose);
     setAttribute(Qt::WA_QuitOnClose, false);
-    m_requestReply = 0;
+    m_requestReply = nullptr;
     m_cachePath = Qmmp::configDir() + "/lyrics/";
     m_ui.artistLineEdit->setText(artist);
     m_ui.titleLineEdit->setText(title);
@@ -78,7 +78,7 @@ void LyricsWindow::showText(QNetworkReply *reply)
     {
         m_ui.stateLabel->setText(tr("Error"));
         m_ui.textBrowser->setText(reply->errorString());
-        m_requestReply = 0;
+        m_requestReply = nullptr;
         reply->deleteLater();
         return;
     }
@@ -87,7 +87,7 @@ void LyricsWindow::showText(QNetworkReply *reply)
 
     if(m_requestReply == reply)
     {
-        m_requestReply = 0;
+        m_requestReply = nullptr;
         reply->deleteLater();
         QRegExp artist_regexp("<artist>(.*)</artist>");
         artist_regexp.setMinimal(true);

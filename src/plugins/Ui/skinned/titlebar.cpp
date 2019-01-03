@@ -45,10 +45,10 @@ TitleBar::TitleBar(TimeIndicatorModel *model, QWidget *parent)
     setPixmap(m_skin->getTitleBar(Skin::TITLEBAR_A));
     m_mw = qobject_cast<MainWindow*>(parent->parent());
     m_shaded = false;
-    m_shade2 = 0;
-    m_currentTime = 0;
-    m_control = 0;
-    m_visual = 0;
+    m_shade2 = nullptr;
+    m_currentTime = nullptr;
+    m_control = nullptr;
+    m_visual = nullptr;
     //buttons
     m_menu = new Button(this,Skin::BT_MENU_N,Skin::BT_MENU_P, Skin::CUR_MAINMENU);
     connect(m_menu,SIGNAL(clicked()),this,SLOT(showMainMenu()));
@@ -184,10 +184,10 @@ void TitleBar::shade()
         m_control->deleteLater();
         Visual::remove(m_visual);
         m_visual->deleteLater();
-        m_shade2 = 0;
-        m_currentTime = 0;
-        m_control = 0;
-        m_visual = 0;
+        m_shade2 = nullptr;
+        m_currentTime = nullptr;
+        m_control = nullptr;
+        m_visual = nullptr;
         m_shade->show();
     }
     qobject_cast<MainDisplay *> (parent())->setMinimalMode(m_shaded);

@@ -46,7 +46,7 @@ class HalDevice : public QObject
 {
     Q_OBJECT
 public:
-    HalDevice(const QString &udi, QObject *parent = 0);
+    HalDevice(const QString &udi, QObject *parent = nullptr);
 
     ~HalDevice();
 

@@ -24,7 +24,7 @@
 
 SIDHelper::SIDHelper(SidDatabase *db)
 {
-    m_tune = 0;
+    m_tune = nullptr;
     m_db = db;
 }
 
@@ -32,7 +32,7 @@ SIDHelper::~SIDHelper()
 {
     if(m_tune)
         delete m_tune;
-    m_tune = 0;
+    m_tune = nullptr;
 }
 
 SidTune *SIDHelper::load(const QString &url)
@@ -40,7 +40,7 @@ SidTune *SIDHelper::load(const QString &url)
     if(m_tune)
     {
         delete m_tune;
-        m_tune = 0;
+        m_tune = nullptr;
     }
     QString path = url;
     int track = 1;

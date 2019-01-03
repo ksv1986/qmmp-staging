@@ -33,7 +33,7 @@ class PositionBar : public PixmapWidget
 {
     Q_OBJECT
 public:
-    PositionBar(QWidget *parent = 0);
+    PositionBar(QWidget *parent = nullptr);
     virtual ~PositionBar();
 
 public slots:

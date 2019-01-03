@@ -36,7 +36,7 @@ class TrackChange : public QObject
 {
     Q_OBJECT
 public:
-    TrackChange(QObject *parent = 0);
+    TrackChange(QObject *parent = nullptr);
 
     ~TrackChange();
 

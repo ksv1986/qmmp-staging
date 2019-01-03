@@ -41,7 +41,7 @@ Visual *VisualProjectMFactory::create(QWidget *parent)
 QDialog *VisualProjectMFactory::createConfigDialog(QWidget *parent)
 {
     Q_UNUSED(parent);
-    return 0;
+    return nullptr;
 }
 
 void VisualProjectMFactory::showAbout(QWidget *parent)

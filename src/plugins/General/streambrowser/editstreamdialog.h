@@ -33,7 +33,7 @@ class EditStreamDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit EditStreamDialog(QWidget *parent = 0);
+    explicit EditStreamDialog(QWidget *parent = nullptr);
     ~EditStreamDialog();
 
     enum Key

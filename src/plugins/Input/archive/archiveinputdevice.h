@@ -30,8 +30,8 @@ class ArchiveInputDevice : public QIODevice
 {
     Q_OBJECT
 public:
-    ArchiveInputDevice(const QString &url, QObject *parent = 0);
-    ArchiveInputDevice(struct archive *a, struct archive_entry *e, QObject *parent = 0);
+    ArchiveInputDevice(const QString &url, QObject *parent = nullptr);
+    ArchiveInputDevice(struct archive *a, struct archive_entry *e, QObject *parent = nullptr);
     virtual ~ArchiveInputDevice();
 
     bool seek(qint64 pos);

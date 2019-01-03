@@ -37,7 +37,7 @@ class FileOps : public QObject
 {
     Q_OBJECT
 public:
-    FileOps(QObject *parent = 0);
+    FileOps(QObject *parent = nullptr);
 
     ~FileOps();
 

@@ -35,7 +35,7 @@ Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.InputSourceFactoryInterface.1.0")
 Q_INTERFACES(InputSourceFactory)
 public:
     InputSourceProperties properties() const;
-    InputSource *create(const QString &url, QObject *parent = 0);
+    InputSource *create(const QString &url, QObject *parent = nullptr);
     void showSettings(QWidget *parent);
     void showAbout(QWidget *parent);
     QString translation() const;

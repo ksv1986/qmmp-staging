@@ -44,7 +44,7 @@ public:
     * @param parent Parent object.
     * @param f Widget flags.
     */
-    Visual(QWidget *parent, Qt::WindowFlags f = 0);
+    Visual(QWidget *parent, Qt::WindowFlags f = Qt::WindowFlags());
     /*!
      * Destructor.
      */
@@ -83,7 +83,7 @@ public:
      * @param receiver Receiver object.
      * @param member A slot to receive changes of active visualizations list.
      */
-    static void initialize(QWidget *parent, QObject *receiver = 0, const char *member = 0);
+    static void initialize(QWidget *parent, QObject *receiver = nullptr, const char *member = nullptr);
     /*!
      * Returns a pointer to a list of created visual objects.
      */
@@ -137,7 +137,7 @@ protected:
      * @param left Left channel buffer.
      * @param right Right channel buffer.
      */
-    bool takeData(float *left, float *right = 0);
+    bool takeData(float *left, float *right = nullptr);
 
 private:
     static QList<VisualFactory*> *m_factories;

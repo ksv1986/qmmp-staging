@@ -31,7 +31,7 @@ class PixmapWidget : public QWidget
 {
 Q_OBJECT
 public:
-    PixmapWidget(QWidget *parent = 0);
+    PixmapWidget(QWidget *parent = nullptr);
 
     virtual ~PixmapWidget();
 

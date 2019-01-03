@@ -86,7 +86,7 @@ void SettingsDialog::accept()
 
 void SettingsDialog::on_tableWidget_itemDoubleClicked (QTableWidgetItem *item)
 {
-    Hotkey *k = 0;
+    Hotkey *k = nullptr;
     foreach(k, m_hotkeys)
     {
         if (k->action == item->type())

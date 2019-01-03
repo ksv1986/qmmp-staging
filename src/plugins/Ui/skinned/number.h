@@ -31,7 +31,7 @@ class Number : public PixmapWidget
 {
 Q_OBJECT
 public:
-    Number(QWidget *parent = 0);
+    Number(QWidget *parent = nullptr);
 
     ~Number();
 

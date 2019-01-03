@@ -41,8 +41,8 @@ ListWidgetDrawer::ListWidgetDrawer()
     m_show_splitters = false;
     m_alternate_splitter_color = false;
     m_padding = 0;
-    m_metrics = 0;
-    m_extra_metrics = 0;
+    m_metrics = nullptr;
+    m_extra_metrics = nullptr;
     readSettings();
     loadColors();
 }

@@ -289,19 +289,19 @@ void FileLoader::run()
 
 void FileLoader::add(const QString &path)
 {
-    insert(0, QStringList() << path);
+    insert(nullptr, QStringList() << path);
 }
 
 void FileLoader::add(const QStringList &paths)
 {
-    insert(0, paths);
+    insert(nullptr, paths);
 }
 
 void FileLoader::addPlayList(const QString &fmt, const QByteArray &data)
 {
     m_mutex.lock();
     LoaderTask task;
-    task.before = 0;
+    task.before = nullptr;
     task.playListFormat = fmt;
     task.playListContent = data;
     m_tasks.append(task);

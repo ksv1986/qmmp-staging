@@ -44,7 +44,7 @@ DetailsDialog::DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent)
     m_ui->directoryButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_DirOpenIcon));
     m_ui->nextButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_ArrowRight));
     m_ui->prevButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_ArrowLeft));
-    m_metaDataModel = 0;
+    m_metaDataModel = nullptr;
     m_page = 0;
     m_tracks = tracks;
     updatePage();
@@ -56,7 +56,7 @@ DetailsDialog::~DetailsDialog()
     if(m_metaDataModel)
     {
         delete m_metaDataModel;
-        m_metaDataModel = 0;
+        m_metaDataModel = nullptr;
     }
     delete m_ui;
 }
@@ -85,7 +85,7 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
     if(m_ui->buttonBox->standardButton(button) == QDialogButtonBox::Save)
     {
         TagEditor *tagEditor = qobject_cast<TagEditor *>(m_ui->tabWidget->currentWidget());
-        CoverEditor *coverEditor = 0;
+        CoverEditor *coverEditor = nullptr;
         if(tagEditor)
             tagEditor->save();
         else if((coverEditor = qobject_cast<CoverEditor *>(m_ui->tabWidget->currentWidget())))
@@ -100,7 +100,7 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
         if(m_metaDataModel)
         {
             delete m_metaDataModel;
-            m_metaDataModel = 0;
+            m_metaDataModel = nullptr;
         }
         reject();
     }
@@ -108,7 +108,7 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
 
 void DetailsDialog::on_tabWidget_currentChanged(int index)
 {
-    CoverEditor *coverEditor = 0;
+    CoverEditor *coverEditor = nullptr;
     if(qobject_cast<TagEditor *>(m_ui->tabWidget->widget(index)))
         m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(m_metaDataModel && !m_metaDataModel->isReadOnly());
     else if((coverEditor = qobject_cast<CoverEditor *>(m_ui->tabWidget->currentWidget())))
@@ -141,7 +141,7 @@ void DetailsDialog::closeEvent(QCloseEvent *)
     if(m_metaDataModel)
     {
         delete m_metaDataModel;
-        m_metaDataModel = 0;
+        m_metaDataModel = nullptr;
     }
 }
 
@@ -150,7 +150,7 @@ void DetailsDialog::updatePage()
     if(m_metaDataModel)
     {
         delete m_metaDataModel;
-        m_metaDataModel = 0;
+        m_metaDataModel = nullptr;
     }
 
     while (m_ui->tabWidget->count() > 1)

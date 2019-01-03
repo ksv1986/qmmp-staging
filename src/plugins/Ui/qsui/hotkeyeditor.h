@@ -35,7 +35,7 @@ class HotkeyEditor : public QWidget
     Q_OBJECT
 
 public:
-    explicit HotkeyEditor(QWidget *parent = 0);
+    explicit HotkeyEditor(QWidget *parent = nullptr);
     virtual ~HotkeyEditor();
 
 private slots:

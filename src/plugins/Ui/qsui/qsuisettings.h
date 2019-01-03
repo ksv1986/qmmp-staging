@@ -32,7 +32,7 @@ class QSUISettings : public QWidget
 {
     Q_OBJECT
 public:
-    explicit QSUISettings(QWidget *parent = 0);
+    explicit QSUISettings(QWidget *parent = nullptr);
     virtual ~QSUISettings();
     void writeSettings();
 

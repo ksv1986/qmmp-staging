@@ -33,7 +33,7 @@ class ShadedBar : public QWidget
 {
     Q_OBJECT
 public:
-    ShadedBar(QWidget *parent = 0, uint slider1 = 0, uint slider2 = 0, uint slider3 = 0);
+    ShadedBar(QWidget *parent = nullptr, uint slider1 = 0, uint slider2 = 0, uint slider3 = 0);
 
     ~ShadedBar();
     int value()

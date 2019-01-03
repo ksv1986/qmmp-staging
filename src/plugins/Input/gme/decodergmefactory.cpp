@@ -89,7 +89,7 @@ MetaDataModel* DecoderGmeFactory::createMetaDataModel(const QString &path, bool 
 {
     Q_UNUSED(path);
     Q_UNUSED(readOnly);
-    return 0;
+    return nullptr;
 }
 
 void DecoderGmeFactory::showSettings(QWidget *parent)

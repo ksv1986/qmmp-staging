@@ -33,7 +33,7 @@ class VolumeSlider : public QSlider
 {
     Q_OBJECT
 public:
-    explicit VolumeSlider(QWidget *parent = 0);
+    explicit VolumeSlider(QWidget *parent = nullptr);
     virtual ~VolumeSlider(){}
 
 protected:

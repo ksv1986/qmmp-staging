@@ -39,7 +39,7 @@ Q_PROPERTY(QStringList SupportedMimeTypes READ supportedMimeTypes)
 Q_PROPERTY(QStringList SupportedUriSchemes READ supportedUriSchemes)
 
 public:
-    Root2Object(QObject *parent = 0);
+    Root2Object(QObject *parent = nullptr);
     virtual ~Root2Object();
 
     bool canQuit() const;

@@ -28,11 +28,11 @@
 ShoutOutput::ShoutOutput(ShoutClient *m)
 {
     m_client = m;
-    m_soxr = 0;
+    m_soxr = nullptr;
     m_ratio = 0;
-    m_soxr_buf = 0;
+    m_soxr_buf = nullptr;
     m_soxr_buf_frames = 0;
-    qsrand(time(NULL));
+    qsrand(time(nullptr));
 }
 
 ShoutOutput::~ShoutOutput()
@@ -46,12 +46,12 @@ ShoutOutput::~ShoutOutput()
     if(m_soxr)
     {
         soxr_delete(m_soxr);
-        m_soxr = 0;
+        m_soxr = nullptr;
     }
     if(m_soxr_buf)
     {
         free(m_soxr_buf);
-        m_soxr_buf = 0;
+        m_soxr_buf = nullptr;
     }
 }
 
@@ -63,7 +63,7 @@ bool ShoutOutput::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat)
 
     if(freq != outFreq)
     {
-        m_soxr = soxr_create(freq, outFreq, map.size(), 0, 0, 0, 0);
+        m_soxr = soxr_create(freq, outFreq, map.size(), nullptr, nullptr, nullptr, nullptr);
         m_ratio = (double)outFreq/freq;
     }
 
@@ -90,7 +90,7 @@ qint64 ShoutOutput::writeAudio(unsigned char *data, qint64 maxSize)
 {
     int chan = channels();
     int frames = maxSize / chan / sizeof(float);
-    float *input_data = 0;
+    float *input_data = nullptr;
 
     if(m_soxr)
     {
@@ -102,7 +102,7 @@ qint64 ShoutOutput::writeAudio(unsigned char *data, qint64 maxSize)
         }
 
         size_t done = 0;
-        soxr_process(m_soxr, data, frames, 0,  m_soxr_buf, m_soxr_buf_frames, &done);
+        soxr_process(m_soxr, data, frames, nullptr,  m_soxr_buf, m_soxr_buf_frames, &done);
         input_data = m_soxr_buf;
         if(done == 0) //soxr requires more data
             return maxSize;
@@ -136,7 +136,7 @@ qint64 ShoutOutput::writeAudio(unsigned char *data, qint64 maxSize)
     while(ok && vorbis_analysis_blockout(&m_vd, &m_vb) == 1)
     {
         // analysis, assume we want to use bitrate management
-        vorbis_analysis(&m_vb, NULL);
+        vorbis_analysis(&m_vb, nullptr);
         vorbis_bitrate_addblock(&m_vb);
 
         while(ok && vorbis_bitrate_flushpacket(&m_vd, &m_op))
@@ -214,7 +214,7 @@ void ShoutOutput::setTrackInfo(const QMap<Qmmp::MetaData, QString> &metaData)
         { Qmmp::YEAR, "date"},
         { Qmmp::COMPOSER, "composer"},
         { Qmmp::DISCNUMBER, "discnumber"},
-        { Qmmp::UNKNOWN, 0}
+        { Qmmp::UNKNOWN, nullptr}
     };
 
     int i = 0;

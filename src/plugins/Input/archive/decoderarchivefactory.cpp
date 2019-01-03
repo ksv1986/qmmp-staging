@@ -56,7 +56,7 @@ Decoder *DecoderArchiveFactory::create(const QString &url, QIODevice *)
 QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
     QList<TrackInfo *> list;
-    struct archive_entry *entry = 0;
+    struct archive_entry *entry = nullptr;
 
     struct archive *a = archive_read_new();
     archive_read_support_filter_all(a);
@@ -109,7 +109,7 @@ QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, Tr
                                      .arg(archivePath)
                                      .arg(filePath));
 
-                ArchiveInputDevice dev(a, entry, 0);
+                ArchiveInputDevice dev(a, entry, nullptr);
                 ArchiveTagReader reader(&dev, list.last()->path());
 
                 if(parts & TrackInfo::MetaData)
@@ -140,7 +140,7 @@ MetaDataModel* DecoderArchiveFactory::createMetaDataModel(const QString &path, b
 {
     Q_UNUSED(path);
     Q_UNUSED(readOnly);
-    return 0;
+    return nullptr;
 }
 
 void DecoderArchiveFactory::showSettings(QWidget *)

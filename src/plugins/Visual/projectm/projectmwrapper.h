@@ -28,8 +28,8 @@ class ProjectMWrapper : public QObject, public projectM
 {
     Q_OBJECT
 public:
-    explicit ProjectMWrapper(std::string config_file, int flags, QObject *parent = 0);
-    explicit ProjectMWrapper(Settings settings, int flags, QObject *parent = 0);
+    explicit ProjectMWrapper(std::string config_file, int flags, QObject *parent = nullptr);
+    explicit ProjectMWrapper(Settings settings, int flags, QObject *parent = nullptr);
 
     virtual ~ProjectMWrapper();
 

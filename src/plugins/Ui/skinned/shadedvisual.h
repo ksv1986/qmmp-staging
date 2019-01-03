@@ -35,7 +35,7 @@ class ShadedVisual : public Visual
 {
     Q_OBJECT
 public:
-    ShadedVisual(QWidget *parent = 0);
+    ShadedVisual(QWidget *parent = nullptr);
 
     ~ShadedVisual();
 

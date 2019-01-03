@@ -34,7 +34,7 @@ class QSUiAnalyzer : public Visual
 {
     Q_OBJECT
 public:
-    QSUiAnalyzer(QWidget *parent = 0);
+    QSUiAnalyzer(QWidget *parent = nullptr);
     virtual ~QSUiAnalyzer();
 
     void setCover(const QPixmap &pixmap);

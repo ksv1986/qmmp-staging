@@ -32,7 +32,7 @@ class MMSInputSource : public InputSource
 {
 Q_OBJECT
 public:
-    MMSInputSource(const QString &path, QObject *parent = 0);
+    MMSInputSource(const QString &path, QObject *parent = nullptr);
 
     QIODevice *ioDevice();
     bool initialize();

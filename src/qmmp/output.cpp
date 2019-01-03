@@ -74,7 +74,7 @@ Output::~Output()
 {}
 
 // static methods
-QList<QmmpPluginCache*> *Output::m_cache = 0;
+QList<QmmpPluginCache*> *Output::m_cache = nullptr;
 
 void Output::loadPlugins()
 {
@@ -98,7 +98,7 @@ void Output::loadPlugins()
 Output *Output::create ()
 {
     loadPlugins();
-    Output *output = 0;
+    Output *output = nullptr;
     if (m_cache->isEmpty ())
     {
         qDebug("Output: unable to find output plugins");
@@ -167,5 +167,5 @@ OutputFactory *Output::currentFactory()
     }
     if (!m_cache->isEmpty())
         return m_cache->at(0)->outputFactory();
-    return 0;
+    return nullptr;
 }

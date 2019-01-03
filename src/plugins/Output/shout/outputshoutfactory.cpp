@@ -50,7 +50,7 @@ Output* OutputShoutFactory::create()
 
 Volume *OutputShoutFactory::createVolume()
 {
-    return 0;
+    return nullptr;
 }
 
 void OutputShoutFactory::showSettings(QWidget* parent)
@@ -63,7 +63,7 @@ void OutputShoutFactory::showAbout(QWidget *parent)
 {
    QMessageBox::about (parent, tr("About Icecast Output Plugin"),
                        tr("Qmmp Icecast Output Plugin")+"\n"+
-                       tr("Compiled against libshout-%1").arg(shout_version(0,0,0))+"\n"+
+                       tr("Compiled against libshout-%1").arg(shout_version(nullptr,nullptr,nullptr))+"\n"+
                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 

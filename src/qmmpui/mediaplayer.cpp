@@ -27,7 +27,7 @@
 #include "qmmpuisettings.h"
 #include "mediaplayer.h"
 
-MediaPlayer *MediaPlayer::m_instance = 0;
+MediaPlayer *MediaPlayer::m_instance = nullptr;
 
 MediaPlayer::MediaPlayer(QObject *parent)
         : QObject(parent)
@@ -35,8 +35,8 @@ MediaPlayer::MediaPlayer(QObject *parent)
     if(m_instance)
         qFatal("StateHandler: only one instance is allowed");
     m_instance = this;
-    m_pl_manager = 0;
-    m_core = 0;
+    m_pl_manager = nullptr;
+    m_core = nullptr;
     m_skips = 0;
     m_finishTimer = new QTimer(this);
     m_finishTimer->setSingleShot(true);
@@ -57,7 +57,7 @@ MediaPlayer::MediaPlayer(QObject *parent)
 
 MediaPlayer::~MediaPlayer()
 {
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 MediaPlayer* MediaPlayer::instance()
@@ -142,7 +142,7 @@ void MediaPlayer::playNext()
 void MediaPlayer::updateNextUrl()
 {
     m_nextUrl.clear();
-    PlayListTrack *track = 0;
+    PlayListTrack *track = nullptr;
     if(m_settings->isRepeatableTrack())
         track = m_pl_manager->currentPlayList()->currentTrack();
     else if(!m_settings->isNoPlayListAdvance())

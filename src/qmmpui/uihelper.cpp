@@ -38,14 +38,14 @@
 #include "mediaplayer.h"
 #include "uihelper.h"
 
-UiHelper *UiHelper::m_instance = 0;
+UiHelper *UiHelper::m_instance = nullptr;
 
 UiHelper::UiHelper(QObject *parent)
         : QObject(parent)
 {
     m_instance = this;
-    m_jumpDialog = 0;
-    m_model = 0;
+    m_jumpDialog = nullptr;
+    m_model = nullptr;
     General::create(parent);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_lastDir = settings.value("General/last_dir", QDir::homePath()).toString(); //last directory

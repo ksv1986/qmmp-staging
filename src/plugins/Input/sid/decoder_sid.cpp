@@ -32,7 +32,7 @@
 #include "decoder_sid.h"
 
 // Decoder class
-DecoderSID::DecoderSID(SidDatabase *db, const QString &url) : Decoder(), m_tune(0)
+DecoderSID::DecoderSID(SidDatabase *db, const QString &url) : Decoder(), m_tune(nullptr)
 {
     m_db = db;
     m_url = url;
@@ -102,7 +102,7 @@ bool DecoderSID::initialize()
 
     qDebug("DecoderSID: song length: %d", m_length);
 
-    sidbuilder *rs = 0;
+    sidbuilder *rs = nullptr;
     if(settings.value("engine", "residfp").toString() == "residfp")
     {
         rs = new ReSIDfpBuilder("ReSIDfp builder");

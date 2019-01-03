@@ -31,7 +31,7 @@
 
 ModPlugMetaDataModel::ModPlugMetaDataModel(const QString &path) : MetaDataModel(true)
 {
-    m_soundFile = 0;
+    m_soundFile = nullptr;
     m_path = path;
     ArchiveReader reader(nullptr);
     if(reader.isSupported(m_path))

@@ -136,7 +136,7 @@ bool DecoderMPEGFactory::canDecode(QIODevice *input) const
     if (decoderName != "mpg123")
     {
         mpg123_init();
-        mpg123_handle *handle = mpg123_new(0, 0);
+        mpg123_handle *handle = mpg123_new(nullptr, nullptr);
         if (!handle)
             return false;
         if(mpg123_open_feed(handle) != MPG123_OK)
@@ -151,7 +151,7 @@ bool DecoderMPEGFactory::canDecode(QIODevice *input) const
             return false;
         }
         size_t out_size = 0;
-        int ret = mpg123_decode(handle, (unsigned char*) buf, dataSize, 0, 0, &out_size);
+        int ret = mpg123_decode(handle, (unsigned char*) buf, dataSize, nullptr, 0, &out_size);
         mpg123_close(handle);
         mpg123_delete(handle);
         return ret == MPG123_DONE || ret == MPG123_NEW_FORMAT;
@@ -175,7 +175,7 @@ DecoderProperties DecoderMPEGFactory::properties() const
 
 Decoder *DecoderMPEGFactory::create(const QString &, QIODevice *input)
 {
-    Decoder *d = 0;
+    Decoder *d = nullptr;
 #if defined(WITH_MAD) && defined(WITH_MPG123)
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     if(settings.value("MPEG/decoder", "mad").toString() == "mpg123")
@@ -203,7 +203,7 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
     if(parts == TrackInfo::NoParts)
         return QList<TrackInfo*>() << info;
 
-    TagLib::Tag *tag = 0;
+    TagLib::Tag *tag = nullptr;
     TagLib::FileStream stream(QStringToFileName(path), true);
     TagLib::MPEG::File fileRef(&stream, TagLib::ID3v2::FrameFactory::instance());
 
@@ -212,7 +212,7 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
         QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
         settings.beginGroup("MPEG");
 
-        QTextCodec *codec = 0;
+        QTextCodec *codec = nullptr;
 
         uint tag_array[3];
         tag_array[0] = settings.value("tag_1", SettingsDialog::ID3v2).toInt();
@@ -324,7 +324,7 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
         if(fileRef.ID3v2Tag() && !fileRef.ID3v2Tag()->isEmpty())
         {
             TagLib::ID3v2::Tag *tag = fileRef.ID3v2Tag();
-            TagLib::ID3v2::UserTextIdentificationFrame* frame = 0;
+            TagLib::ID3v2::UserTextIdentificationFrame *frame = nullptr;
             TagLib::ID3v2::FrameList frames = tag->frameList("TXXX");
             for(TagLib::ID3v2::FrameList::Iterator it = frames.begin(); it != frames.end(); ++it)
             {

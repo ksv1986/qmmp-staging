@@ -141,7 +141,7 @@ QList<TrackInfo *> DecoderSndFileFactory::createPlayList(const QString &path, Tr
         return QList<TrackInfo*>() << info;
 
     SF_INFO snd_info;
-    SNDFILE *sndfile = 0;
+    SNDFILE *sndfile = nullptr;
     memset(&snd_info, 0, sizeof(snd_info));
     snd_info.format = 0;
 #ifdef Q_OS_WIN
@@ -201,7 +201,7 @@ QList<TrackInfo *> DecoderSndFileFactory::createPlayList(const QString &path, Tr
         SF_FORMAT_INFO format_info;
         memset(&format_info, 0, sizeof(format_info));
         format_info.format = (snd_info.format & SF_FORMAT_TYPEMASK);
-        sf_command(0, SFC_GET_FORMAT_INFO, &format_info, sizeof(format_info));
+        sf_command(nullptr, SFC_GET_FORMAT_INFO, &format_info, sizeof(format_info));
         info->setValue(Qmmp::FORMAT_NAME, QString::fromLatin1(format_info.name));
         info->setDuration(int(snd_info.frames * 1000 / snd_info.samplerate));
     }
@@ -212,7 +212,7 @@ QList<TrackInfo *> DecoderSndFileFactory::createPlayList(const QString &path, Tr
 
 MetaDataModel* DecoderSndFileFactory::createMetaDataModel(const QString&, bool)
 {
-    return 0;
+    return nullptr;
 }
 
 void DecoderSndFileFactory::showSettings(QWidget *)
@@ -221,7 +221,7 @@ void DecoderSndFileFactory::showSettings(QWidget *)
 void DecoderSndFileFactory::showAbout(QWidget *parent)
 {
     char version [128] = { 0 };
-    sf_command (NULL, SFC_GET_LIB_VERSION, version, sizeof (version)) ;
+    sf_command (nullptr, SFC_GET_LIB_VERSION, version, sizeof (version)) ;
     QMessageBox::about (parent, tr("About Sndfile Audio Plugin"),
                         tr("Qmmp Sndfile Audio Plugin")+"\n"+
                         tr("Compiled against")+" "+QString(version)+"\n" +

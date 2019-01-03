@@ -55,7 +55,7 @@ PlayListHeader::PlayListHeader(QWidget *parent) :
     m_scrollbar_width = 0;
     m_reverted = false;
     m_auto_resize = false;
-    m_metrics = 0;
+    m_metrics = nullptr;
     m_task = NO_TASK;
 
     m_model = PlayListManager::instance()->headerModel();
@@ -96,7 +96,7 @@ PlayListHeader::~PlayListHeader()
 {
     if (m_metrics)
         delete m_metrics;
-    m_metrics = 0;
+    m_metrics = nullptr;
 }
 
 void PlayListHeader::readSettings()
@@ -104,7 +104,7 @@ void PlayListHeader::readSettings()
     if (m_metrics)
     {
         delete m_metrics;
-        m_metrics = 0;
+        m_metrics = nullptr;
     }
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);

@@ -26,7 +26,7 @@
 DecoderGme::DecoderGme(const QString &path) : Decoder()
 {
     m_path = path;
-    m_emu = 0;
+    m_emu = nullptr;
 }
 
 DecoderGme::~DecoderGme()
@@ -44,7 +44,7 @@ bool DecoderGme::initialize()
     {
         qWarning("DecoderGme: track number is out of range");
         gme_delete(m_emu);
-        m_emu = 0;
+        m_emu = nullptr;
         return false;
     }
     gme_start_track(m_emu, track - 1);

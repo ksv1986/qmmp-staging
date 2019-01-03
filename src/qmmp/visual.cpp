@@ -83,17 +83,17 @@ bool Visual::takeData(float *left, float *right)
         }
     }
     m_buffer.mutex()->unlock();
-    return node != 0;
+    return node != nullptr;
 }
 
 //static members
-QList<VisualFactory*> *Visual::m_factories = 0;
-QHash <VisualFactory*, QString> *Visual::m_files = 0;
+QList<VisualFactory*> *Visual::m_factories = nullptr;
+QHash <VisualFactory*, QString> *Visual::m_files = nullptr;
 QList<Visual*> Visual::m_visuals;
 QHash<VisualFactory*, Visual*> Visual::m_vis_map;
-QWidget *Visual::m_parentWidget = 0;
-QObject *Visual::m_receiver = 0;
-const char *Visual::m_member = 0;
+QWidget *Visual::m_parentWidget = nullptr;
+QObject *Visual::m_receiver = nullptr;
+const char *Visual::m_member = nullptr;
 VisualBuffer Visual::m_buffer;
 
 QList<VisualFactory *> Visual::factories()
@@ -254,7 +254,7 @@ void Visual::checkFactories()
             else
                 qWarning("Visual: %s", qPrintable(loader.errorString ()));
 
-            VisualFactory *factory = 0;
+            VisualFactory *factory = nullptr;
             if (plugin)
                 factory = qobject_cast<VisualFactory *>(plugin);
 

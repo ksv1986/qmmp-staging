@@ -165,12 +165,12 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
     if(parts == TrackInfo::NoParts)
         return QList<TrackInfo*>() << info;
 
-    AVFormatContext *in = 0;
+    AVFormatContext *in = nullptr;
 
 #ifdef Q_OS_WIN
-    if(avformat_open_input(&in, path.toUtf8().constData(), 0, 0) < 0)
+    if(avformat_open_input(&in, path.toUtf8().constData(), nullptr, nullptr) < 0)
 #else
-    if(avformat_open_input(&in, path.toLocal8Bit().constData(), 0, 0) < 0)
+    if(avformat_open_input(&in, path.toLocal8Bit().constData(), nullptr, nullptr) < 0)
 #endif
     {
         qDebug("DecoderFFmpegFactory: unable to open file");
@@ -178,29 +178,29 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
         return  QList<TrackInfo*>();
     }
 
-    avformat_find_stream_info(in, 0);
+    avformat_find_stream_info(in, nullptr);
 
     if(parts & TrackInfo::MetaData)
     {
-        AVDictionaryEntry *album = av_dict_get(in->metadata,"album",0,0);
+        AVDictionaryEntry *album = av_dict_get(in->metadata,"album",nullptr,0);
         if(!album)
-            album = av_dict_get(in->metadata,"WM/AlbumTitle",0,0);
-        AVDictionaryEntry *artist = av_dict_get(in->metadata,"artist",0,0);
+            album = av_dict_get(in->metadata,"WM/AlbumTitle",nullptr,0);
+        AVDictionaryEntry *artist = av_dict_get(in->metadata,"artist",nullptr,0);
         if(!artist)
-            artist = av_dict_get(in->metadata,"author",0,0);
-        AVDictionaryEntry *comment = av_dict_get(in->metadata,"comment",0,0);
-        AVDictionaryEntry *genre = av_dict_get(in->metadata,"genre",0,0);
-        AVDictionaryEntry *title = av_dict_get(in->metadata,"title",0,0);
-        AVDictionaryEntry *year = av_dict_get(in->metadata,"WM/Year",0,0);
+            artist = av_dict_get(in->metadata,"author",nullptr,0);
+        AVDictionaryEntry *comment = av_dict_get(in->metadata,"comment",nullptr,0);
+        AVDictionaryEntry *genre = av_dict_get(in->metadata,"genre",nullptr,0);
+        AVDictionaryEntry *title = av_dict_get(in->metadata,"title",nullptr,0);
+        AVDictionaryEntry *year = av_dict_get(in->metadata,"WM/Year",nullptr,0);
         if(!year)
-            year = av_dict_get(in->metadata,"year",0,0);
+            year = av_dict_get(in->metadata,"year",nullptr,0);
         if(!year)
-            year = av_dict_get(in->metadata,"date",0,0);
-        AVDictionaryEntry *track = av_dict_get(in->metadata,"track",0,0);
+            year = av_dict_get(in->metadata,"date",nullptr,0);
+        AVDictionaryEntry *track = av_dict_get(in->metadata,"track",nullptr,0);
         if(!track)
-            track = av_dict_get(in->metadata,"WM/Track",0,0);
+            track = av_dict_get(in->metadata,"WM/Track",nullptr,0);
         if(!track)
-            track = av_dict_get(in->metadata,"WM/TrackNumber",0,0);
+            track = av_dict_get(in->metadata,"WM/TrackNumber",nullptr,0);
 
         if(album)
             info->setValue(Qmmp::ALBUM, QString::fromUtf8(album->value));
@@ -220,7 +220,7 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
 
     if(parts & TrackInfo::Properties)
     {
-        int idx = av_find_best_stream(in, AVMEDIA_TYPE_AUDIO, -1, -1, 0, 0);
+        int idx = av_find_best_stream(in, AVMEDIA_TYPE_AUDIO, -1, -1, nullptr, 0);
         if(idx >= 0)
         {
     #if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(57,48,0)) //ffmpeg-3.1:  57.48.101

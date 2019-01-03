@@ -65,7 +65,7 @@ class UDisks2Device : public QObject
 {
     Q_OBJECT
 public:
-    UDisks2Device(QDBusObjectPath o, QObject *parent = 0);
+    UDisks2Device(QDBusObjectPath o, QObject *parent = nullptr);
 
     ~UDisks2Device();
 

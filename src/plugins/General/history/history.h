@@ -36,7 +36,7 @@ class History : public QObject
 {
     Q_OBJECT
 public:
-    explicit History(QObject *parent = 0);
+    explicit History(QObject *parent = nullptr);
     ~History();
 
 private slots:

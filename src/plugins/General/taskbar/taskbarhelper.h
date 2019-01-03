@@ -36,7 +36,7 @@ class TaskbarHelper : public QObject
 {
 Q_OBJECT
 public:
-    TaskbarHelper(QObject *parent = 0);
+    TaskbarHelper(QObject *parent = nullptr);
     ~TaskbarHelper();
 
 private slots:

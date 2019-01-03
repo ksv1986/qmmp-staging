@@ -58,7 +58,7 @@ Q_PROPERTY(bool Shuffle READ shuffle WRITE setShuffle)
 Q_PROPERTY(double Volume READ volume WRITE setVolume)
 
 public:
-    Player2Object(QObject *parent = 0);
+    Player2Object(QObject *parent = nullptr);
     virtual ~Player2Object();
     bool canControl() const;
     bool canGoNext() const;

@@ -37,7 +37,7 @@ class QMMPUI_EXPORT WinFileAssocPage : public QWidget
 {
     Q_OBJECT
 public:
-    WinFileAssocPage(QWidget *parent = 0);
+    WinFileAssocPage(QWidget *parent = nullptr);
     virtual ~WinFileAssocPage();
 
 

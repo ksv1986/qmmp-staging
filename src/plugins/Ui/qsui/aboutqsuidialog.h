@@ -31,7 +31,7 @@ class AboutQSUIDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit AboutQSUIDialog(QWidget *parent = 0);
+    explicit AboutQSUIDialog(QWidget *parent = nullptr);
     virtual ~AboutQSUIDialog();
 
 private:

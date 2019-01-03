@@ -48,7 +48,7 @@ public:
      * @param tracks a list of tracks which should be used.
      * @param parent Parent widget.
      */
-    DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent = 0);
+    DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent = nullptr);
     /*!
      * Destructor.
      */

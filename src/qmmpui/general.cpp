@@ -25,10 +25,10 @@
 #include "qmmpuiplugincache_p.h"
 #include "general.h"
 
-QList<QmmpUiPluginCache*> *General::m_cache = 0;
+QList<QmmpUiPluginCache*> *General::m_cache = nullptr;
 QStringList General::m_enabledNames;
-QHash <GeneralFactory*, QObject*> *General::m_generals = 0;
-QObject *General::m_parent = 0;
+QHash <GeneralFactory*, QObject*> *General::m_generals = nullptr;
+QObject *General::m_parent = nullptr;
 
 void General::loadPlugins()
 {

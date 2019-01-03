@@ -380,7 +380,7 @@ void MpegFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
 
 bool MpegFileTagModel::exists() const
 {
-    return (m_tag != 0);
+    return (m_tag != nullptr);
 }
 
 void MpegFileTagModel::create()
@@ -397,7 +397,7 @@ void MpegFileTagModel::create()
 
 void MpegFileTagModel::remove()
 {
-    m_tag = 0;
+    m_tag = nullptr;
 }
 
 void MpegFileTagModel::save()

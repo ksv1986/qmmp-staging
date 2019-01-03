@@ -32,7 +32,7 @@ class VisualMenu : public QMenu
 {
     Q_OBJECT
 public:
-    VisualMenu(QWidget *parent = 0);
+    VisualMenu(QWidget *parent = nullptr);
 
     ~VisualMenu();
 
@@ -44,7 +44,7 @@ class VisualAction : public QAction
 {
     Q_OBJECT
 public:
-    VisualAction(VisualFactory *factory, QWidget *parent = 0);
+    VisualAction(VisualFactory *factory, QWidget *parent = nullptr);
 
 private slots:
     void select(bool);

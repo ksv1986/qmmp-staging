@@ -69,7 +69,7 @@ PlayListHeader::PlayListHeader(QWidget *parent) :
     QWidget(parent)
 {
     setMouseTracking(true);
-    m_metrics = 0;
+    m_metrics = nullptr;
     m_padding = 0;
     m_pl_padding = 0;
     m_number_width = 0;
@@ -118,7 +118,7 @@ PlayListHeader::~PlayListHeader()
 {
     if (m_metrics)
         delete m_metrics;
-    m_metrics = 0;
+    m_metrics = nullptr;
     writeSettings();
 }
 
@@ -131,7 +131,7 @@ void PlayListHeader::readSettings()
     if (m_metrics)
     {
         delete m_metrics;
-        m_metrics = 0;
+        m_metrics = nullptr;
     }
 
     m_metrics = new QFontMetrics(m_font);

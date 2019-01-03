@@ -30,7 +30,7 @@ class QSUiTabBar : public QTabBar
 {
     Q_OBJECT
 public:
-    explicit QSUiTabBar(QWidget *parent = 0);
+    explicit QSUiTabBar(QWidget *parent = nullptr);
 
 private:
     void mouseReleaseEvent(QMouseEvent *e);

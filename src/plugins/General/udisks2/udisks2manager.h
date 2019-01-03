@@ -37,7 +37,7 @@ class UDisks2Manager : public QObject
 {
 Q_OBJECT
 public:
-    UDisks2Manager(QObject *parent = 0);
+    UDisks2Manager(QObject *parent = nullptr);
 
     ~UDisks2Manager();
 

@@ -89,7 +89,7 @@ private:
             frames = 0;
             bytes = 0;
             scale = 0;
-            lame = 0;
+            lame = nullptr;
         }
     };
     XingHeader m_xing;

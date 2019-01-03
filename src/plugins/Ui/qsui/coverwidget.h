@@ -32,7 +32,7 @@ class CoverWidget : public QWidget
 {
 Q_OBJECT
 public:
-    CoverWidget(QWidget *parent = 0);
+    CoverWidget(QWidget *parent = nullptr);
 
     ~CoverWidget();
 

@@ -31,7 +31,7 @@ Effect::Effect()
 {
     m_freq = 0;
     m_channels = 0;
-    m_factory = 0;
+    m_factory = nullptr;
 }
 
 Effect::~Effect()
@@ -75,7 +75,7 @@ bool _effectCacheCompareFunc(QmmpPluginCache *e1, QmmpPluginCache *e2)
 }
 
 //static members
-QList<QmmpPluginCache*> *Effect::m_cache = 0;
+QList<QmmpPluginCache*> *Effect::m_cache = nullptr;
 QStringList Effect::m_enabledNames;
 
 void Effect::loadPlugins()
@@ -185,5 +185,5 @@ EffectFactory *Effect::findFactory(const QString &shortName)
         if(shortName == f->properties().shortName)
             return f;
     }
-    return 0;
+    return nullptr;
 }

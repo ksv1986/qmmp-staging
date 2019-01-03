@@ -47,7 +47,7 @@ StreamWindow::StreamWindow(QWidget *parent)
     setWindowFlags(Qt::Window);
     setAttribute(Qt::WA_DeleteOnClose);
     setAttribute(Qt::WA_QuitOnClose, false);
-    m_requestReply = 0;
+    m_requestReply = nullptr;
     //buttons
     m_ui->addPushButton->setIcon(QIcon::fromTheme("list-add"));
     m_ui->updatePushButton->setIcon(QIcon::fromTheme("view-refresh"));
@@ -153,13 +153,13 @@ void StreamWindow::showText(QNetworkReply *reply)
     {
         m_ui->statusLabel->setText(tr("Error"));
         QMessageBox::warning (this, tr("Error"), reply->errorString());
-        m_requestReply = 0;
+        m_requestReply = nullptr;
         reply->deleteLater();
         return;
     }
     if(m_requestReply == reply)
     {
-        m_requestReply = 0;
+        m_requestReply = nullptr;
         readXml(reply, m_iceCastModel);
     }
     reply->deleteLater();

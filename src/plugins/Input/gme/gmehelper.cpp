@@ -25,7 +25,7 @@
 
 GmeHelper::GmeHelper()
 {
-     m_emu = 0;
+     m_emu = nullptr;
 
      QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
      m_fade_length = settings.value("GME/fadeout_length", 7000).toInt();
@@ -37,41 +37,41 @@ GmeHelper::~GmeHelper()
 {
     if(m_emu)
         gme_delete(m_emu);
-    m_emu = 0;
+    m_emu = nullptr;
 }
 
 Music_Emu *GmeHelper::load(const QString &url, int sample_rate)
 {
     if(m_emu)
         gme_delete(m_emu);
-    m_emu = 0;
+    m_emu = nullptr;
     QString path = url;
     if(url.contains("://"))
     {
         path.remove("gme://");
         path.remove(QRegExp("#\\d+$"));
     }
-    const char *err = 0;
+    const char *err = nullptr;
     gme_type_t file_type;
     if((err = gme_identify_file(qPrintable(path),&file_type)))
     {
         qWarning("GmeHelper: %s", err);
-        return 0;
+        return nullptr;
     }
     if(!file_type)
     {
         qWarning("DecoderGme: unsupported music type");
-        return 0;
+        return nullptr;
     }
     if(!(m_emu = gme_new_emu(file_type, sample_rate)))
     {
         qWarning("GmeHelper: out of memory");
-        return 0;
+        return nullptr;
     }
     if((err = gme_load_file(m_emu, qPrintable(path))))
     {
         qWarning("GmeHelper: %s", err);
-        return 0;
+        return nullptr;
     }
     QString m3u_path = path.left(path.lastIndexOf("."));
     m3u_path.append(".m3u");

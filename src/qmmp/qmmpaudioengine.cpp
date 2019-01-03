@@ -39,17 +39,17 @@
 #define TRANSPORT_TIMEOUT 5000 //ms
 
 QmmpAudioEngine::QmmpAudioEngine(QObject *parent)
-        : AbstractEngine(parent), m_factory(0), m_output(0)
+        : AbstractEngine(parent), m_factory(nullptr), m_output(nullptr)
 {
-    m_output_buf = 0;
+    m_output_buf = nullptr;
     m_output_size = 0;
     m_bks = 0;
     m_sample_size = 0;
-    m_decoder = 0;
-    m_output = 0;
+    m_decoder = nullptr;
+    m_output = nullptr;
     m_muted = false;
-    m_replayGain = 0;
-    m_dithering = 0;
+    m_replayGain = nullptr;
+    m_dithering = nullptr;
     m_converter = new AudioConverter;
 
     m_settings = QmmpSettings::instance();
@@ -66,9 +66,9 @@ QmmpAudioEngine::~QmmpAudioEngine()
     reset();
     if(m_output_buf)
         delete [] m_output_buf;
-    m_output_buf = 0;
+    m_output_buf = nullptr;
     qDeleteAll(m_effects);
-    m_instance = 0;
+    m_instance = nullptr;
     delete m_converter;
 }
 
@@ -89,7 +89,7 @@ void QmmpAudioEngine::clearDecoders()
     {
         m_inputs.take(m_decoder)->deleteLater ();
         delete m_decoder;
-        m_decoder = 0;
+        m_decoder = nullptr;
     }
     while(!m_decoders.isEmpty())
     {
@@ -129,14 +129,14 @@ bool QmmpAudioEngine::enqueue(InputSource *source)
     }
     mutex()->unlock();
 
-    DecoderFactory *factory = 0;
+    DecoderFactory *factory = nullptr;
 
     if(!source->path().contains("://"))
         factory = Decoder::findByFilePath(source->path(), m_settings->determineFileTypeByContent());
     if(!factory)
         factory = Decoder::findByMime(source->contentType());
     if(factory && !factory->properties().noInput && source->ioDevice() && source->path().contains("://"))
-        factory = (factory->canDecode(source->ioDevice()) ? factory : 0);
+        factory = (factory->canDecode(source->ioDevice()) ? factory : nullptr);
     if(!factory && source->ioDevice() && source->path().contains("://")) //ignore content of local files
         factory = Decoder::findByContent(source->ioDevice());
     if(!factory && source->path().contains("://"))
@@ -200,7 +200,7 @@ void QmmpAudioEngine::addEffect(EffectFactory *factory)
 
 void QmmpAudioEngine::removeEffect(EffectFactory *factory)
 {
-    Effect *effect = 0;
+    Effect *effect = nullptr;
     foreach(Effect *e, m_effects)
     {
         if(e->factory() == factory)
@@ -271,14 +271,14 @@ void QmmpAudioEngine::stop()
     if (m_output)
     {
         delete m_output;
-        m_output = 0;
+        m_output = nullptr;
     }
 
     clearDecoders();
     reset();
     while(!m_effects.isEmpty()) //delete effects
         delete m_effects.takeFirst();
-    m_replayGain = 0;
+    m_replayGain = nullptr;
 }
 
 qint64 QmmpAudioEngine::produceSound(unsigned char *data, qint64 size, quint32 brate)
@@ -621,13 +621,13 @@ void QmmpAudioEngine::attachMetaData(Decoder *decoder, DecoderFactory *factory, 
 
 OutputWriter *QmmpAudioEngine::createOutput()
 {
-    OutputWriter *output = new OutputWriter(0);
+    OutputWriter *output = new OutputWriter(nullptr);
     output->setMuted(m_muted);
     if (!output->initialize(m_ap.sampleRate(), m_ap.channelMap()))
     {
         delete output;
         StateHandler::instance()->dispatch(Qmmp::FatalError);
-        return 0;
+        return nullptr;
     }
     return output;
 }
@@ -654,8 +654,8 @@ void QmmpAudioEngine::prepareEffects(Decoder *d)
             m_blockedEffects.removeAll(e);
         }
     }
-    m_replayGain = 0;
-    m_dithering = 0;
+    m_replayGain = nullptr;
+    m_dithering = nullptr;
     QList <Effect *> tmp_effects = m_effects;
     m_effects.clear();
 
@@ -686,7 +686,7 @@ void QmmpAudioEngine::prepareEffects(Decoder *d)
 
     foreach(EffectFactory *factory, Effect::enabledFactories())
     {
-        Effect *effect = 0;
+        Effect *effect = nullptr;
         foreach(Effect *e, tmp_effects) //find effect
         {
             if(e->factory() == factory)
@@ -699,7 +699,7 @@ void QmmpAudioEngine::prepareEffects(Decoder *d)
             m_blockedEffects.removeAll(effect);
             tmp_effects.removeAll(effect);
             delete effect;
-            effect = 0;
+            effect = nullptr;
         }
         if(!effect)
         {
@@ -719,7 +719,7 @@ void QmmpAudioEngine::prepareEffects(Decoder *d)
 }
 
 //static members
-QmmpAudioEngine *QmmpAudioEngine::m_instance = 0;
+QmmpAudioEngine *QmmpAudioEngine::m_instance = nullptr;
 
 QmmpAudioEngine *QmmpAudioEngine::instance()
 {

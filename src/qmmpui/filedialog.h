@@ -74,7 +74,7 @@ public:
      * @param caption Dialog title.
      * @param dir Default directory.
      */
-    static QString getExistingDirectory(QWidget *parent = 0,
+    static QString getExistingDirectory(QWidget *parent = nullptr,
                                         const QString &caption = QString(),
                                         const QString &dir = QString());
     /*!
@@ -87,11 +87,11 @@ public:
      * (example: "Audio (*.mp3 *.ogg);;Text files (*.txt);;XML files (*.xml)").
      * @param selectedFilter Default selected filter
      */
-    static QString getOpenFileName(QWidget *parent = 0,
+    static QString getOpenFileName(QWidget *parent = nullptr,
                                    const QString &caption = QString(),
                                    const QString &dir = QString(),
                                    const QString &filter = QString(),
-                                   QString *selectedFilter = 0);
+                                   QString *selectedFilter = nullptr);
     /*!
      * This is a static function that will open modal file dialog and
      * return an existing file selected by the user.
@@ -102,11 +102,11 @@ public:
      * (example: "Audio (*.mp3 *.ogg);;Text files (*.txt);;XML files (*.xml)").
      * @param selectedFilter Default selected filter.
      */
-    static QStringList getOpenFileNames(QWidget *parent = 0,
+    static QStringList getOpenFileNames(QWidget *parent = nullptr,
                                         const QString &caption = QString(),
                                         const QString &dir = QString(),
                                         const QString &filter = QString(),
-                                        QString *selectedFilter = 0);
+                                        QString *selectedFilter = nullptr);
     /*!
      * This is a static function that will open modal file dialog and
      * return a file name selected by the user. The file does not have to exist.
@@ -117,11 +117,11 @@ public:
      * (example: "Audio (*.mp3 *.ogg);;Text files (*.txt);;XML files (*.xml)").
      * @param selectedFilter Default selected filter.
      */
-    static QString getSaveFileName (QWidget *parent = 0,
+    static QString getSaveFileName (QWidget *parent = nullptr,
                                     const QString &caption = QString(),
                                     const QString &dir = QString(),
                                     const QString &filter = QString(),
-                                    QString *selectedFilter = 0);
+                                    QString *selectedFilter = nullptr);
     /*!
      * Opens nonmodal file dialog. Selected file dialog should support nonmodal mode.
      * Otherwise this function creates modal dialog.
@@ -138,11 +138,11 @@ public:
      *                 m_playListModel, SLOT(addFileList(QStringList)),
      *                 tr("Choose a directory"));
      */
-    static void popup(QWidget *parent = 0,
+    static void popup(QWidget *parent = nullptr,
                       Mode mode = AddFiles,
-                      QString *dir = 0,
-                      QObject *receiver = 0,
-                      const char *member = 0,
+                      QString *dir = nullptr,
+                      QObject *receiver = nullptr,
+                      const char *member = nullptr,
                       const QString &caption = QString(),
                       const QString &filters = QString());
 
@@ -186,7 +186,7 @@ protected:
     */
     virtual QStringList exec(QWidget *parent, const QString &dir, Mode mode,
                              const QString &caption, const QString &filter = QString(),
-                             QString *selectedFilter = 0) = 0;
+                             QString *selectedFilter = nullptr) = 0;
 
 private slots:
     void updateLastDir(const QStringList&);

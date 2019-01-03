@@ -266,13 +266,13 @@ DecoderFLAC::DecoderFLAC(const QString &path, QIODevice *i)
 {
     m_path = path;
     m_data = new flac_data;
-    m_data->decoder = NULL;
+    m_data->decoder = nullptr;
     m_data->input = i;
-    m_parser = 0;
+    m_parser = nullptr;
     length_in_bytes = 0;
     m_totalBytes = 0;
     m_sz = 0;
-    m_buf = 0;
+    m_buf = nullptr;
     m_offset = 0;
     m_track = 0;
 }
@@ -286,11 +286,11 @@ DecoderFLAC::~DecoderFLAC()
         if (m_data->decoder)
             FLAC__stream_decoder_delete(m_data->decoder);
         delete m_data;
-        m_data = 0;
+        m_data = nullptr;
     }
     if(m_buf)
         delete[] m_buf;
-    m_buf = 0;
+    m_buf = nullptr;
 }
 
 bool DecoderFLAC::initialize()
@@ -506,7 +506,7 @@ qint64 DecoderFLAC::read(unsigned char *buf, qint64 size)
             if(size >= m_buf_size)
             {
                 delete[] m_buf;
-                m_buf = 0;
+                m_buf = nullptr;
                 m_buf_size = 0;
             }
             else
@@ -547,11 +547,11 @@ void DecoderFLAC::deinit()
     {
         m_data->input->close();
         delete m_data->input;
-        m_data->input = 0;
+        m_data->input = nullptr;
     };
     if(m_parser)
         delete m_parser;
-    m_parser = 0;
+    m_parser = nullptr;
 }
 
 const QString DecoderFLAC::nextURL() const

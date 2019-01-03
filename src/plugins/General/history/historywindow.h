@@ -35,7 +35,7 @@ class HistoryWindow : public QWidget
 {
     Q_OBJECT
 public:
-    explicit HistoryWindow(QSqlDatabase db, QWidget *parent = 0);
+    explicit HistoryWindow(QSqlDatabase db, QWidget *parent = nullptr);
     ~HistoryWindow();
 
 private slots:

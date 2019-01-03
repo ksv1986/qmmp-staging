@@ -33,7 +33,7 @@ class ConverterHelper : public QObject
 {
 Q_OBJECT
 public:
-    ConverterHelper(QObject *parent = 0);
+    ConverterHelper(QObject *parent = nullptr);
 
     ~ConverterHelper();
 

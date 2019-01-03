@@ -35,7 +35,7 @@ class TwoPanelFileDialogImpl : public QDialog
 {
     Q_OBJECT
 public:
-    TwoPanelFileDialogImpl(QWidget *parent = 0);
+    TwoPanelFileDialogImpl(QWidget *parent = nullptr);
 
     ~TwoPanelFileDialogImpl();
 
@@ -73,7 +73,7 @@ class PathCompleter : public QCompleter
 {
     Q_OBJECT
 public:
-    PathCompleter(QAbstractItemModel *model, QAbstractItemView *itemView, QObject *parent = 0) : QCompleter(model, parent)
+    PathCompleter(QAbstractItemModel *model, QAbstractItemView *itemView, QObject *parent = nullptr) : QCompleter(model, parent)
     {
         m_itemView = itemView;
     }

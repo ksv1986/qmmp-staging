@@ -82,9 +82,9 @@ void ScrobblerResponse::parse(QIODevice *device)
 Scrobbler::Scrobbler(const QString &scrobblerUrl, const QString &name, QObject *parent)
     : QObject(parent)
 {
-    m_notificationReply = 0;
+    m_notificationReply = nullptr;
     m_submitedSongs = 0;
-    m_submitReply = 0;
+    m_submitReply = nullptr;
     m_previousState = Qmmp::Stopped;
     m_elapsed = 0;
     m_scrobblerUrl = scrobblerUrl;
@@ -211,7 +211,7 @@ void Scrobbler::processResponse(QNetworkReply *reply)
 
     if (reply == m_submitReply)
     {
-        m_submitReply = 0;
+        m_submitReply = nullptr;
         if (response.status == "ok")
         {
             qDebug("Scrobbler[%s]: submited %d song(s)", qPrintable(m_name), m_submitedSongs);
@@ -248,7 +248,7 @@ void Scrobbler::processResponse(QNetworkReply *reply)
     }
     else if (reply == m_notificationReply)
     {
-        m_notificationReply = 0;
+        m_notificationReply = nullptr;
         if(response.status == "ok")
         {
             qDebug("Scrobbler[%s]: Now-Playing notification done", qPrintable(m_name));
@@ -386,8 +386,8 @@ void Scrobbler::sendNotification(const SongInfo &info)
 ScrobblerAuth::ScrobblerAuth(const QString &scrobblerUrl, const QString &authUrl,
                              const QString &name, QObject *parent) : QObject(parent)
 {
-    m_getTokenReply = 0;
-    m_getSessionReply = 0;
+    m_getTokenReply = nullptr;
+    m_getSessionReply = nullptr;
     m_scrobblerUrl = scrobblerUrl;
     m_authUrl = authUrl;
     m_name = name;
@@ -522,7 +522,7 @@ void ScrobblerAuth::processResponse(QNetworkReply *reply)
 
     if (reply == m_getTokenReply)
     {
-        m_getTokenReply = 0;
+        m_getTokenReply = nullptr;
         if(response.status == "ok")
         {
             m_token = response.token;
@@ -548,7 +548,7 @@ void ScrobblerAuth::processResponse(QNetworkReply *reply)
     }
     else if(reply == m_getSessionReply)
     {
-        m_getSessionReply = 0;
+        m_getSessionReply = nullptr;
         m_session.clear();
         if(response.status == "ok")
         {
@@ -586,7 +586,7 @@ void ScrobblerAuth::processResponse(QNetworkReply *reply)
     }
     else if(reply == m_checkSessionReply)
     {
-        m_checkSessionReply = 0;
+        m_checkSessionReply = nullptr;
         if(response.status == "ok")
         {
             qDebug("ScrobblerAuth[%s]: session ok", qPrintable(m_name));

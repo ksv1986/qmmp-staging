@@ -33,7 +33,7 @@ class EqSlider : public PixmapWidget
 {
 Q_OBJECT
 public:
-    EqSlider(QWidget *parent = 0);
+    EqSlider(QWidget *parent = nullptr);
 
     ~EqSlider();
 

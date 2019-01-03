@@ -28,7 +28,7 @@
 #include <qmmp/qmmp.h>
 #include "actionmanager.h"
 
-ActionManager *ActionManager::m_instance = 0;
+ActionManager *ActionManager::m_instance = nullptr;
 
 ActionManager::ActionManager(QObject *parent) :
     QObject(parent)
@@ -59,10 +59,10 @@ ActionManager::ActionManager(QObject *parent) :
     //view
     m_actions[WM_ALLWAYS_ON_TOP] = createAction2(tr("Always on Top"), "always_on_top", "");
     m_actions[WM_STICKY] = createAction2(tr("Put on All Workspaces"), "sticky", "");
-    m_actions[UI_ANALYZER] = 0; //external action
-    m_actions[UI_FILEBROWSER] = 0; //external action
-    m_actions[UI_COVER] = 0; //external action
-    m_actions[UI_PLAYLISTBROWSER] = 0; //external action
+    m_actions[UI_ANALYZER] = nullptr; //external action
+    m_actions[UI_FILEBROWSER] = nullptr; //external action
+    m_actions[UI_COVER] = nullptr; //external action
+    m_actions[UI_PLAYLISTBROWSER] = nullptr; //external action
     m_actions[UI_SHOW_TABS] = createAction2(tr("Show Tabs"), "show_tabs", "");
     m_actions[UI_SHOW_TITLEBARS] = createAction2(tr("Show Title Bars"), "show_titlebars", "");
     m_actions[UI_BLOCK_TOOLBARS] = createAction2(tr("Block Toolbars"), "block_toolbars", "");
@@ -112,14 +112,14 @@ ActionManager::ActionManager(QObject *parent) :
     m_settings->endGroup();
     readStates();
     delete m_settings;
-    m_settings = 0;
+    m_settings = nullptr;
     m_actions[ABOUT]->setIcon(qApp->windowIcon());
 }
 
 ActionManager::~ActionManager()
 {
     saveStates();
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 QAction *ActionManager::action(int type)

@@ -36,7 +36,7 @@ class KdeNotify : public QObject
 {
     Q_OBJECT
 public:
-    KdeNotify(QObject *parent = 0);
+    KdeNotify(QObject *parent = nullptr);
     ~KdeNotify();
 
 private:

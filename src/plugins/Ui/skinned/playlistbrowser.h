@@ -36,7 +36,7 @@ class PlayListBrowser : public QDialog
 {
 Q_OBJECT
 public:
-    PlayListBrowser(PlayListManager *manager, QWidget *parent = 0);
+    PlayListBrowser(PlayListManager *manager, QWidget *parent = nullptr);
     ~PlayListBrowser();
 
 private slots:

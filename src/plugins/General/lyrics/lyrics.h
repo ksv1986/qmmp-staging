@@ -37,7 +37,7 @@ class Lyrics : public QObject
 {
 Q_OBJECT
 public:
-    Lyrics(QObject *parent = 0);
+    Lyrics(QObject *parent = nullptr);
 
     ~Lyrics();
 

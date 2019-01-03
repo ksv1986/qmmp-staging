@@ -94,12 +94,12 @@ QHash<QString, QString> InputSource::takeStreamInfo()
 
 // static methods
 QStringList InputSource::m_disabledNames;
-QList<QmmpPluginCache*> *InputSource::m_cache = 0;
+QList<QmmpPluginCache*> *InputSource::m_cache = nullptr;
 
 InputSource *InputSource::create(const QString &url, QObject *parent)
 {
     loadPlugins();
-    InputSourceFactory *factory = 0;
+    InputSourceFactory *factory = nullptr;
     if(!url.contains("://")) //local file path doesn't contain "://"
     {
         qDebug("InputSource: using file transport");
@@ -115,7 +115,7 @@ InputSource *InputSource::create(const QString &url, QObject *parent)
         if(factory && factory->properties().protocols.contains(url.section("://", 0, 0)))
             break;
         else
-            factory = 0;
+            factory = nullptr;
     }
     if(factory)
     {

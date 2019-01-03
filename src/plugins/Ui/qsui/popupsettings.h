@@ -30,7 +30,7 @@ class PopupSettings : public QDialog
 {
 Q_OBJECT
 public:
-    PopupSettings(QWidget *parent = 0);
+    PopupSettings(QWidget *parent = nullptr);
     ~PopupSettings();
 
 

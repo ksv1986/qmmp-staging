@@ -51,7 +51,7 @@ class MainDisplay : public PixmapWidget
 {
     Q_OBJECT
 public:
-    MainDisplay(MainWindow *parent = 0);
+    MainDisplay(MainWindow *parent = nullptr);
 
     ~MainDisplay();
 

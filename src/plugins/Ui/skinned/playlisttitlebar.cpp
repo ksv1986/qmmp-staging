@@ -38,8 +38,8 @@ PlayListTitleBar::PlayListTitleBar(QWidget *parent)
     m_active = false;
     m_resize = false;
     m_formatter.setPattern(TITLE_FORMAT);
-    m_shade2 = 0;
-    m_model = 0;
+    m_shade2 = nullptr;
+    m_model = nullptr;
     m_shaded = false;
     m_align = false;
     m_skin = Skin::instance();
@@ -221,7 +221,7 @@ void PlayListTitleBar::setActive(bool a)
 void PlayListTitleBar::setModel(PlayListModel *selected, PlayListModel *previous)
 {
     if(previous)
-        disconnect(previous, 0, this, 0); //disconnect previous model
+        disconnect(previous, nullptr, this, nullptr); //disconnect previous model
     m_model = selected;
     connect (m_model, SIGNAL(listChanged(int)), SLOT(showCurrent()));
     showCurrent();
@@ -262,7 +262,7 @@ void PlayListTitleBar::shade()
     else
     {
         m_shade2->deleteLater();
-        m_shade2 = 0;
+        m_shade2 = nullptr;
         m_shade->show();
     }
     m_pl->setMinimalMode(m_shaded);

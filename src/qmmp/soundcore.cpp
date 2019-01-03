@@ -35,7 +35,7 @@
 #include "qmmpsettings.h"
 #include "soundcore.h"
 
-SoundCore *SoundCore::m_instance = 0;
+SoundCore *SoundCore::m_instance = nullptr;
 
 SoundCore::SoundCore(QObject *parent)
         : QObject(parent)
@@ -44,7 +44,7 @@ SoundCore::SoundCore(QObject *parent)
         qFatal("SoundCore: only one instance is allowed");
     qRegisterMetaType<Qmmp::State>("Qmmp::State");
     m_instance = this;
-    m_engine = 0;
+    m_engine = nullptr;
     m_nextState = NO_ENGINE;
     m_muted = false;
     m_handler = new StateHandler(this);
@@ -64,7 +64,7 @@ SoundCore::~SoundCore()
 {
     stop();
     MetaDataManager::destroy();
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 bool SoundCore::play(const QString &source, bool queue, qint64 offset)
@@ -335,7 +335,7 @@ void SoundCore::startNextEngine()
         if(m_engine)
         {
             m_engine->deleteLater();
-            m_engine = 0;
+            m_engine = nullptr;
         }
         if(!m_sources.isEmpty())
         {

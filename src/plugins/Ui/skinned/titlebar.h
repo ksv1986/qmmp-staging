@@ -42,7 +42,7 @@ class TitleBar : public PixmapWidget
 {
 Q_OBJECT
 public:
-    TitleBar(TimeIndicatorModel *model, QWidget *parent = 0);
+    TitleBar(TimeIndicatorModel *model, QWidget *parent = nullptr);
 
     ~TitleBar();
 

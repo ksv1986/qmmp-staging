@@ -270,7 +270,7 @@ RGScanner *RGScanDialog::findScannerByUrl(const QString &url)
         if(scanner->url() == url)
             return scanner;
     }
-    return 0;
+    return nullptr;
 }
 
 QString RGScanDialog::getAlbumName(const QString &url)

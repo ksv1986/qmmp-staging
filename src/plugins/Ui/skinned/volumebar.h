@@ -32,7 +32,7 @@ class VolumeBar : public PixmapWidget
 {
 Q_OBJECT
 public:
-    VolumeBar(QWidget *parent = 0);
+    VolumeBar(QWidget *parent = nullptr);
 
     ~VolumeBar();
 

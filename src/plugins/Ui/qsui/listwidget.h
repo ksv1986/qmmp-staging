@@ -47,7 +47,7 @@ class ListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    ListWidget(PlayListModel *model, QWidget *parent = 0);
+    ListWidget(PlayListModel *model, QWidget *parent = nullptr);
 
     ~ListWidget();
 

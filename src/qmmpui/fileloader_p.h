@@ -49,7 +49,7 @@ public:
      * Constructs FileLoader object.
      * @param parent QObject parent
      */
-    FileLoader(QObject *parent = 0);
+    FileLoader(QObject *parent = nullptr);
     /*!
      * Object destructor.
      */
@@ -83,10 +83,10 @@ signals:
 
 private:
     void run();
-    QList<PlayListTrack*> processFile(const QString &path, QStringList *ignoredPaths = 0);
+    QList<PlayListTrack*> processFile(const QString &path, QStringList *ignoredPaths = nullptr);
     void insertPlayList(const QString &fmt, const QByteArray &contents, PlayListItem *before);
     void insertPlayList(const QString &path, PlayListItem *before);
-    void addDirectory(const QString &s, PlayListItem *before = 0);
+    void addDirectory(const QString &s, PlayListItem *before = nullptr);
     bool checkRestrictFilters(const QFileInfo &info);
     bool checkExcludeFilters(const QFileInfo &info);
     void removeIgnoredTracks(QList<PlayListTrack *> *tracks, const QStringList &ignoredPaths);

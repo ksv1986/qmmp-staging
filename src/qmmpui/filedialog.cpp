@@ -30,9 +30,9 @@
 #include "qtfiledialog_p.h"
 
 //static functions
-FileDialog* FileDialog::m_instance = 0;
-QList<QmmpUiPluginCache*> *FileDialog::m_cache = 0;
-FileDialogFactory *FileDialog::m_currentFactory = 0;
+FileDialog* FileDialog::m_instance = nullptr;
+QList<QmmpUiPluginCache*> *FileDialog::m_cache = nullptr;
+FileDialogFactory *FileDialog::m_currentFactory = nullptr;
 
 void FileDialog::loadPlugins()
 {
@@ -163,7 +163,7 @@ void FileDialog::popup(QWidget *parent,
 FileDialog* FileDialog::instance()
 {
     loadPlugins();
-    FileDialogFactory *selected = 0;
+    FileDialogFactory *selected = nullptr;
 
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     QString name = settings.value("FileDialog", "qt_dialog").toString();
@@ -185,7 +185,7 @@ FileDialog* FileDialog::instance()
     if(m_instance)
     {
         delete m_instance;
-        m_instance = 0;
+        m_instance = nullptr;
     }
 
     m_currentFactory = selected;
@@ -196,7 +196,7 @@ FileDialog* FileDialog::instance()
 //base implementation
 FileDialog::FileDialog() : QObject(), m_initialized(false)
 {
-    m_lastDir = 0;
+    m_lastDir = nullptr;
 }
 
 FileDialog::~FileDialog() {}

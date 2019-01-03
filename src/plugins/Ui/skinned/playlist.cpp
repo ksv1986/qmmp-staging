@@ -60,8 +60,8 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
     m_skin = Skin::instance();
     m_ratio = m_skin->ratio();
     m_shaded = false;
-    m_pl_browser = 0;
-    m_pl_selector = 0;
+    m_pl_browser = nullptr;
+    m_pl_selector = nullptr;
 
 #ifdef QMMP_WS_X11
     QString wm_name = WindowSystem::netWindowManagerName();
@@ -455,7 +455,7 @@ void PlayList::readSettings()
             m_pl_selector->deleteLater();
             m_listWidget->menu()->removeAction(m_copySelectedMenu->menuAction());
         }
-        m_pl_selector = 0;
+        m_pl_selector = nullptr;
     }
 
     if (m_update)
@@ -621,7 +621,7 @@ void PlayList::generateCopySelectedMenu()
 
 void PlayList::copySelectedMenuActionTriggered(QAction *action)
 {
-    PlayListModel *targetPlayList = 0;
+    PlayListModel *targetPlayList = nullptr;
     QString actionText=action->text();
     if(action == m_copySelectedMenu->actions().at(0))//actionText == tr ("&New PlayList"))
     {

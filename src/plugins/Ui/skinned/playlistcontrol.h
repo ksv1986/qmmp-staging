@@ -34,7 +34,7 @@ class PlaylistControl : public PixmapWidget
 {
 Q_OBJECT
 public:
-    PlaylistControl(QWidget* parent = 0);
+    PlaylistControl(QWidget* parent = nullptr);
 
 
 signals:

@@ -42,7 +42,7 @@ QObject *LyricsFactory::create(QObject *parent)
 QDialog *LyricsFactory::createConfigDialog(QWidget *parent)
 {
     Q_UNUSED(parent);
-    return 0;
+    return nullptr;
 }
 
 void LyricsFactory::showAbout(QWidget *parent)

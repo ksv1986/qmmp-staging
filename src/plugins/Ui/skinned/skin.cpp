@@ -37,7 +37,7 @@
 #include "skin.h"
 #include "cursorimage.h"
 
-Skin *Skin::m_instance = 0;
+Skin *Skin::m_instance = nullptr;
 
 Skin *Skin::instance()
 {
@@ -858,7 +858,7 @@ QPixmap * Skin::getDummyPixmap(const QString &name, const QString &fallback)
     }
 
     qFatal("Skin: default skin is corrupted");
-    return 0;
+    return nullptr;
 }
 
 QPixmap Skin::scalePixmap(const QPixmap &pix, int ratio)

@@ -33,7 +33,7 @@ class HotkeyDialog : public QDialog
 {
     Q_OBJECT
 public:
-    HotkeyDialog(quint32 key, quint32 mod, QWidget *parent = 0);
+    HotkeyDialog(quint32 key, quint32 mod, QWidget *parent = nullptr);
 
     ~HotkeyDialog();
 

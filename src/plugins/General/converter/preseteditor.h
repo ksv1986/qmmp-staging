@@ -36,7 +36,7 @@ class PresetEditor : public QDialog
     Q_OBJECT
 
 public:
-    explicit PresetEditor(const QVariantMap &data, QWidget *parent = 0);
+    explicit PresetEditor(const QVariantMap &data, QWidget *parent = nullptr);
     virtual ~PresetEditor();
 
     const QVariantMap data() const;

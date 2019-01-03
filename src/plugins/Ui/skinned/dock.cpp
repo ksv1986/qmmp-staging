@@ -25,7 +25,7 @@
 #include <QApplication>
 #include "dock.h"
 
-Dock *Dock::m_instance = 0;
+Dock *Dock::m_instance = nullptr;
 
 Dock *Dock::instance()
 {
@@ -38,12 +38,12 @@ Dock::Dock (QObject *parent)
         : QObject (parent)
 {
     m_instance = this;
-    m_mainWidget = 0;
+    m_mainWidget = nullptr;
 }
 
 Dock::~Dock()
 {
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 void Dock::setMainWidget (QWidget *widget)

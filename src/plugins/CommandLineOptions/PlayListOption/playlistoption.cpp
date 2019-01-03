@@ -64,7 +64,7 @@ QString PlayListOption::executeCommand(int id, const QStringList &args)
     QString out;
     PlayListManager *pl_manager = PlayListManager::instance();
     MediaPlayer *player = MediaPlayer::instance();
-    QmmpUiSettings *ui_settings = (id == PL_HELP) ? 0 : QmmpUiSettings::instance();
+    QmmpUiSettings *ui_settings = (id == PL_HELP) ? nullptr : QmmpUiSettings::instance();
 
     switch (id)
     {

@@ -20,7 +20,7 @@
 
 #include "metadatahelper_p.h"
 
-MetaDataHelper *MetaDataHelper::m_instance = 0;
+MetaDataHelper *MetaDataHelper::m_instance = nullptr;
 
 MetaDataHelper::MetaDataHelper()
 {
@@ -31,7 +31,7 @@ MetaDataHelper::MetaDataHelper()
 
 MetaDataHelper::~MetaDataHelper()
 {
-    m_instance = 0;
+    m_instance = nullptr;
     delete m_group_formatter;
     qDeleteAll(m_title_formatters);
     m_title_formatters.clear();

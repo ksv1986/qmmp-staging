@@ -40,7 +40,7 @@ public:
      * Object constructor,
      * @param parent Parent object.
      */
-    MediaPlayer(QObject *parent = 0);
+    MediaPlayer(QObject *parent = nullptr);
     /*!
      * Destructor
      */

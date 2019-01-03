@@ -35,7 +35,7 @@ class ProjectMWidget : public QOpenGLWidget
 {
     Q_OBJECT
 public:
-    ProjectMWidget(QListWidget *listWidget, QWidget *parent = 0);
+    ProjectMWidget(QListWidget *listWidget, QWidget *parent = nullptr);
 
     ~ProjectMWidget();
 

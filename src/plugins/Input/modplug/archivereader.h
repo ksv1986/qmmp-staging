@@ -32,7 +32,7 @@ class ArchiveReader : public QObject
 {
 Q_OBJECT
 public:
-    ArchiveReader(QObject *parent = 0);
+    ArchiveReader(QObject *parent = nullptr);
 
     ~ArchiveReader();
 

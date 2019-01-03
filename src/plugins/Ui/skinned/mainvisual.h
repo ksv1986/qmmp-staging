@@ -45,7 +45,7 @@ class MainVisual : public Visual
     Q_OBJECT
 
 public:
-    MainVisual(QWidget *parent = 0);
+    MainVisual(QWidget *parent = nullptr);
     virtual ~MainVisual();
 
     static MainVisual *instance();

@@ -778,7 +778,7 @@ void MainWindow::readSettings()
     else
     {
         m_addListButton->setVisible(false);
-        m_tabWidget->setCornerWidget(0, Qt::TopLeftCorner);
+        m_tabWidget->setCornerWidget(nullptr, Qt::TopLeftCorner);
     }
     if(settings.value("pl_show_tab_list_menu", false).toBool())
     {
@@ -789,7 +789,7 @@ void MainWindow::readSettings()
     else
     {
         m_tabListMenuButton->setVisible(false);
-        m_tabWidget->setCornerWidget(0, Qt::TopRightCorner);
+        m_tabWidget->setCornerWidget(nullptr, Qt::TopRightCorner);
     }
 
     settings.endGroup();
@@ -878,25 +878,25 @@ void MainWindow::setTitleBarsVisible(bool visible)
 {
     if(visible)
     {
-        QWidget *widget = 0;
+        QWidget *widget = nullptr;
         if((widget = m_ui.analyzerDockWidget->titleBarWidget()))
         {
-            m_ui.analyzerDockWidget->setTitleBarWidget(0);
+            m_ui.analyzerDockWidget->setTitleBarWidget(nullptr);
             delete widget;
         }
         if((widget = m_ui.fileSystemDockWidget->titleBarWidget()))
         {
-            m_ui.fileSystemDockWidget->setTitleBarWidget(0);
+            m_ui.fileSystemDockWidget->setTitleBarWidget(nullptr);
             delete widget;
         }
         if((widget = m_ui.coverDockWidget->titleBarWidget()))
         {
-            m_ui.coverDockWidget->setTitleBarWidget(0);
+            m_ui.coverDockWidget->setTitleBarWidget(nullptr);
             delete widget;
         }
         if((widget = m_ui.playlistsDockWidget->titleBarWidget()))
         {
-            m_ui.playlistsDockWidget->setTitleBarWidget(0);
+            m_ui.playlistsDockWidget->setTitleBarWidget(nullptr);
             delete widget;
         }
     }

@@ -38,7 +38,7 @@ class ActionManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit ActionManager(QObject *parent = 0);
+    explicit ActionManager(QObject *parent = nullptr);
     ~ActionManager();
 
     enum Type

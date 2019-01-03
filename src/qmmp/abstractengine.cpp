@@ -44,7 +44,7 @@ QMutex *AbstractEngine::mutex()
 
 // static methods
 QStringList AbstractEngine::m_disabledNames;
-QList<QmmpPluginCache*> *AbstractEngine::m_cache = 0;
+QList<QmmpPluginCache*> *AbstractEngine::m_cache = nullptr;
 
 void AbstractEngine::loadPlugins()
 {
@@ -72,7 +72,7 @@ AbstractEngine *AbstractEngine::create(InputSource *s, QObject *parent)
     if(!engine->enqueue(s))
     {
         engine->deleteLater();
-        engine = 0;
+        engine = nullptr;
     }
     else
         return engine;
@@ -91,7 +91,7 @@ AbstractEngine *AbstractEngine::create(InputSource *s, QObject *parent)
         if(!engine->enqueue(s))
         {
             engine->deleteLater();
-            engine = 0;
+            engine = nullptr;
         }
         else
             break;
@@ -136,7 +136,7 @@ EngineFactory *AbstractEngine::findByFilePath(const QString& source)
         if (fact && fact->supports(source))
             return fact;
     }
-    return 0;
+    return nullptr;
 }
 
 void AbstractEngine::setEnabled(EngineFactory *factory, bool enable)

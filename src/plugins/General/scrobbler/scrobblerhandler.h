@@ -33,7 +33,7 @@ class ScrobblerHandler : public QObject
 Q_OBJECT
 
 public:
-    ScrobblerHandler(QObject *parent = 0);
+    ScrobblerHandler(QObject *parent = nullptr);
     ~ScrobblerHandler();
 };
 

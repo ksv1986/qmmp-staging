@@ -35,7 +35,7 @@ class QSUIQuickSearch : public QWidget
 {
     Q_OBJECT
 public:
-    explicit QSUIQuickSearch(ListWidget *listWidget, QWidget *parent = 0);
+    explicit QSUIQuickSearch(ListWidget *listWidget, QWidget *parent = nullptr);
 
 private:
     QLineEdit *m_lineEdit;

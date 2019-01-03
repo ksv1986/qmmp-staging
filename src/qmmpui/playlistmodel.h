@@ -109,7 +109,7 @@ public:
      * @param name Playlist name.
      * @param parent QObject parent
      */
-    PlayListModel(const QString &name, QObject *parent = 0);
+    PlayListModel(const QString &name, QObject *parent = nullptr);
     /*!
      * Object destructor.
      */
@@ -480,12 +480,12 @@ public slots:
      * Shows details for the first selected item.
      * @param parent parent Widget.
      */
-    void showDetails(QWidget *parent = 0);
+    void showDetails(QWidget *parent = nullptr);
     /*!
      * Shows the details for the current song (if any).
      * @param parent parent widget.
      */
-    void showDetailsForCurrent(QWidget *parent = 0);
+    void showDetailsForCurrent(QWidget *parent = nullptr);
     /*!
      * Ensures that the current track is visible.
      */

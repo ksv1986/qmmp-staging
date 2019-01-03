@@ -36,8 +36,8 @@
 Converter::Converter(QObject *parent) : QObject(parent), QRunnable()
 {
     m_user_stop = false;
-    m_decoder = 0;
-    m_input = 0;
+    m_decoder = nullptr;
+    m_input = nullptr;
     m_row = -1;
 }
 
@@ -47,12 +47,12 @@ Converter::~Converter()
     if(m_decoder)
     {
         delete m_decoder;
-        m_decoder = 0;
+        m_decoder = nullptr;
     }
     if(m_input)
     {
         delete m_input;
-        m_input = 0;
+        m_input = nullptr;
     }
 }
 
@@ -78,7 +78,7 @@ bool Converter::prepare(const QString &url, int row, const QVariantMap &preset)
         }
     }
 
-    DecoderFactory *factory = 0;
+    DecoderFactory *factory = nullptr;
 
     if(!source->path().contains("://"))
         factory = Decoder::findByFilePath(source->path());

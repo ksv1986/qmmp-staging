@@ -48,7 +48,7 @@ class ListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    ListWidget(QWidget *parent = 0);
+    ListWidget(QWidget *parent = nullptr);
 
     ~ListWidget();
 
@@ -70,7 +70,7 @@ public slots:
     void readSettings();
     void updateList(int flags);
     void setViewPosition(int sc);
-    void setModel(PlayListModel *selected, PlayListModel *previous = 0);
+    void setModel(PlayListModel *selected, PlayListModel *previous = nullptr);
 
 signals:
     void doubleClicked();

@@ -32,7 +32,7 @@
 
 Player2Object::Player2Object(QObject *parent) : QDBusAbstractAdaptor(parent)
 {
-    m_prev_track = 0;
+    m_prev_track = nullptr;
     m_previous_pos = 0;
     m_core = SoundCore::instance();
     m_player = MediaPlayer::instance();
@@ -49,7 +49,7 @@ Player2Object::Player2Object(QObject *parent) : QDBusAbstractAdaptor(parent)
     connect(m_ui_settings, SIGNAL(shuffleChanged(bool)), SLOT(emitPropertiesChanged()));
     connect(m_pl_manager, SIGNAL(currentPlayListChanged(PlayListModel*,PlayListModel*)),
             SLOT(setModel(PlayListModel*,PlayListModel*)));
-    setModel(m_pl_manager->currentPlayList(), 0);
+    setModel(m_pl_manager->currentPlayList(), nullptr);
     updateId();
     syncProperties();
 }
@@ -64,7 +64,7 @@ bool Player2Object::canControl() const
 
 bool Player2Object::canGoNext() const
 {
-    return m_pl_manager->currentPlayList()->nextTrack() != 0;
+    return m_pl_manager->currentPlayList()->nextTrack() != nullptr;
 }
 
 bool Player2Object::canGoPrevious() const
@@ -371,7 +371,7 @@ void Player2Object::disconnectPl()
 void Player2Object::setModel(PlayListModel *selected, PlayListModel *previous)
 {
     if(previous)
-        disconnect(previous, 0, this, 0); //disconnect previous model
+        disconnect(previous, nullptr, this, nullptr); //disconnect previous model
     connect(selected, SIGNAL(listChanged(int)), SLOT(emitPropertiesChanged()));
 }
 

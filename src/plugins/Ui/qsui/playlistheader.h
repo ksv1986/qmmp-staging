@@ -40,7 +40,7 @@ class PlayListHeader : public QWidget
 {
     Q_OBJECT
 public:
-    explicit PlayListHeader(QWidget *parent = 0);
+    explicit PlayListHeader(QWidget *parent = nullptr);
     ~PlayListHeader();
 
     void readSettings();

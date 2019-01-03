@@ -35,7 +35,7 @@ class Skin : public QObject
 {
     Q_OBJECT
 public:
-    Skin(QObject *parent = 0);
+    Skin(QObject *parent = nullptr);
 
     ~Skin();
 

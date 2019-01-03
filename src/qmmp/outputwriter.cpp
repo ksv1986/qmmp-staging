@@ -37,7 +37,7 @@ OutputWriter::OutputWriter (QObject* parent) : QThread (parent)
     m_handler = StateHandler::instance();
     m_frequency = 0;
     m_channels = 0;
-    m_output = 0;
+    m_output = nullptr;
     m_format = Qmmp::PCM_UNKNOWM;
     m_totalWritten = 0;
     m_currentMilliseconds = -1;
@@ -51,9 +51,9 @@ OutputWriter::OutputWriter (QObject* parent) : QThread (parent)
     m_useEq = false;
     m_muted = false;
     m_settings = QmmpSettings::instance();
-    m_format_converter = 0;
-    m_channel_converter = 0;
-    m_output_buf = 0;
+    m_format_converter = nullptr;
+    m_channel_converter = nullptr;
+    m_output_buf = nullptr;
     m_output_size = 0;
 }
 
@@ -83,7 +83,7 @@ bool OutputWriter::initialize(quint32 freq, ChannelMap map)
     {
         qWarning("OutputWriter: unable to initialize output");
         delete m_output;
-        m_output = 0;
+        m_output = nullptr;
         return false;
     }
     m_frequency = m_output->sampleRate();
@@ -99,7 +99,7 @@ bool OutputWriter::initialize(quint32 freq, ChannelMap map)
     {
         qWarning("OutputWriter: unable to convert audio");
         delete m_output;
-        m_output = 0;
+        m_output = nullptr;
         return false;
     }
 
@@ -175,12 +175,12 @@ bool OutputWriter::prepareConverters()
     if(m_format_converter)
     {
         delete m_format_converter;
-        m_format_converter = 0;
+        m_format_converter = nullptr;
     }
     if(m_channel_converter)
     {
         delete m_channel_converter;
-        m_channel_converter = 0;
+        m_channel_converter = nullptr;
     }
 
     if(m_channels != m_output->channels())
@@ -250,11 +250,11 @@ void OutputWriter::run()
     m_mutex.unlock ();
 
     bool done = false;
-    Buffer *b = 0;
+    Buffer *b = nullptr;
     quint64 l;
     qint64 m = 0;
     size_t output_at = 0;
-    unsigned char *tmp = 0;
+    unsigned char *tmp = nullptr;
 
     dispatch(Qmmp::Playing);
     dispatch(m_output->audioParameters());
@@ -370,7 +370,7 @@ void OutputWriter::run()
         recycler()->mutex()->lock ();
         recycler()->done();
         recycler()->mutex()->unlock();
-        b = 0;
+        b = nullptr;
         m_mutex.unlock();
     }
     m_mutex.lock();

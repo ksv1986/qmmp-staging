@@ -41,7 +41,7 @@ Output* OutputNullFactory::create()
 
 Volume *OutputNullFactory::createVolume()
 {
-    return 0;
+    return nullptr;
 }
 
 void OutputNullFactory::showSettings(QWidget* parent)

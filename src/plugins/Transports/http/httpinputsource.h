@@ -32,7 +32,7 @@ class HTTPInputSource : public InputSource
 {
 Q_OBJECT
 public:
-    HTTPInputSource(const QString &path, QObject *parent = 0);
+    HTTPInputSource(const QString &path, QObject *parent = nullptr);
 
     QIODevice *ioDevice();
     bool initialize();

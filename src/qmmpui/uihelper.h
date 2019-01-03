@@ -49,7 +49,7 @@ public:
      * Object constructor,
      * @param parent Parent object
      */
-    UiHelper(QObject *parent = 0);
+    UiHelper(QObject *parent = nullptr);
     /*!
      * Destructor
      */
@@ -88,14 +88,14 @@ public:
      * @param title Menu title.
      * @param parent Parent widget
      */
-    QMenu *createMenu(MenuType type, const QString &title = QString(), QWidget *parent = 0);
+    QMenu *createMenu(MenuType type, const QString &title = QString(), QWidget *parent = nullptr);
     /*!
      * Registers existing menu for access from general plugins.
      * @param type Menu type.
      * @param menu Menu pointer.
      * @param before An action, after which the rest are added.
      */
-    void registerMenu(MenuType type, QMenu *menu, QAction *before = 0);
+    void registerMenu(MenuType type, QMenu *menu, QAction *before = nullptr);
     /*!
      * Opens 'Add Files' dialog
      * @param parent Parent widget
@@ -149,7 +149,7 @@ public:
      * Shows about dialog
      * @param parent Parent widget
      */
-    void about(QWidget *parent = 0);
+    void about(QWidget *parent = nullptr);
     /*!
      * Returns a pointer to the object's instance.
      */

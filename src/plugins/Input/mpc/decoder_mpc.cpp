@@ -66,7 +66,7 @@ DecoderMPC::DecoderMPC(QIODevice *i)
     m_len = 0;
     m_bitrate = 0;
     m_totalTime = 0.0;
-    m_data = 0;
+    m_data = nullptr;
 }
 
 DecoderMPC::~DecoderMPC()
@@ -77,7 +77,7 @@ DecoderMPC::~DecoderMPC()
         if(m_data->demuxer)
             mpc_demux_exit(m_data->demuxer);
         delete m_data;
-        m_data = 0;
+        m_data = nullptr;
     }
 }
 

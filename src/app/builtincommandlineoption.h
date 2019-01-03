@@ -38,7 +38,7 @@ class BuiltinCommandLineOption : public QObject
 {
     Q_OBJECT
 public:
-    BuiltinCommandLineOption(QObject *parent = 0);
+    BuiltinCommandLineOption(QObject *parent = nullptr);
 
     ~BuiltinCommandLineOption();
 

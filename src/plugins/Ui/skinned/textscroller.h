@@ -37,7 +37,7 @@ class TextScroller : public QWidget
 {
 Q_OBJECT
 public:
-    TextScroller(QWidget *parent = 0);
+    TextScroller(QWidget *parent = nullptr);
     virtual ~TextScroller();
 
     void setText(const QString &text);

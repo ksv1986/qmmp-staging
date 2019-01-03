@@ -38,7 +38,7 @@ class Converter : public QObject, public QRunnable
 {
     Q_OBJECT
 public:
-    explicit Converter(QObject *parent = 0);
+    explicit Converter(QObject *parent = nullptr);
     virtual ~Converter();
 
     bool prepare(const QString &url, int row, const QVariantMap &preset);

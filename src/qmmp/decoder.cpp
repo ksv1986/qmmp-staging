@@ -115,7 +115,7 @@ const QMap<Qmmp::TrackProperty, QString> &Decoder::properties() const
 
 // static methods
 QStringList Decoder::m_disabledNames;
-QList<QmmpPluginCache*> *Decoder::m_cache = 0;
+QList<QmmpPluginCache*> *Decoder::m_cache = nullptr;
 
 //sort cache items by priority
 static bool _pluginCacheLessComparator(QmmpPluginCache* f1, QmmpPluginCache* f2)
@@ -175,7 +175,7 @@ QStringList Decoder::protocols()
 DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
 {
     loadPlugins();
-    DecoderFactory *fact = 0;
+    DecoderFactory *fact = nullptr;
     //detect by content if enabled
     if(useContent)
     {
@@ -183,7 +183,7 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
         if(!file.open(QIODevice::ReadOnly))
         {
             qWarning("Decoder: file open error: %s", qPrintable(file.errorString()));
-            return 0;
+            return nullptr;
         }
 
         foreach(QmmpPluginCache *item, *m_cache)
@@ -200,13 +200,13 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
             if (fact->canDecode(&file))
                 return fact;
         }
-        fact = 0;
+        fact = nullptr;
     }
 
     QList<DecoderFactory*> filtered = findByFileExtension(path);
 
     if(filtered.isEmpty())
-        return 0;
+        return nullptr;
 
     if(filtered.size() == 1)
         return filtered.at(0);
@@ -217,7 +217,7 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
     if(!file.open(QIODevice::ReadOnly))
     {
         qWarning("Decoder: file open error: %s", qPrintable(file.errorString()));
-        return 0;
+        return nullptr;
     }
 
     foreach (fact, filtered)
@@ -229,13 +229,13 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
     if(!filtered.isEmpty() && !useContent) //fallback
         return filtered.first();
 
-    return 0;
+    return nullptr;
 }
 
 DecoderFactory *Decoder::findByMime(const QString& type)
 {
     if(type.isEmpty())
-        return 0;
+        return nullptr;
     loadPlugins();
     foreach (QmmpPluginCache *item, *m_cache)
     {
@@ -245,7 +245,7 @@ DecoderFactory *Decoder::findByMime(const QString& type)
         if(fact && !fact->properties().noInput && fact->properties().contentTypes.contains(type))
             return fact;
     }
-    return 0;
+    return nullptr;
 }
 
 DecoderFactory *Decoder::findByContent(QIODevice *input)
@@ -259,7 +259,7 @@ DecoderFactory *Decoder::findByContent(QIODevice *input)
         if(fact && !fact->properties().noInput && fact->canDecode(input))
             return fact;
     }
-    return 0;
+    return nullptr;
 }
 
 DecoderFactory *Decoder::findByProtocol(const QString &p)
@@ -273,13 +273,13 @@ DecoderFactory *Decoder::findByProtocol(const QString &p)
         if (item->decoderFactory() && item->decoderFactory()->properties().protocols.contains(p))
             return item->decoderFactory();
     }
-    return 0;
+    return nullptr;
 }
 
 QList<DecoderFactory *> Decoder::findByFileExtension(const QString &path)
 {
     QList<DecoderFactory*> filtered;
-    DecoderFactory *fact = 0;
+    DecoderFactory *fact = nullptr;
     foreach (QmmpPluginCache *item, *m_cache)
     {
         if(m_disabledNames.contains(item->shortName()))

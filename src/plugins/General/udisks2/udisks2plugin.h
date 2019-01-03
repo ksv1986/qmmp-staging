@@ -36,7 +36,7 @@ class UDisks2Plugin : public QObject
 {
 Q_OBJECT
 public:
-    UDisks2Plugin(QObject *parent = 0);
+    UDisks2Plugin(QObject *parent = nullptr);
 
     ~UDisks2Plugin();
 

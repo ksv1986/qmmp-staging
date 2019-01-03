@@ -42,7 +42,7 @@ class StreamWindow : public QWidget
 {
 Q_OBJECT
 public:
-    StreamWindow(QWidget *parent = 0);
+    StreamWindow(QWidget *parent = nullptr);
 
     ~StreamWindow();
 

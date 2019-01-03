@@ -37,7 +37,7 @@ void TagUpdater::updateTags()
         if (!t->isUsed() && t->isSheduledForDeletion())
         {
             delete t;
-            t = 0;
+            t = nullptr;
         }
         else
         {

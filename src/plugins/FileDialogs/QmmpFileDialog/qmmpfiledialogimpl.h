@@ -33,7 +33,7 @@ class QmmpFileDialogImpl : public QDialog , private Ui::QmmpFileDialog
 {
     Q_OBJECT
 public:
-    QmmpFileDialogImpl(QWidget *parent = 0, Qt::WindowFlags f = 0);
+    QmmpFileDialogImpl(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     ~QmmpFileDialogImpl();
 
@@ -76,7 +76,7 @@ class PathCompleter : public QCompleter
 {
     Q_OBJECT
 public:
-    PathCompleter(QAbstractItemModel *model, QAbstractItemView *itemView, QObject *parent = 0) : QCompleter(model, parent)
+    PathCompleter(QAbstractItemModel *model, QAbstractItemView *itemView, QObject *parent = nullptr) : QCompleter(model, parent)
     {
         m_itemView = itemView;
     };

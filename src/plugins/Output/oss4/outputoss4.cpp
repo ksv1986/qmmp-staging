@@ -44,8 +44,8 @@ extern "C"
 #include <qmmp/visual.h>
 #include "outputoss4.h"
 
-OutputOSS4 *OutputOSS4::m_instance = 0;
-VolumeOSS4 *OutputOSS4::m_vc = 0;
+OutputOSS4 *OutputOSS4::m_instance = nullptr;
+VolumeOSS4 *OutputOSS4::m_vc = nullptr;
 Qmmp::ChannelPosition OutputOSS4::m_oss_pos[16] =
 {
     Qmmp::CHAN_NULL,         //0 = null
@@ -83,7 +83,7 @@ OutputOSS4::~OutputOSS4()
         close(m_audio_fd);
         m_audio_fd = -1;
     }
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 int OutputOSS4::fd()
@@ -108,7 +108,7 @@ void OutputOSS4::sync()
 
 bool OutputOSS4::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat format)
 {
-    m_audio_fd = open(m_audio_device.toLatin1(), O_WRONLY);
+    m_audio_fd = open(m_audio_device.toLatin1().constData(), O_WRONLY);
 
     if (m_audio_fd < 0)
     {
@@ -209,7 +209,7 @@ VolumeOSS4::~VolumeOSS4()
 {
     VolumeSettings vol = volume();
     m_volume = (vol.right << 8) | vol.left;
-    OutputOSS4::m_vc = 0;
+    OutputOSS4::m_vc = nullptr;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("OSS4/volume", m_volume);
 }

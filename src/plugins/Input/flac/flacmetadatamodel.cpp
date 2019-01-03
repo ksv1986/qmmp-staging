@@ -38,9 +38,9 @@ FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly)
     : MetaDataModel(true)
 #endif
 {
-    m_file = 0;
-    m_stream = 0;
-    m_tag = 0;
+    m_file = nullptr;
+    m_stream = nullptr;
+    m_tag = nullptr;
 
     if(path.startsWith("flac://"))
     {
@@ -81,7 +81,7 @@ FLACMetaDataModel::~FLACMetaDataModel()
     if(m_file)
     {
         delete m_file;
-        m_file = 0;
+        m_file = nullptr;
     }
     if(m_stream)
         delete m_stream;

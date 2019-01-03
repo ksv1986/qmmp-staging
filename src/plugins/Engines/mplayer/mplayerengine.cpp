@@ -97,7 +97,7 @@ QStringList MplayerInfo::filters()
 MplayerEngine::MplayerEngine(QObject *parent)
         : AbstractEngine(parent)
 {
-    m_source = 0;
+    m_source = nullptr;
     m_bitrate = 0;
     m_samplerate = 0;
     m_channels = 0;
@@ -106,7 +106,7 @@ MplayerEngine::MplayerEngine(QObject *parent)
     m_currentTime = 0;
     m_muted = false;
     m_user_stop = false;
-    m_process = 0;
+    m_process = nullptr;
 }
 
 MplayerEngine::~MplayerEngine()
@@ -297,7 +297,7 @@ void MplayerEngine::startMplayerProcess()
     StateHandler::instance()->dispatch(*info);
     delete info;
     m_source->deleteLater();
-    m_source = 0;
+    m_source = nullptr;
     m_currentTime = 0;
     if(m_muted)
         setMuted(true);

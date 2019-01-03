@@ -33,7 +33,7 @@ class RGScanHelper : public QObject
 {
 Q_OBJECT
 public:
-    RGScanHelper(QObject *parent = 0);
+    RGScanHelper(QObject *parent = nullptr);
     ~RGScanHelper();
 
 private slots:

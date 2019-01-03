@@ -33,7 +33,7 @@ class PositionSlider : public QSlider
 {
     Q_OBJECT
 public:
-    explicit PositionSlider(QWidget *parent = 0);
+    explicit PositionSlider(QWidget *parent = nullptr);
     virtual ~PositionSlider(){}
 
 protected:

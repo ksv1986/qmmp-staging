@@ -72,7 +72,7 @@ MetaDataModel* DecoderCDAudioFactory::createMetaDataModel(const QString &path, b
 {
     Q_UNUSED(readOnly);
     Q_UNUSED(path);
-    return 0;
+    return nullptr;
 }
 
 void DecoderCDAudioFactory::showSettings(QWidget *parent)

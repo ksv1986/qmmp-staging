@@ -34,7 +34,7 @@ class KeyboardManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit KeyboardManager(QObject *parent = 0);
+    explicit KeyboardManager(QObject *parent = nullptr);
 
     QList<QAction*> actions();
     void setListWidget(ListWidget *listWidget);

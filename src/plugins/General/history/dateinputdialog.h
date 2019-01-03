@@ -33,7 +33,7 @@ class DateInputDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit DateInputDialog(QWidget *parent = 0);
+    explicit DateInputDialog(QWidget *parent = nullptr);
     ~DateInputDialog();
 
     QDate selectedDate() const;

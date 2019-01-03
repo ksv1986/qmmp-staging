@@ -36,7 +36,7 @@ class QmmpTrayIcon : public QSystemTrayIcon
 {
 Q_OBJECT
 public:
-    QmmpTrayIcon(QObject *parent = 0);
+    QmmpTrayIcon(QObject *parent = nullptr);
     ~QmmpTrayIcon();
 
      void setToolTip(const QString &tip);

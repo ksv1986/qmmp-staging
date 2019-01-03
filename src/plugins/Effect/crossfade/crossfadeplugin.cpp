@@ -26,7 +26,7 @@
 
 CrossfadePlugin::CrossfadePlugin() : Effect()
 {
-    m_buffer = 0;
+    m_buffer = nullptr;
     m_buffer_at = 0;
     m_buffer_size = 0;
     m_core = SoundCore::instance() ;

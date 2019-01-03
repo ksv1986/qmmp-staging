@@ -43,7 +43,7 @@ class StatusIconPopupWidget : public QFrame
     Q_OBJECT
 public:
 
-    StatusIconPopupWidget(QWidget * parent = 0);
+    StatusIconPopupWidget(QWidget *parent = nullptr);
     ~StatusIconPopupWidget();
 
     void showInfo(int x, int y, const QString &message); //x,y are tray icon position
@@ -75,7 +75,7 @@ class TimeBar : public QProgressBar
 {
     Q_OBJECT
 public:
-    TimeBar(QWidget *parent = 0);
+    TimeBar(QWidget *parent = nullptr);
     virtual QString text() const;
 };
 

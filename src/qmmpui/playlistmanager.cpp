@@ -30,7 +30,7 @@
 #include "qmmpuisettings.h"
 #include "playlistmanager.h"
 
-PlayListManager *PlayListManager::m_instance = 0;
+PlayListManager *PlayListManager::m_instance = nullptr;
 
 PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
 {
@@ -40,8 +40,8 @@ PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
     m_instance = this;
     m_ui_settings = QmmpUiSettings::instance();
     m_header = new PlayListHeaderModel(this);
-    m_current = 0;
-    m_selected = 0;
+    m_current = nullptr;
+    m_selected = nullptr;
     m_timer = new QTimer(this);
     m_timer->setInterval(5000);
     m_timer->setSingleShot(true);
@@ -69,7 +69,7 @@ PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
 PlayListManager::~PlayListManager()
 {
     writePlayLists();
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 PlayListManager* PlayListManager::instance()
@@ -247,7 +247,7 @@ PlayListModel *PlayListManager::playListAt(int i) const
 {
     if(i >= 0 && i < m_models.count())
         return m_models.at(i);
-    return 0;
+    return nullptr;
 }
 
 PlayListHeaderModel *PlayListManager::headerModel()

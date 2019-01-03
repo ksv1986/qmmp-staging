@@ -70,7 +70,7 @@ class HotkeyManager : public QObject, public QAbstractNativeEventFilter
 {
     Q_OBJECT
 public:
-    HotkeyManager(QObject *parent = 0);
+    HotkeyManager(QObject *parent = nullptr);
 
     ~HotkeyManager();
 

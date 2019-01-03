@@ -33,7 +33,7 @@ MediaKeys::MediaKeys(QObject *parent) :
     QObject(parent)
 {
     m_isRegistered = false;
-    m_interface = 0;
+    m_interface = nullptr;
     if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.gnome.SettingsDaemon"))
     {
         qWarning("MediaKeys: gnome settings daemon is not running");

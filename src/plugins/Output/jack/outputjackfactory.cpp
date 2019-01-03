@@ -41,7 +41,7 @@ Output* OutputJACKFactory::create()
 
 Volume *OutputJACKFactory::createVolume()
 {
-    return 0;
+    return nullptr;
 }
 
 void OutputJACKFactory::showSettings(QWidget*)

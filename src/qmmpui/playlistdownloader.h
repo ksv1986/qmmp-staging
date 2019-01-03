@@ -40,7 +40,7 @@ public:
     /*!
      * Object constructor.
      */
-    explicit PlayListDownloader(QObject *parent = 0);
+    explicit PlayListDownloader(QObject *parent = nullptr);
 
 signals:
     /*!

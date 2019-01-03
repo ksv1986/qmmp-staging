@@ -25,14 +25,14 @@ extern "C"{
 #include <QSettings>
 #include "outputpulseaudio.h"
 
-OutputPulseAudio *OutputPulseAudio::instance = 0;
-VolumePulseAudio *OutputPulseAudio::volumeControl = 0;
+OutputPulseAudio *OutputPulseAudio::instance = nullptr;
+VolumePulseAudio *OutputPulseAudio::volumeControl = nullptr;
 
 OutputPulseAudio::OutputPulseAudio(): Output()
 {
-    m_loop = 0;
-    m_ctx = 0;
-    m_stream = 0;
+    m_loop = nullptr;
+    m_ctx = nullptr;
+    m_stream = nullptr;
 
     m_pa_channels[Qmmp::CHAN_NULL] = PA_CHANNEL_POSITION_INVALID;
     m_pa_channels[Qmmp::CHAN_FRONT_CENTER] = PA_CHANNEL_POSITION_MONO;
@@ -52,7 +52,7 @@ OutputPulseAudio::OutputPulseAudio(): Output()
 OutputPulseAudio::~OutputPulseAudio()
 {
     uninitialize();
-    instance = 0;
+    instance = nullptr;
 }
 
 bool OutputPulseAudio::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat format)
@@ -69,7 +69,7 @@ bool OutputPulseAudio::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForma
         return false;
     }
 
-    if(pa_context_connect(m_ctx, 0, (pa_context_flags_t)0, 0) < 0)
+    if(pa_context_connect(m_ctx, nullptr, (pa_context_flags_t)0, nullptr) < 0)
     {
         qWarning("OutputPulseAudio: unable to connect the context: %s", pa_strerror(pa_context_errno(m_ctx)));
         return false;
@@ -129,14 +129,14 @@ bool OutputPulseAudio::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForma
     attr.fragsize = attr.tlength;
 
     pa_stream_flags_t flags = pa_stream_flags_t(PA_STREAM_INTERPOLATE_TIMING | PA_STREAM_AUTO_TIMING_UPDATE);
-    pa_cvolume *pvol = 0;
+    pa_cvolume *pvol = nullptr;
     pa_cvolume vol;
     if(volumeControl)
     {
         vol = VolumePulseAudio::volumeSettingsToCvolume(volumeControl->volume(), map.count());
         pvol = &vol;
     }
-    if(pa_stream_connect_playback(m_stream, 0, &attr, flags, pvol, 0) < 0)
+    if(pa_stream_connect_playback(m_stream, nullptr, &attr, flags, pvol, nullptr) < 0)
     {
         qWarning("OutputPulseAudio: unable to connect playback: %s", pa_strerror(pa_context_errno(m_ctx)));
         return false;
@@ -191,7 +191,7 @@ qint64 OutputPulseAudio::writeAudio(unsigned char *data, qint64 maxSize)
     }
 
     size_t length = qMin(size_t(maxSize), pa_stream_writable_size(m_stream));
-    if(pa_stream_write(m_stream, data, length, 0, 0, PA_SEEK_RELATIVE) < 0)
+    if(pa_stream_write(m_stream, data, length, nullptr, 0, PA_SEEK_RELATIVE) < 0)
     {
         qWarning("OutputPulseAudio: pa_stream_write failed: %s", pa_strerror(pa_context_errno(m_ctx)));
         return -1;
@@ -201,25 +201,25 @@ qint64 OutputPulseAudio::writeAudio(unsigned char *data, qint64 maxSize)
 
 void OutputPulseAudio::drain()
 {
-    pa_operation *op = pa_stream_drain(m_stream, OutputPulseAudio::stream_success_cb, 0);
+    pa_operation *op = pa_stream_drain(m_stream, OutputPulseAudio::stream_success_cb, nullptr);
     process(op);
 }
 
 void OutputPulseAudio::reset()
 {
-    pa_operation *op = pa_stream_flush(m_stream, OutputPulseAudio::stream_success_cb, 0);
+    pa_operation *op = pa_stream_flush(m_stream, OutputPulseAudio::stream_success_cb, nullptr);
     process(op);
 }
 
 void OutputPulseAudio::suspend()
 {
-    pa_operation *op = pa_stream_cork(m_stream, 1, OutputPulseAudio::stream_success_cb, 0);
+    pa_operation *op = pa_stream_cork(m_stream, 1, OutputPulseAudio::stream_success_cb, nullptr);
     process(op);
 }
 
 void OutputPulseAudio::resume()
 {
-    pa_operation *op = pa_stream_cork(m_stream, 0, OutputPulseAudio::stream_success_cb, 0);
+    pa_operation *op = pa_stream_cork(m_stream, 0, OutputPulseAudio::stream_success_cb, nullptr);
     process(op);
 }
 
@@ -227,7 +227,7 @@ void OutputPulseAudio::setVolume(const VolumeSettings &v)
 {
     pa_cvolume volume = VolumePulseAudio::volumeSettingsToCvolume(v, audioParameters().channels());
     pa_operation *op = pa_context_set_sink_input_volume(m_ctx, pa_stream_get_index(m_stream), &volume,
-                                                        OutputPulseAudio::context_success_cb, 0);
+                                                        OutputPulseAudio::context_success_cb, nullptr);
     pa_operation_unref(op);
 }
 
@@ -237,20 +237,20 @@ void OutputPulseAudio::uninitialize()
     {
         pa_stream_disconnect(m_stream);
         pa_stream_unref(m_stream);
-        m_stream = 0;
+        m_stream = nullptr;
     }
 
     if(m_ctx)
     {
         pa_context_disconnect(m_ctx);
         pa_context_unref(m_ctx);
-        m_ctx = 0;
+        m_ctx = nullptr;
     }
 
     if(m_loop)
     {
         pa_mainloop_free(m_loop);
-        m_loop = 0;
+        m_loop = nullptr;
     }
 }
 
@@ -291,7 +291,7 @@ void OutputPulseAudio::subscribe_cb(pa_context *ctx, pa_subscription_event_type 
              t != (PA_SUBSCRIPTION_EVENT_SINK_INPUT | PA_SUBSCRIPTION_EVENT_CHANGE)))
         return;
 
-    if(!(op = pa_context_get_sink_input_info (ctx, index, OutputPulseAudio::info_cb, 0)))
+    if(!(op = pa_context_get_sink_input_info (ctx, index, OutputPulseAudio::info_cb, nullptr)))
     {
         qWarning("OutputPulseAudio: pa_context_get_sink_input_info failed: %s", pa_strerror(pa_context_errno(ctx)));
         return;
@@ -338,7 +338,7 @@ VolumePulseAudio::~VolumePulseAudio()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("PulseAudio/left_volume", m_volume.left);
     settings.setValue("PulseAudio/right_volume", m_volume.right);
-    OutputPulseAudio::volumeControl = 0;
+    OutputPulseAudio::volumeControl = nullptr;
 }
 
 void VolumePulseAudio::updateVolume(const pa_cvolume &v)

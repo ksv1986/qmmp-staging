@@ -56,7 +56,7 @@ class Scrobbler : public QObject
 {
     Q_OBJECT
 public:
-    Scrobbler(const QString &scrobblerUrl, const QString &name,QObject *parent = 0);
+    Scrobbler(const QString &scrobblerUrl, const QString &name,QObject *parent = nullptr);
     ~Scrobbler();
 
 private slots:
@@ -93,7 +93,7 @@ class ScrobblerAuth : public QObject
     Q_OBJECT
 public:
     explicit ScrobblerAuth(const QString &scrobblerUrl, const QString &authUrl,
-                           const QString &name, QObject *parent = 0);
+                           const QString &name, QObject *parent = nullptr);
     void getToken();
     void getSession();
     void checkSession(const QString &session);

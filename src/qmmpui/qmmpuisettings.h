@@ -42,7 +42,7 @@ public:
      * @param parent Parent object.
      * This functions is for internal usage only, use QmmpSettings::instance() instead.
      */
-    explicit QmmpUiSettings(QObject *parent = 0);
+    explicit QmmpUiSettings(QObject *parent = nullptr);
     /*!
      * Destructor.
      */

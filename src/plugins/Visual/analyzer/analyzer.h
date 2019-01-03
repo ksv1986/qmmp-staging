@@ -37,7 +37,7 @@ class Analyzer : public Visual
     Q_OBJECT
 
 public:
-    Analyzer( QWidget *parent = 0);
+    Analyzer( QWidget *parent = nullptr);
     virtual ~Analyzer();
 
 public slots:

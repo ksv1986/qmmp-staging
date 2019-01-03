@@ -33,7 +33,7 @@ class MediaKeys : public QObject
 {
     Q_OBJECT
 public:
-    explicit MediaKeys(QObject *parent = 0);
+    explicit MediaKeys(QObject *parent = nullptr);
     virtual ~MediaKeys();
 
 private slots:

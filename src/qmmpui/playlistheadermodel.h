@@ -43,7 +43,7 @@ public:
      * Constructs a playlist model.
      * @param parent QObject parent.
      */
-    explicit PlayListHeaderModel(QObject *parent = 0);
+    explicit PlayListHeaderModel(QObject *parent = nullptr);
     /*!
      * Object destructor.
      */
@@ -93,13 +93,13 @@ public:
      * @param index Index of the column.
      * @param parent Parent widget,
      */
-    void execEdit(int index, QWidget *parent = 0);
+    void execEdit(int index, QWidget *parent = nullptr);
     /*!
      * Opens internal column editor and inserts new column if user press "ok".
      * @param index Required index of the column.
      * @param parent Parent widget.
      */
-    void execInsert(int index, QWidget *parent = 0);
+    void execInsert(int index, QWidget *parent = nullptr);
     /*!
      * Returns number of the columns.
      */

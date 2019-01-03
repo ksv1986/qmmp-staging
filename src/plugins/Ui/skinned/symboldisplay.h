@@ -32,7 +32,7 @@ class SymbolDisplay : public PixmapWidget
 {
     Q_OBJECT
 public:
-    SymbolDisplay(QWidget *parent = 0, int digits = 3);
+    SymbolDisplay(QWidget *parent = nullptr, int digits = 3);
 
     virtual ~SymbolDisplay();
 

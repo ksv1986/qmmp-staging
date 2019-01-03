@@ -66,14 +66,14 @@ DecoderMPG123::DecoderMPG123(QIODevice *i) : Decoder(i)
     m_rate = 0;
     m_frame_info.bitrate = 0;
     m_mpg123_encoding = MPG123_ENC_SIGNED_16;
-    m_handle = 0;
+    m_handle = nullptr;
     m_errors = 0;
 }
 
 DecoderMPG123::~DecoderMPG123()
 {
     cleanup(m_handle);
-    m_handle = 0;
+    m_handle = nullptr;
 }
 
 bool DecoderMPG123::initialize()
@@ -94,7 +94,7 @@ bool DecoderMPG123::initialize()
     }
     int channels = 0;
 
-    if(!(m_handle = mpg123_new(0, &err)))
+    if(!(m_handle = mpg123_new(nullptr, &err)))
     {
         qWarning("DecoderMPG123: basic setup goes wrong: %s", mpg123_plain_strerror(err));
         return false;
@@ -102,11 +102,11 @@ bool DecoderMPG123::initialize()
 
     mpg123_param (m_handle, MPG123_ADD_FLAGS, MPG123_SEEKBUFFER | MPG123_FUZZY, 0);
 
-    if((err = mpg123_replace_reader_handle(m_handle, mpg123_read_cb, mpg123_seek_cb, 0)) != MPG123_OK)
+    if((err = mpg123_replace_reader_handle(m_handle, mpg123_read_cb, mpg123_seek_cb, nullptr)) != MPG123_OK)
     {
         qWarning("DecoderMPG123: mpg123 error: %s", mpg123_plain_strerror(err));
         cleanup(m_handle);
-        m_handle = 0;
+        m_handle = nullptr;
         return false;
     }
     setMPG123Format(MPG123_ENC_FLOAT_32);
@@ -115,7 +115,7 @@ bool DecoderMPG123::initialize()
     {
         qWarning("DecoderMPG123: mpg123 error: %s", mpg123_plain_strerror(err));
         cleanup(m_handle);
-        m_handle = 0;
+        m_handle = nullptr;
         return false;
     }
 
@@ -123,7 +123,7 @@ bool DecoderMPG123::initialize()
     {
         qWarning("DecoderMPG123: mpg123 error: %s", mpg123_plain_strerror(err));
         cleanup(m_handle);
-        m_handle = 0;
+        m_handle = nullptr;
         return false;
     }
     //check format
@@ -131,7 +131,7 @@ bool DecoderMPG123::initialize()
     {
         cleanup(m_handle);
         qWarning("DecoderMPG123: bad encoding: 0x%x!\n", m_mpg123_encoding);
-        m_handle = 0;
+        m_handle = nullptr;
         return false;
     }
 

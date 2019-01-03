@@ -38,7 +38,7 @@ class Logo : public Visual
 {
     Q_OBJECT
 public:
-    explicit Logo(QWidget *parent = 0);
+    explicit Logo(QWidget *parent = nullptr);
     virtual ~Logo();
 
 public slots:

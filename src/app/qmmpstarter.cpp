@@ -57,9 +57,9 @@ using namespace std;
 
 QMMPStarter::QMMPStarter() : QObject()
 {
-    m_player = 0;
-    m_core = 0;
-    m_ui = 0;
+    m_player = nullptr;
+    m_core = nullptr;
+    m_ui = nullptr;
     m_finished = false;
     m_exit_code = EXIT_SUCCESS;
 #ifndef QT_NO_SESSIONMANAGER

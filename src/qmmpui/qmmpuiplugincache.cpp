@@ -33,10 +33,10 @@
 QmmpUiPluginCache::QmmpUiPluginCache(const QString &file, QSettings *settings)
 {
     m_error = false;
-    m_instance = 0;
-    m_generalFactory = 0;
-    m_uiFactory = 0;
-    m_fileDialogFactory = 0;
+    m_instance = nullptr;
+    m_generalFactory = nullptr;
+    m_uiFactory = nullptr;
+    m_fileDialogFactory = nullptr;
     m_priority = 0;
     bool update = false;
     QFileInfo info(file);
@@ -105,9 +105,9 @@ QmmpUiPluginCache::QmmpUiPluginCache(QObject *instance)
 {
     m_error = false;
     m_instance = instance;
-    m_generalFactory = 0;
-    m_uiFactory = 0;
-    m_fileDialogFactory = 0;
+    m_generalFactory = nullptr;
+    m_uiFactory = nullptr;
+    m_fileDialogFactory = nullptr;
     m_priority = 0;
 
     if(GeneralFactory *factory = generalFactory())
@@ -190,7 +190,7 @@ FileDialogFactory *QmmpUiPluginCache::fileDialogFactory()
 QObject *QmmpUiPluginCache::instance()
 {
     if(m_error)
-        return 0;
+        return nullptr;
     if(m_instance)
         return m_instance;
     QPluginLoader loader(m_path);

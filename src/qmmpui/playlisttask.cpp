@@ -114,7 +114,7 @@ PlayListTask::PlayListTask(QObject *parent) : QThread(parent)
 {
     m_reverted = true;
     m_align_groups = false;
-    m_current_track = 0;
+    m_current_track = nullptr;
     m_column = 0;
     m_task = EMPTY;
     m_sort_mode = PlayListModel::TITLE;
@@ -294,8 +294,8 @@ void PlayListTask::run()
 
     if(m_task == SORT || m_task == SORT_SELECTION || m_task == SORT_BY_COLUMN)
     {
-        bool(*compareLessFunc)(TrackField*, TrackField*) = 0;
-        bool(*compareGreaterFunc)(TrackField*, TrackField*) = 0;
+        bool(*compareLessFunc)(TrackField*, TrackField*) = nullptr;
+        bool(*compareGreaterFunc)(TrackField*, TrackField*) = nullptr;
 
         QList<TrackField*>::iterator begin = m_fields.begin();
         QList<TrackField*>::iterator end = m_fields.end();
@@ -368,7 +368,7 @@ void PlayListTask::run()
     }
     else if(m_task == REMOVE_INVALID)
     {
-        TrackField *f = 0;
+        TrackField *f = nullptr;
         bool ok = false;
         for(int i = 0; i < m_fields.count(); ++i)
         {
@@ -386,7 +386,7 @@ void PlayListTask::run()
     else if(m_task == REMOVE_DUPLICATES)
     {
         QStringList urls;
-        TrackField *f = 0;
+        TrackField *f = nullptr;
         for(int i = 0; i < m_fields.count(); ++i)
         {
             f = m_fields.at(i);
@@ -403,7 +403,7 @@ void PlayListTask::run()
     }
     else if(m_task == REFRESH)
     {
-        TrackField *f = 0;
+        TrackField *f = nullptr;
         MetaDataManager *mm = MetaDataManager::instance();
         bool ok = false;
         //find invalid files
@@ -516,7 +516,7 @@ QList<PlayListTrack *> PlayListTask::takeResults(PlayListTrack **current_track)
     else if(m_task == REMOVE_INVALID || m_task == REMOVE_DUPLICATES || m_task == REFRESH)
     {
         int index = 0;
-        PlayListTrack *t = 0;
+        PlayListTrack *t = nullptr;
         for (int i = m_indexes.count() - 1; i >= 0; i--)
         {
             index = m_indexes.at(i);
@@ -524,7 +524,7 @@ QList<PlayListTrack *> PlayListTask::takeResults(PlayListTrack **current_track)
             if(t == m_current_track)
             {
                 if(m_tracks.isEmpty())
-                    m_current_track = 0;
+                    m_current_track = nullptr;
                 else if(index > 0 && index <= m_tracks.count())
                     m_current_track = m_tracks[index - 1];
                 else
@@ -566,5 +566,5 @@ void PlayListTask::clear()
     m_indexes.clear();
     m_input_tracks.clear();
     m_tracks.clear();
-    m_current_track = 0;
+    m_current_track = nullptr;
 }

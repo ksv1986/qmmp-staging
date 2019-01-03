@@ -30,7 +30,7 @@ class PlayListSlider : public QWidget
 {
 Q_OBJECT
 public:
-    PlayListSlider(QWidget *parent = 0);
+    PlayListSlider(QWidget *parent = nullptr);
 
     ~PlayListSlider();
 

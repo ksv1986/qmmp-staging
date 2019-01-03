@@ -30,7 +30,7 @@ class EQGraph : public PixmapWidget
 {
    Q_OBJECT
 public:
-    EQGraph (QWidget *parent = 0);
+    EQGraph (QWidget *parent = nullptr);
 
    ~EQGraph();
 

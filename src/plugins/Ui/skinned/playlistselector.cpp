@@ -40,7 +40,7 @@ PlayListSelector::PlayListSelector(PlayListManager *manager, QWidget *parent) : 
     m_moving = false;
     m_offset = 0;
     m_offset_max = 0;
-    m_metrics = 0;
+    m_metrics = nullptr;
     m_pressed_button = BUTTON_UNKNOWN;
     m_skin = Skin::instance();
     m_pl_manager = manager;
@@ -60,7 +60,7 @@ PlayListSelector::~PlayListSelector()
 {
     if (m_metrics)
         delete m_metrics;
-    m_metrics = 0;
+    m_metrics = nullptr;
 }
 
 void PlayListSelector::readSettings()
@@ -70,7 +70,7 @@ void PlayListSelector::readSettings()
     if (m_metrics)
     {
         delete m_metrics;
-        m_metrics = 0;
+        m_metrics = nullptr;
     }
     m_metrics = new QFontMetrics(m_font);
     m_pl_separator = settings.value("Skinned/pl_separator", "::").toString();

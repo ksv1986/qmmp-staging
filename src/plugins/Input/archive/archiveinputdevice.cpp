@@ -23,8 +23,8 @@
 
 ArchiveInputDevice::ArchiveInputDevice(const QString &url, QObject *parent)  : QIODevice(parent)
 {
-    m_archive = 0;
-    m_entry = 0;
+    m_archive = nullptr;
+    m_entry = nullptr;
     QString filePath = url.section("#", -1);
     QString archivePath = url;
     archivePath.remove(QRegExp("^.+://"));
@@ -74,7 +74,7 @@ ArchiveInputDevice::~ArchiveInputDevice()
     {
         archive_read_close(m_archive);
         archive_read_free(m_archive);
-        m_archive = 0;
+        m_archive = nullptr;
     }
 }
 

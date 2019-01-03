@@ -80,7 +80,7 @@ TwoPanelFileDialogImpl::TwoPanelFileDialogImpl(QWidget * parent) : QDialog(paren
     QCompleter* dirCompleter = new QCompleter (m_dirModel, this);
     m_ui.lookInComboBox->setCompleter (dirCompleter);
 
-    if(qApp->style()->styleHint(QStyle::SH_DialogButtonBox_ButtonsHaveIcons, 0, this))
+    if(qApp->style()->styleHint(QStyle::SH_DialogButtonBox_ButtonsHaveIcons, nullptr, this))
     {
         m_ui.playButton->setIcon(qApp->style()->standardIcon(QStyle::SP_MediaPlay));
         m_ui.addButton->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOpenButton));

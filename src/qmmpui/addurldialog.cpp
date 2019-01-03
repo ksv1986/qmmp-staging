@@ -61,7 +61,7 @@ AddUrlDialog::~AddUrlDialog()
     settings.setValue("URLDialog/history", m_history);
 }
 
-QPointer<AddUrlDialog> AddUrlDialog::m_instance = 0;
+QPointer<AddUrlDialog> AddUrlDialog::m_instance = nullptr;
 
 void AddUrlDialog::popup(QWidget* parent, PlayListModel* model)
 {

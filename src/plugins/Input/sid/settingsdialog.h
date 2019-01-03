@@ -31,7 +31,7 @@ class SettingsDialog : public QDialog
 {
     Q_OBJECT
 public:
-    SettingsDialog(SidDatabase *db, QWidget *parent = 0);
+    SettingsDialog(SidDatabase *db, QWidget *parent = nullptr);
 
     virtual ~SettingsDialog();
 

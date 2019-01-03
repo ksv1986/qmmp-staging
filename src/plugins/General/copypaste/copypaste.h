@@ -36,7 +36,7 @@ class CopyPaste : public QObject
 {
     Q_OBJECT
 public:
-    CopyPaste(QObject *parent = 0);
+    CopyPaste(QObject *parent = nullptr);
 
     ~CopyPaste();
 

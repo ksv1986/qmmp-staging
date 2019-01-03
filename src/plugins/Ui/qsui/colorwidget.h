@@ -30,7 +30,7 @@ class ColorWidget : public QFrame
 {
     Q_OBJECT
 public:
-    ColorWidget(QWidget *parent = 0);
+    ColorWidget(QWidget *parent = nullptr);
 
     ~ColorWidget();
 

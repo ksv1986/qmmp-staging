@@ -33,27 +33,27 @@ DecoderCUE::DecoderCUE(const QString &url)
         : Decoder()
 {
     m_path = url;
-    m_decoder = 0;
-    m_parser = 0;
+    m_decoder = nullptr;
+    m_parser = nullptr;
     m_track = 0;
-    m_buf = 0;
-    m_input = 0;
+    m_buf = nullptr;
+    m_input = nullptr;
 }
 
 DecoderCUE::~DecoderCUE()
 {
     if(m_decoder)
         delete m_decoder;
-    m_decoder = 0;
+    m_decoder = nullptr;
     if(m_parser)
         delete m_parser;
-    m_parser = 0;
+    m_parser = nullptr;
     if(m_buf)
         delete [] m_buf;
-    m_buf = 0;
+    m_buf = nullptr;
     if(m_input)
         m_input->deleteLater();
-    m_input = 0;
+    m_input = nullptr;
 }
 
 bool DecoderCUE::initialize()
@@ -134,7 +134,7 @@ qint64 DecoderCUE::read(unsigned char *data, qint64 size)
         if(size >= m_buf_size)
         {
             delete[] m_buf;
-            m_buf = 0;
+            m_buf = nullptr;
             m_buf_size = 0;
         }
         else

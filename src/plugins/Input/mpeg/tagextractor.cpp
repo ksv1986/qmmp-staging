@@ -59,7 +59,7 @@ const QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag()
     settings.beginGroup("MPEG");
     QByteArray name = settings.value("ID3v2_encoding","UTF-8").toByteArray ();
     bool utf = false;
-    QTextCodec *codec = 0;
+    QTextCodec *codec = nullptr;
     if (name.contains("UTF"))
     {
         codec = QTextCodec::codecForName ("UTF-8");

@@ -42,8 +42,8 @@ QSUiTabWidget::QSUiTabWidget(QWidget *parent) : QWidget(parent)
 
     setFocusPolicy(Qt::TabFocus);
     setFocusProxy(m_tabBar);
-    m_rightCornerWidget = 0;
-    m_leftCornerWidget = 0;
+    m_rightCornerWidget = nullptr;
+    m_leftCornerWidget = nullptr;
 
     m_menu = new QMenu(this);
     m_group = new QActionGroup(this);
@@ -184,9 +184,9 @@ void QSUiTabWidget::initStyleOption(QStyleOptionTabWidgetFrame *option) const
         return;
 
     option->initFrom(this);
-    option->lineWidth = style()->pixelMetric(QStyle::PM_DefaultFrameWidth, 0, this);
+    option->lineWidth = style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, this);
 
-    int exth = style()->pixelMetric(QStyle::PM_TabBarBaseHeight, 0, this);
+    int exth = style()->pixelMetric(QStyle::PM_TabBarBaseHeight, nullptr, this);
     QSize t(0, 0);
     if (m_tabBar->isVisibleTo(const_cast<QSUiTabWidget *>(this)))
         t = m_tabBar->sizeHint();
@@ -328,7 +328,7 @@ void QSUiTabWidget::tabRemoved(int index)
 void QSUiTabWidget::mousePressEvent(QMouseEvent *e)
 {
     if((e->button() == Qt::MidButton) &&
-            (childAt(e->pos()) == 0))
+            (childAt(e->pos()) == nullptr))
     {
         e->accept();
         emit createPlayListRequested();
@@ -339,7 +339,7 @@ void QSUiTabWidget::mousePressEvent(QMouseEvent *e)
 void QSUiTabWidget::mouseDoubleClickEvent(QMouseEvent *e)
 {
     if((e->button() == Qt::LeftButton) &&
-            (childAt(e->pos()) == 0))
+            (childAt(e->pos()) == nullptr))
     {
         e->accept();
         emit createPlayListRequested();

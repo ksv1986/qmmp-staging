@@ -26,7 +26,7 @@
 #include <qmmp/qmmp.h>
 #include "actionmanager.h"
 
-ActionManager *ActionManager::m_instance = 0;
+ActionManager *ActionManager::m_instance = nullptr;
 
 ActionManager::ActionManager(QObject *parent) :
     QObject(parent)
@@ -104,14 +104,14 @@ ActionManager::ActionManager(QObject *parent) :
     m_settings->endGroup();
     readStates();
     delete m_settings;
-    m_settings = 0;
+    m_settings = nullptr;
     m_actions[ABOUT]->setIcon(qApp->windowIcon());
 }
 
 ActionManager::~ActionManager()
 {
     saveStates();
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 QAction *ActionManager::action(int type)

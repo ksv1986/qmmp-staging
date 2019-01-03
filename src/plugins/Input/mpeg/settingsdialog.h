@@ -30,7 +30,7 @@ class SettingsDialog : public QDialog
 {
 Q_OBJECT
 public:
-    SettingsDialog(bool using_rusxmms, QWidget *parent = 0);
+    SettingsDialog(bool using_rusxmms, QWidget *parent = nullptr);
 
     ~SettingsDialog();
 

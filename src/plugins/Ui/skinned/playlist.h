@@ -49,7 +49,7 @@ class PlayList : public QWidget
 {
         Q_OBJECT
     public:
-        PlayList (PlayListManager *manager, QWidget *parent = 0);
+        PlayList (PlayListManager *manager, QWidget *parent = nullptr);
         virtual ~PlayList();
 
         void readSettings();

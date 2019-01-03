@@ -91,11 +91,11 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
     if(parts == TrackInfo::NoParts)
         return QList<TrackInfo *>() << info;
 
-    TagLib::Ogg::XiphComment *tag = 0;
-    TagLib::FLAC::Properties *ap = 0;
+    TagLib::Ogg::XiphComment *tag = nullptr;
+    TagLib::FLAC::Properties *ap = nullptr;
 
-    TagLib::FLAC::File *flacFile = 0;
-    TagLib::Ogg::FLAC::File *oggFlacFile = 0;
+    TagLib::FLAC::File *flacFile = nullptr;
+    TagLib::Ogg::FLAC::File *oggFlacFile = nullptr;
 
     TagLib::FileStream stream(QStringToFileName(path), true);
 
@@ -200,7 +200,7 @@ MetaDataModel* DecoderFLACFactory::createMetaDataModel(const QString &path, bool
     if (!path.contains("://") || path.startsWith("flac://"))
         return new FLACMetaDataModel(path, readOnly);
     else
-        return 0;
+        return nullptr;
 }
 
 void DecoderFLACFactory::showSettings(QWidget *)

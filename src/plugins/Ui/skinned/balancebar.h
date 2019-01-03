@@ -31,7 +31,7 @@ class BalanceBar : public PixmapWidget
 {
 Q_OBJECT
 public:
-    BalanceBar(QWidget *parent = 0);
+    BalanceBar(QWidget *parent = nullptr);
 
     ~BalanceBar();
 

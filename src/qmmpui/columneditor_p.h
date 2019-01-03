@@ -34,7 +34,7 @@ class ColumnEditor : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ColumnEditor(const QString &name, const QString &patt, QWidget *parent = 0);
+    explicit ColumnEditor(const QString &name, const QString &patt, QWidget *parent = nullptr);
     ~ColumnEditor();
 
     QString name() const;

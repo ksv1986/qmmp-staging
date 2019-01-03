@@ -42,7 +42,7 @@ ProjectMWidget::ProjectMWidget(QListWidget *listWidget, QWidget *parent)
 {
     setMouseTracking(true);
     m_listWidget = listWidget;
-    m_projectM = 0;
+    m_projectM = nullptr;
     m_menu = new QMenu(this);
     connect(SoundCore::instance(), SIGNAL(trackInfoChanged()), SLOT(updateTitle()));
     createActions();

@@ -23,14 +23,14 @@
 
 FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path) : MetaDataModel(true)
 {
-    m_in = 0;
+    m_in = nullptr;
 #ifdef Q_OS_WIN
-    if (avformat_open_input(&m_in, path.toUtf8().constData(), 0, 0) < 0)
+    if (avformat_open_input(&m_in, path.toUtf8().constData(), nullptr, nullptr) < 0)
 #else
-    if (avformat_open_input(&m_in, path.toLocal8Bit().constData(), 0, 0) < 0)
+    if (avformat_open_input(&m_in, path.toLocal8Bit().constData(), nullptr, nullptr) < 0)
 #endif
         return;
-    avformat_find_stream_info(m_in, 0);
+    avformat_find_stream_info(m_in, nullptr);
     av_read_play(m_in);
 }
 
@@ -45,9 +45,9 @@ QPixmap FFmpegMetaDataModel::cover() const
     if(!m_in)
         return QPixmap();
 #if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(57,48,0)) //ffmpeg-3.1:  57.48.101
-    AVCodecParameters *c = 0;
+    AVCodecParameters *c = nullptr;
 #else
-    AVCodecContext *c = 0;
+    AVCodecContext *c = nullptr;
 #endif
 
     for (uint idx = 0; idx < m_in->nb_streams; idx++)

@@ -31,7 +31,7 @@ class TitleBarControl : public QWidget
 {
 Q_OBJECT
 public:
-    TitleBarControl(QWidget *parent = 0);
+    TitleBarControl(QWidget *parent = nullptr);
     ~TitleBarControl();
 
 signals:

@@ -26,7 +26,7 @@
 DecoderWildMidi::DecoderWildMidi(const QString &path) : Decoder()
 {
     m_path = path;
-    midi_ptr =  0;
+    midi_ptr = nullptr;
     m_sample_rate = 0;
 }
 

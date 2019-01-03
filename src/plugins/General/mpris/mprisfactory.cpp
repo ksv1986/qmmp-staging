@@ -42,7 +42,7 @@ QObject *MPRISFactory::create(QObject *parent)
 
 QDialog *MPRISFactory::createConfigDialog(QWidget *)
 {
-    return 0;
+    return nullptr;
 }
 
 void MPRISFactory::showAbout(QWidget *parent)

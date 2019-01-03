@@ -31,7 +31,7 @@ class PlayStatus : public PixmapWidget
 {
 Q_OBJECT
 public:
-    PlayStatus(QWidget *parent = 0);
+    PlayStatus(QWidget *parent = nullptr);
 
     ~PlayStatus();
 

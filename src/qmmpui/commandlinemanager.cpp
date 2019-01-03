@@ -32,8 +32,8 @@
 #include "mediaplayer.h"
 #include "commandlinemanager.h"
 
-QList<CommandLineHandler *> *CommandLineManager::m_options = 0;
-QHash<CommandLineHandler*, QString> *CommandLineManager::m_files = 0;
+QList<CommandLineHandler *> *CommandLineManager::m_options = nullptr;
+QHash<CommandLineHandler*, QString> *CommandLineManager::m_files = nullptr;
 
 void CommandLineManager::checkOptions()
 {
@@ -51,7 +51,7 @@ void CommandLineManager::checkOptions()
             else
                 qWarning("CommandLineManager: %s", qPrintable(loader.errorString ()));
 
-            CommandLineHandler *option = 0;
+            CommandLineHandler *option = nullptr;
             if (plugin)
                 option = qobject_cast<CommandLineHandler *>(plugin);
 
@@ -99,7 +99,7 @@ bool CommandLineManager::hasOption(const QString &opt_str, CommandLineHandler::O
 {
     checkOptions();
     if(flags)
-        *flags = 0;
+        *flags = nullptr;
     foreach(CommandLineHandler *opt, *m_options)
     {
         int id = opt->identify(opt_str);

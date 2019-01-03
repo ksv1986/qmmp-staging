@@ -33,7 +33,7 @@ class ProjectMPlugin : public Visual
 {
     Q_OBJECT
 public:
-    ProjectMPlugin(QWidget *parent = 0);
+    ProjectMPlugin(QWidget *parent = nullptr);
     virtual ~ProjectMPlugin();
 
 public slots:

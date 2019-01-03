@@ -52,6 +52,10 @@ unix {
   isEmpty(PLUGIN_DIR): PLUGIN_DIR=$$LIB_DIR/qmmp-$${QMMP_VERSION_MAJOR}.$${QMMP_VERSION_MINOR}
 }
 
+#*-g++ {
+#  QMAKE_CXXFLAGS += -Werror=zero-as-null-pointer-constant
+#}
+
 #Comment/uncomment this if you want to change plugins list
 
 CONFIG += ARCHIVE_PLUGIN
@@ -66,7 +70,7 @@ CONFIG += OPUS_PLUGIN
 CONFIG += OSS_PLUGIN #deprecated
 CONFIG += PULSE_AUDIO_PLUGIN
 CONFIG += ALSA_PLUGIN
-#CONFIG += OSS4_PLUGIN
+CONFIG += OSS4_PLUGIN
 CONFIG += AAC_PLUGIN
 CONFIG += MPLAYER_PLUGIN
 CONFIG += CDAUDIO_PLUGIN

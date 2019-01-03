@@ -142,11 +142,11 @@ HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) 
     curl_global_init(CURL_GLOBAL_ALL);
     m_stream.buf_fill = 0;
     m_stream.buf_size = 0;
-    m_stream.buf = 0;
+    m_stream.buf = nullptr;
     m_stream.icy_meta_data = false;
     m_stream.aborted = true;
     m_stream.icy_metaint = 0;
-    m_handle = 0;
+    m_handle = nullptr;
     m_metacount = 0;
     m_meta_sent = false;
     m_ready = false;
@@ -162,8 +162,8 @@ HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) 
     if (!m_codec)
         m_codec = QTextCodec::codecForName ("UTF-8");
 #ifdef WITH_ENCA
-    m_analyser = 0;
-    m_prevCodec = 0;
+    m_analyser = nullptr;
+    m_prevCodec = nullptr;
     if(settings.value("use_enca", false).toBool())
         m_analyser = enca_analyser_alloc(settings.value("enca_lang").toByteArray ().constData());
     if(m_analyser)
@@ -182,7 +182,7 @@ HttpStreamReader::~HttpStreamReader()
     if (m_stream.buf)
         free(m_stream.buf);
 
-    m_stream.buf = 0;
+    m_stream.buf = nullptr;
 #ifdef WITH_ENCA
     if(m_analyser)
         enca_analyser_free(m_analyser);
@@ -307,7 +307,7 @@ void HttpStreamReader::abort()
     if (m_handle)
     {
         curl_easy_cleanup(m_handle);
-        m_handle = 0;
+        m_handle = nullptr;
     }
     QIODevice::close();
 }
@@ -368,15 +368,15 @@ void HttpStreamReader::run()
     // error message
     curl_easy_setopt(m_handle, CURLOPT_ERRORBUFFER, errorBuffer);
 
-    struct curl_slist *http200_aliases = curl_slist_append(NULL, "ICY");
-    struct curl_slist *http_headers = curl_slist_append(NULL, "Icy-MetaData: 1");
+    struct curl_slist *http200_aliases = curl_slist_append(nullptr, "ICY");
+    struct curl_slist *http_headers = curl_slist_append(nullptr, "Icy-MetaData: 1");
     curl_easy_setopt(m_handle, CURLOPT_HTTP200ALIASES, http200_aliases);
     curl_easy_setopt(m_handle, CURLOPT_HTTPHEADER, http_headers);
     m_mutex.lock();
     if(m_stream.buf)
     {
         free(m_stream.buf);
-        m_stream.buf = 0;
+        m_stream.buf = nullptr;
     }
     m_stream.buf_fill = 0;
     m_stream.buf_size = m_prebuffer_size * 2;

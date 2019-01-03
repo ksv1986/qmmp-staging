@@ -38,7 +38,7 @@ public:
         COLUMN_MENU
     };
 
-    explicit MetaDataFormatterMenu(Type type, QWidget *parent = 0);
+    explicit MetaDataFormatterMenu(Type type, QWidget *parent = nullptr);
 
 signals:
     void patternSelected(const QString &pattern);

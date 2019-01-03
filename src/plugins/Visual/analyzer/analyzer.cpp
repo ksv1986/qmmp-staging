@@ -33,9 +33,9 @@
 
 Analyzer::Analyzer (QWidget *parent) : Visual (parent)
 {
-    m_intern_vis_data = 0;
-    m_peaks = 0;
-    m_x_scale = 0;
+    m_intern_vis_data = nullptr;
+    m_peaks = nullptr;
+    m_x_scale = nullptr;
     m_rows = 0;
     m_cols = 0;
     m_update = false;
@@ -202,7 +202,7 @@ void Analyzer::mousePressEvent(QMouseEvent *e)
 
 void Analyzer::process()
 {
-    static fft_state *state = 0;
+    static fft_state *state = nullptr;
     if (!state)
         state = fft_init();
 

@@ -35,9 +35,9 @@ RGScanner::RGScanner()
     m_is_running = false;
     m_is_pending = false;
     m_has_values = false;
-    m_handle = 0;
-    m_decoder = 0;
-    m_source = 0;
+    m_handle = nullptr;
+    m_decoder = nullptr;
+    m_source = nullptr;
 }
 
 RGScanner::~RGScanner()
@@ -47,7 +47,7 @@ RGScanner::~RGScanner()
     if(m_handle)
     {
         DeinitGainAnalysis(m_handle);
-        m_handle = 0;
+        m_handle = nullptr;
     }
 }
 
@@ -57,7 +57,7 @@ bool RGScanner::prepare(const QString &url)
     deinit();
     m_url = url;
     QString name = m_url.section("/", -1);
-    InputSource *source = InputSource::create(url, 0);
+    InputSource *source = InputSource::create(url, nullptr);
     if(!source->initialize())
     {
         delete source;
@@ -273,11 +273,11 @@ void RGScanner::deinit()
     if(m_decoder)
     {
         delete m_decoder;
-        m_decoder = 0;
+        m_decoder = nullptr;
     }
     if(m_source)
     {
         delete m_source;
-        m_source = 0;
+        m_source = nullptr;
     }
 }

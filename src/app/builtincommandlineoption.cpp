@@ -33,7 +33,7 @@
 
 BuiltinCommandLineOption::BuiltinCommandLineOption(QObject *parent) : QObject(parent)
 {
-    m_model = 0;
+    m_model = nullptr;
     m_options << "--enqueue" << "-e"
               << "--play" << "-p"
               << "--pause" << "-u"
@@ -253,7 +253,7 @@ void BuiltinCommandLineOption::disconnectPl()
         disconnect(m_model, SIGNAL(trackAdded(PlayListTrack*)), MediaPlayer::instance(), SLOT(play()));
         disconnect(m_model, SIGNAL(trackAdded(PlayListTrack*)), this, SLOT(disconnectPl()));
         disconnect(m_model, SIGNAL(loaderFinished()), this, SLOT(disconnectPl()));
-        m_model = 0;
+        m_model = nullptr;
     }
 }
 

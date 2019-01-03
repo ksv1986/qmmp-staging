@@ -42,7 +42,7 @@ QObject *GnomeHotkeyFactory::create(QObject *parent)
 QDialog *GnomeHotkeyFactory::createConfigDialog(QWidget *parent)
 {
     Q_UNUSED(parent);
-    return 0;
+    return nullptr;
 }
 
 void GnomeHotkeyFactory::showAbout(QWidget *parent)

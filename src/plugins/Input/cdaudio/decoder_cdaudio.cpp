@@ -87,7 +87,7 @@ DecoderCDAudio::DecoderCDAudio(const QString &url) : Decoder()
     m_last_sector  = -1;
     m_current_sector  = -1;
     m_url = url;
-    m_cdio = 0;
+    m_cdio = nullptr;
     m_buffer_at = 0;
     m_buffer = new char[CDDA_BUFFER_SIZE];
 }
@@ -98,7 +98,7 @@ DecoderCDAudio::~DecoderCDAudio()
     if (m_cdio)
     {
         cdio_destroy(m_cdio);
-        m_cdio = 0;
+        m_cdio = nullptr;
     }
     delete [] m_buffer;
 }
@@ -111,13 +111,13 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
     bool use_cd_text = settings.value("cdaudio/cdtext", true).toBool();
     QList <CDATrack> tracks;
     cdio_log_set_handler(log_handler); //setup cdio log handler
-    CdIo_t *cdio = 0;
+    CdIo_t *cdio = nullptr;
     QString device_path = device;
     if (device_path.isEmpty() || device_path == "/")
         device_path = settings.value("cdaudio/device").toString();
     if (device_path.isEmpty() || device_path == "/")
     {
-        char **cd_drives = cdio_get_devices_with_cap(0, CDIO_FS_AUDIO, true); //get drive list with CDA disks
+        char **cd_drives = cdio_get_devices_with_cap(nullptr, CDIO_FS_AUDIO, true); //get drive list with CDA disks
         // open first audio capable cd drive
         if (cd_drives && *cd_drives)
         {
@@ -164,7 +164,7 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
             qWarning("DecoderCDAudio: unable to set drive speed to %dX.", cd_speed);
     }
 
-    cdrom_drive_t *pcdrom_drive = cdio_cddap_identify_cdio(cdio, 1, 0); //create paranoya CD-ROM object
+    cdrom_drive_t *pcdrom_drive = cdio_cddap_identify_cdio(cdio, 1, nullptr); //create paranoya CD-ROM object
     //get first and last track numbers
     int first_track_number = cdio_get_first_track_num(pcdrom_drive->p_cdio);
     int last_track_number = cdio_get_last_track_num(pcdrom_drive->p_cdio);
@@ -173,7 +173,7 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
     {
         qWarning("DecoderCDAudio: invalid first (last) track number.");
         cdio_destroy(cdio);
-        cdio = 0;
+        cdio = nullptr;
         return tracks;
     }
     bool use_cddb = true;
@@ -201,12 +201,12 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
             qWarning("DecoderCDAudio: invalid stard(end) lsn for the track %d.", i);
             tracks.clear();
             cdio_destroy(cdio);
-            cdio = 0;
+            cdio = nullptr;
             return tracks;
         }
         //cd text
 #if LIBCDIO_VERSION_NUM <= 83
-        cdtext_t *cdtext = use_cd_text ? cdio_get_cdtext(pcdrom_drive->p_cdio, i) : 0;
+        cdtext_t *cdtext = use_cd_text ? cdio_get_cdtext(pcdrom_drive->p_cdio, i) : nullptr;
         if (cdtext && cdtext->field[CDTEXT_TITLE])
         {
             t.info.setValue(Qmmp::TITLE, QString::fromLocal8Bit(cdtext->field[CDTEXT_TITLE]));
@@ -215,7 +215,7 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
             use_cddb = false;
         }
 #else
-        cdtext_t *cdtext = use_cd_text ? cdio_get_cdtext(pcdrom_drive->p_cdio) : 0;
+        cdtext_t *cdtext = use_cd_text ? cdio_get_cdtext(pcdrom_drive->p_cdio) : nullptr;
         if (cdtext)
         {
             t.info.setValue(Qmmp::TITLE, QString::fromUtf8(cdtext_get_const(cdtext,CDTEXT_FIELD_TITLE,i)));
@@ -329,7 +329,7 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
     }
 
     cdio_destroy(cdio);
-    cdio = 0;
+    cdio = nullptr;
     m_track_cache = tracks;
     return tracks;
 }
@@ -425,7 +425,7 @@ bool DecoderCDAudio::initialize()
 
     if (device_path.isEmpty() || device_path == "/")
     {
-        char **cd_drives = cdio_get_devices_with_cap(0, CDIO_FS_AUDIO, true); //get drive list with CDA disks
+        char **cd_drives = cdio_get_devices_with_cap(nullptr, CDIO_FS_AUDIO, true); //get drive list with CDA disks
         // open first audio capable cd drive
         if (cd_drives && *cd_drives)
         {

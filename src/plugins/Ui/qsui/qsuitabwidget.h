@@ -35,7 +35,7 @@ class QSUiTabWidget : public QWidget
 {
     Q_OBJECT
 public:
-    QSUiTabWidget(QWidget *parent = 0);
+    QSUiTabWidget(QWidget *parent = nullptr);
 
     QSUiTabBar *tabBar() const;
     ListWidget *listWidget() const;

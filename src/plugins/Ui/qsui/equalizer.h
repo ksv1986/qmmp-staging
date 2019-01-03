@@ -38,7 +38,7 @@ class Equalizer : public QDialog
 {
     Q_OBJECT
 public:
-    explicit Equalizer(QWidget *parent = 0);
+    explicit Equalizer(QWidget *parent = nullptr);
     ~Equalizer();
 
 

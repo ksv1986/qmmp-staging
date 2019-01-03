@@ -37,7 +37,7 @@ public:
     ~Buffer()
     {
         delete[] data;
-        data = 0;
+        data = nullptr;
         samples = 0;
         rate = 0;
         size = 0;

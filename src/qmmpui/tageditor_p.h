@@ -36,7 +36,7 @@ class TagEditor : public QWidget
 {
 Q_OBJECT
 public:
-    TagEditor(TagModel *tagModel, QWidget *parent = 0);
+    TagEditor(TagModel *tagModel, QWidget *parent = nullptr);
     ~TagEditor();
 
     void save();

@@ -41,7 +41,7 @@ QObject *RGScanFactory::create(QObject *parent)
 QDialog *RGScanFactory::createConfigDialog(QWidget *parent)
 {
     Q_UNUSED(parent);
-    return 0;
+    return nullptr;
 }
 
 void RGScanFactory::showAbout(QWidget *parent)

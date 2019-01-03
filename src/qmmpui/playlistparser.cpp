@@ -27,7 +27,7 @@
 #include "playlistformat.h"
 #include "playlistparser.h"
 
-QList<PlayListFormat*> *PlayListParser::m_formats = 0;
+QList<PlayListFormat*> *PlayListParser::m_formats = nullptr;
 
 QList<PlayListFormat *> PlayListParser::formats()
 {
@@ -65,7 +65,7 @@ PlayListFormat *PlayListParser::findByMime(const QString &mime)
         if(format->properties().contentTypes.contains(mime))
             return format;
     }
-    return 0;
+    return nullptr;
 }
 
 PlayListFormat *PlayListParser::findByPath(const QString &filePath)
@@ -80,7 +80,7 @@ PlayListFormat *PlayListParser::findByPath(const QString &filePath)
                 return format;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 PlayListFormat *PlayListParser::findByUrl(const QUrl &url)
@@ -172,7 +172,7 @@ void PlayListParser::loadFormats()
         else
             qWarning("PlayListParser: %s", qPrintable(loader.errorString ()));
 
-        PlayListFormat *fmt = 0;
+        PlayListFormat *fmt = nullptr;
         if (plugin)
             fmt = qobject_cast<PlayListFormat *>(plugin);
 

@@ -39,7 +39,7 @@ public:
      * Constructor.
      * @param parent Parent widget.
      */
-    explicit TemplateEditor(QWidget *parent = 0);
+    explicit TemplateEditor(QWidget *parent = nullptr);
     /*!
      * Returns current template from editor.
      */
@@ -62,7 +62,7 @@ public:
      * @param ok This varible will be set to \b true (\b false) if the user pressed OK (Cancel).
      */
     static QString getTemplate (QWidget *parent, const QString &title, const QString &text = QString(),
-                                const QString &default_template = QString(), bool *ok = 0);
+                                const QString &default_template = QString(), bool *ok = nullptr);
 
 private slots:
     void on_resetButton_clicked();

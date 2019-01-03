@@ -92,7 +92,7 @@ MetaDataModel* DecoderWildMidiFactory::createMetaDataModel(const QString &path, 
 {
     Q_UNUSED(path);
     Q_UNUSED(readOnly);
-    return 0;
+    return nullptr;
 }
 
 void DecoderWildMidiFactory::showSettings(QWidget *parent)

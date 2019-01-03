@@ -210,7 +210,7 @@ QAction *HalPlugin::findAction(const QString &dev_path)
         if (action->data().toString() == dev_path)
             return action;
     }
-    return 0;
+    return nullptr;
 }
 
 HalDevice *HalPlugin::findDevice(QAction *action)
@@ -232,7 +232,7 @@ HalDevice *HalPlugin::findDevice(QAction *action)
                 return device;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 void HalPlugin::addPath(const QString &path)

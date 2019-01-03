@@ -28,7 +28,7 @@
 
 PlayListDownloader::PlayListDownloader(QObject *parent) : QObject(parent)
 {
-    m_getReply = 0;
+    m_getReply = nullptr;
     m_ua = QString("qmmp/%1").arg(Qmmp::strVersion()).toLatin1();
     m_manager = new QNetworkAccessManager(this);
     connect(m_manager, SIGNAL(finished (QNetworkReply *)), SLOT(readResponse(QNetworkReply *)));
@@ -94,7 +94,7 @@ void PlayListDownloader::readResponse(QNetworkReply *reply)
 
     if(reply == m_getReply)
     {
-        m_getReply = 0;
+        m_getReply = nullptr;
 
         if(m_model.isNull())
         {

@@ -73,7 +73,7 @@ QList<TrackInfo *> DecoderModPlugFactory::createPlayList(const QString &path, Tr
 
     QByteArray buffer;
 
-    ArchiveReader reader(0);
+    ArchiveReader reader(nullptr);
     if (reader.isSupported(path))
     {
         buffer = reader.unpack(path);

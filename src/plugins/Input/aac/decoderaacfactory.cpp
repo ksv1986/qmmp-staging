@@ -92,7 +92,7 @@ MetaDataModel* DecoderAACFactory::createMetaDataModel(const QString &path, bool 
 {
     Q_UNUSED(path);
     Q_UNUSED(readOnly);
-    return 0;
+    return nullptr;
 }
 
 void DecoderAACFactory::showSettings(QWidget *)

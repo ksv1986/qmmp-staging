@@ -31,7 +31,7 @@ MMSStreamReader::MMSStreamReader(const QString &url, MMSInputSource *parent) : Q
 {
     m_parent = parent;
     m_url = url;
-    m_handle = 0;
+    m_handle = nullptr;
     m_aborted = false;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_prebuf_size = settings.value("MMS/buffer_size",384).toInt() * 1024;
@@ -47,7 +47,7 @@ MMSStreamReader::~MMSStreamReader()
     qDebug("%s", Q_FUNC_INFO);
     abort();
     free(m_buffer);
-    m_buffer = 0;
+    m_buffer = nullptr;
     m_buffer_at = 0;
     m_buffer_size = 0;
 }
@@ -128,7 +128,7 @@ void MMSStreamReader::abort()
     m_ready = false;
     if (m_handle)
         mmsx_close(m_handle);
-    m_handle = 0;
+    m_handle = nullptr;
 }
 
 qint64 MMSStreamReader::bytesAvailable() const
@@ -140,7 +140,7 @@ void MMSStreamReader::run()
 {
     int to_read = 1024;
     char prebuf[to_read];
-    m_handle = mmsx_connect (0, 0, m_url.toLocal8Bit().constData(), 128 * 1024);
+    m_handle = mmsx_connect (nullptr, nullptr, m_url.toLocal8Bit().constData(), 128 * 1024);
     if(!m_handle)
     {
         qWarning("MMSStreamReader: connection failed");
@@ -168,7 +168,7 @@ void MMSStreamReader::run()
             m_buffer = (char *)realloc(m_buffer, m_buffer_size);
         }
         m_mutex.unlock();
-        len = mmsx_read (0, m_handle, prebuf, to_read);
+        len = mmsx_read (nullptr, m_handle, prebuf, to_read);
         m_mutex.lock();
         if(len < 0)
         {

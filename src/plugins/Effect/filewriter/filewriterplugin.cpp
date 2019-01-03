@@ -27,7 +27,7 @@
 
 FileWriterPlugin::FileWriterPlugin()
 {
-    qsrand(time(NULL));
+    qsrand(time(nullptr));
     m_inited = false;
 }
 
@@ -67,7 +67,7 @@ void FileWriterPlugin::applyEffect(Buffer *b)
     while(ok && vorbis_analysis_blockout(&m_vd, &m_vb) == 1)
     {
         // analysis, assume we want to use bitrate management
-        vorbis_analysis(&m_vb, NULL);
+        vorbis_analysis(&m_vb, nullptr);
         vorbis_bitrate_addblock(&m_vb);
 
         while(ok && vorbis_bitrate_flushpacket(&m_vd, &m_op))
@@ -167,7 +167,7 @@ void FileWriterPlugin::init(const TrackInfo &info)
         { Qmmp::YEAR, "date"},
         { Qmmp::COMPOSER, "composer"},
         { Qmmp::DISCNUMBER, "discnumber"},
-        { Qmmp::UNKNOWN, 0}
+        { Qmmp::UNKNOWN, nullptr}
     };
 
     int i = 0;

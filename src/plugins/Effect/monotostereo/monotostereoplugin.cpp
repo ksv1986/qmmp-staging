@@ -24,7 +24,7 @@
 
 MonoToStereoPlugin::MonoToStereoPlugin() : Effect()
 {
-    m_tmp = 0;
+    m_tmp = nullptr;
     m_size = 0;
     m_enabled = false;
 }
@@ -34,7 +34,7 @@ MonoToStereoPlugin::~MonoToStereoPlugin()
     if(m_tmp)
     {
         delete[] m_tmp;
-        m_tmp = 0;
+        m_tmp = nullptr;
     }
 }
 

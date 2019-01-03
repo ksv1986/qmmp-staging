@@ -174,7 +174,7 @@ void MPCFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
 
 bool MPCFileTagModel::exists() const
 {
-    return (m_tag != 0);
+    return (m_tag != nullptr);
 }
 
 void MPCFileTagModel::create()
@@ -189,7 +189,7 @@ void MPCFileTagModel::create()
 
 void MPCFileTagModel::remove()
 {
-    m_tag = 0;
+    m_tag = nullptr;
 }
 
 void MPCFileTagModel::save()

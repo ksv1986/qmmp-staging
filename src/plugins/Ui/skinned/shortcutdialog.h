@@ -32,7 +32,7 @@ class ShortcutDialog : public QDialog
 {
     Q_OBJECT
 public:
-    ShortcutDialog(const QString &key, QWidget *parent = 0);
+    ShortcutDialog(const QString &key, QWidget *parent = nullptr);
 
     ~ShortcutDialog();
 

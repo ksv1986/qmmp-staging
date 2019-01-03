@@ -41,9 +41,9 @@ ListWidgetDrawer::ListWidgetDrawer()
     m_row_height = 0;
     m_number_width = 0;
     m_padding = 0;
-    m_metrics = 0;
-    m_extra_metrics = 0;
-    m_bold_metrics = 0;
+    m_metrics = nullptr;
+    m_extra_metrics = nullptr;
+    m_bold_metrics = nullptr;
     readSettings();
 }
 
@@ -312,7 +312,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
 
     painter->setFont(m_font);
     painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : m_normal);
-    QFontMetrics *metrics = 0;
+    QFontMetrics *metrics = nullptr;
     if(row->flags & ListWidgetRow::CURRENT)
     {
         m_font.setBold(true);

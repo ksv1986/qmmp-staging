@@ -33,7 +33,7 @@ class MPRIS : public QObject
 {
 Q_OBJECT
 public:
-    MPRIS(QObject *parent = 0);
+    MPRIS(QObject *parent = nullptr);
 
     ~MPRIS();
 };

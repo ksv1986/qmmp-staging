@@ -209,7 +209,7 @@ PlayListItem *GroupedContainer::item(int index) const
     if(index >= count() || index < 0)
     {
         qWarning("GroupedContainer: index is out of range");
-        return 0;
+        return nullptr;
     }
     return m_items.at(index);
 }
@@ -219,7 +219,7 @@ PlayListTrack *GroupedContainer::track(int index) const
     updateCache();
     PlayListItem *i = item(index);
     if(!i || i->isGroup())
-        return 0;
+        return nullptr;
     return dynamic_cast<PlayListTrack *> (i);
 }
 
@@ -228,7 +228,7 @@ PlayListGroup *GroupedContainer::group(int index) const
     PlayListItem *i = item(index);
     if(i && i->isGroup())
         return dynamic_cast<PlayListGroup *> (i);
-    return 0;
+    return nullptr;
 }
 
 bool GroupedContainer::contains(PlayListItem *item) const
@@ -259,7 +259,7 @@ PlayListTrack *GroupedContainer::findTrack(int number) const
         }
         firstNumber += group->count();
     }
-    return 0;
+    return nullptr;
 }
 
 void GroupedContainer::removeTrack(PlayListTrack *track)
@@ -290,7 +290,7 @@ void GroupedContainer::removeTracks(QList<PlayListTrack *> tracks)
 bool GroupedContainer::move(QList<int> indexes, int from, int to)
 {
     updateCache();
-    PlayListGroup *group = 0;
+    PlayListGroup *group = nullptr;
     int firstIndex = 0, lastIndex = 0;
 
     for(int i = 0; i < m_groups.count(); ++i)

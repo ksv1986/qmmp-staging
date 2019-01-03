@@ -31,7 +31,7 @@ class MonoStereo : public PixmapWidget
 {
 Q_OBJECT
 public:
-    MonoStereo(QWidget *parent = 0);
+    MonoStereo(QWidget *parent = nullptr);
 
     ~MonoStereo();
 

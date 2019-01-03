@@ -184,7 +184,7 @@ QAction *UDisks2Plugin::findAction(const QString &dev_path)
         if (action->data().toString() == dev_path)
             return action;
     }
-    return 0;
+    return nullptr;
 }
 
 UDisks2Device *UDisks2Plugin::findDevice(QAction *action)
@@ -205,7 +205,7 @@ UDisks2Device *UDisks2Plugin::findDevice(QAction *action)
                 return device;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 void UDisks2Plugin::addPath(const QString &path)

@@ -32,7 +32,7 @@ class HorizontalSlider : public QWidget
 {
 Q_OBJECT
 public:
-    HorizontalSlider(QWidget *parent = 0);
+    HorizontalSlider(QWidget *parent = nullptr);
 
     ~HorizontalSlider();
 

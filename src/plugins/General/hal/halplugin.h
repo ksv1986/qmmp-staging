@@ -36,7 +36,7 @@ class HalPlugin : public QObject
 {
 Q_OBJECT
 public:
-    HalPlugin(QObject *parent = 0);
+    HalPlugin(QObject *parent = nullptr);
 
     ~HalPlugin();
 

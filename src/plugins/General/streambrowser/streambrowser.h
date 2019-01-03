@@ -35,7 +35,7 @@ class StreamBrowser : public QObject
 {
 Q_OBJECT
 public:
-    StreamBrowser(QObject *parent = 0);
+    StreamBrowser(QObject *parent = nullptr);
 
     ~StreamBrowser();
 

@@ -36,10 +36,10 @@ DecoderAAC::DecoderAAC(QIODevice *i)
 {
     m_bitrate = 0;
     m_totalTime = 0;
-    m_data = 0;
-    m_input_buf = 0;
+    m_data = nullptr;
+    m_input_buf = nullptr;
     m_input_at = 0;
-    m_sample_buf = 0;
+    m_sample_buf = nullptr;
     m_sample_buf_at = 0;
     m_sample_buf_size = 0;
 }
@@ -52,11 +52,11 @@ DecoderAAC::~DecoderAAC()
         if (data()->handle)
             NeAACDecClose (data()->handle);
         delete data();
-        m_data = 0;
+        m_data = nullptr;
     }
     if (m_input_buf)
         delete [] m_input_buf;
-    m_input_buf = 0;
+    m_input_buf = nullptr;
     m_bitrate = 0;
 }
 

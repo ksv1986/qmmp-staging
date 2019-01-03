@@ -61,7 +61,7 @@ void PresetEditor::addAutoPresets(const QList<EQPreset*> &presets)
 
 void PresetEditor::loadPreset()
 {
-    EQPreset* preset = 0;
+    EQPreset* preset = nullptr;
     if (ui.tabWidget->currentIndex () == 0)
         preset = (EQPreset *) ui.presetListWidget->currentItem ();
     if (ui.tabWidget->currentIndex () == 1)
@@ -72,7 +72,7 @@ void PresetEditor::loadPreset()
 
 void PresetEditor::deletePreset()
 {
-    EQPreset* preset = 0;
+    EQPreset* preset = nullptr;
     if (ui.tabWidget->currentIndex () == 0)
         preset = (EQPreset *) ui.presetListWidget->currentItem ();
     if (ui.tabWidget->currentIndex () == 1)

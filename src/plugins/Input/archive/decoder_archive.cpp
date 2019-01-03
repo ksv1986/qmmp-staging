@@ -27,8 +27,8 @@
 DecoderArchive::DecoderArchive(const QString &url)
 {
     m_url = url;
-    m_decoder = 0;
-    m_input = 0;
+    m_decoder = nullptr;
+    m_input = nullptr;
 }
 
 DecoderArchive::~DecoderArchive()
@@ -36,12 +36,12 @@ DecoderArchive::~DecoderArchive()
     if(m_decoder)
     {
         delete m_decoder;
-        m_decoder = 0;
+        m_decoder = nullptr;
     }
     if(m_input)
     {
         delete m_input;
-        m_input = 0;
+        m_input = nullptr;
     }
 }
 
@@ -80,7 +80,7 @@ bool DecoderArchive::initialize()
         return false;
     }
 
-    DecoderFactory *factory = 0;
+    DecoderFactory *factory = nullptr;
     if(filtered.size() == 1)
         factory = filtered.first();
     else

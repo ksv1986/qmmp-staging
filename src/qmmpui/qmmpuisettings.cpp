@@ -26,7 +26,7 @@
 #include "playlistmanager.h"
 #include "qmmpuisettings.h"
 
-QmmpUiSettings *QmmpUiSettings::m_instance = 0;
+QmmpUiSettings *QmmpUiSettings::m_instance = nullptr;
 
 QmmpUiSettings::QmmpUiSettings(QObject *parent) : QObject(parent)
 {
@@ -67,7 +67,7 @@ QmmpUiSettings::QmmpUiSettings(QObject *parent) : QObject(parent)
 
 QmmpUiSettings::~QmmpUiSettings()
 {
-    m_instance = 0;
+    m_instance = nullptr;
     sync();
     delete m_helper;
 }

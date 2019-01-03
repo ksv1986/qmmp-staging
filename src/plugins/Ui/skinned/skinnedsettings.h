@@ -32,7 +32,7 @@ class SkinnedSettings : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SkinnedSettings(QWidget *parent = 0);
+    explicit SkinnedSettings(QWidget *parent = nullptr);
     virtual ~SkinnedSettings();
     void writeSettings();
 

@@ -37,7 +37,7 @@ class CoverEditor : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CoverEditor(MetaDataModel *model, const QString &coverPath, QWidget *parent = 0);
+    explicit CoverEditor(MetaDataModel *model, const QString &coverPath, QWidget *parent = nullptr);
 
     bool isEditable() const;
     void save();

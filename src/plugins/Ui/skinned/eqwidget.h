@@ -42,7 +42,7 @@ class EqWidget : public PixmapWidget
 {
     Q_OBJECT
 public:
-    EqWidget(QWidget *parent = 0);
+    EqWidget(QWidget *parent = nullptr);
 
     ~EqWidget();
 

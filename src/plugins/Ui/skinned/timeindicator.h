@@ -35,7 +35,7 @@ class Skin;
 class TimeIndicatorModel : public QObject {
     Q_OBJECT
 public:
-    TimeIndicatorModel(QObject *parent = 0);
+    TimeIndicatorModel(QObject *parent = nullptr);
     ~TimeIndicatorModel();
 
     int position() { return m_position; }
@@ -77,7 +77,7 @@ class TimeIndicator : public PixmapWidget
 {
     Q_OBJECT
 public:
-    TimeIndicator(TimeIndicatorModel *model, QWidget *parent = 0);
+    TimeIndicator(TimeIndicatorModel *model, QWidget *parent = nullptr);
     ~TimeIndicator();
 
 protected:

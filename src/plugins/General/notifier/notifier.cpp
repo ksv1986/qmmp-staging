@@ -41,7 +41,7 @@
 
 Notifier::Notifier(QObject *parent) : QObject(parent)
 {
-    m_popupWidget = 0;
+    m_popupWidget = nullptr;
     m_l = -1;
     m_r = -1;
     m_isPaused = false;

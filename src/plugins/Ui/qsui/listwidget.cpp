@@ -45,9 +45,9 @@ ListWidget::ListWidget(PlayListModel *model, QWidget *parent)
         : QWidget(parent)
 {
     setFocusPolicy(Qt::StrongFocus);
-    m_popupWidget = 0;
+    m_popupWidget = nullptr;
     m_ui_settings = QmmpUiSettings::instance();
-    m_menu = 0;
+    m_menu = nullptr;
     m_filterMode = false;
     m_model = model;
     m_timer = new QTimer(this);
@@ -67,7 +67,7 @@ ListWidget::ListWidget(PlayListModel *model, QWidget *parent)
     m_row_count = 0;
     m_select_on_release = false;
     m_count = 0;
-    m_firstItem = 0;
+    m_firstItem = nullptr;
 
     setAcceptDrops(true);
     setMouseTracking(true);
@@ -108,7 +108,7 @@ void ListWidget::readSettings()
         if(m_popupWidget)
         {
             m_popupWidget->deleteLater();
-            m_popupWidget = 0;
+            m_popupWidget = nullptr;
         }
     }
     else
@@ -174,13 +174,13 @@ void ListWidget::setModel(PlayListModel *selected, PlayListModel *previous)
     if(previous)
     {
         previous->setProperty("first_visible", m_first);
-        disconnect(previous, 0, this, 0); //disconnect previous model
-        disconnect(previous,0,m_header,0);
+        disconnect(previous, nullptr, this, nullptr); //disconnect previous model
+        disconnect(previous,nullptr,m_header,nullptr);
     }
     qApp->processEvents();
     m_model = selected;
     m_count = m_model->count();
-    m_firstItem = 0;
+    m_firstItem = nullptr;
 
     if(m_model->property("first_visible").isValid())
     {
@@ -436,7 +436,7 @@ void ListWidget::updateList(int flags)
 
         if(!m_filterMode)
         {
-            m_firstItem = m_model->isEmpty() ? 0 : m_model->item(m_first);
+            m_firstItem = m_model->isEmpty() ? nullptr : m_model->item(m_first);
             m_count = m_model->count();
         }
         items = m_filterMode ? m_filteredItems.mid(m_first, m_row_count) : m_model->mid(m_first, m_row_count);

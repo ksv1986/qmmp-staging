@@ -31,7 +31,7 @@
 
 #define COVER_CACHE_SIZE 10
 
-MetaDataManager* MetaDataManager::m_instance = 0;
+MetaDataManager* MetaDataManager::m_instance = nullptr;
 
 MetaDataManager::MetaDataManager() : m_mutex(QMutex::Recursive)
 {
@@ -44,14 +44,14 @@ MetaDataManager::MetaDataManager() : m_mutex(QMutex::Recursive)
 MetaDataManager::~MetaDataManager()
 {
     clearCoverCache();
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 QList<TrackInfo *> MetaDataManager::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredPaths) const
 {
     QList <TrackInfo *> list;
-    DecoderFactory *fact = 0;
-    EngineFactory *efact = 0;
+    DecoderFactory *fact = nullptr;
+    EngineFactory *efact = nullptr;
     QStringList dummyList;
     if(!ignoredPaths)
         ignoredPaths = &dummyList;
@@ -98,23 +98,23 @@ QList<TrackInfo *> MetaDataManager::createPlayList(const QString &path, TrackInf
 
 MetaDataModel* MetaDataManager::createMetaDataModel(const QString &path, bool readOnly) const
 {
-    DecoderFactory *fact = 0;
-    EngineFactory *efact = 0;
+    DecoderFactory *fact = nullptr;
+    EngineFactory *efact = nullptr;
 
     if (!path.contains("://")) //local file
     {
         if(!QFile::exists(path))
-            return 0;
+            return nullptr;
         else if((fact = Decoder::findByFilePath(path, m_settings->determineFileTypeByContent())))
             return fact->createMetaDataModel(path, readOnly);
         else if((efact = AbstractEngine::findByFilePath(path)))
             return efact->createMetaDataModel(path, readOnly);
-        return 0;
+        return nullptr;
     }
     else
     {
         QString scheme = path.section("://",0,0);
-        MetaDataModel *model = 0;
+        MetaDataModel *model = nullptr;
         if((fact = Decoder::findByProtocol(scheme)))
         {
             return fact->createMetaDataModel(path, readOnly);
@@ -127,7 +127,7 @@ MetaDataModel* MetaDataManager::createMetaDataModel(const QString &path, bool re
                 return model;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 QStringList MetaDataManager::filters() const
@@ -177,8 +177,8 @@ QStringList MetaDataManager::protocols() const
 
 bool MetaDataManager::supports(const QString &fileName) const
 {
-    DecoderFactory *fact = 0;
-    EngineFactory *efact = 0;
+    DecoderFactory *fact = nullptr;
+    EngineFactory *efact = nullptr;
     if (!fileName.contains("://")) //local file
     {
         if (!QFile::exists(fileName))

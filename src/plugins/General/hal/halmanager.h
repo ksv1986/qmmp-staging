@@ -32,7 +32,7 @@ class HalManager : public QObject
 {
 Q_OBJECT
 public:
-    HalManager(QObject *parent = 0);
+    HalManager(QObject *parent = nullptr);
 
     ~HalManager();
 

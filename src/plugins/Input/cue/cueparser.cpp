@@ -49,9 +49,9 @@ CUEParser::CUEParser(const QString &path)
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("CUE");
     m_dirty = settings.value("dirty_cue", false).toBool();
-    QTextCodec *codec = 0;
+    QTextCodec *codec = nullptr;
 #ifdef WITH_ENCA
-    EncaAnalyser analyser = 0;
+    EncaAnalyser analyser = nullptr;
     if(settings.value("use_enca", false).toBool())
     {
         analyser = enca_analyser_alloc(settings.value("enca_lang").toByteArray ().constData());

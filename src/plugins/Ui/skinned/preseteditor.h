@@ -34,7 +34,7 @@ class PresetEditor : public QDialog
 {
 Q_OBJECT
 public:
-    PresetEditor(QWidget *parent = 0);
+    PresetEditor(QWidget *parent = nullptr);
 
     ~PresetEditor();
 

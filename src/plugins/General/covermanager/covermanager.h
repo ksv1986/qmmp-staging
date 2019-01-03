@@ -33,7 +33,7 @@ class CoverManager : public QObject
 {
 Q_OBJECT
 public:
-    CoverManager(QObject *parent = 0);
+    CoverManager(QObject *parent = nullptr);
 
 private slots:
     void showWindow();

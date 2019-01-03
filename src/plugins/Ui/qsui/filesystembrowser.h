@@ -42,7 +42,7 @@ class FileSystemBrowser : public QWidget
 {
     Q_OBJECT
 public:
-    explicit FileSystemBrowser(QWidget *parent = 0);
+    explicit FileSystemBrowser(QWidget *parent = nullptr);
     ~FileSystemBrowser();
 
     void readSettings();

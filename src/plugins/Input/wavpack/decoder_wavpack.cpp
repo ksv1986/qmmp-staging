@@ -38,9 +38,9 @@ DecoderWavPack::DecoderWavPack(const QString &path)
     m_path = path;
     m_totalTime = 0.0;
     m_chan = 0;
-    m_context = 0;
-    m_parser = 0;
-    m_output_buf = 0;
+    m_context = nullptr;
+    m_parser = nullptr;
+    m_output_buf = nullptr;
     m_length_in_bytes = 0;
     m_totalBytes = 0;
     m_frame_size = 0;
@@ -54,7 +54,7 @@ DecoderWavPack::~DecoderWavPack()
     deinit();
     if (m_output_buf)
         delete [] m_output_buf;
-    m_output_buf = 0;
+    m_output_buf = nullptr;
 }
 
 bool DecoderWavPack::initialize()
@@ -79,7 +79,7 @@ bool DecoderWavPack::initialize()
             qWarning("DecoderWavPack: error: %s", err);
             return false;
         }
-        int cue_len = WavpackGetTagItem (m_context, "cuesheet", NULL, 0);
+        int cue_len = WavpackGetTagItem (m_context, "cuesheet", nullptr, 0);
         char *value;
         if (cue_len)
         {
@@ -173,10 +173,10 @@ void DecoderWavPack::deinit()
     m_chan = 0;
     if (m_context)
         WavpackCloseFile (m_context);
-    m_context = 0;
+    m_context = nullptr;
     if(m_parser)
         delete m_parser;
-    m_parser = 0;
+    m_parser = nullptr;
 }
 
 void DecoderWavPack::seek(qint64 time)

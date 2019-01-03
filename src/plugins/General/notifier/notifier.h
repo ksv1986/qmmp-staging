@@ -36,7 +36,7 @@ class Notifier : public QObject
 {
 Q_OBJECT
 public:
-    Notifier(QObject *parent = 0);
+    Notifier(QObject *parent = nullptr);
 
     virtual~Notifier();
 

@@ -31,7 +31,7 @@
 #include "inlines.h"
 #include "mainvisual.h"
 
-MainVisual *MainVisual::m_instance = 0;
+MainVisual *MainVisual::m_instance = nullptr;
 
 MainVisual *MainVisual::instance()
 {
@@ -40,7 +40,7 @@ MainVisual *MainVisual::instance()
     return m_instance;
 }
 
-MainVisual::MainVisual (QWidget *parent) : Visual (parent), m_vis (0)
+MainVisual::MainVisual (QWidget *parent) : Visual (parent), m_vis (nullptr)
 {
     m_skin = Skin::instance();
     m_ratio = m_skin->ratio();
@@ -60,9 +60,9 @@ MainVisual::~MainVisual()
     if (m_vis)
     {
         delete m_vis;
-        m_vis = 0;
+        m_vis = nullptr;
     }
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 void MainVisual::setVisual (VisualBase *newvis)
@@ -129,7 +129,7 @@ void MainVisual::mousePressEvent (QMouseEvent *e)
         else if (m_vis->name() == "Analyzer")
             setVisual(new mainvisual::Scope);
         else if (m_vis->name() == "Scope")
-            setVisual(0);
+            setVisual(nullptr);
 
         QString str = m_vis ? m_vis->name() : "Off";
         foreach(QAction *act, m_visModeGroup->actions ())
@@ -358,7 +358,7 @@ void MainVisual::readSettings()
     else if (vis_name == "Scope")
         setVisual(new mainvisual::Scope);
     else
-        setVisual(0);
+        setVisual(nullptr);
     resize(76 * m_ratio, 16 * m_ratio);
     update();
 }
@@ -395,7 +395,7 @@ void Analyzer::clear()
 
 bool Analyzer::process (float *l)
 {
-    static fft_state *state = 0;
+    static fft_state *state = nullptr;
     if (!state)
         state = fft_init();
     short dest[256];

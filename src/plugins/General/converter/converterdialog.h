@@ -37,7 +37,7 @@ class ConverterDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ConverterDialog(QList <PlayListTrack *> items,  QWidget *parent = 0);
+    explicit ConverterDialog(QList <PlayListTrack *> items,  QWidget *parent = nullptr);
     virtual ~ConverterDialog();
 
 public slots:

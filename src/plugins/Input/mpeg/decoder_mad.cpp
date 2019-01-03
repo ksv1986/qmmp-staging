@@ -41,7 +41,7 @@ DecoderMAD::DecoderMAD(QIODevice *i) : Decoder(i)
     m_bitrate = 0;
     m_freq = 0;
     m_len = 0;
-    m_input_buf = 0;
+    m_input_buf = nullptr;
     m_input_bytes = 0;
     m_skip_frames = 0;
     m_eof = false;
@@ -56,7 +56,7 @@ DecoderMAD::~DecoderMAD()
     {
         qDebug("DecoderMAD: deleting input_buf");
         delete [] m_input_buf;
-        m_input_buf = 0;
+        m_input_buf = nullptr;
     }
 }
 
@@ -98,7 +98,7 @@ bool DecoderMAD::initialize()
     mad_stream_buffer(&m_stream, (unsigned char *) m_input_buf, m_input_bytes);
     m_stream.error = MAD_ERROR_BUFLEN;
     mad_frame_mute (&m_frame);
-    m_stream.next_frame = 0;
+    m_stream.next_frame = nullptr;
     m_stream.sync = 0;
     ChannelMap map;
     if(m_channels == 1)
@@ -131,7 +131,7 @@ void DecoderMAD::deinit()
     if(m_xing.lame)
     {
         delete m_xing.lame;
-        m_xing.lame = 0;
+        m_xing.lame = nullptr;
     }
 }
 
@@ -204,17 +204,17 @@ bool DecoderMAD::findXingHeader(struct mad_bitptr ptr, unsigned int bitlen)
 DecoderMAD::LameHeader* DecoderMAD::findLameHeader(mad_bitptr ptr, unsigned int bitlen)
 {
     if(bitlen < 272)
-        return 0;
+        return nullptr;
 
     if(mad_bit_read (&ptr, 32) != LAME_MAGIC)
-        return 0;
+        return nullptr;
 
     LameHeader header;
     mad_bit_skip (&ptr, 40); //version
 
     header.revision = mad_bit_read (&ptr, 4);
     if (header.revision == 15)
-        return 0;
+        return nullptr;
 
     mad_bit_skip(&ptr, 12); //VBR,Lowpass filter value
     header.peak = mad_bit_read(&ptr, 32) << 5; //Peak amplitude
@@ -428,7 +428,7 @@ void DecoderMAD::seek(qint64 pos)
         m_stream.error = MAD_ERROR_BUFLEN;
         m_stream.sync = 0;
         m_input_bytes = 0;
-        m_stream.next_frame = 0;
+        m_stream.next_frame = nullptr;
         m_skip_frames = 2;
         m_skip_bytes = 0;
         m_play_bytes = -1;

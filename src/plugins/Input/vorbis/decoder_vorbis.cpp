@@ -103,7 +103,7 @@ bool DecoderVorbis::initialize()
         oggclose,
         oggtell
     };
-    if (ov_open_callbacks(this, &oggfile, NULL, 0, oggcb) < 0)
+    if (ov_open_callbacks(this, &oggfile, nullptr, 0, oggcb) < 0)
     {
         qWarning("DecoderVorbis: cannot open stream");
 
@@ -285,7 +285,7 @@ void DecoderVorbis::seek(qint64 time)
 qint64 DecoderVorbis::read(unsigned char *data, qint64 maxSize)
 {
     len = -1;
-    float **pcm = 0;
+    float **pcm = nullptr;
     int section = 0;
     while (len < 0)
         len = ov_read_float(&oggfile, &pcm, maxSize/sizeof(float), &section);

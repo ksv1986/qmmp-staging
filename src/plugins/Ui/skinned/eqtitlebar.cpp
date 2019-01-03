@@ -32,9 +32,9 @@
 EqTitleBar::EqTitleBar(QWidget *parent)
         : PixmapWidget(parent)
 {
-    m_volumeBar = 0;
-    m_balanceBar = 0;
-    m_shade2 = 0;
+    m_volumeBar = nullptr;
+    m_balanceBar = nullptr;
+    m_shade2 = nullptr;
     m_left = 0;
     m_right = 0;
     m_shaded = false;
@@ -159,9 +159,9 @@ void EqTitleBar::shade()
         m_shade2->deleteLater();
         m_volumeBar->deleteLater();
         m_balanceBar->deleteLater();
-        m_volumeBar = 0;
-        m_balanceBar = 0;
-        m_shade2 = 0;
+        m_volumeBar = nullptr;
+        m_balanceBar = nullptr;
+        m_shade2 = nullptr;
         m_shade->show();
     }
     qobject_cast<EqWidget *>(m_eq)->setMimimalMode(m_shaded);

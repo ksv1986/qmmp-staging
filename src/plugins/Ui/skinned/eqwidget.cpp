@@ -396,7 +396,7 @@ EQPreset *EqWidget::findPreset(const QString &name)
         if (preset->text() == name)
             return preset;
     }
-    return 0;
+    return nullptr;
 }
 
 void EqWidget::importWinampEQF()

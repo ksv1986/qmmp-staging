@@ -122,7 +122,6 @@ RESOURCES = resources/resources.qrc \
 LIBS += $$QMMPUI_LIB
 
 unix {
-    DEFINES += APP_NAME_SUFFIX=\\\"$$APP_NAME_SUFFIX\\\"
     target.path = $$PLUGIN_DIR/Ui
     scripts.files = scripts/kwin.sh
     scripts.path = $$DATA_DIR/qmmp$${APP_NAME_SUFFIX}/scripts

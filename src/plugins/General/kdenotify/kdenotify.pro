@@ -7,8 +7,6 @@ TARGET = $$PLUGINS_PREFIX/General/kdenotify
 
 QT += dbus
 
-DEFINES += APP_NAME_SUFFIX=\\\"$$APP_NAME_SUFFIX\\\"
-
 SOURCES += kdenotifyfactory.cpp \
     kdenotify.cpp \
     settingsdialog.cpp

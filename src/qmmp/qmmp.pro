@@ -108,6 +108,7 @@ win32 {
 }
 
 unix {
+    DEFINES += APP_NAME_SUFFIX=\\\"$$APP_NAME_SUFFIX\\\"
     target.path = $$LIB_DIR
     devel.files += \
         abstractengine.h \

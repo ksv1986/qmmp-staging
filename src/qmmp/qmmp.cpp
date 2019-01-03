@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -143,6 +143,15 @@ void Qmmp::setUiLanguageID(const QString &code)
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("General/locale", code);
     m_langID.clear();
+}
+
+QString Qmmp::dataPath()
+{
+#if defined(Q_OS_WIN) && !defined(Q_OS_CYGWIN)
+    return qApp->applicationDirPath();
+#else
+    return QDir(qApp->applicationDirPath() + "/../share/qmmp" APP_NAME_SUFFIX).absolutePath();
+#endif
 }
 
 #ifdef Q_OS_WIN

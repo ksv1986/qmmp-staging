@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -177,6 +177,10 @@ public:
      * @param code Language code; code "auto" means autodetection.
      */
     static void setUiLanguageID(const QString &code);
+    /*!
+     * Returns a directory location where persistent application data can be stored.
+     */
+    static QString dataPath();
 #ifdef Q_OS_WIN
     /*!
      * Returns \b true if portable mode is enabled. Otherwise returns \b false.

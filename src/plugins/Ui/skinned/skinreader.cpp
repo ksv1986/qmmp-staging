@@ -52,7 +52,7 @@ void SkinReader::generateThumbs()
 #if defined(Q_OS_WIN) && !defined(Q_OS_CYGWIN)
     dir.setPath(qApp->applicationDirPath()+"/skins");
 #else
-    dir.setPath(qApp->applicationDirPath()+"/../share/qmmp/skins");
+    dir.setPath(qApp->applicationDirPath()+"/../share/qmmp" APP_NAME_SUFFIX "/skins");
 #endif
     dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     f << dir.entryInfoList();

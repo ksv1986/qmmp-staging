@@ -201,7 +201,7 @@ void SkinnedSettings::loadSkins()
 #if defined(Q_OS_WIN) && !defined(Q_OS_CYGWIN)
     findSkins(qApp->applicationDirPath()+"/skins");
 #else
-    findSkins(qApp->applicationDirPath()+"/../share/qmmp/skins");
+    findSkins(qApp->applicationDirPath()+"/../share/qmmp" APP_NAME_SUFFIX "/skins");
 #endif
     foreach(QString path, m_reader->skins())
     {

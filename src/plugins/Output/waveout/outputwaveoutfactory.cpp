@@ -45,7 +45,7 @@ Volume *OutputWaveOutFactory::createVolume()
     {
         qDebug("OutputWaveOutFactory: device doesn't support volume control");
         delete vol;
-        return 0;
+        return nullptr;
     }
     return vol;
 }

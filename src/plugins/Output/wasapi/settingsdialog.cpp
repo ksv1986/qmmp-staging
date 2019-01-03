@@ -57,25 +57,25 @@ void SettingsDialog::enumDevices()
     m_ui.deviceComboBox->clear();
     m_ui.deviceComboBox->addItem(tr("Default"), "default");
 
-    IMMDeviceEnumerator *pEnumerator = 0;
+    IMMDeviceEnumerator *pEnumerator = nullptr;
     HRESULT result = CoCreateInstance(CLSID_MMDeviceEnumerator, NULL, CLSCTX_ALL, IID_IMMDeviceEnumerator, (void**)&pEnumerator);
     if(result != S_OK)
     {
         qWarning("SettingsDialog: CoCreateInstance failed, error code = 0x%lx", result);
-        pEnumerator = 0;
+        pEnumerator = nullptr;
     }
 
-    IMMDeviceCollection *pEndpoints = 0;
-    IMMDevice *pEndpoint = 0;
-    LPWSTR pwszID = 0;
-    IPropertyStore *pProps = 0;
+    IMMDeviceCollection *pEndpoints = nullptr;
+    IMMDevice *pEndpoint = nullptr;
+    LPWSTR pwszID = nullptr;
+    IPropertyStore *pProps = nullptr;
     UINT count = 0;
 
     result = pEnumerator->EnumAudioEndpoints(eRender, DEVICE_STATE_ACTIVE, &pEndpoints);
     if(result != S_OK)
     {
         qWarning("SettingsDialog: IMMDeviceEnumerator::EnumAudioEndpoints failed, error code = 0x%lx", result);
-        pEndpoints = 0;
+        pEndpoints = nullptr;
     }
 
     if(pEndpoints)
@@ -93,7 +93,7 @@ void SettingsDialog::enumDevices()
             if(result != S_OK)
             {
                 qWarning("SettingsDialog: IMMDeviceCollection::Item failed, error code = 0x%lx", result);
-                pEndpoint = 0;
+                pEndpoint = nullptr;
                 break;
             }
 
@@ -101,7 +101,7 @@ void SettingsDialog::enumDevices()
             if(result != S_OK)
             {
                 qWarning("SettingsDialog: IMMDevice::GetId failed, error code = 0x%lx", result);
-                pwszID = 0;
+                pwszID = nullptr;
                 break;
             }
 
@@ -109,7 +109,7 @@ void SettingsDialog::enumDevices()
             if(result != S_OK)
             {
                 qWarning("SettingsDialog: IMMDevice::GetId failed, error code = 0x%lx", result);
-                pProps = 0;
+                pProps = nullptr;
                 break;
             }
 
@@ -126,42 +126,42 @@ void SettingsDialog::enumDevices()
             m_ui.deviceComboBox->addItem(QString::fromWCharArray(varName.pwszVal), QString::fromWCharArray(pwszID));
 
             CoTaskMemFree(pwszID);
-            pwszID = 0;
+            pwszID = nullptr;
             PropVariantClear(&varName);
             pProps->Release();
-            pProps = 0;
+            pProps = nullptr;
             pEndpoint->Release();
-            pEndpoint = 0;
+            pEndpoint = nullptr;
         }
     }
 
     if(pProps)
     {
         pProps->Release();
-        pProps = 0;
+        pProps = nullptr;
     }
 
     if(pwszID)
     {
         CoTaskMemFree(pwszID);
-        pwszID = 0;
+        pwszID = nullptr;
     }
 
     if(pEndpoint)
     {
         pEndpoint->Release();
-        pEndpoint = 0;
+        pEndpoint = nullptr;
     }
 
     if(pEndpoints)
     {
         pEndpoints->Release();
-        pEndpoints = 0;
+        pEndpoints = nullptr;
     }
 
     if(pEnumerator)
     {
        pEnumerator->Release();
-       pEnumerator = 0;
+       pEnumerator = nullptr;
     }
 }

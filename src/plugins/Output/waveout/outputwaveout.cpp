@@ -244,7 +244,7 @@ void OutputWaveOut::uninitialize()
 
         waveOutReset (dev);      // reset the device
         waveOutClose (dev);      // close the device
-        dev = 0;
+        dev = nullptr;
     }
 
     DeleteCriticalSection (&cs);
@@ -262,14 +262,14 @@ VolumeWaveOut::~VolumeWaveOut()
 void VolumeWaveOut::setVolume(const VolumeSettings &vol)
 {
     DWORD data = (vol.right*0xFFFF/100 << 16) | vol.left*0xFFFF/100;
-    waveOutSetVolume(0, data);
+    waveOutSetVolume(nullptr, data);
 }
 
 VolumeSettings VolumeWaveOut::volume() const
 {
     VolumeSettings vol;
     DWORD data;
-    waveOutGetVolume(0, (PDWORD)&data);
+    waveOutGetVolume(nullptr, (PDWORD)&data);
     vol.left = (long)LOWORD(data) * 100 / 0xFFFF + 1;
     vol.right = (long)HIWORD(data) * 100 / 0xFFFF + 1;
     return vol;

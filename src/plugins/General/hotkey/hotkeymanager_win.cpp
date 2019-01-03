@@ -65,7 +65,7 @@ static struct
     { VK_MEDIA_PREV_TRACK, 0x110,  "Media Previous Track"},
     { VK_MEDIA_STOP, 0x124,  "Media Stop"},
     { VK_MEDIA_PLAY_PAUSE, 0x122,  "Media Play/Pause"},
-{ 0, 0, 0 }
+{ 0, 0, nullptr }
 };
 
 quint32 Hotkey::defaultKey()

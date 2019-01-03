@@ -66,7 +66,7 @@ QMMPStarter::QMMPStarter() : QObject()
     connect(qApp, SIGNAL(commitDataRequest(QSessionManager&)), SLOT(commitData(QSessionManager&)), Qt::DirectConnection);
 #endif
 #ifdef Q_OS_WIN
-    m_named_mutex = 0;
+    m_named_mutex = nullptr;
 #endif
     m_option_manager = new BuiltinCommandLineOption(this);
     QStringList tmp = qApp->arguments().mid(1);
@@ -128,7 +128,7 @@ QMMPStarter::QMMPStarter() : QObject()
                 cout << qPrintable(CommandLineManager::executeCommand(key, commands.value(key)).trimmed()) << endl;
 #ifdef Q_OS_WIN
                 string text = tmp_stream.str();
-                QMessageBox::information(0, tr("Command Line Help"), QString::fromLocal8Bit(text.c_str()));
+                QMessageBox::information(nullptr, tr("Command Line Help"), QString::fromLocal8Bit(text.c_str()));
                 cout.rdbuf(old_stream); //restore old stream buffer
 #endif
                 return;
@@ -413,7 +413,7 @@ void QMMPStarter::printUsage()
         cout << qPrintable(CommandLineManager::formatHelpString(line)) << endl;
 #ifdef Q_OS_WIN
     string text = tmp_stream.str();
-    QMessageBox::information(0, tr("Command Line Help"), QString::fromLocal8Bit(text.c_str()));
+    QMessageBox::information(nullptr, tr("Command Line Help"), QString::fromLocal8Bit(text.c_str()));
     cout.rdbuf(old_stream); //restore old stream buffer
 #endif
 }
@@ -431,7 +431,7 @@ void QMMPStarter::printVersion()
     cout << qPrintable(tr("Using Qt version: %1").arg(qVersion())) << endl;
 #ifdef Q_OS_WIN
     string text = tmp_stream.str();
-    QMessageBox::information(0, tr("Qmmp Version"), QString::fromLocal8Bit(text.c_str()));
+    QMessageBox::information(nullptr, tr("Qmmp Version"), QString::fromLocal8Bit(text.c_str()));
     cout.rdbuf(old_stream); //restore old stream buffer
 #endif
 }
@@ -448,7 +448,7 @@ void QMMPStarter::printUserInterfaces()
         cout << qPrintable(name) << endl;
 #ifdef Q_OS_WIN
     string text = tmp_stream.str();
-    QMessageBox::information(0, tr("User Interfaces"), QString::fromLocal8Bit(text.c_str()));
+    QMessageBox::information(nullptr, tr("User Interfaces"), QString::fromLocal8Bit(text.c_str()));
     cout.rdbuf(old_stream); //restore old stream buffer
 #endif
 }

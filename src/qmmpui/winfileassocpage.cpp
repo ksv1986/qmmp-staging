@@ -87,7 +87,7 @@ void WinFileAssocPage::loadAssociations()
                 //VISTA doesn't seem to support extension 'restoration' in the API.
                 if (QSysInfo::WindowsVersion >= QSysInfo::WV_VISTA)
                 {
-                    pItem->setFlags(0);
+                    pItem->setFlags(Qt::NoItemFlags);
                 }
             }
             else

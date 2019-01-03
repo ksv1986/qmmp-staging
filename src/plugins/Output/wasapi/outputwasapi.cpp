@@ -39,8 +39,8 @@
 #define AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM 0x80000000
 #endif
 
-OutputWASAPI *OutputWASAPI::instance = 0;
-VolumeWASAPI *OutputWASAPI::volumeControl = 0;
+OutputWASAPI *OutputWASAPI::instance = nullptr;
+VolumeWASAPI *OutputWASAPI::volumeControl = nullptr;
 OutputWASAPI::DWASAPIChannels OutputWASAPI::m_wasapi_pos[10]  = {
    {Qmmp::CHAN_FRONT_LEFT, SPEAKER_FRONT_LEFT},
    {Qmmp::CHAN_FRONT_RIGHT, SPEAKER_FRONT_RIGHT},
@@ -56,11 +56,11 @@ OutputWASAPI::DWASAPIChannels OutputWASAPI::m_wasapi_pos[10]  = {
 
 OutputWASAPI::OutputWASAPI() : Output()
 {
-    m_pEnumerator = 0;
-    m_pDevice = 0;
-    m_pAudioClient = 0;
-    m_pRenderClient = 0;
-    m_pSimpleAudioVolume = 0;
+    m_pEnumerator = nullptr;
+    m_pDevice = nullptr;
+    m_pAudioClient = nullptr;
+    m_pRenderClient = nullptr;
+    m_pSimpleAudioVolume = nullptr;
     instance = this;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_id = settings.value("WASAPI/device", "default").toString();
@@ -69,7 +69,7 @@ OutputWASAPI::OutputWASAPI() : Output()
 
 OutputWASAPI::~OutputWASAPI()
 {
-    instance = 0;
+    instance = nullptr;
     uninitialize();
 }
 
@@ -79,7 +79,7 @@ bool OutputWASAPI::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat fo
     if(result != S_OK)
     {
         qWarning("OutputWASAPI: CoCreateInstance failed, error code = 0x%lx", result);
-        m_pEnumerator = 0;
+        m_pEnumerator = nullptr;
         return false;
     }
 
@@ -92,7 +92,7 @@ bool OutputWASAPI::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat fo
         if((result = m_pEnumerator->GetDevice(id, &m_pDevice)) != S_OK)
         {
             qWarning("OutputWASAPI: IMMDeviceEnumerator::GetDevice failed, error code = 0x%lx", result);
-            m_pDevice = 0;
+            m_pDevice = nullptr;
         }
         else
             qDebug("OutputWASAPI: using device id: %s", qPrintable(m_id));
@@ -103,7 +103,7 @@ bool OutputWASAPI::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat fo
         if((result = m_pEnumerator->GetDefaultAudioEndpoint(eRender, eConsole, &m_pDevice)) != S_OK)
         {
             qWarning("OutputWASAPI: IMMDeviceEnumerator::GetDefaultAudioEndpoint failed, error code = 0x%lx", result);
-            m_pDevice = 0;
+            m_pDevice = nullptr;
             return false;
         }
     }
@@ -111,7 +111,7 @@ bool OutputWASAPI::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat fo
     if((result = m_pDevice->Activate(IID_IAudioClient, CLSCTX_ALL, NULL, (void**)&m_pAudioClient)) != S_OK)
     {
         qWarning("OutputWASAPI: IMMDevice::Activate failed, error code = 0x%lx", result);
-        m_pAudioClient = 0;
+        m_pAudioClient = nullptr;
         return false;
     }
 
@@ -166,7 +166,7 @@ bool OutputWASAPI::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat fo
     AUDCLNT_SHAREMODE mode = m_exclusive ? AUDCLNT_SHAREMODE_EXCLUSIVE :  AUDCLNT_SHAREMODE_SHARED;
     DWORD streamFlags = 0;
     //enable channel matrixer and a sample rate converter if format is unsupported
-    if(m_pAudioClient->IsFormatSupported(mode, (WAVEFORMATEX *)&wfex, 0) != S_OK)
+    if(m_pAudioClient->IsFormatSupported(mode, (WAVEFORMATEX *)&wfex, nullptr) != S_OK)
     {
         streamFlags |= AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM;
         qDebug("OutputWASAPI: format is not supported, using converter");
@@ -220,7 +220,7 @@ qint64 OutputWASAPI::latency()
 qint64 OutputWASAPI::writeAudio(unsigned char *data, qint64 len)
 {
     UINT32 frames = 0;
-    BYTE *pData = 0;
+    BYTE *pData = nullptr;
     DWORD flags = 0;
     DWORD result = 0;
     m_pAudioClient->GetCurrentPadding(&frames);
@@ -291,27 +291,27 @@ void OutputWASAPI::uninitialize()
     {
         m_pAudioClient->Stop();
         m_pAudioClient->Release();
-        m_pAudioClient = 0;
+        m_pAudioClient = nullptr;
     }
     if(m_pEnumerator)
     {
         m_pEnumerator->Release();
-        m_pEnumerator = 0;
+        m_pEnumerator = nullptr;
     }
     if(m_pDevice)
     {
         m_pDevice->Release();
-        m_pDevice = 0;
+        m_pDevice = nullptr;
     }
     if(m_pRenderClient)
     {
         m_pRenderClient->Release();
-        m_pRenderClient = 0;
+        m_pRenderClient = nullptr;
     }
     if(m_pSimpleAudioVolume)
     {
         m_pSimpleAudioVolume->Release();
-        m_pSimpleAudioVolume = 0;
+        m_pSimpleAudioVolume = nullptr;
     }
 }
 
@@ -330,14 +330,14 @@ VolumeWASAPI::~VolumeWASAPI()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("WASAPI/left_volume", m_volume.left);
     settings.setValue("WASAPI/right_volume", m_volume.right);
-    OutputWASAPI::volumeControl = 0;
+    OutputWASAPI::volumeControl = nullptr;
 }
 
 void VolumeWASAPI::setVolume(const VolumeSettings &vol)
 {
     if(OutputWASAPI::instance && OutputWASAPI::instance->simpleAudioVolume())
     {
-        OutputWASAPI::instance->simpleAudioVolume()->SetMasterVolume(float(qMax(vol.left, vol.right)) / 100.0f, 0);
+        OutputWASAPI::instance->simpleAudioVolume()->SetMasterVolume(float(qMax(vol.left, vol.right)) / 100.0f, nullptr);
     }
     m_volume = vol;
 }

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -116,6 +116,8 @@ StreamWindow::StreamWindow(QWidget *parent)
     QDir dir(Qmmp::configDir());
     if(!dir.exists("streambrowser"))
         dir.mkdir("streambrowser");
+    //create initial config
+    createInitialConfig();
     //read cache
     QFile file(Qmmp::configDir() + "/streambrowser/icecast.xml");
     if(file.open(QIODevice::ReadOnly))
@@ -428,5 +430,17 @@ void StreamWindow::readXml(QIODevice *input, QStandardItemModel *model)
 #else
         qWarning("StreamWindow: xml error: %lld: %s", xml.lineNumber(), qPrintable(xml.errorString()));
 #endif
+    }
+}
+
+void StreamWindow::createInitialConfig()
+{
+    QString config = Qmmp::configDir() + "/streambrowser/favorites.xml";
+    QString defaultConfig = Qmmp::dataPath() + "/favorites.xml.default";
+
+    if(!QFile::exists(config) && QFile::exists(defaultConfig))
+    {
+        qDebug("StreamWindow: creating initial config");
+        QFile::copy(defaultConfig, config);
     }
 }

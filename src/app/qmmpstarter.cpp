@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -68,6 +68,7 @@ QMMPStarter::QMMPStarter() : QObject()
 #ifdef Q_OS_WIN
     m_named_mutex = nullptr;
 #endif
+    createInitialConfig();
     m_option_manager = new BuiltinCommandLineOption(this);
     QStringList tmp = qApp->arguments().mid(1);
 
@@ -281,6 +282,18 @@ void QMMPStarter::startPlayer()
             qint64 pos =  settings.value("resume_playback_time").toLongLong();
             m_player->play(pos);
         }
+    }
+}
+
+void QMMPStarter::createInitialConfig()
+{
+    QString defaultConfig = Qmmp::dataPath() + "/qmmprc.default";
+
+    if(!QFile::exists(Qmmp::configFile()) && QFile::exists(defaultConfig))
+    {
+        qDebug("QMMPStarter: creating initial config");
+        QDir("/").mkpath(Qmmp::configDir());
+        QFile::copy(defaultConfig, Qmmp::configFile());
     }
 }
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -61,6 +61,7 @@ private slots:
 private:
     void closeEvent(QCloseEvent *);
     void readXml(QIODevice *input, QStandardItemModel *model);
+    void createInitialConfig();
 
     Ui::StreamWindow *m_ui;
     QNetworkAccessManager *m_http;

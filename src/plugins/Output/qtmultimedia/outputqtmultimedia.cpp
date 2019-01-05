@@ -29,7 +29,7 @@
 #include <unistd.h>
 
 
-OutputQtMultimedia::OutputQtMultimedia() : Output(), m_buffer(NULL), m_bytes_per_second(0)
+OutputQtMultimedia::OutputQtMultimedia() : Output(), m_buffer(nullptr), m_bytes_per_second(0)
 {
 }
 

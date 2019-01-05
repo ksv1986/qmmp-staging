@@ -43,7 +43,7 @@ Output* OutputQtMultimediaFactory::create()
 
 Volume *OutputQtMultimediaFactory::createVolume()
 {
-    return 0;
+    return nullptr;
 }
 
 void OutputQtMultimediaFactory::showSettings(QWidget* parent)

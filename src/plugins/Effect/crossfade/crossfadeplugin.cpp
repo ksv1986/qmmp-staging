@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov <forkotov02@ya.ru>         *
+ *   Copyright (C) 2009-2019 by Ilya Kotov <forkotov02@ya.ru>              *
  *   Copyright (C) 2009 by Sebastian Pipping <sebastian@pipping.org>       *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -65,11 +65,23 @@ void CrossfadePlugin::applyEffect(Buffer *b)
             if(m_buffer_at + b->samples > m_buffer_size)
             {
                 m_buffer_size = m_buffer_at + b->samples;
+                float *tmp = m_buffer;
                 m_buffer = (float *)realloc(m_buffer, m_buffer_size * sizeof(float));
+                if(!m_buffer)
+                {
+                    qWarning("CrossfadePlugin: unable to allocate  %zu bytes", m_buffer_size);
+                    m_buffer_size = 0;
+                    if(tmp)
+                        free(tmp);
+                }
             }
-            memcpy(m_buffer + m_buffer_at, b->data, b->samples * sizeof(float));
-            m_buffer_at += b->samples;
-            b->samples = 0;
+
+            if(m_buffer)
+            {
+                memcpy(m_buffer + m_buffer_at, b->data, b->samples * sizeof(float));
+                m_buffer_at += b->samples;
+                b->samples = 0;
+            }
         }
         else if(m_buffer_at > 0)
             m_state = PROCESSING;

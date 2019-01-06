@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -165,7 +165,20 @@ void MMSStreamReader::run()
         if(m_buffer_at + to_read > m_buffer_size)
         {
             m_buffer_size = m_buffer_at + to_read;
+            char *tmp = m_buffer;
             m_buffer = (char *)realloc(m_buffer, m_buffer_size);
+            if(!m_buffer)
+            {
+                qWarning("MMSStreamReader: unable to allocate %lld bytes", m_buffer_size);
+                if(tmp)
+                    free(tmp);
+                m_mutex.unlock();
+                setErrorString(QString("unable to allocate %1 bytes").arg(m_buffer_size));
+                emit error();
+                m_buffer_size = 0;
+                m_buffer_at = 0;
+                break;
+            }
         }
         m_mutex.unlock();
         len = mmsx_read (nullptr, m_handle, prebuf, to_read);

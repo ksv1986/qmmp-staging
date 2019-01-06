@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -98,7 +98,16 @@ qint64 ShoutOutput::writeAudio(unsigned char *data, qint64 maxSize)
         if(required_frames > m_soxr_buf_frames)
         {
             m_soxr_buf_frames = required_frames;
+            float *tmp = m_soxr_buf;
             m_soxr_buf = (float *)realloc(m_soxr_buf, m_soxr_buf_frames * sizeof(float) * chan);
+            if(!m_soxr_buf)
+            {
+                qWarning("ShoutOutput: unable to allocate %zu bytes", m_soxr_buf_frames * sizeof(float) * chan);
+                m_soxr_buf_frames = 0;
+                if(tmp)
+                    free(tmp);
+                return -1;
+            }
         }
 
         size_t done = 0;

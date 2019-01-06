@@ -39,15 +39,15 @@ public:
     OutputWASAPI();
     ~OutputWASAPI();
 
-    bool initialize(quint32, ChannelMap map,  Qmmp::AudioFormat format);
+    bool initialize(quint32, ChannelMap map,  Qmmp::AudioFormat format) override;
 
     //output api
-    qint64 latency();
-    qint64 writeAudio(unsigned char *data, qint64 size);
-    void drain();
-    void suspend();
-    void resume();
-    void reset();
+    qint64 latency() override;
+    qint64 writeAudio(unsigned char *data, qint64 size) override;
+    void drain() override;
+    void suspend() override;
+    void resume() override;
+    void reset() override;
 
     //volume control
     ISimpleAudioVolume *simpleAudioVolume();
@@ -89,8 +89,8 @@ public:
     VolumeWASAPI();
     ~VolumeWASAPI();
 
-    void setVolume(const VolumeSettings &vol);
-    VolumeSettings volume() const;
+    void setVolume(const VolumeSettings &vol) override;
+    VolumeSettings volume() const override;
     void restore();
 
 private:

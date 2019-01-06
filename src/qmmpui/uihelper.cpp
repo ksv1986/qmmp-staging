@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -59,8 +59,7 @@ UiHelper::~UiHelper()
 
 bool UiHelper::visibilityControl()
 {
-    GeneralFactory* factory;
-    foreach(factory, General::enabledFactories())
+    foreach(GeneralFactory *factory, General::enabledFactories())
     {
         if (factory->properties().visibilityControl)
             return true;

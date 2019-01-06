@@ -35,13 +35,13 @@ public:
     virtual ~DecoderCUE();
 
     // Standard Decoder API
-    bool initialize();
-    qint64 totalTime() const;
-    void seek(qint64);
-    qint64 read(unsigned char *data, qint64 size);
-    int bitrate() const;
-    const QString nextURL() const;
-    void next();
+    bool initialize() override;
+    qint64 totalTime() const override;
+    void seek(qint64) override;
+    qint64 read(unsigned char *data, qint64 size) override;
+    int bitrate() const override;
+    const QString nextURL() const override;
+    void next() override;
 
 private:
     Decoder *m_decoder;

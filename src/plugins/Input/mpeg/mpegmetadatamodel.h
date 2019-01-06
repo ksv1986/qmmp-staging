@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -33,11 +33,11 @@ class MPEGMetaDataModel : public MetaDataModel
 public:
     MPEGMetaDataModel(bool using_rusxmms, const QString &path, bool readOnly);
     ~MPEGMetaDataModel();
-    QList<MetaDataItem> extraProperties() const;
-    QList<TagModel* > tags() const;
-    QPixmap cover() const;
-    void setCover(const QPixmap &pix);
-    void removeCover();
+    QList<MetaDataItem> extraProperties() const override;
+    QList<TagModel* > tags() const override;
+    QPixmap cover() const override;
+    void setCover(const QPixmap &pix) override;
+    void removeCover() override;
 
 private:
     QList<TagModel* > m_tags;
@@ -50,14 +50,14 @@ class MpegFileTagModel : public TagModel
 public:
     MpegFileTagModel(bool using_rusxmms, TagLib::MPEG::File *file, TagLib::MPEG::File::TagTypes tagType);
     ~MpegFileTagModel();
-    QString name() const;
-    QList<Qmmp::MetaData> keys() const;
-    QString value(Qmmp::MetaData key) const;
-    void setValue(Qmmp::MetaData key, const QString &value);
-    bool exists() const;
-    void create();
-    void remove();
-    void save();
+    QString name() const override;
+    QList<Qmmp::MetaData> keys() const override;
+    QString value(Qmmp::MetaData key) const override;
+    void setValue(Qmmp::MetaData key, const QString &value) override;
+    bool exists() const override;
+    void create() override;
+    void remove() override;
+    void save() override;
 
 private:
     bool m_using_rusxmms;

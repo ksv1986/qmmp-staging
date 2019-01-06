@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -43,7 +43,7 @@ public:
 
 #ifdef QMMP_WS_X11
 private:
-    bool event(QEvent *e);
+    bool event(QEvent *e) override;
     void wheelEvent(QWheelEvent *e);
     void showToolTip();
     

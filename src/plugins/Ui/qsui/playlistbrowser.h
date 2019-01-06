@@ -48,7 +48,7 @@ private slots:
     void updateCurrentRow(QModelIndex index, QModelIndex);
 
 private:
-    bool eventFilter(QObject *o, QEvent *e);
+    bool eventFilter(QObject *o, QEvent *e) override;
     QLineEdit *m_lineEdit;
     QListView *m_listView;
     PlayListManager *m_pl_manager;

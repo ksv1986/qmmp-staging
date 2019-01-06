@@ -36,13 +36,13 @@ public:
     ~SettingsDialog();
 
 public slots:
-    virtual void accept();
+    virtual void accept() override;
 
 private slots:
     virtual void on_templateButton_clicked();
 
 protected:
-    void changeEvent(QEvent *e);
+    void changeEvent(QEvent *e) override;
 
 private:
     Ui::SettingsDialog *ui;

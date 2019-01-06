@@ -36,7 +36,7 @@ public:
 
     virtual ~IODeviceStream() {}
 
-    virtual TagLib::FileName name() const
+    virtual TagLib::FileName name() const override
     {
 #ifdef Q_OS_WIN
         return QStringToFileName(m_fileName);
@@ -44,26 +44,26 @@ public:
         return m_fileName.constData();
 #endif
     }
-    virtual TagLib::ByteVector readBlock(unsigned long length)
+    virtual TagLib::ByteVector readBlock(unsigned long length) override
     {
         QByteArray data = m_input->read(length);
         return TagLib::ByteVector(data.constData(), data.size());
     }
-    virtual void writeBlock(const TagLib::ByteVector &)
+    virtual void writeBlock(const TagLib::ByteVector &) override
     {}
-    virtual void insert(const TagLib::ByteVector &, unsigned long, unsigned long)
+    virtual void insert(const TagLib::ByteVector &, unsigned long, unsigned long) override
     {}
-    virtual void removeBlock(unsigned long, unsigned long)
+    virtual void removeBlock(unsigned long, unsigned long) override
     {}
-    virtual bool readOnly() const
+    virtual bool readOnly() const override
     {
         return true;
     }
-    virtual bool isOpen() const
+    virtual bool isOpen() const override
     {
         return m_input->isOpen();
     }
-    virtual void seek(long offset, Position p = Beginning)
+    virtual void seek(long offset, Position p = Beginning) override
     {
         switch (p)
         {
@@ -78,20 +78,20 @@ public:
             break;
         }
     }
-    virtual void clear()
+    virtual void clear() override
     {
         m_input->seek(0);
         TagLib::IOStream::clear();
     }
-    virtual long tell() const
+    virtual long tell() const override
     {
         return m_input->pos();
     }
-    virtual long length()
+    virtual long length() override
     {
         return m_input->size();
     }
-    virtual void truncate(long)
+    virtual void truncate(long) override
     {}
 
 private:

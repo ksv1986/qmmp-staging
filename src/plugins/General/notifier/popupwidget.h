@@ -57,7 +57,7 @@ public:
     void showVolume(int);
 
 protected:
-    virtual void mousePressEvent (QMouseEvent *);
+    virtual void mousePressEvent (QMouseEvent *) override;
 
 private:
     void updatePosition();

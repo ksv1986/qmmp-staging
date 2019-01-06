@@ -32,12 +32,12 @@ public:
     ShoutOutput(ShoutClient *m);
     ~ShoutOutput();
 
-    bool initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat);
-    qint64 latency();
-    qint64 writeAudio(unsigned char *data, qint64 maxSize);
-    void drain();
-    void reset();
-    void setTrackInfo(const QMap<Qmmp::MetaData, QString> &metaData);
+    bool initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat) override;
+    qint64 latency() override;
+    qint64 writeAudio(unsigned char *data, qint64 maxSize) override;
+    void drain() override;
+    void reset() override;
+    void setTrackInfo(const TrackInfo &info) override;
 
 private:
     void sendHeader();

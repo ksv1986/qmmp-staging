@@ -19,13 +19,13 @@ public:
     virtual ~DecoderVorbis();
 
     // Standard Decoder API
-    bool initialize();
-    qint64 totalTime() const;
-    int bitrate() const;
+    bool initialize() override;
+    qint64 totalTime() const override;
+    int bitrate() const override;
 
 private:
-    virtual qint64 read(unsigned char *data, qint64 maxSize);
-    virtual void seek(qint64 time);
+    virtual qint64 read(unsigned char *data, qint64 maxSize) override;
+    virtual void seek(qint64 time) override;
 
     // helper functions
     void deinit();

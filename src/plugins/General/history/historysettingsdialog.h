@@ -36,7 +36,7 @@ public:
     ~HistorySettingsDialog();
 
 public slots:
-    void accept();
+    void accept() override;
 
 private slots:
     void addTitleString(const QString &str);

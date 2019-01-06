@@ -34,7 +34,7 @@ public:
     ~SettingsDialog();
 
 private:
-    virtual void accept();
+    virtual void accept() override;
     Ui::SettingsDialog ui;
 };
 

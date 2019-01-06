@@ -36,11 +36,11 @@ public:
     virtual ~DecoderSndFile();
 
     // Standard Decoder API
-    bool initialize();
-    qint64 totalTime() const;
-    int bitrate() const;
-    qint64 read(unsigned char *audio, qint64 maxSize);
-    void seek(qint64 time);
+    bool initialize() override;
+    qint64 totalTime() const override;
+    int bitrate() const override;
+    qint64 read(unsigned char *audio, qint64 maxSize) override;
+    void seek(qint64 time) override;
 
 private:
 

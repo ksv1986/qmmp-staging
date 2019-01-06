@@ -34,12 +34,12 @@ public:
     ArchiveInputDevice(struct archive *a, struct archive_entry *e, QObject *parent = nullptr);
     virtual ~ArchiveInputDevice();
 
-    bool seek(qint64 pos);
-    qint64 size() const;
+    bool seek(qint64 pos) override;
+    qint64 size() const override;
 
 protected:
-    virtual qint64 readData(char *data, qint64 maxSize);
-    virtual qint64 writeData(const char *, qint64);
+    virtual qint64 readData(char *data, qint64 maxSize) override;
+    virtual qint64 writeData(const char *, qint64) override;
 
 private:
     struct archive *m_archive;

@@ -52,7 +52,7 @@ signals:
     void message(int row, QString message);
 
 private:
-    void run();
+    void run() override;
     bool convert(Decoder *decoder, FILE *file, bool use16bit);
     Decoder *m_decoder;
     InputSource *m_input;

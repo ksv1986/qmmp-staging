@@ -34,11 +34,11 @@ Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.VisualFactoryInterface.1.0")
 Q_INTERFACES(VisualFactory)
 
 public:
-    VisualProperties properties() const;
-    Visual *create(QWidget *parent);
-    QDialog *createConfigDialog(QWidget *parent);
-    void showAbout(QWidget *parent);
-    QString translation() const;
+    VisualProperties properties() const override;
+    Visual *create(QWidget *parent) override;
+    QDialog *createConfigDialog(QWidget *parent) override;
+    void showAbout(QWidget *parent) override;
+    QString translation() const override;
 };
 
 

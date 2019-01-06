@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -61,15 +61,15 @@ public:
      * Returns formatted title of the item.
      * @param column Number of column.
      */
-    const QString formattedTitle(int column);
+    const QString formattedTitle(int column) override;
     /*!
      * Returns the list of the formatted titles for all columns.
      */
-    const QStringList formattedTitles();
+    const QStringList formattedTitles() override;
     /*!
      *  Returns formatted length of the item.
      */
-    const QString formattedLength();
+    const QString formattedLength() override;
     /*!
      *  Updates current metadata.
      *  @param info Track information.
@@ -86,16 +86,16 @@ public:
     /*!
      * Returns \b false.
      */
-    bool isGroup() const;
+    bool isGroup() const override;
     /*!
      * Sets the index of the track.
      */
-    void setTrackIndex(int track_index);
+    void setTrackIndex(int track_index) override;
     /*!
      * Returns the index of the track.
      * Default implementation returns -1.
      */
-    int trackIndex() const;
+    int trackIndex() const override;
     /*!
      * Prepares for usage.
      * Increases reference counter.

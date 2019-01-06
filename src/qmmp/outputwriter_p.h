@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -92,7 +92,7 @@ public:
     void updateEqSettings();
 
 private:
-    void run(); //thread run function
+    void run() override; //thread run function
     void status();
     void dispatch(qint64 elapsed, int bitrate);
     void dispatch(const Qmmp::State &state);

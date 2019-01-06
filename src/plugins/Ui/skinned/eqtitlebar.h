@@ -61,10 +61,10 @@ private:
     ShadedBar* m_balanceBar;
 
 protected:
-    void mousePressEvent(QMouseEvent*);
-    void mouseReleaseEvent(QMouseEvent*);
-    void mouseMoveEvent(QMouseEvent*);
-    void mouseDoubleClickEvent (QMouseEvent *);
+    void mousePressEvent(QMouseEvent*) override;
+    void mouseReleaseEvent(QMouseEvent*) override;
+    void mouseMoveEvent(QMouseEvent*) override;
+    void mouseDoubleClickEvent (QMouseEvent *) override;
 };
 
 #endif

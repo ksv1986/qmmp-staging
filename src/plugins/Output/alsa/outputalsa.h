@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,14 +38,14 @@ public:
     OutputALSA();
     ~OutputALSA();
 
-    bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format);
+    bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format) override;
     //output api
-    qint64 latency();
-    qint64 writeAudio(unsigned char *data, qint64 maxSize);
-    void drain();
-    void reset();
-    void suspend();
-    void resume();
+    qint64 latency() override;
+    qint64 writeAudio(unsigned char *data, qint64 maxSize) override;
+    void drain() override;
+    void reset() override;
+    void suspend() override;
+    void resume() override;
 
 private:
     // helper functions
@@ -74,10 +74,10 @@ public:
     VolumeALSA();
     virtual ~VolumeALSA();
 
-    void setVolume(const VolumeSettings &vol);
-    VolumeSettings volume() const;
+    void setVolume(const VolumeSettings &vol) override;
+    VolumeSettings volume() const override;
 
-    bool hasNotifySignal() const;
+    bool hasNotifySignal() const override;
 
 private:
     //alsa mixer

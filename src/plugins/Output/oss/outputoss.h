@@ -32,12 +32,12 @@ public:
     OutputOSS();
     virtual ~OutputOSS();
 
-    bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format);
+    bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format) override;
     //output api
-    qint64 latency();
-    qint64 writeAudio(unsigned char *data, qint64 maxSize);
-    void drain();
-    void reset();
+    qint64 latency() override;
+    qint64 writeAudio(unsigned char *data, qint64 maxSize) override;
+    void drain() override;
+    void reset() override;
 
 private:
     //oss
@@ -54,8 +54,8 @@ public:
     VolumeOSS();
     ~VolumeOSS();
 
-    void setVolume(const VolumeSettings &vol);
-    VolumeSettings volume() const;
+    void setVolume(const VolumeSettings &vol) override;
+    VolumeSettings volume() const override;
 
 private:
     //oss mixer

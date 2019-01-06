@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -43,7 +43,7 @@ private slots:
     void saveAs();
 
 private:
-    void paintEvent (QPaintEvent *);
+    void paintEvent (QPaintEvent *) override;
     QPixmap m_pixmap;
 };
 

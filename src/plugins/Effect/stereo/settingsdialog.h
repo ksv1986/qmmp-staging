@@ -35,8 +35,8 @@ public:
     ~SettingsDialog();
 
 public slots:
-    virtual void accept();
-    virtual void reject();
+    virtual void accept() override;
+    virtual void reject() override;
 
 private slots:
     void on_intensitySlider_valueChanged (int value);

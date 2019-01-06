@@ -35,7 +35,7 @@ public:
     ~SettingsDialog();
 
 public slots:
-    virtual void accept();
+    virtual void accept() override;
 
 private slots:
     void addTitleString(const QString &str);

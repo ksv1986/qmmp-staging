@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,11 +40,11 @@ public:
     ~VorbisMetaDataModel();
     friend class VorbisCommentModel;
 
-    QList<TagModel* > tags() const;
-    QPixmap cover() const;
+    QList<TagModel* > tags() const override;
+    QPixmap cover() const override;
 #ifdef HAS_PICTURE_LIST
-    void setCover(const QPixmap &pix);
-    void removeCover();
+    void setCover(const QPixmap &pix) override;
+    void removeCover() override;
 #endif
 
 private:
@@ -60,10 +60,10 @@ class VorbisCommentModel : public TagModel
 public:
     VorbisCommentModel(VorbisMetaDataModel *model);
     ~VorbisCommentModel();
-    QString name() const;
-    QString value(Qmmp::MetaData key) const;
-    void setValue(Qmmp::MetaData key, const QString &value);
-    void save();
+    QString name() const override;
+    QString value(Qmmp::MetaData key) const override;
+    void setValue(Qmmp::MetaData key, const QString &value) override;
+    void save() override;
 
 private:
     VorbisMetaDataModel *m_model;

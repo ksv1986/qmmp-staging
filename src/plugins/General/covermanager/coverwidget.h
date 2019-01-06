@@ -41,8 +41,8 @@ public:
     virtual void setPixmap(const QPixmap&);
 
 protected:
-    void paintEvent (QPaintEvent *event);
-    void mousePressEvent (QMouseEvent * event);
+    void paintEvent (QPaintEvent *event) override;
+    void mousePressEvent (QMouseEvent * event) override;
 
 private slots:
     void saveAs();

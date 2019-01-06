@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -82,7 +82,7 @@ signals:
     void newTracksToInsert(PlayListItem *before, QList<PlayListTrack *> tracks);
 
 private:
-    void run();
+    void run() override;
     QList<PlayListTrack*> processFile(const QString &path, QStringList *ignoredPaths = nullptr);
     void insertPlayList(const QString &fmt, const QByteArray &contents, PlayListItem *before);
     void insertPlayList(const QString &path, PlayListItem *before);

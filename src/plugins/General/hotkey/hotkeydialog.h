@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,12 +41,12 @@ public:
     quint32 keySym () const;
 
 public slots:
-    void accept();
-    void reject();
+    void accept() override;
+    void reject() override;
 
 private:
-    void keyPressEvent (QKeyEvent *event);
-    void showEvent(QShowEvent *);
+    void keyPressEvent (QKeyEvent *event) override;
+    void showEvent(QShowEvent *) override;
 
     Ui::HotkeyDialog m_ui;
     quint32 m_key, m_modifiers;

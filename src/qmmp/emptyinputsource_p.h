@@ -32,9 +32,9 @@ Q_OBJECT
 public:
     EmptyInputSource(const QString &path, QObject *parent = nullptr);
 
-    QIODevice *ioDevice();
-    bool initialize();
-    bool isReady();
+    QIODevice *ioDevice() override;
+    bool initialize() override;
+    bool isReady() override;
 
 private:
     bool m_ok;

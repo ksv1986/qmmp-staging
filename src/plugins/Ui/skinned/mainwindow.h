@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -91,10 +91,10 @@ private slots:
 
 private:
     //events
-    void closeEvent (QCloseEvent *);
-    void hideEvent (QHideEvent *);
-    void changeEvent (QEvent *event);
-    void keyPressEvent (QKeyEvent* );
+    void closeEvent (QCloseEvent *) override;
+    void hideEvent (QHideEvent *) override;
+    void changeEvent (QEvent *event) override;
+    void keyPressEvent (QKeyEvent* ) override;
 
 
     void readSettings();

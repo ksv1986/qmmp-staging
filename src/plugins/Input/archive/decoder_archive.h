@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2016-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -34,11 +34,11 @@ public:
 
     virtual ~DecoderArchive();
 
-    bool initialize();
-    qint64 totalTime() const;
-    void seek(qint64 time);
-    qint64 read(unsigned char *data, qint64 maxSize);
-    int bitrate() const;
+    bool initialize() override;
+    qint64 totalTime() const override;
+    void seek(qint64 time) override;
+    qint64 read(unsigned char *data, qint64 maxSize) override;
+    int bitrate() const override;
 
 private:
     QString m_url;

@@ -46,8 +46,8 @@ public:
     const QString url() const;
 
 protected:
-    virtual void mousePressEvent (QMouseEvent *);
-    virtual void mouseMoveEvent (QMouseEvent *);
+    virtual void mousePressEvent (QMouseEvent *) override;
+    virtual void mouseMoveEvent (QMouseEvent *) override;
 
 private slots:
     void loadCover();

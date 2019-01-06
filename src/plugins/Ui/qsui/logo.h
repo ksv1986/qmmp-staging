@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -42,15 +42,15 @@ public:
     virtual ~Logo();
 
 public slots:
-    void start();
-    void stop();
+    void start() override;
+    void stop() override;
 
 private slots:
     void updateLetters();
 
 private:
-    void paintEvent(QPaintEvent *);
-    void mousePressEvent(QMouseEvent *);
+    void paintEvent(QPaintEvent *) override;
+    void mousePressEvent(QMouseEvent *) override;
     void processPreset1();
     void processPreset2();
     void processPreset3();

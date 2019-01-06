@@ -31,8 +31,8 @@ class ChannelConverter : public Effect
 public:
     ChannelConverter(ChannelMap out_map);
     ~ChannelConverter();
-    void configure(quint32 srate, ChannelMap in_map);
-    void applyEffect(Buffer *b);
+    void configure(quint32 srate, ChannelMap in_map) override;
+    void applyEffect(Buffer *b) override;
 
 private:
     bool m_disabled;

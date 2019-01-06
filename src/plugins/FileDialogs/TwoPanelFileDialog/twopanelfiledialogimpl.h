@@ -58,7 +58,7 @@ private slots:
 
 private:
     void updateFileList(const QString &path);
-    void hideEvent (QHideEvent *event);
+    void hideEvent (QHideEvent *event) override;
     void addToHistory(const QString &path);
     void addFiles(const QStringList &list, bool play);
 
@@ -78,7 +78,7 @@ public:
         m_itemView = itemView;
     }
 
-    QString pathFromIndex(const QModelIndex &index) const
+    QString pathFromIndex(const QModelIndex &index) const override
     {
         const QFileSystemModel *fileModel = static_cast<const QFileSystemModel *>(model());
         QString currentLocation = fileModel->filePath(m_itemView->rootIndex());
@@ -91,7 +91,7 @@ public:
     }
 
 
-    QStringList splitPath(const QString &path) const
+    QStringList splitPath(const QString &path) const override
     {
         if (path.isEmpty())
             return QStringList(completionPrefix());

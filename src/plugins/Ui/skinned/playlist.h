@@ -94,16 +94,16 @@ class PlayList : public QWidget
         void createMenus();
         void createActions();
         //events
-        void paintEvent (QPaintEvent *);
-        void resizeEvent (QResizeEvent *);
-        void mouseMoveEvent (QMouseEvent *);
-        void mousePressEvent (QMouseEvent *);
-        void mouseReleaseEvent (QMouseEvent *);
-        void changeEvent (QEvent*);
-        void closeEvent (QCloseEvent*);
-        void keyPressEvent (QKeyEvent*);
+        void paintEvent (QPaintEvent *) override;
+        void resizeEvent (QResizeEvent *) override;
+        void mouseMoveEvent (QMouseEvent *) override;
+        void mousePressEvent (QMouseEvent *) override;
+        void mouseReleaseEvent (QMouseEvent *) override;
+        void changeEvent (QEvent*) override;
+        void closeEvent (QCloseEvent*) override;
+        void keyPressEvent (QKeyEvent*) override;
 #ifdef QMMP_WS_X11
-        bool event (QEvent *event);
+        bool event (QEvent *event) override;
 #endif
         QMenu *m_addMenu;
         QMenu *m_subMenu;

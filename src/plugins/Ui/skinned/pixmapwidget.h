@@ -38,8 +38,8 @@ public:
     virtual void setPixmap(const QPixmap &pixmap, bool fixed_size = false);
 
 protected:
-    void paintEvent ( QPaintEvent * event );
-    virtual void mousePressEvent(QMouseEvent*);
+    void paintEvent ( QPaintEvent * event ) override;
+    virtual void mousePressEvent(QMouseEvent*) override;
 
 signals:
     void mouseClicked();

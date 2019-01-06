@@ -205,7 +205,7 @@ void ShoutOutput::drain()
 void ShoutOutput::reset()
 {}
 
-void ShoutOutput::setTrackInfo(const QMap<Qmmp::MetaData, QString> &metaData)
+void ShoutOutput::setTrackInfo(const TrackInfo &info)
 {
     vorbis_comment_clear(&m_vc);
 
@@ -229,8 +229,8 @@ void ShoutOutput::setTrackInfo(const QMap<Qmmp::MetaData, QString> &metaData)
     int i = 0;
     while(tag_map[i].key != Qmmp::UNKNOWN)
     {
-        if(!metaData[tag_map[i].key].isEmpty())
-            vorbis_comment_add_tag(&m_vc, tag_map[i].tag, metaData[tag_map[i].key].toUtf8().constData());
+        if(!info.value(tag_map[i].key).isEmpty())
+            vorbis_comment_add_tag(&m_vc, tag_map[i].tag, info.value(tag_map[i].key).toUtf8().constData());
         i++;
     }
     sendHeader();

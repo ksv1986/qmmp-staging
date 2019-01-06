@@ -2,7 +2,7 @@
  *   Copyright (C) 2009 by Artur Guzik                                     *
  *   a.guzik88@gmail.com                                                   *
  *                                                                         *
- *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -49,7 +49,7 @@ public:
     void showInfo(int x, int y, const QString &message); //x,y are tray icon position
 
 protected:
-    virtual void mousePressEvent(QMouseEvent *);
+    virtual void mousePressEvent(QMouseEvent *) override;
 
 private slots:
     void updatePosition(int trayx, int trayy);
@@ -76,7 +76,7 @@ class TimeBar : public QProgressBar
     Q_OBJECT
 public:
     TimeBar(QWidget *parent = nullptr);
-    virtual QString text() const;
+    virtual QString text() const override;
 };
 
 #endif

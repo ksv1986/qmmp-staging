@@ -32,10 +32,10 @@ class SkinnedFactory : public QObject, public UiFactory
     Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.UiFactoryInterface.1.0")
     Q_INTERFACES(UiFactory)
 public:
-    UiProperties properties() const;
-    QObject *create();
-    void showAbout(QWidget *parent);
-    QString translation() const;
+    UiProperties properties() const override;
+    QObject *create() override;
+    void showAbout(QWidget *parent) override;
+    QString translation() const override;
 };
 
 #endif

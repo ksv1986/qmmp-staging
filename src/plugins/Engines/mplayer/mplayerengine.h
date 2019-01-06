@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -49,13 +49,13 @@ public:
     virtual ~MplayerEngine();
 
     // Engine API
-    bool play();
-    bool enqueue(InputSource *source);
+    bool play() override;
+    bool enqueue(InputSource *source) override;
     bool initialize();
-    void seek(qint64);
-    void stop();
-    void pause();
-    void setMuted(bool muted);
+    void seek(qint64) override;
+    void stop() override;
+    void pause() override;
+    void setMuted(bool muted) override;
 
 private slots:
     void readStdOut();

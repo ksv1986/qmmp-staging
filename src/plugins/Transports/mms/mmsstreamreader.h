@@ -47,13 +47,13 @@ public:
     /**
      *  QIODevice API
      */
-    bool atEnd () const;
-    qint64 bytesAvailable () const;
-    qint64 bytesToWrite () const;
-    void close ();
-    bool isSequential () const;
-    bool open (OpenMode mode);
-    bool seek (qint64 pos);
+    bool atEnd () const override;
+    qint64 bytesAvailable () const override;
+    qint64 bytesToWrite () const override;
+    void close () override;
+    bool isSequential () const override;
+    bool open (OpenMode mode) override;
+    bool seek (qint64 pos) override;
     /**
      *  helper functions
      */
@@ -70,8 +70,8 @@ signals:
     void error();
 
 private:
-    virtual qint64 readData(char*, qint64);
-    virtual qint64 writeData(const char*, qint64);
+    virtual qint64 readData(char*, qint64) override;
+    virtual qint64 writeData(const char*, qint64) override;
 
     QMutex m_mutex;
     QString m_url;
@@ -97,7 +97,7 @@ public:
         }
 
 private:
-    virtual void run();
+    virtual void run() override;
     MMSStreamReader *m_parent;
 };
 

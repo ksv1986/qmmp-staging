@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -36,9 +36,9 @@ class M3UPlaylistFormat : public QObject, public PlayListFormat
     Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.PlayListFormatInterface.1.0")
     Q_INTERFACES(PlayListFormat)
 public:
-    const PlayListFormatProperties properties() const;
-    QList<PlayListTrack*> decode(const QByteArray &contents);
-    QByteArray encode(const QList<PlayListTrack*>& contents, const QString &path);
+    const PlayListFormatProperties properties() const override;
+    QList<PlayListTrack*> decode(const QByteArray &contents) override;
+    QByteArray encode(const QList<PlayListTrack*>& contents, const QString &path) override;
 
 };
 

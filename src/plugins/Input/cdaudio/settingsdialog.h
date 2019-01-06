@@ -36,7 +36,7 @@ public:
 
 
 public slots:
-    virtual void accept();
+    virtual void accept() override;
     void on_clearCacheButton_clicked();
 
 private:

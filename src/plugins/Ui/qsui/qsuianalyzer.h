@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,11 +40,11 @@ public:
     void setCover(const QPixmap &pixmap);
     void clear();
     void clearCover();
-    QSize sizeHint() const;
+    QSize sizeHint() const override;
 
 public slots:
-    void start();
-    void stop();
+    void start() override;
+    void stop() override;
     void readSettings();
 
 private slots:
@@ -52,11 +52,11 @@ private slots:
     void writeSettings();
 
 private:
-    void paintEvent(QPaintEvent *);
-    void mousePressEvent(QMouseEvent *);
-    void hideEvent(QHideEvent *);
-    void showEvent(QShowEvent *);
-    void resizeEvent(QResizeEvent *);
+    void paintEvent(QPaintEvent *) override;
+    void mousePressEvent(QMouseEvent *) override;
+    void hideEvent(QHideEvent *) override;
+    void showEvent(QShowEvent *) override;
+    void resizeEvent(QResizeEvent *) override;
     void process();
     void draw(QPainter *p);
     void createMenu();

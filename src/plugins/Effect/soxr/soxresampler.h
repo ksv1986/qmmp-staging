@@ -33,8 +33,8 @@ public:
     SoXResampler();
     virtual ~SoXResampler();
 
-    void applyEffect(Buffer *b);
-    void configure(quint32 freq, ChannelMap map);
+    void applyEffect(Buffer *b) override;
+    void configure(quint32 freq, ChannelMap map) override;
 
 private:
     void freeSoXR();

@@ -46,9 +46,9 @@ private slots:
     void updateSkin();
 
 private:
-    void paintEvent(QPaintEvent*);
-    void mousePressEvent(QMouseEvent*);
-    void mouseMoveEvent(QMouseEvent*);
+    void paintEvent(QPaintEvent*) override;
+    void mousePressEvent(QMouseEvent*) override;
+    void mouseMoveEvent(QMouseEvent*) override;
     int convert(int) const;   // value = convert(position);
     int sliderSize() const;
 

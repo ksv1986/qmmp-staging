@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,8 +41,8 @@ public:
     virtual ~Analyzer();
 
 public slots:
-    void start();
-    void stop();
+    void start() override;
+    void stop() override;
 
 private slots:
     void timeout();
@@ -52,11 +52,11 @@ private slots:
 
 private:
     void clear();
-    virtual void hideEvent (QHideEvent *);
-    virtual void showEvent (QShowEvent *);
-    virtual void closeEvent (QCloseEvent *);
-    void paintEvent(QPaintEvent *);
-    void mousePressEvent(QMouseEvent *e);
+    virtual void hideEvent (QHideEvent *) override;
+    virtual void showEvent (QShowEvent *) override;
+    virtual void closeEvent (QCloseEvent *) override;
+    void paintEvent(QPaintEvent *) override;
+    void mousePressEvent(QMouseEvent *e) override;
     void process();
     void draw(QPainter *p);
     void createMenu();

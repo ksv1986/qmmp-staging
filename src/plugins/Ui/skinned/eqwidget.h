@@ -77,11 +77,11 @@ private:
     void updateMask();
     EQPreset *findPreset(const QString &name);
     //events
-    void keyPressEvent (QKeyEvent *);
-    void changeEvent(QEvent*);
-    void closeEvent(QCloseEvent*);
+    void keyPressEvent (QKeyEvent *) override;
+    void changeEvent(QEvent*) override;
+    void closeEvent(QCloseEvent*) override;
 #ifdef QMMP_WS_X11
-    bool event (QEvent *event);
+    bool event (QEvent *event) override;
 #endif
 
     Skin *m_skin;

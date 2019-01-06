@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,7 +41,7 @@ public:
     virtual ~ConverterDialog();
 
 public slots:
-    virtual void reject();
+    virtual void reject() override;
 
 private slots:
     void on_dirButton_clicked();

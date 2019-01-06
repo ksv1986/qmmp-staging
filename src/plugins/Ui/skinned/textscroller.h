@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -55,13 +55,13 @@ private slots:
     void clearText();
 
 private:
-    void hideEvent(QHideEvent *);
-    void showEvent(QShowEvent *);
-    void paintEvent(QPaintEvent *);
-    void mousePressEvent(QMouseEvent *);
-    void mouseReleaseEvent(QMouseEvent *);
-    void mouseMoveEvent(QMouseEvent *);
-    void mouseDoubleClickEvent(QMouseEvent *);
+    void hideEvent(QHideEvent *) override;
+    void showEvent(QShowEvent *) override;
+    void paintEvent(QPaintEvent *) override;
+    void mousePressEvent(QMouseEvent *) override;
+    void mouseReleaseEvent(QMouseEvent *) override;
+    void mouseMoveEvent(QMouseEvent *) override;
+    void mouseDoubleClickEvent(QMouseEvent *) override;
     void preparePixmap(const QString &text, bool scrollable = false);
     QString m_defautText;
     QString m_bufferText;

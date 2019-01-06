@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,7 +41,7 @@ public:
 
 protected:
     virtual bool filterAcceptsRow(
-            int source_row, const QModelIndex &source_parent) const{
+            int source_row, const QModelIndex &source_parent) const override {
         QFileSystemModel *sm = qobject_cast<QFileSystemModel*>(sourceModel());
         if (source_parent == sm->index(sm->rootPath())) {
             return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);

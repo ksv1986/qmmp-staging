@@ -72,12 +72,12 @@ private slots:
     void onColumnRemoved();
 
 private:
-    void mousePressEvent(QMouseEvent *e);
-    void mouseReleaseEvent(QMouseEvent *);
-    void mouseMoveEvent(QMouseEvent *e);
-    void resizeEvent(QResizeEvent *e);
-    void contextMenuEvent(QContextMenuEvent *e);
-    void paintEvent(QPaintEvent *);
+    void mousePressEvent(QMouseEvent *e) override;
+    void mouseReleaseEvent(QMouseEvent *) override;
+    void mouseMoveEvent(QMouseEvent *e) override;
+    void resizeEvent(QResizeEvent *e) override;
+    void contextMenuEvent(QContextMenuEvent *e) override;
+    void paintEvent(QPaintEvent *) override;
     void loadColors();
     void adjustColumn(int index);
     int autoResizeColumn() const;

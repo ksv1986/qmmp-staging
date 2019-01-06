@@ -34,9 +34,9 @@ Q_OBJECT
 public:
     FileInputSource(const QString &path, QObject *parent = nullptr);
 
-    QIODevice *ioDevice();
-    bool initialize();
-    bool isReady();
+    QIODevice *ioDevice() override;
+    bool initialize() override;
+    bool isReady() override;
 
 private:
     QFile *m_file;

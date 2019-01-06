@@ -40,7 +40,7 @@ public slots:
     void setColor (QString);
 
 private:
-    void mousePressEvent(QMouseEvent *);
+    void mousePressEvent(QMouseEvent *) override;
     QString m_colorName;
 
 

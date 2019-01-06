@@ -34,10 +34,10 @@ Q_OBJECT
 Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.CommandLineHandlerInterface.1.0")
 Q_INTERFACES(CommandLineHandler)
 public:
-    void registerOprions();
-    QString shortName() const;
-    QString translation() const;
-    QString executeCommand(int id, const QStringList &args);
+    void registerOprions() override;
+    QString shortName() const override;
+    QString translation() const override;
+    QString executeCommand(int id, const QStringList &args) override;
 
 private:
     enum Command

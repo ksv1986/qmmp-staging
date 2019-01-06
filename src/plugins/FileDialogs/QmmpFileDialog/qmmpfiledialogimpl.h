@@ -58,7 +58,7 @@ signals:
     void filesSelected(const QStringList&, bool play = false);
 
 protected:
-    virtual void hideEvent (QHideEvent *event);
+    virtual void hideEvent (QHideEvent *event) override;
 
 private slots:
     void updateSelection ();
@@ -79,10 +79,10 @@ public:
     PathCompleter(QAbstractItemModel *model, QAbstractItemView *itemView, QObject *parent = nullptr) : QCompleter(model, parent)
     {
         m_itemView = itemView;
-    };
+    }
 
 
-    QString pathFromIndex(const QModelIndex &index) const
+    QString pathFromIndex(const QModelIndex &index) const override
     {
         const QFileSystemModel *dirModel = static_cast<const QFileSystemModel *>(model());
         QString currentLocation = dirModel->filePath(m_itemView->rootIndex());
@@ -95,7 +95,7 @@ public:
     }
 
 
-    QStringList splitPath(const QString &path) const
+    QStringList splitPath(const QString &path) const override
     {
         if (path.isEmpty())
             return QStringList(completionPrefix());

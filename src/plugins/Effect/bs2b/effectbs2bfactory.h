@@ -34,11 +34,11 @@ Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.EffectFactoryInterface.1.0")
 Q_INTERFACES(EffectFactory)
 
 public:
-    const EffectProperties properties() const;
-    Effect *create();
-    void showSettings(QWidget *parent);
-    void showAbout(QWidget *parent);
-    QString translation() const;
+    const EffectProperties properties() const override;
+    Effect *create() override;
+    void showSettings(QWidget *parent) override;
+    void showAbout(QWidget *parent) override;
+    QString translation() const override;
 };
 
 

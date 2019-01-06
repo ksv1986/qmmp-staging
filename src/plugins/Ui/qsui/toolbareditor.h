@@ -44,7 +44,7 @@ public:
     ~ToolBarEditor();
 
 public slots:
-    void accept();
+    void accept() override;
 
 private slots:
     void on_addToolButton_clicked();

@@ -35,8 +35,8 @@ public:
 
     virtual ~Bs2bPlugin();
 
-    void applyEffect(Buffer *b);
-    void configure(quint32 freq, ChannelMap map);
+    void applyEffect(Buffer *b) override;
+    void configure(quint32 freq, ChannelMap map) override;
     void setCrossfeedLevel(uint32_t level);
     static Bs2bPlugin* instance();
 

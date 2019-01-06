@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -29,7 +29,7 @@ class MplayerMetaDataModel : public MetaDataModel
 public:
     MplayerMetaDataModel(const QString &path);
     ~MplayerMetaDataModel();
-    QList<MetaDataItem> extraProperties() const;
+    QList<MetaDataItem> extraProperties() const override;
 
 private:
     QString m_path;

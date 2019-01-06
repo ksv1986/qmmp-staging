@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,7 +37,7 @@ public:
     enum TagType {ID3v1 = 0, ID3v2, APE, Disabled};
 
 public slots:
-    void accept();
+    void accept() override;
 
 private:
     void findCodecs();

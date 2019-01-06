@@ -36,8 +36,8 @@ public:
     ~SettingsDialog();
 
 public slots:
-    virtual void accept();
-    virtual void reject();
+    virtual void accept() override;
+    virtual void reject() override;
 
 private slots:
     void on_freqSlider_valueChanged (int value);

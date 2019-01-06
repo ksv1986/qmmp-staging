@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -52,12 +52,12 @@ public:
     QmmpAudioEngine(QObject *parent);
     ~QmmpAudioEngine();
 
-    bool play();
-    bool enqueue(InputSource *source);
-    void seek(qint64 time);
-    void stop();
-    void pause();
-    void setMuted(bool muted);
+    bool play() override;
+    bool enqueue(InputSource *source) override;
+    void seek(qint64 time) override;
+    void stop() override;
+    void pause() override;
+    void setMuted(bool muted) override;
     void addEffect(EffectFactory *factory);
     void removeEffect(EffectFactory *factory);
 
@@ -70,7 +70,7 @@ private slots:
     void updateEqSettings();
 
 private:
-    void run();
+    void run() override;
     void reset();
     void clearDecoders();
     void flush(bool = false);

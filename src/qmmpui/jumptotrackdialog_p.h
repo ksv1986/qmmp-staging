@@ -53,7 +53,7 @@ private slots:
     void queueUnqueue(const QModelIndex&,const QModelIndex&);
 
 private:
-    bool eventFilter(QObject *o, QEvent *e);
+    bool eventFilter(QObject *o, QEvent *e) override;
     QStringListModel* m_listModel;
     QSortFilterProxyModel* m_proxyModel;
     PlayListManager *m_pl_manager;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,17 +37,17 @@ public:
     virtual ~ProjectMPlugin();
 
 public slots:
-    void start();
-    void stop();
+    void start() override;
+    void stop() override;
 
 private slots:
     void onTimeout();
     void setFullScreen(bool yes);
 
 private:
-    void closeEvent(QCloseEvent *event);
-    void showEvent(QShowEvent *);
-    void hideEvent(QHideEvent *);
+    void closeEvent(QCloseEvent *event) override;
+    void showEvent(QShowEvent *) override;
+    void hideEvent(QHideEvent *) override;
     QTimer *m_timer;
     ProjectMWidget *m_projectMWidget;
     QSplitter *m_splitter;

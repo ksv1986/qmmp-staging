@@ -58,7 +58,7 @@ public:
     void removeDuplicates(QList<PlayListTrack *> tracks, PlayListTrack *current_track);
     void refresh(QList<PlayListTrack *> tracks, PlayListTrack *current_track);
 
-    void run();
+    void run() override;
 
     TaskType type() const;
     bool isChanged(PlayListContainer *container);

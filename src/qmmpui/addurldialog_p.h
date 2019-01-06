@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -46,7 +46,7 @@ private slots:
 private:
     AddUrlDialog(QWidget *parent);
     ~AddUrlDialog();
-    void accept();
+    void accept() override;
     void setModel(PlayListModel*);
     static QPointer<AddUrlDialog> m_instance;
     PlayListModel *m_model;

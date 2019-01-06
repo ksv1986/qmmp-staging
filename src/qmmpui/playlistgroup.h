@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -46,8 +46,8 @@ public:
      * Returns formatted title of the  group.
      * @param column Number of column (unused).
      */
-    const QString formattedTitle(int column = 0);
-    const QStringList formattedTitles();
+    const QString formattedTitle(int column = 0) override;
+    const QStringList formattedTitles() override;
     /*!
      * Returns \b true if the group contains track \b track.
      * Otherwise returns \b false.
@@ -69,11 +69,11 @@ public:
     /*!
      *  Returns formatted length of the item.
      */
-    const QString formattedLength() { return QString(); }
+    const QString formattedLength() override { return QString(); }
     /*!
      * Returns \b true.
      */
-    bool isGroup() const;
+    bool isGroup() const override;
 
 private:
     QList<PlayListTrack *> trackList; //A list of tracks

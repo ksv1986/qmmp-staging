@@ -66,13 +66,13 @@ public:
     /**
      *  QIODevice API
      */
-    bool atEnd () const;
-    qint64 bytesAvailable () const;
-    qint64 bytesToWrite () const;
-    void close ();
-    bool isSequential () const;
-    bool open (OpenMode mode);
-    bool seek (qint64 pos);
+    bool atEnd () const override;
+    qint64 bytesAvailable () const override;
+    qint64 bytesToWrite () const override;
+    void close () override;
+    bool isSequential () const override;
+    bool open (OpenMode mode) override;
+    bool seek (qint64 pos) override;
     /**
      *  helper functions
      */
@@ -88,8 +88,8 @@ signals:
     void error();
 
 protected:
-    qint64 readData(char*, qint64);
-    qint64 writeData(const char*, qint64);
+    qint64 readData(char*, qint64) override;
+    qint64 writeData(const char*, qint64) override;
 
 private:
     void abort();
@@ -124,7 +124,7 @@ public:
     virtual ~DownloadThread ();
 
 private:
-    virtual void run();
+    virtual void run() override;
     HttpStreamReader *m_parent;
 };
 

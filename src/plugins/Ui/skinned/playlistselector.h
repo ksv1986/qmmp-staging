@@ -49,12 +49,12 @@ private slots:
     void updateSkin();
 
 private:
-    void paintEvent(QPaintEvent *);
-    void mousePressEvent (QMouseEvent *e);
-    void mouseReleaseEvent (QMouseEvent *e);
-    void mouseDoubleClickEvent (QMouseEvent *e);
-    void mouseMoveEvent(QMouseEvent *e);
-    void resizeEvent (QResizeEvent *);
+    void paintEvent(QPaintEvent *) override;
+    void mousePressEvent (QMouseEvent *e) override;
+    void mouseReleaseEvent (QMouseEvent *e) override;
+    void mouseDoubleClickEvent (QMouseEvent *e) override;
+    void mouseMoveEvent(QMouseEvent *e) override;
+    void resizeEvent (QResizeEvent *) override;
     void updateOffsets();
     void loadColors();
     void drawButtons();

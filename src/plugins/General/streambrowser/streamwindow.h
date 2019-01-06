@@ -59,7 +59,7 @@ private slots:
     void removeFromFavorites();
 
 private:
-    void closeEvent(QCloseEvent *);
+    void closeEvent(QCloseEvent *) override;
     void readXml(QIODevice *input, QStandardItemModel *model);
     void createInitialConfig();
 
@@ -84,7 +84,7 @@ public:
     StreamsProxyModel(QObject *parent) : QSortFilterProxyModel(parent){}
 
 protected:
-    bool lessThan (const QModelIndex &left, const QModelIndex &right) const
+    bool lessThan (const QModelIndex &left, const QModelIndex &right) const override
     {
         if(left.column() == 2 && right.column() == 2)
         {

@@ -39,7 +39,7 @@ public:
     void updateSettings(QmmpSettings::ReplayGainMode mode, double preamp,
                         double default_gain, bool clip);
     void setReplayGainInfo(const QMap<Qmmp::ReplayGainKey, double> &info);
-    void applyEffect(Buffer *b);
+    void applyEffect(Buffer *b) override;
 
 private:
     void updateScale();

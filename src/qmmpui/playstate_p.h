@@ -77,9 +77,9 @@ protected:
 class NormalPlayState : public PlayState
 {
 public:
-    virtual bool next();
-    virtual bool previous();
-    virtual int nextIndex();
+    virtual bool next() override;
+    virtual bool previous() override;
+    virtual int nextIndex() override;
     NormalPlayState(PlayListModel* model);
 };
 
@@ -90,12 +90,12 @@ public:
 class ShufflePlayState : public PlayState
 {
 public:
-    virtual bool next();
-    virtual bool previous();
-    virtual int nextIndex();
-    virtual void prepare();
+    virtual bool next() override;
+    virtual bool previous() override;
+    virtual int nextIndex() override;
+    virtual void prepare() override;
     ShufflePlayState(PlayListModel* model);
-    virtual void resetState();
+    virtual void resetState() override;
 private:
 
     /// Current shuffled index.

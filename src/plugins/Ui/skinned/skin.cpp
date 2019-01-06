@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *

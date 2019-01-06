@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -129,8 +129,8 @@ public:
     SoftwareVolume();
     ~SoftwareVolume();
 
-    void setVolume(const VolumeSettings &v);
-    VolumeSettings volume() const;
+    void setVolume(const VolumeSettings &v) override;
+    VolumeSettings volume() const override;
     void changeVolume(Buffer *b, int chan);
 
     static SoftwareVolume *instance();

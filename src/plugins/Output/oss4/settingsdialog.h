@@ -37,7 +37,7 @@ private slots:
     void setText(int n);
 
 private:
-    virtual void accept();
+    virtual void accept() override;
     Ui::SettingsDialog ui;
     QStringList m_devices;
 

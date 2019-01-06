@@ -33,7 +33,7 @@ public:
     explicit QSUiTabBar(QWidget *parent = nullptr);
 
 private:
-    void mouseReleaseEvent(QMouseEvent *e);
+    void mouseReleaseEvent(QMouseEvent *e) override;
 
 };
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2017-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -53,7 +53,7 @@ private:
     void loadTopArtists();
     void loadTopGenres();
     void readSettings();
-    void closeEvent(QCloseEvent *);
+    void closeEvent(QCloseEvent *) override;
 
     Ui::HistoryWindow *m_ui;
     QSqlDatabase m_db;

@@ -34,11 +34,11 @@ Q_OBJECT
 public:
     HTTPInputSource(const QString &path, QObject *parent = nullptr);
 
-    QIODevice *ioDevice();
-    bool initialize();
-    bool isReady();
-    bool isWaiting();
-    QString contentType() const;
+    QIODevice *ioDevice() override;
+    bool initialize() override;
+    bool isReady() override;
+    bool isWaiting() override;
+    QString contentType() const override;
 
 private:
     HttpStreamReader *m_reader;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,14 +40,14 @@ public:
     OutputPulseAudio();
     ~OutputPulseAudio();
 
-    bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format);
+    bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format) override;
     //output api
-    qint64 latency();
-    qint64 writeAudio(unsigned char *data, qint64 maxSize);
-    void drain();
-    void reset();
-    void suspend();
-    void resume();
+    qint64 latency() override;
+    qint64 writeAudio(unsigned char *data, qint64 maxSize) override;
+    void drain() override;
+    void reset() override;
+    void suspend() override;
+    void resume() override;
     void setVolume(const VolumeSettings &v);
 
     static OutputPulseAudio *instance;
@@ -82,9 +82,9 @@ public:
     ~VolumePulseAudio();
 
     void updateVolume(const pa_cvolume &v);
-    void setVolume(const VolumeSettings &vol);
-    VolumeSettings volume() const;
-    bool hasNotifySignal() const;
+    void setVolume(const VolumeSettings &vol) override;
+    VolumeSettings volume() const override;
+    bool hasNotifySignal() const override;
     static VolumeSettings cvolumeToVolumeSettings(const pa_cvolume &v);
     static pa_cvolume volumeSettingsToCvolume(const VolumeSettings &v, int channels);
 

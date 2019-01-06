@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -34,11 +34,11 @@ Q_OBJECT
 Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.InputSourceFactoryInterface.1.0")
 Q_INTERFACES(InputSourceFactory)
 public:
-    InputSourceProperties properties() const;
-    InputSource *create(const QString &url, QObject *parent = nullptr);
-    void showSettings(QWidget *parent);
-    void showAbout(QWidget *parent);
-    QString translation() const;
+    InputSourceProperties properties() const override;
+    InputSource *create(const QString &url, QObject *parent = nullptr) override;
+    void showSettings(QWidget *parent) override;
+    void showAbout(QWidget *parent) override;
+    QString translation() const override;
 };
 
 #endif // MMSINPUTFACTORY_H

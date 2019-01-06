@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -129,7 +129,7 @@ protected:
      * QWidget's close event. Reimplementation should call base function.
      * @param event QCloseEvent insatance.
      */
-    virtual void closeEvent (QCloseEvent *event);
+    virtual void closeEvent (QCloseEvent *event) override;
     /*!
      * Takes visualization data. Caller should allocate \b QMMP_VISUAL_NODE_SIZE
      * bytes for each channel. If buffer for right channel is not specified,

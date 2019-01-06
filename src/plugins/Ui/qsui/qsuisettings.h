@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -47,7 +47,7 @@ private slots:
     void addWindowTitleString(const QString &str);
 
 private:
-    void showEvent(QShowEvent *);
+    void showEvent(QShowEvent *) override;
     void loadFonts();
     void createActions();
     void readSettings();

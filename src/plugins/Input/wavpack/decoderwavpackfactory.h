@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,14 +30,14 @@ class DecoderWavPackFactory : public QObject,
     Q_INTERFACES(DecoderFactory)
 
 public:
-    bool canDecode(QIODevice *input) const;
-    DecoderProperties properties() const;
-    Decoder *create(const QString &p, QIODevice *i);
-    QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredFiles);
-    MetaDataModel* createMetaDataModel(const QString &path, bool readOnly);
-    void showSettings(QWidget *parent);
-    void showAbout(QWidget *parent);
-    QString translation() const;
+    bool canDecode(QIODevice *input) const override;
+    DecoderProperties properties() const override;
+    Decoder *create(const QString &p, QIODevice *i) override;
+    QList<TrackInfo *> createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredFiles) override;
+    MetaDataModel* createMetaDataModel(const QString &path, bool readOnly) override;
+    void showSettings(QWidget *parent) override;
+    void showAbout(QWidget *parent) override;
+    QString translation() const override;
 };
 
 #endif

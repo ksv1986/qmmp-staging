@@ -38,10 +38,10 @@ public:
 
 protected:
     void raise(const QString &dir, Mode mode, const QString &caption,
-               const QStringList &mask);
+               const QStringList &mask) override;
 
     QStringList exec(QWidget *parent, const QString &dir, Mode mode,
-                     const QString &caption, const QString &filter, QString *);
+                     const QString &caption, const QString &filter, QString *) override;
 
 
 private:
@@ -57,10 +57,10 @@ class TwoPanelFileDialogFactory : public QObject, public FileDialogFactory
     Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.FileDialogFactoryInterface.1.0")
     Q_INTERFACES(FileDialogFactory)
 public:
-    FileDialog* create();
-    FileDialogProperties properties() const;
-    void showAbout(QWidget*);
-    QString translation() const;
+    FileDialog* create() override;
+    FileDialogProperties properties() const override;
+    void showAbout(QWidget*) override;
+    QString translation() const override;
 };
 
 

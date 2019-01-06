@@ -71,14 +71,14 @@ private slots:
 private:
     void initStyleOption(QStyleOptionTabWidgetFrame *option) const;
     void setUpLayout();
-    void showEvent(QShowEvent *);
-    void resizeEvent(QResizeEvent *e);
-    void paintEvent(QPaintEvent *);
+    void showEvent(QShowEvent *) override;
+    void resizeEvent(QResizeEvent *e) override;
+    void paintEvent(QPaintEvent *) override;
     void setTabBar(QTabBar *);
-    void changeEvent(QEvent *ev);
-    bool event(QEvent *ev);
-    void mousePressEvent(QMouseEvent *e);
-    void mouseDoubleClickEvent(QMouseEvent *e);
+    void changeEvent(QEvent *ev) override;
+    bool event(QEvent *ev) override;
+    void mousePressEvent(QMouseEvent *e) override;
+    void mouseDoubleClickEvent(QMouseEvent *e) override;
     void tabInserted(int index);
     void tabRemoved(int index);
 

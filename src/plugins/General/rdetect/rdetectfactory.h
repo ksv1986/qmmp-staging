@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2018 by Ilya Kotov                                      *
+ *   Copyright (C) 2018-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -34,11 +34,11 @@ Q_OBJECT
 Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.GeneralFactoryInterface.1.0")
 Q_INTERFACES(GeneralFactory)
 public:
-    GeneralProperties properties() const;
-    QObject *create(QObject *parent);
-    QDialog *createConfigDialog(QWidget *parent);
-    void showAbout(QWidget *parent);
-    QString translation() const;
+    GeneralProperties properties() const override;
+    QObject *create(QObject *parent) override;
+    QDialog *createConfigDialog(QWidget *parent) override;
+    void showAbout(QWidget *parent) override;
+    QString translation() const override;
 };
 
 #endif

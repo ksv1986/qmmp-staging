@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -33,7 +33,7 @@ class MPCMetaDataModel : public MetaDataModel
 public:
     MPCMetaDataModel(const QString &path, bool readOnly);
     ~MPCMetaDataModel();
-    QList<TagModel* > tags() const;
+    QList<TagModel* > tags() const override;
 
 private:
     QList<TagModel* > m_tags;
@@ -46,14 +46,14 @@ class MPCFileTagModel : public TagModel
 public:
     MPCFileTagModel(TagLib::MPC::File *file, TagLib::MPC::File::TagTypes tagType);
     ~MPCFileTagModel();
-    QString name() const;
-    QList<Qmmp::MetaData> keys() const;
-    QString value(Qmmp::MetaData key) const;
-    void setValue(Qmmp::MetaData key, const QString &value);
-    bool exists() const;
-    void create();
-    void remove();
-    void save();
+    QString name() const override;
+    QList<Qmmp::MetaData> keys() const override;
+    QString value(Qmmp::MetaData key) const override;
+    void setValue(Qmmp::MetaData key, const QString &value) override;
+    bool exists() const override;
+    void create() override;
+    void remove() override;
+    void save() override;
 
 private:
     QTextCodec *m_codec;

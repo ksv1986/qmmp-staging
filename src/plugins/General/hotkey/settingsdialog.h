@@ -38,7 +38,7 @@ public:
 
 
 public slots:
-    virtual void accept();
+    virtual void accept() override;
 
 private slots:
     void on_tableWidget_itemDoubleClicked (QTableWidgetItem * item);

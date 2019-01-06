@@ -57,7 +57,7 @@ signals:
     void finished(const QString &url);
 
 private:
-    void run();
+    void run() override;
     void deinit();
     InputSource *m_source;
     Decoder *m_decoder;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -34,12 +34,11 @@ public:
     virtual ~DecoderMPG123();
 
     // standard decoder API
-    bool initialize();
-    qint64 totalTime() const;
-    int bitrate() const;
-    qint64 read(unsigned char *data, qint64 size);
-    qint64 read(float *data, qint64 samples);
-    void seek(qint64);
+    bool initialize() override;
+    qint64 totalTime() const override;
+    int bitrate() const override;
+    qint64 read(unsigned char *data, qint64 size) override;
+    void seek(qint64) override;
 
 private:
     void cleanup(mpg123_handle *handle);

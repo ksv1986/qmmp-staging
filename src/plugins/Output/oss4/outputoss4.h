@@ -38,14 +38,14 @@ public:
     OutputOSS4();
     virtual ~OutputOSS4();
 
-    bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format);
+    bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format) override;
     int fd();
 
     //output api
-    qint64 writeAudio(unsigned char *data, qint64 maxSize);
-    void drain();
-    void reset();
-    qint64 latency();
+    qint64 writeAudio(unsigned char *data, qint64 maxSize) override;
+    void drain() override;
+    void reset() override;
+    qint64 latency() override;
 
     static OutputOSS4 *instance();
     static VolumeOSS4 *m_vc;
@@ -66,8 +66,8 @@ public:
     VolumeOSS4();
     ~VolumeOSS4();
 
-    void setVolume(const VolumeSettings &vol);
-    VolumeSettings volume() const;
+    void setVolume(const VolumeSettings &vol) override;
+    VolumeSettings volume() const override;
     void restore();
 
 private:

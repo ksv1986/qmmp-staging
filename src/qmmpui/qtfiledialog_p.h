@@ -33,10 +33,10 @@ class QtFileDialogFactory : public QObject, public FileDialogFactory
     Q_INTERFACES(FileDialogFactory)
 public:
     QtFileDialogFactory(){}
-    FileDialog* create();
-    FileDialogProperties properties() const;
-    void showAbout(QWidget*);
-    QString translation() const;
+    FileDialog* create() override;
+    FileDialogProperties properties() const override;
+    void showAbout(QWidget*) override;
+    QString translation() const override;
     virtual ~QtFileDialogFactory()
     {
         ;
@@ -51,7 +51,7 @@ public:
 protected:
     QStringList exec(QWidget *parent, const QString &dir, Mode mode,
                      const QString &caption, const QString &filter,
-                     QString *selectedFilter);
+                     QString *selectedFilter) override;
 };
 
 #endif

@@ -49,7 +49,7 @@ private slots:
 	void updateSkin();
 
 private:
-    void mouseReleaseEvent(QMouseEvent*);
+    void mouseReleaseEvent(QMouseEvent*) override;
     int m_ratio;
     Skin* m_skin;
 };

@@ -38,7 +38,7 @@ public:
     virtual void setPixmap(const QPixmap&);
 
 protected:
-    void paintEvent (QPaintEvent *event);
+    void paintEvent (QPaintEvent *event) override;
 
 private: 
       QPixmap m_pixmap;

@@ -38,8 +38,8 @@ public:
     Output* create();
     Volume *createVolume();
     void showSettings(QWidget* parent);
-    void showAbout(QWidget *parent);
-    QString translation() const;
+    void showAbout(QWidget *parent) override;
+    QString translation() const override;
 };
 
 #endif

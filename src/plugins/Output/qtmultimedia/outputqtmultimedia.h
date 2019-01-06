@@ -38,13 +38,13 @@ public:
     OutputQtMultimedia();
     ~OutputQtMultimedia();
 
-    virtual bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format);
-    virtual qint64 latency();
-    virtual qint64 writeAudio(unsigned char *data, qint64 maxSize);
-    virtual void drain();
-    virtual void reset();
-    virtual void suspend();
-    virtual void resume();
+    virtual bool initialize(quint32, ChannelMap map, Qmmp::AudioFormat format) override;
+    virtual qint64 latency() override;
+    virtual qint64 writeAudio(unsigned char *data, qint64 maxSize) override;
+    virtual void drain() override;
+    virtual void reset() override;
+    virtual void suspend() override;
+    virtual void resume() override;
 
 private:
     QScopedPointer<QAudioOutput> m_output;

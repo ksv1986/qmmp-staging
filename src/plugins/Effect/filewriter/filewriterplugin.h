@@ -33,8 +33,8 @@ public:
     FileWriterPlugin();
     virtual ~FileWriterPlugin();
 
-    void configure(quint32 srate, ChannelMap map);
-    void applyEffect(Buffer *b);
+    void configure(quint32 srate, ChannelMap map) override;
+    void applyEffect(Buffer *b) override;
 
 private:
     void init(const TrackInfo &info);

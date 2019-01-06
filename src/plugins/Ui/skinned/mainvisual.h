@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -51,16 +51,16 @@ public:
     static MainVisual *instance();
     void setVisual(VisualBase *newvis);
 
-    void paintEvent(QPaintEvent *);
+    void paintEvent(QPaintEvent *) override;
 
 protected:
-    virtual void hideEvent (QHideEvent *);
-    virtual void showEvent (QShowEvent *);
-    virtual void mousePressEvent (QMouseEvent *);
+    virtual void hideEvent (QHideEvent *) override;
+    virtual void showEvent (QShowEvent *) override;
+    virtual void mousePressEvent (QMouseEvent *) override;
 
 public slots:
-    void start();
-    void stop();
+    void start() override;
+    void stop() override;
 
 private slots:
     void timeout();
@@ -103,10 +103,10 @@ public:
     Analyzer();
     virtual ~Analyzer();
 
-    void clear();
-    bool process(float *l);
-    void draw(QPainter *p);
-    const QString name()
+    void clear() override;
+    bool process(float *l) override;
+    void draw(QPainter *p) override;
+    const QString name() override
     {
         return "Analyzer";
     }
@@ -128,10 +128,10 @@ class Scope : public VisualBase
 public:
     Scope();
     virtual ~Scope();
-    void clear();
-    bool process(float *l);
-    void draw(QPainter *p);
-    const QString name()
+    void clear() override;
+    bool process(float *l) override;
+    void draw(QPainter *p) override;
+    const QString name() override
     {
         return "Scope";
     }

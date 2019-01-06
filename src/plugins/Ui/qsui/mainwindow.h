@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -94,8 +94,8 @@ private slots:
     void restoreWindowTitle();
 
 private:
-    void closeEvent(QCloseEvent *);
-    void hideEvent(QHideEvent *);
+    void closeEvent(QCloseEvent *) override;
+    void hideEvent(QHideEvent *) override;
     void createWidgets();
     void createActions();
     void writeSettings();

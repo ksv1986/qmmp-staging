@@ -33,11 +33,11 @@ public:
     virtual ~DecoderWildMidi();
 
     // Standard Decoder API
-    bool initialize();
-    qint64 totalTime() const;
-    int bitrate() const;
-    qint64 read(unsigned char *data, qint64 size);
-    void seek(qint64);
+    bool initialize() override;
+    qint64 totalTime() const override;
+    int bitrate() const override;
+    qint64 read(unsigned char *data, qint64 size) override;
+    void seek(qint64) override;
 
 private:
     void *midi_ptr;

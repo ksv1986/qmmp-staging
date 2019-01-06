@@ -67,10 +67,10 @@ private:
     int m_ratio;
 
 protected:
-    void mousePressEvent(QMouseEvent*);
-    void mouseReleaseEvent(QMouseEvent*);
-    void mouseMoveEvent(QMouseEvent*);
-    void paintEvent(QPaintEvent*);
+    void mousePressEvent(QMouseEvent*) override;
+    void mouseReleaseEvent(QMouseEvent*) override;
+    void mouseMoveEvent(QMouseEvent*) override;
+    void paintEvent(QPaintEvent*) override;
 };
 
 #endif

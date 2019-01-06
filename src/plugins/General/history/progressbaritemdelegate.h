@@ -37,8 +37,8 @@ class ProgressBarItemDelegate : public QStyledItemDelegate
 public:
     explicit ProgressBarItemDelegate(QObject *parent = nullptr);
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     bool hasProgressBar(const QModelIndex &index) const;
 };
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2018 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -36,12 +36,12 @@ class FLACMetaDataModel : public MetaDataModel
 public:
     FLACMetaDataModel(const QString &path, bool readOnly);
     ~FLACMetaDataModel();
-    QList<TagModel* > tags() const;
-    QPixmap cover() const;
-    QString coverPath() const;
+    QList<TagModel* > tags() const override;
+    QPixmap cover() const override;
+    QString coverPath() const override;
 #ifdef HAS_PICTURE_LIST
-    void setCover(const QPixmap &pix);
-    void removeCover();
+    void setCover(const QPixmap &pix) override;
+    void removeCover() override;
 #endif
 
 
@@ -58,10 +58,10 @@ class VorbisCommentModel : public TagModel
 public:
     VorbisCommentModel(TagLib::Ogg::XiphComment *tag, TagLib::File *file);
     ~VorbisCommentModel();
-    QString name() const;
-    QString value(Qmmp::MetaData key) const;
-    void setValue(Qmmp::MetaData key, const QString &value);
-    void save();
+    QString name() const override;
+    QString value(Qmmp::MetaData key) const override;
+    void setValue(Qmmp::MetaData key, const QString &value) override;
+    void save() override;
 
 private:
     TagLib::File *m_file;

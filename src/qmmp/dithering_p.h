@@ -34,9 +34,9 @@ class Dithering : public Effect
 public:
     Dithering();
 
-    void configure(quint32 srate, ChannelMap map);
+    void configure(quint32 srate, ChannelMap map) override;
     void setFormats(Qmmp::AudioFormat in, Qmmp::AudioFormat out);
-    void applyEffect(Buffer *b);
+    void applyEffect(Buffer *b) override;
     void setEnabled(bool enabled);
 
 private:

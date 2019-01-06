@@ -40,7 +40,7 @@ public slots:
     void selectPreset(int index);
 
 private:
-    void presetSwitchedEvent(bool isHardCut, unsigned int index) const;
+    void presetSwitchedEvent(bool isHardCut, unsigned int index) const override;
 
 
 };

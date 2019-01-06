@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2017 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,17 +41,17 @@ public:
 
 public slots:
     void timeout();
-    void start();
-    void stop();
+    void start() override;
+    void stop() override;
 
 private slots:
     void updateSkin();
 
 private:
     void clear();
-    void paintEvent (QPaintEvent *);
-    void hideEvent (QHideEvent *);
-    void showEvent (QShowEvent *);
+    void paintEvent (QPaintEvent *) override;
+    void hideEvent (QHideEvent *) override;
+    void showEvent (QShowEvent *) override;
     void process ();
     void draw (QPainter *);
 

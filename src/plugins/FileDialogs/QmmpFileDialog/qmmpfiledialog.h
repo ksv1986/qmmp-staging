@@ -34,10 +34,10 @@ public:
 
 protected:
     void raise(const QString &dir, Mode mode, const QString &caption,
-               const QStringList &mask);
+               const QStringList &mask) override;
 
     QStringList exec(QWidget *parent, const QString &dir, Mode mode,
-                     const QString &caption, const QString &filter, QString *);
+                     const QString &caption, const QString &filter, QString *) override;
 
 private:
     QmmpFileDialogImpl *m_dialog;
@@ -50,10 +50,10 @@ Q_OBJECT
 Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.FileDialogFactoryInterface.1.0")
 Q_INTERFACES(FileDialogFactory)
 public:
-    virtual FileDialog* create();
-    virtual FileDialogProperties properties() const;
-    virtual void showAbout(QWidget*);
-    virtual QString translation() const;
+    virtual FileDialog* create() override;
+    virtual FileDialogProperties properties() const override;
+    virtual void showAbout(QWidget*) override;
+    virtual QString translation() const override;
     virtual ~QmmpFileDialogFactory()
     {
         ;

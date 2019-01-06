@@ -39,7 +39,7 @@ public:
     const QString key();
 
 protected:
-    virtual void keyPressEvent (QKeyEvent *event);
+    virtual void keyPressEvent (QKeyEvent *event) override;
 
 private:
     Ui::ShortcutDialog m_ui;

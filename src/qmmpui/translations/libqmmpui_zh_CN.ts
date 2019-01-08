@@ -1252,39 +1252,39 @@
 <context>
     <name>UiHelper</name>
     <message>
-        <location filename="../uihelper.cpp" line="126"/>
-        <location filename="../uihelper.cpp" line="138"/>
+        <location filename="../uihelper.cpp" line="125"/>
+        <location filename="../uihelper.cpp" line="137"/>
         <source>All Supported Bitstreams</source>
         <translation>所有被支持格式的媒体流</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="132"/>
+        <location filename="../uihelper.cpp" line="131"/>
         <source>Select one or more files to open</source>
         <translation>选择一个或多个文件并打开</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="144"/>
+        <location filename="../uihelper.cpp" line="143"/>
         <source>Select one or more files to play</source>
         <translation>选择一个或多个文件并播放</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="152"/>
+        <location filename="../uihelper.cpp" line="151"/>
         <source>Choose a directory</source>
         <translation>选择文件夹</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="168"/>
-        <location filename="../uihelper.cpp" line="192"/>
+        <location filename="../uihelper.cpp" line="167"/>
+        <location filename="../uihelper.cpp" line="191"/>
         <source>Playlist Files</source>
         <translation>播放列表文件</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="170"/>
+        <location filename="../uihelper.cpp" line="169"/>
         <source>Open Playlist</source>
         <translation>打开播放列表</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="193"/>
+        <location filename="../uihelper.cpp" line="192"/>
         <source>Save Playlist</source>
         <translation>保存播放列表</translation>
     </message>

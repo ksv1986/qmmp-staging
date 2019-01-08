@@ -1,11 +1,11 @@
 Бразильский португальский:
-    Vitor Pereira
-    Klaos Lacerda
     Bruno Gonçalves
+    Klaos Lacerda
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
 
 Болгарский:
-    Kiril Kirilov
+    Кирил Кирилов
 
 Китайский традиционный:
     lon <lon83129@126.com>
@@ -18,11 +18,14 @@
     Mingye Wang
 
 Чешский:
-    Karel Volný <kvolny@redhat.com>
     Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
 
 Голландский:
     Ronald Uitermark <ronald645@gmail.com>
+
+Финский:
+    Jiri Grönroos
 
 Французский:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>
@@ -30,6 +33,7 @@
     Stanislas Zeller <uncensored.assault@gmail.com>
 
 Галисийский:
+    Delio Docampo Cordeiro
     Óscar Pereira <oscarpereira1989@gmail.com>
 
 Немецкий:
@@ -80,7 +84,9 @@
     Ján Ďanovský <dagsoftware@yahoo.com>
 
 Испанский:
+    Bohdan Shuba
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
 Турецкий:
     Mustafa GUNAY <mustafagunay@pgmail.com>

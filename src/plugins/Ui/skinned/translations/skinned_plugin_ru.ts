@@ -1222,12 +1222,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="307"/>
         <source>Show splitters</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать разделители</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="314"/>
         <source>Alternate splitter color</source>
-        <translation type="unfinished"></translation>
+        <translation>Альтернативный цвет разделителей</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="416"/>

@@ -7,7 +7,7 @@
         <location filename="../converter.cpp" line="129"/>
         <location filename="../converter.cpp" line="229"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Anulowano</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="144"/>
@@ -18,17 +18,17 @@
     <message>
         <location filename="../converter.cpp" line="179"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Konwertowanie</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="240"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodowanie</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="278"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukończono</translation>
     </message>
 </context>
 <context>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>Konwerter dźwięku</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Stan</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="198"/>
         <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Utwórz kopię</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="129"/>
@@ -103,7 +103,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Czekanie</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="196"/>
@@ -123,12 +123,12 @@
     <message>
         <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można wykonać &quot;%1&quot;. Program nie został znaleziony.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Proces &quot;%1&quot; zakończył się błędem.</translation>
     </message>
 </context>
 <context>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
-        <translation>Wtyczka konwertera</translation>
+        <translation>Wtyczka Konwerter</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
@@ -156,7 +156,7 @@
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -169,7 +169,7 @@
     <message>
         <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+C</translation>
     </message>
 </context>
 <context>

@@ -18,15 +18,15 @@
     <message>
         <location filename="../fileops.cpp" line="132"/>
         <source>Move Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Przenieś pliki</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="133"/>
         <source>Are you sure you want to move %n file(s)?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Czy na pewno chcesz przenieść %n plik?</numerusform>
+            <numerusform>Czy na pewno chcesz przenieść %n pliki?</numerusform>
+            <numerusform>Czy na pewno chcesz przenieść %n plików?</numerusform>
         </translation>
     </message>
     <message>
@@ -48,25 +48,25 @@
     <message>
         <location filename="../fileops.cpp" line="239"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Przenoszenie</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="272"/>
         <source>Moving file %1/%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Przenoszenie pliku %1/%2</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="110"/>
         <source>Remove Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Usuń pliki</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="111"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
-        <translation type="unfinished">
-            <numerusform>Czy napewno chcesz usunąć %n plik(ów) z dysku?</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Czy napewno chcesz usunąć %n plik z dysku?</numerusform>
+            <numerusform>Czy na pewno chcesz usunąć %n pliki z dysku?</numerusform>
+            <numerusform>Czy na pewno chcesz usunąć %n plików z dysku?</numerusform>
         </translation>
     </message>
 </context>
@@ -75,7 +75,7 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="30"/>
         <source>File Operations Plugin</source>
-        <translation>Wtyczka Operacji na plikach</translation>
+        <translation>Wtyczka Operacje na plikach</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="50"/>
@@ -90,7 +90,7 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -182,7 +182,7 @@
         <location filename="../settingsdialog.cpp" line="53"/>
         <location filename="../settingsdialog.cpp" line="133"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Przenieś</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="137"/>

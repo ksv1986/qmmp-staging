@@ -24,27 +24,27 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="31"/>
         <source>Global Hotkey Plugin</source>
-        <translation>Wtyczka klawiszów skrótowych</translation>
+        <translation>Wtyczka Globalne skróty klawiszowe</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="57"/>
         <source>About Global Hotkey Plugin</source>
-        <translation>O wtyczce Klawisze Skrótowe</translation>
+        <translation>O wtyczce Globalne skróty klawiszowe</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="58"/>
         <source>Qmmp Global Hotkey Plugin</source>
-        <translation>Wtyczka Skróŧy Klawiszowe dla Qmmp</translation>
+        <translation>Wtyczka Globalne skróty klawiszowe dla Qmmp</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="59"/>
         <source>This plugin adds support for multimedia keys or global key combinations</source>
-        <translation>Ta wtyczka obsługuje klawisze multimedialne oraz globalne kombinacje klawiszów skrótowych</translation>
+        <translation>Ta wtyczka obsługuje klawisze multimedialne oraz globalne kombinacje skrótów klawiszowych</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Global Hotkey Plugin Settings</source>
-        <translation>Globalne ustawienia wtyczki Klawiszów Skrótowych</translation>
+        <translation>Ustawienia wtyczki Globalne skróŧy klawiszowe</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="30"/>
         <source>File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Wtyczka Zapis pliku</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="51"/>
         <source>About File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>O wtyczce Zapis pliku</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="52"/>
         <source>Qmmp File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Wtyczka Zapis pliku dla Qmmp</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Writer Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia wtyczki Zapis pliku</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jakość:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>

@@ -11,22 +11,22 @@
     <message>
         <location filename="../outputossfactory.cpp" line="56"/>
         <source>About OSS Output Plugin</source>
-        <translation>O wtyczce dźwiękowej OSS</translation>
+        <translation>O wtyczce wyjściowej OSS</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="57"/>
         <source>Qmmp OSS Output Plugin</source>
-        <translation>Wtyczka OSS dla Qmmp</translation>
+        <translation>Wtyczka wyjściowa OSS dla Qmmp</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="58"/>
         <source>Written by: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</source>
-        <translation>Autor: Jurij Žuravljov &lt;slalkerg@gmail.com&gt;</translation>
+        <translation>Napisana przez: Jurij Žuravljov &lt;slalkerg@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="59"/>
         <source>Based on code by: Brad Hughes &lt;bhughes@trolltech.com&gt;</source>
-        <translation>Oparty na kodzie stworzonym przez Brad Hughes &lt;bhughes@trolltech.com&gt;</translation>
+        <translation>Oparta na kodzie stworzonym przez Brada Hughesa &lt;bhughes@trolltech.com&gt;</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="84"/>
         <source>Advanced Settings</source>
-        <translation>Zaawansowane ustawienia</translation>
+        <translation>Ustawienia zaawansowane</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>

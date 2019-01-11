@@ -6,12 +6,12 @@
     <message>
         <location filename="../analyzer.cpp" line="44"/>
         <source>Qmmp Analyzer</source>
-        <translation>Qmmp Analizator</translation>
+        <translation>Analizator dla Qmmp</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="332"/>
         <source>Peaks</source>
-        <translation>Piki</translation>
+        <translation>Szczyty</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="335"/>
@@ -21,22 +21,22 @@
     <message>
         <location filename="../analyzer.cpp" line="338"/>
         <source>50 fps</source>
-        <translation>50 klatek</translation>
+        <translation>50 kl./s</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="339"/>
         <source>25 fps</source>
-        <translation>25 klatek</translation>
+        <translation>25 kl./s</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="340"/>
         <source>10 fps</source>
-        <translation>10 klatek</translation>
+        <translation>10 kl./s</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="341"/>
         <source>5 fps</source>
-        <translation>5 klatek</translation>
+        <translation>5 kl./s</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="348"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../analyzer.cpp" line="362"/>
         <source>Peaks Falloff</source>
-        <translation>Opadanie pików</translation>
+        <translation>Opadanie szczytów</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>
         <source>&amp;Full Screen</source>
-        <translation>Pełny Ekran</translation>
+        <translation>&amp;Pełny ekran</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Analyzer Plugin Settings</source>
-        <translation>Ustawienia Wtyczki Analizator</translation>
+        <translation>Ustawienia wtyczki Analizator</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>Cells size:</source>
-        <translation>Rozmiar komórki:</translation>
+        <translation>Rozmiar komórek:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="101"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="107"/>
         <source>Peaks:</source>
-        <translation>Piki:</translation>
+        <translation>Szczyty:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="139"/>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="49"/>
         <source>About Analyzer Visual Plugin</source>
-        <translation>O wtyczce Analizator</translation>
+        <translation>O wtyczce wizualnej Analizator</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="50"/>
@@ -165,7 +165,7 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

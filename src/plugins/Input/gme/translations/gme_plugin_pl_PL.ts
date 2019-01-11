@@ -11,7 +11,7 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="41"/>
         <source>Game Music Files</source>
-        <translation>Game Music Files</translation>
+        <translation>Pliki muzyczne z gier</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="103"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="106"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,12 +39,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>GME Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia wtyczki GME</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Fadeout length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Długość ściszenia:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="44"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="57"/>
         <source>Enable fadeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Włącz ściszenie</translation>
     </message>
 </context>
 </TS>

@@ -31,7 +31,7 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="86"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="65"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="68"/>
         <source>FPS</source>
-        <translation>Klatek na sek.</translation>
+        <translation>Kl./s</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="69"/>
@@ -74,13 +74,13 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <source>Video bitrate</source>
-        <translation>Bitrate</translation>
+        <translation>Bitrate wideo</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="74"/>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPlayer Settings</source>
-        <translation>Ustawienia Mplayer</translation>
+        <translation>Ustawienia MPlayer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
@@ -133,7 +133,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Audio/video auto synchronization</source>
-        <translation>Auto synchronizacja audio/wideo</translation>
+        <translation>Automatyczna synchronizacja audio/wideo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="72"/>

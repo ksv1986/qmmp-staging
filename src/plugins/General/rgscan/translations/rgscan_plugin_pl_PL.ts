@@ -11,7 +11,7 @@
     <message>
         <location filename="../rgscandialog.ui" line="84"/>
         <source>Write track gain/peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz wzmocnienie/szczyt utworu</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="42"/>
@@ -26,27 +26,27 @@
     <message>
         <location filename="../rgscandialog.ui" line="52"/>
         <source>Track Gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Wzmocnienie utworu</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="57"/>
         <source>Album Gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Wzmocnienie albumu</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="62"/>
         <source>Track Peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Szczyt utworu</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="67"/>
         <source>Album Peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Szczyt albumu</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="77"/>
         <source>Skip already scanned files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomiń już zeskanowane pliki</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="113"/>
@@ -56,12 +56,12 @@
     <message>
         <location filename="../rgscandialog.ui" line="120"/>
         <source>Write Tags</source>
-        <translation>Zapisz Tagi</translation>
+        <translation>Zapisz tagi</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="91"/>
         <source>Write album gain/peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz wzmocnienie/szczyt albumu</translation>
     </message>
     <message>
         <location filename="../rgscandialog.cpp" line="122"/>
@@ -75,7 +75,7 @@
         <location filename="../rgscandialog.cpp" line="157"/>
         <location filename="../rgscandialog.cpp" line="228"/>
         <source>%1 dB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 dB</translation>
     </message>
 </context>
 <context>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="50"/>
         <source>ReplayGain Scanner Plugin for Qmmp</source>
-        <translation>Wtyczka ReplayGain dla Qmmp</translation>
+        <translation>Wtyczka Skaner ReplayGain dla Qmmp</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="51"/>
@@ -103,27 +103,27 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="53"/>
         <source>Based on source code by:</source>
-        <translation>Oparte na kodzie stworzonym przez:</translation>
+        <translation>Oparta na kodzie stworzonym przez:</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="54"/>
         <source>David Robinson &lt;David@Robinson.org&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>David Robinson &lt;David@Robinson.org&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="55"/>
         <source>Glen Sawyer &lt;mp3gain@hotmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Glen Sawyer &lt;mp3gain@hotmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="56"/>
         <source>Frank Klemm</source>
-        <translation type="unfinished"></translation>
+        <translation>Frank Klemm</translation>
     </message>
 </context>
 <context>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../rgscanhelper.cpp" line="33"/>
         <source>Meta+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+R</translation>
     </message>
 </context>
 </TS>

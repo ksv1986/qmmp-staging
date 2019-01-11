@@ -1,1 +1,1 @@
-Qmmp to odtwarzacz muzyki napisany przy użyciu biblioteki QT.
+Qmmp to odtwarzacz muzyki napisany przy użyciu biblioteki Qt.

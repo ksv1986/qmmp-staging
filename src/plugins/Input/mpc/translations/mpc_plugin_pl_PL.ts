@@ -16,17 +16,17 @@
     <message>
         <location filename="../decodermpcfactory.cpp" line="112"/>
         <source>About Musepack Audio Plugin</source>
-        <translation>O wtyczce Musepack Audio</translation>
+        <translation>O wtyczce dźwiękowej Musepack</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="113"/>
         <source>Qmmp Musepack Audio Plugin</source>
-        <translation>Wtyczka Musepack Audio dla Qmmp</translation>
+        <translation>Wtyczka dźwiękowa Musepack dla Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="114"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

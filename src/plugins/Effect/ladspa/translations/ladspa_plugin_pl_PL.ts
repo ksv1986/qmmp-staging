@@ -11,7 +11,7 @@
     <message>
         <location filename="../effectladspafactory.cpp" line="50"/>
         <source>About LADSPA Host for Qmmp</source>
-        <translation>O wtyczce LADSPA dla Qmmp</translation>
+        <translation>O wtyczce Host LADSPA dla Qmmp</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="51"/>
@@ -21,27 +21,27 @@
     <message>
         <location filename="../effectladspafactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="53"/>
         <source>Based on the LADSPA Host for BMP</source>
-        <translation>Oparta na LADSPA Host dla BMP</translation>
+        <translation>Oparta na hoście LADSPA dla BMP</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="54"/>
         <source>BMP-ladspa developers:</source>
-        <translation>Autorzy BMP-ladspa:</translation>
+        <translation>Programiści BMP-ladspa:</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="55"/>
         <source>Nick Lamb &lt;njl195@zepler.org.uk&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nick Lamb &lt;njl195@zepler.org.uk&gt;</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="56"/>
         <source>Giacomo Lozito &lt;city_hunter@users.sf.net&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Giacomo Lozito &lt;city_hunter@users.sf.net&gt;</translation>
     </message>
 </context>
 <context>
@@ -54,12 +54,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&gt;</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="59"/>
         <source>&lt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="94"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="47"/>
         <source>UID</source>
-        <translation type="unfinished"></translation>
+        <translation>UID</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="48"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>This LADSPA plugin has no user controls</source>
-        <translation>Ta wtyczka LADSPA nie posiada panelu sterowania</translation>
+        <translation>Ta wtyczka LADSPA nie ma panelu sterowania</translation>
     </message>
 </context>
 </TS>

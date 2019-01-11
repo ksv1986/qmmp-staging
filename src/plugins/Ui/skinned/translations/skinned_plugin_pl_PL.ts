@@ -91,7 +91,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
@@ -101,27 +101,27 @@
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>S</source>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
         <source>&amp;No Playlist Advance</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Brak listy odtwarzania</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="49"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
         <source>&amp;Stop After Selected</source>
-        <translation>Zatrzymaj po aktualnie odtwarzanym utworze</translation>
+        <translation>Za&amp;trzymaj po aktualnie odtwarzanym utworze</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
@@ -131,7 +131,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
         <source>Alt+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
@@ -141,7 +141,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
         <source>Alt+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+E</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
@@ -151,7 +151,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
         <source>Alt+G</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+G</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="56"/>
@@ -171,12 +171,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="58"/>
         <source>Meta+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+D</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="59"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Wygładzanie krawędzi</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
@@ -321,7 +321,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
@@ -331,7 +331,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
@@ -361,7 +361,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
@@ -371,7 +371,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Ctrl+PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+PgDown</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
@@ -381,7 +381,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>Ctrl+PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+PgUp</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
@@ -391,27 +391,27 @@
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation>P</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>&amp;Group Tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Grupuj utwory</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>Ctrl+G</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+G</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>&amp;Show Column Headers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pokaż nagłówki kolumn</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
@@ -465,12 +465,12 @@
     <message>
         <location filename="../eqwidget.cpp" line="278"/>
         <source>&amp;Save Preset</source>
-        <translation>Zapi&amp;sz Profil</translation>
+        <translation>Zapi&amp;sz profil</translation>
     </message>
     <message>
         <location filename="../eqwidget.cpp" line="280"/>
         <source>&amp;Save Auto-load Preset</source>
-        <translation>Zapi&amp;sz Auto-ładowanie Profilu</translation>
+        <translation>Zapi&amp;sz autoładowanie profilu</translation>
     </message>
     <message>
         <location filename="../eqwidget.cpp" line="282"/>
@@ -485,12 +485,12 @@
     <message>
         <location filename="../eqwidget.cpp" line="314"/>
         <source>Saving Preset</source>
-        <translation>Zapisywanie Profilu</translation>
+        <translation>Zapisywanie profilu</translation>
     </message>
     <message>
         <location filename="../eqwidget.cpp" line="315"/>
         <source>Preset name:</source>
-        <translation>Nazwa Profilu:</translation>
+        <translation>Nazwa profilu:</translation>
     </message>
     <message>
         <location filename="../eqwidget.cpp" line="316"/>
@@ -500,7 +500,7 @@
     <message>
         <location filename="../eqwidget.cpp" line="407"/>
         <source>Import Preset</source>
-        <translation>Importuj Profil</translation>
+        <translation>Importuj profil</translation>
     </message>
 </context>
 <context>
@@ -553,12 +553,12 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="94"/>
         <source>Reset Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetuj skróty klawiszowe</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="95"/>
         <source>Do you want to restore default shortcuts?</source>
-        <translation type="unfinished"></translation>
+        <translation>Czy chcesz przywrócić domyślne skróty?</translation>
     </message>
 </context>
 <context>
@@ -596,7 +596,7 @@
     <message>
         <location filename="../display.cpp" line="83"/>
         <source>Equalizer</source>
-        <translation>Equalizer</translation>
+        <translation>Korektor</translation>
     </message>
     <message>
         <location filename="../display.cpp" line="86"/>
@@ -664,7 +664,7 @@
     <message>
         <location filename="../mainvisual.cpp" line="217"/>
         <source>Scope</source>
-        <translation type="unfinished"></translation>
+        <translation>Zakres</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="218"/>
@@ -689,7 +689,7 @@
     <message>
         <location filename="../mainvisual.cpp" line="230"/>
         <source>Vertical Lines</source>
-        <translation>Pionowe Linie</translation>
+        <translation>Pionowe linie</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="231"/>
@@ -704,7 +704,7 @@
     <message>
         <location filename="../mainvisual.cpp" line="245"/>
         <source>Peaks</source>
-        <translation>Piki</translation>
+        <translation>Szczyty</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="249"/>
@@ -714,22 +714,22 @@
     <message>
         <location filename="../mainvisual.cpp" line="252"/>
         <source>50 fps</source>
-        <translation>50 klatek</translation>
+        <translation>50 kl./s</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="253"/>
         <source>25 fps</source>
-        <translation>25 klatek</translation>
+        <translation>25 kl./s</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="254"/>
         <source>10 fps</source>
-        <translation>10 klatek</translation>
+        <translation>10 kl./s</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="255"/>
         <source>5 fps</source>
-        <translation>5 klatek</translation>
+        <translation>5 kl./s</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="262"/>
@@ -769,7 +769,7 @@
     <message>
         <location filename="../mainvisual.cpp" line="276"/>
         <source>Peaks Falloff</source>
-        <translation>Opadanie Pików</translation>
+        <translation>Opadanie szczytów</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="289"/>
@@ -817,7 +817,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="551"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp</translation>
     </message>
 </context>
 <context>
@@ -865,7 +865,7 @@
         <location filename="../playlist.cpp" line="242"/>
         <location filename="../playlist.cpp" line="282"/>
         <source>By Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Według artysty albumu</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="245"/>
@@ -877,36 +877,36 @@
         <location filename="../playlist.cpp" line="248"/>
         <location filename="../playlist.cpp" line="288"/>
         <source>By Path + Filename</source>
-        <translation>Według Ścieżki + Nazwy pliku</translation>
+        <translation>Według ścieżki + nazwy pliku</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="251"/>
         <location filename="../playlist.cpp" line="291"/>
         <source>By Date</source>
-        <translation>Wg Daty</translation>
+        <translation>Według daty</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="254"/>
         <location filename="../playlist.cpp" line="294"/>
         <source>By Track Number</source>
-        <translation>Wg numeru utworu</translation>
+        <translation>Według numeru utworu</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="260"/>
         <location filename="../playlist.cpp" line="300"/>
         <source>By File Creation Date</source>
-        <translation>Wg Daty Utworzenia Pliku</translation>
+        <translation>Według daty utworzenia pliku</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="263"/>
         <location filename="../playlist.cpp" line="303"/>
         <source>By File Modification Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Według daty modyfikacji pliku</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="266"/>
         <source>By Group</source>
-        <translation>Wg Grupy</translation>
+        <translation>Według grupy</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="271"/>
@@ -984,50 +984,50 @@
     <message>
         <location filename="../playlistheader.cpp" line="86"/>
         <source>Add Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj kolumnę</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="87"/>
         <source>Edit Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Edytuj kolumnę</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="88"/>
         <source>Show Queue/Protocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż kolejkę/protokół</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="90"/>
         <source>Auto-resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatyczna zmiana rozmiaru</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="93"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyrównanie</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="94"/>
         <source>Left</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Lewo</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="95"/>
         <source>Right</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Prawo</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="96"/>
         <source>Center</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="106"/>
         <source>Remove Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Usuń kolumnę</translation>
     </message>
 </context>
 <context>
@@ -1035,7 +1035,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="14"/>
         <source>Popup Information Settings</source>
-        <translation>Ustawienia informacji Popup</translation>
+        <translation>Ustawienia inforamcji popup</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="29"/>
@@ -1083,7 +1083,7 @@
     <message>
         <location filename="../forms/preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
-        <translation>Edytor Profili</translation>
+        <translation>Edytor profili</translation>
     </message>
     <message>
         <location filename="../forms/preseteditor.ui" line="36"/>
@@ -1093,7 +1093,7 @@
     <message>
         <location filename="../forms/preseteditor.ui" line="52"/>
         <source>Auto-preset</source>
-        <translation>Auto-profil</translation>
+        <translation>Autoprofil</translation>
     </message>
     <message>
         <location filename="../forms/preseteditor.ui" line="77"/>
@@ -1129,52 +1129,52 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="35"/>
         <source>Skinned User Interface</source>
-        <translation>Interfejs obsługi skór dla Qmmp</translation>
+        <translation>Interfejs obsługi skórek dla Qmmp</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="61"/>
         <source>About Qmmp Skinned User Interface</source>
-        <translation>O interfejsie obsługi skór</translation>
+        <translation>O interfejsie obsługi skórek Qmmp</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="62"/>
         <source>Qmmp Skinned User Interface</source>
-        <translation>Qmmp - Interfejs obsługi skór</translation>
+        <translation>Interfejs obsługi skórek Qmmp</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="63"/>
         <source>Simple user interface with Winamp-2.x/XMMS skins support</source>
-        <translation>Prosty interfejs obsługi skór z Winamp-2.x/XMMS</translation>
+        <translation>Prosty interfejs obsługi skórek z Winamp-2.x/XMMS</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="64"/>
         <source>Written by:</source>
-        <translation>Napisana przez:</translation>
+        <translation>Napisany przez:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="65"/>
         <source>Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="66"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="67"/>
         <source>Artwork:</source>
-        <translation>Artwork:</translation>
+        <translation>Grafika:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="68"/>
         <source>Andrey Adreev &lt;andreev00@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Andrey Adreev &lt;andreev00@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="69"/>
         <source>sixixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>sixixfive &lt;http://sixsixfive.deviantart.com/&gt;</translation>
     </message>
 </context>
 <context>
@@ -1182,7 +1182,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="24"/>
         <source>Skins</source>
-        <translation>Skóry</translation>
+        <translation>Skórki</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="55"/>
@@ -1197,7 +1197,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="95"/>
         <source>Main Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Okno główne </translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="101"/>
@@ -1217,17 +1217,17 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="253"/>
         <source>Single Column Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryb pojedynczej kolumny</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="307"/>
         <source>Show splitters</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż rozdzielacze</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="314"/>
         <source>Alternate splitter color</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternatywny kolor rozdzielacza</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="416"/>
@@ -1242,7 +1242,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="506"/>
         <source>Column headers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nagłówki kolumn:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="428"/>
@@ -1267,7 +1267,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="548"/>
         <source>Reset fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetuj czcionki</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="557"/>
@@ -1277,7 +1277,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="124"/>
         <source>Window title format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format tytułu okna:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="89"/>
@@ -1324,12 +1324,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="266"/>
         <source>Show song lengths</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż długości utworów</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="259"/>
         <source>Show song numbers</source>
-        <translation>Wyświetl numery utworów na liście odtwarzania</translation>
+        <translation>Pokaż numery utworów</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="276"/>
@@ -1369,12 +1369,12 @@
     <message>
         <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Select Skin Files</source>
-        <translation>Wybierz skórę</translation>
+        <translation>Wybierz skórkę</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="121"/>
         <source>Skin files</source>
-        <translation>Pliki skór</translation>
+        <translation>Pliki skórek</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="173"/>

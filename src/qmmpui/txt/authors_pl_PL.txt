@@ -1,14 +1,14 @@
-Core Developers:
+Główni programiści:
 
-    Ilya Kotov <forkotov02@ya.ru> - idea and base code
+    Ilya Kotov <forkotov02@ya.ru> - pomysł i kod bazowy
 
-Former Developers:
+Byli programiści:
 
-    Artur Guzik <aguzik88@gmail.com> - kde4 notification plugin, tray icon improvements
-    Vladimir Kuznetsov <vovanec@gmail.com> - look&feel and many improvements
-    Yuriy Zhuravlev <stalkerg@gmail.com>  - JACK and OSS plugins
+    Artur Guzik <aguzik88@gmail.com> - wtyczka powiadamiania kde4, ulepszenia ikony w zasobniku
+    Vladimir Kuznetsov <vovanec@gmail.com> - wygląd i wiele ulepszeń
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - wtyczki JACK i OSS 
 
-Artwork:
+Grafika:
 
-    Andrey Adreev <andreev00@gmail.com> - icons and default skin (for versions 0.2-0.8)
-    sixsixfive <http://sixsixfive.deviantart.com/> - default skin
+    Andrey Adreev <andreev00@gmail.com> - ikony i domyślna skórka (w wersjach 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - domyślna skórka

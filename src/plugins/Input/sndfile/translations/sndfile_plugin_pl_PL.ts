@@ -16,22 +16,22 @@
     <message>
         <location filename="../decodersndfilefactory.cpp" line="225"/>
         <source>About Sndfile Audio Plugin</source>
-        <translation>O wtyczce Sndfile Audio</translation>
+        <translation>O wtyczce dźwiękowej Sndfile</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="226"/>
         <source>Qmmp Sndfile Audio Plugin</source>
-        <translation>Wtyczka Sndfile Audio dla Qmmp</translation>
+        <translation>Wtyczka dźwiękowa Sndfile dla Qmmp</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="227"/>
         <source>Compiled against</source>
-        <translation>Skompilowano przy użyciu</translation>
+        <translation>Skompilowana z biblioteką</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="228"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

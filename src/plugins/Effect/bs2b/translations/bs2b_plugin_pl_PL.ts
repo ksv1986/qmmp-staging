@@ -16,7 +16,7 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="52"/>
         <source>This is the Qmmp plugin version of Boris Mikhaylov&apos;s headphone DSP effect &quot;Bauer stereophonic-to-binaural&quot;, abbreviated bs2b.</source>
-        <translation>Jest to wersja wtyczki efektu DSP dla słuchawek autorstwa Boris Mikhaylov&apos;a &quot;Bauer stereophonic-to-binaural&quot;, w skrócie bs2b.</translation>
+        <translation>Jest to wersja wtyczki efektu DSP dla słuchawek autorstwa Borisa Mikhaylova &quot;Bauer stereophonic-to-binaural&quot;, w skrócie bs2b.</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="54"/>
@@ -26,22 +26,22 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="56"/>
         <source>Compiled against libbs2b-%1</source>
-        <translation>Skompilowane z biblioteką w wersji-%1</translation>
+        <translation>Skompilowana z biblioteką libbs2b-%1</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="57"/>
         <source>Developers:</source>
-        <translation>Autorzy:</translation>
+        <translation>Programiści:</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="58"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="59"/>
         <source>Sebastian Pipping &lt;sebastian@pipping.org&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Sebastian Pipping &lt;sebastian@pipping.org&gt;</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
         <source>Crossfeed level</source>
-        <translation>Poziom Crossfeed</translation>
+        <translation>Poziom crossfeedu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
@@ -70,22 +70,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>C.Moy</source>
-        <translation type="unfinished"></translation>
+        <translation>C.Moy</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="85"/>
         <source>J. Meier</source>
-        <translation type="unfinished"></translation>
+        <translation>J. Meier</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="60"/>
         <source>%1 Hz, %2 us</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Hz, %2 us</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="67"/>
         <source>%1 dB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 dB</translation>
     </message>
 </context>
 </TS>

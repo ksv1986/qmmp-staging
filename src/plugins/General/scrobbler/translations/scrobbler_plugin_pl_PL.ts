@@ -21,7 +21,7 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="20"/>
         <source>Last.fm</source>
-        <translation type="unfinished"></translation>
+        <translation>Last.fm</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="31"/>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="73"/>
         <source>Libre.fm</source>
-        <translation type="unfinished"></translation>
+        <translation>Libre.fm</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="129"/>
         <source>ListenBrainz</source>
-        <translation type="unfinished"></translation>
+        <translation>ListenBrainz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>

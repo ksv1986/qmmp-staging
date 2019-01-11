@@ -16,42 +16,42 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="136"/>
         <source>About ModPlug Audio Plugin</source>
-        <translation>O wtyczce ModPlug Audio</translation>
+        <translation>O wtyczce dźwiękowej ModPlug</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="137"/>
         <source>Qmmp ModPlug Audio Plugin</source>
-        <translation>Wtyczka ModPlug Audio dla Qmmp</translation>
+        <translation>Wtyczka dźwiękowa ModPlug dla Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="138"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="139"/>
         <source>Based on the Modplug Plugin for Xmms</source>
-        <translation>Oparty na wtyczce Modplug dla Xmms</translation>
+        <translation>Oparta na wtyczce Modplug dla Xmms</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="140"/>
         <source>Modplug Plugin developers:</source>
-        <translation>Twórcy wtyczki Modplug:</translation>
+        <translation>Programiści wtyczki Modplug:</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="141"/>
         <source>Olivier Lapicque &lt;olivierl@jps.net&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Olivier Lapicque &lt;olivierl@jps.net&gt;</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="142"/>
         <source>Kenton Varda &lt;temporal@gauge3d.org&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Kenton Varda &lt;temporal@gauge3d.org&gt;</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="143"/>
         <source>Konstanty Bialkowski &lt;konstanty@ieee.org&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Konstanty Bialkowski &lt;konstanty@ieee.org&gt;</translation>
     </message>
 </context>
 <context>
@@ -70,7 +70,7 @@
         <location filename="../modplugmetadatamodel.cpp" line="73"/>
         <location filename="../modplugmetadatamodel.cpp" line="94"/>
         <source>Samples</source>
-        <translation>Sample</translation>
+        <translation>Próbki</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="74"/>
@@ -169,22 +169,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="152"/>
         <source>48000 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>48000 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="159"/>
         <source>44100 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>44100 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="166"/>
         <source>22050 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>22050 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="173"/>
         <source>11025 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>11025 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="184"/>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="292"/>
         <source>40</source>
-        <translation type="unfinished">40</translation>
+        <translation>40</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="324"/>
@@ -239,17 +239,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="426"/>
         <source>10</source>
-        <translation type="unfinished">10</translation>
+        <translation>10</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="458"/>
         <source>Surround</source>
-        <translation type="unfinished"></translation>
+        <translation>Surround</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="551"/>
         <source>5</source>
-        <translation type="unfinished">5</translation>
+        <translation>5</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="577"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Track Change Plugin Settings</source>
-        <translation>Ustawienia wtyczki Zmiany Utworów </translation>
+        <translation>Ustawienia wtyczki Zmiana utworu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
@@ -19,22 +19,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Command to run when Qmmp starts new track</source>
-        <translation>Komenda uruchamiana kiedy Qmmp uruchamia nowy utwór</translation>
+        <translation>Polecenie do uruchomienia, gdy Qmmp rozpoczyna nową utwór</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="83"/>
         <source>Command to run toward to end of a track</source>
-        <translation>Komenda uruchamiana kiedy Qmmp kończy utwór</translation>
+        <translation>Polecenie do uruchomienia przy końcu utworu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="90"/>
         <source>Command to run when Qmmp reaches the end of the playlist</source>
-        <translation>Komenda uruchamiana kiedy Qmmp zakończy listę odtwarzania</translation>
+        <translation>Polecenie do uruchomienia, gdy Qmmp kończy listę odtwarzania</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="97"/>
         <source>Command to run when title changes (i.e. network streams title)</source>
-        <translation>Komenda uruchamiana kiedy zmienia się tytuł (np: tytuły strumieni internetowych)</translation>
+        <translation>Polecenie do uruchomienia, gdy zmienia się tytuł (tj. tytuł strumieni sieciowych)</translation>
     </message>
 </context>
 <context>
@@ -42,27 +42,27 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="30"/>
         <source>Track Change Plugin</source>
-        <translation>Wtyczka Zmiany Utworu</translation>
+        <translation>Wtyczka Zmiana utworu</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="50"/>
         <source>About Track Change Plugin</source>
-        <translation>O wtyczce Zmiany Utworu</translation>
+        <translation>O wtyczce Zmiana utworu</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="51"/>
         <source>Qmmp Track Change Plugin</source>
-        <translation>Wtyczka Zmiany Utworu dla Qmmp</translation>
+        <translation>Wtyczka Zmiana utworu dla Qmmp</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="52"/>
         <source>This plugin executes external command when current track is changed</source>
-        <translation>Uruchamia zewnętrzne polecenia przy zmianie utworu</translation>
+        <translation>Uruchamia zewnętrzne polecenie przy zmianie utworu</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

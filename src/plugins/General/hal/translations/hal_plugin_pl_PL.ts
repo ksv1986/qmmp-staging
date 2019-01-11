@@ -26,12 +26,12 @@
     <message>
         <location filename="../halfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="54"/>
         <source>Based on Solid (KDE hardware library)</source>
-        <translation>Oparte na Solid (biblioteka urządzeń dla KDE)</translation>
+        <translation>Oparta na Solid (biblioteka urządzeń dla KDE)</translation>
     </message>
 </context>
 <context>

@@ -16,12 +16,12 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="176"/>
         <source>About WavPack Audio Plugin</source>
-        <translation>O wtyczce WavPack Audio</translation>
+        <translation>O wtyczce dźwiękowej WavPack</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="177"/>
         <source>Qmmp WavPack Audio Plugin</source>
-        <translation>Wtyczka WavPack dla Qmmp</translation>
+        <translation>Wtyczka dźwiękowa WavPack dla Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="178"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="180"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

@@ -11,17 +11,17 @@
     <message>
         <location filename="../outputalsafactory.cpp" line="56"/>
         <source>About ALSA Output Plugin</source>
-        <translation>O wtyczce dźwiękowej ALSA</translation>
+        <translation>O wtyczce wyjściowej ALSA</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="57"/>
         <source>Qmmp ALSA Output Plugin</source>
-        <translation>Wtyczka ALSA dla Qmmp</translation>
+        <translation>Wtyczka wyjściowa ALSA dla Qmmp</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

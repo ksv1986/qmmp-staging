@@ -11,7 +11,7 @@
     <message>
         <location filename="../lyrics.cpp" line="34"/>
         <source>Ctrl+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+L</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="29"/>
         <source>Lyrics Plugin</source>
-        <translation>Wtyczka tekstów piosenek</translation>
+        <translation>Wtyczka Teksty piosenek</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="50"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="51"/>
         <source>Qmmp Lyrics Plugin</source>
-        <translation>Wtyczka Teksty Piosenek dla Qmmp</translation>
+        <translation>Wtyczka Teksty piosenek dla Qmmp</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="52"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../lyricswindow.ui" line="14"/>
         <source>Lyrics Plugin</source>
-        <translation>Wtyczka wyszukiwania tekstów piosenek</translation>
+        <translation>Wtyczka Teksty piosenek</translation>
     </message>
     <message>
         <location filename="../lyricswindow.ui" line="45"/>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../lyricswindow.ui" line="36"/>
         <source>No connection</source>
-        <translation>Nie połączony</translation>
+        <translation>Brak połączenia</translation>
     </message>
     <message>
         <location filename="../lyricswindow.cpp" line="76"/>

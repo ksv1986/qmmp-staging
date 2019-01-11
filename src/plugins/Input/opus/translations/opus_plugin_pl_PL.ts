@@ -16,17 +16,17 @@
     <message>
         <location filename="../decoderopusfactory.cpp" line="116"/>
         <source>About Opus Audio Plugin</source>
-        <translation>O wtyczce Opus Audio</translation>
+        <translation>O wtyczce dźwiękowej Opus</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="117"/>
         <source>Qmmp Opus Audio Plugin</source>
-        <translation>Wtyczka Opus Audio dla Qmmp</translation>
+        <translation>Wtyczka dźwiękowa Opus dla Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="118"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../opusmetadatamodel.cpp" line="59"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Wersja</translation>
     </message>
 </context>
 </TS>

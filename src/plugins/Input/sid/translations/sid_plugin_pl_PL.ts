@@ -16,12 +16,12 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="114"/>
         <source>About SID Audio Plugin</source>
-        <translation>O wtyczce SID Audio</translation>
+        <translation>O wtyczce dźwiękowej SID</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="115"/>
         <source>Qmmp SID Audio Plugin</source>
-        <translation>Wtyczka SID Audio dla Qmmp</translation>
+        <translation>Wtyczka dźwiękowej SID dla Qmmp</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="116"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="117"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="93"/>
         <source>Defaults song length, sec:</source>
-        <translation>Domyślna długość utworu, sek:</translation>
+        <translation>Domyślna długość utworu, s:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="100"/>
@@ -79,12 +79,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
         <source>44100 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>44100 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="42"/>
         <source>48000 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>48000 Hz</translation>
     </message>
 </context>
 </TS>

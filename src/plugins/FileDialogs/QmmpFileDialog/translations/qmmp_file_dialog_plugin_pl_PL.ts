@@ -63,24 +63,26 @@
         <location filename="../qmmpfiledialog.cpp" line="69"/>
         <location filename="../qmmpfiledialog.cpp" line="79"/>
         <source>Qmmp File Dialog</source>
-        <translation>Qmmp Okno Dialogowe</translation>
+        <translation>Okno dialogowe Qmmp</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="78"/>
         <source>About Qmmp File Dialog</source>
-        <translation>O Qmmp File Dialog</translation>
+        <translation>O oknie dialogowym Qmmp</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="80"/>
         <source>Written by:
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
 Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisane przez:
+Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
+Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="83"/>
         <source>Some code is copied from the Qt library</source>
-        <translation>Część kodu zostało skopiowane z biblioteki QT</translation>
+        <translation>Część kodu została skopiowana z biblioteki Qt</translation>
     </message>
 </context>
 <context>

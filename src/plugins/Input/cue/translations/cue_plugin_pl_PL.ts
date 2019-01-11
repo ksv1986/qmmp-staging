@@ -16,17 +16,17 @@
     <message>
         <location filename="../decodercuefactory.cpp" line="91"/>
         <source>About CUE Audio Plugin</source>
-        <translation>O wtyczce CUE Audio</translation>
+        <translation>O wtyczce dźwiękowej CUE</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="92"/>
         <source>Qmmp CUE Audio Plugin</source>
-        <translation>O wtyczce CUE dla Qmmp</translation>
+        <translation>Wtyczka dźwiękowa CUE dla Qmmp</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="93"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Load incorrect cue sheets if possible</source>
-        <translation>Załaduj niewłaściwy plik CUE jeśli możliwe</translation>
+        <translation>Załaduj niewłaściwy plik CUE, jeśli możliwe</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>

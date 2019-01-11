@@ -21,12 +21,12 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="55"/>
         <source>Compiled against libcurl-%1</source>
-        <translation>Skompilowana przy pomocy libcurl-%1</translation>
+        <translation>Skompilowana z biblioteką libcurl-%1</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Buffer size:</source>
-        <translation>Kodowanie metadanych:</translation>
+        <translation>Rozmiar bufora:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
@@ -69,12 +69,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="137"/>
         <source>User Agent:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nagłówek identyfikujący:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="151"/>
         <source>Change User Agent</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmień nagłówek identyfikujący</translation>
     </message>
 </context>
 </TS>

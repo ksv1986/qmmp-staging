@@ -11,17 +11,17 @@
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="60"/>
         <source>About WaveOut Output Plugin</source>
-        <translation>O wtyczce WaveOut</translation>
+        <translation>O wtyczce wyjściowej WaveOut</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="61"/>
         <source>Qmmp WaveOut Output Plugin</source>
-        <translation>Wtyczka WaveOut dla Qmmp</translation>
+        <translation>Wtyczka wyjściowa WaveOut dla Qmmp</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="62"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="63"/>

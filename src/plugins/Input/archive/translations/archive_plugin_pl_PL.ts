@@ -6,32 +6,32 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="39"/>
         <source>Archive Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Wtyczka Archiwum</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="41"/>
         <source>Archives</source>
-        <translation type="unfinished"></translation>
+        <translation>Archiwa</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="151"/>
         <source>About Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>O wtyczce Czytnik archiwów</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="152"/>
         <source>Qmmp Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Wtyczka Czytnik archiwów dla Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="153"/>
         <source>Compiled against %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Skompilowana z biblioteką %1</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="154"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

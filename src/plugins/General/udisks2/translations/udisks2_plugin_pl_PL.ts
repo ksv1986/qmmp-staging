@@ -64,7 +64,7 @@
     <message>
         <location filename="../udisks2factory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../udisks2plugin.cpp" line="137"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation>Dodaj urządzenie &quot;%1&quot;</translation>
+        <translation>Dodaj głośność &quot;%1&quot;</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Status Icon Plugin Settings</source>
-        <translation>Ustawienia wtyczki Ikona Statusu</translation>
+        <translation>Ustawienia wtyczki Ikona statusu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="91"/>
         <source>Try to split file name when no tag</source>
-        <translation>Próbuj rozdzielić nazwę pliku jeśli brakuje tagu</translation>
+        <translation>Próbuj rozdzielić nazwę pliku, jeśli brakuje tagu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="98"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="214"/>
         <source>32</source>
-        <translation type="unfinished">32</translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="225"/>
@@ -118,17 +118,17 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="29"/>
         <source>Status Icon Plugin</source>
-        <translation>Wtyczka Ikona Statusu</translation>
+        <translation>Wtyczka Ikona statusu</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="49"/>
         <source>About Status Icon Plugin</source>
-        <translation>O Wtyczce Ikona Statusu</translation>
+        <translation>O wtyczce Ikona statusu</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="50"/>
         <source>Qmmp Status Icon Plugin</source>
-        <translation>Wtyczka Ikona Statusu dla Qmmp</translation>
+        <translation>Wtyczka Ikona statusu dla Qmmp</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="51"/>
@@ -138,12 +138,12 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="52"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="53"/>
         <source>Artur Guzik &lt;a.guzik88@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Artur Guzik &lt;a.guzik88@gmail.com&gt;</translation>
     </message>
 </context>
 </TS>

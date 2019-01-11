@@ -1,90 +1,97 @@
-Brazilian Portuguese:
-    Vitor Pereira
-    Klaos Lacerda
+Brazylijski portugalski
     Bruno Gonçalves
+    Klaos Lacerda
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
 
-Bulgarian:
+Bułgarski:
     Kiril Kirilov
 
-Chinese Traditional:
+Chiński tradycyjny:
     lon <lon83129@126.com>
     Jeff Huang
 
-Chinese Simplified:
+Chiński uproszczony:
     lon <lon83129@126.com>
     mabier
     Mingcong Bai
     Mingye Wang
 
-Czech:
-    Karel Volný <kvolny@redhat.com>
+Czeski:
     Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
 
-Dutch:
+Holenderski:
     Ronald Uitermark <ronald645@gmail.com>
 
-French:
+Fiński:
+    Jiri Grönroos
+
+Francuski:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>
     Sébastien Aperghis-Tramoni (maddingue)
     Stanislas Zeller <uncensored.assault@gmail.com>
 
-Galician:
+Galicyjski:
+    Delio Docampo Cordeiro
     Óscar Pereira <oscarpereira1989@gmail.com>
 
-German:
+Niemiecki:
     Ettore Atalan
     Stefan Koelling <stefankoelling.ext@googlemail.com>
     Panagiotis Papadopoulos <pano_90@gmx.net>
 
-Greek:
+Grecki:
     Dimitrios Glentadakis
 
-Hebrew:
+Hebrajski:
     Genghis Khan <genghiskhan@gmx.ca>
 
-Hungarian:
+Węgierski:
     Németh Gábor <sutee84@freemail.hu>
 
-Indonesian:
+Indonezyjski:
     Wantoyo <wantoyek@gmail.com>
 
-Italian:
+Włoski:
     Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
 
-Japanese:
+Japoński:
     Ryota Shimamoto <liangtai.s16@gmail.com>
 
-Kazakh:
+Kazachski:
     Baurzhan Muftakhidinov <baurthefirst@gmail.com>
 
-Lithuanian:
+Litewski:
     Algirdas Butkus <butkus.algirdas@gmail.com>
 
 Polish:
     Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
 
-Portuguese:
+Portugalski:
     Sérgio Marques <smarquespt@gmail.com>
 
-Russian:
+Rosyjski:
+    Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
 
-Serbian:
+Serbski:
     Mladen Pejaković <pejakm@autistici.org>
 
-Slovak:
+Słowacki:
     Ján Ďanovský <dagsoftware@yahoo.com>
 
-Spanish:
+Hiszpański:
+    Bohdan Shuba
     Félix Medrano <xukosky@yahoo.es>
     Joel Barrios <darkshram@gmail.com>
 
-Turkish:
+Turecki:
     Mustafa GUNAY <mustafagunay@pgmail.com>
     Bilgesu Güngör <h.ibrahim.gungor@gmail.com>
     Uğur KUYU
 
-Ukrainian:
+Ukraiński:
     Gennadi Motsyo <drool@altlinux.ru>

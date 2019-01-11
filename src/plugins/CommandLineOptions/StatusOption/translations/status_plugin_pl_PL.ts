@@ -36,7 +36,7 @@
     <message>
         <location filename="../statusoption.cpp" line="97"/>
         <source>%aa - album artist</source>
-        <translation type="unfinished"></translation>
+        <translation>%aa - artysta albumu</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="98"/>
@@ -96,37 +96,37 @@
     <message>
         <location filename="../statusoption.cpp" line="109"/>
         <source>%{bitrate} - bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>%{bitrate} - bitrate</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="110"/>
         <source>%{samplerate} - sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>%{samplerate} - próbkowanie</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="111"/>
         <source>%{channels} - number of channels</source>
-        <translation type="unfinished"></translation>
+        <translation>%{channels} - liczba kanałów</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="112"/>
         <source>%{samplesize} - bits per sample</source>
-        <translation type="unfinished"></translation>
+        <translation>%{samplesize} - bity na próbkę</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="113"/>
         <source>%{format} - format name</source>
-        <translation type="unfinished"></translation>
+        <translation>%{format} - nazwa formatu</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="114"/>
         <source>%{decoder} - decoder name</source>
-        <translation type="unfinished"></translation>
+        <translation>%{decoder} - nazwa dekodera</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="115"/>
         <source>%{filesize} - file size</source>
-        <translation type="unfinished"></translation>
+        <translation>%{filesize} - rozmiar pliku</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="116"/>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../statusoption.cpp" line="117"/>
         <source>%dir(n) - directory name located on n levels above</source>
-        <translation type="unfinished"></translation>
+        <translation>%dir(n) - nazwa katalogu znajdującego się na n poziomach powyżej</translation>
     </message>
 </context>
 </TS>

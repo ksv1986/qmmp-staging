@@ -65,7 +65,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="129"/>
         <source>ListenBrainz</source>
-        <translation type="unfinished"></translation>
+        <translation>ListenBrainz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>

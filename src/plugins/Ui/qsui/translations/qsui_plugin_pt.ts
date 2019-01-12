@@ -1228,7 +1228,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="94"/>
         <source>Show splitters</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar divisórias</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="138"/>
@@ -1333,7 +1333,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="709"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Divisória:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="965"/>

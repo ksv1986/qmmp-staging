@@ -153,7 +153,7 @@
     <message>
         <location filename="../historywindow.cpp" line="118"/>
         <source>dd MMMM yyyy</source>
-        <translation>dd MMMM yyyy</translation>
+        <translation>yyyy-MM-dd</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="119"/>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../historywindow.cpp" line="194"/>
         <source>dd MMMM</source>
-        <translation>dd MMMM</translation>
+        <translation>dd-MMM-yyyy</translation>
     </message>
 </context>
 </TS>

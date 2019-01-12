@@ -55,6 +55,7 @@ Indonésio:
 
 Italiano:
     Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
 
 Japonês:
     Ryota Shimamoto <liangtai.s16@gmail.com>

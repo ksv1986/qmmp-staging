@@ -11,7 +11,7 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="51"/>
         <source>About Scrobbler Plugin</source>
-        <translation>Про модуль Scrobbler </translation>
+        <translation>Про модуль Scrobbler</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="52"/>
@@ -65,7 +65,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="129"/>
         <source>ListenBrainz</source>
-        <translation type="unfinished"></translation>
+        <translation>ListenBrainz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>

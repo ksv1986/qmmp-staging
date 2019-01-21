@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>MplayerEngineFactory</name>
     <message>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
@@ -80,7 +80,7 @@
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="74"/>
@@ -90,12 +90,12 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzorkovacia frekvencia</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
@@ -105,7 +105,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="77"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanály</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="72"/>

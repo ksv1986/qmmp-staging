@@ -109,7 +109,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="145"/>
         <source>Tom&apos;s lossless Audio Kompressor (TAK)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tom&apos;s verlustfreier Audiokompressor (TAK)</translation>
     </message>
 </context>
 </TS>

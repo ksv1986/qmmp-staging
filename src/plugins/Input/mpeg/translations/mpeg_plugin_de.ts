@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">MPEG-Modul</translation>
+        <translation>MPEG-Modul</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">MPEG-Dateien</translation>
+        <translation>MPEG-Dateien</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">Über MPEG-Audiomodul</translation>
+        <translation>Über MPEG-Audiomodul</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="379"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kompiliert gegen:</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="388"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="392"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">Basiert auf Code von den mq3- und madplay-Projekten</translation>
+        <translation>Basiert auf Code von den mq3- und madplay-Projekten</translation>
     </message>
 </context>
 <context>
@@ -80,17 +80,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekoder</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>MAD</source>
-        <translation type="unfinished"></translation>
+        <translation>MAD</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>MPG123</source>
-        <translation type="unfinished"></translation>
+        <translation>MPG123</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="77"/>

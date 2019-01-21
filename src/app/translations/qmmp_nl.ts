@@ -4,24 +4,14 @@
 <context>
     <name>BuiltinCommandLineOption</name>
     <message>
-        <location filename="../builtincommandlineoption.cpp" line="82"/>
-        <source>Skip forward in playlist</source>
-        <translation>Naar voren schuiven in afspeellijst</translation>
-    </message>
-    <message>
-        <location filename="../builtincommandlineoption.cpp" line="83"/>
-        <source>Skip backwards in playlist</source>
-        <translation>Naar achteren schuiven in afspeellijst</translation>
+        <location filename="../builtincommandlineoption.cpp" line="71"/>
+        <source>Don&apos;t clear the playlist</source>
+        <translation>Niet de afspeellijst leeghalen</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="72"/>
         <source>Start playing current song</source>
         <translation>Begin met afspelen van huidig nummer</translation>
-    </message>
-    <message>
-        <location filename="../builtincommandlineoption.cpp" line="71"/>
-        <source>Don&apos;t clear the playlist</source>
-        <translation>Niet de afspeellijst leeghalen</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="73"/>
@@ -69,6 +59,16 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../builtincommandlineoption.cpp" line="82"/>
+        <source>Skip forward in playlist</source>
+        <translation>Naar voren schuiven in afspeellijst</translation>
+    </message>
+    <message>
+        <location filename="../builtincommandlineoption.cpp" line="83"/>
+        <source>Skip backwards in playlist</source>
+        <translation>Naar achteren schuiven in afspeellijst</translation>
+    </message>
+    <message>
         <location filename="../builtincommandlineoption.cpp" line="84"/>
         <source>Show/hide application</source>
         <translation>Toon/verberg programma</translation>
@@ -91,6 +91,11 @@
 </context>
 <context>
     <name>QMMPStarter</name>
+    <message>
+        <location filename="../qmmpstarter.cpp" line="113"/>
+        <source>Unknown command</source>
+        <translation>Onbekend commando</translation>
+    </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="409"/>
         <source>Usage: qmmp [options] [files]</source>
@@ -115,6 +120,11 @@
         <location filename="../qmmpstarter.cpp" line="418"/>
         <source>Don&apos;t start the application</source>
         <translation>Niet de applicatie starten</translation>
+    </message>
+    <message>
+        <location filename="../qmmpstarter.cpp" line="419"/>
+        <source>Display this text and exit</source>
+        <translation>Toon deze tekst en sluit</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="420"/>
@@ -165,17 +175,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="464"/>
         <source>User Interfaces</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qmmpstarter.cpp" line="419"/>
-        <source>Display this text and exit</source>
-        <translation>Toon deze tekst en sluit</translation>
-    </message>
-    <message>
-        <location filename="../qmmpstarter.cpp" line="113"/>
-        <source>Unknown command</source>
-        <translation>Onbekend commando</translation>
+        <translation>GebruikersInterfaces</translation>
     </message>
 </context>
 </TS>

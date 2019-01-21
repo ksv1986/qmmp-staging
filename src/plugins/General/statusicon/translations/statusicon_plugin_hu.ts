@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>SettingsDialog</name>
     <message>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="131"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Átlátszóság:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="165"/>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="174"/>
         <source>Cover size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Borító mérete:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="214"/>
@@ -75,27 +75,27 @@
     <message>
         <location filename="../statusicon.cpp" line="71"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejátszás</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="72"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Szünet</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="73"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Megállít</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="75"/>
         <source>Next</source>
-        <translation type="unfinished"></translation>
+        <translation>Következő</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="76"/>
         <source>Previous</source>
-        <translation type="unfinished"></translation>
+        <translation>Előző</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="78"/>

@@ -21,7 +21,7 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WASAPI Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Setelan Plugin WASAPI</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>

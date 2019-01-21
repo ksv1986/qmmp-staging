@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>Converter</name>
     <message>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Megállít</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="108"/>
@@ -86,7 +86,7 @@
     <message>
         <location filename="../converterdialog.ui" line="39"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Cím</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="198"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Töröl</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="353"/>
@@ -177,7 +177,7 @@
     <message>
         <location filename="../preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Beállítás szerkesztő</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="29"/>

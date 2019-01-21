@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">Modul MPEG</translation>
+        <translation>Modul MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">Soubory MPEG</translation>
+        <translation>Soubory MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">O modulu MPEG</translation>
+        <translation>O modulu MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="379"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kompilováno s:</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="388"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">Zdrojový kód je založen na projektech mq3 a madplay</translation>
+        <translation>Zdrojový kód je založen na projektech mq3 a madplay</translation>
     </message>
 </context>
 <context>

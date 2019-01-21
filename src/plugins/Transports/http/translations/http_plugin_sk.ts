@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>HTTPInputFactory</name>
     <message>
         <location filename="../httpinputfactory.cpp" line="33"/>
         <source>HTTP Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin HTTP</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="53"/>
         <source>About HTTP Transport Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>O plugine HTTP transport</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="54"/>
         <source>Qmmp HTTP Transport Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp plugin HTTP transport</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="55"/>
         <source>Compiled against libcurl-%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Skompilované oproti libcurl-%1</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="56"/>
@@ -34,37 +34,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>HTTP Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavenia HTTP Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Buffer size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť buffera:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>KB</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Metadata encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Kódovanie metadát</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="84"/>
         <source>Automatic charset detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatická voľba znakovej sady</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="94"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jazyk:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="114"/>
         <source>Default encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>Východzie kódovanie:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="137"/>

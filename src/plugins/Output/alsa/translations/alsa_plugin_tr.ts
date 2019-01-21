@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>OutputALSAFactory</name>
     <message>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="213"/>
         <source>Use snd_pcm_pause function</source>
-        <translation type="unfinished"></translation>
+        <translation>Snd_pcm_pause işlevi</translation>
     </message>
 </context>
 </TS>

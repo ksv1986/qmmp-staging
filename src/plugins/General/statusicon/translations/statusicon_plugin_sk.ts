@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>SettingsDialog</name>
     <message>
@@ -37,27 +37,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="131"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Priehľadnosť:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="165"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="174"/>
         <source>Cover size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť obalu:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="214"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">32</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="225"/>
         <source>Edit template</source>
-        <translation type="unfinished"></translation>
+        <translation>Upraviť šablónu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="250"/>
@@ -75,27 +75,27 @@
     <message>
         <location filename="../statusicon.cpp" line="71"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Hrať</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="72"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozastaviť</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="73"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastaviť</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="75"/>
         <source>Next</source>
-        <translation type="unfinished"></translation>
+        <translation>Nasledujúca</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="76"/>
         <source>Previous</source>
-        <translation type="unfinished"></translation>
+        <translation>Predchádzajúca</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="78"/>

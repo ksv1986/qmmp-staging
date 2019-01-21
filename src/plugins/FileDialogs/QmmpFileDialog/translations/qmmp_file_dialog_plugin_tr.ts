@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>QmmpFileDialog</name>
     <message>
@@ -106,7 +106,8 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
         <location filename="../qmmpfiledialogimpl.cpp" line="476"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 zaten var.
+Bunu değiştirmek istiyor musunuz?</translation>
     </message>
 </context>
 </TS>

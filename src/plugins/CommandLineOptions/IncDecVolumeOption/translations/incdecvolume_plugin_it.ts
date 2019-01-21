@@ -11,7 +11,7 @@
     <message>
         <location filename="../incdecvolumeoption.cpp" line="30"/>
         <source>Decrease volume by 5 steps</source>
-        <translation>Diminuisci volume con passo 5</translation>
+        <translation>Diminuisci il volume con passo 5</translation>
     </message>
 </context>
 </TS>

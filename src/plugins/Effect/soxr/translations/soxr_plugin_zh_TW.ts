@@ -21,7 +21,7 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="40"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>音質:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>

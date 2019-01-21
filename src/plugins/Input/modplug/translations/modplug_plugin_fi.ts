@@ -189,7 +189,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="184"/>
         <source>Effects</source>
-        <translation type="unfinished"></translation>
+        <translation>Tehosteet</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="190"/>

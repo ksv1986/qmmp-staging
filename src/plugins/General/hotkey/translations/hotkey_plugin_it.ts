@@ -24,35 +24,55 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="31"/>
         <source>Global Hotkey Plugin</source>
-        <translation>Modulo scorciatoie globali</translation>
+        <translation>Estensione scorciatoie globali</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="57"/>
         <source>About Global Hotkey Plugin</source>
-        <translation>Info sul modulo scorciatoie globali</translation>
+        <translation>Informazioni sull&apos;estensione scorciatoie globali</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="58"/>
         <source>Qmmp Global Hotkey Plugin</source>
-        <translation>Modulo scorciatoie globali per Qmmp</translation>
+        <translation>Estensione scorciatoie globali per Qmmp</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="59"/>
         <source>This plugin adds support for multimedia keys or global key combinations</source>
-        <translation>Modulo che aggiunge il supporto per combinazione di tasti multimedia o scorciatoie</translation>
+        <translation>Estensione che aggiunge il supporto per tasti multimediali o combinazioni di tasti</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
     <name>SettingsDialog</name>
     <message>
+        <location filename="../settingsdialog.ui" line="14"/>
+        <source>Global Hotkey Plugin Settings</source>
+        <translation>Impostazioni estensione scorciatoie globali</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="42"/>
+        <source>Action</source>
+        <translation>Azione</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="47"/>
+        <source>Shortcut</source>
+        <translation>Scorciatoia</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="55"/>
+        <source>Reset</source>
+        <translation>Azzera</translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>Play</source>
-        <translation>Esegui</translation>
+        <translation>Riproduci</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
@@ -67,17 +87,17 @@
     <message>
         <location filename="../settingsdialog.cpp" line="40"/>
         <source>Play/Pause</source>
-        <translation>Esegui/Pausa</translation>
+        <translation>Riproduci/Pausa</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
         <source>Next</source>
-        <translation>Titolo successivo</translation>
+        <translation>Successivo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="42"/>
         <source>Previous</source>
-        <translation>Titolo precedente</translation>
+        <translation>Precedente</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="43"/>
@@ -97,52 +117,32 @@
     <message>
         <location filename="../settingsdialog.cpp" line="46"/>
         <source>Forward 5 seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Avanti di 5 secondi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="47"/>
         <source>Rewind 5 seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Indietro di 5 secondi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="48"/>
         <source>Jump to track</source>
-        <translation type="unfinished"></translation>
+        <translation>Salta alla traccia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="49"/>
         <source>Mute</source>
-        <translation type="unfinished"></translation>
+        <translation>Silenzia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="111"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Avviso</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="111"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="14"/>
-        <source>Global Hotkey Plugin Settings</source>
-        <translation>Impostazioni modulo scorciatoie globali</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="42"/>
-        <source>Action</source>
-        <translation>Azione</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="47"/>
-        <source>Shortcut</source>
-        <translation>Scorciatoia</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="55"/>
-        <source>Reset</source>
-        <translation>Azzera impostazione</translation>
+        <translation>La combinazione di tasti «%1» è già usata</translation>
     </message>
 </context>
 </TS>

@@ -6,42 +6,42 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">Πρόσθετο MPEG</translation>
+        <translation>Πρόσθετο MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">Αρχεία MPEG</translation>
+        <translation>Αρχεία MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">Σχετικά με το πρόσθετο ήχου MPEG</translation>
+        <translation>Σχετικά με το πρόσθετο ήχου MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>MPEG 1.0/2.0/2.5 στρώση 1/2/3 αποκωδικοποιητής ήχου</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="379"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Μεταγλωττίστηκε χρησιμοποιώντας:</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="388"/>
         <source>mpg123, API version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>mpg123, API έκδοση: %1</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="392"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+        <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">Ο πηγαίος κώδικας έχει βασιστεί στα έργα mq3 και madplay</translation>
+        <translation>Ο πηγαίος κώδικας έχει βασιστεί στα έργα mq3 και madplay</translation>
     </message>
 </context>
 <context>
@@ -80,17 +80,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποκωδικοποιητής</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>MAD</source>
-        <translation type="unfinished"></translation>
+        <translation>MAD</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>MPG123</source>
-        <translation type="unfinished"></translation>
+        <translation>MPG123</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="77"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="187"/>
         <source>Third:</source>
-        <translation>Τρίτη</translation>
+        <translation>Τρίτη:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="252"/>

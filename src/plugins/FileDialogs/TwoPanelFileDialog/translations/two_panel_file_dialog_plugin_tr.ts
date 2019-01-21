@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>TwoPanelFileDialog</name>
     <message>
         <location filename="../twopanelfiledialog.ui" line="14"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Ekle</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="70"/>
         <source>File name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya adı:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="80"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya tipi:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="117"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Oynat</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="130"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekle</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapat</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
     <message>
         <location filename="../twopanelfiledialog.cpp" line="78"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="79"/>
@@ -64,23 +64,24 @@
         <location filename="../twopanelfiledialogimpl.cpp" line="322"/>
         <location filename="../twopanelfiledialogimpl.cpp" line="338"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekle</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="340"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Dizinler</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="352"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaydet</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="459"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 zaten var.
+Bunu değiştirmek istiyor musunuz?</translation>
     </message>
 </context>
 </TS>

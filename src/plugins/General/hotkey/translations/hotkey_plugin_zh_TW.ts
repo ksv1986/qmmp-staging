@@ -44,7 +44,7 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -137,7 +137,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="111"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>注意</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="111"/>

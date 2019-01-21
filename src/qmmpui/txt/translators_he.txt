@@ -1,8 +1,8 @@
 ברזילאית פורטוגזית:
-    Vitor Pereira
-    Klaos Lacerda
     Bruno Gonçalves
+    Klaos Lacerda
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
 
 Bulgarian:
     Kiril Kirilov
@@ -18,11 +18,14 @@ Bulgarian:
     Mingye Wang
 
 צ׳כית:
-    Karel Volný <kvolny@redhat.com>
     Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
 
 הולנדית:
     Ronald Uitermark <ronald645@gmail.com>
+
+Finnish:
+    Jiri Grönroos
 
 צרפתית:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>
@@ -30,6 +33,7 @@ Bulgarian:
     Stanislas Zeller <uncensored.assault@gmail.com>
 
 גליצאית:
+    Delio Docampo Cordeiro
     Óscar Pereira <oscarpereira1989@gmail.com>
 
 גרמנית:
@@ -51,6 +55,7 @@ Indonesian:
 
 איטלקית:
     Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
 
 יפנית:
     Ryota Shimamoto <liangtai.s16@gmail.com>
@@ -69,6 +74,7 @@ Indonesian:
     Sérgio Marques <smarquespt@gmail.com>
 
 רוסית:
+    Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
 
 סרבית:
@@ -78,6 +84,7 @@ Indonesian:
     Ján Ďanovský <dagsoftware@yahoo.com>
 
 ספרדית:
+    Bohdan Shuba
     Félix Medrano <xukosky@yahoo.es>
     Joel Barrios <darkshram@gmail.com>
 

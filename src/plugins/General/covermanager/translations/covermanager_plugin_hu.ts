@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>CoverManager</name>
     <message>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../coverwidget.cpp" line="37"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mentés másként...</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="37"/>

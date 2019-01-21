@@ -84,7 +84,7 @@
     <message>
         <location filename="../forms/addurldialog.ui" line="14"/>
         <source>Enter URL to add</source>
-        <translation type="unfinished"></translation>
+        <translation>Anna lisättävä verkko-osoite</translation>
     </message>
     <message>
         <location filename="../forms/addurldialog.ui" line="46"/>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../forms/columneditor.ui" line="14"/>
         <source>Edit Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa saraketta</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="36"/>
@@ -444,7 +444,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="638"/>
         <source>Replay Gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Replay Gain</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="644"/>
@@ -454,7 +454,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="661"/>
         <source>Preamp:</source>
-        <translation type="unfinished"></translation>
+        <translation>Esivahvistus:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="693"/>
@@ -475,7 +475,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="788"/>
         <source>Buffer size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bufferin koko:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="807"/>
@@ -515,7 +515,7 @@
     <message>
         <location filename="../configdialog.cpp" line="66"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Pois käytöstä</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="82"/>
@@ -540,7 +540,7 @@
     <message>
         <location filename="../configdialog.cpp" line="220"/>
         <source>Effects</source>
-        <translation type="unfinished"></translation>
+        <translation>Tehosteet</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="231"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../configdialog.cpp" line="264"/>
         <source>File Dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostoikkunat</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="275"/>
@@ -718,12 +718,12 @@
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
         <source>Load</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataa</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="83"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
@@ -850,32 +850,32 @@
     <message>
         <location filename="../detailsdialog.cpp" line="267"/>
         <source>Duration</source>
-        <translation type="unfinished">Kesto</translation>
+        <translation>Kesto</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bittinopeus</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytteenottotaajuus</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="272"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanavat</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostokoko</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
@@ -905,12 +905,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kyllä</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei</translation>
     </message>
 </context>
 <context>
@@ -1024,7 +1024,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bittinopeus</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
@@ -1120,7 +1120,7 @@
     <message>
         <location filename="../playlistheadermodel.cpp" line="187"/>
         <source>Add Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää sarake</translation>
     </message>
 </context>
 <context>

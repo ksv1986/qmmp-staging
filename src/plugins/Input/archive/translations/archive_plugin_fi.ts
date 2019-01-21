@@ -6,12 +6,12 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="39"/>
         <source>Archive Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Arkistointiliitännäinen</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="41"/>
         <source>Archives</source>
-        <translation type="unfinished"></translation>
+        <translation>Arkistot</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="151"/>

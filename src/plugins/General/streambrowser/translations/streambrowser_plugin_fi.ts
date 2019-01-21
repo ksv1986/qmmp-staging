@@ -16,12 +16,12 @@
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nimi:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
         <source>Genre:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyylilaji:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="64"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../editstreamdialog.ui" line="74"/>
         <source>Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyyppi:</translation>
     </message>
 </context>
 <context>
@@ -144,12 +144,12 @@
     <message>
         <location filename="../streamwindow.cpp" line="138"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Luo</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="140"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Muokkaa</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="143"/>

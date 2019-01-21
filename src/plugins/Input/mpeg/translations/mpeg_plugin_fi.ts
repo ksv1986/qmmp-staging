@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">MPEG-liitännäinen</translation>
+        <translation>MPEG-liitännäinen</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">MPEG-tiedostot</translation>
+        <translation>MPEG-tiedostot</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">Tietoja - MPEG-ääniliitännäinen</translation>
+        <translation>Tietoja - MPEG-ääniliitännäinen</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="392"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
@@ -121,14 +121,14 @@
         <location filename="../settingsdialog.ui" line="168"/>
         <location filename="../settingsdialog.ui" line="217"/>
         <source>APE</source>
-        <translation type="unfinished"></translation>
+        <translation>APE</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="124"/>
         <location filename="../settingsdialog.ui" line="173"/>
         <location filename="../settingsdialog.ui" line="222"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Pois käytöstä</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="138"/>

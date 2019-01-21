@@ -55,6 +55,7 @@
 
 Ιταλικά
     Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
 
 Ιαπωνικά
     Ryota Shimamoto <liangtai.s16@gmail.com>

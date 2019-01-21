@@ -1222,12 +1222,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="307"/>
         <source>Show splitters</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση διαχωριστών</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="314"/>
         <source>Alternate splitter color</source>
-        <translation type="unfinished"></translation>
+        <translation>Εναλλαγή χρώματος διαχωριστή</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="416"/>

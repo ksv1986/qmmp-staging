@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de">
+<TS version="2.1" language="it">
 <context>
     <name>DecoderOpusFactory</name>
     <message>
         <location filename="../decoderopusfactory.cpp" line="42"/>
         <source>Opus Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione Opus</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="45"/>
         <source>Ogg Opus Files</source>
-        <translation type="unfinished"></translation>
+        <translation>File Ogg Opus</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="116"/>
         <source>About Opus Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sull&apos;estensione audio Opus</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="117"/>
         <source>Qmmp Opus Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione audio Opus per Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="118"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../opusmetadatamodel.cpp" line="59"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione</translation>
     </message>
 </context>
 </TS>

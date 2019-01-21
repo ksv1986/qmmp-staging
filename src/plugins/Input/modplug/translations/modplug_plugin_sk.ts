@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>DecoderModPlugFactory</name>
     <message>
@@ -86,12 +86,12 @@
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="76"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanály</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="108"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Komentár</translation>
     </message>
 </context>
 <context>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="74"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanály</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="80"/>
@@ -189,7 +189,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="184"/>
         <source>Effects</source>
-        <translation type="unfinished"></translation>
+        <translation>Efekty</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="190"/>
@@ -208,7 +208,7 @@
         <location filename="../settingsdialog.ui" line="499"/>
         <location filename="../settingsdialog.ui" line="618"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="260"/>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="292"/>
         <source>40</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">40</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="324"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="426"/>
         <source>10</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">10</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="458"/>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="551"/>
         <source>5</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">5</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="577"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="586"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlasitosť</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="656"/>
@@ -270,12 +270,12 @@ too high may cause clipping!</source>
     <message>
         <location filename="../settingsdialog.ui" line="671"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Rôzne</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="677"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Všeobecné</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="683"/>

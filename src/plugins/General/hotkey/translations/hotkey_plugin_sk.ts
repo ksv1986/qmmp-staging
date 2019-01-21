@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>HotkeyDialog</name>
     <message>
@@ -11,12 +11,12 @@
     <message>
         <location filename="../hotkeydialog.ui" line="32"/>
         <source>Press the key combination you want to assign</source>
-        <translation type="unfinished"></translation>
+        <translation>Stlačte klávesovú kombináciu ktorú chcete priradiť</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="52"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyčistiť</translation>
     </message>
 </context>
 <context>
@@ -57,32 +57,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Akcia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="47"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Skratka</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Zresetovať</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Hrať</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastaviť</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozastaviť</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="40"/>
@@ -92,12 +92,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
         <source>Next</source>
-        <translation type="unfinished"></translation>
+        <translation>Nasledujúca</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="42"/>
         <source>Previous</source>
-        <translation type="unfinished"></translation>
+        <translation>Predchádzajúca</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="43"/>

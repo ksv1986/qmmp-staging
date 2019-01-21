@@ -11,82 +11,82 @@
     <message>
         <location filename="../analyzer.cpp" line="332"/>
         <source>Peaks</source>
-        <translation type="unfinished"></translation>
+        <translation>Picchi</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="335"/>
         <source>Refresh Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Velocità di aggiornamento</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="338"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="339"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="340"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="341"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="348"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricaduta analizzatore</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="351"/>
         <location filename="../analyzer.cpp" line="365"/>
         <source>Slowest</source>
-        <translation type="unfinished">Molto lenta</translation>
+        <translation>Molto lenta</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="352"/>
         <location filename="../analyzer.cpp" line="366"/>
         <source>Slow</source>
-        <translation type="unfinished">Lenta</translation>
+        <translation>Lenta</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="353"/>
         <location filename="../analyzer.cpp" line="367"/>
         <source>Medium</source>
-        <translation type="unfinished">Media</translation>
+        <translation>Media</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="354"/>
         <location filename="../analyzer.cpp" line="368"/>
         <source>Fast</source>
-        <translation type="unfinished">Rapida</translation>
+        <translation>Rapida</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="355"/>
         <location filename="../analyzer.cpp" line="369"/>
         <source>Fastest</source>
-        <translation type="unfinished">Molto rapida</translation>
+        <translation>Molto veloce</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="362"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../analyzer.cpp" line="376"/>
-        <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricadua picchi</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>
         <source>&amp;Full Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Schermo int&amp;ero</translation>
+    </message>
+    <message>
+        <location filename="../analyzer.cpp" line="376"/>
+        <source>F</source>
+        <translation>F</translation>
     </message>
 </context>
 <context>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="37"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona colore</translation>
     </message>
 </context>
 <context>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Analyzer Plugin Settings</source>
-        <translation>Impostazioni Del modulo Analizzatore</translation>
+        <translation>Impostazioni dell&apos;estensione analizzatore</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>Cells size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione celle:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="101"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="139"/>
         <source>Analyzer #1:</source>
-        <translation>Analizzatore Nr. 1:</translation>
+        <translation>Analizzatore n° 1:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="171"/>
@@ -137,12 +137,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="203"/>
         <source>Analyzer #2:</source>
-        <translation>Analizzatore N° 2:</translation>
+        <translation>Analizzatore n° 2:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="248"/>
         <source>Analyzer #3:</source>
-        <translation>Analizzatore N° 3:</translation>
+        <translation>Analizzatore n° 3:</translation>
     </message>
 </context>
 <context>
@@ -150,22 +150,22 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="30"/>
         <source>Analyzer Plugin</source>
-        <translation>Modulo analizzatore</translation>
+        <translation>Estensione analizzatore</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="49"/>
         <source>About Analyzer Visual Plugin</source>
-        <translation>Info sul modulo Analizzatore visivo</translation>
+        <translation>Informazioni sull&apos;estensione analizzatore visivo</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="50"/>
         <source>Qmmp Analyzer Visual Plugin</source>
-        <translation>Modulo Analizzatore visivo Qmmp</translation>
+        <translation>Estensione analizzatore visivo per Qmmp</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

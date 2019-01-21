@@ -16,12 +16,12 @@
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
         <source>Genre:</source>
-        <translation type="unfinished"></translation>
+        <translation>流派：</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="64"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../editstreamdialog.ui" line="74"/>
         <source>Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>類型:</translation>
     </message>
 </context>
 <context>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../streamwindow.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>過滤器:</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="47"/>

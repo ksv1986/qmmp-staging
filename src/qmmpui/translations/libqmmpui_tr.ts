@@ -99,7 +99,7 @@
     <message>
         <location filename="../addurldialog.cpp" line="85"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
 </context>
 <context>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../forms/columneditor.ui" line="64"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="29"/>
@@ -132,27 +132,27 @@
     <message>
         <location filename="../columneditor.cpp" line="85"/>
         <source>Artist</source>
-        <translation type="unfinished">Sanatçı</translation>
+        <translation>Sanatçı</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="86"/>
         <source>Album</source>
-        <translation type="unfinished">Albüm</translation>
+        <translation>Albüm</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="90"/>
         <source>Title</source>
-        <translation type="unfinished">Başlık</translation>
+        <translation>Başlık</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="93"/>
         <source>Genre</source>
-        <translation type="unfinished">Tarz</translation>
+        <translation>Tarz</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="94"/>
         <source>Comment</source>
-        <translation type="unfinished">Yorum</translation>
+        <translation>Yorum</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="95"/>
@@ -167,7 +167,7 @@
     <message>
         <location filename="../columneditor.cpp" line="101"/>
         <source>Year</source>
-        <translation type="unfinished">Yıl</translation>
+        <translation>Yıl</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="100"/>
@@ -515,7 +515,7 @@
     <message>
         <location filename="../configdialog.cpp" line="66"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Etkisiz</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="82"/>
@@ -718,12 +718,12 @@
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
         <source>Load</source>
-        <translation type="unfinished"></translation>
+        <translation>Yükle</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="83"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
@@ -780,7 +780,7 @@
     <message>
         <location filename="../forms/detailsdialog.ui" line="47"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/detailsdialog.ui" line="63"/>
@@ -800,12 +800,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="240"/>
         <source>Title</source>
-        <translation type="unfinished">Başlık</translation>
+        <translation>Başlık</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="241"/>
         <source>Artist</source>
-        <translation type="unfinished">Sanatçı</translation>
+        <translation>Sanatçı</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="242"/>
@@ -815,17 +815,17 @@
     <message>
         <location filename="../detailsdialog.cpp" line="243"/>
         <source>Album</source>
-        <translation type="unfinished">Albüm</translation>
+        <translation>Albüm</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="244"/>
         <source>Comment</source>
-        <translation type="unfinished">Yorum</translation>
+        <translation>Yorum</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="245"/>
         <source>Genre</source>
-        <translation type="unfinished">Tarz</translation>
+        <translation>Tarz</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="246"/>
@@ -835,7 +835,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="247"/>
         <source>Year</source>
-        <translation type="unfinished">Yıl</translation>
+        <translation>Yıl</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="248"/>
@@ -855,27 +855,27 @@
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bit hızı</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Örnekleme oranı</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="272"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanallar</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya boyutu</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
@@ -969,12 +969,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished">Sanatçı</translation>
+        <translation>Sanatçı</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation type="unfinished">Albüm</translation>
+        <translation>Albüm</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
@@ -984,7 +984,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished">Başlık</translation>
+        <translation>Başlık</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
@@ -1004,12 +1004,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Genre</source>
-        <translation type="unfinished">Tarz</translation>
+        <translation>Tarz</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="40"/>
         <source>Comment</source>
-        <translation type="unfinished">Yorum</translation>
+        <translation>Yorum</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="41"/>
@@ -1024,7 +1024,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bit hızı</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
@@ -1074,7 +1074,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>Year</source>
-        <translation type="unfinished">Yıl</translation>
+        <translation>Yıl</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="50"/>
@@ -1115,7 +1115,7 @@
     <message>
         <location filename="../playlistheadermodel.cpp" line="186"/>
         <source>Title</source>
-        <translation type="unfinished">Başlık</translation>
+        <translation>Başlık</translation>
     </message>
     <message>
         <location filename="../playlistheadermodel.cpp" line="187"/>
@@ -1129,7 +1129,7 @@
         <location filename="../playlistmanager.cpp" line="172"/>
         <location filename="../playlistmanager.cpp" line="317"/>
         <source>Playlist</source>
-        <translation type="unfinished">Çalma Listesi</translation>
+        <translation>Çalma Listesi</translation>
     </message>
 </context>
 <context>
@@ -1150,7 +1150,7 @@
     <message>
         <location filename="../qmmpuisettings.cpp" line="57"/>
         <source>Playlist</source>
-        <translation type="unfinished">Çalma Listesi</translation>
+        <translation>Çalma Listesi</translation>
     </message>
 </context>
 <context>
@@ -1171,12 +1171,12 @@
     <message>
         <location filename="../forms/tageditor.ui" line="38"/>
         <source>Title:</source>
-        <translation type="unfinished"></translation>
+        <translation>Başlık:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="64"/>
         <source>Artist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Artist:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="90"/>
@@ -1241,7 +1241,7 @@
     <message>
         <location filename="../forms/templateeditor.ui" line="39"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıfırla</translation>
     </message>
     <message>
         <location filename="../forms/templateeditor.ui" line="46"/>
@@ -1270,7 +1270,7 @@
     <message>
         <location filename="../uihelper.cpp" line="151"/>
         <source>Choose a directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Dizin seç</translation>
     </message>
     <message>
         <location filename="../uihelper.cpp" line="167"/>

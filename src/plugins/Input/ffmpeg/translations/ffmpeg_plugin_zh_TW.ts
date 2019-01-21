@@ -26,12 +26,12 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="261"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>編譯使用：</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="274"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

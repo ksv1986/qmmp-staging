@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>SettingsDialog</name>
     <message>
@@ -14,7 +14,7 @@
         <location filename="../settingsdialog.ui" line="52"/>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

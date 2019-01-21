@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>DecoderMPEGFactory</name>
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">MPEG Eklentisi</translation>
+        <translation>MPEG Eklentisi</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">MPEG Dosyaları</translation>
+        <translation>MPEG Dosyaları</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">MPEG Ses Eklentisi Hakkında</translation>
+        <translation>MPEG Ses Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="392"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>

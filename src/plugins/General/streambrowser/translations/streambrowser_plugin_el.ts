@@ -16,12 +16,12 @@
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Όνομα:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
         <source>Genre:</source>
-        <translation type="unfinished"></translation>
+        <translation>Είδος:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="64"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../editstreamdialog.ui" line="74"/>
         <source>Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Τύπος:</translation>
     </message>
 </context>
 <context>
@@ -144,12 +144,12 @@
     <message>
         <location filename="../streamwindow.cpp" line="138"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Δημιουργία</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="140"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Επεξεργασία</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="143"/>

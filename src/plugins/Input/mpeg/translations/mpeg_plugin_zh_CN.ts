@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">MPEG 插件</translation>
+        <translation>MPEG 插件</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">MPEG 文件</translation>
+        <translation>MPEG 文件</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">关于 MPEG 音频插件</translation>
+        <translation>关于 MPEG 音频插件</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="379"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>在以下文件的基础上进行的编译：</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="388"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">源代码基于mq3及madplay项目</translation>
+        <translation>源代码基于mq3及madplay项目</translation>
     </message>
 </context>
 <context>
@@ -128,7 +128,7 @@
         <location filename="../settingsdialog.ui" line="173"/>
         <location filename="../settingsdialog.ui" line="222"/>
         <source>Disabled</source>
-        <translation>无效</translation>
+        <translation>关闭</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="138"/>

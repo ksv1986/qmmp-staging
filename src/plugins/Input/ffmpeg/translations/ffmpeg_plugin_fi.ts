@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Muodot</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>

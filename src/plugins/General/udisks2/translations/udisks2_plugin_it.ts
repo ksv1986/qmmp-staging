@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>UDisks Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni dell&apos;estensione UDisks</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
         <source>Add tracks to playlist automatically</source>
-        <translation>Aggiungi automaticamente i titoli alla lista dei brani</translation>
+        <translation>Aggiungi automaticamente le tracce alla scaletta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Remove tracks from playlist automatically</source>
-        <translation>Rimuovi automaticamente i titoli dalla lista dei brani</translation>
+        <translation>Rimuovi automaticamente i titoli dalla scaletta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
         <source>Add files to playlist automatically</source>
-        <translation>Aggiungi brani automaticamente alla lista</translation>
+        <translation>Aggiungi automaticamente i file alla scaletta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Remove files from playlist automatically</source>
-        <translation>Rimuovi automaticamente i brani dalla lista</translation>
+        <translation>Rimuovi automaticamente i file dalla scaletta</translation>
     </message>
 </context>
 <context>
@@ -44,27 +44,27 @@
     <message>
         <location filename="../udisks2factory.cpp" line="30"/>
         <source>UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione UDisks2</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="50"/>
         <source>About UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sull&apos;estensione UDisks2</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="51"/>
         <source>Qmmp UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione UDisks2 per Qmmp</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks2</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione che permette il rilevamento di dispositivi rimovibili utilizzando UDisks2</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisks2plugin.cpp" line="129"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">Aggiungi CD &quot;%1&quot;</translation>
+        <translation>Aggiungi CD «%1»</translation>
     </message>
     <message>
         <location filename="../udisks2plugin.cpp" line="137"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">Aggiungi libreria &quot;%1&quot;</translation>
+        <translation>Aggiungi volume «%1»</translation>
     </message>
 </context>
 </TS>

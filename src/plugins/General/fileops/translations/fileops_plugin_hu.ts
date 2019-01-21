@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>FileOps</name>
     <message>
@@ -36,7 +36,7 @@
         <location filename="../fileops.cpp" line="150"/>
         <location filename="../fileops.cpp" line="240"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Megállít</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="195"/>
@@ -155,7 +155,7 @@
         <location filename="../settingsdialog.ui" line="126"/>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="133"/>
@@ -172,7 +172,7 @@
         <location filename="../settingsdialog.cpp" line="52"/>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Átnevez</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>

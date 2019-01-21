@@ -16,12 +16,12 @@
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Име:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
         <source>Genre:</source>
-        <translation type="unfinished"></translation>
+        <translation>Жанр:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="64"/>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../streamwindow.cpp" line="140"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Уређивање</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="143"/>

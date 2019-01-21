@@ -6,22 +6,22 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="39"/>
         <source>Archive Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>壓縮檔支援外掛</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="41"/>
         <source>Archives</source>
-        <translation type="unfinished"></translation>
+        <translation>壓縮檔</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="151"/>
         <source>About Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>關於壓縮檔支援外掛</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="152"/>
         <source>Qmmp Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp 壓縮檔支援外掛</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="153"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="154"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

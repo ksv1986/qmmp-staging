@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>NotifierFactory</name>
     <message>
@@ -45,16 +45,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="368"/>
-        <source>Song change notification</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="325"/>
-        <source>Volume change notification</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.ui" line="51"/>
         <source>Font:</source>
         <translation type="unfinished"></translation>
@@ -62,17 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="332"/>
-        <source>Delay (ms):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="299"/>
-        <source>Cover size:</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
@@ -83,7 +63,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="85"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Átlátszóság:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="229"/>
@@ -96,8 +76,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../settingsdialog.ui" line="299"/>
+        <source>Cover size:</source>
+        <translation>Borító mérete:</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="325"/>
+        <source>Volume change notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="332"/>
+        <source>Delay (ms):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="361"/>
         <source>Playback resume notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="368"/>
+        <source>Song change notification</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

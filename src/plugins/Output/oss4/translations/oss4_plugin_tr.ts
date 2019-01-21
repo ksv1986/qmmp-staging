@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>OutputOSS4Factory</name>
     <message>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../outputoss4factory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Öntanımlı</translation>
     </message>
 </context>
 </TS>

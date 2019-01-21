@@ -6,27 +6,27 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="33"/>
         <source>HTTP Plugin</source>
-        <translation>Modulo HTTP</translation>
+        <translation>Estensione HTTP</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="53"/>
         <source>About HTTP Transport Plugin</source>
-        <translation>Informazioni sul modulo di trasporto HTTP</translation>
+        <translation>Informazioni sull&apos;estensione di trasporto HTTP</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="54"/>
         <source>Qmmp HTTP Transport Plugin</source>
-        <translation>Modulo di trasporto HTTP per QMMP</translation>
+        <translation>Estensione di trasporto HTTP per QMMP</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="55"/>
         <source>Compiled against libcurl-%1</source>
-        <translation>Compilazione basata su libcurl-%1</translation>
+        <translation>Compilato con libcurl-%1</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>HTTP Plugin Settings</source>
-        <translation>Impostazioni del modulo HTTP</translation>
+        <translation>Impostazioni dell&apos;estensione HTTP</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="84"/>
         <source>Automatic charset detection</source>
-        <translation>Rilevamento automatico dei caratteri</translation>
+        <translation>Rilevamento automatico della codifica dei caratteri</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="94"/>
@@ -64,17 +64,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="114"/>
         <source>Default encoding:</source>
-        <translation>Codifica predefinita</translation>
+        <translation>Codifica predefinita:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="137"/>
         <source>User Agent:</source>
-        <translation type="unfinished"></translation>
+        <translation>User Agent:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="151"/>
         <source>Change User Agent</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica lo User Agent</translation>
     </message>
 </context>
 </TS>

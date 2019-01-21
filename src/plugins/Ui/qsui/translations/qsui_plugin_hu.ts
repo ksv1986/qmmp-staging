@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>AboutQSUIDialog</name>
     <message>
@@ -44,71 +44,71 @@
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>&amp;Play</source>
-        <translation type="unfinished">&amp;Lejátszás</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>&amp;Pause</source>
-        <translation type="unfinished">&amp;Szünet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>C</source>
-        <translation type="unfinished">C</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>&amp;Stop</source>
-        <translation type="unfinished">&amp;Megállítás</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
         <source>&amp;Previous</source>
-        <translation type="unfinished">&amp;Előző</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>&amp;Next</source>
-        <translation type="unfinished">&amp;Következő</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>B</source>
-        <translation type="unfinished">B</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
         <source>&amp;Play/Pause</source>
-        <translation type="unfinished">&amp;Lejátszás/Szünet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
         <source>Space</source>
-        <translation type="unfinished">Szóköz</translation>
-    </message>
-    <message>
-        <location filename="../actionmanager.cpp" line="46"/>
-        <source>J</source>
-        <translation type="unfinished">J</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
         <source>&amp;Jump to Track</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="46"/>
+        <source>J</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -117,9 +117,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="47"/>
+        <source>E</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="48"/>
+        <source>&amp;Record</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../actionmanager.cpp" line="50"/>
         <source>&amp;Repeat Playlist</source>
-        <translation type="unfinished">Lista &amp;ismétlése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
@@ -129,22 +139,22 @@
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
         <source>&amp;Repeat Track</source>
-        <translation type="unfinished">Számok i&amp;smétlése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished">Crtl+R</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="53"/>
         <source>&amp;Shuffle</source>
-        <translation type="unfinished">&amp;Véletlenszerű</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="53"/>
         <source>S</source>
-        <translation type="unfinished">S</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
@@ -184,21 +194,6 @@
     <message>
         <location filename="../actionmanager.cpp" line="61"/>
         <source>Put on All Workspaces</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../actionmanager.cpp" line="74"/>
-        <source>&amp;Add File</source>
-        <translation type="unfinished">&amp;Fájl hozzáadása</translation>
-    </message>
-    <message>
-        <location filename="../actionmanager.cpp" line="47"/>
-        <source>E</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../actionmanager.cpp" line="48"/>
-        <source>&amp;Record</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -248,58 +243,63 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
+        <source>&amp;Add File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="74"/>
         <source>F</source>
-        <translation type="unfinished">F</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>&amp;Add Directory</source>
-        <translation type="unfinished">&amp;Könyvtár hazááadása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>D</source>
-        <translation type="unfinished">D</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
         <source>&amp;Add Url</source>
-        <translation type="unfinished">&amp;Url hozzáadása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>&amp;Remove Selected</source>
-        <translation type="unfinished">&amp;Megjelöltek eltávolítása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Del</source>
-        <translation type="unfinished">Del</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
         <source>&amp;Remove All</source>
-        <translation type="unfinished">&amp;Összes eltávolítása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>&amp;Remove Unselected</source>
-        <translation type="unfinished">&amp;Jelöletlenek eltávolítása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="82"/>
         <source>Remove unavailable files</source>
-        <translation type="unfinished">Elérhetetlen fájlok eltávolítása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>Remove duplicates</source>
-        <translation type="unfinished">Duplikációk eltávolítása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
@@ -314,77 +314,77 @@
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>Q</source>
-        <translation type="unfinished">Q</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
         <source>Invert Selection</source>
-        <translation type="unfinished">Fordított kijelölés</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;Select None</source>
-        <translation type="unfinished">&amp;Kijelölés megszűntetése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished">&amp;Összes kijelölése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished">Ctrl+A</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
         <source>&amp;View Track Details</source>
-        <translation type="unfinished">Szám adatainak &amp;megnézése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
         <source>Alt+I</source>
-        <translation type="unfinished">Alt+I</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
         <source>&amp;New List</source>
-        <translation type="unfinished">&amp;Új lista</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished">Ctrl+T</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>&amp;Delete List</source>
-        <translation type="unfinished">&amp;Lista törlése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished">Ctrl+W</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
         <source>&amp;Load List</source>
-        <translation type="unfinished">&amp;Lista betöltése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
         <source>O</source>
-        <translation type="unfinished">O</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
         <source>&amp;Save List</source>
-        <translation type="unfinished">Lista &amp;mentése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
         <source>Shift+S</source>
-        <translation type="unfinished">Shift+S</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
@@ -399,22 +399,22 @@
     <message>
         <location filename="../actionmanager.cpp" line="99"/>
         <source>&amp;Select Next Playlist</source>
-        <translation type="unfinished">&amp;Következő lista választása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Ctrl+PgDown</source>
-        <translation type="unfinished">Ctrl+PgDown</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
         <source>&amp;Select Previous Playlist</source>
-        <translation type="unfinished">&amp;Előző lista választása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
         <source>Ctrl+PgUp</source>
-        <translation type="unfinished">Ctrl+PgUp</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
@@ -449,12 +449,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>&amp;Settings</source>
-        <translation type="unfinished">&amp;Beállítások</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished">Ctrl+P</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
@@ -464,22 +464,22 @@
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
         <source>&amp;About</source>
-        <translation type="unfinished">&amp;Névjegy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="110"/>
         <source>&amp;About Qt</source>
-        <translation type="unfinished">N&amp;évjegy: Qt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
         <source>&amp;Exit</source>
-        <translation type="unfinished">&amp;Kilépés</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished">Ctrl+Q</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="283"/>
@@ -500,7 +500,7 @@
     <message>
         <location filename="../coverwidget.cpp" line="32"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mentés másként...</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="65"/>
@@ -518,7 +518,7 @@
     <message>
         <location filename="../equalizer.cpp" line="39"/>
         <source>Equalizer</source>
-        <translation type="unfinished"></translation>
+        <translation>Hangszínszabályzó</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="48"/>
@@ -538,12 +538,12 @@
     <message>
         <location filename="../equalizer.cpp" line="66"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Töröl</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="70"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Visszaállít</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="83"/>
@@ -565,7 +565,7 @@
     <message>
         <location filename="../equalizer.cpp" line="150"/>
         <source>preset</source>
-        <translation type="unfinished"></translation>
+        <translation>beállítás</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="220"/>
@@ -586,6 +586,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../filesystembrowser.cpp" line="93"/>
+        <source>Change Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../filesystembrowser.cpp" line="95"/>
         <source>Quick Search</source>
         <translation type="unfinished"></translation>
@@ -595,18 +600,13 @@
         <source>Select Directory</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../filesystembrowser.cpp" line="93"/>
-        <source>Change Directory</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>HotkeyEditor</name>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Visszaállít</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
@@ -641,17 +641,17 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="74"/>
         <source>View</source>
-        <translation type="unfinished">Megnéz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="80"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Hangerő</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="86"/>
         <source>Playlist</source>
-        <translation type="unfinished">Lejátszási lista</translation>
+        <translation>Lejátszási lista</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="92"/>
@@ -661,188 +661,6 @@
 </context>
 <context>
     <name>MainWindow</name>
-    <message>
-        <location filename="../mainwindow.cpp" line="463"/>
-        <source>Volume</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="373"/>
-        <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="374"/>
-        <source>Paused</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="384"/>
-        <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="385"/>
-        <source>Stopped</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="286"/>
-        <source>Playlist name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="327"/>
-        <source>Appearance</source>
-        <translation type="unfinished">Megjelenés</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="328"/>
-        <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="374"/>
-        <source>Playing</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="453"/>
-        <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="459"/>
-        <source>P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="461"/>
-        <source>Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="465"/>
-        <source>Quick Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="521"/>
-        <source>Edit Toolbars</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="523"/>
-        <source>Sort List</source>
-        <translation type="unfinished">Lista rendezése</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="526"/>
-        <location filename="../mainwindow.cpp" line="567"/>
-        <source>By Title</source>
-        <translation type="unfinished">Cím szerint</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="529"/>
-        <location filename="../mainwindow.cpp" line="570"/>
-        <source>By Album</source>
-        <translation type="unfinished">Album szerint</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="532"/>
-        <location filename="../mainwindow.cpp" line="573"/>
-        <source>By Artist</source>
-        <translation type="unfinished">Előadó szerint</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="535"/>
-        <location filename="../mainwindow.cpp" line="576"/>
-        <source>By Album Artist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="538"/>
-        <location filename="../mainwindow.cpp" line="579"/>
-        <source>By Filename</source>
-        <translation type="unfinished">Fájlnév szerint</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="541"/>
-        <location filename="../mainwindow.cpp" line="582"/>
-        <source>By Path + Filename</source>
-        <translation type="unfinished">Elérési út és fájlnév szerint</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="544"/>
-        <location filename="../mainwindow.cpp" line="585"/>
-        <source>By Date</source>
-        <translation type="unfinished">Dátum szerint</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="547"/>
-        <location filename="../mainwindow.cpp" line="588"/>
-        <source>By Track Number</source>
-        <translation type="unfinished">Zene sorszáma szerint</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="550"/>
-        <location filename="../mainwindow.cpp" line="591"/>
-        <source>By Disc Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="553"/>
-        <location filename="../mainwindow.cpp" line="594"/>
-        <source>By File Creation Date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="556"/>
-        <location filename="../mainwindow.cpp" line="597"/>
-        <source>By File Modification Date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="559"/>
-        <source>By Group</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="564"/>
-        <source>Sort Selection</source>
-        <translation type="unfinished">Jelöltek rendezése</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="602"/>
-        <source>Randomize List</source>
-        <translation type="unfinished">Lista összekeverése</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="604"/>
-        <source>Reverse List</source>
-        <translation type="unfinished">Fordított lista</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="611"/>
-        <location filename="../mainwindow.cpp" line="652"/>
-        <source>Actions</source>
-        <translation type="unfinished">Tevékenységek</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="418"/>
-        <source>Add new playlist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="424"/>
-        <source>Show all tabs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="848"/>
-        <source>Buffering: %1%</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="939"/>
@@ -902,37 +720,37 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="137"/>
         <source>Previous</source>
-        <translation type="unfinished">Előző</translation>
+        <translation>Előző</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="147"/>
         <source>Play</source>
-        <translation type="unfinished">Lejátszás</translation>
+        <translation>Lejátszás</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="157"/>
         <source>Pause</source>
-        <translation type="unfinished">Szünet</translation>
+        <translation>Szünet</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="167"/>
         <source>Next</source>
-        <translation type="unfinished">Következő</translation>
+        <translation>Következő</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="177"/>
         <source>Stop</source>
-        <translation type="unfinished">Megállít</translation>
+        <translation>Megállít</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="182"/>
         <source>&amp;Add File</source>
-        <translation type="unfinished">&amp;Fájl hozzáadása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="187"/>
         <source>&amp;Remove All</source>
-        <translation type="unfinished">&amp;Összes eltávolítása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="192"/>
@@ -947,12 +765,12 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="202"/>
         <source>&amp;Add Directory</source>
-        <translation type="unfinished">&amp;Könyvtár hazááadása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="207"/>
         <source>&amp;Exit</source>
-        <translation type="unfinished">&amp;Kilépés</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="212"/>
@@ -967,22 +785,22 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="222"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished">&amp;Összes kijelölése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="227"/>
         <source>&amp;Remove Selected</source>
-        <translation type="unfinished">&amp;Megjelöltek eltávolítása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="232"/>
         <source>&amp;Remove Unselected</source>
-        <translation type="unfinished">&amp;Jelöletlenek eltávolítása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="237"/>
         <source>Visualization</source>
-        <translation type="unfinished">Vizualizáció</translation>
+        <translation>Vizualizáció</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="242"/>
@@ -993,7 +811,189 @@
         <location filename="../forms/mainwindow.ui" line="247"/>
         <location filename="../mainwindow.cpp" line="286"/>
         <source>Rename Playlist</source>
-        <translation type="unfinished">Lista átnevezése</translation>
+        <translation>Lista átnevezése</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="463"/>
+        <source>Volume</source>
+        <translation>Hangerő</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="373"/>
+        <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="374"/>
+        <source>Paused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="384"/>
+        <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="385"/>
+        <source>Stopped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="286"/>
+        <source>Playlist name:</source>
+        <translation>Lista neve:</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="327"/>
+        <source>Appearance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="328"/>
+        <source>Shortcuts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="374"/>
+        <source>Playing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="453"/>
+        <source>Ctrl+0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="459"/>
+        <source>P</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="461"/>
+        <source>Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="465"/>
+        <source>Quick Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="521"/>
+        <source>Edit Toolbars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="523"/>
+        <source>Sort List</source>
+        <translation>Lista rendezése</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="526"/>
+        <location filename="../mainwindow.cpp" line="567"/>
+        <source>By Title</source>
+        <translation>Cím szerint</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="570"/>
+        <source>By Album</source>
+        <translation>Album szerint</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="532"/>
+        <location filename="../mainwindow.cpp" line="573"/>
+        <source>By Artist</source>
+        <translation>Előadó szerint</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="535"/>
+        <location filename="../mainwindow.cpp" line="576"/>
+        <source>By Album Artist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="538"/>
+        <location filename="../mainwindow.cpp" line="579"/>
+        <source>By Filename</source>
+        <translation>Fájlnév szerint</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="541"/>
+        <location filename="../mainwindow.cpp" line="582"/>
+        <source>By Path + Filename</source>
+        <translation>Elérési út és fájlnév szerint</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="544"/>
+        <location filename="../mainwindow.cpp" line="585"/>
+        <source>By Date</source>
+        <translation>Dátum szerint</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="547"/>
+        <location filename="../mainwindow.cpp" line="588"/>
+        <source>By Track Number</source>
+        <translation>Zene sorszáma szerint</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="591"/>
+        <source>By Disc Number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="553"/>
+        <location filename="../mainwindow.cpp" line="594"/>
+        <source>By File Creation Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="556"/>
+        <location filename="../mainwindow.cpp" line="597"/>
+        <source>By File Modification Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="559"/>
+        <source>By Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="564"/>
+        <source>Sort Selection</source>
+        <translation>Jelöltek rendezése</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="602"/>
+        <source>Randomize List</source>
+        <translation>Lista összekeverése</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="604"/>
+        <source>Reverse List</source>
+        <translation>Fordított lista</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="611"/>
+        <location filename="../mainwindow.cpp" line="652"/>
+        <source>Actions</source>
+        <translation>Tevékenységek</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="418"/>
+        <source>Add new playlist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="424"/>
+        <source>Show all tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="848"/>
+        <source>Buffering: %1%</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1052,47 +1052,47 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="14"/>
         <source>Popup Information Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Popup Információs Beállítások</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="29"/>
         <source>Template</source>
-        <translation type="unfinished"></translation>
+        <translation>Sablon</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="58"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Visszaállít</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="65"/>
         <source>Insert</source>
-        <translation type="unfinished"></translation>
+        <translation>Beszúr</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="75"/>
         <source>Show cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Borító mutatása</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="89"/>
         <source>Cover size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Borító mérete:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="115"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Átlátszóság:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="145"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Késleltetés:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
 </context>
 <context>
@@ -1108,22 +1108,22 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="24"/>
         <source>View</source>
-        <translation type="unfinished">Megnéz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="36"/>
         <source>Hide on close</source>
-        <translation type="unfinished">Elrejtés bezáráskor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="43"/>
         <source>Start hidden</source>
-        <translation type="unfinished">Rejtve induljon</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="770"/>
         <source>Fonts</source>
-        <translation type="unfinished">Betűtípus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="776"/>
@@ -1140,7 +1140,7 @@
         <location filename="../forms/qsuisettings.ui" line="869"/>
         <location filename="../forms/qsuisettings.ui" line="888"/>
         <source>???</source>
-        <translation type="unfinished">???</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="62"/>
@@ -1148,7 +1148,7 @@
         <location filename="../forms/qsuisettings.ui" line="834"/>
         <location filename="../forms/qsuisettings.ui" line="895"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="30"/>
@@ -1163,17 +1163,17 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="74"/>
         <source>Song Display</source>
-        <translation type="unfinished">Szám kijelző</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="80"/>
         <source>Show protocol</source>
-        <translation type="unfinished">Protokol mutatása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="144"/>
         <source>Show song numbers</source>
-        <translation type="unfinished">Zene sorszámának mutatása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="151"/>
@@ -1193,26 +1193,11 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="101"/>
         <source>Show popup information</source>
-        <translation type="unfinished">Felugró információk mutatása</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="113"/>
         <source>Edit template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="185"/>
-        <source>Colors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="516"/>
-        <source>Group background:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="709"/>
-        <source>Splitter:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1231,33 +1216,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="523"/>
-        <source>Group text:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="965"/>
-        <source>Tabs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="971"/>
-        <source>Show close buttons</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="978"/>
-        <source>Show tab list menu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="985"/>
-        <source>Show &apos;New Playlist&apos; button</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../forms/qsuisettings.ui" line="959"/>
         <source>Miscellaneous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="191"/>
+        <source>Analyzer Colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1271,8 +1236,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="191"/>
-        <source>Analyzer Colors</source>
+        <location filename="../forms/qsuisettings.ui" line="185"/>
+        <source>Colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1303,11 +1268,6 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="405"/>
         <source>Playlist Colors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="411"/>
-        <source>Use system colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1356,6 +1316,46 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../forms/qsuisettings.ui" line="411"/>
+        <source>Use system colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="516"/>
+        <source>Group background:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="523"/>
+        <source>Group text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="709"/>
+        <source>Splitter:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="965"/>
+        <source>Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="971"/>
+        <source>Show close buttons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="978"/>
+        <source>Show tab list menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="985"/>
+        <source>Show &apos;New Playlist&apos; button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
         <translation type="unfinished"></translation>
@@ -1396,72 +1396,72 @@
     <message>
         <location filename="../qsuianalyzer.cpp" line="231"/>
         <source>Peaks</source>
-        <translation type="unfinished"></translation>
+        <translation>Csúcsok</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="234"/>
         <source>Refresh Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Ráta frissítése</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="237"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="238"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 fps</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="239"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 fps</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="240"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 fps</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="247"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished"></translation>
+        <translation>Analízer esése</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="250"/>
         <location filename="../qsuianalyzer.cpp" line="264"/>
         <source>Slowest</source>
-        <translation type="unfinished"></translation>
+        <translation>Lassabb</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="251"/>
         <location filename="../qsuianalyzer.cpp" line="265"/>
         <source>Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>Lassú</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="252"/>
         <location filename="../qsuianalyzer.cpp" line="266"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Közepes</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="253"/>
         <location filename="../qsuianalyzer.cpp" line="267"/>
         <source>Fast</source>
-        <translation type="unfinished"></translation>
+        <translation>Gyors</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="254"/>
         <location filename="../qsuianalyzer.cpp" line="268"/>
         <source>Fastest</source>
-        <translation type="unfinished"></translation>
+        <translation>Gyorsabb</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="261"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished"></translation>
+        <translation>Csúcsok esése</translation>
     </message>
 </context>
 <context>
@@ -1492,7 +1492,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="62"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Visszaállít</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="199"/>

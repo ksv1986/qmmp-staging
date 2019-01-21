@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>DecoderModPlugFactory</name>
     <message>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="108"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Megjegyzés</translation>
     </message>
 </context>
 <context>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="586"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Hangerő</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="656"/>

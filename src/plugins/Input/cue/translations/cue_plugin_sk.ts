@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>DecoderCUEFactory</name>
     <message>
@@ -54,17 +54,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="51"/>
         <source>Automatic charset detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatická voľba znakovej sady</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jazyk:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="81"/>
         <source>Default encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>Východzie kódovanie:</translation>
     </message>
 </context>
 </TS>

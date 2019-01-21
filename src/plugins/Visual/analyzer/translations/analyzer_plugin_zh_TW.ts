@@ -81,7 +81,7 @@
     <message>
         <location filename="../analyzer.cpp" line="376"/>
         <source>&amp;Full Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>(&amp;F)全螢幕</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="37"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇色彩</translation>
     </message>
 </context>
 <context>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>Cells size:</source>
-        <translation type="unfinished"></translation>
+        <translation>框柵大小:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="101"/>
@@ -165,7 +165,7 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

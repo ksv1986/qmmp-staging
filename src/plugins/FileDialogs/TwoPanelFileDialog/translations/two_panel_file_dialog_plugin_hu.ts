@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>TwoPanelFileDialog</name>
     <message>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../twopanelfiledialog.ui" line="117"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejátszás</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="130"/>

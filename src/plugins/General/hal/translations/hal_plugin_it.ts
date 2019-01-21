@@ -6,27 +6,27 @@
     <message>
         <location filename="../halfactory.cpp" line="30"/>
         <source>HAL Plugin</source>
-        <translation>Modulo HAL</translation>
+        <translation>Estensione HAL</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="50"/>
         <source>About HAL Plugin</source>
-        <translation>Info sul modulo HAL</translation>
+        <translation>Informazioni sull&apos;estensione HAL</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="51"/>
         <source>Qmmp HAL Plugin</source>
-        <translation>Modulo HAL per Qmmp</translation>
+        <translation>Estensione HAL per Qmmp</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using HAL</source>
-        <translation>Modulo che permette il rilevamento di dispositivi rimovibili utilizzando HAL</translation>
+        <translation>Estensione che permette il rilevamento di dispositivi rimovibili utilizzando HAL</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="54"/>
@@ -39,12 +39,12 @@
     <message>
         <location filename="../halplugin.cpp" line="160"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation>Aggiungi CD &quot;%1&quot;</translation>
+        <translation>Aggiungi CD «%1»</translation>
     </message>
     <message>
         <location filename="../halplugin.cpp" line="166"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation>Aggiungi libreria &quot;%1&quot;</translation>
+        <translation>Aggiungi volume «%1»</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="13"/>
         <source>HAL Plugin Settings</source>
-        <translation>Impostazioni modulo HAL</translation>
+        <translation>Impostazioni estensione HAL</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="28"/>
@@ -62,12 +62,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="37"/>
         <source>Add tracks to playlist automatically</source>
-        <translation>Aggiungi automaticamente i titoli alla lista dei brani</translation>
+        <translation>Aggiungi automaticamente le tracce alla scaletta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="44"/>
         <source>Remove tracks from playlist automatically</source>
-        <translation>Rimuovi automaticamente i titoli dalla lista dei brani</translation>
+        <translation>Rimuovi automaticamente le tracce dalla scaletta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="54"/>
@@ -77,12 +77,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="63"/>
         <source>Add files to playlist automatically</source>
-        <translation>Aggiungi brani automaticamente alla lista</translation>
+        <translation>Aggiungi automaticamente i file alla scaletta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="70"/>
         <source>Remove files from playlist automatically</source>
-        <translation>Rimuovi automaticamente i brani dalla lista</translation>
+        <translation>Rimuovi automaticamente i file dalla scaletta</translation>
     </message>
 </context>
 </TS>

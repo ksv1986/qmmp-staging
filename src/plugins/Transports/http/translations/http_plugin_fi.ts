@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Buffer size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bufferin koko:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="64"/>

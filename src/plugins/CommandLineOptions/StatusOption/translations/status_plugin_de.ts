@@ -96,17 +96,17 @@
     <message>
         <location filename="../statusoption.cpp" line="109"/>
         <source>%{bitrate} - bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>%{bitrate} - Bitrate</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="110"/>
         <source>%{samplerate} - sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>%{samplerate} - Abtastrate</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="111"/>
         <source>%{channels} - number of channels</source>
-        <translation type="unfinished"></translation>
+        <translation>%{channels} - Anzahl der Kanäle</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="112"/>
@@ -116,17 +116,17 @@
     <message>
         <location filename="../statusoption.cpp" line="113"/>
         <source>%{format} - format name</source>
-        <translation type="unfinished"></translation>
+        <translation>%{format} - Formatname</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="114"/>
         <source>%{decoder} - decoder name</source>
-        <translation type="unfinished"></translation>
+        <translation>%{decoder} - Dekodername</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="115"/>
         <source>%{filesize} - file size</source>
-        <translation type="unfinished"></translation>
+        <translation>%{filesize} - Dateigröße</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="116"/>

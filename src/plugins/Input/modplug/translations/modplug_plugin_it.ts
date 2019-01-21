@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de">
+<TS version="2.1" language="it">
 <context>
     <name>DecoderModPlugFactory</name>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="46"/>
         <source>ModPlug Plugin</source>
-        <translation>Modulo ModPlug</translation>
+        <translation>Estensione ModPlug</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="52"/>
         <source>ModPlug Files</source>
-        <translation>Brani ModPlug</translation>
+        <translation>File ModPlug</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="136"/>
         <source>About ModPlug Audio Plugin</source>
-        <translation>Info sul modulo audio ModPlug</translation>
+        <translation>Informazioni sull&apos;estensione audio ModPlug</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="137"/>
         <source>Qmmp ModPlug Audio Plugin</source>
-        <translation>Modulo audio ModPlug per Qmmp</translation>
+        <translation>Estensione audio ModPlug per Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="138"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="139"/>
         <source>Based on the Modplug Plugin for Xmms</source>
-        <translation>Basato sul Modulo Modplug per Xmms</translation>
+        <translation>Basato sull&apos;estensione Modplug per Xmms</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="140"/>
         <source>Modplug Plugin developers:</source>
-        <translation>Sviluppatori del modulo Modplug:</translation>
+        <translation>Sviluppatori dell&apos;estensione Modplug:</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="141"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>ModPlug Plugin Settings</source>
-        <translation>Impostazioni modulo ModPlug</translation>
+        <translation>Impostazioni estensione ModPlug</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
@@ -197,12 +197,24 @@
         <translation>Riverbero</translation>
     </message>
     <message>
+        <location filename="../settingsdialog.ui" line="202"/>
+        <location filename="../settingsdialog.ui" line="467"/>
+        <source>Depth (%)</source>
+        <translation>Intensità (%)</translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="234"/>
         <location filename="../settingsdialog.ui" line="368"/>
         <location filename="../settingsdialog.ui" line="499"/>
         <location filename="../settingsdialog.ui" line="618"/>
         <source>0</source>
         <translation>0</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="260"/>
+        <location filename="../settingsdialog.ui" line="519"/>
+        <source>Delay (ms)</source>
+        <translation>Ritardo (ms)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="292"/>
@@ -212,7 +224,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="324"/>
         <source>Bass Boost</source>
-        <translation>Potenzaiamento bassi</translation>
+        <translation>Potenziamento bassi</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="336"/>
+        <source>Amount (%)</source>
+        <translation>Percentuale (%)</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="394"/>
+        <source>Range (Hz)</source>
+        <translation>Campo di variazione (Hz)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="426"/>
@@ -237,7 +259,13 @@
     <message>
         <location filename="../settingsdialog.ui" line="586"/>
         <source>Volume</source>
-        <translation>Pegel</translation>
+        <translation>Volume</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="656"/>
+        <source>Note: Setting the preamp
+too high may cause clipping!</source>
+        <translation>Nota: impostare la preamplificazione troppo alta può causare dei tagli!</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="671"/>
@@ -252,22 +280,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="683"/>
         <source>Use filename as song title</source>
-        <translation>Nome brano come titolo</translation>
+        <translation>Usa nome file come titolo brano</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="690"/>
         <source>Noise reduction</source>
-        <translation>Riduzione fastidio</translation>
+        <translation>Riduzione rumore</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="700"/>
         <source>Fast playlist info</source>
-        <translation>informazione rapida sulla lista dei brani</translation>
+        <translation>Informazione rapida sulla scaletta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="710"/>
         <source>Play Amiga MOD</source>
-        <translation>Esegui Amiga MOD</translation>
+        <translation>Riproduci MOD Amiga</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="720"/>
@@ -277,7 +305,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="726"/>
         <source>Don&apos;t loop</source>
-        <translation>Nessuna</translation>
+        <translation>Nessuna ripetizione</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="733"/>
@@ -293,34 +321,6 @@
         <location filename="../settingsdialog.ui" line="770"/>
         <source>Loop forever</source>
         <translation>Sempre</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="202"/>
-        <location filename="../settingsdialog.ui" line="467"/>
-        <source>Depth (%)</source>
-        <translation>Intensità (%)</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="260"/>
-        <location filename="../settingsdialog.ui" line="519"/>
-        <source>Delay (ms)</source>
-        <translation>Ritardo (ms)</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="336"/>
-        <source>Amount (%)</source>
-        <translation>Percentuale (%)</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="394"/>
-        <source>Range (Hz)</source>
-        <translation>campo di variazione (Hz)</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="656"/>
-        <source>Note: Setting the preamp
-too high may cause clipping!</source>
-        <translation>Nota: Impostare la preamplificazione troppo alta può causare dei tagli!</translation>
     </message>
 </context>
 </TS>

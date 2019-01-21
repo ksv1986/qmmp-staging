@@ -21,7 +21,7 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Аутор: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Уређај:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="68"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="58"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Подразумеван</translation>
     </message>
 </context>
 </TS>

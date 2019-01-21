@@ -44,7 +44,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="65"/>
@@ -80,7 +80,7 @@
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbit/s</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="74"/>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>

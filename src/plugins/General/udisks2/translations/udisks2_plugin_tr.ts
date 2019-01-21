@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>SettingsDialog</name>
     <message>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../udisks2factory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisks2plugin.cpp" line="129"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">CD &quot;%1&quot; Ekle</translation>
+        <translation>CD &quot;%1&quot; Ekle</translation>
     </message>
     <message>
         <location filename="../udisks2plugin.cpp" line="137"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">&quot;%1&quot; Aygıtını Ekle</translation>
+        <translation>&quot;%1&quot; Aygıtını Ekle</translation>
     </message>
 </context>
 </TS>

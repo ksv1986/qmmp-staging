@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="it">
 <context>
     <name>EffectLADSPAFactory</name>
     <message>
         <location filename="../effectladspafactory.cpp" line="30"/>
         <source>LADSPA Plugin</source>
-        <translation>Plugin LADSPA</translation>
+        <translation>Estensione LADSPA</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="50"/>
         <source>About LADSPA Host for Qmmp</source>
-        <translation>Informazioni su LADSPA per Qmmp</translation>
+        <translation>Informazioni su host LADSPA per Qmmp</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="51"/>
@@ -47,24 +47,9 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="47"/>
-        <source>UID</source>
-        <translation>UID</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="48"/>
-        <source>Name</source>
-        <translation>Nome</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="132"/>
-        <source>This LADSPA plugin has no user controls</source>
-        <translation>QUesot plugin LADSPA non ha controlli</translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>LADSPA Plugin Catalog</source>
-        <translation>Catalogo Plugin LADSPA</translation>
+        <translation>Catalogo estensioni LADSPA</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
@@ -80,6 +65,21 @@
         <location filename="../settingsdialog.ui" line="94"/>
         <source>Configure</source>
         <translation>Configura</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="47"/>
+        <source>UID</source>
+        <translation>UID</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="48"/>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="132"/>
+        <source>This LADSPA plugin has no user controls</source>
+        <translation>Questa estensione LADSPA non ha controlli</translation>
     </message>
 </context>
 </TS>

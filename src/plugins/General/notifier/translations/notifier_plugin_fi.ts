@@ -29,7 +29,7 @@
     <message>
         <location filename="../popupwidget.cpp" line="116"/>
         <source>Volume:</source>
-        <translation type="unfinished"></translation>
+        <translation>Äänenvoimakkuus:</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="325"/>
         <source>Volume change notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Äänenvoimakkuuden muutoksen ilmoitus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="332"/>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="361"/>
         <source>Playback resume notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Toiston jatkamisen ilmoitus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="368"/>
@@ -103,7 +103,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="375"/>
         <source>Disable notifications when another application is in the Full Screen Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista ilmoitukset käytöstä, kun jokin toinen sovellus on koko näytön tilassa</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="378"/>

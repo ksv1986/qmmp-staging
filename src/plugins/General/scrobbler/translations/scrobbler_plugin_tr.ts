@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>ScrobblerFactory</name>
     <message>
@@ -91,6 +91,16 @@
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="134"/>
+        <location filename="../settingsdialog.cpp" line="138"/>
+        <location filename="../settingsdialog.cpp" line="172"/>
+        <location filename="../settingsdialog.cpp" line="176"/>
+        <location filename="../settingsdialog.cpp" line="227"/>
+        <location filename="../settingsdialog.cpp" line="231"/>
+        <source>Error</source>
+        <translation>Hata</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="134"/>
         <location filename="../settingsdialog.cpp" line="172"/>
         <location filename="../settingsdialog.cpp" line="227"/>
         <source>Network error</source>
@@ -115,16 +125,6 @@
     <message>
         <location filename="../settingsdialog.cpp" line="231"/>
         <source>Permission denied</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="134"/>
-        <location filename="../settingsdialog.cpp" line="138"/>
-        <location filename="../settingsdialog.cpp" line="172"/>
-        <location filename="../settingsdialog.cpp" line="176"/>
-        <location filename="../settingsdialog.cpp" line="227"/>
-        <location filename="../settingsdialog.cpp" line="231"/>
-        <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

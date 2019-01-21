@@ -13,7 +13,7 @@
         <location filename="../converter.cpp" line="144"/>
         <location filename="../converter.cpp" line="211"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fout</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="179"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../converterdialog.ui" line="44"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Voortgang</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="49"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished">Converteer</translation>
+        <translation>Converteer</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
@@ -89,11 +89,16 @@
         <translation>Naam</translation>
     </message>
     <message>
+        <location filename="../converterdialog.cpp" line="198"/>
+        <source>Create a Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../converterdialog.cpp" line="129"/>
         <location filename="../converterdialog.cpp" line="353"/>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fout</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
@@ -109,11 +114,6 @@
         <location filename="../converterdialog.cpp" line="197"/>
         <source>Edit</source>
         <translation>Bewerk</translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="198"/>
-        <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="199"/>
@@ -169,7 +169,7 @@
     <message>
         <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

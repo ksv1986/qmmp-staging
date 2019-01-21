@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>OutputShoutFactory</name>
     <message>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Port:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="56"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
 </context>
 </TS>

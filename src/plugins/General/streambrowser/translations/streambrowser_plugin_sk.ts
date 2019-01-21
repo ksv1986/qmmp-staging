@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>EditStreamDialog</name>
     <message>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
         <source>Genre:</source>
-        <translation type="unfinished"></translation>
+        <translation>Žáner:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="64"/>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../streamwindow.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter:</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="47"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../streamwindow.ui" line="102"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridať</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="109"/>
@@ -117,13 +117,13 @@
         <location filename="../streamwindow.cpp" line="57"/>
         <location filename="../streamwindow.cpp" line="75"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Žáner</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="58"/>
         <location filename="../streamwindow.cpp" line="76"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitový tok</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="59"/>
@@ -159,18 +159,18 @@
     <message>
         <location filename="../streamwindow.cpp" line="153"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokončené</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="156"/>
         <location filename="../streamwindow.cpp" line="157"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="176"/>
         <source>Receiving</source>
-        <translation type="unfinished"></translation>
+        <translation>Sťahujem</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="273"/>

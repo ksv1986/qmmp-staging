@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>Converter</name>
     <message>
@@ -13,7 +13,7 @@
         <location filename="../converter.cpp" line="144"/>
         <location filename="../converter.cpp" line="211"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="179"/>
@@ -76,16 +76,21 @@
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Durdur</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="108"/>
         <source>Choose a directory</source>
-        <translation type="unfinished">Dizin seç</translation>
+        <translation>Dizin seç</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="39"/>
         <source>Title</source>
+        <translation>Başlık</translation>
+    </message>
+    <message>
+        <location filename="../converterdialog.cpp" line="198"/>
+        <source>Create a Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -93,7 +98,7 @@
         <location filename="../converterdialog.cpp" line="353"/>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
@@ -111,14 +116,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="198"/>
-        <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="353"/>
@@ -156,7 +156,7 @@
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -177,12 +177,12 @@
     <message>
         <location filename="../preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Tanımlanmış Ayar Düzenleyici</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="29"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Genel</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="35"/>

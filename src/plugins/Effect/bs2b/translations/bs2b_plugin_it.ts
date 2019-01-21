@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="31"/>
         <source>BS2B Plugin</source>
-        <translation>Modulo BS2B</translation>
+        <translation>Estensione BS2B</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="51"/>
         <source>About BS2B Effect Plugin</source>
-        <translation>Info sul modulo effetti BS2B</translation>
+        <translation>Informazioni sull&apos;estensione effetti BS2B</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="52"/>
         <source>This is the Qmmp plugin version of Boris Mikhaylov&apos;s headphone DSP effect &quot;Bauer stereophonic-to-binaural&quot;, abbreviated bs2b.</source>
-        <translation>Versione per Qmmp  del modulo headphone DSP effect &quot;Bauer stereophonic-to-binaural&quot; di Boris Mikhaylov, abbreviato in bs2b</translation>
+        <translation>Versione per Qmmp dell&apos;effetto DSP per cuffie «Bauer stereophonic-to-binaural» di Boris Mikhaylov, abbreviato in bs2b.</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="54"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="58"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="59"/>
         <source>Sebastian Pipping &lt;sebastian@pipping.org&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Sebastian Pipping &lt;sebastian@pipping.org&gt;</translation>
     </message>
 </context>
 <context>
@@ -49,12 +49,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>BS2B Plugin Settings</source>
-        <translation>Impostazioni del modulo BS2B</translation>
+        <translation>Impostazioni dell&apos;estensione BS2B</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
         <source>Crossfeed level</source>
-        <translation>livello di fuoco incrociato</translation>
+        <translation>Livello di crossfeed</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
@@ -65,7 +65,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Default</source>
-        <translation>Default</translation>
+        <translation>Predefinito</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>

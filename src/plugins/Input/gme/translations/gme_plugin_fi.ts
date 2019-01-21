@@ -11,7 +11,7 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="41"/>
         <source>Game Music Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pelimusiikkitiedostot</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="103"/>

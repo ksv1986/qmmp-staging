@@ -718,12 +718,12 @@
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
         <source>Load</source>
-        <translation type="unfinished"></translation>
+        <translation>Laad</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="83"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwijder</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
@@ -746,18 +746,18 @@
     <message>
         <location filename="../coverviewer.cpp" line="35"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bewaar als...</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="68"/>
         <source>Save Cover As</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewaar Albumhoes Als</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="70"/>
         <location filename="../coverviewer.cpp" line="83"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Afbeeldingen</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="81"/>
@@ -780,7 +780,7 @@
     <message>
         <location filename="../forms/detailsdialog.ui" line="47"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/detailsdialog.ui" line="63"/>
@@ -825,7 +825,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="245"/>
         <source>Genre</source>
-        <translation type="unfinished">Genre</translation>
+        <translation>Genre</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="246"/>
@@ -850,12 +850,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="267"/>
         <source>Duration</source>
-        <translation type="unfinished">Duur</translation>
+        <translation>Duur</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitsnelheid</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
@@ -865,7 +865,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Sample frequentie</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
@@ -875,7 +875,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="272"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanalen</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsgrootte</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
@@ -905,12 +905,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nee</translation>
     </message>
 </context>
 <context>
@@ -969,62 +969,62 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished">Artiest</translation>
+        <translation>Artiest</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation type="unfinished">Album</translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
         <source>Album Artist</source>
-        <translation type="unfinished">Album Artiest</translation>
+        <translation>Album Artiest</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished">Naam</translation>
+        <translation>Naam</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
         <source>Track Number</source>
-        <translation type="unfinished">Nummer</translation>
+        <translation>Nummer</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="33"/>
         <source>Two-digit Track Number</source>
-        <translation type="unfinished">2 cijferig nummer</translation>
+        <translation>2 cijferige nummer</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Track Index</source>
-        <translation type="unfinished">Nummer</translation>
+        <translation>Nummer</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Genre</source>
-        <translation type="unfinished">Genre</translation>
+        <translation>Genre</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="40"/>
         <source>Comment</source>
-        <translation type="unfinished">Commentaar</translation>
+        <translation>Commentaar</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="41"/>
         <source>Composer</source>
-        <translation type="unfinished">Componist</translation>
+        <translation>Componist</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Duration</source>
-        <translation type="unfinished">Duur</translation>
+        <translation>Duur</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitsnelheid</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
@@ -1044,7 +1044,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Formaat</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>
@@ -1059,32 +1059,32 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
         <source>Disc Number</source>
-        <translation type="unfinished">Schijf nummer</translation>
+        <translation>Schijf nummer</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="47"/>
         <source>File Name</source>
-        <translation type="unfinished">Bestandsnaam</translation>
+        <translation>Bestandsnaam</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="48"/>
         <source>File Path</source>
-        <translation type="unfinished">Bestandspad</translation>
+        <translation>Bestandspad</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>Year</source>
-        <translation type="unfinished">Jaar</translation>
+        <translation>Jaar</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="50"/>
         <source>Condition</source>
-        <translation type="unfinished">Staat</translation>
+        <translation>Staat</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="49"/>
         <source>Artist - Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Artiest - Naam</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="54"/>
@@ -1265,7 +1265,7 @@
     <message>
         <location filename="../uihelper.cpp" line="143"/>
         <source>Select one or more files to play</source>
-        <translation type="unfinished">Kies één of meerdere bestanden om af te spelen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../uihelper.cpp" line="151"/>

@@ -11,12 +11,12 @@
     <message>
         <location filename="../analyzer.cpp" line="332"/>
         <source>Peaks</source>
-        <translation type="unfinished"></translation>
+        <translation>Toppen</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="335"/>
         <source>Refresh Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Vernieuw Frequentie</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="338"/>
@@ -41,51 +41,51 @@
     <message>
         <location filename="../analyzer.cpp" line="348"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished"></translation>
+        <translation>Analysator Uitval</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="351"/>
         <location filename="../analyzer.cpp" line="365"/>
         <source>Slowest</source>
-        <translation type="unfinished">Traagst</translation>
+        <translation>Traagst</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="352"/>
         <location filename="../analyzer.cpp" line="366"/>
         <source>Slow</source>
-        <translation type="unfinished">Traag</translation>
+        <translation>Traag</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="353"/>
         <location filename="../analyzer.cpp" line="367"/>
         <source>Medium</source>
-        <translation type="unfinished">Normaal</translation>
+        <translation>Normaal</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="354"/>
         <location filename="../analyzer.cpp" line="368"/>
         <source>Fast</source>
-        <translation type="unfinished">Snel</translation>
+        <translation>Snel</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="355"/>
         <location filename="../analyzer.cpp" line="369"/>
         <source>Fastest</source>
-        <translation type="unfinished">Snelst</translation>
+        <translation>Snelst</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="362"/>
         <source>Peaks Falloff</source>
+        <translation>Toppen Uitval</translation>
+    </message>
+    <message>
+        <location filename="../analyzer.cpp" line="376"/>
+        <source>&amp;Full Screen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>
         <source>F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../analyzer.cpp" line="376"/>
-        <source>&amp;Full Screen</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

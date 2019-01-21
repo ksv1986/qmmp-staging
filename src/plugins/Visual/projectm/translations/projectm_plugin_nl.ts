@@ -19,7 +19,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="150"/>
         <source>F1</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="151"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="151"/>
         <source>F2</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
         <source>F3</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="153"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="155"/>
         <source>N</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
         <source>P</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
         <source>R</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>
         <source>L</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="160"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="160"/>
         <source>F</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

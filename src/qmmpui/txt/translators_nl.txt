@@ -1,56 +1,97 @@
-Braziliaans Portugees:
-    Klaos Lacerda
+Brazilian Portuguese:
     Bruno Gonçalves
+    Klaos Lacerda
+    Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
 
-Traditioneel Chinees:
+Bulgarian:
+    Kiril Kirilov
+
+Chinese Traditional:
     lon <lon83129@126.com>
+    Jeff Huang
 
-Gesimplificeerd Chinees:
+Chinese Simplified:
     lon <lon83129@126.com>
+    mabier
+    Mingcong Bai
+    Mingye Wang
 
-Tsjech:
+Czech:
+    Jaroslav Lichtblau
     Karel Volný <kvolny@redhat.com>
 
-Nederlands:
+Dutch:
     Ronald Uitermark <ronald645@gmail.com>
 
-Frans:
+Finnish:
+    Jiri Grönroos
+
+French:
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
+    Sébastien Aperghis-Tramoni (maddingue)
     Stanislas Zeller <uncensored.assault@gmail.com>
 
-Duits:
+Galician:
+    Delio Docampo Cordeiro
+    Óscar Pereira <oscarpereira1989@gmail.com>
+
+German:
+    Ettore Atalan
     Stefan Koelling <stefankoelling.ext@googlemail.com>
     Panagiotis Papadopoulos <pano_90@gmx.net>
 
-Hongaars:
+Greek:
+    Dimitrios Glentadakis
+
+Hebrew:
+    Genghis Khan <genghiskhan@gmx.ca>
+
+Hungarian:
     Németh Gábor <sutee84@freemail.hu>
 
-Italiaans:
-    Gian Paolo Renello <emmerkar@gmail.com>
+Indonesian:
+    Wantoyo <wantoyek@gmail.com>
 
-Japans:
+Italian:
+    Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
+
+Japanese:
     Ryota Shimamoto <liangtai.s16@gmail.com>
 
-Kazachstaans:
+Kazakh:
     Baurzhan Muftakhidinov <baurthefirst@gmail.com>
 
-Litouws:
+Lithuanian:
     Algirdas Butkus <butkus.algirdas@gmail.com>
 
-Pools:
+Polish:
+    Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
 
-Russisch:
+Portuguese:
+    Sérgio Marques <smarquespt@gmail.com>
+
+Russian:
+    Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
 
-Slowaak:
+Serbian:
+    Mladen Pejaković <pejakm@autistici.org>
+
+Slovak:
     Ján Ďanovský <dagsoftware@yahoo.com>
 
-Spaans:
+Spanish:
+    Bohdan Shuba
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
-Turks:
+Turkish:
     Mustafa GUNAY <mustafagunay@pgmail.com>
     Bilgesu Güngör <h.ibrahim.gungor@gmail.com>
+    Uğur KUYU
 
-Oekraïens:
+Ukrainian:
     Gennadi Motsyo <drool@altlinux.ru>

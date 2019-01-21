@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="117"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Escrito por: LLya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

@@ -6,32 +6,32 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="38"/>
         <source>GME Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione GME</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="41"/>
         <source>Game Music Files</source>
-        <translation type="unfinished"></translation>
+        <translation>File Game Music</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="103"/>
         <source>About GME Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sull&apos;estensione audio GME</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="104"/>
         <source>Qmmp GME Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione audio GME per Qmmp</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="105"/>
         <source>This plugin uses Game_Music_Emu library to play game music files</source>
-        <translation type="unfinished"></translation>
+        <translation>Questa estensione usa la libreria Game_Music_Emu per riprodurre file di tipo game music</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="106"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,22 +39,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>GME Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni dell&apos;estensione GME</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Fadeout length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lunghezza dissolvenza in uscita:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="44"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="57"/>
         <source>Enable fadeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita dissolvenza in uscita</translation>
     </message>
 </context>
 </TS>

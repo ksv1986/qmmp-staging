@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>NotifierFactory</name>
     <message>
         <location filename="../notifierfactory.cpp" line="29"/>
         <source>Notifier Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Notifier Plugin</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="49"/>
         <source>About Notifier Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>O notifikačnom plugine</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="50"/>
         <source>Qmmp Notifier Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp notifikačný plugin</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="51"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../popupwidget.cpp" line="116"/>
         <source>Volume:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlasitosť:</translation>
     </message>
 </context>
 <context>
@@ -37,68 +37,68 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Notifier Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavenia notfikačného pluginu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Desktop Notification</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="368"/>
-        <source>Song change notification</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="325"/>
-        <source>Volume change notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Notifkácia na ploche</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="51"/>
         <source>Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Písmo:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="332"/>
-        <source>Delay (ms):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="299"/>
-        <source>Cover size:</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <location filename="../settingsdialog.ui" line="279"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="85"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Priehľadnosť:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="229"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Umiestnenie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="251"/>
         <source>Edit template</source>
-        <translation type="unfinished"></translation>
+        <translation>Upraviť šablónu</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="299"/>
+        <source>Cover size:</source>
+        <translation>Veľkosť obalu:</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="325"/>
+        <source>Volume change notification</source>
+        <translation>Notifikácia zmeny hlasitosti</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="332"/>
+        <source>Delay (ms):</source>
+        <translation>Oneskorenie (ms):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="361"/>
         <source>Playback resume notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Notifikácia obnovenia prehrávania</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="368"/>
+        <source>Song change notification</source>
+        <translation>Notifikácia zmeny skladby</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="375"/>
@@ -113,17 +113,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="388"/>
         <source>Psi Notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Psi notifikácia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="400"/>
         <source>Enable Psi notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Povoliť Psi notifikáciu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="109"/>
         <source>Notification Template</source>
-        <translation type="unfinished"></translation>
+        <translation>Šablóna notifikácie</translation>
     </message>
 </context>
 </TS>

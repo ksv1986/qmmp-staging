@@ -6,27 +6,27 @@
     <message>
         <location filename="../decodercuefactory.cpp" line="38"/>
         <source>CUE Plugin</source>
-        <translation>Modulo CUE</translation>
+        <translation>Estensione CUE</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="41"/>
         <source>CUE Files</source>
-        <translation>Brani CUE</translation>
+        <translation>File CUE</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="91"/>
         <source>About CUE Audio Plugin</source>
-        <translation>Informazioni sul Modulo audio CUE</translation>
+        <translation>Informazioni sull&apos;estensione audio CUE</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="92"/>
         <source>Qmmp CUE Audio Plugin</source>
-        <translation>Modulo audio CUE per Qmmp</translation>
+        <translation>Estensione audio CUE per Qmmp</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="93"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,17 +34,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>CUE Plugin Settings</source>
-        <translation>Impostazioni del modulo CUE</translation>
+        <translation>Impostazioni dell&apos;estensione CUE</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Common settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni comuni</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Load incorrect cue sheets if possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Carica file cue non corretti se possibile</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="51"/>
         <source>Automatic charset detection</source>
-        <translation>Rilevazione automaticamente del set di caratteri</translation>
+        <translation>Rilevamento automatico della codifica dei caratteri</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="81"/>
         <source>Default encoding:</source>
-        <translation>Codifica predefeinita</translation>
+        <translation>Codifica predefinita:</translation>
     </message>
 </context>
 </TS>

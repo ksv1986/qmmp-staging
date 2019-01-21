@@ -16,7 +16,7 @@
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../editstreamdialog.ui" line="74"/>
         <source>Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Type:</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../streambrowser.cpp" line="35"/>
         <source>Ctrl+U</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../streamwindow.ui" line="31"/>
         <source>Filter:</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="47"/>
@@ -117,7 +117,7 @@
         <location filename="../streamwindow.cpp" line="57"/>
         <location filename="../streamwindow.cpp" line="75"/>
         <source>Genre</source>
-        <translation></translation>
+        <translation>Genre</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="58"/>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../streamwindow.cpp" line="140"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bewerk</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="143"/>

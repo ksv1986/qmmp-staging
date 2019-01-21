@@ -27,12 +27,12 @@
     <message>
         <location filename="../historyfactory.cpp" line="51"/>
         <source>About Listening History Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja - Kuunteluhistorialiitännäinen</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="52"/>
         <source>Qmmp Listening History Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp:n kuunteluhistorialiitännäinen</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="53"/>

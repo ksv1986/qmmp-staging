@@ -26,7 +26,7 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="47"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="49"/>
@@ -1228,7 +1228,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="94"/>
         <source>Show splitters</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan pemisahan</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="138"/>

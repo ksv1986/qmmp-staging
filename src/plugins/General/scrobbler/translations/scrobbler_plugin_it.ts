@@ -6,22 +6,22 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="31"/>
         <source>Scrobbler Plugin</source>
-        <translation>Modulo Scrobbler</translation>
+        <translation>Estensione Scrobbler</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="51"/>
         <source>About Scrobbler Plugin</source>
-        <translation>Info sul modulo Scrobbler</translation>
+        <translation>Informazioni sull&apos;estensione Scrobbler</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="52"/>
         <source>Qmmp AudioScrobbler Plugin</source>
-        <translation>Modulo AudioScrobbler per Qmmp</translation>
+        <translation>Estensione AudioScrobbler per Qmmp</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Scrobbler Plugin Settings</source>
-        <translation>Impostazioni del modulo Scrobbler</translation>
+        <translation>Impostazioni dell&apos;estensione Scrobbler</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="20"/>
@@ -41,21 +41,21 @@
         <location filename="../settingsdialog.ui" line="104"/>
         <location filename="../settingsdialog.ui" line="160"/>
         <source>Session:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sessione</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <location filename="../settingsdialog.ui" line="117"/>
         <location filename="../settingsdialog.ui" line="173"/>
         <source>Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Verifica</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="63"/>
         <location filename="../settingsdialog.ui" line="95"/>
         <location filename="../settingsdialog.ui" line="151"/>
         <source>Register new session</source>
-        <translation type="unfinished"></translation>
+        <translation>Registra una nuova sessione</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="73"/>
@@ -72,50 +72,22 @@
         <location filename="../settingsdialog.cpp" line="152"/>
         <location filename="../settingsdialog.cpp" line="217"/>
         <source>Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Messaggio</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="127"/>
         <source>1. Wait for browser startup</source>
-        <translation type="unfinished"></translation>
+        <translation>1. Attendi l&apos;avvio del browser</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="128"/>
         <source>2. Allow Qmmp to scrobble tracks to your %1 account</source>
-        <translation type="unfinished"></translation>
+        <translation>2. Permetti a Qmmp di pubblicare le tracce ascoltate sull&apos;account %1</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>3. Press &quot;OK&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="134"/>
-        <location filename="../settingsdialog.cpp" line="172"/>
-        <location filename="../settingsdialog.cpp" line="227"/>
-        <source>Network error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="138"/>
-        <location filename="../settingsdialog.cpp" line="176"/>
-        <source>Unable to register new session</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="152"/>
-        <source>New session has been received successfully</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="217"/>
-        <source>Permission granted</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="231"/>
-        <source>Permission denied</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Premi «OK»</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="134"/>
@@ -125,7 +97,35 @@
         <location filename="../settingsdialog.cpp" line="227"/>
         <location filename="../settingsdialog.cpp" line="231"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="134"/>
+        <location filename="../settingsdialog.cpp" line="172"/>
+        <location filename="../settingsdialog.cpp" line="227"/>
+        <source>Network error</source>
+        <translation>Errore di rete</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="138"/>
+        <location filename="../settingsdialog.cpp" line="176"/>
+        <source>Unable to register new session</source>
+        <translation>Impossible registrare una nuova sessione</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="152"/>
+        <source>New session has been received successfully</source>
+        <translation>Una nuova sessione è stata ricevuta correttamente</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="217"/>
+        <source>Permission granted</source>
+        <translation>Permesso accordato</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="231"/>
+        <source>Permission denied</source>
+        <translation>Permesso negato</translation>
     </message>
 </context>
 </TS>

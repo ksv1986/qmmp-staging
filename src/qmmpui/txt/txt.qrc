@@ -8,6 +8,11 @@
     <file>thanks.txt</file>
     <file>translators.txt</file>
 
+    <file>description_hu.txt</file>
+    <file>authors_hu.txt</file>
+    <file>thanks_hu.txt</file>
+    <file>translators_hu.txt</file>
+
     <file>description_uk_UA.txt</file>
     <file>authors_uk_UA.txt</file>
     <file>thanks_uk_UA.txt</file>
@@ -102,6 +107,11 @@
     <file>authors_sr_BA.txt</file>
     <file>thanks_sr_BA.txt</file>
     <file>translators_sr_BA.txt</file>
+
+    <file>description_sk.txt</file>
+    <file>authors_sk.txt</file>
+    <file>thanks_sk.txt</file>
+    <file>translators_sk.txt</file>
 
     <file>description_pl_PL.txt</file>
     <file>authors_pl_PL.txt</file>

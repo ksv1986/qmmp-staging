@@ -21,12 +21,12 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="46"/>
         <source>Developers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Програмери:</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="47"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="49"/>
@@ -304,7 +304,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Освежи</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
@@ -394,7 +394,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="99"/>
@@ -606,22 +606,22 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished">Ресетуј</translation>
+        <translation>Ресетуј</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
         <source>Action</source>
-        <translation type="unfinished">радња</translation>
+        <translation>радња</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="59"/>
         <source>Shortcut</source>
-        <translation type="unfinished">пречица</translation>
+        <translation>пречица</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="33"/>
         <source>Change shortcut...</source>
-        <translation type="unfinished">Измени пречицу...</translation>
+        <translation>Измени пречицу...</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="55"/>
@@ -636,27 +636,27 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="68"/>
         <source>Playback</source>
-        <translation type="unfinished">Контроле</translation>
+        <translation>Контроле</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="74"/>
         <source>View</source>
-        <translation type="unfinished">Приказ</translation>
+        <translation>Приказ</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="80"/>
         <source>Volume</source>
-        <translation type="unfinished">Јачина</translation>
+        <translation>Јачина</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="86"/>
         <source>Playlist</source>
-        <translation type="unfinished">Листа нумера</translation>
+        <translation>Листа нумера</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="92"/>
         <source>Misc</source>
-        <translation type="unfinished">Разно</translation>
+        <translation>Разно</translation>
     </message>
 </context>
 <context>
@@ -851,7 +851,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="328"/>
         <source>Shortcuts</source>
-        <translation type="unfinished">Пречице</translation>
+        <translation>Пречице</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
@@ -871,7 +871,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="461"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Положај</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="465"/>
@@ -1133,7 +1133,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="824"/>
         <source>Playlist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Листа:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="804"/>
@@ -1238,7 +1238,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="185"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Боје</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="197"/>
@@ -1298,7 +1298,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="484"/>
         <source>Highlighted text:</source>
-        <translation>Означени текст:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="995"/>
@@ -1358,7 +1358,7 @@
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Подразумеван</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
@@ -1512,7 +1512,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Уклони</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="100"/>

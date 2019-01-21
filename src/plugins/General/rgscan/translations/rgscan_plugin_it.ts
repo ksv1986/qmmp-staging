@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="it">
 <context>
     <name>RGScanDialog</name>
     <message>
         <location filename="../rgscandialog.ui" line="14"/>
         <source>ReplayGain Scanner</source>
-        <translation type="unfinished"></translation>
+        <translation>Scansione ReplayGain</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="84"/>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../rgscandialog.ui" line="42"/>
         <source>Title</source>
-        <translation type="unfinished">Titolo</translation>
+        <translation>Titolo</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="47"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Avanzamento</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="52"/>
         <source>Track Gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Guadagno traccia</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="57"/>
         <source>Album Gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Guadagno album</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="62"/>
@@ -46,17 +46,17 @@
     <message>
         <location filename="../rgscandialog.ui" line="77"/>
         <source>Skip already scanned files</source>
-        <translation type="unfinished"></translation>
+        <translation>Salta i file già analizzati</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="113"/>
         <source>Calculate</source>
-        <translation type="unfinished"></translation>
+        <translation>Calcola</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="120"/>
         <source>Write Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Scrivi tag</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="91"/>
@@ -67,7 +67,7 @@
         <location filename="../rgscandialog.cpp" line="122"/>
         <location filename="../rgscandialog.cpp" line="233"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore</translation>
     </message>
     <message>
         <location filename="../rgscandialog.cpp" line="132"/>
@@ -75,7 +75,7 @@
         <location filename="../rgscandialog.cpp" line="157"/>
         <location filename="../rgscandialog.cpp" line="228"/>
         <source>%1 dB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 dB</translation>
     </message>
 </context>
 <context>
@@ -83,47 +83,47 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="28"/>
         <source>ReplayGain Scanner Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione scansione ReplayGain</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="49"/>
         <source>About ReplayGain Scanner Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sull&apos;estensione scansione ReplayGain</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="50"/>
         <source>ReplayGain Scanner Plugin for Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione scansione ReplayGain per Qmmp</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="51"/>
         <source>This plugin scans audio files and gives information for volume normalization</source>
-        <translation type="unfinished"></translation>
+        <translation>Questa estensione analizza i file audio e fornisce informazioni per la normalizzazione del volume</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="53"/>
         <source>Based on source code by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Basato su codice sorgente di:</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="54"/>
         <source>David Robinson &lt;David@Robinson.org&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>David Robinson &lt;David@Robinson.org&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="55"/>
         <source>Glen Sawyer &lt;mp3gain@hotmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Glen Sawyer &lt;mp3gain@hotmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="56"/>
         <source>Frank Klemm</source>
-        <translation type="unfinished"></translation>
+        <translation>Frank Klemm</translation>
     </message>
 </context>
 <context>
@@ -131,12 +131,12 @@
     <message>
         <location filename="../rgscanhelper.cpp" line="32"/>
         <source>ReplayGain Scanner</source>
-        <translation type="unfinished"></translation>
+        <translation>Scansione ReplayGain</translation>
     </message>
     <message>
         <location filename="../rgscanhelper.cpp" line="33"/>
         <source>Meta+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+R</translation>
     </message>
 </context>
 </TS>

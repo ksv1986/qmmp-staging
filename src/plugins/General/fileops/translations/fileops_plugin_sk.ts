@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>FileOps</name>
     <message>
         <location filename="../fileops.cpp" line="94"/>
         <location filename="../fileops.cpp" line="128"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="95"/>
@@ -38,7 +38,7 @@
         <location filename="../fileops.cpp" line="150"/>
         <location filename="../fileops.cpp" line="240"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastaviť</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="195"/>
@@ -103,12 +103,12 @@
     <message>
         <location filename="../hotkeydialog.ui" line="29"/>
         <source>Press the key combination you want to assign</source>
-        <translation type="unfinished"></translation>
+        <translation>Stlačte klávesovú kombináciu ktorú chcete priradiť</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="43"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyčistiť</translation>
     </message>
 </context>
 <context>
@@ -136,12 +136,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="63"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Skratka</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="79"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridať</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="92"/>
@@ -159,7 +159,7 @@
         <location filename="../settingsdialog.ui" line="126"/>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="133"/>
@@ -176,7 +176,7 @@
         <location filename="../settingsdialog.cpp" line="52"/>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Premenovať</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>

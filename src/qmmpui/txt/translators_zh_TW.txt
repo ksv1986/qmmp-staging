@@ -1,7 +1,8 @@
 Brazilian Portuguese:
-    Klaos Lacerda
     Bruno Gonçalves
+    Klaos Lacerda
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
 
 Bulgarian:
     Kiril Kirilov
@@ -17,11 +18,14 @@ Chinese Simplified:
     Mingye Wang
 
 Czech:
-    Karel Volný <kvolny@redhat.com>
     Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
 
 Dutch:
     Ronald Uitermark <ronald645@gmail.com>
+
+Finnish:
+    Jiri Grönroos
 
 French:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>
@@ -29,6 +33,7 @@ French:
     Stanislas Zeller <uncensored.assault@gmail.com>
 
 Galician:
+    Delio Docampo Cordeiro
     Óscar Pereira <oscarpereira1989@gmail.com>
 
 German:
@@ -45,8 +50,12 @@ Hebrew:
 Hungarian:
     Németh Gábor <sutee84@freemail.hu>
 
+Indonesian:
+    Wantoyo <wantoyek@gmail.com>
+
 Italian:
     Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
 
 Japanese:
     Ryota Shimamoto <liangtai.s16@gmail.com>
@@ -65,6 +74,7 @@ Portuguese:
     Sérgio Marques <smarquespt@gmail.com>
 
 Russian:
+    Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
 
 Serbian:
@@ -74,7 +84,9 @@ Slovak:
     Ján Ďanovský <dagsoftware@yahoo.com>
 
 Spanish:
+    Bohdan Shuba
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
 Turkish:
     Mustafa GUNAY <mustafagunay@pgmail.com>

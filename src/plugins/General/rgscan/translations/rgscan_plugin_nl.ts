@@ -16,12 +16,12 @@
     <message>
         <location filename="../rgscandialog.ui" line="42"/>
         <source>Title</source>
-        <translation type="unfinished">Naam</translation>
+        <translation>Naam</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="47"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Voortgang</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="52"/>
@@ -67,7 +67,7 @@
         <location filename="../rgscandialog.cpp" line="122"/>
         <location filename="../rgscandialog.cpp" line="233"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fout</translation>
     </message>
     <message>
         <location filename="../rgscandialog.cpp" line="132"/>
@@ -103,7 +103,7 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="53"/>

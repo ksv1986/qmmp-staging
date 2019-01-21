@@ -1159,7 +1159,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="66"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="67"/>
@@ -1222,12 +1222,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="307"/>
         <source>Show splitters</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan pemisahan</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="314"/>
         <source>Alternate splitter color</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna pemisah alternatif</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="416"/>

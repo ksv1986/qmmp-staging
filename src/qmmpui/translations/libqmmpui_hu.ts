@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../forms/columneditor.ui" line="64"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="29"/>
@@ -132,42 +132,42 @@
     <message>
         <location filename="../columneditor.cpp" line="85"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Előadó</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="86"/>
         <source>Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="90"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Cím</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="93"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Műfaj</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="94"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Megjegyzés</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="95"/>
         <source>Composer</source>
-        <translation type="unfinished"></translation>
+        <translation>Szerző</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="96"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation>Időtartam</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="101"/>
         <source>Year</source>
-        <translation type="unfinished"></translation>
+        <translation>Év</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="100"/>
@@ -235,7 +235,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="58"/>
         <source>Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejátszási lista</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="67"/>
@@ -264,6 +264,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../forms/configdialog.ui" line="143"/>
+        <source>Convert %20 to blanks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../forms/configdialog.ui" line="129"/>
         <source>Load metadata from files</source>
         <translation type="unfinished"></translation>
@@ -274,13 +279,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="143"/>
-        <source>Convert %20 to blanks</source>
+        <location filename="../forms/configdialog.ui" line="150"/>
+        <source>Group format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="160"/>
         <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="170"/>
+        <source>Read tags while loading a playlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -300,42 +310,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="421"/>
-        <source>Cover Image Retrieve</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/configdialog.ui" line="427"/>
-        <source>Use separate image files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/configdialog.ui" line="437"/>
-        <source>Include files:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/configdialog.ui" line="459"/>
-        <source>Recursive search depth:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/configdialog.ui" line="270"/>
-        <location filename="../configdialog.cpp" line="312"/>
-        <source>Preferences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/configdialog.ui" line="150"/>
-        <source>Group format:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/configdialog.ui" line="170"/>
-        <source>Read tags while loading a playlist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../forms/configdialog.ui" line="209"/>
         <source>Miscellaneous</source>
         <translation type="unfinished"></translation>
@@ -348,6 +322,12 @@
     <message>
         <location filename="../forms/configdialog.ui" line="222"/>
         <source>Clear previous playlist when opening new one</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="270"/>
+        <location filename="../configdialog.cpp" line="312"/>
+        <source>Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -394,6 +374,26 @@
     <message>
         <location filename="../forms/configdialog.ui" line="404"/>
         <source>Add files from command line to this playlist:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="421"/>
+        <source>Cover Image Retrieve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="427"/>
+        <source>Use separate image files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="437"/>
+        <source>Include files:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="459"/>
+        <source>Recursive search depth:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="807"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="823"/>
@@ -510,7 +510,7 @@
     <message>
         <location filename="../configdialog.cpp" line="65"/>
         <source>Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="66"/>
@@ -545,7 +545,7 @@
     <message>
         <location filename="../configdialog.cpp" line="231"/>
         <source>Visualization</source>
-        <translation type="unfinished"></translation>
+        <translation>Vizualizáció</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="242"/>
@@ -718,12 +718,12 @@
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
         <source>Load</source>
-        <translation type="unfinished"></translation>
+        <translation>Betölt</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="83"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Töröl</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
@@ -746,7 +746,7 @@
     <message>
         <location filename="../coverviewer.cpp" line="35"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mentés másként...</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="68"/>
@@ -780,7 +780,7 @@
     <message>
         <location filename="../forms/detailsdialog.ui" line="47"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/detailsdialog.ui" line="63"/>
@@ -800,12 +800,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="240"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Cím</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="241"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Előadó</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="242"/>
@@ -815,27 +815,27 @@
     <message>
         <location filename="../detailsdialog.cpp" line="243"/>
         <source>Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="244"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Megjegyzés</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="245"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Műfaj</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="246"/>
         <source>Composer</source>
-        <translation type="unfinished"></translation>
+        <translation>Szerző</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="247"/>
         <source>Year</source>
-        <translation type="unfinished"></translation>
+        <translation>Év</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="248"/>
@@ -845,12 +845,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="249"/>
         <source>Disc number</source>
-        <translation type="unfinished"></translation>
+        <translation>Lemezszám</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="267"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation>Időtartam</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
@@ -969,12 +969,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Előadó</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
@@ -984,7 +984,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Cím</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
@@ -1004,22 +1004,22 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Műfaj</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="40"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Megjegyzés</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="41"/>
         <source>Composer</source>
-        <translation type="unfinished"></translation>
+        <translation>Szerző</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation>Időtartam</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
@@ -1074,12 +1074,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>Year</source>
-        <translation type="unfinished"></translation>
+        <translation>Év</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="50"/>
         <source>Condition</source>
-        <translation type="unfinished"></translation>
+        <translation>Feltétel</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="49"/>
@@ -1115,7 +1115,7 @@
     <message>
         <location filename="../playlistheadermodel.cpp" line="186"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Cím</translation>
     </message>
     <message>
         <location filename="../playlistheadermodel.cpp" line="187"/>
@@ -1129,7 +1129,7 @@
         <location filename="../playlistmanager.cpp" line="172"/>
         <location filename="../playlistmanager.cpp" line="317"/>
         <source>Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejátszási lista</translation>
     </message>
 </context>
 <context>
@@ -1150,7 +1150,7 @@
     <message>
         <location filename="../qmmpuisettings.cpp" line="57"/>
         <source>Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejátszási lista</translation>
     </message>
 </context>
 <context>
@@ -1241,12 +1241,12 @@
     <message>
         <location filename="../forms/templateeditor.ui" line="39"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Visszaállít</translation>
     </message>
     <message>
         <location filename="../forms/templateeditor.ui" line="46"/>
         <source>Insert</source>
-        <translation type="unfinished"></translation>
+        <translation>Beszúr</translation>
     </message>
 </context>
 <context>

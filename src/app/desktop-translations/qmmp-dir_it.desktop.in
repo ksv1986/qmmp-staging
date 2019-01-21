@@ -1,0 +1,19 @@
+[Desktop Entry]
+X-Desktop-File-Install-Version=0.11
+Name=Qmmp
+Comment=Qt-based Multimedia Player
+GenericName=Audio player
+Exec=qmmp-0 %F
+Icon=qmmp-0
+Terminal=false
+NoDisplay=true
+Type=Application
+Categories=AudioVideo;Player;Audio;Qt;
+MimeType=inode/directory;
+X-KDE-StartupNotify=false
+
+
+# Translations
+Name[it]=Qmmp
+Comment[it]=Riproduttore audio basato su Qt (Qt-based Multimedia Player)
+GenericName[it]=Riproduttore audio

@@ -6,12 +6,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Status Icon Plugin Settings</source>
-        <translation>Impostazione del modulo icona di stato</translation>
+        <translation>Impostazione dell&apos;estensione icona di stato</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="79"/>
-        <source>Tooltip</source>
-        <translation>Strumento suggerimenti</translation>
+        <location filename="../settingsdialog.ui" line="29"/>
+        <source>Balloon message</source>
+        <translation>Messaggio a comparsa</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
@@ -20,9 +20,14 @@
         <translation>Ritardo, ms:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="29"/>
-        <source>Balloon message</source>
-        <translation>Comparsa messaggio</translation>
+        <location filename="../settingsdialog.ui" line="79"/>
+        <source>Tooltip</source>
+        <translation>Suggerimento</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="91"/>
+        <source>Try to split file name when no tag</source>
+        <translation>Dividi nome file se senza tag</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="98"/>
@@ -40,16 +45,6 @@
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="225"/>
-        <source>Edit template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="91"/>
-        <source>Try to split file name when no tag</source>
-        <translation>Dividi nome file se senza tag</translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.ui" line="174"/>
         <source>Cover size:</source>
         <translation>Dimensione copertina:</translation>
@@ -60,6 +55,11 @@
         <translation>32</translation>
     </message>
     <message>
+        <location filename="../settingsdialog.ui" line="225"/>
+        <source>Edit template</source>
+        <translation>Modifica modello</translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="250"/>
         <source>Use standard icons</source>
         <translation>Usa icone standard</translation>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="80"/>
         <source>Tooltip Template</source>
-        <translation>Modello strumento suggerimento</translation>
+        <translation>Modello suggerimento</translation>
     </message>
 </context>
 <context>
@@ -75,7 +75,7 @@
     <message>
         <location filename="../statusicon.cpp" line="71"/>
         <source>Play</source>
-        <translation>Esegui</translation>
+        <translation>Riproduci</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="72"/>
@@ -105,12 +105,12 @@
     <message>
         <location filename="../statusicon.cpp" line="120"/>
         <source>Stopped</source>
-        <translation type="unfinished">Fermato</translation>
+        <translation>Fermato</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="145"/>
         <source>Now Playing</source>
-        <translation>Brano in esecuzione: </translation>
+        <translation>In riproduzione</translation>
     </message>
 </context>
 <context>
@@ -118,12 +118,17 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="29"/>
         <source>Status Icon Plugin</source>
-        <translation>Modulo icona di stato</translation>
+        <translation>Estensione icona di stato</translation>
+    </message>
+    <message>
+        <location filename="../statusiconfactory.cpp" line="49"/>
+        <source>About Status Icon Plugin</source>
+        <translation>Informazioni sull&apos;estensione icona di stato</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="50"/>
         <source>Qmmp Status Icon Plugin</source>
-        <translation>Modulo icona di stato per Qmmp</translation>
+        <translation>Estensione icona di stato per Qmmp</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="51"/>
@@ -139,11 +144,6 @@
         <location filename="../statusiconfactory.cpp" line="53"/>
         <source>Artur Guzik &lt;a.guzik88@gmail.com&gt;</source>
         <translation>Artur Guzik &lt;a.guzik88@gmail.com&gt;</translation>
-    </message>
-    <message>
-        <location filename="../statusiconfactory.cpp" line="49"/>
-        <source>About Status Icon Plugin</source>
-        <translation>Info sul modulo icona di stato</translation>
     </message>
 </context>
 </TS>

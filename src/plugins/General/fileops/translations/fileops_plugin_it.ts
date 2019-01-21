@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="it">
 <context>
     <name>FileOps</name>
     <message>
@@ -18,13 +18,14 @@
     <message>
         <location filename="../fileops.cpp" line="132"/>
         <source>Move Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta file</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="133"/>
         <source>Are you sure you want to move %n file(s)?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Vuoi davvero spostare %n file?</numerusform>
+            <numerusform>Vuoi davvero spostare %n file?</numerusform>
         </translation>
     </message>
     <message>
@@ -41,28 +42,29 @@
     <message>
         <location filename="../fileops.cpp" line="195"/>
         <source>Copying file %1/%2</source>
-        <translation>Copia del file</translation>
+        <translation>Copia in corso del file %1/%2</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="239"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Spostamento</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="272"/>
         <source>Moving file %1/%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Spostamento del file %1/%2</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="110"/>
         <source>Remove Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimozione file</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="111"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
         <translation>
-            <numerusform>Vuoi davvero rimuovere %n file(s) dal disco?</numerusform>
+            <numerusform>Vuoi davvero rimuovere %n file dal disco?</numerusform>
+            <numerusform>Vuoi davvero rimuovere %n file dal disco?</numerusform>
         </translation>
     </message>
 </context>
@@ -71,22 +73,22 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="30"/>
         <source>File Operations Plugin</source>
-        <translation>Modulo Operazioni su file</translation>
+        <translation>Estensione per le operazioni su file</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="50"/>
         <source>About File Operations Plugin</source>
-        <translation>Info sul modulo Operazioni file</translation>
+        <translation>Informazioni sull&apos;estensione per le operazioni su file</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="51"/>
         <source>Qmmp File Operations Plugin</source>
-        <translation>Modulo Operazioni su file di Qmmp</translation>
+        <translation>Estensione per le operazioni su file di Qmmp</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -110,44 +112,9 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="51"/>
-        <location filename="../settingsdialog.cpp" line="131"/>
-        <source>Copy</source>
-        <translation>Copia</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="52"/>
-        <location filename="../settingsdialog.cpp" line="132"/>
-        <source>Rename</source>
-        <translation>Rinomina</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="92"/>
-        <location filename="../settingsdialog.cpp" line="54"/>
-        <location filename="../settingsdialog.cpp" line="134"/>
-        <source>Remove</source>
-        <translation>Rimuovi</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="137"/>
-        <source>New action</source>
-        <translation>Nuova azione</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="53"/>
-        <location filename="../settingsdialog.cpp" line="133"/>
-        <source>Move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="232"/>
-        <source>Choose a directory</source>
-        <translation>Scegli una cartella</translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Operations Settings</source>
-        <translation>Impostazione operazioni sul file</translation>
+        <translation>Impostazioni per le operazioni su file</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
@@ -170,10 +137,16 @@
         <translation>Scorciatoia</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="126"/>
-        <location filename="../settingsdialog.ui" line="143"/>
-        <source>...</source>
-        <translation>...</translation>
+        <location filename="../settingsdialog.ui" line="79"/>
+        <source>Add</source>
+        <translation>Aggiungi</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="92"/>
+        <location filename="../settingsdialog.cpp" line="54"/>
+        <location filename="../settingsdialog.cpp" line="134"/>
+        <source>Remove</source>
+        <translation>Rimuovi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="116"/>
@@ -181,14 +154,43 @@
         <translation>Destinazione:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="79"/>
-        <source>Add</source>
-        <translation>Aggiungi</translation>
+        <location filename="../settingsdialog.ui" line="126"/>
+        <location filename="../settingsdialog.ui" line="143"/>
+        <source>...</source>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="133"/>
         <source>File name pattern:</source>
-        <translation>Schema nome del file</translation>
+        <translation>Schema nome del file:</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="51"/>
+        <location filename="../settingsdialog.cpp" line="131"/>
+        <source>Copy</source>
+        <translation>Copia</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="52"/>
+        <location filename="../settingsdialog.cpp" line="132"/>
+        <source>Rename</source>
+        <translation>Rinomina</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="53"/>
+        <location filename="../settingsdialog.cpp" line="133"/>
+        <source>Move</source>
+        <translation>Sposta</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="137"/>
+        <source>New action</source>
+        <translation>Nuova azione</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="232"/>
+        <source>Choose a directory</source>
+        <translation>Scegli una cartella</translation>
     </message>
 </context>
 </TS>

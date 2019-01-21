@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>Converter</name>
     <message>
@@ -13,7 +13,7 @@
         <location filename="../converter.cpp" line="144"/>
         <location filename="../converter.cpp" line="211"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="179"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastaviť</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="108"/>
@@ -86,7 +86,7 @@
     <message>
         <location filename="../converterdialog.ui" line="39"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Názov</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="198"/>
@@ -98,7 +98,7 @@
         <location filename="../converterdialog.cpp" line="353"/>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Vymazať</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="353"/>
@@ -177,12 +177,12 @@
     <message>
         <location filename="../preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor predvolieb</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="29"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Všeobecné</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="35"/>
@@ -202,7 +202,7 @@
     <message>
         <location filename="../preseteditor.ui" line="77"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Voľby</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="83"/>

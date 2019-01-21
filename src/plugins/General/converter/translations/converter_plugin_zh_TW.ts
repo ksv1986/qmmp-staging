@@ -51,12 +51,12 @@
     <message>
         <location filename="../converterdialog.ui" line="63"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>檔案輸出目錄:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="80"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>輸入檔案名稱:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="97"/>
@@ -156,7 +156,7 @@
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -187,7 +187,7 @@
     <message>
         <location filename="../preseteditor.ui" line="35"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="45"/>

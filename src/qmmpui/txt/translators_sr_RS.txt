@@ -1,68 +1,97 @@
-Португалски (Бразил):
-    Klaos Lacerda
+Brazilian Portuguese:
     Bruno Gonçalves
+    Klaos Lacerda
     Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
 
-Традиционални кинески:
+Bulgarian:
+    Kiril Kirilov
+
+Chinese Traditional:
     lon <lon83129@126.com>
+    Jeff Huang
 
-Поједностављени кинески:
+Chinese Simplified:
     lon <lon83129@126.com>
+    mabier
+    Mingcong Bai
+    Mingye Wang
 
-Чешки:
+Czech:
+    Jaroslav Lichtblau
     Karel Volný <kvolny@redhat.com>
 
-Холандски:
+Dutch:
     Ronald Uitermark <ronald645@gmail.com>
 
-Француски:
+Finnish:
+    Jiri Grönroos
+
+French:
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
+    Sébastien Aperghis-Tramoni (maddingue)
     Stanislas Zeller <uncensored.assault@gmail.com>
-    
-Галицијски:
+
+Galician:
+    Delio Docampo Cordeiro
     Óscar Pereira <oscarpereira1989@gmail.com>
 
-Немачки:
+German:
+    Ettore Atalan
     Stefan Koelling <stefankoelling.ext@googlemail.com>
     Panagiotis Papadopoulos <pano_90@gmx.net>
 
-Хебрејски:
+Greek:
+    Dimitrios Glentadakis
+
+Hebrew:
     Genghis Khan <genghiskhan@gmx.ca>
 
-Мађарски:
+Hungarian:
     Németh Gábor <sutee84@freemail.hu>
 
-Италијански:
-    Gian Paolo Renello <emmerkar@gmail.com>
+Indonesian:
+    Wantoyo <wantoyek@gmail.com>
 
-Јапански:
+Italian:
+    Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
+
+Japanese:
     Ryota Shimamoto <liangtai.s16@gmail.com>
 
-Казашки:
+Kazakh:
     Baurzhan Muftakhidinov <baurthefirst@gmail.com>
 
-Литвански:
+Lithuanian:
     Algirdas Butkus <butkus.algirdas@gmail.com>
 
-Пољски:
+Polish:
+    Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
 
-Руски:
+Portuguese:
+    Sérgio Marques <smarquespt@gmail.com>
+
+Russian:
+    Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
-    
-Српски:
+
+Serbian:
     Mladen Pejaković <pejakm@autistici.org>
 
-Словачки:
+Slovak:
     Ján Ďanovský <dagsoftware@yahoo.com>
 
-Шпански:
+Spanish:
+    Bohdan Shuba
     Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
 
-Турски:
+Turkish:
     Mustafa GUNAY <mustafagunay@pgmail.com>
     Bilgesu Güngör <h.ibrahim.gungor@gmail.com>
+    Uğur KUYU
 
-Украјински:
+Ukrainian:
     Gennadi Motsyo <drool@altlinux.ru>
-
-

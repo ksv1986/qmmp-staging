@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>QmmpFileDialog</name>
     <message>
@@ -19,7 +19,7 @@
         <location filename="../qmmpfiledialog.ui" line="212"/>
         <location filename="../qmmpfiledialog.ui" line="237"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="190"/>

@@ -3,8 +3,8 @@ X-Desktop-File-Install-Version=0.11
 Name=Qmmp
 Comment=Qt-based Multimedia Player
 GenericName=Audio player
-Exec=qmmp %F
-Icon=qmmp
+Exec=qmmp-0 %F
+Icon=qmmp-0
 Terminal=false
 NoDisplay=true
 Type=Application
@@ -14,7 +14,6 @@ X-KDE-StartupNotify=false
 
 
 # Translations
+Name[el]=Qmmp
 Comment[el]=Αναπαραγωγέας πολυμέσων βασισμένος στην Qt
 GenericName[el]=Αναπαραγωγέας ήχου
-Name[el]=Qmmp
-Icon[el]=qmmp

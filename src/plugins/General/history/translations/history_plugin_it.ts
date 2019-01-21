@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="it">
 <context>
     <name>DateInputDialog</name>
     <message>
         <location filename="../dateinputdialog.ui" line="14"/>
         <source>Select Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona data</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../history.cpp" line="59"/>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Cronologia</translation>
     </message>
 </context>
 <context>
@@ -22,27 +22,27 @@
     <message>
         <location filename="../historyfactory.cpp" line="31"/>
         <source>Listening History Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione cronologia d&apos;ascolto</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="51"/>
         <source>About Listening History Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sull&apos;estensione cronologia d&apos;ascolto</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="52"/>
         <source>Qmmp Listening History Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione cronologia d&apos;ascolto per Qmmp</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="53"/>
         <source>This plugin collects information about listened tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>Questa estensione raccoglie informazioni sulle tracce ascoltate</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -50,12 +50,12 @@
     <message>
         <location filename="../historysettingsdialog.ui" line="14"/>
         <source>Listening History Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni dell&apos;estensione cronologia d&apos;ascolto</translation>
     </message>
     <message>
         <location filename="../historysettingsdialog.ui" line="31"/>
         <source>Title format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Formato del titolo : </translation>
     </message>
 </context>
 <context>
@@ -64,32 +64,32 @@
         <location filename="../historywindow.ui" line="14"/>
         <location filename="../historywindow.ui" line="110"/>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Cronologia</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="29"/>
         <source>Time Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervallo di tempo</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="35"/>
         <source>From:</source>
-        <translation type="unfinished"></translation>
+        <translation>Da:</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="52"/>
         <source>To:</source>
-        <translation type="unfinished"></translation>
+        <translation>A:</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="69"/>
         <source>Last week</source>
-        <translation type="unfinished"></translation>
+        <translation>Settimana scorsa</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="76"/>
         <source>Last month</source>
-        <translation type="unfinished"></translation>
+        <translation>Mese scorso</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="83"/>
@@ -99,13 +99,13 @@
     <message>
         <location filename="../historywindow.ui" line="129"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Data</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="134"/>
         <location filename="../historywindow.ui" line="183"/>
         <source>Song</source>
-        <translation type="unfinished"></translation>
+        <translation>Brano</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="143"/>
@@ -115,7 +115,7 @@
     <message>
         <location filename="../historywindow.ui" line="156"/>
         <source>Day</source>
-        <translation type="unfinished"></translation>
+        <translation>Giorno</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="161"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../historywindow.ui" line="210"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Artista</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="224"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../historywindow.ui" line="237"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Genere</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="118"/>

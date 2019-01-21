@@ -4,8 +4,8 @@ Name=Qmmp
 Comment=Qt-based Multimedia Player
 GenericName=Audio player
 Keywords=player;audio;video;multimedia;
-Exec=qmmp %F
-Icon=qmmp
+Exec=qmmp-0 %F
+Icon=qmmp-0
 Terminal=false
 Type=Application
 Categories=AudioVideo;Player;Audio;Qt;
@@ -15,27 +15,26 @@ Actions=Play;Pause;Stop;Previous;Next;
 
 [Desktop Action Play]
 Name=Play
-Exec=qmmp --no-start --play
+Exec=qmmp-0 --no-start --play
 
 [Desktop Action Pause]
 Name=Pause
-Exec=qmmp --no-start --pause
+Exec=qmmp-0 --no-start --pause
 
 [Desktop Action Stop]
 Name=Stop
-Exec=qmmp --no-start --stop
+Exec=qmmp-0 --no-start --stop
 
 [Desktop Action Previous]
 Name=Previous
-Exec=qmmp --no-start --previous
+Exec=qmmp-0 --no-start --previous
 
 [Desktop Action Next]
 Name=Next
-Exec=qmmp --no-start --next
+Exec=qmmp-0 --no-start --next
 
 
 # Translations
 Comment[zh_CN]=基于 Qt 的多媒体播放器
 GenericName[zh_CN]=音频播放器
 Name[zh_CN]=Qmmp
-Icon[zh_CN]=qmmp

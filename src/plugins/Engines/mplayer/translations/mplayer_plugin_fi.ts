@@ -64,12 +64,12 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="69"/>
         <source>Video codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Videokoodekki</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="70"/>
         <source>Aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvasuhde</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
@@ -80,12 +80,12 @@
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="74"/>
         <source>Audio codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Äänikoodekki</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>

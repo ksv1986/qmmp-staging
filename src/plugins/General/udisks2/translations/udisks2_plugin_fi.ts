@@ -16,27 +16,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
         <source>Add tracks to playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää kappaleet soittolistaan automaattisesti</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Remove tracks from playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista kappaleet soittolistalta automaattisesti</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Removable Device Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Irrotettavan laitteen havaitseminen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
         <source>Add files to playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää tiedostot soittolistaan automaattisesti</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Remove files from playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista tiedostot soittolistasta automaattisesti</translation>
     </message>
 </context>
 <context>

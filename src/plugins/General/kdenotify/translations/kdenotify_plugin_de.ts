@@ -42,12 +42,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Notification delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Benachrichtigungsverzögerung:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>s</source>
-        <translation type="unfinished"></translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>

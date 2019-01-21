@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>Lyrics</name>
     <message>
@@ -45,44 +45,6 @@
 <context>
     <name>LyricsWindow</name>
     <message>
-        <location filename="../lyricswindow.cpp" line="76"/>
-        <location filename="../lyricswindow.cpp" line="209"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.cpp" line="79"/>
-        <location filename="../lyricswindow.cpp" line="103"/>
-        <location filename="../lyricswindow.cpp" line="109"/>
-        <location filename="../lyricswindow.cpp" line="117"/>
-        <location filename="../lyricswindow.cpp" line="125"/>
-        <location filename="../lyricswindow.cpp" line="136"/>
-        <source>Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.cpp" line="130"/>
-        <location filename="../lyricswindow.cpp" line="165"/>
-        <source>Not found</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.ui" line="36"/>
-        <source>No connection</source>
-        <translation>Bağlantı yok</translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.cpp" line="151"/>
-        <location filename="../lyricswindow.cpp" line="178"/>
-        <source>Receiving</source>
-        <translation>Alınıyor</translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.cpp" line="179"/>
-        <source>Lyrics: %1 - %2</source>
-        <translation>Şarkı Sözü: %1 - %2</translation>
-    </message>
-    <message>
         <location filename="../lyricswindow.ui" line="14"/>
         <source>Lyrics Plugin</source>
         <translation>Şarkı Sözü Eklentisi</translation>
@@ -101,6 +63,44 @@
         <location filename="../lyricswindow.ui" line="65"/>
         <source>Search</source>
         <translation>Ara</translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.ui" line="36"/>
+        <source>No connection</source>
+        <translation>Bağlantı yok</translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.cpp" line="76"/>
+        <location filename="../lyricswindow.cpp" line="209"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.cpp" line="79"/>
+        <location filename="../lyricswindow.cpp" line="103"/>
+        <location filename="../lyricswindow.cpp" line="109"/>
+        <location filename="../lyricswindow.cpp" line="117"/>
+        <location filename="../lyricswindow.cpp" line="125"/>
+        <location filename="../lyricswindow.cpp" line="136"/>
+        <source>Error</source>
+        <translation>Hata</translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.cpp" line="130"/>
+        <location filename="../lyricswindow.cpp" line="165"/>
+        <source>Not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.cpp" line="151"/>
+        <location filename="../lyricswindow.cpp" line="178"/>
+        <source>Receiving</source>
+        <translation>Alınıyor</translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.cpp" line="179"/>
+        <source>Lyrics: %1 - %2</source>
+        <translation>Şarkı Sözü: %1 - %2</translation>
     </message>
 </context>
 </TS>

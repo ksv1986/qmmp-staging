@@ -6,42 +6,42 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">Plugin MPEG</translation>
+        <translation>Plugin MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">File MPEG</translation>
+        <translation>File MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">Tentang Plugin Audio MPEG</translation>
+        <translation>Tentang Plugin Audio MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="379"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dikompilasi terhadap:</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="388"/>
         <source>mpg123, API version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>mpg123, versi API: %1</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="392"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ditulis oleh: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">Kode sumber berdasarkan pada mq3 dan proyek madplay</translation>
+        <translation>Kode sumber berdasarkan pada mq3 dan proyek madplay</translation>
     </message>
 </context>
 <context>
@@ -80,17 +80,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Decoder</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>MAD</source>
-        <translation type="unfinished"></translation>
+        <translation>MAD</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>MPG123</source>
-        <translation type="unfinished"></translation>
+        <translation>MPG123</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="77"/>

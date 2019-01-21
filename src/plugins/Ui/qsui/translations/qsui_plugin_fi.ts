@@ -26,7 +26,7 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="47"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="49"/>
@@ -621,17 +621,17 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="33"/>
         <source>Change shortcut...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaihda pikanäppäintä...</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="55"/>
         <source>Reset Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Palauta pikanäppäimet</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="56"/>
         <source>Do you want to restore default shortcuts?</source>
-        <translation type="unfinished"></translation>
+        <translation>Haluatko palauttaa oletusarvoiset pikanäppäimet?</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="68"/>
@@ -1001,12 +1001,12 @@
     <message>
         <location filename="../playlistheader.cpp" line="65"/>
         <source>Add Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää sarake</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="66"/>
         <source>Edit Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa saraketta</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="67"/>
@@ -1044,7 +1044,7 @@
     <message>
         <location filename="../playlistheader.cpp" line="85"/>
         <source>Remove Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista sarake</translation>
     </message>
 </context>
 <context>
@@ -1233,7 +1233,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="138"/>
         <source>Single Column Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Yhden sarakkeen tila</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="185"/>
@@ -1469,7 +1469,7 @@
     <message>
         <location filename="../forms/shortcutdialog.ui" line="14"/>
         <source>Change Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaihda pikanäppäintä</translation>
     </message>
     <message>
         <location filename="../forms/shortcutdialog.ui" line="29"/>

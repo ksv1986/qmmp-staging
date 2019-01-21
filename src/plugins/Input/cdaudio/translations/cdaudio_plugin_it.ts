@@ -6,32 +6,32 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="39"/>
         <source>CD Audio Plugin</source>
-        <translation>Modulo CD-Audio</translation>
+        <translation>Estensione CD Audio</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="86"/>
         <source>About CD Audio Plugin</source>
-        <translation>Informazioni sul modulo CD-Audio</translation>
+        <translation>Informazioni sull&apos;estensione CD Audio</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="87"/>
         <source>Qmmp CD Audio Plugin</source>
-        <translation>Modulo CD-Audio per Qmmp</translation>
+        <translation>Estensione CD Audio per Qmmp</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="88"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
-        <translation>Compilazione basata su libcdio-%1 e libcddb-%2</translation>
+        <translation>Compilato con libcdio-%1 e libcddb-%2</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="90"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="91"/>
         <source>Usage: open cdda:/// using Add URL dialog or command line</source>
-        <translation>Uso: aprire cdda:// nella finestra di dialgo degli URL, o via linea di comando</translation>
+        <translation>Uso: aprire cdda:/// dalla finestra di dialogo di aggiunta URL, o via riga di comando</translation>
     </message>
 </context>
 <context>
@@ -39,12 +39,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>CD Audio Plugin Settings</source>
-        <translation>Impostazioni del modulo CD-Audio</translation>
+        <translation>Impostazioni dell&apos;estensione CD Audio</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Override device:</source>
-        <translation>Sovrascrivi dispositivo</translation>
+        <translation>Sovrascrivi dispositivo:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Use cd-text</source>
-        <translation>Usa CD-Text</translation>
+        <translation>Usa CD Text</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Use HTTP instead of CDDBP</source>
-        <translation>usa HTTP invece di CDDBP</translation>
+        <translation>Usa HTTP invece di CDDBP</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="88"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="105"/>
         <source>Port:</source>
-        <translation></translation>
+        <translation>Porta:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="117"/>

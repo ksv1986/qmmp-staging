@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="it">
 <context>
     <name>Converter</name>
     <message>
         <location filename="../converter.cpp" line="129"/>
         <location filename="../converter.cpp" line="229"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Annullato</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="144"/>
         <location filename="../converter.cpp" line="211"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="179"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversione</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="240"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Codifica</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="278"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Terminata</translation>
     </message>
 </context>
 <context>
@@ -36,99 +36,99 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertitore audio</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Avanzamento</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Stato</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cartella di uscita:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="80"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome file d&apos;uscita:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="97"/>
         <source>Preset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Preimpostazione:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="114"/>
         <source>Overwrite existing files</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovrascrivi i file esistenti</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished"></translation>
+        <translation>Converti</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferma</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="108"/>
         <source>Choose a directory</source>
-        <translation type="unfinished">Scegli una cartella</translation>
+        <translation>Scegli una cartella</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="39"/>
         <source>Title</source>
-        <translation type="unfinished">Titolo</translation>
+        <translation>Titolo</translation>
+    </message>
+    <message>
+        <location filename="../converterdialog.cpp" line="198"/>
+        <source>Create a Copy</source>
+        <translation>Crea una copia</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="129"/>
         <location filename="../converterdialog.cpp" line="353"/>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
-        <translation type="unfinished"></translation>
+        <translation>In attesa</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="196"/>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Crea</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="197"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../converterdialog.cpp" line="198"/>
-        <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile eseguire «%1». Programma non trovato.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il processo «%1» ha terminato con un errore.</translation>
     </message>
 </context>
 <context>
@@ -136,27 +136,27 @@
     <message>
         <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione convertitore</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sull&apos;estensione convertitore</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione convertitore per Qmmp</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
-        <translation type="unfinished"></translation>
+        <translation>Questa estensione converte i file audio supportati in altri formati di file usando codificatori esterni a riga di comando</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -164,12 +164,12 @@
     <message>
         <location filename="../converterhelper.cpp" line="33"/>
         <source>Convert</source>
-        <translation type="unfinished"></translation>
+        <translation>Converti</translation>
     </message>
     <message>
         <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+C</translation>
     </message>
 </context>
 <context>
@@ -177,57 +177,57 @@
     <message>
         <location filename="../preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor delle impostazioni</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="29"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Generale</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="35"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="45"/>
         <source>Extension:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="58"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="77"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opzioni</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="83"/>
         <source>Write tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Scrivi tag</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="90"/>
         <source>Convert to 16 bit</source>
-        <translation type="unfinished"></translation>
+        <translation>Converti a 16 bit</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="37"/>
         <source>%1 (Read Only)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (sola lettura)</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="70"/>
         <source>Output file</source>
-        <translation type="unfinished"></translation>
+        <translation>File d&apos;uscita</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="71"/>
         <source>Input file</source>
-        <translation type="unfinished"></translation>
+        <translation>File d&apos;ingresso</translation>
     </message>
 </context>
 </TS>

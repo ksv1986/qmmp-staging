@@ -26,7 +26,7 @@
     <message>
         <location filename="../decoderopusfactory.cpp" line="118"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../opusmetadatamodel.cpp" line="59"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versie</translation>
     </message>
 </context>
 </TS>

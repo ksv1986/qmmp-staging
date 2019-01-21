@@ -95,7 +95,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>הרץ</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>

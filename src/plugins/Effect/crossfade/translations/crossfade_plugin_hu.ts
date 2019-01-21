@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>EffectCrossfadeFactory</name>
     <message>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
 </context>
 </TS>

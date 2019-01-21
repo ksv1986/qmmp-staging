@@ -54,7 +54,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>&amp;Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>貼上(&amp;P)</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>&amp;Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>停止（&amp;S）</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>空白鍵</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
@@ -109,7 +109,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
         <source>J</source>
-        <translation type="unfinished"></translation>
+        <translation>J</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
@@ -174,7 +174,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="57"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="58"/>
@@ -304,7 +304,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>重新整理</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
@@ -314,7 +314,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="37"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇色彩</translation>
     </message>
 </context>
 <context>
@@ -636,7 +636,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="68"/>
         <source>Playback</source>
-        <translation type="unfinished"></translation>
+        <translation>播放方式</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="74"/>
@@ -710,7 +710,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="114"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>封面</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="123"/>
@@ -1006,7 +1006,7 @@
     <message>
         <location filename="../playlistheader.cpp" line="66"/>
         <source>Edit Column</source>
-        <translation type="unfinished"></translation>
+        <translation>編輯欄位</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="67"/>
@@ -1092,7 +1092,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>毫秒</translation>
     </message>
 </context>
 <context>
@@ -1358,7 +1358,7 @@
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>默認</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
@@ -1391,7 +1391,7 @@
     <message>
         <location filename="../qsuianalyzer.cpp" line="228"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>封面</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="231"/>

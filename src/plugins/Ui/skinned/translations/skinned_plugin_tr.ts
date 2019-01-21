@@ -6,67 +6,62 @@
     <message>
         <location filename="../actionmanager.cpp" line="38"/>
         <source>&amp;Play</source>
-        <translation type="unfinished">&amp;Çal</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="38"/>
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="39"/>
         <source>&amp;Pause</source>
-        <translation type="unfinished">&amp;Duraklat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="39"/>
         <source>C</source>
-        <translation type="unfinished">C</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>&amp;Stop</source>
-        <translation type="unfinished">&amp;Durdur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>&amp;Previous</source>
-        <translation type="unfinished">&amp;Önceki</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>&amp;Next</source>
-        <translation type="unfinished">&amp;Sonraki</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>B</source>
-        <translation type="unfinished">B</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
         <source>&amp;Play/Pause</source>
-        <translation type="unfinished">&amp;Oynat/Duraklat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
         <source>Space</source>
-        <translation type="unfinished">Boşluk</translation>
-    </message>
-    <message>
-        <location filename="../actionmanager.cpp" line="44"/>
-        <source>J</source>
-        <translation type="unfinished">J</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
@@ -74,34 +69,39 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="44"/>
+        <source>J</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../actionmanager.cpp" line="45"/>
         <source>&amp;Repeat Playlist</source>
-        <translation type="unfinished">&amp;Çalma Listesini Yinele</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
         <source>R</source>
-        <translation type="unfinished">R</translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
         <source>&amp;Repeat Track</source>
-        <translation type="unfinished">&amp;Parçayı Yinele</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished">Ctrl+R</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>&amp;Shuffle</source>
-        <translation type="unfinished">&amp;Rastgele</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>S</source>
-        <translation type="unfinished">S</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">9</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
@@ -211,52 +211,52 @@
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
         <source>&amp;Add File</source>
-        <translation type="unfinished">&amp;Dosya Ekle</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
         <source>F</source>
-        <translation type="unfinished">F</translation>
+        <translation>F</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>&amp;Add Directory</source>
-        <translation type="unfinished">&amp;Dizin Ekle</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>D</source>
-        <translation type="unfinished">D</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="69"/>
         <source>&amp;Add Url</source>
-        <translation type="unfinished">&amp;Url Ekle</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="69"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>&amp;Remove Selected</source>
-        <translation type="unfinished">&amp;Seçileni Kaldır</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>Del</source>
-        <translation type="unfinished">Del</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>&amp;Remove All</source>
-        <translation type="unfinished">&amp;Hepsini Kaldır</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>&amp;Remove Unselected</source>
-        <translation type="unfinished">&amp;Seçilmemişleri Kaldır</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished">Yenile</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -281,42 +281,42 @@
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
         <source>Q</source>
-        <translation type="unfinished">Q</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Invert Selection</source>
-        <translation type="unfinished">Seçimi Tersine Çevir</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="81"/>
         <source>&amp;Select None</source>
-        <translation type="unfinished">&amp;Hiçbirini Seçme</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="82"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished">&amp;Tümünü Seç</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished">Ctrl+A</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>&amp;View Track Details</source>
-        <translation type="unfinished">&amp;Parça Detaylarını Göster</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>Alt+I</source>
-        <translation type="unfinished">Alt+I</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>&amp;New List</source>
-        <translation type="unfinished">&amp;Yeni Liste</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
@@ -336,22 +336,22 @@
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;Load List</source>
-        <translation type="unfinished">&amp;Liste Yükle</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>O</source>
-        <translation type="unfinished">O</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>&amp;Save List</source>
-        <translation type="unfinished">&amp;Listeyi Kaydet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>Shift+S</source>
-        <translation type="unfinished">Shift+S</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
@@ -361,7 +361,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
@@ -391,7 +391,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation>P</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
@@ -416,36 +416,41 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>&amp;Settings</source>
-        <translation type="unfinished">&amp;Ayarlar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished">Ctrl+P</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
         <source>&amp;About</source>
-        <translation type="unfinished">&amp;Hakkında</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
         <source>&amp;About Qt</source>
-        <translation type="unfinished">&amp;Qt Hakkında</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>&amp;Exit</source>
-        <translation type="unfinished">&amp;Çıkış</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished">Ctrl+Q</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>EqWidget</name>
+    <message>
+        <location filename="../eqwidget.cpp" line="46"/>
+        <source>Equalizer</source>
+        <translation>Ekolayzır</translation>
+    </message>
     <message>
         <location filename="../eqwidget.cpp" line="175"/>
         <location filename="../eqwidget.cpp" line="192"/>
@@ -468,6 +473,11 @@
         <translation>&amp;Otomatik Tanımlanmış Ayarları Kaydet</translation>
     </message>
     <message>
+        <location filename="../eqwidget.cpp" line="282"/>
+        <source>&amp;Import</source>
+        <translation>&amp;İçe Aktar</translation>
+    </message>
+    <message>
         <location filename="../eqwidget.cpp" line="285"/>
         <source>&amp;Clear</source>
         <translation>&amp;Temizle</translation>
@@ -488,16 +498,6 @@
         <translation>tanımlanmış ayar #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="282"/>
-        <source>&amp;Import</source>
-        <translation>&amp;İçe Aktar</translation>
-    </message>
-    <message>
-        <location filename="../eqwidget.cpp" line="46"/>
-        <source>Equalizer</source>
-        <translation type="unfinished">Ekolayzır</translation>
-    </message>
-    <message>
         <location filename="../eqwidget.cpp" line="407"/>
         <source>Import Preset</source>
         <translation>Tanımlanmış Ayarları Al</translation>
@@ -508,17 +508,17 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıfırla</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Eylem</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="59"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Kısayol</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="33"/>
@@ -538,17 +538,17 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="70"/>
         <source>Volume</source>
-        <translation type="unfinished">Ses</translation>
+        <translation>Ses</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="76"/>
         <source>Playlist</source>
-        <translation type="unfinished">Çalma Listesi</translation>
+        <translation>Çalma Listesi</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="82"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Çeşitli</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="94"/>
@@ -787,7 +787,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="363"/>
         <source>Appearance</source>
-        <translation type="unfinished">Görünüm</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="364"/>
@@ -802,12 +802,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="443"/>
         <source>Playlist</source>
-        <translation type="unfinished">Çalma Listesi</translation>
+        <translation>Çalma Listesi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="461"/>
         <source>Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Ses</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="469"/>
@@ -822,6 +822,11 @@
 </context>
 <context>
     <name>PlayList</name>
+    <message>
+        <location filename="../playlist.cpp" line="55"/>
+        <source>Playlist</source>
+        <translation>Çalma Listesi</translation>
+    </message>
     <message>
         <location filename="../playlist.cpp" line="199"/>
         <source>&amp;Copy Selection To</source>
@@ -881,6 +886,12 @@
         <translation>Tarihe Göre</translation>
     </message>
     <message>
+        <location filename="../playlist.cpp" line="254"/>
+        <location filename="../playlist.cpp" line="294"/>
+        <source>By Track Number</source>
+        <translation>Parça Numarasına Göre</translation>
+    </message>
+    <message>
         <location filename="../playlist.cpp" line="260"/>
         <location filename="../playlist.cpp" line="300"/>
         <source>By File Creation Date</source>
@@ -913,6 +924,11 @@
         <translation>Listeyi Ters Çevir</translation>
     </message>
     <message>
+        <location filename="../playlist.cpp" line="321"/>
+        <source>Actions</source>
+        <translation>Eylemler</translation>
+    </message>
+    <message>
         <location filename="../playlist.cpp" line="591"/>
         <source>Rename Playlist</source>
         <translation type="unfinished"></translation>
@@ -926,22 +942,6 @@
         <location filename="../playlist.cpp" line="612"/>
         <source>&amp;New PlayList</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../playlist.cpp" line="254"/>
-        <location filename="../playlist.cpp" line="294"/>
-        <source>By Track Number</source>
-        <translation>Parça Numarasına Göre</translation>
-    </message>
-    <message>
-        <location filename="../playlist.cpp" line="55"/>
-        <source>Playlist</source>
-        <translation type="unfinished">Çalma Listesi</translation>
-    </message>
-    <message>
-        <location filename="../playlist.cpp" line="321"/>
-        <source>Actions</source>
-        <translation>Eylemler</translation>
     </message>
 </context>
 <context>
@@ -965,13 +965,13 @@
         <location filename="../forms/playlistbrowser.ui" line="50"/>
         <location filename="../playlistbrowser.cpp" line="43"/>
         <source>Delete</source>
-        <translation type="unfinished">Sil</translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../forms/playlistbrowser.ui" line="57"/>
         <location filename="../forms/playlistbrowser.ui" line="67"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../playlistbrowser.cpp" line="42"/>
@@ -1038,9 +1038,29 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../forms/popupsettings.ui" line="29"/>
+        <source>Template</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/popupsettings.ui" line="58"/>
+        <source>Reset</source>
+        <translation>Sıfırla</translation>
+    </message>
+    <message>
+        <location filename="../forms/popupsettings.ui" line="65"/>
+        <source>Insert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../forms/popupsettings.ui" line="75"/>
         <source>Show cover</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/popupsettings.ui" line="89"/>
+        <source>Cover size:</source>
+        <translation>Размер обложки:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="115"/>
@@ -1057,26 +1077,6 @@
         <source>ms</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="89"/>
-        <source>Cover size:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="29"/>
-        <source>Template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="58"/>
-        <source>Reset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="65"/>
-        <source>Insert</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>PresetEditor</name>
@@ -1084,16 +1084,6 @@
         <location filename="../forms/preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
         <translation>Tanımlanmış Ayar Düzenleyici</translation>
-    </message>
-    <message>
-        <location filename="../forms/preseteditor.ui" line="77"/>
-        <source>Load</source>
-        <translation>Yükle</translation>
-    </message>
-    <message>
-        <location filename="../forms/preseteditor.ui" line="84"/>
-        <source>Delete</source>
-        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../forms/preseteditor.ui" line="36"/>
@@ -1104,6 +1094,16 @@
         <location filename="../forms/preseteditor.ui" line="52"/>
         <source>Auto-preset</source>
         <translation>Ayarları Otomatik Tanımla</translation>
+    </message>
+    <message>
+        <location filename="../forms/preseteditor.ui" line="77"/>
+        <source>Load</source>
+        <translation>Yükle</translation>
+    </message>
+    <message>
+        <location filename="../forms/preseteditor.ui" line="84"/>
+        <source>Delete</source>
+        <translation>Sil</translation>
     </message>
 </context>
 <context>
@@ -1116,12 +1116,12 @@
     <message>
         <location filename="../forms/shortcutdialog.ui" line="29"/>
         <source>Press the key combination you want to assign</source>
-        <translation type="unfinished"></translation>
+        <translation>Atamak istediğiniz tuş kombinasyonuna basın</translation>
     </message>
     <message>
         <location filename="../forms/shortcutdialog.ui" line="52"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Temizle</translation>
     </message>
 </context>
 <context>
@@ -1164,12 +1164,12 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="67"/>
         <source>Artwork:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizim:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="68"/>
         <source>Andrey Adreev &lt;andreev00@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Andrey Adreev &lt;andreev00@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="69"/>
@@ -1182,17 +1182,17 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="24"/>
         <source>Skins</source>
-        <translation type="unfinished">Kabuklar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="55"/>
         <source>Add...</source>
-        <translation type="unfinished">Ekle...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="68"/>
         <source>Refresh</source>
-        <translation type="unfinished">Yenile</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="95"/>
@@ -1202,12 +1202,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="101"/>
         <source>Hide on close</source>
-        <translation type="unfinished">Kapatınca saklan</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="108"/>
         <source>Start hidden</source>
-        <translation type="unfinished">Gizli başlat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="115"/>
@@ -1232,7 +1232,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="416"/>
         <source>Fonts</source>
-        <translation type="unfinished">Fontlar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="470"/>
@@ -1247,14 +1247,14 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="428"/>
         <source>Player:</source>
-        <translation type="unfinished">Oynatıcı:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="450"/>
         <location filename="../forms/skinnedsettings.ui" line="492"/>
         <location filename="../forms/skinnedsettings.ui" line="519"/>
         <source>???</source>
-        <translation type="unfinished">???</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="134"/>
@@ -1262,7 +1262,7 @@
         <location filename="../forms/skinnedsettings.ui" line="499"/>
         <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="548"/>
@@ -1282,44 +1282,44 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="89"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Genel</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="146"/>
         <source>Transparency</source>
-        <translation type="unfinished">Transparanlık</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="152"/>
         <source>Main window</source>
-        <translation type="unfinished">Ana pencere</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="175"/>
         <location filename="../forms/skinnedsettings.ui" line="199"/>
         <location filename="../forms/skinnedsettings.ui" line="223"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="182"/>
         <source>Equalizer</source>
-        <translation type="unfinished">Ekolayzır</translation>
+        <translation>Ekolayzır</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="206"/>
         <source>Playlist</source>
-        <translation type="unfinished">Çalma Listesi</translation>
+        <translation>Çalma Listesi</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="247"/>
         <source>Song Display</source>
-        <translation type="unfinished">Şarkı Göstergesi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="286"/>
         <source>Show protocol</source>
-        <translation type="unfinished">Protokolü göster</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="266"/>
@@ -1329,7 +1329,17 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="259"/>
         <source>Show song numbers</source>
-        <translation type="unfinished">Şarkı numaralarını göster</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="276"/>
+        <source>Align song numbers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="293"/>
+        <source>Show anchor</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="300"/>
@@ -1357,34 +1367,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="293"/>
-        <source>Show anchor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/skinnedsettings.ui" line="276"/>
-        <source>Align song numbers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Select Skin Files</source>
-        <translation type="unfinished">Kabuk Dosyası Seç</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="121"/>
         <source>Skin files</source>
-        <translation type="unfinished">Kabuk dosyaları</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="173"/>
         <source>Unarchived skin</source>
-        <translation type="unfinished">Arşivlenmemiş kabuk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="210"/>
         <source>Archived skin</source>
-        <translation type="unfinished">Arşivlenmiş kabuk</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

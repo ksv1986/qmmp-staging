@@ -24,7 +24,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="151"/>
         <source>&amp;Show Song Title</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Näytä kappaleen nimi</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="151"/>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
         <source>&amp;Show Preset Name</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Näytä esiasetuksen nimi</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="155"/>
         <source>&amp;Next Preset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Seuraava esiasetus</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="155"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
         <source>&amp;Previous Preset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Edellinen esiasetus</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
         <source>&amp;Random Preset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Satunnainen esiasetus</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>
         <source>&amp;Lock Preset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lukitse esiasetus</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="53"/>
         <source>Based on libprojectM-qt library</source>
-        <translation type="unfinished"></translation>
+        <translation>Pohjautuu libprojectM-qt-kirjastoon</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>OutputShoutFactory</name>
     <message>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../outputshoutfactory.cpp" line="67"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Poort:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="56"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="106"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sample frequentie:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="136"/>

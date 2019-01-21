@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">תוסף MPEG</translation>
+        <translation>תוסף MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">קבצי MPEG</translation>
+        <translation>קבצי MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">אודות תוסף שמע MPEG</translation>
+        <translation>אודות תוסף שמע MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="379"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>הודר כנגד:</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="388"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">קוד מקור מבוסס על המיזמים mq3 וגם madplay</translation>
+        <translation>קוד מקור מבוסס על המיזמים mq3 וגם madplay</translation>
     </message>
 </context>
 <context>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="252"/>
         <source>Encodings</source>
-        <translation>קידוד</translation>
+        <translation>קידודים</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="264"/>

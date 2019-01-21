@@ -16,7 +16,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="39"/>
         <source>&amp;Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>貼上(&amp;P)</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="39"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>&amp;Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>停止（&amp;S）</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>空白鍵</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>J</source>
-        <translation type="unfinished"></translation>
+        <translation>J</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>重新整理</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -281,7 +281,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
         <source>Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
@@ -528,7 +528,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="58"/>
         <source>Playback</source>
-        <translation type="unfinished"></translation>
+        <translation>播放方式</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="64"/>
@@ -954,7 +954,7 @@
     <message>
         <location filename="../forms/playlistbrowser.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>過滤器:</translation>
     </message>
     <message>
         <location filename="../forms/playlistbrowser.ui" line="43"/>
@@ -989,7 +989,7 @@
     <message>
         <location filename="../playlistheader.cpp" line="87"/>
         <source>Edit Column</source>
-        <translation type="unfinished"></translation>
+        <translation>編輯欄位</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="88"/>
@@ -1075,7 +1075,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>毫秒</translation>
     </message>
 </context>
 <context>
@@ -1164,7 +1164,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="67"/>
         <source>Artwork:</source>
-        <translation type="unfinished"></translation>
+        <translation>Artwork:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="68"/>
@@ -1192,7 +1192,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="68"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>重新整理</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="95"/>

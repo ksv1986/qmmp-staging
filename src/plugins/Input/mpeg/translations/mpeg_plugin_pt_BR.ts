@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">Plugin MPEG</translation>
+        <translation>Plugin MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">Arquivos MPEG</translation>
+        <translation>Arquivos MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">Sobre o plugin MPEG Audio</translation>
+        <translation>Sobre o plugin MPEG Audio</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="379"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Compilado com:</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="388"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">Baseado no código fonte dos projetos mq3 e madplay</translation>
+        <translation>Baseado no código fonte dos projetos mq3 e madplay</translation>
     </message>
 </context>
 <context>
@@ -75,7 +75,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPEG Plugin Settings</source>
-        <translation>Preferências do plugin MPEG</translation>
+        <translation>Preferências do plugin MPEG </translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>

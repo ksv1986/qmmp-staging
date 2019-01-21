@@ -1,13 +1,14 @@
-Çekirdek Geliştiriciler:
+Çekirdek Geliştiricileri
 
-    Ilya Kotov <forkotov02@ya.ru> (fikirler ve temel kod)
-    Vladimir Kuznetsov <vovanec@gmail.com> (görünüm ve birçok iyileştirme)
+    Ilya Kotov <forkotov02@ya.ru> - idea and base code
 
-Eklenti Geliştiricileri:
+Former Developers:
 
-    Yuriy Zhuravlev <stalkerg@gmail.com> (jack & oss eklentisi)
+    Artur Guzik <aguzik88@gmail.com> - kde4 notification plugin, tray icon improvements
+    Vladimir Kuznetsov <vovanec@gmail.com> - look&feel and many improvements
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - JACK and OSS plugins
 
-Artwork:
+Çizim:
 
-    Andrey Adreev <andreev00@gmail.com>
-
+    Andrey Adreev <andreev00@gmail.com> - icons and default skin (for versions 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - default skin

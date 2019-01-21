@@ -34,12 +34,12 @@
     <message>
         <location filename="../removablehelper.cpp" line="134"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>增加CD&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../removablehelper.cpp" line="138"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>增加音量&quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -52,32 +52,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>CD Audio Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>CD 音频检测</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
         <source>Add tracks to playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>自动添加音轨到播放列表</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Remove tracks from playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>自动从播放列表删除音轨</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Removable Device Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>可移动设备检测</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
         <source>Add files to playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>自动添加文件到播放列表</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Remove files from playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>自动从播放列表删除文件</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>DateInputDialog</name>
     <message>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../historyfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../historysettingsdialog.ui" line="31"/>
         <source>Title format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Titel formaat:</translation>
     </message>
 </context>
 <context>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../historywindow.ui" line="210"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Artiest</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="224"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../historywindow.ui" line="237"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Genre</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="118"/>

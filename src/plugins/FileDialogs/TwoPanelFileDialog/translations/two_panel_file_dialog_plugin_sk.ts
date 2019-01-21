@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>TwoPanelFileDialog</name>
     <message>
         <location filename="../twopanelfiledialog.ui" line="14"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridať súbory</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="70"/>
         <source>File name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Názov súboru:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="80"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbory typu:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="117"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Hrať</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="130"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridať</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatvoriť</translation>
     </message>
 </context>
 <context>
@@ -64,23 +64,24 @@
         <location filename="../twopanelfiledialogimpl.cpp" line="322"/>
         <location filename="../twopanelfiledialogimpl.cpp" line="338"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridať</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="340"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Priečinky</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="352"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Uložiť</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="459"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 už existuje.
+Prajete si ho nahradiť?</translation>
     </message>
 </context>
 </TS>

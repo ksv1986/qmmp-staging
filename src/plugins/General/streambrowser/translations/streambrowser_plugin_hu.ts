@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>EditStreamDialog</name>
     <message>
@@ -117,7 +117,7 @@
         <location filename="../streamwindow.cpp" line="57"/>
         <location filename="../streamwindow.cpp" line="75"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Műfaj</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="58"/>

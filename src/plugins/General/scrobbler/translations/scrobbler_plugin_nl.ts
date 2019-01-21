@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="20"/>
         <source>Last.fm</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="31"/>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="73"/>
         <source>Libre.fm</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="129"/>
@@ -91,6 +91,16 @@
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="134"/>
+        <location filename="../settingsdialog.cpp" line="138"/>
+        <location filename="../settingsdialog.cpp" line="172"/>
+        <location filename="../settingsdialog.cpp" line="176"/>
+        <location filename="../settingsdialog.cpp" line="227"/>
+        <location filename="../settingsdialog.cpp" line="231"/>
+        <source>Error</source>
+        <translation>Fout</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="134"/>
         <location filename="../settingsdialog.cpp" line="172"/>
         <location filename="../settingsdialog.cpp" line="227"/>
         <source>Network error</source>
@@ -115,16 +125,6 @@
     <message>
         <location filename="../settingsdialog.cpp" line="231"/>
         <source>Permission denied</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="134"/>
-        <location filename="../settingsdialog.cpp" line="138"/>
-        <location filename="../settingsdialog.cpp" line="172"/>
-        <location filename="../settingsdialog.cpp" line="176"/>
-        <location filename="../settingsdialog.cpp" line="227"/>
-        <location filename="../settingsdialog.cpp" line="231"/>
-        <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

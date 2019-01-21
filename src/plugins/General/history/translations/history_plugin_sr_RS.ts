@@ -42,7 +42,7 @@
     <message>
         <location filename="../historyfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../historysettingsdialog.ui" line="31"/>
         <source>Title format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат наслова:</translation>
     </message>
 </context>
 <context>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../historywindow.ui" line="210"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>извођача</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="224"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../historywindow.ui" line="237"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>жанр</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="118"/>

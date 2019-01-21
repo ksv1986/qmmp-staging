@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>StatusOption</name>
     <message>
         <location filename="../statusoption.cpp" line="30"/>
         <source>Print playback status</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypíš status prehrávania</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="31"/>
         <source>Print formatted track name (example: qmmp --nowplaying &quot;%t - %a&quot;)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypíš formátovaný názov stopy (príklad: qmmp --nowplaying &quot;%t - %a&quot;)</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="33"/>
         <source>Print --nowplaying syntax</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypíš syntax --nowplaying</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="94"/>
         <source>Syntax:</source>
-        <translation type="unfinished"></translation>
+        <translation>Syntax:</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="95"/>
         <source>%p - artist</source>
-        <translation type="unfinished"></translation>
+        <translation>%p - interprét</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="96"/>
         <source>%a - album</source>
-        <translation type="unfinished"></translation>
+        <translation>%a - album</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="97"/>
         <source>%aa - album artist</source>
-        <translation type="unfinished"></translation>
+        <translation>%aa - interprét albumu</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="98"/>
         <source>%t - title</source>
-        <translation type="unfinished"></translation>
+        <translation>%t - názov</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="99"/>
         <source>%n - track</source>
-        <translation type="unfinished"></translation>
+        <translation>%n - stopa</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="100"/>
         <source>%NN - 2-digit track</source>
-        <translation type="unfinished"></translation>
+        <translation>%NN - 2-ciferná stopa</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="101"/>
         <source>%g - genre</source>
-        <translation type="unfinished"></translation>
+        <translation>%g - žáner</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="102"/>
         <source>%c - comment</source>
-        <translation type="unfinished"></translation>
+        <translation>%c - komentár</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="103"/>
         <source>%C - composer</source>
-        <translation type="unfinished"></translation>
+        <translation>%C - skladateľ</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="104"/>
         <source>%D - disc number</source>
-        <translation type="unfinished"></translation>
+        <translation>%D - číslo disku</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="105"/>
         <source>%f - file name</source>
-        <translation type="unfinished"></translation>
+        <translation>%f - názov súboru</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="106"/>
         <source>%F - full path</source>
-        <translation type="unfinished"></translation>
+        <translation>%F - plná cesta</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="107"/>
         <source>%y - year</source>
-        <translation type="unfinished"></translation>
+        <translation>%y - rok</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="108"/>
         <source>%l - duration</source>
-        <translation type="unfinished"></translation>
+        <translation>%l - dĺžka</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="109"/>
@@ -131,7 +131,7 @@
     <message>
         <location filename="../statusoption.cpp" line="116"/>
         <source>%if(A&amp;B&amp;C,D,E) - condition</source>
-        <translation type="unfinished"></translation>
+        <translation>%if(A&amp;B&amp;C,D,E) - podmienka</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="117"/>

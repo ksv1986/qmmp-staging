@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">MPEG Module</translation>
+        <translation>MPEG Module</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">MPEG Bestanden</translation>
+        <translation>MPEG Bestanden</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">Over de MPEG Audio Module</translation>
+        <translation>Over de MPEG Audio Module</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="392"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">Broncode gebasseerd op &apos;mq3&apos; en &apos;madplay&apos; projecten</translation>
+        <translation>Broncode gebasseerd op &apos;mq3&apos; en &apos;madplay&apos; projecten</translation>
     </message>
 </context>
 <context>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../mpegmetadatamodel.cpp" line="78"/>
         <source>Copyright</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mpegmetadatamodel.cpp" line="79"/>
@@ -76,35 +76,6 @@
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPEG Plugin Settings</source>
         <translation>MPEG Module Instellingen</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="109"/>
-        <location filename="../settingsdialog.ui" line="158"/>
-        <location filename="../settingsdialog.ui" line="207"/>
-        <source>ID3v1</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="114"/>
-        <location filename="../settingsdialog.ui" line="163"/>
-        <location filename="../settingsdialog.ui" line="212"/>
-        <source>ID3v2</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="264"/>
-        <source>ID3v1 encoding:</source>
-        <translation>ID3v1 codering:</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="290"/>
-        <source>ID3v2 encoding:</source>
-        <translation>ID3v2 codering:</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="77"/>
-        <source>Tag Priority</source>
-        <translation>Tag prioriteit</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -122,16 +93,35 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../settingsdialog.ui" line="77"/>
+        <source>Tag Priority</source>
+        <translation>Tag prioriteit</translation>
+    </message>
+    <message>
         <location filename="../settingsdialog.ui" line="89"/>
         <source>First:</source>
         <translation>Primair:</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="109"/>
+        <location filename="../settingsdialog.ui" line="158"/>
+        <location filename="../settingsdialog.ui" line="207"/>
+        <source>ID3v1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="114"/>
+        <location filename="../settingsdialog.ui" line="163"/>
+        <location filename="../settingsdialog.ui" line="212"/>
+        <source>ID3v2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="119"/>
         <location filename="../settingsdialog.ui" line="168"/>
         <location filename="../settingsdialog.ui" line="217"/>
         <source>APE</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="124"/>
@@ -154,6 +144,16 @@
         <location filename="../settingsdialog.ui" line="252"/>
         <source>Encodings</source>
         <translation>Codering</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="264"/>
+        <source>ID3v1 encoding:</source>
+        <translation>ID3v1 codering:</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="290"/>
+        <source>ID3v2 encoding:</source>
+        <translation>ID3v2 codering:</translation>
     </message>
 </context>
 </TS>

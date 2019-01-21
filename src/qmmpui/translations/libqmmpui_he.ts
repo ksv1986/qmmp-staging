@@ -718,12 +718,12 @@
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
         <source>Load</source>
-        <translation type="unfinished"></translation>
+        <translation>טען</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="83"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>מחק</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
@@ -850,12 +850,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="267"/>
         <source>Duration</source>
-        <translation type="unfinished">משך</translation>
+        <translation>משך</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>שיעור סיביות</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
@@ -865,17 +865,17 @@
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>שיעור דגימה</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>הרץ</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="272"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>ערוצים</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>גודל קובץ</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
@@ -905,12 +905,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>כן</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>לא</translation>
     </message>
 </context>
 <context>
@@ -999,7 +999,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Track Index</source>
-        <translation type="unfinished">אינדקס רצועה</translation>
+        <translation>אינדקס רצועה</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
@@ -1024,7 +1024,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>שיעור סיביות</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
@@ -1044,7 +1044,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>פורמט</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>

@@ -13,7 +13,7 @@
         <location filename="../converter.cpp" line="144"/>
         <location filename="../converter.cpp" line="211"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="179"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../converterdialog.ui" line="44"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Трака напретка</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="49"/>
@@ -71,12 +71,12 @@
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished">Претвори</translation>
+        <translation>Претвори</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Заустави</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="108"/>
@@ -98,7 +98,7 @@
         <location filename="../converterdialog.cpp" line="353"/>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="134"/>

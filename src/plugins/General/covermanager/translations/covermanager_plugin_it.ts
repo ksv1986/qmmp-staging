@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="it">
 <context>
     <name>CoverManager</name>
     <message>
         <location filename="../covermanager.cpp" line="35"/>
         <source>Show Cover</source>
-        <translation>Mostra Copertina</translation>
+        <translation>Mostra copertina</translation>
     </message>
     <message>
         <location filename="../covermanager.cpp" line="36"/>
@@ -19,17 +19,17 @@
     <message>
         <location filename="../covermanagerfactory.cpp" line="30"/>
         <source>Cover Manager Plugin</source>
-        <translation>Plugin gestione copertine</translation>
+        <translation>Estensione gestore copertine</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="50"/>
         <source>About Cover Manager Plugin</source>
-        <translation>Info sul Plugin gestione copertine</translation>
+        <translation>Informazioni sull&apos;estensione gestore copertine</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="51"/>
         <source>Qmmp Cover Manager Plugin</source>
-        <translation>Plugin gestione copertine</translation>
+        <translation>Estensione gestore copertine</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="52"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../coverwidget.cpp" line="37"/>
         <source>&amp;Save As...</source>
-        <translation>Salva come...</translation>
+        <translation>&amp;Salva come...</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="37"/>

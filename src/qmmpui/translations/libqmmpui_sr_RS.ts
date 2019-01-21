@@ -112,7 +112,7 @@
     <message>
         <location filename="../forms/columneditor.ui" line="36"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Име:</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="76"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../forms/columneditor.ui" line="64"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="29"/>
@@ -132,42 +132,42 @@
     <message>
         <location filename="../columneditor.cpp" line="85"/>
         <source>Artist</source>
-        <translation type="unfinished">Извођач</translation>
+        <translation>извођача</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="86"/>
         <source>Album</source>
-        <translation type="unfinished"></translation>
+        <translation>албум</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="90"/>
         <source>Title</source>
-        <translation type="unfinished">Наслов</translation>
+        <translation>наслов</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="93"/>
         <source>Genre</source>
-        <translation type="unfinished">Жанр</translation>
+        <translation>жанр</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="94"/>
         <source>Comment</source>
-        <translation type="unfinished">Коментар</translation>
+        <translation>коментар</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="95"/>
         <source>Composer</source>
-        <translation type="unfinished">Композитор</translation>
+        <translation>композитора</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="96"/>
         <source>Duration</source>
-        <translation type="unfinished">дужину</translation>
+        <translation>дужину</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="101"/>
         <source>Year</source>
-        <translation type="unfinished">Година</translation>
+        <translation>годину</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="100"/>
@@ -718,12 +718,12 @@
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
         <source>Load</source>
-        <translation type="unfinished"></translation>
+        <translation>Учитај</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="83"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Обриши</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
@@ -746,18 +746,18 @@
     <message>
         <location filename="../coverviewer.cpp" line="35"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сачувај као...</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="68"/>
         <source>Save Cover As</source>
-        <translation type="unfinished"></translation>
+        <translation>Сачувај омот</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="70"/>
         <location filename="../coverviewer.cpp" line="83"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Слике</translation>
     </message>
     <message>
         <location filename="../coverviewer.cpp" line="81"/>
@@ -795,7 +795,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="210"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Омот</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="240"/>
@@ -850,32 +850,32 @@
     <message>
         <location filename="../detailsdialog.cpp" line="267"/>
         <source>Duration</source>
-        <translation type="unfinished">дужину</translation>
+        <translation>дужину</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Битски проток</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kb/s</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Узорковање</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="272"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Канала</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Величина</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
@@ -905,12 +905,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Да</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Не</translation>
     </message>
 </context>
 <context>
@@ -969,12 +969,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="26"/>
         <source>Artist</source>
-        <translation type="unfinished">Извођач</translation>
+        <translation>извођача</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation type="unfinished"></translation>
+        <translation>албум</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
@@ -984,7 +984,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
         <source>Title</source>
-        <translation type="unfinished">Наслов</translation>
+        <translation>наслов</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
@@ -1004,27 +1004,27 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
         <source>Genre</source>
-        <translation type="unfinished">Жанр</translation>
+        <translation>жанр</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="40"/>
         <source>Comment</source>
-        <translation type="unfinished">Коментар</translation>
+        <translation>коментар</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="41"/>
         <source>Composer</source>
-        <translation type="unfinished">Композитор</translation>
+        <translation>композитора</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Duration</source>
-        <translation type="unfinished">дужину</translation>
+        <translation>дужину</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Битски проток</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
@@ -1044,7 +1044,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>
@@ -1074,12 +1074,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="43"/>
         <source>Year</source>
-        <translation type="unfinished">Година</translation>
+        <translation>годину</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="50"/>
         <source>Condition</source>
-        <translation type="unfinished">услов</translation>
+        <translation>услов</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="49"/>
@@ -1115,7 +1115,7 @@
     <message>
         <location filename="../playlistheadermodel.cpp" line="186"/>
         <source>Title</source>
-        <translation type="unfinished">Наслов</translation>
+        <translation>наслов</translation>
     </message>
     <message>
         <location filename="../playlistheadermodel.cpp" line="187"/>

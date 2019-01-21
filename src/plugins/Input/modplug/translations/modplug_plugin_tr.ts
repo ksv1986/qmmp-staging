@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>DecoderModPlugFactory</name>
     <message>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="138"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="139"/>
@@ -59,39 +59,39 @@
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="71"/>
         <source>Speed</source>
-        <translation type="unfinished">Hız</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="72"/>
         <source>Tempo</source>
-        <translation type="unfinished">Tempo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="73"/>
         <location filename="../modplugmetadatamodel.cpp" line="94"/>
         <source>Samples</source>
-        <translation type="unfinished">Örnekler</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="74"/>
         <location filename="../modplugmetadatamodel.cpp" line="103"/>
         <source>Instruments</source>
-        <translation type="unfinished">Enstrümanlar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="75"/>
         <source>Patterns</source>
-        <translation type="unfinished">Desenler</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="76"/>
         <source>Channels</source>
-        <translation type="unfinished">Kanallar</translation>
+        <translation>Kanallar</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="108"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Yorum</translation>
     </message>
 </context>
 <context>

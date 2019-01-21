@@ -37,7 +37,7 @@
         <location filename="../fileops.cpp" line="150"/>
         <location filename="../fileops.cpp" line="240"/>
         <source>Stop</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="195"/>
@@ -112,41 +112,6 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="51"/>
-        <location filename="../settingsdialog.cpp" line="131"/>
-        <source>Copy</source>
-        <translation>Kopiëer</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="52"/>
-        <location filename="../settingsdialog.cpp" line="132"/>
-        <source>Rename</source>
-        <translation>Hernoem</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="92"/>
-        <location filename="../settingsdialog.cpp" line="54"/>
-        <location filename="../settingsdialog.cpp" line="134"/>
-        <source>Remove</source>
-        <translation>Verwijder</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="137"/>
-        <source>New action</source>
-        <translation>Nieuwe actie</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="53"/>
-        <location filename="../settingsdialog.cpp" line="133"/>
-        <source>Move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.cpp" line="232"/>
-        <source>Choose a directory</source>
-        <translation>Kies een map</translation>
-    </message>
-    <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Operations Settings</source>
         <translation>Instellingen van Bestandsbeheer</translation>
@@ -172,10 +137,16 @@
         <translation>Sneltoets</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="126"/>
-        <location filename="../settingsdialog.ui" line="143"/>
-        <source>...</source>
-        <translation></translation>
+        <location filename="../settingsdialog.ui" line="79"/>
+        <source>Add</source>
+        <translation>Toevoegen</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="92"/>
+        <location filename="../settingsdialog.cpp" line="54"/>
+        <location filename="../settingsdialog.cpp" line="134"/>
+        <source>Remove</source>
+        <translation>Verwijder</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="116"/>
@@ -183,14 +154,43 @@
         <translation>Doel:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="79"/>
-        <source>Add</source>
-        <translation>Toevoegen</translation>
+        <location filename="../settingsdialog.ui" line="126"/>
+        <location filename="../settingsdialog.ui" line="143"/>
+        <source>...</source>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="133"/>
         <source>File name pattern:</source>
         <translation>Bestandsnaam patroon:</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="51"/>
+        <location filename="../settingsdialog.cpp" line="131"/>
+        <source>Copy</source>
+        <translation>Kopiëer</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="52"/>
+        <location filename="../settingsdialog.cpp" line="132"/>
+        <source>Rename</source>
+        <translation>Hernoem</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="53"/>
+        <location filename="../settingsdialog.cpp" line="133"/>
+        <source>Move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="137"/>
+        <source>New action</source>
+        <translation>Nieuwe actie</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="232"/>
+        <source>Choose a directory</source>
+        <translation>Kies een map</translation>
     </message>
 </context>
 </TS>

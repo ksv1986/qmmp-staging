@@ -112,7 +112,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>Cells size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Solujen koko:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="101"/>

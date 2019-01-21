@@ -6,27 +6,27 @@
     <message>
         <location filename="../playlistoption.cpp" line="33"/>
         <source>Show playlist manipulation commands</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra i comandi di manipolazione della scaletta</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="34"/>
         <source>List all available playlists</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra tutte le scalette disponibili</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="35"/>
         <source>Show playlist content</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra contenuto della scaletta</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="36"/>
         <source>Play track &lt;track&gt; in playlist &lt;id&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Riproduci la traccia &lt;track&gt; nella scaletta &lt;id&gt;</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="37"/>
         <source>Clear playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulisci scaletta</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="38"/>
@@ -41,24 +41,24 @@
     <message>
         <location filename="../playlistoption.cpp" line="40"/>
         <source>Show playlist options</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra opzioni della scaletta</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="104"/>
         <location filename="../playlistoption.cpp" line="126"/>
         <location filename="../playlistoption.cpp" line="143"/>
         <source>Invalid playlist ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID scaletta non valido</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="120"/>
         <source>Invalid number of arguments</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di argomenti non valido</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="130"/>
         <source>Invalid track ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID traccia non valido</translation>
     </message>
 </context>
 </TS>

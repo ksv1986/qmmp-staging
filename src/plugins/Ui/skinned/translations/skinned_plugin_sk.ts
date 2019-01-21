@@ -65,13 +65,13 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
-        <source>J</source>
-        <translation>J</translation>
+        <source>&amp;Jump to Track</source>
+        <translation>&amp;Preskočiť na skladbu</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
-        <source>&amp;Jump to Track</source>
-        <translation type="unfinished"></translation>
+        <source>J</source>
+        <translation>J</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
@@ -181,32 +181,32 @@
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>Volume &amp;+</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlasitosť &amp;+</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>Volume &amp;-</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlasitosť &amp;-</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation>9</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
         <source>&amp;Mute</source>
-        <translation type="unfinished"></translation>
+        <translation>Stlmiť</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished">Obnoviť</translation>
+        <translation>Obnoviť</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -401,7 +401,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>Ctrl+G</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+G</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
@@ -508,47 +508,47 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished">Zresetovať</translation>
+        <translation>Zresetovať</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
         <source>Action</source>
-        <translation type="unfinished">Činnosť</translation>
+        <translation>Akcia</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="59"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Skratka</translation>
+        <translation>Skratka</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="33"/>
         <source>Change shortcut...</source>
-        <translation type="unfinished">Zmeniť skratku...</translation>
+        <translation>Zmeniť skratku...</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="58"/>
         <source>Playback</source>
-        <translation type="unfinished">Prehrávanie</translation>
+        <translation>Prehrávanie</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="64"/>
         <source>View</source>
-        <translation type="unfinished">Zobraziť</translation>
+        <translation>Zobraziť</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="70"/>
         <source>Volume</source>
-        <translation type="unfinished">Hlasitosť</translation>
+        <translation>Hlasitosť</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="76"/>
         <source>Playlist</source>
-        <translation type="unfinished">Playlist</translation>
+        <translation>Zoznam skladieb</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="82"/>
         <source>Misc</source>
-        <translation type="unfinished">Rôzn.</translation>
+        <translation>Rôzne</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="94"/>
@@ -591,7 +591,7 @@
     <message>
         <location filename="../display.cpp" line="76"/>
         <source>Play files</source>
-        <translation type="unfinished"></translation>
+        <translation>Prehrať súbory</translation>
     </message>
     <message>
         <location filename="../display.cpp" line="83"/>
@@ -787,12 +787,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="363"/>
         <source>Appearance</source>
-        <translation type="unfinished">Vzhľad</translation>
+        <translation>Vzhľad</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="364"/>
         <source>Shortcuts</source>
-        <translation type="unfinished">Skratky</translation>
+        <translation>Skratky</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="434"/>
@@ -807,7 +807,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="461"/>
         <source>Audio</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvuk</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="469"/>
@@ -817,11 +817,21 @@
     <message>
         <location filename="../mainwindow.cpp" line="551"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp</translation>
     </message>
 </context>
 <context>
     <name>PlayList</name>
+    <message>
+        <location filename="../playlist.cpp" line="55"/>
+        <source>Playlist</source>
+        <translation>Playlist</translation>
+    </message>
+    <message>
+        <location filename="../playlist.cpp" line="199"/>
+        <source>&amp;Copy Selection To</source>
+        <translation>&amp;Skopírovať výber do</translation>
+    </message>
     <message>
         <location filename="../playlist.cpp" line="230"/>
         <source>Sort List</source>
@@ -843,7 +853,7 @@
         <location filename="../playlist.cpp" line="257"/>
         <location filename="../playlist.cpp" line="297"/>
         <source>By Disc Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Podľa čísla disku</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="239"/>
@@ -855,7 +865,7 @@
         <location filename="../playlist.cpp" line="242"/>
         <location filename="../playlist.cpp" line="282"/>
         <source>By Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Podľa interpréta albumu</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="245"/>
@@ -876,10 +886,16 @@
         <translation>Podľa dátumu</translation>
     </message>
     <message>
+        <location filename="../playlist.cpp" line="254"/>
+        <location filename="../playlist.cpp" line="294"/>
+        <source>By Track Number</source>
+        <translation>Podľa čísla skladby</translation>
+    </message>
+    <message>
         <location filename="../playlist.cpp" line="260"/>
         <location filename="../playlist.cpp" line="300"/>
         <source>By File Creation Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Podľa dátumu vytvorenia súboru</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="263"/>
@@ -890,7 +906,7 @@
     <message>
         <location filename="../playlist.cpp" line="266"/>
         <source>By Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Podľa skupiny</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="271"/>
@@ -908,40 +924,24 @@
         <translation>Otočiť zoznam</translation>
     </message>
     <message>
+        <location filename="../playlist.cpp" line="321"/>
+        <source>Actions</source>
+        <translation>Činnosti</translation>
+    </message>
+    <message>
         <location filename="../playlist.cpp" line="591"/>
         <source>Rename Playlist</source>
-        <translation type="unfinished">Premenovať playlist</translation>
+        <translation>Premenovať playlist</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="591"/>
         <source>Playlist name:</source>
-        <translation type="unfinished">Název playlistu:</translation>
+        <translation>Název playlistu:</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="612"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Nový playlist</translation>
-    </message>
-    <message>
-        <location filename="../playlist.cpp" line="199"/>
-        <source>&amp;Copy Selection To</source>
-        <translation>&amp;Skopírovať výber do</translation>
-    </message>
-    <message>
-        <location filename="../playlist.cpp" line="55"/>
-        <source>Playlist</source>
-        <translation>Playlist</translation>
-    </message>
-    <message>
-        <location filename="../playlist.cpp" line="254"/>
-        <location filename="../playlist.cpp" line="294"/>
-        <source>By Track Number</source>
-        <translation>Podľa čísla skladby</translation>
-    </message>
-    <message>
-        <location filename="../playlist.cpp" line="321"/>
-        <source>Actions</source>
-        <translation>Činnosti</translation>
     </message>
 </context>
 <context>
@@ -954,7 +954,7 @@
     <message>
         <location filename="../forms/playlistbrowser.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter:</translation>
     </message>
     <message>
         <location filename="../forms/playlistbrowser.ui" line="43"/>
@@ -1038,9 +1038,29 @@
         <translation>Nastavenie informácií v upozornení</translation>
     </message>
     <message>
+        <location filename="../forms/popupsettings.ui" line="29"/>
+        <source>Template</source>
+        <translation>Šablóna</translation>
+    </message>
+    <message>
+        <location filename="../forms/popupsettings.ui" line="58"/>
+        <source>Reset</source>
+        <translation>Zresetovať</translation>
+    </message>
+    <message>
+        <location filename="../forms/popupsettings.ui" line="65"/>
+        <source>Insert</source>
+        <translation>Vložiť</translation>
+    </message>
+    <message>
         <location filename="../forms/popupsettings.ui" line="75"/>
         <source>Show cover</source>
         <translation>Zobraziť obal</translation>
+    </message>
+    <message>
+        <location filename="../forms/popupsettings.ui" line="89"/>
+        <source>Cover size:</source>
+        <translation>Veľkosť obalu:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="115"/>
@@ -1057,26 +1077,6 @@
         <source>ms</source>
         <translation>ms</translation>
     </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="89"/>
-        <source>Cover size:</source>
-        <translation>Veľkosť obalu:</translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="29"/>
-        <source>Template</source>
-        <translation>Šablóna</translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="58"/>
-        <source>Reset</source>
-        <translation>Zresetovať</translation>
-    </message>
-    <message>
-        <location filename="../forms/popupsettings.ui" line="65"/>
-        <source>Insert</source>
-        <translation>Vložiť</translation>
-    </message>
 </context>
 <context>
     <name>PresetEditor</name>
@@ -1084,16 +1084,6 @@
         <location filename="../forms/preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
         <translation>Editor predvolieb</translation>
-    </message>
-    <message>
-        <location filename="../forms/preseteditor.ui" line="77"/>
-        <source>Load</source>
-        <translation>Načítať</translation>
-    </message>
-    <message>
-        <location filename="../forms/preseteditor.ui" line="84"/>
-        <source>Delete</source>
-        <translation>Vymazať</translation>
     </message>
     <message>
         <location filename="../forms/preseteditor.ui" line="36"/>
@@ -1104,6 +1094,16 @@
         <location filename="../forms/preseteditor.ui" line="52"/>
         <source>Auto-preset</source>
         <translation>Automatická predvoľba</translation>
+    </message>
+    <message>
+        <location filename="../forms/preseteditor.ui" line="77"/>
+        <source>Load</source>
+        <translation>Načítať</translation>
+    </message>
+    <message>
+        <location filename="../forms/preseteditor.ui" line="84"/>
+        <source>Delete</source>
+        <translation>Vymazať</translation>
     </message>
 </context>
 <context>
@@ -1144,7 +1144,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="63"/>
         <source>Simple user interface with Winamp-2.x/XMMS skins support</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednoduché užívateľské rozhranie s podporou Winamp-2.x/XMMS skinov</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="64"/>
@@ -1182,17 +1182,17 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="24"/>
         <source>Skins</source>
-        <translation type="unfinished">Skiny</translation>
+        <translation>Skiny</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="55"/>
         <source>Add...</source>
-        <translation type="unfinished">Pridať...</translation>
+        <translation>Pridať...</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="68"/>
         <source>Refresh</source>
-        <translation type="unfinished">Obnoviť</translation>
+        <translation>Obnoviť</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="95"/>
@@ -1202,17 +1202,17 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="101"/>
         <source>Hide on close</source>
-        <translation type="unfinished">Skryť pri zatvorení</translation>
+        <translation>Skryť pri zatvorení</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="108"/>
         <source>Start hidden</source>
-        <translation type="unfinished">Spustiť skryté</translation>
+        <translation>Spustiť skryté</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="115"/>
         <source>Use skin cursors</source>
-        <translation type="unfinished">Použiť kurzory zo skinu</translation>
+        <translation>Použiť kurzory zo skinu</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="253"/>
@@ -1232,12 +1232,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="416"/>
         <source>Fonts</source>
-        <translation type="unfinished">Písma</translation>
+        <translation>Písma</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="470"/>
         <source>Playlist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoznam skladieb</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="506"/>
@@ -1247,14 +1247,14 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="428"/>
         <source>Player:</source>
-        <translation type="unfinished">Prehrávač:</translation>
+        <translation>Prehrávač:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="450"/>
         <location filename="../forms/skinnedsettings.ui" line="492"/>
         <location filename="../forms/skinnedsettings.ui" line="519"/>
         <source>???</source>
-        <translation type="unfinished">???</translation>
+        <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="134"/>
@@ -1262,7 +1262,7 @@
         <location filename="../forms/skinnedsettings.ui" line="499"/>
         <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="548"/>
@@ -1272,7 +1272,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="557"/>
         <source>Use bitmap font if available</source>
-        <translation type="unfinished">Použiť bitmapové písmo, ak je dostupné</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="124"/>
@@ -1282,44 +1282,44 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="89"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Všeobecné</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="146"/>
         <source>Transparency</source>
-        <translation type="unfinished">Priehľadnosť</translation>
+        <translation>Priehľadnosť</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="152"/>
         <source>Main window</source>
-        <translation type="unfinished">Hlavné okno</translation>
+        <translation>Hlavné okno</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="175"/>
         <location filename="../forms/skinnedsettings.ui" line="199"/>
         <location filename="../forms/skinnedsettings.ui" line="223"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="182"/>
         <source>Equalizer</source>
-        <translation type="unfinished">Ekvalizér</translation>
+        <translation>Ekvalizér</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="206"/>
         <source>Playlist</source>
-        <translation type="unfinished">Playlist</translation>
+        <translation>Zoznam skladieb</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="247"/>
         <source>Song Display</source>
-        <translation type="unfinished">Zobrazenie skladby</translation>
+        <translation>Zobrazenie skladby</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="286"/>
         <source>Show protocol</source>
-        <translation type="unfinished">Zobraziť protokol</translation>
+        <translation>Zobraziť protokol</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="266"/>
@@ -1329,62 +1329,62 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="259"/>
         <source>Show song numbers</source>
-        <translation type="unfinished">Zobrazovať čísla piesní</translation>
-    </message>
-    <message>
-        <location filename="../forms/skinnedsettings.ui" line="300"/>
-        <source>Show playlists</source>
-        <translation type="unfinished">Zobrazovať playlisty</translation>
-    </message>
-    <message>
-        <location filename="../forms/skinnedsettings.ui" line="368"/>
-        <source>Show popup information</source>
-        <translation type="unfinished">Zobrazovať upozornenia s informáciami</translation>
-    </message>
-    <message>
-        <location filename="../forms/skinnedsettings.ui" line="380"/>
-        <source>Edit template</source>
-        <translation type="unfinished">Upraviť šablónu</translation>
-    </message>
-    <message>
-        <location filename="../forms/skinnedsettings.ui" line="333"/>
-        <source>Playlist separator:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/skinnedsettings.ui" line="324"/>
-        <source>Show &apos;New Playlist&apos; button</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/skinnedsettings.ui" line="293"/>
-        <source>Show anchor</source>
-        <translation type="unfinished">Zobrazovať ukotvenie</translation>
+        <translation>Zobrazovať čísla piesní</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="276"/>
         <source>Align song numbers</source>
-        <translation type="unfinished">Zarovnať čísla piesní</translation>
+        <translation>Zarovnať čísla piesní</translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="293"/>
+        <source>Show anchor</source>
+        <translation>Zobrazovať ukotvenie</translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="300"/>
+        <source>Show playlists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="368"/>
+        <source>Show popup information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="380"/>
+        <source>Edit template</source>
+        <translation>Upraviť šablónu</translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="333"/>
+        <source>Playlist separator:</source>
+        <translation>Oddeľovať playlistov:</translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="324"/>
+        <source>Show &apos;New Playlist&apos; button</source>
+        <translation>Zobraziť tlačidlo &apos;Nový playlist&apos;</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Select Skin Files</source>
-        <translation type="unfinished">Vybrať súbory skinov</translation>
+        <translation>Vybrať súbory skinov</translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="121"/>
         <source>Skin files</source>
-        <translation type="unfinished">Súbory skinov</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="173"/>
         <source>Unarchived skin</source>
-        <translation type="unfinished">Nearchivovaný skin</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../skinnedsettings.cpp" line="210"/>
         <source>Archived skin</source>
-        <translation type="unfinished">Archivovaný skin</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

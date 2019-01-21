@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputnullfactory.cpp" line="30"/>
         <source>Null Plugin</source>
-        <translation>Modulo di uscita nullo</translation>
+        <translation>Estensione di uscita nulla</translation>
     </message>
     <message>
         <location filename="../outputnullfactory.cpp" line="54"/>
         <source>About Null Output Plugin</source>
-        <translation>Informazioni sul modulo di uscita nullo</translation>
+        <translation>Informazioni sull&apos;estensione di uscita nulla</translation>
     </message>
     <message>
         <location filename="../outputnullfactory.cpp" line="55"/>
         <source>Qmmp Null Output Plugin</source>
-        <translation>Modulo di uscita nullo per Qmmp</translation>
+        <translation>Estensione di uscita nulla per Qmmp</translation>
     </message>
     <message>
         <location filename="../outputnullfactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>OutputWASAPIFactory</name>
     <message>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Apparaat:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="68"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="58"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard</translation>
     </message>
 </context>
 </TS>

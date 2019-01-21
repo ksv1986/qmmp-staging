@@ -620,7 +620,7 @@
     <message>
         <location filename="../configdialog.cpp" line="335"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Griechisch</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="336"/>
@@ -635,7 +635,7 @@
     <message>
         <location filename="../configdialog.cpp" line="338"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesisch</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="339"/>
@@ -675,7 +675,7 @@
     <message>
         <location filename="../configdialog.cpp" line="346"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbisch</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="347"/>
@@ -713,32 +713,32 @@
     <message>
         <location filename="../forms/covereditor.ui" line="22"/>
         <source>Image source:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildquelle:</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
         <source>Load</source>
-        <translation type="unfinished"></translation>
+        <translation>Laden</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="83"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Löschen</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
         <source>Save as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Speichern unter...</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="33"/>
         <source>External file</source>
-        <translation type="unfinished"></translation>
+        <translation>Externe Datei</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="34"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Schlagwort</translation>
     </message>
 </context>
 <context>
@@ -762,7 +762,7 @@
     <message>
         <location filename="../coverviewer.cpp" line="81"/>
         <source>Open Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild öffnen</translation>
     </message>
 </context>
 <context>
@@ -850,67 +850,67 @@
     <message>
         <location filename="../detailsdialog.cpp" line="267"/>
         <source>Duration</source>
-        <translation type="unfinished">Abspieldauer</translation>
+        <translation>Abspieldauer</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitrate</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbit/s</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Abtastrate</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="272"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanäle</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>Sample size</source>
-        <translation type="unfinished"></translation>
+        <translation>Abtastgröße</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>bits</source>
-        <translation type="unfinished"></translation>
+        <translation>Bit</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="274"/>
         <source>Format name</source>
-        <translation type="unfinished"></translation>
+        <translation>Formatname</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateigröße</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nein</translation>
     </message>
 </context>
 <context>
@@ -999,7 +999,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Track Index</source>
-        <translation type="unfinished">Titelindex</translation>
+        <translation>Titelindex</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
@@ -1024,37 +1024,37 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitrate</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Sample Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Abtastrate</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Number of Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzahl der Kanäle</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Sample Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Abtastgröße</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Format</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekoder</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="66"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateigröße</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
@@ -1089,7 +1089,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Artist - [Year] Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Interpret - [Jahr] Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="56"/>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../mmsinputfactory.cpp" line="32"/>
         <source>MMS Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione MMS</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="52"/>
         <source>About MMS Transport Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sull&apos;estensione transporto MMS</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="53"/>
         <source>Qmmp MMS Transport Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione transporto MMS per Qmmp</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MMS Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni estensione MMS</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>

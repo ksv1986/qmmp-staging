@@ -11,22 +11,22 @@
     <message>
         <location filename="../decoderaacfactory.cpp" line="41"/>
         <source>AAC Files</source>
-        <translation>Brani AAC</translation>
+        <translation>File AAC</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="103"/>
         <source>About AAC Audio Plugin</source>
-        <translation>Informazioni sul modulo Audio AAC</translation>
+        <translation>Informazioni sull&apos;estensione audio AAC</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="104"/>
         <source>Qmmp AAC Audio Plugin</source>
-        <translation>Modulo Audio AAC per Qmmp</translation>
+        <translation>Estensione audio AAC per Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="105"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

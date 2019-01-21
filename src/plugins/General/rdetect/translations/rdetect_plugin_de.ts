@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.1" language="de">
 <context>
     <name>RDetectFactory</name>
     <message>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../rdetectfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../removablehelper.cpp" line="134"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>CD „%1“ hinzufügen</translation>
     </message>
     <message>
         <location filename="../removablehelper.cpp" line="138"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Datenträger „%1“ hinzufügen</translation>
     </message>
 </context>
 <context>
@@ -52,32 +52,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>CD Audio Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>CD-Audio-Erkennung</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
         <source>Add tracks to playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Titel automatisch zur Wiedergabeliste hinzufügen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Remove tracks from playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Titel automatisch von der Wiedergabeliste entfernen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Removable Device Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Wechsellaufwerkerkennung</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
         <source>Add files to playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateien automatisch zur Wiedergabeliste hinzufügen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Remove files from playlist automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateien automatisch von der Wiedergabeliste entfernen</translation>
     </message>
 </context>
 </TS>

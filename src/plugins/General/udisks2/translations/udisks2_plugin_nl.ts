@@ -64,7 +64,7 @@
     <message>
         <location filename="../udisks2factory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisks2plugin.cpp" line="129"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">Voeg CD &quot;%1&quot; toe</translation>
+        <translation>Voeg CD &quot;%1&quot; toe</translation>
     </message>
     <message>
         <location filename="../udisks2plugin.cpp" line="137"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">Voeg Station &quot;%1&quot; toe</translation>
+        <translation>Voeg Station &quot;%1&quot; toe</translation>
     </message>
 </context>
 </TS>

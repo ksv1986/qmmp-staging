@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>HotkeyDialog</name>
     <message>
@@ -67,22 +67,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Visszaállít</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejátszás</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Megállít</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Szünet</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="40"/>
@@ -92,12 +92,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
         <source>Next</source>
-        <translation type="unfinished"></translation>
+        <translation>Következő</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="42"/>
         <source>Previous</source>
-        <translation type="unfinished"></translation>
+        <translation>Előző</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="43"/>

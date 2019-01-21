@@ -21,7 +21,7 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Аутор: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Аутор: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Умерено</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>

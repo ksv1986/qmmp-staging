@@ -271,7 +271,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Refresh</source>
-        <translation type="unfinished">Освежи</translation>
+        <translation>Освежи</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -356,12 +356,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>&amp;Rename List</source>
-        <translation type="unfinished"></translation>
+        <translation>Пре&amp;именуј листу нумера</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation type="unfinished">Ресетуј</translation>
+        <translation>Ресетуј</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
@@ -817,7 +817,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="551"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Кумп</translation>
     </message>
 </context>
 <context>
@@ -931,12 +931,12 @@
     <message>
         <location filename="../playlist.cpp" line="591"/>
         <source>Rename Playlist</source>
-        <translation type="unfinished">Преименовање листе</translation>
+        <translation>Преименуј листу нумера</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="591"/>
         <source>Playlist name:</source>
-        <translation type="unfinished">Име листе:</translation>
+        <translation>Име листе нумера:</translation>
     </message>
     <message>
         <location filename="../playlist.cpp" line="612"/>
@@ -1149,7 +1149,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="64"/>
         <source>Written by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Аутори:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="65"/>
@@ -1159,7 +1159,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="66"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="67"/>
@@ -1237,7 +1237,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="470"/>
         <source>Playlist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Листа:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="506"/>
@@ -1282,7 +1282,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="89"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Опште</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="146"/>

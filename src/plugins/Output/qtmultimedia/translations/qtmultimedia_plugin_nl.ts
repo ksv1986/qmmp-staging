@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>OutputQtMultimediaFactory</name>
     <message>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Apparaat:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard</translation>
     </message>
 </context>
 </TS>

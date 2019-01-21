@@ -26,7 +26,7 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>作者：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -69,12 +69,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="137"/>
         <source>User Agent:</source>
-        <translation type="unfinished"></translation>
+        <translation>用戶端:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="151"/>
         <source>Change User Agent</source>
-        <translation type="unfinished"></translation>
+        <translation>變更用戶端</translation>
     </message>
 </context>
 </TS>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="166"/>
         <source>MPEG Plugin</source>
-        <translation type="unfinished">Greffon MPEG</translation>
+        <translation>Greffon MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="169"/>
         <source>MPEG Files</source>
-        <translation type="unfinished">Fichiers MPEG</translation>
+        <translation>Fichiers MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="377"/>
         <source>About MPEG Audio Plugin</source>
-        <translation type="unfinished">À propos du greffon audio MPEG</translation>
+        <translation>À propos du greffon audio MPEG</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="378"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="379"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Compilé contre :</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="388"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="392"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Écrit par : Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished">Code source basé sur les projets mq3 et madplay</translation>
+        <translation>Code source basé sur les projets mq3 et madplay</translation>
     </message>
 </context>
 <context>
@@ -75,7 +75,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPEG Plugin Settings</source>
-        <translation>Configuration du greffon MPEG</translation>
+        <translation>Paramètres du plugin MPEG</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -95,12 +95,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="77"/>
         <source>Tag Priority</source>
-        <translation>Priorité d&apos;étiquette</translation>
+        <translation>Priorité du tag</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
         <source>First:</source>
-        <translation>Premier :</translation>
+        <translation>Premier:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="109"/>
@@ -128,17 +128,17 @@
         <location filename="../settingsdialog.ui" line="173"/>
         <location filename="../settingsdialog.ui" line="222"/>
         <source>Disabled</source>
-        <translation>Désactivé</translation>
+        <translation>Désactiver</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="138"/>
         <source>Second:</source>
-        <translation>Deuxième :</translation>
+        <translation>Deuxième:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="187"/>
         <source>Third:</source>
-        <translation>Troisième :</translation>
+        <translation>Troisième:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="252"/>
@@ -148,12 +148,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="264"/>
         <source>ID3v1 encoding:</source>
-        <translation>Encodage ID3v1 :</translation>
+        <translation>Encodage ID3v1</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="290"/>
         <source>ID3v2 encoding:</source>
-        <translation>Encodage ID3v2 :</translation>
+        <translation>Encodage ID3v2</translation>
     </message>
 </context>
 </TS>

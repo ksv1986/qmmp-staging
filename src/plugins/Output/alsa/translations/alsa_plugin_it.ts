@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputalsafactory.cpp" line="31"/>
         <source>ALSA Plugin</source>
-        <translation>Modulo ALSA</translation>
+        <translation>Estensione ALSA</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="56"/>
         <source>About ALSA Output Plugin</source>
-        <translation>Informazioni sul modulo d&apos;uscita ALSA</translation>
+        <translation>Informazioni sull&apos;estensione d&apos;uscita ALSA</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="57"/>
         <source>Qmmp ALSA Output Plugin</source>
-        <translation>Modulo d&apos;uscita ALSA per Qmmp</translation>
+        <translation>Estensione d&apos;uscita ALSA per Qmmp</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Autore: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>ALSA Plugin Settings</source>
-        <translation>Impostazioni modulo ALSA</translation>
+        <translation>Impostazioni estensione ALSA</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
         <source>Device Settings</source>
-        <translation>Impostazione del device</translation>
+        <translation>Impostazione del dispositivo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
@@ -49,12 +49,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Mixer card:</source>
-        <translation>Scheda Mixer:</translation>
+        <translation>Scheda mixer:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="86"/>
         <source>Mixer device:</source>
-        <translation>Dispositivo Mixer:</translation>
+        <translation>Dispositivo mixer:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="193"/>
         <source>Use mmap access</source>
-        <translation>Usa accesso Mmap</translation>
+        <translation>Usa accesso mmap</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="213"/>

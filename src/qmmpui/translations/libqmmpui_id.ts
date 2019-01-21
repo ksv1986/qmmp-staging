@@ -217,7 +217,7 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Direktori Induk</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
@@ -718,12 +718,12 @@
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
         <source>Load</source>
-        <translation type="unfinished"></translation>
+        <translation>Muat</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="83"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Hapus</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
@@ -850,67 +850,67 @@
     <message>
         <location filename="../detailsdialog.cpp" line="267"/>
         <source>Duration</source>
-        <translation type="unfinished">Durasi</translation>
+        <translation>Durasi</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitrate</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Sample rate</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="272"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Saluran</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>Sample size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran sample</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>bits</source>
-        <translation type="unfinished"></translation>
+        <translation>bits</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="274"/>
         <source>Format name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nama format</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>File size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran file</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ya</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak</translation>
     </message>
 </context>
 <context>
@@ -999,7 +999,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
         <source>Track Index</source>
-        <translation type="unfinished">Indeks Track</translation>
+        <translation>Indeks Track</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="39"/>
@@ -1024,37 +1024,37 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitrate</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Sample Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Laju Sample</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Number of Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Jumlah Channel</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Sample Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran Sample</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Format</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Decoder</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="66"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukursn File</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
@@ -1089,12 +1089,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Artist - [Year] Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Artis - [Tahun] Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="56"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nama Direktori Induk</translation>
     </message>
 </context>
 <context>

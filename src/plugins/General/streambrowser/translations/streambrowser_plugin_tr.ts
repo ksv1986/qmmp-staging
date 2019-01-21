@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>EditStreamDialog</name>
     <message>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Yazan: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../streamwindow.ui" line="102"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekle</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="109"/>
@@ -117,13 +117,13 @@
         <location filename="../streamwindow.cpp" line="57"/>
         <location filename="../streamwindow.cpp" line="75"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarz</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="58"/>
         <location filename="../streamwindow.cpp" line="76"/>
         <source>Bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bit hızı</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="59"/>
@@ -165,12 +165,12 @@
         <location filename="../streamwindow.cpp" line="156"/>
         <location filename="../streamwindow.cpp" line="157"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="176"/>
         <source>Receiving</source>
-        <translation type="unfinished">Alınıyor</translation>
+        <translation>Alınıyor</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="273"/>

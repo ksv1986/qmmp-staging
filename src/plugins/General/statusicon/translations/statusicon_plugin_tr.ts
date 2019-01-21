@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>SettingsDialog</name>
     <message>
@@ -9,8 +9,8 @@
         <translation>Durum Simgesi Eklenti Ayarları</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="79"/>
-        <source>Tooltip</source>
+        <location filename="../settingsdialog.ui" line="29"/>
+        <source>Balloon message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -20,8 +20,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="29"/>
-        <source>Balloon message</source>
+        <location filename="../settingsdialog.ui" line="79"/>
+        <source>Tooltip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="91"/>
+        <source>Try to split file name when no tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -37,26 +42,21 @@
     <message>
         <location filename="../settingsdialog.ui" line="165"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="225"/>
-        <source>Edit template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="91"/>
-        <source>Try to split file name when no tag</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="174"/>
         <source>Cover size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер обложки:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="214"/>
         <source>32</source>
+        <translation type="unfinished">32</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="225"/>
+        <source>Edit template</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

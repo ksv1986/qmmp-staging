@@ -1405,3 +1405,55 @@ Version 1.2.6
 * fixed OSS4 plugin build
 * fixed 12, 20-bit integer and 32-bit float formats support in the 
   WavPack plugin
+  
+Version 1.3.0
+ * added history plugin
+ * added mono to stereo converter
+ * added mpg123-based decoder
+ * added PulseAudio volume control
+ * added cover edition feature
+ * added playlist reading/writing optimization
+ * added TAK support
+ * added feature to send listened tracks to  ListenBrainz
+ * added sorting by time in the history plugin
+ * changed KDE notification plugin description
+ * improved skinned plugin:
+   - added KWin rules
+   - added feature to hide splitters
+   - added alternate splitter colors
+   - added ability to hold the first visible track while loading a playlist
+ * improved qsui plugin:
+   - added feature to hide splitters
+   - added feature to change splitter color
+   - added ability to hold the first visible track while loading a playlist
+ * moved removable volumes to the "add" menu
+ * improved http plugin:
+   - reduced number of memory allocations
+   - limited maximum buffer size
+ * improved stream browser:
+   - added feature to edit bookmark list
+   - moved launch action from "tools" to "add" menu
+ * added track properties to the title formatting fields
+ * added feature to disable tag reading while loading a playlist file
+ * reduced number of locks
+ * improved command line support
+ * fixed "--pl-help", "--nowplaying-syntax" command line options
+   processing
+ * fixed feature to disable engine
+ * improved Windows support:
+   - added support for progress indicator in the taskbar (taskbar plugin)
+   - added removable device detecion (rdetect plugin)
+   - added exclusive mode in the WASAPI plugin
+ * hid private symbols in the liqmmp and libqmmpui libraries
+ * changed plugin installation path
+ * resolved conflict between Qt4- and Qt5-based versions
+ * using GNUInstallDirs module for cmake build
+ * removed mpris1 support
+ * removed support for old versions of the following libraries:
+   musepack, curl, alsa, sndlib, ffmpeg
+ * removed Windows XP support
+ * removed uninstall plugin
+ * replaced deprecated Qt classes: QDesktopWidget, QSignalMapper
+ * updated Russian translation (Alexey Loginov)
+ * updated Polish translation (mrerexx)
+ * updated Portuguese translation (Sérgio Marques)

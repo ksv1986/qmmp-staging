@@ -66,7 +66,7 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
 #ifdef QMMP_WS_X11
     QString wm_name = WindowSystem::netWindowManagerName();
     m_compiz = wm_name.contains("compiz", Qt::CaseInsensitive);
-    if(wm_name.contains("openbox", Qt::CaseInsensitive))
+    if(wm_name.contains("openbox", Qt::CaseInsensitive) || wm_name.contains("xfwm4", Qt::CaseInsensitive))
         setWindowFlags (Qt::Drawer | Qt::FramelessWindowHint);
     else if(wm_name.contains("metacity", Qt::CaseInsensitive) ||
             wm_name.contains("kwin", Qt::CaseInsensitive))

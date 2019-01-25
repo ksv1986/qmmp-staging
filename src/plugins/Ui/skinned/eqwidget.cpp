@@ -77,7 +77,7 @@ EqWidget::EqWidget (QWidget *parent)
     updateMask();
 #ifdef QMMP_WS_X11
     QString wm_name = WindowSystem::netWindowManagerName();
-    if(wm_name.contains("openbox", Qt::CaseInsensitive))
+    if(wm_name.contains("openbox", Qt::CaseInsensitive) || wm_name.contains("xfwm4", Qt::CaseInsensitive))
         setWindowFlags (Qt::Drawer | Qt::FramelessWindowHint);
     else if(wm_name.contains("metacity", Qt::CaseInsensitive) ||
             wm_name.contains("kwin", Qt::CaseInsensitive))

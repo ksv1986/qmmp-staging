@@ -1440,6 +1440,8 @@ Version 1.3.0
 * fixed "--pl-help", "--nowplaying-syntax" command line options
   processing
 * fixed feature to disable engine
+* fixed flac preset in the converter plugin
+* fixed xfce support
 * improved Windows support:
   - added support for progress indicator in the taskbar (taskbar plugin)
   - added removable device detecion (rdetect plugin)

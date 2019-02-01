@@ -18,7 +18,7 @@ cmake_policy(SET CMP0063 NEW)
 ENDIF()
 
 #Qt5 modules
-SET(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/qt56/lib/cmake)
+SET(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/qt512/lib/cmake)
 
 #installation paths
 include(GNUInstallDirs)

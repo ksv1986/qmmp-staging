@@ -329,6 +329,7 @@ qint64 DecoderFFmpeg::read(unsigned char *audio, qint64 maxSize)
 
     if(!m_output_at)
         return 0;
+
     qint64 len = qMin(m_output_at, maxSize);
 
     if(av_sample_fmt_is_planar(c->sample_fmt) && m_channels > 1)
@@ -371,7 +372,9 @@ qint64 DecoderFFmpeg::ffmpeg_decode()
 #endif
 
 #if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(57,48,0)) //ffmpeg-3.1:  57.48.101
-        int err = avcodec_send_packet(c, &m_temp_pkt);
+        int err = 0;
+        if(m_temp_pkt.data)
+            err = avcodec_send_packet(c, &m_temp_pkt);
         if(err != 0 && err != AVERROR(EAGAIN) && err != AVERROR(EINVAL))
         {
             qWarning("DecoderFFmpeg: avcodec_send_packet error: %d", err);
@@ -442,7 +445,7 @@ void DecoderFFmpeg::fillBuffer()
             if (av_read_frame(ic, &m_pkt) < 0)
             {
                 m_temp_pkt.size = 0;
-                break;
+                m_temp_pkt.data = nullptr;
             }
             m_temp_pkt.size = m_pkt.size;
             m_temp_pkt.data = m_pkt.data;
@@ -522,6 +525,10 @@ void DecoderFFmpeg::fillBuffer()
                 break;
             }
             continue;
+        }
+        else if(m_output_at == 0 && !m_pkt.data)
+        {
+            return;
         }
         else if(m_output_at == 0)
         {

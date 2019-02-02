@@ -21,14 +21,6 @@
 #ifndef FFMPEGMETADATAMODEL_H
 #define FFMPEGMETADATAMODEL_H
 
-extern "C"{
-#include <libavformat/avformat.h>
-#include <libavcodec/avcodec.h>
-#if (LIBAVUTIL_VERSION_INT >= AV_VERSION_INT(51,32,0))
-#include <libavutil/dict.h>
-#endif
-}
-
 #include <qmmp/metadatamodel.h>
 
 class FFmpegMetaDataModel : public MetaDataModel
@@ -39,7 +31,7 @@ public:
     QPixmap cover() const override;
 
 private:
-    AVFormatContext *m_in;
+    QPixmap m_pixmap;
 };
 
 #endif // FFMPEGMETADATAMODEL_H

@@ -272,6 +272,7 @@ void MainWindow::readSettings()
         show();
         qApp->processEvents();
         m_playlist->setVisible(m_display->isPlaylistVisible());
+        qApp->processEvents();
         m_equalizer->setVisible(m_display->isEqualizerVisible());
 
         if(m_pl_manager->currentPlayList()->currentTrack())
@@ -299,6 +300,8 @@ void MainWindow::readSettings()
         {
             ACTION(ActionManager::WM_ALLWAYS_ON_TOP)->setChecked(true);
             setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
+            m_playlist->setWindowFlags(m_playlist->windowFlags() | Qt::WindowStaysOnTopHint);
+            m_equalizer->setWindowFlags(m_equalizer->windowFlags() | Qt::WindowStaysOnTopHint);
         }
         ACTION(ActionManager::WM_STICKY)->setChecked(settings.value("show_on_all_desktops",
                                                                     false).toBool());

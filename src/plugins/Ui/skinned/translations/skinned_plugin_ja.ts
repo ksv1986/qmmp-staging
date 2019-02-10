@@ -786,37 +786,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="443"/>
+        <location filename="../mainwindow.cpp" line="446"/>
         <source>Playlist</source>
         <translation>プレイリスト</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="363"/>
+        <location filename="../mainwindow.cpp" line="366"/>
         <source>Appearance</source>
         <translation>外観</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="364"/>
+        <location filename="../mainwindow.cpp" line="367"/>
         <source>Shortcuts</source>
         <translation>ショートカット</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="434"/>
+        <location filename="../mainwindow.cpp" line="437"/>
         <source>View</source>
         <translation>観容</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="461"/>
+        <location filename="../mainwindow.cpp" line="464"/>
         <source>Audio</source>
         <translation>音響</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="469"/>
+        <location filename="../mainwindow.cpp" line="472"/>
         <source>Tools</source>
         <translation>ツール</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="554"/>
         <source>Qmmp</source>
         <translation type="unfinished"></translation>
     </message>
@@ -930,17 +930,17 @@
         <translation>動作</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="591"/>
+        <location filename="../playlist.cpp" line="589"/>
         <source>Rename Playlist</source>
         <translation>プレイリスト名を変更</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="591"/>
+        <location filename="../playlist.cpp" line="589"/>
         <source>Playlist name:</source>
         <translation>プレイリスト名:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="612"/>
+        <location filename="../playlist.cpp" line="610"/>
         <source>&amp;New PlayList</source>
         <translation>新しいプレイリスト(&amp;N)</translation>
     </message>
@@ -1174,8 +1174,8 @@
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="69"/>
-        <source>sixixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
-        <translation>sixixfive &lt;http://sixsixfive.deviantart.com/&gt;</translation>
+        <source>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

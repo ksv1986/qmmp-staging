@@ -785,37 +785,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="363"/>
+        <location filename="../mainwindow.cpp" line="366"/>
         <source>Appearance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="364"/>
+        <location filename="../mainwindow.cpp" line="367"/>
         <source>Shortcuts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="434"/>
+        <location filename="../mainwindow.cpp" line="437"/>
         <source>View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="443"/>
+        <location filename="../mainwindow.cpp" line="446"/>
         <source>Playlist</source>
         <translation>Çalma Listesi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="461"/>
+        <location filename="../mainwindow.cpp" line="464"/>
         <source>Audio</source>
         <translation>Ses</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="469"/>
+        <location filename="../mainwindow.cpp" line="472"/>
         <source>Tools</source>
         <translation>Araçlar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="554"/>
         <source>Qmmp</source>
         <translation type="unfinished"></translation>
     </message>
@@ -929,17 +929,17 @@
         <translation>Eylemler</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="591"/>
+        <location filename="../playlist.cpp" line="589"/>
         <source>Rename Playlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="591"/>
+        <location filename="../playlist.cpp" line="589"/>
         <source>Playlist name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="612"/>
+        <location filename="../playlist.cpp" line="610"/>
         <source>&amp;New PlayList</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1173,7 +1173,7 @@
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="69"/>
-        <source>sixixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
+        <source>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

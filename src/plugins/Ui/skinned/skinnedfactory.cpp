@@ -66,7 +66,7 @@ void SkinnedFactory::showAbout(QWidget *parent)
                         tr("Ilya Kotov <forkotov02@ya.ru>")+"\n"+
                         tr("Artwork:")+"\n"+
                         tr("Andrey Adreev <andreev00@gmail.com>")+"\n"+
-                        tr("sixixfive <http://sixsixfive.deviantart.com/>"));
+                        tr("sixsixfive <http://sixsixfive.deviantart.com/>"));
 
 }
 

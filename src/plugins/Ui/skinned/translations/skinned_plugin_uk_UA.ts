@@ -785,37 +785,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="363"/>
+        <location filename="../mainwindow.cpp" line="366"/>
         <source>Appearance</source>
         <translation>Зовнішній вигляд</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="364"/>
+        <location filename="../mainwindow.cpp" line="367"/>
         <source>Shortcuts</source>
         <translation>Комбінації клавіш</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="434"/>
+        <location filename="../mainwindow.cpp" line="437"/>
         <source>View</source>
         <translation>Вигляд</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="443"/>
+        <location filename="../mainwindow.cpp" line="446"/>
         <source>Playlist</source>
         <translation>Список</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="461"/>
+        <location filename="../mainwindow.cpp" line="464"/>
         <source>Audio</source>
         <translation>Звук</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="469"/>
+        <location filename="../mainwindow.cpp" line="472"/>
         <source>Tools</source>
         <translation>Утиліти</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="554"/>
         <source>Qmmp</source>
         <translation></translation>
     </message>
@@ -913,17 +913,17 @@
         <translation>Перевернути</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="591"/>
+        <location filename="../playlist.cpp" line="589"/>
         <source>Rename Playlist</source>
         <translation>Переіменувати список</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="591"/>
+        <location filename="../playlist.cpp" line="589"/>
         <source>Playlist name:</source>
         <translation>Ім&apos;я списка:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="612"/>
+        <location filename="../playlist.cpp" line="610"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Новий список</translation>
     </message>
@@ -1173,8 +1173,8 @@
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="69"/>
-        <source>sixixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
-        <translation></translation>
+        <source>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

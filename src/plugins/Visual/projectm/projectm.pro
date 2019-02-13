@@ -13,6 +13,8 @@ SOURCES += projectmplugin.cpp \
 
 RESOURCES = translations/translations.qrc
 
+#DEFINES += PROJECTM_31
+
 unix {
     PKGCONFIG += libprojectM
     target.path = $$PLUGIN_DIR/Visual

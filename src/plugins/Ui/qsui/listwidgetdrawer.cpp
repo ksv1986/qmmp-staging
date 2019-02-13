@@ -311,17 +311,21 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
     bool draw_extra = false;
 
     painter->setFont(m_font);
-    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : m_normal);
     QFontMetrics *metrics = nullptr;
+    QColor textColor = m_normal;
+
     if(row->flags & ListWidgetRow::CURRENT)
     {
         m_font.setBold(true);
         painter->setFont(m_font);
         m_font.setBold(false);
         metrics = m_bold_metrics;
+        textColor = m_current;
     }
     else
         metrics = m_metrics;
+
+    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : textColor);
 
     if(rtl)
     {
@@ -337,7 +341,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 {
                     painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : m_splitter);
                     painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
-                    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : m_normal);
+                    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : textColor);
                 }
             }
 
@@ -362,7 +366,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
         {
             for(int i = 0; i < row->sizes.count(); i++)
             {
-                painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : m_normal);
+                painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : textColor);
                 draw_extra = (i == row->trackStateColumn && !row->extraString.isEmpty());
 
                 if(row->alignment[i] == ListWidgetRow::ALIGN_LEFT)
@@ -416,7 +420,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 {
                     painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : m_splitter);
                     painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
-                    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : m_normal);
+                    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : textColor);
                 }
             }
 
@@ -441,7 +445,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
         {
             for(int i = 0; i < row->sizes.count(); i++)
             {
-                painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : m_normal);
+                painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_highlighted : textColor);
                 draw_extra = (i == row->trackStateColumn && !row->extraString.isEmpty());
 
                 if(row->alignment[i] == ListWidgetRow::ALIGN_LEFT)

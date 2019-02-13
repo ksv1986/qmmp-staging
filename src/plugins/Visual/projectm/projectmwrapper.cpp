@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,8 +40,16 @@ void ProjectMWrapper::selectPreset(int index)
         projectM::selectPreset(index);
 }
 
+#ifdef PROJECTM_31
+void ProjectMWrapper::presetSwitchedEvent(bool isHardCut, size_t index) const
+{
+    Q_UNUSED(isHardCut);
+    emit currentPresetChanged(index);
+}
+#else
 void ProjectMWrapper::presetSwitchedEvent(bool isHardCut, unsigned int index) const
 {
     Q_UNUSED(isHardCut);
     emit currentPresetChanged(index);
 }
+#endif

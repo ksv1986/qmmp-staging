@@ -15,6 +15,12 @@ ELSE(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL GL)
   MESSAGE(WARNING "Unsuppoted OpenGL implementation, projectM disabled")
 ENDIF(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL GL)
 
+pkg_search_module(PROJECTM_31 libprojectM>=3.1.0)
+
+IF(PROJECTM_31_FOUND)
+ADD_DEFINITIONS(-DPROJECTM_31)
+ENDIF(PROJECTM_31_FOUND)
+
 find_file(PROJECTM_CONFIG config.inp
           PATHS "/usr/share/projectM/" "/usr/local/share/projectM/")
 

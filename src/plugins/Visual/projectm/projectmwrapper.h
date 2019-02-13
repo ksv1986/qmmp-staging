@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,7 +40,11 @@ public slots:
     void selectPreset(int index);
 
 private:
+#ifdef PROJECTM_31
+    void presetSwitchedEvent(bool isHardCut, size_t index) const override;
+#else
     void presetSwitchedEvent(bool isHardCut, unsigned int index) const override;
+#endif
 
 
 };

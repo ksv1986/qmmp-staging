@@ -86,8 +86,10 @@ AACFile::AACFile(QIODevice *input, bool metaData, bool adts)
         //try to determnate header type;
         if ((uchar) buf[adts_offset] == 0xff && (((uchar)buf[adts_offset+1] & 0xf6) == 0xf0))
         {
-            unsigned int frame_length = ((((unsigned int)buf[adts_offset+3] & 0x3)) << 11)
-                    | (((unsigned int)buf[adts_offset+4]) << 3) | ((unsigned int)buf[adts_offset+5] >> 5);
+            unsigned int frame_length = uchar(buf[adts_offset + 3]) << 11;
+            frame_length |= uchar(buf[adts_offset + 4]) << 3;
+            frame_length |= uchar(buf[adts_offset + 5]) >> 5;
+            frame_length &= 0x1FFF;
 
             if(frame_length == 0 || (adts_offset + frame_length > buf_at - 6))
             {

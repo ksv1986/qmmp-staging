@@ -19,8 +19,8 @@
  ***************************************************************************/
 
 #include <QtDBus>
-#include "mpris2/root2object.h"
-#include "mpris2/player2object.h"
+#include "root2object.h"
+#include "player2object.h"
 #include "mpris.h"
 
 MPRIS::MPRIS(QObject *parent) : QObject(parent)

@@ -1467,3 +1467,14 @@ Version 1.3.0
 * updated Italian translation (Luigi Toscano)
 * updated Finnish translation (Jiri Grönroos)
 * updated Chinese Traditional translation (Cosmos Chen)
+
+Version 1.3.1
+* added projectM 3.1 support
+* added feature to determine plugin prefix via pkgconfig (Chris Spiegel)
+* fixed current track text color in the qsui plugin
+* fixed command line processing under Windows
+* fixed AAC support
+* updated Polish translation (mrerexx)
+* updated Portuguese translation (Sérgio Marques)
+* updated Finnish translation (Jiri Grönroos)
+* updated Russian translation (Alexey Loginov)

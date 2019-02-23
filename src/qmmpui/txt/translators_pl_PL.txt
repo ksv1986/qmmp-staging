@@ -8,6 +8,7 @@ Bułgarski:
     Kiril Kirilov
 
 Chiński tradycyjny:
+    Cosmos Chen
     lon <lon83129@126.com>
     Jeff Huang
 
@@ -69,6 +70,7 @@ Litewski:
 Polish:
     Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
+    mrerexx
 
 Portugalski:
     Sérgio Marques <smarquespt@gmail.com>
@@ -76,6 +78,7 @@ Portugalski:
 Rosyjski:
     Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
 
 Serbski:
     Mladen Pejaković <pejakm@autistici.org>

@@ -1052,7 +1052,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="14"/>
         <source>Popup Information Settings</source>
-        <translation>Ustawienia informacji popup</translation>
+        <translation>Ustawienia inforamcji popup</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="29"/>

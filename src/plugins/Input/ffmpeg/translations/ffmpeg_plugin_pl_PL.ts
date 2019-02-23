@@ -84,7 +84,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="110"/>
         <source>Shorten</source>
-        <translation>Shorten </translation>
+        <translation>Shorten</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="117"/>

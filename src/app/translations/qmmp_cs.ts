@@ -97,83 +97,83 @@
         <translation>Neznámý příkaz</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="409"/>
+        <location filename="../qmmpstarter.cpp" line="413"/>
         <source>Usage: qmmp [options] [files]</source>
         <translation>Použití: qmmp [volby] [soubory]</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="410"/>
+        <location filename="../qmmpstarter.cpp" line="414"/>
         <source>Options:</source>
         <translation>Volby:</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="416"/>
+        <location filename="../qmmpstarter.cpp" line="420"/>
         <source>Start qmmp with the specified user interface</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="417"/>
+        <location filename="../qmmpstarter.cpp" line="421"/>
         <source>List all available user interfaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="418"/>
+        <location filename="../qmmpstarter.cpp" line="422"/>
         <source>Don&apos;t start the application</source>
         <translation>Nespouštět aplikaci</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="419"/>
+        <location filename="../qmmpstarter.cpp" line="423"/>
         <source>Display this text and exit</source>
         <translation>Zobrazit tento text a skončit</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="420"/>
+        <location filename="../qmmpstarter.cpp" line="424"/>
         <source>Print version number and exit</source>
         <translation>Vypsat číslo verze a skončit</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="422"/>
+        <location filename="../qmmpstarter.cpp" line="426"/>
         <source>Home page: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="423"/>
+        <location filename="../qmmpstarter.cpp" line="427"/>
         <source>Development page: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="424"/>
+        <location filename="../qmmpstarter.cpp" line="428"/>
         <source>Bug tracker: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="132"/>
-        <location filename="../qmmpstarter.cpp" line="429"/>
+        <location filename="../qmmpstarter.cpp" line="135"/>
+        <location filename="../qmmpstarter.cpp" line="433"/>
         <source>Command Line Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="442"/>
+        <location filename="../qmmpstarter.cpp" line="446"/>
         <source>QMMP version: %1</source>
         <translation>QMMP verze: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="443"/>
+        <location filename="../qmmpstarter.cpp" line="447"/>
         <source>Compiled with Qt version: %1</source>
         <translation>Zkompilováno s Qt verze: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="444"/>
+        <location filename="../qmmpstarter.cpp" line="448"/>
         <source>Using Qt version: %1</source>
         <translation>Používá Qt verze: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="447"/>
+        <location filename="../qmmpstarter.cpp" line="451"/>
         <source>Qmmp Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="464"/>
+        <location filename="../qmmpstarter.cpp" line="468"/>
         <source>User Interfaces</source>
         <translation>Uživatelská rozhraní</translation>
     </message>

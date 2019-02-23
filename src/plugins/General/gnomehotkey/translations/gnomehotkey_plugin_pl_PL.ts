@@ -16,7 +16,7 @@
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="51"/>
         <source>Qmmp Gnome Hotkey Plugin</source>
-        <translation>Wtyczka Skróŧy klawiszowe Gnome dla Qmmp</translation>
+        <translation>Wtyczka Skróty klawiszowe Gnome dla Qmmp</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="52"/>

@@ -1035,7 +1035,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="14"/>
         <source>Popup Information Settings</source>
-        <translation>Ustawienia inforamcji popup</translation>
+        <translation>Ustawienia informacji popup</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="29"/>
@@ -1174,7 +1174,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="69"/>
         <source>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</translation>
     </message>
 </context>
 <context>
@@ -1272,7 +1272,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="557"/>
         <source>Use bitmap font if available</source>
-        <translation>Użyj czcionki bitmapowej jeśli jest dostępna</translation>
+        <translation>Użyj czcionki bitmapowej, jeśli jest dostępna</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="124"/>

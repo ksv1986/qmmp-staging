@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="388"/>
         <source>mpg123, API version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>mpg123, API-versio: %1</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="392"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="393"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähdekoodi perustuu mq3- ja madplay-projektien koodiin</translation>
     </message>
 </context>
 <context>
@@ -80,17 +80,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Purkaja</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>MAD</source>
-        <translation type="unfinished"></translation>
+        <translation>MAD</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>MPG123</source>
-        <translation type="unfinished"></translation>
+        <translation>MPG123</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="77"/>

@@ -1049,7 +1049,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Purkaja</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="66"/>

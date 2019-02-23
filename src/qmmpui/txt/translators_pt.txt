@@ -8,6 +8,7 @@ Búlgaro:
     Kiril Kirilov
 
 Mandarim tradicional:
+    Cosmos Chen
     lon <lon83129@126.com>
     Jeff Huang
 
@@ -69,6 +70,7 @@ Lituano:
 Polaco:
     Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
+    mrerexx
 
 Português:
     Sérgio Marques <smarquespt@gmail.com>
@@ -76,6 +78,7 @@ Português:
 Russo:
     Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
 
 Sérvio:
     Mladen Pejaković <pejakm@autistici.org>

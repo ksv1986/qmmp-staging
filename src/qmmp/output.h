@@ -77,6 +77,11 @@ public:
      */
     virtual void resume();
     /*!
+     * Mutes/Restores volume. Default implementation does nothing.
+     * @param mute - state of volume (\b true - mute, \b false - restore)
+     */
+    virtual void setMuted(bool mute);
+    /*!
      * Sets track information for output.
      * Default implementation does nothing.
      * Reimplement this function to receive metadata.

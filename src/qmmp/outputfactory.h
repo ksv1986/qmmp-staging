@@ -31,24 +31,15 @@ class Volume;
 class Decoder;
 class Output;
 
-/*! @brief Helper class to store output plugin properies.
+/*! @brief Helper structure to store output plugin properies.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QMMP_EXPORT OutputProperties
+struct OutputProperties
 {
-public:
-    /*!
-     * Constructor
-     */
-    OutputProperties()
-    {
-        hasAbout = false;
-        hasSettings = false;
-    }
-    QString name;        /*!< Effect plugin full name */
-    QString shortName;   /*!< Effect plugin short name for internal usage */
-    bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings;    /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    QString name;              /*!< Effect plugin full name */
+    QString shortName;         /*!< Effect plugin short name for internal usage */
+    bool hasAbout = false;     /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    bool hasSettings = false;  /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
 };
 /*! @brief %Output plugin interface (output factory).
  * @author Ilya Kotov <forkotov02@ya.ru>

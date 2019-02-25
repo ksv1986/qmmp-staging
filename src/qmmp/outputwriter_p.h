@@ -111,14 +111,13 @@ private:
     ChannelMap m_chan_map;
     Qmmp::AudioFormat m_format;
     qint64 m_bytesPerMillisecond;
-    std::atomic_bool m_user_stop, m_pause;
+    std::atomic_bool m_user_stop, m_pause, m_muted;
     bool m_prev_pause;
     std::atomic_bool m_finish;
     bool m_useEq;
     qint64 m_totalWritten, m_currentMilliseconds;
     QmmpSettings *m_settings;
     Output *m_output;
-    std::atomic_bool m_muted;
     AudioParameters m_in_params;
     AudioConverter *m_format_converter;
     ChannelConverter *m_channel_converter;

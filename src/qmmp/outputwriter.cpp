@@ -130,6 +130,12 @@ void OutputWriter::stop()
 void OutputWriter::setMuted(bool muted)
 {
     m_muted = muted;
+    if(isRunning() && m_output)
+    {
+        m_mutex.lock();
+        m_output->setMuted(muted);
+        m_mutex.unlock();
+    }
 }
 
 void OutputWriter::finish()
@@ -247,6 +253,8 @@ void OutputWriter::run()
         m_mutex.unlock ();
         return;
     }
+    if(m_muted)
+        m_output->setMuted(true);
     m_mutex.unlock ();
 
     bool done = false;
@@ -315,8 +323,8 @@ void OutputWriter::run()
             dispatchVisual(b);
             if (SoftwareVolume::instance())
                 SoftwareVolume::instance()->changeVolume(b, m_channels);
-            if (m_muted)
-                memset(b->data, 0, b->size * sizeof(float));
+            //if (m_muted)
+            //    memset(b->data, 0, b->size * sizeof(float));
             if(m_channel_converter)
                 m_channel_converter->applyEffect(b);
             l = 0;

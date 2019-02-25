@@ -223,6 +223,13 @@ void OutputPulseAudio::resume()
     process(op);
 }
 
+void OutputPulseAudio::setMuted(bool mute)
+{
+    pa_operation *op = pa_context_set_sink_input_mute(m_ctx, pa_stream_get_index(m_stream), mute,
+                                                      OutputPulseAudio::context_success_cb, nullptr);
+    pa_operation_unref(op);
+}
+
 void OutputPulseAudio::setVolume(const VolumeSettings &v)
 {
     pa_cvolume volume = VolumePulseAudio::volumeSettingsToCvolume(v, audioParameters().channels());

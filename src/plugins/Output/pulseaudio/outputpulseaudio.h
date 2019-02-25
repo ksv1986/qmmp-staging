@@ -48,6 +48,7 @@ public:
     void reset() override;
     void suspend() override;
     void resume() override;
+    void setMuted(bool mute) override;
     void setVolume(const VolumeSettings &v);
 
     static OutputPulseAudio *instance;
@@ -62,7 +63,6 @@ private:
     //callbacks
     static void subscribe_cb(pa_context *ctx, pa_subscription_event_type t, uint32_t index, void *data);
     static void info_cb(pa_context *ctx, const pa_sink_input_info * info, int, void * data);
-    //converters
     static void context_success_cb(pa_context *, int success, void *data);
     static void stream_success_cb(pa_stream *, int success, void *data);
 

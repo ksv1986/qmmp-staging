@@ -102,27 +102,29 @@ private:
     void startVisualization();
     void stopVisualization();
 
-    bool m_skip;
+    bool m_skip = false;
     QMutex m_mutex;
     Recycler m_recycler;
     StateHandler *m_handler;
-    quint32 m_frequency;
-    int m_channels, m_kbps;
+    quint32 m_frequency = 0;
+    int m_channels = 0, m_kbps = 0;
     ChannelMap m_chan_map;
-    Qmmp::AudioFormat m_format;
-    qint64 m_bytesPerMillisecond;
-    std::atomic_bool m_user_stop, m_pause, m_muted;
-    bool m_prev_pause;
-    std::atomic_bool m_finish;
-    bool m_useEq;
-    qint64 m_totalWritten, m_currentMilliseconds;
+    Qmmp::AudioFormat m_format = Qmmp::PCM_UNKNOWM;
+    qint64 m_bytesPerMillisecond = 0;
+    std::atomic_bool m_user_stop = ATOMIC_VAR_INIT(false);
+    std::atomic_bool m_pause = ATOMIC_VAR_INIT(false);
+    std::atomic_bool m_muted = ATOMIC_VAR_INIT(false);
+    std::atomic_bool m_finish = ATOMIC_VAR_INIT(false);
+    bool m_prev_pause = false;
+    bool m_useEq = false;
+    qint64 m_totalWritten = 0, m_currentMilliseconds = -1;
     QmmpSettings *m_settings;
-    Output *m_output;
+    Output *m_output = nullptr;
     AudioParameters m_in_params;
-    AudioConverter *m_format_converter;
-    ChannelConverter *m_channel_converter;
-    unsigned char *m_output_buf;
-    size_t m_output_size; //samples
+    AudioConverter *m_format_converter = nullptr;
+    ChannelConverter *m_channel_converter = nullptr;
+    unsigned char *m_output_buf = nullptr;
+    size_t m_output_size = 0; //samples
 };
 
 #endif // OUTPUTWRITER_P_H

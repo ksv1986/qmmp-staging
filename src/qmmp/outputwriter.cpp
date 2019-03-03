@@ -35,26 +35,7 @@ extern "C" {
 OutputWriter::OutputWriter (QObject* parent) : QThread (parent)
 {
     m_handler = StateHandler::instance();
-    m_frequency = 0;
-    m_channels = 0;
-    m_output = nullptr;
-    m_format = Qmmp::PCM_UNKNOWM;
-    m_totalWritten = 0;
-    m_currentMilliseconds = -1;
-    m_bytesPerMillisecond = 0;
-    m_user_stop = false;
-    m_finish = false;
-    m_kbps = 0;
-    m_skip = false;
-    m_pause = false;
-    m_prev_pause = false;
-    m_useEq = false;
-    m_muted = false;
     m_settings = QmmpSettings::instance();
-    m_format_converter = nullptr;
-    m_channel_converter = nullptr;
-    m_output_buf = nullptr;
-    m_output_size = 0;
 }
 
 OutputWriter::~OutputWriter()
@@ -365,7 +346,7 @@ void OutputWriter::run()
                 if(m >= 0)
                 {
                     m_totalWritten += m;
-                    l+= m;
+                    l += m;
                 }
                 else
                     break;

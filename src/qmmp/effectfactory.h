@@ -27,12 +27,11 @@ class QObject;
 class QWidget;
 class Effect;
 
-/*! @brief Helper class to store effect plugin properties.
+/*! @brief Structure to store effect plugin properties.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QMMP_EXPORT EffectProperties
+struct EffectProperties
 {
-public:
     /*!
      * This enum describes effect preferd position.
      */
@@ -42,21 +41,14 @@ public:
         EFFECT_PRIORITY_DEFAULT,    /*!< Default priority */
         EFFECT_PRIORITY_HIGH        /*!< High priority */
     };
-    /*!
-     * Constructor
-     */
-    EffectProperties()
-    {
-        hasAbout = false;
-        hasSettings = false;
-        priority = EFFECT_PRIORITY_DEFAULT;
-    }
-    QString name;        /*!< Effect plugin full name */
-    QString shortName;   /*!< Effect plugin short name for internal usage */
-    bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings;    /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
-    int priority;        /*!< Effect priority. Effecs with higher priority will be applied first */
+
+    QString name;               /*!< Effect plugin full name */
+    QString shortName;          /*!< Effect plugin short name for internal usage */
+    bool hasAbout = false;      /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    bool hasSettings = false;   /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    int priority = EFFECT_PRIORITY_DEFAULT;  /*!< Effect priority. Effecs with higher priority will be applied first */
 };
+
 /*! @brief Effect plugin interface (effect factory).
  * @author Ilya Kotov <forkotov02@ya.ru>
  */

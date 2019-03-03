@@ -29,21 +29,13 @@ class QWidget;
 class Control;
 class General;
 
-/*! @brief Helper class to store user interface plugin properies.
+/*! @brief Structure to store user interface plugin properies.
  */
-class QMMPUI_EXPORT UiProperties
+struct UiProperties
 {
-public:
-    /*!
-     * Constructor
-     */
-    UiProperties()
-    {
-        hasAbout = false;
-    }
-    QString name;        /*!< File dialog plugin full name */
-    QString shortName;   /*!< File dialog short name for internal usage */
-    bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    QString name;          /*!< File dialog plugin full name */
+    QString shortName;     /*!< File dialog short name for internal usage */
+    bool hasAbout = false; /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
 };
 /*! @brief User interface plugin interface.
  * @author Ilya Kotov <forkotov02@ya.ru>

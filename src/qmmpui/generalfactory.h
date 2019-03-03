@@ -29,26 +29,16 @@ class QWidget;
 class Control;
 class General;
 
-/*! @brief Helper class to store general plugin properies.
+/*! @brief Structure to store general plugin properies.
  */
-class QMMPUI_EXPORT GeneralProperties
+struct GeneralProperties
 {
-public:
-    /*!
-     * Constructor
-     */
-    GeneralProperties()
-    {
-        hasAbout = false;
-        hasSettings = false;
-        visibilityControl = false;
-    }
-    QString name;           /*!< File dialog plugin full name */
-    QString shortName;      /*!< File dialog short name for internal usage */
-    bool hasAbout;          /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings;       /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
-    bool visibilityControl; /*!< Should be \b true if plugin can show/hide main window of the player,
-                             * otherwise returns \b false */
+    QString name;                   /*!< File dialog plugin full name */
+    QString shortName;              /*!< File dialog short name for internal usage */
+    bool hasAbout = false;          /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    bool hasSettings = false;       /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    bool visibilityControl = false; /*!< Should be \b true if plugin can show/hide main window of the player,
+                                     * otherwise returns \b false */
 };
 /*! @brief %General plugin interface.
  * @author Ilya Kotov <forkotov02@ya.ru>

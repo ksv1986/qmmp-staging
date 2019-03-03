@@ -27,24 +27,15 @@ class FileDialog;
 class QWidget;
 class QString;
 
-/*! @brief Helper class to store file dialog plugin properties.
+/*! @brief Structure to store file dialog plugin properties.
  */
-class FileDialogProperties
+struct FileDialogProperties
 {
-public:
-    /*!
-     * Constructor
-     */
-    FileDialogProperties()
-    {
-        hasAbout = false;
-        modal = true;
-    }
-    bool hasAbout;        /*!< Should be \b true if the file dialog plugin has about dialog,
+    bool hasAbout = false;/*!< Should be \b true if the file dialog plugin has about dialog,
                            * otherwise should be \b false */
     QString name;         /*!< File dialog plugin full name */
     QString shortName;    /*!< File dialog short name for internal usage */
-    bool modal;           /*!<  Should be \b true if the file dialog doesn't support nonmodal mode,
+    bool modal = false;   /*!<  Should be \b true if the file dialog doesn't support nonmodal mode,
                            * otherwise should be \b false */
 };
 /*! @brief File dialog plugin interface.

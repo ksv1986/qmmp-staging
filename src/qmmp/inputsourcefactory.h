@@ -27,26 +27,16 @@
 class QStringList;
 class InputSource;
 
-/*! @brief Helper class to store transport plugin properies.
+/*! @brief Structure to store transport plugin properies.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QMMP_EXPORT InputSourceProperties
+struct QMMP_EXPORT InputSourceProperties
 {
-public:
-    /*!
-     * Constructor
-     */
-    InputSourceProperties()
-    {
-        hasSettings = false;
-        hasAbout = false;
-    }
-
-    QString name;          /*!< Transport plugin full name */
-    QString shortName;     /*!< Transport plugin name for internal usage */
-    QStringList protocols; /*!< A list of supported protocols. */
-    bool hasAbout;         /*!< Should be \b true if plugin has about dialog, otherwise \b false */
-    bool hasSettings;      /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
+    QString name;              /*!< Transport plugin full name */
+    QString shortName;         /*!< Transport plugin name for internal usage */
+    QStringList protocols;     /*!< A list of supported protocols. */
+    bool hasAbout = false;     /*!< Should be \b true if plugin has about dialog, otherwise \b false */
+    bool hasSettings = false;  /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
 };
 
 

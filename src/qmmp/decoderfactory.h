@@ -30,22 +30,11 @@
 #include "metadatamodel.h"
 #include "trackinfo.h"
 
-/*! @brief Helper class to store input plugin properties.
+/*! @brief Structure to store input plugin properties.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class DecoderProperties
+struct DecoderProperties
 {
-public:
-    /*!
-     * Constructor
-     */
-    DecoderProperties()
-    {
-        hasAbout = false;
-        hasSettings = false;
-        noInput = false;
-        priority = 0;
-    }
     QString name;             /*!< Input plugin full name */
     QString shortName;        /*!< Input plugin short name for internal usage */
     QStringList filters;      /*!< File filters (example: "*.mp3") */
@@ -53,10 +42,10 @@ public:
     QStringList contentTypes; /*!< Supported content types */
     QStringList protocols;    /*!< A list of supported protocols.
                                *   Should be empty if plugin uses stream input. */
-    bool hasAbout;            /*!< Should be \b true if plugin has about dialog, otherwise \b false */
-    bool hasSettings;         /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
-    bool noInput;             /*!< Should be \b true if plugin has own input, otherwise \b false */
-    int priority;             /*!< Decoder priority. Decoders with lowest value will be used first */
+    bool hasAbout = false;     /*!< Should be \b true if plugin has about dialog, otherwise \b false */
+    bool hasSettings = false;  /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
+    bool noInput = false;      /*!< Should be \b true if plugin has own input, otherwise \b false */
+    int priority = 0;          /*!< Decoder priority. Decoders with lowest value will be used first */
 };
 /*! @brief Input plugin interface (decoder factory).
  * @author Ilya Kotov <forkotov02@ya.ru>

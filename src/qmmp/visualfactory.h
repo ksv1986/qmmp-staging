@@ -21,6 +21,7 @@
 #ifndef VISUALFACTORY_H
 #define VISUALFACTORY_H
 
+#include <QString>
 #include "qmmp_export.h"
 
 class QObject;
@@ -28,24 +29,15 @@ class QWidget;
 class QDialog;
 class Visual;
 
-/*! @brief Helper class to store visual plugin properies.
+/*! @brief Structure to store visual plugin properies.
  *  @author Ilya Kotov <forkotov02@ya.ru>
  */
-class VisualProperties
+struct VisualProperties
 {
-public:
-    /*!
-     * Constructor
-     */
-    VisualProperties()
-    {
-        hasAbout = false;
-        hasSettings = false;
-    }
-    QString name;        /*!< Effect plugin full name */
-    QString shortName;   /*!< Effect plugin short name for internal usage */
-    bool hasAbout;       /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings;    /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    QString name;              /*!< Effect plugin full name */
+    QString shortName;         /*!< Effect plugin short name for internal usage */
+    bool hasAbout = false;     /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    bool hasSettings = false;  /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
 };
 /*! @brief %Visual plugin interface (visual factory).
  * @author Ilya Kotov <forkotov02@ya.ru>

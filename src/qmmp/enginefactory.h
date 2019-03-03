@@ -33,29 +33,21 @@
 
 class AbstractEngine;
 
-/*! @brief Helper class to store custom audio engine properies.
+/*! @brief Structure to store custom audio engine properies.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QMMP_EXPORT EngineProperties
+struct EngineProperties
 {
-public:
-    /*!
-     * Constructor
-     */
-    EngineProperties()
-    {
-        hasAbout = false;
-        hasSettings = false;
-    }
     QString name;             /*!< Input plugin full name */
     QString shortName;        /*!< Input plugin short name for internal usage */
     QStringList filters;      /*!< File filters (example: "*.mp3,*.ogg") */
     QString description;      /*!< File filter description */
     QStringList contentTypes; /*!< Supported content types */
     QStringList protocols;    /*!< Supported protocols. Should be empty if plugin uses stream input. */
-    bool hasAbout;            /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings;         /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    bool hasAbout = false;    /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
+    bool hasSettings = false; /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
 };
+
 /*! @brief Engine plugin interface.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */

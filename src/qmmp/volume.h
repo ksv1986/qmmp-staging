@@ -28,17 +28,9 @@
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
 struct VolumeSettings
-{
-    /*!
-     * Constructor
-     */
-    VolumeSettings()
-    {
-        left = 0;
-        right = 0;
-    }
-    int left /*!< Volume of the left channel. It should be \b 0..100. */;
-    int right /*!< Volume of the left channel It should be \b 0..100. */;
+{    
+    int left = 0;  /*!< Volume of the left channel. It should be \b 0..100. */
+    int right = 0; /*!< Volume of the left channel It should be \b 0..100. */
 };
 
 

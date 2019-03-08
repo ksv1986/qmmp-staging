@@ -25,7 +25,7 @@ QStringList CommandLineHandler::helpString() const
     QStringList out;
     foreach (const CommandLineOption &opt, m_options.values())
     {
-        if(opt.flags & HIDDEN_FROM_HELP)
+        if(opt.flags & HiddenFromHelp)
             continue;
         else if(opt.values.isEmpty())
             out << opt.names.join(", ") + "||" + opt.helpString;

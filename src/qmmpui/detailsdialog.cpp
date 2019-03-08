@@ -202,7 +202,7 @@ void DetailsDialog::updatePage()
         coverPixmap = m_metaDataModel->cover();
     }
 
-    if((m_metaDataModel && (m_metaDataModel->dialogHints() & MetaDataModel::IS_COVER_EDITABLE)) ||
+    if((m_metaDataModel && (m_metaDataModel->dialogHints() & MetaDataModel::IsCoverEditable)) ||
             !coverPath.isEmpty() ||
             !coverPixmap.isNull())
     {
@@ -265,7 +265,7 @@ void DetailsDialog::printInfo()
     QList<MetaDataItem> items;
     if(m_info.duration() > 0)
         items << MetaDataItem(tr("Duration"), MetaDataFormatter::formatDuration(m_info.duration()));
-    if(!m_metaDataModel || !(m_metaDataModel->dialogHints() & MetaDataModel::COMPLETE_PROPERTY_LIST))
+    if(!m_metaDataModel || !(m_metaDataModel->dialogHints() & MetaDataModel::CompletePropertyList))
     {
         items << MetaDataItem(tr("Bitrate"), m_info.value(Qmmp::BITRATE).toInt(), tr("kbps"));
         items << MetaDataItem(tr("Sample rate"), m_info.value(Qmmp::SAMPLERATE).toInt(), tr("Hz"));

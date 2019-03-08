@@ -28,7 +28,7 @@ CoverEditor::CoverEditor(MetaDataModel *model, const QString &coverPath, QWidget
     m_ui.setupUi(this);
     m_model = model;
     m_coverPath = coverPath;
-    m_editable = m_model && (m_model->dialogHints() & MetaDataModel::IS_COVER_EDITABLE) && !m_model->isReadOnly();
+    m_editable = m_model && (m_model->dialogHints() & MetaDataModel::IsCoverEditable) && !m_model->isReadOnly();
 
     m_ui.sourceComboBox->addItem(tr("External file"));
     m_ui.sourceComboBox->addItem(tr("Tag"));

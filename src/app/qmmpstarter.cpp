@@ -116,7 +116,7 @@ QMMPStarter::QMMPStarter() : QObject()
                 return;
             }
 
-            if(flags & CommandLineHandler::NO_START)
+            if(flags & CommandLineHandler::NoStart)
             {
                 m_exit_code = EXIT_SUCCESS;
                 m_finished = true;

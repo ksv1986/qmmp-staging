@@ -39,14 +39,14 @@ void PlayListOption::registerOprions()
     registerOption(PL_SHUFFLE_TOGGLE, "--pl-shuffle-toggle", tr("Toggle playlist shuffle"));
     registerOption(PL_STATE, "--pl-state", tr("Show playlist options"));
 
-    setOptionFlags(PL_HELP, NO_START);
-    setOptionFlags(PL_LIST, HIDDEN_FROM_HELP);
-    setOptionFlags(PL_DUMP, HIDDEN_FROM_HELP);
-    setOptionFlags(PL_PLAY, HIDDEN_FROM_HELP);
-    setOptionFlags(PL_CLEAR, HIDDEN_FROM_HELP);
-    setOptionFlags(PL_REPEATE_TOGGLE, HIDDEN_FROM_HELP);
-    setOptionFlags(PL_SHUFFLE_TOGGLE, HIDDEN_FROM_HELP);
-    setOptionFlags(PL_STATE, HIDDEN_FROM_HELP);
+    setOptionFlags(PL_HELP, NoStart);
+    setOptionFlags(PL_LIST, HiddenFromHelp);
+    setOptionFlags(PL_DUMP, HiddenFromHelp);
+    setOptionFlags(PL_PLAY, HiddenFromHelp);
+    setOptionFlags(PL_CLEAR, HiddenFromHelp);
+    setOptionFlags(PL_REPEATE_TOGGLE, HiddenFromHelp);
+    setOptionFlags(PL_SHUFFLE_TOGGLE, HiddenFromHelp);
+    setOptionFlags(PL_STATE, HiddenFromHelp);
 }
 
 QString PlayListOption::shortName() const

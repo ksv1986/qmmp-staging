@@ -82,7 +82,7 @@ QString CommandLineManager::executeCommand(const QString &name, const QStringLis
         if(id < 0)
             continue;
 
-        if(started || (opt->flags(id) & CommandLineHandler::NO_START))
+        if(started || (opt->flags(id) & CommandLineHandler::NoStart))
             return opt->executeCommand(id, args);
         else
         {

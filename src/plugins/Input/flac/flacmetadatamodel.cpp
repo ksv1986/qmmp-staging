@@ -33,7 +33,7 @@
 
 FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly)
 #ifdef HAS_PICTURE_LIST
-    : MetaDataModel(true, MetaDataModel::IS_COVER_EDITABLE)
+    : MetaDataModel(true, MetaDataModel::IsCoverEditable)
 #else
     : MetaDataModel(true)
 #endif

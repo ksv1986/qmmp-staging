@@ -81,8 +81,8 @@ public:
      */
     enum OptionFlag
     {
-        HIDDEN_FROM_HELP = 0x1, /*!< Hide this option in the user-visible help output. */
-        NO_START = 0x2          /*!< Do not start player instance (useful for extra help options). */
+        HiddenFromHelp = 0x1,  /*!< Hide this option in the user-visible help output. */
+        NoStart = 0x2          /*!< Do not start player instance (useful for extra help options). */
     };
     Q_DECLARE_FLAGS(OptionFlags, OptionFlag)
     /*!

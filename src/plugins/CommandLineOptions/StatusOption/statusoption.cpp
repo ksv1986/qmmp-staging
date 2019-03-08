@@ -32,7 +32,7 @@ void StatusOption::registerOprions()
                    QStringList() << "fmt");
     registerOption(NOW_PLAYING_SYNTAX, "--nowplaying-syntax", tr("Print --nowplaying syntax"));
 
-    setOptionFlags(NOW_PLAYING_SYNTAX, NO_START);
+    setOptionFlags(NOW_PLAYING_SYNTAX, NoStart);
 }
 
 QString StatusOption::shortName() const

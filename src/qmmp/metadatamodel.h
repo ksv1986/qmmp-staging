@@ -85,9 +85,9 @@ public:
      */
     enum DialogHint
     {
-        NO_HINTS = 0x0,               /*!< Default value. */
-        IS_COVER_EDITABLE = 0x1,      /*!< Enable cover editor. */
-        COMPLETE_PROPERTY_LIST = 0x2  /*!< Show properties from \b extraProperties() only (ignore other sources) */
+        NoHints = 0x0,              /*!< Default value. */
+        IsCoverEditable = 0x1,      /*!< Enable cover editor. */
+        CompletePropertyList = 0x2  /*!< Show properties from \b extraProperties() only (ignore other sources) */
     };
     Q_DECLARE_FLAGS(DialogHints, DialogHint)
     /*!
@@ -95,7 +95,7 @@ public:
      * @param readOnly Open file in read-only mode (\b true - enabled, \b false - disable).
      * @param hints Details dialog settings.
      */
-    MetaDataModel(bool readOnly, DialogHints hints = NO_HINTS);
+    MetaDataModel(bool readOnly, DialogHints hints = NoHints);
     /*!
      * Destructor.
      */

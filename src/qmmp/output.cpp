@@ -65,11 +65,6 @@ void Output::suspend()
 void Output::resume()
 {}
 
-void Output::setMuted(bool mute)
-{
-    Q_UNUSED(mute);
-}
-
 void Output::setTrackInfo(const TrackInfo &info)
 {
     Q_UNUSED(info);

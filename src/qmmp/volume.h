@@ -22,6 +22,7 @@
 #define VOLUME_H
 
 #include <QObject>
+#include <QFlags>
 #include "qmmp_export.h"
 
 /*! @brief The VolumeSettings structure stores volume levels
@@ -41,6 +42,14 @@ class QMMP_EXPORT Volume : public QObject
 {
     Q_OBJECT
 public:
+    enum VolumeFlag
+    {
+        NoFlags = 0x0,
+        IsMuteSupported = 0x1,
+        HasNotifySignal = 0x2, /*!< Indicates the object supports change notification via
+                                * emitting changed() signal so polling the volume is not needed */
+    };
+    Q_DECLARE_FLAGS(VolumeFlags, VolumeFlag)
     /*!
      * Destructor.
      */
@@ -55,17 +64,24 @@ public:
      * Returns volume level of the \b channel.
      */
     virtual VolumeSettings volume() const = 0;
+    virtual bool isMuted() const;
     /*!
-     * Returns true if the object supports change notification via
-     * emitting changed() signal so polling the volume is not needed.
+     * Mutes/Restores volume. Default implementation does nothing.
+     * @param mute - state of volume (\b true - mute, \b false - restore)
      */
-    virtual bool hasNotifySignal() const;
+    virtual void setMuted(bool mute);
+    virtual VolumeFlags flags() const;
 
 signals:
     /*!
      * Emitted if volume is changed.
      */
     void changed();
+
+private:
+    bool m_mutedInternal = false;
 };
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(Volume::VolumeFlags)
 
 #endif // VOLUME_H

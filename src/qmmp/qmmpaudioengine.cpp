@@ -252,10 +252,6 @@ void QmmpAudioEngine::pause()
 void QmmpAudioEngine::setMuted(bool muted)
 {
     m_muted = muted;
-    if(m_output)
-    {
-        m_output->setMuted(muted);
-    }
 }
 
 void QmmpAudioEngine::stop()
@@ -622,7 +618,6 @@ void QmmpAudioEngine::attachMetaData(Decoder *decoder, DecoderFactory *factory, 
 OutputWriter *QmmpAudioEngine::createOutput()
 {
     OutputWriter *output = new OutputWriter(nullptr);
-    output->setMuted(m_muted);
     if (!output->initialize(m_ap.sampleRate(), m_ap.channelMap()))
     {
         delete output;

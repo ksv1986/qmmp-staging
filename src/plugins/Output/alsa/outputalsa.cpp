@@ -558,7 +558,7 @@ int VolumeALSA::getMixer(snd_mixer_t **mixer, QString card)
     return (*mixer != NULL);
 }
 
-bool VolumeALSA::hasNotifySignal() const
+/*bool VolumeALSA::hasNotifySignal() const
 {
     return true;
-}
+}*/

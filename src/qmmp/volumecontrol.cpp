@@ -25,13 +25,8 @@
 #include "output.h"
 #include "volumecontrol_p.h"
 
-VolumeControl::VolumeControl(QObject *parent)
-        : QObject(parent)
+VolumeControl::VolumeControl(QObject *parent) : QObject(parent)
 {
-    m_left = 0;
-    m_right = 0;
-    m_prev_block = false;
-    m_volume = nullptr;
     m_timer = new QTimer(this);
     connect(m_timer, SIGNAL(timeout()), SLOT(checkVolume()));
     reload();
@@ -71,6 +66,15 @@ void VolumeControl::setBalance(int balance)
               volume()+qMin(balance,0)*volume()/100);
 }
 
+void VolumeControl::setMuted(bool muted)
+{
+    if(m_muted != muted)
+    {
+        m_volume->setMuted(muted);
+        checkVolume();
+    }
+}
+
 int VolumeControl::left() const
 {
     return m_left;
@@ -92,16 +96,26 @@ int VolumeControl::balance() const
     return v > 0 ? (m_right - m_left)*100/v : 0;
 }
 
+bool VolumeControl::isMuted() const
+{
+    return m_muted;
+}
+
 void VolumeControl::checkVolume()
 {
     VolumeSettings v = m_volume->volume();
     int l = v.left;
     int r = v.right;
+    bool muted = m_volume->isMuted();
 
-    l = (l > 100) ? 100 : l;
-    r = (r > 100) ? 100 : r;
-    l = (l < 0) ? 0 : l;
-    r = (r < 0) ? 0 : r;
+    l = qBound(0, l, 100);
+    r = qBound(0, r, 100);
+    if(m_muted != muted || (m_prev_block && !signalsBlocked ()))
+    {
+        m_muted = muted;
+        emit mutedChanged(m_muted);
+    }
+
     if (m_left != l || m_right != r) //volume has been changed
     {
         m_left = l;
@@ -122,26 +136,37 @@ void VolumeControl::checkVolume()
 void VolumeControl::reload()
 {
     m_timer->stop();
+    bool restore = false;
     if(m_volume)
     {
+        restore = true;
         delete m_volume;
         m_volume = nullptr;
     }
+
     if(!QmmpSettings::instance()->useSoftVolume() && Output::currentFactory())
+        m_volume = Output::currentFactory()->createVolume();
+
+    if(m_volume)
     {
-        if((m_volume = Output::currentFactory()->createVolume()))
+        if(restore)
+            m_volume->setMuted(m_muted);
+
+        if(m_volume->flags() & Volume::HasNotifySignal)
         {
-            if(m_volume->hasNotifySignal())
-            {
-                checkVolume();
-                connect(m_volume, SIGNAL(changed()), SLOT(checkVolume()));
-            }
-            else
-                m_timer->start(150); // fallback to polling if change notification is not available.
+            checkVolume();
+            connect(m_volume, SIGNAL(changed()), SLOT(checkVolume()));
+        }
+        else
+        {
+            m_timer->start(150); // fallback to polling if change notification is not available.
         }
     }
-    if(!m_volume)
+    else
     {
+        if(restore)
+            m_volume->setMuted(m_muted);
+
         m_volume = new SoftwareVolume;
         blockSignals(true);
         checkVolume();

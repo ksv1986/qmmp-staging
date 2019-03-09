@@ -66,6 +66,7 @@ public:
      * @param balance balance between left and right channels \b [-100..100].
      */
     void setBalance(int balance);
+    void setMuted(bool muted);
     /*!
      * Returns left channel volume.
      */
@@ -83,6 +84,7 @@ public:
      */
     int balance() const;
 
+    bool isMuted() const;
 
 signals:
     /*!
@@ -101,6 +103,7 @@ signals:
      * @param volume new balance value.
      */
     void balanceChanged(int balance);
+    void mutedChanged(bool muted);
 
 public slots:
     /*!
@@ -113,9 +116,10 @@ public slots:
     void reload();
 
 private:
-    int m_left, m_right;
-    bool m_prev_block;
-    Volume *m_volume;
+    int m_left = 0, m_right = 0;
+    bool m_prev_block = false;
+    bool m_muted = false;
+    Volume *m_volume = nullptr;
     QTimer *m_timer;
 
 };

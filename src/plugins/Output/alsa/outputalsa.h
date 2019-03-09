@@ -77,7 +77,7 @@ public:
     void setVolume(const VolumeSettings &vol) override;
     VolumeSettings volume() const override;
 
-    bool hasNotifySignal() const override;
+    //bool hasNotifySignal() const override;
 
 private:
     //alsa mixer

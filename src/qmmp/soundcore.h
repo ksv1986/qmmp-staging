@@ -274,7 +274,6 @@ private:
     AbstractEngine *m_engine;
     QQueue<InputSource *> m_sources;
     int m_nextState;
-    bool m_muted;
 };
 
 #endif

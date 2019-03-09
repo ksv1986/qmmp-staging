@@ -163,6 +163,8 @@ bool OutputPulseAudio::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForma
         return false;
     }
     success = false;
+    if(volumeControl)
+        setMuted(volumeControl->isMuted());
     op = pa_context_get_sink_input_info(m_ctx, pa_stream_get_index(m_stream), OutputPulseAudio::info_cb, &success);
     if(!process(op) || !success)
     {
@@ -313,7 +315,7 @@ void OutputPulseAudio::info_cb(pa_context *ctx, const pa_sink_input_info *info, 
         return;
 
     if(volumeControl && pa_context_get_state(ctx) == PA_CONTEXT_READY)
-        volumeControl->updateVolume(info->volume);
+        volumeControl->updateVolume(info->volume, info->mute > 0);
 
     if(data)
         *(bool *) data = true;
@@ -348,9 +350,10 @@ VolumePulseAudio::~VolumePulseAudio()
     OutputPulseAudio::volumeControl = nullptr;
 }
 
-void VolumePulseAudio::updateVolume(const pa_cvolume &v)
+void VolumePulseAudio::updateVolume(const pa_cvolume &v, bool muted)
 {
     m_volume = cvolumeToVolumeSettings(v);
+    m_muted = muted;
     emit changed();
 }
 
@@ -366,9 +369,21 @@ VolumeSettings VolumePulseAudio::volume() const
     return m_volume;
 }
 
-bool VolumePulseAudio::hasNotifySignal() const
+bool VolumePulseAudio::isMuted() const
 {
-    return true;
+    return m_muted;
+}
+
+void VolumePulseAudio::setMuted(bool mute)
+{
+    if(OutputPulseAudio::instance)
+        OutputPulseAudio::instance->setMuted(mute);
+    m_muted = mute;
+}
+
+Volume::VolumeFlags VolumePulseAudio::flags() const
+{
+    return Volume::IsMuteSupported | Volume::HasNotifySignal;
 }
 
 VolumeSettings VolumePulseAudio::cvolumeToVolumeSettings(const pa_cvolume &v)

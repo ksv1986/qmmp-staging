@@ -48,7 +48,7 @@ public:
     void reset() override;
     void suspend() override;
     void resume() override;
-    void setMuted(bool mute) override;
+    void setMuted(bool mute);
     void setVolume(const VolumeSettings &v);
 
     static OutputPulseAudio *instance;
@@ -81,15 +81,18 @@ public:
     VolumePulseAudio();
     ~VolumePulseAudio();
 
-    void updateVolume(const pa_cvolume &v);
+    void updateVolume(const pa_cvolume &v, bool muted);
     void setVolume(const VolumeSettings &vol) override;
     VolumeSettings volume() const override;
-    bool hasNotifySignal() const override;
+    bool isMuted() const override;
+    void setMuted(bool mute) override;
+    VolumeFlags flags() const override;
     static VolumeSettings cvolumeToVolumeSettings(const pa_cvolume &v);
     static pa_cvolume volumeSettingsToCvolume(const VolumeSettings &v, int channels);
 
 private:
     VolumeSettings m_volume;
+    bool m_muted = false;
 };
 
 #endif // OUTPUTPULSEAUDIO_H

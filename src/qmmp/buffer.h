@@ -27,8 +27,6 @@ public:
     Buffer(size_t sz)
     {
         data = new float[sz];
-        samples = 0;
-        rate = 0;
         size = sz;
     }
     /*!
@@ -43,9 +41,9 @@ public:
         size = 0;
     }
 
-    float *data;                         /*!< Audio data. */
-    size_t samples;                      /*!< Audio data size in samples. */
-    size_t size;                         /*!< Buffer size in samples. */
+    float *data = nullptr;               /*!< Audio data. */
+    size_t samples = 0;                  /*!< Audio data size in samples. */
+    size_t size = 0;                     /*!< Buffer size in samples. */
     unsigned int rate;                   /*!< Buffer bitrate. */
     QSharedPointer<TrackInfo> trackInfo; /*!< Attached track information. */
 };

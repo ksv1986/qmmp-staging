@@ -108,17 +108,6 @@ void OutputWriter::stop()
     m_user_stop = true;
 }
 
-/*void OutputWriter::setMuted(bool muted)
-{
-    m_muted = muted;
-    if(isRunning() && m_output)
-    {
-        m_mutex.lock();
-        m_output->setMuted(muted);
-        m_mutex.unlock();
-    }
-}*/
-
 void OutputWriter::finish()
 {
     m_finish = true;
@@ -300,8 +289,8 @@ void OutputWriter::run()
             }
             m_mutex.unlock();
             dispatchVisual(b);
-            //if (SoftwareVolume::instance())
-            //    SoftwareVolume::instance()->changeVolume(b, m_channels);
+            if(VolumeHandler::instance())
+                VolumeHandler::instance()->apply(b, m_channels);
             if(m_channel_converter)
                 m_channel_converter->applyEffect(b);
             l = 0;

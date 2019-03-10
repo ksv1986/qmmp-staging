@@ -41,8 +41,7 @@ HEADERS += \
     visualbuffer_p.h \
     qmmp_export.h \
     trackinfo.h \
-    volumehandler.h \
-    softwarevolume_p.h
+    volumehandler.h
 SOURCES += recycler.cpp \
     decoder.cpp \
     output.cpp \
@@ -76,8 +75,7 @@ SOURCES += recycler.cpp \
     dithering.cpp \
     visualbuffer.cpp \
     trackinfo.cpp \
-    volumehandler.cpp \
-    softwarevolume.cpp
+    volumehandler.cpp
 
 unix:TARGET = ../../lib/qmmp$$APP_NAME_SUFFIX
 win32:TARGET = ../../../bin/qmmp
@@ -140,6 +138,7 @@ unix {
         visualfactory.h \
         visual.h \
         volume.h \
+        volumehandler.h \
         qmmp_export.h
 
     isEmpty(APP_NAME_SUFFIX) {

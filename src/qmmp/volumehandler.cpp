@@ -23,20 +23,33 @@
 #include <QSettings>
 #include "qmmpsettings.h"
 #include "output.h"
-#include "softwarevolume_p.h"
 #include "volumehandler.h"
+
+VolumeHandler *VolumeHandler::m_instance = nullptr;
 
 VolumeHandler::VolumeHandler(QObject *parent) : QObject(parent)
 {
+    if(m_instance)
+        qFatal("VolumeHandler: only one instance is allowed!");
+
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    m_settings.left = settings.value("Volume/left", 80).toInt();
+    m_settings.right = settings.value("Volume/right", 80).toInt();
     m_timer = new QTimer(this);
     connect(m_timer, SIGNAL(timeout()), SLOT(checkVolume()));
     reload();
+    m_instance = this;
 }
 
 VolumeHandler::~VolumeHandler()
 {
+    m_instance = nullptr;
     if(m_volume)
         delete m_volume;
+
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.setValue("Volume/left", m_settings.left);
+    settings.setValue("Volume/right", m_settings.right);
 }
 
 void VolumeHandler::setVolume(int left, int right)
@@ -44,8 +57,18 @@ void VolumeHandler::setVolume(int left, int right)
     VolumeSettings v;
     v.left = qBound(0,left,100);
     v.right = qBound(0,right,100);
-    m_volume->setVolume(v);
-    checkVolume();
+    if(m_volume)
+    {
+        m_volume->setVolume(v);
+        checkVolume();
+    }
+    else if(m_settings != v)
+    {
+        m_settings = v;
+        m_scaleLeft = double(m_settings.left) / 100.0;
+        m_scaleRight = double(m_settings.right) / 100.0;
+        checkVolume();
+    }
 }
 
 void VolumeHandler::changeVolume(int delta)
@@ -71,8 +94,11 @@ void VolumeHandler::setMuted(bool muted)
 {
     if(m_muted != muted)
     {
-        m_volume->setMuted(muted);
-        checkVolume();
+        if(m_volume)
+        {
+            m_volume->setMuted(muted);
+            checkVolume();
+        }
     }
 }
 
@@ -102,8 +128,43 @@ bool VolumeHandler::isMuted() const
     return m_muted;
 }
 
+void VolumeHandler::apply(Buffer *b, int chan)
+{
+    if(m_apply)
+    {
+        if(chan == 1)
+        {
+            for(size_t i = 0; i < b->samples; ++i)
+            {
+                b->data[i] *= qMax(m_scaleLeft, m_scaleRight);
+            }
+        }
+        else
+        {
+            for(size_t i = 0; i < b->samples; i+=2)
+            {
+                b->data[i] *= m_scaleLeft;
+                b->data[i+1] *= m_scaleRight;
+            }
+        }
+    }
+}
+
+VolumeHandler *VolumeHandler::instance()
+{
+    return m_instance;
+}
+
 void VolumeHandler::checkVolume()
 {
+    if(!m_volume) //soft volume
+    {
+        emit volumeChanged(m_settings.left, m_settings.right);
+        emit volumeChanged(volume());
+        emit balanceChanged(balance());
+        return;
+    }
+
     VolumeSettings v = m_volume->volume();
     bool muted = m_volume->isMuted();
 
@@ -141,6 +202,7 @@ void VolumeHandler::reload()
         delete m_volume;
         m_volume = nullptr;
     }
+    m_apply = false;
 
     if(!QmmpSettings::instance()->useSoftVolume() && Output::currentFactory())
         m_volume = Output::currentFactory()->createVolume();
@@ -162,10 +224,9 @@ void VolumeHandler::reload()
     }
     else
     {
-        if(restore)
-            m_volume->setMuted(m_muted);
-
-        m_volume = new SoftwareVolume;
+        m_scaleLeft = double(m_settings.left) / 100.0;
+        m_scaleRight = double(m_settings.right) / 100.0;
+        m_apply = true;
         blockSignals(true);
         checkVolume();
         blockSignals(false);

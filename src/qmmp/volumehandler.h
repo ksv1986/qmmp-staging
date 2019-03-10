@@ -86,6 +86,10 @@ public:
 
     bool isMuted() const;
 
+    void apply(Buffer *b, int chan);
+
+    static VolumeHandler *instance();
+
 signals:
     /*!
      * Emitted when volume is changed.
@@ -119,8 +123,11 @@ private:
     VolumeSettings m_settings;
     bool m_prev_block = false;
     bool m_muted = false;
+    double m_scaleLeft = 0, m_scaleRight = 0;
+    bool m_apply = false;
     Volume *m_volume = nullptr;
     QTimer *m_timer;
+    static VolumeHandler *m_instance;
 
 };
 

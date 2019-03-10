@@ -72,11 +72,6 @@ public:
      */
     virtual void pause() = 0;
     /*!
-     * Mutes/Restores volume. Subclass should reimplement this function.
-     * @param muted - state of volume (\b true - mute, \b false - restore)
-     */
-    virtual void setMuted(bool muted) = 0;
-    /*!
      * Creates Engine object.
      * @param s InputSource object.
      * @param parent Parent object.

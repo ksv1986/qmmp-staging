@@ -159,8 +159,6 @@ void SoundCore::setVolume(int L, int R)
 void SoundCore::setMuted(bool mute)
 {
     m_volumeControl->setMuted(mute);
-    if(m_engine)
-        m_engine->setMuted(mute);
 }
 
 void SoundCore::changeVolume(int delta)
@@ -279,7 +277,6 @@ void SoundCore::startNextSource()
     {
         if((m_engine = AbstractEngine::create(s, this)))
         {
-            m_engine->setMuted(m_volumeControl->isMuted());
             m_engine->play();
             m_nextState = NO_ENGINE;
             return;

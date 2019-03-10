@@ -57,7 +57,6 @@ public:
     void seek(qint64 time) override;
     void stop() override;
     void pause() override;
-    void setMuted(bool muted) override;
     void addEffect(EffectFactory *factory);
     void removeEffect(EffectFactory *factory);
 
@@ -96,7 +95,6 @@ private:
     QHash <Decoder*, InputSource*> m_inputs;
     AudioParameters m_ap;
     bool m_next;
-    bool m_muted;
     QSharedPointer<TrackInfo> m_trackInfo;
     static QmmpAudioEngine *m_instance;
     ReplayGain *m_replayGain;

@@ -47,7 +47,6 @@ QmmpAudioEngine::QmmpAudioEngine(QObject *parent)
     m_sample_size = 0;
     m_decoder = nullptr;
     m_output = nullptr;
-    m_muted = false;
     m_replayGain = nullptr;
     m_dithering = nullptr;
     m_converter = new AudioConverter;
@@ -247,11 +246,6 @@ void QmmpAudioEngine::pause()
         m_output->recycler()->cond()->wakeAll();
         m_output->recycler()->mutex()->unlock();
     }
-}
-
-void QmmpAudioEngine::setMuted(bool muted)
-{
-    m_muted = muted;
 }
 
 void QmmpAudioEngine::stop()

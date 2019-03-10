@@ -17,8 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef VOLUMECONTROL_P_H
-#define VOLUMECONTROL_P_H
+#ifndef VOLUMEHANDLER_H
+#define VOLUMEHANDLER_H
 
 #include <QObject>
 #include "qmmp.h"
@@ -28,11 +28,11 @@
 class QTimer;
 class SoftwareVolume;
 
-/*! @internal
- * @brief The VolumeControl class provides volume control access
+/*!
+ * @brief The VolumeHandler class provides volume control access
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QMMP_EXPORT VolumeControl : public QObject
+class QMMP_EXPORT VolumeHandler : public QObject
 {
     Q_OBJECT
 public:
@@ -40,11 +40,11 @@ public:
      * Object constructor.
      * @param parent Parent object.
      */
-    VolumeControl(QObject *parent = nullptr);
+    VolumeHandler(QObject *parent = nullptr);
     /*!
      * Destructor.
      */
-    ~VolumeControl();
+    ~VolumeHandler();
     /*!
      * Setups volume level.
      * Subclass should reimplement this fucntion.
@@ -122,24 +122,6 @@ private:
     Volume *m_volume = nullptr;
     QTimer *m_timer;
 
-};
-/*! @internal
- * @brief The SoftwareVolume class provides access to the software volume control.
- * @author Ilya Kotov <forkotov02@ya.ru>
- */
-class SoftwareVolume : public Volume
-{
-public:
-    SoftwareVolume();
-    ~SoftwareVolume();
-
-    void setVolume(const VolumeSettings &v) override;
-    VolumeSettings volume() const override;
-    void changeVolume(Buffer *b, int chan);
-
-private:
-    int m_left, m_right;
-    double m_scaleLeft, m_scaleRight;
 };
 
 #endif

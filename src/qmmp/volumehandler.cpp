@@ -23,22 +23,23 @@
 #include <QSettings>
 #include "qmmpsettings.h"
 #include "output.h"
-#include "volumecontrol_p.h"
+#include "softwarevolume_p.h"
+#include "volumehandler.h"
 
-VolumeControl::VolumeControl(QObject *parent) : QObject(parent)
+VolumeHandler::VolumeHandler(QObject *parent) : QObject(parent)
 {
     m_timer = new QTimer(this);
     connect(m_timer, SIGNAL(timeout()), SLOT(checkVolume()));
     reload();
 }
 
-VolumeControl::~VolumeControl()
+VolumeHandler::~VolumeHandler()
 {
     if(m_volume)
         delete m_volume;
 }
 
-void VolumeControl::setVolume(int left, int right)
+void VolumeHandler::setVolume(int left, int right)
 {
     VolumeSettings v;
     v.left = qBound(0,left,100);
@@ -47,26 +48,26 @@ void VolumeControl::setVolume(int left, int right)
     checkVolume();
 }
 
-void VolumeControl::changeVolume(int delta)
+void VolumeHandler::changeVolume(int delta)
 {
     setVolume(qBound(0, volume() + delta, 100));
 }
 
-void VolumeControl::setVolume(int volume)
+void VolumeHandler::setVolume(int volume)
 {
     volume = qBound(0, volume, 100);
     setVolume(volume-qMax(balance(),0)*volume/100,
               volume+qMin(balance(),0)*volume/100);
 }
 
-void VolumeControl::setBalance(int balance)
+void VolumeHandler::setBalance(int balance)
 {
     balance = qBound(-100, balance, 100);
     setVolume(volume()-qMax(balance,0)*volume()/100,
               volume()+qMin(balance,0)*volume()/100);
 }
 
-void VolumeControl::setMuted(bool muted)
+void VolumeHandler::setMuted(bool muted)
 {
     if(m_muted != muted)
     {
@@ -75,33 +76,33 @@ void VolumeControl::setMuted(bool muted)
     }
 }
 
-int VolumeControl::left() const
+int VolumeHandler::left() const
 {
     return m_left;
 }
 
-int VolumeControl::right() const
+int VolumeHandler::right() const
 {
     return m_right;
 }
 
-int VolumeControl::volume() const
+int VolumeHandler::volume() const
 {
     return qMax(m_right, m_left);
 }
 
-int VolumeControl::balance() const
+int VolumeHandler::balance() const
 {
     int v = volume();
     return v > 0 ? (m_right - m_left)*100/v : 0;
 }
 
-bool VolumeControl::isMuted() const
+bool VolumeHandler::isMuted() const
 {
     return m_muted;
 }
 
-void VolumeControl::checkVolume()
+void VolumeHandler::checkVolume()
 {
     VolumeSettings v = m_volume->volume();
     int l = v.left;
@@ -133,7 +134,7 @@ void VolumeControl::checkVolume()
     m_prev_block = signalsBlocked ();
 }
 
-void VolumeControl::reload()
+void VolumeHandler::reload()
 {
     m_timer->stop();
     bool restore = false;
@@ -172,56 +173,5 @@ void VolumeControl::reload()
         checkVolume();
         blockSignals(false);
         QTimer::singleShot(125, this, SLOT(checkVolume()));
-    }
-}
-
-SoftwareVolume::SoftwareVolume()
-{
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    m_left = settings.value("Volume/left", 80).toInt();
-    m_right = settings.value("Volume/right", 80).toInt();
-    m_scaleLeft = (double)m_left/100.0;
-    m_scaleRight = (double)m_right/100.0;
-}
-
-SoftwareVolume::~SoftwareVolume()
-{
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    settings.setValue("Volume/left", m_left);
-    settings.setValue("Volume/right", m_right);
-}
-
-void SoftwareVolume::setVolume(const VolumeSettings &v)
-{
-    m_left = v.left;
-    m_right = v.right;
-    m_scaleLeft = (double)m_left/100.0;
-    m_scaleRight = (double)m_right/100.0;
-}
-
-VolumeSettings SoftwareVolume::volume() const
-{
-    VolumeSettings v;
-    v.left = m_left;
-    v.right = m_right;
-    return v;
-}
-
-void SoftwareVolume::changeVolume(Buffer *b, int chan)
-{
-    if(chan == 1)
-    {
-        for(size_t i = 0; i < b->samples; ++i)
-        {
-            b->data[i] *= qMax(m_scaleLeft, m_scaleRight);
-        }
-    }
-    else
-    {
-        for(size_t i = 0; i < b->samples; i+=2)
-        {
-            b->data[i] *= m_scaleLeft;
-            b->data[i+1] *= m_scaleRight;
-        }
     }
 }

@@ -25,7 +25,7 @@
 #include "output.h"
 #include "audioconverter.h"
 #include "channelconverter_p.h"
-#include "volumecontrol_p.h"
+#include "volumehandler.h"
 #include "outputwriter_p.h"
 
 extern "C" {

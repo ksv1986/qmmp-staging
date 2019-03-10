@@ -29,7 +29,7 @@
 #include "effect.h"
 #include "statehandler.h"
 #include "inputsource.h"
-#include "volumecontrol_p.h"
+#include "volumehandler.h"
 #include "enginefactory.h"
 #include "metadatamanager.h"
 #include "qmmpsettings.h"
@@ -47,7 +47,7 @@ SoundCore::SoundCore(QObject *parent)
     m_engine = nullptr;
     m_nextState = NO_ENGINE;
     m_handler = new StateHandler(this);
-    m_volumeControl = new VolumeControl(this);
+    m_volumeControl = new VolumeHandler(this);
     connect(m_handler, SIGNAL(elapsedChanged(qint64)), SIGNAL(elapsedChanged(qint64)));
     connect(m_handler, SIGNAL(bitrateChanged(int)), SIGNAL(bitrateChanged(int)));
     connect(m_handler, SIGNAL(audioParametersChanged(AudioParameters)), SIGNAL(audioParametersChanged(AudioParameters)));

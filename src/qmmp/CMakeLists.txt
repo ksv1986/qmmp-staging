@@ -42,7 +42,7 @@ SET(libqmmp_SRCS
     effect.cpp
     qmmp.cpp
     statehandler.cpp
-    volumecontrol.cpp
+    volumehandler.cpp
     metadatamodel.cpp
     tagmodel.cpp
     qmmpaudioengine.cpp
@@ -125,6 +125,7 @@ SET(libqmmp_DEVEL_HDRS
     visualfactory.h
     visual.h
     volume.h
+    volumehandler.h
     qmmp_export.h
 )
 

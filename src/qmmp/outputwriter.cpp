@@ -300,8 +300,8 @@ void OutputWriter::run()
             }
             m_mutex.unlock();
             dispatchVisual(b);
-            if (SoftwareVolume::instance())
-                SoftwareVolume::instance()->changeVolume(b, m_channels);
+            //if (SoftwareVolume::instance())
+            //    SoftwareVolume::instance()->changeVolume(b, m_channels);
             if(m_channel_converter)
                 m_channel_converter->applyEffect(b);
             l = 0;

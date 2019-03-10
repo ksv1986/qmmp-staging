@@ -137,8 +137,6 @@ public:
     VolumeSettings volume() const override;
     void changeVolume(Buffer *b, int chan);
 
-    static SoftwareVolume *instance();
-
 private:
     int m_left, m_right;
     double m_scaleLeft, m_scaleRight;

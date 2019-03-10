@@ -116,7 +116,7 @@ public slots:
     void reload();
 
 private:
-    int m_left = 0, m_right = 0;
+    VolumeSettings m_settings;
     bool m_prev_block = false;
     bool m_muted = false;
     Volume *m_volume = nullptr;

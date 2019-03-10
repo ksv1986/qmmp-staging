@@ -32,8 +32,18 @@ struct VolumeSettings
 {    
     int left = 0;  /*!< Volume of the left channel. It should be \b 0..100. */
     int right = 0; /*!< Volume of the left channel It should be \b 0..100. */
+
 };
 
+inline bool operator==(const VolumeSettings &v1, const VolumeSettings &v2)
+{
+    return v1.left == v2.left && v1.right == v2.right;
+}
+
+inline bool operator!=(const VolumeSettings &v1, const VolumeSettings &v2)
+{
+    return v1.left != v2.left || v1.right != v2.right;
+}
 
 /*! @brief The Volume class provides asbtract volume interface
  * @author Ilya Kotov <forkotov02@ya.ru>

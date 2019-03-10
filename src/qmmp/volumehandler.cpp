@@ -78,23 +78,23 @@ void VolumeHandler::setMuted(bool muted)
 
 int VolumeHandler::left() const
 {
-    return m_left;
+    return m_settings.left;
 }
 
 int VolumeHandler::right() const
 {
-    return m_right;
+    return m_settings.right;
 }
 
 int VolumeHandler::volume() const
 {
-    return qMax(m_right, m_left);
+    return qMax(m_settings.right, m_settings.left);
 }
 
 int VolumeHandler::balance() const
 {
     int v = volume();
-    return v > 0 ? (m_right - m_left)*100/v : 0;
+    return v > 0 ? (m_settings.right - m_settings.left) * 100 / v : 0;
 }
 
 bool VolumeHandler::isMuted() const
@@ -105,29 +105,26 @@ bool VolumeHandler::isMuted() const
 void VolumeHandler::checkVolume()
 {
     VolumeSettings v = m_volume->volume();
-    int l = v.left;
-    int r = v.right;
     bool muted = m_volume->isMuted();
 
-    l = qBound(0, l, 100);
-    r = qBound(0, r, 100);
+    v.left = qBound(0, v.left, 100);
+    v.right = qBound(0, v.right, 100);
     if(m_muted != muted || (m_prev_block && !signalsBlocked ()))
     {
         m_muted = muted;
         emit mutedChanged(m_muted);
     }
 
-    if (m_left != l || m_right != r) //volume has been changed
+    if (m_settings != v) //volume has been changed
     {
-        m_left = l;
-        m_right = r;
-        emit volumeChanged(m_left, m_right);
+        m_settings = v;
+        emit volumeChanged(v.left, v.right);
         emit volumeChanged(volume());
         emit balanceChanged(balance());
     }
     else if(m_prev_block && !signalsBlocked ()) //signals have been unblocked
     {
-        emit volumeChanged(m_left, m_right);
+        emit volumeChanged(v.left, v.right);
         emit volumeChanged(volume());
         emit balanceChanged(balance());
     }

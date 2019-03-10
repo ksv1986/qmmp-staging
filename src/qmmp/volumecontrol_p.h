@@ -142,7 +142,6 @@ public:
 private:
     int m_left, m_right;
     double m_scaleLeft, m_scaleRight;
-    static SoftwareVolume *m_instance;
 };
 
 #endif

@@ -175,8 +175,6 @@ void VolumeControl::reload()
     }
 }
 
-SoftwareVolume *SoftwareVolume::m_instance = nullptr;
-
 SoftwareVolume::SoftwareVolume()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
@@ -184,7 +182,6 @@ SoftwareVolume::SoftwareVolume()
     m_right = settings.value("Volume/right", 80).toInt();
     m_scaleLeft = (double)m_left/100.0;
     m_scaleRight = (double)m_right/100.0;
-    m_instance = this;
 }
 
 SoftwareVolume::~SoftwareVolume()
@@ -192,7 +189,6 @@ SoftwareVolume::~SoftwareVolume()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("Volume/left", m_left);
     settings.setValue("Volume/right", m_right);
-    m_instance = nullptr;
 }
 
 void SoftwareVolume::setVolume(const VolumeSettings &v)
@@ -228,10 +224,4 @@ void SoftwareVolume::changeVolume(Buffer *b, int chan)
             b->data[i+1] *= m_scaleRight;
         }
     }
-}
-
-//static
-SoftwareVolume *SoftwareVolume::instance()
-{
-    return m_instance;
 }

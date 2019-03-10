@@ -55,26 +55,26 @@ public:
     void seek(qint64) override;
     void stop() override;
     void pause() override;
-    void setMuted(bool muted) override;
 
 private slots:
+    void setMuted(bool muted);
     void readStdOut();
     void onError(QProcess::ProcessError error);
+    void onStateChanged(QProcess::ProcessState state);
     void startMplayerProcess();
 
 private:
     QStringList m_args;
-    QProcess *m_process;
-    int m_bitrate;
-    int m_samplerate;
-    int m_channels;
-    int m_bitsPerSample;
-    bool m_muted;
-    bool m_user_stop;
-    qint64 m_currentTime;
-    qint64 m_length;
+    QProcess *m_process = nullptr;
+    int m_bitrate = 0;
+    int m_samplerate = 0;
+    int m_channels = 0;
+    int m_bitsPerSample = 0;
+    bool m_user_stop = false;
+    qint64 m_currentTime = 0;
+    qint64 m_length = 0;
     QQueue <InputSource*> m_sources;
-    InputSource *m_source;
+    InputSource *m_source = nullptr;
 };
 
 

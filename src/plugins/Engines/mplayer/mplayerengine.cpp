@@ -27,8 +27,10 @@
 #include <QRegExp>
 #include <QSettings>
 #include <QFileInfo>
+#include <QDebug>
 #include <qmmp/trackinfo.h>
 #include <qmmp/inputsource.h>
+#include <qmmp/volumehandler.h>
 #include "mplayerengine.h"
 
 //#define MPLAYER_DEBUG
@@ -97,16 +99,7 @@ QStringList MplayerInfo::filters()
 MplayerEngine::MplayerEngine(QObject *parent)
         : AbstractEngine(parent)
 {
-    m_source = nullptr;
-    m_bitrate = 0;
-    m_samplerate = 0;
-    m_channels = 0;
-    m_bitsPerSample = 0;
-    m_length = 0;
-    m_currentTime = 0;
-    m_muted = false;
-    m_user_stop = false;
-    m_process = nullptr;
+    connect(VolumeHandler::instance(), SIGNAL(mutedChanged(bool)), SLOT(setMuted(bool)));
 }
 
 MplayerEngine::~MplayerEngine()
@@ -282,6 +275,12 @@ void MplayerEngine::onError(QProcess::ProcessError error)
     qWarning("MplayerEngine: process error: %d", error);
 }
 
+void MplayerEngine::onStateChanged(QProcess::ProcessState state)
+{
+    if(state == QProcess::Running)
+        setMuted(VolumeHandler::instance()->isMuted());
+}
+
 void MplayerEngine::startMplayerProcess()
 {
     initialize();
@@ -290,6 +289,7 @@ void MplayerEngine::startMplayerProcess()
     m_process = new QProcess(this);
     connect(m_process, SIGNAL(readyReadStandardOutput()), SLOT(readStdOut()));
     connect(m_process, SIGNAL(error(QProcess::ProcessError)), SLOT(onError(QProcess::ProcessError)));
+    connect(m_process, SIGNAL(stateChanged(QProcess::ProcessState)), SLOT(onStateChanged(QProcess::ProcessState)));
     m_process->start ("mplayer", m_args);
     StateHandler::instance()->dispatch(Qmmp::Playing);
     StateHandler::instance()->dispatch(m_length);
@@ -299,6 +299,4 @@ void MplayerEngine::startMplayerProcess()
     m_source->deleteLater();
     m_source = nullptr;
     m_currentTime = 0;
-    if(m_muted)
-        setMuted(true);
 }

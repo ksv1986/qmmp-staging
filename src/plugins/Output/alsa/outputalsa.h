@@ -76,8 +76,7 @@ public:
 
     void setVolume(const VolumeSettings &vol) override;
     VolumeSettings volume() const override;
-
-    //bool hasNotifySignal() const override;
+    VolumeFlags flags() const override;
 
 private:
     //alsa mixer
@@ -85,8 +84,8 @@ private:
     void parseMixerName(char *str, char **name, int *index);
     int getMixer(snd_mixer_t **m_mixer, QString card);
     snd_mixer_elem_t* getMixerElem(snd_mixer_t *m_mixer, char *name, int index);
-    snd_mixer_t *m_mixer;
-    snd_mixer_elem_t *pcm_element;
+    snd_mixer_t *m_mixer = nullptr;
+    snd_mixer_elem_t *pcm_element = nullptr;
 };
 
 #endif // OUTPUTALSA_H

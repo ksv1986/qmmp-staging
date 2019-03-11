@@ -439,6 +439,12 @@ VolumeSettings VolumeALSA::volume() const
     return vol;
 }
 
+Volume::VolumeFlags VolumeALSA::flags() const
+{
+
+    return Volume::HasNotifySignal;
+}
+
 int VolumeALSA::setupMixer(QString card, QString device)
 {
     char *name;
@@ -557,8 +563,3 @@ int VolumeALSA::getMixer(snd_mixer_t **mixer, QString card)
     }
     return (*mixer != NULL);
 }
-
-/*bool VolumeALSA::hasNotifySignal() const
-{
-    return true;
-}*/

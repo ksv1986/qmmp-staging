@@ -92,13 +92,24 @@ void VolumeHandler::setBalance(int balance)
 
 void VolumeHandler::setMuted(bool muted)
 {
-    if(m_muted != muted)
+    if(m_muted == muted)
+        return;
+
+    if(m_volume && (m_volume->flags() & Volume::IsMuteSupported))
     {
-        if(m_volume)
+        m_volume->setMuted(muted);
+        checkVolume();
+    }
+    else if(m_volume)
+    {
+        m_muted = muted;
+        m_apply = muted;
+        if(m_muted)
         {
-            m_volume->setMuted(muted);
-            checkVolume();
+            m_scaleLeft = 0.0;
+            m_scaleRight = 0.0;
         }
+        emit mutedChanged(muted);
     }
 }
 

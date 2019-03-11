@@ -104,11 +104,11 @@ void VolumeHandler::setMuted(bool muted)
     {
         m_muted = muted;
         m_apply = muted;
-        if(m_muted)
-        {
-            m_scaleLeft = 0.0;
-            m_scaleRight = 0.0;
-        }
+        emit mutedChanged(muted);
+    }
+    else
+    {
+        m_muted = muted;
         emit mutedChanged(muted);
     }
 }
@@ -143,6 +143,12 @@ void VolumeHandler::apply(Buffer *b, int chan)
 {
     if(m_apply)
     {
+        if(m_muted)
+        {
+            memset(b->data, 0, b->samples * sizeof(float));
+            return;
+        }
+
         if(chan == 1)
         {
             for(size_t i = 0; i < b->samples; ++i)
@@ -222,6 +228,9 @@ void VolumeHandler::reload()
     {
         if(restore)
             m_volume->setMuted(m_muted);
+
+        if(!(m_volume->flags() & Volume::IsMuteSupported) && m_muted)
+            m_apply = true;
 
         if(m_volume->flags() & Volume::HasNotifySignal)
         {

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -65,8 +65,10 @@ void VolumeHandler::setVolume(int left, int right)
     else if(m_settings != v)
     {
         m_settings = v;
+        m_mutex.lock();
         m_scaleLeft = double(m_settings.left) / 100.0;
         m_scaleRight = double(m_settings.right) / 100.0;
+        m_mutex.unlock();
         checkVolume();
     }
 }
@@ -149,6 +151,7 @@ void VolumeHandler::apply(Buffer *b, int chan)
             return;
         }
 
+        m_mutex.lock();
         if(chan == 1)
         {
             for(size_t i = 0; i < b->samples; ++i)
@@ -164,6 +167,7 @@ void VolumeHandler::apply(Buffer *b, int chan)
                 b->data[i+1] *= m_scaleRight;
             }
         }
+        m_mutex.unlock();
     }
 }
 
@@ -244,8 +248,10 @@ void VolumeHandler::reload()
     }
     else
     {
+        m_mutex.lock();
         m_scaleLeft = double(m_settings.left) / 100.0;
         m_scaleRight = double(m_settings.right) / 100.0;
+        m_mutex.unlock();
         m_apply = true;
         blockSignals(true);
         checkVolume();

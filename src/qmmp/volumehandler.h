@@ -21,6 +21,7 @@
 #define VOLUMEHANDLER_H
 
 #include <QObject>
+#include <QMutex>
 #include <atomic>
 #include "qmmp.h"
 #include "volume.h"
@@ -125,8 +126,8 @@ private:
     bool m_prev_block = false;
     std::atomic_bool m_muted = ATOMIC_VAR_INIT(false);
     std::atomic_bool m_apply = ATOMIC_VAR_INIT(false);
-    std::atomic<double> m_scaleLeft = ATOMIC_VAR_INIT(0);
-    std::atomic<double> m_scaleRight = ATOMIC_VAR_INIT(0);
+    QMutex m_mutex;
+    double m_scaleLeft = 0, m_scaleRight = 0;
     Volume *m_volume = nullptr;
     QTimer *m_timer;
     static VolumeHandler *m_instance;

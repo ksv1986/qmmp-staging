@@ -1,7 +1,7 @@
 /***************************************************************************
  *   Based on Licq                                                         *
  *   Copyright (C) 2006-2009 Licq developers                               *
- *   Copyright (C) 2011-2017 Ilya Kotov                                    *
+ *   Copyright (C) 2011-2019 Ilya Kotov                                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -32,36 +32,42 @@
 #ifdef QMMP_WS_X11
 void WindowSystem::ghostWindow(WId win)
 {
-  Display* dsp = QX11Info::display();
-  Window root = DefaultRootWindow(dsp);
+    if(!QX11Info::isPlatformX11())
+        return;
 
-  Atom win_state = XInternAtom(dsp, "_NET_WM_STATE", False);
-  Atom win_state_add = XInternAtom(dsp, "_NET_WM_STATE_ADD", False);
-  Atom win_state_settings[] =
-  {
-    XInternAtom(dsp, "_NET_WM_STATE_SKIP_TASKBAR", False),
-    XInternAtom(dsp, "_NET_WM_STATE_SKIP_PAGER", False)
-  };
-  XChangeProperty(dsp, win, win_state, XA_ATOM, 32, PropModeReplace,
-      reinterpret_cast<unsigned char*>(&win_state_settings), 2);
+    Display* dsp = QX11Info::display();
+    Window root = DefaultRootWindow(dsp);
 
-  XEvent xev;
-  xev.type = ClientMessage;
-  xev.xclient.type = ClientMessage;
-  xev.xclient.display = dsp;
-  xev.xclient.window = win;
-  xev.xclient.message_type = win_state;
-  xev.xclient.format = 32;
-  xev.xclient.data.l[0] = win_state_add;
-  xev.xclient.data.l[1] = win_state_settings[0];
-  xev.xclient.data.l[2] = win_state_settings[1];
+    Atom win_state = XInternAtom(dsp, "_NET_WM_STATE", False);
+    Atom win_state_add = XInternAtom(dsp, "_NET_WM_STATE_ADD", False);
+    Atom win_state_settings[] =
+    {
+        XInternAtom(dsp, "_NET_WM_STATE_SKIP_TASKBAR", False),
+        XInternAtom(dsp, "_NET_WM_STATE_SKIP_PAGER", False)
+    };
+    XChangeProperty(dsp, win, win_state, XA_ATOM, 32, PropModeReplace,
+                    reinterpret_cast<unsigned char*>(&win_state_settings), 2);
 
-  XSendEvent(dsp, root, false,
-      SubstructureRedirectMask | SubstructureNotifyMask, &xev);
+    XEvent xev;
+    xev.type = ClientMessage;
+    xev.xclient.type = ClientMessage;
+    xev.xclient.display = dsp;
+    xev.xclient.window = win;
+    xev.xclient.message_type = win_state;
+    xev.xclient.format = 32;
+    xev.xclient.data.l[0] = win_state_add;
+    xev.xclient.data.l[1] = win_state_settings[0];
+    xev.xclient.data.l[2] = win_state_settings[1];
+
+    XSendEvent(dsp, root, false,
+               SubstructureRedirectMask | SubstructureNotifyMask, &xev);
 }
 
 QString WindowSystem::netWindowManagerName()
 {
+    if(!QX11Info::isPlatformX11())
+        return QString();
+
     Display* dsp = QX11Info::display();
     WId root = DefaultRootWindow(dsp);
 
@@ -99,6 +105,9 @@ QString WindowSystem::netWindowManagerName()
 
 void WindowSystem::changeWinSticky(WId win, bool stick)
 {
+    if(!QX11Info::isPlatformX11())
+        return;
+
     qDebug("WindowSystem: setting sticky state of window 0x%lx to %s.",
            static_cast<unsigned long>(win), stick ? "true" : "false");
     Display* dsp = QX11Info::display();
@@ -134,6 +143,9 @@ void WindowSystem::changeWinSticky(WId win, bool stick)
 
 void WindowSystem::setWinHint(WId win, const char *res_name, const char *res_class)
 {
+    if(!QX11Info::isPlatformX11())
+        return;
+
     Display* dsp = QX11Info::display();
     XClassHint hint;
     hint.res_name = strdup(res_name);
@@ -145,68 +157,71 @@ void WindowSystem::setWinHint(WId win, const char *res_name, const char *res_cla
 
 unsigned char* WindowSystem::getWindowProperty(WId win, const char* prop)
 {
-  Display* dsp = QX11Info::display();
+    Display* dsp = QX11Info::display();
 
-  // We inhibit new Atom creation since if you request for it
-  // then such Atom most probably exists already.
-  // Otherwise, no surprise we return NULL here.
-  Atom reqAtom = XInternAtom(dsp, prop, True);
+    // We inhibit new Atom creation since if you request for it
+    // then such Atom most probably exists already.
+    // Otherwise, no surprise we return NULL here.
+    Atom reqAtom = XInternAtom(dsp, prop, True);
 
-  if (reqAtom == None)
-    return NULL;
+    if (reqAtom == None)
+        return NULL;
 
-  Atom retType = None;
-  int retFormat = 0;
-  unsigned long retItems = 0UL;
-  unsigned long retMoreBytes = 0UL;
-  unsigned char* retValue = NULL;
+    Atom retType = None;
+    int retFormat = 0;
+    unsigned long retItems = 0UL;
+    unsigned long retMoreBytes = 0UL;
+    unsigned char* retValue = NULL;
 
-  // Check if the property exists and calculate its length.
-  int retCheck = XGetWindowProperty(dsp, win,
-      reqAtom, 0L, 0L, False, AnyPropertyType,
-      &retType, &retFormat, &retItems, &retMoreBytes, &retValue);
+    // Check if the property exists and calculate its length.
+    int retCheck = XGetWindowProperty(dsp, win,
+                                      reqAtom, 0L, 0L, False, AnyPropertyType,
+                                      &retType, &retFormat, &retItems, &retMoreBytes, &retValue);
 
-  // The value is most probably empty, since we requested to read
-  // only 0L length, thus, it's just useless...
-  if (retValue != NULL)
-  {
-    XFree(retValue);
-    retValue = NULL;
-  }
-
-  if (retCheck != Success ||
-      retType == None ||
-      retMoreBytes == 0)
-    return NULL;
-
-  // These are not needed for now.
-  retFormat = 0;
-  retItems = 0UL;
-
-  // Convert the byte length into 32bit multiples.
-  if (retMoreBytes % 4 != 0)
-    retMoreBytes += 4 - retMoreBytes % 4;
-  retMoreBytes /= 4;
-
-  // Now request the actual property value with correct length and type.
-  retCheck = XGetWindowProperty(dsp, win,
-      reqAtom, 0L, retMoreBytes, False, retType,
-      &retType, &retFormat, &retItems, &retMoreBytes, &retValue);
-
-  if (retCheck != Success ||
-      retMoreBytes != 0)
-  {
+    // The value is most probably empty, since we requested to read
+    // only 0L length, thus, it's just useless...
     if (retValue != NULL)
-      XFree(retValue);
-    return NULL;
-  }
+    {
+        XFree(retValue);
+        retValue = NULL;
+    }
 
-  return retValue;
+    if (retCheck != Success ||
+            retType == None ||
+            retMoreBytes == 0)
+        return NULL;
+
+    // These are not needed for now.
+    retFormat = 0;
+    retItems = 0UL;
+
+    // Convert the byte length into 32bit multiples.
+    if (retMoreBytes % 4 != 0)
+        retMoreBytes += 4 - retMoreBytes % 4;
+    retMoreBytes /= 4;
+
+    // Now request the actual property value with correct length and type.
+    retCheck = XGetWindowProperty(dsp, win,
+                                  reqAtom, 0L, retMoreBytes, False, retType,
+                                  &retType, &retFormat, &retItems, &retMoreBytes, &retValue);
+
+    if (retCheck != Success ||
+            retMoreBytes != 0)
+    {
+        if (retValue != NULL)
+            XFree(retValue);
+        return NULL;
+    }
+
+    return retValue;
 }
 //On RTL locales Qt sets flag NorthEastGravity for windows.
 //This function reverts these changes.
 void WindowSystem::revertGravity(WId win)
 {
+    if(!QX11Info::isPlatformX11())
+        return;
+
     Display* dsp = QX11Info::display();
     XSizeHints sh;
     memset(&sh, 0, sizeof(sh));

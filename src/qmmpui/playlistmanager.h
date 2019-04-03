@@ -204,6 +204,10 @@ public slots:
      */
     void showDetails();
     /*!
+     * This is a convenience function and is the same as calling \b selectedPlayList()->add(tracks)
+     */
+    void add(QList <PlayListTrack *> tracks);
+    /*!
      * This is a convenience function and is the same as calling \b selectedPlayList()->add(path)
      */
     void add(const QString &path);

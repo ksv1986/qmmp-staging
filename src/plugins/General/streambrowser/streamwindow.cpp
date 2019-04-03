@@ -179,14 +179,18 @@ void StreamWindow::on_updatePushButton_clicked()
 
 void StreamWindow::on_addPushButton_clicked()
 {
-    QStringList urls;
+    QList<PlayListTrack *> tracks;
     if(m_ui->tabWidget->currentIndex() == 0)
     {
         QModelIndexList indexes = m_ui->favoritesTableView->selectionModel()->selectedRows(0);
         foreach(QModelIndex index, indexes)
         {
             QModelIndex source_index = m_favoritesFilterModel->mapToSource(index);
-            urls.append(m_favoritesModel->item(source_index.row(),0)->data().toString());
+            tracks << new PlayListTrack();
+            tracks.last()->setPath(m_favoritesModel->item(source_index.row(),0)->data().toString());
+            tracks.last()->setValue(Qmmp::TITLE, m_favoritesModel->item(source_index.row(),0)->text());
+            tracks.last()->setValue(Qmmp::GENRE, m_favoritesModel->item(source_index.row(),1)->text());
+
         }
     }
     else
@@ -195,11 +199,13 @@ void StreamWindow::on_addPushButton_clicked()
         foreach(QModelIndex index, indexes)
         {
             QModelIndex source_index = m_iceCastFilterModel->mapToSource(index);
-            urls.append(m_iceCastModel->item(source_index.row(),0)->data().toString());
+            tracks << new PlayListTrack();
+            tracks.last()->setPath(m_iceCastModel->item(source_index.row(),0)->data().toString());
+            tracks.last()->setValue(Qmmp::TITLE, m_iceCastModel->item(source_index.row(),0)->text());
+            tracks.last()->setValue(Qmmp::GENRE, m_iceCastModel->item(source_index.row(),1)->text());
         }
     }
-    urls.removeDuplicates();
-    PlayListManager::instance()->add(urls);
+    PlayListManager::instance()->add(tracks);
 }
 
 void StreamWindow::on_filterLineEdit_textChanged(const QString &text)

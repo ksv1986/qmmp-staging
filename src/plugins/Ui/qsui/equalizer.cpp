@@ -99,7 +99,7 @@ Equalizer::Equalizer(QWidget *parent) : QDialog(parent)
         QLabel *label2 = new QLabel(this);
         label2->setText(tr("%1dB").arg(0));
         label2->setFrameShape(QFrame::Box);
-        label2->setMinimumWidth(fontMetrics().width(tr("+%1dB").arg(20) + 5));
+        label2->setMinimumWidth(fontMetrics().horizontalAdvance(tr("+%1dB").arg(20) + 5));
         label2->setAlignment(Qt::AlignCenter);
         slidersLayout->addWidget(label2, 0, i, Qt::AlignHCenter);
         connect(slider, SIGNAL(valueChanged(int)), SLOT(updateLabel()));

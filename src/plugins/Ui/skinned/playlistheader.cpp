@@ -135,11 +135,11 @@ void PlayListHeader::readSettings()
     }
 
     m_metrics = new QFontMetrics(m_font);
-    m_padding = m_metrics->width("9")/2;
+    m_padding = m_metrics->horizontalAdvance("9")/2;
 
     QFont pl_font;
     pl_font.fromString(settings.value("pl_font", qApp->font().toString()).toString());
-    m_pl_padding = QFontMetrics(pl_font).width("9")/2;
+    m_pl_padding = QFontMetrics(pl_font).horizontalAdvance("9")/2;
 
     if(!m_model->isSettingsLoaded())
     {
@@ -443,7 +443,7 @@ void PlayListHeader::mousePressEvent(QMouseEvent *e)
 
             if(rtl)
             {
-                if(m_pressed_pos.x() < m_model->data(m_pressed_column, RECT).toRect().x() + m_metrics->width("9"))
+                if(m_pressed_pos.x() < m_model->data(m_pressed_column, RECT).toRect().x() + m_metrics->horizontalAdvance("9"))
                 {
                     m_old_size = size(m_pressed_column);
                     m_task = RESIZE;
@@ -456,7 +456,7 @@ void PlayListHeader::mousePressEvent(QMouseEvent *e)
             }
             else
             {
-                if(m_pressed_pos.x() > m_model->data(m_pressed_column, RECT).toRect().right() - m_metrics->width("9"))
+                if(m_pressed_pos.x() > m_model->data(m_pressed_column, RECT).toRect().right() - m_metrics->horizontalAdvance("9"))
                 {
                     m_old_size = size(m_pressed_column);
                     m_task = RESIZE;
@@ -571,14 +571,14 @@ void PlayListHeader::mouseMoveEvent(QMouseEvent *e)
         {
             if(rtl)
             {
-                if(column >= 0 && x < m_model->data(column, RECT).toRect().x() + m_metrics->width("9"))
+                if(column >= 0 && x < m_model->data(column, RECT).toRect().x() + m_metrics->horizontalAdvance("9"))
                     setCursor(Qt::SplitHCursor);
                 else
                     setCursor(Qt::ArrowCursor);
             }
             else
             {
-                if(column >= 0 && x > m_model->data(column, RECT).toRect().right() - m_metrics->width("9"))
+                if(column >= 0 && x > m_model->data(column, RECT).toRect().right() - m_metrics->horizontalAdvance("9"))
                     setCursor(Qt::SplitHCursor);
                 else
                     setCursor(Qt::ArrowCursor);
@@ -690,7 +690,7 @@ void PlayListHeader::paintEvent(QPaintEvent *)
                 painter.drawLine(rect.right(), 0, rect.right(), height());
             }
 
-            painter.drawText(rect.right() - m_padding - m_metrics->width(name(0)),
+            painter.drawText(rect.right() - m_padding - m_metrics->horizontalAdvance(name(0)),
                     m_metrics->ascent(), name(0));
             if(m_sorting_column == 0)
             {
@@ -715,7 +715,7 @@ void PlayListHeader::paintEvent(QPaintEvent *)
                 continue;
             }
 
-            painter.drawText(rect.right() - m_padding - m_metrics->width(name(i)),
+            painter.drawText(rect.right() - m_padding - m_metrics->horizontalAdvance(name(i)),
                              m_metrics->ascent(), name(i));
 
             painter.drawLine(rect.x() - 1, 0, rect.x() - 1, height() + 1);
@@ -737,7 +737,7 @@ void PlayListHeader::paintEvent(QPaintEvent *)
             painter.setPen(m_normal_bg);
             painter.drawText(m_mouse_pos.x() - m_press_offset +
                              m_model->data(m_pressed_column, RECT).toRect().width() - m_padding -
-                             m_metrics->width(m_model->data(m_pressed_column, NAME).toString()),
+                             m_metrics->horizontalAdvance(m_model->data(m_pressed_column, NAME).toString()),
                              m_metrics->ascent(), m_model->data(m_pressed_column, NAME).toString());
         }
     }

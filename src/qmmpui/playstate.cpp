@@ -97,7 +97,7 @@ void ShufflePlayState::prepare()
     }
 
     for (int i = 0; i < m_shuffled_indexes.count(); i++)
-        m_shuffled_indexes.swap(i, qrand()%m_shuffled_indexes.size());
+        m_shuffled_indexes.swapItemsAt(i, qrand()%m_shuffled_indexes.size());
 
     m_shuffled_indexes.prepend(m_model->currentIndex());
 }

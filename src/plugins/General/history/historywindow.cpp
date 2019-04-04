@@ -125,8 +125,8 @@ void HistoryWindow::loadHistory()
             m_ui->historyTreeWidget->topLevelItem(topLevelCount++)->setText(0, dateStr);
             m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setFirstColumnSpanned(true);
             m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setTextAlignment(0, Qt::AlignCenter);
-            m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setBackgroundColor(0, bgColor);
-            m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setTextColor(0, textColor);
+            m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setBackground(0, bgColor);
+            m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setForeground(0, textColor);
         }
         else if(m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->text(0) != dateStr)
         {
@@ -134,8 +134,8 @@ void HistoryWindow::loadHistory()
             m_ui->historyTreeWidget->topLevelItem(topLevelCount++)->setText(0, dateStr);
             m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setFirstColumnSpanned(true);
             m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setTextAlignment(0, Qt::AlignCenter);
-            m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setBackgroundColor(0, bgColor);
-            m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setTextColor(0, textColor);
+            m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setBackground(0, bgColor);
+            m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1)->setForeground(0, textColor);
         }
 
         QTreeWidgetItem *topLevelItem = m_ui->historyTreeWidget->topLevelItem(topLevelCount - 1);
@@ -200,8 +200,8 @@ void HistoryWindow::loadDistribution()
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount++)->setText(0,  monthStr);
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setFirstColumnSpanned(true);
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setTextAlignment(0, Qt::AlignCenter);
-            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setBackgroundColor(0, bgColor);
-            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setTextColor(0, textColor);
+            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setBackground(0, bgColor);
+            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setForeground(0, textColor);
         }
         else if(m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->text(0) != monthStr)
         {
@@ -209,8 +209,8 @@ void HistoryWindow::loadDistribution()
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount++)->setText(0, monthStr);
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setFirstColumnSpanned(true);
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setTextAlignment(0, Qt::AlignCenter);
-            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setBackgroundColor(0, bgColor);
-            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setTextColor(0, textColor);
+            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setBackground(0, bgColor);
+            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setForeground(0, textColor);
         }
 
         QTreeWidgetItem *topLevelItem = m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1);

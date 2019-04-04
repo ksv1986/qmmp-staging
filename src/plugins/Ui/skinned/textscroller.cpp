@@ -265,7 +265,7 @@ void TextScroller::preparePixmap(const QString &text, bool scrollable)
     if(scrollable)
     {
          int textWidth = m_bitmap ? QString(text + SCROLL_SEP).size() * 5
-                                  : m_metrics->width(text + SCROLL_SEP);
+                                  : m_metrics->horizontalAdvance(text + SCROLL_SEP);
          int count = 150*m_ratio / textWidth + 1;
          int width = count * textWidth;
          QString fullText;

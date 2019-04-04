@@ -76,7 +76,7 @@ void ListWidgetDrawer::readSettings()
     m_update = true;
     m_metrics = new QFontMetrics(m_font);
     m_extra_metrics = new QFontMetrics(m_extra_font);
-    m_padding = m_metrics->width("9")/2;
+    m_padding = m_metrics->horizontalAdvance("9")/2;
     m_row_height = m_metrics->lineSpacing() + 1;
 }
 
@@ -102,7 +102,7 @@ void ListWidgetDrawer::calculateNumberWidth(int count)
 {
     //song numbers width
     if(m_show_numbers && m_align_numbers && count)
-        m_number_width = m_metrics->width("9") * QString::number(count).size();
+        m_number_width = m_metrics->horizontalAdvance("9") * QString::number(count).size();
     else
         m_number_width = 0;
 }
@@ -137,10 +137,10 @@ void ListWidgetDrawer::prepareRow(ListWidgetRow *row)
             row->lengthColumnWidth = 0;
 
         if(m_show_lengths && !row->length.isEmpty())
-            row->lengthColumnWidth += m_metrics->width(row->length) + m_padding;
+            row->lengthColumnWidth += m_metrics->horizontalAdvance(row->length) + m_padding;
 
         if(!row->extraString.isEmpty())
-            row->lengthColumnWidth += m_extra_metrics->width(row->extraString) + m_padding;
+            row->lengthColumnWidth += m_extra_metrics->horizontalAdvance(row->extraString) + m_padding;
     }
 
     //elide title
@@ -162,10 +162,10 @@ void ListWidgetDrawer::prepareRow(ListWidgetRow *row)
         int size = row->sizes[i];
         if(i == row->trackStateColumn && !row->extraString.isEmpty())
         {
-            int text_size = qMax(0, size - 3 * m_padding - m_extra_metrics->width(row->extraString));
+            int text_size = qMax(0, size - 3 * m_padding - m_extra_metrics->horizontalAdvance(row->extraString));
             row->titles[i] = m_metrics->elidedText (row->titles[i], Qt::ElideRight, text_size);
             row->extraString = m_extra_metrics->elidedText(row->extraString, Qt::ElideRight,
-                                                           size - 3 * m_padding - m_metrics->width(row->titles[i]));
+                                                           size - 3 * m_padding - m_metrics->horizontalAdvance(row->titles[i]));
         }
         else
         {
@@ -210,7 +210,7 @@ void ListWidgetDrawer::drawSeparator(QPainter *painter, ListWidgetRow *row, bool
     painter->setPen(m_normal);
 
     if(rtl)
-        sx = row->rect.right() - sx - m_metrics->width(row->titles[0]);
+        sx = row->rect.right() - sx - m_metrics->horizontalAdvance(row->titles[0]);
     else
         sx += row->rect.x();
 
@@ -222,7 +222,7 @@ void ListWidgetDrawer::drawSeparator(QPainter *painter, ListWidgetRow *row, bool
     if(rtl)
     {
         painter->drawLine(row->rect.x() + 5, sy, sx - 5, sy);
-        painter->drawLine(sx + m_metrics->width(row->titles[0]) + 5, sy,
+        painter->drawLine(sx + m_metrics->horizontalAdvance(row->titles[0]) + 5, sy,
                           row->rect.right() - row->numberColumnWidth - m_padding, sy);
         if(m_show_splitters && row->numberColumnWidth)
         {
@@ -234,7 +234,7 @@ void ListWidgetDrawer::drawSeparator(QPainter *painter, ListWidgetRow *row, bool
     else
     {
         painter->drawLine(sx - 45, sy, sx - 5, sy);
-        painter->drawLine(sx + m_metrics->width(row->titles[0]) + 5, sy,
+        painter->drawLine(sx + m_metrics->horizontalAdvance(row->titles[0]) + 5, sy,
                           row->rect.width(), sy);
         if(m_show_splitters && row->numberColumnWidth)
         {
@@ -273,7 +273,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 }
             }
 
-            sx -= m_metrics->width(row->titles[0]);
+            sx -= m_metrics->horizontalAdvance(row->titles[0]);
             painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);
             painter->drawText(sx - m_padding, sy, row->titles[0]);
 
@@ -282,7 +282,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
             if(m_show_lengths && !row->length.isEmpty())
             {
                 painter->drawText(sx, sy, row->length);
-                sx += m_metrics->width(row->length);
+                sx += m_metrics->horizontalAdvance(row->length);
                 sx += m_padding;
             }
 
@@ -302,18 +302,18 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 if(row->alignment[i] == ListWidgetRow::ALIGN_LEFT)
                 {
                     title_x = sx - row->sizes[i] + m_padding;
-                    extra_x = draw_extra ? sx - m_padding - m_extra_metrics->width(row->extraString) : 0;
+                    extra_x = draw_extra ? sx - m_padding - m_extra_metrics->horizontalAdvance(row->extraString) : 0;
                 }
                 else if(row->alignment[i] == ListWidgetRow::ALIGN_RIGHT)
                 {
-                    title_x = sx - m_padding - m_metrics->width(row->titles[i]);
+                    title_x = sx - m_padding - m_metrics->horizontalAdvance(row->titles[i]);
                     extra_x = draw_extra ? sx - row->sizes[i] + m_padding : 0;
                 }
                 else
                 {
-                    title_x = sx - row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2 +
-                            (draw_extra ? (m_extra_metrics->width(row->extraString) + m_padding) / 2 : 0);
-                    extra_x = draw_extra ? title_x - m_metrics->width(row->extraString) - m_padding : 0;
+                    title_x = sx - row->sizes[i] / 2 - m_metrics->horizontalAdvance(row->titles[i]) / 2 +
+                            (draw_extra ? (m_extra_metrics->horizontalAdvance(row->extraString) + m_padding) / 2 : 0);
+                    extra_x = draw_extra ? title_x - m_metrics->horizontalAdvance(row->extraString) - m_padding : 0;
                 }
 
                 painter->drawText(title_x, sy, row->titles[i]);
@@ -345,7 +345,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 sx += row->numberColumnWidth;
                 painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);
                 QString number = QString("%1").arg(row->number);
-                painter->drawText(sx - m_padding - m_metrics->width(number), sy, number);
+                painter->drawText(sx - m_padding - m_metrics->horizontalAdvance(number), sy, number);
                 if(m_show_splitters)
                 {
                     painter->setPen(m_alternate_splitter_color ? m_current : m_normal);
@@ -361,14 +361,14 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
 
             if(m_show_lengths && !row->length.isEmpty())
             {
-                sx -= m_metrics->width(row->length);
+                sx -= m_metrics->horizontalAdvance(row->length);
                 painter->drawText(sx, sy, row->length);
                 sx -= m_padding;
             }
 
             if(!row->extraString.isEmpty())
             {
-                sx -= m_extra_metrics->width(row->extraString);
+                sx -= m_extra_metrics->horizontalAdvance(row->extraString);
                 painter->setFont(m_extra_font);
                 painter->drawText(sx, sy, row->extraString);
             }
@@ -383,18 +383,18 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 if(row->alignment[i] == ListWidgetRow::ALIGN_LEFT)
                 {
                     title_x = sx + m_padding;
-                    extra_x = draw_extra ? sx + row->sizes[i] - m_padding - m_extra_metrics->width(row->extraString) : 0;
+                    extra_x = draw_extra ? sx + row->sizes[i] - m_padding - m_extra_metrics->horizontalAdvance(row->extraString) : 0;
                 }
                 else if(row->alignment[i] == ListWidgetRow::ALIGN_RIGHT)
                 {
-                    title_x = sx + row->sizes[i] - m_padding - m_metrics->width(row->titles[i]);
+                    title_x = sx + row->sizes[i] - m_padding - m_metrics->horizontalAdvance(row->titles[i]);
                     extra_x = draw_extra ? sx + m_padding : 0;
                 }
                 else
                 {
-                    title_x = sx + row->sizes[i] / 2 - m_metrics->width(row->titles[i]) / 2 -
-                            (draw_extra ? (m_extra_metrics->width(row->extraString) + m_padding) / 2 : 0);
-                    extra_x = draw_extra ? title_x + m_metrics->width(row->titles[i]) + m_padding : 0;
+                    title_x = sx + row->sizes[i] / 2 - m_metrics->horizontalAdvance(row->titles[i]) / 2 -
+                            (draw_extra ? (m_extra_metrics->horizontalAdvance(row->extraString) + m_padding) / 2 : 0);
+                    extra_x = draw_extra ? title_x + m_metrics->horizontalAdvance(row->titles[i]) + m_padding : 0;
                 }
 
                 painter->drawText(title_x, sy, row->titles[i]);

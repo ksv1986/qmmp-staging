@@ -34,6 +34,10 @@
 #include "skin.h"
 #include "playlistselector.h"
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#define horizontalAdvance width
+#endif
+
 PlayListSelector::PlayListSelector(PlayListManager *manager, QWidget *parent) : QWidget(parent)
 {
     m_scrollable = false;

@@ -32,6 +32,10 @@
 #include <QPainter>
 #include <QStyle>
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#define horizontalAdvance width
+#endif
+
 /*!
     \class Utils::ElidingLabel
 

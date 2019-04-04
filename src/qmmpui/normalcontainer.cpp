@@ -20,6 +20,11 @@
 
 #include "normalcontainer_p.h"
 
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 13, 0)
+#define swapItemsAt swap
+#endif
+
 NormalContainer::NormalContainer()
 {}
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,6 +20,10 @@
 
 #include "qmmpuisettings.h"
 #include "playstate_p.h"
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 13, 0)
+#define swapItemsAt swap
+#endif
 
 PlayState::PlayState(PlayListModel *model) : m_model(model)
 {
@@ -97,7 +101,7 @@ void ShufflePlayState::prepare()
     }
 
     for (int i = 0; i < m_shuffled_indexes.count(); i++)
-        m_shuffled_indexes.swap(i, qrand()%m_shuffled_indexes.size());
+        m_shuffled_indexes.swapItemsAt(i, qrand()%m_shuffled_indexes.size());
 
     m_shuffled_indexes.prepend(m_model->currentIndex());
 }

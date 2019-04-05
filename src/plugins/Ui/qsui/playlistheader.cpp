@@ -39,6 +39,10 @@
 #include "playlistheader.h"
 #include "listwidgetdrawer.h"
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#define horizontalAdvance width
+#endif
+
 #define INITAL_SIZE 150
 #define MIN_SIZE 30
 #define MAX_COLUMNS 7
@@ -124,7 +128,7 @@ void PlayListHeader::readSettings()
 
     QFont pl_font;
     pl_font.fromString(settings.value("pl_font", qApp->font().toString()).toString());
-    m_pl_padding = QFontMetrics(pl_font).width("9")/2;
+    m_pl_padding = QFontMetrics(pl_font).horizontalAdvance("9")/2;
 
     if(!m_model->isSettingsLoaded()) //do not load settings several times
     {
@@ -437,7 +441,7 @@ void PlayListHeader::mousePressEvent(QMouseEvent *e)
 
             if(rtl)
             {
-                if(e->pos().x() < m_model->data(m_pressed_column, RECT).toRect().x() + m_metrics->width("9"))
+                if(e->pos().x() < m_model->data(m_pressed_column, RECT).toRect().x() + m_metrics->horizontalAdvance("9"))
                 {
                     m_old_size = size(m_pressed_column);
                     m_task = RESIZE;
@@ -450,7 +454,7 @@ void PlayListHeader::mousePressEvent(QMouseEvent *e)
             }
             else
             {
-                if(e->pos().x() > m_model->data(m_pressed_column, RECT).toRect().right() - m_metrics->width("9"))
+                if(e->pos().x() > m_model->data(m_pressed_column, RECT).toRect().right() - m_metrics->horizontalAdvance("9"))
                 {
                     m_old_size = size(m_pressed_column);
                     m_task = RESIZE;
@@ -565,14 +569,14 @@ void PlayListHeader::mouseMoveEvent(QMouseEvent *e)
         {
             if(rtl)
             {
-                if(column >= 0 && x < m_model->data(column, RECT).toRect().x() + m_metrics->width("9"))
+                if(column >= 0 && x < m_model->data(column, RECT).toRect().x() + m_metrics->horizontalAdvance("9"))
                     setCursor(Qt::SplitHCursor);
                 else
                     setCursor(Qt::ArrowCursor);
             }
             else
             {
-                if(column >= 0 && x > m_model->data(column, RECT).toRect().right() - m_metrics->width("9"))
+                if(column >= 0 && x > m_model->data(column, RECT).toRect().right() - m_metrics->horizontalAdvance("9"))
                     setCursor(Qt::SplitHCursor);
                 else
                     setCursor(Qt::ArrowCursor);

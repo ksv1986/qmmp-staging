@@ -20,6 +20,11 @@
 
 #include "normalcontainer_p.h"
 
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 13, 0)
+#define swapItemsAt swap
+#endif
+
 NormalContainer::NormalContainer()
 {}
 
@@ -229,7 +234,7 @@ void NormalContainer::reverseList()
 {
     for (int i = 0; i < m_items.size()/2; i++)
     {
-        m_items.swap(i, m_items.size() - i - 1);
+        m_items.swapItemsAt(i, m_items.size() - i - 1);
         swapTrackNumbers(&m_items, i, m_items.size() - i - 1);
     }
 }
@@ -237,7 +242,7 @@ void NormalContainer::reverseList()
 void NormalContainer::randomizeList()
 {
     for (int i = 0; i < m_items.size(); i++)
-        m_items.swap(qrand()%m_items.size(), qrand()%m_items.size());
+        m_items.swapItemsAt(qrand()%m_items.size(), qrand()%m_items.size());
 
     for(int i = 0; i < m_items.count(); ++i)
         m_items[i]->setTrackIndex(i);

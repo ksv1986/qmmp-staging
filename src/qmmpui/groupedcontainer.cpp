@@ -21,6 +21,10 @@
 #include "playlistmodel.h"
 #include "groupedcontainer_p.h"
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 13, 0)
+#define swapItemsAt swap
+#endif
+
 GroupedContainer::GroupedContainer()
 {
     m_update = true;
@@ -387,7 +391,7 @@ void GroupedContainer::reverseList()
     QList<PlayListTrack *> tracks = takeAllTracks();
 
     for (int i = 0; i < tracks.size()/2 ;i++)
-        tracks.swap(i, tracks.size() - i - 1);
+        tracks.swapItemsAt(i, tracks.size() - i - 1);
 
     addTracks(tracks);
 }
@@ -398,14 +402,14 @@ void GroupedContainer::randomizeList()
     {
         for (int j = 0; j < m_groups[i]->trackList.size(); j++)
         {
-            m_groups[i]->trackList.swap(qrand() % m_groups[i]->trackList.size(),
-                                        qrand() % m_groups[i]->trackList.size());
+            m_groups[i]->trackList.swapItemsAt(qrand() % m_groups[i]->trackList.size(),
+                                               qrand() % m_groups[i]->trackList.size());
         }
     }
 
     for(int i = 0; i < m_groups.count(); ++i)
     {
-        m_groups.swap(qrand() % m_groups.size(), qrand() % m_groups.size());
+        m_groups.swapItemsAt(qrand() % m_groups.size(), qrand() % m_groups.size());
     }
 
     m_update = true;

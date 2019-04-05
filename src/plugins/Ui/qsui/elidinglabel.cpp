@@ -32,6 +32,10 @@
 #include <QPainter>
 #include <QStyle>
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#define horizontalAdvance width
+#endif
+
 /*!
     \class Utils::ElidingLabel
 
@@ -70,7 +74,7 @@ void ElidingLabel::paintEvent(QPaintEvent *)
     QRect contents = contentsRect().adjusted(m, m, -m, -m);
     QFontMetrics fm = fontMetrics();
     QString txt = text();
-    if (txt.length() > 4 && fm.width(txt) > contents.width()) {
+    if (txt.length() > 4 && fm.horizontalAdvance(txt) > contents.width()) {
         setToolTip(txt);
         txt = fm.elidedText(txt, m_elideMode, contents.width());
     } else {

@@ -35,6 +35,10 @@
 #include "actionmanager.h"
 #include "textscroller.h"
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#define horizontalAdvance width
+#endif
+
 #define SCROLL_SEP "   *** "
 #define TITLE_FORMAT "%p%if(%p&%t, - ,)%t%if(%p,,%if(%t,,%f))%if(%l, - %l,)"
 
@@ -265,7 +269,7 @@ void TextScroller::preparePixmap(const QString &text, bool scrollable)
     if(scrollable)
     {
          int textWidth = m_bitmap ? QString(text + SCROLL_SEP).size() * 5
-                                  : m_metrics->width(text + SCROLL_SEP);
+                                  : m_metrics->horizontalAdvance(text + SCROLL_SEP);
          int count = 150*m_ratio / textWidth + 1;
          int width = count * textWidth;
          QString fullText;

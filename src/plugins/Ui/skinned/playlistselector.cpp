@@ -34,6 +34,10 @@
 #include "skin.h"
 #include "playlistselector.h"
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#define horizontalAdvance width
+#endif
+
 PlayListSelector::PlayListSelector(PlayListManager *manager, QWidget *parent) : QWidget(parent)
 {
     m_scrollable = false;
@@ -93,18 +97,18 @@ void PlayListSelector::updateTabs()
         if(m_rects.isEmpty())
             rect.setX(9);
         else
-            rect.setX(m_rects.last().x() + m_rects.last().width() + m_metrics->width(m_pl_separator));
+            rect.setX(m_rects.last().x() + m_rects.last().width() + m_metrics->horizontalAdvance(m_pl_separator));
         rect.setY(0);
-        rect.setWidth(m_metrics->width(text));
+        rect.setWidth(m_metrics->horizontalAdvance(text));
         rect.setHeight(m_metrics->ascent ());
         m_rects.append(rect);
     }
 
     if(m_show_new_pl_button)
     {
-        rect.setX(m_rects.last().x() + m_rects.last().width() + m_metrics->width("  "));
+        rect.setX(m_rects.last().x() + m_rects.last().width() + m_metrics->horizontalAdvance("  "));
         rect.setY(0);
-        rect.setWidth(m_metrics->width(m_pl_button));
+        rect.setWidth(m_metrics->horizontalAdvance(m_pl_button));
         rect.setHeight(m_metrics->ascent ());
         m_extra_rects.append(rect);
     }
@@ -365,7 +369,7 @@ QRect PlayListSelector::firstVisible()
 {
     for(int i = 0; i < m_rects.size(); ++i)
     {
-        if(m_rects.at(i).right() + m_metrics->width(m_pl_separator) >= 9 + m_offset)
+        if(m_rects.at(i).right() + m_metrics->horizontalAdvance(m_pl_separator) >= 9 + m_offset)
             return m_rects.at(i);
     }
     return m_rects.at(0);
@@ -375,12 +379,12 @@ QRect PlayListSelector::lastVisible()
 {
     for(int i = m_extra_rects.size() - 1; i >= 0; --i)
     {
-        if(m_extra_rects.at(i).x() - m_offset -  m_metrics->width("  ") - 2 <= width() - 40)
+        if(m_extra_rects.at(i).x() - m_offset -  m_metrics->horizontalAdvance("  ") - 2 <= width() - 40)
             return m_extra_rects.at(i);
     }
     for(int i = m_rects.size() - 1; i >= 0; --i)
     {
-        if(m_rects.at(i).x() - m_offset - m_metrics->width(m_pl_separator) - 2 <= width() - 40)
+        if(m_rects.at(i).x() - m_offset - m_metrics->horizontalAdvance(m_pl_separator) - 2 <= width() - 40)
             return m_rects.at(i);
     }
     return m_extra_rects.isEmpty() ? m_rects.last() : m_extra_rects.last();

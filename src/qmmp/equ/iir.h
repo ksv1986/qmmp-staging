@@ -64,6 +64,7 @@ void init_iir(unsigned int srate, int band_num);
 void clean_history();
 void set_gain(int index, int chn, float val);
 void set_preamp(int chn, float val);
+void set_two_passes(int enabled);
 
 
 int iir(float * d, int samples, int nch);
@@ -81,6 +82,7 @@ __inline__ int round_ppc(float x);
 extern float preamp[EQ_CHANNELS];
 extern sIIRCoefficients *iir_cf;
 extern int band_count;
+extern int two_passes;
 
 #ifdef BENCHMARK
 extern double timex;

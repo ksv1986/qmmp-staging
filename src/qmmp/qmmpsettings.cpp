@@ -189,7 +189,7 @@ void QmmpSettings::setEqSettings(const EqSettings &settings)
     emit eqSettingsChanged();
 }
 
-void QmmpSettings::readEqSettings(int bands)
+void QmmpSettings::readEqSettings(EqSettings::Bands bands)
 {
     m_eq_settings = EqSettings(bands);
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);

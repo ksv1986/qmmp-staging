@@ -30,13 +30,8 @@ EqSettings::EqSettings(const EqSettings &other)
         m_gains[i] = other.m_gains[i];
 }
 
-EqSettings::EqSettings(int bands)
+EqSettings::EqSettings(Bands bands)
 {
-    if(bands != 10 && bands != 15 && bands != 25 && bands != 31)
-    {
-        qWarning("EqSettings: invalid number of bands (%d), using 10 bands as fallback", bands);
-        bands = 10;
-    }
     for(int i = 0; i < 31; ++i)
         m_gains[i] = 0;
     m_bands = bands;
@@ -61,7 +56,7 @@ double EqSettings::preamp() const
 
 int EqSettings::bands() const
 {
-    return m_bands;
+    return static_cast<int>(m_bands);
 }
 
 void EqSettings::setEnabled(bool enabled)

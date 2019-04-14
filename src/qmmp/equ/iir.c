@@ -51,10 +51,16 @@ unsigned int blength = 0;
  */
 unsigned int rate = 0;
 int band_count = 0;
+int two_passes = 0;
 
 void set_preamp(int chn, float val)
 {
   preamp[chn] = val;
+}
+
+void set_two_passes(int enabled)
+{
+  two_passes = enabled;
 }
 
 /* Init the filters */

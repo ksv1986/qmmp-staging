@@ -30,6 +30,16 @@ class QMMP_EXPORT EqSettings
 {
 public:
     /*!
+     * Equalizer band number
+     */
+    enum Bands
+    {
+        EQ_BANDS_10 = 10, /*!< 10 bands */
+        EQ_BANDS_15 = 15, /*!< 15 bands */
+        EQ_BANDS_25 = 25, /*!< 25 bands */
+        EQ_BANDS_31 = 31  /*!< 31 bands */
+    };
+    /*!
      * Constructs a copy of \b other.
      */
     EqSettings(const EqSettings &other);
@@ -37,7 +47,7 @@ public:
      * Constructs an empty equalizer settings (0 dB, disabled)
      * @param bands - Number of bands (supported: 10, 15, 25, 31)
      */
-    EqSettings(int bands = EQ_BANDS_10);
+    EqSettings(Bands bands = EQ_BANDS_10);
     /*!
      * Returns \b true if equalizer os enabled, otherwise returns \b false.
      */
@@ -80,16 +90,6 @@ public:
      * Returns \b true if equalizer settins \b s is not equal to this settings; otherwise returns false.
      */
     bool operator!=(const EqSettings &s) const;
-    /*!
-     * Equalizer bands number
-     */
-    enum BANDS
-    {
-        EQ_BANDS_10 = 10, /*!< 10 bands */
-        EQ_BANDS_15 = 15, /*!< 15 bands */
-        EQ_BANDS_25 = 25, /*!< 25 bands */
-        EQ_BANDS_31 = 31  /*!< 31 bands */
-    };
 
 private:
     double m_gains[31];

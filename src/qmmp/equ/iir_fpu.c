@@ -136,7 +136,7 @@ __inline__ int iir(float *d, int samples, int nch)
         out[channel] +=  data_history[channel][band].y[i]*gain[channel][band]; // * 2.0;
       } /* For each band */
 
-      //if (eqcfg.extra_filtering)
+      if (two_passes)
       {
         /* Filter the sample again */
         for (band = 0; band < band_count; band++)

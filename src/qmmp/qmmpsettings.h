@@ -152,7 +152,7 @@ public:
      * Reads equalizer settings. Call this function before equalizer usage.
      * @param bands Number of bands.
      */
-    void readEqSettings(int bands = EqSettings::EQ_BANDS_10);
+    void readEqSettings(EqSettings::Bands bands = EqSettings::EQ_BANDS_10);
     /*!
      * Returns buffer size in milliseconds.
      */

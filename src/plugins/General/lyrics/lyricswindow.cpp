@@ -139,8 +139,7 @@ void LyricsWindow::showText(QNetworkReply *reply)
 
         QString temp = url_regexp.cap(1).toLatin1();
         qDebug("LyricsWindow: received url = %s", qPrintable(temp));
-        temp.replace("http://lyrics.wikia.com/","http://lyrics.wikia.com/index.php?title=");
-        temp.append("&action=edit");
+        temp = QString("https://lyrics.fandom.com/index.php?title=%1&action=edit").arg(temp.section("/", -1));
 
         QUrl url = QUrl::fromEncoded(temp.toLatin1());
         QString referer = url_regexp.cap(1);
@@ -150,7 +149,6 @@ void LyricsWindow::showText(QNetworkReply *reply)
         request.setRawHeader("Referer", referer.toLatin1());
         m_ui.stateLabel->setText(tr("Receiving"));
         m_http->get(request);
-        reply->deleteLater();
         return;
     }
     content.replace("&lt;", "<");
@@ -179,7 +177,7 @@ void LyricsWindow::on_searchPushButton_clicked()
     setWindowTitle(QString(tr("Lyrics: %1 - %2")).arg(m_ui.artistLineEdit->text())
                    .arg(m_ui.titleLineEdit->text()));
     QNetworkRequest request;
-    request.setUrl(QUrl("http://lyrics.wikia.com/api.php?action=lyrics&artist=" +
+    request.setUrl(QUrl("https://lyrics.fandom.com/api.php?action=lyrics&artist=" +
                         m_ui.artistLineEdit->text()+"&song=" + m_ui.titleLineEdit->text() + "&fmt=xml"));
     request.setRawHeader("User-Agent", QString("qmmp/%1").arg(Qmmp::strVersion()).toLatin1());
     m_requestReply = m_http->get(request);

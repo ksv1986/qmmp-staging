@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -51,9 +51,9 @@ private slots:
 
 private:
     Skin *m_skin;
-    bool m_moving;
+    bool m_moving = false;
     int press_pos;
-    int m_max, m_min, m_pos, m_value, m_old;
+    int m_max = 100, m_min = -100, m_pos, m_value = 0, m_old = 0;
     QPixmap m_pixmap;
     int convert(int);   // value = convert(position);
     void draw(bool pressed = true);

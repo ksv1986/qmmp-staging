@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *
@@ -31,11 +31,10 @@ Button::Button (QWidget *parent, uint normal, uint pressed, uint cursor)
     name_normal = normal;
     name_pressed = pressed;
     name_cursor = cursor;
-    m_pressed = false;
-    skin = Skin::instance();
+    m_skin = Skin::instance();
     setON (false);
-    setCursor (skin->getCursor (name_cursor));
-    connect (skin, SIGNAL (skinChanged()), this, SLOT (updateSkin()));
+    setCursor (m_skin->getCursor (name_cursor));
+    connect (m_skin, SIGNAL (skinChanged()), this, SLOT (updateSkin()));
 }
 
 
@@ -44,16 +43,16 @@ Button::~Button()
 
 void Button::updateSkin()
 {
-    setPixmap (skin->getButton (name_normal));
-    setCursor (skin->getCursor (name_cursor));
+    setPixmap (m_skin->getButton (name_normal));
+    setCursor (m_skin->getCursor (name_cursor));
 }
 
 void Button::setON (bool on)
 {
     if (on)
-        setPixmap (skin->getButton (name_pressed));
+        setPixmap (m_skin->getButton (name_pressed));
     else
-        setPixmap (skin->getButton (name_normal));
+        setPixmap (m_skin->getButton (name_normal));
 }
 void Button::mousePressEvent (QMouseEvent *e)
 {

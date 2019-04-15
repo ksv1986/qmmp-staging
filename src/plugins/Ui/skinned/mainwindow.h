@@ -106,8 +106,8 @@ private:
     PlayList *m_playlist;
     PlayListManager *m_pl_manager;
     EqWidget *m_equalizer;
-    MainVisual *m_vis;
-    bool m_update;
+    MainVisual *m_vis = nullptr;
+    bool m_update = false;
     Skin *m_skin;
     bool m_hideOnClose, m_startHidden;
     VisualMenu *m_visMenu;

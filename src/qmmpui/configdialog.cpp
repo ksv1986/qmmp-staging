@@ -53,7 +53,6 @@ ConfigDialog::ConfigDialog (QWidget *parent) : QDialog (parent)
 {
     m_ui = new Ui::ConfigDialog;
     m_ui->setupUi (this);
-    m_insert_row = 0;
     setAttribute(Qt::WA_QuitOnClose, false);
     setAttribute(Qt::WA_DeleteOnClose, false);
     m_ui->preferencesButton->setEnabled(false);

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,9 +41,9 @@ private slots:
     void updateSkin();
 
 private:
-    Skin *skin;
+    Skin *m_skin;
     //bool m_cursorin;
-    bool m_pressed;
+    bool m_pressed = false;
     void setON(bool);
     uint name_normal, name_pressed;
     uint name_cursor;

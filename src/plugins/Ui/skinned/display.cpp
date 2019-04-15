@@ -46,7 +46,6 @@
 MainDisplay::MainDisplay (MainWindow *parent)
         : PixmapWidget (parent)
 {
-    m_shaded = false;
     m_skin = Skin::instance();
     setPixmap (m_skin->getMain());
     setCursor(m_skin->getCursor(Skin::CUR_NORMAL));

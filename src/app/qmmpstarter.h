@@ -76,15 +76,15 @@ private:
     void createInitialConfig();
 
 private:
-    MediaPlayer *m_player;
-    SoundCore *m_core;
-    QObject *m_ui;
+    MediaPlayer *m_player = nullptr;
+    SoundCore *m_core = nullptr;
+    QObject *m_ui = nullptr;
     QString argString;
     BuiltinCommandLineOption* m_option_manager;
     QLocalServer *m_server;
     QLocalSocket *m_socket;
-    bool m_finished;
-    int m_exit_code;
+    bool m_finished = false;
+    int m_exit_code = EXIT_SUCCESS;
 #ifdef Q_OS_WIN
     HANDLE m_named_mutex;
 #endif

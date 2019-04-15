@@ -57,11 +57,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
 #ifdef QMMP_WS_X11
     qDebug("MainWindow: detected wm: %s", qPrintable(WindowSystem::netWindowManagerName()));
-#endif
-    m_vis = nullptr;
-    m_update = false;
-
-#ifdef QMMP_WS_X11
     QString wm_name = WindowSystem::netWindowManagerName();
     if(wm_name.contains("Marco", Qt::CaseInsensitive) ||
             wm_name.contains("Metacity", Qt::CaseInsensitive) ||

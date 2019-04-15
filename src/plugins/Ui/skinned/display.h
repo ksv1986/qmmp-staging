@@ -91,7 +91,7 @@ private:
     void updateMask();
     QWidget* m_equlizer;
     QWidget* m_playlist;
-    bool m_shaded;
+    bool m_shaded = false;
     Skin *m_skin;
     PositionBar *m_posbar;
     Button *m_previous;

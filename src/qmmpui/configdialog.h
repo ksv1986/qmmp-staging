@@ -74,7 +74,7 @@ private:
     void loadPluginsInfo();
     void createMenus();
     void loadLanguages();
-    int m_insert_row;
+    int m_insert_row = 0;
     Ui::ConfigDialog *m_ui;
     QAction *m_preferencesAction;
     QAction *m_informationAction;

@@ -57,11 +57,6 @@ using namespace std;
 
 QMMPStarter::QMMPStarter() : QObject()
 {
-    m_player = nullptr;
-    m_core = nullptr;
-    m_ui = nullptr;
-    m_finished = false;
-    m_exit_code = EXIT_SUCCESS;
 #ifndef QT_NO_SESSIONMANAGER
     connect(qApp, SIGNAL(commitDataRequest(QSessionManager&)), SLOT(commitData(QSessionManager&)), Qt::DirectConnection);
 #endif

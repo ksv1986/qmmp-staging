@@ -64,6 +64,7 @@ public:
      * Returns number of bands
      */
     int bands() const;
+    bool twoPasses() const;
     /*!
      *  Enables equalizer if \p enabled is \b true or disables it if \p enabled is \b false.
      */
@@ -78,6 +79,7 @@ public:
      * Sets equalizer preamp to \b preamp.
      */
     void setPreamp(double preamp);
+    void setTwoPasses(bool enabled = true);
     /*!
      * Assigns equalizer settings \b s to this settings.
      */
@@ -92,10 +94,11 @@ public:
     bool operator!=(const EqSettings &s) const;
 
 private:
-    double m_gains[31];
-    double m_preamp;
-    bool m_is_enabled;
+    double m_gains[31] = { 0 };
+    double m_preamp = 0;
+    bool m_is_enabled = false;
     int m_bands;
+    bool m_two_passes = false;
 };
 
 #endif // EQSETTINGS_H

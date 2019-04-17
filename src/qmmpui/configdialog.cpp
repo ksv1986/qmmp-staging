@@ -155,6 +155,8 @@ void ConfigDialog::readSettings()
     m_ui->bitDepthComboBox->setCurrentIndex(m_ui->bitDepthComboBox->findData(gs->outputFormat()));
     m_ui->ditheringCheckBox->setChecked(gs->useDithering());
     m_ui->bufferSizeSpinBox->setValue(gs->bufferSize());
+    //equalizer
+    m_ui->twoPassEqCheckBox->setChecked(gs->eqSettings().twoPasses());
     //geometry
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     resize(settings.value("ConfigDialog/window_size", QSize(700,470)).toSize());
@@ -418,6 +420,9 @@ void ConfigDialog::saveSettings()
     gs->setBufferSize(m_ui->bufferSizeSpinBox->value());
     gs->setDetermineFileTypeByContent(m_ui->byContentCheckBox->isChecked());
     gs->setVolumeStep(m_ui->volumeStepSpinBox->value());
+    EqSettings eqs = gs->eqSettings();
+    eqs.setTwoPasses(m_ui->twoPassEqCheckBox->isChecked());
+    gs->setEqSettings(eqs);
     QList<QVariant> var_sizes;
     var_sizes << m_ui->splitter->sizes().first() << m_ui->splitter->sizes().last();
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);

@@ -382,6 +382,7 @@ void OutputWriter::updateEqSettings()
         int bands =  m_settings->eqSettings().bands();
 
         init_iir(m_frequency, bands);
+        set_two_passes(m_settings->eqSettings().twoPasses());
 
         set_preamp(0, 1.0 + 0.0932471 *preamp + 0.00279033 * preamp * preamp);
         set_preamp(1, 1.0 + 0.0932471 *preamp + 0.00279033 * preamp * preamp);

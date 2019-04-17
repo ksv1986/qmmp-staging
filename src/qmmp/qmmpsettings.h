@@ -132,7 +132,7 @@ public:
     /*!
      * Returns global proxy url.
      */
-    QUrl proxy() const;
+    const QUrl &proxy() const;
     /*!
      * Sets network settings.
      * @param use_proxy Enables or disables global proxy.
@@ -143,7 +143,7 @@ public:
     /*!
      * Returns equalizer settings.
      */
-    EqSettings eqSettings() const;
+    const EqSettings &eqSettings() const;
     /*!
      * Changes equalizer settings to \b settings.
      */

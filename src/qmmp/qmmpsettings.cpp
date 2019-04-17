@@ -163,9 +163,9 @@ bool QmmpSettings::useProxyAuth() const
     return m_proxy_auth;
 }
 
-QUrl QmmpSettings::proxy() const
+const QUrl &QmmpSettings::proxy() const
 {
-    return  m_proxy_url;
+    return m_proxy_url;
 }
 
 void QmmpSettings::setNetworkSettings(bool use_proxy, bool auth, const QUrl &proxy)
@@ -177,7 +177,7 @@ void QmmpSettings::setNetworkSettings(bool use_proxy, bool auth, const QUrl &pro
     emit networkSettingsChanged();
 }
 
-EqSettings QmmpSettings::eqSettings() const
+const EqSettings &QmmpSettings::eqSettings() const
 {
     return m_eq_settings;
 }
@@ -199,6 +199,7 @@ void QmmpSettings::readEqSettings(EqSettings::Bands bands)
     m_eq_settings.setPreamp(settings.value("preamp", 0).toDouble());
     m_eq_settings.setEnabled(settings.value("enabled", false).toBool());
     settings.endGroup();
+    m_eq_settings.setTwoPasses(settings.value("Equalizer/two_passes", true).toBool());
     emit eqSettingsChanged();
 }
 
@@ -256,6 +257,7 @@ void QmmpSettings::sync()
     settings.setValue("preamp", m_eq_settings.preamp());
     settings.setValue("enabled", m_eq_settings.isEnabled());
     settings.endGroup();
+    settings.setValue("Equalizer/two_passes", m_eq_settings.twoPasses());
     //buffer size
     settings.setValue("Output/buffer_size", m_buffer_size);
     //file type determination

@@ -173,7 +173,7 @@
         <translation>Получение</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="273"/>
+        <location filename="../streamwindow.cpp" line="279"/>
         <source>Edit Stream</source>
         <translation>Редактировать потоковое радио</translation>
     </message>

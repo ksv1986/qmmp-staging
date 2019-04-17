@@ -564,87 +564,87 @@
 <context>
     <name>MainDisplay</name>
     <message>
-        <location filename="../display.cpp" line="60"/>
+        <location filename="../display.cpp" line="59"/>
         <source>Previous</source>
         <translation>上一曲</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="64"/>
+        <location filename="../display.cpp" line="63"/>
         <source>Play</source>
         <translation>播放</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="67"/>
+        <location filename="../display.cpp" line="66"/>
         <source>Pause</source>
         <translation>暫停</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="70"/>
+        <location filename="../display.cpp" line="69"/>
         <source>Stop</source>
         <translation>停止</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="73"/>
+        <location filename="../display.cpp" line="72"/>
         <source>Next</source>
         <translation>下一曲</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="76"/>
+        <location filename="../display.cpp" line="75"/>
         <source>Play files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="83"/>
+        <location filename="../display.cpp" line="82"/>
         <source>Equalizer</source>
         <translation>均衡器</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="86"/>
+        <location filename="../display.cpp" line="85"/>
         <source>Playlist</source>
         <translation>播放清單</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="91"/>
+        <location filename="../display.cpp" line="90"/>
         <source>Repeat playlist</source>
         <translation>重復播放清單</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="94"/>
+        <location filename="../display.cpp" line="93"/>
         <source>Shuffle</source>
         <translation>亂序</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="104"/>
+        <location filename="../display.cpp" line="103"/>
         <source>Volume</source>
         <translation>音量</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="110"/>
+        <location filename="../display.cpp" line="109"/>
         <source>Balance</source>
         <translation>平衡</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="296"/>
+        <location filename="../display.cpp" line="295"/>
         <source>Volume: %1%</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="300"/>
+        <location filename="../display.cpp" line="299"/>
         <source>Balance: %1% right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="302"/>
+        <location filename="../display.cpp" line="301"/>
         <source>Balance: %1% left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="304"/>
+        <location filename="../display.cpp" line="303"/>
         <source>Balance: center</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="310"/>
+        <location filename="../display.cpp" line="309"/>
         <source>Seek to: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -785,37 +785,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="366"/>
+        <location filename="../mainwindow.cpp" line="361"/>
         <source>Appearance</source>
         <translation>外觀</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="367"/>
+        <location filename="../mainwindow.cpp" line="362"/>
         <source>Shortcuts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="437"/>
+        <location filename="../mainwindow.cpp" line="432"/>
         <source>View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="446"/>
+        <location filename="../mainwindow.cpp" line="441"/>
         <source>Playlist</source>
         <translation>播放清單</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="464"/>
+        <location filename="../mainwindow.cpp" line="459"/>
         <source>Audio</source>
         <translation>聲訊</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="472"/>
+        <location filename="../mainwindow.cpp" line="467"/>
         <source>Tools</source>
         <translation>工具</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="554"/>
+        <location filename="../mainwindow.cpp" line="549"/>
         <source>Qmmp</source>
         <translation type="unfinished"></translation>
     </message>
@@ -982,50 +982,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="86"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Add Column</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="87"/>
+        <location filename="../playlistheader.cpp" line="91"/>
         <source>Edit Column</source>
         <translation>編輯欄位</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="92"/>
         <source>Show Queue/Protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="94"/>
         <source>Auto-resize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="93"/>
+        <location filename="../playlistheader.cpp" line="97"/>
         <source>Alignment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="94"/>
+        <location filename="../playlistheader.cpp" line="98"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="95"/>
+        <location filename="../playlistheader.cpp" line="99"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="96"/>
+        <location filename="../playlistheader.cpp" line="100"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="106"/>
+        <location filename="../playlistheader.cpp" line="110"/>
         <source>Remove Column</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1390,17 +1390,17 @@
 <context>
     <name>TextScroller</name>
     <message>
-        <location filename="../textscroller.cpp" line="57"/>
+        <location filename="../textscroller.cpp" line="61"/>
         <source>Autoscroll Songname</source>
         <translation>自動捲動曲目名</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="58"/>
+        <location filename="../textscroller.cpp" line="62"/>
         <source>Transparent Background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="128"/>
+        <location filename="../textscroller.cpp" line="132"/>
         <source>Buffering: %1%</source>
         <translation type="unfinished"></translation>
     </message>

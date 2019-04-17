@@ -564,87 +564,87 @@
 <context>
     <name>MainDisplay</name>
     <message>
-        <location filename="../display.cpp" line="60"/>
+        <location filename="../display.cpp" line="59"/>
         <source>Previous</source>
         <translation>Προηγούμενο</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="64"/>
+        <location filename="../display.cpp" line="63"/>
         <source>Play</source>
         <translation>Αναπαραγωγή</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="67"/>
+        <location filename="../display.cpp" line="66"/>
         <source>Pause</source>
         <translation>Παύση</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="70"/>
+        <location filename="../display.cpp" line="69"/>
         <source>Stop</source>
         <translation>Διακοπή</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="73"/>
+        <location filename="../display.cpp" line="72"/>
         <source>Next</source>
         <translation>Επόμενο</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="76"/>
+        <location filename="../display.cpp" line="75"/>
         <source>Play files</source>
         <translation>Αναπαραγωγή αρχείων</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="83"/>
+        <location filename="../display.cpp" line="82"/>
         <source>Equalizer</source>
         <translation>Ισοσταθμιστής</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="86"/>
+        <location filename="../display.cpp" line="85"/>
         <source>Playlist</source>
         <translation>Λίστα αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="91"/>
+        <location filename="../display.cpp" line="90"/>
         <source>Repeat playlist</source>
         <translation>Επανάληψη λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="94"/>
+        <location filename="../display.cpp" line="93"/>
         <source>Shuffle</source>
         <translation>Ανακάτεμα</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="104"/>
+        <location filename="../display.cpp" line="103"/>
         <source>Volume</source>
         <translation>Ένταση</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="110"/>
+        <location filename="../display.cpp" line="109"/>
         <source>Balance</source>
         <translation>Ισορροπία</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="296"/>
+        <location filename="../display.cpp" line="295"/>
         <source>Volume: %1%</source>
         <translation>Ένταση: %1%</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="300"/>
+        <location filename="../display.cpp" line="299"/>
         <source>Balance: %1% right</source>
         <translation>Ισορροπία: %1 % δεξιά</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="302"/>
+        <location filename="../display.cpp" line="301"/>
         <source>Balance: %1% left</source>
         <translation>Ισορροπία: %1 % αριστερά</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="304"/>
+        <location filename="../display.cpp" line="303"/>
         <source>Balance: center</source>
         <translation>Ισορροπία: κέντρο</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="310"/>
+        <location filename="../display.cpp" line="309"/>
         <source>Seek to: %1</source>
         <translation>Αναζήτηση σε: %1</translation>
     </message>
@@ -785,37 +785,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="366"/>
+        <location filename="../mainwindow.cpp" line="361"/>
         <source>Appearance</source>
         <translation>Εμφάνιση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="367"/>
+        <location filename="../mainwindow.cpp" line="362"/>
         <source>Shortcuts</source>
         <translation>Συντομεύσεις</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="437"/>
+        <location filename="../mainwindow.cpp" line="432"/>
         <source>View</source>
         <translation>Προβολή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="446"/>
+        <location filename="../mainwindow.cpp" line="441"/>
         <source>Playlist</source>
         <translation>Λίστα αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="464"/>
+        <location filename="../mainwindow.cpp" line="459"/>
         <source>Audio</source>
         <translation>Ήχος</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="472"/>
+        <location filename="../mainwindow.cpp" line="467"/>
         <source>Tools</source>
         <translation>Εργαλεία</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="554"/>
+        <location filename="../mainwindow.cpp" line="549"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -982,50 +982,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="86"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Add Column</source>
         <translation>Προσθήκη στήλης</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="87"/>
+        <location filename="../playlistheader.cpp" line="91"/>
         <source>Edit Column</source>
         <translation>Επεξεργασία στήλης</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="92"/>
         <source>Show Queue/Protocol</source>
         <translation>Εμφάνιση Ουράς αναμονής/πρωτοκόλλου</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="94"/>
         <source>Auto-resize</source>
         <translation>Αυτόματη κλιμάκωση</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="93"/>
+        <location filename="../playlistheader.cpp" line="97"/>
         <source>Alignment</source>
         <translation>Στοίχιση</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="94"/>
+        <location filename="../playlistheader.cpp" line="98"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>Αριστερά</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="95"/>
+        <location filename="../playlistheader.cpp" line="99"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>Δεξιά</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="96"/>
+        <location filename="../playlistheader.cpp" line="100"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Κέντρο</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="106"/>
+        <location filename="../playlistheader.cpp" line="110"/>
         <source>Remove Column</source>
         <translation>Αφαίρεση στήλης</translation>
     </message>
@@ -1390,17 +1390,17 @@
 <context>
     <name>TextScroller</name>
     <message>
-        <location filename="../textscroller.cpp" line="57"/>
+        <location filename="../textscroller.cpp" line="61"/>
         <source>Autoscroll Songname</source>
         <translation>Αυτόματη κύλιση του τίτλου του τραγουδιού</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="58"/>
+        <location filename="../textscroller.cpp" line="62"/>
         <source>Transparent Background</source>
         <translation>Διαφανές παρασκήνιο</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="128"/>
+        <location filename="../textscroller.cpp" line="132"/>
         <source>Buffering: %1%</source>
         <translation>Πλήρωση ενδιάμεσης μνήμης: %1%</translation>
     </message>

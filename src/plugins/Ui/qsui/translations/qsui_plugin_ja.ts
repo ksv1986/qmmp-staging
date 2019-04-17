@@ -516,64 +516,64 @@
 <context>
     <name>Equalizer</name>
     <message>
-        <location filename="../equalizer.cpp" line="39"/>
+        <location filename="../equalizer.cpp" line="43"/>
         <source>Equalizer</source>
         <translation>イコライザー</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="48"/>
+        <location filename="../equalizer.cpp" line="52"/>
         <source>Enable equalizer</source>
         <translation>イコライザー稼動</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="54"/>
+        <location filename="../equalizer.cpp" line="58"/>
         <source>Preset:</source>
         <translation>プリセット:</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="62"/>
+        <location filename="../equalizer.cpp" line="66"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="66"/>
+        <location filename="../equalizer.cpp" line="70"/>
         <source>Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="70"/>
+        <location filename="../equalizer.cpp" line="74"/>
         <source>Reset</source>
         <translation>リセット</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="83"/>
+        <location filename="../equalizer.cpp" line="87"/>
         <source>Preamp</source>
         <translation>プリアンプ</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="100"/>
-        <location filename="../equalizer.cpp" line="197"/>
+        <location filename="../equalizer.cpp" line="104"/>
+        <location filename="../equalizer.cpp" line="201"/>
         <source>%1dB</source>
         <translation>%1dB</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="102"/>
-        <location filename="../equalizer.cpp" line="195"/>
+        <location filename="../equalizer.cpp" line="106"/>
+        <location filename="../equalizer.cpp" line="199"/>
         <source>+%1dB</source>
         <translation>+%1dB</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="150"/>
+        <location filename="../equalizer.cpp" line="154"/>
         <source>preset</source>
         <translation>プリセット</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="220"/>
+        <location filename="../equalizer.cpp" line="224"/>
         <source>Overwrite Request</source>
         <translation>上書き警告</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="221"/>
+        <location filename="../equalizer.cpp" line="225"/>
         <source>Preset &apos;%1&apos; already exists. Overwrite?</source>
         <translation>既にプリセット「%1」があります。 これを上書きしますか？</translation>
     </message>
@@ -999,50 +999,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="65"/>
+        <location filename="../playlistheader.cpp" line="69"/>
         <source>Add Column</source>
         <translation>カラムを追加</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="66"/>
+        <location filename="../playlistheader.cpp" line="70"/>
         <source>Edit Column</source>
         <translation>カラムを編集</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="67"/>
+        <location filename="../playlistheader.cpp" line="71"/>
         <source>Show Queue/Protocol</source>
         <translation>キューやプロトコルを表示</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="69"/>
+        <location filename="../playlistheader.cpp" line="73"/>
         <source>Auto-resize</source>
         <translation>自動適正幅調整</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="72"/>
+        <location filename="../playlistheader.cpp" line="76"/>
         <source>Alignment</source>
         <translation>行揃え</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="73"/>
+        <location filename="../playlistheader.cpp" line="77"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>左寄せ</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="74"/>
+        <location filename="../playlistheader.cpp" line="78"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>右寄せ</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="75"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>中央揃え</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="85"/>
+        <location filename="../playlistheader.cpp" line="89"/>
         <source>Remove Column</source>
         <translation>カラムを撤去</translation>
     </message>

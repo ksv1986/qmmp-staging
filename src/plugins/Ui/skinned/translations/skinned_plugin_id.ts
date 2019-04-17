@@ -564,87 +564,87 @@
 <context>
     <name>MainDisplay</name>
     <message>
-        <location filename="../display.cpp" line="60"/>
+        <location filename="../display.cpp" line="59"/>
         <source>Previous</source>
         <translation>Sebelumnya</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="64"/>
+        <location filename="../display.cpp" line="63"/>
         <source>Play</source>
         <translation>Mainkan</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="67"/>
+        <location filename="../display.cpp" line="66"/>
         <source>Pause</source>
         <translation>Jeda</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="70"/>
+        <location filename="../display.cpp" line="69"/>
         <source>Stop</source>
         <translation>Henti</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="73"/>
+        <location filename="../display.cpp" line="72"/>
         <source>Next</source>
         <translation>Selanjutnya</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="76"/>
+        <location filename="../display.cpp" line="75"/>
         <source>Play files</source>
         <translation>Mainkan file</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="83"/>
+        <location filename="../display.cpp" line="82"/>
         <source>Equalizer</source>
         <translation>Equalizer</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="86"/>
+        <location filename="../display.cpp" line="85"/>
         <source>Playlist</source>
         <translation>Daftarmain</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="91"/>
+        <location filename="../display.cpp" line="90"/>
         <source>Repeat playlist</source>
         <translation>Ulangi daftarmain</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="94"/>
+        <location filename="../display.cpp" line="93"/>
         <source>Shuffle</source>
         <translation>Kocok</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="104"/>
+        <location filename="../display.cpp" line="103"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="110"/>
+        <location filename="../display.cpp" line="109"/>
         <source>Balance</source>
         <translation>Imbang</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="296"/>
+        <location filename="../display.cpp" line="295"/>
         <source>Volume: %1%</source>
         <translation>Volume: %1%</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="300"/>
+        <location filename="../display.cpp" line="299"/>
         <source>Balance: %1% right</source>
         <translation>Imbang: %1% kanan</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="302"/>
+        <location filename="../display.cpp" line="301"/>
         <source>Balance: %1% left</source>
         <translation>Imbang: %1% kiri</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="304"/>
+        <location filename="../display.cpp" line="303"/>
         <source>Balance: center</source>
         <translation>Imbang: pusat</translation>
     </message>
     <message>
-        <location filename="../display.cpp" line="310"/>
+        <location filename="../display.cpp" line="309"/>
         <source>Seek to: %1</source>
         <translation>Jangka ke: %1</translation>
     </message>
@@ -785,37 +785,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="366"/>
+        <location filename="../mainwindow.cpp" line="361"/>
         <source>Appearance</source>
         <translation>Tampilan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="367"/>
+        <location filename="../mainwindow.cpp" line="362"/>
         <source>Shortcuts</source>
         <translation>Pintasan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="437"/>
+        <location filename="../mainwindow.cpp" line="432"/>
         <source>View</source>
         <translation>Tinjau</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="446"/>
+        <location filename="../mainwindow.cpp" line="441"/>
         <source>Playlist</source>
         <translation>Daftarmain</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="464"/>
+        <location filename="../mainwindow.cpp" line="459"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="472"/>
+        <location filename="../mainwindow.cpp" line="467"/>
         <source>Tools</source>
         <translation>Alat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="554"/>
+        <location filename="../mainwindow.cpp" line="549"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -982,50 +982,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="86"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Add Column</source>
         <translation>Tambah Kolom</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="87"/>
+        <location filename="../playlistheader.cpp" line="91"/>
         <source>Edit Column</source>
         <translation>Edit Kolom</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="92"/>
         <source>Show Queue/Protocol</source>
         <translation>Tampakkan Antrian/Protokol</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="94"/>
         <source>Auto-resize</source>
         <translation>Ubah-ukuran otomatis</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="93"/>
+        <location filename="../playlistheader.cpp" line="97"/>
         <source>Alignment</source>
         <translation>Kesejajaran</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="94"/>
+        <location filename="../playlistheader.cpp" line="98"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>Kiri</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="95"/>
+        <location filename="../playlistheader.cpp" line="99"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>Kanan</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="96"/>
+        <location filename="../playlistheader.cpp" line="100"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Pusat</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="106"/>
+        <location filename="../playlistheader.cpp" line="110"/>
         <source>Remove Column</source>
         <translation>Hapus Kolom</translation>
     </message>
@@ -1390,17 +1390,17 @@
 <context>
     <name>TextScroller</name>
     <message>
-        <location filename="../textscroller.cpp" line="57"/>
+        <location filename="../textscroller.cpp" line="61"/>
         <source>Autoscroll Songname</source>
         <translation>Gulir-oto Nama-lagu</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="58"/>
+        <location filename="../textscroller.cpp" line="62"/>
         <source>Transparent Background</source>
         <translation>Background Transparan</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="128"/>
+        <location filename="../textscroller.cpp" line="132"/>
         <source>Buffering: %1%</source>
         <translation>Buffering: %1%</translation>
     </message>

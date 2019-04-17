@@ -173,7 +173,7 @@
         <translation>Vastaanotetaan</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="273"/>
+        <location filename="../streamwindow.cpp" line="279"/>
         <source>Edit Stream</source>
         <translation type="unfinished"></translation>
     </message>

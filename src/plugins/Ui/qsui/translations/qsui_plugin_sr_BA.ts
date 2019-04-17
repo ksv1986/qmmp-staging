@@ -516,64 +516,64 @@
 <context>
     <name>Equalizer</name>
     <message>
-        <location filename="../equalizer.cpp" line="39"/>
+        <location filename="../equalizer.cpp" line="43"/>
         <source>Equalizer</source>
         <translation>Еквилајзер</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="48"/>
+        <location filename="../equalizer.cpp" line="52"/>
         <source>Enable equalizer</source>
         <translation>Омоући еквилајзер</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="54"/>
+        <location filename="../equalizer.cpp" line="58"/>
         <source>Preset:</source>
         <translation>Поставка:</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="62"/>
+        <location filename="../equalizer.cpp" line="66"/>
         <source>Save</source>
         <translation>Сачувај</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="66"/>
+        <location filename="../equalizer.cpp" line="70"/>
         <source>Delete</source>
         <translation>Обриши</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="70"/>
+        <location filename="../equalizer.cpp" line="74"/>
         <source>Reset</source>
         <translation>Ресетуј</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="83"/>
+        <location filename="../equalizer.cpp" line="87"/>
         <source>Preamp</source>
         <translation>Претпојачање</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="100"/>
-        <location filename="../equalizer.cpp" line="197"/>
+        <location filename="../equalizer.cpp" line="104"/>
+        <location filename="../equalizer.cpp" line="201"/>
         <source>%1dB</source>
         <translation>%1dB</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="102"/>
-        <location filename="../equalizer.cpp" line="195"/>
+        <location filename="../equalizer.cpp" line="106"/>
+        <location filename="../equalizer.cpp" line="199"/>
         <source>+%1dB</source>
         <translation>+%1dB</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="150"/>
+        <location filename="../equalizer.cpp" line="154"/>
         <source>preset</source>
         <translation>поставка</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="220"/>
+        <location filename="../equalizer.cpp" line="224"/>
         <source>Overwrite Request</source>
         <translation>Захтјев за пребрисавање</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="221"/>
+        <location filename="../equalizer.cpp" line="225"/>
         <source>Preset &apos;%1&apos; already exists. Overwrite?</source>
         <translation>Поставка „%1“ већ постоји. Желите ли да је пребришете?</translation>
     </message>
@@ -999,50 +999,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="65"/>
+        <location filename="../playlistheader.cpp" line="69"/>
         <source>Add Column</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="66"/>
+        <location filename="../playlistheader.cpp" line="70"/>
         <source>Edit Column</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="67"/>
+        <location filename="../playlistheader.cpp" line="71"/>
         <source>Show Queue/Protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="69"/>
+        <location filename="../playlistheader.cpp" line="73"/>
         <source>Auto-resize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="72"/>
+        <location filename="../playlistheader.cpp" line="76"/>
         <source>Alignment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="73"/>
+        <location filename="../playlistheader.cpp" line="77"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="74"/>
+        <location filename="../playlistheader.cpp" line="78"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="75"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="85"/>
+        <location filename="../playlistheader.cpp" line="89"/>
         <source>Remove Column</source>
         <translation type="unfinished"></translation>
     </message>

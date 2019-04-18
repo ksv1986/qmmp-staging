@@ -45,7 +45,6 @@ UiHelper::UiHelper(QObject *parent)
 {
     m_instance = this;
     m_jumpDialog = nullptr;
-    m_model = nullptr;
     General::create(parent);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_lastDir = settings.value("General/last_dir", QDir::homePath()).toString(); //last directory
@@ -59,7 +58,7 @@ UiHelper::~UiHelper()
 
 bool UiHelper::visibilityControl()
 {
-    foreach(GeneralFactory *factory, General::enabledFactories())
+    for(const GeneralFactory *factory : General::enabledFactories())
     {
         if (factory->properties().visibilityControl)
             return true;
@@ -79,16 +78,20 @@ void UiHelper::addAction(QAction *action, MenuType type)
             m_menus[type].menu->insertAction(m_menus[type].before, action);
         else
             m_menus[type].menu->addAction(action);
+        m_menus[type].menu->menuAction()->setVisible(!m_menus[type].autoHide || !m_menus[type].actions.isEmpty());
     }
 }
 
 void UiHelper::removeAction(QAction *action)
 {
-    foreach(MenuType type, m_menus.keys())
+    for(MenuType type : m_menus.keys())
     {
         m_menus[type].actions.removeAll(action);
         if(m_menus[type].menu)
+        {
             m_menus[type].menu->removeAction(action);
+            m_menus[type].menu->menuAction()->setVisible(!m_menus[type].autoHide || !m_menus[type].actions.isEmpty());
+        }
     }
 }
 
@@ -97,26 +100,32 @@ QList<QAction *> UiHelper::actions(MenuType type)
     return m_menus[type].actions;
 }
 
-QMenu *UiHelper::createMenu(MenuType type, const QString &title, QWidget *parent)
+QMenu *UiHelper::createMenu(MenuType type, const QString &title, bool autoHide, QWidget *parent)
 {
     if(m_menus[type].menu)
     {
         m_menus[type].menu->setTitle(title);
-        return m_menus[type].menu;
     }
-    m_menus[type].menu = new QMenu(title, parent);
-    m_menus[type].menu->addActions(m_menus[type].actions);
+    else
+    {
+        m_menus[type].menu = new QMenu(title, parent);
+        m_menus[type].menu->addActions(m_menus[type].actions);
+    }
+    m_menus[type].autoHide = autoHide;
+    m_menus[type].menu->menuAction()->setVisible(!autoHide || !m_menus[type].actions.isEmpty());
     return m_menus[type].menu;
 }
 
-void UiHelper::registerMenu(UiHelper::MenuType type, QMenu *menu, QAction *before)
+void UiHelper::registerMenu(UiHelper::MenuType type, QMenu *menu, bool autoHide, QAction *before)
 {
     m_menus[type].menu = menu;
     m_menus[type].before = before;
+    m_menus[type].autoHide = autoHide;
     if(before)
         m_menus[type].menu->insertActions(before, m_menus[type].actions);
     else
         m_menus[type].menu->addActions(m_menus[type].actions);
+     m_menus[type].menu->menuAction()->setVisible(!autoHide || !m_menus[type].actions.isEmpty());
 }
 
 void UiHelper::addFiles(QWidget *parent, PlayListModel *model)

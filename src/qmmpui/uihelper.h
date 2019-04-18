@@ -88,14 +88,14 @@ public:
      * @param title Menu title.
      * @param parent Parent widget
      */
-    QMenu *createMenu(MenuType type, const QString &title = QString(), QWidget *parent = nullptr);
+    QMenu *createMenu(MenuType type, const QString &title = QString(), bool autoHide = true, QWidget *parent = nullptr);
     /*!
      * Registers existing menu for access from general plugins.
      * @param type Menu type.
      * @param menu Menu pointer.
      * @param before An action, after which the rest are added.
      */
-    void registerMenu(MenuType type, QMenu *menu, QAction *before = nullptr);
+    void registerMenu(MenuType type, QMenu *menu, bool autoHide = false, QAction *before = nullptr);
     /*!
      * Opens 'Add Files' dialog
      * @param parent Parent widget
@@ -194,11 +194,12 @@ private:
         QPointer<QMenu> menu;
         QPointer<QAction> before;
         QList<QAction*> actions;
+        bool autoHide = false;
     };
     QMap<MenuType, MenuData> m_menus;
     QString m_lastDir;
     QPointer <JumpToTrackDialog> m_jumpDialog;
-    PlayListModel *m_model;
+    PlayListModel *m_model = nullptr;
     static UiHelper* m_instance;
 };
 

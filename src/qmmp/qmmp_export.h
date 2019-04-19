@@ -20,6 +20,8 @@
 #ifndef QMMP_EXPORT_H
 #define QMMP_EXPORT_H
 
+#include <QtGlobal>
+
 #ifdef QMMP_LIBRARY
 #    define QMMP_EXPORT Q_DECL_EXPORT
 #else

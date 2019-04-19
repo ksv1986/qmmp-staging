@@ -20,6 +20,8 @@
 #ifndef QMMPUI_EXPORT_H
 #define QMMPUI_EXPORT_H
 
+#include <QtGlobal>
+
 #ifdef QMMPUI_LIBRARY
 #    define QMMPUI_EXPORT Q_DECL_EXPORT
 #else

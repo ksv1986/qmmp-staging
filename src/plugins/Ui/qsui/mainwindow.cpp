@@ -477,7 +477,7 @@ void MainWindow::createActions()
     m_ui.menuFile->addAction(SET_ACTION(ActionManager::PL_ADD_DIRECTORY, this, SLOT(addDir())));
     m_ui.menuFile->addAction(SET_ACTION(ActionManager::PL_ADD_URL, this, SLOT(addUrl())));
     QAction *sep = m_ui.menuFile->addSeparator();
-    UiHelper::instance()->registerMenu(UiHelper::ADD_MENU, m_ui.menuFile, sep);
+    UiHelper::instance()->registerMenu(UiHelper::ADD_MENU, m_ui.menuFile, false, sep);
     m_ui.menuFile->addAction(SET_ACTION(ActionManager::PL_NEW, m_pl_manager, SLOT(createPlayList())));
     m_ui.menuFile->addAction(SET_ACTION(ActionManager::PL_CLOSE, this, SLOT(removePlaylist())));
     m_ui.menuFile->addAction(SET_ACTION(ActionManager::PL_RENAME, this, SLOT(renameTab())));
@@ -608,7 +608,7 @@ void MainWindow::createActions()
     m_ui.menuEdit->addSeparator();
     m_ui.menuEdit->addAction(SET_ACTION(ActionManager::SETTINGS, this, SLOT(showSettings())));
     //tools
-    m_ui.menuTools->addMenu(m_uiHelper->createMenu(UiHelper::TOOLS_MENU, tr("Actions"), this));
+    m_ui.menuTools->addMenu(m_uiHelper->createMenu(UiHelper::TOOLS_MENU, tr("Actions"), true, this));
     //playback menu
     m_ui.menuPlayback->addAction(ACTION(ActionManager::PLAY));
     m_ui.menuPlayback->addAction(ACTION(ActionManager::STOP));
@@ -649,7 +649,7 @@ void MainWindow::createActions()
     m_pl_menu->addAction(ACTION(ActionManager::PL_REMOVE_ALL));
     m_pl_menu->addAction(ACTION(ActionManager::PL_REMOVE_UNSELECTED));
     m_pl_menu->addMenu(UiHelper::instance()->createMenu(UiHelper::PLAYLIST_MENU,
-                                                        tr("Actions"), this));
+                                                        tr("Actions"), true, this));
     m_pl_menu->addSeparator();
     m_pl_menu->addAction(SET_ACTION(ActionManager::PL_ENQUEUE, m_pl_manager, SLOT(addToQueue())));
     //tools menu

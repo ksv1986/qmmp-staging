@@ -210,7 +210,7 @@ void PlayList::createActions()
     m_addMenu->addAction(SET_ACTION(ActionManager::PL_ADD_FILE, parent(), SLOT(addFile())));
     m_addMenu->addAction(SET_ACTION(ActionManager::PL_ADD_DIRECTORY, parent(), SLOT(addDir())));
     m_addMenu->addAction(SET_ACTION(ActionManager::PL_ADD_URL, parent(), SLOT(addUrl())));
-    UiHelper::instance()->registerMenu(UiHelper::ADD_MENU, m_addMenu);
+    UiHelper::instance()->registerMenu(UiHelper::ADD_MENU, m_addMenu, false);
     //sub menu
     m_subMenu->addAction(SET_ACTION(ActionManager::PL_REMOVE_SELECTED, m_pl_manager, SLOT(removeSelected())));
     m_subMenu->addAction(SET_ACTION(ActionManager::PL_REMOVE_ALL, m_pl_manager, SLOT(clear())));
@@ -318,7 +318,7 @@ void PlayList::createActions()
     m_listWidget->menu()->addSeparator();
     m_listWidget->menu()->addActions (m_subMenu->actions().mid(0,3)); //use 3 first actions
     m_listWidget->menu()->addMenu(UiHelper::instance()->createMenu(UiHelper::PLAYLIST_MENU,
-                                  tr("Actions"), this));
+                                  tr("Actions"), true, this));
     m_listWidget->menu()->addSeparator();
     m_listWidget->menu()->addAction(SET_ACTION(ActionManager::PL_ENQUEUE, m_pl_manager, SLOT(addToQueue())));
     //select menu

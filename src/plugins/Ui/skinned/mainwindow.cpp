@@ -464,7 +464,7 @@ void MainWindow::createActions()
 
     m_visMenu = new VisualMenu(this);
     m_mainMenu->addMenu(m_visMenu);
-    m_mainMenu->addMenu(m_uiHelper->createMenu(UiHelper::TOOLS_MENU, tr("Tools"), this));
+    m_mainMenu->addMenu(m_uiHelper->createMenu(UiHelper::TOOLS_MENU, tr("Tools"), true, this));
 
     m_mainMenu->addSeparator();
     m_mainMenu->addAction(SET_ACTION(ActionManager::SETTINGS, this, SLOT(showSettings())));

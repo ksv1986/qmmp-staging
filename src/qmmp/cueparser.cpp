@@ -21,6 +21,9 @@
 #include <QTextCodec>
 #include "cueparser.h"
 
+CueParser::CueParser()
+{}
+
 CueParser::CueParser(const QByteArray &data, const QByteArray &codecName)
 {
     loadData(data, codecName);
@@ -126,6 +129,14 @@ void CueParser::loadData(const QByteArray &data, const QByteArray &codecName)
         qWarning("CueParser: invalid cue data");
 }
 
+QList<TrackInfo *> CueParser::createPlayList() const
+{
+    QList<TrackInfo*> out;
+    for(const CUETrack *track : m_tracks)
+        out << new TrackInfo(track->info);
+    return out;
+}
+
 const QStringList &CueParser::files() const
 {
     return m_files;
@@ -176,14 +187,14 @@ int CueParser::count() const
     return m_tracks.count();
 }
 
-QMap<Qmmp::ReplayGainKey, double> CueParser::replayGain(int track) const
+const TrackInfo *CueParser::info(int track) const
 {
     if(track < 0 || track >= m_tracks.count())
     {
         qWarning("CueParser: invalid track number: %d", track);
-        return QMap<Qmmp::ReplayGainKey, double>();
+        return nullptr;
     }
-    return m_tracks.at(track)->info.replayGainInfo();
+    return &m_tracks.at(track)->info;
 }
 
 void CueParser::setDuration(const QString &file, qint64 duration)
@@ -238,7 +249,7 @@ void CueParser::setProperties(const QMap<Qmmp::TrackProperty, QString> &properti
 void CueParser::setUrl(const QString &scheme, const QString &path)
 {
     for(int i = 0; i < m_tracks.count(); ++i)
-        m_tracks.at(i)->info.setPath(QString("%1://%2#%3").arg(scheme).arg(path).arg(i + 1));
+        m_tracks.at(i)->info.setPath(QString("%1://%2#%3").arg(scheme).arg(path).arg(m_tracks.at(i)->info.value(Qmmp::TRACK)));
 }
 
 QStringList CueParser::splitLine(const QString &line)

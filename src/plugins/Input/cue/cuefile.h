@@ -17,8 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef CUEPARSER_H
-#define CUEPARSER_H
+#ifndef CUEFILE_H
+#define CUEFILE_H
 
 #include <QList>
 #include <QMap>
@@ -26,40 +26,27 @@
 #include <QStringList>
 #include <qmmp/qmmp.h>
 #include <qmmp/trackinfo.h>
+#include <qmmp/cueparser.h>
 
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class CUEParser
+class CueFile : public CueParser
 {
 public:
-    CUEParser(const QString &path);
+    CueFile(const QString &path);
+    ~CueFile();
 
-    ~CUEParser();
-
-    QList<TrackInfo*> createPlayList();
-    const QString filePath(int track) const;
-    const QStringList dataFiles() const;
-    qint64 offset(int track) const;
-    qint64 duration(int track) const;
-    int count() const;
-    TrackInfo *info(int track);
-    const QString trackURL(int track) const;
-    const QMap<Qmmp::ReplayGainKey, double> replayGain(int track) const;
+    QString dataFilePath(int track) const;
+    QStringList dataFilePaths() const;
 
 private:
-    struct CUETrack
-    {
-        TrackInfo info;
-        qint64 offset;
-        QString file;
-    };
-    QList <CUETrack *> m_tracks;
-    bool m_dirty;
     QStringList splitLine(const QString &line);
-    qint64 getLength(const QString &str);
     QString getDirtyPath(const QString &cue_path, const QString &path);
+    QMap<QString, QString> m_dataFiles; //name, full path
+    bool m_dirty;
+
 };
 
-#endif
+#endif //CUEFILE_H

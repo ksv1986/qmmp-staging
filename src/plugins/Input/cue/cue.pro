@@ -3,16 +3,16 @@ include(../../plugins.pri)
 TARGET = $$PLUGINS_PREFIX/Input/cue
 
 HEADERS += decodercuefactory.h \
-    cueparser.h \
     decoder_cue.h \
     settingsdialog.h \
-    cuemetadatamodel.h
+    cuemetadatamodel.h \
+    cuefile.h
 
 SOURCES += decoder_cue.cpp \
     decodercuefactory.cpp \
-    cueparser.cpp \
     settingsdialog.cpp \
-    cuemetadatamodel.cpp
+    cuemetadatamodel.cpp \
+    cuefile.cpp
 
 FORMS += settingsdialog.ui
 

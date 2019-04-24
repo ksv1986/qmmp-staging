@@ -21,7 +21,7 @@
 #include <QMessageBox>
 #include "decoder_cue.h"
 #include "cuemetadatamodel.h"
-#include "cueparser.h"
+#include "cuefile.h"
 #include "settingsdialog.h"
 #include "decodercuefactory.h"
 
@@ -55,7 +55,7 @@ Decoder *DecoderCUEFactory::create(const QString &path, QIODevice *input)
 QList<TrackInfo *> DecoderCUEFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredPaths)
 {
     Q_UNUSED(parts);
-    CUEParser parser(path);
+    CueFile parser(path);
     if(path.contains("://"))
     {
         QList<TrackInfo *> list;
@@ -69,7 +69,7 @@ QList<TrackInfo *> DecoderCUEFactory::createPlayList(const QString &path, TrackI
     }
     else
     {
-        ignoredPaths->append(parser.dataFiles());
+        ignoredPaths->append(parser.dataFilePaths());
         return parser.createPlayList();
     }
 }

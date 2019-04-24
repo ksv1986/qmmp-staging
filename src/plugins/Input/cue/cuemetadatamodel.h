@@ -23,7 +23,7 @@
 
 #include <qmmp/metadatamodel.h>
 
-class CUEParser;
+class CueFile;
 
 class CUEMetaDataModel : public MetaDataModel
 {
@@ -34,7 +34,7 @@ public:
     QString coverPath() const override;
 
 private:
-    CUEParser *m_parser;
+    CueFile *m_cueFile;
     QString m_path;
 };
 

@@ -32,13 +32,14 @@ class QMMP_EXPORT CueParser
 public:
     CueParser(const QByteArray &data, const QByteArray &codecName = QByteArray());
     ~CueParser();
+    void loadData(const QByteArray &data, const QByteArray &codecName = QByteArray());
     const QStringList &files() const;
     qint64 offset(int track) const;
     qint64 duration(int track) const;
-    const QString file(int track) const;
-    const QString url(int track) const;
+    QString file(int track) const;
+    QString url(int track) const;
     int count() const;
-    const QMap<Qmmp::ReplayGainKey, double> replayGain(int track) const;
+    QMap<Qmmp::ReplayGainKey, double> replayGain(int track) const;
     void setDuration(const QString &file, qint64 duration);
     void setDuration(qint64 duration);
     void setProperties(const QString &file, const QMap<Qmmp::TrackProperty, QString> &properties);

@@ -23,6 +23,21 @@
 
 CueParser::CueParser(const QByteArray &data, const QByteArray &codecName)
 {
+    loadData(data, codecName);
+}
+
+CueParser::~CueParser()
+{
+    qDeleteAll(m_tracks);
+    m_tracks.clear();
+}
+
+void CueParser::loadData(const QByteArray &data, const QByteArray &codecName)
+{
+    qDeleteAll(m_tracks);
+    m_tracks.clear();
+    m_files.clear();
+
     QString artist, album, genre, date, comment, file;
     double album_peak = 0.0, album_gain = 0.0;
     QTextStream textStream(data);
@@ -108,28 +123,7 @@ CueParser::CueParser(const QByteArray &data, const QByteArray &codecName)
         }
     }
     if(m_tracks.isEmpty())
-    {
         qWarning("CueParser: invalid cue data");
-        return;
-    }
-
-    /*QList<TrackInfo *> f_list = MetaDataManager::instance()->createPlayList(m_filePath, TrackInfo::Properties);
-    if(!f_list.isEmpty())
-    {
-        //calculate last item length
-        m_tracks.last()->info.setDuration(qMax(0LL, f_list.first()->duration() - m_tracks.last()->offset));
-        //add properties
-        foreach(CUETrack *cueTrack, m_tracks)
-            cueTrack->info.setValues(f_list.first()->properties());
-        qDeleteAll(f_list);
-        f_list.clear();
-    }*/
-}
-
-CueParser::~CueParser()
-{
-    qDeleteAll(m_tracks);
-    m_tracks.clear();
 }
 
 const QStringList &CueParser::files() const
@@ -157,7 +151,7 @@ qint64 CueParser::duration(int track) const
     return m_tracks.at(track)->info.duration();
 }
 
-const QString CueParser::file(int track) const
+QString CueParser::file(int track) const
 {
     if(track < 0 || track >= m_tracks.count())
     {
@@ -167,12 +161,12 @@ const QString CueParser::file(int track) const
     return m_tracks.at(track)->file;
 }
 
-const QString CueParser::url(int track) const
+QString CueParser::url(int track) const
 {
     if(track < 0 || track >= m_tracks.count())
     {
         qWarning("CueParser: invalid track number: %d", track);
-        return 0;
+        return QString();
     }
     return m_tracks.at(track)->info.path();
 }
@@ -182,7 +176,7 @@ int CueParser::count() const
     return m_tracks.count();
 }
 
-const QMap<Qmmp::ReplayGainKey, double> CueParser::replayGain(int track) const
+QMap<Qmmp::ReplayGainKey, double> CueParser::replayGain(int track) const
 {
     if(track < 0 || track >= m_tracks.count())
     {

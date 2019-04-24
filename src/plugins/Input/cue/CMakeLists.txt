@@ -17,13 +17,13 @@ SET(libcue_SRCS
   decoder_cue.cpp
   decodercuefactory.cpp
   settingsdialog.cpp
-  cueparser.cpp
+  cuefile.cpp
   cuemetadatamodel.cpp
 )
 
 SET(libcue_HDRS
   decoder_cue.h
-  cueparser.h
+  cuefile.h
 )
 
 SET(libcue_RCCS translations/translations.qrc)

@@ -63,6 +63,7 @@ SET(libqmmp_SRCS
     volume.cpp
     dithering.cpp
     visualbuffer.cpp
+    cueparser.cpp
 )
 
 SET(libqmmp_HDRS
@@ -94,6 +95,7 @@ SET(libqmmp_HDRS
     channelconverter_p.h
     dithering_p.h
     visualbuffer_p.h
+    cueparser.h
     qmmp_export.h
 )
 
@@ -126,6 +128,7 @@ SET(libqmmp_DEVEL_HDRS
     visual.h
     volume.h
     volumehandler.h
+    cueparser.h
     qmmp_export.h
 )
 

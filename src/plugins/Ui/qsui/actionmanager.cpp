@@ -147,6 +147,9 @@ ActionManager* ActionManager::instance()
 QAction *ActionManager::createAction(QString name, QString confKey, QString key, QString iconName)
 {
     QAction *action = new QAction(name, this);
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+    action->setShortcutVisibleInContextMenu(true);
+#endif
     action->setShortcut(m_settings->value(confKey, key).toString());
     action->setObjectName(confKey);
     action->setProperty("defaultShortcut", key);
@@ -219,6 +222,9 @@ void ActionManager::registerAction(int id, QAction *action, QString confKey, QSt
     action->setShortcut(settings.value(confKey, key).toString());
     action->setProperty("defaultShortcut", key);
     action->setObjectName(confKey);
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+    action->setShortcutVisibleInContextMenu(true);
+#endif
     m_actions[id] = action;
     settings.endGroup();
 }

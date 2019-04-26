@@ -72,7 +72,12 @@ void UiHelper::addAction(QAction *action, MenuType type)
     connect(action, SIGNAL(destroyed (QObject *)), SLOT(removeAction(QObject*)));
 
     if(!m_menus[type].actions.contains(action))
+    {
         m_menus[type].actions.append(action);
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+        action->setShortcutVisibleInContextMenu(true);
+#endif
+    }
     if(m_menus[type].menu && !m_menus[type].menu->actions().contains(action))
     {
         if(m_menus[type].before)

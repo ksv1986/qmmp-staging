@@ -50,6 +50,7 @@ public:
     void setDuration(qint64 duration);
     void setProperties(const QString &file, const QMap<Qmmp::TrackProperty, QString> &properties);
     void setProperties(const QMap<Qmmp::TrackProperty, QString> &properties);
+    void setMetaData(int track, Qmmp::MetaData key, const QVariant &value);
     void setUrl(const QString &scheme, const QString &path);
     void clear();
 

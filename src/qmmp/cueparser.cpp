@@ -257,6 +257,14 @@ void CueParser::setProperties(const QMap<Qmmp::TrackProperty, QString> &properti
         track->info.setValues(properties);
 }
 
+void CueParser::setMetaData(int track, Qmmp::MetaData key, const QVariant &value)
+{
+    if(track < 1 || track > m_tracks.count())
+        qWarning("CueParser: invalid track number: %d", track);
+
+    m_tracks.at(track - 1)->info.setValue(key, value);
+}
+
 void CueParser::setUrl(const QString &scheme, const QString &path)
 {
     for(int i = 0; i < m_tracks.count(); ++i)

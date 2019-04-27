@@ -27,7 +27,7 @@
 #include <taglib/tmap.h>
 #include <taglib/tfilestream.h>
 #include <taglib/id3v2framefactory.h>
-#include "cueparser.h"
+#include <qmmp/cueparser.h>
 #include "decoder_flac.h"
 #include "flacmetadatamodel.h"
 #include "decoderflacfactory.h"
@@ -67,23 +67,17 @@ Decoder *DecoderFLACFactory::create(const QString &path, QIODevice *i)
 
 QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredFiles)
 {
-    //extract metadata of the one cue track
-    if(path.contains("://"))
+    Q_UNUSED(ignoredFiles);
+
+    int track = -1; //cue track
+    QString filePath = path;
+
+    if(path.contains("://")) //is it cue track?
     {
-        QString filePath = path;
         filePath.remove("flac://");
         filePath.remove(QRegExp("#\\d+$"));
-        int track = filePath.section("#", -1).toInt();
-        QList<TrackInfo *> list = createPlayList(filePath, TrackInfo::Properties, ignoredFiles);
-        if (list.isEmpty() || track <= 0 || track > list.count())
-        {
-            qDeleteAll(list);
-            list.clear();
-            return list;
-        }
-        TrackInfo *info = list.takeAt(track - 1);
-        qDeleteAll(list);
-        return QList<TrackInfo *>() << info;
+        track = filePath.section("#", -1).toInt();
+        parts = TrackInfo::AllParts; //extract all metadata for single cue track
     }
 
     TrackInfo *info = new TrackInfo(path);
@@ -117,54 +111,6 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
         return QList<TrackInfo *>();
     }
 
-    if((parts & TrackInfo::MetaData) && tag && !tag->isEmpty())
-    {
-        if (tag->fieldListMap().contains("CUESHEET"))
-        {
-            delete info;
-
-            QByteArray data(tag->fieldListMap()["CUESHEET"].toString().toCString(true));
-            QString diskNumber;
-
-            if(tag->contains("DISCNUMBER") && !tag->fieldListMap()["DISCNUMBER"].isEmpty())
-            {
-                TagLib::StringList fld = tag->fieldListMap()["DISCNUMBER"];
-                diskNumber = TStringToQString(fld.toString()).trimmed();
-            }
-
-            if(flacFile)
-                delete flacFile;
-            if(oggFlacFile)
-                delete oggFlacFile;
-
-            CUEParser parser(data, path);
-            if(!diskNumber.isEmpty())
-            {
-                for(int i = 1; i <= parser.count(); ++i)
-                    parser.info(i)->setValue(Qmmp::DISCNUMBER, diskNumber);
-            }
-
-            return parser.createPlayList();
-        }
-
-        info->setValue(Qmmp::ALBUM, TStringToQString(tag->album()));
-        info->setValue(Qmmp::ARTIST, TStringToQString(tag->artist()));
-        info->setValue(Qmmp::COMMENT, TStringToQString(tag->comment()));
-        info->setValue(Qmmp::GENRE, TStringToQString(tag->genre()));
-        info->setValue(Qmmp::TITLE, TStringToQString(tag->title()));
-        info->setValue(Qmmp::YEAR, tag->year());
-        info->setValue(Qmmp::TRACK, tag->track());
-        //additional metadata
-        TagLib::StringList fld;
-        if(!(fld = tag->fieldListMap()["ALBUMARTIST"]).isEmpty())
-            info->setValue(Qmmp::ALBUMARTIST, TStringToQString(fld.front()));
-        if(!(fld = tag->fieldListMap()["COMPOSER"]).isEmpty())
-            info->setValue(Qmmp::COMPOSER, TStringToQString(fld.front()));
-        if(!(fld = tag->fieldListMap()["DISCNUMBER"]).isEmpty())
-            info->setValue(Qmmp::DISCNUMBER, TStringToQString(fld.front()));
-
-    }
-
     if((parts & TrackInfo::Properties) && ap)
     {
         info->setValue(Qmmp::BITRATE, ap->bitrate());
@@ -186,6 +132,57 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
             info->setValue(Qmmp::REPLAYGAIN_ALBUM_GAIN,TStringToQString(items["REPLAYGAIN_ALBUM_GAIN"].front()));
         if (items.contains("REPLAYGAIN_ALBUM_PEAK"))
             info->setValue(Qmmp::REPLAYGAIN_ALBUM_PEAK,TStringToQString(items["REPLAYGAIN_ALBUM_PEAK"].front()));
+    }
+
+    if((parts & TrackInfo::MetaData) && tag && !tag->isEmpty())
+    {
+        if (tag->fieldListMap().contains("CUESHEET") && ap)
+        {
+            QByteArray data(tag->fieldListMap()["CUESHEET"].toString().toCString(true));
+            QString diskNumber;
+
+            if(tag->contains("DISCNUMBER") && !tag->fieldListMap()["DISCNUMBER"].isEmpty())
+            {
+                TagLib::StringList fld = tag->fieldListMap()["DISCNUMBER"];
+                diskNumber = TStringToQString(fld.toString()).trimmed();
+            }
+
+            CueParser parser(data);
+
+            if(!diskNumber.isEmpty())
+            {
+                for(int i = 1; i <= parser.count(); ++i)
+                    parser.setMetaData(i, Qmmp::DISCNUMBER, diskNumber);
+            }
+            parser.setDuration(ap->lengthInMilliseconds());
+            parser.setProperties(info->properties());
+            parser.setUrl("flac", path);
+
+            if(flacFile)
+                delete flacFile;
+            if(oggFlacFile)
+                delete oggFlacFile;
+
+            delete info;
+            return (track > 0) ? parser.createPlayList(track) : parser.createPlayList();
+        }
+
+        info->setValue(Qmmp::ALBUM, TStringToQString(tag->album()));
+        info->setValue(Qmmp::ARTIST, TStringToQString(tag->artist()));
+        info->setValue(Qmmp::COMMENT, TStringToQString(tag->comment()));
+        info->setValue(Qmmp::GENRE, TStringToQString(tag->genre()));
+        info->setValue(Qmmp::TITLE, TStringToQString(tag->title()));
+        info->setValue(Qmmp::YEAR, tag->year());
+        info->setValue(Qmmp::TRACK, tag->track());
+        //additional metadata
+        TagLib::StringList fld;
+        if(!(fld = tag->fieldListMap()["ALBUMARTIST"]).isEmpty())
+            info->setValue(Qmmp::ALBUMARTIST, TStringToQString(fld.front()));
+        if(!(fld = tag->fieldListMap()["COMPOSER"]).isEmpty())
+            info->setValue(Qmmp::COMPOSER, TStringToQString(fld.front()));
+        if(!(fld = tag->fieldListMap()["DISCNUMBER"]).isEmpty())
+            info->setValue(Qmmp::DISCNUMBER, TStringToQString(fld.front()));
+
     }
 
     if(flacFile)

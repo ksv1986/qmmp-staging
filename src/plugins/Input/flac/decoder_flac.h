@@ -29,7 +29,7 @@
 #define SAMPLES_PER_WRITE 512
 #define SAMPLE_BUFFER_SIZE ((FLAC__MAX_BLOCK_SIZE + SAMPLES_PER_WRITE) * MAX_SUPPORTED_CHANNELS * (32/8))
 
-class CUEParser;
+class CueParser;
 
 struct flac_data
 {
@@ -86,7 +86,7 @@ private:
     qint64 m_offset;
     qint64 m_length;
     QString m_path;
-    CUEParser *m_parser;
+    CueParser *m_parser;
     int m_track;
     char *m_buf; //buffer for remainig data
     qint64 m_buf_size;

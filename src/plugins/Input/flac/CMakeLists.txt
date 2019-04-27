@@ -22,12 +22,10 @@ SET(libflac_SRCS
   decoder_flac.cpp
   decoderflacfactory.cpp
   flacmetadatamodel.cpp
-  cueparser.cpp
 )
 
 SET(libflac_HDRS
   decoder_flac.h
-  cueparser.h
 )
 
 SET(libflac_RCCS translations/translations.qrc)

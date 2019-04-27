@@ -4,12 +4,10 @@ TARGET = $$PLUGINS_PREFIX/Input/flac
 
 HEADERS += decoderflacfactory.h \
     decoder_flac.h \
-    cueparser.h \
     flacmetadatamodel.h
 
 SOURCES += decoder_flac.cpp \
     decoderflacfactory.cpp \
-    cueparser.cpp \
     flacmetadatamodel.cpp
 
 RESOURCES = translations/translations.qrc

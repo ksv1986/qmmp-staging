@@ -79,7 +79,7 @@ CueFile::CueFile(const QString &path) : CueParser()
         codec = QTextCodec::codecForName("UTF-8");
     settings.endGroup();
     //qDebug("CUEParser: using %s encoding", codec->name().constData());
-    loadData(data, codec->name());
+    loadData(data, codec);
     setUrl("cue", path);
     for(const QString &dataFileName : files())
     {
@@ -92,6 +92,16 @@ CueFile::CueFile(const QString &path) : CueParser()
             setDuration(dataFileName, pl.first()->duration());
             qDeleteAll(pl);
             pl.clear();
+        }
+    }
+
+    for(const QString &path : m_dataFiles.values())
+    {
+        if(!QFile::exists(path))
+        {
+            qDebug("CueFile: unable to find file: %s", qPrintable(path));
+            clear();
+            return;
         }
     }
 }
@@ -143,16 +153,6 @@ QStringList CueFile::splitLine(const QString &line)
     }
     return list;
 }
-
-/*qint64 CueFile::getLength(const QString &str)
-{
-    QStringList list = str.split(":");
-    if (list.size() == 2)
-        return (qint64)list.at(0).toInt()*60000 + list.at(1).toInt()*1000;
-    else if (list.size() == 3)
-        return (qint64)list.at(0).toInt()*60000 + list.at(1).toInt()*1000 + list.at(2).toInt()*1000/75;
-    return 0;
-}*/
 
 QString CueFile::getDirtyPath(const QString &cue_path, const QString &path)
 {

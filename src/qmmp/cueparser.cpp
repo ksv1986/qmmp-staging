@@ -31,29 +31,23 @@ CueParser::CueParser(const QByteArray &data, const QByteArray &codecName)
 
 CueParser::~CueParser()
 {
-    qDeleteAll(m_tracks);
-    m_tracks.clear();
+    clear();
 }
 
 void CueParser::loadData(const QByteArray &data, const QByteArray &codecName)
 {
-    qDeleteAll(m_tracks);
-    m_tracks.clear();
-    m_files.clear();
+    loadData(data, QTextCodec::codecForName(codecName));
+}
+
+void CueParser::loadData(const QByteArray &data, QTextCodec *codec)
+{
+    clear();
 
     QString artist, album, genre, date, comment, file;
     double album_peak = 0.0, album_gain = 0.0;
     QTextStream textStream(data);
 
-    if(codecName.isEmpty())
-    {
-        textStream.setCodec("UTF-8");
-    }
-    else
-    {
-        QTextCodec *codec = QTextCodec::codecForName(codecName);
-        textStream.setCodec(codec ? codec : QTextCodec::codecForName("UTF-8"));
-    }
+    textStream.setCodec(codec ? codec : QTextCodec::codecForName("UTF-8"));
 
     while (!textStream.atEnd())
     {
@@ -131,9 +125,21 @@ void CueParser::loadData(const QByteArray &data, const QByteArray &codecName)
 
 QList<TrackInfo *> CueParser::createPlayList() const
 {
-    QList<TrackInfo*> out;
+    QList<TrackInfo *> out;
     for(const CUETrack *track : m_tracks)
         out << new TrackInfo(track->info);
+    return out;
+}
+
+QList<TrackInfo *> CueParser::createPlayList(int track) const
+{
+    QList<TrackInfo *> out;
+    if(track < 1 || track > m_tracks.count())
+    {
+        qWarning("CueParser: invalid track number: %d", track);
+        return out;
+    }
+    out << new TrackInfo(m_tracks.at(track - 1)->info);
     return out;
 }
 
@@ -144,12 +150,12 @@ const QStringList &CueParser::files() const
 
 qint64 CueParser::offset(int track) const
 {
-    if(track < 0 || track >= m_tracks.count())
+    if(track < 1 || track > m_tracks.count())
     {
         qWarning("CueParser: invalid track number: %d", track);
         return 0;
     }
-    return m_tracks.at(track)->offset;
+    return m_tracks.at(track - 1)->offset;
 }
 
 qint64 CueParser::duration(int track) const
@@ -185,6 +191,11 @@ QString CueParser::url(int track) const
 int CueParser::count() const
 {
     return m_tracks.count();
+}
+
+bool CueParser::isEmpty() const
+{
+    return m_tracks.isEmpty();
 }
 
 const TrackInfo *CueParser::info(int track) const
@@ -250,6 +261,13 @@ void CueParser::setUrl(const QString &scheme, const QString &path)
 {
     for(int i = 0; i < m_tracks.count(); ++i)
         m_tracks.at(i)->info.setPath(QString("%1://%2#%3").arg(scheme).arg(path).arg(m_tracks.at(i)->info.value(Qmmp::TRACK)));
+}
+
+void CueParser::clear()
+{
+    qDeleteAll(m_tracks);
+    m_tracks.clear();
+    m_files.clear();
 }
 
 QStringList CueParser::splitLine(const QString &line)

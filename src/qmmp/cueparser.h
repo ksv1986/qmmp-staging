@@ -24,6 +24,7 @@
 #include <QString>
 #include <QList>
 #include <QStringList>
+#include <QTextCodec>
 #include "trackinfo.h"
 #include "qmmp_export.h"
 
@@ -34,19 +35,23 @@ public:
     CueParser(const QByteArray &data, const QByteArray &codecName = QByteArray());
     ~CueParser();
     void loadData(const QByteArray &data, const QByteArray &codecName = QByteArray());
+    void loadData(const QByteArray &data, QTextCodec *codec);
     QList<TrackInfo *> createPlayList() const;
+    QList<TrackInfo *> createPlayList(int track) const;
     const QStringList &files() const;
     qint64 offset(int track) const;
     qint64 duration(int track) const;
     QString file(int track) const;
     QString url(int track) const;
     int count() const;
+    bool isEmpty() const;
     const TrackInfo *info(int track) const;
     void setDuration(const QString &file, qint64 duration);
     void setDuration(qint64 duration);
     void setProperties(const QString &file, const QMap<Qmmp::TrackProperty, QString> &properties);
     void setProperties(const QMap<Qmmp::TrackProperty, QString> &properties);
     void setUrl(const QString &scheme, const QString &path);
+    void clear();
 
 private:
     struct CUETrack

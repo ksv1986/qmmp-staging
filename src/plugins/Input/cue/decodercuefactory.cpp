@@ -58,14 +58,8 @@ QList<TrackInfo *> DecoderCUEFactory::createPlayList(const QString &path, TrackI
     CueFile parser(path);
     if(path.contains("://"))
     {
-        QList<TrackInfo *> list;
         int track = path.section("#", -1).toInt();
-        if (!parser.count() || track <= 0 || track > parser.count())
-            return list;
-        list = parser.createPlayList();
-        TrackInfo *info = list.takeAt(track - 1);
-        qDeleteAll(list);
-        return QList<TrackInfo *>() << info;
+        return parser.createPlayList(track);
     }
     else
     {

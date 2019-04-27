@@ -55,16 +55,16 @@ Decoder *DecoderCUEFactory::create(const QString &path, QIODevice *input)
 QList<TrackInfo *> DecoderCUEFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredPaths)
 {
     Q_UNUSED(parts);
-    CueFile parser(path);
+    CueFile cueFile(path);
     if(path.contains("://"))
     {
         int track = path.section("#", -1).toInt();
-        return parser.createPlayList(track);
+        return cueFile.createPlayList(track);
     }
     else
     {
-        ignoredPaths->append(parser.dataFilePaths());
-        return parser.createPlayList();
+        ignoredPaths->append(cueFile.dataFilePaths());
+        return cueFile.createPlayList();
     }
 }
 

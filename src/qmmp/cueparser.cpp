@@ -154,32 +154,32 @@ qint64 CueParser::offset(int track) const
 
 qint64 CueParser::duration(int track) const
 {
-    if(track < 0 || track >= m_tracks.count())
+    if(track < 1 || track > m_tracks.count())
     {
         qWarning("CueParser: invalid track number: %d", track);
         return 0;
     }
-    return m_tracks.at(track)->info.duration();
+    return m_tracks.at(track - 1)->info.duration();
 }
 
 QString CueParser::file(int track) const
 {
-    if(track < 0 || track >= m_tracks.count())
+    if(track < 1 || track > m_tracks.count())
     {
         qWarning("CueParser: invalid track number: %d", track);
         return 0;
     }
-    return m_tracks.at(track)->file;
+    return m_tracks.at(track - 1)->file;
 }
 
 QString CueParser::url(int track) const
 {
-    if(track < 0 || track >= m_tracks.count())
+    if(track < 1 || track > m_tracks.count())
     {
         qWarning("CueParser: invalid track number: %d", track);
         return QString();
     }
-    return m_tracks.at(track)->info.path();
+    return m_tracks.at(track - 1)->info.path();
 }
 
 int CueParser::count() const
@@ -189,12 +189,12 @@ int CueParser::count() const
 
 const TrackInfo *CueParser::info(int track) const
 {
-    if(track < 0 || track >= m_tracks.count())
+    if(track < 1 || track > m_tracks.count())
     {
         qWarning("CueParser: invalid track number: %d", track);
         return nullptr;
     }
-    return &m_tracks.at(track)->info;
+    return &m_tracks.at(track - 1)->info;
 }
 
 void CueParser::setDuration(const QString &file, qint64 duration)

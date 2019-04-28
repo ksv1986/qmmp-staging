@@ -48,9 +48,9 @@ public:
 private:
     QString m_path;
     QList<TagModel* > m_tags;
-    TagLib::Ogg::XiphComment *m_tag;
-    TagLib::File *m_file;
-    TagLib::FileStream *m_stream;
+    TagLib::Ogg::XiphComment *m_tag = nullptr;
+    TagLib::File *m_file = nullptr;
+    TagLib::FileStream *m_stream = nullptr;
 };
 
 class VorbisCommentModel : public TagModel

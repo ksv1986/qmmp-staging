@@ -136,7 +136,6 @@ static FLAC__StreamDecoderReadStatus flac_callback_read (const FLAC__StreamDecod
     }
 
     return FLAC__STREAM_DECODER_READ_STATUS_ABORT;
-
 }
 
 static FLAC__StreamDecoderWriteStatus flac_callback_write (const FLAC__StreamDecoder *d,
@@ -270,15 +269,7 @@ DecoderFLAC::DecoderFLAC(const QString &path, QIODevice *i)
     m_data = new flac_data;
     m_data->decoder = nullptr;
     m_data->input = i;
-    m_parser = nullptr;
-    length_in_bytes = 0;
-    m_totalBytes = 0;
-    m_sz = 0;
-    m_buf = nullptr;
-    m_offset = 0;
-    m_track = 0;
 }
-
 
 DecoderFLAC::~DecoderFLAC()
 {

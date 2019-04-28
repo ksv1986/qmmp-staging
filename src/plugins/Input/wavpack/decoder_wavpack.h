@@ -26,7 +26,7 @@ extern "C"{
 }
 #include <qmmp/decoder.h>
 
-class CUEParser;
+class CueParser;
 
 class DecoderWavPack : public Decoder
 {
@@ -57,7 +57,7 @@ private:
     qint64 m_offset;
     qint64 m_length;
     QString m_path;
-    CUEParser *m_parser;
+    CueParser *m_parser;
     int m_track;
     int m_bps;
     qint64 m_frame_size; //frame size

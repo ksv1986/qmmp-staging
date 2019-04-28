@@ -17,12 +17,10 @@ SET(libwavpack_SRCS
   decoder_wavpack.cpp
   decoderwavpackfactory.cpp
   wavpackmetadatamodel.cpp
-  cueparser.cpp
 )
 
 SET(libwavpack_HDRS
   decoder_wavpack.h
-  cueparser.h
 )
 
 SET(libwavpack_RCCS translations/translations.qrc)

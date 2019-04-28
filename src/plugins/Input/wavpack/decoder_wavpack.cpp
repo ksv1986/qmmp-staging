@@ -24,8 +24,8 @@
 #include <QRegExp>
 #include <math.h>
 #include <stdint.h>
+#include <qmmp/cueparser.h>
 #include <qmmp/buffer.h>
-#include <qmmp/output.h>
 #include <stdlib.h>
 #include "decoder_wavpack.h"
 #include "cueparser.h"
@@ -62,7 +62,7 @@ bool DecoderWavPack::initialize()
     m_chan = 0;
     m_totalTime = 0;
 
-    char err [80];
+    char err[80] = { 0 };
     if (m_path.startsWith("wvpack://")) //embeded cue track
     {
         QString p = m_path;
@@ -80,14 +80,15 @@ bool DecoderWavPack::initialize()
             return false;
         }
         int cue_len = WavpackGetTagItem (m_context, "cuesheet", nullptr, 0);
-        char *value;
-        if (cue_len)
+        if (cue_len > 0)
         {
-            value = (char*)malloc (cue_len * 2 + 1);
-            WavpackGetTagItem (m_context, "cuesheet", value, cue_len + 1);
-            m_parser = new CUEParser(value, p);
+            char *value = (char*)malloc (cue_len * 2 + 1);
+            WavpackGetTagItem(m_context, "cuesheet", value, cue_len + 1);
+            m_parser = new CueParser(value);
+            m_parser->setDuration((qint64)WavpackGetNumSamples(m_context) * 1000 / WavpackGetSampleRate(m_context));
+            m_parser->setUrl("wvpack", p);
             m_track = m_path.section("#", -1).toInt();
-            if(m_track > m_parser->count())
+            if(m_track < 1 || m_track > m_parser->count())
             {
                 qWarning("DecoderWavPack: invalid cuesheet comment");
                 return false;
@@ -155,7 +156,7 @@ bool DecoderWavPack::initialize()
         m_offset = m_parser->offset(m_track);
         m_length_in_bytes = audioParameters().sampleRate() *
                           audioParameters().frameSize() * m_length/1000;
-        setReplayGainInfo(m_parser->replayGain(m_track));
+        setReplayGainInfo(m_parser->info(m_track)->replayGainInfo());
         seek(0);
     }
     m_totalBytes = 0;
@@ -218,7 +219,7 @@ qint64 DecoderWavPack::read(unsigned char *data, qint64 size)
 const QString DecoderWavPack::nextURL() const
 {
     if(m_parser && m_track +1 <= m_parser->count())
-        return m_parser->trackURL(m_track + 1);
+        return m_parser->url(m_track + 1);
     else
         return QString();
 }
@@ -234,7 +235,7 @@ void DecoderWavPack::next()
                           audioParameters().channels() *
                           audioParameters().sampleSize() * m_length/1000;
         addMetaData(m_parser->info(m_track)->metaData());
-        setReplayGainInfo(m_parser->replayGain(m_track));
+        setReplayGainInfo(m_parser->info(m_track)->replayGainInfo());
         m_totalBytes = 0;
     }
 }

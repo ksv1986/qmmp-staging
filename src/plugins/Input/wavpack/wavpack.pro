@@ -4,12 +4,10 @@ TARGET = $$PLUGINS_PREFIX/Input/wavpack
 
 HEADERS += decoderwavpackfactory.h \
     decoder_wavpack.h \
-    cueparser.h \
     wavpackmetadatamodel.h
 
 SOURCES += decoder_wavpack.cpp \
     decoderwavpackfactory.cpp \
-    cueparser.cpp \
     wavpackmetadatamodel.cpp
 
 

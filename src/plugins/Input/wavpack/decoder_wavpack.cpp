@@ -28,7 +28,6 @@
 #include <qmmp/buffer.h>
 #include <stdlib.h>
 #include "decoder_wavpack.h"
-#include "cueparser.h"
 
 // Decoder class
 

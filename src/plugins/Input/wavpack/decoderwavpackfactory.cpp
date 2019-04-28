@@ -60,7 +60,7 @@ QList<TrackInfo *> DecoderWavPackFactory::createPlayList(const QString &path, Tr
         filePath.remove("wvpack://");
         filePath.remove(QRegExp("#\\d+$"));
         int track = filePath.section("#", -1).toInt();
-        QList<TrackInfo *> list = createPlayList(filePath, parts, ignoredFiles);
+        QList<TrackInfo *> list = createPlayList(filePath, TrackInfo::AllParts, ignoredFiles);
         if (list.isEmpty() || track <= 0 || track > list.count())
         {
             qDeleteAll(list);

@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include <QMessageBox>
+#include <QFileInfo>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/flacfile.h>
@@ -76,11 +77,11 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
     {
         filePath.remove("flac://");
         filePath.remove(QRegExp("#\\d+$"));
-        track = filePath.section("#", -1).toInt();
+        track = path.section("#", -1).toInt();
         parts = TrackInfo::AllParts; //extract all metadata for single cue track
     }
 
-    TrackInfo *info = new TrackInfo(path);
+    TrackInfo *info = new TrackInfo(filePath);
 
     if(parts == TrackInfo::NoParts)
         return QList<TrackInfo *>() << info;
@@ -91,15 +92,15 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
     TagLib::FLAC::File *flacFile = nullptr;
     TagLib::Ogg::FLAC::File *oggFlacFile = nullptr;
 
-    TagLib::FileStream stream(QStringToFileName(path), true);
+    TagLib::FileStream stream(QStringToFileName(filePath), true);
 
-    if(path.endsWith(".flac", Qt::CaseInsensitive))
+    if(filePath.endsWith(".flac", Qt::CaseInsensitive))
     {
         flacFile = new TagLib::FLAC::File(&stream, TagLib::ID3v2::FrameFactory::instance());
         tag = flacFile->xiphComment();
         ap = flacFile->audioProperties();
     }
-    else if(path.endsWith(".oga", Qt::CaseInsensitive))
+    else if(filePath.endsWith(".oga", Qt::CaseInsensitive))
     {
         oggFlacFile = new TagLib::Ogg::FLAC::File(&stream);
         tag = oggFlacFile->tag();
@@ -118,6 +119,7 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
         info->setValue(Qmmp::CHANNELS, ap->channels());
         info->setValue(Qmmp::BITS_PER_SAMPLE, ap->bitsPerSample());
         info->setValue(Qmmp::FORMAT_NAME, flacFile ? "FLAC" : "Ogg FLAC");
+        info->setValue(Qmmp::FILE_SIZE, QFileInfo(filePath).size()); //adds file size for cue tracks
         info->setDuration(ap->lengthInMilliseconds());
     }
 
@@ -156,7 +158,7 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
             }
             parser.setDuration(ap->lengthInMilliseconds());
             parser.setProperties(info->properties());
-            parser.setUrl("flac", path);
+            parser.setUrl("flac", filePath);
 
             if(flacFile)
                 delete flacFile;

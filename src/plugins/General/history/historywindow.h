@@ -31,6 +31,8 @@ namespace Ui {
 class HistoryWindow;
 }
 
+class QTreeWidgetItem;
+
 class HistoryWindow : public QWidget
 {
     Q_OBJECT
@@ -44,7 +46,13 @@ private slots:
     void on_lastMonthButton_clicked();
     void on_fromButton_clicked();
     void on_toButton_clicked();
+    void on_historyTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int);
+    void on_topSongsTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int);
     void onSortIndicatorChanged(int index, Qt::SortOrder order);
+    void playTrack(PlayListTrack *item);
+    void disconnectPl();
+
+
 
 private:
     void loadHistory();

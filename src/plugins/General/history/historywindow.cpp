@@ -25,11 +25,17 @@
 #include <QSettings>
 #include <QProgressBar>
 #include <QTreeWidgetItem>
+#include <QFile>
+#include <QtDebug>
 #include <qmmp/qmmp.h>
+#include <qmmpui/mediaplayer.h>
+#include <qmmpui/playlistmanager.h>
 #include "historywindow.h"
 #include "dateinputdialog.h"
 #include "progressbaritemdelegate.h"
 #include "ui_historywindow.h"
+
+#define PathRole (Qt::UserRole + 4)
 
 HistoryWindow::HistoryWindow(QSqlDatabase db, QWidget *parent) :
     QWidget(parent),
@@ -142,6 +148,7 @@ void HistoryWindow::loadHistory()
         QTreeWidgetItem *item = new QTreeWidgetItem();
         item->setText(0, timeStr);
         item->setText(1, m_formatter.format(info));
+        item->setData(1, PathRole, info.path());
         topLevelItem->addChild(item);
     }
 
@@ -220,6 +227,7 @@ void HistoryWindow::loadDistribution()
         item->setData(1, ProgressBarRole, true);
         item->setData(1, ProgressBarMaxRole, maxCount);
         item->setData(1, ProgressBarValueRole, query.value(0).toInt());
+        //item->setData(1, PathRole, info.path());
     }
 
     m_ui->distributionTreeWidget->expandAll();
@@ -274,6 +282,7 @@ void HistoryWindow::loadTopSongs()
         item->setData(1, ProgressBarRole, true);
         item->setData(1, ProgressBarMaxRole, maxCount);
         item->setData(1, ProgressBarValueRole, query.value(0).toInt());
+        item->setData(1, PathRole, info.path());
     }
 }
 
@@ -429,6 +438,33 @@ void HistoryWindow::on_toButton_clicked()
         m_ui->toDateEdit->setDate(d.selectedDate());
 }
 
+void HistoryWindow::on_historyTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int)
+{
+    if(item && item->parent())
+        on_topSongsTreeWidget_itemDoubleClicked(item, 0);
+}
+
+void HistoryWindow::on_topSongsTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int)
+{
+    QString path = item->data(1, PathRole).toString();
+    if(!path.contains("://") && !QFile::exists(path))
+    {
+        qDebug("HistoryWindow: unable to find file: %s", qPrintable(path));
+        return;
+    }
+
+    PlayListManager *plManager = PlayListManager::instance();
+    plManager->clear();
+    if(!plManager->selectedPlayList()->isLoaderRunning())
+    {
+        plManager->activatePlayList(plManager->selectedPlayList());
+        connect(plManager->currentPlayList(), SIGNAL(trackAdded(PlayListTrack*)), SLOT(playTrack(PlayListTrack*)));
+        connect(plManager->currentPlayList(), SIGNAL(loaderFinished()), SLOT(disconnectPl()));
+
+    }
+    plManager->add(path);
+}
+
 void HistoryWindow::onSortIndicatorChanged(int index, Qt::SortOrder order)
 {
     if(index == 0)
@@ -441,4 +477,22 @@ void HistoryWindow::onSortIndicatorChanged(int index, Qt::SortOrder order)
         //restore sort indicator order
         m_ui->historyTreeWidget->header()->setSortIndicator(0, m_order);
     }
+}
+
+void HistoryWindow::playTrack(PlayListTrack *item)
+{
+    PlayListManager *plManager = PlayListManager::instance();
+    plManager->selectPlayList(qobject_cast<PlayListModel*>(sender()));
+    plManager->activatePlayList(qobject_cast<PlayListModel*>(sender()));
+    disconnect(sender(), SIGNAL(trackAdded(PlayListTrack*)), this, SLOT(playTrack(PlayListTrack*)));
+    if(plManager->currentPlayList()->setCurrent(item))
+    {
+        MediaPlayer::instance()->stop();
+        MediaPlayer::instance()->play();
+    }
+}
+
+void HistoryWindow::disconnectPl()
+{
+    disconnect(sender(), SIGNAL(trackAdded(PlayListTrack*)), this, SLOT(playTrack(PlayListTrack*)));
 }

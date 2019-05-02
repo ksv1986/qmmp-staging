@@ -38,15 +38,12 @@ FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly)
     : MetaDataModel(true)
 #endif
 {
+    m_path = path;
     if(path.startsWith("flac://"))
     {
-        QString p = path;
-        p.remove("flac://");
-        p.remove(QRegExp("#\\d+$"));
-        m_path = p;
+        m_path.remove("flac://");
+        m_path.remove(QRegExp("#\\d+$"));
     }
-    else
-        m_path = path;
 
     if(m_path.endsWith(".flac", Qt::CaseInsensitive))
     {

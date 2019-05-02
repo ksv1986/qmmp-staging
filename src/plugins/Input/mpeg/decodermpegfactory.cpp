@@ -23,6 +23,7 @@
 #include <QSettings>
 #include <QFile>
 #include <QTextCodec>
+#include <QtDebug>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/id3v1tag.h>
@@ -108,32 +109,36 @@ bool DecoderMPEGFactory::canDecode(QIODevice *input) const
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     decoderName = settings.value("MPEG/decoder", "mad").toString();
 #elif defined(WITH_MAD)
-    decoderName = "mpg123";
-#elif defined(WITH_MPG123)
     decoderName = "mad";
+#elif defined(WITH_MPG123)
+    decoderName = "mpg123";
 #endif
 
 #ifdef WITH_MAD
-    if(decoderName == "mpg123")
+    if(decoderName != "mpg123")
     {
         struct mad_stream stream;
         struct mad_header header;
         int dec_res;
 
-        mad_stream_init (&stream);
-        mad_header_init (&header);
+        mad_stream_init(&stream);
+        mad_header_init(&header);
         mad_stream_buffer (&stream, (unsigned char *) buf, dataSize);
         stream.error = MAD_ERROR_NONE;
 
         while ((dec_res = mad_header_decode(&header, &stream)) == -1
                && MAD_RECOVERABLE(stream.error))
             ;
-        return dec_res != -1 ? true: false;
+
+        if(dec_res == 0)
+            dec_res = mad_header_decode(&header, &stream);
+
+        return dec_res == 0;
     }
 #endif
 
 #ifdef WITH_MPG123
-    if (decoderName != "mpg123")
+    if (decoderName == "mpg123")
     {
         mpg123_init();
         mpg123_handle *handle = mpg123_new(nullptr, nullptr);

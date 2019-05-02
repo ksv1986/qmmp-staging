@@ -452,14 +452,17 @@ void DecoderFFmpeg::fillBuffer()
 
             if(m_pkt.stream_index != audioIndex)
             {
+                m_temp_pkt.size = 0;
                 if(m_pkt.data)
+                {
 #if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(57,24,102)) //ffmpeg-3.0
                     av_packet_unref(&m_pkt);
 #else
                     av_free_packet(&m_pkt);
 #endif
-                m_temp_pkt.size = 0;
-                continue;
+                    continue;
+                }
+                return;
             }
 
             if(m_seekTime && c->codec_id == AV_CODEC_ID_APE)

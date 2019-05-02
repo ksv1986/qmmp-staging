@@ -28,10 +28,18 @@ extern "C" {
 FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path) : MetaDataModel(true)
 {
     AVFormatContext *in = nullptr;
+    QString filePath = path;
+
+    if(path.startsWith("ffmpeg://"))
+    {
+        filePath.remove("ffmpeg://");
+        filePath.remove(QRegExp("#\\d+$"));
+    }
+
 #ifdef Q_OS_WIN
-    if (avformat_open_input(&in, path.toUtf8().constData(), nullptr, nullptr) < 0)
+    if (avformat_open_input(&in, filePath.toUtf8().constData(), nullptr, nullptr) < 0)
 #else
-    if (avformat_open_input(&in, path.toLocal8Bit().constData(), nullptr, nullptr) < 0)
+    if (avformat_open_input(&in, filePath.toLocal8Bit().constData(), nullptr, nullptr) < 0)
 #endif
         return;
 

@@ -159,7 +159,7 @@ DecoderProperties DecoderFFmpegFactory::properties() const
 
 Decoder *DecoderFFmpegFactory::create(const QString &path, QIODevice *input)
 {
-    if(path.contains("://"))
+    if(path.startsWith("ffmpeg://"))
         return new DecoderFFmpegCue(path);
     else
         return new DecoderFFmpeg(path, input);

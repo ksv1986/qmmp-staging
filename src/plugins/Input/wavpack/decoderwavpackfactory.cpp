@@ -122,7 +122,7 @@ QList<TrackInfo *> DecoderWavPackFactory::createPlayList(const QString &path, Tr
             WavpackGetTagItem(ctx, "cuesheet", value, cue_len + 1);
 
             CueParser parser(value);
-            parser.setDuration((qint64)WavpackGetNumSamples(ctx) * 1000 / WavpackGetSampleRate(ctx));
+            parser.setDuration(info->duration());
             parser.setProperties(info->properties());
             parser.setUrl("wvpack", filePath);
 

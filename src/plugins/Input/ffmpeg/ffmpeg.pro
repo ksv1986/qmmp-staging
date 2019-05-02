@@ -6,13 +6,15 @@ HEADERS += decoderffmpegfactory.h \
     decoder_ffmpeg.h \
     settingsdialog.h \
     ffmpegmetadatamodel.h \
-    replaygainreader.h
+    replaygainreader.h \
+    decoder_ffmpegcue.h
 
 SOURCES += decoder_ffmpeg.cpp \
     decoderffmpegfactory.cpp \
     settingsdialog.cpp \
     ffmpegmetadatamodel.cpp \
-    replaygainreader.cpp
+    replaygainreader.cpp \
+    decoder_ffmpegcue.cpp
 
 FORMS += settingsdialog.ui
 

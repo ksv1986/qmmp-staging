@@ -1481,6 +1481,8 @@ Version 1.3.1
 * updated Russian translation (Alexey Loginov)
 
 Version 1.3.2
+* added feature to play track on double click in the history plugin
+* enabled mpg123 decoder for Windows
 * using album cover from file by default
 * fixed lyrics plugin
 * fixed API documentation
@@ -1489,3 +1491,6 @@ Version 1.3.2
 * fixed shortcuts displaying in context menus under Qt 5.10 or higher
 * fixed Qt 5.13 support
 * fixed crash under Wayland session
+* fixed freezing on some corrupted files in the ffmpeg plugin
+* fixed crash on some streams in the ffmpeg plugin
+* fixed file type determination by content in the mpeg plugin

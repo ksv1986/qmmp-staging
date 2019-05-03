@@ -86,8 +86,8 @@ DecoderFFmpeg::DecoderFFmpeg(const QString &path, QIODevice *i)
     m_seekTime = -1;
     av_init_packet(&m_pkt);
     av_init_packet(&m_temp_pkt);
+    m_input_buf = nullptr;
 }
-
 
 DecoderFFmpeg::~DecoderFFmpeg()
 {
@@ -106,7 +106,11 @@ DecoderFFmpeg::~DecoderFFmpeg()
         av_free_packet(&m_pkt);
 #endif
     if(m_stream)
+#if (LIBAVFORMAT_VERSION_INT >= AV_VERSION_INT(57, 80, 100)) //ffmpeg-3.4
+        avio_context_free(&m_stream);
+#else
         av_free(m_stream);
+#endif
 
     if(m_decoded_frame)
 #if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(55,34,0)) //libav-10: 55.34.1; ffmpeg-2.1:  55.39.100
@@ -114,7 +118,6 @@ DecoderFFmpeg::~DecoderFFmpeg()
 #else
         av_free(m_decoded_frame);
 #endif
-
 }
 
 bool DecoderFFmpeg::initialize()
@@ -145,9 +148,17 @@ bool DecoderFFmpeg::initialize()
     qDebug("DecoderFFmpeg: detected format: %s", fmt->long_name);
     qDebug("=%s=", fmt->name);
 
+#if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(58,10,100)) //ffmpeg-3.5
+    m_input_buf = (uchar*)av_malloc(INPUT_BUFFER_SIZE + AV_INPUT_BUFFER_PADDING_SIZE);
+#else
+    m_input_buf = (uchar*)av_malloc(INPUT_BUFFER_SIZE + FF_INPUT_BUFFER_PADDING_SIZE);
+#endif
+
     m_stream = avio_alloc_context(m_input_buf, INPUT_BUFFER_SIZE, 0, this, ffmpeg_read, nullptr, ffmpeg_seek);
     if(!m_stream)
     {
+        av_free(m_input_buf);
+        m_input_buf = nullptr;
         qWarning("DecoderFFmpeg: unable to initialize I/O callbacks");
         return false;
     }

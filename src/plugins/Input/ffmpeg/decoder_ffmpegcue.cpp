@@ -21,7 +21,7 @@
 #include <QObject>
 #include <QFile>
 #include <QRegExp>
-#include "cueparser.h"
+#include <qmmp/cueparser.h>
 #include "decoder_ffmpeg.h"
 #include "decoder_ffmpegcue.h"
 

@@ -30,6 +30,7 @@ ArchiveInputDevice::ArchiveInputDevice(const QString &url, QObject *parent)  : Q
     archivePath.remove(QRegExp("^.+://"));
     archivePath.remove(QRegExp("#.+$"));
 
+    m_close_libarchive = true;
     m_archive = archive_read_new();
     archive_read_support_filter_all(m_archive);
     archive_read_support_format_all(m_archive);
@@ -56,7 +57,6 @@ ArchiveInputDevice::ArchiveInputDevice(const QString &url, QObject *parent)  : Q
         }
         archive_read_data_skip(m_archive);
     }
-    m_close_libarchive = true;
 }
 
 ArchiveInputDevice::ArchiveInputDevice(archive *a, archive_entry *e, QObject *parent) : QIODevice(parent)

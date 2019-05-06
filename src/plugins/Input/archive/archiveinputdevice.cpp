@@ -30,6 +30,7 @@ ArchiveInputDevice::ArchiveInputDevice(const QString &url, QObject *parent)  : Q
     archivePath.remove(QRegExp("^.+://"));
     archivePath.remove(QRegExp("#.+$"));
 
+    m_close_libarchive = true;
     m_archive = archive_read_new();
     archive_read_support_filter_all(m_archive);
     archive_read_support_format_all(m_archive);
@@ -56,7 +57,6 @@ ArchiveInputDevice::ArchiveInputDevice(const QString &url, QObject *parent)  : Q
         }
         archive_read_data_skip(m_archive);
     }
-    m_close_libarchive = true;
 }
 
 ArchiveInputDevice::ArchiveInputDevice(archive *a, archive_entry *e, QObject *parent) : QIODevice(parent)
@@ -80,6 +80,9 @@ ArchiveInputDevice::~ArchiveInputDevice()
 
 bool ArchiveInputDevice::seek(qint64 pos)
 {
+    if(!isOpen())
+        return false;
+
     QIODevice::seek(pos);
 
     if(pos > m_buffer.size())
@@ -99,10 +102,11 @@ bool ArchiveInputDevice::seek(qint64 pos)
             else if(r < 0)
             {
                 qWarning("ArchiveInputDevice: seeking failed; libarchive error: %s", archive_error_string(m_archive));
+                setErrorString(QString::fromLocal8Bit(archive_error_string(m_archive)));
+                close();
             }
             return false;
         }
-
     }
 
     return m_buffer.seek(pos);
@@ -115,6 +119,9 @@ qint64 ArchiveInputDevice::size() const
 
 qint64 ArchiveInputDevice::readData(char *data, qint64 maxSize)
 {
+    if(!isOpen())
+        return -1;
+
     if(m_buffer.pos() + maxSize > m_buffer.size())
     {
         qint64 l = m_buffer.pos() + maxSize - m_buffer.size();
@@ -123,7 +130,12 @@ qint64 ArchiveInputDevice::readData(char *data, qint64 maxSize)
         if(r > 0)
             m_buffer.buffer().append(tmp, r);
         else if(r < 0)
+        {
             qWarning("ArchiveInputDevice: reading failed; libarchive error: %s", archive_error_string(m_archive));
+            setErrorString(QString::fromLocal8Bit(archive_error_string(m_archive)));
+            close();
+            return -1;
+        }
     }
     return m_buffer.read(data, maxSize);
 }

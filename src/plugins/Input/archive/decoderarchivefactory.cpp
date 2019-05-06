@@ -112,6 +112,14 @@ QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, Tr
                 ArchiveInputDevice dev(a, entry, nullptr);
                 ArchiveTagReader reader(&dev, list.last()->path());
 
+                if(!dev.isOpen())
+                {
+                    qDeleteAll(list);
+                    list.clear();
+                    archive_read_free(a);
+                    return list;
+                }
+
                 if(parts & TrackInfo::MetaData)
                     list.last()->setValues(reader.metaData());
 

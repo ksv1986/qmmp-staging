@@ -83,7 +83,7 @@ CueFile::CueFile(const QString &path) : CueParser()
     setUrl("cue", filePath);
     for(const QString &dataFileName : files())
     {
-        QString dataFilePath = getDirtyPath(dataFileName, QFileInfo(filePath).dir().filePath(dataFileName));
+        QString dataFilePath = getDirtyPath(filePath, QFileInfo(filePath).dir().filePath(dataFileName));
         m_dataFiles.insert(dataFileName, dataFilePath);
         QList<TrackInfo *> pl = MetaDataManager::instance()->createPlayList(dataFilePath, TrackInfo::Properties);
         if(!pl.isEmpty())
@@ -155,8 +155,8 @@ QStringList CueFile::splitLine(const QString &line)
 }
 
 QString CueFile::getDirtyPath(const QString &cue_path, const QString &path)
-{
-    if((QFile::exists(path) && Decoder::findByFilePath(path)) || !m_dirty)
+{    
+    if((QFile::exists(path) && Decoder::findByFilePath(path)))
         return path;
 
     QStringList candidates;
@@ -164,12 +164,17 @@ QString CueFile::getDirtyPath(const QString &cue_path, const QString &path)
     while (it.hasNext())
     {
         it.next();
+
         QString f = it.filePath();
-        if ((f != cue_path) && Decoder::findByFilePath(f))
+
+        if(it.fileName().toLower() == QFileInfo(path).fileName().toLower() && Decoder::findByFilePath(f))
+            return it.filePath();
+
+        if(m_dirty && (f != cue_path) && Decoder::findByFilePath(f))
             candidates.push_back(f);
     }
 
-    if (candidates.empty())
+    if (candidates.isEmpty())
         return path;
     else if (candidates.count() == 1)
         return candidates.first();

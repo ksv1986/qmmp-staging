@@ -463,11 +463,13 @@ public slots:
     /*!
      * Removes items with \b i index.
      */
-    void removeTrack (int i);
+    void removeTrack(int i);
     /*!
      * Removes item \b item from playlist
      */
-    void removeTrack (PlayListItem *track);
+    void removeTrack(PlayListItem *track);
+    void removeTracks(const QList<PlayListItem *> &items);
+    void removeTracks(const QList<PlayListTrack *> &tracks);
     /*!
      * Inverts selection (selects unselected items and unselects selected items)
      */

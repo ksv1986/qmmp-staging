@@ -71,6 +71,7 @@ Logo::Logo(QWidget *parent) : Visual(parent)
     m_elapsed = 0;
     updateLetters();
     Visual::add(this);
+    m_timer->start();
 }
 
 Logo::~Logo()
@@ -79,14 +80,10 @@ Logo::~Logo()
 }
 
 void Logo::start()
-{
-    m_timer->start();
-}
+{}
 
 void Logo::stop()
-{
-    m_timer->stop();
-}
+{}
 
 void Logo::paintEvent(QPaintEvent *)
 {

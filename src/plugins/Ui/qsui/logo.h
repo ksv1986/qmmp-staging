@@ -41,10 +41,6 @@ public:
     explicit Logo(QWidget *parent = nullptr);
     virtual ~Logo();
 
-public slots:
-    void start() override;
-    void stop() override;
-
 private slots:
     void updateLetters();
 

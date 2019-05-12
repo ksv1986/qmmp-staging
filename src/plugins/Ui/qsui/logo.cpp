@@ -71,21 +71,12 @@ Logo::Logo(QWidget *parent) : Visual(parent)
     m_elapsed = 0;
     updateLetters();
     Visual::add(this);
+    m_timer->start();
 }
 
 Logo::~Logo()
 {
     Visual::remove(this);
-}
-
-void Logo::start()
-{
-    m_timer->start();
-}
-
-void Logo::stop()
-{
-    m_timer->stop();
 }
 
 void Logo::paintEvent(QPaintEvent *)

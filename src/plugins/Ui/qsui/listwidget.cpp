@@ -587,6 +587,55 @@ void ListWidget::setFilterString(const QString &str)
     updateList(PlayListModel::STRUCTURE);
 }
 
+void ListWidget::clear()
+{
+    if(m_filterMode)
+    {
+        m_model->removeTracks(m_filteredItems);
+        m_filteredItems.clear();
+    }
+    else
+    {
+        m_model->clear();
+    }
+}
+
+void ListWidget::removeSelected()
+{
+    if(m_filterMode)
+    {
+        QList<PlayListItem *> items;
+        for(PlayListItem *item : m_filteredItems)
+        {
+            if(item->isSelected())
+                items << item;
+        }
+        m_model->removeTracks(items);
+    }
+    else
+    {
+        m_model->removeSelected();
+    }
+}
+
+void ListWidget::removeUnselected()
+{
+    if(m_filterMode)
+    {
+        QList<PlayListItem *> items;
+        for(PlayListItem *item : m_filteredItems)
+        {
+            if(!item->isSelected())
+                items << item;
+        }
+        m_model->removeTracks(items);
+    }
+    else
+    {
+        m_model->removeUnselected();
+    }
+}
+
 void ListWidget::updateSkin()
 {
     m_drawer.loadSystemColors();

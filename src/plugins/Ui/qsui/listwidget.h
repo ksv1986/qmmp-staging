@@ -73,6 +73,9 @@ public slots:
     void updateList(int flags);
     void setViewPosition(int sc);
     void setFilterString(const QString &str = QString());
+    void clear();
+    void removeSelected();
+    void removeUnselected();
 
 signals:
     void doubleClicked();

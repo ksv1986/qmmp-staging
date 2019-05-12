@@ -238,6 +238,12 @@ void Visual::clearBuffer()
     m_buffer.mutex()->unlock();
 }
 
+void Visual::start()
+{}
+
+void Visual::stop()
+{}
+
 void Visual::checkFactories()
 {
     if (!m_factories)

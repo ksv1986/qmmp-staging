@@ -110,13 +110,13 @@ public:
 
 public slots:
     /*!
-     * Starts visualization.
+     * Starts visualization. Default implementation does nothing.
      */
-    virtual void start() = 0;
+    virtual void start();
     /*!
-     * Stops visualization.
+     * Stops visualization. Default implementation does nothing.
      */
-    virtual void stop() = 0;
+    virtual void stop();
 
 signals:
     /*!

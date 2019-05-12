@@ -437,7 +437,7 @@ qint64 DecoderFFmpeg::ffmpeg_decode()
 
 void DecoderFFmpeg::seek(qint64 pos)
 {
-   int64_t timestamp = int64_t(pos)*AV_TIME_BASE/1000;
+    int64_t timestamp = int64_t(pos) * AV_TIME_BASE / 1000;
     if (ic->start_time != (qint64)AV_NOPTS_VALUE)
         timestamp += ic->start_time;
     m_seekTime = timestamp;

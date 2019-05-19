@@ -104,7 +104,7 @@ public:
      */
     enum AudioFormat
     {
-        PCM_UNKNOWM = -1, /*!< Unknown format */
+        PCM_UNKNOWN = -1, /*!< Unknown format */
         PCM_S8 = 0, /*!< Signed 8 bit */
         PCM_U8,     /*!< Unsigned 8 bit */
         PCM_S16LE,  /*!< Signed 16 bit Little Endian */

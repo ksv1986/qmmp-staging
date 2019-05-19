@@ -159,7 +159,7 @@ void StateHandler::dispatch(Qmmp::State state)
         m_info.clear();
         m_streamInfo.clear();
         m_sendAboutToFinish = true;
-        m_audioParameters = AudioParameters(44100, ChannelMap(2), Qmmp::PCM_UNKNOWM);
+        m_audioParameters = AudioParameters(44100, ChannelMap(2), Qmmp::PCM_UNKNOWN);
     }
     if (m_state != state)
     {

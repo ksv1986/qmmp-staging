@@ -288,7 +288,7 @@ bool DecoderFFmpeg::initialize()
     if(c->codec_id == AV_CODEC_ID_SHORTEN) //ffmpeg bug workaround
         m_totalTime = 0;
 
-    Qmmp::AudioFormat format = Qmmp::PCM_UNKNOWM;
+    Qmmp::AudioFormat format = Qmmp::PCM_UNKNOWN;
 
     switch(c->sample_fmt)
     {

@@ -157,7 +157,6 @@ void StateHandler::dispatch(Qmmp::State state)
         m_elapsed = -1;
         m_bitrate = 0;
         m_info.clear();
-        m_metaData.clear();
         m_streamInfo.clear();
         m_sendAboutToFinish = true;
     }

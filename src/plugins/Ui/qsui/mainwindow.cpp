@@ -85,6 +85,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     connect(m_core, SIGNAL(elapsedChanged(qint64)), SLOT(updatePosition(qint64)));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(showState(Qmmp::State)));
     connect(m_core, SIGNAL(bitrateChanged(int)), SLOT(updateStatus()));
+    connect(m_core, SIGNAL(audioParametersChanged(AudioParameters)), SLOT(updateStatus()));
     connect(m_core, SIGNAL(bufferingProgress(int)), SLOT(showBuffering(int)));
     connect(m_core, SIGNAL(trackInfoChanged()), SLOT(showMetaData()));
     //keyboard manager

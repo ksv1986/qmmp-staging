@@ -88,7 +88,7 @@ bool Visual::takeData(float *left, float *right)
 
 //static members
 QList<VisualFactory*> *Visual::m_factories = nullptr;
-QHash <VisualFactory*, QString> *Visual::m_files = nullptr;
+QHash <const VisualFactory*, QString> *Visual::m_files = nullptr;
 QList<Visual*> Visual::m_visuals;
 QHash<VisualFactory*, Visual*> Visual::m_vis_map;
 QWidget *Visual::m_parentWidget = nullptr;
@@ -102,13 +102,13 @@ QList<VisualFactory *> Visual::factories()
     return *m_factories;
 }
 
-QString Visual::file(VisualFactory *factory)
+QString Visual::file(const VisualFactory *factory)
 {
     checkFactories();
     return m_files->value(factory);
 }
 
-void Visual::setEnabled(VisualFactory* factory, bool enable)
+void Visual::setEnabled(VisualFactory *factory, bool enable)
 {
     checkFactories();
     if (!m_factories->contains(factory))
@@ -149,11 +149,9 @@ void Visual::setEnabled(VisualFactory* factory, bool enable)
     settings.setValue("Visualization/enabled_plugins", visList);
 }
 
-bool Visual::isEnabled(VisualFactory* factory)
+bool Visual::isEnabled(const VisualFactory *factory)
 {
     checkFactories();
-    if (!m_factories->contains(factory))
-        return false;
     QString name = factory->properties().shortName;
     QSettings settings ( Qmmp::configFile(), QSettings::IniFormat );
     QStringList visList = settings.value("Visualization/enabled_plugins").toStringList();
@@ -249,7 +247,7 @@ void Visual::checkFactories()
     if (!m_factories)
     {
         m_factories = new QList<VisualFactory *>;
-        m_files = new QHash <VisualFactory*, QString>;
+        m_files = new QHash <const VisualFactory*, QString>;
 
         foreach (QString filePath, Qmmp::findPlugins("Visual"))
         {

@@ -155,7 +155,7 @@ QList<InputSourceFactory *> InputSource::enabledFactories()
     return list;
 }
 
-QString InputSource::file(InputSourceFactory *factory)
+QString InputSource::file(const InputSourceFactory *factory)
 {
     loadPlugins();
     foreach(QmmpPluginCache *item, *m_cache)
@@ -201,7 +201,7 @@ void InputSource::setEnabled(InputSourceFactory *factory, bool enable)
     settings.setValue("Transports/disabled_plugins", m_disabledNames);
 }
 
-bool InputSource::isEnabled(InputSourceFactory *factory)
+bool InputSource::isEnabled(const InputSourceFactory *factory)
 {
     loadPlugins();
     return !m_disabledNames.contains(factory->properties().shortName);

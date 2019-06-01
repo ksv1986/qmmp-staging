@@ -97,7 +97,7 @@ QList<GeneralFactory *> General::enabledFactories()
     return list;
 }
 
-QString General::file(GeneralFactory *factory)
+QString General::file(const GeneralFactory *factory)
 {
     loadPlugins();
     foreach(QmmpUiPluginCache *item, *m_cache)
@@ -158,7 +158,7 @@ void General::showSettings(GeneralFactory* factory, QWidget* parentWidget)
     dialog->deleteLater();
 }
 
-bool General::isEnabled(GeneralFactory* factory)
+bool General::isEnabled(const GeneralFactory *factory)
 {
     loadPlugins();
     return m_enabledNames.contains(factory->properties().shortName);

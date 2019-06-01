@@ -101,17 +101,17 @@ public:
      * This function uses \b QObject::objectName() function.
      * @param factory Engine plugin factory.
      */
-    static bool isEnabled(EngineFactory *factory);
+    static bool isEnabled(const EngineFactory *factory);
     /*!
      * Returns \b true if engine is enabled, otherwise returns \b false
      * @param engine Engine object.
      */
-    static bool isEnabled(AbstractEngine *engine);
+    static bool isEnabled(const AbstractEngine *engine);
     /*!
      * Returns plugin file path.
      * @param factory Engine plugin factory.
      */
-    static QString file(EngineFactory *factory);
+    static QString file(const EngineFactory *factory);
     /*!
      * Returns a list of supported protocols (including meta-protocols).
      * This fuction ignores disabled engines.

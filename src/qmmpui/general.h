@@ -51,7 +51,7 @@ public:
      * Returns plugin file path.
      * @param factory General plugin factory.
      */
-    static QString file(GeneralFactory *factory);
+    static QString file(const GeneralFactory *factory);
     /*!
      * Sets whether the general plugin is enabled.
      * @param factory General plugin factory.
@@ -68,7 +68,7 @@ public:
      * Returns \b true if general plugin is enabled, otherwise returns \b false
      * @param factory General plugin factory.
      */
-    static bool isEnabled(GeneralFactory* factory);
+    static bool isEnabled(const GeneralFactory* factory);
 
 private:
     static void loadPlugins();

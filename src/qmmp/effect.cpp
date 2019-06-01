@@ -132,7 +132,7 @@ QList<EffectFactory *> Effect::enabledFactories()
     return list;
 }
 
-QString Effect::file(EffectFactory *factory)
+QString Effect::file(const EffectFactory *factory)
 {
     loadPlugins();
     foreach(QmmpPluginCache *item, *m_cache)
@@ -143,7 +143,7 @@ QString Effect::file(EffectFactory *factory)
     return QString();
 }
 
-void Effect::setEnabled(EffectFactory* factory, bool enable)
+void Effect::setEnabled(EffectFactory *factory, bool enable)
 {
     loadPlugins();
     if (!factories().contains(factory))
@@ -171,7 +171,7 @@ void Effect::setEnabled(EffectFactory* factory, bool enable)
     settings.setValue("Effect/enabled_plugins", m_enabledNames);
 }
 
-bool Effect::isEnabled(EffectFactory* factory)
+bool Effect::isEnabled(const EffectFactory *factory)
 {
     loadPlugins();
     return m_enabledNames.contains(factory->properties().shortName);

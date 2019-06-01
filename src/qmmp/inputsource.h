@@ -130,7 +130,7 @@ public:
      * Returns plugin file path.
      * @param factory Transport plugin factory.
      */
-    static QString file(InputSourceFactory *factory);
+    static QString file(const InputSourceFactory *factory);
     /*!
      * Returns a list of supported protocols.
      */
@@ -140,12 +140,12 @@ public:
      * @param factory Transport plugin factory.
      * @param enable Plugin enable state (\b true - enable, \b false - disable)
      */
-    static void setEnabled(InputSourceFactory* factory, bool enable = true);
+    static void setEnabled(InputSourceFactory *factory, bool enable = true);
     /*!
      * Returns \b true if input plugin is enabled, otherwise returns \b false
      * @param factory Decoder plugin factory.
      */
-    static bool isEnabled(InputSourceFactory* factory);
+    static bool isEnabled(const InputSourceFactory* factory);
 
 signals:
     /*!

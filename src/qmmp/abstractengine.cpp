@@ -158,13 +158,13 @@ void AbstractEngine::setEnabled(EngineFactory *factory, bool enable)
     settings.setValue("Engine/disabled_plugins", m_disabledNames);
 }
 
-bool AbstractEngine::isEnabled(EngineFactory *factory)
+bool AbstractEngine::isEnabled(const EngineFactory *factory)
 {
     loadPlugins();
     return !m_disabledNames.contains(factory->properties().shortName);
 }
 
-bool AbstractEngine::isEnabled(AbstractEngine *engine)
+bool AbstractEngine::isEnabled(const AbstractEngine *engine)
 {
     if(engine->objectName().isEmpty()) //qmmp engine
         return true;
@@ -173,7 +173,7 @@ bool AbstractEngine::isEnabled(AbstractEngine *engine)
     return !m_disabledNames.contains(engine->objectName());
 }
 
-QString AbstractEngine::file(EngineFactory *factory)
+QString AbstractEngine::file(const EngineFactory *factory)
 {
     loadPlugins();
     foreach(QmmpPluginCache *item, *m_cache)

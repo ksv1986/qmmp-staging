@@ -44,16 +44,16 @@ public:
     /*!
      * Selects current file dialog factory.
      */
-    static void setEnabled(FileDialogFactory *factory);
+    static void setEnabled(const FileDialogFactory *factory);
     /*!
      * Returns \b true if file dialog \b factory is used by default, otherwise returns \b false
      */
-    static bool isEnabled(FileDialogFactory *factory);
+    static bool isEnabled(const FileDialogFactory *factory);
     /*!
      * Returns plugin file path.
      * @param factory File dialog plugin factory.
      */
-    static QString file(FileDialogFactory *factory);
+    static QString file(const FileDialogFactory *factory);
     /*!
      * Enum of available file dialog modes
      */

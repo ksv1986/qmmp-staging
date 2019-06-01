@@ -67,14 +67,14 @@ QList<FileDialogFactory *> FileDialog::factories()
     return list;
 }
 
-void FileDialog::setEnabled(FileDialogFactory *factory)
+void FileDialog::setEnabled(const FileDialogFactory *factory)
 {
     loadPlugins();
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("FileDialog", factory->properties().shortName);
 }
 
-bool FileDialog::isEnabled(FileDialogFactory *factory)
+bool FileDialog::isEnabled(const FileDialogFactory *factory)
 {
     loadPlugins();
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
@@ -82,7 +82,7 @@ bool FileDialog::isEnabled(FileDialogFactory *factory)
     return factory->properties().shortName == name;
 }
 
-QString FileDialog::file(FileDialogFactory *factory)
+QString FileDialog::file(const FileDialogFactory *factory)
 {
     loadPlugins();
     foreach(QmmpUiPluginCache *item, *m_cache)

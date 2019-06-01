@@ -122,7 +122,7 @@ QList<OutputFactory *> Output::factories()
     return list;
 }
 
-QString Output::file(OutputFactory *factory)
+QString Output::file(const OutputFactory *factory)
 {
     loadPlugins();
     foreach(QmmpPluginCache *item, *m_cache)
@@ -133,7 +133,7 @@ QString Output::file(OutputFactory *factory)
     return QString();
 }
 
-void Output::setCurrentFactory(OutputFactory* factory)
+void Output::setCurrentFactory(const OutputFactory *factory)
 {
     loadPlugins();
     if (file(factory).isEmpty())

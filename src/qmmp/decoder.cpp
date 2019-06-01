@@ -145,7 +145,7 @@ void Decoder::loadPlugins()
     QmmpPluginCache::cleanup(&settings);
 }
 
-QString Decoder::file(DecoderFactory *factory)
+QString Decoder::file(const DecoderFactory *factory)
 {
     loadPlugins();
     foreach(QmmpPluginCache *item, *m_cache)
@@ -302,7 +302,7 @@ QList<DecoderFactory *> Decoder::findByFileExtension(const QString &path)
     return filtered;
 }
 
-void Decoder::setEnabled(DecoderFactory* factory, bool enable)
+void Decoder::setEnabled(DecoderFactory *factory, bool enable)
 {
     loadPlugins();
     if (!factories().contains(factory))
@@ -321,7 +321,7 @@ void Decoder::setEnabled(DecoderFactory* factory, bool enable)
     settings.setValue("Decoder/disabled_plugins", m_disabledNames);
 }
 
-bool Decoder::isEnabled(DecoderFactory* factory)
+bool Decoder::isEnabled(const DecoderFactory *factory)
 {
     loadPlugins();
     return !m_disabledNames.contains(factory->properties().shortName);

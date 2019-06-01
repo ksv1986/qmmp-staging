@@ -156,7 +156,7 @@ public:
      * Returns plugin file path.
      * @param factory Decoder plugin factory.
      */
-    static QString file(DecoderFactory *factory);
+    static QString file(const DecoderFactory *factory);
     /*!
      * Returns a list of supported protocols (including meta-protocols).
      * This fuction ignores disabled decoders.
@@ -167,12 +167,12 @@ public:
      * @param factory Decoder plugin factory.
      * @param enable Plugin enable state (\b true - enable, \b false - disable)
      */
-    static void setEnabled(DecoderFactory* factory, bool enable = true);
+    static void setEnabled(DecoderFactory *factory, bool enable = true);
     /*!
      * Returns \b true if input plugin is enabled, otherwise returns \b false
      * @param factory Decoder plugin factory.
      */
-    static bool isEnabled(DecoderFactory* factory);
+    static bool isEnabled(const DecoderFactory* factory);
 
 protected:
     /*!

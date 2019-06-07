@@ -22,11 +22,7 @@
 
 ChannelConverter::ChannelConverter(ChannelMap out_map)
 {
-    m_disabled = true;
-    m_tmp_buf = nullptr;
-    m_tmp_size = 0;
     m_out_map = out_map;
-    memset(m_reorder_array, 0, sizeof(m_reorder_array));
 }
 
 ChannelConverter::~ChannelConverter()

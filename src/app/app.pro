@@ -32,16 +32,19 @@ unix {
     icon48.files = images/48x48/qmmp$${APP_NAME_SUFFIX}.png
     icon_svg.files = images/scalable/qmmp$${APP_NAME_SUFFIX}.svgz \
         images/scalable/qmmp-simple$${APP_NAME_SUFFIX}.svgz
+    appdata.files = appdata/qmmp$${APP_NAME_SUFFIX}.appdata.xml
     icon16.path = $$DATA_DIR/icons/hicolor/16x16/apps
     icon32.path = $$DATA_DIR/icons/hicolor/32x32/apps
     icon48.path = $$DATA_DIR/icons/hicolor/48x48/apps
     icon_svg.path = $$DATA_DIR/icons/hicolor/scalable/apps
+    appdata.path = $$DATA_DIR/metainfo
     INSTALLS += desktop \
         target \
         icon16 \
         icon32 \
         icon48 \
-        icon_svg
+        icon_svg \
+        appdata
 }
 
 win32 {

@@ -46,6 +46,9 @@ int main(int argc, char *argv[])
     icon.addFile(":/32x32/qmmp.png");
     icon.addFile(":/48x48/qmmp.png");
     icon.addFile(":/56x56/qmmp.png");
+    icon.addFile(":/64x64/qmmp.png");
+    icon.addFile(":/128x128/qmmp.png");
+    icon.addFile(":/256x256/qmmp.png");
     icon.addFile(":/scalable/qmmp.svgz");
     a.setWindowIcon(icon);
 #ifdef Q_OS_WIN

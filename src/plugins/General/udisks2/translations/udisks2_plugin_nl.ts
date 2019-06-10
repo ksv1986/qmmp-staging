@@ -44,22 +44,22 @@
     <message>
         <location filename="../udisks2factory.cpp" line="30"/>
         <source>UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>UDisks2-plug-in</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="50"/>
         <source>About UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de UDisks2-plug-in</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="51"/>
         <source>Qmmp UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>UDisks2-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks2</source>
-        <translation type="unfinished"></translation>
+        <translation>Deze plug-in faciliteert detectie van verwisselbare apparaten via UDisks2</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="53"/>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="30"/>
         <source>File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsuitvoer-plug-in</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="51"/>
         <source>About File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over Bestandsuitvoer-plug-in</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="52"/>
         <source>Qmmp File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsuitvoer-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="53"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Writer Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwaliteit:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>

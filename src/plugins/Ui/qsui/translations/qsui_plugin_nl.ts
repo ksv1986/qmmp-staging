@@ -31,7 +31,7 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="49"/>
         <source>Translators:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertalers:</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="44"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
@@ -59,17 +59,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>C</source>
-        <translation type="unfinished"></translation>
+        <translation>C</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>&amp;Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Stoppen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>B</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
@@ -109,22 +109,22 @@
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
         <source>J</source>
-        <translation type="unfinished"></translation>
+        <translation>J</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>&amp;Play Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestanden afs&amp;pelen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>E</source>
-        <translation type="unfinished"></translation>
+        <translation>E</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
         <source>&amp;Record</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Opnemen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="53"/>
@@ -154,7 +154,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="53"/>
         <source>S</source>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
@@ -164,7 +164,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="56"/>
@@ -174,7 +174,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="57"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="58"/>
@@ -184,7 +184,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="58"/>
         <source>Alt+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="60"/>
@@ -199,47 +199,47 @@
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
         <source>Show Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabbladen tonen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
         <source>Show Title Bars</source>
-        <translation type="unfinished"></translation>
+        <translation>Titelbalken tonen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>Block Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalken vergrendelen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Volume &amp;+</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume &amp;+</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>Volume &amp;-</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume &amp;-</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation>9</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>&amp;Mute</source>
-        <translation type="unfinished"></translation>
+        <translation>De&amp;mpen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation>F</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>D</source>
-        <translation type="unfinished"></translation>
+        <translation>D</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation>U</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -314,7 +314,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
@@ -334,7 +334,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
@@ -344,7 +344,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
         <source>Alt+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+I</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
@@ -354,7 +354,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
@@ -364,7 +364,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
@@ -374,7 +374,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
@@ -384,7 +384,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
         <source>Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+S</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
@@ -394,7 +394,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="99"/>
@@ -404,7 +404,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Ctrl+PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+PgDown</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
@@ -414,37 +414,37 @@
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
         <source>Ctrl+PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+PgUp</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>Ctrl+G</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+G</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>&amp;Group Tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>Nummers &amp;groeperen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
         <source>&amp;Show Column Headers</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolomtitel&amp;s tonen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
         <source>&amp;Equalizer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Equalizer</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
         <source>Ctrl+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
@@ -454,7 +454,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
@@ -479,12 +479,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="289"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalk</translation>
     </message>
 </context>
 <context>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="37"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleur kiezen</translation>
     </message>
 </context>
 <context>
@@ -518,7 +518,7 @@
     <message>
         <location filename="../equalizer.cpp" line="43"/>
         <source>Equalizer</source>
-        <translation type="unfinished"></translation>
+        <translation>Equalizer</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="52"/>
@@ -554,13 +554,13 @@
         <location filename="../equalizer.cpp" line="104"/>
         <location filename="../equalizer.cpp" line="201"/>
         <source>%1dB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1dB</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="106"/>
         <location filename="../equalizer.cpp" line="199"/>
         <source>+%1dB</source>
-        <translation type="unfinished"></translation>
+        <translation>+%1dB</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="154"/>
@@ -570,12 +570,12 @@
     <message>
         <location filename="../equalizer.cpp" line="224"/>
         <source>Overwrite Request</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzoek negeren</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="225"/>
         <source>Preset &apos;%1&apos; already exists. Overwrite?</source>
-        <translation type="unfinished"></translation>
+        <translation>De voorinstelling &apos;%1&apos; bestaat al. Wil je deze overschrijven?</translation>
     </message>
 </context>
 <context>
@@ -583,22 +583,22 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="91"/>
         <source>Add to Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Toevoegen aan afspeellijst</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="93"/>
         <source>Change Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Andere map kiezen</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="95"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Snelzoeken</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="169"/>
         <source>Select Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Map kiezen</translation>
     </message>
 </context>
 <context>
@@ -626,12 +626,12 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="55"/>
         <source>Reset Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Sneltoetsen herstellen</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="56"/>
         <source>Do you want to restore default shortcuts?</source>
-        <translation type="unfinished"></translation>
+        <translation>Wil je de standaard sneltoetsen herstellen?</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="68"/>
@@ -646,7 +646,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="80"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="86"/>
@@ -701,22 +701,22 @@ Afspeellijst</translation>
     <message>
         <location filename="../forms/mainwindow.ui" line="84"/>
         <source>Spectrum Analyzer</source>
-        <translation type="unfinished"></translation>
+        <translation>Spectrumanalyse</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="99"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestanden</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="114"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoes</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="123"/>
         <source>Playlists</source>
-        <translation type="unfinished"></translation>
+        <translation>Afspeellijsten</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="137"/>
@@ -741,7 +741,7 @@ Afspeellijst</translation>
     <message>
         <location filename="../forms/mainwindow.ui" line="177"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stoppen</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="182"/>
@@ -818,12 +818,12 @@ Instellingen</translation>
     <message>
         <location filename="../mainwindow.cpp" line="463"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="373"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|nummers: %5|totale duur: %6|%7 kbps|</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
@@ -833,7 +833,7 @@ Instellingen</translation>
     <message>
         <location filename="../mainwindow.cpp" line="384"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt;|nummers: %2|totale duur: %3|</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="385"/>
@@ -863,12 +863,12 @@ Instellingen</translation>
     <message>
         <location filename="../mainwindow.cpp" line="453"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="459"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation>P</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="461"/>
@@ -878,12 +878,12 @@ Instellingen</translation>
     <message>
         <location filename="../mainwindow.cpp" line="465"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Snelzoeken</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="521"/>
         <source>Edit Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalken aanpassen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="523"/>
@@ -912,7 +912,7 @@ Instellingen</translation>
         <location filename="../mainwindow.cpp" line="535"/>
         <location filename="../mainwindow.cpp" line="576"/>
         <source>By Album Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Op albumartiest</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="538"/>
@@ -948,18 +948,18 @@ Instellingen</translation>
         <location filename="../mainwindow.cpp" line="553"/>
         <location filename="../mainwindow.cpp" line="594"/>
         <source>By File Creation Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Op datum van creatie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="556"/>
         <location filename="../mainwindow.cpp" line="597"/>
         <source>By File Modification Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Op datum van bewerking</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="559"/>
         <source>By Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Op groep</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="564"/>
@@ -985,12 +985,12 @@ Instellingen</translation>
     <message>
         <location filename="../mainwindow.cpp" line="418"/>
         <source>Add new playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieuwe afspeellijst toevoegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="424"/>
         <source>Show all tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle tabbladen tonen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
@@ -1013,40 +1013,40 @@ Instellingen</translation>
     <message>
         <location filename="../playlistheader.cpp" line="71"/>
         <source>Show Queue/Protocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Wachtrij/Protocol tonen</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="73"/>
         <source>Auto-resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatische grootte</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="76"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitlijning</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="77"/>
         <source>Left</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Links</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="78"/>
         <source>Right</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Rechts</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="79"/>
         <source>Center</source>
         <comment>alignment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Midden</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="89"/>
         <source>Remove Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolom verwijderen</translation>
     </message>
 </context>
 <context>
@@ -1094,7 +1094,7 @@ Instellingen</translation>
     <message>
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
 </context>
 <context>
@@ -1130,7 +1130,7 @@ Instellingen</translation>
     <message>
         <location filename="../forms/qsuisettings.ui" line="776"/>
         <source>Use system fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Systeemlettertypen gebruiken</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="824"/>
@@ -1142,7 +1142,7 @@ Instellingen</translation>
         <location filename="../forms/qsuisettings.ui" line="869"/>
         <location filename="../forms/qsuisettings.ui" line="888"/>
         <source>???</source>
-        <translation type="unfinished"></translation>
+        <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="62"/>
@@ -1155,12 +1155,12 @@ Instellingen</translation>
     <message>
         <location filename="../forms/qsuisettings.ui" line="30"/>
         <source>Main Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoofdvenster</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="52"/>
         <source>Window title format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstertitelopmaak:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="74"/>
@@ -1180,7 +1180,7 @@ Instellingen</translation>
     <message>
         <location filename="../forms/qsuisettings.ui" line="151"/>
         <source>Show song lengths</source>
-        <translation type="unfinished"></translation>
+        <translation>Duur van nummers tonen</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="161"/>
@@ -1205,17 +1205,17 @@ Instellingen</translation>
     <message>
         <location filename="../forms/qsuisettings.ui" line="917"/>
         <source>Reset fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettertypen herstellen</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="932"/>
         <source>Column headers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolomtitels:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="847"/>
         <source>Tab names:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabbladnamen:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="959"/>
@@ -1225,17 +1225,17 @@ Instellingen</translation>
     <message>
         <location filename="../forms/qsuisettings.ui" line="191"/>
         <source>Analyzer Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleuranalyse</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="94"/>
         <source>Show splitters</source>
-        <translation type="unfinished"></translation>
+        <translation>Splitsgrepen tonen</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="138"/>
         <source>Single Column Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Eénkolommodus</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="185"/>
@@ -1270,87 +1270,87 @@ Instellingen</translation>
     <message>
         <location filename="../forms/qsuisettings.ui" line="405"/>
         <source>Playlist Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleuren van afspeellijst</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="477"/>
         <source>Background #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Achtergrond #1:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="537"/>
         <source>Normal text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Normale tekst</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="645"/>
         <source>Background #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Achtergrond #2:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="652"/>
         <source>Current text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Huidige tekst</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="530"/>
         <source>Highlighted background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gemarkeerde achtergrond:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="484"/>
         <source>Highlighted text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gemarkeerde tekst:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="995"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalken</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1003"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictogramgrootte:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1028"/>
         <source>Customize...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aanpassen...</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="411"/>
         <source>Use system colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Systeemkleuren gebruiken</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="516"/>
         <source>Group background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Groeperingsachtergrond:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="523"/>
         <source>Group text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Groeperingstekst:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="709"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Splitsgreep:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="965"/>
         <source>Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabbladen</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="971"/>
         <source>Show close buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Sluitknoppen tonen</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="978"/>
         <source>Show tab list menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabbladlijst tonen</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="985"/>
@@ -1365,27 +1365,27 @@ Instellingen</translation>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
         <source>16x16</source>
-        <translation type="unfinished"></translation>
+        <translation>16x16</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="44"/>
         <source>22x22</source>
-        <translation type="unfinished"></translation>
+        <translation>22x22</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="45"/>
         <source>32x32</source>
-        <translation type="unfinished"></translation>
+        <translation>32x32</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="46"/>
         <source>48x48</source>
-        <translation type="unfinished"></translation>
+        <translation>48x48</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="47"/>
         <source>64x64</source>
-        <translation type="unfinished"></translation>
+        <translation>64x64</translation>
     </message>
 </context>
 <context>
@@ -1393,7 +1393,7 @@ Instellingen</translation>
     <message>
         <location filename="../qsuianalyzer.cpp" line="228"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoes</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="231"/>
@@ -1408,22 +1408,22 @@ Instellingen</translation>
     <message>
         <location filename="../qsuianalyzer.cpp" line="237"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="238"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 fps</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="239"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 fps</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="240"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 fps</translation>
     </message>
     <message>
         <location filename="../qsuianalyzer.cpp" line="247"/>
@@ -1489,7 +1489,7 @@ Instellingen</translation>
     <message>
         <location filename="../forms/toolbareditor.ui" line="14"/>
         <source>ToolBar Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalk bewerken</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="62"/>
@@ -1499,17 +1499,17 @@ Instellingen</translation>
     <message>
         <location filename="../forms/toolbareditor.ui" line="199"/>
         <source>Toolbar:</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalk:</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="222"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Creëren</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="238"/>
         <source>Re&amp;name</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Naam wijzigen</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
@@ -1520,27 +1520,27 @@ Instellingen</translation>
         <location filename="../toolbareditor.cpp" line="100"/>
         <location filename="../toolbareditor.cpp" line="198"/>
         <source>Separator</source>
-        <translation type="unfinished"></translation>
+        <translation>Scheiding</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="248"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalk</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="250"/>
         <source>Toolbar %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalk %1</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Rename Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalknaam wijzigen</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Toolbar name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalknaam:</translation>
     </message>
 </context>
 <context>
@@ -1556,7 +1556,7 @@ Instellingen</translation>
     <message>
         <location filename="../volumeslider.cpp" line="91"/>
         <source>%1%</source>
-        <translation type="unfinished"></translation>
+        <translation>%1%</translation>
     </message>
 </context>
 </TS>

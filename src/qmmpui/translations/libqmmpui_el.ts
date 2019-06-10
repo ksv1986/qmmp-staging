@@ -291,7 +291,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="170"/>
         <source>Read tags while loading a playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανάγνωση των ετικετών κατά την φόρτωση μιας λίστας αναπαραγωγής</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="180"/>
@@ -620,7 +620,7 @@
     <message>
         <location filename="../configdialog.cpp" line="336"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Ελληνικά</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="337"/>
@@ -635,7 +635,7 @@
     <message>
         <location filename="../configdialog.cpp" line="339"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ινδονησιακά</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="340"/>
@@ -675,7 +675,7 @@
     <message>
         <location filename="../configdialog.cpp" line="347"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Σερβικά</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="348"/>
@@ -713,7 +713,7 @@
     <message>
         <location filename="../forms/covereditor.ui" line="22"/>
         <source>Image source:</source>
-        <translation type="unfinished"></translation>
+        <translation>Πηγή εικόνας:</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
@@ -728,17 +728,17 @@
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
         <source>Save as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση ως...</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="33"/>
         <source>External file</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξωτερικό αρχείο</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="34"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Ετικέτα</translation>
     </message>
 </context>
 <context>
@@ -762,7 +762,7 @@
     <message>
         <location filename="../coverviewer.cpp" line="81"/>
         <source>Open Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Άνοιγμα εικόνας</translation>
     </message>
 </context>
 <context>
@@ -880,17 +880,17 @@
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>Sample size</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγεθος δειγματοληψίας</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>bits</source>
-        <translation type="unfinished"></translation>
+        <translation>bit</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="274"/>
         <source>Format name</source>
-        <translation type="unfinished"></translation>
+        <translation>Όνομα τύπου</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
@@ -900,7 +900,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
@@ -1029,17 +1029,17 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Sample Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Ρυθμός δειγματοληψίας</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Number of Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριθμός καναλιών</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Sample Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγεθος δειγματοληψίας</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
@@ -1054,7 +1054,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="66"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγεθος αρχείου</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
@@ -1089,7 +1089,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Artist - [Year] Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Καλλιτέχνης - [Έτος] Δίσκος</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="56"/>

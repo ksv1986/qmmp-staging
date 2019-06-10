@@ -7,7 +7,7 @@
         <location filename="../converter.cpp" line="129"/>
         <location filename="../converter.cpp" line="229"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Afgebroken</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="144"/>
@@ -18,17 +18,17 @@
     <message>
         <location filename="../converter.cpp" line="179"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met converteren</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="240"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met omzetten</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="278"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Afgerond</translation>
     </message>
 </context>
 <context>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio converteren</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stoppen</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="108"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="198"/>
         <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopie creëren</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="129"/>
@@ -103,7 +103,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met wachten</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="196"/>
@@ -123,12 +123,12 @@
     <message>
         <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan &apos;%1&apos; niet uitvoeren: programma niet aangetroffen.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Het proces &apos;%1&apos; is afgerond, maar met fouten.</translation>
     </message>
 </context>
 <context>
@@ -169,7 +169,7 @@
     <message>
         <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Super+C</translation>
     </message>
 </context>
 <context>

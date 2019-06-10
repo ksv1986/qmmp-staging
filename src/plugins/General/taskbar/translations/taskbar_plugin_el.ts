@@ -6,22 +6,22 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="28"/>
         <source>Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Πρόσθετο γραμμής εργασιών</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="49"/>
         <source>About Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Σχετικά με το πρόσθετο γραμμής εργασιών</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="50"/>
         <source>Qmmp Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Πρόσθετο γραμμής εργασιών Qmmp</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="51"/>
         <source>This plugin adds support for progress indicator in the Windows taskbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτό το πρόσθετο προσφέρει υποστήριξη για την εμφάνιση προόδου στην γραμμή εργασιών των Windows</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="52"/>

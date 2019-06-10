@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="32"/>
         <source>Qt Multimedia Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt-multimediaplug-in</translation>
     </message>
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="57"/>
         <source>About Qt Multimedia Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de Qt-multimedia-uitvoerplug-in</translation>
     </message>
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="58"/>
         <source>Qmmp Qt Multimedia Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt-multimedia-uitvoerplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="59"/>
         <source>Written by: Ivan Ponomarev &lt;ivantrue@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Auteur: Ivan Ponomarev &lt;ivantrue@gmail.com&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Qt Multimedia Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>

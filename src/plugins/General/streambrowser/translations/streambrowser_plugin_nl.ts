@@ -6,12 +6,12 @@
     <message>
         <location filename="../editstreamdialog.ui" line="14"/>
         <source>Edit Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Stream bewerken</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="34"/>
         <source>URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
         <source>Genre:</source>
-        <translation type="unfinished"></translation>
+        <translation>Genre:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="64"/>
         <source>Bitrate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitsnelheid:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="74"/>
@@ -39,12 +39,12 @@
     <message>
         <location filename="../streambrowser.cpp" line="33"/>
         <source>Add Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Stream toevoegen</translation>
     </message>
     <message>
         <location filename="../streambrowser.cpp" line="35"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../streamwindow.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter:</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="47"/>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../streamwindow.cpp" line="138"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Creëren</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="140"/>
@@ -175,7 +175,7 @@
     <message>
         <location filename="../streamwindow.cpp" line="273"/>
         <source>Edit Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Stream bewerken</translation>
     </message>
 </context>
 </TS>

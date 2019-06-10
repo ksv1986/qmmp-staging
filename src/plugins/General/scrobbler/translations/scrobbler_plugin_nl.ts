@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="20"/>
         <source>Last.fm</source>
-        <translation type="unfinished"></translation>
+        <translation>Last.fm</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="31"/>
@@ -48,7 +48,7 @@
         <location filename="../settingsdialog.ui" line="117"/>
         <location filename="../settingsdialog.ui" line="173"/>
         <source>Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Controleren</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="63"/>
@@ -60,34 +60,34 @@
     <message>
         <location filename="../settingsdialog.ui" line="73"/>
         <source>Libre.fm</source>
-        <translation type="unfinished"></translation>
+        <translation>Libre.fm</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="129"/>
         <source>ListenBrainz</source>
-        <translation type="unfinished"></translation>
+        <translation>ListenBrainz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>
         <location filename="../settingsdialog.cpp" line="152"/>
         <location filename="../settingsdialog.cpp" line="217"/>
         <source>Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Bericht</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="127"/>
         <source>1. Wait for browser startup</source>
-        <translation type="unfinished"></translation>
+        <translation>1. Wacht tot de browser is opgestart</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="128"/>
         <source>2. Allow Qmmp to scrobble tracks to your %1 account</source>
-        <translation type="unfinished"></translation>
+        <translation>2. Sta toe dat Qmmp nummers scrobbelt naar je %1-account</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>3. Press &quot;OK&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Druk op &apos;Oké&apos;</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="134"/>
@@ -104,28 +104,28 @@
         <location filename="../settingsdialog.cpp" line="172"/>
         <location filename="../settingsdialog.cpp" line="227"/>
         <source>Network error</source>
-        <translation type="unfinished"></translation>
+        <translation>Netwerkfout</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="138"/>
         <location filename="../settingsdialog.cpp" line="176"/>
         <source>Unable to register new session</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan nieuwe sessie niet registreren</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="152"/>
         <source>New session has been received successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieuwe sessie is geregistreerd</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="217"/>
         <source>Permission granted</source>
-        <translation type="unfinished"></translation>
+        <translation>Machtiging verleend</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="231"/>
         <source>Permission denied</source>
-        <translation type="unfinished"></translation>
+        <translation>Machtiging geweigerd</translation>
     </message>
 </context>
 </TS>

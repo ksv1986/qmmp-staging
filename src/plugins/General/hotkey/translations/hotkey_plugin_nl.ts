@@ -77,7 +77,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stoppen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="49"/>
         <source>Mute</source>
-        <translation type="unfinished"></translation>
+        <translation>Dempen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="111"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="111"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
-        <translation type="unfinished"></translation>
+        <translation>De toetscombinatie &apos;%1&apos; is al in gebruik</translation>
     </message>
 </context>
 </TS>

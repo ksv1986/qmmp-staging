@@ -6,22 +6,22 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="28"/>
         <source>Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Taakbalkplug-in</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="49"/>
         <source>About Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de Taakbalkplug-in</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="50"/>
         <source>Qmmp Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Taakbalkplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="51"/>
         <source>This plugin adds support for progress indicator in the Windows taskbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Deze plug-in voegt ondersteuning toe voor de voortgangsbalk van de Windows-taakbalk</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="52"/>

@@ -46,17 +46,17 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>
         <source>Print volume level</source>
-        <translation type="unfinished"></translation>
+        <translation>Afspeelvolume printen</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="80"/>
         <source>Mute/Restore volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume dempen/herstellen</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="81"/>
         <source>Print mute status</source>
-        <translation type="unfinished"></translation>
+        <translation>Dempstatus printen</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="82"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="85"/>
         <source>Show main window</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoofdvenster tonen</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="86"/>
@@ -109,12 +109,12 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="420"/>
         <source>Start qmmp with the specified user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp starten met opgegeven uiterlijk</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="421"/>
         <source>List all available user interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle varianten van uiterlijk tonen</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="422"/>
@@ -134,23 +134,23 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="426"/>
         <source>Home page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Website: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="427"/>
         <source>Development page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ontwikkelaarspagina: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="428"/>
         <source>Bug tracker: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Bugtracker: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="135"/>
         <location filename="../qmmpstarter.cpp" line="433"/>
         <source>Command Line Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Opdrachtregelhulp</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="446"/>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="451"/>
         <source>Qmmp Version</source>
-        <translation type="unfinished"></translation>
+        <translation>QMMP-versie</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="468"/>

@@ -44,7 +44,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="65"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="68"/>
         <source>FPS</source>
-        <translation type="unfinished"></translation>
+        <translation>FPS</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="69"/>
@@ -80,7 +80,7 @@
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="74"/>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
@@ -123,12 +123,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Video:</source>
-        <translation type="unfinished"></translation>
+        <translation>Video:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>Audio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
@@ -143,12 +143,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
         <source>Extra options:</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra opties:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>
         <source>Extra command line options</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra opdrachtregelopties</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>

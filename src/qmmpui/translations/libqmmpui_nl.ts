@@ -217,7 +217,7 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Bovenliggende map</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
@@ -291,7 +291,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="170"/>
         <source>Read tags while loading a playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Tags uitlezen tijdens laden van afspeellijst</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="180"/>
@@ -349,7 +349,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="342"/>
         <source>Look and Feel</source>
-        <translation type="unfinished"></translation>
+        <translation>Uiterlijk</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="348"/>
@@ -460,7 +460,7 @@
         <location filename="../forms/configdialog.ui" line="693"/>
         <location filename="../forms/configdialog.ui" line="738"/>
         <source>dB</source>
-        <translation type="unfinished"></translation>
+        <translation>dB</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="706"/>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="807"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="823"/>
@@ -490,17 +490,17 @@
     <message>
         <location filename="../forms/configdialog.ui" line="840"/>
         <source>Volume adjustment step:</source>
-        <translation type="unfinished"></translation>
+        <translation>Volumestap:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="774"/>
         <source>Output bit depth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitdiepte van uitvoer:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="781"/>
         <source>Use dithering</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruis gebruiken</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="64"/>
@@ -535,7 +535,7 @@
     <message>
         <location filename="../configdialog.cpp" line="210"/>
         <source>Engines</source>
-        <translation type="unfinished"></translation>
+        <translation>Aandrijvingen</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="221"/>
@@ -555,7 +555,7 @@
     <message>
         <location filename="../configdialog.cpp" line="254"/>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitvoer</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="265"/>
@@ -575,137 +575,137 @@
     <message>
         <location filename="../configdialog.cpp" line="327"/>
         <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugees (Brazilië)</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="328"/>
         <source>Chinese Simplified</source>
-        <translation type="unfinished"></translation>
+        <translation>Chinees (Vereenvoudigd)</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="329"/>
         <source>Chinese Traditional</source>
-        <translation type="unfinished"></translation>
+        <translation>Chinees (Traditioneel)</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="330"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Tsjechisch</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="331"/>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>Nederlands</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="332"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Engels</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="333"/>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Frans</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="334"/>
         <source>Galician</source>
-        <translation type="unfinished"></translation>
+        <translation>Galicisch</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="335"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Duits</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="336"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Grieks</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="337"/>
         <source>Hebrew</source>
-        <translation type="unfinished"></translation>
+        <translation>Hebreeuws</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="338"/>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Hongaars</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="339"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesisch</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="340"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation>Italiaans</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="341"/>
         <source>Japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Japans</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="342"/>
         <source>Kazakh</source>
-        <translation type="unfinished"></translation>
+        <translation>Kazachs</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="343"/>
         <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Litouws</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="344"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>Pools</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="345"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugees</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="346"/>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation>Russisch</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="347"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Servisch</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="348"/>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation>Slowaaks</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="349"/>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>Spaans</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="350"/>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation>Turks</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="351"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Oekraïens</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="352"/>
         <source>Serbian (Ijekavian)</source>
-        <translation type="unfinished"></translation>
+        <translation>Servisch (Ijekavisch)</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="353"/>
         <source>Serbian (Ekavian)</source>
-        <translation type="unfinished"></translation>
+        <translation>Servisch (Ekavisch)</translation>
     </message>
 </context>
 <context>
@@ -713,7 +713,7 @@
     <message>
         <location filename="../forms/covereditor.ui" line="22"/>
         <source>Image source:</source>
-        <translation type="unfinished"></translation>
+        <translation>Afbeeldingsbron:</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
@@ -728,17 +728,17 @@
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
         <source>Save as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Opslaan als...</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="33"/>
         <source>External file</source>
-        <translation type="unfinished"></translation>
+        <translation>Extern bestand</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="34"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag</translation>
     </message>
 </context>
 <context>
@@ -762,7 +762,7 @@
     <message>
         <location filename="../coverviewer.cpp" line="81"/>
         <source>Open Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Afbeelding openen</translation>
     </message>
 </context>
 <context>
@@ -790,12 +790,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="164"/>
         <source>%1/%2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="210"/>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoes</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="240"/>
@@ -860,7 +860,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
@@ -870,7 +870,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="271"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="272"/>
@@ -880,17 +880,17 @@
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>Sample size</source>
-        <translation type="unfinished"></translation>
+        <translation>Samplegrootte</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>bits</source>
-        <translation type="unfinished"></translation>
+        <translation>bits</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="274"/>
         <source>Format name</source>
-        <translation type="unfinished"></translation>
+        <translation>Opmaak</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
@@ -900,7 +900,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
@@ -923,7 +923,7 @@
     <message>
         <location filename="../forms/jumptotrackdialog.ui" line="37"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter:</translation>
     </message>
     <message>
         <location filename="../forms/jumptotrackdialog.ui" line="73"/>
@@ -945,23 +945,23 @@
     <message>
         <location filename="../jumptotrackdialog.cpp" line="58"/>
         <source>Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Q</translation>
     </message>
     <message>
         <location filename="../jumptotrackdialog.cpp" line="59"/>
         <source>J</source>
-        <translation type="unfinished"></translation>
+        <translation>J</translation>
     </message>
     <message>
         <location filename="../jumptotrackdialog.cpp" line="60"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../jumptotrackdialog.cpp" line="89"/>
         <location filename="../jumptotrackdialog.cpp" line="136"/>
         <source>Unqueue</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwijderen uit wachtrij</translation>
     </message>
 </context>
 <context>
@@ -1029,17 +1029,17 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Sample Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Samplesnelheid</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Number of Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal kanalen</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Sample Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Samplegrootte</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
@@ -1049,12 +1049,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Decoder</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="66"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsgrootte</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
@@ -1089,12 +1089,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Artist - [Year] Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Artiest - [Jaar] Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="56"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam van bovenliggende map</translation>
     </message>
 </context>
 <context>
@@ -1137,12 +1137,12 @@
     <message>
         <location filename="../playlisttrack.cpp" line="249"/>
         <source>Streams</source>
-        <translation type="unfinished"></translation>
+        <translation>Streams</translation>
     </message>
     <message>
         <location filename="../playlisttrack.cpp" line="254"/>
         <source>Empty group</source>
-        <translation type="unfinished"></translation>
+        <translation>Lege groep</translation>
     </message>
 </context>
 <context>
@@ -1196,7 +1196,7 @@
     <message>
         <location filename="../forms/tageditor.ui" line="143"/>
         <source>Genre:</source>
-        <translation type="unfinished"></translation>
+        <translation>Genre:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="169"/>
@@ -1208,7 +1208,7 @@
         <location filename="../forms/tageditor.ui" line="228"/>
         <location filename="../forms/tageditor.ui" line="260"/>
         <source>?</source>
-        <translation type="unfinished"></translation>
+        <translation>?</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="203"/>
@@ -1265,7 +1265,7 @@
     <message>
         <location filename="../uihelper.cpp" line="148"/>
         <source>Select one or more files to play</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies één of meer af te spelen bestanden</translation>
     </message>
     <message>
         <location filename="../uihelper.cpp" line="156"/>

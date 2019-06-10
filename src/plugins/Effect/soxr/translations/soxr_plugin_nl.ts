@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="30"/>
         <source>SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>SoX-hersamplingplug-in</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="51"/>
         <source>About SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de SoX-hersamplingplug-in</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="52"/>
         <source>Qmmp SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>SoX-hersamplingplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="53"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Sample Rate Converter Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Sample Rate Converter Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="20"/>
@@ -39,17 +39,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="40"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwaliteit:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Quick</source>
-        <translation type="unfinished"></translation>
+        <translation>Snel</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="35"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
@@ -59,12 +59,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoog</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
         <source>Very High</source>
-        <translation type="unfinished"></translation>
+        <translation>Erg hoog</translation>
     </message>
 </context>
 </TS>

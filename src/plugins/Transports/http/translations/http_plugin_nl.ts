@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>KB</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
@@ -69,12 +69,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="137"/>
         <source>User Agent:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruikersagent:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="151"/>
         <source>Change User Agent</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruikersagent aanpassen</translation>
     </message>
 </context>
 </TS>

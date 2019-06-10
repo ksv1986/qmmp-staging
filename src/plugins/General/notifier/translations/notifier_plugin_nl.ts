@@ -58,7 +58,7 @@
         <location filename="../settingsdialog.ui" line="78"/>
         <location filename="../settingsdialog.ui" line="279"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="85"/>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="361"/>
         <source>Playback resume notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Melding bij voortzetten van afspelen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="368"/>
@@ -103,12 +103,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="375"/>
         <source>Disable notifications when another application is in the Full Screen Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Meldingen uitschakelen als een andere toepassing in volledig scherm-modus is</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="378"/>
         <source>Disable for full screen windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitschakelen bij volledig scherm-vensters</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="388"/>

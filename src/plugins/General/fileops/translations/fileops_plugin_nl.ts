@@ -18,7 +18,7 @@
     <message>
         <location filename="../fileops.cpp" line="132"/>
         <source>Move Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestanden verplaatsen</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="133"/>
@@ -37,7 +37,7 @@
         <location filename="../fileops.cpp" line="150"/>
         <location filename="../fileops.cpp" line="240"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stoppen</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="195"/>
@@ -47,17 +47,17 @@
     <message>
         <location filename="../fileops.cpp" line="239"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met verplaatsen</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="272"/>
         <source>Moving file %1/%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met verplaatsen: %1/%2</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="110"/>
         <source>Remove Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestanden verwijderen</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="111"/>
@@ -180,7 +180,7 @@
         <location filename="../settingsdialog.cpp" line="53"/>
         <location filename="../settingsdialog.cpp" line="133"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Verplaatsen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="137"/>

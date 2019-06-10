@@ -21,7 +21,7 @@
     <message>
         <location filename="../statusoption.cpp" line="94"/>
         <source>Syntax:</source>
-        <translation type="unfinished"></translation>
+        <translation>Syntax:</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="95"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../statusoption.cpp" line="96"/>
         <source>%a - album</source>
-        <translation type="unfinished"></translation>
+        <translation>%a - album</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="97"/>
         <source>%aa - album artist</source>
-        <translation type="unfinished"></translation>
+        <translation>%aa - albumartiest</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="98"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../statusoption.cpp" line="101"/>
         <source>%g - genre</source>
-        <translation type="unfinished"></translation>
+        <translation>%g - genre</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="102"/>
@@ -96,37 +96,37 @@
     <message>
         <location filename="../statusoption.cpp" line="109"/>
         <source>%{bitrate} - bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>%{bitrate} - bitsnelheid</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="110"/>
         <source>%{samplerate} - sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>%{samplerate} - samplesnelheid</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="111"/>
         <source>%{channels} - number of channels</source>
-        <translation type="unfinished"></translation>
+        <translation>%{channels} - aantal kanalen</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="112"/>
         <source>%{samplesize} - bits per sample</source>
-        <translation type="unfinished"></translation>
+        <translation>%{samplesize} - bits per sample</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="113"/>
         <source>%{format} - format name</source>
-        <translation type="unfinished"></translation>
+        <translation>%{format} - naaw van bestandformaat</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="114"/>
         <source>%{decoder} - decoder name</source>
-        <translation type="unfinished"></translation>
+        <translation>%{decoder} - naam van decoder</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="115"/>
         <source>%{filesize} - file size</source>
-        <translation type="unfinished"></translation>
+        <translation>%{filesize} - bestandsgrootte</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="116"/>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../statusoption.cpp" line="117"/>
         <source>%dir(n) - directory name located on n levels above</source>
-        <translation type="unfinished"></translation>
+        <translation>%dir(n) - mapnaam, x aantal bovenliggend</translation>
     </message>
 </context>
 </TS>

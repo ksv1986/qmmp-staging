@@ -4,6 +4,9 @@
         <file>32x32/qmmp.png</file>
         <file>48x48/qmmp.png</file>
         <file>56x56/qmmp.png</file>
+        <file>64x64/qmmp.png</file>
+        <file>128x128/qmmp.png</file>
+        <file>256x256/qmmp.png</file>
         <file>scalable/qmmp.svgz</file>
     </qresource>
 </RCC>

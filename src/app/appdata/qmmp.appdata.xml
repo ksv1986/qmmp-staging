@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>qmmp.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>Qmmp</name>
+  <name xml:lang="ru">Плеер Qmmp</name>
+  <name xml:lang="sr">Кумп</name>
+  <name xml:lang="sr@Ijekavian">Кумп</name>
+  <summary>Qt-based Multimedia Player</summary>
+  <summary xml:lang="cs">Přehrávač hudby založený na Qt</summary>
+  <summary xml:lang="de">Qt-basierter Audio-Player</summary>
+  <summary xml:lang="el">Αναπαραγωγέας πολυμέσων βασισμένος στην Qt</summary>
+  <summary xml:lang="es">Reproductor de Medios basado sobre Qt</summary>
+  <summary xml:lang="fi">Qt-pohjainen multimediasoitin</summary>
+  <summary xml:lang="fr">Lecteur multimédia en Qt</summary>
+  <summary xml:lang="gl_ES">Reproductor multimedia basado en Qt</summary>
+  <summary xml:lang="he">נגן מולטימדיה מבוסס Qt</summary>
+  <summary xml:lang="id">Pemain Multimedia Berbasis-Qt</summary>
+  <summary xml:lang="it">Riproduttore audio basato su Qt (Qt-based Multimedia Player)</summary>
+  <summary xml:lang="ja">Qt を用いたマルティミディアプレイヤー</summary>
+  <summary xml:lang="pl_PL">Odtwarzacz multimedialny oparty na Qt</summary>
+  <summary xml:lang="pt">Reprodutor multimédia em Qt</summary>
+  <summary xml:lang="pt_BR">Reprodutor multimídia em Qt</summary>
+  <summary xml:lang="ru">Медиа-проигрыватель на базе Qt</summary>
+  <summary xml:lang="sr">Кут медија плејер</summary>
+  <summary xml:lang="sr@Ijekavian">Кут медија плејер</summary>
+  <summary xml:lang="sr@ijekavianlatin">Qt medija plejer</summary>
+  <summary xml:lang="sr@latin">Qt medija plejer</summary>
+  <summary xml:lang="tr">Qt tabanlı Çokluortam Oynatıcı</summary>
+  <summary xml:lang="uk">Медіа-програвач на базі Qt</summary>
+  <summary xml:lang="zh_CN">基于Qt的多媒体播放器</summary>
+  <summary xml:lang="zh_TW">基于Qt的多媒體播放器</summary>
+  <description>
+    <p>
+	  Qmmp is a cross-platform audio-player, written with the help of the Qt library.
+	  It has two different user interfaces, Winamp/XMMS skins support and other features provided by plugins.
+    </p>
+    <p xml:lang="ru">
+	  Qmmp является кросс-платформенным аудио-плеером, написанным с использованием библиотеки Qt.
+	  Плеер имеет два различных пользовательских интерфейса, поддержку обложек Winamp/XMMS и другие возможности, предоставляемые модулями.
+    </p>
+  </description>
+  <categories>
+    <category>AudioVideo</category>
+    <category>Audio</category>
+  </categories>
+  <keywords>
+    <keyword>audio</keyword>
+    <keyword>multimedia</keyword>
+    <keyword>video</keyword>
+    <keyword xml:lang="es">audio</keyword>
+    <keyword xml:lang="es">multimedios</keyword>
+    <keyword xml:lang="es">video</keyword>
+    <keyword xml:lang="fr">audio</keyword>
+    <keyword xml:lang="fr">lecteur</keyword>
+    <keyword xml:lang="fr">multimédia</keyword>
+    <keyword xml:lang="fr">vidéo</keyword>
+    <keyword xml:lang="ru">аудио</keyword>
+    <keyword xml:lang="ru">мультимедиа</keyword>
+    <keyword xml:lang="ru">видео</keyword>
+  </keywords>
+  <url type="bugtracker">https://sourceforge.net/p/qmmp-dev/tickets/</url>
+  <url type="donation">http://qmmp.ylsoftware.com/index.php</url>
+  <url type="help">https://sourceforge.net/p/qmmp-dev/tickets/</url>
+  <url type="homepage">http://qmmp.ylsoftware.com/index.php</url>
+  <url type="translate">https://www.transifex.com/qmmp-development-team/</url>
+  <project_group>none</project_group>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">http://qmmp.ylsoftware.com/images/qmmp-0.9_full_2.png</image>  
+    </screenshot>
+    <screenshot>
+      <image type="source">https://screenshots.debian.net/screenshots/000/014/320/large.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">http://qmmp.ylsoftware.com/images/qmmp-0.9_full_3.png</image>
+    </screenshot>
+    <screenshot>
+	  <image type="source">http://qmmp.ylsoftware.com/images/qmmp-0.9_full_4.png</image>
+    </screenshot>
+  </screenshots>
+  <launchable type="desktop-id">qmmp.desktop</launchable>
+  <update_contact>forkotov02_AT_ya.ru</update_contact>
+  <translation type="qt">qmmp</translation>
+  <developer_name>Qmmp Development Team</developer_name>
+</component>

@@ -982,50 +982,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="86"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Add Column</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="87"/>
+        <location filename="../playlistheader.cpp" line="91"/>
         <source>Edit Column</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="92"/>
         <source>Show Queue/Protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="94"/>
         <source>Auto-resize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="93"/>
+        <location filename="../playlistheader.cpp" line="97"/>
         <source>Alignment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="94"/>
+        <location filename="../playlistheader.cpp" line="98"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="95"/>
+        <location filename="../playlistheader.cpp" line="99"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="96"/>
+        <location filename="../playlistheader.cpp" line="100"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="106"/>
+        <location filename="../playlistheader.cpp" line="110"/>
         <source>Remove Column</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1390,17 +1390,17 @@
 <context>
     <name>TextScroller</name>
     <message>
-        <location filename="../textscroller.cpp" line="57"/>
+        <location filename="../textscroller.cpp" line="61"/>
         <source>Autoscroll Songname</source>
         <translation>Számok címének görgetése</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="58"/>
+        <location filename="../textscroller.cpp" line="62"/>
         <source>Transparent Background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="128"/>
+        <location filename="../textscroller.cpp" line="132"/>
         <source>Buffering: %1%</source>
         <translation type="unfinished"></translation>
     </message>

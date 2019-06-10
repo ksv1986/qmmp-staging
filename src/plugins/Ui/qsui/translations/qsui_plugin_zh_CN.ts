@@ -482,7 +482,7 @@
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="283"/>
+        <location filename="../actionmanager.cpp" line="289"/>
         <source>Toolbar</source>
         <translation>工具栏</translation>
     </message>
@@ -516,64 +516,64 @@
 <context>
     <name>Equalizer</name>
     <message>
-        <location filename="../equalizer.cpp" line="39"/>
+        <location filename="../equalizer.cpp" line="43"/>
         <source>Equalizer</source>
         <translation>均衡器</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="48"/>
+        <location filename="../equalizer.cpp" line="52"/>
         <source>Enable equalizer</source>
         <translation>启用均衡器</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="54"/>
+        <location filename="../equalizer.cpp" line="58"/>
         <source>Preset:</source>
         <translation>预设：</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="62"/>
+        <location filename="../equalizer.cpp" line="66"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="66"/>
+        <location filename="../equalizer.cpp" line="70"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="70"/>
+        <location filename="../equalizer.cpp" line="74"/>
         <source>Reset</source>
         <translation>重置</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="83"/>
+        <location filename="../equalizer.cpp" line="87"/>
         <source>Preamp</source>
         <translation>前置放大器</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="100"/>
-        <location filename="../equalizer.cpp" line="197"/>
+        <location filename="../equalizer.cpp" line="104"/>
+        <location filename="../equalizer.cpp" line="201"/>
         <source>%1dB</source>
         <translation>%1分贝</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="102"/>
-        <location filename="../equalizer.cpp" line="195"/>
+        <location filename="../equalizer.cpp" line="106"/>
+        <location filename="../equalizer.cpp" line="199"/>
         <source>+%1dB</source>
         <translation>+%1分贝</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="150"/>
+        <location filename="../equalizer.cpp" line="154"/>
         <source>preset</source>
         <translation>预设</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="220"/>
+        <location filename="../equalizer.cpp" line="224"/>
         <source>Overwrite Request</source>
         <translation>覆盖请求</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="221"/>
+        <location filename="../equalizer.cpp" line="225"/>
         <source>Preset &apos;%1&apos; already exists. Overwrite?</source>
         <translation>预设&apos;%1&apos;已经存在。是否覆盖？</translation>
     </message>
@@ -999,50 +999,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="65"/>
+        <location filename="../playlistheader.cpp" line="69"/>
         <source>Add Column</source>
         <translation>增加n列</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="66"/>
+        <location filename="../playlistheader.cpp" line="70"/>
         <source>Edit Column</source>
         <translation>编辑n列</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="67"/>
+        <location filename="../playlistheader.cpp" line="71"/>
         <source>Show Queue/Protocol</source>
         <translation>显示排队/协议</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="69"/>
+        <location filename="../playlistheader.cpp" line="73"/>
         <source>Auto-resize</source>
         <translation>自动调整大小</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="72"/>
+        <location filename="../playlistheader.cpp" line="76"/>
         <source>Alignment</source>
         <translation>对齐</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="73"/>
+        <location filename="../playlistheader.cpp" line="77"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>左对齐</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="74"/>
+        <location filename="../playlistheader.cpp" line="78"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>右对齐</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="75"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>居中</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="85"/>
+        <location filename="../playlistheader.cpp" line="89"/>
         <source>Remove Column</source>
         <translation>移除n列</translation>
     </message>

@@ -71,7 +71,7 @@
     </message>
     <message>
         <location filename="../lyricswindow.cpp" line="76"/>
-        <location filename="../lyricswindow.cpp" line="209"/>
+        <location filename="../lyricswindow.cpp" line="207"/>
         <source>Done</source>
         <translation>Feito</translation>
     </message>
@@ -87,18 +87,18 @@
     </message>
     <message>
         <location filename="../lyricswindow.cpp" line="130"/>
-        <location filename="../lyricswindow.cpp" line="165"/>
+        <location filename="../lyricswindow.cpp" line="163"/>
         <source>Not found</source>
         <translation>Non atopada</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="151"/>
-        <location filename="../lyricswindow.cpp" line="178"/>
+        <location filename="../lyricswindow.cpp" line="150"/>
+        <location filename="../lyricswindow.cpp" line="176"/>
         <source>Receiving</source>
         <translation>Recibindo</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="179"/>
+        <location filename="../lyricswindow.cpp" line="177"/>
         <source>Lyrics: %1 - %2</source>
         <translation>Letras: %1 - %2</translation>
     </message>

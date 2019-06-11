@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -123,6 +123,11 @@ bool OutputOSS4::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat form
     int chan = map.count();
     switch (format)
     {
+#ifdef AFMT_FLOAT
+    case Qmmp::PCM_FLOAT:
+        p = AFMT_FLOAT;
+        break;
+#endif
     case Qmmp::PCM_S32LE:
         p = AFMT_S32_LE;
         break;

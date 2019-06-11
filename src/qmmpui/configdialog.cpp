@@ -67,7 +67,9 @@ ConfigDialog::ConfigDialog (QWidget *parent) : QDialog (parent)
     m_ui->bitDepthComboBox->addItem("16", Qmmp::PCM_S16LE);
     m_ui->bitDepthComboBox->addItem("24", Qmmp::PCM_S24LE);
     m_ui->bitDepthComboBox->addItem("32", Qmmp::PCM_S32LE);
+#ifndef Q_OS_WIN
     m_ui->bitDepthComboBox->addItem("32 (float)", Qmmp::PCM_FLOAT);
+#endif
     readSettings();
     loadPluginsInfo();
     loadLanguages();

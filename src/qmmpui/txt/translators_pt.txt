@@ -23,6 +23,7 @@ Checo:
     Karel Volný <kvolny@redhat.com>
 
 Holandês:
+    Heimen Stoffels
     Ronald Uitermark <ronald645@gmail.com>
 
 Finlandês:

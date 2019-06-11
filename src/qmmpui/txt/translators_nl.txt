@@ -23,6 +23,7 @@ Tsjechisch:
     Karel Volný <kvolny@redhat.com>
 
 Nederlands:
+    Heimen Stoffels
     Ronald Uitermark <ronald645@gmail.com>
 
 Fins:

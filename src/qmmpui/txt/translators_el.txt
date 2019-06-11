@@ -23,6 +23,7 @@
     Karel Volný <kvolny@redhat.com>
 
 Ολλανδικά
+    Heimen Stoffels
     Ronald Uitermark <ronald645@gmail.com>
 
 Φιλανδικά:

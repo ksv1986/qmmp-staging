@@ -1496,7 +1496,7 @@ Version 1.3.2
 * fixed file type determination by content in the mpeg plugin
 
 Version 1.3.3
-* added float output support for PulseAudio
+* added float output support for PulseAudio, ALSA and OSS4
 * added AppStream information (Joel Barrios Dueñas)
 * added more icon sizes
 * improved channel conversion

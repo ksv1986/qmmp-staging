@@ -55,8 +55,8 @@ void EffectBs2bFactory::showAbout(QWidget *parent)
                         .arg("<a href=\"http://bs2b.sourceforge.net/\">http://bs2b.sourceforge.net/</a>")+
                         QString("<p>" + tr("Compiled against libbs2b-%1") + "</p>").arg(BS2B_VERSION_STR)+
                         "<p>"+tr("Developers:")+"<br>"+
-                        tr("Ilya Kotov <forkotov02@ya.ru>")+"<br>"+
-                        tr("Sebastian Pipping <sebastian@pipping.org>")+"</p>");
+                        tr("Ilya Kotov &lt;forkotov02@ya.ru&gt;")+"<br>"+
+                        tr("Sebastian Pipping &lt;sebastian@pipping.org&gt;")+"</p>");
 }
 
 QString EffectBs2bFactory::translation() const

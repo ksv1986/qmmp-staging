@@ -48,7 +48,7 @@ void KdeNotifyFactory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About KDE Notification Plugin"),
                         tr("KDE notification plugin for Qmmp") + "<br>"
-                                                                 "Artur Guzik <a.guzik88@gmail.com>");
+                                                                 "Artur Guzik &lt;a.guzik88@gmail.com&gt;");
 }
 
 QString KdeNotifyFactory::translation() const

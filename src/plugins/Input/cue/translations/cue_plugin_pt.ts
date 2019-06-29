@@ -14,17 +14,17 @@
         <translation>Ficheiros CUE</translation>
     </message>
     <message>
-        <location filename="../decodercuefactory.cpp" line="91"/>
+        <location filename="../decodercuefactory.cpp" line="85"/>
         <source>About CUE Audio Plugin</source>
         <translation>Sobre o suplemento CUE Audio</translation>
     </message>
     <message>
-        <location filename="../decodercuefactory.cpp" line="92"/>
+        <location filename="../decodercuefactory.cpp" line="86"/>
         <source>Qmmp CUE Audio Plugin</source>
         <translation>Suplemento Qmmp CUE Audio</translation>
     </message>
     <message>
-        <location filename="../decodercuefactory.cpp" line="93"/>
+        <location filename="../decodercuefactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

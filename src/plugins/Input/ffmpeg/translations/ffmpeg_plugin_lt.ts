@@ -4,32 +4,32 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="259"/>
+        <location filename="../decoderffmpegfactory.cpp" line="291"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>Apie FFmpeg įskiepį</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="260"/>
+        <location filename="../decoderffmpegfactory.cpp" line="292"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>FFmpeg Qmmp audio įskiepis</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="261"/>
+        <location filename="../decoderffmpegfactory.cpp" line="293"/>
         <source>Compiled against:</source>
         <translation>Sukompiliuota su:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="274"/>
+        <location filename="../decoderffmpegfactory.cpp" line="306"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Sukūrė: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="125"/>
+        <location filename="../decoderffmpegfactory.cpp" line="128"/>
         <source>FFmpeg Plugin</source>
         <translation>FFmpeg įskiepis</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="127"/>
+        <location filename="../decoderffmpegfactory.cpp" line="130"/>
         <source>FFmpeg Formats</source>
         <translation>FFmpeg bylų tipai</translation>
     </message>

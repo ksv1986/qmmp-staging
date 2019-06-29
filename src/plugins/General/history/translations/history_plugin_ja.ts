@@ -151,22 +151,22 @@
         <translation>ジャンル</translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="118"/>
+        <location filename="../historywindow.cpp" line="124"/>
         <source>dd MMMM yyyy</source>
         <translation>yyyy年MM月dd日</translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="119"/>
+        <location filename="../historywindow.cpp" line="125"/>
         <source>hh:mm:ss</source>
         <translation>hh:mm:ss</translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="193"/>
+        <location filename="../historywindow.cpp" line="200"/>
         <source>MM-yyyy</source>
         <translation>yyyy年MM月</translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="194"/>
+        <location filename="../historywindow.cpp" line="201"/>
         <source>dd MMMM</source>
         <translation>MM月dd日</translation>
     </message>

@@ -4,12 +4,12 @@
 <context>
     <name>DecoderWavPackFactory</name>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="37"/>
+        <location filename="../decoderwavpackfactory.cpp" line="38"/>
         <source>WavPack Plugin</source>
         <translation>Вавпак прикључак</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="39"/>
+        <location filename="../decoderwavpackfactory.cpp" line="40"/>
         <source>WavPack Files</source>
         <translation>Вавпак фајлови</translation>
     </message>
@@ -37,12 +37,12 @@
 <context>
     <name>WavPackMetaDataModel</name>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="73"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="70"/>
         <source>Ratio</source>
         <translation>Размера</translation>
     </message>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="74"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
         <source>Version</source>
         <translation>Издање</translation>
     </message>

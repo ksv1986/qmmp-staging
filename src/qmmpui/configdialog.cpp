@@ -69,6 +69,8 @@ ConfigDialog::ConfigDialog (QWidget *parent) : QDialog (parent)
 #ifndef Q_OS_WIN
     m_ui->bitDepthComboBox->addItem("32 (float)", Qmmp::PCM_FLOAT);
 #endif
+    m_ui->proxyTypeComboBox->addItem(tr("HTTP"), QmmpSettings::HTTP_PROXY);
+    m_ui->proxyTypeComboBox->addItem(tr("SOCKS5"), QmmpSettings::SOCKS5_PROXY);
     readSettings();
     loadPluginsInfo();
     loadLanguages();
@@ -131,6 +133,7 @@ void ConfigDialog::readSettings()
     m_ui->enableProxyCheckBox->setChecked(gs->isProxyEnabled());
     m_ui->authProxyCheckBox->setChecked(gs->useProxyAuth());
     m_ui->hostLineEdit->setText(gs->proxy().host());
+    m_ui->proxyTypeComboBox->setCurrentIndex(m_ui->proxyTypeComboBox->findData(gs->proxyType()));
     if (gs->proxy().port(0))
         m_ui->portLineEdit->setText(QString::number(gs->proxy().port(0)));
     m_ui->proxyUserLineEdit->setText(gs->proxy().userName());
@@ -138,6 +141,7 @@ void ConfigDialog::readSettings()
 
     m_ui->hostLineEdit->setEnabled(m_ui->enableProxyCheckBox->isChecked());
     m_ui->portLineEdit->setEnabled(m_ui->enableProxyCheckBox->isChecked());
+    m_ui->proxyTypeComboBox->setEnabled(m_ui->enableProxyCheckBox->isChecked());
     m_ui->proxyUserLineEdit->setEnabled(m_ui->authProxyCheckBox->isChecked());
     m_ui->proxyPasswLineEdit->setEnabled(m_ui->authProxyCheckBox->isChecked());
     //file type determination
@@ -404,6 +408,7 @@ void ConfigDialog::saveSettings()
     proxyUrl.setPassword(m_ui->proxyPasswLineEdit->text());
     gs->setNetworkSettings(m_ui->enableProxyCheckBox->isChecked(),
                            m_ui->authProxyCheckBox->isChecked(),
+                           static_cast<QmmpSettings::ProxyType>(m_ui->proxyTypeComboBox->currentData().toInt()),
                            proxyUrl);
 
     gs->setCoverSettings(m_ui->coverIncludeLineEdit->text().split(","),

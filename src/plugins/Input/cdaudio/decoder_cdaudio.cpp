@@ -252,7 +252,7 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
             {
                 cddb_http_enable (cddb_conn);
                 cddb_set_http_path_query (cddb_conn, settings.value("cddb_path").toByteArray().constData());
-                if (QmmpSettings::instance()->isProxyEnabled())
+                if (QmmpSettings::instance()->isProxyEnabled() && QmmpSettings::instance()->proxyType() == QmmpSettings::HTTP_PROXY)
                 {
                     QUrl proxy = QmmpSettings::instance()->proxy();
                     cddb_http_proxy_enable (cddb_conn);

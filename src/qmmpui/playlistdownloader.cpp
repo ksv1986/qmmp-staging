@@ -37,6 +37,8 @@ PlayListDownloader::PlayListDownloader(QObject *parent) : QObject(parent)
     if (gs->isProxyEnabled())
     {
         QNetworkProxy proxy(QNetworkProxy::HttpProxy, gs->proxy().host(),  gs->proxy().port());
+        if(gs->proxyType() == QmmpSettings::SOCKS5_PROXY)
+            proxy.setType(QNetworkProxy::Socks5Proxy);
         if(gs->useProxyAuth())
         {
             proxy.setUser(gs->proxy().userName());

@@ -37,6 +37,21 @@ class QMMP_EXPORT QmmpSettings : public QObject
 Q_OBJECT
 public:
     /*!
+     * This enum describes possible replaygain modes.
+     */
+    enum ReplayGainMode
+    {
+        REPLAYGAIN_TRACK = 0, /*!< Use track gain/peak */
+        REPLAYGAIN_ALBUM,     /*!< Use album gain/peak */
+        REPLAYGAIN_DISABLED   /*!< Disable ReplayGain */
+    };
+
+    enum ProxyType
+    {
+        HTTP_PROXY = 0,
+        SOCKS5_PROXY
+    };
+    /*!
      * Constructor.
      * @param parent Parent object.
      * This functions is for internal usage only, use QmmpSettings::instance() instead.
@@ -46,15 +61,6 @@ public:
      * Destructor.
      */
     virtual ~QmmpSettings();
-    /*!
-     * This enum describes possible replaygain modes.
-     */
-    enum ReplayGainMode
-    {
-        REPLAYGAIN_TRACK = 0, /*!< Use track gain/peak */
-        REPLAYGAIN_ALBUM,     /*!< Use album gain/peak */
-        REPLAYGAIN_DISABLED   /*!< Disable ReplayGain */
-    };
     /*!
      * Returns current ReplayGain mode.
      */
@@ -133,13 +139,14 @@ public:
      * Returns global proxy url.
      */
     const QUrl &proxy() const;
+    ProxyType proxyType() const;
     /*!
      * Sets network settings.
      * @param use_proxy Enables or disables global proxy.
      * @param auth Enables or disables proxy authentication.
      * @param proxy Proxy url.
      */
-    void setNetworkSettings(bool use_proxy, bool auth, const QUrl &proxy);
+    void setNetworkSettings(bool use_proxy, bool auth, ProxyType type, const QUrl &proxy);
     /*!
      * Returns equalizer settings.
      */
@@ -234,6 +241,7 @@ private:
     bool m_proxy_enabled;
     bool m_proxy_auth;
     QUrl m_proxy_url;
+    ProxyType m_proxy_type;
     //equalizer settings
     EqSettings m_eq_settings;
     //buffer size

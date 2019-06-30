@@ -517,19 +517,7 @@
        </layout>
       </widget>
       <widget class="QWidget" name="network">
-       <layout class="QVBoxLayout">
-        <property name="leftMargin">
-         <number>9</number>
-        </property>
-        <property name="topMargin">
-         <number>5</number>
-        </property>
-        <property name="rightMargin">
-         <number>0</number>
-        </property>
-        <property name="bottomMargin">
-         <number>0</number>
-        </property>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
          <widget class="QGroupBox" name="groupBox_5">
           <property name="title">
@@ -541,7 +529,7 @@
           <property name="checkable">
            <bool>false</bool>
           </property>
-          <layout class="QGridLayout">
+          <layout class="QFormLayout" name="formLayout">
            <item row="0" column="0" colspan="2">
             <widget class="QCheckBox" name="enableProxyCheckBox">
              <property name="text">
@@ -550,6 +538,16 @@
             </widget>
            </item>
            <item row="1" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>Proxy type:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="proxyTypeComboBox"/>
+           </item>
+           <item row="2" column="0">
             <widget class="QLabel" name="label_5">
              <property name="text">
               <string>Proxy host name:</string>
@@ -559,10 +557,10 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
+           <item row="2" column="1">
             <widget class="QLineEdit" name="hostLineEdit"/>
            </item>
-           <item row="2" column="0">
+           <item row="3" column="0">
             <widget class="QLabel" name="label_6">
              <property name="text">
               <string>Proxy port:</string>
@@ -572,17 +570,17 @@
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
+           <item row="3" column="1">
             <widget class="QLineEdit" name="portLineEdit"/>
            </item>
-           <item row="3" column="0" colspan="2">
+           <item row="4" column="0" colspan="2">
             <widget class="QCheckBox" name="authProxyCheckBox">
              <property name="text">
               <string>Use authentication with proxy</string>
              </property>
             </widget>
            </item>
-           <item row="4" column="0">
+           <item row="5" column="0">
             <widget class="QLabel" name="label_7">
              <property name="text">
               <string>Proxy user name:</string>
@@ -592,10 +590,10 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="1">
+           <item row="5" column="1">
             <widget class="QLineEdit" name="proxyUserLineEdit"/>
            </item>
-           <item row="5" column="0">
+           <item row="6" column="0">
             <widget class="QLabel" name="label_8">
              <property name="text">
               <string>Proxy password:</string>
@@ -605,7 +603,7 @@
              </property>
             </widget>
            </item>
-           <item row="5" column="1">
+           <item row="6" column="1">
             <widget class="QLineEdit" name="proxyPasswLineEdit">
              <property name="echoMode">
               <enum>QLineEdit::Password</enum>
@@ -915,12 +913,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>275</x>
-     <y>37</y>
+     <x>480</x>
+     <y>63</y>
     </hint>
     <hint type="destinationlabel">
-     <x>275</x>
-     <y>37</y>
+     <x>617</x>
+     <y>131</y>
     </hint>
    </hints>
   </connection>
@@ -931,12 +929,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>275</x>
-     <y>37</y>
+     <x>480</x>
+     <y>63</y>
     </hint>
     <hint type="destinationlabel">
-     <x>275</x>
-     <y>37</y>
+     <x>617</x>
+     <y>163</y>
     </hint>
    </hints>
   </connection>
@@ -947,12 +945,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>275</x>
-     <y>37</y>
+     <x>617</x>
+     <y>192</y>
     </hint>
     <hint type="destinationlabel">
-     <x>275</x>
-     <y>37</y>
+     <x>617</x>
+     <y>224</y>
     </hint>
    </hints>
   </connection>
@@ -963,12 +961,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>275</x>
-     <y>37</y>
+     <x>617</x>
+     <y>192</y>
     </hint>
     <hint type="destinationlabel">
-     <x>272</x>
-     <y>37</y>
+     <x>617</x>
+     <y>256</y>
     </hint>
    </hints>
   </connection>
@@ -1011,12 +1009,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>275</x>
-     <y>37</y>
+     <x>480</x>
+     <y>192</y>
     </hint>
     <hint type="destinationlabel">
-     <x>275</x>
-     <y>37</y>
+     <x>617</x>
+     <y>194</y>
     </hint>
    </hints>
   </connection>
@@ -1033,6 +1031,22 @@
     <hint type="destinationlabel">
      <x>261</x>
      <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableProxyCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>proxyTypeComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>342</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>88</y>
     </hint>
    </hints>
   </connection>

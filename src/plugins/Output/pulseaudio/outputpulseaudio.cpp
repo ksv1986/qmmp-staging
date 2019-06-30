@@ -104,7 +104,7 @@ bool OutputPulseAudio::initialize(quint32 freq, ChannelMap map, Qmmp::AudioForma
         ss.format = PA_SAMPLE_S32LE;
         break;
     case Qmmp::PCM_FLOAT:
-#ifdef PA_SAMPLE_FLOAT32NE;
+#ifdef PA_SAMPLE_FLOAT32NE
         ss.format = PA_SAMPLE_FLOAT32NE;
         break;
 #endif

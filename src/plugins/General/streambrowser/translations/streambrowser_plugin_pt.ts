@@ -132,48 +132,48 @@
         <translation>Formato</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="132"/>
+        <location filename="../streamwindow.cpp" line="134"/>
         <source>&amp;Add to favorites</source>
         <translation>&amp;Adicionar às favoritas</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="135"/>
+        <location filename="../streamwindow.cpp" line="137"/>
         <source>&amp;Add to playlist</source>
         <translation>A&amp;dicionar à lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="138"/>
+        <location filename="../streamwindow.cpp" line="140"/>
         <source>&amp;Create</source>
         <translation>&amp;Criar</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="140"/>
+        <location filename="../streamwindow.cpp" line="142"/>
         <source>&amp;Edit</source>
         <translation>&amp;Editar</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="143"/>
+        <location filename="../streamwindow.cpp" line="145"/>
         <source>&amp;Remove</source>
         <translation>&amp;Remover</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="153"/>
+        <location filename="../streamwindow.cpp" line="155"/>
         <source>Done</source>
         <translation>Terminado</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="156"/>
-        <location filename="../streamwindow.cpp" line="157"/>
+        <location filename="../streamwindow.cpp" line="158"/>
+        <location filename="../streamwindow.cpp" line="159"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="176"/>
+        <location filename="../streamwindow.cpp" line="178"/>
         <source>Receiving</source>
         <translation>Receção</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="279"/>
+        <location filename="../streamwindow.cpp" line="281"/>
         <source>Edit Stream</source>
         <translation>Editar emissão</translation>
     </message>

@@ -132,48 +132,48 @@
         <translation>Format</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="132"/>
+        <location filename="../streamwindow.cpp" line="134"/>
         <source>&amp;Add to favorites</source>
         <translation>&amp;Tambah ke favorit</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="135"/>
+        <location filename="../streamwindow.cpp" line="137"/>
         <source>&amp;Add to playlist</source>
         <translation>&amp;Tambah ke daftarmain</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="138"/>
+        <location filename="../streamwindow.cpp" line="140"/>
         <source>&amp;Create</source>
         <translation>&amp;Ciptakan</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="140"/>
+        <location filename="../streamwindow.cpp" line="142"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="143"/>
+        <location filename="../streamwindow.cpp" line="145"/>
         <source>&amp;Remove</source>
         <translation>&amp;Buang</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="153"/>
+        <location filename="../streamwindow.cpp" line="155"/>
         <source>Done</source>
         <translation>Kelar</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="156"/>
-        <location filename="../streamwindow.cpp" line="157"/>
+        <location filename="../streamwindow.cpp" line="158"/>
+        <location filename="../streamwindow.cpp" line="159"/>
         <source>Error</source>
         <translation>Galat</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="176"/>
+        <location filename="../streamwindow.cpp" line="178"/>
         <source>Receiving</source>
         <translation>Menerima</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="279"/>
+        <location filename="../streamwindow.cpp" line="281"/>
         <source>Edit Stream</source>
         <translation type="unfinished"></translation>
     </message>

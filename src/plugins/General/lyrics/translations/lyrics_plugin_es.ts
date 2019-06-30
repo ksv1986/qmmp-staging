@@ -70,35 +70,35 @@
         <translation>Sin conexión</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="76"/>
-        <location filename="../lyricswindow.cpp" line="207"/>
+        <location filename="../lyricswindow.cpp" line="78"/>
+        <location filename="../lyricswindow.cpp" line="209"/>
         <source>Done</source>
         <translation>Hecho</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="79"/>
-        <location filename="../lyricswindow.cpp" line="103"/>
-        <location filename="../lyricswindow.cpp" line="109"/>
-        <location filename="../lyricswindow.cpp" line="117"/>
-        <location filename="../lyricswindow.cpp" line="125"/>
-        <location filename="../lyricswindow.cpp" line="136"/>
+        <location filename="../lyricswindow.cpp" line="81"/>
+        <location filename="../lyricswindow.cpp" line="105"/>
+        <location filename="../lyricswindow.cpp" line="111"/>
+        <location filename="../lyricswindow.cpp" line="119"/>
+        <location filename="../lyricswindow.cpp" line="127"/>
+        <location filename="../lyricswindow.cpp" line="138"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="130"/>
-        <location filename="../lyricswindow.cpp" line="163"/>
+        <location filename="../lyricswindow.cpp" line="132"/>
+        <location filename="../lyricswindow.cpp" line="165"/>
         <source>Not found</source>
         <translation>No encontrado</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="150"/>
-        <location filename="../lyricswindow.cpp" line="176"/>
+        <location filename="../lyricswindow.cpp" line="152"/>
+        <location filename="../lyricswindow.cpp" line="178"/>
         <source>Receiving</source>
         <translation>Recibiendo</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="177"/>
+        <location filename="../lyricswindow.cpp" line="179"/>
         <source>Lyrics: %1 - %2</source>
         <translation>Letras: %1 - %2</translation>
     </message>

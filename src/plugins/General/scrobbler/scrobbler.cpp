@@ -27,7 +27,7 @@
 #include <QXmlStreamReader>
 #include <QUrl>
 #include <QUrlQuery>
-#include <QTime>
+#include <QElapsedTimer>
 #include <QTimer>
 #include <QDateTime>
 #include <QDir>
@@ -89,7 +89,7 @@ Scrobbler::Scrobbler(const QString &scrobblerUrl, const QString &name, QObject *
     m_elapsed = 0;
     m_scrobblerUrl = scrobblerUrl;
     m_name = name;
-    m_time = new QTime();
+    m_time = new QElapsedTimer();
     m_cache = new ScrobblerCache(Qmmp::configDir() +"/scrobbler_"+name+".cache");
     m_ua = QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toLatin1();
     m_http = new QNetworkAccessManager(this);

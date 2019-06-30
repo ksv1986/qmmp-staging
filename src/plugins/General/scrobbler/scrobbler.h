@@ -28,7 +28,7 @@
 class QNetworkAccessManager;
 class QNetworkReply;
 class QIODevice;
-class QTime;
+class QElapsedTimer;
 class SoundCore;
 
 
@@ -78,7 +78,7 @@ private:
     QNetworkAccessManager *m_http;
     SoundCore *m_core;
     QNetworkReply *m_submitReply, *m_notificationReply;
-    QTime *m_time;
+    QElapsedTimer *m_time;
     ScrobblerCache *m_cache;
     QString m_scrobblerUrl, m_name;
     Qmmp::State m_previousState;

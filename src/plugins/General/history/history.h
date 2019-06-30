@@ -22,7 +22,7 @@
 #define HISTORY_H
 
 #include <QObject>
-#include <QTime>
+#include <QElapsedTimer>
 #include <QPointer>
 #include <qmmp/trackinfo.h>
 #include <qmmp/qmmp.h>
@@ -50,7 +50,7 @@ private:
 
     SoundCore *m_core;
     TrackInfo m_trackInfo;
-    QTime m_time;
+    QElapsedTimer m_time;
     Qmmp::State m_previousState;
     quint64 m_elapsed;
     QPointer<HistoryWindow> m_historyWindow;

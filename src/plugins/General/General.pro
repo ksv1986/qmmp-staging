@@ -10,7 +10,8 @@ SUBDIRS += statusicon \
            trackchange \
            copypaste \
            rgscan \
-           hotkey
+           hotkey \
+           listenbrainz
 
 unix:SUBDIRS += mpris \
                 kdenotify \

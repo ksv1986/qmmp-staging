@@ -67,22 +67,22 @@ private slots:
     void submit();
 
 private:
-    enum { MIN_SONG_LENGTH = 30 };
+    enum { MIN_SONG_LENGTH = 30000 };
 
     void sendNotification(const SongInfo &info);
     SongInfo m_song;
     QList <SongInfo> m_cachedSongs;
     QByteArray m_ua;
-    int m_submitedSongs;
+    int m_submitedSongs = 0;
     QString m_session;
     QNetworkAccessManager *m_http;
     SoundCore *m_core;
-    QNetworkReply *m_submitReply, *m_notificationReply;
+    QNetworkReply *m_submitReply = nullptr, *m_notificationReply = nullptr;
     QElapsedTimer *m_time;
     ScrobblerCache *m_cache;
     QString m_scrobblerUrl, m_name;
-    Qmmp::State m_previousState;
-    int m_elapsed;
+    Qmmp::State m_previousState = Qmmp::Stopped;
+    qint64 m_elapsed = 0;
 };
 
 /**

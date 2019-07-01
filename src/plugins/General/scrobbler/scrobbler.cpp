@@ -82,11 +82,6 @@ void ScrobblerResponse::parse(QIODevice *device)
 Scrobbler::Scrobbler(const QString &scrobblerUrl, const QString &name, QObject *parent)
     : QObject(parent)
 {
-    m_notificationReply = nullptr;
-    m_submitedSongs = 0;
-    m_submitReply = nullptr;
-    m_previousState = Qmmp::Stopped;
-    m_elapsed = 0;
     m_scrobblerUrl = scrobblerUrl;
     m_name = name;
     m_time = new QElapsedTimer();
@@ -128,22 +123,21 @@ void Scrobbler::setState(Qmmp::State state)
 {
     if(state == Qmmp::Playing && m_previousState == Qmmp::Paused)
     {
-        qDebug("Scrobbler[%s]: resuming from %d seconds played", qPrintable(m_name), m_elapsed / 1000);
+        qDebug("Scrobbler[%s]: resuming from %d seconds played", qPrintable(m_name), int(m_elapsed / 1000));
         m_time->restart();
     }
     else if(state == Qmmp::Paused)
     {
         m_elapsed += m_time->elapsed();
-        qDebug("Scrobbler[%s]: pausing after %d seconds played", qPrintable(m_name), m_elapsed / 1000);
+        qDebug("Scrobbler[%s]: pausing after %d seconds played", qPrintable(m_name), int(m_elapsed / 1000));
     }
     else if(state == Qmmp::Stopped && !m_song.metaData().isEmpty())
     {
         if(m_previousState == Qmmp::Playing)
             m_elapsed += m_time->elapsed();
 
-        m_elapsed /= 1000; //convert to seconds
-        if((m_elapsed > 240) || (m_elapsed > MIN_SONG_LENGTH && m_song.length() == 0) ||
-                (m_elapsed > int(m_song.length()/2) && m_song.length() > MIN_SONG_LENGTH))
+        if((m_elapsed > 240000) || (m_elapsed > MIN_SONG_LENGTH && m_song.duration() == 0) ||
+                (m_elapsed > int(m_song.duration() / 2) && m_song.duration() > MIN_SONG_LENGTH))
         {
             m_cachedSongs << m_song;
             m_cache->save(m_cachedSongs);
@@ -158,15 +152,15 @@ void Scrobbler::setState(Qmmp::State state)
 
 void Scrobbler::updateMetaData()
 {
-    QMap <Qmmp::MetaData, QString> metadata = m_core->metaData();
+    TrackInfo info = m_core->trackInfo();
     if(m_core->state() != Qmmp::Playing)
         return;
 
-    if(!m_song.metaData().isEmpty() && m_song.metaData() != metadata)
+    if(!m_song.metaData().isEmpty() && m_song.metaData() != info.metaData())
     {
-        int elapsed = (m_elapsed + m_time->elapsed()) / 1000;
-        if((elapsed > 240) || (elapsed > MIN_SONG_LENGTH && m_song.length() == 0) ||
-                (elapsed > int(m_song.length()/2) && m_song.length() > MIN_SONG_LENGTH))
+        int elapsed = (m_elapsed + m_time->elapsed());
+        if((elapsed > 240000) || (elapsed > MIN_SONG_LENGTH && m_song.duration() == 0) ||
+                (elapsed > int(m_song.duration() / 2) && m_song.duration() > MIN_SONG_LENGTH))
         {
             m_cachedSongs << m_song;
             m_cache->save(m_cachedSongs);
@@ -176,9 +170,9 @@ void Scrobbler::updateMetaData()
         m_song.clear();
     }
 
-    if(!metadata.value(Qmmp::TITLE).isEmpty() && !metadata.value(Qmmp::ARTIST).isEmpty())
+    if(!info.value(Qmmp::TITLE).isEmpty() && !info.value(Qmmp::ARTIST).isEmpty())
     {
-        m_song = SongInfo(metadata, m_core->duration()/1000);
+        m_song = SongInfo(info);
         m_song.setTimeStamp(QDateTime::currentDateTime().toTime_t());
         sendNotification(m_song);
     }
@@ -293,13 +287,13 @@ void Scrobbler::submit()
     for (int i = 0; i < m_submitedSongs; ++i)
     {
         SongInfo info = m_cachedSongs[i];
-        params.insert(QString("track[%1]").arg(i),info.metaData(Qmmp::TITLE));
+        params.insert(QString("track[%1]").arg(i),info.value(Qmmp::TITLE));
         params.insert(QString("timestamp[%1]").arg(i),QString("%1").arg(info.timeStamp()));
-        params.insert(QString("artist[%1]").arg(i),info.metaData(Qmmp::ARTIST));
-        params.insert(QString("album[%1]").arg(i),info.metaData(Qmmp::ALBUM));
-        params.insert(QString("trackNumber[%1]").arg(i),info.metaData(Qmmp::TRACK));
-        if(info.length() > 0)
-            params.insert(QString("duration[%1]").arg(i),QString("%1").arg(info.length()));
+        params.insert(QString("artist[%1]").arg(i),info.value(Qmmp::ARTIST));
+        params.insert(QString("album[%1]").arg(i),info.value(Qmmp::ALBUM));
+        params.insert(QString("trackNumber[%1]").arg(i),info.value(Qmmp::TRACK));
+        if(info.duration() > 0)
+            params.insert(QString("duration[%1]").arg(i),QString("%1").arg(info.duration() / 1000));
     }
     params.insert("api_key", API_KEY);
     params.insert("method", "track.scrobble");
@@ -343,14 +337,14 @@ void Scrobbler::sendNotification(const SongInfo &info)
     qDebug("Scrobbler[%s]: sending notification", qPrintable(m_name));
 
     QMap <QString, QString> params;
-    params.insert("track", info.metaData(Qmmp::TITLE));
-    params.insert("artist", info.metaData(Qmmp::ARTIST));
-    if(!info.metaData(Qmmp::ALBUM).isEmpty())
-        params.insert("album", info.metaData(Qmmp::ALBUM));
-    if(!info.metaData(Qmmp::TRACK).isEmpty())
-        params.insert("trackNumber", info.metaData(Qmmp::TRACK));
-    if(info.length() > 0)
-        params.insert("duration", QString("%1").arg(info.length()));
+    params.insert("track", info.value(Qmmp::TITLE));
+    params.insert("artist", info.value(Qmmp::ARTIST));
+    if(!info.value(Qmmp::ALBUM).isEmpty())
+        params.insert("album", info.value(Qmmp::ALBUM));
+    if(!info.value(Qmmp::TRACK).isEmpty())
+        params.insert("trackNumber", info.value(Qmmp::TRACK));
+    if(info.duration() > 0)
+        params.insert("duration", QString("%1").arg(info.duration() / 1000));
     params.insert("api_key", API_KEY);
     params.insert("method", "track.updateNowPlaying");
     params.insert("sk", m_session);

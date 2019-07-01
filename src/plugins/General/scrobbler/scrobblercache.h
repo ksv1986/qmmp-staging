@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,16 +24,16 @@
 #include <QMap>
 #include <QList>
 #include <qmmp/qmmp.h>
-
+#include <qmmp/trackinfo.h>
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class SongInfo
+class SongInfo : public TrackInfo
 {
 public:
     SongInfo();
-    SongInfo(const QMap <Qmmp::MetaData, QString> metadata, qint64 length = 0);
+    SongInfo(const TrackInfo &info);
     SongInfo(const SongInfo &other);
 
     ~SongInfo();
@@ -41,22 +41,11 @@ public:
     SongInfo & operator=(const SongInfo &info);
     bool operator==(const SongInfo &info);
     bool operator!=(const SongInfo &info);
-
-    void setMetaData(const QMap <Qmmp::MetaData, QString> metadata);
-    void setMetaData(Qmmp::MetaData key, const QString &value);
-    void setLength(qint64 l);
-    const QMap <Qmmp::MetaData, QString> metaData() const;
-    const QString metaData(Qmmp::MetaData) const;
-    qint64 length () const;
-    void clear();
     void setTimeStamp(uint ts);
     uint timeStamp() const;
 
 private:
-    QMap <Qmmp::MetaData, QString> m_metadata;
-    qint64 m_length;
-    uint m_start_ts;
-
+    uint m_start_ts = 0;
 };
 
 /**

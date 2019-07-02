@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2019 by Ilya Kotov                                      *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,51 +17,53 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-
-#ifndef SCROBBLERCACHE_H
-#define SCROBBLERCACHE_H
+#ifndef LISTENBRAINZ_H
+#define LISTENBRAINZ_H
 
 #include <QMap>
-#include <QList>
+#include <QObject>
 #include <qmmp/qmmp.h>
-#include <qmmp/trackinfo.h>
+#include "payloadcache.h"
+
+class QNetworkAccessManager;
+class QNetworkReply;
+class QIODevice;
+class QElapsedTimer;
+class SoundCore;
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class SongInfo : public TrackInfo
+class ListenBrainz : public QObject
 {
+    Q_OBJECT
 public:
-    SongInfo();
-    SongInfo(const TrackInfo &info);
-    SongInfo(const SongInfo &other);
+    ListenBrainz(QObject *parent = nullptr);
+    ~ListenBrainz();
 
-    ~SongInfo();
-
-    SongInfo & operator=(const SongInfo &info);
-    bool operator==(const SongInfo &info);
-    bool operator!=(const SongInfo &info);
-    void setTimeStamp(uint ts);
-    uint timeStamp() const;
+private slots:
+    void setState(Qmmp::State state);
+    void updateMetaData();
+    void processResponse(QNetworkReply *reply);
+    void setupProxy();
+    void submit();
 
 private:
-    uint m_start_ts = 0;
+    enum { MIN_SONG_LENGTH = 30000 };
+
+    void sendNotification(const TrackMetaData &metaData);
+    TrackMetaData m_song;
+    QList<TrackMetaData> m_cachedSongs;
+    QByteArray m_ua;
+    int m_submitedSongs = 0;
+    QString m_token;
+    QNetworkAccessManager *m_http;
+    SoundCore *m_core;
+    QNetworkReply *m_submitReply = nullptr, *m_notificationReply = nullptr;
+    QElapsedTimer *m_time;
+    PayloadCache *m_cache;
+    Qmmp::State m_previousState = Qmmp::Stopped;
+    qint64 m_elapsed = 0;
 };
 
-/**
-    @author Ilya Kotov <forkotov02@ya.ru>
-*/
-class ListenCache
-{
-public:
-    explicit ListenCache(const QString &filePath);
-
-    QList<SongInfo> load();
-    void save(const QList<SongInfo> &songs);
-
-private:
-    QString m_filePath;
-
-};
-
-#endif // SCROBBLERCACHE_H
+#endif //LISTENBRAINZ_H

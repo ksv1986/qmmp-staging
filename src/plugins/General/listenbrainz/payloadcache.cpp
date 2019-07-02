@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2019 by Ilya Kotov                                      *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,62 +19,62 @@
  ***************************************************************************/
 
 #include <QFile>
-#include "scrobblercache.h"
+#include "payloadcache.h"
 
-SongInfo::SongInfo()
+TrackMetaData::TrackMetaData()
 {}
 
-SongInfo::SongInfo(const TrackInfo &info) : TrackInfo(info)
+TrackMetaData::TrackMetaData(const TrackInfo &info) : TrackInfo(info)
 {}
 
-SongInfo::SongInfo(const SongInfo &other) : TrackInfo(other),
+TrackMetaData::TrackMetaData(const TrackMetaData &other) : TrackInfo(other),
     m_start_ts(other.timeStamp())
 {}
 
-SongInfo::~SongInfo()
+TrackMetaData::~TrackMetaData()
 {}
 
-SongInfo & SongInfo::operator=(const SongInfo &info)
+TrackMetaData & TrackMetaData::operator=(const TrackMetaData &info)
 {
     TrackInfo::operator=(info);
     m_start_ts = info.timeStamp();
     return *this;
 }
 
-bool SongInfo::operator==(const SongInfo &info)
+bool TrackMetaData::operator==(const TrackMetaData &info)
 {
     return (TrackInfo::operator==(info)) && (m_start_ts == info.timeStamp());
 }
 
-bool SongInfo::operator!=(const SongInfo &info)
+bool TrackMetaData::operator!=(const TrackMetaData &info)
 {
     return !operator==(info);
 }
 
-void SongInfo::setTimeStamp(uint ts)
+void TrackMetaData::setTimeStamp(uint ts)
 {
     m_start_ts = ts;
 }
 
-uint SongInfo::timeStamp() const
+uint TrackMetaData::timeStamp() const
 {
     return m_start_ts;
 }
 
-ListenCache::ListenCache(const QString &filePath)
+PayloadCache::PayloadCache(const QString &filePath)
 {
     m_filePath = filePath;
 }
 
-QList<SongInfo> ListenCache::load()
+QList<TrackMetaData> PayloadCache::load()
 {
-    QList<SongInfo> songs;
+    QList<TrackMetaData> songs;
     int s = 0;
     QString line, param, value;
     QFile file(m_filePath);
 
     if(!file.open(QIODevice::ReadOnly))
-        return QList<SongInfo>();
+        return QList<TrackMetaData>();
 
     while (!file.atEnd())
     {
@@ -87,7 +87,7 @@ QList<SongInfo> ListenCache::load()
 
         if (param == "title")
         {
-            songs << SongInfo();
+            songs << TrackMetaData();
             songs.last().setValue(Qmmp::TITLE, value);
         }
         else if (songs.isEmpty())
@@ -115,7 +115,7 @@ QList<SongInfo> ListenCache::load()
     return songs;
 }
 
-void ListenCache::save(const QList<SongInfo> &songs)
+void PayloadCache::save(const QList<TrackMetaData> &songs)
 {
     QFile file(m_filePath);
     if (songs.isEmpty())
@@ -125,11 +125,11 @@ void ListenCache::save(const QList<SongInfo> &songs)
     }
     if(!file.open(QIODevice::WriteOnly))
     {
-        qWarning("ScrobblerCache: unable to save file %s", qPrintable(m_filePath));
-        qWarning("ScrobblerCache: error %d: %s", file.error(), qPrintable(file.errorString()));
+        qWarning("PayloadCache: unable to save file %s", qPrintable(m_filePath));
+        qWarning("PayloadCache: error %d: %s", file.error(), qPrintable(file.errorString()));
         return;
     }
-    foreach(SongInfo m, songs)
+    foreach(TrackMetaData m, songs)
     {
         file.write(QString("title=%1").arg(m.value(Qmmp::TITLE)).toUtf8() +"\n");
         file.write(QString("artist=%1").arg(m.value(Qmmp::ARTIST)).toUtf8() +"\n");

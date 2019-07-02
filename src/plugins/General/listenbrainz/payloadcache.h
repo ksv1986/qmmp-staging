@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2019 by Ilya Kotov                                      *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#ifndef SCROBBLERCACHE_H
-#define SCROBBLERCACHE_H
+#ifndef PAYLOADCACHE_H
+#define PAYLOADCACHE_H
 
 #include <QMap>
 #include <QList>
@@ -29,18 +29,18 @@
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class SongInfo : public TrackInfo
+class TrackMetaData : public TrackInfo
 {
 public:
-    SongInfo();
-    SongInfo(const TrackInfo &info);
-    SongInfo(const SongInfo &other);
+    TrackMetaData();
+    TrackMetaData(const TrackInfo &info);
+    TrackMetaData(const TrackMetaData &other);
 
-    ~SongInfo();
+    ~TrackMetaData();
 
-    SongInfo & operator=(const SongInfo &info);
-    bool operator==(const SongInfo &info);
-    bool operator!=(const SongInfo &info);
+    TrackMetaData & operator=(const TrackMetaData &info);
+    bool operator==(const TrackMetaData &info);
+    bool operator!=(const TrackMetaData &info);
     void setTimeStamp(uint ts);
     uint timeStamp() const;
 
@@ -51,17 +51,17 @@ private:
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class ListenCache
+class PayloadCache
 {
 public:
-    explicit ListenCache(const QString &filePath);
+    explicit PayloadCache(const QString &filePath);
 
-    QList<SongInfo> load();
-    void save(const QList<SongInfo> &songs);
+    QList<TrackMetaData> load();
+    void save(const QList<TrackMetaData> &songs);
 
 private:
     QString m_filePath;
 
 };
 
-#endif // SCROBBLERCACHE_H
+#endif // PAYLOADCACHE_H

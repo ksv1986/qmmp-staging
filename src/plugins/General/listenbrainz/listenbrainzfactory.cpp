@@ -20,7 +20,7 @@
 
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
-//#include "scrobblerhandler.h"
+#include "listenbrainz.h"
 #include "settingsdialog.h"
 #include "listenbrainzfactory.h"
 
@@ -37,8 +37,7 @@ GeneralProperties ListenBrainzFactory::properties() const
 
 QObject *ListenBrainzFactory::create(QObject *parent)
 {
-    //return new ScrobblerHandler(parent);
-    return nullptr;
+    return new ListenBrainz(parent);
 }
 
 QDialog *ListenBrainzFactory::createConfigDialog(QWidget *parent)

@@ -79,7 +79,7 @@ private:
     SoundCore *m_core;
     QNetworkReply *m_submitReply = nullptr, *m_notificationReply = nullptr;
     QElapsedTimer *m_time;
-    ScrobblerCache *m_cache;
+    ListenCache *m_cache;
     QString m_scrobblerUrl, m_name;
     Qmmp::State m_previousState = Qmmp::Stopped;
     qint64 m_elapsed = 0;

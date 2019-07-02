@@ -49,6 +49,7 @@ void ListenBrainzFactory::showAbout(QWidget *parent)
 {
     QMessageBox::about (parent, tr("About ListenBrainz Plugin"),
                         tr("Qmmp ListenBrainz Plugin")+"\n"+
+                        tr("This plugin submits listen history to ListenBrainz server")+"\n"+
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 

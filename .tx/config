@@ -283,6 +283,12 @@ source_lang = en
 source_file = src/plugins/General/history/translations/history_plugin_en.ts
 type = QT
 
+[qmmp.listenbrainz]
+file_filter = src/plugins/General/listenbrainz/translations/listenbrainz_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/General/listenbrainz/translations/listenbrainz_plugin_en.ts
+type = QT
+
 [qmmp.converter]
 file_filter = src/plugins/General/converter/translations/converter_plugin_<lang>.ts
 source_lang = en

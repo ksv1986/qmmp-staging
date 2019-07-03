@@ -24,16 +24,12 @@
 #include <QNetworkReply>
 #include <QByteArray>
 #include <QCryptographicHash>
-#include <QXmlStreamReader>
 #include <QUrl>
-#include <QUrlQuery>
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QElapsedTimer>
 #include <QTimer>
-#include <QDateTime>
-#include <QDir>
 #include <QDesktopServices>
 #include <QSettings>
 #include <qmmp/soundcore.h>

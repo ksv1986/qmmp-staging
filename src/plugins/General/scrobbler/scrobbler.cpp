@@ -29,8 +29,6 @@
 #include <QUrlQuery>
 #include <QElapsedTimer>
 #include <QTimer>
-#include <QDateTime>
-#include <QDir>
 #include <QDesktopServices>
 #include <QSettings>
 #include <qmmp/soundcore.h>

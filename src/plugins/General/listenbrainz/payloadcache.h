@@ -21,8 +21,6 @@
 #ifndef PAYLOADCACHE_H
 #define PAYLOADCACHE_H
 
-#include <QMap>
-#include <QList>
 #include <qmmp/qmmp.h>
 #include <qmmp/trackinfo.h>
 

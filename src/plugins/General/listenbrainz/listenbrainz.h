@@ -27,7 +27,6 @@
 
 class QNetworkAccessManager;
 class QNetworkReply;
-class QIODevice;
 class QElapsedTimer;
 class SoundCore;
 

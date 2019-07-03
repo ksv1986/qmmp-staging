@@ -21,8 +21,6 @@
 #ifndef SCROBBLERCACHE_H
 #define SCROBBLERCACHE_H
 
-#include <QMap>
-#include <QList>
 #include <qmmp/qmmp.h>
 #include <qmmp/trackinfo.h>
 

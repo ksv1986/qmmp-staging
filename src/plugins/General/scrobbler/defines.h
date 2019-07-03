@@ -23,10 +23,8 @@
 
 #define SCROBBLER_LASTFM_URL "http://ws.audioscrobbler.com/2.0/"
 #define SCROBBLER_LIBREFM_URL "https://libre.fm/2.0/"
-#define SCROBBLER_LISTENBRAINZ_URL "https://api.listenbrainz.org/2.0/"
 
 #define LASTFM_AUTH_URL "http://www.last.fm/api/auth/"
 #define LIBREFM_AUTH_URL "https://libre.fm/api/auth/"
-#define LISTENBRAINZ_AUTH_URL "https://listenbrainz.org/api/auth/"
 
 #endif // DEFINES_H

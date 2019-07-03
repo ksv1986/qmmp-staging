@@ -31,8 +31,6 @@ ScrobblerHandler::ScrobblerHandler(QObject *parent) : QObject(parent)
         new Scrobbler(SCROBBLER_LASTFM_URL, "lastfm", this);
     if(settings.value("use_librefm", false).toBool())
         new Scrobbler(SCROBBLER_LIBREFM_URL, "librefm", this);
-    if(settings.value("use_listenbrainz", false).toBool())
-        new Scrobbler(SCROBBLER_LISTENBRAINZ_URL, "listenbrainz", this);
     settings.endGroup();
 }
 

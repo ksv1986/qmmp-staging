@@ -1,5 +1,6 @@
 SET(USE_MPRIS TRUE CACHE BOOL "enable/disable mpris plugin")
 SET(USE_SCROBBLER TRUE CACHE BOOL "enable/disable scrobbler plugin")
+SET(USE_LISTENBRAINZ TRUE CACHE BOOL "enable/disable listenbrainz plugin")
 SET(USE_STATICON TRUE CACHE BOOL "enable/disable status icon plugin")
 SET(USE_NOTIFIER TRUE CACHE BOOL "enable/disable notifier plugin")
 SET(USE_LYRICS TRUE CACHE BOOL "enable/disable lyrics version")
@@ -26,6 +27,10 @@ ENDIF(USE_MPRIS AND Qt5DBus_FOUND)
 IF(USE_SCROBBLER)
 add_subdirectory(scrobbler)
 ENDIF(USE_SCROBBLER)
+
+IF(USE_LISTENBRAINZ)
+add_subdirectory(listenbrainz)
+ENDIF(USE_SLISTENBRAINZ)
 
 IF(USE_STATICON)
 add_subdirectory(statusicon)

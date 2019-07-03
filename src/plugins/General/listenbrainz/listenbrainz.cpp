@@ -47,7 +47,7 @@ ListenBrainz::ListenBrainz(QObject *parent)
     : QObject(parent)
 {
     m_time = new QElapsedTimer();
-    m_cache = new PayloadCache(Qmmp::configDir() +"/listenbrainz_.cache");
+    m_cache = new PayloadCache(Qmmp::configDir() +"/listenbrainz.cache");
     m_ua = QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toLatin1();
     m_http = new QNetworkAccessManager(this);
     m_core = SoundCore::instance();
@@ -78,7 +78,6 @@ ListenBrainz::~ListenBrainz()
     m_cache->save(m_cachedSongs);
     delete m_time;
     delete m_cache;
-
 }
 
 void ListenBrainz::setState(Qmmp::State state)
@@ -156,6 +155,11 @@ void ListenBrainz::processResponse(QNetworkReply *reply)
     {
         status.clear();
         qWarning("ListenBrainz: server reply: %s", data.constData());
+        if(reply->error() == QNetworkReply::AuthenticationRequiredError)
+        {
+            m_token.clear();
+            qWarning("ListenBrainz: invalid user token, submitting has been disabled");
+        }
     }
 
     if(reply == m_submitReply)

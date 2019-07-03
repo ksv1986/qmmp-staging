@@ -250,7 +250,7 @@ void Scrobbler::processResponse(QNetworkReply *reply)
         else if(error_code == "9") //invalid session key
         {
             m_session.clear();
-            qWarning("Scrobbler[%s]: invalid session key, scrobbling disabled", qPrintable(m_name));
+            qWarning("Scrobbler[%s]: invalid session key, scrobbling has been disabled", qPrintable(m_name));
         }
     }
     reply->deleteLater();

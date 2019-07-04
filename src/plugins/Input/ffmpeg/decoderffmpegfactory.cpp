@@ -213,7 +213,7 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
             info->setValue(Qmmp::CHANNELS, c->channels);
             info->setValue(Qmmp::BITS_PER_SAMPLE, c->bits_per_raw_sample);
 
-            //info->setValue(Qmmp::FORMAT_NAME, QString::fromLatin1(avcodec_get_name(c->codec_id)));
+            info->setValue(Qmmp::FORMAT_NAME, QString::fromLatin1(avcodec_get_name(c->codec_id)));
             info->setValue(Qmmp::FILE_SIZE, QFileInfo(filePath).size()); //adds file size for cue tracks
             info->setDuration(in->duration * 1000 / AV_TIME_BASE);
         }

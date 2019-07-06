@@ -138,7 +138,7 @@ QString MetaDataFormatter::formatDuration(qint64 duration, bool hideZero, bool s
     QString out;
     qint64 durationInSeconds = duration / 1000;
     if(durationInSeconds >= 3600)
-        out = QString("%1:%2").arg(durationInSeconds / 3600).arg(duration % 3600 / 60, 2, 10, QChar('0'));
+        out = QString("%1:%2").arg(durationInSeconds / 3600).arg(durationInSeconds % 3600 / 60, 2, 10, QChar('0'));
     else
         out = QString("%1").arg(durationInSeconds % 3600 / 60);
     out += QString(":%1").arg(durationInSeconds % 60, 2, 10, QChar('0'));

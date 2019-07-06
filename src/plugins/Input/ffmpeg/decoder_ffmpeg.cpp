@@ -313,6 +313,7 @@ bool DecoderFFmpeg::initialize()
         return false;
     }
 
+    setProperty(Qmmp::FORMAT_NAME, QString::fromLatin1(avcodec_get_name(c->codec_id)));
     configure(c->sample_rate, m_channels, format);
 
     if(ic->bit_rate)

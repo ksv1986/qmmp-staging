@@ -78,6 +78,12 @@ quint32 Hotkey::defaultKey(int act)
 
 HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
 {
+    if(!QX11Info::isPlatformX11())
+    {
+        qWarning("HotkeyManager: X11 not found. Plugin disabled");
+        return;
+    }
+
     QCoreApplication::instance()->installEventFilter(this);
     WId rootWindow = DefaultRootWindow(QX11Info::display());
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat); //load settings

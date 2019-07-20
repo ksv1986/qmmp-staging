@@ -419,7 +419,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="543"/>
         <source>Proxy type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип проксі:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="553"/>
@@ -495,7 +495,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="871"/>
         <source>Use two passes for equalizer</source>
-        <translation type="unfinished"></translation>
+        <translation>Два прохода для еквалайзера</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="814"/>
@@ -530,12 +530,12 @@
     <message>
         <location filename="../configdialog.cpp" line="72"/>
         <source>HTTP</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="73"/>
         <source>SOCKS5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="86"/>

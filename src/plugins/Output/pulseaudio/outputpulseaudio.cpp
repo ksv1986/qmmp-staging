@@ -288,7 +288,7 @@ bool OutputPulseAudio::process(pa_operation *op)
         return false;
 
     pa_operation_state_t state;
-    while((state = pa_operation_get_state(op)) != PA_OPERATION_DONE && isReady())
+    while((state = pa_operation_get_state(op)) == PA_OPERATION_RUNNING && isReady())
        poll();
 
     pa_operation_unref(op);

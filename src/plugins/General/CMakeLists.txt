@@ -30,7 +30,7 @@ ENDIF(USE_SCROBBLER)
 
 IF(USE_LISTENBRAINZ)
 add_subdirectory(listenbrainz)
-ENDIF(USE_SLISTENBRAINZ)
+ENDIF(USE_LISTENBRAINZ)
 
 IF(USE_STATICON)
 add_subdirectory(statusicon)

@@ -239,24 +239,23 @@ void OutputWriter::run()
     while (!done)
     {
         m_mutex.lock ();
-        if(m_pause != m_prev_pause)
+        if(m_pause != m_paused)
         {
-            if(m_pause)
+            m_paused = m_pause;
+            if(m_paused)
             {
                 Visual::clearBuffer();
                 m_output->suspend();
                 m_mutex.unlock();
-                m_prev_pause = m_pause;
                 continue;
             }
             else
                 m_output->resume();
-            m_prev_pause = m_pause;
         }
         recycler()->mutex()->lock ();
         done = m_user_stop || (m_finish && recycler()->empty());
 
-        while (!done && (recycler()->empty() || m_pause))
+        while (!done && (recycler()->empty() || m_paused))
         {
             recycler()->cond()->wakeOne();
             m_mutex.unlock();
@@ -315,7 +314,7 @@ void OutputWriter::run()
             }
             output_at = b->samples * m_output->sampleSize();
 
-            while (l < output_at && !m_pause && !m_prev_pause)
+            while (l < output_at && !m_pause && !m_paused)
             {
                 m_mutex.lock();
                 if(m_skip)

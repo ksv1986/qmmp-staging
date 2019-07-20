@@ -110,7 +110,7 @@ private:
     std::atomic_bool m_pause = ATOMIC_VAR_INIT(false);
     std::atomic_bool m_muted = ATOMIC_VAR_INIT(false);
     std::atomic_bool m_finish = ATOMIC_VAR_INIT(false);
-    bool m_prev_pause = false;
+    bool m_paused = false;
     bool m_useEq = false;
     qint64 m_totalWritten = 0, m_currentMilliseconds = -1;
     QmmpSettings *m_settings;

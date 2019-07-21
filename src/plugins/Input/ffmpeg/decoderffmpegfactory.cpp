@@ -233,7 +233,9 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
             info->setValue(Qmmp::CHANNELS, c->channels);
             info->setValue(Qmmp::BITS_PER_SAMPLE, c->bits_per_raw_sample);
 
-            info->setValue(Qmmp::FORMAT_NAME, QString::fromLatin1(avcodec_get_name(c->codec_id)));
+            AVCodec *codec = avcodec_find_decoder(c->codec_id);
+            if(codec)
+                info->setValue(Qmmp::FORMAT_NAME, QString::fromLatin1(codec->name));
             info->setDuration(in->duration * 1000 / AV_TIME_BASE);
         }
     }

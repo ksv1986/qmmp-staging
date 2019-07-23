@@ -310,7 +310,7 @@ void MetaDataManager::prepareForAnotherThread()
 MetaDataManager *MetaDataManager::instance()
 {
     if(!m_instance)
-        new MetaDataManager();
+        m_instance = new MetaDataManager();
     return m_instance;
 }
 

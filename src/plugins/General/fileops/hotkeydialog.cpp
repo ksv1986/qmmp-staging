@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -47,7 +47,6 @@ void HotkeyDialog::keyPressEvent (QKeyEvent *event)
     case Qt::Key_Menu:
     case 0:
     case Qt::Key_unknown:
-        key = 0;
         ui.keyLineEdit->clear();
         QWidget::keyPressEvent(event);
         return;

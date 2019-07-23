@@ -451,7 +451,7 @@ void HttpStreamReader::checkBuffer()
 
 void HttpStreamReader::readICYMetaData()
 {
-    uint8_t packet_size;
+    uint8_t packet_size = 0;
     m_metacount = 0;
     m_mutex.lock();
 

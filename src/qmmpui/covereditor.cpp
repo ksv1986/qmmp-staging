@@ -70,7 +70,8 @@ void CoverEditor::on_sourceComboBox_activated(int index)
     }
     else if(index == 1)
     {
-        m_viewer->setPixmap(m_model->cover());
+        if(m_model)
+            m_viewer->setPixmap(m_model->cover());
         m_ui.loadButton->setEnabled(m_editable);
         m_ui.deleteButton->setEnabled(m_editable && m_viewer->hasPixmap());
         m_ui.saveAsButton->setEnabled(m_viewer->hasPixmap());

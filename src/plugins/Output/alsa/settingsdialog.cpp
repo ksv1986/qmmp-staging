@@ -181,6 +181,7 @@ void SettingsDialog::getCardDevices(int card)
         ui.deviceComboBox->addItem(str);
     }
 
+    free(card_name);
     snd_ctl_close(ctl);
 }
 

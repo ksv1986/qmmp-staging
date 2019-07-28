@@ -36,6 +36,7 @@
 #include <taglib/id3v2tag.h>
 #include <taglib/textidentificationframe.h>
 #include <taglib/mp4file.h>
+#include <taglib/opusfile.h>
 #include "rgscanner.h"
 #include "gain_analysis.h"
 #include "rgscandialog.h"
@@ -76,7 +77,8 @@ RGScanDialog::RGScanDialog(QList <PlayListTrack *> tracks,  QWidget *parent) : Q
                 ext == "oga" || //ogg flac
                 ext == "ogg" ||  //ogg vorbis
                 ext == "wv" || //wavpack
-                ext == "m4a") //aac (mp4 container)
+                ext == "m4a" || //aac (mp4 container)
+                ext == "opus")
         {
             paths.append(track->path());
             QString name = formatter.format(track);
@@ -432,6 +434,12 @@ void RGScanDialog::on_writeButton_clicked()
         {
             TagLib::MP4::File file(qPrintable(item->url));
             writeMP4Tag(file.tag(), item);
+            file.save();
+        }
+        else if(ext == "opus")
+        {
+            TagLib::Ogg::Opus::File file(qPrintable(item->url));
+            writeVorbisComment(file.tag(), item);
             file.save();
         }
     }

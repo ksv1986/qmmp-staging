@@ -265,7 +265,7 @@
         <location filename="../settingsdialog.ui" line="656"/>
         <source>Note: Setting the preamp
 too high may cause clipping!</source>
-        <translation>Nota: impostare la preamplificazione troppo alta può causare dei tagli!</translation>
+        <translation>Nota: Impostare la preamplificazione troppo alta può causare dei tagli!</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="671"/>

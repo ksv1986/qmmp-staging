@@ -65,7 +65,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="129"/>
         <source>ListenBrainz</source>
-        <translation type="unfinished"></translation>
+        <translation>ListenBrainz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>3. Press &quot;OK&quot;</source>
-        <translation>3. Premi «OK»</translation>
+        <translation>Premi «OK»</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="134"/>

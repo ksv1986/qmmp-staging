@@ -49,7 +49,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Mixer device</source>
-        <translation>Dispositivo mixer</translation>
+        <translation>Dispositivo mixer:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="84"/>

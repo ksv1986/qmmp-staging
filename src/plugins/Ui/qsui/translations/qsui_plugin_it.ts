@@ -459,7 +459,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
         <source>&amp;About Ui</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Informazioni sull&apos;interfaccia</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
@@ -500,7 +500,7 @@
     <message>
         <location filename="../coverwidget.cpp" line="32"/>
         <source>&amp;Save As...</source>
-        <translation>&amp;Salva come...</translation>
+        <translation>Salva come...</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="65"/>
@@ -680,7 +680,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="45"/>
         <source>&amp;Help</source>
-        <translation>&amp;Aiuto</translation>
+        <translation>Aiuto</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="50"/>
@@ -811,7 +811,7 @@
         <location filename="../forms/mainwindow.ui" line="247"/>
         <location filename="../mainwindow.cpp" line="286"/>
         <source>Rename Playlist</source>
-        <translation>Rinomina scaletta</translation>
+        <translation>Rinomina lista brani</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="463"/>
@@ -821,7 +821,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="373"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracce: %5|durata totale: %6|%7 kbps|</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
@@ -1011,7 +1011,7 @@
     <message>
         <location filename="../playlistheader.cpp" line="71"/>
         <source>Show Queue/Protocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra coda/protocollo</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="73"/>
@@ -1062,7 +1062,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="58"/>
         <source>Reset</source>
-        <translation>Azzera impostazione</translation>
+        <translation>Azzera</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="65"/>

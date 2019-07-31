@@ -162,7 +162,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="133"/>
         <source>File name pattern:</source>
-        <translation>Schema nome del file:</translation>
+        <translation>Schema nome del file</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="51"/>

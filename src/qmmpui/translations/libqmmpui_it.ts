@@ -271,7 +271,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="129"/>
         <source>Load metadata from files</source>
-        <translation>Carica i metadati dai file</translation>
+        <translation>Carica i metadati dai brani</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="136"/>
@@ -291,7 +291,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="170"/>
         <source>Read tags while loading a playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Leggi le etichette al caricamento delle scalette</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="180"/>
@@ -465,7 +465,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="706"/>
         <source>Default gain:</source>
-        <translation>Normalizzazione predefinita:</translation>
+        <translation>Normalizzazione predefinita</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="758"/>
@@ -495,7 +495,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="774"/>
         <source>Output bit depth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Profondità in bit dell&apos;uscita:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="781"/>
@@ -555,7 +555,7 @@
     <message>
         <location filename="../configdialog.cpp" line="256"/>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation>Uscita</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="267"/>
@@ -620,7 +620,7 @@
     <message>
         <location filename="../configdialog.cpp" line="338"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Greco</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="339"/>
@@ -635,7 +635,7 @@
     <message>
         <location filename="../configdialog.cpp" line="341"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesiano</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="342"/>
@@ -675,7 +675,7 @@
     <message>
         <location filename="../configdialog.cpp" line="349"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbo</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="350"/>
@@ -713,7 +713,7 @@
     <message>
         <location filename="../forms/covereditor.ui" line="22"/>
         <source>Image source:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonte immagine:</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
@@ -728,17 +728,17 @@
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
         <source>Save as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva come...</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="33"/>
         <source>External file</source>
-        <translation type="unfinished"></translation>
+        <translation>File esterno</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="34"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Etichetta</translation>
     </message>
 </context>
 <context>
@@ -762,7 +762,7 @@
     <message>
         <location filename="../coverviewer.cpp" line="81"/>
         <source>Open Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri immagine</translation>
     </message>
 </context>
 <context>
@@ -880,17 +880,17 @@
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>Sample size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione campione</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>bits</source>
-        <translation type="unfinished"></translation>
+        <translation>bit</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="274"/>
         <source>Format name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome formato</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
@@ -900,7 +900,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
@@ -1029,17 +1029,17 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Sample Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Campionamento</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Number of Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di canali</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Sample Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione campione</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
@@ -1054,7 +1054,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="66"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione file</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
@@ -1089,7 +1089,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Artist - [Year] Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Artista - [anno] album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="56"/>
@@ -1218,7 +1218,7 @@
     <message>
         <location filename="../forms/tageditor.ui" line="250"/>
         <source>Disc number:</source>
-        <translation>Numero disco: </translation>
+        <translation>Disco numero: </translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="275"/>
@@ -1255,7 +1255,7 @@
         <location filename="../uihelper.cpp" line="130"/>
         <location filename="../uihelper.cpp" line="142"/>
         <source>All Supported Bitstreams</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti i tipi di flusso supportati</translation>
     </message>
     <message>
         <location filename="../uihelper.cpp" line="136"/>

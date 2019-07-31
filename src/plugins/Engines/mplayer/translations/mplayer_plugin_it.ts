@@ -44,7 +44,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="65"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="67"/>
         <source>Video format</source>
-        <translation>Formato video</translation>
+        <translation>Formato Video</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="68"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <source>Video bitrate</source>
-        <translation>bit al secondo video</translation>
+        <translation>bit al secondo Video</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="71"/>

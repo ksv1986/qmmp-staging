@@ -383,13 +383,15 @@ void OutputWriter::updateEqSettings()
         init_iir(m_frequency, bands);
         set_two_passes(m_settings->eqSettings().twoPasses());
 
-        set_preamp(0, 1.0 + 0.0932471 *preamp + 0.00279033 * preamp * preamp);
-        set_preamp(1, 1.0 + 0.0932471 *preamp + 0.00279033 * preamp * preamp);
-        for(int i = 0; i < bands; ++i)
+        for(int ch = 0; ch < m_channels; ++ch)
         {
-            double value =  m_settings->eqSettings().gain(i);
-            set_gain(i,0, 0.03*value+0.000999999*value*value);
-            set_gain(i,1, 0.03*value+0.000999999*value*value);
+            set_preamp(ch, 1.0 + 0.0932471 *preamp + 0.00279033 * preamp * preamp);
+
+            for(int i = 0; i < bands; ++i)
+            {
+                double value =  m_settings->eqSettings().gain(i);
+                set_gain(i, ch, 0.03 * value + 0.000999999 * value * value);
+            }
         }
     }
     m_useEq = m_settings->eqSettings().isEnabled();

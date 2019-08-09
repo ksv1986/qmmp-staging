@@ -42,14 +42,6 @@ class QMMP_EXPORT MetaDataManager
 {
 public:
     /*!
-     * Constructor. Use MetaDataManager::instance() instead.
-     */
-    MetaDataManager();
-    /*!
-     * Destructor. Use MetaDataManager::destroy() instead.
-     */
-    ~MetaDataManager();
-    /*!
      * Extracts metadata and audio information from file \b path and returns a list of FileInfo items.
      * One file may contain several playlist items (for example: cda disk or flac with embedded cue)
      * @param path Local file path or URL.
@@ -114,12 +106,12 @@ public:
      * Returns a pointer to the MetaDataManager instance.
      */
     static MetaDataManager* instance();
-    /*!
-     * Destroys MetaDataManager object.
-     */
-    static void destroy();
 
 private:
+    MetaDataManager();
+    ~MetaDataManager();
+    static void destroy();
+
     struct CoverCacheItem
     {
         QString url;

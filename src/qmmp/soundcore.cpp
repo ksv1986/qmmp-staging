@@ -63,7 +63,6 @@ SoundCore::SoundCore(QObject *parent)
 SoundCore::~SoundCore()
 {
     stop();
-    MetaDataManager::destroy();
     m_instance = nullptr;
 }
 

@@ -22,6 +22,7 @@
 #include <QFileInfo>
 #include <QBuffer>
 #include <QMutexLocker>
+#include <QCoreApplication>
 #include "decoder.h"
 #include "decoderfactory.h"
 #include "abstractengine.h"
@@ -35,16 +36,12 @@ MetaDataManager* MetaDataManager::m_instance = nullptr;
 
 MetaDataManager::MetaDataManager() : m_mutex(QMutex::Recursive)
 {
-    if(m_instance)
-        qFatal("MetaDataManager is already created");
-    m_instance = this;
     m_settings = QmmpSettings::instance();
 }
 
 MetaDataManager::~MetaDataManager()
 {
     clearCoverCache();
-    m_instance = nullptr;
 }
 
 QList<TrackInfo *> MetaDataManager::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *ignoredPaths) const
@@ -310,7 +307,10 @@ void MetaDataManager::prepareForAnotherThread()
 MetaDataManager *MetaDataManager::instance()
 {
     if(!m_instance)
+    {
         m_instance = new MetaDataManager();
+        qAddPostRoutine(&MetaDataManager::destroy);
+    }
     return m_instance;
 }
 
@@ -318,4 +318,5 @@ void MetaDataManager::destroy()
 {
     if(m_instance)
         delete m_instance;
+    m_instance = nullptr;
 }

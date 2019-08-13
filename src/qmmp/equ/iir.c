@@ -51,20 +51,23 @@ unsigned int blength = 0;
  */
 unsigned int rate = 0;
 int band_count = 0;
-int two_passes = 0;
+unsigned int eq_options = 0;
 
-void set_preamp(int chn, float val)
+void eq_set_preamp(int chn, float val)
 {
   preamp[chn] = val;
 }
 
-void set_two_passes(int enabled)
+void eq_set_option(eq_option_t option, int enabled)
 {
-  two_passes = enabled;
+  if(enabled)
+    eq_options |= option;
+  else
+    eq_options &= ~option;
 }
 
 /* Init the filters */
-void init_iir(unsigned int srate, int band_num)
+void eq_init_iir(unsigned int srate, int band_num)
 {
   calc_coeffs();
 #if 0
@@ -78,7 +81,7 @@ void init_iir(unsigned int srate, int band_num)
   rate = srate;
 
   iir_cf = get_coeffs(&band_count, rate);
-  clean_history();
+  eq_clean_history();
 }
 
 #ifdef ARCH_X86

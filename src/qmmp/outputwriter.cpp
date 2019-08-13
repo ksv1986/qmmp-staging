@@ -92,7 +92,7 @@ bool OutputWriter::initialize(quint32 freq, ChannelMap map)
     m_bytesPerMillisecond = m_frequency * m_channels * AudioParameters::sampleSize(m_format) / 1000;
     m_recycler.configure(m_in_params.sampleRate(), m_in_params.channels()); //calculate output buffer size
     updateEqSettings();
-    clean_history();
+    eq_clean_history();
     return true;
 }
 
@@ -284,7 +284,7 @@ void OutputWriter::run()
             m_mutex.lock();
             if (m_useEq)
             {
-                iir(b->data, b->samples, m_channels);
+                eq_iir(b->data, b->samples, m_channels);
             }
             m_mutex.unlock();
             dispatchVisual(b);
@@ -380,17 +380,17 @@ void OutputWriter::updateEqSettings()
         double preamp = m_settings->eqSettings().preamp();
         int bands =  m_settings->eqSettings().bands();
 
-        init_iir(m_frequency, bands);
-        set_two_passes(m_settings->eqSettings().twoPasses());
+        eq_init_iir(m_frequency, bands);
+        eq_set_option(EQ_TWO_PASSES, m_settings->eqSettings().twoPasses());
 
         for(int ch = 0; ch < m_channels; ++ch)
         {
-            set_preamp(ch, 1.0 + 0.0932471 *preamp + 0.00279033 * preamp * preamp);
+            eq_set_preamp(ch, 1.0 + 0.0932471 *preamp + 0.00279033 * preamp * preamp);
 
             for(int i = 0; i < bands; ++i)
             {
                 double value =  m_settings->eqSettings().gain(i);
-                set_gain(i, ch, 0.03 * value + 0.000999999 * value * value);
+                eq_set_gain(i, ch, 0.03 * value + 0.000999999 * value * value);
             }
         }
     }

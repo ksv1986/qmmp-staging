@@ -37,12 +37,12 @@ static sXYData data_history[EQ_CHANNELS][EQ_MAX_BANDS] __attribute__((aligned));
 static sXYData data_history2[EQ_CHANNELS][EQ_MAX_BANDS] __attribute__((aligned));
 float gain[EQ_CHANNELS][EQ_MAX_BANDS] __attribute__((aligned));
 
-void set_gain(int index, int chn, float val)
+void eq_set_gain(int index, int chn, float val)
 {
   gain[chn][index] = val;
 }
 
-void clean_history()
+void eq_clean_history()
 {
   //int n;
   /* Zero the history arrays */
@@ -50,7 +50,7 @@ void clean_history()
   memset(data_history2, 0, sizeof(sXYData) * EQ_MAX_BANDS * EQ_CHANNELS);
 }
 
-__inline__ int iir(float *d, int samples, int nch)
+__inline__ int eq_iir(float *d, int samples, int nch)
 {
 //  FTZ_ON;
   float *data = (float *) d;
@@ -117,7 +117,7 @@ __inline__ int iir(float *d, int samples, int nch)
         out[channel] +=  data_history[channel][band].y[i]*gain[channel][band]; // * 2.0;
       } /* For each band */
 
-      if (two_passes)
+      if (eq_options & EQ_TWO_PASSES)
       {
         /* Filter the sample again */
         for (band = 0; band < band_count; band++)

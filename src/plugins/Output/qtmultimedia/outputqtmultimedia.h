@@ -47,8 +47,8 @@ public:
     virtual void resume() override;
 
 private:
-    QScopedPointer<QAudioOutput> m_output;
-    QScopedPointer<OutputControl> m_control;
+    QAudioOutput *m_output = nullptr;
+    OutputControl *m_control = nullptr;
     QIODevice *m_buffer;
     qint64 m_bytes_per_second;
 };
@@ -63,6 +63,7 @@ public:
 public slots:
     void suspend();
     void resume();
+    void stop();
 
 private:
     QAudioOutput *m_output;

@@ -35,6 +35,13 @@ OutputQtMultimedia::OutputQtMultimedia() : Output(), m_buffer(nullptr), m_bytes_
 
 OutputQtMultimedia::~OutputQtMultimedia()
 {
+    if(m_output && m_control)
+        QMetaObject::invokeMethod(m_control, "stop", Qt::QueuedConnection);
+
+    if(m_output)
+        m_output->deleteLater();
+    if(m_control)
+        m_control->deleteLater();
 }
 
 bool OutputQtMultimedia::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat format)
@@ -103,9 +110,9 @@ bool OutputQtMultimedia::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFor
 
     qDebug() << "OutputQtMultimedia: Using output device: " << device_info.deviceName();
 
-    m_output.reset(new QAudioOutput(device_info, qformat));
+    m_output = new QAudioOutput(device_info, qformat);
     m_buffer = m_output->start();
-    m_control.reset(new OutputControl(m_output.data()));
+    m_control = new OutputControl(m_output);
 
     configure(freq, map, format);
     return true;
@@ -139,12 +146,12 @@ void OutputQtMultimedia::reset()
 
 void OutputQtMultimedia::suspend()
 {
-    QMetaObject::invokeMethod(m_control.data(), "suspend", Qt::QueuedConnection);
+    QMetaObject::invokeMethod(m_control, "suspend", Qt::QueuedConnection);
 }
 
 void OutputQtMultimedia::resume()
 {
-    QMetaObject::invokeMethod(m_control.data(), "resume", Qt::QueuedConnection);
+    QMetaObject::invokeMethod(m_control, "resume", Qt::QueuedConnection);
 }
 
 OutputControl::OutputControl(QAudioOutput *o)
@@ -160,4 +167,9 @@ void OutputControl::suspend()
 void OutputControl::resume()
 {
     m_output->resume();
+}
+
+void OutputControl::stop()
+{
+    m_output->stop();
 }

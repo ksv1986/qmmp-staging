@@ -1506,3 +1506,17 @@ Version 1.3.3
 * fixed freezing in the ffmpeg plugin
 * updated Dutch translation (Heimen Stoffels)
 * updated Greek translation (Dimitrios Glentadakis)
+
+Version 1.3.4
+* improved mp3 file determination
+* added format name in the ffmpeg plugin
+* fixed pausing logic
+* fixed random crash when changing audio settings
+* fixed crash in the QtMultimedia plugin
+* fixed build warning
+* fixed duration formatting
+* fixed ReplayGain support
+* fixed memory leak
+* fixed multiple channels support in the equalizer
+* updated Ukrainian translation (Gennady Motsyo)
+* updated Italian translation (Luigi Toscano)

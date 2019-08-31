@@ -82,6 +82,13 @@ QList<TrackInfo *> DecoderVorbisFactory::createPlayList(const QString &path, Tra
         info->setValue(Qmmp::TITLE, TStringToQString(tag->title()));
         info->setValue(Qmmp::YEAR, tag->year());
         info->setValue(Qmmp::TRACK, tag->track());
+        TagLib::Ogg::FieldListMap items = tag->fieldListMap();
+        if(items.contains("ALBUMARTIST"))
+            info->setValue(Qmmp::ALBUMARTIST, TStringToQString(items["ALBUMARTIST"].front()));
+        if(items.contains("COMPOSER"))
+            info->setValue(Qmmp::COMPOSER, TStringToQString(items["COMPOSER"].front()));
+        if(items.contains("DISCNUMBER"))
+            info->setValue(Qmmp::DISCNUMBER, TStringToQString(items["DISCNUMBER"].front()));
     }
 
     if((parts & TrackInfo::Properties) && fileRef.audioProperties())

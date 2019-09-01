@@ -218,6 +218,11 @@ void MainWindow::seek()
 
 void MainWindow::showState(Qmmp::State state)
 {
+    if(state != Qmmp::Playing)
+    {
+        ACTION(ActionManager::PLAY_PAUSE)->setIcon(QIcon::fromTheme("media-playback-start"));
+    }
+
     switch((int) state)
     {
     case Qmmp::Playing:
@@ -226,6 +231,7 @@ void MainWindow::showState(Qmmp::State state)
         m_analyzer->setCover(MetaDataManager::instance()->getCover(m_core->path()));
         CoverWidget *cw = qobject_cast<CoverWidget *>(m_ui.coverDockWidget->widget());
         cw->setCover(MetaDataManager::instance()->getCover(m_core->path()));
+        ACTION(ActionManager::PLAY_PAUSE)->setIcon(QIcon::fromTheme("media-playback-pause"));
         break;
     }
     case Qmmp::Paused:

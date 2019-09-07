@@ -226,7 +226,7 @@ bool HotkeyManager::nativeEventFilter(const QByteArray &eventType, void *message
     {
         SoundCore *core = SoundCore::instance();
         MediaPlayer *player = MediaPlayer::instance();
-        foreach(Hotkey *hotkey, m_grabbedKeys)
+        for(const Hotkey *hotkey : qAsConst(m_grabbedKeys))
         {
             if(hotkey->id != m->wParam)
                 continue;

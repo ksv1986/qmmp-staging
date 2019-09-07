@@ -129,7 +129,7 @@ void ListenCache::save(const QList<SongInfo> &songs)
         qWarning("ScrobblerCache: error %d: %s", file.error(), qPrintable(file.errorString()));
         return;
     }
-    foreach(SongInfo m, songs)
+    for(const SongInfo &m : qAsConst(songs))
     {
         file.write(QString("title=%1").arg(m.value(Qmmp::TITLE)).toUtf8() +"\n");
         file.write(QString("artist=%1").arg(m.value(Qmmp::ARTIST)).toUtf8() +"\n");

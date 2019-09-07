@@ -70,10 +70,13 @@ QList<TrackInfo *> MetaDataManager::createPlayList(const QString &path, TrackInf
         }
         else
         {
-            foreach(fact, Decoder::factories())
+            for(DecoderFactory *f : Decoder::factories())
             {
-                if(fact->properties().protocols.contains(scheme) && Decoder::isEnabled(fact))
+                if(f->properties().protocols.contains(scheme) && Decoder::isEnabled(f))
+                {
+                    fact = f;
                     break;
+                }
             }
         }
     }
@@ -83,7 +86,7 @@ QList<TrackInfo *> MetaDataManager::createPlayList(const QString &path, TrackInf
     else if(efact)
         list = efact->createPlayList(path, parts, ignoredPaths);
 
-    foreach(TrackInfo *info, list)
+    for(TrackInfo *info : qAsConst(list))
     {
         if(info->value(Qmmp::DECODER).isEmpty() && (fact || efact))
             info->setValue(Qmmp::DECODER, fact ? fact->properties().shortName : efact->properties().shortName);
@@ -116,7 +119,7 @@ MetaDataModel* MetaDataManager::createMetaDataModel(const QString &path, bool re
         {
             return fact->createMetaDataModel(path, readOnly);
         }
-        foreach(efact, AbstractEngine::enabledFactories())
+        for(EngineFactory *efact : AbstractEngine::enabledFactories())
         {
             if(efact->properties().protocols.contains(scheme))
                 model = efact->createMetaDataModel(path, readOnly);
@@ -130,12 +133,12 @@ MetaDataModel* MetaDataManager::createMetaDataModel(const QString &path, bool re
 QStringList MetaDataManager::filters() const
 {
     QStringList filters;
-    foreach(DecoderFactory *fact, Decoder::enabledFactories())
+    for(const DecoderFactory *fact : Decoder::enabledFactories())
     {
         if (!fact->properties().filters.isEmpty())
             filters << fact->properties().description + " (" + fact->properties().filters.join(" ") + ")";
     }
-    foreach(EngineFactory *fact, AbstractEngine::enabledFactories())
+    for(const EngineFactory *fact : AbstractEngine::enabledFactories())
     {
         if (!fact->properties().filters.isEmpty())
             filters << fact->properties().description + " (" + fact->properties().filters.join(" ") + ")";
@@ -146,12 +149,12 @@ QStringList MetaDataManager::filters() const
 QStringList MetaDataManager::nameFilters() const
 {
     QStringList filters;
-    foreach(DecoderFactory *fact, Decoder::enabledFactories())
+    for(const DecoderFactory *fact : Decoder::enabledFactories())
     {
         if (Decoder::isEnabled(fact))
             filters << fact->properties().filters;
     }
-    foreach(EngineFactory *fact, AbstractEngine::enabledFactories())
+    for(const EngineFactory *fact : AbstractEngine::enabledFactories())
     {
         if (AbstractEngine::isEnabled(fact))
             filters << fact->properties().filters;
@@ -242,9 +245,9 @@ QFileInfoList MetaDataManager::findCoverFiles(QDir dir, int depth) const
     dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     dir.setSorting(QDir::Name);
     QFileInfoList file_list = dir.entryInfoList(m_settings->coverNameFilters());
-    foreach(QFileInfo i, file_list)
+    for(const QFileInfo &i : qAsConst(file_list))
     {
-        foreach(QString pattern, m_settings->coverNameFilters(false))
+        for(const QString &pattern : m_settings->coverNameFilters(false))
         {
             if(QRegExp (pattern, Qt::CaseInsensitive, QRegExp::Wildcard).exactMatch(i.fileName()))
             {
@@ -259,7 +262,7 @@ QFileInfoList MetaDataManager::findCoverFiles(QDir dir, int depth) const
     dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
     dir.setSorting(QDir::Name);
     QFileInfoList dir_info_list = dir.entryInfoList();
-    foreach(QFileInfo i, dir_info_list)
+    for(const QFileInfo &i : qAsConst(dir_info_list))
     {
         file_list << findCoverFiles(QDir(i.absoluteFilePath()), depth);
     }

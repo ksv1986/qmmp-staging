@@ -74,7 +74,7 @@ void PlayListBrowser::updateList()
 {
     m_listView->selectionModel()->blockSignals(true);
     m_listModel->clear();
-    foreach(PlayListModel *model, m_pl_manager->playLists())
+    for(PlayListModel *model : m_pl_manager->playLists())
     {
         QStandardItem *item = new QStandardItem(model->name());
         if(m_pl_manager->currentPlayList() == model)

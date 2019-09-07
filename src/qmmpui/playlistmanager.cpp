@@ -105,7 +105,7 @@ QList <PlayListModel *> PlayListManager::playLists() const
 QStringList PlayListManager::playListNames() const
 {
     QStringList names;
-    foreach(PlayListModel *model, m_models)
+    for(const PlayListModel *model : qAsConst(m_models))
         names << model->name();
     return names;
 }
@@ -325,7 +325,7 @@ void PlayListManager::readPlayLists()
         pl = 0;
     m_selected = m_models.at(pl);
     m_current = m_models.at(pl);
-    foreach(PlayListModel *model, m_models)
+    for(const PlayListModel *model : qAsConst(m_models))
     {
         connect(model, SIGNAL(nameChanged(QString)), SIGNAL(playListsChanged()));
         connect(model, SIGNAL(listChanged(int)), SLOT(onListChanged(int)));
@@ -344,27 +344,27 @@ void PlayListManager::writePlayLists()
         return;
     }
     plFile.write(QString("current_playlist=%1\n").arg(m_models.indexOf(m_current)).toUtf8());
-    foreach(PlayListModel *model, m_models)
+    for(const PlayListModel *model : qAsConst(m_models))
     {
         plFile.write(QString("playlist=%1\n").arg(model->name()).toUtf8());
         if(model->isEmpty())
             continue;
         QList<PlayListItem *> items = model->items();
         plFile.write(QString("current=%1\n").arg(model->indexOfTrack(model->currentIndex())).toUtf8());
-        foreach(PlayListItem* m, items)
+        for(PlayListItem *m : qAsConst(items))
         {
             if(m->isGroup())
                 continue;
             PlayListTrack *t = dynamic_cast<PlayListTrack *>(m);
             plFile.write(QString("file=%1\n").arg(t->path()).toUtf8());
 
-            foreach(Qmmp::MetaData metaKey, m_metaKeys.values())
+            for(const Qmmp::MetaData &metaKey : m_metaKeys.values())
             {
                 if(!(value = t->value(metaKey)).isEmpty())
                     plFile.write(QString("%1=%2\n").arg(m_metaKeys.key(metaKey)).arg(value).toUtf8());
             }
 
-            foreach(Qmmp::TrackProperty propKey, m_propKeys.values())
+            for(const Qmmp::TrackProperty &propKey : m_propKeys.values())
             {
                 if(!(value = t->value(propKey)).isEmpty())
                     plFile.write(QString("%1=%2\n").arg(m_propKeys.key(propKey)).arg(value).toLatin1());

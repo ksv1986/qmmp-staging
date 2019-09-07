@@ -298,7 +298,7 @@ void Scrobbler::submit()
     params.insert("sk", m_session);
 
     QStringList keys = params.keys();
-    foreach (QString key, keys) //removes empty keys
+    for(const QString &key : qAsConst(keys)) //removes empty keys
     {
         if(params.value(key).isEmpty() || params.value(key) == "0")
             params.remove(key);
@@ -309,7 +309,7 @@ void Scrobbler::submit()
 
     QUrlQuery body("");
     QByteArray data;
-    foreach (QString key, params.keys())
+    for(const QString &key : params.keys())
     {
         body.addQueryItem(key, params.value(key));
         data.append(key.toUtf8() + params.value(key).toUtf8());
@@ -347,7 +347,7 @@ void Scrobbler::sendNotification(const SongInfo &info)
     params.insert("method", "track.updateNowPlaying");
     params.insert("sk", m_session);
 
-    foreach (QString key, params) //removes empty keys
+    for(const QString &key : qAsConst(params)) //removes empty keys
     {
         if(params.value(key).isEmpty())
             params.remove(key);
@@ -358,7 +358,7 @@ void Scrobbler::sendNotification(const SongInfo &info)
 
     QUrlQuery body("");
     QByteArray data;
-    foreach (QString key, params.keys())
+    for(const QString &key : params.keys())
     {
         body.addQueryItem(key, params.value(key));
         data.append(key.toUtf8() + params.value(key).toUtf8());
@@ -469,7 +469,7 @@ void ScrobblerAuth::checkSession(const QString &session)
 
     QUrlQuery body("");
     QByteArray data;
-    foreach (QString key, params.keys())
+    for(const QString &key : params.keys())
     {
         body.addQueryItem(key, params.value(key));
         data.append(key.toUtf8() + params.value(key).toUtf8());

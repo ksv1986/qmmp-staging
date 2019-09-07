@@ -219,7 +219,7 @@ void QmmpUiPluginCache::cleanup(QSettings *settings)
 {
     settings->beginGroup("PluginCache");
 
-    foreach (QString key, settings->allKeys())
+    for(const QString &key : settings->allKeys())
     {
 #ifdef Q_OS_WIN
         if(!QFile::exists(key))

@@ -194,7 +194,7 @@ void ConfigDialog::loadPluginsInfo()
      */
     QTreeWidgetItem *item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Transports"));
     item->setFirstColumnSpanned(true);
-    foreach(InputSourceFactory *factory, InputSource::factories())
+    for(InputSourceFactory *factory : InputSource::factories())
     {
         new PluginItem (item, factory,  InputSource::file(factory));
     }
@@ -205,7 +205,7 @@ void ConfigDialog::loadPluginsInfo()
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Decoders"));
     item->setFirstColumnSpanned(true);
-    foreach(DecoderFactory *factory, Decoder::factories())
+    for(DecoderFactory *factory : Decoder::factories())
     {
         new PluginItem (item, factory,  Decoder::file(factory));
     }
@@ -216,7 +216,7 @@ void ConfigDialog::loadPluginsInfo()
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Engines"));
     item->setFirstColumnSpanned(true);
-    foreach(EngineFactory *factory, AbstractEngine::factories())
+    for(EngineFactory *factory : AbstractEngine::factories())
     {
         new PluginItem (item, factory,  AbstractEngine::file(factory));
     }
@@ -227,7 +227,7 @@ void ConfigDialog::loadPluginsInfo()
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Effects"));
     item->setFirstColumnSpanned(true);
-    foreach(EffectFactory *factory, Effect::factories())
+    for(EffectFactory *factory : Effect::factories())
     {
         new PluginItem (item, factory, Effect::file(factory));
     }
@@ -238,7 +238,7 @@ void ConfigDialog::loadPluginsInfo()
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Visualization"));
     item->setFirstColumnSpanned(true);
-    foreach(VisualFactory *factory, Visual::factories())
+    for(VisualFactory *factory : Visual::factories())
     {
         new PluginItem (item, factory, Visual::file(factory));
     }
@@ -249,7 +249,7 @@ void ConfigDialog::loadPluginsInfo()
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("General"));
     item->setFirstColumnSpanned(true);
-    foreach(GeneralFactory *factory, General::factories())
+    for(GeneralFactory *factory : General::factories())
     {
         new PluginItem (item, factory, General::file(factory));
     }
@@ -260,7 +260,7 @@ void ConfigDialog::loadPluginsInfo()
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("Output"));
     item->setFirstColumnSpanned(true);
-    foreach(OutputFactory *factory, Output::factories())
+    for(OutputFactory *factory : Output::factories())
     {
         new PluginItem (item, factory, Output::file(factory));
     }
@@ -271,7 +271,7 @@ void ConfigDialog::loadPluginsInfo()
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("File Dialogs"));
     item->setFirstColumnSpanned(true);
-    foreach(FileDialogFactory *factory, FileDialog::factories())
+    for(FileDialogFactory *factory : FileDialog::factories())
     {
         new PluginItem (item, factory, FileDialog::file(factory));
     }
@@ -282,7 +282,7 @@ void ConfigDialog::loadPluginsInfo()
     */
     item = new QTreeWidgetItem (m_ui->treeWidget, QStringList() << tr("User Interfaces"));
     item->setFirstColumnSpanned(true);
-    foreach(UiFactory *factory, UiLoader::factories())
+    for(UiFactory *factory : UiLoader::factories())
     {
         new PluginItem (item, factory, UiLoader::file(factory));
     }
@@ -359,7 +359,7 @@ void ConfigDialog::loadLanguages()
     l["sr_BA"] = tr("Serbian (Ijekavian)");
     l["sr_RS"] = tr("Serbian (Ekavian)");
 
-    foreach(QString code, l.keys())
+    for(const QString &code : l.keys())
     {
         QString title = code != "auto" ? l.value(code) + " (" + code + ")" : l.value(code);
         m_ui->langComboBox->addItem(title, code);

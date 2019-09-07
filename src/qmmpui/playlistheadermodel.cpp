@@ -240,7 +240,7 @@ void PlayListHeaderModel::updatePlayLists()
         patterns.append(m_columns[i].pattern);
     m_helper->setTitleFormats(patterns);
 
-    foreach(PlayListModel *model, PlayListManager::instance()->playLists())
+    for(PlayListModel *model : PlayListManager::instance()->playLists())
     {
          QMetaObject::invokeMethod(model, "listChanged", Q_ARG(int, PlayListModel::METADATA));
     }

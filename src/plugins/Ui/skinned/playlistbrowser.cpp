@@ -69,7 +69,7 @@ void PlayListBrowser::updateList()
 {
     m_ui.listView->selectionModel()->blockSignals(true);
     m_listModel->clear();
-    foreach(PlayListModel *model, m_pl_manager->playLists())
+    for(PlayListModel *model : m_pl_manager->playLists())
     {
         QStandardItem *item = new QStandardItem(model->name());
         if(m_pl_manager->currentPlayList() == model)
@@ -129,11 +129,11 @@ void PlayListBrowser::rename()
 void PlayListBrowser::on_deleteButton_clicked()
 {
     QModelIndexList selectedIndexes;
-    foreach(QModelIndex index, m_ui.listView->selectionModel()->selectedIndexes())
+    for(const QModelIndex &index : m_ui.listView->selectionModel()->selectedIndexes())
     {
         selectedIndexes << m_proxyModel->mapToSource(index);
     }
-    foreach (QModelIndex index, selectedIndexes)
+    for(const QModelIndex &index : qAsConst(selectedIndexes))
     {
         m_pl_manager->removePlayList(index.row());
     }

@@ -32,7 +32,7 @@ void UiLoader::loadPlugins()
 
     m_cache = new QList<QmmpUiPluginCache*>;
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    foreach (QString filePath, Qmmp::findPlugins("Ui"))
+    for(const QString &filePath : Qmmp::findPlugins("Ui"))
     {
         QmmpUiPluginCache *item = new QmmpUiPluginCache(filePath, &settings);
         if(item->hasError())
@@ -48,7 +48,7 @@ QList<UiFactory *> UiLoader::factories()
 {
     loadPlugins();
     QList<UiFactory *> list;
-    foreach (QmmpUiPluginCache *item, *m_cache)
+    for(QmmpUiPluginCache *item : qAsConst(*m_cache))
     {
         if(item->uiFactory())
             list.append(item->uiFactory());
@@ -60,7 +60,7 @@ QStringList UiLoader::names()
 {
     QStringList out;
     loadPlugins();
-    foreach(QmmpUiPluginCache *item, *m_cache)
+    for(const QmmpUiPluginCache *item : qAsConst(*m_cache))
     {
         out << item->shortName();
     }
@@ -70,7 +70,7 @@ QStringList UiLoader::names()
 QString UiLoader::file(UiFactory *factory)
 {
     loadPlugins();
-    foreach(QmmpUiPluginCache *item, *m_cache)
+    for(const QmmpUiPluginCache *item : qAsConst(*m_cache))
     {
         if(item->shortName() == factory->properties().shortName)
             return item->file();
@@ -86,7 +86,7 @@ void UiLoader::select(UiFactory* factory)
 void UiLoader::select(const QString &name)
 {
     loadPlugins();
-    foreach(QmmpUiPluginCache *item, *m_cache)
+    for(const QmmpUiPluginCache *item : qAsConst(*m_cache))
     {
         if(item->shortName() == name)
         {
@@ -106,7 +106,7 @@ UiFactory *UiLoader::selected()
 #else
     QString name = settings.value("Ui/current_plugin", "skinned").toString();
 #endif
-    foreach(QmmpUiPluginCache *item, *m_cache)
+    for(QmmpUiPluginCache *item : qAsConst(*m_cache))
     {
         if(item->shortName() == name && item->uiFactory())
             return item->uiFactory();

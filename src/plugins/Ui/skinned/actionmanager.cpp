@@ -179,7 +179,7 @@ void ActionManager::saveStates()
 void ActionManager::saveActions()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    foreach(QAction *action, m_actions.values())
+    for(const QAction *action : m_actions.values())
     {
         settings.setValue(QString("SkinnedShortcuts/")+action->objectName(), action->shortcut());
     }
@@ -187,7 +187,7 @@ void ActionManager::saveActions()
 
 void ActionManager::resetShortcuts()
 {
-    foreach (QAction *action, m_actions.values())
+    for(QAction *action : m_actions.values())
     {
         action->setShortcut(action->property("defaultShortcut").toString());
     }

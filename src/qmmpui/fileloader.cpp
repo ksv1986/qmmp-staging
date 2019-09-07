@@ -47,7 +47,7 @@ QList<PlayListTrack *> FileLoader::processFile(const QString &path, QStringList 
     QList<PlayListTrack *> tracks;
     QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, m_parts, ignoredPaths);
 
-    foreach (TrackInfo *info, infoList)
+    for(TrackInfo *info : qAsConst(infoList))
     {
         tracks.append(new PlayListTrack(info));
     }
@@ -128,11 +128,11 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
     {
         QStringList protocols = MetaDataManager::instance()->protocols();
         QList<QRegExp> filters;
-        foreach(const QString &pattern, MetaDataManager::instance()->nameFilters())
+        for(const QString &pattern : MetaDataManager::instance()->nameFilters())
             filters << QRegExp(pattern, Qt::CaseInsensitive, QRegExp::Wildcard);
 
 
-        foreach(PlayListTrack *t, tracks)
+        for(PlayListTrack *t : qAsConst(tracks))
         {
             if(t->path().contains("://"))
             {
@@ -150,7 +150,7 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
             else
             {
                 bool found = false;
-                foreach(const QRegExp &filter, filters)
+                for(const QRegExp &filter : qAsConst(filters))
                 {
                     if(filter.exactMatch(t->path()))
                     {
@@ -185,7 +185,7 @@ void FileLoader::addDirectory(const QString& s, PlayListItem *before)
     dir.setSorting(QDir::Name);
     QFileInfoList l = dir.entryInfoList(m_filters);
 
-    foreach(QFileInfo info, l)
+    for(const QFileInfo &info : qAsConst(l))
     {
         if(checkRestrictFilters(info) && checkExcludeFilters(info))
         {
@@ -325,7 +325,7 @@ void FileLoader::insert(PlayListItem *before, const QString &path)
 void FileLoader::insert(PlayListItem *before, const QStringList &paths)
 {
     m_mutex.lock();
-    foreach (QString path, paths)
+    for(const QString &path : qAsConst(paths))
     {
         LoaderTask task;
         task.before = before;
@@ -356,7 +356,7 @@ bool FileLoader::checkRestrictFilters(const QFileInfo &info)
     if(m_settings->restrictFilters().isEmpty())
         return true;
 
-    foreach(QString filter, m_settings->restrictFilters())
+    for(const QString &filter : m_settings->restrictFilters())
     {
         QRegExp regexp (filter, Qt::CaseInsensitive, QRegExp::Wildcard);
         if(regexp.exactMatch(info.absoluteFilePath()))
@@ -370,7 +370,7 @@ bool FileLoader::checkExcludeFilters(const QFileInfo &info)
     if(m_settings->excludeFilters().isEmpty())
         return true;
 
-    foreach(QString filter, m_settings->excludeFilters())
+    for(const QString &filter : m_settings->excludeFilters())
     {
         QRegExp regexp (filter, Qt::CaseInsensitive, QRegExp::Wildcard);
         if(regexp.exactMatch(info.absoluteFilePath()))
@@ -384,7 +384,7 @@ void FileLoader::removeIgnoredTracks(QList<PlayListTrack *> *tracks, const QStri
     if(ignoredPaths.isEmpty())
         return;
 
-    foreach(PlayListTrack *track, *tracks)
+    for(PlayListTrack *track : qAsConst(*tracks))
     {
         if(ignoredPaths.contains(track->path()))
         {

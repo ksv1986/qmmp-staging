@@ -113,7 +113,7 @@ void FileOps::execAction(int n)
                                    QMessageBox::Yes | QMessageBox::No) !=  QMessageBox::Yes)
             break;
 
-        foreach(PlayListTrack *track, tracks)
+        for(PlayListTrack *track : qAsConst(tracks))
         {
             if (QFile::exists(track->path()) && QFile::remove(track->path()))
                 model->removeTrack(track);
@@ -151,7 +151,7 @@ void FileOps::copy(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
     progress.show();
     progress.setAutoClose (false);
     int i  = 0;
-    foreach(PlayListTrack *track, tracks)
+    for(const PlayListTrack *track : qAsConst(tracks))
     {
         if (!QFile::exists(track->path()))
             continue;
@@ -207,9 +207,9 @@ void FileOps::copy(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
     progress.close();
 }
 
-void FileOps::rename(QList<PlayListTrack *> tracks, MetaDataFormatter *formatter, PlayListModel *model)
+void FileOps::rename(const QList<PlayListTrack *> &tracks, MetaDataFormatter *formatter, PlayListModel *model)
 {
-    foreach(PlayListTrack *track, tracks)
+    for(PlayListTrack *track : qAsConst(tracks))
     {
         if (!QFile::exists(track->path())) //is it file?
             continue;
@@ -232,7 +232,7 @@ void FileOps::rename(QList<PlayListTrack *> tracks, MetaDataFormatter *formatter
     }
 }
 
-void FileOps::move(QList<PlayListTrack *> tracks, const QString &dest, MetaDataFormatter *formatter, PlayListModel *model)
+void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, MetaDataFormatter *formatter, PlayListModel *model)
 {
     QProgressDialog progress(qApp->activeWindow ());
     progress.setWindowModality(Qt::WindowModal);
@@ -241,7 +241,7 @@ void FileOps::move(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
     progress.show();
     progress.setAutoClose (false);
     int i  = 0;
-    foreach(PlayListTrack *track, tracks)
+    for(PlayListTrack *track : qAsConst(tracks))
     {
         if (!QFile::exists(track->path()))
             continue;

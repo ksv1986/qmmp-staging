@@ -151,7 +151,7 @@ void EqWidget::readSettings()
     QPoint pos = settings.value("Skinned/eq_pos", QPoint(100, 216)).toPoint();
     int r = m_skin->ratio();
     //TODO QGuiApplication::screenAt
-    foreach(QScreen *screen, QGuiApplication::screens())
+    for(const QScreen *screen : QGuiApplication::screens())
     {
         if(screen->availableGeometry().contains(pos))
         {
@@ -321,7 +321,7 @@ void EqWidget::savePreset()
         preset->setPreamp(m_preamp->value());
         for (int i = 0; i<10; ++i)
             preset->setGain(i, m_sliders.at (i)->value());
-        foreach(EQPreset *p, m_presets) //remove preset with same name
+        for(EQPreset *p : qAsConst(m_presets)) //remove preset with same name
         {
             if (p->text() == text)
             {
@@ -391,7 +391,7 @@ void EqWidget::loadPreset(const QString &name)
 
 EQPreset *EqWidget::findPreset(const QString &name)
 {
-    foreach(EQPreset *preset, m_autoPresets)
+    for(EQPreset *preset : qAsConst(m_autoPresets))
     {
         if (preset->text() == name)
             return preset;

@@ -35,7 +35,7 @@ NormalContainer::~NormalContainer()
 
 void NormalContainer::addTracks(QList<PlayListTrack *> tracks)
 {
-    foreach (PlayListTrack *track, tracks)
+    for(PlayListTrack *track : qAsConst(tracks))
     {
         m_items.append(track);
         track->setTrackIndex(m_items.count() - 1);
@@ -118,7 +118,7 @@ void NormalContainer::setSelected(int index, bool selected)
 
 void NormalContainer::clearSelection()
 {
-    foreach (PlayListItem *item, m_items)
+    for(PlayListItem *item : qAsConst(m_items))
     {
         item->setSelected(false);
     }
@@ -177,7 +177,7 @@ void NormalContainer::removeTrack(PlayListTrack *track)
 
 void NormalContainer::removeTracks(QList<PlayListTrack *> tracks)
 {
-    foreach(PlayListTrack *t, tracks)
+    for(PlayListTrack *t : qAsConst(tracks))
         m_items.removeAll(t);
 
     for(int i = 0; i < m_items.count(); ++i)
@@ -188,7 +188,7 @@ bool NormalContainer::move(QList<int> indexes, int from, int to)
 {
     if (from > to)
     {
-        foreach(int i, indexes)
+        for(const int &i : qAsConst(indexes))
         {
             if (i + to - from < 0)
                 break;

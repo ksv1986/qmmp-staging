@@ -106,7 +106,7 @@ void SettingsDialog::on_configureButton_clicked()
     LADSPASlider *slider = nullptr;
     QLabel *label = nullptr;
 
-    foreach(LADSPAControl *c, effect->controls)
+    for(LADSPAControl *c : qAsConst(effect->controls))
     {
         switch ((int) c->type)
         {
@@ -146,6 +146,6 @@ void SettingsDialog::accept()
 void SettingsDialog::updateRunningPlugins()
 {
     m_ui->runningListWidget->clear();
-    foreach(LADSPAEffect *e, LADSPAHost::instance()->effects())
+    for(LADSPAEffect *e : LADSPAHost::instance()->effects())
         m_ui->runningListWidget->addItem(e->plugin->desc->Name);
 }

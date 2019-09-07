@@ -133,7 +133,7 @@ void QmmpUiSettings::setGroupFormat(const QString &groupFormat)
     {
         m_group_format = groupFormat;
         m_helper->setGroupFormat(m_group_format);
-        foreach(PlayListModel *model, PlayListManager::instance()->playLists())
+        for(PlayListModel *model : PlayListManager::instance()->playLists())
         {
             model->rebuildGroups();
         }

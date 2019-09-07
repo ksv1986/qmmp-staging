@@ -47,7 +47,7 @@ HalPlugin::HalPlugin(QObject *parent) : QObject(parent)
     m_addFiles = false;
     //find existing devices
     QStringList udis = m_manager->findDeviceByCapability("volume");
-    foreach(QString udi, udis)
+    for(const QString &udi : qAsConst(udis))
     addDevice(udi);
     //load remaining settings
     m_addTracks = settings.value("add_tracks", false).toBool();
@@ -63,7 +63,7 @@ HalPlugin::~HalPlugin()
 
 void HalPlugin::removeDevice(const QString &udi)
 {
-    foreach(HalDevice *device, m_devices)
+    for(HalDevice *device : qAsConst(m_devices))
     {
         if (device->udi() == udi)
         {
@@ -78,7 +78,7 @@ void HalPlugin::removeDevice(const QString &udi)
 
 void HalPlugin::addDevice(const QString &udi)
 {
-    foreach(HalDevice *device, m_devices) //is it already exists?
+    for(const HalDevice *device : qAsConst(m_devices)) //is it already exists?
     {
         if (device->udi() == udi)
             return;
@@ -141,7 +141,7 @@ void HalPlugin::addDevice(const QString &udi)
 void HalPlugin::updateActions()
 {
     // add action for cd audio or mounted volume
-    foreach(HalDevice *device, m_devices)
+    for(HalDevice *device : qAsConst(m_devices))
     {
         QStringList caps = device->property("info.capabilities").toStringList();
         QString dev_path;
@@ -184,7 +184,7 @@ void HalPlugin::updateActions()
         }
     }
     // remove action if device is unmounted/removed
-    foreach(QAction *action, m_actions->actions ())
+    for(QAction *action :m_actions->actions ())
     {
         if (!findDevice(action))
         {
@@ -205,7 +205,7 @@ void HalPlugin::processAction(QAction *action)
 
 QAction *HalPlugin::findAction(const QString &dev_path)
 {
-    foreach(QAction *action, m_actions->actions ())
+    for(QAction *action : m_actions->actions())
     {
         if (action->data().toString() == dev_path)
             return action;
@@ -215,7 +215,7 @@ QAction *HalPlugin::findAction(const QString &dev_path)
 
 HalDevice *HalPlugin::findDevice(QAction *action)
 {
-    foreach(HalDevice *device, m_devices)
+    for(HalDevice *device : qAsConst(m_devices))
     {
         QStringList caps = device->property("info.capabilities").toStringList();
         QString dev_path;
@@ -239,11 +239,11 @@ void HalPlugin::addPath(const QString &path)
 {
     PlayListModel *model = PlayListManager::instance()->selectedPlayList();
 
-    foreach(PlayListItem *item, model->items()) // Is it already exist?
+    for(const PlayListItem *item : model->items()) // Is it already exist?
     {
         if(item->isGroup())
             continue;
-        if (dynamic_cast<PlayListTrack *>(item)->path().startsWith(path))
+        if (dynamic_cast<const PlayListTrack *>(item)->path().startsWith(path))
             return;
     }
 

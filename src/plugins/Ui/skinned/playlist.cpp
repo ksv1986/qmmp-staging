@@ -473,7 +473,7 @@ void PlayList::readSettings()
         QPoint pos = settings.value ("Skinned/pl_pos", QPoint (100, 332)).toPoint();
         m_ratio = m_skin->ratio();
         //TODO QGuiApplication::screenAt
-        foreach(QScreen *screen, QGuiApplication::screens())
+        for(const QScreen *screen : QGuiApplication::screens())
         {
             if(screen->availableGeometry().contains(pos))
             {
@@ -611,7 +611,7 @@ void PlayList::generateCopySelectedMenu()
     action->setIcon(QIcon::fromTheme("document-new"));
     m_copySelectedMenu->addSeparator();
 
-    foreach(QString name, m_pl_manager->playListNames())
+    for(QString name : m_pl_manager->playListNames())
     {
         m_copySelectedMenu->addAction("&"+name.replace("&", "&&"));
     }
@@ -628,7 +628,7 @@ void PlayList::copySelectedMenuActionTriggered(QAction *action)
     else
     {
         actionText.remove(0,1).replace("&&", "&");
-        foreach(PlayListModel *model, m_pl_manager->playLists())
+        for(PlayListModel *model : m_pl_manager->playLists())
         {
             //if("&" + model->name().replace("&", "&&") == actionText)
             if(model->name() == actionText)
@@ -644,7 +644,7 @@ void PlayList::copySelectedMenuActionTriggered(QAction *action)
         return;
     }
     QList <PlayListTrack *> theCopy;
-    foreach(PlayListTrack *track, m_pl_manager->selectedPlayList()->selectedTracks())
+    for(PlayListTrack *track : m_pl_manager->selectedPlayList()->selectedTracks())
     {
         PlayListTrack *newItem = new PlayListTrack(*track);
         theCopy << newItem;

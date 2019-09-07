@@ -150,7 +150,7 @@ void FileSystemBrowser::onListViewActivated(const QModelIndex &index)
 
 void FileSystemBrowser::addToPlayList()
 {
-    foreach (QModelIndex index, m_listView->selectionModel()->selectedIndexes())
+    for(const QModelIndex &index : m_listView->selectionModel()->selectedIndexes())
     {
         if(!index.isValid())
             continue;

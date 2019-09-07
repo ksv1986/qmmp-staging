@@ -76,7 +76,7 @@ void ToolBarEditor::populateActionList(bool reset)
     }
 
     QStringList actionNames;
-    foreach (ActionManager::ToolBarInfo info, m_toolBarInfoList)
+    for(const ActionManager::ToolBarInfo &info : qAsConst(m_toolBarInfoList))
     {
         actionNames << info.actionNames;
         m_ui->toolbarNameComboBox->addItem(info.title);
@@ -191,7 +191,7 @@ void ToolBarEditor::on_toolbarNameComboBox_activated(int index)
         return;
     ActionManager::ToolBarInfo info = m_toolBarInfoList.at(index);
 
-    foreach (QString name, info.actionNames)
+    for(const QString &name : qAsConst(info.actionNames))
     {
         if(name == "separator")
         {

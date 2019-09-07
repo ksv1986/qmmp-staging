@@ -248,7 +248,7 @@ void UiHelper::exit()
 {
     //send non-spontaneous close event
     //for all windows
-    foreach (QWidget *widget, qApp->topLevelWidgets())
+    for(QWidget *widget : qApp->topLevelWidgets())
         widget->close();
 
     qApp->closeAllWindows();

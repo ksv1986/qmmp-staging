@@ -129,7 +129,7 @@ void PayloadCache::save(const QList<TrackMetaData> &songs)
         qWarning("PayloadCache: error %d: %s", file.error(), qPrintable(file.errorString()));
         return;
     }
-    foreach(TrackMetaData m, songs)
+    for(const TrackMetaData &m : qAsConst(songs))
     {
         file.write(QString("title=%1").arg(m.value(Qmmp::TITLE)).toUtf8() +"\n");
         file.write(QString("artist=%1").arg(m.value(Qmmp::ARTIST)).toUtf8() +"\n");

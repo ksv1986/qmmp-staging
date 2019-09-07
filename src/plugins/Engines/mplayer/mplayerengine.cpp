@@ -66,7 +66,7 @@ TrackInfo *MplayerInfo::createTrackInfo(const QString &path)
     QString str = QString::fromLocal8Bit(mplayer_process.readAll()).trimmed();
     TrackInfo *info = new TrackInfo(path);
     QStringList lines = str.split("\n");
-    foreach(QString line, lines)
+    for(const QString &line : qAsConst(lines))
     {
         if(rx_id_length.indexIn(line) > -1)
             info->setDuration((qint64) rx_id_length.cap(1).toDouble() * 1000);
@@ -124,7 +124,7 @@ bool MplayerEngine::enqueue(InputSource *source)
 {
     QStringList filters = MplayerInfo::filters();
     bool supports = false;
-    foreach(QString filter, filters)
+    for(const QString &filter : qAsConst(filters))
     {
         QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
         supports = regexp.exactMatch(source->path());
@@ -203,9 +203,8 @@ void MplayerEngine::setMuted(bool muted)
 
 void MplayerEngine::readStdOut()
 {
-    QString line = QString::fromLocal8Bit(m_process->readAll ()).trimmed();
-    QStringList lines = line.split("\n");
-    foreach(line, lines)
+    const QStringList lines = QString::fromLocal8Bit(m_process->readAll()).trimmed().split("\n");
+    for(const QString &line : lines)
     {
         if (rx_av.indexIn(line) > -1)
         {

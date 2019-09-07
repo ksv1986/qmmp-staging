@@ -131,7 +131,7 @@ void PlayListModel::add(QList<PlayListTrack *> tracks)
         m_current = m_container->indexOf(m_current_track);
     }
 
-    foreach(PlayListTrack *track, tracks)
+    for(PlayListTrack *track : qAsConst(tracks))
     {
         m_total_duration += track->duration();
         emit trackAdded(track);
@@ -189,7 +189,7 @@ void PlayListModel::insert(int index, QList<PlayListTrack *> tracks)
 
     int flags = 0;
 
-    foreach(PlayListTrack *track, tracks)
+    for(PlayListTrack *track : qAsConst(tracks))
     {
         m_container->insertTrack(index, track);
         m_total_duration += track->duration();
@@ -235,7 +235,7 @@ void PlayListModel::insert(int index, const QStringList &paths)
 void PlayListModel::insert(int index, const QList<QUrl> &urls)
 {
     QStringList paths;
-    foreach (QUrl url, urls)
+    for(const QUrl &url : qAsConst(urls))
     {
         if(url.scheme() == "file")
             paths.append(QFileInfo(url.toLocalFile()).canonicalFilePath());
@@ -452,14 +452,14 @@ void PlayListModel::setSelected(int index, bool selected)
 
 void PlayListModel::setSelected(QList<PlayListTrack *> tracks, bool selected)
 {
-    foreach(PlayListTrack *t, tracks)
+    for(PlayListTrack *t : qAsConst(tracks))
         t->setSelected(selected);
     emit listChanged(SELECTION);
 }
 
 void PlayListModel::setSelected(QList<PlayListItem *> items, bool selected)
 {
-    foreach(PlayListItem *i, items)
+    for(PlayListItem *i : qAsConst(items))
         i->setSelected(selected);
     emit listChanged(SELECTION);
 }
@@ -483,7 +483,7 @@ void PlayListModel::setSelected(int first, int last, bool selected)
 
 void PlayListModel::setSelected(QList<int> indexes, bool selected)
 {
-    foreach (int idx, indexes)
+    for(const int &idx : qAsConst(indexes))
         m_container->setSelected(idx, selected);
     emit listChanged(SELECTION);
 }
@@ -728,7 +728,7 @@ void PlayListModel::moveItems(int from, int to)
     if(selected_indexes.isEmpty())
         return;
 
-    foreach(int i, selected_indexes) //do no move groups
+    for(const int &i : qAsConst(selected_indexes)) //do no move groups
     {
         if(!isTrack(i))
             return;
@@ -800,7 +800,7 @@ QList<int> PlayListModel::selectedIndexes() const
 QList<PlayListTrack *> PlayListModel::selectedTracks() const
 {
     QList<PlayListTrack*> selected_tracks;
-    foreach(PlayListItem *item, m_container->items())
+    for(PlayListItem *item : m_container->items())
     {
         if(!item->isGroup() && item->isSelected())
             selected_tracks.append(dynamic_cast<PlayListTrack *>(item));
@@ -817,7 +817,7 @@ void PlayListModel::addToQueue()
 {
     QList<PlayListTrack*> selected_tracks = selectedTracks();
     blockSignals(true);
-    foreach(PlayListTrack* track, selected_tracks)
+    for(PlayListTrack *track : qAsConst(selected_tracks))
         setQueued(track);
     blockSignals(false);
     emit listChanged(QUEUE);
@@ -976,7 +976,7 @@ void PlayListModel::onTaskFinished()
                 flags |= STOP_AFTER;
             }
 
-            foreach (PlayListTrack *t, m_queued_songs)
+            for(PlayListTrack *t : qAsConst(m_queued_songs))
             {
                 if(!m_container->contains(t))
                 {

@@ -182,19 +182,19 @@ void TrackInfo::setValues(const QMap<Qmmp::ReplayGainKey, double> &replayGainInf
 
 void TrackInfo::updateValues(const QMap<Qmmp::MetaData, QString> &metaData)
 {
-    foreach (Qmmp::MetaData key, metaData.keys())
+    for(const Qmmp::MetaData &key : metaData.keys())
         setValue(key, metaData[key]);
 }
 
 void TrackInfo::updateValues(const QMap<Qmmp::TrackProperty, QString> &properties)
 {
-    foreach (Qmmp::TrackProperty key, properties.keys())
+    for(const Qmmp::TrackProperty &key : properties.keys())
         setValue(key, properties[key]);
 }
 
 void TrackInfo::updateValues(const QMap<Qmmp::ReplayGainKey, double> &replayGainInfo)
 {
-    foreach (Qmmp::ReplayGainKey key, replayGainInfo.keys())
+    for(const Qmmp::ReplayGainKey &key : replayGainInfo.keys())
         setValue(key, replayGainInfo[key]);
 }
 

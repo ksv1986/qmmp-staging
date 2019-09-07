@@ -119,7 +119,7 @@ void SkinnedSettings::on_skinInstallButton_clicked()
 {
     QStringList files = FileDialog::getOpenFileNames(this,tr("Select Skin Files"), QDir::homePath(),
                                                      tr("Skin files") + " (*.tar.gz *.tgz *.tar.bz2 *.zip *.wsz)");
-    foreach(QString path, files)
+    for(const QString &path : qAsConst(files))
     {
         QFile file(path);
         file.copy(Qmmp::configDir() + "/skins/" + QFileInfo(path).fileName());
@@ -163,7 +163,7 @@ void SkinnedSettings::findSkins(const QString &path)
     QList <QFileInfo> fileList = dir.entryInfoList();
     if (fileList.count() == 0)
         return;
-    foreach (QFileInfo fileInfo, fileList)
+    for(const QFileInfo &fileInfo : qAsConst(fileList))
     {
         QPixmap preview = Skin::getPixmap ("main", QDir(fileInfo.filePath ()));
         if (!preview.isNull())
@@ -203,7 +203,7 @@ void SkinnedSettings::loadSkins()
 #else
     findSkins(Qmmp::dataPath());
 #endif
-    foreach(QString path, m_reader->skins())
+    for(const QString &path : m_reader->skins())
     {
         QListWidgetItem *item = new QListWidgetItem (path.section('/', -1));
         item->setIcon (m_reader->getPreview(path));

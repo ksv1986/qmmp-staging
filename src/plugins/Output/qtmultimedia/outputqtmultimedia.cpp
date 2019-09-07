@@ -86,7 +86,7 @@ bool OutputQtMultimedia::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFor
     if (!saved_device_name.isEmpty())
     {
         const QList<QAudioDeviceInfo> devices = QAudioDeviceInfo::availableDevices(QAudio::AudioOutput);
-        foreach (const QAudioDeviceInfo &info, devices)
+        for(const QAudioDeviceInfo &info : devices)
         {
             if (info.deviceName()==saved_device_name)
             {

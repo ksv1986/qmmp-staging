@@ -37,7 +37,7 @@ void General::loadPlugins()
 
     m_cache = new QList<QmmpUiPluginCache*>;
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    foreach (QString filePath, Qmmp::findPlugins("General"))
+    for(const QString &filePath : Qmmp::findPlugins("General"))
     {
         QmmpUiPluginCache *item = new QmmpUiPluginCache(filePath, &settings);
         if(item->hasError())
@@ -58,7 +58,7 @@ void General::create(QObject *parent)
     m_generals = new QHash <GeneralFactory*, QObject*>();
     m_parent = parent;
     loadPlugins();
-    foreach(QmmpUiPluginCache* item, *m_cache)
+    for(QmmpUiPluginCache* item : qAsConst(*m_cache))
     {
         if(!m_enabledNames.contains(item->shortName()))
             continue;
@@ -75,7 +75,7 @@ QList<GeneralFactory *> General::factories()
 {
     loadPlugins();
     QList<GeneralFactory *> list;
-    foreach (QmmpUiPluginCache *item, *m_cache)
+    for(QmmpUiPluginCache *item : qAsConst(*m_cache))
     {
         if(item->generalFactory())
             list.append(item->generalFactory());
@@ -87,7 +87,7 @@ QList<GeneralFactory *> General::enabledFactories()
 {
     loadPlugins();
     QList<GeneralFactory *> list;
-    foreach (QmmpUiPluginCache *item, *m_cache)
+    for(QmmpUiPluginCache *item : qAsConst(*m_cache))
     {
         if(!m_enabledNames.contains(item->shortName()))
             continue;
@@ -100,7 +100,7 @@ QList<GeneralFactory *> General::enabledFactories()
 QString General::file(const GeneralFactory *factory)
 {
     loadPlugins();
-    foreach(QmmpUiPluginCache *item, *m_cache)
+    for(const QmmpUiPluginCache *item : qAsConst(*m_cache))
     {
         if(item->shortName() == factory->properties().shortName)
             return item->file();

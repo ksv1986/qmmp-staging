@@ -79,7 +79,7 @@ PlayListHeader::PlayListHeader(QWidget *parent) :
     m_alignmentMenu->addAction(tr("Center", "alignment"))->setData(ListWidgetRow::ALIGN_CENTER);
     connect(m_alignmentMenu, SIGNAL(triggered(QAction*)), SLOT(setAlignment(QAction*)));
     QActionGroup *alignmentGroup = new QActionGroup(this);
-    foreach (QAction *a, m_alignmentMenu->actions())
+    for(QAction *a : m_alignmentMenu->actions())
     {
         a->setCheckable(true);
         alignmentGroup->addAction(a);
@@ -275,7 +275,7 @@ int PlayListHeader::maxScrollValue() const
         return 0;
 
     int row_width = 0;
-    foreach (int size, sizes())
+    for(int size : sizes())
     {
         row_width += size;
     }
@@ -633,7 +633,7 @@ void PlayListHeader::contextMenuEvent(QContextMenuEvent *e)
         m_autoResizeAction->setChecked(m_model->data(m_pressed_column, AUTO_RESIZE).toBool());
 
         int alignment = m_model->data(m_pressed_column, ALIGNMENT).toInt();
-        foreach (QAction *action, m_alignmentMenu->actions())
+        for(QAction *action : m_alignmentMenu->actions())
         {
             if(action->data().toInt() == alignment)
             {
@@ -643,7 +643,7 @@ void PlayListHeader::contextMenuEvent(QContextMenuEvent *e)
         }
 
         //hide unused actions
-        foreach (QAction *action, m_menu->actions())
+        for(QAction *action : m_menu->actions())
         {
             if(m_menu->actions().at(0) == action)
                 action->setVisible(m_model->count() < MAX_COLUMNS);
@@ -656,7 +656,7 @@ void PlayListHeader::contextMenuEvent(QContextMenuEvent *e)
     }
     else
     {
-        foreach (QAction *action, m_menu->actions())
+        for(QAction *action : m_menu->actions())
         {
             if(action == m_menu->actions().first())
                 action->setVisible(m_model->count() < MAX_COLUMNS);

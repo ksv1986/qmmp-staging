@@ -57,7 +57,7 @@ QList<PlayListTrack *> PLSPlaylistFormat::decode(const QByteArray &contents)
     int number = 0;
     bool error = false;
 
-    foreach (QString line, splitted)
+    for(const QString &line : qAsConst(splitted))
     {
         if(fileRegExp.indexIn(line) > -1)
         {
@@ -124,7 +124,7 @@ QByteArray PLSPlaylistFormat::encode(const QList<PlayListTrack *> &contents, con
     QStringList out;
     out << QString("[playlist]");
     int counter = 1;
-    foreach(PlayListTrack *f, contents)
+    for(const PlayListTrack *f : qAsConst(contents))
     {
         QString begin = "File" + QString::number(counter) + "=";
         out.append(begin + f->path());

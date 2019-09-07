@@ -42,7 +42,7 @@ void CommandLineManager::checkOptions()
         m_options = new QList<CommandLineHandler *>;
         m_files = new QHash<CommandLineHandler*, QString>;
 
-        foreach (QString filePath, Qmmp::findPlugins("CommandLineOptions"))
+        for(const QString &filePath : Qmmp::findPlugins("CommandLineOptions"))
         {
             QPluginLoader loader(filePath);
             QObject *plugin = loader.instance();
@@ -76,7 +76,7 @@ QString CommandLineManager::executeCommand(const QString &name, const QStringLis
     checkOptions();
     bool started = UiHelper::instance() && SoundCore::instance() && MediaPlayer::instance();
 
-    foreach(CommandLineHandler *opt, *m_options)
+    for(CommandLineHandler *opt : qAsConst(*m_options))
     {
         int id = opt->identify(name);
         if(id < 0)
@@ -100,7 +100,7 @@ bool CommandLineManager::hasOption(const QString &opt_str, CommandLineHandler::O
     checkOptions();
     if(flags)
         *flags = nullptr;
-    foreach(CommandLineHandler *opt, *m_options)
+    for(const CommandLineHandler *opt : qAsConst(*m_options))
     {
         int id = opt->identify(opt_str);
         if(id >= 0)
@@ -116,9 +116,9 @@ bool CommandLineManager::hasOption(const QString &opt_str, CommandLineHandler::O
 void CommandLineManager::printUsage()
 {
     checkOptions();
-    foreach(CommandLineHandler *opt, *m_options)
+    for(const CommandLineHandler *opt : qAsConst(*m_options))
     {
-        foreach(QString line, opt->helpString())
+        for(const QString &line : opt->helpString())
         {
             QString str = formatHelpString(line);
             if(!str.isEmpty())

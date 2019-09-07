@@ -60,10 +60,10 @@ void SkinReader::generateThumbs()
     cache_dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     QFileInfoList d = cache_dir.entryInfoList();
     //clear removed skins from cache
-    foreach(QFileInfo thumbFile, d)
+    for(const QFileInfo &thumbFile : qAsConst(d))
     {
         bool del = true;
-        foreach(QFileInfo fileInfo, f)
+        for(const QFileInfo &fileInfo : qAsConst(f))
         {
             if (fileInfo.baseName () == thumbFile.baseName ())
             {
@@ -80,10 +80,10 @@ void SkinReader::generateThumbs()
         }
     }
     //add new skins to cache
-    foreach(QFileInfo fileInfo, f)
+    for(const QFileInfo &fileInfo : qAsConst(f))
     {
         bool create = true;
-        foreach(QFileInfo thumbInfo, d)
+        for(const QFileInfo &thumbInfo : qAsConst(d))
         {
             if (fileInfo.baseName () == thumbInfo.baseName ())
             {
@@ -106,9 +106,9 @@ void SkinReader::generateThumbs()
     //add thumbs to map
     cache_dir.refresh();
     d = cache_dir.entryInfoList();
-    foreach(QFileInfo fileInfo, f)
+    for(const QFileInfo &fileInfo : qAsConst(f))
     {
-         foreach(QFileInfo thumbInfo, d)
+         for(const QFileInfo &thumbInfo : qAsConst(d))
          {
             if (fileInfo.baseName () == thumbInfo.baseName ())
             {
@@ -126,7 +126,7 @@ void SkinReader::unpackSkin(const QString &path)
     QDir dir(Qmmp::configDir() + "/cache/skin");
     dir.setFilter( QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     QFileInfoList f = dir.entryInfoList();
-    foreach(QFileInfo file, f)
+    for(const QFileInfo &file : qAsConst(f))
         dir.remove(file.fileName());
     //unpack
     QString name = QFileInfo(path).fileName().toLower();
@@ -157,7 +157,7 @@ void SkinReader::untar(const QString &from, const QString &to, bool preview)
     array = m_process->readAllStandardOutput ();
     QString str = QString(array);
     QStringList outputList = str.split("\n", QString::SkipEmptyParts);
-    foreach(QString str, outputList)
+    for(QString str : qAsConst(outputList))
     {
         str = str.trimmed();
         args.clear();
@@ -194,7 +194,7 @@ void SkinReader::unzip(const QString &from, const QString &to, bool preview)
         QDir dir(to);
         dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
         QFileInfoList fileList = dir.entryInfoList();
-        foreach(QFileInfo thumbInfo, fileList)
+        for(const QFileInfo &thumbInfo : qAsConst(fileList))
         {
             if (thumbInfo.fileName().startsWith("main.", Qt::CaseInsensitive))
             {

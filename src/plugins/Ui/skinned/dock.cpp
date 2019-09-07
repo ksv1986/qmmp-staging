@@ -199,7 +199,7 @@ void Dock::move (QWidget* mv, QPoint npos)
 void Dock::calculateDistances()
 {
     m_delta_list.clear();
-    foreach (QWidget *w, m_widgetList)
+    for(const QWidget *w : qAsConst(m_widgetList))
     {
         if (w == m_mainWidget)
             m_delta_list.append(QPoint(0,0));

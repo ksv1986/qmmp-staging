@@ -49,7 +49,7 @@ UDisks2Plugin::UDisks2Plugin(QObject *parent) : QObject(parent)
     m_addFiles = false;
     //find existing devices
     QList<QDBusObjectPath> devs = m_manager->findAllDevices();
-    foreach(QDBusObjectPath o, devs)
+    for(const QDBusObjectPath &o : qAsConst(devs))
         addDevice(o);
     //load remaining settings
     m_addTracks = settings.value("add_tracks", false).toBool();
@@ -65,7 +65,7 @@ UDisks2Plugin::~UDisks2Plugin()
 
 void UDisks2Plugin::removeDevice(QDBusObjectPath o)
 {
-    foreach(UDisks2Device *device, m_devices)
+    for(UDisks2Device *device : qAsConst(m_devices))
     {
         if (device->objectPath() == o)
         {
@@ -80,7 +80,7 @@ void UDisks2Plugin::removeDevice(QDBusObjectPath o)
 
 void UDisks2Plugin::addDevice(QDBusObjectPath o)
 {
-    foreach(UDisks2Device *device, m_devices) //is it already exists?
+    for(const UDisks2Device *device : qAsConst(m_devices)) //is it already exists?
     {
         if (device->objectPath() == o)
             return;
@@ -101,7 +101,7 @@ void UDisks2Plugin::addDevice(QDBusObjectPath o)
 void UDisks2Plugin::updateActions()
 {
     // add action for cd audio or mounted volume
-    foreach(UDisks2Device *device, m_devices)
+    for(const UDisks2Device *device : qAsConst(m_devices))
     {
         QString dev_path;
         if (m_detectCDA && device->isAudio()) //cd audio
@@ -157,7 +157,7 @@ void UDisks2Plugin::updateActions()
         }
     }
     // remove action if device is unmounted/removed
-    foreach(QAction *action, m_actions->actions ())
+    for(QAction *action : m_actions->actions())
     {
         if (!findDevice(action))
         {
@@ -179,7 +179,7 @@ void UDisks2Plugin::processAction(QAction *action)
 
 QAction *UDisks2Plugin::findAction(const QString &dev_path)
 {
-    foreach(QAction *action, m_actions->actions ())
+    for(QAction *action : m_actions->actions())
     {
         if (action->data().toString() == dev_path)
             return action;
@@ -189,7 +189,7 @@ QAction *UDisks2Plugin::findAction(const QString &dev_path)
 
 UDisks2Device *UDisks2Plugin::findDevice(QAction *action)
 {
-    foreach(UDisks2Device *device, m_devices)
+    for(UDisks2Device *device : qAsConst(m_devices))
     {
         QString dev_path;
         if (device->isAudio())
@@ -212,7 +212,7 @@ void UDisks2Plugin::addPath(const QString &path)
 {
     PlayListModel *model = PlayListManager::instance()->selectedPlayList();
 
-    foreach(PlayListItem *item, model->items()) // Is it already exist?
+    for(PlayListItem *item : model->items()) // Is it already exist?
     {
         if(item->isGroup())
             continue;

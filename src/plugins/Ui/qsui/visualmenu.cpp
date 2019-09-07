@@ -26,8 +26,7 @@
 
 VisualMenu::VisualMenu(QWidget *parent) : QMenu(tr("Visualization"), parent)
 {
-    VisualFactory *factory = nullptr;
-    foreach(factory, Visual::factories())
+    for(VisualFactory *factory : Visual::factories())
     {
         VisualAction *act = new VisualAction(factory, this);
         addAction(act);

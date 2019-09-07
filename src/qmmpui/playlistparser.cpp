@@ -39,7 +39,7 @@ QStringList PlayListParser::nameFilters()
 {
     loadFormats();
     QStringList filters;
-    foreach(PlayListFormat* format, *m_formats)
+    for(const PlayListFormat *format : qAsConst(*m_formats))
     {
         filters << format->properties().filters;
     }
@@ -48,7 +48,7 @@ QStringList PlayListParser::nameFilters()
 
 bool PlayListParser::isPlayList(const QString &url)
 {
-    foreach (QString filter, nameFilters())
+    for(const QString &filter : nameFilters())
     {
         QRegExp r(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
         if(r.exactMatch(url))
@@ -60,7 +60,7 @@ bool PlayListParser::isPlayList(const QString &url)
 PlayListFormat *PlayListParser::findByMime(const QString &mime)
 {
     loadFormats();
-    foreach(PlayListFormat* format, *m_formats)
+    for(PlayListFormat *format : qAsConst(*m_formats))
     {
         if(format->properties().contentTypes.contains(mime))
             return format;
@@ -71,9 +71,9 @@ PlayListFormat *PlayListParser::findByMime(const QString &mime)
 PlayListFormat *PlayListParser::findByPath(const QString &filePath)
 {
     loadFormats();
-    foreach(PlayListFormat* format, *m_formats)
+    for(PlayListFormat *format : qAsConst(*m_formats))
     {
-        foreach(QString filter, format->properties().filters)
+        for(const QString &filter : format->properties().filters)
         {
             QRegExp r(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
             if(r.exactMatch(filePath))
@@ -130,7 +130,7 @@ QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &f_name)
     }
 
     QString path;
-    foreach (PlayListTrack *t, tracks)
+    for(PlayListTrack *t : qAsConst(tracks))
     {
         path = t->path();
 
@@ -149,7 +149,7 @@ QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &f_name)
 
 QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &fmt, const QByteArray &content)
 {
-    foreach (PlayListFormat *p, *m_formats)
+    for(PlayListFormat *p : qAsConst(*m_formats))
     {
         if(p->properties().shortName == fmt)
             return p->decode(content);
@@ -163,7 +163,7 @@ void PlayListParser::loadFormats()
         return;
 
     m_formats = new QList<PlayListFormat*>();
-    foreach (QString filePath, Qmmp::findPlugins("PlayListFormats"))
+    for(const QString &filePath : Qmmp::findPlugins("PlayListFormats"))
     {
         QPluginLoader loader(filePath);
         QObject *plugin = loader.instance();

@@ -50,7 +50,7 @@ CoverWidget::CoverWidget(QWidget *parent)
     //settings
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_size = settings.value("CoverManager/size", 0).toInt();
-    foreach(QAction *a, sizeMenu->actions ())
+    for(QAction *a : sizeMenu->actions ())
     {
         a->setCheckable(true);
         if(a->data().toInt() == m_size)

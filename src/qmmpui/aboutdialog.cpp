@@ -75,7 +75,7 @@ QString AboutDialog::loadAbout()
 
     text.append("<h5>"+tr("Input plugins:")+"</h5>");
     text.append("<ul type=\"square\">");
-    foreach(DecoderFactory *fact, Decoder::factories())
+    for(const DecoderFactory *fact : Decoder::factories())
     {
         text.append("<li>");
         text.append(fact->properties().name);
@@ -84,7 +84,7 @@ QString AboutDialog::loadAbout()
     text.append("</ul>");
     text.append("<h5>"+tr("Output plugins:")+"</h5>");
     text.append("<ul type=\"square\">");
-    foreach(OutputFactory *fact, Output::factories())
+    for(const OutputFactory *fact : Output::factories())
     {
         text.append("<li>");
         text.append(fact->properties().name);
@@ -93,7 +93,7 @@ QString AboutDialog::loadAbout()
     text.append("</ul>");
     text.append("<h5>"+tr("Visual plugins:")+"</h5>");
     text.append("<ul type=\"square\">");
-    foreach(VisualFactory *fact, Visual::factories())
+    for(const VisualFactory *fact : Visual::factories())
     {
         text.append("<li>");
         text.append(fact->properties().name);
@@ -102,7 +102,7 @@ QString AboutDialog::loadAbout()
     text.append("</ul>");
     text.append("<h5>"+tr("Effect plugins:")+"</h5>");
     text.append("<ul type=\"square\">");
-    foreach(EffectFactory *fact, Effect::factories())
+    for(const EffectFactory *fact : Effect::factories())
     {
         text.append("<li>");
         text.append(fact->properties().name);
@@ -111,7 +111,7 @@ QString AboutDialog::loadAbout()
     text.append("</ul>");
     text.append("<h5>"+tr("General plugins:")+"</h5>");
     text.append("<ul type=\"square\">");
-    foreach(GeneralFactory *fact, General::factories())
+    for(const GeneralFactory *fact : General::factories())
     {
         text.append("<li>");
         text.append(fact->properties().name);
@@ -123,7 +123,7 @@ QString AboutDialog::loadAbout()
     return text;
 }
 
-QString AboutDialog::getStringFromResource(const QString& res_file)
+QString AboutDialog::getStringFromResource(const QString &res_file)
 {
     QString ret_string;
     QStringList paths;
@@ -135,7 +135,7 @@ QString AboutDialog::getStringFromResource(const QString& res_file)
     paths << res_file + ".txt";
     paths << res_file;
 
-    foreach(QString path, paths)
+    for(const QString &path : qAsConst(paths))
     {
         QFile file(path);
         if (file.open(QIODevice::ReadOnly))

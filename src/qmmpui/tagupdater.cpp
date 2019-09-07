@@ -23,7 +23,7 @@
 TagUpdater::TagUpdater(QObject* o, QList<PlayListTrack *> tracks) : m_observable(o)
 {
     m_tracks = tracks;
-    foreach(PlayListTrack *t, m_tracks)
+    for(PlayListTrack *t : qAsConst(m_tracks))
         t->beginUsage();
     connect(m_observable, SIGNAL(destroyed(QObject *)),SLOT(updateTags()));
     connect(m_observable, SIGNAL(destroyed(QObject *)),SLOT(deleteLater()));
@@ -31,7 +31,7 @@ TagUpdater::TagUpdater(QObject* o, QList<PlayListTrack *> tracks) : m_observable
 
 void TagUpdater::updateTags()
 {
-    foreach (PlayListTrack *t, m_tracks)
+    for(PlayListTrack *t : qAsConst(m_tracks))
     {
         t->endUsage();
         if (!t->isUsed() && t->isSheduledForDeletion())

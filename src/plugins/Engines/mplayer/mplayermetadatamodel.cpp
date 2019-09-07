@@ -56,7 +56,7 @@ QList<MetaDataItem> MplayerMetaDataModel::extraProperties() const
     //mplayer std output parsing
     QRegExp rx_id("^(ID_.*)=(.*)");
     QMap<QString, QString> params;
-    foreach(QString line, lines)
+    for(const QString &line : qAsConst(lines))
     {
         if(rx_id.indexIn(line.trimmed()) > -1)
             params.insert(rx_id.cap(1), rx_id.cap(2));

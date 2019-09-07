@@ -45,7 +45,7 @@ PresetEditor::~PresetEditor()
 
 void PresetEditor::addPresets(const QList<EQPreset*> &presets)
 {
-    foreach(QListWidgetItem *item, presets)
+    for(QListWidgetItem *item : qAsConst(presets))
     {
         ui.presetListWidget->addItem(item);
     }
@@ -53,7 +53,7 @@ void PresetEditor::addPresets(const QList<EQPreset*> &presets)
 
 void PresetEditor::addAutoPresets(const QList<EQPreset*> &presets)
 {
-    foreach(QListWidgetItem *item, presets)
+    for(QListWidgetItem *item : qAsConst(presets))
     {
         ui.autoPresetListWidget->addItem(item);
     }

@@ -279,7 +279,7 @@ void MainWindow::readSettings()
         QRect availableGeometry = screen->availableGeometry();
         QPoint pos = settings.value("mw_pos", QPoint(100, 100)).toPoint();
         int r = m_skin->ratio();
-        foreach(QScreen *screen, QGuiApplication::screens())
+        for(const QScreen *screen : QGuiApplication::screens())
         {
             if(screen->availableGeometry().contains(pos))
             {

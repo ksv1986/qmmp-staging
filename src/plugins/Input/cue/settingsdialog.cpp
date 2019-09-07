@@ -33,7 +33,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     ui.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
     findCodecs();
-    foreach (QTextCodec *codec, codecs)
+    for(const QTextCodec *codec : qAsConst(codecs))
         ui.cueEncComboBox->addItem(codec->name());
 
 #ifdef WITH_ENCA
@@ -79,7 +79,7 @@ void SettingsDialog::findCodecs()
     QMap<QString, QTextCodec *> codecMap;
     QRegExp iso8859RegExp("ISO[- ]8859-([0-9]+).*");
 
-    foreach (int mib, QTextCodec::availableMibs())
+    for(int mib : QTextCodec::availableMibs())
     {
         QTextCodec *codec = QTextCodec::codecForMib(mib);
 

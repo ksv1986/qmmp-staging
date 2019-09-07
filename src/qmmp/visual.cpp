@@ -179,7 +179,7 @@ void Visual::initialize(QWidget *parent , QObject *receiver, const char *member)
     m_receiver = receiver;
     m_member = member;
     m_parentWidget = parent;
-    foreach(VisualFactory* factory, factories())
+    for(VisualFactory *factory : factories())
     {
         if (isEnabled(factory))
         {
@@ -249,7 +249,7 @@ void Visual::checkFactories()
         m_factories = new QList<VisualFactory *>;
         m_files = new QHash <const VisualFactory*, QString>;
 
-        foreach (QString filePath, Qmmp::findPlugins("Visual"))
+        for(const QString &filePath : Qmmp::findPlugins("Visual"))
         {
             QPluginLoader loader(filePath);
             QObject *plugin = loader.instance();

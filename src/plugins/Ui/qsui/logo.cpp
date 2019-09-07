@@ -158,7 +158,7 @@ void Logo::processPreset2()
     QString str = QString("..0000..");//.arg(Qmmp::strVersion().left(5));
     int at = m_value % str.size();
 
-    foreach(QString line, m_source_lines)
+    for(QString line : qAsConst(m_source_lines))
     {
         while(line.contains("X"))
         {
@@ -178,7 +178,7 @@ void Logo::processPreset3()
     QString str = QString("...%1...").arg(Qmmp::strVersion().left(5));
     int at = m_value % str.size();
 
-    foreach(QString line, m_source_lines)
+    for(QString line : qAsConst(m_source_lines))
     {
         while(line.contains("X"))
         {
@@ -211,7 +211,7 @@ void Logo::processPreset4()
 
     int at = 0;
 
-    foreach(QString line, m_source_lines)
+    for(QString line : qAsConst(m_source_lines))
     {
         int count = line.count("X");
         int k = 0;

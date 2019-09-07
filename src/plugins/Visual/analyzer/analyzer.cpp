@@ -117,17 +117,17 @@ void Analyzer::readSettings()
         m_update = true;
         m_peaksAction->setChecked(m_show_peaks);
 
-        foreach(QAction *act, m_fpsGroup->actions ())
+        for(QAction *act : m_fpsGroup->actions ())
         {
             if (m_timer->interval() == 1000 / act->data().toInt())
                 act->setChecked(true);
         }
-        foreach(QAction *act, m_peaksFalloffGroup->actions ())
+        for(QAction *act : m_peaksFalloffGroup->actions ())
         {
             if (m_peaks_falloff == act->data().toDouble())
                 act->setChecked(true);
         }
-        foreach(QAction *act, m_analyzerFalloffGroup->actions ())
+        for(QAction *act : m_analyzerFalloffGroup->actions ())
         {
             if (m_analyzer_falloff == act->data().toDouble())
                 act->setChecked(true);
@@ -339,7 +339,7 @@ void Analyzer::createMenu()
     m_fpsGroup->addAction(tr("25 fps"))->setData(25);
     m_fpsGroup->addAction(tr("10 fps"))->setData(10);
     m_fpsGroup->addAction(tr("5 fps"))->setData(5);
-    foreach(QAction *act, m_fpsGroup->actions ())
+    for(QAction *act : m_fpsGroup->actions ())
     {
         act->setCheckable(true);
         refreshRate->addAction(act);
@@ -353,7 +353,7 @@ void Analyzer::createMenu()
     m_analyzerFalloffGroup->addAction(tr("Medium"))->setData(2.2);
     m_analyzerFalloffGroup->addAction(tr("Fast"))->setData(2.4);
     m_analyzerFalloffGroup->addAction(tr("Fastest"))->setData(2.8);
-    foreach(QAction *act, m_analyzerFalloffGroup->actions ())
+    for(QAction *act : m_analyzerFalloffGroup->actions())
     {
         act->setCheckable(true);
         analyzerFalloff->addAction(act);
@@ -367,7 +367,7 @@ void Analyzer::createMenu()
     m_peaksFalloffGroup->addAction(tr("Medium"))->setData(0.2);
     m_peaksFalloffGroup->addAction(tr("Fast"))->setData(0.4);
     m_peaksFalloffGroup->addAction(tr("Fastest"))->setData(0.8);
-    foreach(QAction *act, m_peaksFalloffGroup->actions ())
+    for(QAction *act : m_peaksFalloffGroup->actions())
     {
         act->setCheckable(true);
         peaksFalloff->addAction(act);

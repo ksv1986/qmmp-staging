@@ -503,8 +503,8 @@ void HttpStreamReader::parseICYMetaData(char *data, qint64 size)
     }
 #endif
     QString str = codec->toUnicode(data).trimmed();
-    QStringList list(str.split(";", QString::SkipEmptyParts));
-    foreach(QString line, list)
+    const QStringList list(str.split(";", QString::SkipEmptyParts));
+    for(QString line : qAsConst(list))
     {
         if (line.contains("StreamTitle="))
         {
@@ -536,7 +536,7 @@ void HttpStreamReader::parseICYMetaData(char *data, qint64 size)
 void HttpStreamReader::sendStreamInfo(QTextCodec *codec)
 {
     QHash<QString, QString> info;
-    foreach (QString key, m_stream.header.keys())
+    for(const QString &key : m_stream.header.keys())
     {
         info.insert(key, codec->toUnicode(m_stream.header.value(key)));
     }

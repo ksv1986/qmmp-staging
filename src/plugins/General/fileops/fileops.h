@@ -54,9 +54,9 @@ private slots:
 
 private:
     void copy(QList<PlayListTrack*> tracks, const QString &dest, MetaDataFormatter *formatter);
-    void rename(QList<PlayListTrack*> tracks, MetaDataFormatter *formatter,
+    void rename(const QList<PlayListTrack *> &tracks, MetaDataFormatter *formatter,
                 PlayListModel *model);
-    void move(QList<PlayListTrack*> tracks, const QString &dest, MetaDataFormatter *formatter,
+    void move(const QList<PlayListTrack*> &tracks, const QString &dest, MetaDataFormatter *formatter,
               PlayListModel *model);
 
     QList <int> m_types;

@@ -105,7 +105,7 @@ InputSource *InputSource::create(const QString &url, QObject *parent)
         qDebug("InputSource: using file transport");
         return new FileInputSource(url, parent);
     }
-    foreach (QmmpPluginCache *item, *m_cache)
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(m_disabledNames.contains(item->shortName()))
             continue;
@@ -133,7 +133,7 @@ QList<InputSourceFactory *> InputSource::factories()
 {
     loadPlugins();
     QList<InputSourceFactory *> list;
-    foreach (QmmpPluginCache *item, *m_cache)
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(item->inputSourceFactory())
             list.append(item->inputSourceFactory());
@@ -145,7 +145,7 @@ QList<InputSourceFactory *> InputSource::enabledFactories()
 {
     loadPlugins();
     QList<InputSourceFactory *> list;
-    foreach (QmmpPluginCache *item, *m_cache)
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(m_disabledNames.contains(item->shortName()))
             continue;
@@ -158,7 +158,7 @@ QList<InputSourceFactory *> InputSource::enabledFactories()
 QString InputSource::file(const InputSourceFactory *factory)
 {
     loadPlugins();
-    foreach(QmmpPluginCache *item, *m_cache)
+    for(const QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(item->shortName() == factory->properties().shortName)
             return item->file();
@@ -171,7 +171,7 @@ QStringList InputSource::protocols()
     loadPlugins();
     QStringList protocolsList;
 
-    foreach (QmmpPluginCache *item, *m_cache)
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(m_disabledNames.contains(item->shortName()))
             continue;
@@ -214,7 +214,7 @@ void InputSource::loadPlugins()
 
     m_cache = new QList<QmmpPluginCache*>;
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    foreach (QString filePath, Qmmp::findPlugins("Transports"))
+    for(const QString &filePath : Qmmp::findPlugins("Transports"))
     {
         QmmpPluginCache *item = new QmmpPluginCache(filePath, &settings);
         if(item->hasError())

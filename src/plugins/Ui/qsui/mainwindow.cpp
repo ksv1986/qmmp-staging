@@ -91,7 +91,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     //keyboard manager
     m_key_manager = new KeyboardManager(this);
     //create tabs
-    foreach(PlayListModel *model, m_pl_manager->playLists())
+    for(PlayListModel *model : m_pl_manager->playLists())
     {
         if(m_pl_manager->currentPlayList() != model)
             m_tabWidget->addTab(model->name());
@@ -692,13 +692,13 @@ void MainWindow::readSettings()
     QList<QToolBar *> toolBars = findChildren<QToolBar*>();
 
     //clear toolbars to avoid conflicts
-    foreach (QToolBar *toolBar, toolBars)
+    for(QToolBar *toolBar : qAsConst(toolBars))
         toolBar->clear();
 
-    foreach (ActionManager::ToolBarInfo info, toolBarInfoList)
+    for(const ActionManager::ToolBarInfo &info : qAsConst(toolBarInfoList))
     {
         bool found = false;
-        foreach (QToolBar *toolBar, toolBars)
+        for(QToolBar *toolBar : qAsConst(toolBars))
         {
             if(toolBar->property("uid").toString() == info.uid)
             {
@@ -715,7 +715,7 @@ void MainWindow::readSettings()
         }
     }
 
-    foreach (QToolBar *toolBar, toolBars)
+    for(QToolBar *toolBar : qAsConst(toolBars))
         toolBar->deleteLater();
     toolBars.clear();
     setToolBarsBlocked(ACTION(ActionManager::UI_BLOCK_TOOLBARS)->isChecked());
@@ -925,7 +925,7 @@ void MainWindow::setTitleBarsVisible(bool visible)
 
 void MainWindow::setToolBarsBlocked(bool blocked)
 {
-    foreach (QToolBar *t, findChildren<QToolBar *>())
+    for(QToolBar *t : findChildren<QToolBar *>())
     {
         t->setMovable(!blocked);
     }

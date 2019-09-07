@@ -198,7 +198,7 @@ void ActionManager::saveStates()
 void ActionManager::saveActions()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    foreach(QAction *action, m_actions.values())
+    for(const QAction *action : m_actions.values())
     {
         settings.setValue(QString("SimpleUiShortcuts/")+action->objectName(), action->shortcut());
     }
@@ -206,7 +206,7 @@ void ActionManager::saveActions()
 
 void ActionManager::resetShortcuts()
 {
-    foreach (QAction *action, m_actions.values())
+    for(QAction *action : m_actions.values())
     {
         action->setShortcut(action->property("defaultShortcut").toString());
     }
@@ -254,7 +254,7 @@ void ActionManager::updateToolBar(QToolBar *toolBar, ActionManager::ToolBarInfo 
 {
     toolBar->clear();
     toolBar->setIconSize(info.iconSize);
-    foreach (QString name, info.actionNames)
+    for(const QString &name : qAsConst(info.actionNames))
     {
         if(name == "separator")
         {
@@ -276,7 +276,7 @@ ActionManager::ToolBarInfo ActionManager::defaultToolBar() const
     idList << PL_ADD_FILE << PL_ADD_DIRECTORY << PREVIOUS << PLAY << PAUSE << STOP << NEXT << EJECT;
     idList << UI_SEPARATOR << UI_POS_SLIDER << UI_SEPARATOR << UI_VOL_SLIDER << VOL_MUTE;
     QStringList names;
-    foreach (Type id, idList)
+    for(const Type &id : qAsConst(idList))
     {
         if(id == UI_SEPARATOR)
         {

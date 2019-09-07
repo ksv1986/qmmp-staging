@@ -58,7 +58,7 @@ RGScanDialog::RGScanDialog(QList <PlayListTrack *> tracks,  QWidget *parent) : Q
 
     QStringList paths;
     MetaDataFormatter formatter("%if(%p&%t,%p - %t,%f) - %l");
-    foreach(PlayListTrack *track, tracks)
+    for(const PlayListTrack *track : qAsConst(tracks))
     {
         //skip streams
         if(track->duration() == 0 || track->path().contains("://"))
@@ -163,7 +163,7 @@ void RGScanDialog::onScanFinished(QString url)
 
     bool stopped = true;
 
-    foreach (RGScanner *scanner, m_scanners)
+    for(const RGScanner *scanner : qAsConst(m_scanners))
     {
         if(scanner->isRunning() || scanner->isPending())
             stopped = false;
@@ -177,7 +177,7 @@ void RGScanDialog::onScanFinished(QString url)
         QMultiMap<QString, ReplayGainInfoItem*> itemGroupMap; //items grouped  by album
 
         //group by album name
-        foreach (RGScanner *scanner, m_scanners)
+        for(RGScanner *scanner : qAsConst(m_scanners))
         {
             if(!scanner->hasValues())
                 continue;
@@ -190,7 +190,7 @@ void RGScanDialog::onScanFinished(QString url)
             itemGroupMap.insert(album, item);
         }
         //calculate album peak and gain
-        foreach (QString album, itemGroupMap.keys())
+        for(const QString &album : itemGroupMap.keys())
         {
             QList<ReplayGainInfoItem*> items = itemGroupMap.values(album);
             GainHandle_t **a = (GainHandle_t **) malloc(items.count()*sizeof(GainHandle_t *));
@@ -202,7 +202,7 @@ void RGScanDialog::onScanFinished(QString url)
             }
             double album_gain = GetAlbumGain(a, items.count());
             free(a);
-            foreach (ReplayGainInfoItem *item, items)
+            for(ReplayGainInfoItem *item : qAsConst(items))
             {
                 item->info[Qmmp::REPLAYGAIN_ALBUM_PEAK] = album_peak;
                 item->info[Qmmp::REPLAYGAIN_ALBUM_GAIN] = album_gain;
@@ -220,7 +220,7 @@ void RGScanDialog::onScanFinished(QString url)
         {
             QString url = m_ui.tableWidget->item(i, 0)->data(Qt::UserRole).toString();
             bool found = false;
-            foreach (ReplayGainInfoItem *item, m_replayGainItemList)
+            for(const ReplayGainInfoItem *item : qAsConst(m_replayGainItemList))
             {
                 if(item->url == url)
                 {
@@ -256,7 +256,7 @@ void RGScanDialog::stop()
 {
     if(m_scanners.isEmpty())
         return;
-    foreach (RGScanner *scaner, m_scanners)
+    for(RGScanner *scaner : qAsConst(m_scanners))
     {
         scaner->stop();
     }
@@ -267,7 +267,7 @@ void RGScanDialog::stop()
 
 RGScanner *RGScanDialog::findScannerByUrl(const QString &url)
 {
-    foreach (RGScanner *scanner, m_scanners)
+    for(RGScanner *scanner : qAsConst(m_scanners))
     {
         if(scanner->url() == url)
             return scanner;
@@ -395,7 +395,7 @@ void RGScanDialog::on_writeButton_clicked()
 
     qDebug("RGScanDialog: writing ReplayGain values...");
 
-    foreach (ReplayGainInfoItem *item, m_replayGainItemList)
+    for(ReplayGainInfoItem *item : qAsConst(m_replayGainItemList))
     {
         QString ext = item->url.section(".", -1).toLower();
 

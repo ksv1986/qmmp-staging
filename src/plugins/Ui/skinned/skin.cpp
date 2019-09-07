@@ -132,20 +132,19 @@ void Skin::setSkin (const QString& path)
     loadColors();
     if(m_double_size)
     {
-        uint key;
-        foreach(key, m_buttons.keys())
+        for(uint key : m_buttons.keys())
             m_buttons[key] = scalePixmap(m_buttons[key]);
-        foreach(key, m_titlebar.keys())
+        for(uint key : m_titlebar.keys())
             m_titlebar[key] = scalePixmap(m_titlebar[key]);
-        foreach(key, m_pl_parts.keys())
+        for(uint key : m_pl_parts.keys())
             m_pl_parts[key] = scalePixmap(m_pl_parts[key]);
-        foreach(key, m_eq_parts.keys())
+        for(uint key : m_eq_parts.keys())
             m_eq_parts[key] = scalePixmap(m_eq_parts[key]);
-        foreach(key, m_ms_parts.keys())
+        for(uint key : m_ms_parts.keys())
             m_ms_parts[key] = scalePixmap(m_ms_parts[key]);
-        foreach(key, m_parts.keys())
+        for(uint key : m_parts.keys())
             m_parts[key] = scalePixmap(m_parts[key]);
-        foreach(QChar c, m_letters.keys())
+        for(const QChar &c : m_letters.keys())
             m_letters[c] = scalePixmap(m_letters[c]);
         m_main = scalePixmap(m_main);
         posbar = scalePixmap(posbar);
@@ -400,7 +399,7 @@ void Skin::loadPlayList()
 QPixmap *Skin::getPixmap (const QString& name, const QString &fallback)
 {
     m_skin_dir.setFilter (QDir::Files | QDir::Hidden | QDir::NoSymLinks);
-    foreach(QFileInfo info, m_skin_dir.entryInfoList(QStringList() << name + ".*"))
+    for(const QFileInfo &info : m_skin_dir.entryInfoList(QStringList() << name + ".*"))
     {
         if(info.suffix().toLower() != "cur" && info.suffix().toLower() != "txt")
             return new QPixmap (info.filePath());
@@ -408,7 +407,7 @@ QPixmap *Skin::getPixmap (const QString& name, const QString &fallback)
 
     if(!fallback.isEmpty())
     {
-        foreach(QFileInfo info, m_skin_dir.entryInfoList(QStringList() << fallback + ".*"))
+        for(const QFileInfo &info : m_skin_dir.entryInfoList(QStringList() << fallback + ".*"))
         {
             if(info.suffix().toLower() != "cur" && info.suffix().toLower() != "txt")
                 return new QPixmap (info.filePath());
@@ -795,7 +794,7 @@ QRegion Skin::createRegion(const QString &path, const QString &key)
     QStringList numPoints = settings.value(key+"/NumPoints").toStringList();
     QStringList value = settings.value(key+"/PointList").toStringList();
     QStringList numbers;
-    foreach(QString str, value)
+    for(const QString &str : qAsConst(value))
     numbers << str.split(" ", QString::SkipEmptyParts);
 
     QList <QRegion> regions;

@@ -155,7 +155,7 @@ void RemovableHelper::updateActions()
         }
     }
     // remove action if device is unmounted/removed
-    foreach(QAction *action, m_actions->actions())
+    for(const QAction *action : m_actions->actions())
     {
         bool found = false;
 
@@ -188,7 +188,7 @@ void RemovableHelper::updateActions()
 
 QAction *RemovableHelper::findAction(const QString &dev_path)
 {
-    foreach(QAction *action, m_actions->actions())
+    for(const QAction *action : m_actions->actions())
     {
         if (action->data().toString() == dev_path)
             return action;
@@ -200,7 +200,7 @@ void RemovableHelper::addPath(const QString &path)
 {
     PlayListModel *model = PlayListManager::instance()->selectedPlayList();
 
-    foreach(PlayListItem *item, model->items()) // Is it already exist?
+    for(const PlayListItem *item : model->items()) // Is it already exist?
     {
         if(item->isGroup())
             continue;

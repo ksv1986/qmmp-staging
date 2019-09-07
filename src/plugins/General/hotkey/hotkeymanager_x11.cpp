@@ -95,7 +95,7 @@ HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)
 
         if (key)
         {
-            foreach(long mask_mod, ignModifiersList())
+            for(long mask_mod : ignModifiersList())
             {
                 Hotkey *hotkey = new Hotkey;
                 hotkey->action = i;
@@ -155,7 +155,7 @@ bool HotkeyManager::nativeEventFilter(const QByteArray &eventType, void *message
         quint32 mod = ke->state;
         SoundCore *core = SoundCore::instance();
         MediaPlayer *player = MediaPlayer::instance();
-        foreach(Hotkey *hotkey, m_grabbedKeys)
+        for(const Hotkey *hotkey : qAsConst(m_grabbedKeys))
         {
             if (hotkey->key != key || hotkey->mod != mod)
                 continue;

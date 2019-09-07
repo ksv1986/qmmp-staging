@@ -212,14 +212,14 @@ void DetailsDialog::updatePage()
 
     if(m_metaDataModel)
     {
-        foreach(TagModel *tagModel, m_metaDataModel->tags())
+        for(TagModel *tagModel : m_metaDataModel->tags())
         {
             TagEditor *editor = new TagEditor(tagModel, this);
             editor->setEnabled(!m_metaDataModel->isReadOnly());
             m_ui->tabWidget->addTab(editor, tagModel->name());
         }
 
-        foreach(MetaDataItem item, m_metaDataModel->descriptions())
+        for(const MetaDataItem &item : m_metaDataModel->descriptions())
         {
             QTextEdit *textEdit = new QTextEdit(this);
             textEdit->setReadOnly(true);
@@ -254,7 +254,7 @@ void DetailsDialog::printInfo()
     //stream information
     if(core->state() == Qmmp::Playing && core->path() == m_info.path())
     {
-        foreach(QString key, core->streamInfo().keys())
+        for(const QString &key : core->streamInfo().keys())
             streamInfoRows += formatRow(key, core->streamInfo().value(key));
     }
     streamInfoRows = streamInfoRows.trimmed();
@@ -276,7 +276,7 @@ void DetailsDialog::printInfo()
     }
     if(m_metaDataModel)
         items << m_metaDataModel->extraProperties();
-    foreach (MetaDataItem item, items)
+    for(const MetaDataItem &item : qAsConst(items))
         propertyRows += formatRow(item);
     propertyRows = propertyRows.trimmed();
     if(!propertyRows.isEmpty())

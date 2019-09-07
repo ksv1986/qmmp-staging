@@ -35,7 +35,7 @@ const PlayListFormatProperties M3UPlaylistFormat::properties() const
 QList<PlayListTrack *> M3UPlaylistFormat::decode(const QByteArray &contents)
 {
     QList<PlayListTrack*> out;
-    QStringList splitted = QString::fromUtf8(contents).split("\n");
+    const QStringList splitted = QString::fromUtf8(contents).split("\n");
     if(splitted.isEmpty())
         return out;
 
@@ -44,7 +44,7 @@ QList<PlayListTrack *> M3UPlaylistFormat::decode(const QByteArray &contents)
     QString artist, title;
     bool hasExtInf = false;
 
-    foreach(QString str, splitted)
+    for(QString str : qAsConst(splitted))
     {
         str = str.trimmed();
         if(str.startsWith("#EXTM3U") || str.isEmpty())
@@ -82,7 +82,7 @@ QByteArray M3UPlaylistFormat::encode(const QList<PlayListTrack*> &contents, cons
     MetaDataFormatter formatter("%if(%p,%p - %t,%t)%if(%p|%t,,%f)");
     QString m3uDir = QFileInfo(path).canonicalPath();
 
-    foreach(PlayListTrack* f, contents)
+    for(const PlayListTrack *f : qAsConst(contents))
     {
         QString info = "#EXTINF:" + QString::number(f->duration() / 1000) + "," + formatter.format(f);
         out.append(info);

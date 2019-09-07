@@ -97,7 +97,7 @@ QMMPStarter::QMMPStarter() : QObject()
 
     if(!commands.isEmpty())
     {
-        foreach(QString key, commands.keys())
+        for(const QString &key : commands.keys())
         {
             CommandLineHandler::OptionFlags flags;
             if(!m_option_manager->identify(key) &&
@@ -368,7 +368,7 @@ QString QMMPStarter::processCommandArgs(const QStringList &slist, const QString&
     if(slist.isEmpty())
         return QString();
     QStringList paths;
-    foreach(QString arg, slist) //detect file/directory paths
+    for(const QString &arg : qAsConst(slist)) //detect file/directory paths
     {
         if(arg.startsWith("-"))
             break;
@@ -383,7 +383,7 @@ QString QMMPStarter::processCommandArgs(const QStringList &slist, const QString&
         return QString();
 
     QString out;
-    foreach(QString key, commands.keys())
+    for(const QString &key : commands.keys())
     {
         if(key == "--no-start" || key == "--ui")
             continue;
@@ -408,7 +408,7 @@ void QMMPStarter::printUsage()
     cout << qPrintable(tr("Usage: qmmp [options] [files]")) << endl;
     cout << qPrintable(tr("Options:")) << endl;
     cout << "--------" << endl;
-    foreach (QString line, m_option_manager->helpString())
+    for(const QString &line : m_option_manager->helpString())
         cout << qPrintable(CommandLineManager::formatHelpString(line) ) << endl;
     CommandLineManager::printUsage();
     QStringList extraHelp;
@@ -421,7 +421,7 @@ void QMMPStarter::printUsage()
     extraHelp << tr("Home page: %1").arg("http://qmmp.ylsoftware.com");
     extraHelp << tr("Development page: %1").arg("https://sourceforge.net/p/qmmp-dev");
     extraHelp << tr("Bug tracker: %1").arg("https://sourceforge.net/p/qmmp-dev/tickets");
-    foreach (QString line, extraHelp)
+    for(const QString &line : qAsConst(extraHelp))
         cout << qPrintable(CommandLineManager::formatHelpString(line)) << endl;
 #ifdef Q_OS_WIN
     string text = tmp_stream.str();
@@ -456,7 +456,7 @@ void QMMPStarter::printUserInterfaces()
     tmp_stream.copyfmt(cout);
     streambuf* old_stream = cout.rdbuf(tmp_stream.rdbuf());
 #endif
-    foreach (QString name, UiLoader::names())
+    for(const QString &name : UiLoader::names())
         cout << qPrintable(name) << endl;
 #ifdef Q_OS_WIN
     string text = tmp_stream.str();

@@ -38,7 +38,7 @@ SettingsDialog::SettingsDialog (QWidget *parent) : QDialog (parent)
 
     const QList<QAudioDeviceInfo> devices = QAudioDeviceInfo::availableDevices(QAudio::AudioOutput);
 	int index = 1;
-    foreach (const QAudioDeviceInfo &info, devices)
+    for(const QAudioDeviceInfo &info : devices)
 	{
     	const QString device_name = info.deviceName();
 		ui.deviceComboBox->addItem(device_name);

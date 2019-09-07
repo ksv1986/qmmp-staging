@@ -105,7 +105,7 @@ QStringList TwoPanelFileDialogImpl::selectedFiles() const
     }
     else if(m_mode == FileDialog::AddDir || m_mode == FileDialog::AddDirs)
     {
-        foreach (QModelIndex index, m_ui.dirListView->selectionModel()->selectedRows(0))
+        for(const QModelIndex &index : m_ui.dirListView->selectionModel()->selectedRows(0))
         {
             if(index.isValid() && (m_dirModel->fileName(index) != ".."))
             {
@@ -115,7 +115,7 @@ QStringList TwoPanelFileDialogImpl::selectedFiles() const
     }
     else
     {
-        foreach (QListWidgetItem *item, m_ui.fileListWidget->selectedItems())
+        for(const QListWidgetItem *item : m_ui.fileListWidget->selectedItems())
         {
             l << item->data(Qt::UserRole).toString();
         }
@@ -156,7 +156,7 @@ void TwoPanelFileDialogImpl::updateFileSelection ()
 
     QStringList names;
 
-    foreach(QString path, paths)
+    for(const QString &path : qAsConst(paths))
     {
         QString name = QFileInfo(path).fileName();
         if (!names.contains(name))
@@ -182,9 +182,9 @@ void TwoPanelFileDialogImpl::updateFileSelection ()
     if(m_mode == FileDialog::AddFiles || m_mode == FileDialog::AddDirsFiles || m_mode == FileDialog::AddFile
             || m_mode == FileDialog::PlayDirsFiles)
     {
-        foreach(str, paths)
+        for(const QString &path : qAsConst(paths))
         {
-            if(QFileInfo(str).isFile())
+            if(QFileInfo(path).isFile())
             {
                 m_ui.playButton->setEnabled(true);
                 break;
@@ -382,7 +382,7 @@ void TwoPanelFileDialogImpl::updateFileList(const QString &path)
     dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     dir.setSorting(QDir::Name);
 
-    foreach (QFileInfo info, dir.entryInfoList(m_filters))
+    for(const QFileInfo &info : dir.entryInfoList(m_filters))
     {
         QListWidgetItem *item = new QListWidgetItem(info.fileName());
         item->setIcon(m_dirModel->iconProvider()->icon(info));
@@ -428,7 +428,7 @@ void TwoPanelFileDialogImpl::addFiles(const QStringList &list, bool play)
         //check file extension
         QString f_name = m_ui.fileNameLineEdit->text();
         bool contains = false;
-        foreach(QString str, qt_clean_filter_list(m_ui.fileTypeComboBox->currentText()))
+        for(const QString &str : qt_clean_filter_list(m_ui.fileTypeComboBox->currentText()))
         {
             QRegExp regExp(str);
             regExp.setPatternSyntax(QRegExp::Wildcard);

@@ -125,7 +125,7 @@ void GroupedContainer::insertTrack(int index, PlayListTrack *track)
 
 void GroupedContainer::replaceTracks(QList<PlayListTrack *> tracks)
 {
-    foreach (PlayListGroup *g, m_groups)
+    for(PlayListGroup *g : qAsConst(m_groups))
     {
         g->trackList.clear();
     }
@@ -195,7 +195,7 @@ void GroupedContainer::setSelected(int index, bool selected)
 void GroupedContainer::clearSelection()
 {
     updateCache();
-    foreach (PlayListItem *item, m_items)
+    for(PlayListItem *item : qAsConst(m_items))
     {
         item->setSelected(false);
     }
@@ -255,7 +255,7 @@ int GroupedContainer::indexOfTrack(int index) const
 PlayListTrack *GroupedContainer::findTrack(int number) const
 {
     int firstNumber = 0;
-    foreach (PlayListGroup *group, m_groups)
+    for(const PlayListGroup *group : qAsConst(m_groups))
     {
         if(number >= firstNumber && number < firstNumber + group->count())
         {
@@ -268,7 +268,7 @@ PlayListTrack *GroupedContainer::findTrack(int number) const
 
 void GroupedContainer::removeTrack(PlayListTrack *track)
 {
-    foreach(PlayListGroup *group, m_groups)
+    for(PlayListGroup *group : qAsConst(m_groups))
     {
         if(group->contains(track))
         {
@@ -287,7 +287,7 @@ void GroupedContainer::removeTrack(PlayListTrack *track)
 
 void GroupedContainer::removeTracks(QList<PlayListTrack *> tracks)
 {
-    foreach(PlayListTrack *t, tracks)
+    for(PlayListTrack *t : qAsConst(tracks))
         removeTrack(t);
 }
 
@@ -320,7 +320,7 @@ bool GroupedContainer::move(QList<int> indexes, int from, int to)
     if(!group)
         return false;
 
-    foreach (int i, indexes)
+    for(const int &i : qAsConst(indexes))
     {
         if(i <= firstIndex || i > lastIndex)
             return false;
@@ -334,7 +334,7 @@ bool GroupedContainer::move(QList<int> indexes, int from, int to)
 
     if (from > to)
     {
-        foreach(int i, indexes)
+        for(const int &i : qAsConst(indexes))
         {
             if (i + to - from < 0)
                 break;
@@ -368,7 +368,7 @@ bool GroupedContainer::move(QList<int> indexes, int from, int to)
 QList<PlayListTrack *> GroupedContainer::takeAllTracks()
 {
     QList<PlayListTrack *> tracks;
-    foreach (PlayListGroup *g, m_groups)
+    for(PlayListGroup *g : qAsConst(m_groups))
     {
         tracks.append(g->trackList);
         g->trackList.clear();
@@ -426,7 +426,7 @@ void GroupedContainer::updateCache() const
     for(int i = 0; i < m_groups.count(); ++i)
     {
         m_items.append(m_groups.at(i));
-        foreach (PlayListTrack *track, m_groups.at(i)->trackList)
+        for(PlayListTrack *track : m_groups.at(i)->trackList)
         {
             track->setTrackIndex(t++);
             m_items.append(track);

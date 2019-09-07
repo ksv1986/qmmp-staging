@@ -97,7 +97,7 @@ void MetaDataFormatter::setPattern(const QString &pattern)
     m_nodes = compile(pattern);
 #ifdef DUMP_NODES
     qDebug("MetaDataFormatter: dump of nodes");
-    foreach (Node n, m_nodes)
+    for(const Node &n : qAsConst(m_nodes))
     {
         qDebug("=>%s", qPrintable(dumpNode(n)));
     }
@@ -575,7 +575,7 @@ QString MetaDataFormatter::dumpNode(MetaDataFormatter::Node node) const
     else if(node.command == Node::OR_OPERATOR)
         str += "OR_OPERATOR";
     str += "(";
-    foreach (Param p, node.params)
+    for(const Param &p : qAsConst(node.params))
     {
         if(p.type == Param::FIELD)
             params.append(QString("FIELD:%1").arg(p.field));
@@ -588,7 +588,7 @@ QString MetaDataFormatter::dumpNode(MetaDataFormatter::Node node) const
         else if(p.type == Param::NODES)
         {
             QStringList nodeStrList;
-            foreach (Node n, p.children)
+            for(const Node &n : qAsConst(p.children))
             {
                 nodeStrList.append(dumpNode(n));
             }

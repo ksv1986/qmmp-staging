@@ -83,7 +83,7 @@ void Output::loadPlugins()
 
     m_cache = new QList<QmmpPluginCache *>;
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    foreach (QString filePath, Qmmp::findPlugins("Output"))
+    for(const QString &filePath : Qmmp::findPlugins("Output"))
     {
         QmmpPluginCache *item = new QmmpPluginCache(filePath, &settings);
         if(item->hasError())
@@ -114,7 +114,7 @@ QList<OutputFactory *> Output::factories()
 {
     loadPlugins();
     QList<OutputFactory *> list;
-    foreach(QmmpPluginCache *item, *m_cache)
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(item->outputFactory())
             list.append(item->outputFactory());
@@ -125,7 +125,7 @@ QList<OutputFactory *> Output::factories()
 QString Output::file(const OutputFactory *factory)
 {
     loadPlugins();
-    foreach(QmmpPluginCache *item, *m_cache)
+    for(const QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(item->shortName() == factory->properties().shortName)
             return item->file();
@@ -160,7 +160,7 @@ OutputFactory *Output::currentFactory()
     QString name = settings.value("Output/current_plugin", "oss4").toString();
 #endif
 #endif //QMMP_DEFAULT_OUTPUT
-    foreach(QmmpPluginCache *item, *m_cache)
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if (item->shortName() == name && item->outputFactory())
             return item->outputFactory();

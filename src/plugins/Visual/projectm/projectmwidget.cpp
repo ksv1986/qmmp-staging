@@ -112,7 +112,7 @@ void ProjectMWidget::initializeGL()
         RatingList list;
         list.push_back(3);
         list.push_back(3);
-        foreach (QFileInfo info, l)
+        for(const QFileInfo &info : qAsConst(l))
         {
             m_projectM->addPresetURL (info.absoluteFilePath().toStdString(), info.fileName().toStdString(), list);
             m_listWidget->addItem(info.fileName());

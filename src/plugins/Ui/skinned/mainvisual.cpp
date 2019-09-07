@@ -132,7 +132,7 @@ void MainVisual::mousePressEvent (QMouseEvent *e)
             setVisual(nullptr);
 
         QString str = m_vis ? m_vis->name() : "Off";
-        foreach(QAction *act, m_visModeGroup->actions ())
+        for(QAction *act : m_visModeGroup->actions())
         {
             if (str == act->data().toString())
             {
@@ -216,7 +216,7 @@ void MainVisual::createMenu()
     m_visModeGroup->addAction(tr("Analyzer"))->setData("Analyzer");
     m_visModeGroup->addAction(tr("Scope"))->setData("Scope");
     m_visModeGroup->addAction(tr("Off"))->setData("Off");
-    foreach(QAction *act, m_visModeGroup->actions ())
+    for(QAction *act : m_visModeGroup->actions())
     {
         act->setCheckable(true);
         visMode->addAction(act);
@@ -230,13 +230,13 @@ void MainVisual::createMenu()
     m_analyzerModeGroup->addAction(tr("Vertical Lines"))->setData(2);
     m_analyzerTypeGroup->addAction(tr("Lines"))->setData(0);
     m_analyzerTypeGroup->addAction(tr("Bars"))->setData(1);
-    foreach(QAction *act, m_analyzerModeGroup->actions ())
+    for(QAction *act : m_analyzerModeGroup->actions())
     {
         act->setCheckable(true);
         analyzerMode->addAction(act);
     }
     analyzerMode->addSeparator ();
-    foreach(QAction *act, m_analyzerTypeGroup->actions ())
+    for(QAction *act : m_analyzerTypeGroup->actions())
     {
         act->setCheckable(true);
         analyzerMode->addAction(act);
@@ -253,7 +253,7 @@ void MainVisual::createMenu()
     m_fpsGroup->addAction(tr("25 fps"))->setData(25);
     m_fpsGroup->addAction(tr("10 fps"))->setData(10);
     m_fpsGroup->addAction(tr("5 fps"))->setData(5);
-    foreach(QAction *act, m_fpsGroup->actions ())
+    for(QAction *act : m_fpsGroup->actions())
     {
         act->setCheckable(true);
         refreshRate->addAction(act);
@@ -267,7 +267,7 @@ void MainVisual::createMenu()
     m_analyzerFalloffGroup->addAction(tr("Medium"))->setData(2.2);
     m_analyzerFalloffGroup->addAction(tr("Fast"))->setData(2.4);
     m_analyzerFalloffGroup->addAction(tr("Fastest"))->setData(2.8);
-    foreach(QAction *act, m_analyzerFalloffGroup->actions ())
+    for(QAction *act : m_analyzerFalloffGroup->actions())
     {
         act->setCheckable(true);
         analyzerFalloff->addAction(act);
@@ -281,7 +281,7 @@ void MainVisual::createMenu()
     m_peaksFalloffGroup->addAction(tr("Medium"))->setData(0.2);
     m_peaksFalloffGroup->addAction(tr("Fast"))->setData(0.4);
     m_peaksFalloffGroup->addAction(tr("Fastest"))->setData(0.8);
-    foreach(QAction *act, m_peaksFalloffGroup->actions ())
+    for(QAction *act : m_peaksFalloffGroup->actions())
     {
         act->setCheckable(true);
         peaksFalloff->addAction(act);
@@ -302,38 +302,38 @@ void MainVisual::readSettings()
     {
         m_update = true;
 
-        foreach(QAction *act, m_visModeGroup->actions ())
+        for(QAction *act : m_visModeGroup->actions())
         {
             if (vis_name == act->data().toString())
                 act->setChecked(true);
         }
         m_peaksAction->setChecked(settings.value("vis_show_peaks", true).toBool());
         int fps = settings.value("vis_rate", 25).toInt();
-        foreach(QAction *act, m_fpsGroup->actions ())
+        for(QAction *act : m_fpsGroup->actions())
         {
             if (fps == act->data().toInt())
                 act->setChecked(true);
         }
         int mode = settings.value("vis_analyzer_mode", 0).toInt();
-        foreach(QAction *act, m_analyzerModeGroup->actions ())
+        for(QAction *act : m_analyzerModeGroup->actions ())
         {
             if (mode == act->data().toInt())
                 act->setChecked(true);
         }
         int type = settings.value("vis_analyzer_type", 1).toInt();
-        foreach(QAction *act, m_analyzerTypeGroup->actions ())
+        for(QAction *act : m_analyzerTypeGroup->actions ())
         {
             if (type == act->data().toInt())
                 act->setChecked(true);
         }
         double speed = settings.value("vis_peaks_falloff", 0.2).toDouble();
-        foreach(QAction *act, m_peaksFalloffGroup->actions ())
+        for(QAction *act : m_peaksFalloffGroup->actions ())
         {
             if (speed == act->data().toDouble())
                 act->setChecked(true);
         }
         speed = settings.value("vis_analyzer_falloff", 2.2).toDouble();
-        foreach(QAction *act, m_analyzerFalloffGroup->actions ())
+        for(QAction *act : m_analyzerFalloffGroup->actions ())
         {
             if (speed == act->data().toDouble())
                 act->setChecked(true);

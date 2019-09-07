@@ -66,7 +66,7 @@ QString AboutQSUIDialog::getStringFromResource(const QString& res_file)
     paths << res_file + ".txt";
     paths << res_file;
 
-    foreach(QString path, paths)
+    for(const QString &path : qAsConst(paths))
     {
         QFile file(path);
         if (file.open(QIODevice::ReadOnly))

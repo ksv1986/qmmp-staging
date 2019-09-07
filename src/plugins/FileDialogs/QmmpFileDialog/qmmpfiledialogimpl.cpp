@@ -116,9 +116,9 @@ QStringList QmmpFileDialogImpl::selectedFiles ()
     }
     else
     {
-        QModelIndexList ml = fileListView->selectionModel()->selectedIndexes();
-        foreach(QModelIndex i,ml)
-        l << m_model->filePath(i);
+        const QModelIndexList ml = fileListView->selectionModel()->selectedIndexes();
+        for(const QModelIndex &i : ml)
+            l << m_model->filePath(i);
     }
     return l;
 }
@@ -233,7 +233,7 @@ void QmmpFileDialogImpl::on_addPushButton_clicked()
             ml = fileListView->selectionModel()->selectedIndexes();
         else
             ml = treeView->selectionModel()->selectedIndexes();
-        foreach(QModelIndex i,ml)
+       for(const QModelIndex &i : qAsConst(ml))
         {
             if (!l.contains(m_model->filePath(i)))
                 l << m_model->filePath(i);
@@ -315,7 +315,7 @@ void QmmpFileDialogImpl::setModeAndMask(const QString& d,FileDialog::Mode m, con
 void QmmpFileDialogImpl::loadMountedVolumes()
 {
     mountPointsListWidget->clear();
-    foreach (QStorageInfo i, QStorageInfo::mountedVolumes())
+    for(const QStorageInfo &i : QStorageInfo::mountedVolumes())
     {
         if(i.fileSystemType() == "tmpfs")
             continue;
@@ -369,7 +369,7 @@ void QmmpFileDialogImpl::updateSelection ()
         ml = treeView->selectionModel()->selectedIndexes();
     QStringList l;
     QStringList files;
-    foreach(QModelIndex i,ml)
+    for(const QModelIndex &i : qAsConst(ml))
     {
         if (!l.contains(m_model->filePath(i).section("/", -1)))
         {
@@ -394,9 +394,9 @@ void QmmpFileDialogImpl::updateSelection ()
         if (m_mode == FileDialog::AddFiles || m_mode == FileDialog::AddFile/* || FileDialog::SaveFile*/)
         {
             addPushButton->setEnabled(true);
-            foreach(str, files)
+            for(const QString &file : qAsConst(files))
             {
-                if (QFileInfo(str).isDir())
+                if (QFileInfo(file).isDir())
                 {
                     addPushButton->setEnabled(false);
                     break;
@@ -445,7 +445,7 @@ void QmmpFileDialogImpl::addFiles(const QStringList &list)
         //check file extension
         QString f_name = fileNameLineEdit->text();
         bool contains = false;
-        foreach(QString str, qt_clean_filter_list(fileTypeComboBox->currentText()))
+        for(const QString &str : qt_clean_filter_list(fileTypeComboBox->currentText()))
         {
             QRegExp regExp(str);
             regExp.setPatternSyntax(QRegExp::Wildcard);

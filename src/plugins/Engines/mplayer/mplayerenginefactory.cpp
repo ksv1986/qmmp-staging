@@ -44,7 +44,7 @@ EngineProperties MplayerEngineFactory::properties() const
 bool MplayerEngineFactory::supports(const QString &source) const
 {
     QStringList filters = MplayerInfo::filters();
-    foreach(QString filter, filters)
+    for(const QString &filter : qAsConst(filters))
     {
         QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
         if (regexp.exactMatch(source))

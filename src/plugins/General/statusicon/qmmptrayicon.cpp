@@ -78,7 +78,7 @@ bool QmmpTrayIcon::hasToolTipEvent()
 {
     //checking for XEmbed system tray implementation
     //only this implementation is able to send QHelpEvent
-    foreach (QWindow *w, qApp->allWindows())
+    for(const QWindow *w : qApp->allWindows())
     {
         if(w->objectName() == "QSystemTrayIconSysWindow")
             return true;

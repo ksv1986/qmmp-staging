@@ -150,7 +150,7 @@ void PlayListTask::sort(QList<PlayListTrack *> tracks, PlayListModel::SortMode m
 
     m_align_groups = QmmpUiSettings::instance()->isGroupsEnabled() && (mode != PlayListModel::GROUP);
 
-    foreach (PlayListTrack *t, tracks)
+    for(PlayListTrack *t : qAsConst(tracks))
     {
         TrackField *f = new TrackField;
         f->track = t;
@@ -435,7 +435,7 @@ void PlayListTask::run()
         }
         //find all files
         QFileInfoList l;
-        foreach (QString p, dirs)
+        for(const QString &p : qAsConst(dirs))
         {
             QDir dir(p);
             dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
@@ -444,7 +444,7 @@ void PlayListTask::run()
         }
         //generate URLs for the current playlist
         QStringList urls;
-        foreach (TrackField *t, m_fields)
+        for(const TrackField *t : qAsConst(m_fields))
             urls.append(t->value);
 
         //find files that have already been added
@@ -464,10 +464,10 @@ void PlayListTask::run()
         //create new playlist tracks
         QStringList ignoredFiles;
         TrackInfo::Parts parts = QmmpUiSettings::instance()->useMetaData() ? TrackInfo::AllParts : TrackInfo::NoParts;
-        foreach(QFileInfo f, l)
+        for(const QFileInfo &f : qAsConst(l))
         {
             QStringList ignored;
-            foreach (TrackInfo *info, mm->createPlayList(f.canonicalFilePath(), parts, &ignored))
+            for(TrackInfo *info : mm->createPlayList(f.canonicalFilePath(), parts, &ignored))
             {
                 m_new_tracks << new PlayListTrack(info);
             }
@@ -475,7 +475,7 @@ void PlayListTask::run()
         }
         //remove dublicate URLs and ignored files
         //this code prevents re-addition of cue tracks
-        foreach(PlayListTrack *t, m_new_tracks)
+        for(PlayListTrack *t : qAsConst(m_new_tracks))
         {
             if((t->path().contains("://") && urls.contains(t->path())) ||
                     ignoredFiles.contains(t->path()))
@@ -505,7 +505,7 @@ QList<PlayListTrack *> PlayListTask::takeResults(PlayListTrack **current_track)
 {
     if(m_task == SORT || m_task == SORT_BY_COLUMN)
     {
-        foreach (TrackField *f, m_fields)
+        for(const TrackField *f : qAsConst(m_fields))
             m_tracks.append(f->track);
     }
     else if(m_task == SORT_SELECTION)

@@ -92,7 +92,7 @@ void PlayListSelector::updateTabs()
     m_rects.clear();
     m_extra_rects.clear();
     QRect rect;
-    foreach(QString text, m_pl_manager->playListNames())
+    for(const QString &text : m_pl_manager->playListNames())
     {
         if(m_rects.isEmpty())
             rect.setX(9);

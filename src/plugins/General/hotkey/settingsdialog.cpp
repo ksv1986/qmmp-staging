@@ -75,7 +75,7 @@ void SettingsDialog::accept()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Hotkey");
-    foreach(Hotkey *k, m_hotkeys)
+    for(const Hotkey *k : qAsConst(m_hotkeys))
     {
         settings.setValue(QString("key_%1").arg(k->action), k->key);
         settings.setValue(QString("modifiers_%1").arg(k->action), k->mod);
@@ -86,16 +86,19 @@ void SettingsDialog::accept()
 
 void SettingsDialog::on_tableWidget_itemDoubleClicked (QTableWidgetItem *item)
 {
-    Hotkey *k = nullptr;
-    foreach(k, m_hotkeys)
+    Hotkey *key = nullptr;
+    for(Hotkey *k : m_hotkeys)
     {
         if (k->action == item->type())
+        {
+            key = k;
             break;
+        }
     }
-    if (!k)
+    if (!key)
         return;
 
-    HotkeyDialog *dialog = new HotkeyDialog(k->key, k->mod, this);
+    HotkeyDialog *dialog = new HotkeyDialog(key->key, key->mod, this);
     if (item->type() >= QTableWidgetItem::UserType &&
             dialog->exec() == QDialog::Accepted)
     {
@@ -104,8 +107,8 @@ void SettingsDialog::on_tableWidget_itemDoubleClicked (QTableWidgetItem *item)
         if(keyString.isEmpty() || items.isEmpty() || items.first() == item)
         {
             item->setText(keyString);
-            k->key = dialog->keySym ();
-            k->mod = dialog->nativeModifiers ();
+            key->key = dialog->keySym ();
+            key->mod = dialog->nativeModifiers ();
         }
         else
             QMessageBox::warning(this, tr("Warning"), tr("Key sequence '%1' is already used").arg(keyString));

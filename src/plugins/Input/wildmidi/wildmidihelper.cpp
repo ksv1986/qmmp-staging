@@ -116,7 +116,7 @@ QStringList WildMidiHelper::configFiles() const
     QStringList files = QStringList() << "/etc/timidity.cfg"
                                       << "/etc/timidity/timidity.cfg"
                                       << "/etc/wildmidi/wildmidi.cfg";
-    foreach(QString path, files)
+    for(const QString &path : qAsConst(files))
     {
         if(!QFile::exists(path))
             files.removeAll(path);

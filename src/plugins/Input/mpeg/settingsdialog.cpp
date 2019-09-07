@@ -29,7 +29,7 @@ SettingsDialog::SettingsDialog(bool using_rusxmms, QWidget *parent)
     m_ui.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
     findCodecs();
-    foreach (QTextCodec *codec, codecs)
+    for(const QTextCodec *codec : qAsConst(codecs))
     {
         m_ui.id3v1EncComboBox->addItem(codec->name());
         m_ui.id3v2EncComboBox->addItem(codec->name());
@@ -92,7 +92,7 @@ void SettingsDialog::findCodecs()
     QMap<QString, QTextCodec *> codecMap;
     QRegExp iso8859RegExp("ISO[- ]8859-([0-9]+).*");
 
-    foreach (int mib, QTextCodec::availableMibs())
+    for(int mib : QTextCodec::availableMibs())
     {
         QTextCodec *codec = QTextCodec::codecForMib(mib);
 

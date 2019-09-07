@@ -79,7 +79,7 @@ QString PlayListOption::executeCommand(int id, const QStringList &args)
                 << helpString(PL_SHUFFLE_TOGGLE)
                 << helpString(PL_STATE);
 
-        foreach (QString line, list)
+        for(const QString &line : qAsConst(list))
             out += CommandLineManager::formatHelpString(line) + "\n";
     }
         break;

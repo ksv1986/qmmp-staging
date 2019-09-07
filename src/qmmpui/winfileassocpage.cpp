@@ -39,7 +39,7 @@ WinFileAssocPage::WinFileAssocPage(QWidget *parent): QWidget(parent)
         m_ui->selectNone->hide();
     }
 
-    foreach (QString ext, MetaDataManager::instance()->nameFilters())
+    for(QString ext : MetaDataManager::instance()->nameFilters())
     {
         ext.remove("*.");
         m_ui->listWidget->addItem(ext);

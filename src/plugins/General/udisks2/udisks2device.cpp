@@ -90,7 +90,7 @@ QStringList UDisks2Device::mountPoints() const
 
     QList<QVariant> args = reply.arguments();
 
-    foreach (QVariant arg, args)
+    for(const QVariant &arg : qAsConst(args))
     {
         QByteArrayList list;
         QDBusArgument a = arg.value<QDBusVariant>().variant().value<QDBusArgument>();
@@ -98,7 +98,7 @@ QStringList UDisks2Device::mountPoints() const
             continue;
         a >> list;
 
-        foreach (QByteArray p, list)
+        for(const QByteArray &p : qAsConst(list))
             points.append(p);
     }
     return points;

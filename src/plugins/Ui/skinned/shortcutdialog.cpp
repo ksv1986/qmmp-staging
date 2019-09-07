@@ -28,7 +28,7 @@ ShortcutDialog::ShortcutDialog(const QString &key, QWidget *parent)
     m_ui.keyLineEdit->setText(key);
 
     //buttons should not catch keys
-    foreach(QAbstractButton *button, m_ui.buttonBox->buttons())
+    for(QAbstractButton *button : m_ui.buttonBox->buttons())
         button->setFocusPolicy(Qt::NoFocus);
 }
 

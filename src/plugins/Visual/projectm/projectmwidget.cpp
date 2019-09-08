@@ -107,7 +107,7 @@ void ProjectMWidget::initializeGL()
         presetDir.setFilter(QDir::Files);
         QStringList filters;
         filters << "*.prjm" << "*.milk";
-        QFileInfoList l = presetDir.entryInfoList(filters);
+        const QFileInfoList l = presetDir.entryInfoList(filters);
 
         RatingList list;
         list.push_back(3);

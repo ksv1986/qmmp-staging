@@ -268,20 +268,22 @@ PlayListTrack *GroupedContainer::findTrack(int number) const
 
 void GroupedContainer::removeTrack(PlayListTrack *track)
 {
-    for(PlayListGroup *group : qAsConst(m_groups))
+    QList<PlayListGroup *>::iterator it = m_groups.begin();
+    while(it != m_groups.end())
     {
-        if(group->contains(track))
+        if((*it)->contains(track))
         {
-            group->trackList.removeAll(track);
+            (*it)->trackList.removeAll(track);
             m_items.removeAll(track);
-            if(group->isEmpty())
+            if((*it)->isEmpty())
             {
-                m_groups.removeAll(group);
-                m_items.removeAll(group);
-                delete group;
+                m_groups.removeAll(*it);
+                m_items.removeAll(*it);
+                delete *it;
             }
             return;
         }
+        ++it;
     }
 }
 
@@ -320,7 +322,7 @@ bool GroupedContainer::move(QList<int> indexes, int from, int to)
     if(!group)
         return false;
 
-    for(const int &i : qAsConst(indexes))
+    for(int i : qAsConst(indexes))
     {
         if(i <= firstIndex || i > lastIndex)
             return false;

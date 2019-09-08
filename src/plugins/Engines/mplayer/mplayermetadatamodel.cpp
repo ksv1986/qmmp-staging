@@ -52,7 +52,7 @@ QList<MetaDataItem> MplayerMetaDataModel::extraProperties() const
     mplayer_process.start("mplayer", args);
     mplayer_process.waitForFinished();
     QString str = QString::fromLocal8Bit(mplayer_process.readAll()).trimmed();
-    QStringList lines = str.split("\n");
+    const QStringList lines = str.split("\n");
     //mplayer std output parsing
     QRegExp rx_id("^(ID_.*)=(.*)");
     QMap<QString, QString> params;

@@ -117,8 +117,8 @@ void SkinnedSettings::on_resetFontsButton_clicked()
 
 void SkinnedSettings::on_skinInstallButton_clicked()
 {
-    QStringList files = FileDialog::getOpenFileNames(this,tr("Select Skin Files"), QDir::homePath(),
-                                                     tr("Skin files") + " (*.tar.gz *.tgz *.tar.bz2 *.zip *.wsz)");
+    const QStringList files = FileDialog::getOpenFileNames(this,tr("Select Skin Files"), QDir::homePath(),
+                                                           tr("Skin files") + " (*.tar.gz *.tgz *.tar.bz2 *.zip *.wsz)");
     for(const QString &path : qAsConst(files))
     {
         QFile file(path);
@@ -160,7 +160,7 @@ void SkinnedSettings::findSkins(const QString &path)
 {
     QDir dir(path);
     dir.setFilter (QDir::Dirs | QDir::NoDotAndDotDot);
-    QList <QFileInfo> fileList = dir.entryInfoList();
+    const QList <QFileInfo> fileList = dir.entryInfoList();
     if (fileList.count() == 0)
         return;
     for(const QFileInfo &fileInfo : qAsConst(fileList))

@@ -475,13 +475,18 @@ void PlayListTask::run()
         }
         //remove dublicate URLs and ignored files
         //this code prevents re-addition of cue tracks
-        for(PlayListTrack *t : qAsConst(m_new_tracks))
+        QList<PlayListTrack *>::iterator it = m_new_tracks.begin();
+        while(it != m_new_tracks.end())
         {
-            if((t->path().contains("://") && urls.contains(t->path())) ||
-                    ignoredFiles.contains(t->path()))
+            if(((*it)->path().contains("://") && urls.contains((*it)->path())) ||
+                    ignoredFiles.contains((*it)->path()))
             {
-                m_new_tracks.removeAll(t);
-                delete t;
+                delete (*it);
+                it = m_new_tracks.erase(it);
+            }
+            else
+            {
+                ++it;
             }
         }
     }

@@ -77,7 +77,7 @@ void SettingsDialog::on_clearCacheButton_clicked()
 {
     QDir dir(Qmmp::configDir());
     dir.cd("cddbcache");
-    QStringList list = dir.entryList(QStringList() << "*", QDir::Files);
+    const QStringList list = dir.entryList(QStringList() << "*", QDir::Files);
     for(const QString &name : qAsConst(list))
         dir.remove(name);
 }

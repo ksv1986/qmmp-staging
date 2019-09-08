@@ -48,7 +48,7 @@ UDisks2Plugin::UDisks2Plugin(QObject *parent) : QObject(parent)
     m_addTracks = false; //do not load tracks on startup
     m_addFiles = false;
     //find existing devices
-    QList<QDBusObjectPath> devs = m_manager->findAllDevices();
+    const QList<QDBusObjectPath> devs = m_manager->findAllDevices();
     for(const QDBusObjectPath &o : qAsConst(devs))
         addDevice(o);
     //load remaining settings
@@ -65,15 +65,20 @@ UDisks2Plugin::~UDisks2Plugin()
 
 void UDisks2Plugin::removeDevice(QDBusObjectPath o)
 {
-    for(UDisks2Device *device : qAsConst(m_devices))
+    QList<UDisks2Device *>::iterator it = m_devices.begin();
+    while(it != m_devices.end())
     {
-        if (device->objectPath() == o)
+        if((*it)->objectPath() == o)
         {
-            m_devices.removeAll(device);
-            delete device;
+            delete (*it);
+            it = m_devices.erase(it);
             qDebug("UDisks2Plugin: removed device: \"%s\"", qPrintable(o.path()));
             updateActions();
             break;
+        }
+        else
+        {
+            ++it;
         }
     }
 }

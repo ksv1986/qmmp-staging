@@ -88,7 +88,7 @@ QStringList UDisks2Device::mountPoints() const
 
     QDBusMessage reply = QDBusConnection::systemBus().call(message);
 
-    QList<QVariant> args = reply.arguments();
+    const QList<QVariant> args = reply.arguments();
 
     for(const QVariant &arg : qAsConst(args))
     {

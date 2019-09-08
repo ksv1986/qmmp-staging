@@ -797,10 +797,7 @@ QRegion Skin::createRegion(const QString &path, const QString &key)
     for(const QString &str : qAsConst(value))
     numbers << str.split(" ", QString::SkipEmptyParts);
 
-    QList <QRegion> regions;
-
-    QList<QString>::iterator n;
-    n = numbers.begin();
+    QList<QString>::iterator n = numbers.begin();
     int r = m_double_size ? 2 : 1;
     for (int i = 0; i < numPoints.size(); ++i)
     {

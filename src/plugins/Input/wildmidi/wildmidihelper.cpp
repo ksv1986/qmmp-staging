@@ -113,15 +113,14 @@ void WildMidiHelper::removePtr(void *t)
 
 QStringList WildMidiHelper::configFiles() const
 {
-    QStringList files = QStringList() << "/etc/timidity.cfg"
-                                      << "/etc/timidity/timidity.cfg"
-                                      << "/etc/wildmidi/wildmidi.cfg";
-    for(const QString &path : qAsConst(files))
+    const QStringList paths = { "/etc/timidity.cfg", "/etc/timidity/timidity.cfg", "/etc/wildmidi/wildmidi.cfg" };
+    QStringList filtered;
+    for(const QString &path : qAsConst(paths))
     {
-        if(!QFile::exists(path))
-            files.removeAll(path);
+        if(QFile::exists(path))
+            filtered << path;
     }
-    return files;
+    return filtered;
 }
 
 quint32 WildMidiHelper::sampleRate()

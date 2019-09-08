@@ -297,7 +297,7 @@ void Scrobbler::submit()
     params.insert("method", "track.scrobble");
     params.insert("sk", m_session);
 
-    QStringList keys = params.keys();
+    const QStringList keys = params.keys();
     for(const QString &key : qAsConst(keys)) //removes empty keys
     {
         if(params.value(key).isEmpty() || params.value(key) == "0")
@@ -347,7 +347,8 @@ void Scrobbler::sendNotification(const SongInfo &info)
     params.insert("method", "track.updateNowPlaying");
     params.insert("sk", m_session);
 
-    for(const QString &key : qAsConst(params)) //removes empty keys
+    const QStringList keys = params.keys();
+    for(const QString &key : qAsConst(keys)) //removes empty keys
     {
         if(params.value(key).isEmpty())
             params.remove(key);

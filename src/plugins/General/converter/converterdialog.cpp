@@ -36,7 +36,7 @@
 #include "preseteditor.h"
 #include "converterdialog.h"
 
-ConverterDialog::ConverterDialog(QList <PlayListTrack *> tracks,  QWidget *parent) : QDialog(parent)
+ConverterDialog::ConverterDialog(const QList <PlayListTrack *> &tracks,  QWidget *parent) : QDialog(parent)
 {
     m_ui.setupUi(this);
     m_ui.tableWidget->verticalHeader()->setDefaultSectionSize(fontMetrics().height() + 3);

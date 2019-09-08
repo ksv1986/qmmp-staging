@@ -158,7 +158,7 @@ void LADSPAHost::findModules(const QString &path)
     QDir dir (path);
     dir.setFilter(QDir::Files | QDir::Hidden);
     dir.setSorting(QDir::Name);
-    QFileInfoList files = dir.entryInfoList((QStringList() << "*.so"));
+    const QFileInfoList files = dir.entryInfoList((QStringList() << "*.so"));
 
     for(const QFileInfo &file : qAsConst(files))
     {

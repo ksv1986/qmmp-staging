@@ -203,7 +203,7 @@ DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)
         fact = nullptr;
     }
 
-    QList<DecoderFactory*> filtered = findByFileExtension(path);
+    const QList<DecoderFactory*> filtered = findByFileExtension(path);
 
     if(filtered.isEmpty())
         return nullptr;

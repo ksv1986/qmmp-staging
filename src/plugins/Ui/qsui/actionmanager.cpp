@@ -272,9 +272,10 @@ void ActionManager::updateToolBar(QToolBar *toolBar, ActionManager::ToolBarInfo 
 
 ActionManager::ToolBarInfo ActionManager::defaultToolBar() const
 {
-    QList <Type> idList;
-    idList << PL_ADD_FILE << PL_ADD_DIRECTORY << PREVIOUS << PLAY << PAUSE << STOP << NEXT << EJECT;
-    idList << UI_SEPARATOR << UI_POS_SLIDER << UI_SEPARATOR << UI_VOL_SLIDER << VOL_MUTE;
+    const QList<Type> idList = {
+        PL_ADD_FILE, PL_ADD_DIRECTORY, PREVIOUS, PLAY, PAUSE, STOP, NEXT, EJECT,
+        UI_SEPARATOR, UI_POS_SLIDER, UI_SEPARATOR, UI_VOL_SLIDER, VOL_MUTE
+    };
     QStringList names;
     for(const Type &id : qAsConst(idList))
     {

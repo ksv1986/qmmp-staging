@@ -43,7 +43,7 @@ EngineProperties MplayerEngineFactory::properties() const
 
 bool MplayerEngineFactory::supports(const QString &source) const
 {
-    QStringList filters = MplayerInfo::filters();
+    const QStringList filters = MplayerInfo::filters();
     for(const QString &filter : qAsConst(filters))
     {
         QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);

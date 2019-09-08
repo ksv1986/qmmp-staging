@@ -95,11 +95,11 @@ QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, Tr
             }
 
             //is this file supported by qmmp?
-            QList<DecoderFactory *> filtered = Decoder::findByFileExtension(filePath);
-            for(DecoderFactory *f : qAsConst(filtered))
+            QList<DecoderFactory *> filtered;
+            for(DecoderFactory *f : Decoder::findByFileExtension(filePath))
             {
-                if(f->properties().noInput)
-                    filtered.removeAll(f); //remove all factories without streaming input
+                if(!f->properties().noInput)
+                    filtered << f; //add all factories with streaming input
             }
 
             if(!filtered.isEmpty())

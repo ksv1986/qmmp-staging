@@ -245,7 +245,8 @@ QFileInfoList MetaDataManager::findCoverFiles(QDir dir, int depth) const
     dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     dir.setSorting(QDir::Name);
     QFileInfoList file_list = dir.entryInfoList(m_settings->coverNameFilters());
-    for(const QFileInfo &i : qAsConst(file_list))
+    const auto fileListCopy = file_list; //avoid container modification
+    for(const QFileInfo &i : qAsConst(fileListCopy))
     {
         for(const QString &pattern : m_settings->coverNameFilters(false))
         {
@@ -261,7 +262,7 @@ QFileInfoList MetaDataManager::findCoverFiles(QDir dir, int depth) const
     depth--;
     dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
     dir.setSorting(QDir::Name);
-    QFileInfoList dir_info_list = dir.entryInfoList();
+    const QFileInfoList dir_info_list = dir.entryInfoList();
     for(const QFileInfo &i : qAsConst(dir_info_list))
     {
         file_list << findCoverFiles(QDir(i.absoluteFilePath()), depth);

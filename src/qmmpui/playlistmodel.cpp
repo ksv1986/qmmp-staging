@@ -815,7 +815,7 @@ QList<PlayListItem *> PlayListModel::items() const
 
 void PlayListModel::addToQueue()
 {
-    QList<PlayListTrack*> selected_tracks = selectedTracks();
+    const QList<PlayListTrack*> selected_tracks = selectedTracks();
     blockSignals(true);
     for(PlayListTrack *track : qAsConst(selected_tracks))
         setQueued(track);
@@ -976,12 +976,17 @@ void PlayListModel::onTaskFinished()
                 flags |= STOP_AFTER;
             }
 
-            for(PlayListTrack *t : qAsConst(m_queued_songs))
+            QList<PlayListTrack *>::iterator it = m_queued_songs.begin();
+            while(it != m_queued_songs.end())
             {
-                if(!m_container->contains(t))
+                if(!m_container->contains(*it))
                 {
                     flags |= QUEUE;
-                    m_queued_songs.removeAll(t);
+                    it = m_queued_songs.erase(it);
+                }
+                else
+                {
+                    ++it;
                 }
             }
 

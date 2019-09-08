@@ -46,9 +46,9 @@ HalPlugin::HalPlugin(QObject *parent) : QObject(parent)
     m_addTracks = false; //do not load tracks on startup
     m_addFiles = false;
     //find existing devices
-    QStringList udis = m_manager->findDeviceByCapability("volume");
+    const QStringList udis = m_manager->findDeviceByCapability("volume");
     for(const QString &udi : qAsConst(udis))
-    addDevice(udi);
+        addDevice(udi);
     //load remaining settings
     m_addTracks = settings.value("add_tracks", false).toBool();
     m_removeTracks = settings.value("remove_tracks", false).toBool();
@@ -63,15 +63,20 @@ HalPlugin::~HalPlugin()
 
 void HalPlugin::removeDevice(const QString &udi)
 {
-    for(HalDevice *device : qAsConst(m_devices))
+    QList<HalDevice *>::iterator it = m_devices.begin();
+    while(it != m_devices.end())
     {
-        if (device->udi() == udi)
+        if((*it)->udi() == udi)
         {
-            m_devices.removeAll(device);
-            delete device;
+            delete *it;
+            it = m_devices.erase(it);
             qDebug("HalPlugin: device \"%s\" removed", qPrintable(udi));
             updateActions();
             break;
+        }
+        else
+        {
+            ++it;
         }
     }
 }

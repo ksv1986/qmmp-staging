@@ -321,12 +321,17 @@ void EqWidget::savePreset()
         preset->setPreamp(m_preamp->value());
         for (int i = 0; i<10; ++i)
             preset->setGain(i, m_sliders.at (i)->value());
-        for(EQPreset *p : qAsConst(m_presets)) //remove preset with same name
+        QList<EQPreset *>::iterator it = m_presets.begin();
+        while(it != m_presets.end()) //remove preset with same name
         {
-            if (p->text() == text)
+            if ((*it)->text() == text)
             {
-                m_presets.removeAll(p);
-                delete p;
+                delete (*it);
+                it = m_presets.erase(it);
+            }
+            else
+            {
+                ++it;
             }
         }
         m_presets.append(preset);

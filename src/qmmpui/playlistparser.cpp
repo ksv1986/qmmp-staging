@@ -121,7 +121,7 @@ QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &f_name)
         return QList<PlayListTrack *>();
     }
 
-    QList <PlayListTrack*> tracks = prs->decode(file.readAll());
+    const QList<PlayListTrack*> tracks = prs->decode(file.readAll());
 
     if(tracks.isEmpty())
     {

@@ -45,7 +45,7 @@ FileLoader::~FileLoader()
 QList<PlayListTrack *> FileLoader::processFile(const QString &path, QStringList *ignoredPaths)
 {
     QList<PlayListTrack *> tracks;
-    QList <TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, m_parts, ignoredPaths);
+    const QList<TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, m_parts, ignoredPaths);
 
     for(TrackInfo *info : qAsConst(infoList))
     {
@@ -132,27 +132,25 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
             filters << QRegExp(pattern, Qt::CaseInsensitive, QRegExp::Wildcard);
 
 
-        for(PlayListTrack *t : qAsConst(tracks))
+        QList<PlayListTrack *>::iterator it = tracks.begin();
+        while(it != tracks.end())
         {
-            if(t->path().contains("://"))
+            if((*it)->path().contains("://") && !protocols.contains((*it)->path().section("://", 0, 0)))
             {
-                if(!protocols.contains(t->path().section("://",0,0)))
-                {
-                    tracks.removeAll(t);
-                    delete t;
-                }
+                delete (*it);
+                it = tracks.erase(it);
             }
-            else if(!QFile::exists(t->path()))
+            else if(!QFile::exists((*it)->path()))
             {
-                tracks.removeAll(t);
-                delete t;
+                delete (*it);
+                it = tracks.erase(it);
             }
             else
             {
                 bool found = false;
                 for(const QRegExp &filter : qAsConst(filters))
                 {
-                    if(filter.exactMatch(t->path()))
+                    if(filter.exactMatch((*it)->path()))
                     {
                         found = true;
                         break;
@@ -160,8 +158,12 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
                 }
                 if(!found)
                 {
-                    tracks.removeAll(t);
-                    delete t;
+                    delete (*it);
+                    it = tracks.erase(it);
+                }
+                else
+                {
+                    ++it;
                 }
             }
         }
@@ -384,12 +386,17 @@ void FileLoader::removeIgnoredTracks(QList<PlayListTrack *> *tracks, const QStri
     if(ignoredPaths.isEmpty())
         return;
 
-    for(PlayListTrack *track : qAsConst(*tracks))
+    QList<PlayListTrack *>::iterator it = tracks->begin();
+    while(it != tracks->end())
     {
-        if(ignoredPaths.contains(track->path()))
+        if(ignoredPaths.contains((*it)->path()))
         {
-            tracks->removeAll(track);
-            delete track;
+            delete (*it);
+            it = tracks->erase(it);
+        }
+        else
+        {
+            ++it;
         }
     }
 }

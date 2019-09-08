@@ -65,7 +65,7 @@ TrackInfo *MplayerInfo::createTrackInfo(const QString &path)
     mplayer_process.kill();
     QString str = QString::fromLocal8Bit(mplayer_process.readAll()).trimmed();
     TrackInfo *info = new TrackInfo(path);
-    QStringList lines = str.split("\n");
+    const QStringList lines = str.split("\n");
     for(const QString &line : qAsConst(lines))
     {
         if(rx_id_length.indexIn(line) > -1)
@@ -122,7 +122,7 @@ bool MplayerEngine::play()
 
 bool MplayerEngine::enqueue(InputSource *source)
 {
-    QStringList filters = MplayerInfo::filters();
+    const QStringList filters = MplayerInfo::filters();
     bool supports = false;
     for(const QString &filter : qAsConst(filters))
     {

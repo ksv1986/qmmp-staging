@@ -125,7 +125,7 @@ void SkinReader::unpackSkin(const QString &path)
     //remove old skin
     QDir dir(Qmmp::configDir() + "/cache/skin");
     dir.setFilter( QDir::Files | QDir::Hidden | QDir::NoSymLinks);
-    QFileInfoList f = dir.entryInfoList();
+    const QFileInfoList f = dir.entryInfoList();
     for(const QFileInfo &file : qAsConst(f))
         dir.remove(file.fileName());
     //unpack
@@ -156,7 +156,7 @@ void SkinReader::untar(const QString &from, const QString &to, bool preview)
     m_process->waitForFinished();
     array = m_process->readAllStandardOutput ();
     QString str = QString(array);
-    QStringList outputList = str.split("\n", QString::SkipEmptyParts);
+    const QStringList outputList = str.split("\n", QString::SkipEmptyParts);
     for(QString str : qAsConst(outputList))
     {
         str = str.trimmed();
@@ -193,7 +193,7 @@ void SkinReader::unzip(const QString &from, const QString &to, bool preview)
         QProcess::execute("unzip", args);
         QDir dir(to);
         dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
-        QFileInfoList fileList = dir.entryInfoList();
+        const QFileInfoList fileList = dir.entryInfoList();
         for(const QFileInfo &thumbInfo : qAsConst(fileList))
         {
             if (thumbInfo.fileName().startsWith("main.", Qt::CaseInsensitive))

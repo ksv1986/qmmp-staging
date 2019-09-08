@@ -688,7 +688,7 @@ void MainWindow::readSettings()
     m_titleFormatter.setPattern(settings.value("window_title_format","%if(%p,%p - %t,%t)").toString());
 
     //update toolbars
-    QList<ActionManager::ToolBarInfo> toolBarInfoList = ActionManager::instance()->readToolBarSettings();
+    const QList<ActionManager::ToolBarInfo> toolBarInfoList = ActionManager::instance()->readToolBarSettings();
     QList<QToolBar *> toolBars = findChildren<QToolBar*>();
 
     //clear toolbars to avoid conflicts
@@ -698,15 +698,17 @@ void MainWindow::readSettings()
     for(const ActionManager::ToolBarInfo &info : qAsConst(toolBarInfoList))
     {
         bool found = false;
-        for(QToolBar *toolBar : qAsConst(toolBars))
+        QList<QToolBar *>::iterator it = toolBars.begin();
+        while(it != toolBars.end())
         {
-            if(toolBar->property("uid").toString() == info.uid)
+            if((*it)->property("uid").toString() == info.uid)
             {
                 found = true;
-                toolBars.removeAll(toolBar);
-                ActionManager::instance()->updateToolBar(toolBar, info);
+                ActionManager::instance()->updateToolBar(*it, info);
+                toolBars.erase(it);
                 break;
             }
+            it++;
         }
 
         if(!found)

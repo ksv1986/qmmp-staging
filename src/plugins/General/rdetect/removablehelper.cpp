@@ -97,9 +97,9 @@ void RemovableHelper::processAction(QAction *action)
 
 void RemovableHelper::updateActions()
 {
-    QList<QStorageInfo> volumes = QStorageInfo::mountedVolumes();
+    const QList<QStorageInfo> volumes = QStorageInfo::mountedVolumes();
 
-    foreach(const QStorageInfo &storage, volumes)
+    for(const QStorageInfo &storage : qAsConst(volumes))
     {
         if(!storage.isValid() || !storage.isReady())
             continue;
@@ -155,11 +155,12 @@ void RemovableHelper::updateActions()
         }
     }
     // remove action if device is unmounted/removed
-    for(const QAction *action : m_actions->actions())
+    const QList<QAction *> actions = m_actions->actions();
+    for(QAction *action : qAsConst(actions))
     {
         bool found = false;
 
-        foreach(const QStorageInfo &storage, volumes)
+        for(const QStorageInfo &storage : qAsConst(volumes))
         {
             QString dev_path = storage.rootPath();
             if(isAudioCd(dev_path))
@@ -188,7 +189,7 @@ void RemovableHelper::updateActions()
 
 QAction *RemovableHelper::findAction(const QString &dev_path)
 {
-    for(const QAction *action : m_actions->actions())
+    for(QAction *action : m_actions->actions())
     {
         if (action->data().toString() == dev_path)
             return action;
@@ -200,7 +201,7 @@ void RemovableHelper::addPath(const QString &path)
 {
     PlayListModel *model = PlayListManager::instance()->selectedPlayList();
 
-    for(const PlayListItem *item : model->items()) // Is it already exist?
+    for(PlayListItem *item : model->items()) // Is it already exist?
     {
         if(item->isGroup())
             continue;
@@ -210,11 +211,11 @@ void RemovableHelper::addPath(const QString &path)
 
     if (path.startsWith("cdda://") && m_addTracks)
     {
-        PlayListManager::instance()->selectedPlayList()->add(path);
+        model->add(path);
         return;
     }
     else if (!path.startsWith("cdda://") && m_addFiles)
-        PlayListManager::instance()->selectedPlayList()->add(path);
+        model->add(path);
 }
 
 void RemovableHelper::removePath(const QString &path)

@@ -101,7 +101,7 @@ QString BuiltinCommandLineOption::executeCommand(const QString &option_string, c
         if(args.isEmpty())
             return out;
         QStringList full_path_list, remote_pls_list;
-        for(const QString &s : qAsConst(args))
+        for(QString s : qAsConst(args))
         {
 #ifdef Q_OS_WIN
             s.replace("\\","/");

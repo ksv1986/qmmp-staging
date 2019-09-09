@@ -32,6 +32,7 @@
 #include <QTimer>
 #include <QDesktopServices>
 #include <QSettings>
+#include <QDateTime>
 #include <qmmp/soundcore.h>
 #include <qmmp/qmmpsettings.h>
 #include <qmmp/qmmp.h>

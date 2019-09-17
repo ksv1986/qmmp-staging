@@ -277,9 +277,10 @@ void GroupedContainer::removeTrack(PlayListTrack *track)
             m_items.removeAll(track);
             if((*it)->isEmpty())
             {
-                m_groups.removeAll(*it);
-                m_items.removeAll(*it);
-                delete *it;
+                PlayListGroup *group = *it;
+                m_groups.removeAll(group);
+                m_items.removeAll(group);
+                delete group;
             }
             return;
         }

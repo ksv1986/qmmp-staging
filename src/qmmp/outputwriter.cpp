@@ -382,6 +382,7 @@ void OutputWriter::updateEqSettings()
 
         eq_init_iir(m_frequency, bands);
         eq_set_option(EQ_TWO_PASSES, m_settings->eqSettings().twoPasses());
+        eq_set_option(EQ_CLIP, 1);
 
         for(int ch = 0; ch < m_channels; ++ch)
         {

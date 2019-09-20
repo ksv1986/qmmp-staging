@@ -62,7 +62,7 @@
  */
 typedef enum {
     EQ_TWO_PASSES = 0x01,
-    EQ_LIMITER = 0x02
+    EQ_CLIP = 0x02
 
 } eq_option_t;
 

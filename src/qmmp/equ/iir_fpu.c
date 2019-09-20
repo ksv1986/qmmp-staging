@@ -144,16 +144,22 @@ __inline__ int eq_iir(float *d, int samples, int nch)
         } /* For each band */
       }
 
-      /* Volume stuff
-         Scale down original PCM sample and add it to the filters
-         output. This substitutes the multiplication by 0.25
-         Go back to use the floating point multiplication before the
-         conversion to give more dynamic range
-         */
-      out[channel] += pcm[channel]*0.25;
-
-
-      data[index+channel] = out[channel] > 1.0 ? 1.0 : (out[channel] < -1.0 ? -1.0 : out[channel]);
+      if (eq_options & EQ_CLIP)
+      {
+        /* Volume stuff
+           Scale down original PCM sample and add it to the filters
+           output. This substitutes the multiplication by 0.25
+           Go back to use the floating point multiplication before the
+           conversion to give more dynamic range
+           */
+        out[channel] += pcm[channel]*0.25;
+        data[index+channel] = out[channel] > 1.0 ? 1.0 : (out[channel] < -1.0 ? -1.0 : out[channel]);
+      }
+      else
+      {
+        out[channel] += pcm[channel];
+        data[index+channel] = out[channel];
+      }
 
     } /* For each channel */
 

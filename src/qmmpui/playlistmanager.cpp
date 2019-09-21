@@ -57,6 +57,7 @@ PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
     m_metaKeys.insert("year", Qmmp::YEAR);
     m_metaKeys.insert("track", Qmmp::TRACK);
     m_metaKeys.insert("disk", Qmmp::DISCNUMBER);
+    m_propKeys.insert("bitrate", Qmmp::BITRATE);
     m_propKeys.insert("samplerate", Qmmp::SAMPLERATE);
     m_propKeys.insert("channels", Qmmp::CHANNELS);
     m_propKeys.insert("bits_per_sample", Qmmp::BITS_PER_SAMPLE);

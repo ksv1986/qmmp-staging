@@ -135,12 +135,12 @@
         <translation>Stumm</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="111"/>
+        <location filename="../settingsdialog.cpp" line="114"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="111"/>
+        <location filename="../settingsdialog.cpp" line="114"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
         <translation>Tastenfolge &apos;%1&apos; wird bereits verwendet</translation>
     </message>

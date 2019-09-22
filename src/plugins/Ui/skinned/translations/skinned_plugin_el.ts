@@ -498,7 +498,7 @@
         <translation>προρύθμιση #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="407"/>
+        <location filename="../eqwidget.cpp" line="412"/>
         <source>Import Preset</source>
         <translation>Εισαγωγή προρύθμισης</translation>
     </message>

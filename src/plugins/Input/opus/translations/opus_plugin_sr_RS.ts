@@ -14,17 +14,17 @@
         <translation>Огг Опус фајлови</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="116"/>
+        <location filename="../decoderopusfactory.cpp" line="123"/>
         <source>About Opus Audio Plugin</source>
         <translation>О Опус прикључку</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="117"/>
+        <location filename="../decoderopusfactory.cpp" line="124"/>
         <source>Qmmp Opus Audio Plugin</source>
         <translation>Кумп Опус прикључак</translation>
     </message>
     <message>
-        <location filename="../decoderopusfactory.cpp" line="118"/>
+        <location filename="../decoderopusfactory.cpp" line="125"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Аутор: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

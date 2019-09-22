@@ -14,22 +14,22 @@
         <translation>Μορφές FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="291"/>
+        <location filename="../decoderffmpegfactory.cpp" line="293"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="292"/>
+        <location filename="../decoderffmpegfactory.cpp" line="294"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>Qmmp πρόσθετο ήχου FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="293"/>
+        <location filename="../decoderffmpegfactory.cpp" line="295"/>
         <source>Compiled against:</source>
         <translation>Μεταγλωττίστηκε χρησιμοποιώντας:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="306"/>
+        <location filename="../decoderffmpegfactory.cpp" line="308"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>

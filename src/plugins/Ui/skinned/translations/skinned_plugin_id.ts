@@ -498,7 +498,7 @@
         <translation>preset #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="407"/>
+        <location filename="../eqwidget.cpp" line="412"/>
         <source>Import Preset</source>
         <translation>Import Preset</translation>
     </message>

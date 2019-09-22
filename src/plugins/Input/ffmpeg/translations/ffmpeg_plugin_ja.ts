@@ -14,22 +14,22 @@
         <translation>FFmpeg 用の形式</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="291"/>
+        <location filename="../decoderffmpegfactory.cpp" line="293"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>FFmpeg 音響プラグインについて</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="292"/>
+        <location filename="../decoderffmpegfactory.cpp" line="294"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>QMMP FFmpeg 音響プラグイン</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="293"/>
+        <location filename="../decoderffmpegfactory.cpp" line="295"/>
         <source>Compiled against:</source>
         <translation>コンパイルに使用したライブラリ:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="306"/>
+        <location filename="../decoderffmpegfactory.cpp" line="308"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>制作: Илья Котов (Ilya Kotov) &lt;forkotov02@ya.ru&gt;</translation>
     </message>

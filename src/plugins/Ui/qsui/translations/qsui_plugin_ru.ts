@@ -482,7 +482,7 @@
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="289"/>
+        <location filename="../actionmanager.cpp" line="290"/>
         <source>Toolbar</source>
         <translation>Панель инструментов</translation>
     </message>
@@ -663,7 +663,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="940"/>
+        <location filename="../mainwindow.cpp" line="948"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -809,189 +809,189 @@
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="247"/>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="293"/>
         <source>Rename Playlist</source>
         <translation>Переименовать список</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="464"/>
+        <location filename="../mainwindow.cpp" line="470"/>
         <source>Volume</source>
         <translation>Громкость</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="374"/>
+        <location filename="../mainwindow.cpp" line="380"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;|%2 бит|%3 к.|%4 Гц|треков: %5|общее время: %6|%7 кбит/с|</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="375"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Paused</source>
         <translation>Пауза</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="385"/>
+        <location filename="../mainwindow.cpp" line="391"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;|треков: %2|общее время: %3|</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="386"/>
+        <location filename="../mainwindow.cpp" line="392"/>
         <source>Stopped</source>
         <translation>Стоп</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="293"/>
         <source>Playlist name:</source>
         <translation>Имя списка:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="328"/>
+        <location filename="../mainwindow.cpp" line="334"/>
         <source>Appearance</source>
         <translation>Внешний вид</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="329"/>
+        <location filename="../mainwindow.cpp" line="335"/>
         <source>Shortcuts</source>
         <translation>Сочетания клавиш</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="375"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Playing</source>
         <translation>Воспр.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="454"/>
+        <location filename="../mainwindow.cpp" line="460"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="460"/>
+        <location filename="../mainwindow.cpp" line="466"/>
         <source>P</source>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="462"/>
+        <location filename="../mainwindow.cpp" line="468"/>
         <source>Position</source>
         <translation>Позиция</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="466"/>
+        <location filename="../mainwindow.cpp" line="472"/>
         <source>Quick Search</source>
         <translation>Быстрый поиск</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="522"/>
+        <location filename="../mainwindow.cpp" line="528"/>
         <source>Edit Toolbars</source>
         <translation>Изменить панели инструментов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="524"/>
+        <location filename="../mainwindow.cpp" line="530"/>
         <source>Sort List</source>
         <translation>Сортировать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="527"/>
-        <location filename="../mainwindow.cpp" line="568"/>
+        <location filename="../mainwindow.cpp" line="533"/>
+        <location filename="../mainwindow.cpp" line="574"/>
         <source>By Title</source>
         <translation>По названию</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="530"/>
-        <location filename="../mainwindow.cpp" line="571"/>
+        <location filename="../mainwindow.cpp" line="536"/>
+        <location filename="../mainwindow.cpp" line="577"/>
         <source>By Album</source>
         <translation>По альбому</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="533"/>
-        <location filename="../mainwindow.cpp" line="574"/>
+        <location filename="../mainwindow.cpp" line="539"/>
+        <location filename="../mainwindow.cpp" line="580"/>
         <source>By Artist</source>
         <translation>По исполнителю</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="536"/>
-        <location filename="../mainwindow.cpp" line="577"/>
+        <location filename="../mainwindow.cpp" line="542"/>
+        <location filename="../mainwindow.cpp" line="583"/>
         <source>By Album Artist</source>
         <translation>По исполнителю альбома</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="539"/>
-        <location filename="../mainwindow.cpp" line="580"/>
+        <location filename="../mainwindow.cpp" line="545"/>
+        <location filename="../mainwindow.cpp" line="586"/>
         <source>By Filename</source>
         <translation>По имени файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="542"/>
-        <location filename="../mainwindow.cpp" line="583"/>
+        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.cpp" line="589"/>
         <source>By Path + Filename</source>
         <translation>По пути и файлу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="545"/>
-        <location filename="../mainwindow.cpp" line="586"/>
+        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="592"/>
         <source>By Date</source>
         <translation>По дате</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="548"/>
-        <location filename="../mainwindow.cpp" line="589"/>
+        <location filename="../mainwindow.cpp" line="554"/>
+        <location filename="../mainwindow.cpp" line="595"/>
         <source>By Track Number</source>
         <translation>По номеру трека</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
-        <location filename="../mainwindow.cpp" line="592"/>
+        <location filename="../mainwindow.cpp" line="557"/>
+        <location filename="../mainwindow.cpp" line="598"/>
         <source>By Disc Number</source>
         <translation>По номеру диска</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="554"/>
-        <location filename="../mainwindow.cpp" line="595"/>
+        <location filename="../mainwindow.cpp" line="560"/>
+        <location filename="../mainwindow.cpp" line="601"/>
         <source>By File Creation Date</source>
         <translation>По дате создания файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="557"/>
-        <location filename="../mainwindow.cpp" line="598"/>
+        <location filename="../mainwindow.cpp" line="563"/>
+        <location filename="../mainwindow.cpp" line="604"/>
         <source>By File Modification Date</source>
         <translation>По дате изменения файла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="560"/>
+        <location filename="../mainwindow.cpp" line="566"/>
         <source>By Group</source>
         <translation>По группе</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="565"/>
+        <location filename="../mainwindow.cpp" line="571"/>
         <source>Sort Selection</source>
         <translation>Сортировать выделенное</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="603"/>
+        <location filename="../mainwindow.cpp" line="609"/>
         <source>Randomize List</source>
         <translation>Перемешать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="605"/>
+        <location filename="../mainwindow.cpp" line="611"/>
         <source>Reverse List</source>
         <translation>Перевернуть</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="612"/>
-        <location filename="../mainwindow.cpp" line="653"/>
+        <location filename="../mainwindow.cpp" line="618"/>
+        <location filename="../mainwindow.cpp" line="659"/>
         <source>Actions</source>
         <translation>Действия</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="419"/>
+        <location filename="../mainwindow.cpp" line="425"/>
         <source>Add new playlist</source>
         <translation>Добавить новый список воспроизведения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="425"/>
+        <location filename="../mainwindow.cpp" line="431"/>
         <source>Show all tabs</source>
         <translation>Показать все вкладки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="849"/>
+        <location filename="../mainwindow.cpp" line="857"/>
         <source>Buffering: %1%</source>
         <translation>Буферизация: %1%</translation>
     </message>
@@ -1121,32 +1121,32 @@
         <translation>Запускать скрытым</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="770"/>
+        <location filename="../forms/qsuisettings.ui" line="848"/>
         <source>Fonts</source>
         <translation>Шрифты</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="776"/>
+        <location filename="../forms/qsuisettings.ui" line="854"/>
         <source>Use system fonts</source>
         <translation>Использовать системные шрифты</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="824"/>
+        <location filename="../forms/qsuisettings.ui" line="902"/>
         <source>Playlist:</source>
         <translation>Список:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="804"/>
-        <location filename="../forms/qsuisettings.ui" line="869"/>
-        <location filename="../forms/qsuisettings.ui" line="888"/>
+        <location filename="../forms/qsuisettings.ui" line="882"/>
+        <location filename="../forms/qsuisettings.ui" line="947"/>
+        <location filename="../forms/qsuisettings.ui" line="966"/>
         <source>???</source>
         <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="62"/>
-        <location filename="../forms/qsuisettings.ui" line="811"/>
-        <location filename="../forms/qsuisettings.ui" line="834"/>
-        <location filename="../forms/qsuisettings.ui" line="895"/>
+        <location filename="../forms/qsuisettings.ui" line="889"/>
+        <location filename="../forms/qsuisettings.ui" line="912"/>
+        <location filename="../forms/qsuisettings.ui" line="973"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -1201,22 +1201,22 @@
         <translation>Редактировать шаблон</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="917"/>
+        <location filename="../forms/qsuisettings.ui" line="995"/>
         <source>Reset fonts</source>
         <translation>Сбросить шрифты</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="932"/>
+        <location filename="../forms/qsuisettings.ui" line="1010"/>
         <source>Column headers:</source>
         <translation>Названия колонок:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="847"/>
+        <location filename="../forms/qsuisettings.ui" line="925"/>
         <source>Tab names:</source>
         <translation>Названия вкладок:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="959"/>
+        <location filename="../forms/qsuisettings.ui" line="1037"/>
         <source>Miscellaneous</source>
         <translation>Разное</translation>
     </message>
@@ -1271,47 +1271,62 @@
         <translation>Цвета списка воспроиведения</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="477"/>
+        <location filename="../forms/qsuisettings.ui" line="427"/>
         <source>Background #1:</source>
         <translation>Фон #1:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="537"/>
+        <location filename="../forms/qsuisettings.ui" line="472"/>
         <source>Normal text:</source>
         <translation>Обычный текст:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="645"/>
+        <location filename="../forms/qsuisettings.ui" line="517"/>
         <source>Background #2:</source>
         <translation>Фон #2:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="652"/>
+        <location filename="../forms/qsuisettings.ui" line="549"/>
         <source>Current text:</source>
         <translation>Текущий текст:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="530"/>
+        <location filename="../forms/qsuisettings.ui" line="581"/>
         <source>Highlighted background:</source>
         <translation>Выделенный фон:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="484"/>
+        <location filename="../forms/qsuisettings.ui" line="613"/>
         <source>Highlighted text:</source>
         <translation>Выделенный текст:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="995"/>
+        <location filename="../forms/qsuisettings.ui" line="753"/>
+        <source>Override current track background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="763"/>
+        <source>Current track background:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="795"/>
+        <source>Override group background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="1073"/>
         <source>Toolbars</source>
         <translation>Панели инструментов</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1003"/>
+        <location filename="../forms/qsuisettings.ui" line="1081"/>
         <source>Icon size:</source>
         <translation>Размер иконок:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1028"/>
+        <location filename="../forms/qsuisettings.ui" line="1106"/>
         <source>Customize...</source>
         <translation>Настроить...</translation>
     </message>
@@ -1321,37 +1336,37 @@
         <translation>Использовать системные цвета</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="516"/>
+        <location filename="../forms/qsuisettings.ui" line="721"/>
         <source>Group background:</source>
         <translation>Фон группы:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="523"/>
+        <location filename="../forms/qsuisettings.ui" line="689"/>
         <source>Group text:</source>
         <translation>Текст группы:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="709"/>
+        <location filename="../forms/qsuisettings.ui" line="648"/>
         <source>Splitter:</source>
         <translation>Разделитель:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="965"/>
+        <location filename="../forms/qsuisettings.ui" line="1043"/>
         <source>Tabs</source>
         <translation>Вкладки</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="971"/>
+        <location filename="../forms/qsuisettings.ui" line="1049"/>
         <source>Show close buttons</source>
         <translation>Показывать кнопки закрытия</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="978"/>
+        <location filename="../forms/qsuisettings.ui" line="1056"/>
         <source>Show tab list menu</source>
         <translation>Показывать меню со списком вкладок</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="985"/>
+        <location filename="../forms/qsuisettings.ui" line="1063"/>
         <source>Show &apos;New Playlist&apos; button</source>
         <translation>Показывать кнопку &quot;Новый список&quot;</translation>
     </message>

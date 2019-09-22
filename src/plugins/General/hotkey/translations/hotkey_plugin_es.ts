@@ -135,12 +135,12 @@
         <translation>Silenciar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="111"/>
+        <location filename="../settingsdialog.cpp" line="114"/>
         <source>Warning</source>
         <translation>Advertencia</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="111"/>
+        <location filename="../settingsdialog.cpp" line="114"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
         <translation>Secuencia de teclas &apos;%1&apos; ya está en uso</translation>
     </message>

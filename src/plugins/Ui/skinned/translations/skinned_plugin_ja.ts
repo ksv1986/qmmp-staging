@@ -498,7 +498,7 @@
         <translation>プリセット番号</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="407"/>
+        <location filename="../eqwidget.cpp" line="412"/>
         <source>Import Preset</source>
         <translation>プリセットを移入</translation>
     </message>

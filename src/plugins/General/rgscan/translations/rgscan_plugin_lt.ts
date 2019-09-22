@@ -64,16 +64,16 @@
         <translation type="unfinished">Įrašyti albumo didėjimą/piką </translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="122"/>
-        <location filename="../rgscandialog.cpp" line="233"/>
+        <location filename="../rgscandialog.cpp" line="124"/>
+        <location filename="../rgscandialog.cpp" line="235"/>
         <source>Error</source>
         <translation>Klaida</translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="132"/>
-        <location filename="../rgscandialog.cpp" line="133"/>
-        <location filename="../rgscandialog.cpp" line="157"/>
-        <location filename="../rgscandialog.cpp" line="228"/>
+        <location filename="../rgscandialog.cpp" line="134"/>
+        <location filename="../rgscandialog.cpp" line="135"/>
+        <location filename="../rgscandialog.cpp" line="159"/>
+        <location filename="../rgscandialog.cpp" line="230"/>
         <source>%1 dB</source>
         <translation>%1 dB</translation>
     </message>

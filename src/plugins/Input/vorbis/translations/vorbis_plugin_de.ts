@@ -14,22 +14,22 @@
         <translation>Ogg-Vorbis-Dateien</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="119"/>
+        <location filename="../decodervorbisfactory.cpp" line="126"/>
         <source>About Ogg Vorbis Audio Plugin</source>
         <translation>Über Ogg-Vorbis-Audiomodul</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="120"/>
+        <location filename="../decodervorbisfactory.cpp" line="127"/>
         <source>Qmmp Ogg Vorbis Audio Plugin</source>
         <translation>Qmmp Ogg-Vorbis-Audiomodul</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="121"/>
+        <location filename="../decodervorbisfactory.cpp" line="128"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="122"/>
+        <location filename="../decodervorbisfactory.cpp" line="129"/>
         <source>Source code based on mq3 project</source>
         <translation>Quellcode basiert auf dem mq3-Projekt</translation>
     </message>

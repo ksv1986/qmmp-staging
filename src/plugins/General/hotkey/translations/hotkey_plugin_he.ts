@@ -135,12 +135,12 @@
         <translation>השתק</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="111"/>
+        <location filename="../settingsdialog.cpp" line="114"/>
         <source>Warning</source>
         <translation>אזהרה</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="111"/>
+        <location filename="../settingsdialog.cpp" line="114"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
         <translation>רצף מקש &apos;%1&apos; מצוי כבר בשימוש</translation>
     </message>

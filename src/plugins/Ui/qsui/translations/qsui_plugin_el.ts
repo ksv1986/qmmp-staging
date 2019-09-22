@@ -482,7 +482,7 @@
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="289"/>
+        <location filename="../actionmanager.cpp" line="290"/>
         <source>Toolbar</source>
         <translation>Γραμμή εργαλείων</translation>
     </message>
@@ -663,7 +663,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="940"/>
+        <location filename="../mainwindow.cpp" line="948"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -809,189 +809,189 @@
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="247"/>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="293"/>
         <source>Rename Playlist</source>
         <translation>Μετονομασία της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="464"/>
+        <location filename="../mainwindow.cpp" line="470"/>
         <source>Volume</source>
         <translation>Ένταση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="374"/>
+        <location filename="../mainwindow.cpp" line="380"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 καν|%4 Hz|κομμάτια: %5|συνολικός χρόνος: %6|%7 kbps|</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="375"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Paused</source>
         <translation>Σε παύση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="385"/>
+        <location filename="../mainwindow.cpp" line="391"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;|κομμάτια: %2|συνολικός χρόνος: %3|</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="386"/>
+        <location filename="../mainwindow.cpp" line="392"/>
         <source>Stopped</source>
         <translation>Σταματημένο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="293"/>
         <source>Playlist name:</source>
         <translation>Όνομα λίστας αναπαραγωγής:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="328"/>
+        <location filename="../mainwindow.cpp" line="334"/>
         <source>Appearance</source>
         <translation>Εμφάνιση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="329"/>
+        <location filename="../mainwindow.cpp" line="335"/>
         <source>Shortcuts</source>
         <translation>Συντομεύσεις</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="375"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Playing</source>
         <translation>Εκτελείται</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="454"/>
+        <location filename="../mainwindow.cpp" line="460"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="460"/>
+        <location filename="../mainwindow.cpp" line="466"/>
         <source>P</source>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="462"/>
+        <location filename="../mainwindow.cpp" line="468"/>
         <source>Position</source>
         <translation>Θέση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="466"/>
+        <location filename="../mainwindow.cpp" line="472"/>
         <source>Quick Search</source>
         <translation>Γρήγορη αναζήτηση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="522"/>
+        <location filename="../mainwindow.cpp" line="528"/>
         <source>Edit Toolbars</source>
         <translation>Επεξεργασία γραμμών εργαλείων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="524"/>
+        <location filename="../mainwindow.cpp" line="530"/>
         <source>Sort List</source>
         <translation>Ταξινόμηση λίστας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="527"/>
-        <location filename="../mainwindow.cpp" line="568"/>
+        <location filename="../mainwindow.cpp" line="533"/>
+        <location filename="../mainwindow.cpp" line="574"/>
         <source>By Title</source>
         <translation>Ανά τίτλο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="530"/>
-        <location filename="../mainwindow.cpp" line="571"/>
+        <location filename="../mainwindow.cpp" line="536"/>
+        <location filename="../mainwindow.cpp" line="577"/>
         <source>By Album</source>
         <translation>Ανά άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="533"/>
-        <location filename="../mainwindow.cpp" line="574"/>
+        <location filename="../mainwindow.cpp" line="539"/>
+        <location filename="../mainwindow.cpp" line="580"/>
         <source>By Artist</source>
         <translation>Ανά καλλιτέχνη</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="536"/>
-        <location filename="../mainwindow.cpp" line="577"/>
+        <location filename="../mainwindow.cpp" line="542"/>
+        <location filename="../mainwindow.cpp" line="583"/>
         <source>By Album Artist</source>
         <translation>Ανά καλλιτέχνη άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="539"/>
-        <location filename="../mainwindow.cpp" line="580"/>
+        <location filename="../mainwindow.cpp" line="545"/>
+        <location filename="../mainwindow.cpp" line="586"/>
         <source>By Filename</source>
         <translation>Ανά όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="542"/>
-        <location filename="../mainwindow.cpp" line="583"/>
+        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.cpp" line="589"/>
         <source>By Path + Filename</source>
         <translation>Ανά διαδρομή + όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="545"/>
-        <location filename="../mainwindow.cpp" line="586"/>
+        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="592"/>
         <source>By Date</source>
         <translation>Ανά ημερομηνία</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="548"/>
-        <location filename="../mainwindow.cpp" line="589"/>
+        <location filename="../mainwindow.cpp" line="554"/>
+        <location filename="../mainwindow.cpp" line="595"/>
         <source>By Track Number</source>
         <translation>Ανά αριθμό κομματιού</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
-        <location filename="../mainwindow.cpp" line="592"/>
+        <location filename="../mainwindow.cpp" line="557"/>
+        <location filename="../mainwindow.cpp" line="598"/>
         <source>By Disc Number</source>
         <translation>Ανά αριθμό δίσκου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="554"/>
-        <location filename="../mainwindow.cpp" line="595"/>
+        <location filename="../mainwindow.cpp" line="560"/>
+        <location filename="../mainwindow.cpp" line="601"/>
         <source>By File Creation Date</source>
         <translation>Ανά ημερομηνία δημιουργίας του αρχείου </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="557"/>
-        <location filename="../mainwindow.cpp" line="598"/>
+        <location filename="../mainwindow.cpp" line="563"/>
+        <location filename="../mainwindow.cpp" line="604"/>
         <source>By File Modification Date</source>
         <translation>Ανά ημερομηνία τροποποίησης του αρχείου </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="560"/>
+        <location filename="../mainwindow.cpp" line="566"/>
         <source>By Group</source>
         <translation>Ανά ομάδα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="565"/>
+        <location filename="../mainwindow.cpp" line="571"/>
         <source>Sort Selection</source>
         <translation>Ταξινόμηση επιλογής</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="603"/>
+        <location filename="../mainwindow.cpp" line="609"/>
         <source>Randomize List</source>
         <translation>Τυχαία ταξινόμηση της λίστας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="605"/>
+        <location filename="../mainwindow.cpp" line="611"/>
         <source>Reverse List</source>
         <translation>Αντιστροφή ταξινόμησης της λίστας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="612"/>
-        <location filename="../mainwindow.cpp" line="653"/>
+        <location filename="../mainwindow.cpp" line="618"/>
+        <location filename="../mainwindow.cpp" line="659"/>
         <source>Actions</source>
         <translation>Ενέργειες</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="419"/>
+        <location filename="../mainwindow.cpp" line="425"/>
         <source>Add new playlist</source>
         <translation>Προσθήκη νέας λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="425"/>
+        <location filename="../mainwindow.cpp" line="431"/>
         <source>Show all tabs</source>
         <translation>Εμφάνιση όλων των καρτελών</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="849"/>
+        <location filename="../mainwindow.cpp" line="857"/>
         <source>Buffering: %1%</source>
         <translation>Πλήρωση ενδιάμεσης μνήμης: %1%</translation>
     </message>
@@ -1121,32 +1121,32 @@
         <translation>Εκκίνηση σε απόκρυψη</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="770"/>
+        <location filename="../forms/qsuisettings.ui" line="848"/>
         <source>Fonts</source>
         <translation>Γραμματοσειρές</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="776"/>
+        <location filename="../forms/qsuisettings.ui" line="854"/>
         <source>Use system fonts</source>
         <translation>Χρήση των γραμματοσειρών του συστήματος</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="824"/>
+        <location filename="../forms/qsuisettings.ui" line="902"/>
         <source>Playlist:</source>
         <translation>Λίστα αναπαραγωγής:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="804"/>
-        <location filename="../forms/qsuisettings.ui" line="869"/>
-        <location filename="../forms/qsuisettings.ui" line="888"/>
+        <location filename="../forms/qsuisettings.ui" line="882"/>
+        <location filename="../forms/qsuisettings.ui" line="947"/>
+        <location filename="../forms/qsuisettings.ui" line="966"/>
         <source>???</source>
         <translation>;;;</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="62"/>
-        <location filename="../forms/qsuisettings.ui" line="811"/>
-        <location filename="../forms/qsuisettings.ui" line="834"/>
-        <location filename="../forms/qsuisettings.ui" line="895"/>
+        <location filename="../forms/qsuisettings.ui" line="889"/>
+        <location filename="../forms/qsuisettings.ui" line="912"/>
+        <location filename="../forms/qsuisettings.ui" line="973"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -1201,22 +1201,22 @@
         <translation>Επεξεργασία πρότυπου</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="917"/>
+        <location filename="../forms/qsuisettings.ui" line="995"/>
         <source>Reset fonts</source>
         <translation>Επαναφορά γραμματοσειρών</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="932"/>
+        <location filename="../forms/qsuisettings.ui" line="1010"/>
         <source>Column headers:</source>
         <translation>Επικεφαλίδες στηλών:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="847"/>
+        <location filename="../forms/qsuisettings.ui" line="925"/>
         <source>Tab names:</source>
         <translation>Ονόματα καρτελών</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="959"/>
+        <location filename="../forms/qsuisettings.ui" line="1037"/>
         <source>Miscellaneous</source>
         <translation>Διάφορα</translation>
     </message>
@@ -1271,47 +1271,62 @@
         <translation>Χρώματα λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="477"/>
+        <location filename="../forms/qsuisettings.ui" line="427"/>
         <source>Background #1:</source>
         <translation>Παρασκήνιο #1:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="537"/>
+        <location filename="../forms/qsuisettings.ui" line="472"/>
         <source>Normal text:</source>
         <translation>Κανονικό κείμενο:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="645"/>
+        <location filename="../forms/qsuisettings.ui" line="517"/>
         <source>Background #2:</source>
         <translation>Παρασκήνιο #2:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="652"/>
+        <location filename="../forms/qsuisettings.ui" line="549"/>
         <source>Current text:</source>
         <translation>Τρέχον κείμενο:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="530"/>
+        <location filename="../forms/qsuisettings.ui" line="581"/>
         <source>Highlighted background:</source>
         <translation>Τονισμένο παρασκήνιο:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="484"/>
+        <location filename="../forms/qsuisettings.ui" line="613"/>
         <source>Highlighted text:</source>
         <translation>Τονισμένο κείμενο:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="995"/>
+        <location filename="../forms/qsuisettings.ui" line="753"/>
+        <source>Override current track background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="763"/>
+        <source>Current track background:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="795"/>
+        <source>Override group background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="1073"/>
         <source>Toolbars</source>
         <translation>Εργαλειοθήκες</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1003"/>
+        <location filename="../forms/qsuisettings.ui" line="1081"/>
         <source>Icon size:</source>
         <translation>Μέγεθος εικονιδίων:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1028"/>
+        <location filename="../forms/qsuisettings.ui" line="1106"/>
         <source>Customize...</source>
         <translation>Προσαρμογή...</translation>
     </message>
@@ -1321,37 +1336,37 @@
         <translation>Χρήση των χρωμάτων του συστήματος</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="516"/>
+        <location filename="../forms/qsuisettings.ui" line="721"/>
         <source>Group background:</source>
         <translation>Παρασκήνιο ομάδας:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="523"/>
+        <location filename="../forms/qsuisettings.ui" line="689"/>
         <source>Group text:</source>
         <translation>Κείμενο ομάδας:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="709"/>
+        <location filename="../forms/qsuisettings.ui" line="648"/>
         <source>Splitter:</source>
         <translation>Διαχωριστής:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="965"/>
+        <location filename="../forms/qsuisettings.ui" line="1043"/>
         <source>Tabs</source>
         <translation>Καρτέλες</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="971"/>
+        <location filename="../forms/qsuisettings.ui" line="1049"/>
         <source>Show close buttons</source>
         <translation>Εμφάνιση των κουμπιών κλεισίματος</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="978"/>
+        <location filename="../forms/qsuisettings.ui" line="1056"/>
         <source>Show tab list menu</source>
         <translation>Εμφάνιση του μενού λίστας των καρτελών</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="985"/>
+        <location filename="../forms/qsuisettings.ui" line="1063"/>
         <source>Show &apos;New Playlist&apos; button</source>
         <translation>Εμφάνιση του κουμπιού «Νέα λίστα αναπαραγωγής»</translation>
     </message>

@@ -96,7 +96,7 @@ public:
 
 private:
     QColor m_normal, m_current, m_normal_bg, m_selected_bg, m_alternate, m_highlighted, m_splitter;
-    QColor m_group_bg, m_group_alt_bg, m_group_text;
+    QColor m_group_bg, m_group_alt_bg, m_group_text, m_current_bg, m_current_alt_bg;
     QFontMetrics *m_metrics;
     QFontMetrics *m_extra_metrics;
     QFontMetrics *m_bold_metrics;

@@ -184,7 +184,6 @@ void QSUISettings::readSettings()
     QString normal = palette().color(QPalette::Text).name();
     QString current = palette().color(QPalette::Text).name();
     QString highlighted = palette().color(QPalette::HighlightedText).name();
-    QString group_bg = palette().color(QPalette::Base).name();
     QString group_text = palette().color(QPalette::Text).name();
     m_ui.plSystemColorsCheckBox->setChecked(settings.value("pl_system_colors", true).toBool());
     m_ui.plBg1Color->setColor(settings.value("pl_bg1_color", normal_bg).toString());
@@ -193,9 +192,12 @@ void QSUISettings::readSettings()
     m_ui.plTextNormalColor->setColor(settings.value("pl_normal_text_color", normal).toString());
     m_ui.plTextCurrentColor->setColor(settings.value("pl_current_text_color", current).toString());
     m_ui.plTextHlCurrentColor->setColor(settings.value("pl_hl_text_color", highlighted).toString());
-    m_ui.plGrBgColor->setColor(settings.value("pl_group_bg", group_bg).toString());
+    m_ui.plGrBgColor->setColor(settings.value("pl_group_bg", normal_bg).toString());
     m_ui.plSplitterColor->setColor(settings.value("pl_splitter_color", normal).toString());
     m_ui.plGrTextColor->setColor(settings.value("pl_group_text", group_text).toString());
+    m_ui.plCurrentTrackBgColor->setColor(settings.value("pl_current_bg_color", normal_bg).toString());
+    m_ui.plOverrideGroupBgCheckBox->setChecked(settings.value("pl_override_group_bg", false).toBool());
+    m_ui.plOverrideCurrentBgCheckBox->setChecked(settings.value("pl_override_current_bg", false).toBool());
     //toolbar
     int index = m_ui.toolBarIconSizeComboBox->findData(settings.value("toolbar_icon_size", -1).toInt());
     m_ui.toolBarIconSizeComboBox->setCurrentIndex(index > 0 ? index : 0);
@@ -234,6 +236,9 @@ void QSUISettings::writeSettings()
     settings.setValue("pl_group_bg", m_ui.plGrBgColor->colorName());
     settings.setValue("pl_splitter_color", m_ui.plSplitterColor->colorName());
     settings.setValue("pl_group_text", m_ui.plGrTextColor->colorName());
+    settings.setValue("pl_current_bg_color", m_ui.plCurrentTrackBgColor->colorName());
+    settings.setValue("pl_override_group_bg", m_ui.plOverrideGroupBgCheckBox->isChecked());
+    settings.setValue("pl_override_current_bg", m_ui.plOverrideCurrentBgCheckBox->isChecked());
     settings.setValue("pl_font", m_ui.plFontLabel->font().toString());
     settings.setValue("pl_tabs_font", m_ui.tabsFontLabel->font().toString());
     settings.setValue("pl_header_font", m_ui.columnFontLabel->font().toString());

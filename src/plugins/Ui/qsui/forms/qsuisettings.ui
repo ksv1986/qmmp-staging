@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>463</width>
-    <height>483</height>
+    <width>497</width>
+    <height>529</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -184,7 +184,7 @@
       <attribute name="title">
        <string>Colors</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_7">
+      <layout class="QVBoxLayout" name="verticalLayout_8">
        <item>
         <widget class="QGroupBox" name="groupBox_4">
          <property name="title">
@@ -404,7 +404,7 @@
          <property name="title">
           <string>Playlist Colors</string>
          </property>
-         <layout class="QVBoxLayout" name="_2">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
           <item>
            <widget class="QCheckBox" name="plSystemColorsCheckBox">
             <property name="text">
@@ -421,145 +421,10 @@
              <bool>false</bool>
             </property>
             <layout class="QGridLayout" name="gridLayout_2">
-             <property name="margin">
-              <number>0</number>
-             </property>
-             <item row="3" column="1">
-              <widget class="ColorWidget" name="plGrBgColor">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::Box</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="ColorWidget" name="plHlColor">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::Box</enum>
-               </property>
-              </widget>
-             </item>
              <item row="0" column="0">
               <widget class="QLabel" name="label_7">
                <property name="text">
                 <string>Background #1:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="3">
-              <widget class="QLabel" name="label_12">
-               <property name="text">
-                <string>Highlighted text:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="ColorWidget" name="plBg2Color">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::Box</enum>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="label_14">
-               <property name="text">
-                <string>Group background:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="3">
-              <widget class="QLabel" name="label_15">
-               <property name="text">
-                <string>Group text:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_9">
-               <property name="text">
-                <string>Highlighted background:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QLabel" name="label_10">
-               <property name="text">
-                <string>Normal text:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="4">
-              <widget class="ColorWidget" name="plTextNormalColor">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::Box</enum>
                </property>
               </widget>
              </item>
@@ -588,7 +453,52 @@
                </property>
               </widget>
              </item>
-             <item row="0" column="5" rowspan="4">
+             <item row="0" column="2" rowspan="5" colspan="2">
+              <spacer name="horizontalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>43</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="4" colspan="2">
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>Normal text:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="6">
+              <widget class="ColorWidget" name="plTextNormalColor">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="7" rowspan="5">
               <spacer name="horizontalSpacer_6">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
@@ -601,7 +511,46 @@
                </property>
               </spacer>
              </item>
-             <item row="1" column="4">
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>Background #2:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="ColorWidget" name="plBg2Color">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4" colspan="2">
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>Current text:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="6">
               <widget class="ColorWidget" name="plTextCurrentColor">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -626,35 +575,15 @@
                </property>
               </widget>
              </item>
-             <item row="0" column="2" rowspan="4">
-              <spacer name="horizontalSpacer_5">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>43</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_8">
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_9">
                <property name="text">
-                <string>Background #2:</string>
+                <string>Highlighted background:</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="3">
-              <widget class="QLabel" name="label_11">
-               <property name="text">
-                <string>Current text:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="4">
-              <widget class="ColorWidget" name="plGrTextColor">
+             <item row="2" column="1">
+              <widget class="ColorWidget" name="plHlColor">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
@@ -667,15 +596,25 @@
                  <height>20</height>
                 </size>
                </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::Box</enum>
                </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
+              </widget>
+             </item>
+             <item row="2" column="4" colspan="2">
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>Highlighted text:</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="4">
+             <item row="2" column="6">
               <widget class="ColorWidget" name="plTextHlCurrentColor">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -703,14 +642,14 @@
                </property>
               </widget>
              </item>
-             <item row="4" column="0">
+             <item row="3" column="0" rowspan="2">
               <widget class="QLabel" name="label_19">
                <property name="text">
                 <string>Splitter:</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="1">
+             <item row="3" column="1" rowspan="2">
               <widget class="ColorWidget" name="plSplitterColor">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -743,6 +682,145 @@
                 <enum>QFrame::Plain</enum>
                </property>
               </widget>
+             </item>
+             <item row="4" column="4" colspan="2">
+              <widget class="QLabel" name="label_15">
+               <property name="text">
+                <string>Group text:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="6">
+              <widget class="ColorWidget" name="plGrTextColor">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_14">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Group background:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="ColorWidget" name="plGrBgColor">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0" colspan="5">
+              <widget class="QCheckBox" name="plOverrideCurrentBgCheckBox">
+               <property name="text">
+                <string>Override current track background</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="label_20">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Current track background:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <widget class="ColorWidget" name="plCurrentTrackBgColor">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0" colspan="8">
+              <widget class="QCheckBox" name="plOverrideGroupBgCheckBox">
+               <property name="text">
+                <string>Override group background</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="4" colspan="4">
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>110</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="8" column="4" colspan="4">
+              <spacer name="horizontalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>189</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>
@@ -1068,12 +1146,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>154</x>
-     <y>220</y>
+     <x>180</x>
+     <y>377</y>
     </hint>
     <hint type="destinationlabel">
-     <x>184</x>
-     <y>276</y>
+     <x>210</x>
+     <y>435</y>
     </hint>
    </hints>
   </connection>
@@ -1084,12 +1162,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>152</x>
-     <y>332</y>
+     <x>178</x>
+     <y>280</y>
     </hint>
     <hint type="destinationlabel">
-     <x>144</x>
-     <y>368</y>
+     <x>147</x>
+     <y>313</y>
     </hint>
    </hints>
   </connection>
@@ -1104,8 +1182,8 @@
      <y>49</y>
     </hint>
     <hint type="destinationlabel">
-     <x>101</x>
-     <y>77</y>
+     <x>111</x>
+     <y>140</y>
     </hint>
    </hints>
   </connection>
@@ -1122,6 +1200,70 @@
     <hint type="destinationlabel">
      <x>189</x>
      <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plOverrideGroupBgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_14</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plOverrideGroupBgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plGrBgColor</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>255</x>
+     <y>361</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plOverrideCurrentBgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_20</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>97</x>
+     <y>391</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>94</x>
+     <y>413</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plOverrideCurrentBgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plCurrentTrackBgColor</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>419</y>
     </hint>
    </hints>
   </connection>

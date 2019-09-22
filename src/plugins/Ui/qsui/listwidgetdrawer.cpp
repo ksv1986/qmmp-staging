@@ -88,10 +88,28 @@ void ListWidgetDrawer::readSettings()
         m_normal.setNamedColor(settings.value("pl_normal_text_color", m_normal.name()).toString());
         m_current.setNamedColor(settings.value("pl_current_text_color",m_current.name()).toString());
         m_highlighted.setNamedColor(settings.value("pl_hl_text_color",m_highlighted.name()).toString());
-        m_group_bg.setNamedColor(settings.value("pl_group_bg", m_group_bg.name()).toString());
         m_splitter.setNamedColor(settings.value("pl_splitter_color", m_splitter).toString());
-        m_group_alt_bg = m_group_bg;
         m_group_text.setNamedColor(settings.value("pl_group_text", m_group_text.name()).toString());
+        if(settings.value("pl_override_group_bg", false).toBool())
+        {
+            m_group_bg.setNamedColor(settings.value("pl_group_bg", m_normal_bg.name()).toString());
+            m_group_alt_bg = m_group_bg;
+        }
+        else
+        {
+            m_group_bg = m_normal_bg;
+            m_group_alt_bg = m_alternate;
+        }
+        if(settings.value("pl_override_current_bg", false).toBool())
+        {
+            m_current_bg.setNamedColor(settings.value("pl_current_bg_color", m_normal_bg.name()).toString());
+            m_current_alt_bg = m_current_bg;
+        }
+        else
+        {
+            m_current_bg = m_normal_bg;
+            m_current_alt_bg = m_alternate;
+        }
     }
 
     if (m_update)
@@ -122,6 +140,8 @@ void ListWidgetDrawer::loadSystemColors()
     m_group_bg = m_normal_bg;
     m_group_alt_bg = m_alternate,
     m_group_text = m_normal;
+    m_current_bg = m_normal_bg;
+    m_current_alt_bg = m_alternate;
 }
 
 int ListWidgetDrawer::rowHeight() const
@@ -237,6 +257,19 @@ void ListWidgetDrawer::drawBackground(QPainter *painter, ListWidgetRow *row, int
         {
             painter->setBrush(QBrush(m_group_bg));
             painter->setPen(m_group_bg);
+        }
+    }
+    else if(row->flags & ListWidgetRow::CURRENT)
+    {
+        if(index % 2)
+        {
+            painter->setBrush(QBrush(m_current_alt_bg));
+            painter->setPen(m_current_alt_bg);
+        }
+        else
+        {
+            painter->setBrush(QBrush(m_current_bg));
+            painter->setPen(m_current_bg);
         }
     }
     else

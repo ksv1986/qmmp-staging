@@ -6,15 +6,20 @@ QT += network
 
 HEADERS += lyricsfactory.h \
            lyrics.h \
-           lyricswindow.h
+           lyricswindow.h \
+    lyricsprovider.h \
+    ultimatelyricsparser.h
 
 SOURCES += lyricsfactory.cpp \
            lyrics.cpp \
-           lyricswindow.cpp
+           lyricswindow.cpp \
+    lyricsprovider.cpp \
+    ultimatelyricsparser.cpp
 
 FORMS += lyricswindow.ui
 
-RESOURCES = translations/translations.qrc
+RESOURCES = translations/translations.qrc \
+            providers/providers.qrc
 
 LIBS += $$QMMPUI_LIB
 

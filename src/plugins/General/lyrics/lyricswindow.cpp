@@ -28,6 +28,7 @@
 #include <QCryptographicHash>
 #include <qmmp/qmmpsettings.h>
 #include <qmmp/qmmp.h>
+//#include "ultimatelyricsparser.h"
 #include "lyricswindow.h"
 
 LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget *parent)
@@ -66,6 +67,9 @@ LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget 
     }
     if(!loadFromCache())
         on_searchPushButton_clicked();
+
+    //UltimateLyricsParser parser;
+    //parser.load(":/ultimate_providers.xml");
 }
 
 

@@ -35,9 +35,9 @@ public:
     virtual ~GroupedContainer();
 
     void addTrack(PlayListTrack *track) override;
-    void addTracks(QList<PlayListTrack *> tracks) override;
+    void addTracks(const QList<PlayListTrack *> &tracks) override;
     void insertTrack(int index, PlayListTrack *track) override;
-    void replaceTracks(QList<PlayListTrack *> tracks) override;
+    void replaceTracks(const QList<PlayListTrack *> &tracks) override;
     QList<PlayListGroup *> groups() const override;
     QList<PlayListTrack *> tracks() const override;
     QList<PlayListItem *> items() const override;
@@ -57,7 +57,7 @@ public:
     PlayListTrack *findTrack(int number) const override;
     void removeTrack(PlayListTrack *track) override;
     void removeTracks(QList<PlayListTrack *> tracks) override;
-    bool move(QList<int> indexes, int from, int to) override;
+    bool move(const QList<int> &indexes, int from, int to) override;
     QList<PlayListTrack *> takeAllTracks() override;
     void clear() override;
 

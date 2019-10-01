@@ -110,7 +110,7 @@ void PlayListModel::add(PlayListTrack *track)
     emit listChanged(flags);
 }
 
-void PlayListModel::add(QList<PlayListTrack *> tracks)
+void PlayListModel::add(const QList<PlayListTrack *> &tracks)
 {
     if(tracks.isEmpty())
         return;
@@ -182,7 +182,7 @@ void PlayListModel::insert(PlayListItem *before, PlayListTrack *track)
          add(track);
 }
 
-void PlayListModel::insert(int index, QList<PlayListTrack *> tracks)
+void PlayListModel::insert(int index, const QList<PlayListTrack *> &tracks)
 {
     if(tracks.isEmpty())
         return;
@@ -208,7 +208,7 @@ void PlayListModel::insert(int index, QList<PlayListTrack *> tracks)
     emit listChanged(flags);
 }
 
-void PlayListModel::insert(PlayListItem *before, QList<PlayListTrack *> tracks)
+void PlayListModel::insert(PlayListItem *before, const QList<PlayListTrack *> &tracks)
 {
     if(before)
         insert(m_container->indexOf(before), tracks);
@@ -450,14 +450,14 @@ void PlayListModel::setSelected(int index, bool selected)
     emit listChanged(SELECTION);
 }
 
-void PlayListModel::setSelected(QList<PlayListTrack *> tracks, bool selected)
+void PlayListModel::setSelected(const QList<PlayListTrack *> &tracks, bool selected)
 {
     for(PlayListTrack *t : qAsConst(tracks))
         t->setSelected(selected);
     emit listChanged(SELECTION);
 }
 
-void PlayListModel::setSelected(QList<PlayListItem *> items, bool selected)
+void PlayListModel::setSelected(const QList<PlayListItem *> &items, bool selected)
 {
     for(PlayListItem *i : qAsConst(items))
         i->setSelected(selected);
@@ -481,7 +481,7 @@ void PlayListModel::setSelected(int first, int last, bool selected)
     emit listChanged(SELECTION);
 }
 
-void PlayListModel::setSelected(QList<int> indexes, bool selected)
+void PlayListModel::setSelected(const QList<int> &indexes, bool selected)
 {
     for(const int &idx : qAsConst(indexes))
         m_container->setSelected(idx, selected);
@@ -852,7 +852,7 @@ int PlayListModel::queueSize() const
     return m_queued_songs.size();
 }
 
-bool PlayListModel::isStopAfter(PlayListItem* item) const
+bool PlayListModel::isStopAfter(const PlayListItem *item) const
 {
     return m_stop_track == item;
 }

@@ -61,15 +61,15 @@ public:
      * Returns formatted title of the item.
      * @param column Number of column.
      */
-    const QString formattedTitle(int column) override;
+    QString formattedTitle(int column) override;
     /*!
      * Returns the list of the formatted titles for all columns.
      */
-    const QStringList formattedTitles() override;
+    QStringList formattedTitles() override;
     /*!
      *  Returns formatted length of the item.
      */
-    const QString formattedLength() override;
+    QString formattedLength() override;
     /*!
      *  Updates current metadata.
      *  @param info Track information.
@@ -82,7 +82,7 @@ public:
     /*!
      * Returns name of the parent group.
      */
-    const QString groupName();
+    const QString &groupName();
     /*!
      * Returns \b false.
      */

@@ -38,13 +38,13 @@ PlayListGroup::~PlayListGroup()
     }
 }
 
-const QString PlayListGroup::formattedTitle(int column)
+QString PlayListGroup::formattedTitle(int column)
 {
     Q_UNUSED(column);
     return m_name;
 }
 
-const QStringList PlayListGroup::formattedTitles()
+QStringList PlayListGroup::formattedTitles()
 {
     return QStringList() << m_name;
 }
@@ -67,6 +67,11 @@ QList<PlayListTrack *> PlayListGroup::tracks() const
 int PlayListGroup::count() const
 {
     return trackList.count();
+}
+
+QString PlayListGroup::formattedLength()
+{
+    return QString();
 }
 
 bool PlayListGroup::isGroup() const

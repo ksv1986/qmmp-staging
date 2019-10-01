@@ -202,13 +202,13 @@ public:
      * @param tracks List of tracks.
      * @param selected Selection state (\b true - select, \b false - unselect)
      */
-    void setSelected(QList<PlayListTrack *> tracks, bool selected = true);
+    void setSelected(const QList<PlayListTrack *> &tracks, bool selected = true);
     /*!
      * Sets the selected state of the list of items to \b select
      * @param items List of items.
      * @param selected Selection state (\b true - select, \b false - unselect)
      */
-    void setSelected(QList<PlayListItem *> items, bool selected = true);
+    void setSelected(const QList<PlayListItem *> &items, bool selected = true);
     /*!
      * Sets the selected state of the list of items range.
      * @param first Firts item in the range.
@@ -221,7 +221,7 @@ public:
      * @param indexes List of item \b indexes.
      * @param selected Selection state (\b true - select, \b false - unselect)
      */
-    void setSelected(QList<int> indexes, bool selected = true);
+    void setSelected(const QList<int> &indexes, bool selected = true);
     /*!
      * Advances to the next item. Returns \b false if next iten doesn't exist,
      * otherwise returns \b true
@@ -245,7 +245,7 @@ public:
     /*!
      * Returns \b true if \b f file is in play queue, otherwise returns \b false.
      */
-    bool isQueued(PlayListTrack* item) const;
+    bool isQueued(PlayListTrack *item) const;
     /*!
      * Returns \b true if play queue is empty,otherwise returns - \b false.
      */
@@ -253,7 +253,7 @@ public:
     /*!
      * Returns index of \b f file in queue.e
      */
-    int queuedIndex(PlayListTrack* track) const;
+    int queuedIndex(PlayListTrack *track) const;
     /*!
      * Returns the number of items in the queue
      */
@@ -261,7 +261,7 @@ public:
     /*!
      * Returns \b true if playback stops after \b item, otherwise returns \b false.
      */
-    bool isStopAfter(PlayListItem* item) const;
+    bool isStopAfter(const PlayListItem* item) const;
     /*!
      * Returns current selection(playlist can contain a lot of selections,
      * this method returns selection which \b row belongs to)
@@ -399,7 +399,7 @@ public slots:
      * Adds a list of tracks to the playlist.
      * @param tracks List of tracks.
      */
-    void add(QList <PlayListTrack *> tracks);
+    void add(const QList<PlayListTrack *> &tracks);
     /*!
      * Adds a list of files and directories to the playlist
      * @param path Full path of file or directory.
@@ -421,11 +421,11 @@ public slots:
     /*!
      * Inserts \b tracks at index position \b index in the playlist.
      */
-    void insert(int index, QList <PlayListTrack *> tracks);
+    void insert(int index, const QList<PlayListTrack *> &tracks);
     /*!
      * Inserts \b tracks after item \b before in the playlist.
      */
-    void insert(PlayListItem *before, QList <PlayListTrack *> tracks);
+    void insert(PlayListItem *before, const QList<PlayListTrack *> &tracks);
     /*!
      * Inserts file or directory at index position \b index in the playlist.
      * @param path Full path of file or directory.

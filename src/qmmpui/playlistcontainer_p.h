@@ -39,9 +39,9 @@ public:
     virtual ~PlayListContainer(){}
 
     virtual void addTrack(PlayListTrack *track);
-    virtual void addTracks(QList<PlayListTrack *> tracks) = 0;
+    virtual void addTracks(const QList<PlayListTrack *> &tracks) = 0;
     virtual void insertTrack(int index, PlayListTrack *track) = 0;
-    virtual void replaceTracks(QList<PlayListTrack *> tracks) = 0;
+    virtual void replaceTracks(const QList<PlayListTrack *> &tracks) = 0;
     virtual QList<PlayListGroup *> groups() const = 0;
     virtual QList<PlayListItem *> items() const = 0;
     virtual QList<PlayListTrack *> tracks() const = 0;
@@ -61,7 +61,7 @@ public:
     virtual PlayListTrack *findTrack(int number) const = 0;
     virtual void removeTrack(PlayListTrack *track) = 0;
     virtual void removeTracks(QList<PlayListTrack *> tracks) = 0;
-    virtual bool move(QList<int> indexes, int from, int to) = 0;
+    virtual bool move(const QList<int> &indexes, int from, int to) = 0;
     virtual QList<PlayListTrack *> takeAllTracks() = 0;
     virtual void clear() = 0;
 

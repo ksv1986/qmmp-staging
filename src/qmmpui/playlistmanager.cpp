@@ -429,7 +429,7 @@ void PlayListManager::showDetails()
     m_selected->showDetails();
 }
 
-void PlayListManager::add(QList<PlayListTrack *> tracks)
+void PlayListManager::add(const QList<PlayListTrack *> &tracks)
 {
     m_selected->add(tracks);
 }

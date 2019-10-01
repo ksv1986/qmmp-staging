@@ -105,7 +105,7 @@ void PlayListTrack::updateMetaData()
     qDeleteAll(list);
 }
 
-const QString PlayListTrack::groupName()
+const QString &PlayListTrack::groupName()
 {
     if(m_group.isEmpty() || m_groupFormat != m_settings->groupFormat())
     {
@@ -155,7 +155,7 @@ bool PlayListTrack::isUsed() const
     return (m_refCount != 0);
 }
 
-const QString PlayListTrack::formattedTitle(int column)
+QString PlayListTrack::formattedTitle(int column)
 {
     if(m_formattedTitles.count() != m_helper->columnCount())
     {
@@ -186,7 +186,7 @@ const QString PlayListTrack::formattedTitle(int column)
     return m_formattedTitles[column];
 }
 
-const QStringList PlayListTrack::formattedTitles()
+QStringList PlayListTrack::formattedTitles()
 {
     if(m_formattedTitles.count() != m_helper->columnCount())
     {
@@ -217,7 +217,7 @@ const QStringList PlayListTrack::formattedTitles()
     return m_formattedTitles;
 }
 
-const QString PlayListTrack::formattedLength()
+QString PlayListTrack::formattedLength()
 {
     if(duration() > 0 && m_formattedLength.isEmpty())
         m_formattedLength = MetaDataFormatter::formatDuration(duration());

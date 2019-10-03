@@ -21,7 +21,7 @@
 #define LYRICSWINDOW_H
 
 #include <QWidget>
-
+#include "ultimatelyricsparser.h"
 #include "ui_lyricswindow.h"
 
 class QNetworkAccessManager;
@@ -51,6 +51,7 @@ private:
     QNetworkReply *m_requestReply;
     QString m_artist, m_title;
     QString m_cachePath;
+    UltimateLyricsParser m_parser;
 };
 
 #endif

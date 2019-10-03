@@ -41,7 +41,7 @@ add_subdirectory(notifier)
 ENDIF(USE_NOTIFIER)
 
 IF(USE_LYRICS)
-add_subdirectory(lyrics)
+#add_subdirectory(lyrics)
 ENDIF(USE_LYRICS)
 
 IF(USE_HAL AND Qt5DBus_FOUND)

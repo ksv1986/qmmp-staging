@@ -28,7 +28,6 @@
 #include <QCryptographicHash>
 #include <qmmp/qmmpsettings.h>
 #include <qmmp/qmmp.h>
-//#include "ultimatelyricsparser.h"
 #include "lyricswindow.h"
 
 LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget *parent)
@@ -59,6 +58,9 @@ LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget 
     }
     connect(m_http, SIGNAL(finished (QNetworkReply *)), SLOT(showText(QNetworkReply *)));
 
+    if(!m_parser.load(":/ultimate_providers.xml"))
+        qWarning("LyricsWindow: unable to load ultimate_providers.xml");
+
     QDir cacheDir(m_cachePath);
     if(!cacheDir.exists())
     {
@@ -67,9 +69,6 @@ LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget 
     }
     if(!loadFromCache())
         on_searchPushButton_clicked();
-
-    //UltimateLyricsParser parser;
-    //parser.load(":/ultimate_providers.xml");
 }
 
 
@@ -180,13 +179,16 @@ void LyricsWindow::showText(QNetworkReply *reply)
 void LyricsWindow::on_searchPushButton_clicked()
 {
     m_ui.stateLabel->setText(tr("Receiving"));
-    setWindowTitle(QString(tr("Lyrics: %1 - %2")).arg(m_ui.artistLineEdit->text())
+    qDebug() << m_parser.providers().count();
+
+
+    /*setWindowTitle(QString(tr("Lyrics: %1 - %2")).arg(m_ui.artistLineEdit->text())
                    .arg(m_ui.titleLineEdit->text()));
     QNetworkRequest request;
     request.setUrl(QUrl("https://lyrics.fandom.com/api.php?action=lyrics&artist=" +
                         m_ui.artistLineEdit->text()+"&song=" + m_ui.titleLineEdit->text() + "&fmt=xml"));
     request.setRawHeader("User-Agent", QString("qmmp/%1").arg(Qmmp::strVersion()).toLatin1());
-    m_requestReply = m_http->get(request);
+    m_requestReply = m_http->get(request);*/
 }
 
 QString LyricsWindow::cacheFilePath() const

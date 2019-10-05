@@ -5,6 +5,9 @@
 #include <QList>
 #include <QPair>
 
+class PlayListTrack;
+class TrackInfo;
+
 class LyricsProvider
 {
 public:
@@ -17,8 +20,11 @@ public:
     void addUrlFormat(const QString &replace, const QString &with);
     void addRule(const QList<QPair<QString, QString> > &args, bool exclude = false);
     void addInvalidIndicator(const QString &indicator);
+    QString getUrl(const TrackInfo *track) const;
 
 private:
+    QString fixCase(const QString &title) const;
+
     QString m_name, m_title;
     QString m_charser = QLatin1String("utf-8");
     QString m_url;

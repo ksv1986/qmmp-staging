@@ -26,6 +26,7 @@
 
 class QNetworkAccessManager;
 class QNetworkReply;
+class TrackInfo;
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
@@ -34,7 +35,7 @@ class LyricsWindow : public QWidget
 {
 Q_OBJECT
 public:
-    LyricsWindow(const QString &artist, const QString &title, QWidget *parent = nullptr);
+    LyricsWindow(const TrackInfo *info, QWidget *parent = nullptr);
 
     ~LyricsWindow();
 

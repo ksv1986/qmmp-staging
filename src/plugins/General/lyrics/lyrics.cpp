@@ -47,8 +47,7 @@ void Lyrics::showLyrics()
     {
         if (tracks.at(0)->value(Qmmp::ARTIST).isEmpty() || tracks.at(0)->value(Qmmp::TITLE).isEmpty())
                 return;
-            LyricsWindow *w = new LyricsWindow(tracks.at(0)->value(Qmmp::ARTIST),
-                                               tracks.at(0)->value(Qmmp::TITLE), qApp->activeWindow ());
+            LyricsWindow *w = new LyricsWindow(tracks.first(), qApp->activeWindow ());
             w->show();
     }
 }

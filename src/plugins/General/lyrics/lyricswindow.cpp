@@ -30,7 +30,7 @@
 #include <qmmp/qmmp.h>
 #include "lyricswindow.h"
 
-LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget *parent)
+LyricsWindow::LyricsWindow(const TrackInfo *info, QWidget *parent)
         : QWidget(parent)
 {
     m_ui.setupUi(this);
@@ -39,8 +39,8 @@ LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget 
     setAttribute(Qt::WA_QuitOnClose, false);
     m_requestReply = nullptr;
     m_cachePath = Qmmp::configDir() + "/lyrics/";
-    m_ui.artistLineEdit->setText(artist);
-    m_ui.titleLineEdit->setText(title);
+    //m_ui.artistLineEdit->setText(info);
+    //m_ui.titleLineEdit->setText(title);
     m_http = new QNetworkAccessManager(this);
      //load global proxy settings
     QmmpSettings *gs = QmmpSettings::instance();
@@ -67,8 +67,10 @@ LyricsWindow::LyricsWindow(const QString &artist, const QString &title, QWidget 
         if(!cacheDir.mkpath(cacheDir.absolutePath()))
             qWarning("LyricsWindow: unable to create cache directory");
     }
-    if(!loadFromCache())
-        on_searchPushButton_clicked();
+    //if(!loadFromCache())
+    //    on_searchPushButton_clicked();
+
+    qDebug() << m_parser.providers().first()->getUrl(info);
 }
 
 
@@ -179,7 +181,7 @@ void LyricsWindow::showText(QNetworkReply *reply)
 void LyricsWindow::on_searchPushButton_clicked()
 {
     m_ui.stateLabel->setText(tr("Receiving"));
-    qDebug() << m_parser.providers().count();
+    //qDebug() << m_parser.providers().first()->getUrl()
 
 
     /*setWindowTitle(QString(tr("Lyrics: %1 - %2")).arg(m_ui.artistLineEdit->text())

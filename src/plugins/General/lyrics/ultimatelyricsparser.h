@@ -16,6 +16,7 @@ public:
     bool load(const QString &path);
     const QString &errorString() const;
     const QList<LyricsProvider *> &providers();
+    LyricsProvider *provider(const QString &name) const;
 
 private:
     QString m_errorString;

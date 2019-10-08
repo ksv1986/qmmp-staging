@@ -1,5 +1,6 @@
 #include <QtDebug>
 #include <QRegularExpression>
+#include <QTextCodec>
 #include <qmmp/trackinfo.h>
 #include "lyricsprovider.h"
 
@@ -20,7 +21,7 @@ void LyricsProvider::setTitle(const QString &title)
 
 void LyricsProvider::setCharset(const QString &charset)
 {
-    m_charser = charset;
+    m_charset = charset;
 }
 
 void LyricsProvider::setUrl(const QString &url)
@@ -65,23 +66,23 @@ void LyricsProvider::addInvalidIndicator(const QString &indicator)
     m_invalidIndicators << indicator;
 }
 
-QString LyricsProvider::getUrl(const TrackInfo *track) const
+QString LyricsProvider::getUrl(const TrackInfo &track) const
 {
     QString url = m_url;
     QMap<QString, QString> replaceMap = {
-        { "{artist}", track->value(Qmmp::ARTIST).toLower() },
-        { "{artist2}", track->value(Qmmp::ARTIST).toLower().remove(' ') },
-        { "{Artist}", track->value(Qmmp::ARTIST) },
-        { "{ARTIST}", track->value(Qmmp::ARTIST).toUpper() },
-        { "{a}", track->value(Qmmp::ARTIST).left(1).toLower() },
-        { "{album}", track->value(Qmmp::ALBUM).toLower() },
-        { "{album2}", track->value(Qmmp::ALBUM).toLower().remove(' ') },
-        { "{Album}", track->value(Qmmp::ALBUM) },
-        { "{title}",  track->value(Qmmp::TITLE).toLower() },
-        { "{Title}", track->value(Qmmp::TITLE) },
-        { "{Title2}", fixCase(track->value(Qmmp::TITLE)) },
-        { "{track}", track->value(Qmmp::TRACK) },
-        { "{year}",  track->value(Qmmp::YEAR) }
+        { "{artist}", track.value(Qmmp::ARTIST).toLower() },
+        { "{artist2}", track.value(Qmmp::ARTIST).toLower().remove(' ') },
+        { "{Artist}", track.value(Qmmp::ARTIST) },
+        { "{ARTIST}", track.value(Qmmp::ARTIST).toUpper() },
+        { "{a}", track.value(Qmmp::ARTIST).left(1).toLower() },
+        { "{album}", track.value(Qmmp::ALBUM).toLower() },
+        { "{album2}", track.value(Qmmp::ALBUM).toLower().remove(' ') },
+        { "{Album}", track.value(Qmmp::ALBUM) },
+        { "{title}",  track.value(Qmmp::TITLE).toLower() },
+        { "{Title}", track.value(Qmmp::TITLE) },
+        { "{Title2}", fixCase(track.value(Qmmp::TITLE)) },
+        { "{track}", track.value(Qmmp::TRACK) },
+        { "{year}",  track.value(Qmmp::YEAR) }
     };
 
     QMap<QString, QString>::const_iterator it = replaceMap.constBegin();
@@ -98,6 +99,28 @@ QString LyricsProvider::getUrl(const TrackInfo *track) const
     }
 
     return url;
+}
+
+QString LyricsProvider::format(const QByteArray &data) const
+{
+    QTextCodec *codec = QTextCodec::codecForName(m_charset.toLatin1().constData());
+    if(!codec)
+        codec = QTextCodec::codecForName("UTF-8");
+
+    QString content = codec->toUnicode(data);
+
+    for(const QString &indicator : qAsConst(m_invalidIndicators))
+    {
+        if(content.contains(indicator))
+            return QString();
+    }
+
+    return content;
+}
+
+const QString &LyricsProvider::name() const
+{
+    return m_name;
 }
 
 QString LyricsProvider::fixCase(const QString &title) const

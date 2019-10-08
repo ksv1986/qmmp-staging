@@ -20,13 +20,15 @@ public:
     void addUrlFormat(const QString &replace, const QString &with);
     void addRule(const QList<QPair<QString, QString> > &args, bool exclude = false);
     void addInvalidIndicator(const QString &indicator);
-    QString getUrl(const TrackInfo *track) const;
+    QString getUrl(const TrackInfo &track) const;
+    QString format(const QByteArray &data) const;
+    const QString &name() const;
 
 private:
     QString fixCase(const QString &title) const;
 
     QString m_name, m_title;
-    QString m_charser = QLatin1String("utf-8");
+    QString m_charset = QLatin1String("utf-8");
     QString m_url;
 
     struct UrlFormat

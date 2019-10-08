@@ -21,6 +21,8 @@
 #define LYRICSWINDOW_H
 
 #include <QWidget>
+#include <QHash>
+#include <qmmp/trackinfo.h>
 #include "ultimatelyricsparser.h"
 #include "ui_lyricswindow.h"
 
@@ -40,7 +42,7 @@ public:
     ~LyricsWindow();
 
 private slots:
-    void showText(QNetworkReply *reply);
+    void onRequestFinished(QNetworkReply *reply);
     void on_searchPushButton_clicked();
     QString cacheFilePath() const;
     bool loadFromCache();
@@ -49,10 +51,10 @@ private slots:
 private:
     Ui::LyricsWindow m_ui;
     QNetworkAccessManager *m_http;
-    QNetworkReply *m_requestReply;
-    QString m_artist, m_title;
     QString m_cachePath;
     UltimateLyricsParser m_parser;
+    TrackInfo m_info;
+    QHash<QNetworkReply *, QString> m_tasks;
 };
 
 #endif

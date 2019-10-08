@@ -108,3 +108,13 @@ const QList<LyricsProvider *> &UltimateLyricsParser::providers()
 {
     return m_providers;
 }
+
+LyricsProvider *UltimateLyricsParser::provider(const QString &name) const
+{
+    for(LyricsProvider *provider : qAsConst(m_providers))
+    {
+        if(provider->name() == name)
+            return provider;
+    }
+    return nullptr;
+}

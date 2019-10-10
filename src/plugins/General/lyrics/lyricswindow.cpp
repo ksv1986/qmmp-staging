@@ -88,11 +88,13 @@ void LyricsWindow::onRequestFinished(QNetworkReply *reply)
         LyricsProvider *provider = m_parser.provider(name);
         if(provider)
         {
-            QString content = provider->format(data);
-            qDebug() << content;
+            QString content = provider->format(data, m_info);
+            if(!content.isEmpty())
+            {
+                m_ui.textBrowser->append(content);
+                m_ui.textBrowser->append("<br><hr><br>");
+            }
         }
-
-        qDebug() << "+++++";
     }
     else if(redirectTarget.isValid())
     {

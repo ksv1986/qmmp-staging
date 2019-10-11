@@ -92,7 +92,8 @@ QString LyricsProvider::format(const QByteArray &data, const TrackInfo &track) c
     if(!codec)
         codec = QTextCodec::codecForName("UTF-8");
 
-    QString content = codec->toUnicode(data);
+    const QString content = codec->toUnicode(data);
+    QString out;
 
     for(const QString &indicator : qAsConst(m_invalidIndicators))
     {
@@ -105,6 +106,7 @@ QString LyricsProvider::format(const QByteArray &data, const TrackInfo &track) c
     for(const Rule &rule : qAsConst(m_extractRules))
     {
         Rule tmpRule = rule;
+        QString tmpContent = content;
 
         for(Item &item : tmpRule)
         {
@@ -117,15 +119,37 @@ QString LyricsProvider::format(const QByteArray &data, const TrackInfo &track) c
             }
         }
 
-        content = extract(content, rule);
+        tmpContent = extract(tmpContent, tmpRule);
+
+        if(!tmpContent.isEmpty())
+        {
+            for(const Rule &excludeRule : qAsConst(m_excludeRules))
+                tmpContent = exclude(tmpContent, excludeRule);
+        }
+        if(tmpContent.isEmpty())
+        {
+            tmpContent = content;
+        }
+        else
+        {
+            out = tmpContent;
+            break;
+        }
     }
 
-    for(const Rule &rule : qAsConst(m_excludeRules))
+    while (out.endsWith("<br />"))
     {
-        content = exclude(content, rule);
+        out.chop(6);
+        out = out.trimmed();
     }
 
-    return content;
+    while (out.endsWith("<br>"))
+    {
+        out.chop(4);
+        out = out.trimmed();
+    }
+
+    return out;
 }
 
 const QString &LyricsProvider::name() const
@@ -177,6 +201,7 @@ QString LyricsProvider::extract(const QString &content, const Rule &rule) const
 
     for(const Item &item : qAsConst(rule))
     {
+
         if(!item.url.isEmpty())
         {
             QString url = item.url;
@@ -186,14 +211,16 @@ QString LyricsProvider::extract(const QString &content, const Rule &rule) const
         }
         else if(!item.tag.isEmpty())
         {
-            out = out.section(item.tag, 1).section(QString("</") + item.tag.mid(1), 0, 0);
+            const QRegularExpression re("<(\\w+).*>");
+            QRegularExpressionMatch m = re.match(item.tag);
+            out = out.section(item.tag, 1).section(QString("</%1>").arg(m.captured(1)), 0, 0);
         }
         else
         {
             out = out.section(item.begin, 1).section(item.end, 0, 0);
         }
     }
-    return out;
+    return out.trimmed();
 }
 
 QString LyricsProvider::exclude(const QString &content, const LyricsProvider::Rule &rule) const
@@ -204,12 +231,14 @@ QString LyricsProvider::exclude(const QString &content, const LyricsProvider::Ru
     {
         if(!item.tag.isEmpty())
         {
-            out = out.section(item.tag, 0, 0) + out.section(item.tag, 1).section(QString("</") + item.tag.mid(1), 1);
+            const QRegularExpression re("<(\\w+).*>");
+            QRegularExpressionMatch m = re.match(item.tag);
+            out = out.section(item.tag, 0, 0) + out.section(item.tag, 1).section(QString("</%1>").arg(m.captured(1)), 1);
         }
         else
         {
             out = out.section(item.begin, 0, 0) + out.section(item.begin, 1).section(item.end, 1);
         }
     }
-    return out;
+    return out.trimmed();
 }

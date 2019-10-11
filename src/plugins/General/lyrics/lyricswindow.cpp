@@ -89,16 +89,22 @@ void LyricsWindow::onRequestFinished(QNetworkReply *reply)
         if(provider)
         {
             QString content = provider->format(data, m_info);
+            qDebug() << content;
             if(!content.isEmpty())
             {
+                m_ui.textBrowser->append(QString("<b>%1</b>").arg(provider->name()));
                 m_ui.textBrowser->append(content);
-                m_ui.textBrowser->append("<br><hr><br>");
+                m_ui.textBrowser->append("<br>-------------------------------------<br>");
             }
         }
     }
     else if(redirectTarget.isValid())
     {
         m_tasks.insert(m_http->get(QNetworkRequest(redirectTarget.toUrl())), name);
+    }
+    else
+    {
+        qWarning() << "error:" << reply->errorString();
     }
 
     reply->deleteLater();
@@ -110,12 +116,15 @@ void LyricsWindow::on_searchPushButton_clicked()
 
     for(LyricsProvider *provider : m_parser.providers())
     {
+        //if(provider->name() == "lyrics.wikia.com")
+        {
         QString url = provider->getUrl(m_info);
-        qDebug() << provider->name();
+        qDebug() << provider->name() << url;
         QNetworkRequest request;
         request.setUrl(url);
         request.setRawHeader("User-Agent", QString("qmmp/%1").arg(Qmmp::strVersion()).toLatin1());
         m_tasks.insert(m_http->get(request), provider->name());
+        }
     }
 }
 

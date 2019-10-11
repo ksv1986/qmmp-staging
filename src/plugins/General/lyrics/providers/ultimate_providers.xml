@@ -92,10 +92,12 @@
     <urlFormat replace=" _@;\/&quot;'()[]" with="%20"/>
     <urlFormat replace="?" with=""/>
     <extract>
-      <item begin="&lt;div class=nm&gt;Movie&lt;/div&gt;:" end="&lt;/pre&gt;"/>
+      <item begin="&lt;pre&gt;&lt;font face=&quot;verdana&quot;&gt;" end="&lt;/font&gt;"/>
     </extract>
     <exclude>
       <item begin="&lt;span class=" end="&quot;&gt;"/>
+      <item tag="&lt;script&gt;" />
+      <item tag="&lt;script&gt;" />
     </exclude>
     <invalidIndicator value="Couldn't find that page."/>
   </provider>
@@ -133,7 +135,7 @@
     <invalidIndicator value="Click to search for the Lyrics on Lyrics.com"/>
     <invalidIndicator value="we do not have the lyric for this song"/>
   </provider>
-  <provider name="lyrics.wikia.com" title="{artist}:{title} Lyrics - " charset="utf-8" url="http://lyrics.wikia.com/{Artist}:{Title}">
+  <provider name="lyrics.wikia.com" title="{artist}:{title} Lyrics - " charset="utf-8" url="https://lyrics.wikia.com/{Artist}:{Title}">
     <urlFormat replace=" _@;\&quot;" with="_"/>
     <urlFormat replace="?" with="%3F"/>
     <extract>
@@ -295,7 +297,7 @@
     <urlFormat replace=" _@,;&amp;\/&quot;'" with="-"/>
     <urlFormat replace="." with=""/>
     <extract>
-      <item begin="&lt;div class=&quot;songText&quot; id=&quot;songContent&quot;&gt;" end="&lt;/div&gt;"/>
+      <item begin="&lt;div class=&quot;tabCont originalText songTextDisplay&quot; id=&quot;tab-top-25534-1&quot;&gt;" end="&lt;/div&gt;"/>
     </extract>
   </provider>
   <provider name="vagalume.com.br" title="{title} de {artist} no VAGALUME" charset="iso-8859-1" url="http://vagalume.com.br/{artist}/{title}.html">

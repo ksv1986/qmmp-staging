@@ -10,11 +10,16 @@ link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 SET(liblyrics_SRCS
     lyrics.cpp
     lyricsfactory.cpp
+    lyricsprovider.cpp
     lyricswindow.cpp
+    settingsdialog.cpp
+    ultimatelyricsparser.cpp
 )
 
-SET(liblyrics_RCCS 
-    translations/translations.qrc)
+SET(liblyrics_RCCS
+    translations/translations.qrc
+    providers/providers.qrc
+)
 
 QT5_ADD_RESOURCES(liblyrics_RCC_SRCS ${liblyrics_RCCS})
 
@@ -22,6 +27,7 @@ QT5_ADD_RESOURCES(liblyrics_RCC_SRCS ${liblyrics_RCCS})
 
 SET(liblyrics_UIS
     lyricswindow.ui
+    settingsdialog.ui
 )
 
 QT5_WRAP_UI(liblyrics_UIS_H ${liblyrics_UIS})

@@ -229,3 +229,7 @@ ReplayGainAnalysis (from MP3Gain) - analyzes input samples and give the recommen
 SMPlayer - GUI front-end for mplayer
 
     Ricardo Villalba <rvm@users.sourceforge.net>
+
+Ultimate Lyrics - lyrics plugin for Amarok 2.x series (C) 2009-2010
+
+    Vladimir Brkic <vladimir_brkic@yahoo.com>

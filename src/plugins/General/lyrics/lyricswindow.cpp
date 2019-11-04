@@ -116,6 +116,10 @@ void LyricsWindow::onRequestFinished(QNetworkReply *reply)
                     saveToCache(content);
                 }
             }
+            else if(m_tasks.isEmpty() && m_ui.providerComboBox->count() == 0)
+            {
+                m_ui.textBrowser->setHtml("<b>"+ tr("Not found") +"</b>");
+            }
         }
     }
     else if(redirectTarget.isValid())

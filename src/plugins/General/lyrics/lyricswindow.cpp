@@ -64,7 +64,11 @@ LyricsWindow::LyricsWindow(const TrackInfo *info, QWidget *parent)
     connect(m_http, SIGNAL(finished (QNetworkReply *)), SLOT(onRequestFinished(QNetworkReply *)));
 
     if(!m_parser.load(":/ultimate_providers.xml"))
+    {
         qWarning("LyricsWindow: unable to load ultimate_providers.xml");
+        m_ui.textBrowser->setText(m_parser.errorString());
+        return;
+    }
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_enabledProviders = settings.value("Lyrics/enabled_providers", m_parser.defaultProviders()).toStringList();

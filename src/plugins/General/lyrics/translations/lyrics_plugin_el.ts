@@ -22,24 +22,29 @@
         <translation>Πρόσθετο στίχων</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="50"/>
+        <location filename="../lyricsfactory.cpp" line="49"/>
         <source>About Lyrics Plugin</source>
         <translation>Σχετικά με το πρόσθετο στίχων</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="51"/>
+        <location filename="../lyricsfactory.cpp" line="50"/>
         <source>Qmmp Lyrics Plugin</source>
         <translation>Qmmp πρόσθετο στίχων</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="52"/>
+        <location filename="../lyricsfactory.cpp" line="51"/>
         <source>This plugin retrieves lyrics from LyricWiki</source>
         <translation>Αυτό το πρόσθετο κάνει λήψη στίχων από το LyricWiki</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="53"/>
+        <location filename="../lyricsfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
+    </message>
+    <message>
+        <location filename="../lyricsfactory.cpp" line="53"/>
+        <source>Based on Ultimate Lyrics script by Vladimir Brkic &lt;vladimir_brkic@yahoo.com&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -50,57 +55,80 @@
         <translation>Πρόσθετο στίχων</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.ui" line="45"/>
+        <location filename="../lyricswindow.ui" line="31"/>
+        <source>Provider:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.ui" line="122"/>
+        <source>Album:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.ui" line="139"/>
+        <source>Track:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.ui" line="146"/>
         <source>Artist:</source>
         <translation>Καλλιτέχνης:</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.ui" line="55"/>
+        <location filename="../lyricswindow.ui" line="161"/>
+        <source>Year:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.ui" line="115"/>
         <source>Title:</source>
         <translation>Τίτλος:</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.ui" line="65"/>
-        <source>Search</source>
-        <translation>Αναζήτηση</translation>
+        <location filename="../lyricswindow.cpp" line="114"/>
+        <source>&lt;h2&gt;%1 - %2&lt;/h2&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lyricswindow.ui" line="36"/>
-        <source>No connection</source>
-        <translation>Χωρίς σύνδεση</translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.cpp" line="78"/>
-        <location filename="../lyricswindow.cpp" line="209"/>
-        <source>Done</source>
-        <translation>Έγινε</translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.cpp" line="81"/>
-        <location filename="../lyricswindow.cpp" line="105"/>
-        <location filename="../lyricswindow.cpp" line="111"/>
-        <location filename="../lyricswindow.cpp" line="119"/>
-        <location filename="../lyricswindow.cpp" line="127"/>
-        <location filename="../lyricswindow.cpp" line="138"/>
-        <source>Error</source>
-        <translation>Σφάλμα</translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.cpp" line="132"/>
-        <location filename="../lyricswindow.cpp" line="165"/>
+        <location filename="../lyricswindow.cpp" line="125"/>
         <source>Not found</source>
         <translation>Δεν βρέθηκε</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="152"/>
-        <location filename="../lyricswindow.cpp" line="178"/>
+        <location filename="../lyricswindow.cpp" line="135"/>
+        <source>Error: %1 - %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lyricswindow.cpp" line="148"/>
         <source>Receiving</source>
         <translation>Γίνεται λήψη</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="179"/>
-        <source>Lyrics: %1 - %2</source>
-        <translation>Στίχοι: %1 - %2</translation>
+        <location filename="../lyricswindow.cpp" line="203"/>
+        <source>cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SettingsDialog</name>
+    <message>
+        <location filename="../settingsdialog.ui" line="14"/>
+        <source>Lyrics Plugin Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="29"/>
+        <source>Lyrics providers:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UltimateLyricsParser</name>
+    <message>
+        <location filename="../ultimatelyricsparser.cpp" line="116"/>
+        <source>%1 (line: %2)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

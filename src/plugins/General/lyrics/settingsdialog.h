@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2019 by Ilya Kotov                                      *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,47 +17,29 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef LYRICSWINDOW_H
-#define LYRICSWINDOW_H
 
-#include <QWidget>
-#include <QHash>
-#include <qmmp/trackinfo.h>
-#include "ultimatelyricsparser.h"
-#include "ui_lyricswindow.h"
+#ifndef SETTINGSDIALOG_H
+#define SETTINGSDIALOG_H
 
-class QNetworkAccessManager;
-class QNetworkReply;
-class TrackInfo;
+#include <QDialog>
 
-/**
-    @author Ilya Kotov <forkotov02@ya.ru>
-*/
-class LyricsWindow : public QWidget
+namespace Ui {
+class SettingsDialog;
+}
+
+class SettingsDialog : public QDialog
 {
-Q_OBJECT
+    Q_OBJECT
+
 public:
-    LyricsWindow(const TrackInfo *info, QWidget *parent = nullptr);
+    explicit SettingsDialog(QWidget *parent = 0);
+    ~SettingsDialog();
 
-    ~LyricsWindow();
-
-private slots:
-    void onRequestFinished(QNetworkReply *reply);
-    void on_refreshButton_clicked();
-    void on_editButton_clicked(bool checked);
-    void on_providerComboBox_activated(int index);
-    QString cacheFilePath() const;
-    bool loadFromCache();
-    void saveToCache(const QString &text);
+public slots:
+    void accept() override;
 
 private:
-    Ui::LyricsWindow m_ui;
-    QNetworkAccessManager *m_http;
-    QString m_cachePath;
-    UltimateLyricsParser m_parser;
-    TrackInfo m_info;
-    QHash<QNetworkReply *, QString> m_tasks;
-    QStringList m_enabledProviders;
+    Ui::SettingsDialog *m_ui;
 };
 
-#endif
+#endif // SETTINGSDIALOG_H

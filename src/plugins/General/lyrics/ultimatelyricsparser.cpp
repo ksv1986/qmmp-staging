@@ -118,3 +118,15 @@ LyricsProvider *UltimateLyricsParser::provider(const QString &name) const
     }
     return nullptr;
 }
+
+QStringList UltimateLyricsParser::defaultProviders()
+{
+    QStringList out = {
+        "lyrics.wikia.com",
+        "Encyclopaedia Metallum",
+        "letras.mus.br",
+        "darklyrics.com"
+    };
+
+    return out;
+}

@@ -101,6 +101,9 @@ QString LyricsProvider::format(const QByteArray &data, const TrackInfo &track) c
             return QString();
     }
 
+    if(m_skipRules)
+        return content;
+
     const QMap<QString, QString> replaceMap = generateReplaceMap(track);
 
     for(const Rule &rule : qAsConst(m_extractRules))
@@ -157,6 +160,11 @@ const QString &LyricsProvider::name() const
     return m_name;
 }
 
+void LyricsProvider::skipRules(bool skip)
+{
+    m_skipRules = skip;
+}
+
 QString LyricsProvider::fixCase(const QString &title) const
 {
     QString out;
@@ -201,7 +209,6 @@ QString LyricsProvider::extract(const QString &content, const Rule &rule) const
 
     for(const Item &item : qAsConst(rule))
     {
-
         if(!item.url.isEmpty())
         {
             QString url = item.url;

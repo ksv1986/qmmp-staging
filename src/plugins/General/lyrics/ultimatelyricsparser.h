@@ -17,6 +17,7 @@ public:
     const QString &errorString() const;
     const QList<LyricsProvider *> &providers();
     LyricsProvider *provider(const QString &name) const;
+    static QStringList defaultProviders();
 
 private:
     QString m_errorString;

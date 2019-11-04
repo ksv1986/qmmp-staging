@@ -23,6 +23,7 @@ public:
     QString getUrl(const TrackInfo &track) const;
     QString format(const QByteArray &data, const TrackInfo &track) const;
     const QString &name() const;
+    void skipRules(bool skip);
 
 private:
 
@@ -50,7 +51,7 @@ private:
     QList<Rule> m_extractRules;
     QList<Rule> m_excludeRules;
     QStringList m_invalidIndicators;
-
+    bool m_skipRules = false;
 };
 
 #endif // LYRICSPROVIDER_H

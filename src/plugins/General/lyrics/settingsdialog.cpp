@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2019 by Ilya Kotov                                      *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,47 +17,45 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef LYRICSWINDOW_H
-#define LYRICSWINDOW_H
 
-#include <QWidget>
-#include <QHash>
-#include <qmmp/trackinfo.h>
+#include <QSettings>
+#include <qmmp/qmmp.h>
+#include "settingsdialog.h"
 #include "ultimatelyricsparser.h"
-#include "ui_lyricswindow.h"
+#include "ui_settingsdialog.h"
 
-class QNetworkAccessManager;
-class QNetworkReply;
-class TrackInfo;
-
-/**
-    @author Ilya Kotov <forkotov02@ya.ru>
-*/
-class LyricsWindow : public QWidget
+SettingsDialog::SettingsDialog(QWidget *parent) :
+    QDialog(parent),
+    m_ui(new Ui::SettingsDialog)
 {
-Q_OBJECT
-public:
-    LyricsWindow(const TrackInfo *info, QWidget *parent = nullptr);
+    m_ui->setupUi(this);
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);  
+    UltimateLyricsParser parser;
+    parser.load(":/ultimate_providers.xml");
+    QStringList enabledProviders = settings.value("Lyrics/enabled_providers", parser.defaultProviders()).toStringList();
 
-    ~LyricsWindow();
+    for(const LyricsProvider *provider : parser.providers())
+    {
+        QListWidgetItem *item = new QListWidgetItem(provider->name());
+        item->setCheckState(enabledProviders.contains(provider->name()) ? Qt::Checked : Qt::Unchecked);
+        m_ui->providersListWidget->addItem(item);
+    }
+}
 
-private slots:
-    void onRequestFinished(QNetworkReply *reply);
-    void on_refreshButton_clicked();
-    void on_editButton_clicked(bool checked);
-    void on_providerComboBox_activated(int index);
-    QString cacheFilePath() const;
-    bool loadFromCache();
-    void saveToCache(const QString &text);
+SettingsDialog::~SettingsDialog()
+{
+    delete m_ui;
+}
 
-private:
-    Ui::LyricsWindow m_ui;
-    QNetworkAccessManager *m_http;
-    QString m_cachePath;
-    UltimateLyricsParser m_parser;
-    TrackInfo m_info;
-    QHash<QNetworkReply *, QString> m_tasks;
-    QStringList m_enabledProviders;
-};
-
-#endif
+void SettingsDialog::accept()
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    QStringList enabledProviders;
+    for(int i = 0; i < m_ui->providersListWidget->count(); ++i)
+    {
+        if(m_ui->providersListWidget->item(i)->checkState() == Qt::Checked)
+            enabledProviders << m_ui->providersListWidget->item(i)->text();
+    }
+    settings.setValue("Lyrics/enabled_providers", enabledProviders);
+    QDialog::accept();
+}

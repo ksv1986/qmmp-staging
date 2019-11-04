@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include <QMessageBox>
+#include "settingsdialog.h"
 #include "lyrics.h"
 #include "lyricsfactory.h"
 
@@ -29,7 +29,7 @@ GeneralProperties LyricsFactory::properties() const
     properties.name = tr("Lyrics Plugin");
     properties.shortName = "lyrics";
     properties.hasAbout = true;
-    properties.hasSettings = false;
+    properties.hasSettings = true;
     properties.visibilityControl = false;
     return properties;
 }
@@ -41,8 +41,7 @@ QObject *LyricsFactory::create(QObject *parent)
 
 QDialog *LyricsFactory::createConfigDialog(QWidget *parent)
 {
-    Q_UNUSED(parent);
-    return nullptr;
+    return new SettingsDialog(parent);
 }
 
 void LyricsFactory::showAbout(QWidget *parent)

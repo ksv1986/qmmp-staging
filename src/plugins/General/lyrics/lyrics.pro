@@ -8,15 +8,18 @@ HEADERS += lyricsfactory.h \
            lyrics.h \
            lyricswindow.h \
     lyricsprovider.h \
-    ultimatelyricsparser.h
+    ultimatelyricsparser.h \
+    settingsdialog.h
 
 SOURCES += lyricsfactory.cpp \
            lyrics.cpp \
            lyricswindow.cpp \
     lyricsprovider.cpp \
-    ultimatelyricsparser.cpp
+    ultimatelyricsparser.cpp \
+    settingsdialog.cpp
 
-FORMS += lyricswindow.ui
+FORMS += lyricswindow.ui \
+    settingsdialog.ui
 
 RESOURCES = translations/translations.qrc \
             providers/providers.qrc

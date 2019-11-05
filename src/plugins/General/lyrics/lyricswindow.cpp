@@ -71,6 +71,7 @@ LyricsWindow::LyricsWindow(const TrackInfo *info, QWidget *parent)
     }
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    restoreGeometry(settings.value("Lyrics/geometry").toByteArray());
     m_enabledProviders = settings.value("Lyrics/enabled_providers", m_parser.defaultProviders()).toStringList();
 
     QDir cacheDir(m_cachePath);
@@ -214,4 +215,10 @@ void LyricsWindow::saveToCache(const QString &text)
         return;
     }
     file.write(text.toUtf8());
+}
+
+void LyricsWindow::closeEvent(QCloseEvent *)
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.setValue("Lyrics/geometry", saveGeometry());
 }

@@ -51,6 +51,7 @@ private slots:
     void saveToCache(const QString &text);
 
 private:
+    void closeEvent(QCloseEvent *) override;
     Ui::LyricsWindow m_ui;
     QNetworkAccessManager *m_http;
     QString m_cachePath;

@@ -18,8 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QObject>
-#include <QFile>
 #include <QtDebug>
 #include "replaygainreader.h"
 #include "decoder_ffmpeg.h"

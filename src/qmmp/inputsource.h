@@ -135,6 +135,7 @@ public:
      * Returns a list of supported protocols.
      */
     static QStringList protocols();
+    static InputSourceFactory *findByUrl(const QString &url);
     /*!
      * Sets whether the input plugin is enabled.
      * @param factory Transport plugin factory.

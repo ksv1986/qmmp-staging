@@ -22,6 +22,8 @@
 #define INPUTSOURCEFACTORY_H
 
 #include <QObject>
+#include <QRegularExpression>
+#include <QList>
 #include "qmmp_export.h"
 
 class QStringList;
@@ -32,11 +34,12 @@ class InputSource;
  */
 struct QMMP_EXPORT InputSourceProperties
 {
-    QString name;              /*!< Transport plugin full name */
-    QString shortName;         /*!< Transport plugin name for internal usage */
-    QStringList protocols;     /*!< A list of supported protocols. */
-    bool hasAbout = false;     /*!< Should be \b true if plugin has about dialog, otherwise \b false */
-    bool hasSettings = false;  /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
+    QString name;                      /*!< Transport plugin full name */
+    QString shortName;                 /*!< Transport plugin name for internal usage */
+    QList<QRegularExpression> regExps; /*!< A list of regular expressions for supported URLs (has highest priority). */
+    QStringList protocols;             /*!< A list of supported protocols. */
+    bool hasAbout = false;             /*!< Should be \b true if plugin has about dialog, otherwise \b false */
+    bool hasSettings = false;          /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
 };
 
 

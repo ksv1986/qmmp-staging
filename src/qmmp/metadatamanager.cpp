@@ -64,7 +64,7 @@ QList<TrackInfo *> MetaDataManager::createPlayList(const QString &path, TrackInf
     else
     {
         QString scheme = path.section("://",0,0);
-        if(InputSource::protocols().contains(scheme))
+        if(InputSource::findByUrl(path))
         {
             list << new TrackInfo(path);
         }

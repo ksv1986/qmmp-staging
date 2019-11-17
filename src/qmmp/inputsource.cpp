@@ -99,24 +99,14 @@ QList<QmmpPluginCache*> *InputSource::m_cache = nullptr;
 InputSource *InputSource::create(const QString &url, QObject *parent)
 {
     loadPlugins();
-    InputSourceFactory *factory = nullptr;
     if(!url.contains("://")) //local file path doesn't contain "://"
     {
         qDebug("InputSource: using file transport");
         return new FileInputSource(url, parent);
     }
-    for(QmmpPluginCache *item : qAsConst(*m_cache))
-    {
-        if(m_disabledNames.contains(item->shortName()))
-            continue;
 
-        factory = item->inputSourceFactory();
+    InputSourceFactory *factory = findByUrl(url);
 
-        if(factory && factory->properties().protocols.contains(url.section("://", 0, 0)))
-            break;
-        else
-            factory = nullptr;
-    }
     if(factory)
     {
         qDebug("InputSource: using %s transport", qPrintable(url.section("://", 0, 0)));
@@ -180,6 +170,35 @@ QStringList InputSource::protocols()
     }
     protocolsList.removeDuplicates();
     return protocolsList;
+}
+
+InputSourceFactory *InputSource::findByUrl(const QString &url)
+{
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
+    {
+        if(m_disabledNames.contains(item->shortName()))
+            continue;
+
+        InputSourceFactory *factory = item->inputSourceFactory();
+        for(const QRegularExpression &r : factory->properties().regExps)
+        {
+            if(r.match(url).hasMatch())
+                return factory;
+        }
+    }
+
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
+    {
+        if(m_disabledNames.contains(item->shortName()))
+            continue;
+
+        InputSourceFactory *factory = item->inputSourceFactory();
+
+        if(factory && factory->properties().protocols.contains(url.section("://", 0, 0)))
+            return factory;
+    }
+
+    return nullptr;
 }
 
 void InputSource::setEnabled(InputSourceFactory *factory, bool enable)

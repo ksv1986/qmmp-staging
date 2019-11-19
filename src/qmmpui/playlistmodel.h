@@ -290,7 +290,7 @@ public:
     /*!
      * Returns total duration in milliseconds of all songs.
      */
-    int totalDuration() const;
+    qint64 totalDuration() const;
     /*!
      * Loads playlist with \b f_name name.
      */

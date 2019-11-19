@@ -712,7 +712,7 @@ int PlayListModel::firstSelectedLower(int row)
     return -1;
 }
 
-int PlayListModel::totalDuration() const
+qint64 PlayListModel::totalDuration() const
 {
     return m_total_duration;
 }

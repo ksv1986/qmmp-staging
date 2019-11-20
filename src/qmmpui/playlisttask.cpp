@@ -405,6 +405,8 @@ void PlayListTask::run()
     {
         TrackField *f = nullptr;
         MetaDataManager *mm = MetaDataManager::instance();
+        QStringList protocols = mm->protocols();
+        QList<QRegularExpression> regExps = mm->regExps();
         bool ok = false;
         //find invalid files
         for(int i = 0; i < m_fields.count(); ++i)
@@ -412,7 +414,7 @@ void PlayListTask::run()
             f = m_fields.at(i);
 
             if(f->value.contains("://"))
-                ok = mm->protocols().contains(f->value.section("://",0,0)); //url
+                ok = protocols.contains(f->value.section("://",0,0)) || MetaDataManager::hasMatch(regExps, f->value) ; //url
             else
                 ok = mm->supports(f->value); //local file
 

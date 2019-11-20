@@ -175,6 +175,11 @@ QStringList MetaDataManager::protocols() const
     return p;
 }
 
+QList<QRegularExpression> MetaDataManager::regExps() const
+{
+    return InputSource::regExps();
+}
+
 bool MetaDataManager::supports(const QString &fileName) const
 {
     DecoderFactory *fact = nullptr;
@@ -306,6 +311,26 @@ void MetaDataManager::clearCoverCache()
 void MetaDataManager::prepareForAnotherThread()
 {
     protocols(); //this hack should load all required plugins
+}
+
+bool MetaDataManager::hasMatch(const QList<QRegularExpression> &regExps, const QString &path)
+{
+    for(const QRegularExpression &re : qAsConst(regExps))
+    {
+        if(re.match(path).hasMatch())
+            return true;
+    }
+    return false;
+}
+
+bool MetaDataManager::hasMatch(const QList<QRegExp> &regExps, const QString &path)
+{
+    for(const QRegExp &re : qAsConst(regExps))
+    {
+        if(re.exactMatch(path))
+            return true;
+    }
+    return false;
 }
 
 MetaDataManager *MetaDataManager::instance()

@@ -26,6 +26,7 @@
 #include <QPixmap>
 #include <QDir>
 #include <QMutex>
+#include <QRegularExpression>
 #include "trackinfo.h"
 #include "metadatamodel.h"
 
@@ -69,6 +70,7 @@ public:
      * Returns a list of the suported protocols
      */
     QStringList protocols() const;
+    QList<QRegularExpression> regExps() const;
     /*!
      * Returns \b true if \b file is supported and exists, otherwise returns \b false
      */
@@ -102,6 +104,9 @@ public:
      * Prepares object for usage by another thread to avoid warnings about parent from the different thread
      */
     void prepareForAnotherThread();
+
+    static bool hasMatch(const QList<QRegularExpression> &regExps, const QString &path);
+    static bool hasMatch(const QList<QRegExp> &re, const QString &path);
     /*!
      * Returns a pointer to the MetaDataManager instance.
      */

@@ -48,8 +48,11 @@ AddUrlDialog::AddUrlDialog(QWidget *parent) : QDialog(parent)
     if(QmmpUiSettings::instance()->useClipboard())
     {
         QUrl url(QApplication::clipboard()->text().trimmed());
-        if(url.isValid() && MetaDataManager::instance()->protocols().contains(url.scheme()))
+        if(url.isValid() && (MetaDataManager::instance()->protocols().contains(url.scheme()) ||
+                             MetaDataManager::hasMatch(MetaDataManager::instance()->regExps(), url.toString())))
+        {
             urlComboBox->setEditText(QApplication::clipboard()->text().trimmed());
+        }
     }
 }
 

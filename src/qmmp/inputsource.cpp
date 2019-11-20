@@ -172,6 +172,21 @@ QStringList InputSource::protocols()
     return protocolsList;
 }
 
+QList<QRegularExpression> InputSource::regExps()
+{
+    loadPlugins();
+    QList<QRegularExpression> regExpList;
+
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
+    {
+        if(m_disabledNames.contains(item->shortName()))
+            continue;
+        if(item->inputSourceFactory())
+            regExpList << item->inputSourceFactory()->properties().regExps;
+    }
+    return regExpList;
+}
+
 InputSourceFactory *InputSource::findByUrl(const QString &url)
 {
     for(QmmpPluginCache *item : qAsConst(*m_cache))

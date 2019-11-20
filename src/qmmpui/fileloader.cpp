@@ -127,6 +127,7 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
     else
     {
         QStringList protocols = MetaDataManager::instance()->protocols();
+        QList<QRegularExpression> regExps =  MetaDataManager::instance()->regExps();
         QList<QRegExp> filters;
         for(const QString &pattern : MetaDataManager::instance()->nameFilters())
             filters << QRegExp(pattern, Qt::CaseInsensitive, QRegExp::Wildcard);
@@ -135,8 +136,11 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
         QList<PlayListTrack *>::iterator it = tracks.begin();
         while(it != tracks.end())
         {
-            if((*it)->path().contains("://") && !protocols.contains((*it)->path().section("://", 0, 0)))
+            if((*it)->path().contains("://") &&
+                    !protocols.contains((*it)->path().section("://", 0, 0)) &&
+                    !MetaDataManager::hasMatch(regExps, (*it)->path()))
             {
+
                 delete (*it);
                 it = tracks.erase(it);
             }
@@ -145,26 +149,14 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
                 delete (*it);
                 it = tracks.erase(it);
             }
+            else if(!MetaDataManager::hasMatch(filters, (*it)->path()))
+            {
+                delete (*it);
+                it = tracks.erase(it);
+            }
             else
             {
-                bool found = false;
-                for(const QRegExp &filter : qAsConst(filters))
-                {
-                    if(filter.exactMatch((*it)->path()))
-                    {
-                        found = true;
-                        break;
-                    }
-                }
-                if(!found)
-                {
-                    delete (*it);
-                    it = tracks.erase(it);
-                }
-                else
-                {
-                    ++it;
-                }
+                ++it;
             }
         }
         if(!m_finished && !tracks.isEmpty())

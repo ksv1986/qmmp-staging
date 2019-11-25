@@ -1522,5 +1522,9 @@ Version 1.3.4
 * updated Italian translation (Luigi Toscano)
 
 Version 1.3.5
-* added icon for "play/pause" action
-* fixed "album artist" tag support
+* added icon for 'play/pause' action
+* fixed 'album artist' tag support
+* fixed issue with missing bitrate after application restart
+* fixed issue with incorrect audio properties displaying
+* fixed crash on corrupted .m4a files
+* fixed duration overflow

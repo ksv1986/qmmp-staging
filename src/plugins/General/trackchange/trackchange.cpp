@@ -27,6 +27,7 @@
 #include <QDir>
 #include <QProcess>
 #include <QMap>
+#include <QtDebug>
 #include <qmmp/soundcore.h>
 #include <qmmpui/uihelper.h>
 #include <qmmpui/playlistmodel.h>
@@ -105,12 +106,23 @@ void TrackChange::onFinised()
 
 bool TrackChange::executeCommand(const TrackInfo &info, const QString &format)
 {
+    TrackInfo tmp = info;
+    QMap<Qmmp::MetaData, QString> metaData = tmp.metaData();
+    QMap<Qmmp::MetaData, QString>::iterator it = metaData.begin();
+    while(it != metaData.end())
+    {
+        it.value() = it.value().replace("u", "'\\''");
+        it.value() = it.value().replace("O", "\"");
+        it++;
+    }
+    tmp.setValues(metaData);
     MetaDataFormatter formatter(format);
-    QString command = formatter.format(info);
+    QString command = formatter.format(tmp);
 #ifdef Q_OS_WIN
     bool ok = QProcess::startDetached(QString("cmd.exe \"%1\"").arg(command));
 #else
-    bool ok = QProcess::startDetached(QString("sh -c \"%1\"").arg(command));
+    QStringList args = { "-c", command };
+    bool ok = QProcess::startDetached("sh", args);
 #endif
     if(!ok)
         qWarning("TrackChange: unable to start command '%s'", qPrintable(command));

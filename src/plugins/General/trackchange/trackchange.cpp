@@ -111,8 +111,7 @@ bool TrackChange::executeCommand(const TrackInfo &info, const QString &format)
     QMap<Qmmp::MetaData, QString>::iterator it = metaData.begin();
     while(it != metaData.end())
     {
-        it.value() = it.value().replace("u", "'\\''");
-        it.value() = it.value().replace("O", "\"");
+        it.value() = it.value().replace("'", "'\\''");
         it++;
     }
     tmp.setValues(metaData);

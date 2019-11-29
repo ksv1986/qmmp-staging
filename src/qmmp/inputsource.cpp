@@ -189,6 +189,7 @@ QList<QRegularExpression> InputSource::regExps()
 
 InputSourceFactory *InputSource::findByUrl(const QString &url)
 {
+    loadPlugins();
     for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(m_disabledNames.contains(item->shortName()))

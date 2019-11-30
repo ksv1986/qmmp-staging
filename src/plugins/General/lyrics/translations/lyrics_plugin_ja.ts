@@ -85,27 +85,27 @@
         <translation>タイトル:</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="114"/>
+        <location filename="../lyricswindow.cpp" line="115"/>
         <source>&lt;h2&gt;%1 - %2&lt;/h2&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="125"/>
+        <location filename="../lyricswindow.cpp" line="126"/>
         <source>Not found</source>
         <translation>見付かりません</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="135"/>
+        <location filename="../lyricswindow.cpp" line="136"/>
         <source>Error: %1 - %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="148"/>
+        <location filename="../lyricswindow.cpp" line="149"/>
         <source>Receiving</source>
         <translation>取得中</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="203"/>
+        <location filename="../lyricswindow.cpp" line="204"/>
         <source>cache</source>
         <translation type="unfinished"></translation>
     </message>

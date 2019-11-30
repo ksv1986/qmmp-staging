@@ -97,7 +97,7 @@
         <translation>キャンセル(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../addurldialog.cpp" line="85"/>
+        <location filename="../addurldialog.cpp" line="88"/>
         <source>Error</source>
         <translation>事故</translation>
     </message>

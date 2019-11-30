@@ -97,7 +97,7 @@
         <translation>&amp;Ακύρωση</translation>
     </message>
     <message>
-        <location filename="../addurldialog.cpp" line="85"/>
+        <location filename="../addurldialog.cpp" line="88"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>

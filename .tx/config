@@ -337,6 +337,12 @@ source_lang = en
 source_file = src/plugins/General/udisks2/translations/udisks2_plugin_en.ts
 type = QT
 
+[qmmp.sleepinhibitor]
+file_filter = src/plugins/General/sleepinhibitor/translations/sleepinhibitor_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/General/sleepinhibitor/translations/sleepinhibitor_plugin_en.ts
+type = QT
+
 [qmmp.hal]
 file_filter = src/plugins/General/hal/translations/hal_plugin_<lang>.ts
 source_lang = en

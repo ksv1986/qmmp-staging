@@ -111,14 +111,18 @@ bool TrackChange::executeCommand(const TrackInfo &info, const QString &format)
     QMap<Qmmp::MetaData, QString>::iterator it = metaData.begin();
     while(it != metaData.end())
     {
+#ifdef Q_OS_WIN
+        it.value() = it.value().replace("'", "^'");
+#else
         it.value() = it.value().replace("'", "'\\''");
+#endif
         it++;
     }
     tmp.setValues(metaData);
     MetaDataFormatter formatter(format);
     QString command = formatter.format(tmp);
 #ifdef Q_OS_WIN
-    bool ok = QProcess::startDetached(QString("cmd.exe \"%1\"").arg(command));
+    bool ok = QProcess::startDetached(QString("cmd.exe /C %1").arg(command));
 #else
     QStringList args = { "-c", command };
     bool ok = QProcess::startDetached("sh", args);

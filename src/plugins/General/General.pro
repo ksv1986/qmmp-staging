@@ -16,8 +16,7 @@ SUBDIRS += statusicon \
 unix:SUBDIRS += mpris \
                 kdenotify \
                 converter \
-                gnomehotkey \
-                sleepinhibitor
+                gnomehotkey
 
 contains(CONFIG, UDISKS2_PLUGIN){
     unix:SUBDIRS += udisks2
@@ -25,6 +24,10 @@ contains(CONFIG, UDISKS2_PLUGIN){
 
 contains(CONFIG, HAL_PLUGIN){
     unix:SUBDIRS += hal
+}
+
+contains(CONFIG, SLEEP_INHIBITOR_PLUGIN){
+    unix:SUBDIRS += sleepinhibitor
 }
 
 contains(CONFIG, HISTORY_PLUGIN){

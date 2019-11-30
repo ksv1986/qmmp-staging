@@ -26,7 +26,7 @@ contains(CONFIG, HAL_PLUGIN){
     unix:SUBDIRS += hal
 }
 
-contains(CONFIG, SLEEP_INHIBITOR_PLUGIN){
+contains(CONFIG, SLEEPINHIBITOR_PLUGIN){
     unix:SUBDIRS += sleepinhibitor
 }
 

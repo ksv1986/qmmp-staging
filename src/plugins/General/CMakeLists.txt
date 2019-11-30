@@ -17,6 +17,7 @@ SET(USE_SB TRUE CACHE BOOL "enable/disable stream browser plugin")
 SET(USE_TRACKCHANGE TRUE CACHE BOOL "enable/disable track change plugin")
 SET(USE_COPYPASTE TRUE CACHE BOOL "enable/disable copy/paste change plugin")
 SET(USE_HISTORY TRUE CACHE BOOL "enable/disable history plugin")
+SET(USE_SLEEPINHBITOR TRUE CACHE BOOL "enable/disable sleep mode inhibition plugin")
 SET(USE_TASKBAR TRUE CACHE BOOL "enable/disable taskbar plugin (Windows)")
 SET(USE_RDETECT TRUE CACHE BOOL "enable/disable rdetect plugin (Windows)")
 
@@ -95,6 +96,10 @@ ENDIF(USE_GNOMEHOTKEY AND Qt5DBus_FOUND)
 IF(USE_HISTORY AND Qt5Sql_FOUND)
 add_subdirectory(history)
 ENDIF(USE_HISTORY AND Qt5Sql_FOUND)
+
+IF(USE_SLEEPINHBITOR AND Qt5DBus_FOUND)
+add_subdirectory(sleepinhibitor)
+ENDIF(USE_SLEEPINHBITOR AND Qt5DBus_FOUND)
 
 IF(USE_TASKBAR AND Qt5WinExtras_FOUND)
 add_subdirectory(taskbar)

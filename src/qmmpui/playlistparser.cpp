@@ -46,6 +46,18 @@ QStringList PlayListParser::nameFilters()
     return filters;
 }
 
+QStringList PlayListParser::filters()
+{
+    loadFormats();
+    QStringList filters;
+    for(const PlayListFormat *format : qAsConst(*m_formats))
+    {
+        if (!format->properties().filters.isEmpty())
+            filters << format->properties().shortName.toUpper() + " (" + format->properties().filters.join(" ") + ")";
+    }
+    return filters;
+}
+
 bool PlayListParser::isPlayList(const QString &url)
 {
     for(const QString &filter : nameFilters())

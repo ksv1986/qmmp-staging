@@ -24,6 +24,8 @@
 #include <QAction>
 #include <QSettings>
 #include <QApplication>
+#include <QMessageBox>
+#include <QFileInfo>
 #include <qmmp/soundcore.h>
 #include <qmmp/metadatamanager.h>
 #include "filedialog.h"
@@ -195,16 +197,44 @@ void UiHelper::loadPlayList(QWidget *parent, PlayListModel *model)
 
 void UiHelper::savePlayList(QWidget *parent, PlayListModel *model)
 {
-    if(PlayListParser::nameFilters().isEmpty())
+    QStringList nameFilters = PlayListParser::nameFilters();
+
+    if(nameFilters.isEmpty())
     {
         qWarning("UiHelper: There is no registered playlist parsers");
         return;
     }
-    QString ext = PlayListParser::nameFilters().at(0);
-    ext.replace("*.", "."); //extract extension from name filter
-    QString mask = tr("Playlist Files") + " (" + PlayListParser::nameFilters().join(" ") + ")";
-    QString f_name = FileDialog::getSaveFileName(parent, tr("Save Playlist"),m_lastDir + "/" +
-                                                 model->name() + ext,mask);
+
+    QStringList filters;
+    filters << tr("Playlist Files") + " (" + nameFilters.join(" ") + ")";
+    filters << PlayListParser::filters();
+    QString selectedFilter = filters.at(1);
+    QString f_name = FileDialog::getSaveFileName(parent, tr("Save Playlist"), m_lastDir + "/" +
+                                                 model->name(), filters.join(";;"), &selectedFilter);
+
+    if(f_name.isEmpty())
+        return;
+
+    if(!PlayListParser::isPlayList(f_name)) //append selected extension
+    {
+        QStringList selectedFilters = selectedFilter.section("(", 1).remove(")").split(" ");
+        if(selectedFilters.isEmpty())
+            return;
+
+        QString ext = selectedFilters.first().remove("*"); //use first extension
+        f_name.append(ext);
+
+        QFileInfo info(f_name);
+
+        if(info.exists())
+        {
+            if (QMessageBox::question(parent, tr("Save Playlist"),  tr("%1 already exists.\nDo you want to replace it?")
+                                      .arg(info.fileName()), QMessageBox::Ok | QMessageBox::Cancel) != QMessageBox::Ok)
+            {
+                return;
+            }
+        }
+    }
 
     if (!f_name.isEmpty())
     {

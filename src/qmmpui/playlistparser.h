@@ -40,6 +40,7 @@ public:
      * Returns a list of the supported files name filters, i.e. "*.m3u *.pls"
      */
     static QStringList nameFilters();
+    static QStringList filters();
     /*!
      * Returns \b true if file \b url is playlist. Otherwise returns \b false.
      * \param url Local file path or URL.

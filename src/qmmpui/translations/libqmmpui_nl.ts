@@ -1272,41 +1272,48 @@
 <context>
     <name>UiHelper</name>
     <message>
-        <location filename="../uihelper.cpp" line="139"/>
-        <location filename="../uihelper.cpp" line="151"/>
+        <location filename="../uihelper.cpp" line="141"/>
+        <location filename="../uihelper.cpp" line="153"/>
         <source>All Supported Bitstreams</source>
         <translation>Alle Ondersteunde Bitstromen</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="145"/>
+        <location filename="../uihelper.cpp" line="147"/>
         <source>Select one or more files to open</source>
         <translation>Kies één of meerdere bestanden om te openen</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="157"/>
+        <location filename="../uihelper.cpp" line="159"/>
         <source>Select one or more files to play</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="165"/>
+        <location filename="../uihelper.cpp" line="167"/>
         <source>Choose a directory</source>
         <translation>Kies een map</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="181"/>
-        <location filename="../uihelper.cpp" line="205"/>
+        <location filename="../uihelper.cpp" line="183"/>
+        <location filename="../uihelper.cpp" line="209"/>
         <source>Playlist Files</source>
         <translation>Afspeellijst Bestanden</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="183"/>
+        <location filename="../uihelper.cpp" line="185"/>
         <source>Open Playlist</source>
         <translation>Open Afspeellijst</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="206"/>
+        <location filename="../uihelper.cpp" line="212"/>
+        <location filename="../uihelper.cpp" line="231"/>
         <source>Save Playlist</source>
         <translation>Bewaar Afspeellijst</translation>
+    </message>
+    <message>
+        <location filename="../uihelper.cpp" line="231"/>
+        <source>%1 already exists.
+Do you want to replace it?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

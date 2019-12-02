@@ -152,6 +152,8 @@ void Converter::run()
 
 
     QString name = formatter.format(info);
+    name.remove("'");
+    name.remove("\"");
     QString full_path = out_path + "/" + name + "." + m_preset["ext"].toString();
 
     if(QFile::exists(full_path))

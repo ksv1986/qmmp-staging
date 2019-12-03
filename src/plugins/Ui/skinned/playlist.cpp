@@ -106,27 +106,27 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
     m_current_time = new SymbolDisplay (this,6);
     m_keyboardManager = new KeyboardManager (m_listWidget);
 
-    connect (m_listWidget, SIGNAL (doubleClicked()), parent, SLOT (replay()));
+    connect(m_listWidget, SIGNAL(doubleClicked()), parent, SLOT(replay()));
 
-    connect (m_plslider, SIGNAL (sliderMoved (int)), m_listWidget, SLOT (setViewPosition(int)));
-    connect (m_listWidget, SIGNAL (positionChanged (int, int)), m_plslider,
-             SLOT (setPos (int, int)));
-    connect (m_skin, SIGNAL (skinChanged()), this, SLOT (updateSkin()));
-    connect (m_buttonAdd, SIGNAL (clicked()), SLOT (showAddMenu()));
-    connect (m_buttonSub, SIGNAL (clicked()), SLOT (showSubMenu()));
-    connect (m_selectButton, SIGNAL (clicked()), SLOT (showSelectMenu()));
-    connect (m_sortButton, SIGNAL (clicked()), SLOT (showSortMenu()));
-    connect (m_playlistButton, SIGNAL (clicked()), SLOT (showPlaylistMenu()));
+    connect(m_plslider, SIGNAL(sliderMoved(int)), m_listWidget, SLOT(setViewPosition(int)));
+    connect(m_listWidget, SIGNAL(positionChanged(int, int)), m_plslider,
+             SLOT(setPos (int, int)));
+    connect(m_skin, SIGNAL(skinChanged()), SLOT(updateSkin()));
+    connect(m_buttonAdd, SIGNAL(clicked()), SLOT(showAddMenu()));
+    connect(m_buttonSub, SIGNAL(clicked()), SLOT(showSubMenu()));
+    connect(m_selectButton, SIGNAL(clicked()), SLOT(showSelectMenu()));
+    connect(m_sortButton, SIGNAL(clicked()), SLOT(showSortMenu()));
+    connect(m_playlistButton, SIGNAL(clicked()), SLOT(showPlaylistMenu()));
 
-    connect (m_pl_control, SIGNAL (nextClicked()), SIGNAL (next()));
-    connect (m_pl_control, SIGNAL (previousClicked()), SIGNAL (prev()));
-    connect (m_pl_control, SIGNAL (playClicked()), SIGNAL (play()));
-    connect (m_pl_control, SIGNAL (pauseClicked()), SIGNAL (pause()));
-    connect (m_pl_control, SIGNAL (stopClicked()), SIGNAL (stop()));
-    connect (m_pl_control, SIGNAL (ejectClicked()), SIGNAL (eject()));
+    connect(m_pl_control, SIGNAL(nextClicked()), SIGNAL(next()));
+    connect(m_pl_control, SIGNAL(previousClicked()), SIGNAL(prev()));
+    connect(m_pl_control, SIGNAL(playClicked()), SIGNAL(play()));
+    connect(m_pl_control, SIGNAL(pauseClicked()), SIGNAL(pause()));
+    connect(m_pl_control, SIGNAL(stopClicked()), SIGNAL(stop()));
+    connect(m_pl_control, SIGNAL(ejectClicked()), SIGNAL(eject()));
 
-    connect (m_pl_manager, SIGNAL (selectedPlayListChanged(PlayListModel *, PlayListModel *)),
-             m_listWidget, SLOT(setModel(PlayListModel*, PlayListModel*)));
+    connect(m_pl_manager, SIGNAL(selectedPlayListChanged(PlayListModel *, PlayListModel *)),
+            m_listWidget, SLOT(setModel(PlayListModel*, PlayListModel*)));
     m_listWidget->setModel(m_pl_manager->selectedPlayList());
 
     createMenus();
@@ -136,7 +136,7 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
     m_titleBar = new PlayListTitleBar (this);
     m_titleBar->setMinimumSize(0,0);
     m_titleBar->move (0,0);
-    connect (m_pl_manager, SIGNAL (currentPlayListChanged(PlayListModel *, PlayListModel *)),
+    connect (m_pl_manager, SIGNAL(currentPlayListChanged(PlayListModel *, PlayListModel *)),
              m_titleBar, SLOT(setModel(PlayListModel*)));
     m_titleBar->setModel(m_pl_manager->currentPlayList());
 
@@ -224,7 +224,7 @@ void PlayList::createActions()
     m_subMenu->addAction(SET_ACTION(ActionManager::PL_REMOVE_DUPLICATES, m_pl_manager,
                                 SLOT(removeDuplicates())));
     //sort menu
-    m_sortMenu->addAction(SET_ACTION(ActionManager::PL_SHOW_INFO, m_pl_manager, SLOT (showDetails ())));
+    m_sortMenu->addAction(SET_ACTION(ActionManager::PL_SHOW_INFO, m_pl_manager, SLOT(showDetails ())));
     m_sortMenu->addSeparator();
 
     QMenu* sort_mode_menu = new QMenu (tr("Sort List"), this);

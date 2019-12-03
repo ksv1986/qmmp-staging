@@ -92,6 +92,8 @@ private slots:
     void setToolBarsBlocked(bool blocked);
     void editToolBar();
     void restoreWindowTitle();
+    void onListChanged(int flags);
+    void onCurrentPlayListChanged(PlayListModel *current, PlayListModel *previous);
 
 private:
     void closeEvent(QCloseEvent *) override;

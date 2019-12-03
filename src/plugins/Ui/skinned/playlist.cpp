@@ -135,13 +135,15 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
 
     m_titleBar = new PlayListTitleBar (this);
     m_titleBar->setMinimumSize(0,0);
-    m_titleBar->move (0,0);
-    connect (m_pl_manager, SIGNAL(currentPlayListChanged(PlayListModel *, PlayListModel *)),
-             m_titleBar, SLOT(setModel(PlayListModel*)));
+    m_titleBar->move(0,0);
+    connect(m_pl_manager, SIGNAL(currentPlayListChanged(PlayListModel *, PlayListModel *)),
+            SLOT(onCurrentPlayListChanged(PlayListModel*,PlayListModel*)));
+    connect(m_pl_manager->currentPlayList(), SIGNAL(listChanged(int)), SLOT(onListChanged(int)));
     m_titleBar->setModel(m_pl_manager->currentPlayList());
 
     setCursor(m_skin->getCursor(Skin::CUR_PNORMAL));
     updatePositions();
+    setTime(-1);
 }
 
 PlayList::~PlayList()
@@ -545,16 +547,20 @@ QString PlayList::formatTime (int sec)
 void PlayList::setTime(qint64 time)
 {
     if (time < 0)
-        m_current_time->display ("--:--");
+        m_current_time->display("--:--");
     else
-        m_current_time->display (formatTime (time/1000));
+        m_current_time->display(formatTime (time/1000));
     m_current_time->update();
 
-    if (SoundCore::instance())
+    SoundCore *core = SoundCore::instance();
+    if(core)
     {
-        QString str_length = formatTime (m_pl_manager->currentPlayList()->totalDuration() / 1000) +
-                             "/" + formatTime (SoundCore::instance()->duration() / 1000);
-        m_length_totalLength->display (str_length);
+        QString str_length = formatTime(m_pl_manager->currentPlayList()->totalDuration() / 1000) + "/";
+        if(core->state() == Qmmp::Playing || core->state() == Qmmp::Paused)
+            str_length.append(formatTime(core->duration() / 1000));
+        else
+            str_length.append("--:--");
+        m_length_totalLength->display(str_length);
         m_length_totalLength->update();
     }
 }
@@ -650,6 +656,20 @@ void PlayList::copySelectedMenuActionTriggered(QAction *action)
         theCopy << newItem;
     }
     targetPlayList->add(theCopy);
+}
+
+void PlayList::onCurrentPlayListChanged(PlayListModel *current, PlayListModel *previous)
+{
+    m_titleBar->setModel(current);
+    connect(current, SIGNAL(listChanged(int)), SLOT(onListChanged(int)));
+    if(previous)
+        disconnect(current, SIGNAL(listChanged(int)), this, SLOT(onListChanged(int)));
+}
+
+void PlayList::onListChanged(int flags)
+{
+    if(flags & PlayListModel::CURRENT || flags & PlayListModel::STRUCTURE)
+        setTime(-1);
 }
 
 void PlayList::setMinimalMode(bool b)

@@ -109,13 +109,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     //playlist manager
     connect(m_positionSlider, SIGNAL(sliderReleased()), SLOT(seek()));
     connect(m_pl_manager, SIGNAL(currentPlayListChanged(PlayListModel*,PlayListModel*)),
-            SLOT(updateTabs()));
+            SLOT(onCurrentPlayListChanged(PlayListModel*,PlayListModel*)));
     connect(m_pl_manager, SIGNAL(selectedPlayListChanged(PlayListModel*,PlayListModel*)),
             SLOT(updateTabs()));
     connect(m_pl_manager, SIGNAL(playListRemoved(int)), SLOT(removeTab(int)));
     connect(m_pl_manager, SIGNAL(playListAdded(int)), SLOT(addTab(int)));
     connect(m_pl_manager, SIGNAL(selectedPlayListChanged(PlayListModel*,PlayListModel*)),
             m_listWidget, SLOT(setModel(PlayListModel*,PlayListModel*)));
+    connect(m_pl_manager->currentPlayList(), SIGNAL(listChanged(int)), SLOT(onListChanged(int)));
     connect(m_tabWidget,SIGNAL(currentChanged(int)), m_pl_manager, SLOT(selectPlayList(int)));
     connect(m_tabWidget, SIGNAL(tabCloseRequested(int)), m_pl_manager, SLOT(removePlayList(int)));
     connect(m_tabWidget, SIGNAL(tabMoved(int,int)), m_pl_manager, SLOT(move(int,int)));
@@ -390,7 +391,7 @@ void MainWindow::updateStatus()
         m_statusLabel->setText(tr("<b>%1</b>|tracks: %2|total time: %3|")
                                .arg(tr("Stopped"))
                                .arg(tracks)
-                               .arg(MetaDataFormatter::formatDuration(duration)));
+                               .arg(MetaDataFormatter::formatDuration(duration, false)));
     }
     else
         m_statusLabel->clear();
@@ -943,4 +944,19 @@ void MainWindow::editToolBar()
 void MainWindow::restoreWindowTitle()
 {
     setWindowTitle(tr("Qmmp"));
+}
+
+void MainWindow::onListChanged(int flags)
+{
+    if(flags & PlayListModel::STRUCTURE)
+        updateStatus();
+}
+
+void MainWindow::onCurrentPlayListChanged(PlayListModel *current, PlayListModel *previous)
+{
+    updateTabs();
+    updateStatus();
+    connect(current, SIGNAL(listChanged(int)), SLOT(onListChanged(int)));
+    if(previous)
+        disconnect(current, SIGNAL(listChanged(int)), this, SLOT(onListChanged(int)));
 }

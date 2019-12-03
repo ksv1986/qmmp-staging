@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -86,6 +86,8 @@ class PlayList : public QWidget
         void showPlayLists();
         void generateCopySelectedMenu();
         void copySelectedMenuActionTriggered(QAction *action);
+        void onCurrentPlayListChanged(PlayListModel *current, PlayListModel *previous);
+        void onListChanged(int flags);
 
     private:
         void updatePositions();

@@ -33,15 +33,6 @@
 
 QSUiAnalyzer::QSUiAnalyzer(QWidget *parent) : Visual (parent)
 {
-    m_intern_vis_data = nullptr;
-    m_peaks = nullptr;
-    m_x_scale = nullptr;
-    m_rows = 0;
-    m_cols = 0;
-    m_offset = 0;
-    m_update = false;
-    m_show_cover = false;
-    m_running = false;
     m_pixLabel = new QLabel(this);
     createMenu();
 
@@ -189,32 +180,31 @@ void QSUiAnalyzer::process()
     }
 }
 
-void QSUiAnalyzer::draw (QPainter *p)
+void QSUiAnalyzer::draw(QPainter *p)
 {
     QBrush brush(Qt::SolidPattern);
-    int x = 0;
 
     for (int j = 0; j < m_cols; ++j)
     {
-        x = m_offset + j * m_cell_size.width() + 1;
+        int x = m_offset + j * m_cell_size.width() + 1;
 
         for (int i = 0; i <= m_intern_vis_data[j]; ++i)
         {
-            if (i <= m_rows/3)
+            if (i <= m_rows / 3)
                 brush.setColor(m_color1);
-            else if (i > m_rows/3 && i <= 2 * m_rows / 3)
+            else if (i > m_rows / 3 && i <= 2 * m_rows / 3)
                 brush.setColor(m_color2);
             else
                 brush.setColor(m_color3);
 
-            p->fillRect (x, height() - i * m_cell_size.height(),
-                         m_cell_size.width() - 1, m_cell_size.height() - 4, brush);
+            p->fillRect(x, height() - i * m_cell_size.height(),
+                        m_cell_size.width() - 1, m_cell_size.height() - 4, brush);
         }
 
         if (m_show_peaks)
         {
-            p->fillRect (x, height() - int(m_peaks[j]) * m_cell_size.height(),
-                         m_cell_size.width() - 1, m_cell_size.height() - 4, m_peakColor);
+            p->fillRect(x, height() - int(m_peaks[j]) * m_cell_size.height(),
+                        m_cell_size.width() - 1, m_cell_size.height() - 4, m_peakColor);
         }
     }
 }

@@ -65,17 +65,17 @@ private:
     QPixmap m_bg;
     QPixmap m_cover;
     QTimer *m_timer;
-    double *m_intern_vis_data;
-    double *m_peaks;
-    int *m_x_scale;
+    double *m_intern_vis_data = nullptr;
+    double *m_peaks = nullptr;
+    int *m_x_scale = nullptr;
     double m_peaks_falloff;
     double m_analyzer_falloff;
     bool m_show_peaks;
-    bool m_show_cover;
+    bool m_show_cover = false;
     float m_buffer[QMMP_VISUAL_NODE_SIZE];
-    int m_cols, m_rows;
-    int m_offset;
-    bool m_update;
+    int m_cols = 0, m_rows = 0;
+    int m_offset = 0;
+    bool m_update = false;
     QLabel *m_pixLabel;
     //colors
     QColor m_color1;
@@ -90,7 +90,7 @@ private:
     QActionGroup *m_fpsGroup;
     QActionGroup *m_analyzerFalloffGroup;
     QActionGroup *m_peaksFalloffGroup;
-    bool m_running;
+    bool m_running = false;
 };
 
 

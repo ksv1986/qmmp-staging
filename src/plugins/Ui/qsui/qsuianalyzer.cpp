@@ -138,8 +138,6 @@ void QSUiAnalyzer::process()
             m_x_scale[i] = pow(pow(255.0, 1.0 / m_cols), i);
     }
     short dest[256];
-    short y;
-    int k, magnitude;
 
     calc_freq (dest, m_buffer);
 
@@ -147,14 +145,14 @@ void QSUiAnalyzer::process()
 
     for (int i = 0; i < m_cols; i++)
     {
-        y = 0;
-        magnitude = 0;
+        short y = 0;
+        int magnitude = 0;
 
         if(m_x_scale[i] == m_x_scale[i + 1])
         {
             y = dest[i];
         }
-        for (k = m_x_scale[i]; k < m_x_scale[i + 1]; k++)
+        for (int k = m_x_scale[i]; k < m_x_scale[i + 1]; k++)
         {
             y = qMax(dest[k], y);
         }

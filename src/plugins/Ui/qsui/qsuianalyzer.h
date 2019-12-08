@@ -62,7 +62,6 @@ private:
     void createMenu();
     void updateCover();
 
-    QPixmap m_bg;
     QPixmap m_cover;
     QTimer *m_timer;
     double *m_intern_vis_data = nullptr;

@@ -28,12 +28,12 @@
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class QSUISettings : public QWidget
+class QSUiSettings : public QWidget
 {
     Q_OBJECT
 public:
-    explicit QSUISettings(QWidget *parent = nullptr);
-    virtual ~QSUISettings();
+    explicit QSUiSettings(QWidget *parent = nullptr);
+    virtual ~QSUiSettings();
     void writeSettings();
 
 

@@ -18,7 +18,6 @@ SOURCES += \
     aboutqsuidialog.cpp \
     qsuifactory.cpp \
     qsuisettings.cpp \
-    qsuianalyzer.cpp \
     fft.c \
     colorwidget.cpp \
     qsuitabwidget.cpp \
@@ -33,7 +32,8 @@ SOURCES += \
     playlistheader.cpp \
     hotkeyeditor.cpp \
     volumeslider.cpp \
-    qsuiquicksearch.cpp
+    qsuiquicksearch.cpp \
+    qsuivisualization.cpp
 HEADERS += mainwindow.h \
     listwidget.h \
     visualmenu.h \
@@ -49,7 +49,6 @@ HEADERS += mainwindow.h \
     aboutqsuidialog.h \
     qsuifactory.h \
     qsuisettings.h \
-    qsuianalyzer.h \
     fft.h \
     inlines.h \
     colorwidget.h \
@@ -65,7 +64,8 @@ HEADERS += mainwindow.h \
     playlistheader.h \
     hotkeyeditor.h \
     volumeslider.h \
-    qsuiquicksearch.h
+    qsuiquicksearch.h \
+    qsuivisualization.h
 
 FORMS += forms/mainwindow.ui \
     forms/shortcutdialog.ui \

@@ -32,7 +32,7 @@
 #include "toolbareditor.h"
 #include "qsuisettings.h"
 
-QSUISettings::QSUISettings(QWidget *parent) : QWidget(parent)
+QSUiSettings::QSUiSettings(QWidget *parent) : QWidget(parent)
 {
     m_ui.setupUi(this);
     //setup icons
@@ -51,10 +51,10 @@ QSUISettings::QSUISettings(QWidget *parent) : QWidget(parent)
     createActions();
 }
 
-QSUISettings::~QSUISettings()
+QSUiSettings::~QSUiSettings()
 {}
 
-void QSUISettings::on_plFontButton_clicked()
+void QSUiSettings::on_plFontButton_clicked()
 {
     bool ok = false;
     QFont font = m_ui.plFontLabel->font();
@@ -66,7 +66,7 @@ void QSUISettings::on_plFontButton_clicked()
     }
 }
 
-void QSUISettings::on_columnFontButton_clicked()
+void QSUiSettings::on_columnFontButton_clicked()
 {
     bool ok = false;
     QFont font = m_ui.columnFontLabel->font();
@@ -78,7 +78,7 @@ void QSUISettings::on_columnFontButton_clicked()
     }
 }
 
-void QSUISettings::on_tabsFontButton_clicked()
+void QSUiSettings::on_tabsFontButton_clicked()
 {
     bool ok = false;
     QFont font = m_ui.tabsFontLabel->font();
@@ -90,13 +90,13 @@ void QSUISettings::on_tabsFontButton_clicked()
     }
 }
 
-void QSUISettings::showEvent(QShowEvent *)
+void QSUiSettings::showEvent(QShowEvent *)
 {
     m_ui.hiddenCheckBox->setEnabled(UiHelper::instance()->visibilityControl());
     m_ui.hideOnCloseCheckBox->setEnabled(UiHelper::instance()->visibilityControl());
 }
 
-void QSUISettings::loadFonts()
+void QSUiSettings::loadFonts()
 {
     QString fontName;
     QFont font;
@@ -121,7 +121,7 @@ void QSUISettings::loadFonts()
     m_ui.columnFontLabel->setFont(font);
 }
 
-void QSUISettings::createActions()
+void QSUiSettings::createActions()
 {
     MetaDataFormatterMenu *menu = new MetaDataFormatterMenu(MetaDataFormatterMenu::TITLE_MENU, this);
     m_ui.windowTitleButton->setMenu(menu);
@@ -129,20 +129,20 @@ void QSUISettings::createActions()
     connect(menu, SIGNAL(patternSelected(QString)), SLOT(addWindowTitleString(QString)));
 }
 
-void QSUISettings::on_popupTemplateButton_clicked()
+void QSUiSettings::on_popupTemplateButton_clicked()
 {
     PopupSettings *p = new PopupSettings(this);
     p->exec();
     p->deleteLater();
 }
 
-void QSUISettings::on_customizeToolBarButton_clicked()
+void QSUiSettings::on_customizeToolBarButton_clicked()
 {
     ToolBarEditor editor(this);
     editor.exec();
 }
 
-void QSUISettings::on_resetFontsButton_clicked()
+void QSUiSettings::on_resetFontsButton_clicked()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     settings.remove("Simple/pl_font");
@@ -151,7 +151,7 @@ void QSUISettings::on_resetFontsButton_clicked()
     loadFonts();
 }
 
-void QSUISettings::readSettings()
+void QSUiSettings::readSettings()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
@@ -204,7 +204,7 @@ void QSUISettings::readSettings()
     settings.endGroup();
 }
 
-void QSUISettings::writeSettings()
+void QSUiSettings::writeSettings()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
@@ -248,7 +248,7 @@ void QSUISettings::writeSettings()
     settings.endGroup();
 }
 
-void QSUISettings::addWindowTitleString(const QString &str)
+void QSUiSettings::addWindowTitleString(const QString &str)
 {
     if (m_ui.windowTitleLineEdit->cursorPosition () < 1)
         m_ui.windowTitleLineEdit->insert(str);

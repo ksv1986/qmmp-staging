@@ -29,7 +29,7 @@
 #include "listwidget.h"
 #include "qsuiquicksearch.h"
 
-QSUIQuickSearch::QSUIQuickSearch(ListWidget *listWidget, QWidget *parent) :
+QSUiQuickSearch::QSUiQuickSearch(ListWidget *listWidget, QWidget *parent) :
     QWidget(parent)
 {
     m_listWidget = listWidget;

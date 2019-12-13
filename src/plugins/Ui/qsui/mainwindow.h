@@ -39,10 +39,10 @@ class GeneralHandler;
 class VisualMenu;
 class PositionSlider;
 class KeyboardManager;
-class QSUiAnalyzer;
+class QSUIVisualization;
 class ListWidget;
 class QSUiTabWidget;
-class QSUIQuickSearch;
+class QSUiQuickSearch;
 
 
 /**
@@ -115,9 +115,9 @@ private:
     QMenu *m_pl_menu;
     QMenu *m_tab_menu;
     QSlider *m_volumeSlider;
-    QSUIQuickSearch *m_quickSearch;
+    QSUiQuickSearch *m_quickSearch;
     KeyboardManager *m_key_manager;
-    QSUiAnalyzer *m_analyzer;
+    QSUIVisualization *m_analyzer;
     QToolButton *m_addListButton, *m_tabListMenuButton;
     ListWidget *m_listWidget;
     MetaDataFormatter m_titleFormatter;

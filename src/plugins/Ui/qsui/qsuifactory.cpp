@@ -25,7 +25,7 @@
 #include "aboutqsuidialog.h"
 #include "qsuifactory.h"
 
-UiProperties QSUIFactory::properties() const
+UiProperties QSUiFactory::properties() const
 {
     UiProperties props;
     props.hasAbout = true;
@@ -34,19 +34,19 @@ UiProperties QSUIFactory::properties() const
     return props;
 }
 
-QObject *QSUIFactory::QSUIFactory::create()
+QObject *QSUiFactory::QSUiFactory::create()
 {
     QmmpSettings::instance()->readEqSettings(EqSettings::EQ_BANDS_15);
     return new MainWindow();
 }
 
-void QSUIFactory::showAbout(QWidget *parent)
+void QSUiFactory::showAbout(QWidget *parent)
 {
     AboutQSUIDialog about(parent);
     about.exec();
 }
 
-QString QSUIFactory::translation() const
+QString QSUiFactory::translation() const
 {
     return QLatin1String(":/qsui_plugin_");
 }

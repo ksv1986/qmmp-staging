@@ -42,7 +42,7 @@
 #include "qsuitabbar.h"
 #include "toolbareditor.h"
 #include "actionmanager.h"
-#include "qsuianalyzer.h"
+#include "qsuivisualization.h"
 #include "visualmenu.h"
 #include "listwidget.h"
 #include "positionslider.h"
@@ -148,10 +148,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_volumeSlider->setValue(m_core->volume());
     updateVolumeIcon();
     //quick search
-    m_quickSearch = new QSUIQuickSearch(m_listWidget, this);
+    m_quickSearch = new QSUiQuickSearch(m_listWidget, this);
     m_quickSearch->setMaximumWidth(250);
     //visualization
-    m_analyzer = new QSUiAnalyzer(this);
+    m_analyzer = new QSUIVisualization(this);
     m_ui.analyzerDockWidget->setWidget(m_analyzer);
     Visual::add(m_analyzer);
     //filesystem browser
@@ -331,7 +331,7 @@ void MainWindow::showAndRaise()
 void MainWindow::showSettings()
 {
     ConfigDialog *confDialog = new ConfigDialog(this);
-    QSUISettings *simpleSettings = new QSUISettings(this);
+    QSUiSettings *simpleSettings = new QSUiSettings(this);
     confDialog->addPage(tr("Appearance"), simpleSettings, QIcon(":/qsui/qsui_settings.png"));
     confDialog->addPage(tr("Shortcuts"), new HotkeyEditor(this), QIcon(":/qsui/qsui_shortcuts.png"));
     confDialog->exec();

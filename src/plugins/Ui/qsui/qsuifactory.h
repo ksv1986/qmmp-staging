@@ -26,7 +26,7 @@
 /*!
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class QSUIFactory : public QObject, public UiFactory
+class QSUiFactory : public QObject, public UiFactory
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.UiFactoryInterface.1.0")

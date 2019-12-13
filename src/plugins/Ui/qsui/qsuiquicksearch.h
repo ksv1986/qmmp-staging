@@ -31,11 +31,11 @@ class ListWidget;
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class QSUIQuickSearch : public QWidget
+class QSUiQuickSearch : public QWidget
 {
     Q_OBJECT
 public:
-    explicit QSUIQuickSearch(ListWidget *listWidget, QWidget *parent = nullptr);
+    explicit QSUiQuickSearch(ListWidget *listWidget, QWidget *parent = nullptr);
 
 private:
     QLineEdit *m_lineEdit;

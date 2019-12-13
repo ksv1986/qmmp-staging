@@ -22,7 +22,7 @@ SET(libqsui_SRCS
     logo.cpp
     aboutqsuidialog.cpp
     keyboardmanager.cpp
-    qsuianalyzer.cpp
+    qsuivisualization.cpp
     fft.c
     colorwidget.cpp
     qsuitabwidget.cpp

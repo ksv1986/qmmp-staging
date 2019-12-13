@@ -17,8 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef QSUIANALYZER_H
-#define QSUIANALYZER_H
+#ifndef QSUIVISUALIZATION_H
+#define QSUIVISUALIZATION_H
 
 #include <QWidget>
 #include <QResizeEvent>
@@ -28,14 +28,15 @@ class QTimer;
 class QMenu;
 class QActionGroup;
 class QLabel;
+class QPainter;
+class QSUiVisualDrawer;
 
-
-class QSUiAnalyzer : public Visual
+class QSUIVisualization : public Visual
 {
     Q_OBJECT
 public:
-    QSUiAnalyzer(QWidget *parent = nullptr);
-    virtual ~QSUiAnalyzer();
+    QSUIVisualization(QWidget *parent = nullptr);
+    virtual ~QSUIVisualization();
 
     void setCover(const QPixmap &pixmap);
     void clear();
@@ -92,5 +93,33 @@ private:
     bool m_running = false;
 };
 
+class QSUiVisualDrawer
+{
+public:
+    virtual void draw(QPainter *p) = 0;
+    virtual void readSettings() = 0;
+};
 
-#endif //QSUIANALYZER_H
+class QSUiAnalyzer : public QSUiVisualDrawer
+{
+public:
+    void draw(QPainter *p) override;
+    void readSettings() override;
+
+private:
+    int m_cols = 0, m_rows = 0, m_offset = 0;
+    QColor m_color1;
+    QColor m_color2;
+    QColor m_color3;
+    QColor m_bgColor;
+    QColor m_peakColor;
+    QSize m_cell_size;
+    bool m_show_peaks = false;
+    double *m_intern_vis_data = nullptr;
+    double *m_peaks = nullptr;
+    int *m_x_scale = nullptr;
+
+};
+
+
+#endif //QSUIVISUALIZATION_H

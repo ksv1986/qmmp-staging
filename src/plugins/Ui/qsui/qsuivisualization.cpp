@@ -29,9 +29,9 @@
 #include <stdlib.h>
 #include "fft.h"
 #include "inlines.h"
-#include "qsuianalyzer.h"
+#include "qsuivisualization.h"
 
-QSUiAnalyzer::QSUiAnalyzer(QWidget *parent) : Visual (parent)
+QSUIVisualization::QSUIVisualization(QWidget *parent) : Visual (parent)
 {
     m_pixLabel = new QLabel(this);
     createMenu();
@@ -43,7 +43,7 @@ QSUiAnalyzer::QSUiAnalyzer(QWidget *parent) : Visual (parent)
     clear();
 }
 
-QSUiAnalyzer::~QSUiAnalyzer()
+QSUIVisualization::~QSUIVisualization()
 {
     if(m_peaks)
         delete [] m_peaks;
@@ -53,32 +53,32 @@ QSUiAnalyzer::~QSUiAnalyzer()
         delete [] m_x_scale;
 }
 
-void QSUiAnalyzer::clear()
+void QSUIVisualization::clear()
 {
     m_rows = 0;
     m_cols = 0;
     update();
 }
 
-void QSUiAnalyzer::clearCover()
+void QSUIVisualization::clearCover()
 {
     m_cover = QPixmap();
     updateCover();
     update();
 }
 
-QSize QSUiAnalyzer::sizeHint() const
+QSize QSUIVisualization::sizeHint() const
 {
     return QSize(200, 100);
 }
 
-void QSUiAnalyzer::setCover(const QPixmap &pixmap)
+void QSUIVisualization::setCover(const QPixmap &pixmap)
 {
     m_cover = pixmap;
     updateCover();
 }
 
-void QSUiAnalyzer::timeout()
+void QSUIVisualization::timeout()
 {
     if(takeData(m_buffer))
     {
@@ -87,30 +87,30 @@ void QSUiAnalyzer::timeout()
     }
 }
 
-void QSUiAnalyzer::paintEvent (QPaintEvent * e)
+void QSUIVisualization::paintEvent (QPaintEvent * e)
 {
     QPainter painter (this);
     painter.fillRect(e->rect(),m_bgColor);
     draw(&painter);
 }
 
-void QSUiAnalyzer::hideEvent (QHideEvent *)
+void QSUIVisualization::hideEvent (QHideEvent *)
 {
     m_timer->stop();
 }
 
-void QSUiAnalyzer::showEvent (QShowEvent *)
+void QSUIVisualization::showEvent (QShowEvent *)
 {
     if(m_running)
         m_timer->start();
 }
 
-void QSUiAnalyzer::resizeEvent(QResizeEvent *)
+void QSUIVisualization::resizeEvent(QResizeEvent *)
 {
     updateCover();
 }
 
-void QSUiAnalyzer::process()
+void QSUIVisualization::process()
 {
     int rows = qMax((height() - 2) / m_cell_size.height(),2);
     int cols = qMax((width() - m_offset - 2) / m_cell_size.width(),1);
@@ -178,7 +178,7 @@ void QSUiAnalyzer::process()
     }
 }
 
-void QSUiAnalyzer::draw(QPainter *p)
+void QSUIVisualization::draw(QPainter *p)
 {
     QBrush brush(Qt::SolidPattern);
 
@@ -207,7 +207,7 @@ void QSUiAnalyzer::draw(QPainter *p)
     }
 }
 
-void QSUiAnalyzer::createMenu()
+void QSUIVisualization::createMenu()
 {
     m_menu = new QMenu (this);
     connect(m_menu, SIGNAL(triggered (QAction *)),SLOT(writeSettings()));
@@ -262,7 +262,7 @@ void QSUiAnalyzer::createMenu()
     update();
 }
 
-void QSUiAnalyzer::updateCover()
+void QSUIVisualization::updateCover()
 {
     if(m_show_cover && !m_cover.isNull())
     {
@@ -278,13 +278,13 @@ void QSUiAnalyzer::updateCover()
     }
 }
 
-void QSUiAnalyzer::mousePressEvent (QMouseEvent *e)
+void QSUIVisualization::mousePressEvent (QMouseEvent *e)
 {
     if (e->button() == Qt::RightButton)
         m_menu->exec(e->globalPos());
 }
 
-void QSUiAnalyzer::readSettings()
+void QSUIVisualization::readSettings()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
@@ -325,7 +325,7 @@ void QSUiAnalyzer::readSettings()
     settings.endGroup();
 }
 
-void QSUiAnalyzer::writeSettings()
+void QSUIVisualization::writeSettings()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
@@ -341,16 +341,50 @@ void QSUiAnalyzer::writeSettings()
     settings.endGroup();
 }
 
-void QSUiAnalyzer::start()
+void QSUIVisualization::start()
 {
     m_running = true;
     if(isVisible())
         m_timer->start();
 }
 
-void QSUiAnalyzer::stop()
+void QSUIVisualization::stop()
 {
     m_running = false;
     m_timer->stop();
     clear();
+}
+
+void QSUiAnalyzer::draw(QPainter *p)
+{
+    QBrush brush(Qt::SolidPattern);
+
+    for (int j = 0; j < m_cols; ++j)
+    {
+        int x = m_offset + j * m_cell_size.width() + 1;
+
+        for (int i = 0; i <= m_intern_vis_data[j]; ++i)
+        {
+            if (i <= m_rows / 3)
+                brush.setColor(m_color1);
+            else if (i > m_rows / 3 && i <= 2 * m_rows / 3)
+                brush.setColor(m_color2);
+            else
+                brush.setColor(m_color3);
+
+            //p->fillRect(x, height() - i * m_cell_size.height(),
+            //            m_cell_size.width() - 1, m_cell_size.height() - 4, brush);
+        }
+
+        if (m_show_peaks)
+        {
+            //p->fillRect(x, height() - int(m_peaks[j]) * m_cell_size.height(),
+            //            m_cell_size.width() - 1, m_cell_size.height() - 4, m_peakColor);
+        }
+    }
+}
+
+void QSUiAnalyzer::readSettings()
+{
+
 }

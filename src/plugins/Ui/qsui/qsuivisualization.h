@@ -59,31 +59,17 @@ private:
     void showEvent(QShowEvent *) override;
     void resizeEvent(QResizeEvent *) override;
     void process();
-    void draw(QPainter *p);
     void createMenu();
     void updateCover();
 
     QPixmap m_cover;
     QTimer *m_timer;
-    double *m_intern_vis_data = nullptr;
-    double *m_peaks = nullptr;
-    int *m_x_scale = nullptr;
-    double m_peaks_falloff;
-    double m_analyzer_falloff;
-    bool m_show_peaks;
+    QColor m_bgColor;
     bool m_show_cover = false;
     float m_buffer[QMMP_VISUAL_NODE_SIZE];
-    int m_cols = 0, m_rows = 0;
     int m_offset = 0;
     bool m_update = false;
     QLabel *m_pixLabel;
-    //colors
-    QColor m_color1;
-    QColor m_color2;
-    QColor m_color3;
-    QColor m_bgColor;
-    QColor m_peakColor;
-    QSize m_cell_size;
     QMenu *m_menu;
     QAction *m_peaksAction;
     QAction *m_coverAction;
@@ -91,34 +77,43 @@ private:
     QActionGroup *m_analyzerFalloffGroup;
     QActionGroup *m_peaksFalloffGroup;
     bool m_running = false;
+    QSUiVisualDrawer *m_drawer = nullptr;
 };
 
 class QSUiVisualDrawer
 {
 public:
-    virtual void draw(QPainter *p) = 0;
+    virtual ~QSUiVisualDrawer();
+    virtual void process(float *buffer, int width, int height) = 0;
+    virtual void draw(QPainter *p, int offset) = 0;
+    virtual void clear() = 0;
     virtual void readSettings() = 0;
 };
 
 class QSUiAnalyzer : public QSUiVisualDrawer
 {
 public:
-    void draw(QPainter *p) override;
+    QSUiAnalyzer() {}
+    virtual ~QSUiAnalyzer();
+    void process(float *buffer, int width, int height) override;
+    void draw(QPainter *p, int offset) override;
+    void clear() override;
     void readSettings() override;
 
 private:
-    int m_cols = 0, m_rows = 0, m_offset = 0;
+    int m_cols = 0, m_rows = 0;
     QColor m_color1;
     QColor m_color2;
     QColor m_color3;
     QColor m_bgColor;
     QColor m_peakColor;
     QSize m_cell_size;
+    double m_peaks_falloff;
+    double m_analyzer_falloff;
     bool m_show_peaks = false;
     double *m_intern_vis_data = nullptr;
     double *m_peaks = nullptr;
     int *m_x_scale = nullptr;
-
 };
 
 

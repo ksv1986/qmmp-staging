@@ -90,6 +90,25 @@ public:
     virtual void readSettings() = 0;
 };
 
+class QSUiScope : public QSUiVisualDrawer
+{
+public:
+    QSUiScope() {}
+    virtual ~QSUiScope();
+    void process(float *buffer, int width, int height) override;
+    void draw(QPainter *p, int offset) override;
+    void clear() override;
+    void readSettings() override;
+
+private:
+    int m_width = 0;
+    int m_heigt = 0;
+    int *m_intern_vis_data = nullptr;
+    QColor m_color1;
+    QColor m_color2;
+    QColor m_color3;
+};
+
 class QSUiAnalyzer : public QSUiVisualDrawer
 {
 public:
@@ -105,7 +124,6 @@ private:
     QColor m_color1;
     QColor m_color2;
     QColor m_color3;
-    QColor m_bgColor;
     QColor m_peakColor;
     QSize m_cell_size;
     double m_peaks_falloff;

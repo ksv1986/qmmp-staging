@@ -34,7 +34,8 @@
 QSUIVisualization::QSUIVisualization(QWidget *parent) : Visual (parent)
 {
     m_pixLabel = new QLabel(this);
-    m_drawer = new QSUiAnalyzer;
+    //m_drawer = new QSUiAnalyzer;
+    m_drawer = new QSUiScope;
     createMenu();
 
     m_timer = new QTimer (this);
@@ -266,6 +267,78 @@ void QSUIVisualization::stop()
     clear();
 }
 
+QSUiScope::~QSUiScope()
+{
+    if(m_intern_vis_data)
+        delete [] m_intern_vis_data;
+}
+
+void QSUiScope::process(float *buffer, int width, int height)
+{
+    int step = (QMMP_VISUAL_NODE_SIZE << 8) / width;
+    int pos = 0;
+
+    if(m_width != width )
+    {
+        m_width = width;
+
+        if(m_intern_vis_data)
+            delete [] m_intern_vis_data;
+
+        m_intern_vis_data = new int[m_width]{ 0 };
+    }
+
+    m_heigt = height;
+
+    for(int i = 0; i < width; ++i)
+    {
+        pos += step;
+        m_intern_vis_data[i] = int(buffer[pos >> 8] * height / 2);
+        m_intern_vis_data[i] = qBound(-height / 2, m_intern_vis_data[i], height / 2);
+    }
+}
+
+void QSUiScope::draw(QPainter *p, int offset)
+{
+    p->setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
+
+    for (int i = 0; i < m_width - 1; ++i)
+    {
+        int h1 = m_heigt / 2 - m_intern_vis_data[i];
+        int h2 = m_heigt / 2 - m_intern_vis_data[i+1];
+        QPen pen;
+        pen.setWidthF(1.5);
+        pen.setJoinStyle(Qt::RoundJoin);
+        pen.setCapStyle(Qt::RoundCap);
+
+        if (abs(m_intern_vis_data[i]) <= m_heigt / 6)
+            pen.setColor(m_color1);
+        else if (abs(m_intern_vis_data[i]) > m_heigt / 6 && abs(m_intern_vis_data[i]) <= m_heigt / 3)
+            pen.setColor(m_color2);
+        else
+            pen.setColor(m_color3);
+
+        p->setPen(pen);
+        p->drawLine(i + offset, h1, offset + i + 1, h2);
+    }
+}
+
+void QSUiScope::clear()
+{
+    m_width = 0;
+    m_heigt = 0;
+}
+
+void QSUiScope::readSettings()
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginGroup("Simple");
+    m_color1.setNamedColor(settings.value("vis_color1", "#BECBFF").toString());
+    m_color2.setNamedColor(settings.value("vis_color2", "#BECBFF").toString());
+    m_color3.setNamedColor(settings.value("vis_color3", "#BECBFF").toString());
+    settings.endGroup();
+}
+
 QSUiVisualDrawer::~QSUiVisualDrawer()
 {}
 
@@ -295,14 +368,9 @@ void QSUiAnalyzer::process(float *buffer, int width, int height)
         if(m_x_scale)
             delete [] m_x_scale;
         m_peaks = new double[m_cols];
-        m_intern_vis_data = new double[m_cols];
-        m_x_scale = new int[m_cols + 1];
+        m_intern_vis_data = new double[m_cols] { 0 };
+        m_x_scale = new int[m_cols + 1] { 0 };
 
-        for(int i = 0; i < m_cols; ++i)
-        {
-            m_peaks[i] = 0;
-            m_intern_vis_data[i] = 0;
-        }
         for(int i = 0; i < m_cols + 1; ++i)
             m_x_scale[i] = pow(pow(255.0, 1.0 / m_cols), i);
     }
@@ -390,7 +458,6 @@ void QSUiAnalyzer::readSettings()
     m_color1.setNamedColor(settings.value("vis_color1", "#BECBFF").toString());
     m_color2.setNamedColor(settings.value("vis_color2", "#BECBFF").toString());
     m_color3.setNamedColor(settings.value("vis_color3", "#BECBFF").toString());
-    m_bgColor.setNamedColor(settings.value("vis_bg_color", "Black").toString());
     m_peakColor.setNamedColor(settings.value("vis_peak_color", "#DDDDDD").toString());
     m_cell_size =  QSize(14, 8);
     m_peaks_falloff = settings.value("vis_peaks_falloff", 0.2).toDouble();

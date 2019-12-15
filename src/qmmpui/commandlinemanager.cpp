@@ -99,7 +99,7 @@ bool CommandLineManager::hasOption(const QString &opt_str, CommandLineHandler::O
 {
     checkOptions();
     if(flags)
-        *flags = nullptr;
+        *flags = CommandLineHandler::OptionFlags();
     foreach(CommandLineHandler *opt, *m_options)
     {
         int id = opt->identify(opt_str);

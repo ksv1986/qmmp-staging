@@ -73,9 +73,12 @@ private:
     QMenu *m_menu;
     QAction *m_peaksAction;
     QAction *m_coverAction;
+    QActionGroup *m_visModeGroup;
     QActionGroup *m_fpsGroup;
     QActionGroup *m_analyzerFalloffGroup;
     QActionGroup *m_peaksFalloffGroup;
+    QActionGroup *m_analyzerModeGroup;
+    QActionGroup *m_analyzerTypeGroup;
     bool m_running = false;
     QSUiVisualDrawer *m_drawer = nullptr;
 };
@@ -84,6 +87,7 @@ class QSUiVisualDrawer
 {
 public:
     virtual ~QSUiVisualDrawer();
+    virtual QString name() const = 0;
     virtual void process(float *buffer, int width, int height) = 0;
     virtual void draw(QPainter *p, int offset) = 0;
     virtual void clear() = 0;
@@ -95,6 +99,7 @@ class QSUiScope : public QSUiVisualDrawer
 public:
     QSUiScope() {}
     virtual ~QSUiScope();
+    QString name() const override;
     void process(float *buffer, int width, int height) override;
     void draw(QPainter *p, int offset) override;
     void clear() override;
@@ -114,6 +119,7 @@ class QSUiAnalyzer : public QSUiVisualDrawer
 public:
     QSUiAnalyzer() {}
     virtual ~QSUiAnalyzer();
+    QString name() const override;
     void process(float *buffer, int width, int height) override;
     void draw(QPainter *p, int offset) override;
     void clear() override;

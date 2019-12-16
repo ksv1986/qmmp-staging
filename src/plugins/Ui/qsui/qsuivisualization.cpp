@@ -34,8 +34,8 @@
 QSUIVisualization::QSUIVisualization(QWidget *parent) : Visual (parent)
 {
     m_pixLabel = new QLabel(this);
-    //m_drawer = new QSUiAnalyzer;
-    m_drawer = new QSUiScope;
+    m_drawer = new QSUiAnalyzer;
+    //m_drawer = new QSUiScope;
     createMenu();
 
     m_timer = new QTimer (this);
@@ -128,7 +128,38 @@ void QSUIVisualization::createMenu()
     m_coverAction = m_menu->addAction(tr("Cover"));
     m_coverAction->setCheckable(true);
 
-    m_peaksAction = m_menu->addAction(tr("Peaks"));
+    QMenu *visMode = m_menu->addMenu(tr("Visualization Mode"));
+    m_visModeGroup = new QActionGroup(this);
+    m_visModeGroup->setExclusive(true);
+    m_visModeGroup->addAction(tr("Analyzer"))->setData("analyzer");
+    m_visModeGroup->addAction(tr("Scope"))->setData("scope");
+    for(QAction *act : m_visModeGroup->actions())
+    {
+        act->setCheckable(true);
+        visMode->addAction(act);
+    }
+
+    QMenu *analyzerMode = m_menu->addMenu(tr("Analyzer Mode"));
+    m_analyzerModeGroup = new QActionGroup(this);
+    m_analyzerTypeGroup = new QActionGroup(this);
+    m_analyzerModeGroup->addAction(tr("Normal"))->setData(0);
+    m_analyzerModeGroup->addAction(tr("Fire"))->setData(1);
+    m_analyzerModeGroup->addAction(tr("Vertical Lines"))->setData(2);
+    m_analyzerTypeGroup->addAction(tr("Lines"))->setData(0);
+    m_analyzerTypeGroup->addAction(tr("Bars"))->setData(1);
+    for(QAction *act : m_analyzerModeGroup->actions())
+    {
+        act->setCheckable(true);
+        analyzerMode->addAction(act);
+    }
+    analyzerMode->addSeparator ();
+    for(QAction *act : m_analyzerTypeGroup->actions())
+    {
+        act->setCheckable(true);
+        analyzerMode->addAction(act);
+    }
+    analyzerMode->addSeparator ();
+    m_peaksAction = analyzerMode->addAction(tr("Peaks"));
     m_peaksAction->setCheckable(true);
 
     QMenu *refreshRate = m_menu->addMenu(tr("Refresh Rate"));
@@ -138,7 +169,7 @@ void QSUIVisualization::createMenu()
     m_fpsGroup->addAction(tr("25 fps"))->setData(25);
     m_fpsGroup->addAction(tr("10 fps"))->setData(10);
     m_fpsGroup->addAction(tr("5 fps"))->setData(5);
-    for(QAction *act : m_fpsGroup->actions ())
+    for(QAction *act : m_fpsGroup->actions())
     {
         act->setCheckable(true);
         refreshRate->addAction(act);
@@ -152,7 +183,7 @@ void QSUIVisualization::createMenu()
     m_analyzerFalloffGroup->addAction(tr("Medium"))->setData(2.2);
     m_analyzerFalloffGroup->addAction(tr("Fast"))->setData(2.4);
     m_analyzerFalloffGroup->addAction(tr("Fastest"))->setData(2.8);
-    for(QAction *act : m_analyzerFalloffGroup->actions ())
+    for(QAction *act : m_analyzerFalloffGroup->actions())
     {
         act->setCheckable(true);
         analyzerFalloff->addAction(act);
@@ -166,7 +197,7 @@ void QSUIVisualization::createMenu()
     m_peaksFalloffGroup->addAction(tr("Medium"))->setData(0.2);
     m_peaksFalloffGroup->addAction(tr("Fast"))->setData(0.4);
     m_peaksFalloffGroup->addAction(tr("Fastest"))->setData(0.8);
-    for(QAction *act : m_peaksFalloffGroup->actions ())
+    for(QAction *act : m_peaksFalloffGroup->actions())
     {
         act->setCheckable(true);
         peaksFalloff->addAction(act);
@@ -203,6 +234,7 @@ void QSUIVisualization::readSettings()
     //general settings
     m_show_cover = settings.value("vis_show_cover", true).toBool();
     m_timer->setInterval(1000 / settings.value("vis_refresh_rate", 25).toInt());
+    QString visName = settings.value("vis_type","analyzer").toString();
     //analyzer settings
     double peaks_falloff = settings.value("vis_peaks_falloff", 0.2).toDouble();
     double analyzer_falloff = settings.value("vis_analyzer_falloff", 2.2).toDouble();
@@ -213,6 +245,12 @@ void QSUIVisualization::readSettings()
         m_update = true;
         m_coverAction->setChecked(m_show_cover);
         m_peaksAction->setChecked(show_peaks);
+
+        for(QAction *act : m_visModeGroup->actions())
+        {
+            if (visName == act->data().toString())
+                act->setChecked(true);
+        }
 
         for(QAction *act : m_fpsGroup->actions ())
         {
@@ -233,8 +271,17 @@ void QSUIVisualization::readSettings()
     updateCover();
     settings.endGroup();
 
-    if(m_drawer)
-        m_drawer->readSettings();
+    if(!m_drawer || m_drawer->name() != visName)
+    {
+        if(m_drawer)
+            delete m_drawer;
+
+        if(visName == "scope")
+            m_drawer = new QSUiScope;
+        else
+            m_drawer = new QSUiAnalyzer;
+    }
+    m_drawer->readSettings();
 }
 
 void QSUIVisualization::writeSettings()
@@ -250,6 +297,8 @@ void QSUIVisualization::writeSettings()
     settings.setValue("vis_analyzer_falloff", act ? act->data().toDouble() : 2.2);
     settings.setValue("vis_show_peaks", m_peaksAction->isChecked());
     settings.setValue("vis_show_cover", m_coverAction->isChecked());
+    act = m_visModeGroup->checkedAction ();
+    settings.setValue("vis_type", act ? act->data().toString() : "none");
     settings.endGroup();
 }
 
@@ -271,6 +320,11 @@ QSUiScope::~QSUiScope()
 {
     if(m_intern_vis_data)
         delete [] m_intern_vis_data;
+}
+
+QString QSUiScope::name() const
+{
+    return "scope";
 }
 
 void QSUiScope::process(float *buffer, int width, int height)
@@ -350,6 +404,11 @@ QSUiAnalyzer::~QSUiAnalyzer()
         delete [] m_peaks;
     if(m_x_scale)
         delete [] m_x_scale;
+}
+
+QString QSUiAnalyzer::name() const
+{
+    return "analyzer";
 }
 
 void QSUiAnalyzer::process(float *buffer, int width, int height)

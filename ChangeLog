@@ -1528,3 +1528,5 @@ Version 1.3.5
 * fixed issue with incorrect audio properties displaying
 * fixed crash on corrupted .m4a files
 * fixed duration overflow
+* fixed playlist duration update
+* fixed issue with special symbols in the track change plugin

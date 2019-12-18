@@ -14,22 +14,22 @@
         <translation>Αρχεία Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="119"/>
+        <location filename="../decodervorbisfactory.cpp" line="126"/>
         <source>About Ogg Vorbis Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="120"/>
+        <location filename="../decodervorbisfactory.cpp" line="127"/>
         <source>Qmmp Ogg Vorbis Audio Plugin</source>
         <translation>Qmmp πρόσθετο ήχου Ogg Vorbis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="121"/>
+        <location filename="../decodervorbisfactory.cpp" line="128"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="122"/>
+        <location filename="../decodervorbisfactory.cpp" line="129"/>
         <source>Source code based on mq3 project</source>
         <translation>Ο πηγαίος κώδικας έχει βασιστεί στο έργο mq3</translation>
     </message>

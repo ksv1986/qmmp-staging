@@ -663,7 +663,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="939"/>
+        <location filename="../mainwindow.cpp" line="946"/>
         <source>Qmmp</source>
         <translation>Кумп</translation>
     </message>
@@ -809,189 +809,189 @@
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="247"/>
-        <location filename="../mainwindow.cpp" line="286"/>
+        <location filename="../mainwindow.cpp" line="293"/>
         <source>Rename Playlist</source>
         <translation>Преименуј листу нумера</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="463"/>
+        <location filename="../mainwindow.cpp" line="470"/>
         <source>Volume</source>
         <translation>Јачина</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="373"/>
+        <location filename="../mainwindow.cpp" line="380"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="374"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Paused</source>
         <translation>Паузирано</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="384"/>
+        <location filename="../mainwindow.cpp" line="391"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="385"/>
+        <location filename="../mainwindow.cpp" line="392"/>
         <source>Stopped</source>
         <translation>Заустављено</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="286"/>
+        <location filename="../mainwindow.cpp" line="293"/>
         <source>Playlist name:</source>
         <translation>Име листе нумера:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="327"/>
+        <location filename="../mainwindow.cpp" line="334"/>
         <source>Appearance</source>
         <translation>Изглед</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="328"/>
+        <location filename="../mainwindow.cpp" line="335"/>
         <source>Shortcuts</source>
         <translation>Пречице</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="374"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Playing</source>
         <translation>Пуштање</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="453"/>
+        <location filename="../mainwindow.cpp" line="460"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="459"/>
+        <location filename="../mainwindow.cpp" line="466"/>
         <source>P</source>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="461"/>
+        <location filename="../mainwindow.cpp" line="468"/>
         <source>Position</source>
         <translation>Положај</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="465"/>
+        <location filename="../mainwindow.cpp" line="472"/>
         <source>Quick Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="521"/>
+        <location filename="../mainwindow.cpp" line="528"/>
         <source>Edit Toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="523"/>
+        <location filename="../mainwindow.cpp" line="530"/>
         <source>Sort List</source>
         <translation>Поређај</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="526"/>
-        <location filename="../mainwindow.cpp" line="567"/>
+        <location filename="../mainwindow.cpp" line="533"/>
+        <location filename="../mainwindow.cpp" line="574"/>
         <source>By Title</source>
         <translation>по наслову</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
-        <location filename="../mainwindow.cpp" line="570"/>
+        <location filename="../mainwindow.cpp" line="536"/>
+        <location filename="../mainwindow.cpp" line="577"/>
         <source>By Album</source>
         <translation>по албуму</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="532"/>
-        <location filename="../mainwindow.cpp" line="573"/>
+        <location filename="../mainwindow.cpp" line="539"/>
+        <location filename="../mainwindow.cpp" line="580"/>
         <source>By Artist</source>
         <translation>по извођачу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="535"/>
-        <location filename="../mainwindow.cpp" line="576"/>
+        <location filename="../mainwindow.cpp" line="542"/>
+        <location filename="../mainwindow.cpp" line="583"/>
         <source>By Album Artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="538"/>
-        <location filename="../mainwindow.cpp" line="579"/>
+        <location filename="../mainwindow.cpp" line="545"/>
+        <location filename="../mainwindow.cpp" line="586"/>
         <source>By Filename</source>
         <translation>по имену фајла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="541"/>
-        <location filename="../mainwindow.cpp" line="582"/>
+        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.cpp" line="589"/>
         <source>By Path + Filename</source>
         <translation>по путањи и имену</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="544"/>
-        <location filename="../mainwindow.cpp" line="585"/>
+        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="592"/>
         <source>By Date</source>
         <translation>по датуму</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="547"/>
-        <location filename="../mainwindow.cpp" line="588"/>
+        <location filename="../mainwindow.cpp" line="554"/>
+        <location filename="../mainwindow.cpp" line="595"/>
         <source>By Track Number</source>
         <translation>по броју нумере</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="550"/>
-        <location filename="../mainwindow.cpp" line="591"/>
+        <location filename="../mainwindow.cpp" line="557"/>
+        <location filename="../mainwindow.cpp" line="598"/>
         <source>By Disc Number</source>
         <translation>по броју диска</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="553"/>
-        <location filename="../mainwindow.cpp" line="594"/>
+        <location filename="../mainwindow.cpp" line="560"/>
+        <location filename="../mainwindow.cpp" line="601"/>
         <source>By File Creation Date</source>
         <translation>по датуму фајла</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="556"/>
-        <location filename="../mainwindow.cpp" line="597"/>
+        <location filename="../mainwindow.cpp" line="563"/>
+        <location filename="../mainwindow.cpp" line="604"/>
         <source>By File Modification Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="559"/>
+        <location filename="../mainwindow.cpp" line="566"/>
         <source>By Group</source>
         <translation>по групи</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="564"/>
+        <location filename="../mainwindow.cpp" line="571"/>
         <source>Sort Selection</source>
         <translation>Поређај избор</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="602"/>
+        <location filename="../mainwindow.cpp" line="609"/>
         <source>Randomize List</source>
         <translation>Претумбај</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="604"/>
+        <location filename="../mainwindow.cpp" line="611"/>
         <source>Reverse List</source>
         <translation>Обрни</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="611"/>
-        <location filename="../mainwindow.cpp" line="652"/>
+        <location filename="../mainwindow.cpp" line="618"/>
+        <location filename="../mainwindow.cpp" line="659"/>
         <source>Actions</source>
         <translation>Радње</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="418"/>
+        <location filename="../mainwindow.cpp" line="425"/>
         <source>Add new playlist</source>
         <translation>Додај нову листу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="424"/>
+        <location filename="../mainwindow.cpp" line="431"/>
         <source>Show all tabs</source>
         <translation>Прикажи све језичке</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="848"/>
+        <location filename="../mainwindow.cpp" line="855"/>
         <source>Buffering: %1%</source>
         <translation>Баферујем: %1%</translation>
     </message>

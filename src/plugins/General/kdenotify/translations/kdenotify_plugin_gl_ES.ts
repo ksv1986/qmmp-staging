@@ -14,7 +14,7 @@
     <message>
         <location filename="../kdenotifyfactory.cpp" line="29"/>
         <source>KDE notification plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>plugin notificacións KDE</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="49"/>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../kdenotifyfactory.cpp" line="50"/>
         <source>KDE notification plugin for Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin de notificación de KDE para Qmmp</translation>
     </message>
 </context>
 <context>
@@ -42,12 +42,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Notification delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Atraso na notificación:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>s</source>
-        <translation type="unfinished"></translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>

@@ -14,22 +14,22 @@
         <translation>Ogg Vorbis bylos</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="119"/>
+        <location filename="../decodervorbisfactory.cpp" line="126"/>
         <source>About Ogg Vorbis Audio Plugin</source>
         <translation>Apie Ogg Vorbis audio įskiepį</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="120"/>
+        <location filename="../decodervorbisfactory.cpp" line="127"/>
         <source>Qmmp Ogg Vorbis Audio Plugin</source>
         <translation>Qmmp Ogg Vorbis audio įskiepis</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="121"/>
+        <location filename="../decodervorbisfactory.cpp" line="128"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Sukūrė: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodervorbisfactory.cpp" line="122"/>
+        <location filename="../decodervorbisfactory.cpp" line="129"/>
         <source>Source code based on mq3 project</source>
         <translation>Išvesties kodas sukurtas mq3 pagrindu</translation>
     </message>

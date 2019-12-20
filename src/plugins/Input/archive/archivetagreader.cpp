@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 by Ilya Kotov                                      *
+ *   Copyright (C) 2016-2019 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -46,8 +46,14 @@ public:
     }
     virtual TagLib::ByteVector readBlock(unsigned long length) override
     {
-        QByteArray data = m_input->read(length);
-        return TagLib::ByteVector(data.constData(), data.size());
+        char data[length];
+        qint64 l = m_input->read(data, length);
+        if(l < 0)
+        {
+            m_input->close();
+            return TagLib::ByteVector();
+        }
+        return TagLib::ByteVector(data, l);
     }
     virtual void writeBlock(const TagLib::ByteVector &) override
     {}

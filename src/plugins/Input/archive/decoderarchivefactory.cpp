@@ -80,8 +80,17 @@ QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, Tr
         qWarning("DecoderArchiveFactory: unable to open archive; libarchive error: %s", archive_error_string(a));
         return list;
     }
+
     while (archive_read_next_header(a, &entry) == ARCHIVE_OK)
     {
+        if(archive_read_has_encrypted_entries(a) == 1) //skip encrypted archives
+        {
+            qDeleteAll(list);
+            list.clear();
+            archive_read_free(a);
+            return list;
+        }
+
         if(archive_entry_filetype(entry) == AE_IFREG)
         {
             QString filePath = QString::fromLocal8Bit(archive_entry_pathname(entry));

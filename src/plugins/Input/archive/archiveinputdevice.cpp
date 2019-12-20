@@ -133,7 +133,6 @@ qint64 ArchiveInputDevice::readData(char *data, qint64 maxSize)
         {
             qWarning("ArchiveInputDevice: reading failed; libarchive error: %s", archive_error_string(m_archive));
             setErrorString(QString::fromLocal8Bit(archive_error_string(m_archive)));
-            close();
             return -1;
         }
     }

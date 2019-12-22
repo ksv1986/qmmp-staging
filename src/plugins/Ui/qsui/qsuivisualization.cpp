@@ -483,7 +483,7 @@ void QSUiAnalyzer::draw(QPainter *p, int offset)
     {
         int x = offset + j * m_cell_size.width() + 1;
 
-        for (int i = 0; i <= m_intern_vis_data[j]; ++i)
+        for (int i = 1; i <= m_intern_vis_data[j]; ++i)
         {
             if (i <= m_rows / 3)
                 brush.setColor(m_color1);
@@ -492,13 +492,13 @@ void QSUiAnalyzer::draw(QPainter *p, int offset)
             else
                 brush.setColor(m_color3);
 
-            p->fillRect(x, height - i * m_cell_size.height(),
+            p->fillRect(x, height - (i - 1) * m_cell_size.height(),
                         m_cell_size.width() - 1, m_cell_size.height() - 4, brush);
         }
 
-        if (m_show_peaks)
+        if (m_show_peaks && m_peaks[j] > 0)
         {
-            p->fillRect(x, height - int(m_peaks[j]) * m_cell_size.height(),
+            p->fillRect(x, height - int(m_peaks[j] - 1) * m_cell_size.height(),
                         m_cell_size.width() - 1, m_cell_size.height() - 4, m_peakColor);
         }
     }

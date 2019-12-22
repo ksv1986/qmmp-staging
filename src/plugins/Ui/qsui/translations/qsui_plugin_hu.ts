@@ -663,7 +663,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="948"/>
+        <location filename="../mainwindow.cpp" line="949"/>
         <source>Qmmp</source>
         <translation type="unfinished"></translation>
     </message>
@@ -809,189 +809,189 @@
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="247"/>
-        <location filename="../mainwindow.cpp" line="293"/>
+        <location filename="../mainwindow.cpp" line="294"/>
         <source>Rename Playlist</source>
         <translation>Lista átnevezése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="470"/>
+        <location filename="../mainwindow.cpp" line="471"/>
         <source>Volume</source>
         <translation>Hangerő</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="380"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="381"/>
+        <location filename="../mainwindow.cpp" line="382"/>
         <source>Paused</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="391"/>
+        <location filename="../mainwindow.cpp" line="392"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="392"/>
+        <location filename="../mainwindow.cpp" line="393"/>
         <source>Stopped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="293"/>
+        <location filename="../mainwindow.cpp" line="294"/>
         <source>Playlist name:</source>
         <translation>Lista neve:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="334"/>
+        <location filename="../mainwindow.cpp" line="335"/>
         <source>Appearance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="335"/>
+        <location filename="../mainwindow.cpp" line="336"/>
         <source>Shortcuts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="381"/>
+        <location filename="../mainwindow.cpp" line="382"/>
         <source>Playing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="460"/>
+        <location filename="../mainwindow.cpp" line="461"/>
         <source>Ctrl+0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="466"/>
+        <location filename="../mainwindow.cpp" line="467"/>
         <source>P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="468"/>
+        <location filename="../mainwindow.cpp" line="469"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="472"/>
+        <location filename="../mainwindow.cpp" line="473"/>
         <source>Quick Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="528"/>
+        <location filename="../mainwindow.cpp" line="529"/>
         <source>Edit Toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="530"/>
+        <location filename="../mainwindow.cpp" line="531"/>
         <source>Sort List</source>
         <translation>Lista rendezése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="533"/>
-        <location filename="../mainwindow.cpp" line="574"/>
+        <location filename="../mainwindow.cpp" line="534"/>
+        <location filename="../mainwindow.cpp" line="575"/>
         <source>By Title</source>
         <translation>Cím szerint</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="536"/>
-        <location filename="../mainwindow.cpp" line="577"/>
+        <location filename="../mainwindow.cpp" line="537"/>
+        <location filename="../mainwindow.cpp" line="578"/>
         <source>By Album</source>
         <translation>Album szerint</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="539"/>
-        <location filename="../mainwindow.cpp" line="580"/>
+        <location filename="../mainwindow.cpp" line="540"/>
+        <location filename="../mainwindow.cpp" line="581"/>
         <source>By Artist</source>
         <translation>Előadó szerint</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="542"/>
-        <location filename="../mainwindow.cpp" line="583"/>
+        <location filename="../mainwindow.cpp" line="543"/>
+        <location filename="../mainwindow.cpp" line="584"/>
         <source>By Album Artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="545"/>
-        <location filename="../mainwindow.cpp" line="586"/>
+        <location filename="../mainwindow.cpp" line="546"/>
+        <location filename="../mainwindow.cpp" line="587"/>
         <source>By Filename</source>
         <translation>Fájlnév szerint</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="548"/>
-        <location filename="../mainwindow.cpp" line="589"/>
+        <location filename="../mainwindow.cpp" line="549"/>
+        <location filename="../mainwindow.cpp" line="590"/>
         <source>By Path + Filename</source>
         <translation>Elérési út és fájlnév szerint</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
-        <location filename="../mainwindow.cpp" line="592"/>
+        <location filename="../mainwindow.cpp" line="552"/>
+        <location filename="../mainwindow.cpp" line="593"/>
         <source>By Date</source>
         <translation>Dátum szerint</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="554"/>
-        <location filename="../mainwindow.cpp" line="595"/>
+        <location filename="../mainwindow.cpp" line="555"/>
+        <location filename="../mainwindow.cpp" line="596"/>
         <source>By Track Number</source>
         <translation>Zene sorszáma szerint</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="557"/>
-        <location filename="../mainwindow.cpp" line="598"/>
+        <location filename="../mainwindow.cpp" line="558"/>
+        <location filename="../mainwindow.cpp" line="599"/>
         <source>By Disc Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="560"/>
-        <location filename="../mainwindow.cpp" line="601"/>
+        <location filename="../mainwindow.cpp" line="561"/>
+        <location filename="../mainwindow.cpp" line="602"/>
         <source>By File Creation Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="563"/>
-        <location filename="../mainwindow.cpp" line="604"/>
+        <location filename="../mainwindow.cpp" line="564"/>
+        <location filename="../mainwindow.cpp" line="605"/>
         <source>By File Modification Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="566"/>
+        <location filename="../mainwindow.cpp" line="567"/>
         <source>By Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="571"/>
+        <location filename="../mainwindow.cpp" line="572"/>
         <source>Sort Selection</source>
         <translation>Jelöltek rendezése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="609"/>
+        <location filename="../mainwindow.cpp" line="610"/>
         <source>Randomize List</source>
         <translation>Lista összekeverése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="611"/>
+        <location filename="../mainwindow.cpp" line="612"/>
         <source>Reverse List</source>
         <translation>Fordított lista</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="618"/>
-        <location filename="../mainwindow.cpp" line="659"/>
+        <location filename="../mainwindow.cpp" line="619"/>
+        <location filename="../mainwindow.cpp" line="660"/>
         <source>Actions</source>
         <translation>Tevékenységek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="425"/>
+        <location filename="../mainwindow.cpp" line="426"/>
         <source>Add new playlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="431"/>
+        <location filename="../mainwindow.cpp" line="432"/>
         <source>Show all tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="857"/>
+        <location filename="../mainwindow.cpp" line="858"/>
         <source>Buffering: %1%</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1096,14 +1096,6 @@
     </message>
 </context>
 <context>
-    <name>QSUIFactory</name>
-    <message>
-        <location filename="../qsuifactory.cpp" line="32"/>
-        <source>Simple User Interface</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>QSUISettings</name>
     <message>
         <location filename="../forms/qsuisettings.ui" line="24"/>
@@ -1121,32 +1113,57 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="848"/>
+        <location filename="../forms/qsuisettings.ui" line="191"/>
+        <source>Visualization Colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="197"/>
+        <source>Color #1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="264"/>
+        <source>Color #2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="328"/>
+        <source>Color #3:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="417"/>
+        <source>Reset colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="872"/>
         <source>Fonts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="854"/>
+        <location filename="../forms/qsuisettings.ui" line="878"/>
         <source>Use system fonts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="902"/>
+        <location filename="../forms/qsuisettings.ui" line="926"/>
         <source>Playlist:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="882"/>
-        <location filename="../forms/qsuisettings.ui" line="947"/>
-        <location filename="../forms/qsuisettings.ui" line="966"/>
+        <location filename="../forms/qsuisettings.ui" line="906"/>
+        <location filename="../forms/qsuisettings.ui" line="971"/>
+        <location filename="../forms/qsuisettings.ui" line="990"/>
         <source>???</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="62"/>
-        <location filename="../forms/qsuisettings.ui" line="889"/>
-        <location filename="../forms/qsuisettings.ui" line="912"/>
-        <location filename="../forms/qsuisettings.ui" line="973"/>
+        <location filename="../forms/qsuisettings.ui" line="913"/>
+        <location filename="../forms/qsuisettings.ui" line="936"/>
+        <location filename="../forms/qsuisettings.ui" line="997"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -1201,28 +1218,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="995"/>
+        <location filename="../forms/qsuisettings.ui" line="1019"/>
         <source>Reset fonts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1010"/>
+        <location filename="../forms/qsuisettings.ui" line="1034"/>
         <source>Column headers:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="925"/>
+        <location filename="../forms/qsuisettings.ui" line="949"/>
         <source>Tab names:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1037"/>
+        <location filename="../forms/qsuisettings.ui" line="1061"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="191"/>
-        <source>Analyzer Colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1241,18 +1253,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="197"/>
-        <source>Analyzer #1:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../forms/qsuisettings.ui" line="232"/>
         <source>Peaks:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="264"/>
-        <source>Analyzer #2:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1261,115 +1263,229 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="328"/>
-        <source>Analyzer #3:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/qsuisettings.ui" line="405"/>
+        <location filename="../forms/qsuisettings.ui" line="429"/>
         <source>Playlist Colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="427"/>
+        <location filename="../forms/qsuisettings.ui" line="451"/>
         <source>Background #1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="472"/>
+        <location filename="../forms/qsuisettings.ui" line="496"/>
         <source>Normal text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="517"/>
+        <location filename="../forms/qsuisettings.ui" line="541"/>
         <source>Background #2:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="549"/>
+        <location filename="../forms/qsuisettings.ui" line="573"/>
         <source>Current text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="581"/>
+        <location filename="../forms/qsuisettings.ui" line="605"/>
         <source>Highlighted background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="613"/>
+        <location filename="../forms/qsuisettings.ui" line="637"/>
         <source>Highlighted text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="753"/>
+        <location filename="../forms/qsuisettings.ui" line="777"/>
         <source>Override current track background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="763"/>
+        <location filename="../forms/qsuisettings.ui" line="787"/>
         <source>Current track background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="795"/>
+        <location filename="../forms/qsuisettings.ui" line="819"/>
         <source>Override group background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1073"/>
+        <location filename="../forms/qsuisettings.ui" line="1097"/>
         <source>Toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1081"/>
+        <location filename="../forms/qsuisettings.ui" line="1105"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1106"/>
+        <location filename="../forms/qsuisettings.ui" line="1130"/>
         <source>Customize...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="411"/>
+        <location filename="../forms/qsuisettings.ui" line="435"/>
         <source>Use system colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="721"/>
+        <location filename="../forms/qsuisettings.ui" line="745"/>
         <source>Group background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="689"/>
+        <location filename="../forms/qsuisettings.ui" line="713"/>
         <source>Group text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="648"/>
+        <location filename="../forms/qsuisettings.ui" line="672"/>
         <source>Splitter:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1043"/>
+        <location filename="../forms/qsuisettings.ui" line="1067"/>
         <source>Tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1049"/>
+        <location filename="../forms/qsuisettings.ui" line="1073"/>
         <source>Show close buttons</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1056"/>
+        <location filename="../forms/qsuisettings.ui" line="1080"/>
         <source>Show tab list menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1063"/>
+        <location filename="../forms/qsuisettings.ui" line="1087"/>
         <source>Show &apos;New Playlist&apos; button</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>QSUIVisualization</name>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="126"/>
+        <source>Cover</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="129"/>
+        <source>Visualization Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="132"/>
+        <source>Analyzer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="133"/>
+        <source>Scope</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="140"/>
+        <source>Analyzer Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="142"/>
+        <source>Cells</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="143"/>
+        <source>Lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="151"/>
+        <source>Peaks</source>
+        <translation type="unfinished">Csúcsok</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="154"/>
+        <source>Refresh Rate</source>
+        <translation type="unfinished">Ráta frissítése</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="157"/>
+        <source>50 fps</source>
+        <translation type="unfinished">50 fps</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="158"/>
+        <source>25 fps</source>
+        <translation type="unfinished">25 fps</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="159"/>
+        <source>10 fps</source>
+        <translation type="unfinished">10 fps</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="160"/>
+        <source>5 fps</source>
+        <translation type="unfinished">5 fps</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="167"/>
+        <source>Analyzer Falloff</source>
+        <translation type="unfinished">Analízer esése</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="170"/>
+        <location filename="../qsuivisualization.cpp" line="184"/>
+        <source>Slowest</source>
+        <translation type="unfinished">Lassabb</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="171"/>
+        <location filename="../qsuivisualization.cpp" line="185"/>
+        <source>Slow</source>
+        <translation type="unfinished">Lassú</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="172"/>
+        <location filename="../qsuivisualization.cpp" line="186"/>
+        <source>Medium</source>
+        <translation type="unfinished">Közepes</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="173"/>
+        <location filename="../qsuivisualization.cpp" line="187"/>
+        <source>Fast</source>
+        <translation type="unfinished">Gyors</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="174"/>
+        <location filename="../qsuivisualization.cpp" line="188"/>
+        <source>Fastest</source>
+        <translation type="unfinished">Gyorsabb</translation>
+    </message>
+    <message>
+        <location filename="../qsuivisualization.cpp" line="181"/>
+        <source>Peaks Falloff</source>
+        <translation type="unfinished">Csúcsok esése</translation>
+    </message>
+</context>
+<context>
+    <name>QSUiFactory</name>
+    <message>
+        <location filename="../qsuifactory.cpp" line="32"/>
+        <source>Simple User Interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QSUiSettings</name>
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
@@ -1399,84 +1515,6 @@
         <location filename="../qsuisettings.cpp" line="47"/>
         <source>64x64</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QSUiAnalyzer</name>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="228"/>
-        <source>Cover</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="231"/>
-        <source>Peaks</source>
-        <translation>Csúcsok</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="234"/>
-        <source>Refresh Rate</source>
-        <translation>Ráta frissítése</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="237"/>
-        <source>50 fps</source>
-        <translation>50 fps</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="238"/>
-        <source>25 fps</source>
-        <translation>25 fps</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="239"/>
-        <source>10 fps</source>
-        <translation>10 fps</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="240"/>
-        <source>5 fps</source>
-        <translation>5 fps</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="247"/>
-        <source>Analyzer Falloff</source>
-        <translation>Analízer esése</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="250"/>
-        <location filename="../qsuianalyzer.cpp" line="264"/>
-        <source>Slowest</source>
-        <translation>Lassabb</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="251"/>
-        <location filename="../qsuianalyzer.cpp" line="265"/>
-        <source>Slow</source>
-        <translation>Lassú</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="252"/>
-        <location filename="../qsuianalyzer.cpp" line="266"/>
-        <source>Medium</source>
-        <translation>Közepes</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="253"/>
-        <location filename="../qsuianalyzer.cpp" line="267"/>
-        <source>Fast</source>
-        <translation>Gyors</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="254"/>
-        <location filename="../qsuianalyzer.cpp" line="268"/>
-        <source>Fastest</source>
-        <translation>Gyorsabb</translation>
-    </message>
-    <message>
-        <location filename="../qsuianalyzer.cpp" line="261"/>
-        <source>Peaks Falloff</source>
-        <translation>Csúcsok esése</translation>
     </message>
 </context>
 <context>

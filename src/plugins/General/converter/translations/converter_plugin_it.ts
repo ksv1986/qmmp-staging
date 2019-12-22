@@ -5,28 +5,28 @@
     <name>Converter</name>
     <message>
         <location filename="../converter.cpp" line="129"/>
-        <location filename="../converter.cpp" line="229"/>
+        <location filename="../converter.cpp" line="231"/>
         <source>Cancelled</source>
         <translation>Annullato</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="144"/>
-        <location filename="../converter.cpp" line="211"/>
+        <location filename="../converter.cpp" line="213"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="179"/>
+        <location filename="../converter.cpp" line="181"/>
         <source>Converting</source>
         <translation>Conversione</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="240"/>
+        <location filename="../converter.cpp" line="242"/>
         <source>Encoding</source>
         <translation>Codifica</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="278"/>
+        <location filename="../converter.cpp" line="280"/>
         <source>Finished</source>
         <translation>Terminata</translation>
     </message>

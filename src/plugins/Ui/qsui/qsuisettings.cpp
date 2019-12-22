@@ -151,6 +151,15 @@ void QSUiSettings::on_resetFontsButton_clicked()
     loadFonts();
 }
 
+void QSUiSettings::on_resetColorsButton_clicked()
+{
+    m_ui.vColor1->setColor("#BECBFF");
+    m_ui.vColor2->setColor("#BECBFF");
+    m_ui.vColor3->setColor( "#BECBFF");
+    m_ui.peaksColor->setColor("#DDDDDD");
+    m_ui.bgColor->setColor("Black");
+}
+
 void QSUiSettings::readSettings()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
@@ -171,10 +180,10 @@ void QSUiSettings::readSettings()
     m_ui.hiddenCheckBox->setChecked(settings.value("start_hidden", false).toBool());
     m_ui.hideOnCloseCheckBox->setChecked(settings.value("hide_on_close", false).toBool());
     m_ui.windowTitleLineEdit->setText(settings.value("window_title_format","%if(%p,%p - %t,%t)").toString());
-    //analyzer colors
-    m_ui.aColor1->setColor(settings.value("vis_color1", "#BECBFF").toString());
-    m_ui.aColor2->setColor(settings.value("vis_color2", "#BECBFF").toString());
-    m_ui.aColor3->setColor(settings.value("vis_color3", "#BECBFF").toString());
+    //visualization colors
+    m_ui.vColor1->setColor(settings.value("vis_color1", "#BECBFF").toString());
+    m_ui.vColor2->setColor(settings.value("vis_color2", "#BECBFF").toString());
+    m_ui.vColor3->setColor(settings.value("vis_color3", "#BECBFF").toString());
     m_ui.peaksColor->setColor(settings.value("vis_peak_color", "#DDDDDD").toString());
     m_ui.bgColor->setColor(settings.value("vis_bg_color", "Black").toString());
     //playlist colors
@@ -221,9 +230,9 @@ void QSUiSettings::writeSettings()
     settings.setValue("start_hidden", m_ui.hiddenCheckBox->isChecked());
     settings.setValue("hide_on_close", m_ui.hideOnCloseCheckBox->isChecked());
     settings.setValue("window_title_format", m_ui.windowTitleLineEdit->text());
-    settings.setValue("vis_color1", m_ui.aColor1->colorName());
-    settings.setValue("vis_color2", m_ui.aColor2->colorName());
-    settings.setValue("vis_color3", m_ui.aColor3->colorName());
+    settings.setValue("vis_color1", m_ui.vColor1->colorName());
+    settings.setValue("vis_color2", m_ui.vColor2->colorName());
+    settings.setValue("vis_color3", m_ui.vColor3->colorName());
     settings.setValue("vis_peak_color", m_ui.peaksColor->colorName());
     settings.setValue("vis_bg_color", m_ui.bgColor->colorName());
     settings.setValue("pl_system_colors", m_ui.plSystemColorsCheckBox->isChecked());

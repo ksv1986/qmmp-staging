@@ -188,18 +188,18 @@
        <item>
         <widget class="QGroupBox" name="groupBox_4">
          <property name="title">
-          <string>Analyzer Colors</string>
+          <string>Visualization Colors</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
           <item row="0" column="0">
            <widget class="QLabel" name="label">
             <property name="text">
-             <string>Analyzer #1:</string>
+             <string>Color #1:</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="ColorWidget" name="aColor1">
+           <widget class="ColorWidget" name="vColor1">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -261,12 +261,12 @@
           <item row="1" column="0">
            <widget class="QLabel" name="label_4">
             <property name="text">
-             <string>Analyzer #2:</string>
+             <string>Color #2:</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="ColorWidget" name="aColor2">
+           <widget class="ColorWidget" name="vColor2">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -325,12 +325,12 @@
           <item row="2" column="0">
            <widget class="QLabel" name="label_6">
             <property name="text">
-             <string>Analyzer #3:</string>
+             <string>Color #3:</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="ColorWidget" name="aColor3">
+           <widget class="ColorWidget" name="vColor3">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -354,7 +354,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="3" colspan="2">
+          <item row="2" column="3" colspan="3">
            <spacer name="horizontalSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -365,19 +365,6 @@
             <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="5" rowspan="3">
-           <spacer name="horizontalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>10</width>
               <height>20</height>
              </size>
             </property>
@@ -395,6 +382,43 @@
              </size>
             </property>
            </spacer>
+          </item>
+          <item row="0" column="5" rowspan="2">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="3" column="0" colspan="6">
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="resetColorsButton">
+              <property name="text">
+               <string>Reset colors</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </widget>

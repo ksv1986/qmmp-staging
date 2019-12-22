@@ -44,6 +44,7 @@ private slots:
     void on_popupTemplateButton_clicked();
     void on_customizeToolBarButton_clicked();
     void on_resetFontsButton_clicked();
+    void on_resetColorsButton_clicked();
     void addWindowTitleString(const QString &str);
 
 private:

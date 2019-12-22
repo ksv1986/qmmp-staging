@@ -34,8 +34,6 @@
 QSUIVisualization::QSUIVisualization(QWidget *parent) : Visual (parent)
 {
     m_pixLabel = new QLabel(this);
-    m_drawer = new QSUiAnalyzer;
-    //m_drawer = new QSUiScope;
     createMenu();
 
     m_timer = new QTimer (this);
@@ -140,19 +138,10 @@ void QSUIVisualization::createMenu()
     }
 
     QMenu *analyzerMode = m_menu->addMenu(tr("Analyzer Mode"));
-    m_analyzerModeGroup = new QActionGroup(this);
     m_analyzerTypeGroup = new QActionGroup(this);
-    m_analyzerModeGroup->addAction(tr("Normal"))->setData(0);
-    m_analyzerModeGroup->addAction(tr("Fire"))->setData(1);
-    m_analyzerModeGroup->addAction(tr("Vertical Lines"))->setData(2);
-    m_analyzerTypeGroup->addAction(tr("Lines"))->setData(0);
-    m_analyzerTypeGroup->addAction(tr("Bars"))->setData(1);
-    for(QAction *act : m_analyzerModeGroup->actions())
-    {
-        act->setCheckable(true);
-        analyzerMode->addAction(act);
-    }
-    analyzerMode->addSeparator ();
+    m_analyzerTypeGroup->addAction(tr("Cells"))->setData("cells");
+    m_analyzerTypeGroup->addAction(tr("Lines"))->setData("lines");
+
     for(QAction *act : m_analyzerTypeGroup->actions())
     {
         act->setCheckable(true);
@@ -239,6 +228,7 @@ void QSUIVisualization::readSettings()
     double peaks_falloff = settings.value("vis_peaks_falloff", 0.2).toDouble();
     double analyzer_falloff = settings.value("vis_analyzer_falloff", 2.2).toDouble();
     bool show_peaks = settings.value("vis_show_peaks", true).toBool();
+    QString analyzer_type = settings.value("vis_analyzer_type", "cells").toString();
 
     if(!m_update)
     {
@@ -267,6 +257,12 @@ void QSUIVisualization::readSettings()
             if (analyzer_falloff == act->data().toDouble())
                 act->setChecked(true);
         }
+        for(QAction *act : m_analyzerTypeGroup->actions())
+        {
+            if(analyzer_type == act->data().toString())
+                act->setChecked(true);
+        }
+
     }
     updateCover();
     settings.endGroup();
@@ -282,6 +278,7 @@ void QSUIVisualization::readSettings()
             m_drawer = new QSUiAnalyzer;
     }
     m_drawer->readSettings();
+    m_drawer->clear();
 }
 
 void QSUIVisualization::writeSettings()
@@ -297,8 +294,10 @@ void QSUIVisualization::writeSettings()
     settings.setValue("vis_analyzer_falloff", act ? act->data().toDouble() : 2.2);
     settings.setValue("vis_show_peaks", m_peaksAction->isChecked());
     settings.setValue("vis_show_cover", m_coverAction->isChecked());
-    act = m_visModeGroup->checkedAction ();
+    act = m_visModeGroup->checkedAction();
     settings.setValue("vis_type", act ? act->data().toString() : "none");
+    act = m_analyzerTypeGroup->checkedAction();
+    settings.setValue("vis_analyzer_type", act ? act->data().toString() : "none");
     settings.endGroup();
 }
 
@@ -342,9 +341,23 @@ void QSUiScope::process(float *buffer, int width, int height)
         m_intern_vis_data = new int[m_width]{ 0 };
     }
 
-    m_heigt = height;
+    if(m_height != height)
+    {
+        m_height = height;
+        QLinearGradient gradient(0, 0, 0, m_height);
+        gradient.setColorAt(0.1, m_color3);
+        gradient.setColorAt(0.3, m_color2);
+        gradient.setColorAt(0.5, m_color1);
+        gradient.setColorAt(0.7, m_color2);
+        gradient.setColorAt(0.9, m_color3);
+        QBrush brush(gradient);
+        m_pen.setWidthF(1.5);
+        m_pen.setJoinStyle(Qt::RoundJoin);
+        m_pen.setCapStyle(Qt::RoundCap);
+        m_pen.setBrush(brush);
+    }
 
-    for(int i = 0; i < width; ++i)
+    for(int i = 0; i < width - 4; ++i)
     {
         pos += step;
         m_intern_vis_data[i] = int(buffer[pos >> 8] * height / 2);
@@ -356,23 +369,11 @@ void QSUiScope::draw(QPainter *p, int offset)
 {
     p->setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
 
-    for (int i = 0; i < m_width - 1; ++i)
+    for (int i = 0; i < m_width - 5; ++i)
     {
-        int h1 = m_heigt / 2 - m_intern_vis_data[i];
-        int h2 = m_heigt / 2 - m_intern_vis_data[i+1];
-        QPen pen;
-        pen.setWidthF(1.5);
-        pen.setJoinStyle(Qt::RoundJoin);
-        pen.setCapStyle(Qt::RoundCap);
-
-        if (abs(m_intern_vis_data[i]) <= m_heigt / 6)
-            pen.setColor(m_color1);
-        else if (abs(m_intern_vis_data[i]) > m_heigt / 6 && abs(m_intern_vis_data[i]) <= m_heigt / 3)
-            pen.setColor(m_color2);
-        else
-            pen.setColor(m_color3);
-
-        p->setPen(pen);
+        int h1 = m_height / 2 - m_intern_vis_data[i];
+        int h2 = m_height / 2 - m_intern_vis_data[i+1];
+        p->setPen(m_pen);
         p->drawLine(i + offset, h1, offset + i + 1, h2);
     }
 }
@@ -380,7 +381,7 @@ void QSUiScope::draw(QPainter *p, int offset)
 void QSUiScope::clear()
 {
     m_width = 0;
-    m_heigt = 0;
+    m_height = 0;
 }
 
 void QSUiScope::readSettings()
@@ -415,6 +416,7 @@ void QSUiAnalyzer::process(float *buffer, int width, int height)
 {
     int rows = qMax((height - 2) / m_cell_size.height(),2);
     int cols = qMax((width - 2) / m_cell_size.width(),1);
+    m_height = height;
 
     if(m_rows != rows || m_cols != cols)
     {
@@ -432,6 +434,12 @@ void QSUiAnalyzer::process(float *buffer, int width, int height)
 
         for(int i = 0; i < m_cols + 1; ++i)
             m_x_scale[i] = pow(pow(255.0, 1.0 / m_cols), i);
+
+        QLinearGradient gradient(0, 0, 0, m_height);
+        gradient.setColorAt(0.33, m_color3);
+        gradient.setColorAt(0.66, m_color2);
+        gradient.setColorAt(1.0, m_color1);
+        m_brush = QBrush(gradient);
     }
     short dest[256];
 
@@ -476,29 +484,26 @@ void QSUiAnalyzer::process(float *buffer, int width, int height)
 
 void QSUiAnalyzer::draw(QPainter *p, int offset)
 {
-    QBrush brush(Qt::SolidPattern);
-    int height = m_rows * m_cell_size.height() + 2;
-
     for (int j = 0; j < m_cols; ++j)
     {
         int x = offset + j * m_cell_size.width() + 1;
 
-        for (int i = 1; i <= m_intern_vis_data[j]; ++i)
+        if(m_analyzerType == Cells)
         {
-            if (i <= m_rows / 3)
-                brush.setColor(m_color1);
-            else if (i > m_rows / 3 && i <= 2 * m_rows / 3)
-                brush.setColor(m_color2);
-            else
-                brush.setColor(m_color3);
-
-            p->fillRect(x, height - (i - 1) * m_cell_size.height(),
-                        m_cell_size.width() - 1, m_cell_size.height() - 4, brush);
+            for (int i = 1; i <= m_intern_vis_data[j]; ++i)
+            {
+                p->fillRect(x, m_height - (i - 1) * m_cell_size.height(),
+                            m_cell_size.width() - 1, m_cell_size.height() - 4, m_brush);
+            }
+        }
+        else if(m_analyzerType == Lines && m_intern_vis_data[j] > 0)
+        {
+            p->fillRect(x, m_height - 4, m_cell_size.width() - 1, -int(m_intern_vis_data[j] - 1)* m_cell_size.height() + 4, m_brush);
         }
 
-        if (m_show_peaks && m_peaks[j] > 0)
+        if (m_show_peaks && m_peaks[j] > 1)
         {
-            p->fillRect(x, height - int(m_peaks[j] - 1) * m_cell_size.height(),
+            p->fillRect(x, m_height - int(m_peaks[j] - 1) * m_cell_size.height(),
                         m_cell_size.width() - 1, m_cell_size.height() - 4, m_peakColor);
         }
     }
@@ -522,5 +527,11 @@ void QSUiAnalyzer::readSettings()
     m_peaks_falloff = settings.value("vis_peaks_falloff", 0.2).toDouble();
     m_analyzer_falloff = settings.value("vis_analyzer_falloff", 2.2).toDouble();
     m_show_peaks = settings.value("vis_show_peaks", true).toBool();
+    QString analyzer_type = settings.value("vis_analyzer_type", "cells").toString();
+    if(analyzer_type == "lines")
+        m_analyzerType = Lines;
+    else
+        m_analyzerType = Cells;
+
     settings.endGroup();
 }

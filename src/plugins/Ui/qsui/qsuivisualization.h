@@ -21,6 +21,7 @@
 #define QSUIVISUALIZATION_H
 
 #include <QWidget>
+#include <QPen>
 #include <QResizeEvent>
 #include <qmmp/visual.h>
 
@@ -77,7 +78,6 @@ private:
     QActionGroup *m_fpsGroup;
     QActionGroup *m_analyzerFalloffGroup;
     QActionGroup *m_peaksFalloffGroup;
-    QActionGroup *m_analyzerModeGroup;
     QActionGroup *m_analyzerTypeGroup;
     bool m_running = false;
     QSUiVisualDrawer *m_drawer = nullptr;
@@ -107,11 +107,12 @@ public:
 
 private:
     int m_width = 0;
-    int m_heigt = 0;
+    int m_height = 0;
     int *m_intern_vis_data = nullptr;
     QColor m_color1;
     QColor m_color2;
     QColor m_color3;
+    QPen m_pen;
 };
 
 class QSUiAnalyzer : public QSUiVisualDrawer
@@ -126,18 +127,27 @@ public:
     void readSettings() override;
 
 private:
+    enum AnalyzerType
+    {
+        Cells = 0,
+        Lines
+    };
+
     int m_cols = 0, m_rows = 0;
     QColor m_color1;
     QColor m_color2;
     QColor m_color3;
     QColor m_peakColor;
     QSize m_cell_size;
+    QBrush m_brush;
     double m_peaks_falloff;
     double m_analyzer_falloff;
     bool m_show_peaks = false;
     double *m_intern_vis_data = nullptr;
     double *m_peaks = nullptr;
     int *m_x_scale = nullptr;
+    int m_height = 0;
+    AnalyzerType m_analyzerType = Cells;
 };
 
 

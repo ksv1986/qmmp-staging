@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -309,7 +309,7 @@ bool Converter::convert(Decoder *decoder, FILE *file, bool use16bit)
     int outSampleSize = AudioParameters::sampleSize(outFormat);
 
     unsigned char input_buffer[QMMP_BLOCK_FRAMES * ap.frameSize() * 4];
-    float converter_buffer[QMMP_BLOCK_FRAMES * ap.channels() * 4];
+    float converter_buffer[QMMP_BLOCK_FRAMES * ap.channels() * sizeof(float)];
     unsigned char output_buffer[QMMP_BLOCK_FRAMES * outSampleSize * ap.channels() * 4];
 
     emit progress(0);

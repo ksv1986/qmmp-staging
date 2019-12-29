@@ -81,7 +81,7 @@
     </size>
    </property>
    <property name="windowTitle">
-    <string>Spectrum Analyzer</string>
+    <string>Visualization</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>8</number>

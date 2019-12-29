@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -57,6 +57,7 @@
 #include "volumeslider.h"
 #include "qsuitabwidget.h"
 #include "qsuiquicksearch.h"
+#include "qsuiwaveformseekbar.h"
 #include "equalizer.h"
 
 #define KEY_OFFSET 10000
@@ -154,6 +155,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_analyzer = new QSUIVisualization(this);
     m_ui.analyzerDockWidget->setWidget(m_analyzer);
     Visual::add(m_analyzer);
+    //waveform seek bar
+    m_seekBar = new QSUIWaveformSeekBar(this);
+    m_ui.waveformSeekBarDockWidget->setWidget(m_seekBar);
     //filesystem browser
     m_ui.fileSystemDockWidget->setWidget(new FileSystemBrowser(this));
     //cover
@@ -886,43 +890,33 @@ void MainWindow::showMetaData()
 
 void MainWindow::setTitleBarsVisible(bool visible)
 {
+    QList<QDockWidget *> widgetList = {
+        m_ui.analyzerDockWidget,
+        m_ui.fileSystemDockWidget,
+        m_ui.coverDockWidget,
+        m_ui.playlistsDockWidget,
+        m_ui.waveformSeekBarDockWidget
+    };
+
     if(visible)
     {
-        QWidget *widget = nullptr;
-        if((widget = m_ui.analyzerDockWidget->titleBarWidget()))
+        for(QDockWidget *w : qAsConst(widgetList))
         {
-            m_ui.analyzerDockWidget->setTitleBarWidget(nullptr);
-            delete widget;
-        }
-        if((widget = m_ui.fileSystemDockWidget->titleBarWidget()))
-        {
-            m_ui.fileSystemDockWidget->setTitleBarWidget(nullptr);
-            delete widget;
-        }
-        if((widget = m_ui.coverDockWidget->titleBarWidget()))
-        {
-            m_ui.coverDockWidget->setTitleBarWidget(nullptr);
-            delete widget;
-        }
-        if((widget = m_ui.playlistsDockWidget->titleBarWidget()))
-        {
-            m_ui.playlistsDockWidget->setTitleBarWidget(nullptr);
-            delete widget;
+            QWidget *widget = w->titleBarWidget();
+            if(widget)
+            {
+                w->setTitleBarWidget(nullptr);
+                delete widget;
+            }
         }
     }
     else
     {
-        if(!m_ui.analyzerDockWidget->titleBarWidget())
-            m_ui.analyzerDockWidget->setTitleBarWidget(new QWidget());
-
-        if(!m_ui.fileSystemDockWidget->titleBarWidget())
-            m_ui.fileSystemDockWidget->setTitleBarWidget(new QWidget());
-
-        if(!m_ui.coverDockWidget->titleBarWidget())
-            m_ui.coverDockWidget->setTitleBarWidget(new QWidget());
-
-        if(!m_ui.playlistsDockWidget->titleBarWidget())
-            m_ui.playlistsDockWidget->setTitleBarWidget(new QWidget());
+        for(QDockWidget *w : qAsConst(widgetList))
+        {
+            if(!w->titleBarWidget())
+                w->setTitleBarWidget(new QWidget());
+        }
     }
 }
 

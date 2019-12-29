@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -43,6 +43,7 @@ class QSUIVisualization;
 class ListWidget;
 class QSUiTabWidget;
 class QSUiQuickSearch;
+class QSUIWaveformSeekBar;
 
 
 /**
@@ -118,6 +119,7 @@ private:
     QSUiQuickSearch *m_quickSearch;
     KeyboardManager *m_key_manager;
     QSUIVisualization *m_analyzer;
+    QSUIWaveformSeekBar *m_seekBar;
     QToolButton *m_addListButton, *m_tabListMenuButton;
     ListWidget *m_listWidget;
     MetaDataFormatter m_titleFormatter;

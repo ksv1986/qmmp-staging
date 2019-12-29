@@ -38,6 +38,7 @@ SET(libqsui_SRCS
     hotkeyeditor.cpp
     volumeslider.cpp
     qsuiquicksearch.cpp
+    qsuiwaveformseekbar.cpp
 )
 
 SET(libqsui_HDRS

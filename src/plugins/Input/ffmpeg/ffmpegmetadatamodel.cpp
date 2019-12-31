@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -48,19 +48,12 @@ FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path) : MetaDataModel(tr
         avformat_find_stream_info(in, nullptr);
         av_read_play(in);
 
-#if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(57,48,0)) //ffmpeg-3.1:  57.48.101
         AVCodecParameters *c = nullptr;
-#else
-        AVCodecContext *c = nullptr;
-#endif
 
         for (uint idx = 0; idx < in->nb_streams; idx++)
         {
-#if (LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(57,48,0)) //ffmpeg-3.1:  57.48.101
             c = in->streams[idx]->codecpar;
-#else
-            c = in->streams[idx]->codec;
-#endif
+
             if (c->codec_type == AVMEDIA_TYPE_VIDEO && c->codec_id == AV_CODEC_ID_MJPEG)
                 break;
         }

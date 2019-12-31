@@ -96,7 +96,7 @@ Requirements:
 - libsndfile >= 1.0.22 (optional)
 - wavpack >= 4.41 (optional)
 - pulseaudio >= 0.9.15 (optional)
-- ffmpeg >= 2.0 or libav >= 0.9 (optional)
+- ffmpeg >= 3.2 (optional)
 - libcdio >= 0.80 (optional)
 - libcdio-paranoia >= 10.2 (since libcdio 0.90)
 - libcddb >= 1.3.1 (optional)

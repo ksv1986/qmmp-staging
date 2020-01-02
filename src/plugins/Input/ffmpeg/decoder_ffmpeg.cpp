@@ -185,9 +185,11 @@ bool DecoderFFmpeg::initialize()
         AVDictionaryEntry *album = av_dict_get(ic->metadata,"album",nullptr,0);
         if(!album)
             album = av_dict_get(ic->metadata,"WM/AlbumTitle",nullptr,0);
+        AVDictionaryEntry *album_artist = av_dict_get(ic->metadata,"album_artist",nullptr,0);
         AVDictionaryEntry *artist = av_dict_get(ic->metadata,"artist",nullptr,0);
         if(!artist)
             artist = av_dict_get(ic->metadata,"author",nullptr,0);
+        AVDictionaryEntry *composer = av_dict_get(ic->metadata,"composer",nullptr,0);
         AVDictionaryEntry *comment = av_dict_get(ic->metadata,"comment",nullptr,0);
         AVDictionaryEntry *genre = av_dict_get(ic->metadata,"genre",nullptr,0);
         AVDictionaryEntry *title = av_dict_get(ic->metadata,"title",nullptr,0);
@@ -202,10 +204,15 @@ bool DecoderFFmpeg::initialize()
         if(!track)
             track = av_dict_get(ic->metadata,"WM/TrackNumber",nullptr,0);
 
+
         if(album)
             metaData.insert(Qmmp::ALBUM, QString::fromUtf8(album->value).trimmed());
+        if(album_artist)
+            metaData.insert(Qmmp::ALBUMARTIST, QString::fromUtf8(album_artist->value).trimmed());
         if(artist)
             metaData.insert(Qmmp::ARTIST, QString::fromUtf8(artist->value).trimmed());
+        if(composer)
+            metaData.insert(Qmmp::COMPOSER, QString::fromUtf8(composer->value).trimmed());
         if(comment)
             metaData.insert(Qmmp::COMMENT, QString::fromUtf8(comment->value).trimmed());
         if(genre)

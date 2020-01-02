@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -237,35 +237,45 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
         }
 
         AVDictionaryEntry *album = av_dict_get(in->metadata,"album",nullptr,0);
-        if(!album)
-            album = av_dict_get(in->metadata,"WM/AlbumTitle",nullptr,0);
+        AVDictionaryEntry *album_artist = av_dict_get(in->metadata,"album_artist",nullptr,0);
         AVDictionaryEntry *artist = av_dict_get(in->metadata,"artist",nullptr,0);
-        if(!artist)
-            artist = av_dict_get(in->metadata,"author",nullptr,0);
+        AVDictionaryEntry *composer = av_dict_get(in->metadata,"composer",nullptr,0);
         AVDictionaryEntry *comment = av_dict_get(in->metadata,"comment",nullptr,0);
         AVDictionaryEntry *genre = av_dict_get(in->metadata,"genre",nullptr,0);
         AVDictionaryEntry *title = av_dict_get(in->metadata,"title",nullptr,0);
-        AVDictionaryEntry *year = av_dict_get(in->metadata,"WM/Year",nullptr,0);
+        AVDictionaryEntry *year = av_dict_get(in->metadata,"date",nullptr,0);
+        AVDictionaryEntry *track = av_dict_get(in->metadata,"track",nullptr,0);
+
+        if(!album)
+            album = av_dict_get(in->metadata,"WM/AlbumTitle",nullptr,0);
+
+        if(!artist)
+            artist = av_dict_get(in->metadata,"author",nullptr,0);
+
+        if(!year)
+            year = av_dict_get(in->metadata,"WM/Year",nullptr,0);
         if(!year)
             year = av_dict_get(in->metadata,"year",nullptr,0);
-        if(!year)
-            year = av_dict_get(in->metadata,"date",nullptr,0);
-        AVDictionaryEntry *track = av_dict_get(in->metadata,"track",nullptr,0);
+
         if(!track)
             track = av_dict_get(in->metadata,"WM/Track",nullptr,0);
         if(!track)
             track = av_dict_get(in->metadata,"WM/TrackNumber",nullptr,0);
 
         if(album)
-            info->setValue(Qmmp::ALBUM, QString::fromUtf8(album->value));
+            info->setValue(Qmmp::ALBUM, QString::fromUtf8(album->value).trimmed());
+        if(album_artist)
+            info->setValue(Qmmp::ALBUMARTIST, QString::fromUtf8(album_artist->value).trimmed());
         if(artist)
-            info->setValue(Qmmp::ARTIST, QString::fromUtf8(artist->value));
+            info->setValue(Qmmp::ARTIST, QString::fromUtf8(artist->value).trimmed());
+        if(composer)
+            info->setValue(Qmmp::COMPOSER, QString::fromUtf8(composer->value).trimmed());
         if(comment)
-            info->setValue(Qmmp::COMMENT, QString::fromUtf8(comment->value));
+            info->setValue(Qmmp::COMMENT, QString::fromUtf8(comment->value).trimmed());
         if(genre)
-            info->setValue(Qmmp::GENRE, QString::fromUtf8(genre->value));
+            info->setValue(Qmmp::GENRE, QString::fromUtf8(genre->value).trimmed());
         if(title)
-            info->setValue(Qmmp::TITLE, QString::fromUtf8(title->value));
+            info->setValue(Qmmp::TITLE, QString::fromUtf8(title->value).trimmed());
         if(year)
             info->setValue(Qmmp::YEAR, year->value);
         if(track)

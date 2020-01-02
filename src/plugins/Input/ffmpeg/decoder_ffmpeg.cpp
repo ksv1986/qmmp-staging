@@ -183,27 +183,30 @@ bool DecoderFFmpeg::initialize()
     {
         QMap<Qmmp::MetaData, QString> metaData;
         AVDictionaryEntry *album = av_dict_get(ic->metadata,"album",nullptr,0);
-        if(!album)
-            album = av_dict_get(ic->metadata,"WM/AlbumTitle",nullptr,0);
         AVDictionaryEntry *album_artist = av_dict_get(ic->metadata,"album_artist",nullptr,0);
         AVDictionaryEntry *artist = av_dict_get(ic->metadata,"artist",nullptr,0);
-        if(!artist)
-            artist = av_dict_get(ic->metadata,"author",nullptr,0);
         AVDictionaryEntry *composer = av_dict_get(ic->metadata,"composer",nullptr,0);
         AVDictionaryEntry *comment = av_dict_get(ic->metadata,"comment",nullptr,0);
         AVDictionaryEntry *genre = av_dict_get(ic->metadata,"genre",nullptr,0);
         AVDictionaryEntry *title = av_dict_get(ic->metadata,"title",nullptr,0);
-        AVDictionaryEntry *year = av_dict_get(ic->metadata,"WM/Year",nullptr,0);
+        AVDictionaryEntry *year = av_dict_get(ic->metadata,"date",nullptr,0);
+        AVDictionaryEntry *track = av_dict_get(ic->metadata,"track",nullptr,0);
+
+        if(!album)
+            album = av_dict_get(ic->metadata,"WM/AlbumTitle",nullptr,0);
+
+        if(!artist)
+            artist = av_dict_get(ic->metadata,"author",nullptr,0);
+
+        if(!year)
+            year = av_dict_get(ic->metadata,"WM/Year",nullptr,0);
         if(!year)
             year = av_dict_get(ic->metadata,"year",nullptr,0);
-        if(!year)
-            year = av_dict_get(ic->metadata,"date",nullptr,0);
-        AVDictionaryEntry *track = av_dict_get(ic->metadata,"track",nullptr,0);
+
         if(!track)
             track = av_dict_get(ic->metadata,"WM/Track",nullptr,0);
         if(!track)
             track = av_dict_get(ic->metadata,"WM/TrackNumber",nullptr,0);
-
 
         if(album)
             metaData.insert(Qmmp::ALBUM, QString::fromUtf8(album->value).trimmed());

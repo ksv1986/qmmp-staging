@@ -191,7 +191,6 @@ bool DecoderFFmpeg::initialize()
         if(!track)
             track = av_dict_get(ic->metadata,"WM/TrackNumber",nullptr,0);
 
-
         if(album)
             metaData.insert(Qmmp::ALBUM, QString::fromUtf8(album->value).trimmed());
         if(album_artist)

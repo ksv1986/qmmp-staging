@@ -111,74 +111,145 @@ void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
     if(m_data.isEmpty())
         return;
 
-    float step = (float)width() / (m_data.count() / 3 / m_channels);
+    float step = float(width()) * 3 * m_channels / m_data.size();
 
-    painter.setPen("#BECBFF");
 
-    for(int i = 0; i < m_data.count(); i+=3)
+    if(m_duration > 0)
+    {
+        QColor color(Qt::darkMagenta);
+        QBrush brush(color);
+        painter.fillRect(0, 0, width() * m_elapsed / m_duration, height(), brush);
+    }
+
+
+    painter.setPen(Qt::cyan);
+    painter.setBrush(Qt::cyan);
+
+    for(int i = 0; i < m_data.size() - m_channels * 3; i+=3)
     {
         int ch = (i / 3) % m_channels;
-        float x = step * i / 3 / m_channels;
+        float x1 = step * (i / m_channels / 3);
+        float x2 = step * (i / m_channels / 3 + 1);
+
+        if(x1 > (float) width() * m_elapsed / m_duration)
+        {
+            painter.setPen("#BECBFF");
+            painter.setBrush(QColor("#BECBFF"));
+        }
 
         if(ch == 0 && m_channels == 1)
         {
             float y1 = height()/2 - m_data[i] * (height() / 4) / 1000;
             float y2 = height()/2 - m_data[i+1] * (height() / 4) / 1000;
+            float y3 = height()/2 - m_data[i+3] * (height() / 4) / 1000;
+            float y4 = height()/2 - m_data[i+4] * (height() / 4) / 1000;
 
-            painter.drawLine(x, y1, x, y2);
+            QPointF points[4] = {
+                { x1, y1 },
+                { x1, y2 },
+                { x2, y4 },
+                { x2, y3 }
+            };
 
+            painter.drawPolygon(points, 4);
         }
         else if(ch == 0)
         {
             float y1 = height()/4 - m_data[i] * (height() / 8) / 1000;
-            float y2 = height()/4 - m_data[i+1] * (height() / 8) / 1000;
+            float y2 = height()/4 - m_data[i + 1] * (height() / 8) / 1000;
+            float y3 = height()/4 - m_data[i + m_channels * 3] * (height() / 8) / 1000;
+            float y4 = height()/4 - m_data[i + m_channels * 3 + 1] * (height() / 8) / 1000;
 
-            painter.drawLine(x, y1, x, y2);
+            QPointF points[4] = {
+                { x1, y1 },
+                { x1, y2 },
+                { x2, y4 },
+                { x2, y3 }
+            };
 
+            painter.drawPolygon(points, 4);
         }
         else if(ch == 1)
         {
             float y1 = 3*height()/4 - m_data[i] * (height() / 8) / 1000;
-            float y2 = 3*height()/4 - m_data[i+1] * (height() / 8) / 1000;
+            float y2 = 3*height()/4 - m_data[i + 1] * (height() / 8) / 1000;
+            float y3 = 3*height()/4 - m_data[i + m_channels * 3] * (height() / 8) / 1000;
+            float y4 = 3*height()/4 - m_data[i + m_channels * 3 + 1] * (height() / 8) / 1000;
 
-            painter.drawLine(x, y1, x, y2);
+            QPointF points[4] = {
+                { x1, y1 },
+                { x1, y2 },
+                { x2, y4 },
+                { x2, y3 }
+            };
 
+            painter.drawPolygon(points, 4);
         }
     }
 
     painter.setPen("#DDDDDD");
+    painter.setBrush(QColor("#DDDDDD"));
 
-    for(int i = 0; i < m_data.count(); i+=3)
+    for(int i = 0; i < m_data.size() - m_channels * 3; i+=3)
     {
         int ch = (i / 3) % m_channels;
-        float x = step * i / 3 / m_channels;
+        float x1 = step * (i / m_channels / 3);
+        float x2 = step * (i / m_channels / 3 + 1);
+
+        /*if(x1 > (float) width() * m_elapsed / m_duration)
+        {
+            painter.setPen("#BECBFF");
+            painter.setBrush(QColor("#BECBFF"));
+        }*/
 
         if(ch == 0 && m_channels == 1)
         {
-            float y3 = height()/2 - m_data[i+2] * (height() / 4) / 1000;
-            float y4 = height()/2 + m_data[i+2] * (height() / 4) / 1000;
-            painter.drawLine(x, y3, x, y4);
+            float y1 = height()/2 - m_data[i + 2] * (height() / 4) / 1000;
+            float y2 = height()/2 + m_data[i + 2] * (height() / 4) / 1000;
+            float y3 = height()/2 - m_data[i + 5] * (height() / 4) / 1000;
+            float y4 = height()/2 + m_data[i + 5] * (height() / 4) / 1000;
+
+            QPointF points[4] = {
+                { x1, y1 },
+                { x1, y2 },
+                { x2, y4 },
+                { x2, y3 }
+            };
+
+            painter.drawPolygon(points, 4);
         }
         else if(ch == 0)
         {
-            float y3 = height()/4 - m_data[i+2] * (height() / 8) / 1000;
-            float y4 = height()/4 + m_data[i+2] * (height() / 8) / 1000;
-            painter.drawLine(x, y3, x, y4);
+            float y1 = height()/4 - m_data[i + 2] * (height() / 8) / 1000;
+            float y2 = height()/4 + m_data[i + 2] * (height() / 8) / 1000;
+            float y3 = height()/4 - m_data[i + m_channels * 3 + 2] * (height() / 8) / 1000;
+            float y4 = height()/4 + m_data[i + m_channels * 3 + 2] * (height() / 8) / 1000;
+
+            QPointF points[4] = {
+                { x1, y1 },
+                { x1, y2 },
+                { x2, y4 },
+                { x2, y3 }
+            };
+
+            painter.drawPolygon(points, 4);
         }
         else if(ch == 1)
         {
-            float y3 = 3*height()/4 - m_data[i+2] * (height() / 8) / 1000;
-            float y4 = 3*height()/4 + m_data[i+2] * (height() / 8) / 1000;
-            painter.drawLine(x, y3, x, y4);
-        }
-    }
+            float y1 = 3*height()/4 - m_data[i + 2] * (height() / 8) / 1000;
+            float y2 = 3*height()/4 + m_data[i + 2] * (height() / 8) / 1000;
+            float y3 = 3*height()/4 - m_data[i + m_channels * 3 + 2] * (height() / 8) / 1000;
+            float y4 = 3*height()/4 + m_data[i + m_channels * 3 + 2] * (height() / 8) / 1000;
 
-    if(m_duration > 0)
-    {
-        QColor color(Qt::white);
-        color.setAlpha(120);
-        QBrush brush(color);
-        painter.fillRect(0, 0, width() * m_elapsed / m_duration, height(), brush);
+            QPointF points[4] = {
+                { x1, y1 },
+                { x1, y2 },
+                { x2, y4 },
+                { x2, y3 }
+            };
+
+            painter.drawPolygon(points, 4);
+        }
     }
 }
 
@@ -290,7 +361,7 @@ void QSUIWaveformScanner::run()
     m_data.clear();
 
     qint64 frames = m_decoder->totalTime() * m_ap.sampleRate() / 1000;
-    int samplesForCalculation = frames / 4096 * m_ap.channels();
+    int samplesForCalculation = frames / 512 * m_ap.channels();
 
     m_mutex.lock();
     float max[m_ap.channels()] = { -1.0 }, min[m_ap.channels()] = { 1.0 }, rms[m_ap.channels()] = { 0 };

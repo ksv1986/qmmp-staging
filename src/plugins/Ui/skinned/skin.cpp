@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *
@@ -787,31 +787,39 @@ void Skin::loadRegion()
     m_regions[EQUALIZER_WS] = createRegion(path, "EqualizerWS");
 }
 
-QRegion Skin::createRegion(const QString &path, const QString &key)
+QRegion Skin::createRegion(const QString &path, const QString &group)
 {
     QRegion region;
     QSettings settings(path, QSettings::IniFormat);
-    QStringList numPoints = settings.value(key+"/NumPoints").toStringList();
-    QStringList value = settings.value(key+"/PointList").toStringList();
+    settings.beginGroup(group);
+    QStringList numPoints, value;
+    for(const QString &key : settings.childKeys())
+    {
+        if(!key.compare("NumPoints", Qt::CaseInsensitive))
+            numPoints = settings.value(key).toStringList();
+        else if(!key.compare("PointList", Qt::CaseInsensitive))
+            value = settings.value(key).toStringList();
+    }
+    settings.endGroup();
     QStringList numbers;
     for(const QString &str : qAsConst(value))
-    numbers << str.split(" ", QString::SkipEmptyParts);
+        numbers << str.split(" ", QString::SkipEmptyParts);
 
-    QList<QString>::iterator n = numbers.begin();
+    QList<QString>::const_iterator n = numbers.constBegin();
     int r = m_double_size ? 2 : 1;
-    for (int i = 0; i < numPoints.size(); ++i)
+    for(int i = 0; i < numPoints.size(); ++i)
     {
-        QList <int> lp;
-        for (int j = 0; j < numPoints.at(i).toInt()*2; j++)
+        QList<int> lp;
+        for (int j = 0; j < numPoints.at(i).toInt() * 2 && n != numbers.constEnd(); j++)
         {
             lp << n->toInt();
             n ++;
         }
         QVector<QPoint> points;
 
-        for (int l = 0; l < lp.size(); l+=2)
+        for(int l = 0; l < lp.size(); l += 2)
         {
-            points << QPoint(lp.at(l)*r, lp.at(l+1)*r);
+            points << QPoint(lp.at(l) * r, lp.at(l + 1) * r);
         }
         region = region.united(QRegion(QPolygon(points)));
     }

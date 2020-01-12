@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *
@@ -394,7 +394,7 @@ private:
     void loadVolume();
     void loadBalance();
     void loadRegion();
-    QRegion createRegion(const QString &path, const QString &key);
+    QRegion createRegion(const QString &path, const QString &group);
     QPixmap *correctSize(QPixmap *pixmap, int w, int h);
 };
 

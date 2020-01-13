@@ -6,22 +6,22 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="28"/>
         <source>Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Greffon barre des tâches</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="49"/>
         <source>About Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>À propos du greffon barre des tâches</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="50"/>
         <source>Qmmp Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Greffon barre des tâches pour Qmmp</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="51"/>
         <source>This plugin adds support for progress indicator in the Windows taskbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce greffon ajoute la visualisation du progrès de la lecture dans la barre des tâches de Windows</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="52"/>

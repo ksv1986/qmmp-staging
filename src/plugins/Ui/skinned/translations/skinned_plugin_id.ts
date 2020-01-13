@@ -6,7 +6,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="38"/>
         <source>&amp;Play</source>
-        <translation>&amp;Main</translation>
+        <translation>&amp;Putar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="38"/>
@@ -1174,7 +1174,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="69"/>
         <source>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</translation>
     </message>
 </context>
 <context>

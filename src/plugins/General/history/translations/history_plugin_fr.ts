@@ -84,7 +84,7 @@
     <message>
         <location filename="../historywindow.ui" line="69"/>
         <source>Last week</source>
-        <translation type="unfinished"></translation>
+        <translation>La semaine dernière</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="76"/>

@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="68"/>
         <source>Exclusive mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode eksklusif</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="58"/>

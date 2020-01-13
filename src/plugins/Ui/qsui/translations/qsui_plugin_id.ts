@@ -124,7 +124,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
         <source>&amp;Record</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rekam</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
@@ -593,7 +593,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="95"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencarian Cepat</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="169"/>
@@ -876,7 +876,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="472"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencarian Cepat</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="528"/>
@@ -1303,17 +1303,17 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="995"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>BilahAlat</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1003"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran ikon:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1028"/>
         <source>Customize...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustomisasikan...</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="411"/>
@@ -1333,7 +1333,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="709"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pembelah:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="965"/>
@@ -1363,27 +1363,27 @@
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
         <source>16x16</source>
-        <translation type="unfinished"></translation>
+        <translation>16x16</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="44"/>
         <source>22x22</source>
-        <translation type="unfinished"></translation>
+        <translation>22x22</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="45"/>
         <source>32x32</source>
-        <translation type="unfinished"></translation>
+        <translation>32x32</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="46"/>
         <source>48x48</source>
-        <translation type="unfinished"></translation>
+        <translation>48x48</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="47"/>
         <source>64x64</source>
-        <translation type="unfinished"></translation>
+        <translation>64x64</translation>
     </message>
 </context>
 <context>

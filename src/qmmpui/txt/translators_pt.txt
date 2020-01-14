@@ -53,6 +53,7 @@ Húngaro:
     Németh Gábor <sutee84@freemail.hu>
 
 Indonésio:
+    Andika Triwidada
     Wantoyo <wantoyek@gmail.com>
 
 Italiano:

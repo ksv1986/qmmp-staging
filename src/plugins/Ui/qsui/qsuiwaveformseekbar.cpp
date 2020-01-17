@@ -33,7 +33,6 @@
 QSUIWaveformSeekBar::QSUIWaveformSeekBar(QWidget *parent) : QWidget(parent)
 {
     m_core = SoundCore::instance();
-    connect(m_core, SIGNAL(trackInfoChanged()), SLOT(onTrackInfoChanged()));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(onStateChanged(Qmmp::State)));
     connect(m_core, SIGNAL(elapsedChanged(qint64)), SLOT(onElapsedChanged(qint64)));
 }
@@ -41,11 +40,6 @@ QSUIWaveformSeekBar::QSUIWaveformSeekBar(QWidget *parent) : QWidget(parent)
 QSize QSUIWaveformSeekBar::sizeHint() const
 {
     return QSize(200, 100);
-}
-
-void QSUIWaveformSeekBar::onTrackInfoChanged()
-{
-    m_core->trackInfo().path();
 }
 
 void QSUIWaveformSeekBar::onStateChanged(Qmmp::State state)
@@ -113,29 +107,14 @@ void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
 
     float step = float(width()) * 3 * m_channels / m_data.size();
 
-
-    if(m_duration > 0)
-    {
-        QColor color(Qt::darkMagenta);
-        QBrush brush(color);
-        painter.fillRect(0, 0, width() * m_elapsed / m_duration, height(), brush);
-    }
-
-
-    painter.setPen(Qt::cyan);
-    painter.setBrush(Qt::cyan);
+    painter.setPen("#BECBFF");
+    painter.setBrush(QColor("#BECBFF"));
 
     for(int i = 0; i < m_data.size() - m_channels * 3; i+=3)
     {
         int ch = (i / 3) % m_channels;
         float x1 = step * (i / m_channels / 3);
         float x2 = step * (i / m_channels / 3 + 1);
-
-        if(x1 > (float) width() * m_elapsed / m_duration)
-        {
-            painter.setPen("#BECBFF");
-            painter.setBrush(QColor("#BECBFF"));
-        }
 
         if(ch == 0 && m_channels == 1)
         {
@@ -196,12 +175,6 @@ void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
         float x1 = step * (i / m_channels / 3);
         float x2 = step * (i / m_channels / 3 + 1);
 
-        /*if(x1 > (float) width() * m_elapsed / m_duration)
-        {
-            painter.setPen("#BECBFF");
-            painter.setBrush(QColor("#BECBFF"));
-        }*/
-
         if(ch == 0 && m_channels == 1)
         {
             float y1 = height()/2 - m_data[i + 2] * (height() / 4) / 1000;
@@ -250,6 +223,17 @@ void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
 
             painter.drawPolygon(points, 4);
         }
+    }
+
+    if(m_duration > 0)
+    {
+        QColor color(Qt::magenta);
+        color.setAlpha(150);
+        QBrush brush(color);
+        painter.fillRect(0, 0, width() * m_elapsed / m_duration, height(), brush);
+        color.setAlpha(255);
+        painter.setPen(color);
+        painter.drawLine(width() * m_elapsed / m_duration, 0, width() * m_elapsed / m_duration, height());
     }
 }
 

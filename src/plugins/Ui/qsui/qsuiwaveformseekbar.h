@@ -40,7 +40,6 @@ public:
     QSize sizeHint() const override;
 
 private slots:
-    void onTrackInfoChanged();
     void onStateChanged(Qmmp::State state);
     void onScanFinished();
     void onElapsedChanged(qint64 elapsed);

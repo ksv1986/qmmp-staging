@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2005-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2005-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QColorDialog>
 #include <QPalette>
 #include "colorwidget.h"
 
@@ -31,10 +30,20 @@ ColorWidget::ColorWidget(QWidget *parent) : QFrame(parent)
 ColorWidget::~ColorWidget()
 {}
 
+QColorDialog::ColorDialogOptions ColorWidget::options() const
+{
+    return m_options;
+}
+
+void ColorWidget::setOptions(QColorDialog::ColorDialogOptions options)
+{
+    m_options = options;
+}
+
 void ColorWidget::mousePressEvent(QMouseEvent *)
 {
     QColor color = QColorDialog::getColor(palette().color(backgroundRole()), parentWidget(),
-                                          tr("Select Color"));
+                                          tr("Select Color"), m_options);
     if (color.isValid())
     {
         setColor(color.name());

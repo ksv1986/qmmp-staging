@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2005-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2005-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,6 +22,7 @@
 
 #include <QFrame>
 #include <QPaintEvent>
+#include <QColorDialog>
 
 /**
 @author Ilya Kotov
@@ -29,19 +30,23 @@
 class ColorWidget : public QFrame
 {
     Q_OBJECT
+    Q_PROPERTY(QColorDialog::ColorDialogOptions options READ options WRITE setOptions)
 public:
     ColorWidget(QWidget *parent = nullptr);
-
     ~ColorWidget();
+
+    QColorDialog::ColorDialogOptions options() const;
+    void setOptions(QColorDialog::ColorDialogOptions options);
 
     const QString colorName() const;
 
 public slots:
-    void setColor (QString);
+    void setColor(QString);
 
 private:
     void mousePressEvent(QMouseEvent *) override;
     QString m_colorName;
+    QColorDialog::ColorDialogOptions m_options = QColorDialog::ColorDialogOptions();
 
 
 };

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -224,6 +224,7 @@ void QSUIVisualization::readSettings()
     m_show_cover = settings.value("vis_show_cover", true).toBool();
     m_timer->setInterval(1000 / settings.value("vis_refresh_rate", 25).toInt());
     QString visName = settings.value("vis_type","analyzer").toString();
+    m_bgColor.setNamedColor(settings.value("vis_bg_color", "Black").toString());
     //analyzer settings
     double peaks_falloff = settings.value("vis_peaks_falloff", 0.2).toDouble();
     double analyzer_falloff = settings.value("vis_analyzer_falloff", 2.2).toDouble();

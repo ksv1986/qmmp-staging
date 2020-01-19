@@ -24,6 +24,7 @@
 #include <QWidget>
 #include <QThread>
 #include <QMutex>
+#include <QPixmap>
 #include <qmmp/audioparameters.h>
 #include <qmmp/qmmp.h>
 
@@ -46,6 +47,13 @@ private slots:
 
 private:
     void paintEvent(QPaintEvent *e) override;
+    void resizeEvent(QResizeEvent *) override;
+    void showEvent(QShowEvent *) override;
+    void mousePressEvent(QMouseEvent *e) override;
+    void mouseReleaseEvent(QMouseEvent *) override;
+    void mouseMoveEvent(QMouseEvent *e) override;
+    void drawWaveform();
+    void readSettings();
 
     SoundCore *m_core;
     QSUIWaveformScanner *m_scanner = nullptr;
@@ -53,6 +61,9 @@ private:
     int m_channels = 0;
     qint64 m_elapsed = 0;
     qint64 m_duration = 0;
+    QColor m_bgColor, m_rmsColor, m_waveFormColor, m_progressBar;
+    QPixmap m_pixmap;
+    int m_pressedPos = -1;
 };
 
 class QSUIWaveformScanner : public QThread

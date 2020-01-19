@@ -20,6 +20,7 @@
 
 #include <QPainter>
 #include <QPaintEvent>
+#include <QSettings>
 #include <QtDebug>
 #include <cmath>
 #include <qmmp/soundcore.h>
@@ -35,6 +36,7 @@ QSUIWaveformSeekBar::QSUIWaveformSeekBar(QWidget *parent) : QWidget(parent)
     m_core = SoundCore::instance();
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(onStateChanged(Qmmp::State)));
     connect(m_core, SIGNAL(elapsedChanged(qint64)), SLOT(onElapsedChanged(qint64)));
+    readSettings();
 }
 
 QSize QSUIWaveformSeekBar::sizeHint() const
@@ -48,12 +50,13 @@ void QSUIWaveformSeekBar::onStateChanged(Qmmp::State state)
     {
     case Qmmp::Playing:
     {
-        if(!m_scanner)
+        if(!m_scanner && isVisible())
         {
             m_scanner = new QSUIWaveformScanner(this);
             connect(m_scanner, SIGNAL(finished()), SLOT(onScanFinished()));
         }
-        m_scanner->scan(m_core->path());
+        if(m_scanner)
+            m_scanner->scan(m_core->path());
     }
         break;
     case Qmmp::Stopped:
@@ -69,7 +72,7 @@ void QSUIWaveformSeekBar::onStateChanged(Qmmp::State state)
         m_data.clear();
         m_elapsed = 0;
         m_duration = 0;
-        update();
+        drawWaveform();
     }
         break;
     default:
@@ -86,29 +89,90 @@ void QSUIWaveformSeekBar::onScanFinished()
     m_channels = m_scanner->audioParameters().channels();
     delete m_scanner;
     m_scanner = nullptr;
-    update();
+    drawWaveform();
 }
 
 void QSUIWaveformSeekBar::onElapsedChanged(qint64 elapsed)
 {
     m_elapsed = elapsed;
     m_duration = m_core->duration();
-    update();
+    if(isVisible())
+        update();
 }
 
 void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
 {
     QPainter painter (this);
-    painter.fillRect(e->rect(), Qt::black);
-    painter.setPen("#BECBFF");
+    painter.fillRect(e->rect(), m_bgColor);
 
+    if(!m_pixmap.isNull())
+        painter.drawPixmap(0, 0, width(), height(), m_pixmap);
+
+    if(m_duration > 0)
+    {
+        int x = m_pressedPos >= 0 ? m_pressedPos : (width() * m_elapsed / m_duration);
+        QColor color = m_progressBar;
+        QBrush brush(color);
+        painter.fillRect(0, 0, x, height(), brush);
+        color.setAlpha(255);
+        painter.setPen(color);
+        painter.drawLine(x, 0, x, height());
+    }
+}
+
+void QSUIWaveformSeekBar::resizeEvent(QResizeEvent *)
+{
+    drawWaveform();
+}
+
+void QSUIWaveformSeekBar::showEvent(QShowEvent *)
+{
+    if(m_data.isEmpty() && m_core->state() == Qmmp::Playing)
+        onStateChanged(Qmmp::Playing); //force redraw
+}
+
+void QSUIWaveformSeekBar::mousePressEvent(QMouseEvent *e)
+{
+    if(e->button() == Qt::LeftButton)
+        m_pressedPos = e->pos().x();
+}
+
+void QSUIWaveformSeekBar::mouseReleaseEvent(QMouseEvent *)
+{
+    if(m_pressedPos >= 0)
+    {
+        if(m_duration > 0)
+            m_core->seek(m_pressedPos * m_duration / width());
+        m_pressedPos = -1;
+    }
+}
+
+void QSUIWaveformSeekBar::mouseMoveEvent(QMouseEvent *e)
+{
+    if(m_pressedPos >= 0)
+    {
+        m_pressedPos = e->pos().x();
+        update();
+    }
+}
+
+void QSUIWaveformSeekBar::drawWaveform()
+{
     if(m_data.isEmpty())
+    {
+        m_pixmap = QPixmap();
+        update();
         return;
+    }
+
+    m_pixmap = QPixmap(width(), height());
+    m_pixmap.fill(m_bgColor);
 
     float step = float(width()) * 3 * m_channels / m_data.size();
 
-    painter.setPen("#BECBFF");
-    painter.setBrush(QColor("#BECBFF"));
+    QPainter painter(&m_pixmap);
+    painter.setPen(m_waveFormColor);
+    painter.setBrush(m_waveFormColor);
 
     for(int i = 0; i < m_data.size() - m_channels * 3; i+=3)
     {
@@ -166,8 +230,8 @@ void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
         }
     }
 
-    painter.setPen("#DDDDDD");
-    painter.setBrush(QColor("#DDDDDD"));
+    painter.setPen(m_rmsColor);
+    painter.setBrush(m_rmsColor);
 
     for(int i = 0; i < m_data.size() - m_channels * 3; i+=3)
     {
@@ -224,23 +288,23 @@ void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
             painter.drawPolygon(points, 4);
         }
     }
+    update();
+}
 
-    if(m_duration > 0)
-    {
-        QColor color(Qt::magenta);
-        color.setAlpha(150);
-        QBrush brush(color);
-        painter.fillRect(0, 0, width() * m_elapsed / m_duration, height(), brush);
-        color.setAlpha(255);
-        painter.setPen(color);
-        painter.drawLine(width() * m_elapsed / m_duration, 0, width() * m_elapsed / m_duration, height());
-    }
+void QSUIWaveformSeekBar::readSettings()
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginGroup("Simple");
+    m_bgColor.setNamedColor(settings.value("wfsb_bg_color", "Black").toString());
+    m_rmsColor.setNamedColor(settings.value("wfsb_rms_color", "#DDDDDD").toString());
+    m_waveFormColor.setNamedColor(settings.value("wfsb_waveform_color", "#BECBFF").toString());
+    m_progressBar.setNamedColor(settings.value("wfsb_progressbar_color", "#9633CA10").toString());
+    settings.endGroup();
+    drawWaveform();
 }
 
 QSUIWaveformScanner::QSUIWaveformScanner(QObject *parent) : QThread(parent)
-{
-
-}
+{}
 
 QSUIWaveformScanner::~QSUIWaveformScanner()
 {
@@ -345,7 +409,7 @@ void QSUIWaveformScanner::run()
     m_data.clear();
 
     qint64 frames = m_decoder->totalTime() * m_ap.sampleRate() / 1000;
-    int samplesForCalculation = frames / 512 * m_ap.channels();
+    int samplesPerCalc = frames / 4096 * m_ap.channels();
 
     m_mutex.lock();
     float max[m_ap.channels()] = { -1.0 }, min[m_ap.channels()] = { 1.0 }, rms[m_ap.channels()] = { 0 };
@@ -366,7 +430,7 @@ void QSUIWaveformScanner::run()
                 rms[ch] += (out[sample] * out[sample]);
 
                 counter++;
-                if(counter >= samplesForCalculation)
+                if(counter >= samplesPerCalc)
                 {
                     for(int ch = 0; ch < m_ap.channels(); ++ch)
                     {
@@ -384,7 +448,6 @@ void QSUIWaveformScanner::run()
         else
         {
             m_mutex.lock();
-            qDebug("finished! %d", m_data.count());
             break;
         }
 

@@ -522,6 +522,7 @@ void MainWindow::createActions()
     m_ui.menuView->addAction(SET_ACTION(ActionManager::WM_ALLWAYS_ON_TOP, this, SLOT(readSettings())));
     m_ui.menuView->addSeparator();
     m_ui.menuView->addAction(m_ui.analyzerDockWidget->toggleViewAction());
+    m_ui.menuView->addAction(m_ui.waveformSeekBarDockWidget->toggleViewAction());
     m_ui.menuView->addAction(m_ui.fileSystemDockWidget->toggleViewAction());
     m_ui.menuView->addAction(m_ui.coverDockWidget->toggleViewAction());
     m_ui.menuView->addAction(m_ui.playlistsDockWidget->toggleViewAction());

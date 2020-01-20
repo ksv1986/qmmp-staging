@@ -45,6 +45,8 @@ QSUiSettings::QSUiSettings(QWidget *parent) : QWidget(parent)
     m_ui.toolBarIconSizeComboBox->addItem(tr("32x32"), 32);
     m_ui.toolBarIconSizeComboBox->addItem(tr("48x48"), 48);
     m_ui.toolBarIconSizeComboBox->addItem(tr("64x64"), 64);
+    //other settings
+    m_ui.wfsbProgressBarColor->setOptions(QColorDialog::ShowAlphaChannel);
     //load settings
     readSettings();
     loadFonts();
@@ -207,6 +209,11 @@ void QSUiSettings::readSettings()
     m_ui.plCurrentTrackBgColor->setColor(settings.value("pl_current_bg_color", normal_bg).toString());
     m_ui.plOverrideGroupBgCheckBox->setChecked(settings.value("pl_override_group_bg", false).toBool());
     m_ui.plOverrideCurrentBgCheckBox->setChecked(settings.value("pl_override_current_bg", false).toBool());
+    //waveform seekbar color
+    m_ui.wfsbBgColor->setColor(settings.value("wfsb_bg_color", "Black").toString());
+    m_ui.wfsbRmsColor->setColor(settings.value("wfsb_rms_color", "#DDDDDD").toString());
+    m_ui.wfsbWaveFormColor->setColor(settings.value("wfsb_waveform_color", "#BECBFF").toString());
+    m_ui.wfsbProgressBarColor->setColor(settings.value("wfsb_progressbar_color", "#9633CA10").toString());
     //toolbar
     int index = m_ui.toolBarIconSizeComboBox->findData(settings.value("toolbar_icon_size", -1).toInt());
     m_ui.toolBarIconSizeComboBox->setCurrentIndex(index > 0 ? index : 0);
@@ -254,6 +261,10 @@ void QSUiSettings::writeSettings()
     settings.setValue("use_system_fonts", m_ui.systemFontsCheckBox->isChecked());
     int index = m_ui.toolBarIconSizeComboBox->currentIndex();
     settings.setValue("toolbar_icon_size", m_ui.toolBarIconSizeComboBox->itemData(index));
+    settings.setValue("wfsb_bg_color", m_ui.wfsbBgColor->colorName());
+    settings.setValue("wfsb_rms_color", m_ui.wfsbRmsColor->colorName());
+    settings.setValue("wfsb_waveform_color", m_ui.wfsbWaveFormColor->colorName());
+    settings.setValue("wfsb_progressbar_color", m_ui.wfsbProgressBarColor->colorName());
     settings.endGroup();
 }
 

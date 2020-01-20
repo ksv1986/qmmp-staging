@@ -39,6 +39,7 @@ class QSUIWaveformSeekBar : public QWidget
 public:
     explicit QSUIWaveformSeekBar(QWidget *parent = nullptr);
     QSize sizeHint() const override;
+    void readSettings();
 
 private slots:
     void onStateChanged(Qmmp::State state);
@@ -53,7 +54,6 @@ private:
     void mouseReleaseEvent(QMouseEvent *) override;
     void mouseMoveEvent(QMouseEvent *e) override;
     void drawWaveform();
-    void readSettings();
 
     SoundCore *m_core;
     QSUIWaveformScanner *m_scanner = nullptr;

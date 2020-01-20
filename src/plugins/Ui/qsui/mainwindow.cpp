@@ -344,6 +344,7 @@ void MainWindow::showSettings()
     readSettings();
     ActionManager::instance()->saveActions();
     m_analyzer->readSettings();
+    m_seekBar->readSettings();
 }
 
 void MainWindow::updateVolumeIcon()

@@ -44,6 +44,19 @@ QSize QSUIWaveformSeekBar::sizeHint() const
     return QSize(200, 100);
 }
 
+void QSUIWaveformSeekBar::readSettings()
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginGroup("Simple");
+    m_bgColor.setNamedColor(settings.value("wfsb_bg_color", "Black").toString());
+    m_rmsColor.setNamedColor(settings.value("wfsb_rms_color", "#DDDDDD").toString());
+    m_waveFormColor.setNamedColor(settings.value("wfsb_waveform_color", "#BECBFF").toString());
+    m_progressBar.setNamedColor(settings.value("wfsb_progressbar_color", "#9633CA10").toString());
+    settings.endGroup();
+    drawWaveform();
+}
+
+
 void QSUIWaveformSeekBar::onStateChanged(Qmmp::State state)
 {
     switch (state)
@@ -292,18 +305,6 @@ void QSUIWaveformSeekBar::drawWaveform()
         }
     }
     update();
-}
-
-void QSUIWaveformSeekBar::readSettings()
-{
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    settings.beginGroup("Simple");
-    m_bgColor.setNamedColor(settings.value("wfsb_bg_color", "Black").toString());
-    m_rmsColor.setNamedColor(settings.value("wfsb_rms_color", "#DDDDDD").toString());
-    m_waveFormColor.setNamedColor(settings.value("wfsb_waveform_color", "#BECBFF").toString());
-    m_progressBar.setNamedColor(settings.value("wfsb_progressbar_color", "#9633CA10").toString());
-    settings.endGroup();
-    drawWaveform();
 }
 
 QSUIWaveformScanner::QSUIWaveformScanner(QObject *parent) : QThread(parent)

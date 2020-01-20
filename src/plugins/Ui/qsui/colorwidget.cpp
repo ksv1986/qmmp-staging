@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include <QPalette>
+#include <QDebug>
 #include "colorwidget.h"
 
 ColorWidget::ColorWidget(QWidget *parent) : QFrame(parent)
@@ -42,11 +43,11 @@ void ColorWidget::setOptions(QColorDialog::ColorDialogOptions options)
 
 void ColorWidget::mousePressEvent(QMouseEvent *)
 {
-    QColor color = QColorDialog::getColor(palette().color(backgroundRole()), parentWidget(),
+    QColor color = QColorDialog::getColor(QColor(m_colorName), parentWidget(),
                                           tr("Select Color"), m_options);
     if (color.isValid())
     {
-        setColor(color.name());
+        setColor(color.name((m_options & QColorDialog::ShowAlphaChannel) ? QColor::HexArgb : QColor::HexRgb));
     }
 }
 

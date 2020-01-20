@@ -134,7 +134,10 @@ void QSUIWaveformSeekBar::showEvent(QShowEvent *)
 void QSUIWaveformSeekBar::mousePressEvent(QMouseEvent *e)
 {
     if(e->button() == Qt::LeftButton)
+    {
         m_pressedPos = e->pos().x();
+        update();
+    }
 }
 
 void QSUIWaveformSeekBar::mouseReleaseEvent(QMouseEvent *)

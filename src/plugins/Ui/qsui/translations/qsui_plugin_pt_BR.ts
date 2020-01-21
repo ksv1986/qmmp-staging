@@ -490,7 +490,7 @@
 <context>
     <name>ColorWidget</name>
     <message>
-        <location filename="../colorwidget.cpp" line="37"/>
+        <location filename="../colorwidget.cpp" line="47"/>
         <source>Select Color</source>
         <translation>Selecionar cor</translation>
     </message>
@@ -663,7 +663,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="949"/>
+        <location filename="../mainwindow.cpp" line="945"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -698,11 +698,6 @@
         <translation>&amp;Ver</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="84"/>
-        <source>Spectrum Analyzer</source>
-        <translation>Analisador de espetro</translation>
-    </message>
-    <message>
         <location filename="../forms/mainwindow.ui" line="99"/>
         <source>Files</source>
         <translation>Arquivos</translation>
@@ -718,280 +713,286 @@
         <translation>Listas de reprodução</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="137"/>
+        <location filename="../forms/mainwindow.ui" line="135"/>
+        <source>Waveform Seek Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/mainwindow.ui" line="149"/>
         <source>Previous</source>
         <translation>Anterior</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="147"/>
+        <location filename="../forms/mainwindow.ui" line="159"/>
         <source>Play</source>
         <translation>Reproduzir</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="157"/>
+        <location filename="../forms/mainwindow.ui" line="169"/>
         <source>Pause</source>
         <translation>Pausa</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="167"/>
+        <location filename="../forms/mainwindow.ui" line="179"/>
         <source>Next</source>
         <translation>Próximo</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="177"/>
+        <location filename="../forms/mainwindow.ui" line="189"/>
         <source>Stop</source>
         <translation>Parar</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="182"/>
+        <location filename="../forms/mainwindow.ui" line="194"/>
         <source>&amp;Add File</source>
         <translation>&amp;Adicionar arquivo</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="187"/>
+        <location filename="../forms/mainwindow.ui" line="199"/>
         <source>&amp;Remove All</source>
         <translation>&amp;Remover tudo</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="192"/>
+        <location filename="../forms/mainwindow.ui" line="204"/>
         <source>New Playlist</source>
         <translation>Nova lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="197"/>
+        <location filename="../forms/mainwindow.ui" line="209"/>
         <source>Remove Playlist</source>
         <translation>Remover lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="202"/>
+        <location filename="../forms/mainwindow.ui" line="214"/>
         <source>&amp;Add Directory</source>
         <translation>A&amp;dicionar pasta</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="207"/>
+        <location filename="../forms/mainwindow.ui" line="219"/>
         <source>&amp;Exit</source>
         <translation>S&amp;air</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="212"/>
+        <location filename="../forms/mainwindow.ui" line="224"/>
         <source>About</source>
         <translation>Sobre</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="217"/>
+        <location filename="../forms/mainwindow.ui" line="229"/>
         <source>About Qt</source>
         <translation>Sobre Qt</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="222"/>
+        <location filename="../forms/mainwindow.ui" line="234"/>
         <source>&amp;Select All</source>
         <translation>&amp;Selecionar tudo</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="227"/>
+        <location filename="../forms/mainwindow.ui" line="239"/>
         <source>&amp;Remove Selected</source>
         <translation>&amp;Remover selecionados</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="232"/>
+        <location filename="../forms/mainwindow.ui" line="244"/>
         <source>&amp;Remove Unselected</source>
         <translation>Remover &amp;não selecionados</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="237"/>
+        <location filename="../forms/mainwindow.ui" line="84"/>
+        <location filename="../forms/mainwindow.ui" line="249"/>
         <source>Visualization</source>
         <translation>Visualização</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="242"/>
+        <location filename="../forms/mainwindow.ui" line="254"/>
         <source>Settings</source>
         <translation>Preferências</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="247"/>
-        <location filename="../mainwindow.cpp" line="294"/>
+        <location filename="../forms/mainwindow.ui" line="259"/>
+        <location filename="../mainwindow.cpp" line="298"/>
         <source>Rename Playlist</source>
         <translation>Renomear lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="471"/>
+        <location filename="../mainwindow.cpp" line="476"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="381"/>
+        <location filename="../mainwindow.cpp" line="386"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;|%2 bit|%3 ca|%4 Hz|faixas: %5|duração total: %6|%7 kbps|</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="382"/>
+        <location filename="../mainwindow.cpp" line="387"/>
         <source>Paused</source>
         <translation>Pausado</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="392"/>
+        <location filename="../mainwindow.cpp" line="397"/>
         <source>&lt;b&gt;%1&lt;/b&gt;|tracks: %2|total time: %3|</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;|faixas: %2|duração total: %3|</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="393"/>
+        <location filename="../mainwindow.cpp" line="398"/>
         <source>Stopped</source>
         <translation>Parado</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="294"/>
+        <location filename="../mainwindow.cpp" line="298"/>
         <source>Playlist name:</source>
         <translation>Nome da lista de reprodução:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="335"/>
+        <location filename="../mainwindow.cpp" line="339"/>
         <source>Appearance</source>
         <translation>Aparência</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="336"/>
+        <location filename="../mainwindow.cpp" line="340"/>
         <source>Shortcuts</source>
         <translation>Atalhos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="382"/>
+        <location filename="../mainwindow.cpp" line="387"/>
         <source>Playing</source>
         <translation>Reprodução</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="461"/>
+        <location filename="../mainwindow.cpp" line="466"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="467"/>
+        <location filename="../mainwindow.cpp" line="472"/>
         <source>P</source>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="469"/>
+        <location filename="../mainwindow.cpp" line="474"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="473"/>
+        <location filename="../mainwindow.cpp" line="478"/>
         <source>Quick Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="535"/>
         <source>Edit Toolbars</source>
         <translation>Editar barras de ferramentas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="531"/>
+        <location filename="../mainwindow.cpp" line="537"/>
         <source>Sort List</source>
         <translation>Organizar lista</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="534"/>
-        <location filename="../mainwindow.cpp" line="575"/>
+        <location filename="../mainwindow.cpp" line="540"/>
+        <location filename="../mainwindow.cpp" line="581"/>
         <source>By Title</source>
         <translation>Por título</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="537"/>
-        <location filename="../mainwindow.cpp" line="578"/>
+        <location filename="../mainwindow.cpp" line="543"/>
+        <location filename="../mainwindow.cpp" line="584"/>
         <source>By Album</source>
         <translation>Por álbum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="540"/>
-        <location filename="../mainwindow.cpp" line="581"/>
+        <location filename="../mainwindow.cpp" line="546"/>
+        <location filename="../mainwindow.cpp" line="587"/>
         <source>By Artist</source>
         <translation>Por artista</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="543"/>
-        <location filename="../mainwindow.cpp" line="584"/>
+        <location filename="../mainwindow.cpp" line="549"/>
+        <location filename="../mainwindow.cpp" line="590"/>
         <source>By Album Artist</source>
         <translation>Por artista do álbum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="546"/>
-        <location filename="../mainwindow.cpp" line="587"/>
+        <location filename="../mainwindow.cpp" line="552"/>
+        <location filename="../mainwindow.cpp" line="593"/>
         <source>By Filename</source>
         <translation>Por nome de arquivo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="549"/>
-        <location filename="../mainwindow.cpp" line="590"/>
+        <location filename="../mainwindow.cpp" line="555"/>
+        <location filename="../mainwindow.cpp" line="596"/>
         <source>By Path + Filename</source>
         <translation>Por caminho e nome de arquivo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="552"/>
-        <location filename="../mainwindow.cpp" line="593"/>
+        <location filename="../mainwindow.cpp" line="558"/>
+        <location filename="../mainwindow.cpp" line="599"/>
         <source>By Date</source>
         <translation>Por data</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="555"/>
-        <location filename="../mainwindow.cpp" line="596"/>
+        <location filename="../mainwindow.cpp" line="561"/>
+        <location filename="../mainwindow.cpp" line="602"/>
         <source>By Track Number</source>
         <translation>Por número de faixa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="558"/>
-        <location filename="../mainwindow.cpp" line="599"/>
+        <location filename="../mainwindow.cpp" line="564"/>
+        <location filename="../mainwindow.cpp" line="605"/>
         <source>By Disc Number</source>
         <translation>Por número de disco</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="561"/>
-        <location filename="../mainwindow.cpp" line="602"/>
+        <location filename="../mainwindow.cpp" line="567"/>
+        <location filename="../mainwindow.cpp" line="608"/>
         <source>By File Creation Date</source>
         <translation>Por data de criação do arquivo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="564"/>
-        <location filename="../mainwindow.cpp" line="605"/>
+        <location filename="../mainwindow.cpp" line="570"/>
+        <location filename="../mainwindow.cpp" line="611"/>
         <source>By File Modification Date</source>
         <translation>Por data de modificação do arquivo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="567"/>
+        <location filename="../mainwindow.cpp" line="573"/>
         <source>By Group</source>
         <translation>Por grupo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="572"/>
+        <location filename="../mainwindow.cpp" line="578"/>
         <source>Sort Selection</source>
         <translation>Organizar seleção</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="610"/>
+        <location filename="../mainwindow.cpp" line="616"/>
         <source>Randomize List</source>
         <translation>Lista aleatória</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="612"/>
+        <location filename="../mainwindow.cpp" line="618"/>
         <source>Reverse List</source>
         <translation>Inverter lista</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="619"/>
-        <location filename="../mainwindow.cpp" line="660"/>
+        <location filename="../mainwindow.cpp" line="625"/>
+        <location filename="../mainwindow.cpp" line="666"/>
         <source>Actions</source>
         <translation>Ações</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="426"/>
+        <location filename="../mainwindow.cpp" line="431"/>
         <source>Add new playlist</source>
         <translation>Adicionar nova lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="432"/>
+        <location filename="../mainwindow.cpp" line="437"/>
         <source>Show all tabs</source>
         <translation>Mostrar todos as abas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="858"/>
+        <location filename="../mainwindow.cpp" line="864"/>
         <source>Buffering: %1%</source>
         <translation>Processamento: %1%</translation>
     </message>
@@ -1113,57 +1114,78 @@
         <translation>Iniciar oculto</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="191"/>
+        <location filename="../forms/qsuisettings.ui" line="206"/>
         <source>Visualization Colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="197"/>
+        <location filename="../forms/qsuisettings.ui" line="212"/>
         <source>Color #1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="264"/>
+        <location filename="../forms/qsuisettings.ui" line="279"/>
         <source>Color #2:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="328"/>
+        <location filename="../forms/qsuisettings.ui" line="343"/>
         <source>Color #3:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="417"/>
+        <location filename="../forms/qsuisettings.ui" line="432"/>
         <source>Reset colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="872"/>
+        <location filename="../forms/qsuisettings.ui" line="873"/>
+        <source>Waveform Seekbar Colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="879"/>
+        <source>Progress bar:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="968"/>
+        <source>RMS:</source>
+        <extracomment>Root mean square</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="1013"/>
+        <source>Waveform:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/qsuisettings.ui" line="1054"/>
         <source>Fonts</source>
         <translation>Tipo de letra</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="878"/>
+        <location filename="../forms/qsuisettings.ui" line="1060"/>
         <source>Use system fonts</source>
         <translation>Utilizar tipo de letra do sistema</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="926"/>
+        <location filename="../forms/qsuisettings.ui" line="1108"/>
         <source>Playlist:</source>
         <translation>Lista de reprodução:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="906"/>
-        <location filename="../forms/qsuisettings.ui" line="971"/>
-        <location filename="../forms/qsuisettings.ui" line="990"/>
+        <location filename="../forms/qsuisettings.ui" line="1088"/>
+        <location filename="../forms/qsuisettings.ui" line="1153"/>
+        <location filename="../forms/qsuisettings.ui" line="1172"/>
         <source>???</source>
         <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="62"/>
-        <location filename="../forms/qsuisettings.ui" line="913"/>
-        <location filename="../forms/qsuisettings.ui" line="936"/>
-        <location filename="../forms/qsuisettings.ui" line="997"/>
+        <location filename="../forms/qsuisettings.ui" line="1095"/>
+        <location filename="../forms/qsuisettings.ui" line="1118"/>
+        <location filename="../forms/qsuisettings.ui" line="1179"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -1218,22 +1240,22 @@
         <translation>Editar modelo</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1019"/>
+        <location filename="../forms/qsuisettings.ui" line="1201"/>
         <source>Reset fonts</source>
         <translation>Restaurar tipo de letra</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1034"/>
+        <location filename="../forms/qsuisettings.ui" line="1216"/>
         <source>Column headers:</source>
         <translation>Cabeçalhos de colunas: </translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="949"/>
+        <location filename="../forms/qsuisettings.ui" line="1131"/>
         <source>Tab names:</source>
         <translation>Nome das abas:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1061"/>
+        <location filename="../forms/qsuisettings.ui" line="1243"/>
         <source>Miscellaneous</source>
         <translation>Diversos</translation>
     </message>
@@ -1253,117 +1275,118 @@
         <translation>Cores</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="232"/>
+        <location filename="../forms/qsuisettings.ui" line="247"/>
         <source>Peaks:</source>
         <translation>Picos:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="296"/>
+        <location filename="../forms/qsuisettings.ui" line="311"/>
+        <location filename="../forms/qsuisettings.ui" line="961"/>
         <source>Background:</source>
         <translation>Fundo:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="429"/>
+        <location filename="../forms/qsuisettings.ui" line="444"/>
         <source>Playlist Colors</source>
         <translation>Cores da lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="451"/>
+        <location filename="../forms/qsuisettings.ui" line="860"/>
         <source>Background #1:</source>
         <translation>Fundo #1:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="496"/>
+        <location filename="../forms/qsuisettings.ui" line="669"/>
         <source>Normal text:</source>
         <translation>Texto normal:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="541"/>
+        <location filename="../forms/qsuisettings.ui" line="617"/>
         <source>Background #2:</source>
         <translation>Fundo #2:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="573"/>
+        <location filename="../forms/qsuisettings.ui" line="717"/>
         <source>Current text:</source>
         <translation>Texto atual:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="605"/>
+        <location filename="../forms/qsuisettings.ui" line="662"/>
         <source>Highlighted background:</source>
         <translation>Destaque de fundo:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="637"/>
+        <location filename="../forms/qsuisettings.ui" line="724"/>
         <source>Highlighted text:</source>
         <translation>Destaque de texto:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="777"/>
+        <location filename="../forms/qsuisettings.ui" line="766"/>
         <source>Override current track background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="787"/>
+        <location filename="../forms/qsuisettings.ui" line="734"/>
         <source>Current track background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="819"/>
+        <location filename="../forms/qsuisettings.ui" line="821"/>
         <source>Override group background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1097"/>
+        <location filename="../forms/qsuisettings.ui" line="1279"/>
         <source>Toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1105"/>
+        <location filename="../forms/qsuisettings.ui" line="1287"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1130"/>
+        <location filename="../forms/qsuisettings.ui" line="1312"/>
         <source>Customize...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="435"/>
+        <location filename="../forms/qsuisettings.ui" line="450"/>
         <source>Use system colors</source>
         <translation>Usar cores do sistema</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="745"/>
+        <location filename="../forms/qsuisettings.ui" line="814"/>
         <source>Group background:</source>
         <translation>Fundo do grupo:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="713"/>
+        <location filename="../forms/qsuisettings.ui" line="828"/>
         <source>Group text:</source>
         <translation>Texto do grupo:</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="672"/>
+        <location filename="../forms/qsuisettings.ui" line="710"/>
         <source>Splitter:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1067"/>
+        <location filename="../forms/qsuisettings.ui" line="1249"/>
         <source>Tabs</source>
         <translation>Abas</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1073"/>
+        <location filename="../forms/qsuisettings.ui" line="1255"/>
         <source>Show close buttons</source>
         <translation>Mostrar botão de fechamento</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1080"/>
+        <location filename="../forms/qsuisettings.ui" line="1262"/>
         <source>Show tab list menu</source>
         <translation>Mostrar menu de lista de separadores</translation>
     </message>
     <message>
-        <location filename="../forms/qsuisettings.ui" line="1087"/>
+        <location filename="../forms/qsuisettings.ui" line="1269"/>
         <source>Show &apos;New Playlist&apos; button</source>
         <translation>Mostrar botão &apos;Nova lista de reprodução&apos;</translation>
     </message>
@@ -1474,6 +1497,20 @@
         <location filename="../qsuivisualization.cpp" line="181"/>
         <source>Peaks Falloff</source>
         <translation type="unfinished">Queda de picos</translation>
+    </message>
+</context>
+<context>
+    <name>QSUIWaveformSeekBar</name>
+    <message>
+        <location filename="../qsuiwaveformseekbar.cpp" line="311"/>
+        <source>2 Channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsuiwaveformseekbar.cpp" line="314"/>
+        <source>RMS</source>
+        <extracomment>Root mean square</extracomment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

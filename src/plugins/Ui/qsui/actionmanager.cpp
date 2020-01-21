@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -62,7 +62,8 @@ ActionManager::ActionManager(QObject *parent) :
     m_actions[UI_ANALYZER] = nullptr; //external action
     m_actions[UI_FILEBROWSER] = nullptr; //external action
     m_actions[UI_COVER] = nullptr; //external action
-    m_actions[UI_PLAYLISTBROWSER] = nullptr; //external action
+    m_actions[UI_PLAYLIST_BROWSER] = nullptr; //external action
+    m_actions[UI_WAVEFORM_SEEKBAR] = nullptr; //external action
     m_actions[UI_SHOW_TABS] = createAction2(tr("Show Tabs"), "show_tabs", "");
     m_actions[UI_SHOW_TITLEBARS] = createAction2(tr("Show Title Bars"), "show_titlebars", "");
     m_actions[UI_BLOCK_TOOLBARS] = createAction2(tr("Block Toolbars"), "block_toolbars", "");

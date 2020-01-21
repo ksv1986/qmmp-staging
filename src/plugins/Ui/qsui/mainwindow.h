@@ -102,7 +102,7 @@ private:
     void createWidgets();
     void createActions();
     void writeSettings();
-    bool m_wasMaximized;
+    bool m_wasMaximized = false;
     PlayListManager *m_pl_manager;
     Ui::MainWindow m_ui;
     MediaPlayer *m_player;
@@ -123,7 +123,7 @@ private:
     QToolButton *m_addListButton, *m_tabListMenuButton;
     ListWidget *m_listWidget;
     MetaDataFormatter m_titleFormatter;
-    bool m_update;
+    bool m_update = false;
     bool m_hideOnClose;
     QSUiTabWidget *m_tabWidget;
 

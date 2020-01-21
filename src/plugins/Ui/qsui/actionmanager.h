@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -67,7 +67,8 @@ public:
         UI_ANALYZER,              //external
         UI_FILEBROWSER,           //external
         UI_COVER,                 //external
-        UI_PLAYLISTBROWSER,       //external
+        UI_PLAYLIST_BROWSER,      //external
+        UI_WAVEFORM_SEEKBAR,      //external
         UI_SHOW_TABS,
         UI_SHOW_TITLEBARS,
         UI_BLOCK_TOOLBARS,

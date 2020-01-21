@@ -34,6 +34,9 @@ class Decoder;
 class InputSource;
 class QSUIWaveformScanner;
 
+/**
+   @author Ilya Kotov <forkotov02@ya.ru>
+*/
 class QSUIWaveformSeekBar : public QWidget
 {
     Q_OBJECT

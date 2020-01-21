@@ -65,8 +65,6 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
     m_ui.setupUi(this);
-    m_update = false;
-    m_wasMaximized = false;
     m_titleFormatter.setPattern("%if(%p,%p - %t,%t)");
     //qmmp objects
     m_player = MediaPlayer::instance();
@@ -467,9 +465,12 @@ void MainWindow::createActions()
     ActionManager::instance()->registerAction(ActionManager::UI_COVER,
                                               m_ui.coverDockWidget->toggleViewAction(),
                                               "cover", "");
-    ActionManager::instance()->registerAction(ActionManager::UI_PLAYLISTBROWSER,
+    ActionManager::instance()->registerAction(ActionManager::UI_PLAYLIST_BROWSER,
                                               m_ui.playlistsDockWidget->toggleViewAction(),
                                               "playlist_browser", tr("P"));
+    ActionManager::instance()->registerAction(ActionManager::UI_WAVEFORM_SEEKBAR,
+                                              m_ui.waveformSeekBarDockWidget->toggleViewAction(),
+                                              "waveform_seekbar", "");
     ActionManager::instance()->registerWidget(ActionManager::UI_POS_SLIDER, m_positionSlider,
                                               tr("Position"), "position_slider");
     ActionManager::instance()->registerWidget(ActionManager::UI_VOL_SLIDER, m_volumeSlider,

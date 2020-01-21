@@ -965,7 +965,7 @@
               <item row="1" column="3">
                <widget class="QLabel" name="label_23">
                 <property name="text">
-                 <string>RMS:</string>
+                 <string extracomment="Root mean square">RMS:</string>
                 </property>
                </widget>
               </item>

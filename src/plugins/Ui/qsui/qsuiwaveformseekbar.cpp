@@ -22,6 +22,8 @@
 #include <QPaintEvent>
 #include <QSettings>
 #include <QToolTip>
+#include <QMenu>
+#include <QAction>
 #include <cmath>
 #include <qmmp/soundcore.h>
 #include <qmmp/inputsource.h>
@@ -37,6 +39,7 @@ QSUIWaveformSeekBar::QSUIWaveformSeekBar(QWidget *parent) : QWidget(parent)
     m_core = SoundCore::instance();
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(onStateChanged(Qmmp::State)));
     connect(m_core, SIGNAL(elapsedChanged(qint64)), SLOT(onElapsedChanged(qint64)));
+    createMenu();
     readSettings();
 }
 
@@ -53,6 +56,12 @@ void QSUIWaveformSeekBar::readSettings()
     m_rmsColor.setNamedColor(settings.value("wfsb_rms_color", "#DDDDDD").toString());
     m_waveFormColor.setNamedColor(settings.value("wfsb_waveform_color", "#BECBFF").toString());
     m_progressBar.setNamedColor(settings.value("wfsb_progressbar_color", "#9633CA10").toString());
+    if(!m_update)
+    {
+        m_update = true;
+        m_showTwoChannelsAction->setChecked(settings.value("wfsb_show_two_channels", true).toBool());
+        m_showRmsAction->setChecked(settings.value("wfsb_show_rms", true).toBool());
+    }
     settings.endGroup();
     drawWaveform();
 }
@@ -114,6 +123,16 @@ void QSUIWaveformSeekBar::onElapsedChanged(qint64 elapsed)
         update();
 }
 
+void QSUIWaveformSeekBar::writeSettings()
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginGroup("Simple");
+    settings.setValue("wfsb_show_two_channels", m_showTwoChannelsAction->isChecked());
+    settings.setValue("wfsb_show_rms", m_showRmsAction->isChecked());
+    settings.endGroup();
+    drawWaveform();
+}
+
 void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
 {
     QPainter painter (this);
@@ -152,6 +171,8 @@ void QSUIWaveformSeekBar::mousePressEvent(QMouseEvent *e)
         m_pressedPos = e->pos().x();
         update();
     }
+    else if(e->button() == Qt::RightButton)
+        m_menu->exec(e->globalPos());
 }
 
 void QSUIWaveformSeekBar::mouseReleaseEvent(QMouseEvent *)
@@ -185,6 +206,9 @@ void QSUIWaveformSeekBar::drawWaveform()
         return;
     }
 
+    bool showTwoChannels = m_showTwoChannelsAction->isChecked();
+    bool showRms = m_showRmsAction->isChecked();
+
     m_pixmap = QPixmap(width(), height());
     m_pixmap.fill(m_bgColor);
 
@@ -200,7 +224,7 @@ void QSUIWaveformSeekBar::drawWaveform()
         float x1 = step * (i / m_channels / 3);
         float x2 = step * (i / m_channels / 3 + 1);
 
-        if(ch == 0 && m_channels == 1)
+        if(ch == 0 && (m_channels == 1 || !showTwoChannels))
         {
             float y1 = height()/2 - m_data[i] * (height() / 4) / 1000;
             float y2 = height()/2 - m_data[i+1] * (height() / 4) / 1000;
@@ -232,7 +256,7 @@ void QSUIWaveformSeekBar::drawWaveform()
 
             painter.drawPolygon(points, 4);
         }
-        else if(ch == 1)
+        else if(ch == 1 && showTwoChannels)
         {
             float y1 = 3*height()/4 - m_data[i] * (height() / 8) / 1000;
             float y2 = 3*height()/4 - m_data[i + 1] * (height() / 8) / 1000;
@@ -250,6 +274,12 @@ void QSUIWaveformSeekBar::drawWaveform()
         }
     }
 
+    if(!showRms)
+    {
+        update();
+        return;
+    }
+
     painter.setPen(m_rmsColor);
     painter.setBrush(m_rmsColor);
 
@@ -259,7 +289,7 @@ void QSUIWaveformSeekBar::drawWaveform()
         float x1 = step * (i / m_channels / 3);
         float x2 = step * (i / m_channels / 3 + 1);
 
-        if(ch == 0 && m_channels == 1)
+        if(ch == 0 && (m_channels == 1 || !showTwoChannels))
         {
             float y1 = height()/2 - m_data[i + 2] * (height() / 4) / 1000;
             float y2 = height()/2 + m_data[i + 2] * (height() / 4) / 1000;
@@ -291,7 +321,7 @@ void QSUIWaveformSeekBar::drawWaveform()
 
             painter.drawPolygon(points, 4);
         }
-        else if(ch == 1)
+        else if(ch == 1 && showTwoChannels)
         {
             float y1 = 3*height()/4 - m_data[i + 2] * (height() / 8) / 1000;
             float y2 = 3*height()/4 + m_data[i + 2] * (height() / 8) / 1000;
@@ -309,6 +339,16 @@ void QSUIWaveformSeekBar::drawWaveform()
         }
     }
     update();
+}
+
+void QSUIWaveformSeekBar::createMenu()
+{
+    m_menu = new QMenu(this);
+    m_showTwoChannelsAction = m_menu->addAction(tr("2 Channels"), this, SLOT(writeSettings()));
+    m_showTwoChannelsAction->setCheckable(true);
+    //: Root mean square
+    m_showRmsAction = m_menu->addAction(tr("RMS"), this, SLOT(writeSettings()));
+    m_showRmsAction->setCheckable(true);
 }
 
 QSUIWaveformScanner::QSUIWaveformScanner(QObject *parent) : QThread(parent)

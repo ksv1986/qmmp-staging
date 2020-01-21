@@ -28,6 +28,7 @@
 #include <qmmp/audioparameters.h>
 #include <qmmp/qmmp.h>
 
+class QMenu;
 class SoundCore;
 class Decoder;
 class InputSource;
@@ -45,6 +46,7 @@ private slots:
     void onStateChanged(Qmmp::State state);
     void onScanFinished();
     void onElapsedChanged(qint64 elapsed);
+    void writeSettings();
 
 private:
     void paintEvent(QPaintEvent *e) override;
@@ -54,9 +56,12 @@ private:
     void mouseReleaseEvent(QMouseEvent *) override;
     void mouseMoveEvent(QMouseEvent *e) override;
     void drawWaveform();
+    void createMenu();
 
     SoundCore *m_core;
     QSUIWaveformScanner *m_scanner = nullptr;
+    QMenu *m_menu;
+    QAction *m_showTwoChannelsAction, *m_showRmsAction;
     QList<int> m_data;
     int m_channels = 0;
     qint64 m_elapsed = 0;
@@ -64,6 +69,7 @@ private:
     QColor m_bgColor, m_rmsColor, m_waveFormColor, m_progressBar;
     QPixmap m_pixmap;
     int m_pressedPos = -1;
+    bool m_update = false;
 };
 
 class QSUIWaveformScanner : public QThread

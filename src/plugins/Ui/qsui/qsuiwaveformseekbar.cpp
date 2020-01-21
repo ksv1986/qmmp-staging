@@ -223,45 +223,27 @@ void QSUIWaveformSeekBar::drawWaveform()
         int ch = (i / 3) % m_channels;
         float x1 = step * (i / m_channels / 3);
         float x2 = step * (i / m_channels / 3 + 1);
-
+        bool draw = false;
+        float zeroPos = 0, ratio = 0;
         if(ch == 0 && (m_channels == 1 || !showTwoChannels))
         {
-            float y1 = height()/2 - m_data[i] * (height() / 4) / 1000;
-            float y2 = height()/2 - m_data[i+1] * (height() / 4) / 1000;
-            float y3 = height()/2 - m_data[i+3] * (height() / 4) / 1000;
-            float y4 = height()/2 - m_data[i+4] * (height() / 4) / 1000;
-
-            QPointF points[4] = {
-                { x1, y1 },
-                { x1, y2 },
-                { x2, y4 },
-                { x2, y3 }
-            };
-
-            painter.drawPolygon(points, 4);
+            zeroPos = height() / 2;
+            ratio = float(height() / 4) / 1000;
+            draw = true;
         }
-        else if(ch == 0)
+        else if(ch == 0 || (ch == 1 && showTwoChannels))
         {
-            float y1 = height()/4 - m_data[i] * (height() / 8) / 1000;
-            float y2 = height()/4 - m_data[i + 1] * (height() / 8) / 1000;
-            float y3 = height()/4 - m_data[i + m_channels * 3] * (height() / 8) / 1000;
-            float y4 = height()/4 - m_data[i + m_channels * 3 + 1] * (height() / 8) / 1000;
-
-            QPointF points[4] = {
-                { x1, y1 },
-                { x1, y2 },
-                { x2, y4 },
-                { x2, y3 }
-            };
-
-            painter.drawPolygon(points, 4);
+            zeroPos = ((ch == 0) ? 1 : 3) * height() / 4;
+            ratio = float(height() / 8) / 1000;
+            draw = true;
         }
-        else if(ch == 1 && showTwoChannels)
+
+        if(draw)
         {
-            float y1 = 3*height()/4 - m_data[i] * (height() / 8) / 1000;
-            float y2 = 3*height()/4 - m_data[i + 1] * (height() / 8) / 1000;
-            float y3 = 3*height()/4 - m_data[i + m_channels * 3] * (height() / 8) / 1000;
-            float y4 = 3*height()/4 - m_data[i + m_channels * 3 + 1] * (height() / 8) / 1000;
+            float y1 = zeroPos - m_data[i] * ratio;
+            float y2 = zeroPos - m_data[i + 1] * ratio;
+            float y3 = zeroPos - m_data[i + m_channels * 3] * ratio;
+            float y4 = zeroPos - m_data[i + m_channels * 3 + 1] * ratio;
 
             QPointF points[4] = {
                 { x1, y1 },
@@ -288,45 +270,27 @@ void QSUIWaveformSeekBar::drawWaveform()
         int ch = (i / 3) % m_channels;
         float x1 = step * (i / m_channels / 3);
         float x2 = step * (i / m_channels / 3 + 1);
-
+        bool draw = false;
+        float zeroPos = 0, ratio = 0;
         if(ch == 0 && (m_channels == 1 || !showTwoChannels))
         {
-            float y1 = height()/2 - m_data[i + 2] * (height() / 4) / 1000;
-            float y2 = height()/2 + m_data[i + 2] * (height() / 4) / 1000;
-            float y3 = height()/2 - m_data[i + 5] * (height() / 4) / 1000;
-            float y4 = height()/2 + m_data[i + 5] * (height() / 4) / 1000;
-
-            QPointF points[4] = {
-                { x1, y1 },
-                { x1, y2 },
-                { x2, y4 },
-                { x2, y3 }
-            };
-
-            painter.drawPolygon(points, 4);
+            zeroPos = height() / 2;
+            ratio = float(height() / 4) / 1000;
+            draw = true;
         }
-        else if(ch == 0)
+        else if(ch == 0 || (ch == 1 && showTwoChannels))
         {
-            float y1 = height()/4 - m_data[i + 2] * (height() / 8) / 1000;
-            float y2 = height()/4 + m_data[i + 2] * (height() / 8) / 1000;
-            float y3 = height()/4 - m_data[i + m_channels * 3 + 2] * (height() / 8) / 1000;
-            float y4 = height()/4 + m_data[i + m_channels * 3 + 2] * (height() / 8) / 1000;
-
-            QPointF points[4] = {
-                { x1, y1 },
-                { x1, y2 },
-                { x2, y4 },
-                { x2, y3 }
-            };
-
-            painter.drawPolygon(points, 4);
+            zeroPos = ((ch == 0) ? 1 : 3) * height() / 4;
+            ratio = float(height() / 8) / 1000;
+            draw = true;
         }
-        else if(ch == 1 && showTwoChannels)
+
+        if(draw)
         {
-            float y1 = 3*height()/4 - m_data[i + 2] * (height() / 8) / 1000;
-            float y2 = 3*height()/4 + m_data[i + 2] * (height() / 8) / 1000;
-            float y3 = 3*height()/4 - m_data[i + m_channels * 3 + 2] * (height() / 8) / 1000;
-            float y4 = 3*height()/4 + m_data[i + m_channels * 3 + 2] * (height() / 8) / 1000;
+            float y1 = zeroPos + m_data[i + 2] * ratio;
+            float y2 = zeroPos - m_data[i + 2] * ratio;
+            float y3 = zeroPos + m_data[i + m_channels * 3 + 2] * ratio;
+            float y4 = zeroPos - m_data[i + m_channels * 3 + 2] * ratio;
 
             QPointF points[4] = {
                 { x1, y1 },

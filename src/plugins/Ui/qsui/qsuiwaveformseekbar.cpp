@@ -21,7 +21,7 @@
 #include <QPainter>
 #include <QPaintEvent>
 #include <QSettings>
-#include <QtDebug>
+#include <QToolTip>
 #include <cmath>
 #include <qmmp/soundcore.h>
 #include <qmmp/inputsource.h>
@@ -29,6 +29,7 @@
 #include <qmmp/decoderfactory.h>
 #include <qmmp/audioconverter.h>
 #include <qmmp/buffer.h>
+#include <qmmpui/metadataformatter.h>
 #include "qsuiwaveformseekbar.h"
 
 QSUIWaveformSeekBar::QSUIWaveformSeekBar(QWidget *parent) : QWidget(parent)
@@ -167,7 +168,10 @@ void QSUIWaveformSeekBar::mouseMoveEvent(QMouseEvent *e)
 {
     if(m_pressedPos >= 0)
     {
-        m_pressedPos = e->pos().x();
+        m_pressedPos = qBound(0, e->pos().x(), width());
+        QToolTip::showText(mapToGlobal(e->pos()),
+                           MetaDataFormatter::formatDuration(m_pressedPos * m_duration / width()),
+                           this, QRect());
         update();
     }
 }

@@ -424,7 +424,9 @@ void QSUIWaveformScanner::run()
     int samplesPerCalc = frames / 4096 * m_ap.channels();
 
     m_mutex.lock();
-    float max[m_ap.channels()] = { -1.0 }, min[m_ap.channels()] = { 1.0 }, rms[m_ap.channels()] = { 0 };
+    float *max = new float[m_ap.channels()]{ -1.0 };
+    float *min = new float[m_ap.channels()]{ 1.0 };
+    float *rms = new float[m_ap.channels()]{ 0 };
     int counter = 0;
     while (!m_user_stop)
     {
@@ -465,6 +467,8 @@ void QSUIWaveformScanner::run()
 
         m_mutex.lock();
     }
-
+    delete [] min;
+    delete [] max;
+    delete [] rms;
     m_mutex.unlock();
 }

@@ -160,7 +160,7 @@ void QSUIWaveformSeekBar::resizeEvent(QResizeEvent *)
 
 void QSUIWaveformSeekBar::showEvent(QShowEvent *)
 {
-    if(m_data.isEmpty() && m_core->state() == Qmmp::Playing)
+    if(m_data.isEmpty() && (m_core->state() == Qmmp::Playing || m_core->state() == Qmmp::Paused))
         onStateChanged(Qmmp::Playing); //force redraw
 }
 

@@ -1313,7 +1313,8 @@
         <location filename="../uihelper.cpp" line="231"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 вже існує.
+Бажаєте замінити?</translation>
     </message>
 </context>
 <context>

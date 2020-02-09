@@ -24,6 +24,7 @@
 #include <QToolTip>
 #include <QMenu>
 #include <QAction>
+#include <QMutexLocker>
 #include <cmath>
 #include <qmmp/soundcore.h>
 #include <qmmp/inputsource.h>
@@ -33,6 +34,8 @@
 #include <qmmp/buffer.h>
 #include <qmmpui/metadataformatter.h>
 #include "qsuiwaveformseekbar.h"
+
+#define NUMBER_OF_VALUES (4096)
 
 QSUIWaveformSeekBar::QSUIWaveformSeekBar(QWidget *parent) : QWidget(parent)
 {
@@ -77,6 +80,7 @@ void QSUIWaveformSeekBar::onStateChanged(Qmmp::State state)
         {
             m_scanner = new QSUIWaveformScanner(this);
             connect(m_scanner, SIGNAL(finished()), SLOT(onScanFinished()));
+            connect(m_scanner, SIGNAL(dataChanged()), SLOT(onDataChanged()));
         }
         if(m_scanner)
             m_scanner->scan(m_core->path());
@@ -112,6 +116,16 @@ void QSUIWaveformSeekBar::onScanFinished()
     m_channels = m_scanner->audioParameters().channels();
     delete m_scanner;
     m_scanner = nullptr;
+    drawWaveform();
+}
+
+void QSUIWaveformSeekBar::onDataChanged()
+{
+    if(!m_scanner || !m_scanner->isRunning())
+        return;
+
+    m_data = m_scanner->data();
+    m_channels = m_scanner->audioParameters().channels();
     drawWaveform();
 }
 
@@ -212,7 +226,7 @@ void QSUIWaveformSeekBar::drawWaveform()
     m_pixmap = QPixmap(width(), height());
     m_pixmap.fill(m_bgColor);
 
-    float step = float(width()) * 3 * m_channels / m_data.size();
+    float step = float(width()) / NUMBER_OF_VALUES;
 
     QPainter painter(&m_pixmap);
     painter.setPen(m_waveFormColor);
@@ -403,6 +417,7 @@ void QSUIWaveformScanner::stop()
 
 const QList<int> &QSUIWaveformScanner::data() const
 {
+    QMutexLocker locker(&m_mutex);
     return m_data;
 }
 
@@ -421,13 +436,14 @@ void QSUIWaveformScanner::run()
     m_data.clear();
 
     qint64 frames = m_decoder->totalTime() * m_ap.sampleRate() / 1000;
-    int samplesPerCalc = frames / 4096 * m_ap.channels();
+    int samplesPerValue = frames / NUMBER_OF_VALUES * m_ap.channels();
 
     m_mutex.lock();
     float *max = new float[m_ap.channels()]{ -1.0 };
     float *min = new float[m_ap.channels()]{ 1.0 };
     float *rms = new float[m_ap.channels()]{ 0 };
     int counter = 0;
+    int channels = m_ap.channels();
     while (!m_user_stop)
     {
         m_mutex.unlock();
@@ -438,23 +454,27 @@ void QSUIWaveformScanner::run()
 
             for(uint sample = 0; sample < len / sizeof(float); sample++)
             {
-                int ch = sample % m_ap.channels();
+                int ch = sample % channels;
                 min[ch] = qMin(min[ch], out[sample]);
                 max[ch] = qMax(max[ch], out[sample]);
                 rms[ch] += (out[sample] * out[sample]);
 
                 counter++;
-                if(counter >= samplesPerCalc)
+                if(counter >= samplesPerValue)
                 {
-                    for(int ch = 0; ch < m_ap.channels(); ++ch)
+                    m_mutex.lock();
+                    for(int ch = 0; ch < channels; ++ch)
                     {
                         m_data << max[ch] * 1000;
                         m_data << min[ch] * 1000;
-                        m_data << std::sqrt(rms[ch] / (counter / m_ap.channels())) * 1000;
+                        m_data << std::sqrt(rms[ch] / (counter / channels)) * 1000;
                         max[ch] = -1.0;
                         min[ch] = 1.0;
                         rms[ch] = 0;
                     }
+                    if(m_data.size() / 3 / channels % (NUMBER_OF_VALUES / 64) == 0)
+                        emit dataChanged();
+                    m_mutex.unlock();
                     counter = 0;
                 }
             }

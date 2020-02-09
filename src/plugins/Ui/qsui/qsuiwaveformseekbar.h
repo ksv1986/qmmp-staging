@@ -48,6 +48,7 @@ public:
 private slots:
     void onStateChanged(Qmmp::State state);
     void onScanFinished();
+    void onDataChanged();
     void onElapsedChanged(qint64 elapsed);
     void writeSettings();
 
@@ -86,13 +87,16 @@ public:
     const QList<int> &data() const;
     const AudioParameters &audioParameters() const;
 
+signals:
+    void dataChanged();
+
 private:
     void run() override;
 
     bool m_user_stop = false;
     Decoder *m_decoder = nullptr;
     InputSource *m_input = nullptr;
-    QMutex m_mutex;
+    mutable QMutex m_mutex;
     QList<int> m_data;
     AudioParameters m_ap;
 };

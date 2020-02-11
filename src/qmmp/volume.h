@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -52,10 +52,12 @@ class QMMP_EXPORT Volume : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     * This enum describes volume capabilities.
+     */
     enum VolumeFlag
     {
-        NoFlags = 0x0,
-        IsMuteSupported = 0x1,
+        IsMuteSupported = 0x1, /*!< Indicates the interface has feature to mute audio */
         HasNotifySignal = 0x2, /*!< Indicates the object supports change notification via
                                 * emitting changed() signal so polling the volume is not needed */
     };
@@ -74,12 +76,18 @@ public:
      * Returns volume level of the \b channel.
      */
     virtual VolumeSettings volume() const = 0;
+    /*!
+     * Returns \b true if volume is disabled. Otherwise returns \b false.
+     */
     virtual bool isMuted() const;
     /*!
      * Mutes/Restores volume. Default implementation does nothing.
      * @param mute - state of volume (\b true - mute, \b false - restore)
      */
     virtual void setMuted(bool mute);
+    /*!
+     * Returns volume flags.
+     */
     virtual VolumeFlags flags() const;
 
 signals:

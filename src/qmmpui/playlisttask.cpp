@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2014-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -465,7 +465,7 @@ void PlayListTask::run()
 
         //create new playlist tracks
         QStringList ignoredFiles;
-        TrackInfo::Parts parts = QmmpUiSettings::instance()->useMetaData() ? TrackInfo::AllParts : TrackInfo::NoParts;
+        TrackInfo::Parts parts = QmmpUiSettings::instance()->useMetaData() ? TrackInfo::AllParts : TrackInfo::Parts();
         for(const QFileInfo &f : qAsConst(l))
         {
             QStringList ignored;

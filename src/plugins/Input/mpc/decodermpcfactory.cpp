@@ -63,7 +63,7 @@ QList<TrackInfo *> DecoderMPCFactory::createPlayList(const QString &path, TrackI
 {
     TrackInfo *info = new TrackInfo(path);
 
-    if(parts == TrackInfo::NoParts)
+    if(parts == TrackInfo::Parts())
         return QList<TrackInfo*>() << info;
 
     TagLib::FileStream stream(QStringToFileName(path), true);

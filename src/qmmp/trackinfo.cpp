@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2018-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2018-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,14 +24,14 @@
 TrackInfo::TrackInfo()
 {
     m_duration = 0;
-    m_parts = NoParts;
+    m_parts = Parts();
 }
 
 TrackInfo::TrackInfo(const QString &path)
 {
     m_path = path;
     m_duration = 0;
-    m_parts = NoParts;
+    m_parts = Parts();
 }
 
 TrackInfo::TrackInfo(const TrackInfo &other)

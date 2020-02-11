@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,6 +40,9 @@ public:
      * Returns a list of the supported files name filters, i.e. "*.m3u *.pls"
      */
     static QStringList nameFilters();
+    /*!
+     * Returns a list of file name filters with description, i.e. "M3U (*.m3u)"
+     */
     static QStringList filters();
     /*!
      * Returns \b true if file \b url is playlist. Otherwise returns \b false.

@@ -180,7 +180,7 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
 
      TrackInfo *info = new TrackInfo(filePath);
 
-    if(parts == TrackInfo::NoParts)
+    if(parts == TrackInfo::Parts())
         return QList<TrackInfo*>() << info;
 
     AVFormatContext *in = nullptr;

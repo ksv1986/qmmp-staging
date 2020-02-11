@@ -60,7 +60,7 @@ public:
     void changeVolume(int delta);
     /*!
      * Sets the volume of the left and right channels with keeping of the balance.
-     * @param volume volume of the left and right channels \b[0..100].
+     * @param volume volume of the left and right channels \b [0..100].
      */
     void setVolume(int volume);
     /*!
@@ -68,6 +68,9 @@ public:
      * @param balance balance between left and right channels \b [-100..100].
      */
     void setBalance(int balance);
+    /*!
+     * Sets volume mute state to \b muted.
+     */
     void setMuted(bool muted);
     /*!
      * Returns left channel volume.
@@ -85,11 +88,19 @@ public:
      * Returns the balance between left and right channels.
      */
     int balance() const;
-
+    /*!
+     * Returns \b true if volume is muted, otherwise returns \b false.
+     */
     bool isMuted() const;
-
+    /*!
+     * Changes buffer volume (software mode only).
+     * \param b \b Buffer pointer.
+     * \param chan \b Number of channels.
+     */
     void apply(Buffer *b, int chan);
-
+    /*!
+     * Returns a pointer to the global VolumeHandler instance.
+     */
     static VolumeHandler *instance();
 
 signals:
@@ -101,14 +112,18 @@ signals:
     void volumeChanged(int left, int right);
     /*!
      * Emitted when the highest volume of the left and right channels has changed.
-     * @param volume new value of the highest volume of the left and right channels.
+     * @param volume New value of the highest volume of the left and right channels.
      */
     void volumeChanged(int volume);
     /*!
      * Emitted when the balance between left and right channels has changed.
-     * @param volume new balance value.
+     * @param balance New balance value.
      */
     void balanceChanged(int balance);
+    /*!
+     * Emitted when volume mute state has changed
+     * \param muted New volume mute state.
+     */
     void mutedChanged(bool muted);
 
 public slots:

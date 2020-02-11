@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -49,7 +49,7 @@ public:
      */
     EqSettings(Bands bands = EQ_BANDS_10);
     /*!
-     * Returns \b true if equalizer os enabled, otherwise returns \b false.
+     * Returns \b true if equalizer is enabled, otherwise returns \b false.
      */
     bool isEnabled() const;
     /*!
@@ -64,6 +64,9 @@ public:
      * Returns number of bands
      */
     int bands() const;
+    /*!
+     * Returns \b true if two passes is enabled, otherwise returns \b false.
+     */
     bool twoPasses() const;
     /*!
      *  Enables equalizer if \p enabled is \b true or disables it if \p enabled is \b false.
@@ -79,6 +82,9 @@ public:
      * Sets equalizer preamp to \b preamp.
      */
     void setPreamp(double preamp);
+    /*!
+     *  Enables two passes for equalizer if \p enabled is \b true or disables it if \p enabled is \b false.
+     */
     void setTwoPasses(bool enabled = true);
     /*!
      * Assigns equalizer settings \b s to this settings.

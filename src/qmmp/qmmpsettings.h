@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -46,10 +46,13 @@ public:
         REPLAYGAIN_DISABLED   /*!< Disable ReplayGain */
     };
 
+    /*!
+     * This enum describes proxy types.
+     */
     enum ProxyType
     {
-        HTTP_PROXY = 0,
-        SOCKS5_PROXY
+        HTTP_PROXY = 0, /*!< HTTP proxy */
+        SOCKS5_PROXY    /*!< SOCKS5 proxy */
     };
     /*!
      * Constructor.
@@ -139,11 +142,15 @@ public:
      * Returns global proxy url.
      */
     const QUrl &proxy() const;
+    /*!
+     * Returls global proxy type.
+     */
     ProxyType proxyType() const;
     /*!
      * Sets network settings.
      * @param use_proxy Enables or disables global proxy.
      * @param auth Enables or disables proxy authentication.
+     * @param type Proxy type.
      * @param proxy Proxy url.
      */
     void setNetworkSettings(bool use_proxy, bool auth, ProxyType type, const QUrl &proxy);

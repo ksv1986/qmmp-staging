@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -135,7 +135,13 @@ public:
      * Returns a list of supported protocols.
      */
     static QStringList protocols();
+    /*!
+     * Returns a list of supported regular expressions for URL.
+     */
     static QList<QRegularExpression> regExps();
+    /*!
+     * Returns InputSourceFactory pointer which supports URL \b url or \b nullptr if \b URL is not supported.
+     */
     static InputSourceFactory *findByUrl(const QString &url);
     /*!
      * Sets whether the input plugin is enabled.

@@ -137,7 +137,7 @@ QList<TrackInfo *> DecoderSndFileFactory::createPlayList(const QString &path, Tr
 {
     TrackInfo *info = new TrackInfo(path);
 
-    if(parts == TrackInfo::NoParts)
+    if(parts == TrackInfo::Parts())
         return QList<TrackInfo*>() << info;
 
     SF_INFO snd_info;

@@ -69,7 +69,7 @@ QList<TrackInfo *> DecoderWavPackFactory::createPlayList(const QString &path, Tr
 
     TrackInfo *info = new TrackInfo(filePath);
 
-    if(parts == TrackInfo::NoParts)
+    if(parts == TrackInfo::Parts())
         return QList<TrackInfo *>() << info;
 
     char err[80] = { 0 };

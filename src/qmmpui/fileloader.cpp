@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,7 +35,7 @@ FileLoader::FileLoader(QObject *parent) : QThread(parent)
     m_settings = QmmpUiSettings::instance();
     m_finished = false;
     m_readMetaDataForPlayLists = true;
-    m_parts = TrackInfo::NoParts;
+    m_parts = TrackInfo::Parts();
     connect(qApp, SIGNAL(aboutToQuit()), SLOT(finish()));
 }
 
@@ -305,7 +305,7 @@ void FileLoader::addPlayList(const QString &fmt, const QByteArray &data)
         MetaDataManager::instance()->prepareForAnotherThread();
         PlayListParser::loadFormats();
         m_filters = MetaDataManager::instance()->nameFilters();
-        m_parts = m_settings->useMetaData() ? TrackInfo::AllParts : TrackInfo::NoParts;
+        m_parts = m_settings->useMetaData() ? TrackInfo::AllParts : TrackInfo::Parts();
         m_readMetaDataForPlayLists = m_settings->readMetaDataForPlayLists();
     }
     start(QThread::IdlePriority);
@@ -332,7 +332,7 @@ void FileLoader::insert(PlayListItem *before, const QStringList &paths)
     {
         MetaDataManager::instance()->prepareForAnotherThread();
         m_filters = MetaDataManager::instance()->nameFilters();
-        m_parts = m_settings->useMetaData() ? TrackInfo::AllParts : TrackInfo::NoParts;
+        m_parts = m_settings->useMetaData() ? TrackInfo::AllParts : TrackInfo::Parts();
         m_readMetaDataForPlayLists = m_settings->readMetaDataForPlayLists();
     }
     start(QThread::IdlePriority);

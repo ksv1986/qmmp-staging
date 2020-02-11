@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -85,7 +85,6 @@ public:
      */
     enum DialogHint
     {
-        NoHints = 0x0,              /*!< Default value. */
         IsCoverEditable = 0x1,      /*!< Enable cover editor. */
         CompletePropertyList = 0x2  /*!< Show properties from \b extraProperties() only (ignore other sources) */
     };
@@ -95,7 +94,7 @@ public:
      * @param readOnly Open file in read-only mode (\b true - enabled, \b false - disable).
      * @param hints Details dialog settings.
      */
-    MetaDataModel(bool readOnly, DialogHints hints = NoHints);
+    MetaDataModel(bool readOnly, DialogHints hints = DialogHints());
     /*!
      * Destructor.
      */

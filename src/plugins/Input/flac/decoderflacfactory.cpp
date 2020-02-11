@@ -83,7 +83,7 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
 
     TrackInfo *info = new TrackInfo(filePath);
 
-    if(parts == TrackInfo::NoParts)
+    if(parts == TrackInfo::Parts())
         return QList<TrackInfo *>() << info;
 
     TagLib::Ogg::XiphComment *tag = nullptr;

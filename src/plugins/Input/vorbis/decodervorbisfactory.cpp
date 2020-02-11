@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -66,7 +66,7 @@ QList<TrackInfo *> DecoderVorbisFactory::createPlayList(const QString &path, Tra
 {
     TrackInfo *info = new TrackInfo(path);
 
-    if(parts == TrackInfo::NoParts)
+    if(parts == TrackInfo::Parts())
         return QList<TrackInfo*>() << info;
 
     TagLib::FileStream stream(QStringToFileName(path), true);

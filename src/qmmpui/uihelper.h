@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -86,6 +86,7 @@ public:
      * Creates menu with type \b type
      * @param type Menu type.
      * @param title Menu title.
+     * @param autoHide Hide empty menu.
      * @param parent Parent widget
      */
     QMenu *createMenu(MenuType type, const QString &title = QString(), bool autoHide = true, QWidget *parent = nullptr);
@@ -93,6 +94,7 @@ public:
      * Registers existing menu for access from general plugins.
      * @param type Menu type.
      * @param menu Menu pointer.
+     * @param autoHide Hide empty menu.
      * @param before An action, after which the rest are added.
      */
     void registerMenu(MenuType type, QMenu *menu, bool autoHide = false, QAction *before = nullptr);

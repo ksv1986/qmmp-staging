@@ -32,5 +32,5 @@ void Volume::setMuted(bool mute)
 
 Volume::VolumeFlags Volume::flags() const
 {
-    return Volume::NoFlags;
+    return Volume::VolumeFlags();
 }

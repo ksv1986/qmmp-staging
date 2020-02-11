@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2019 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Copyright (C) 2003-2007 by Justin Karneges and Michail Pishchagin     *

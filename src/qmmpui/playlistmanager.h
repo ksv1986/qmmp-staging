@@ -152,6 +152,10 @@ public slots:
      */
     void activatePlayList(int index);
     /*!
+     * Sets selected playlist as current.
+     */
+    void activateSelectedPlayList();
+    /*!
      * Creates and selects new playlist with the given name \b name.
      */
     PlayListModel *createPlayList(const QString &name = QString());

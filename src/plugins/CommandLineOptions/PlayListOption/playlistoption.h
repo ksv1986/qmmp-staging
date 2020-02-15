@@ -48,6 +48,8 @@ private:
         PL_LIST,
         PL_DUMP,
         PL_PLAY,
+        PL_NEXT,
+        PL_PREV,
         PL_CLEAR,
         PL_REPEATE_TOGGLE,
         PL_SHUFFLE_TOGGLE,

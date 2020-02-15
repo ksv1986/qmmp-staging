@@ -168,6 +168,11 @@ void PlayListManager::activatePlayList(int index)
     activatePlayList(playListAt(index));
 }
 
+void PlayListManager::activateSelectedPlayList()
+{
+    activatePlayList(selectedPlayList());
+}
+
 PlayListModel *PlayListManager::createPlayList(const QString &name)
 {
     PlayListModel *model = new PlayListModel (name.isEmpty() ? tr("Playlist") : name, this);

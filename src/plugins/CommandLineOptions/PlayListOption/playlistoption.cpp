@@ -34,7 +34,9 @@ void PlayListOption::registerOprions()
     registerOption(PL_LIST, "--pl-list", tr("List all available playlists"));
     registerOption(PL_DUMP, "--pl-dump", tr("Show playlist content"), QStringList() << "id");
     registerOption(PL_PLAY, "--pl-play", tr("Play track <track> in playlist <id>"), QStringList() << "id" << "track");
-    registerOption(PL_CLEAR, "--pl-clear",  tr("Clear playlist"), QStringList() << "id");
+    registerOption(PL_CLEAR, "--pl-clear", tr("Clear playlist"), QStringList() << "id");
+    registerOption(PL_NEXT, "--pl-next", tr("Activate next playlist"));
+    registerOption(PL_PREV, "--pl-prev", tr("Activate previous playlist"));
     registerOption(PL_REPEATE_TOGGLE, "--pl-repeat-toggle", tr("Toggle playlist repeat"));
     registerOption(PL_SHUFFLE_TOGGLE, "--pl-shuffle-toggle", tr("Toggle playlist shuffle"));
     registerOption(PL_STATE, "--pl-state", tr("Show playlist options"));
@@ -44,6 +46,8 @@ void PlayListOption::registerOprions()
     setOptionFlags(PL_DUMP, HiddenFromHelp);
     setOptionFlags(PL_PLAY, HiddenFromHelp);
     setOptionFlags(PL_CLEAR, HiddenFromHelp);
+    setOptionFlags(PL_NEXT, HiddenFromHelp);
+    setOptionFlags(PL_PREV, HiddenFromHelp);
     setOptionFlags(PL_REPEATE_TOGGLE, HiddenFromHelp);
     setOptionFlags(PL_SHUFFLE_TOGGLE, HiddenFromHelp);
     setOptionFlags(PL_STATE, HiddenFromHelp);
@@ -75,6 +79,8 @@ QString PlayListOption::executeCommand(int id, const QStringList &args)
                 << helpString(PL_DUMP)
                 << helpString(PL_PLAY)
                 << helpString(PL_CLEAR)
+                << helpString(PL_NEXT)
+                << helpString(PL_PREV)
                 << helpString(PL_REPEATE_TOGGLE)
                 << helpString(PL_SHUFFLE_TOGGLE)
                 << helpString(PL_STATE);
@@ -133,6 +139,28 @@ QString PlayListOption::executeCommand(int id, const QStringList &args)
         pl_manager->selectPlayList(model);
         model->setCurrent(track);
         player->play();
+    }
+        break;
+    case PL_NEXT:
+    {
+        bool playing = SoundCore::instance()->state() == Qmmp::Playing;
+        player->stop();
+        pl_manager->selectPlayList(pl_manager->currentPlayList());
+        pl_manager->selectNextPlayList();
+        pl_manager->activateSelectedPlayList();
+        if(playing)
+            player->play();
+    }
+        break;
+    case PL_PREV:
+    {
+        bool playing = SoundCore::instance()->state() == Qmmp::Playing;
+        player->stop();
+        pl_manager->selectPlayList(pl_manager->currentPlayList());
+        pl_manager->selectPreviousPlayList();
+        pl_manager->activateSelectedPlayList();
+        if(playing)
+            player->play();
     }
         break;
     case PL_CLEAR:

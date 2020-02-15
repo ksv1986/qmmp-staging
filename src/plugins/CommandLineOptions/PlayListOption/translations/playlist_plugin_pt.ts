@@ -30,33 +30,43 @@
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="38"/>
+        <source>Activate next playlist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistoption.cpp" line="39"/>
+        <source>Activate previous playlist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../playlistoption.cpp" line="40"/>
         <source>Toggle playlist repeat</source>
         <translation>Alternar repetição da lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="39"/>
+        <location filename="../playlistoption.cpp" line="41"/>
         <source>Toggle playlist shuffle</source>
         <translation>Alternar embaralhação da lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="40"/>
+        <location filename="../playlistoption.cpp" line="42"/>
         <source>Show playlist options</source>
         <translation>Mostrar opções da lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="104"/>
-        <location filename="../playlistoption.cpp" line="126"/>
-        <location filename="../playlistoption.cpp" line="143"/>
+        <location filename="../playlistoption.cpp" line="110"/>
+        <location filename="../playlistoption.cpp" line="132"/>
+        <location filename="../playlistoption.cpp" line="171"/>
         <source>Invalid playlist ID</source>
         <translation>ID inválida de lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="120"/>
+        <location filename="../playlistoption.cpp" line="126"/>
         <source>Invalid number of arguments</source>
         <translation>Número inválido de argumentos</translation>
     </message>
     <message>
-        <location filename="../playlistoption.cpp" line="130"/>
+        <location filename="../playlistoption.cpp" line="136"/>
         <source>Invalid track ID</source>
         <translation>ID de faixa inválida</translation>
     </message>

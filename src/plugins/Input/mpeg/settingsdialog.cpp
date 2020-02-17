@@ -59,6 +59,7 @@ SettingsDialog::SettingsDialog(bool using_rusxmms, QWidget *parent)
     m_ui.firstTagComboBox->setCurrentIndex(settings.value("tag_1", ID3v2).toInt());
     m_ui.secondTagComboBox->setCurrentIndex(settings.value("tag_2", APE).toInt());
     m_ui.thirdTagComboBox->setCurrentIndex(settings.value("tag_3", ID3v1).toInt());
+    m_ui.mergeTagsCheckBox->setChecked(settings.value("merge_tags", false).toBool());
 
     settings.endGroup();
 
@@ -83,6 +84,7 @@ void SettingsDialog::accept()
     settings.setValue("tag_1", m_ui.firstTagComboBox->currentIndex());
     settings.setValue("tag_2", m_ui.secondTagComboBox->currentIndex());
     settings.setValue("tag_3", m_ui.thirdTagComboBox->currentIndex());
+    settings.setValue("merge_tags", m_ui.mergeTagsCheckBox->isChecked());
     settings.endGroup();
     QDialog::accept();
 }

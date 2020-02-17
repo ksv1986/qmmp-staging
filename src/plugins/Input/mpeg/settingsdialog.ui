@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>294</width>
-    <height>362</height>
+    <width>380</width>
+    <height>391</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -236,6 +236,16 @@
          </size>
         </property>
        </spacer>
+      </item>
+      <item row="3" column="0" colspan="4">
+       <widget class="QCheckBox" name="mergeTagsCheckBox">
+        <property name="text">
+         <string>Merge selected tag types</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

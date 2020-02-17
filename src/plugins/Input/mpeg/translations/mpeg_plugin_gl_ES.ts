@@ -14,32 +14,32 @@
         <translation>Ficheiros MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="386"/>
+        <location filename="../decodermpegfactory.cpp" line="396"/>
         <source>About MPEG Audio Plugin</source>
         <translation>Sobre o engadido MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="387"/>
+        <location filename="../decodermpegfactory.cpp" line="397"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
         <translation>Decodificador de audio MPEG 1.0/2.0/2.5 capa 1/2/3</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="388"/>
+        <location filename="../decodermpegfactory.cpp" line="398"/>
         <source>Compiled against:</source>
         <translation>Compilado usando:</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="397"/>
+        <location filename="../decodermpegfactory.cpp" line="407"/>
         <source>mpg123, API version: %1</source>
         <translation>mpg123, versión API: %1</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="401"/>
+        <location filename="../decodermpegfactory.cpp" line="411"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Escrito por: LLya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="402"/>
+        <location filename="../decodermpegfactory.cpp" line="412"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Código fonte baseado nos proxectos mq3 e madplay</translation>
     </message>
@@ -141,17 +141,22 @@
         <translation>Terceira:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="252"/>
+        <location filename="../settingsdialog.ui" line="243"/>
+        <source>Merge selected tag types</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="262"/>
         <source>Encodings</source>
         <translation>Codificacións</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="264"/>
+        <location filename="../settingsdialog.ui" line="274"/>
         <source>ID3v1 encoding:</source>
         <translation>Codificación ID3v1:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="290"/>
+        <location filename="../settingsdialog.ui" line="300"/>
         <source>ID3v2 encoding:</source>
         <translation>Codificación ID3v2:</translation>
     </message>

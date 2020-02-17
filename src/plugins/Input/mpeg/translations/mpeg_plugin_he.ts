@@ -14,32 +14,32 @@
         <translation>קבצי MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="386"/>
+        <location filename="../decodermpegfactory.cpp" line="396"/>
         <source>About MPEG Audio Plugin</source>
         <translation>אודות תוסף שמע MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="387"/>
+        <location filename="../decodermpegfactory.cpp" line="397"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="388"/>
+        <location filename="../decodermpegfactory.cpp" line="398"/>
         <source>Compiled against:</source>
         <translation>הודר כנגד:</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="397"/>
+        <location filename="../decodermpegfactory.cpp" line="407"/>
         <source>mpg123, API version: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="401"/>
+        <location filename="../decodermpegfactory.cpp" line="411"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="402"/>
+        <location filename="../decodermpegfactory.cpp" line="412"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>קוד מקור מבוסס על המיזמים mq3 וגם madplay</translation>
     </message>
@@ -141,17 +141,22 @@
         <translation>שלישית:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="252"/>
+        <location filename="../settingsdialog.ui" line="243"/>
+        <source>Merge selected tag types</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="262"/>
         <source>Encodings</source>
         <translation>קידודים</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="264"/>
+        <location filename="../settingsdialog.ui" line="274"/>
         <source>ID3v1 encoding:</source>
         <translation>קידוד ID3v1:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="290"/>
+        <location filename="../settingsdialog.ui" line="300"/>
         <source>ID3v2 encoding:</source>
         <translation>קידוד ID3v2:</translation>
     </message>

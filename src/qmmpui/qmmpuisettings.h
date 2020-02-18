@@ -84,6 +84,10 @@ public:
      */
     bool isNoPlayListAdvance() const;
     /*!
+     * Returns \b true if transition between playlists is enabled, otherwise returns \b false
+     */
+    bool isPlayListTransitionEnabled() const;
+    /*!
      * Sets the "Convert underscores to blanks" option state to \b enabled
      * @param enabled Option state (\b true - enabled, \b false - disabled)
      */
@@ -217,6 +221,11 @@ signals:
      * \b false - normal playlist behaviour)
      */
     void noPlayListAdvanceChanged(bool enabled);
+    /*!
+     * Emitted when state of the "transition between playlists" option changes
+     * @param enabled State of transition (\b true - enabled, \b false - disabled)
+     */
+    void playListTransitionChanged(bool enabled) const;
 
 public slots:
     /*!
@@ -231,7 +240,7 @@ public slots:
     void setShuffle(bool s);
     /*!
      * Enables or disables playlist groups
-     * * @param enabled State of the groups (\b true - enabled, \b false - disabled)
+     * @param enabled State of the groups (\b true - enabled, \b false - disabled)
      */
     void setGroupsEnabled(bool enabled);
     /*!
@@ -245,6 +254,11 @@ public slots:
      * (\b true - enabled, \b false - normal playback)
      */
     void setNoPlayListAdvance(bool enabled);
+    /*!
+     * Enables or disables transition between playlists
+     * @param enabled State of transition (\b true - enabled, \b false - disabled)
+     */
+    void setPlayListTransitionEnabled(bool enabled);
 
 private slots:
     /*!
@@ -267,6 +281,7 @@ private:
     bool m_no_pl_advance;
     bool m_clear_prev_playlist;
     bool m_read_metadata_for_playlist;
+    bool m_transit_between_playlists;
     //general
     bool m_resume_on_startup;
     QStringList m_exclude_filters, m_restrict_filters;

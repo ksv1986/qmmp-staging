@@ -48,6 +48,7 @@ QmmpUiSettings::QmmpUiSettings(QObject *parent) : QObject(parent)
     m_no_pl_advance = s.value("no_advance", false).toBool();
     m_clear_prev_playlist = s.value("clear_previous", false).toBool();
     m_read_metadata_for_playlist = s.value("read_metadata_for_playlist", true).toBool();
+    m_transit_between_playlists = s.value("transit_between_playlists", false).toBool();
     s.endGroup();
     s.beginGroup("General");
     m_resume_on_startup = s.value("resume_on_startup", false).toBool();
@@ -100,6 +101,11 @@ bool QmmpUiSettings::isRepeatableTrack() const
 bool QmmpUiSettings::isNoPlayListAdvance() const
 {
     return m_no_pl_advance;
+}
+
+bool QmmpUiSettings::isPlayListTransitionEnabled() const
+{
+    return m_transit_between_playlists;
 }
 
 bool QmmpUiSettings::convertUnderscore() const
@@ -181,6 +187,7 @@ void QmmpUiSettings::sync()
     s.setValue("PlayList/no_advance", m_no_pl_advance);
     s.setValue("PlayList/clear_previous", m_clear_prev_playlist);
     s.setValue("PlayList/read_metadata_for_playlist", m_read_metadata_for_playlist);
+    s.setValue("PlayList/transit_between_playlists", m_transit_between_playlists);
     s.setValue("General/resume_on_startup", m_resume_on_startup);
     s.setValue("General/restrict_filters", m_restrict_filters);
     s.setValue("General/exclude_filters", m_exclude_filters);
@@ -191,47 +198,62 @@ void QmmpUiSettings::sync()
 
 void QmmpUiSettings::setRepeatableList(bool r)
 {
-    if(m_repeate_list == r)
-        return;
-    m_repeate_list = r;
-    m_timer->start();
-    emit repeatableListChanged(r);
+    if(m_repeate_list != r)
+    {
+        m_repeate_list = r;
+        m_timer->start();
+        emit repeatableListChanged(r);
+    }
 }
 
 void QmmpUiSettings::setShuffle(bool s)
 {
-    if(m_shuffle == s)
-        return;
-    m_shuffle = s;
-    m_timer->start();
-    emit shuffleChanged(s);
+    if(m_shuffle != s)
+    {
+        m_shuffle = s;
+        m_timer->start();
+        emit shuffleChanged(s);
+    }
 }
 
 void QmmpUiSettings::setGroupsEnabled(bool enabled)
 {
-    if(m_groups_enabled == enabled)
-        return;
-    m_groups_enabled = enabled;
-    m_timer->start();
-    emit groupsChanged(enabled);
+    if(m_groups_enabled != enabled)
+    {
+        m_groups_enabled = enabled;
+        m_timer->start();
+        emit groupsChanged(enabled);
+    }
 }
 
 void QmmpUiSettings::setRepeatableTrack(bool enabled)
 {
-    if(m_repeat_track == enabled)
-        return;
-    m_repeat_track = enabled;
-    m_timer->start();
-    emit repeatableTrackChanged(enabled);
+    if(m_repeat_track != enabled)
+    {
+        m_repeat_track = enabled;
+        m_timer->start();
+        emit repeatableTrackChanged(enabled);
+    }
 }
 
 void QmmpUiSettings::setNoPlayListAdvance(bool enabled)
 {
-    if(m_no_pl_advance == enabled)
-        return;
-    m_no_pl_advance = enabled;
-    m_timer->start();
-    emit noPlayListAdvanceChanged(enabled);
+    if(m_no_pl_advance != enabled)
+    {
+        m_no_pl_advance = enabled;
+        m_timer->start();
+        emit noPlayListAdvanceChanged(enabled);
+    }
+}
+
+void QmmpUiSettings::setPlayListTransitionEnabled(bool enabled)
+{
+    if(m_transit_between_playlists != enabled)
+    {
+        m_transit_between_playlists = enabled;
+        m_timer->start();
+        emit playListTransitionChanged(enabled);
+    }
 }
 
 QStringList QmmpUiSettings::restrictFilters() const

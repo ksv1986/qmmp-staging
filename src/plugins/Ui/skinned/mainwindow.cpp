@@ -314,6 +314,7 @@ void MainWindow::readSettings()
         ACTION(ActionManager::SHUFFLE)->setChecked(m_ui_settings->isShuffle());
         ACTION(ActionManager::REPEAT_TRACK)->setChecked(m_ui_settings->isRepeatableTrack());
         ACTION(ActionManager::NO_PL_ADVANCE)->setChecked(m_ui_settings->isNoPlayListAdvance());
+        ACTION(ActionManager::TRANSIT_BETWEEN_PLAYLISTS)->setChecked(m_ui_settings->isPlayListTransitionEnabled());
         m_update = true;
     }
 #ifdef QMMP_WS_X11
@@ -444,8 +445,11 @@ void MainWindow::createActions()
     plMenu->addAction(SET_ACTION(ActionManager::SHUFFLE, m_ui_settings, SLOT(setShuffle(bool))));
     plMenu->addAction(SET_ACTION(ActionManager::NO_PL_ADVANCE, m_ui_settings,
                                  SLOT(setNoPlayListAdvance(bool))));
+    plMenu->addAction(SET_ACTION(ActionManager::TRANSIT_BETWEEN_PLAYLISTS, m_ui_settings,
+                                 SLOT(setPlayListTransitionEnabled(bool))));
     plMenu->addAction(SET_ACTION(ActionManager::STOP_AFTER_SELECTED, m_pl_manager,
                                  SLOT(stopAfterSelected())));
+
     plMenu->addAction(SET_ACTION(ActionManager::CLEAR_QUEUE, m_pl_manager, SLOT(clearQueue())));
     connect(m_ui_settings, SIGNAL(repeatableListChanged(bool)),
             ACTION(ActionManager::REPEAT_ALL), SLOT(setChecked(bool)));
@@ -455,6 +459,8 @@ void MainWindow::createActions()
             ACTION(ActionManager::NO_PL_ADVANCE), SLOT(setChecked(bool)));
     connect(m_ui_settings, SIGNAL(shuffleChanged(bool)),
             ACTION(ActionManager::SHUFFLE), SLOT(setChecked(bool)));
+    connect(m_ui_settings, SIGNAL(playListTransitionChanged(bool)),
+            ACTION(ActionManager::TRANSIT_BETWEEN_PLAYLISTS), SLOT(setChecked(bool)));
 
     QMenu *audioMenu = m_mainMenu->addMenu(tr("Audio"));
     audioMenu->addAction(SET_ACTION(ActionManager::VOL_ENC, m_core, SLOT(volumeUp())));

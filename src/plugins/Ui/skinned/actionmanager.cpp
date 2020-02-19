@@ -34,78 +34,71 @@ ActionManager::ActionManager(QObject *parent) :
     m_instance = this;
     m_settings = new QSettings(Qmmp::configFile(), QSettings::IniFormat);
     m_settings->beginGroup("SkinnedShortcuts");
-    //playback
-    m_actions[PLAY] = createAction(tr("&Play"), "play", tr("X"), "media-playback-start");
-    m_actions[PAUSE] = createAction(tr("&Pause"), "pause", tr("C"), "media-playback-pause");
-    m_actions[STOP] = createAction(tr("&Stop"), "stop", tr("V"), "media-playback-stop");
-    m_actions[PREVIOUS] = createAction(tr("&Previous"), "previous", tr("Z"), "media-skip-backward");
-    m_actions[NEXT] = createAction(tr("&Next"), "next", tr("B"), "media-skip-forward");
-    m_actions[PLAY_PAUSE] = createAction(tr("&Play/Pause"), "play_pause", tr("Space"));
-    m_actions[JUMP] = createAction(tr("&Jump to Track"), "jump", tr("J"), "go-up");
-    m_actions[REPEAT_ALL] = createAction2(tr("&Repeat Playlist"), "repeate_playlist", tr("R"));
-    m_actions[REPEAT_TRACK] = createAction2(tr("&Repeat Track"), "repeate_track", tr("Ctrl+R"));
-    m_actions[SHUFFLE] = createAction2(tr("&Shuffle"), "shuffle", tr("S"));
-    m_actions[NO_PL_ADVANCE] = createAction2(tr("&No Playlist Advance"), "no_playlist_advance",
-                                            tr("Ctrl+N"));
-    m_actions[STOP_AFTER_SELECTED] = createAction(tr("&Stop After Selected"), "stop_after_selected",
-                                                  tr("Ctrl+S"));
-    m_actions[CLEAR_QUEUE] = createAction(tr("&Clear Queue"), "clear_queue", tr("Alt+Q"));
-    //view
-    m_actions[SHOW_PLAYLIST] = createAction2(tr("Show Playlist"), "show_playlist", tr("Alt+E"));
-    m_actions[SHOW_EQUALIZER] = createAction2(tr("Show Equalizer"), "show_equalizer", tr("Alt+G"));
-    m_actions[WM_ALLWAYS_ON_TOP] = createAction2(tr("Always on Top"), "always_on_top", "");
-    m_actions[WM_STICKY] = createAction2(tr("Put on All Workspaces"), "sticky", "");
-    m_actions[WM_DOUBLE_SIZE] = createAction2(tr("Double Size"), "double_size", tr("Meta+D"));
-    m_actions[WM_ANTIALIASING] = createAction2(tr("Anti-aliasing"), "anti_aliasing", "");
-    connect(m_actions[WM_DOUBLE_SIZE], SIGNAL(toggled(bool)), m_actions[WM_ANTIALIASING], SLOT(setEnabled(bool)));
-    m_actions[WM_ANTIALIASING]->setEnabled(false);
-    //volume
-    m_actions[VOL_ENC] = createAction(tr("Volume &+"), "vol_enc", tr("0"));
-    m_actions[VOL_DEC] = createAction(tr("Volume &-"), "vol_dec", tr("9"));
-    m_actions[VOL_MUTE] = createAction2(tr("&Mute"), "vol_mute", tr("M"));
-    //playlist
-    m_actions[PL_ADD_FILE] = createAction(tr("&Add File"), "add_file", tr("F"), "audio-x-generic");
-    m_actions[PL_ADD_DIRECTORY] = createAction(tr("&Add Directory"), "add_dir", tr("D"), "folder");
-    m_actions[PL_ADD_URL] = createAction(tr("&Add Url"), "add_url", tr("U"), "network-server");
-    m_actions[PL_REMOVE_SELECTED] = createAction(tr("&Remove Selected"), "remove_selected",
-                                                 tr("Del"), "edit-delete");
-    m_actions[PL_REMOVE_ALL] = createAction(tr("&Remove All"), "remove_all", "", "edit-clear");
-    m_actions[PL_REMOVE_UNSELECTED] = createAction(tr("&Remove Unselected"), "remove_unselected",
-                                                   "", "edit-delete");
-    m_actions[PL_REMOVE_INVALID] = createAction(tr("Remove unavailable files"), "remove_invalid",
-                                                "", "dialog-error");
-    m_actions[PL_REMOVE_DUPLICATES] = createAction(tr("Remove duplicates"), "remove_duplicates", "");
-    m_actions[PL_REFRESH] = createAction(tr("Refresh"), "refresh", "F5", "view-refresh");
-    m_actions[PL_ENQUEUE] = createAction(tr("&Queue Toggle"), "enqueue", tr("Q"));
-    m_actions[PL_INVERT_SELECTION] = createAction(tr("Invert Selection"), "invert_selection", "");
-    m_actions[PL_CLEAR_SELECTION] = createAction(tr("&Select None"), "clear_selection", "");
-    m_actions[PL_SELECT_ALL] = createAction(tr("&Select All"), "select_all",
-                                            tr("Ctrl+A"), "edit-select-all");
-    m_actions[PL_SHOW_INFO] = createAction(tr("&View Track Details"), "show_info", tr("Alt+I"),
-                                           "dialog-information");
-    m_actions[PL_NEW] = createAction(tr("&New List"), "new_pl", tr("Ctrl+T"), "document-new");
-    m_actions[PL_CLOSE] = createAction(tr("&Delete List"), "close_pl", tr("Ctrl+W"), "window-close");
-    m_actions[PL_LOAD] = createAction(tr("&Load List"), "load_pl", tr("O"), "document-open");
-    m_actions[PL_SAVE] = createAction(tr("&Save List"), "save_pl", tr("Shift+S"), "document-save-as");
-    m_actions[PL_RENAME] = createAction(tr("&Rename List"), "pl_rename", tr("F2"));
-    m_actions[PL_SELECT_NEXT] = createAction(tr("&Select Next Playlist"), "next_pl",
-                                             tr("Ctrl+PgDown"), "go-next");
-    m_actions[PL_SELECT_PREVIOUS] = createAction(tr("&Select Previous Playlist"), "prev_pl",
-                                                 tr("Ctrl+PgUp"), "go-previous");
-    m_actions[PL_SHOW_MANAGER] = createAction(tr("&Show Playlists"), "show_playlists",
-                                              tr("P"), "view-list-details");
-    m_actions[PL_GROUP_TRACKS] = createAction2(tr("&Group Tracks"), "group_tracks", tr("Ctrl+G"));
-    m_actions[PL_SHOW_HEADER] = createAction2(tr("&Show Column Headers"), "show_header", tr("Ctrl+H"));
-    //other
-    m_actions[SETTINGS] = createAction(tr("&Settings"), "show_settings", tr("Ctrl+P"), "configure");
-    m_actions[ABOUT] = createAction(tr("&About"), "about", "");
-    m_actions[ABOUT_QT] = createAction(tr("&About Qt"), "about_qt", "");
-    m_actions[QUIT] = createAction(tr("&Exit"), "exit", tr("Ctrl+Q"), "application-exit");
+    m_actions = {
+        //playback
+        { PLAY, createAction(tr("&Play"), "play", tr("X"), "media-playback-start") },
+        { PAUSE, createAction(tr("&Pause"), "pause", tr("C"), "media-playback-pause") },
+        { STOP, createAction(tr("&Stop"), "stop", tr("V"), "media-playback-stop") },
+        { PREVIOUS, createAction(tr("&Previous"), "previous", tr("Z"), "media-skip-backward") },
+        { NEXT, createAction(tr("&Next"), "next", tr("B"), "media-skip-forward") },
+        { PLAY_PAUSE, createAction(tr("&Play/Pause"), "play_pause", tr("Space")) },
+        { JUMP, createAction(tr("&Jump to Track"), "jump", tr("J"), "go-up") },
+        { REPEAT_ALL, createAction2(tr("&Repeat Playlist"), "repeate_playlist", tr("R")) },
+        { REPEAT_TRACK, createAction2(tr("&Repeat Track"), "repeate_track", tr("Ctrl+R")) },
+        { SHUFFLE, createAction2(tr("&Shuffle"), "shuffle", tr("S")) },
+        { NO_PL_ADVANCE, createAction2(tr("&No Playlist Advance"), "no_playlist_advance", tr("Ctrl+N")) },
+        { STOP_AFTER_SELECTED, createAction(tr("&Stop After Selected"), "stop_after_selected", tr("Ctrl+S")) },
+        { TRANSIT_BETWEEN_PLAYLISTS, createAction2(tr("&Transit between playlists"), "transit_between_playlists") },
+        { CLEAR_QUEUE, createAction(tr("&Clear Queue"), "clear_queue", tr("Alt+Q")) },
+        //view
+        { SHOW_PLAYLIST, createAction2(tr("Show Playlist"), "show_playlist", tr("Alt+E")) },
+        { SHOW_EQUALIZER, createAction2(tr("Show Equalizer"), "show_equalizer", tr("Alt+G")) },
+        { WM_ALLWAYS_ON_TOP, createAction2(tr("Always on Top"), "always_on_top") },
+        { WM_STICKY, createAction2(tr("Put on All Workspaces"), "sticky") },
+        { WM_DOUBLE_SIZE, createAction2(tr("Double Size"), "double_size", tr("Meta+D")) },
+        { WM_ANTIALIASING, createAction2(tr("Anti-aliasing"), "anti_aliasing") },
+        //volume
+        { VOL_ENC, createAction(tr("Volume &+"), "vol_enc", tr("0")) },
+        { VOL_DEC, createAction(tr("Volume &-"), "vol_dec", tr("9")) },
+        { VOL_MUTE, createAction2(tr("&Mute"), "vol_mute", tr("M")) },
+        //playlist
+        { PL_ADD_FILE, createAction(tr("&Add File"), "add_file", tr("F"), "audio-x-generic") },
+        { PL_ADD_DIRECTORY, createAction(tr("&Add Directory"), "add_dir", tr("D"), "folder") },
+        { PL_ADD_URL, createAction(tr("&Add Url"), "add_url", tr("U"), "network-server") },
+        { PL_REMOVE_SELECTED, createAction(tr("&Remove Selected"), "remove_selected", tr("Del"), "edit-delete") },
+        { PL_REMOVE_ALL, createAction(tr("&Remove All"), "remove_all", "", "edit-clear") },
+        { PL_REMOVE_UNSELECTED, createAction(tr("&Remove Unselected"), "remove_unselected","", "edit-delete") },
+        { PL_REMOVE_INVALID, createAction(tr("Remove unavailable files"), "remove_invalid", "", "dialog-error") },
+        { PL_REMOVE_DUPLICATES, createAction(tr("Remove duplicates"), "remove_duplicates") },
+        { PL_REFRESH, createAction(tr("Refresh"), "refresh", "F5", "view-refresh") },
+        { PL_ENQUEUE, createAction(tr("&Queue Toggle"), "enqueue", tr("Q")) },
+        { PL_INVERT_SELECTION, createAction(tr("Invert Selection"), "invert_selection") },
+        { PL_CLEAR_SELECTION, createAction(tr("&Select None"), "clear_selection") },
+        { PL_SELECT_ALL, createAction(tr("&Select All"), "select_all", tr("Ctrl+A"), "edit-select-all") },
+        { PL_SHOW_INFO, createAction(tr("&View Track Details"), "show_info", tr("Alt+I"), "dialog-information") },
+        { PL_NEW, createAction(tr("&New List"), "new_pl", tr("Ctrl+T"), "document-new") },
+        { PL_CLOSE, createAction(tr("&Delete List"), "close_pl", tr("Ctrl+W"), "window-close") },
+        { PL_LOAD, createAction(tr("&Load List"), "load_pl", tr("O"), "document-open") },
+        { PL_SAVE, createAction(tr("&Save List"), "save_pl", tr("Shift+S"), "document-save-as") },
+        { PL_RENAME, createAction(tr("&Rename List"), "pl_rename", tr("F2")) },
+        { PL_SELECT_NEXT, createAction(tr("&Select Next Playlist"), "next_pl", tr("Ctrl+PgDown"), "go-next") },
+        { PL_SELECT_PREVIOUS, createAction(tr("&Select Previous Playlist"), "prev_pl", tr("Ctrl+PgUp"), "go-previous") },
+        { PL_SHOW_MANAGER, createAction(tr("&Show Playlists"), "show_playlists", tr("P"), "view-list-details") },
+        { PL_GROUP_TRACKS, createAction2(tr("&Group Tracks"), "group_tracks", tr("Ctrl+G")) },
+        { PL_SHOW_HEADER, createAction2(tr("&Show Column Headers"), "show_header", tr("Ctrl+H")) },
+        //other
+        { SETTINGS, createAction(tr("&Settings"), "show_settings", tr("Ctrl+P"), "configure") },
+        { ABOUT, createAction(tr("&About"), "about") },
+        { ABOUT_QT, createAction(tr("&About Qt"), "about_qt") },
+        { QUIT, createAction(tr("&Exit"), "exit", tr("Ctrl+Q"), "application-exit") },
+      };
     m_settings->endGroup();
     readStates();
     delete m_settings;
     m_settings = nullptr;
     m_actions[ABOUT]->setIcon(qApp->windowIcon());
+    connect(m_actions[WM_DOUBLE_SIZE], SIGNAL(toggled(bool)), m_actions[WM_ANTIALIASING], SLOT(setEnabled(bool)));
+    m_actions[WM_ANTIALIASING]->setEnabled(false);
 }
 
 ActionManager::~ActionManager()

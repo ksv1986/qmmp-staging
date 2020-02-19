@@ -55,6 +55,7 @@ public:
         REPEAT_TRACK,
         SHUFFLE,
         NO_PL_ADVANCE,
+        TRANSIT_BETWEEN_PLAYLISTS,
         STOP_AFTER_SELECTED,
         CLEAR_QUEUE,
 
@@ -109,8 +110,8 @@ public:
     static ActionManager* instance();
 
 private:
-    QAction *createAction(QString name, QString confKey, QString key, QString iconName = QString());
-    QAction *createAction2(QString name, QString confKey, QString key);
+    QAction *createAction(QString name, QString confKey, QString key = QString(), QString iconName = QString());
+    QAction *createAction2(QString name, QString confKey, QString key = QString());
     void readStates();
     void saveStates();
 

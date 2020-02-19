@@ -446,6 +446,7 @@ void MainWindow::createActions()
     ACTION(ActionManager::REPEAT_TRACK)->setChecked(m_ui_settings->isRepeatableTrack());
     ACTION(ActionManager::SHUFFLE)->setChecked(m_ui_settings->isShuffle());
     ACTION(ActionManager::NO_PL_ADVANCE)->setChecked(m_ui_settings->isNoPlayListAdvance());
+    ACTION(ActionManager::TRANSIT_BETWEEN_PLAYLISTS)->setChecked(m_ui_settings->isPlayListTransitionEnabled());
 
     connect(m_ui_settings, SIGNAL(repeatableListChanged(bool)),
             ACTION(ActionManager::REPEAT_ALL), SLOT(setChecked(bool)));
@@ -455,6 +456,8 @@ void MainWindow::createActions()
             ACTION(ActionManager::NO_PL_ADVANCE), SLOT(setChecked(bool)));
     connect(m_ui_settings, SIGNAL(shuffleChanged(bool)),
             ACTION(ActionManager::SHUFFLE), SLOT(setChecked(bool)));
+    connect(m_ui_settings, SIGNAL(playListTransitionChanged(bool)),
+            ACTION(ActionManager::TRANSIT_BETWEEN_PLAYLISTS), SLOT(setChecked(bool)));
     //register external actions
     ActionManager::instance()->registerAction(ActionManager::UI_ANALYZER,
                                               m_ui.analyzerDockWidget->toggleViewAction(),
@@ -535,7 +538,7 @@ void MainWindow::createActions()
     m_ui.menuView->addAction(SET_ACTION(ActionManager::UI_BLOCK_TOOLBARS, this, SLOT(setToolBarsBlocked(bool))));
     m_ui.menuView->addAction(tr("Edit Toolbars"), this, SLOT(editToolBar()));
 
-    QMenu* sort_mode_menu = new QMenu (tr("Sort List"), this);
+    QMenu *sort_mode_menu = new QMenu (tr("Sort List"), this);
     sort_mode_menu->setIcon(QIcon::fromTheme("view-sort-ascending"));
 
     QAction *titleAct = sort_mode_menu->addAction(tr ("By Title"));
@@ -645,8 +648,11 @@ void MainWindow::createActions()
                                             SLOT(setShuffle(bool))));
     m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::NO_PL_ADVANCE, m_ui_settings,
                                             SLOT(setNoPlayListAdvance(bool))));
+    m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::TRANSIT_BETWEEN_PLAYLISTS, m_ui_settings,
+                                            SLOT(setPlayListTransitionEnabled(bool))));
     m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::STOP_AFTER_SELECTED, m_pl_manager,
                                             SLOT(stopAfterSelected())));
+
     m_ui.menuPlayback->addSeparator();
     m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::VOL_ENC, m_core, SLOT(volumeUp())));
     m_ui.menuPlayback->addAction(SET_ACTION(ActionManager::VOL_DEC, m_core, SLOT(volumeDown())));

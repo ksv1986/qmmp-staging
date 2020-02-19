@@ -133,7 +133,25 @@ void MediaPlayer::playNext()
     }
     if (!m_pl_manager->currentPlayList()->next())
     {
-        stop();
+        if(!m_settings->isPlayListTransitionEnabled())
+        {
+            stop();
+            return;
+        }
+        //next playlist
+        int index = m_pl_manager->currentPlayListIndex() + 1;
+        PlayListModel *nextPlayList = index < m_pl_manager->count() ? m_pl_manager->playListAt(index) : nullptr;
+        PlayListTrack *nextTrack = nextPlayList ? nextPlayList->currentTrack() : nullptr;
+        if(nextTrack)
+        {
+            m_pl_manager->selectPlayList(nextPlayList);
+            m_pl_manager->activatePlayList(nextPlayList);
+            play();
+        }
+        else
+        {
+            stop();
+        }
         return;
     }
     play();
@@ -147,6 +165,13 @@ void MediaPlayer::updateNextUrl()
         track = m_pl_manager->currentPlayList()->currentTrack();
     else if(!m_settings->isNoPlayListAdvance())
         track = m_pl_manager->currentPlayList()->nextTrack();
+
+    if(!track && m_settings->isPlayListTransitionEnabled())
+    {
+        int index = m_pl_manager->currentPlayListIndex() + 1;
+        PlayListModel *nextPlayList = index < m_pl_manager->count() ? m_pl_manager->playListAt(index) : nullptr;
+        track = nextPlayList ? nextPlayList->currentTrack() : nullptr;
+    }
 
     if(track)
     {

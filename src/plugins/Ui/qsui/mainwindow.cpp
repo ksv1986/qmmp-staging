@@ -762,6 +762,7 @@ void MainWindow::readSettings()
             m_ui.fileSystemDockWidget->hide();
             m_ui.coverDockWidget->hide();
             m_ui.playlistsDockWidget->hide();
+            m_ui.waveformSeekBarDockWidget->hide();
         }
         else
             restoreState(settings.value("mw_state").toByteArray());

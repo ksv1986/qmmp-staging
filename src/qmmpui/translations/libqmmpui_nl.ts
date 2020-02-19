@@ -1168,7 +1168,7 @@
 <context>
     <name>QmmpUiSettings</name>
     <message>
-        <location filename="../qmmpuisettings.cpp" line="57"/>
+        <location filename="../qmmpuisettings.cpp" line="58"/>
         <source>Playlist</source>
         <translation>Afspeellijst</translation>
     </message>

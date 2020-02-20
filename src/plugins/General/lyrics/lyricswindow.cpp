@@ -94,7 +94,11 @@ void LyricsWindow::onRequestFinished(QNetworkReply *reply)
     QVariant redirectTarget = reply->attribute(QNetworkRequest::RedirectionTargetAttribute);
     int code = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
+    if(reply->networkError() == QNetworkReply::NoError && code == 200)
+#else
     if(reply->error() == QNetworkReply::NoError && code == 200)
+#endif
     {
         QByteArray data = reply->readAll();
         LyricsProvider *provider = m_parser.provider(name);

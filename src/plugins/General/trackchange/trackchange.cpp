@@ -107,13 +107,27 @@ void TrackChange::onFinised()
 void TrackChange::onAppStartup()
 {
     if(QApplication::allWindows().count() == 1 && !m_appStartupCommand.isEmpty()) //detect startup
+    {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
+        QStringList tokens = QProcess::splitCommand(m_appStartupCommand);
+        QProcess::startDetached(tokens.first(), tokens.mid(1));
+#else
         QProcess::startDetached(m_appStartupCommand);
+#endif
+    }
 }
 
 void TrackChange::onAppExit()
 {
     if(!m_appExitCommand.isEmpty())
+    {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
+        QStringList tokens = QProcess::splitCommand(m_appExitCommand);
+        QProcess::startDetached(tokens.first(), tokens.mid(1));
+#else
         QProcess::startDetached(m_appExitCommand);
+#endif
+    }
 }
 
 bool TrackChange::executeCommand(const TrackInfo &info, const QString &format)

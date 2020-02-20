@@ -18,16 +18,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QAction>
 #include <QSettings>
 #include <QApplication>
-#include <QProgressDialog>
-#include <QMessageBox>
-#include <QFile>
-#include <QDir>
 #include <QProcess>
-#include <QMap>
-#include <QtDebug>
 #include <qmmp/soundcore.h>
 #include <qmmpui/uihelper.h>
 #include <qmmpui/playlistmodel.h>
@@ -45,10 +38,17 @@ TrackChange::TrackChange(QObject *parent) : QObject(parent)
     connect(m_core, SIGNAL(trackInfoChanged()), SLOT(onTrackInfoChanged()));
     connect(m_core, SIGNAL(finished()), SLOT(onFinised()));
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    m_newTrackCommand = settings.value("TrackChange/new_track_command").toString();
-    m_endOfTrackCommand = settings.value("TrackChange/end_of_track_command").toString();
-    m_endOfPlCommand = settings.value("TrackChange/end_of_pl_command").toString();
-    m_titleChangeCommand = settings.value("TrackChange/title_change_command").toString();
+    settings.beginGroup("TrackChange");
+    m_newTrackCommand = settings.value("new_track_command").toString();
+    m_endOfTrackCommand = settings.value("end_of_track_command").toString();
+    m_endOfPlCommand = settings.value("end_of_pl_command").toString();
+    m_titleChangeCommand = settings.value("title_change_command").toString();
+    m_appStartupCommand = settings.value("title_change_command").toString();
+    m_appExitCommand = settings.value("title_change_command").toString();
+    settings.endGroup();
+
+    connect(qApp, SIGNAL(aboutToQuit()), SLOT(onAppExit()));
+    onAppStartup();
 }
 
 TrackChange::~TrackChange()
@@ -102,6 +102,18 @@ void TrackChange::onFinised()
         qDebug("TrackChange: starting end of playlist command..");
         executeCommand(m_prevInfo, m_endOfPlCommand);
     }
+}
+
+void TrackChange::onAppStartup()
+{
+    if(QApplication::allWindows().count() == 1 && !m_appStartupCommand.isEmpty()) //detect startup
+        QProcess::startDetached(m_appStartupCommand);
+}
+
+void TrackChange::onAppExit()
+{
+    if(!m_appExitCommand.isEmpty())
+        QProcess::startDetached(m_appExitCommand);
 }
 
 bool TrackChange::executeCommand(const TrackInfo &info, const QString &format)

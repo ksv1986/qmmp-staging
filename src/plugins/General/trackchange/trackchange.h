@@ -44,6 +44,8 @@ private slots:
     void onStateChanged(Qmmp::State state);
     void onTrackInfoChanged();
     void onFinised();
+    void onAppStartup();
+    void onAppExit();
 
 private:
     bool executeCommand(const TrackInfo &info, const QString &format);
@@ -51,6 +53,8 @@ private:
     QString m_endOfTrackCommand;
     QString m_endOfPlCommand;
     QString m_titleChangeCommand;
+    QString m_appStartupCommand;
+    QString m_appExitCommand;
     SoundCore *m_core;
     PlayListManager *m_plManager;
     TrackInfo m_prevInfo;

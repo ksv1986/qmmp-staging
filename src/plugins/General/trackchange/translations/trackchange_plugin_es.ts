@@ -9,32 +9,42 @@
         <translation>Configuración de Módulo Cambio de Pista</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="32"/>
-        <location filename="../settingsdialog.ui" line="42"/>
-        <location filename="../settingsdialog.ui" line="52"/>
-        <location filename="../settingsdialog.ui" line="62"/>
+        <location filename="../settingsdialog.ui" line="39"/>
+        <location filename="../settingsdialog.ui" line="56"/>
+        <location filename="../settingsdialog.ui" line="73"/>
+        <location filename="../settingsdialog.ui" line="90"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="76"/>
+        <location filename="../settingsdialog.ui" line="29"/>
         <source>Command to run when Qmmp starts new track</source>
         <translation>Programa a ejecutar cuando Qmmp comienza una nueva pista</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="83"/>
+        <location filename="../settingsdialog.ui" line="46"/>
         <source>Command to run toward to end of a track</source>
         <translation>Programa a ejecutar hacia el final de una pista</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="90"/>
+        <location filename="../settingsdialog.ui" line="63"/>
         <source>Command to run when Qmmp reaches the end of the playlist</source>
         <translation>Programa a ejecutar cuando Qmmp alcanza el final de la lista de reproducción</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="97"/>
+        <location filename="../settingsdialog.ui" line="80"/>
         <source>Command to run when title changes (i.e. network streams title)</source>
         <translation>Programa a ejecutar cuanto el título cambia (ej. título de flujos de red)</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="97"/>
+        <source>Command to run on application startup:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="104"/>
+        <source>Command to run on application exit:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

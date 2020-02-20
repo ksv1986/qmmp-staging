@@ -37,17 +37,22 @@
         <translation>Directorio de salida:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="59"/>
+        <location filename="../settingsdialog.ui" line="95"/>
         <source>Output file name:</source>
         <translation>Nombre de archivo de salida:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="76"/>
+        <location filename="../settingsdialog.ui" line="109"/>
+        <source>Write to single file if possible.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="36"/>
         <source>Quality:</source>
         <translation>Calidad:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="69"/>
+        <location filename="../settingsdialog.cpp" line="71"/>
         <source>Choose a directory</source>
         <translation>Elija un directorio</translation>
     </message>

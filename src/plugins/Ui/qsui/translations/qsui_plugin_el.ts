@@ -668,7 +668,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="952"/>
+        <location filename="../mainwindow.cpp" line="953"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -997,7 +997,7 @@
         <translation>Εμφάνιση όλων των καρτελών</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="871"/>
+        <location filename="../mainwindow.cpp" line="872"/>
         <source>Buffering: %1%</source>
         <translation>Πλήρωση ενδιάμεσης μνήμης: %1%</translation>
     </message>

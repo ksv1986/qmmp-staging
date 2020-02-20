@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -41,6 +41,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_ui.outDirEdit->setText(settings.value("FileWriter/out_dir", outDir).toString());
     m_ui.outFileEdit->setText(settings.value("FileWriter/file_name", "%p%if(%p&%t, - ,)%t").toString());
     m_ui.qualitySpinBox->setValue(settings.value("FileWriter/vorbis_quality", 0.8).toFloat());
+    m_ui.singleFileCheckBox->setChecked(settings.value("FileWriter/single_file", false).toBool());
 }
 
 SettingsDialog::~SettingsDialog()
@@ -53,6 +54,7 @@ void SettingsDialog::accept()
     settings.setValue("FileWriter/out_dir", m_ui.outDirEdit->text());
     settings.setValue("FileWriter/file_name", m_ui.outFileEdit->text());
     settings.setValue("FileWriter/vorbis_quality", m_ui.qualitySpinBox->value());
+    settings.setValue("FileWriter/single_file", m_ui.singleFileCheckBox->isChecked());
     QDialog::accept();
 }
 

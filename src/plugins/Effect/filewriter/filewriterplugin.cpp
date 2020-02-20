@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -28,7 +28,6 @@
 FileWriterPlugin::FileWriterPlugin()
 {
     qsrand(time(nullptr));
-    m_inited = false;
 }
 
 FileWriterPlugin::~FileWriterPlugin()
@@ -45,7 +44,7 @@ void FileWriterPlugin::configure(quint32 srate, ChannelMap map)
 
 void FileWriterPlugin::applyEffect(Buffer *b)
 {
-    if(!b->trackInfo.isNull())
+    if(!b->trackInfo.isNull() && !m_singleFile)
         init(*b->trackInfo);
 
     if(!m_inited || !b->samples)
@@ -121,6 +120,7 @@ void FileWriterPlugin::init(const TrackInfo &info)
     QString fileName = settings.value("FileWriter/file_name", "%p%if(%p&%t, - ,)%t").toString();
     if(fileName.isEmpty())
         fileName = info.path().section("/", 1);
+    m_singleFile = settings.value("FileWriter/single_file", false).toBool();
 
     MetaDataFormatter formatter(fileName);
     fileName = formatter.format(info);

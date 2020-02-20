@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -48,7 +48,8 @@ private:
     vorbis_comment   m_vc; //struct that stores all the user comments
     vorbis_dsp_state m_vd; //central working state for the packet->PCM decoder
     vorbis_block     m_vb; //local working space for packet->PCM decode
-    bool m_inited;
+    bool m_inited = false;
+    bool m_singleFile = false;
     QFile m_file;
 
 };

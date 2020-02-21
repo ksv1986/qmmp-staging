@@ -254,7 +254,7 @@
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="94"/>
-        <location filename="../forms/configdialog.ui" line="766"/>
+        <location filename="../forms/configdialog.ui" line="773"/>
         <source>Audio</source>
         <translation>Ήχος</translation>
     </message>
@@ -305,7 +305,7 @@
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="196"/>
-        <location filename="../forms/configdialog.ui" line="447"/>
+        <location filename="../forms/configdialog.ui" line="454"/>
         <source>Exclude files:</source>
         <translation>Εξαίρεση αρχείων:</translation>
     </message>
@@ -326,13 +326,13 @@
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="270"/>
-        <location filename="../configdialog.cpp" line="320"/>
+        <location filename="../configdialog.cpp" line="321"/>
         <source>Preferences</source>
         <translation>Προτιμήσεις</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="283"/>
-        <location filename="../configdialog.cpp" line="323"/>
+        <location filename="../configdialog.cpp" line="324"/>
         <source>Information</source>
         <translation>Πληροφορίες</translation>
     </message>
@@ -357,158 +357,163 @@
         <translation>Γλώσσα:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="384"/>
+        <location filename="../forms/configdialog.ui" line="381"/>
+        <source>Display average bitrate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="391"/>
         <source>Playback</source>
         <translation>Αναπαραγωγή</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="390"/>
+        <location filename="../forms/configdialog.ui" line="397"/>
         <source>Continue playback on startup</source>
         <translation>Συνέχιση της αναπαραγωγής κατά την εκκίνηση</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="397"/>
+        <location filename="../forms/configdialog.ui" line="404"/>
         <source>Determine file type by content</source>
         <translation>Προσδιορισμός του τύπου του αρχείου βάσει περιεχομένου</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="404"/>
+        <location filename="../forms/configdialog.ui" line="411"/>
         <source>Add files from command line to this playlist:</source>
         <translation>Προσθήκη αρχείων στη λίστα αναπαραγωγής από τη γραμμή εντολών:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="421"/>
+        <location filename="../forms/configdialog.ui" line="428"/>
         <source>Cover Image Retrieve</source>
         <translation>Λήψη εικόνας εξώφυλλου</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="427"/>
+        <location filename="../forms/configdialog.ui" line="434"/>
         <source>Use separate image files</source>
         <translation>Χρήση ξεχωριστών αρχείων εικόνων</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="437"/>
+        <location filename="../forms/configdialog.ui" line="444"/>
         <source>Include files:</source>
         <translation>Συμπερίληψη των αρχείων:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="459"/>
+        <location filename="../forms/configdialog.ui" line="466"/>
         <source>Recursive search depth:</source>
         <translation>Βάθος αναδρομικής αναζήτησης:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="491"/>
+        <location filename="../forms/configdialog.ui" line="498"/>
         <source>URL Dialog</source>
         <translation>Διάλογος URL</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="497"/>
+        <location filename="../forms/configdialog.ui" line="504"/>
         <source>Auto-paste URL from clipboard</source>
         <translation>Αυτόματη επικόλληση του URL από το πρόχειρο</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="524"/>
+        <location filename="../forms/configdialog.ui" line="531"/>
         <source>Proxy</source>
         <translation>Διαμεσολαβητής</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="536"/>
+        <location filename="../forms/configdialog.ui" line="543"/>
         <source>Enable proxy usage</source>
         <translation>Ενεργοποίηση της χρήσης διαμεσολαβητή</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="543"/>
+        <location filename="../forms/configdialog.ui" line="550"/>
         <source>Proxy type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="553"/>
+        <location filename="../forms/configdialog.ui" line="560"/>
         <source>Proxy host name:</source>
         <translation>Όνομα υπολογιστή του διαμεσολαβητή:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="566"/>
+        <location filename="../forms/configdialog.ui" line="573"/>
         <source>Proxy port:</source>
         <translation>Θύρα διαμεσολαβητή:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="579"/>
+        <location filename="../forms/configdialog.ui" line="586"/>
         <source>Use authentication with proxy</source>
         <translation>Χρήση ταυτοποίησης με τον διαμεσολαβητή</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="586"/>
+        <location filename="../forms/configdialog.ui" line="593"/>
         <source>Proxy user name:</source>
         <translation>Όνομα χρήστη του διαμεσολαβητή:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="599"/>
+        <location filename="../forms/configdialog.ui" line="606"/>
         <source>Proxy password:</source>
         <translation>Κωδικός πρόσβασης διαμεσολαβητή:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="636"/>
+        <location filename="../forms/configdialog.ui" line="643"/>
         <source>Replay Gain</source>
         <translation>Κανονικοποίηση ακουστότητας</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="642"/>
+        <location filename="../forms/configdialog.ui" line="649"/>
         <source>Replay Gain mode:</source>
         <translation>Λειτουργία κανονικοποίησης ακουστότητας:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="659"/>
+        <location filename="../forms/configdialog.ui" line="666"/>
         <source>Preamp:</source>
         <translation>Προενίσχυση:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="691"/>
-        <location filename="../forms/configdialog.ui" line="736"/>
+        <location filename="../forms/configdialog.ui" line="698"/>
+        <location filename="../forms/configdialog.ui" line="743"/>
         <source>dB</source>
         <translation>dB</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="704"/>
+        <location filename="../forms/configdialog.ui" line="711"/>
         <source>Default gain:</source>
         <translation>Εξ ορισμού ενίσχυση:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="756"/>
+        <location filename="../forms/configdialog.ui" line="763"/>
         <source>Use  peak info to prevent clipping</source>
         <translation>Χρήση αιχμών για την αποτροπή διακοπών</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="772"/>
+        <location filename="../forms/configdialog.ui" line="779"/>
         <source>Buffer size:</source>
         <translation>Μέγεθος ενδιάμεσης μνήμης:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="798"/>
+        <location filename="../forms/configdialog.ui" line="805"/>
         <source>ms</source>
         <translation>ms</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="831"/>
+        <location filename="../forms/configdialog.ui" line="838"/>
         <source>Use software volume control</source>
         <translation>Χρήση ελέγχου έντασης μέσω λογισμικού</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="871"/>
+        <location filename="../forms/configdialog.ui" line="878"/>
         <source>Use two passes for equalizer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="814"/>
+        <location filename="../forms/configdialog.ui" line="821"/>
         <source>Volume adjustment step:</source>
         <translation>Βήμα προσαρμογής έντασης:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="838"/>
+        <location filename="../forms/configdialog.ui" line="845"/>
         <source>Output bit depth:</source>
         <translation>Βάθος bit εξόδου:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="779"/>
+        <location filename="../forms/configdialog.ui" line="786"/>
         <source>Use dithering</source>
         <translation>Χρήση αμφιταλάντευσης</translation>
     </message>
@@ -543,187 +548,187 @@
         <translation>Τύποι αρχείων</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="195"/>
+        <location filename="../configdialog.cpp" line="196"/>
         <source>Transports</source>
         <translation>Πρωτόκολλο μεταφοράς</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="206"/>
+        <location filename="../configdialog.cpp" line="207"/>
         <source>Decoders</source>
         <translation>Αποκωδικοποιητές</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="217"/>
+        <location filename="../configdialog.cpp" line="218"/>
         <source>Engines</source>
         <translation>Μηχανές</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="228"/>
+        <location filename="../configdialog.cpp" line="229"/>
         <source>Effects</source>
         <translation>Τεχνάσματα εντυπωσιασμού</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="239"/>
+        <location filename="../configdialog.cpp" line="240"/>
         <source>Visualization</source>
         <translation>Οπτικοποίηση</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="250"/>
+        <location filename="../configdialog.cpp" line="251"/>
         <source>General</source>
         <translation>Γενικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="261"/>
+        <location filename="../configdialog.cpp" line="262"/>
         <source>Output</source>
         <translation>Έξοδος</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="272"/>
+        <location filename="../configdialog.cpp" line="273"/>
         <source>File Dialogs</source>
         <translation>Διάλογοι αρχείων</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="283"/>
+        <location filename="../configdialog.cpp" line="284"/>
         <source>User Interfaces</source>
         <translation>Περιβάλλοντα χρήστη</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="333"/>
+        <location filename="../configdialog.cpp" line="334"/>
         <source>&lt;Autodetect&gt;</source>
         <translation>&lt;αυτόματο&gt;</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="334"/>
+        <location filename="../configdialog.cpp" line="335"/>
         <source>Brazilian Portuguese</source>
         <translation>Πορτογαλικά Βραζιλίας</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="335"/>
+        <location filename="../configdialog.cpp" line="336"/>
         <source>Chinese Simplified</source>
         <translation>Κινέζικα απλά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="336"/>
+        <location filename="../configdialog.cpp" line="337"/>
         <source>Chinese Traditional</source>
         <translation>Κινέζικα παραδοσιακά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="337"/>
+        <location filename="../configdialog.cpp" line="338"/>
         <source>Czech</source>
         <translation>Τσέχικα</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="338"/>
+        <location filename="../configdialog.cpp" line="339"/>
         <source>Dutch</source>
         <translation>Ολλανδικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="339"/>
+        <location filename="../configdialog.cpp" line="340"/>
         <source>English</source>
         <translation>Αγγλικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="340"/>
+        <location filename="../configdialog.cpp" line="341"/>
         <source>French</source>
         <translation>Γαλλικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="341"/>
+        <location filename="../configdialog.cpp" line="342"/>
         <source>Galician</source>
         <translation>Γαλικιανά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="342"/>
+        <location filename="../configdialog.cpp" line="343"/>
         <source>German</source>
         <translation>Γερμανικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="343"/>
+        <location filename="../configdialog.cpp" line="344"/>
         <source>Greek</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="344"/>
+        <location filename="../configdialog.cpp" line="345"/>
         <source>Hebrew</source>
         <translation>Εβραϊκά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="345"/>
+        <location filename="../configdialog.cpp" line="346"/>
         <source>Hungarian</source>
         <translation>Ουγγρικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="346"/>
+        <location filename="../configdialog.cpp" line="347"/>
         <source>Indonesian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="347"/>
+        <location filename="../configdialog.cpp" line="348"/>
         <source>Italian</source>
         <translation>Ιταλικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="348"/>
+        <location filename="../configdialog.cpp" line="349"/>
         <source>Japanese</source>
         <translation>Ιαπωνικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="349"/>
+        <location filename="../configdialog.cpp" line="350"/>
         <source>Kazakh</source>
         <translation>Καζακικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="350"/>
+        <location filename="../configdialog.cpp" line="351"/>
         <source>Lithuanian</source>
         <translation>Λιθουανικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="351"/>
+        <location filename="../configdialog.cpp" line="352"/>
         <source>Polish</source>
         <translation>Πολωνικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="352"/>
+        <location filename="../configdialog.cpp" line="353"/>
         <source>Portuguese</source>
         <translation>Πορτογαλικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="353"/>
+        <location filename="../configdialog.cpp" line="354"/>
         <source>Russian</source>
         <translation>Ρωσικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="354"/>
+        <location filename="../configdialog.cpp" line="355"/>
         <source>Serbian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="355"/>
+        <location filename="../configdialog.cpp" line="356"/>
         <source>Slovak</source>
         <translation>Σλοβακικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="356"/>
+        <location filename="../configdialog.cpp" line="357"/>
         <source>Spanish</source>
         <translation>Ισπανικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="357"/>
+        <location filename="../configdialog.cpp" line="358"/>
         <source>Turkish</source>
         <translation>Τουρκικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="358"/>
+        <location filename="../configdialog.cpp" line="359"/>
         <source>Ukrainian</source>
         <translation>Ουκρανικά</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="359"/>
+        <location filename="../configdialog.cpp" line="360"/>
         <source>Serbian (Ijekavian)</source>
         <translation>Σερβικά Ijekavian</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="360"/>
+        <location filename="../configdialog.cpp" line="361"/>
         <source>Serbian (Ekavian)</source>
         <translation>Σερβικά (Ekavian)</translation>
     </message>
@@ -1120,7 +1125,7 @@
 <context>
     <name>PlayListDownloader</name>
     <message>
-        <location filename="../playlistdownloader.cpp" line="119"/>
+        <location filename="../playlistdownloader.cpp" line="129"/>
         <source>Unsupported playlist format</source>
         <translation>Μη υποστηριζόμενη μορφή λίστας αναπαραγωγής</translation>
     </message>

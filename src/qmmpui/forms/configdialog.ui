@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>489</height>
+    <width>739</width>
+    <height>545</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -341,15 +341,15 @@
           <property name="title">
            <string>Look and Feel</string>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
             <widget class="QLabel" name="label_10">
              <property name="text">
               <string>Language:</string>
              </property>
             </widget>
            </item>
-           <item>
+           <item row="0" column="1">
             <widget class="QComboBox" name="langComboBox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -359,7 +359,7 @@
              </property>
             </widget>
            </item>
-           <item>
+           <item row="0" column="2">
             <spacer name="horizontalSpacer_2">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -374,6 +374,13 @@
               </size>
              </property>
             </spacer>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QCheckBox" name="abrCheckBox">
+             <property name="text">
+              <string>Display average bitrate</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>

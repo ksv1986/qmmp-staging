@@ -186,6 +186,17 @@ public:
      */
     int volumeStep() const;
     /*!
+     * Enables/Disables average bitrate displaying.
+     * @param enabled State of the average bitrate displaying
+     * (\b true - enabled, \b false - disabled). This function emits
+     * \b audioSettingsChanged() signal.
+     */
+    void setAverageBitrate(bool enabled);
+    /*!
+     * Returns \b true if average bitrate displaying is enabled, otherwise returns \b false
+     */
+    bool averageBitrate() const;
+    /*!
      * Enables/Disables file type determination by content.
      * @param enabled State of the content based type determination.
      * (\b true - enabled, \b false - disabled).
@@ -239,6 +250,7 @@ private:
     bool m_aud_dithering;
     Qmmp::AudioFormat m_aud_format;
     int m_volume_step;
+    bool m_average_bitrate;
     //cover settings
     QStringList m_cover_inc;
     QStringList m_cover_exclude;

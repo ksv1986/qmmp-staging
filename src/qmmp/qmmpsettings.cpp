@@ -45,6 +45,7 @@ QmmpSettings::QmmpSettings(QObject *parent) : QObject(parent)
     m_aud_format = static_cast<Qmmp::AudioFormat>(settings.value("Output/format", Qmmp::PCM_S16LE).toInt());
     m_aud_dithering = settings.value("Output/dithering", true).toBool();
     m_volume_step = settings.value("Output/volume_step", 5).toInt();
+    m_average_bitrate = settings.value("Output/average_bitrate", false).toBool();
     //cover settings
     settings.beginGroup("Cover");
     m_cover_inc = settings.value("include", (QStringList() << "*.jpg" << "*.png")).toStringList();
@@ -230,6 +231,18 @@ int QmmpSettings::volumeStep() const
     return m_volume_step;
 }
 
+void QmmpSettings::setAverageBitrate(bool enabled)
+{
+    m_average_bitrate = enabled;
+    m_timer->start();
+    emit audioSettingsChanged();
+}
+
+bool QmmpSettings::averageBitrate() const
+{
+    return m_average_bitrate;
+}
+
 void QmmpSettings::sync()
 {
     qDebug("%s", Q_FUNC_INFO);
@@ -246,6 +259,7 @@ void QmmpSettings::sync()
     settings.setValue("Output/format", m_aud_format);
     settings.setValue("Output/dithering", m_aud_dithering);
     settings.setValue("Output/volume_step", m_volume_step);
+    settings.setValue("Output/average_bitrate", m_average_bitrate);
     //cover settings
     settings.beginGroup("Cover");
     settings.setValue("include", m_cover_inc);

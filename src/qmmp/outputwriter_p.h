@@ -112,6 +112,7 @@ private:
     std::atomic_bool m_finish = ATOMIC_VAR_INIT(false);
     bool m_paused = false;
     bool m_useEq = false;
+    bool m_abr = false;
     qint64 m_totalWritten = 0, m_currentMilliseconds = -1;
     QmmpSettings *m_settings;
     Output *m_output = nullptr;

@@ -162,6 +162,7 @@ void ConfigDialog::readSettings()
     m_ui->bitDepthComboBox->setCurrentIndex(m_ui->bitDepthComboBox->findData(gs->outputFormat()));
     m_ui->ditheringCheckBox->setChecked(gs->useDithering());
     m_ui->bufferSizeSpinBox->setValue(gs->bufferSize());
+    m_ui->abrCheckBox->setChecked(gs->averageBitrate());
     //equalizer
     m_ui->twoPassEqCheckBox->setChecked(gs->eqSettings().twoPasses());
     //geometry
@@ -425,6 +426,7 @@ void ConfigDialog::saveSettings()
     gs->setAudioSettings(m_ui->softVolumeCheckBox->isChecked(),
                          (Qmmp::AudioFormat)m_ui->bitDepthComboBox->itemData(i).toInt(),
                          m_ui->ditheringCheckBox->isChecked());
+    gs->setAverageBitrate(m_ui->abrCheckBox->isChecked());
     gs->setBufferSize(m_ui->bufferSizeSpinBox->value());
     gs->setDetermineFileTypeByContent(m_ui->byContentCheckBox->isChecked());
     gs->setVolumeStep(m_ui->volumeStepSpinBox->value());

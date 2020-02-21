@@ -71,6 +71,7 @@ bool OutputWriter::initialize(quint32 freq, ChannelMap map)
     m_chan_map = m_output->channelMap();
     m_channels = m_chan_map.count();
     m_format = m_output->format();
+    m_abr = m_settings->averageBitrate();
 
     qDebug("OutputWriter: [%s] %s ==> %s",
            qPrintable(Output::currentFactory()->properties().shortName),
@@ -269,10 +270,14 @@ void OutputWriter::run()
         {
             if((b = recycler()->next()))
             {
-                if(b->rate)
+                if(b->rate && !m_abr)
                     m_kbps = b->rate;
                 if(b->trackInfo)
+                {
                     m_output->setTrackInfo(*b->trackInfo);
+                    if(m_abr)
+                        m_kbps = b->trackInfo->value(Qmmp::BITRATE).toInt();
+                }
             }
         }
 

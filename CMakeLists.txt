@@ -97,6 +97,7 @@ add_subdirectory(src/qmmp)
 add_subdirectory(src/qmmpui)
 add_subdirectory(src/plugins)
 add_subdirectory(src/app)
+add_subdirectory(doc)
 
 IF(MAD_FOUND)
   SET(MPEG_DECODERS "MAD")
@@ -147,6 +148,8 @@ ADD_CUSTOM_COMMAND(
     ARGS -rf ${CMAKE_CURRENT_BINARY_DIR}/install_manifest.txt
     COMMAND find
     ARGS ${CMAKE_CURRENT_BINARY_DIR} -name *_automoc.dir | xargs rm -rf
+    COMMAND rm
+    ARGS -rf ${CMAKE_CURRENT_BINARY_DIR}/doc/html
     TARGET  distclean
 )
 ENDIF(UNIX)

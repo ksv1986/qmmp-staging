@@ -381,6 +381,7 @@ void QmmpAudioEngine::run()
             nextURL.clear();
             info.setValues(m);
             info.setValues(m_decoder->properties());
+            info.updateValues(m_inputs[m_decoder]->properties());
             info.setValues(m_decoder->replayGainInfo());
             info.setDuration(m_decoder->totalTime());
             if(StateHandler::instance()->dispatch(info))

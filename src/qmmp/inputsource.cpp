@@ -69,6 +69,28 @@ QMap<Qmmp::MetaData, QString> InputSource::takeMetaData()
     return m_metaData;
 }
 
+void InputSource::setProperty(Qmmp::TrackProperty key, const QVariant &value)
+{
+    QString strValue = value.toString();
+    if(strValue.isEmpty() || strValue == "0")
+        m_properties.remove(key);
+    else
+        m_properties[key] = strValue;
+}
+
+void InputSource::setProperties(const QMap<Qmmp::TrackProperty, QString> &properties)
+{
+    for(const Qmmp::TrackProperty &key : properties.keys())
+    {
+        setProperty(key, properties.value(key));
+    }
+}
+
+const QMap<Qmmp::TrackProperty, QString> &InputSource::properties() const
+{
+    return m_properties;
+}
+
 void InputSource::addMetaData(const QMap<Qmmp::MetaData, QString> &metaData)
 {
     m_metaData = metaData;

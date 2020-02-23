@@ -437,6 +437,7 @@ void HttpStreamReader::checkBuffer()
                 metaData.insert(Qmmp::TITLE, m_stream.header.value("icy-name"));
                 metaData.insert(Qmmp::GENRE, m_stream.header.value("icy-genre"));
                 m_parent->addMetaData(metaData);
+                m_parent->setProperty(Qmmp::BITRATE, m_stream.header.value("icy-br"));
             }
             sendStreamInfo(m_codec);
         }

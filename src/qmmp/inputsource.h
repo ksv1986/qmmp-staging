@@ -97,6 +97,21 @@ public:
      */
     QMap<Qmmp::MetaData, QString> takeMetaData();
     /*!
+     * Sets extra stream property.
+     * \param key Property key.
+     * \param value Property value.
+     */
+    void setProperty(Qmmp::TrackProperty key, const QVariant &value);
+    /*!
+     * Updates all extra stream properties.
+     * \param properties New track properties.
+     */
+    void setProperties(const QMap<Qmmp::TrackProperty, QString> &properties);
+    /*!
+     * Returns stream properties
+     */
+    const QMap<Qmmp::TrackProperty, QString> &properties() const;
+    /*!
      * Informs input source object about received stream information (for example icy data).
      * Call of this function is required for all non-local streams/files
      * @param info Stream information map.
@@ -169,6 +184,7 @@ private:
     QString m_path;
     qint64 m_offset;
     QMap<Qmmp::MetaData, QString> m_metaData;
+    QMap<Qmmp::TrackProperty, QString> m_properties;
     QHash<QString, QString> m_streamInfo;
     bool m_hasMetaData, m_hasStreamInfo;
     static void loadPlugins();

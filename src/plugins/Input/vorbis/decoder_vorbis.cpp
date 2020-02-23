@@ -122,6 +122,7 @@ bool DecoderVorbis::initialize()
     {
         freq = ogginfo->rate;
         chan = ogginfo->channels;
+        setProperty(Qmmp::BITRATE, ogginfo->bitrate_nominal / 1000);
     }
 
     ChannelMap chmap = findChannelMap(chan);

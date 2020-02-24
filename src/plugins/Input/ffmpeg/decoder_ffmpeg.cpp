@@ -393,6 +393,12 @@ void DecoderFFmpeg::fillBuffer()
 
         if(m_pkt->size > 0)
         {
+            if(m_pkt->duration > 0 && m_codecContext->codec_id == AV_CODEC_ID_OPUS)
+            {
+                AVStream *st = m_formatContext->streams[m_audioIndex];
+                m_bitrate = double(m_pkt->size) / (av_q2d(st->time_base) * m_pkt->duration) * 8.0 / 1000;
+            }
+
             if(!(send_error = avcodec_send_packet(m_codecContext, m_pkt)))
             {
                 av_packet_unref(m_pkt);

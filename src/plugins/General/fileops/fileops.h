@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -53,11 +53,12 @@ private slots:
     void execAction(int n);
 
 private:
-    void copy(QList<PlayListTrack*> tracks, const QString &dest, MetaDataFormatter *formatter);
-    void rename(const QList<PlayListTrack *> &tracks, MetaDataFormatter *formatter,
+    void copy(const QList<PlayListTrack*> &tracks, const QString &dest, const MetaDataFormatter *formatter);
+    void rename(const QList<PlayListTrack *> &tracks, const MetaDataFormatter *formatter,
                 PlayListModel *model);
-    void move(const QList<PlayListTrack*> &tracks, const QString &dest, MetaDataFormatter *formatter,
+    void move(const QList<PlayListTrack*> &tracks, const QString &dest, const MetaDataFormatter *formatter,
               PlayListModel *model);
+    bool isValid(PlayListTrack *track) const;
 
     QList <int> m_types;
     QStringList m_patterns;

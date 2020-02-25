@@ -54,13 +54,12 @@ FileOps::FileOps(QObject *parent) : QObject(parent)
 
     for (int i = 0; i < count; ++i)
     {
-
+        m_types << settings.value(QString("action_%1").arg(i), FileOps::COPY).toInt();
+        QString name = settings.value(QString("name_%1").arg(i), "Action").toString();
+        m_patterns << settings.value(QString("pattern_%1").arg(i)).toString();
+        m_destinations << settings.value(QString("destination_%1").arg(i)).toString();
         if (settings.value(QString("enabled_%1").arg(i), true).toBool())
         {
-            m_types << settings.value(QString("action_%1").arg(i), FileOps::COPY).toInt();
-            QString name = settings.value(QString("name_%1").arg(i), "Action").toString();
-            m_patterns << settings.value(QString("pattern_%1").arg(i)).toString();
-            m_destinations << settings.value(QString("destination_%1").arg(i)).toString();
             QAction *action = new QAction(name, this);
             action->setShortcut(settings.value(QString("hotkey_%1").arg(i)).toString());
             connect(action, &QAction::triggered, [i,this]{ execAction(i); });
@@ -113,9 +112,15 @@ void FileOps::execAction(int n)
                                    QMessageBox::Yes | QMessageBox::No) !=  QMessageBox::Yes)
             break;
 
+        if (PlayListManager::instance()->selectedPlayList() != model)
+            break;
+
         for(PlayListTrack *track : qAsConst(tracks))
         {
-            if (QFile::exists(track->path()) && QFile::remove(track->path()))
+            if (PlayListManager::instance()->selectedPlayList() != model)
+                break;
+
+            if (isValid(track) && QFile::exists(track->path()) && QFile::remove(track->path()))
                 model->removeTrack(track);
         }
         break;
@@ -142,7 +147,7 @@ void FileOps::execAction(int n)
     }
 }
 
-void FileOps::copy(QList<PlayListTrack *> tracks, const QString &dest, MetaDataFormatter *formatter)
+void FileOps::copy(const QList<PlayListTrack *> &tracks, const QString &dest, const MetaDataFormatter *formatter)
 {
     QProgressDialog progress(qApp->activeWindow ());
     progress.setWindowModality(Qt::WindowModal);
@@ -151,9 +156,9 @@ void FileOps::copy(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
     progress.show();
     progress.setAutoClose (false);
     int i  = 0;
-    for(const PlayListTrack *track : qAsConst(tracks))
+    for(PlayListTrack *track : qAsConst(tracks))
     {
-        if (!QFile::exists(track->path()))
+        if (!isValid(track) || !QFile::exists(track->path()))
             continue;
 
         QString fileName = formatter->format(track); //generate file name
@@ -207,12 +212,15 @@ void FileOps::copy(QList<PlayListTrack *> tracks, const QString &dest, MetaDataF
     progress.close();
 }
 
-void FileOps::rename(const QList<PlayListTrack *> &tracks, MetaDataFormatter *formatter, PlayListModel *model)
+void FileOps::rename(const QList<PlayListTrack *> &tracks, const MetaDataFormatter *formatter, PlayListModel *model)
 {
     for(PlayListTrack *track : qAsConst(tracks))
     {
-        if (!QFile::exists(track->path())) //is it file?
+        if (!isValid(track) || !QFile::exists(track->path())) //is it file?
             continue;
+
+        if (PlayListManager::instance()->selectedPlayList() != model)
+            break;
 
         QString fileName = formatter->format(track); //generate file name
 
@@ -222,9 +230,10 @@ void FileOps::rename(const QList<PlayListTrack *> &tracks, MetaDataFormatter *fo
         //rename file
         QFile file(track->path());
         QString dest = QFileInfo(track->path()).absolutePath ();
-        if (file.rename(dest + "/" + fileName))
+        if (isValid(track) && file.rename(dest + "/" + fileName) && isValid(track))
         {
             track->setPath(dest + "/" + fileName);
+            track->updateMetaData();
             model->doCurrentVisibleRequest();
         }
         else
@@ -232,7 +241,7 @@ void FileOps::rename(const QList<PlayListTrack *> &tracks, MetaDataFormatter *fo
     }
 }
 
-void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, MetaDataFormatter *formatter, PlayListModel *model)
+void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, const MetaDataFormatter *formatter, PlayListModel *model)
 {
     QProgressDialog progress(qApp->activeWindow ());
     progress.setWindowModality(Qt::WindowModal);
@@ -243,8 +252,11 @@ void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, Me
     int i  = 0;
     for(PlayListTrack *track : qAsConst(tracks))
     {
-        if (!QFile::exists(track->path()))
+        if (!isValid(track) || !QFile::exists(track->path()))
             continue;
+
+        if (PlayListManager::instance()->selectedPlayList() != model)
+            break;
 
         QString fileName = formatter->format(track); //generate file name
 
@@ -271,6 +283,12 @@ void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, Me
         progress.setValue(0);
         progress.setLabelText (QString(tr("Moving file %1/%2")).arg(++i).arg(tracks.size()));
         progress.update();
+        if(!isValid(track) || PlayListManager::instance()->selectedPlayList() != model)
+        {
+            progress.setValue(100);
+            continue;
+        }
+
         //try to rename file first
         if(QFile::rename(track->path(), path))
         {
@@ -307,6 +325,9 @@ void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, Me
 
         in.close();
 
+        if(!isValid(track) || PlayListManager::instance()->selectedPlayList() != model)
+            continue;
+
         if(!QFile::remove(track->path()))
             qWarning("FileOps: unable to remove file '%s'", qPrintable(track->path()));
 
@@ -317,4 +338,10 @@ void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, Me
             break;
     }
     progress.close();
+}
+
+bool FileOps::isValid(PlayListTrack *track) const
+{
+    QList<PlayListTrack*> tracks = PlayListManager::instance()->selectedPlayList()->selectedTracks();
+    return tracks.contains(track);
 }

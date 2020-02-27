@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2019 by Ilya Kotov                                      *
+ *   Copyright (C) 2019-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,7 +40,7 @@ void SleepInhibitor::onStateChanged(Qmmp::State state)
 {
     if(state == Qmmp::Playing)
         inhibit();
-    else if(state == Qmmp::Stopped)
+    else if(state != Qmmp::Buffering)
         uninhibit();
 }
 
@@ -49,11 +49,12 @@ void SleepInhibitor::inhibit()
     if(m_lock)
         return;
 
+    static const QString method = QStringLiteral("Inhibit");
     static const QString what = QStringLiteral("sleep:idle");
-    static const QString who  = QStringLiteral("fly-music");
+    static const QString who  = QStringLiteral("qmmp");
     static const QString why  = QStringLiteral("Playing audio");
     static const QString mode = QStringLiteral("block");
-    QDBusReply<QDBusUnixFileDescriptor> fd = m_interface->call(QStringLiteral("Inhibit"), what, who, why, mode);
+    QDBusReply<QDBusUnixFileDescriptor> fd = m_interface->call(method, what, who, why, mode);
     m_lock.reset(new QDBusUnixFileDescriptor(fd));
 }
 

@@ -74,11 +74,11 @@ bool Player2Object::canGoPrevious() const
 
 bool Player2Object::canPause() const
 {
-    return (m_core->state() == Qmmp::Paused || m_core->state() == Qmmp::Playing);
+    return !m_pl_manager->currentPlayList()->isEmpty();
 }
 bool Player2Object::canPlay() const
 {
-    return m_pl_manager->currentPlayList()->count() != 0;
+    return !m_pl_manager->currentPlayList()->isEmpty();
 }
 
 bool Player2Object::canSeek() const
@@ -239,20 +239,24 @@ void Player2Object::OpenUri(const QString &in0)
 
 void Player2Object::Pause()
 {
-    m_core->pause();
+    if(m_core->state() == Qmmp::Playing)
+        m_core->pause();
 }
 
 void Player2Object::Play()
 {
-    m_player->play();
+    if(m_core->state() == Qmmp::Paused)
+        m_core->pause();
+    else if(m_core->state() != Qmmp::Playing && m_core->state() != Qmmp::Buffering)
+        m_player->play();
 }
 
 void Player2Object::PlayPause()
 {
-    if(m_core->state() == Qmmp::Stopped)
-        m_player->play();
-    else if(m_core->state() == Qmmp::Paused || m_core->state() == Qmmp::Playing)
+    if(m_core->state() == Qmmp::Playing || m_core->state() == Qmmp::Paused)
         m_core->pause();
+    else if(m_core->state() != Qmmp::Playing && m_core->state() != Qmmp::Buffering)
+        m_player->play();
 }
 
 void Player2Object::Previous()

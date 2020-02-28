@@ -140,11 +140,7 @@ void ListenBrainz::updateMetaData()
 
 void ListenBrainz::processResponse(QNetworkReply *reply)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-    if (reply->networkError() != QNetworkReply::NoError)
-#else
     if (reply->error() != QNetworkReply::NoError)
-#endif
     {
         qWarning("ListenBrainz: http error: %s", qPrintable(reply->errorString()));
     }
@@ -152,19 +148,13 @@ void ListenBrainz::processResponse(QNetworkReply *reply)
     QByteArray data = reply->readAll();
     QJsonDocument document = QJsonDocument::fromJson(data);
     QString status = document.object().value("status").toString();
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-    if(status != "ok" || reply->networkError() != QNetworkReply::NoError)
-#else
+
     if(status != "ok" || reply->error() != QNetworkReply::NoError)
-#endif
     {
         status.clear();
         qWarning("ListenBrainz: server reply: %s", data.constData());
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-        if(reply->networkError() == QNetworkReply::AuthenticationRequiredError)
-#else
+
         if(reply->error() == QNetworkReply::AuthenticationRequiredError)
-#endif
         {
             m_token.clear();
             qWarning("ListenBrainz: invalid user token, submitting has been disabled");

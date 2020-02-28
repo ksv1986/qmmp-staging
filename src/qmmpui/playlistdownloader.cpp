@@ -72,23 +72,12 @@ void PlayListDownloader::readResponse(QNetworkReply *reply)
         reply->deleteLater();
         return;
     }
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-    if(reply->networkError() != QNetworkReply::NoError)
-    {
-        {
-            emit finished(false, reply->errorString() + " (" + reply->networkError() + ")");
-            reply->deleteLater();
-            return;
-        }
-    }
-#else
     if(reply->error() != QNetworkReply::NoError)
     {
         emit finished(false, reply->errorString() + " (" + reply->error() + ")");
         reply->deleteLater();
         return;
     }
-#endif
 
     QUrl url = reply->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl();
     if(!url.isEmpty() && url != m_redirect_url)

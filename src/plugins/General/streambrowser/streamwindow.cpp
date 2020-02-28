@@ -153,11 +153,7 @@ StreamWindow::~StreamWindow()
 void StreamWindow::showText(QNetworkReply *reply)
 {
     m_ui->statusLabel->setText(tr("Done"));
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-    if (reply->networkError() != QNetworkReply::NoError)
-#else
     if (reply->error() != QNetworkReply::NoError)
-#endif
     {
         m_ui->statusLabel->setText(tr("Error"));
         QMessageBox::warning (this, tr("Error"), reply->errorString());

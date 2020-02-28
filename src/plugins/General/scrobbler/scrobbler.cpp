@@ -181,11 +181,7 @@ void Scrobbler::updateMetaData()
 
 void Scrobbler::processResponse(QNetworkReply *reply)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-    if (reply->networkError() != QNetworkReply::NoError)
-#else
     if (reply->error() != QNetworkReply::NoError)
-#endif
     {
         qWarning("Scrobbler[%s]: http error: %s", qPrintable(m_name), qPrintable(reply->errorString()));
     }
@@ -501,11 +497,7 @@ QString ScrobblerAuth::session() const
 
 void ScrobblerAuth::processResponse(QNetworkReply *reply)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-    if (reply->networkError() != QNetworkReply::NoError)
-#else
     if (reply->error() != QNetworkReply::NoError)
-#endif
     {
         qWarning("ScrobblerAuth[%s]: http error: %s", qPrintable(m_name), qPrintable(reply->errorString()));
     }

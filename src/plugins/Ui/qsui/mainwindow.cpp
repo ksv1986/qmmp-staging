@@ -58,6 +58,7 @@
 #include "qsuitabwidget.h"
 #include "qsuiquicksearch.h"
 #include "qsuiwaveformseekbar.h"
+#include "qsuistatusbar.h"
 #include "equalizer.h"
 
 #define KEY_OFFSET 10000
@@ -83,9 +84,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     //status
     connect(m_core, SIGNAL(elapsedChanged(qint64)), SLOT(updatePosition(qint64)));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(showState(Qmmp::State)));
-    connect(m_core, SIGNAL(bitrateChanged(int)), SLOT(updateBitrate(int)));
-    connect(m_core, SIGNAL(audioParametersChanged(AudioParameters)), SLOT(updateStatus()));
-    connect(m_core, SIGNAL(bufferingProgress(int)), SLOT(showBuffering(int)));
     connect(m_core, SIGNAL(trackInfoChanged()), SLOT(showMetaData()));
     //keyboard manager
     m_key_manager = new KeyboardManager(this);
@@ -126,21 +124,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     connect(m_tabWidget, SIGNAL(customContextMenuRequested(QPoint)), SLOT(showTabMenu(QPoint)));
     m_tab_menu = new QMenu(m_tabWidget);
     //status bar
-    m_statusLabel = new QLabel(this);
-    m_bitrateLabel = new QLabel(this);
-    m_bitrateLabel->setAlignment(Qt::AlignRight);
-    m_timeLabel = new QLabel(this);
-    m_timeLabel->setAlignment(Qt::AlignRight);
-    m_ui.statusbar->addPermanentWidget(m_statusLabel, 0);
-    QFrame *l = new QFrame(this);
-    l->setFrameStyle(QFrame::VLine | QFrame::Raised);
-    m_ui.statusbar->addPermanentWidget(l);
-    m_ui.statusbar->addPermanentWidget(m_bitrateLabel, 0);
-    l = new QFrame(this);
-    l->setFrameStyle(QFrame::VLine | QFrame::Raised);
-    m_ui.statusbar->addPermanentWidget(l);
-    m_ui.statusbar->addPermanentWidget(m_timeLabel, 0);
-    m_ui.statusbar->addPermanentWidget(new QWidget(this), 1); //spacer
+    m_statusBar = new QSUiStatusBar(this);
+    m_ui.statusbar->addPermanentWidget(m_statusBar, 1);
     m_ui.statusbar->setStyleSheet("QStatusBar::item { border: 0px solid black; };");
     //volume
     m_volumeSlider = new VolumeSlider(this);
@@ -174,7 +159,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
     createActions();
     readSettings();
-    updateStatus();
     restoreWindowTitle();
 }
 
@@ -209,41 +193,11 @@ void MainWindow::addUrl()
     m_uiHelper->addUrl(this);
 }
 
-void MainWindow::updateBitrate(int bitrate)
-{
-    QString text = tr("%1 kbps").arg(bitrate);
-    if(text.size() > m_bitrateLabel->text().size()) //label width tuning to avoid text jumping
-    {
-        QString tmp = text;
-        tmp.replace(QRegularExpression("\\d"), "4");
-        int width = m_bitrateLabel->fontMetrics().horizontalAdvance(tmp);
-        m_bitrateLabel->setMinimumWidth(2);
-        m_bitrateLabel->setMargin(0);
-        m_bitrateLabel->setIndent(0);
-    }
-    m_bitrateLabel->setText(text);
-}
-
 void MainWindow::updatePosition(qint64 pos)
 {
     m_positionSlider->setMaximum(m_core->duration()/1000);
     if(!m_positionSlider->isSliderDown())
         m_positionSlider->setValue(pos/1000);
-
-    QString text = MetaDataFormatter::formatDuration(pos, false);
-    if(m_core->duration() > 1000)
-    {
-        text.append("/");
-        text.append(MetaDataFormatter::formatDuration(m_core->duration()));
-    }
-    if(text.size() != m_timeLabel->text().size()) //label width tuning to avoid text jumping
-    {
-        QString tmp = text;
-        tmp.replace(QRegularExpression("\\d"), "4");
-        int width = m_timeLabel->fontMetrics().horizontalAdvance(tmp);
-        m_timeLabel->setMinimumWidth(width);
-    }
-    m_timeLabel->setText(text);
 }
 
 void MainWindow::seek()
@@ -262,7 +216,6 @@ void MainWindow::showState(Qmmp::State state)
     {
     case Qmmp::Playing:
     {
-        updateStatus();
         m_analyzer->setCover(MetaDataManager::instance()->getCover(m_core->path()));
         CoverWidget *cw = qobject_cast<CoverWidget *>(m_ui.coverDockWidget->widget());
         cw->setCover(MetaDataManager::instance()->getCover(m_core->path()));
@@ -270,12 +223,8 @@ void MainWindow::showState(Qmmp::State state)
         break;
     }
     case Qmmp::Paused:
-        updateStatus();
         break;
     case Qmmp::Stopped:
-        updateStatus();
-        m_bitrateLabel->clear();
-        m_timeLabel->clear();
         m_positionSlider->setValue(0);
         m_analyzer->clearCover();
         qobject_cast<CoverWidget *>(m_ui.coverDockWidget->widget())->clearCover();
@@ -403,33 +352,6 @@ void MainWindow::playPause()
         m_core->pause();
     else
         m_player->play();
-}
-
-void MainWindow::updateStatus()
-{
-    int tracks = m_pl_manager->currentPlayList()->trackCount();
-    qint64 duration = m_pl_manager->currentPlayList()->totalDuration();
-
-    if(m_core->state() == Qmmp::Playing || m_core->state() == Qmmp::Paused)
-    {
-        AudioParameters ap = m_core->audioParameters();
-        m_statusLabel->setText(tr("<b>%1</b>|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|")
-                               .arg(m_core->state() == Qmmp::Playing ? tr("Playing") : tr("Paused"))
-                               .arg(ap.validBitsPerSample())
-                               .arg(ap.channels())
-                               .arg(ap.sampleRate())
-                               .arg(tracks)
-                               .arg(MetaDataFormatter::formatDuration(duration, false)));
-    }
-    else if(m_core->state() == Qmmp::Stopped)
-    {
-        m_statusLabel->setText(tr("<b>%1</b>|tracks: %2|total time: %3")
-                               .arg(tr("Stopped"))
-                               .arg(tracks)
-                               .arg(MetaDataFormatter::formatDuration(duration, false)));
-    }
-    else
-        m_statusLabel->clear();
 }
 
 void MainWindow::closeEvent(QCloseEvent *)
@@ -897,12 +819,6 @@ void MainWindow::loadPlayList()
     m_uiHelper->loadPlayList(this);
 }
 
-void MainWindow::showBuffering(int percent)
-{
-    if(m_core->state() == Qmmp::Buffering)
-        m_statusLabel->setText(tr("Buffering: %1%").arg(percent));
-}
-
 void MainWindow::showEqualizer()
 {
     Equalizer equalizer(this);
@@ -987,13 +903,13 @@ void MainWindow::restoreWindowTitle()
 void MainWindow::onListChanged(int flags)
 {
     if(flags & PlayListModel::STRUCTURE)
-        updateStatus();
+        m_statusBar->updatePlayListStatus();
 }
 
 void MainWindow::onCurrentPlayListChanged(PlayListModel *current, PlayListModel *previous)
 {
     updateTabs();
-    updateStatus();
+    m_statusBar->updatePlayListStatus();
     connect(current, SIGNAL(listChanged(int)), SLOT(onListChanged(int)));
     if(previous)
         disconnect(current, SIGNAL(listChanged(int)), this, SLOT(onListChanged(int)));

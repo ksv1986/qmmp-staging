@@ -34,7 +34,8 @@ SOURCES += \
     volumeslider.cpp \
     qsuiquicksearch.cpp \
     qsuivisualization.cpp \
-    qsuiwaveformseekbar.cpp
+    qsuiwaveformseekbar.cpp \
+    qsuistatusbar.cpp
 HEADERS += mainwindow.h \
     listwidget.h \
     visualmenu.h \
@@ -67,7 +68,8 @@ HEADERS += mainwindow.h \
     volumeslider.h \
     qsuiquicksearch.h \
     qsuivisualization.h \
-    qsuiwaveformseekbar.h
+    qsuiwaveformseekbar.h \
+    qsuistatusbar.h
 
 FORMS += forms/mainwindow.ui \
     forms/shortcutdialog.ui \

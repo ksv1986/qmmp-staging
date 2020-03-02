@@ -26,7 +26,6 @@
 #include "ui_mainwindow.h"
 
 class QSlider;
-class QLabel;
 class QMenu;
 class QToolButton;
 class UiHelper;
@@ -63,11 +62,9 @@ private slots:
     void playFiles();
     void record(bool enabled);
     void addUrl();
-    void updateBitrate(int bitrate);
     void updatePosition(qint64 pos);
     void seek();
     void showState(Qmmp::State);
-    void updateStatus();
     void updateTabs();
     void removePlaylist();
     void removePlaylistWithIndex(int);
@@ -86,7 +83,6 @@ private slots:
     void showTabMenu(QPoint pos);
     void savePlayList();
     void loadPlayList();
-    void showBuffering(int percent);
     void showEqualizer();
     void forward();
     void backward();
@@ -110,7 +106,7 @@ private:
     MediaPlayer *m_player;
     QmmpUiSettings *m_ui_settings;
     PositionSlider *m_positionSlider;
-    QLabel *m_statusLabel, *m_bitrateLabel, *m_timeLabel;
+    QSUiStatusBar *m_statusBar;
     SoundCore *m_core;
     VisualMenu *m_visMenu;
     UiHelper *m_uiHelper;

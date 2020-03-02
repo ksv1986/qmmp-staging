@@ -32,16 +32,16 @@ class QMenu;
 class SoundCore;
 class Decoder;
 class InputSource;
-class QSUIWaveformScanner;
+class QSUiWaveformScanner;
 
 /**
    @author Ilya Kotov <forkotov02@ya.ru>
 */
-class QSUIWaveformSeekBar : public QWidget
+class QSUiWaveformSeekBar : public QWidget
 {
     Q_OBJECT
 public:
-    explicit QSUIWaveformSeekBar(QWidget *parent = nullptr);
+    explicit QSUiWaveformSeekBar(QWidget *parent = nullptr);
     QSize sizeHint() const override;
     void readSettings();
 
@@ -63,7 +63,7 @@ private:
     void createMenu();
 
     SoundCore *m_core;
-    QSUIWaveformScanner *m_scanner = nullptr;
+    QSUiWaveformScanner *m_scanner = nullptr;
     QMenu *m_menu;
     QAction *m_showTwoChannelsAction, *m_showRmsAction;
     QList<int> m_data;
@@ -76,12 +76,12 @@ private:
     bool m_update = false;
 };
 
-class QSUIWaveformScanner : public QThread
+class QSUiWaveformScanner : public QThread
 {
     Q_OBJECT
 public:
-    explicit QSUIWaveformScanner(QObject *parent);
-    ~QSUIWaveformScanner();
+    explicit QSUiWaveformScanner(QObject *parent);
+    ~QSUiWaveformScanner();
     bool scan(const QString &path);
     void stop();
     const QList<int> &data() const;

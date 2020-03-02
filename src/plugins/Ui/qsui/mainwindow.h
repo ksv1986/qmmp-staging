@@ -43,7 +43,8 @@ class QSUIVisualization;
 class ListWidget;
 class QSUiTabWidget;
 class QSUiQuickSearch;
-class QSUIWaveformSeekBar;
+class QSUiWaveformSeekBar;
+class QSUiStatusBar;
 
 
 /**
@@ -62,6 +63,7 @@ private slots:
     void playFiles();
     void record(bool enabled);
     void addUrl();
+    void updateBitrate(int bitrate);
     void updatePosition(qint64 pos);
     void seek();
     void showState(Qmmp::State);
@@ -108,9 +110,8 @@ private:
     MediaPlayer *m_player;
     QmmpUiSettings *m_ui_settings;
     PositionSlider *m_positionSlider;
-    QLabel *m_timeLabel;
+    QLabel *m_statusLabel, *m_bitrateLabel, *m_timeLabel;
     SoundCore *m_core;
-    QLabel *m_statusLabel;
     VisualMenu *m_visMenu;
     UiHelper *m_uiHelper;
     QMenu *m_pl_menu;
@@ -119,7 +120,7 @@ private:
     QSUiQuickSearch *m_quickSearch;
     KeyboardManager *m_key_manager;
     QSUIVisualization *m_analyzer;
-    QSUIWaveformSeekBar *m_seekBar;
+    QSUiWaveformSeekBar *m_seekBar;
     QToolButton *m_addListButton, *m_tabListMenuButton;
     ListWidget *m_listWidget;
     MetaDataFormatter m_titleFormatter;

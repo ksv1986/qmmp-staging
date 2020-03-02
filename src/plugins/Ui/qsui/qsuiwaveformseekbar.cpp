@@ -37,7 +37,7 @@
 
 #define NUMBER_OF_VALUES (4096)
 
-QSUIWaveformSeekBar::QSUIWaveformSeekBar(QWidget *parent) : QWidget(parent)
+QSUiWaveformSeekBar::QSUiWaveformSeekBar(QWidget *parent) : QWidget(parent)
 {
     m_core = SoundCore::instance();
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(onStateChanged(Qmmp::State)));
@@ -46,12 +46,12 @@ QSUIWaveformSeekBar::QSUIWaveformSeekBar(QWidget *parent) : QWidget(parent)
     readSettings();
 }
 
-QSize QSUIWaveformSeekBar::sizeHint() const
+QSize QSUiWaveformSeekBar::sizeHint() const
 {
     return QSize(200, 100);
 }
 
-void QSUIWaveformSeekBar::readSettings()
+void QSUiWaveformSeekBar::readSettings()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
@@ -70,7 +70,7 @@ void QSUIWaveformSeekBar::readSettings()
 }
 
 
-void QSUIWaveformSeekBar::onStateChanged(Qmmp::State state)
+void QSUiWaveformSeekBar::onStateChanged(Qmmp::State state)
 {
     switch (state)
     {
@@ -78,7 +78,7 @@ void QSUIWaveformSeekBar::onStateChanged(Qmmp::State state)
     {
         if(!m_scanner && isVisible())
         {
-            m_scanner = new QSUIWaveformScanner(this);
+            m_scanner = new QSUiWaveformScanner(this);
             connect(m_scanner, SIGNAL(finished()), SLOT(onScanFinished()));
             connect(m_scanner, SIGNAL(dataChanged()), SLOT(onDataChanged()));
         }
@@ -107,7 +107,7 @@ void QSUIWaveformSeekBar::onStateChanged(Qmmp::State state)
     }
 }
 
-void QSUIWaveformSeekBar::onScanFinished()
+void QSUiWaveformSeekBar::onScanFinished()
 {
     if(!m_scanner)
         return;
@@ -119,7 +119,7 @@ void QSUIWaveformSeekBar::onScanFinished()
     drawWaveform();
 }
 
-void QSUIWaveformSeekBar::onDataChanged()
+void QSUiWaveformSeekBar::onDataChanged()
 {
     if(!m_scanner || !m_scanner->isRunning())
         return;
@@ -129,7 +129,7 @@ void QSUIWaveformSeekBar::onDataChanged()
     drawWaveform();
 }
 
-void QSUIWaveformSeekBar::onElapsedChanged(qint64 elapsed)
+void QSUiWaveformSeekBar::onElapsedChanged(qint64 elapsed)
 {
     m_elapsed = elapsed;
     m_duration = m_core->duration();
@@ -137,7 +137,7 @@ void QSUIWaveformSeekBar::onElapsedChanged(qint64 elapsed)
         update();
 }
 
-void QSUIWaveformSeekBar::writeSettings()
+void QSUiWaveformSeekBar::writeSettings()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
@@ -147,7 +147,7 @@ void QSUIWaveformSeekBar::writeSettings()
     drawWaveform();
 }
 
-void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
+void QSUiWaveformSeekBar::paintEvent(QPaintEvent *e)
 {
     QPainter painter (this);
     painter.fillRect(e->rect(), m_bgColor);
@@ -167,18 +167,18 @@ void QSUIWaveformSeekBar::paintEvent(QPaintEvent *e)
     }
 }
 
-void QSUIWaveformSeekBar::resizeEvent(QResizeEvent *)
+void QSUiWaveformSeekBar::resizeEvent(QResizeEvent *)
 {
     drawWaveform();
 }
 
-void QSUIWaveformSeekBar::showEvent(QShowEvent *)
+void QSUiWaveformSeekBar::showEvent(QShowEvent *)
 {
     if(m_data.isEmpty() && (m_core->state() == Qmmp::Playing || m_core->state() == Qmmp::Paused))
         onStateChanged(Qmmp::Playing); //force redraw
 }
 
-void QSUIWaveformSeekBar::mousePressEvent(QMouseEvent *e)
+void QSUiWaveformSeekBar::mousePressEvent(QMouseEvent *e)
 {
     if(e->button() == Qt::LeftButton)
     {
@@ -189,7 +189,7 @@ void QSUIWaveformSeekBar::mousePressEvent(QMouseEvent *e)
         m_menu->exec(e->globalPos());
 }
 
-void QSUIWaveformSeekBar::mouseReleaseEvent(QMouseEvent *)
+void QSUiWaveformSeekBar::mouseReleaseEvent(QMouseEvent *)
 {
     if(m_pressedPos >= 0)
     {
@@ -199,7 +199,7 @@ void QSUIWaveformSeekBar::mouseReleaseEvent(QMouseEvent *)
     }
 }
 
-void QSUIWaveformSeekBar::mouseMoveEvent(QMouseEvent *e)
+void QSUiWaveformSeekBar::mouseMoveEvent(QMouseEvent *e)
 {
     if(m_pressedPos >= 0)
     {
@@ -211,7 +211,7 @@ void QSUIWaveformSeekBar::mouseMoveEvent(QMouseEvent *e)
     }
 }
 
-void QSUIWaveformSeekBar::drawWaveform()
+void QSUiWaveformSeekBar::drawWaveform()
 {
     if(m_data.isEmpty())
     {
@@ -319,7 +319,7 @@ void QSUIWaveformSeekBar::drawWaveform()
     update();
 }
 
-void QSUIWaveformSeekBar::createMenu()
+void QSUiWaveformSeekBar::createMenu()
 {
     m_menu = new QMenu(this);
     m_showTwoChannelsAction = m_menu->addAction(tr("2 Channels"), this, SLOT(writeSettings()));
@@ -329,15 +329,15 @@ void QSUIWaveformSeekBar::createMenu()
     m_showRmsAction->setCheckable(true);
 }
 
-QSUIWaveformScanner::QSUIWaveformScanner(QObject *parent) : QThread(parent)
+QSUiWaveformScanner::QSUiWaveformScanner(QObject *parent) : QThread(parent)
 {}
 
-QSUIWaveformScanner::~QSUIWaveformScanner()
+QSUiWaveformScanner::~QSUiWaveformScanner()
 {
     stop();
 }
 
-bool QSUIWaveformScanner::scan(const QString &path)
+bool QSUiWaveformScanner::scan(const QString &path)
 {
     InputSource *source = InputSource::create(path, this);
     if(!source->initialize())
@@ -392,7 +392,7 @@ bool QSUIWaveformScanner::scan(const QString &path)
     return true;
 }
 
-void QSUIWaveformScanner::stop()
+void QSUiWaveformScanner::stop()
 {
     if(isRunning())
     {
@@ -415,18 +415,18 @@ void QSUIWaveformScanner::stop()
     }
 }
 
-const QList<int> &QSUIWaveformScanner::data() const
+const QList<int> &QSUiWaveformScanner::data() const
 {
     QMutexLocker locker(&m_mutex);
     return m_data;
 }
 
-const AudioParameters &QSUIWaveformScanner::audioParameters() const
+const AudioParameters &QSUiWaveformScanner::audioParameters() const
 {
     return m_ap;
 }
 
-void QSUIWaveformScanner::run()
+void QSUiWaveformScanner::run()
 {
     m_ap = m_decoder->audioParameters();
     unsigned char tmp[QMMP_BLOCK_FRAMES * m_ap.frameSize() * 4];

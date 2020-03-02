@@ -83,7 +83,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     //status
     connect(m_core, SIGNAL(elapsedChanged(qint64)), SLOT(updatePosition(qint64)));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(showState(Qmmp::State)));
-    connect(m_core, SIGNAL(bitrateChanged(int)), SLOT(updateStatus()));
+    connect(m_core, SIGNAL(bitrateChanged(int)), SLOT(updateBitrate(int)));
     connect(m_core, SIGNAL(audioParametersChanged(AudioParameters)), SLOT(updateStatus()));
     connect(m_core, SIGNAL(bufferingProgress(int)), SLOT(showBuffering(int)));
     connect(m_core, SIGNAL(trackInfoChanged()), SLOT(showMetaData()));
@@ -126,13 +126,22 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     connect(m_tabWidget, SIGNAL(customContextMenuRequested(QPoint)), SLOT(showTabMenu(QPoint)));
     m_tab_menu = new QMenu(m_tabWidget);
     //status bar
-    m_timeLabel = new QLabel(this);
     m_statusLabel = new QLabel(this);
+    m_bitrateLabel = new QLabel(this);
+    m_bitrateLabel->setAlignment(Qt::AlignRight);
+    m_timeLabel = new QLabel(this);
+    m_timeLabel->setAlignment(Qt::AlignRight);
     m_ui.statusbar->addPermanentWidget(m_statusLabel, 0);
-    m_ui.statusbar->addPermanentWidget(m_timeLabel, 1);
-    m_ui.statusbar->setMinimumWidth(2);
-    m_statusLabel->setMinimumWidth(2);
-    m_ui.statusbar->setStyleSheet("QStatusBar::item { border: 0px solid black };");
+    QFrame *l = new QFrame(this);
+    l->setFrameStyle(QFrame::VLine | QFrame::Raised);
+    m_ui.statusbar->addPermanentWidget(l);
+    m_ui.statusbar->addPermanentWidget(m_bitrateLabel, 0);
+    l = new QFrame(this);
+    l->setFrameStyle(QFrame::VLine | QFrame::Raised);
+    m_ui.statusbar->addPermanentWidget(l);
+    m_ui.statusbar->addPermanentWidget(m_timeLabel, 0);
+    m_ui.statusbar->addPermanentWidget(new QWidget(this), 1); //spacer
+    m_ui.statusbar->setStyleSheet("QStatusBar::item { border: 0px solid black; };");
     //volume
     m_volumeSlider = new VolumeSlider(this);
     m_volumeSlider->setFocusPolicy(Qt::NoFocus);
@@ -154,7 +163,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_ui.analyzerDockWidget->setWidget(m_analyzer);
     Visual::add(m_analyzer);
     //waveform seek bar
-    m_seekBar = new QSUIWaveformSeekBar(this);
+    m_seekBar = new QSUiWaveformSeekBar(this);
     m_ui.waveformSeekBarDockWidget->setWidget(m_seekBar);
     //filesystem browser
     m_ui.fileSystemDockWidget->setWidget(new FileSystemBrowser(this));
@@ -200,6 +209,21 @@ void MainWindow::addUrl()
     m_uiHelper->addUrl(this);
 }
 
+void MainWindow::updateBitrate(int bitrate)
+{
+    QString text = tr("%1 kbps").arg(bitrate);
+    if(text.size() > m_bitrateLabel->text().size()) //label width tuning to avoid text jumping
+    {
+        QString tmp = text;
+        tmp.replace(QRegularExpression("\\d"), "4");
+        int width = m_bitrateLabel->fontMetrics().horizontalAdvance(tmp);
+        m_bitrateLabel->setMinimumWidth(2);
+        m_bitrateLabel->setMargin(0);
+        m_bitrateLabel->setIndent(0);
+    }
+    m_bitrateLabel->setText(text);
+}
+
 void MainWindow::updatePosition(qint64 pos)
 {
     m_positionSlider->setMaximum(m_core->duration()/1000);
@@ -211,6 +235,13 @@ void MainWindow::updatePosition(qint64 pos)
     {
         text.append("/");
         text.append(MetaDataFormatter::formatDuration(m_core->duration()));
+    }
+    if(text.size() != m_timeLabel->text().size()) //label width tuning to avoid text jumping
+    {
+        QString tmp = text;
+        tmp.replace(QRegularExpression("\\d"), "4");
+        int width = m_timeLabel->fontMetrics().horizontalAdvance(tmp);
+        m_timeLabel->setMinimumWidth(width);
     }
     m_timeLabel->setText(text);
 }
@@ -243,6 +274,7 @@ void MainWindow::showState(Qmmp::State state)
         break;
     case Qmmp::Stopped:
         updateStatus();
+        m_bitrateLabel->clear();
         m_timeLabel->clear();
         m_positionSlider->setValue(0);
         m_analyzer->clearCover();
@@ -381,18 +413,17 @@ void MainWindow::updateStatus()
     if(m_core->state() == Qmmp::Playing || m_core->state() == Qmmp::Paused)
     {
         AudioParameters ap = m_core->audioParameters();
-        m_statusLabel->setText(tr("<b>%1</b>|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|%7 kbps|")
+        m_statusLabel->setText(tr("<b>%1</b>|%2 bit|%3 ch|%4 Hz|tracks: %5|total time: %6|")
                                .arg(m_core->state() == Qmmp::Playing ? tr("Playing") : tr("Paused"))
                                .arg(ap.validBitsPerSample())
                                .arg(ap.channels())
                                .arg(ap.sampleRate())
                                .arg(tracks)
-                               .arg(MetaDataFormatter::formatDuration(duration, false))
-                               .arg(m_core->bitrate()));
+                               .arg(MetaDataFormatter::formatDuration(duration, false)));
     }
     else if(m_core->state() == Qmmp::Stopped)
     {
-        m_statusLabel->setText(tr("<b>%1</b>|tracks: %2|total time: %3|")
+        m_statusLabel->setText(tr("<b>%1</b>|tracks: %2|total time: %3")
                                .arg(tr("Stopped"))
                                .arg(tracks)
                                .arg(MetaDataFormatter::formatDuration(duration, false)));

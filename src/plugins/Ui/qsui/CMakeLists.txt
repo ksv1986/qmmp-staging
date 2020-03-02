@@ -39,6 +39,7 @@ SET(libqsui_SRCS
     volumeslider.cpp
     qsuiquicksearch.cpp
     qsuiwaveformseekbar.cpp
+    qsuistatusbar.cpp
 )
 
 SET(libqsui_HDRS

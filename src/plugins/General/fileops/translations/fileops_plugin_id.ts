@@ -4,62 +4,62 @@
 <context>
     <name>FileOps</name>
     <message>
-        <location filename="../fileops.cpp" line="94"/>
-        <location filename="../fileops.cpp" line="128"/>
+        <location filename="../fileops.cpp" line="93"/>
+        <location filename="../fileops.cpp" line="133"/>
         <source>Error</source>
         <translation>Galat</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="95"/>
-        <location filename="../fileops.cpp" line="129"/>
+        <location filename="../fileops.cpp" line="94"/>
+        <location filename="../fileops.cpp" line="134"/>
         <source>Destination directory doesn&apos;t exist</source>
         <translation>Direktori tujuan tidak ada</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="132"/>
+        <location filename="../fileops.cpp" line="137"/>
         <source>Move Files</source>
         <translation>Pindah File</translation>
     </message>
     <message numerus="yes">
-        <location filename="../fileops.cpp" line="133"/>
+        <location filename="../fileops.cpp" line="138"/>
         <source>Are you sure you want to move %n file(s)?</source>
         <translation>
             <numerusform>Apakah kamu yakin ingin memindah %n file(-file)?</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="149"/>
+        <location filename="../fileops.cpp" line="154"/>
         <source>Copying</source>
         <translation>Menyalin</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="150"/>
-        <location filename="../fileops.cpp" line="240"/>
+        <location filename="../fileops.cpp" line="155"/>
+        <location filename="../fileops.cpp" line="249"/>
         <source>Stop</source>
         <translation>Henti</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="195"/>
+        <location filename="../fileops.cpp" line="200"/>
         <source>Copying file %1/%2</source>
         <translation>Menyalin file %1/%2</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="239"/>
+        <location filename="../fileops.cpp" line="248"/>
         <source>Moving</source>
         <translation>Memindah</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="272"/>
+        <location filename="../fileops.cpp" line="284"/>
         <source>Moving file %1/%2</source>
         <translation>Memindah file %1/%2</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="110"/>
+        <location filename="../fileops.cpp" line="109"/>
         <source>Remove Files</source>
         <translation>Buang File</translation>
     </message>
     <message numerus="yes">
-        <location filename="../fileops.cpp" line="111"/>
+        <location filename="../fileops.cpp" line="110"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
         <translation>
             <numerusform>Apakah kamu yakin ingin membuang %n file(-file) dari disk?</numerusform>

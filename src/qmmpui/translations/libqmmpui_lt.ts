@@ -1125,7 +1125,7 @@
 <context>
     <name>PlayListDownloader</name>
     <message>
-        <location filename="../playlistdownloader.cpp" line="129"/>
+        <location filename="../playlistdownloader.cpp" line="118"/>
         <source>Unsupported playlist format</source>
         <translation>Napalaikomas grojaraščio tipas</translation>
     </message>

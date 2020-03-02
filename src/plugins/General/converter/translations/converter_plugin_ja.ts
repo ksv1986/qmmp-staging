@@ -90,8 +90,8 @@
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="129"/>
-        <location filename="../converterdialog.cpp" line="353"/>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="357"/>
+        <location filename="../converterdialog.cpp" line="363"/>
         <source>Error</source>
         <translation>エラーです</translation>
     </message>
@@ -121,12 +121,12 @@
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="357"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation>&quot;%1&quot; を実行できません。プログラムがみつかりません。</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="363"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation>プロセス &quot;%1&quot; がエラーで終了しました。</translation>
     </message>

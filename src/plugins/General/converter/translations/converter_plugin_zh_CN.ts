@@ -95,8 +95,8 @@
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="129"/>
-        <location filename="../converterdialog.cpp" line="353"/>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="357"/>
+        <location filename="../converterdialog.cpp" line="363"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
@@ -121,12 +121,12 @@
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="357"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation>无法执行&quot;%1&quot;。程序未找到。</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="363"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation>进程”%1“完成同时发现错误。</translation>
     </message>

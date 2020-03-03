@@ -1560,17 +1560,31 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="151"/>
-        <source>%1 ch</source>
+        <location filename="../qsuistatusbar.cpp" line="152"/>
+        <source>mono</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="152"/>
+        <location filename="../qsuistatusbar.cpp" line="154"/>
+        <source>stereo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qsuistatusbar.cpp" line="156"/>
+        <source>%n channels</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qsuistatusbar.cpp" line="157"/>
         <source>%1 Hz</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="157"/>
+        <location filename="../qsuistatusbar.cpp" line="162"/>
         <source>%1 kbps</source>
         <translation type="unfinished"></translation>
     </message>

@@ -148,7 +148,12 @@ void QSUiStatusBar::onBufferingProgress(int percent)
 void QSUiStatusBar::onAudioParametersChanged(const AudioParameters &ap)
 {
     m_labels[SampleSizeLabel]->setText(tr("%1 bits").arg(ap.validBitsPerSample()));
-    m_labels[ChannelsLabel]->setText(tr("%1 ch").arg(ap.channels()));
+    if(ap.channels() == 1)
+        m_labels[ChannelsLabel]->setText(tr("mono").arg(ap.channels()));
+    else if(ap.channels() == 2)
+        m_labels[ChannelsLabel]->setText(tr("stereo").arg(ap.channels()));
+    else
+        m_labels[ChannelsLabel]->setText(tr("%n channels", "", ap.channels()));
     m_labels[SampleRateLabel]->setText(tr("%1 Hz").arg(ap.sampleRate()));
 }
 

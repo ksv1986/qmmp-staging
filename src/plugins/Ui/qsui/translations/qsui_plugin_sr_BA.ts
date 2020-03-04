@@ -1538,37 +1538,42 @@
         <translation type="unfinished">Паузирано</translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="125"/>
+        <location filename="../qsuistatusbar.cpp" line="101"/>
+        <source>Buffering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsuistatusbar.cpp" line="126"/>
         <source>Stopped</source>
         <translation type="unfinished">Заустављено</translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="137"/>
+        <location filename="../qsuistatusbar.cpp" line="138"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="145"/>
+        <location filename="../qsuistatusbar.cpp" line="146"/>
         <source>Buffering: %1%</source>
         <translation type="unfinished">Баферујем: %1%</translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="150"/>
+        <location filename="../qsuistatusbar.cpp" line="151"/>
         <source>%1 bits</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="152"/>
+        <location filename="../qsuistatusbar.cpp" line="153"/>
         <source>mono</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="154"/>
+        <location filename="../qsuistatusbar.cpp" line="155"/>
         <source>stereo</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qsuistatusbar.cpp" line="156"/>
+        <location filename="../qsuistatusbar.cpp" line="157"/>
         <source>%n channels</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1577,12 +1582,12 @@
         </translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="157"/>
+        <location filename="../qsuistatusbar.cpp" line="158"/>
         <source>%1 Hz</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="162"/>
+        <location filename="../qsuistatusbar.cpp" line="163"/>
         <source>%1 kbps</source>
         <translation type="unfinished"></translation>
     </message>

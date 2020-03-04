@@ -98,6 +98,7 @@ void QSUiStatusBar::onStateChanged(Qmmp::State state)
             sep->hide();
 
         m_labels[StatusLabel]->show();
+        m_labels[StatusLabel]->setText(tr("Buffering"));
     }
     else if(state == Qmmp::Stopped)
     {

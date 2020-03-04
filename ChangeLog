@@ -1467,3 +1467,75 @@ Version 1.3.0
 * updated Italian translation (Luigi Toscano)
 * updated Finnish translation (Jiri Grönroos)
 * updated Chinese Traditional translation (Cosmos Chen)
+
+Version 1.3.1
+* added projectM 3.1 support
+* added feature to determine plugin prefix via pkgconfig (Chris Spiegel)
+* fixed current track text color in the qsui plugin
+* fixed command line processing under Windows
+* fixed AAC support
+* fixed kwin.sh script (D1mon)
+* updated Polish translation (mrerexx)
+* updated Portuguese translation (Sérgio Marques)
+* updated Finnish translation (Jiri Grönroos)
+* updated Russian translation (Alexey Loginov)
+
+Version 1.3.2
+* added feature to play track on double click in the history plugin
+* enabled mpg123 decoder for Windows
+* using album cover from file by default
+* fixed lyrics plugin
+* fixed API documentation
+* fixed issue with read-only mode for FLAC files
+* fixed issue with missing properties for some CUE tracks
+* fixed shortcuts displaying in context menus under Qt 5.10 or higher
+* fixed Qt 5.13 support
+* fixed crash under Wayland session
+* fixed freezing on some corrupted files in the ffmpeg plugin
+* fixed crash on some streams in the ffmpeg plugin
+* fixed file type determination by content in the mpeg plugin
+
+Version 1.3.3
+* added float output support for PulseAudio, ALSA and OSS4
+* added AppStream information (Joel Barrios Dueñas)
+* added more icon sizes
+* improved channel conversion
+* fixed feature to remove tracks when using quick search in the qsui plugin
+* fixed crash on some corrupted archives
+* fixed logo animation in the qsui plugin
+* fixed freezing in the ffmpeg plugin
+* updated Dutch translation (Heimen Stoffels)
+* updated Greek translation (Dimitrios Glentadakis)
+
+Version 1.3.4
+* improved mp3 file determination
+* added format name in the ffmpeg plugin
+* fixed pausing logic
+* fixed random crash when changing audio settings
+* fixed crash in the QtMultimedia plugin
+* fixed build warning
+* fixed duration formatting
+* fixed ReplayGain support
+* fixed memory leak
+* fixed multiple channels support in the equalizer
+* updated Ukrainian translation (Gennady Motsyo)
+* updated Italian translation (Luigi Toscano)
+
+Version 1.3.5
+* added icon for 'play/pause' action
+* fixed 'album artist' tag support
+* fixed issue with missing bitrate after application restart
+* fixed issue with incorrect audio properties displaying
+* fixed crash on corrupted .m4a files
+* fixed duration overflow
+* fixed playlist duration update
+* fixed issue with special symbols in the track change plugin
+* fixed crash on encrypted archives
+* updated Galician translation (Delio Docampo Cordeiro)
+
+Version 1.3.6
+* added 'album artist' and 'composer' tags support in the ffmpeg plugin
+* fixed window title updating when playing CUE tracks
+* fixed crash on Futura skin in the skinned ui
+* updated French translation (Adrien Vigneron)
+* updated Indonesian translation (Andika Triwidada and Wantoyo)

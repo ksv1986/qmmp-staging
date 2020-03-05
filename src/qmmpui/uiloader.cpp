@@ -23,6 +23,10 @@
 #include "qmmpuiplugincache_p.h"
 #include "uiloader.h"
 
+#ifndef QMMP_DEFAULT_UI
+#define QMMP_DEFAULT_UI "skinned"
+#endif
+
 QList<QmmpUiPluginCache*> *UiLoader::m_cache = nullptr;
 
 void UiLoader::loadPlugins()
@@ -101,10 +105,13 @@ UiFactory *UiLoader::selected()
 {
     loadPlugins();
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-#ifdef QMMP_DEFAULT_UI
-    QString name = settings.value("Ui/current_plugin", QMMP_DEFAULT_UI).toString();
+#ifdef Q_OS_UNIX
+    QString defaultUi = QMMP_DEFAULT_UI;
+    if(defaultUi == QLatin1String("skinned") && qgetenv("XDG_SESSION_TYPE") == "wayland")
+        defaultUi = "qsui";
+    QString name = settings.value("Ui/current_plugin", defaultUi).toString();
 #else
-    QString name = settings.value("Ui/current_plugin", "skinned").toString();
+    QString name = settings.value("Ui/current_plugin", QMMP_DEFAULT_UI).toString();
 #endif
     for(QmmpUiPluginCache *item : qAsConst(*m_cache))
     {

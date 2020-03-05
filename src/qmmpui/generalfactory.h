@@ -35,10 +35,10 @@ struct GeneralProperties
 {
     QString name;                   /*!< File dialog plugin full name */
     QString shortName;              /*!< File dialog short name for internal usage */
-    bool hasAbout = false;          /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings = false;       /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    bool hasAbout = false;          /*!< Should be \b true if plugin has about dialog, and \b false otherwise */
+    bool hasSettings = false;       /*!< Should be \b true if plugin has settings dialog, and \b false otherwise */
     bool visibilityControl = false; /*!< Should be \b true if plugin can show/hide main window of the player,
-                                     * otherwise returns \b false */
+                                     * and \b false otherwise */
 };
 /*! @brief %General plugin interface.
  * @author Ilya Kotov <forkotov02@ya.ru>

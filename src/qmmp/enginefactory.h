@@ -44,8 +44,8 @@ struct EngineProperties
     QString description;      /*!< File filter description */
     QStringList contentTypes; /*!< Supported content types */
     QStringList protocols;    /*!< Supported protocols. Should be empty if plugin uses stream input. */
-    bool hasAbout = false;    /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings = false; /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    bool hasAbout = false;    /*!< Should be \b true if plugin has about dialog, and \b false otherwise */
+    bool hasSettings = false; /*!< Should be \b true if plugin has settings dialog, and \b false otherwise */
 };
 
 /*! @brief Engine plugin interface.

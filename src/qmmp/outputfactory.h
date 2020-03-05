@@ -38,8 +38,8 @@ struct OutputProperties
 {
     QString name;              /*!< Effect plugin full name */
     QString shortName;         /*!< Effect plugin short name for internal usage */
-    bool hasAbout = false;     /*!< Should be \b true if plugin has about dialog, otherwise returns \b false */
-    bool hasSettings = false;  /*!< Should be \b true if plugin has settings dialog, otherwise returns \b false */
+    bool hasAbout = false;     /*!< Should be \b true if plugin has about dialog, and \b false otherwise */
+    bool hasSettings = false;  /*!< Should be \b true if plugin has settings dialog, and \b false otherwise */
 };
 /*! @brief %Output plugin interface (output factory).
  * @author Ilya Kotov <forkotov02@ya.ru>

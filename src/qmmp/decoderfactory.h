@@ -42,10 +42,10 @@ struct DecoderProperties
     QStringList contentTypes; /*!< Supported content types */
     QStringList protocols;    /*!< A list of supported protocols.
                                *   Should be empty if plugin uses stream input. */
-    bool hasAbout = false;     /*!< Should be \b true if plugin has about dialog, otherwise \b false */
-    bool hasSettings = false;  /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
-    bool noInput = false;      /*!< Should be \b true if plugin has own input, otherwise \b false */
-    int priority = 0;          /*!< Decoder priority. Decoders with lowest value will be used first */
+    bool hasAbout = false;    /*!< Should be \b true if plugin has about dialog, otherwise \b false */
+    bool hasSettings = false; /*!< Should be \b true if plugin has settings dialog, otherwise \b false */
+    bool noInput = false;     /*!< Should be \b true if plugin has own input, otherwise \b false */
+    int priority = 0;         /*!< Decoder priority. Decoders with lowest value will be used first */
 };
 /*! @brief Input plugin interface (decoder factory).
  * @author Ilya Kotov <forkotov02@ya.ru>

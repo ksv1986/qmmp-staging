@@ -7,7 +7,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
 link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
 # libcdaudio
-pkg_check_modules(CDIO libcdio libcdio_cdda libcdio_paranoia libcddb)
+pkg_check_modules(CDIO libcdio libcdio_cdda libcdio_paranoia)
 
 include_directories(${CDIO_INCLUDE_DIRS})
 link_directories(${CDIO_LIBRARY_DIRS})

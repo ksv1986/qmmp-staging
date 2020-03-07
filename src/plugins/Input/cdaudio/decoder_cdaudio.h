@@ -59,9 +59,6 @@ public:
     void seek(qint64 time) override;
 
 private:
-    //helper functions
-    static void saveToCache(QList <CDATrack> tracks,  uint disc_id);
-    static bool readFromCache(QList <CDATrack> *tracks, uint disc_id);
     // libcdio variables
     lsn_t m_first_sector;
     lsn_t m_last_sector;

@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include <QObject>
 #include <QRegExp>
 #include <QSettings>
@@ -215,47 +214,6 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
     cdio = nullptr;
     m_track_cache = tracks;
     return tracks;
-}
-
-void DecoderCDAudio::saveToCache(QList <CDATrack> tracks,  uint disc_id)
-{
-    QDir dir(Qmmp::configDir());
-    if(!dir.exists("cddbcache"))
-        dir.mkdir("cddbcache");
-    dir.cd("cddbcache");
-    QString path = dir.absolutePath() + QString("/%1").arg(disc_id, 0, 16);
-    QSettings settings(path, QSettings::IniFormat);
-    settings.clear();
-    settings.setValue("count", tracks.size());
-    for(int i = 0; i < tracks.size(); ++i)
-    {
-        CDATrack track = tracks[i];
-        QMap<Qmmp::MetaData, QString> meta = track.info.metaData();
-        settings.setValue(QString("artist%1").arg(i), meta[Qmmp::ARTIST]);
-        settings.setValue(QString("title%1").arg(i), meta[Qmmp::TITLE]);
-        settings.setValue(QString("genre%1").arg(i), meta[Qmmp::GENRE]);
-        settings.setValue(QString("album%1").arg(i), meta[Qmmp::ALBUM]);
-    }
-}
-
-bool DecoderCDAudio::readFromCache(QList <CDATrack> *tracks, uint disc_id)
-{
-    QString path = Qmmp::configDir();
-    path += QString("/cddbcache/%1").arg(disc_id, 0, 16);
-    if(!QFile::exists(path))
-        return false;
-    QSettings settings(path, QSettings::IniFormat);
-    int count = settings.value("count").toInt();
-    if(count != tracks->count())
-        return false;
-    for(int i = 0; i < count; ++i)
-    {
-        (*tracks)[i].info.setValue(Qmmp::ARTIST, settings.value(QString("artist%1").arg(i)).toString());
-        (*tracks)[i].info.setValue(Qmmp::TITLE, settings.value(QString("title%1").arg(i)).toString());
-        (*tracks)[i].info.setValue(Qmmp::GENRE, settings.value(QString("genre%1").arg(i)).toString());
-        (*tracks)[i].info.setValue(Qmmp::ALBUM, settings.value(QString("album%1").arg(i)).toString());
-    }
-    return true;
 }
 
 qint64 DecoderCDAudio::calculateTrackLength(lsn_t startlsn, lsn_t endlsn)

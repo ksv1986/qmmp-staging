@@ -37,7 +37,6 @@ public:
 
 public slots:
     virtual void accept() override;
-    void on_clearCacheButton_clicked();
 
 private:
     Ui::SettingsDialog m_ui;

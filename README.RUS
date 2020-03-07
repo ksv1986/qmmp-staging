@@ -66,7 +66,6 @@ Qmmp - Qt-based multimedia player
 - поддерживаемые форматы списков воспроизведения: m3u, pls, xspf
 - поддержка ReplayGain
 - скробблер Last.fm/Libre.fm
-- поддержка CDDB
 - обзор потоков
 - преобразователь аудио-форматов
 - запуск внешних программ при смене трека
@@ -98,7 +97,6 @@ Qmmp - Qt-based multimedia player
 - ffmpeg >= 3.2 (опционально)
 - libcdio >= 0.80 (опционально)
 - libcdio-paranoia >= 10.2 (начиная с libcdio 0.90)
-- libcddb >= 1.3.1 (опционально)
 - faad2 >= 2.6.1 (опционально)
 - game-music-emu >= 0.5.5 (опционально)
 - opus >= 1.0.2 (опционально)

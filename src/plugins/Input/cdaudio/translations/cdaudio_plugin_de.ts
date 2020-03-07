@@ -4,32 +4,32 @@
 <context>
     <name>DecoderCDAudioFactory</name>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="39"/>
+        <location filename="../decodercdaudiofactory.cpp" line="38"/>
         <source>CD Audio Plugin</source>
         <translation>CD-Audio-Modul</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="86"/>
+        <location filename="../decodercdaudiofactory.cpp" line="85"/>
         <source>About CD Audio Plugin</source>
         <translation>Über CD-Audio-Modul</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="87"/>
+        <location filename="../decodercdaudiofactory.cpp" line="86"/>
         <source>Qmmp CD Audio Plugin</source>
         <translation>Qmmp CD-Audio-Modul</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="88"/>
-        <source>Compiled against libcdio-%1 and libcddb-%2</source>
-        <translation>Kompiliert mit libcdio-%1 und libcddb-%2</translation>
+        <location filename="../decodercdaudiofactory.cpp" line="87"/>
+        <source>Compiled against libcdio-%1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="90"/>
+        <location filename="../decodercdaudiofactory.cpp" line="88"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodercdaudiofactory.cpp" line="91"/>
+        <location filename="../decodercdaudiofactory.cpp" line="89"/>
         <source>Usage: open cdda:/// using Add URL dialog or command line</source>
         <translation>Verwendung: Geben Sie cdda:/// in den „URL hinzufügen“-Dialog oder in die Befehlszeile ein</translation>
     </message>
@@ -55,36 +55,6 @@
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Use cd-text</source>
         <translation>CD-Text verwenden</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="69"/>
-        <source>CDDB</source>
-        <translation>CDDB</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="78"/>
-        <source>Use HTTP instead of CDDBP</source>
-        <translation>HTTP anstatt CDDBP verwenden</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="88"/>
-        <source>Server:</source>
-        <translation>Server:</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="95"/>
-        <source>Path:</source>
-        <translation>Pfad:</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="105"/>
-        <source>Port:</source>
-        <translation>Port:</translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="117"/>
-        <source>Clear CDDB cache</source>
-        <translation>CDDB-Zwischenspeicher löschen</translation>
     </message>
 </context>
 </TS>

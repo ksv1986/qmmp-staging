@@ -36,7 +36,7 @@ SET_TARGET_PROPERTIES(qmmp PROPERTIES OUTPUT_NAME qmmp${APP_NAME_SUFFIX})
 add_dependencies(qmmp libqmmpui libqmmp)
 
 install(TARGETS qmmp DESTINATION ${CMAKE_INSTALL_BINDIR})
-install(FILES qmmp.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
+install(FILES qmmp-opencda${APP_NAME_SUFFIX}.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/solid/actions)
 install(FILES qmmp${APP_NAME_SUFFIX}.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
 install(FILES images/16x16/qmmp${APP_NAME_SUFFIX}.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/16x16/apps)
 install(FILES images/32x32/qmmp${APP_NAME_SUFFIX}.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/32x32/apps)

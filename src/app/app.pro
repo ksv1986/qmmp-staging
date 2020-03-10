@@ -27,6 +27,8 @@ unix {
         qmmp-enqueue$${APP_NAME_SUFFIX}.desktop \
         qmmp-dir$${APP_NAME_SUFFIX}.desktop
     desktop.path = $$DATA_DIR/applications
+    solidaction.files = qmmp-opencda$${APP_NAME_SUFFIX}.desktop
+    solidaction.path = $$DATA_DIR/solid/actions
     icon16.files = images/16x16/qmmp$${APP_NAME_SUFFIX}.png
     icon32.files = images/32x32/qmmp$${APP_NAME_SUFFIX}.png
     icon48.files = images/48x48/qmmp$${APP_NAME_SUFFIX}.png

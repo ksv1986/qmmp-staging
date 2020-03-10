@@ -49,6 +49,7 @@ unix {
     icon_svg.path = $$DATA_DIR/icons/hicolor/scalable/apps
     appdata.path = $$DATA_DIR/metainfo
     INSTALLS += desktop \
+        solidaction \
         target \
         icon16 \
         icon32 \

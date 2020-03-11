@@ -340,17 +340,13 @@ QString ConverterDialog::uniqueName(const QString &name)
 
 bool ConverterDialog::checkPreset(const QVariantMap &preset)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-    QStringList tokens = QProcess::splitCommand(preset["command"].toString());
-#else
-    QStringList tokens = preset["command"].toString().split(" ", QString::SkipEmptyParts);
-#endif
-    if(tokens.isEmpty())
+    QStringList programAndArgs = preset["command"].toString().split(" ", QString::SkipEmptyParts);
+    if(programAndArgs.isEmpty())
         return false;
 
-    QString program = tokens.takeFirst();
+    QString program = programAndArgs.first();
 
-    int result = QProcess::execute(program, tokens);
+    int result = QProcess::execute(program, QStringList());
 
     if(result == -2)
     {

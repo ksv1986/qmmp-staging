@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -149,9 +149,7 @@ const QPixmap SkinReader::getPreview(const QString &skinPath)
 void SkinReader::untar(const QString &from, const QString &to, bool preview)
 {
     QByteArray array;
-    QStringList args;
-    //list archive
-    args << "tf" <<from;
+    QStringList args = { "tf", from };  //list archive
     m_process->start("tar", args);
     m_process->waitForFinished();
     array = m_process->readAllStandardOutput ();
@@ -186,10 +184,9 @@ void SkinReader::untar(const QString &from, const QString &to, bool preview)
 
 void SkinReader::unzip(const QString &from, const QString &to, bool preview)
 {
-    QStringList args;
     if (preview)
     {
-        args << "-C" << "-j" << "-o" << "-qq" << "-d" << to << from << "main.*" << "*/main.*";
+        QStringList args = { "-C", "-j", "-o", "-qq", "-d", to, from, "main.*", "*/main.*" };
         QProcess::execute("unzip", args);
         QDir dir(to);
         dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
@@ -205,7 +202,7 @@ void SkinReader::unzip(const QString &from, const QString &to, bool preview)
     }
     else
     {
-        args << "-j" << "-o" << "-qq" << "-d" << to << from;
+        QStringList args = { "-j", "-o", "-qq", "-d", to, from };
         QProcess::execute("unzip", args);
     }
 }

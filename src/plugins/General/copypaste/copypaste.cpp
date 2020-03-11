@@ -25,7 +25,6 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QDir>
-#include <QProcess>
 #include <qmmp/soundcore.h>
 #include <qmmpui/uihelper.h>
 #include <qmmpui/playlistmodel.h>

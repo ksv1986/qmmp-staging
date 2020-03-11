@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -54,12 +54,12 @@ signals:
 private:
     void run() override;
     bool convert(Decoder *decoder, FILE *file, bool use16bit);
-    Decoder *m_decoder;
-    InputSource *m_input;
+    Decoder *m_decoder = nullptr;
+    InputSource *m_input = nullptr;
     QVariantMap m_preset;
     QMutex m_mutex;
-    bool m_user_stop;
-    int m_row;
+    bool m_user_stop = false;
+    int m_row = - 1;
 
 };
 

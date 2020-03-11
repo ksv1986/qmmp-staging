@@ -34,12 +34,7 @@
 #include "converter.h"
 
 Converter::Converter(QObject *parent) : QObject(parent), QRunnable()
-{
-    m_user_stop = false;
-    m_decoder = nullptr;
-    m_input = nullptr;
-    m_row = -1;
-}
+{}
 
 Converter::~Converter()
 {

@@ -4,32 +4,32 @@
 <context>
     <name>CopyPaste</name>
     <message>
-        <location filename="../copypaste.cpp" line="42"/>
+        <location filename="../copypaste.cpp" line="41"/>
         <source>Cu&amp;t</source>
         <translation>Cor&amp;tar</translation>
     </message>
     <message>
-        <location filename="../copypaste.cpp" line="43"/>
+        <location filename="../copypaste.cpp" line="42"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../copypaste.cpp" line="44"/>
+        <location filename="../copypaste.cpp" line="43"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="../copypaste.cpp" line="45"/>
+        <location filename="../copypaste.cpp" line="44"/>
         <source>Ctrl+C</source>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../copypaste.cpp" line="46"/>
+        <location filename="../copypaste.cpp" line="45"/>
         <source>&amp;Paste</source>
         <translation>C&amp;olar</translation>
     </message>
     <message>
-        <location filename="../copypaste.cpp" line="47"/>
+        <location filename="../copypaste.cpp" line="46"/>
         <source>Ctrl+V</source>
         <translation>Ctrl+V</translation>
     </message>

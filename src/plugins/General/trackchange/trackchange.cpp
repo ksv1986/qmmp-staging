@@ -43,8 +43,8 @@ TrackChange::TrackChange(QObject *parent) : QObject(parent)
     m_endOfTrackCommand = settings.value("end_of_track_command").toString();
     m_endOfPlCommand = settings.value("end_of_pl_command").toString();
     m_titleChangeCommand = settings.value("title_change_command").toString();
-    m_appStartupCommand = settings.value("title_change_command").toString();
-    m_appExitCommand = settings.value("title_change_command").toString();
+    m_appStartupCommand = settings.value("application_startup_command").toString();
+    m_appExitCommand = settings.value("application_exit_command").toString();
     settings.endGroup();
 
     connect(qApp, SIGNAL(aboutToQuit()), SLOT(onAppExit()));
@@ -108,11 +108,11 @@ void TrackChange::onAppStartup()
 {
     if(QApplication::allWindows().count() == 1 && !m_appStartupCommand.isEmpty()) //detect startup
     {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-        QStringList tokens = QProcess::splitCommand(m_appStartupCommand);
-        QProcess::startDetached(tokens.first(), tokens.mid(1));
+#ifdef Q_OS_WIN
+        QProcess::startDetached(QString("cmd.exe /C %1").arg(m_appStartupCommand));
 #else
-        QProcess::startDetached(m_appStartupCommand);
+        QStringList args = { "-c", m_appStartupCommand };
+        QProcess::startDetached("sh", args);
 #endif
     }
 }
@@ -121,11 +121,11 @@ void TrackChange::onAppExit()
 {
     if(!m_appExitCommand.isEmpty())
     {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-        QStringList tokens = QProcess::splitCommand(m_appExitCommand);
-        QProcess::startDetached(tokens.first(), tokens.mid(1));
+#ifdef Q_OS_WIN
+        QProcess::startDetached(QString("cmd.exe /C %1").arg(m_appExitCommand));
 #else
-        QProcess::startDetached(m_appExitCommand);
+        QStringList args = { "-c", m_appExitCommand };
+        QProcess::startDetached("sh", args);
 #endif
     }
 }

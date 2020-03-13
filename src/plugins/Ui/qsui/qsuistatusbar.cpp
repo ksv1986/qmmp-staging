@@ -87,6 +87,7 @@ void QSUiStatusBar::onStateChanged(Qmmp::State state)
         m_labels[StatusLabel]->setText(QString("<b>%1</b>").arg(state == Qmmp::Playing ? tr("Playing") : tr("Paused")));
         onAudioParametersChanged(m_core->audioParameters());
         onElapsedChanged(m_core->elapsed());
+        onBitrateChanged(m_core->bitrate());
         updatePlayListStatus();
     }
     else if(state == Qmmp::Buffering)

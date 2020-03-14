@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -81,14 +81,7 @@ static void cddb_log_handler(cddb_log_level_t level, const char *message)
 
 DecoderCDAudio::DecoderCDAudio(const QString &url) : Decoder()
 {
-    m_bitrate = 0;
-    m_totalTime = 0;
-    m_first_sector = -1;
-    m_last_sector  = -1;
-    m_current_sector  = -1;
     m_url = url;
-    m_cdio = nullptr;
-    m_buffer_at = 0;
     m_buffer = new char[CDDA_BUFFER_SIZE];
 }
 

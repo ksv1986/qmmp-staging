@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include <QMessageBox>
+#include <QSettings>
 #include <cdio/version.h>
 #include <cddb/version.h>
 #include "settingsdialog.h"
@@ -27,6 +28,16 @@
 
 
 // DecoderCDAudioFactory
+
+DecoderCDAudioFactory::DecoderCDAudioFactory()
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    if(settings.value("cdaudio/cddb_server").toByteArray() == "freedb.org")
+    {
+        qDebug("DecoderCDAudioFactory: switching to gnudb.org");
+        settings.setValue("cdaudio/cddb_server", "gnudb.org");
+    }
+}
 
 bool DecoderCDAudioFactory::canDecode(QIODevice *) const
 {

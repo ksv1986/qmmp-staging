@@ -1538,42 +1538,42 @@
         <translation type="unfinished">En pause</translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="101"/>
+        <location filename="../qsuistatusbar.cpp" line="102"/>
         <source>Buffering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="126"/>
+        <location filename="../qsuistatusbar.cpp" line="127"/>
         <source>Stopped</source>
         <translation type="unfinished">Arrêté</translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="138"/>
+        <location filename="../qsuistatusbar.cpp" line="139"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="146"/>
+        <location filename="../qsuistatusbar.cpp" line="147"/>
         <source>Buffering: %1%</source>
         <translation type="unfinished">Mise en tampon : %1 %</translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="151"/>
+        <location filename="../qsuistatusbar.cpp" line="152"/>
         <source>%1 bits</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="153"/>
+        <location filename="../qsuistatusbar.cpp" line="154"/>
         <source>mono</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="155"/>
+        <location filename="../qsuistatusbar.cpp" line="156"/>
         <source>stereo</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qsuistatusbar.cpp" line="157"/>
+        <location filename="../qsuistatusbar.cpp" line="158"/>
         <source>%n channels</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1581,12 +1581,12 @@
         </translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="158"/>
+        <location filename="../qsuistatusbar.cpp" line="159"/>
         <source>%1 Hz</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qsuistatusbar.cpp" line="163"/>
+        <location filename="../qsuistatusbar.cpp" line="164"/>
         <source>%1 kbps</source>
         <translation type="unfinished"></translation>
     </message>

@@ -66,6 +66,7 @@ Other features:
 - playlist formats: m3u, pls, xspf
 - ReplayGain support
 - Last.fm/Libre.fm scrobbler
+- CDDB support
 - audio converter
 - stream browser
 - audio formats converter
@@ -98,6 +99,7 @@ Requirements:
 - ffmpeg >= 3.2 (optional)
 - libcdio >= 0.80 (optional)
 - libcdio-paranoia >= 10.2 (since libcdio 0.90)
+- libcddb >= 1.3.1 (optional)
 - faad2 >= 2.6.1 (optional)
 - game-music-emu >= 0.5.5 (optional)
 - opus >= 1.0.2 (optional)

@@ -29,6 +29,7 @@ class DecoderCDAudioFactory : public QObject, DecoderFactory
     Q_PLUGIN_METADATA(IID "org.qmmp.qmmp.DecoderFactoryInterface.1.0")
     Q_INTERFACES(DecoderFactory)
 public:
+    DecoderCDAudioFactory();
     bool canDecode(QIODevice *input) const override;
     DecoderProperties properties() const override;
     Decoder *create(const QString &, QIODevice *) override;

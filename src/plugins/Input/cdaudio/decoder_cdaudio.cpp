@@ -205,8 +205,8 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
             t.info.setValue(Qmmp::TITLE, QString::fromLocal8Bit(cdtext->field[CDTEXT_TITLE]));
             t.info.setValue(Qmmp::ARTIST, QString::fromLocal8Bit(cdtext->field[CDTEXT_PERFORMER]));
             t.info.setValue(Qmmp::GENRE, QString::fromLocal8Bit(cdtext->field[CDTEXT_GENRE]));
-            t.info.setValue(Qmmp::COMMENT, QString::fromLocal8Bit(cdtext->field[CDTEXT_FIELD_MESSAGE]));
-            t.info.setValue(Qmmp::COMPOSER, QString::fromLocal8Bit(cdtext->field[CDTEXT_FIELD_COMPOSER]));
+            t.info.setValue(Qmmp::COMMENT, QString::fromLocal8Bit(cdtext->field[CDTEXT_MESSAGE]));
+            t.info.setValue(Qmmp::COMPOSER, QString::fromLocal8Bit(cdtext->field[CDTEXT_COMPOSER]));
             use_cddb = false;
         }
 #else

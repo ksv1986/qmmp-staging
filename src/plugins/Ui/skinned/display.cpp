@@ -161,7 +161,7 @@ void MainDisplay::updatePositions()
     m_shuffleButton->move (r*164, r*89);
     m_kbps->move (r*111, r*43);
     m_freq->move (r*156, r*43);
-    m_text->resize (r*154, r*15);
+    m_text->resize (r*154, r*16);
     m_text->move (r*109, r*23);
     m_monoster->move (r*212, r*41);
     m_playstatus->move(r*24, r*28);

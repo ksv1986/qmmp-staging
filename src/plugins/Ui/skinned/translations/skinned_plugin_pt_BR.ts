@@ -1395,17 +1395,17 @@
 <context>
     <name>TextScroller</name>
     <message>
-        <location filename="../textscroller.cpp" line="61"/>
+        <location filename="../textscroller.cpp" line="58"/>
         <source>Autoscroll Songname</source>
         <translation>Deslocação automática do nome da faixa</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="62"/>
+        <location filename="../textscroller.cpp" line="59"/>
         <source>Transparent Background</source>
         <translation>Fundo transparente</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="132"/>
+        <location filename="../textscroller.cpp" line="130"/>
         <source>Buffering: %1%</source>
         <translation>Processamento: %1%</translation>
     </message>

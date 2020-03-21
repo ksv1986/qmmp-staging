@@ -69,10 +69,10 @@ private:
     QString m_titleText;
     QPixmap m_pixmap;
     int m_x1, m_x2, m_ratio;
-    bool m_scroll, m_bitmap, m_pressed;
-    int m_press_pos;
+    bool m_scroll = false, m_bitmap = false, m_pressed = false;
+    int m_press_pos = 0;
     QFont m_font;
-    QFontMetrics *m_metrics;
+    QFontMetrics *m_metrics = nullptr;
     Skin *m_skin;
     QColor m_color;
     QTimer *m_timer;

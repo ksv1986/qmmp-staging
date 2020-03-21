@@ -44,9 +44,6 @@
 
 TextScroller::TextScroller (QWidget *parent) : QWidget (parent)
 {
-    m_pressed = false;
-    m_press_pos = 0;
-    m_metrics = nullptr;
     m_defautText = QString("Qmmp ") + Qmmp::strVersion();
     m_formater.setPattern(TITLE_FORMAT);
     m_core = SoundCore::instance();

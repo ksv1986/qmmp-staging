@@ -62,7 +62,6 @@ TextScroller::TextScroller (QWidget *parent) : QWidget (parent)
     m_transparencyAction = m_menu->addAction(tr("Transparent Background"), this, SLOT(updateText()));
     m_scrollAction->setCheckable(true);
     m_transparencyAction->setCheckable(true);
-    connect(m_scrollAction, SIGNAL(toggled(bool)), SLOT(updateText()));
     connect(m_timer, SIGNAL (timeout()), SLOT (addOffset()));
     connect(m_skin, SIGNAL(skinChanged()), SLOT(updateSkin()));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(processState(Qmmp::State)));
@@ -117,7 +116,9 @@ void TextScroller::updateSkin()
     QString fontname = settings.value("Skinned/mw_font", QApplication::font().toString()).toString();
     m_font.fromString(fontname);
     if (m_metrics)
+    {
         delete m_metrics;
+    }
     else
     {
         m_scrollAction->setChecked(settings.value("Skinned/autoscroll", true).toBool());
@@ -286,9 +287,9 @@ void TextScroller::preparePixmap(const QString &text, bool scrollable)
          painter.setPen(m_color);
          painter.setFont(m_font);
          if(bitmap)
-             drawBitmapText (0,12, fullText, &painter, m_skin);
+             drawBitmapText (0, 10 * m_ratio, fullText, &painter, m_skin);
          else
-             painter.drawText (0,12, fullText);
+             painter.drawText (0, qMin(m_pixmap.height() / 2  + m_metrics->ascent() / 2, m_pixmap.height() - 2), fullText);
          m_x1 = 0;
          m_x2 = m_pixmap.width();
     }
@@ -303,9 +304,9 @@ void TextScroller::preparePixmap(const QString &text, bool scrollable)
         painter.setPen(m_color);
         painter.setFont(m_font);
         if(bitmap)
-            drawBitmapText (0,12, text, &painter, m_skin);
+            drawBitmapText (0, 10 * m_ratio, text, &painter, m_skin);
         else
-            painter.drawText (0,12, text);
+            painter.drawText (0, qMin(m_pixmap.height() / 2  + m_metrics->ascent() / 2, m_pixmap.height() - 2), text);
     }
 }
 

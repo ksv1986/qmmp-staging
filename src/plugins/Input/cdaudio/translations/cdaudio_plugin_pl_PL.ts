@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="pl_PL" version="2.1">
 <context>
     <name>DecoderCDAudioFactory</name>
     <message>
@@ -21,7 +19,7 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="88"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
-        <translation>Skompilowana przy użyciu libcdio-%1 oraz libcddb-%2</translation>
+        <translation>Skompilowana z bibliotekami libcdio-%1 oraz libcddb-%2</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="90"/>

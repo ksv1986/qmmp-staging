@@ -1402,7 +1402,7 @@
         <translation>Permatomas fonas</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="132"/>
+        <location filename="../textscroller.cpp" line="133"/>
         <source>Buffering: %1%</source>
         <translation>Buferis: %1%</translation>
     </message>

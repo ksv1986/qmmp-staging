@@ -1400,7 +1400,7 @@
         <translation>Fundo transparente</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="132"/>
+        <location filename="../textscroller.cpp" line="133"/>
         <source>Buffering: %1%</source>
         <translation>Processamento: %1%</translation>
     </message>

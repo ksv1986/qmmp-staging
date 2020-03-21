@@ -4,24 +4,24 @@
 <context>
     <name>FileOps</name>
     <message>
-        <location filename="../fileops.cpp" line="94"/>
-        <location filename="../fileops.cpp" line="128"/>
+        <location filename="../fileops.cpp" line="93"/>
+        <location filename="../fileops.cpp" line="133"/>
         <source>Error</source>
         <translation>Virhe</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="95"/>
-        <location filename="../fileops.cpp" line="129"/>
+        <location filename="../fileops.cpp" line="94"/>
+        <location filename="../fileops.cpp" line="134"/>
         <source>Destination directory doesn&apos;t exist</source>
         <translation>Kohdekansiota ei ole olemassa</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="132"/>
+        <location filename="../fileops.cpp" line="137"/>
         <source>Move Files</source>
         <translation>Siirrä tiedostot</translation>
     </message>
     <message numerus="yes">
-        <location filename="../fileops.cpp" line="133"/>
+        <location filename="../fileops.cpp" line="138"/>
         <source>Are you sure you want to move %n file(s)?</source>
         <translation>
             <numerusform>Haluatko varmasti siirtää %n tiedoston?</numerusform>
@@ -29,38 +29,38 @@
         </translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="149"/>
+        <location filename="../fileops.cpp" line="154"/>
         <source>Copying</source>
         <translation>Kopioidaan</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="150"/>
-        <location filename="../fileops.cpp" line="240"/>
+        <location filename="../fileops.cpp" line="155"/>
+        <location filename="../fileops.cpp" line="249"/>
         <source>Stop</source>
         <translation>Lopeta</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="195"/>
+        <location filename="../fileops.cpp" line="200"/>
         <source>Copying file %1/%2</source>
         <translation>Kopioidaan tiedostoa %1/%2</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="239"/>
+        <location filename="../fileops.cpp" line="248"/>
         <source>Moving</source>
         <translation>Siirretään</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="272"/>
+        <location filename="../fileops.cpp" line="284"/>
         <source>Moving file %1/%2</source>
         <translation>Siirretään tiedostoa %1/%2</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="110"/>
+        <location filename="../fileops.cpp" line="109"/>
         <source>Remove Files</source>
         <translation>Poista tiedostot</translation>
     </message>
     <message numerus="yes">
-        <location filename="../fileops.cpp" line="111"/>
+        <location filename="../fileops.cpp" line="110"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
         <translation type="unfinished">
             <numerusform></numerusform>

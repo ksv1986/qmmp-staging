@@ -1400,7 +1400,7 @@
         <translation>透明的背景</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="132"/>
+        <location filename="../textscroller.cpp" line="133"/>
         <source>Buffering: %1%</source>
         <translation>缓冲中：%1%</translation>
     </message>

@@ -1400,7 +1400,7 @@
         <translation>Прозрачный фон</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="132"/>
+        <location filename="../textscroller.cpp" line="133"/>
         <source>Buffering: %1%</source>
         <translation>Буферизация: %1%</translation>
     </message>

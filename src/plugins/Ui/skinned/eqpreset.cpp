@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006 by Ilya Kotov                                      *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,6 +17,11 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+
+#include <QtGlobal>
+#if (QT_VERSION < QT_VERSION_CHECK(5, 7, 0)) //qAsConst template
+#include <qmmp/qmmp.h>
+#endif
 #include "eqpreset.h"
 
 EQPreset::EQPreset()

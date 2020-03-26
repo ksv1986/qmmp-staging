@@ -23,6 +23,9 @@
 #include <QWindow>
 #include <QtDebug>
 #include <QApplication>
+#if (QT_VERSION < QT_VERSION_CHECK(5, 7, 0)) //qAsConst template
+#include <qmmp/qmmp.h>
+#endif
 #include "dock.h"
 
 Dock *Dock::m_instance = nullptr;

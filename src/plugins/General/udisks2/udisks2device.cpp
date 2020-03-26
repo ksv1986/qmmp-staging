@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,6 +22,9 @@
 #include <QDBusConnection>
 #include <QByteArray>
 #include <QDBusMetaType>
+#if (QT_VERSION < QT_VERSION_CHECK(5, 7, 0)) //qAsConst template
+#include <qmmp/qmmp.h>
+#endif
 #include "udisks2device.h"
 
 UDisks2Device::UDisks2Device(QDBusObjectPath o, QObject *parent) : QObject(parent)

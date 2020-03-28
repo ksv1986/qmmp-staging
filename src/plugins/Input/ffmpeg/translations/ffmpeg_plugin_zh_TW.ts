@@ -4,32 +4,32 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="128"/>
+        <location filename="../decoderffmpegfactory.cpp" line="133"/>
         <source>FFmpeg Plugin</source>
         <translation>FFmpeg 外掛</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="130"/>
+        <location filename="../decoderffmpegfactory.cpp" line="135"/>
         <source>FFmpeg Formats</source>
         <translation>FFmpeg 格式</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="303"/>
+        <location filename="../decoderffmpegfactory.cpp" line="308"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>關於 FFmpeg 聲訊插件</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="304"/>
+        <location filename="../decoderffmpegfactory.cpp" line="309"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>Qmmp FFmpeg 聲訊插件</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="305"/>
+        <location filename="../decoderffmpegfactory.cpp" line="310"/>
         <source>Compiled against:</source>
         <translation>編譯使用：</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="318"/>
+        <location filename="../decoderffmpegfactory.cpp" line="323"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
@@ -109,6 +109,11 @@
     <message>
         <location filename="../settingsdialog.ui" line="145"/>
         <source>Tom&apos;s lossless Audio Kompressor (TAK)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="152"/>
+        <source>Direct Stream Digital (DSD)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -126,7 +126,7 @@
 <context>
     <name>UltimateLyricsParser</name>
     <message>
-        <location filename="../ultimatelyricsparser.cpp" line="116"/>
+        <location filename="../ultimatelyricsparser.cpp" line="119"/>
         <source>%1 (line: %2)</source>
         <translation type="unfinished"></translation>
     </message>

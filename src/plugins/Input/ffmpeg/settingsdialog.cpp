@@ -35,8 +35,9 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_ui.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    QStringList filters;
-    filters << "*.wma" << "*.ape" << "*.tta" << "*.m4a" << "*.aac" << "*.ra" << "*.shn" << "*.vqf" << "*.ac3" << "*.tak";
+    QStringList filters = {
+        "*.wma", "*.ape", "*.tta", "*.m4a", "*.aac", "*.ra", "*.shn", "*.vqf", "*.ac3", "*.tak", "*.dsf", "*.dsdiff"
+    };
     filters = settings.value("FFMPEG/filters", filters).toStringList();
 
     m_ui.wmaCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_WMAV1));
@@ -65,6 +66,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_ui.vqfCheckBox->setChecked(filters.contains("*.vqf") && avcodec_find_decoder(AV_CODEC_ID_TWINVQ));
     m_ui.takCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_TAK));
     m_ui.takCheckBox->setChecked(filters.contains("*.tak") && avcodec_find_decoder(AV_CODEC_ID_TAK));
+    m_ui.dsdCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_DSD_LSBF));
+    m_ui.dsdCheckBox->setChecked(filters.contains("*.dsd") && avcodec_find_decoder(AV_CODEC_ID_DSD_LSBF));
 }
 
 SettingsDialog::~SettingsDialog()
@@ -100,6 +103,8 @@ void SettingsDialog::accept()
         filters << "*.vqf";
     if (m_ui.takCheckBox->isChecked())
         filters << "*.tak";
+    if (m_ui.dsdCheckBox->isChecked())
+        filters << "*.dsf" << "*.dsdiff";
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("FFMPEG/filters", filters);
     QDialog::accept();

@@ -169,7 +169,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
         <source>&amp;Transit between playlists</source>
-        <translation type="unfinished"></translation>
+        <translation>Przejście między listami &amp;odtwarzania</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="56"/>
@@ -720,7 +720,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="135"/>
         <source>Waveform Seek Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasek wyszukiwania przebiegu fali</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="149"/>
@@ -1091,48 +1091,48 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="206"/>
         <source>Visualization Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolory wizualizacji</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="212"/>
         <source>Color #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolor #1:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="279"/>
         <source>Color #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolor #2:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="343"/>
         <source>Color #3:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolor #3:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="432"/>
         <source>Reset colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetuj kolory</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="873"/>
         <source>Waveform Seekbar Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolory paska wyszukiwania przebiegu fali</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="879"/>
         <source>Progress bar:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasek postępu:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="968"/>
         <source>RMS:</source>
         <extracomment>Root mean square</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Średnia kwadratowa:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1013"/>
         <source>Waveform:</source>
-        <translation type="unfinished"></translation>
+        <translation>Przebieg fali:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1054"/>
@@ -1298,17 +1298,17 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="766"/>
         <source>Override current track background</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastąp tło aktualnego utworu</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="734"/>
         <source>Current track background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tło aktualnego utworu:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="821"/>
         <source>Override group background</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastąp tło grupy</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1279"/>
@@ -1371,107 +1371,107 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="126"/>
         <source>Cover</source>
-        <translation type="unfinished">Okładka</translation>
+        <translation>Okładka</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="129"/>
         <source>Visualization Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryb wizualizacji</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="132"/>
         <source>Analyzer</source>
-        <translation type="unfinished"></translation>
+        <translation>Analizator</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="133"/>
         <source>Scope</source>
-        <translation type="unfinished"></translation>
+        <translation>Zakres</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="140"/>
         <source>Analyzer Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryb Analizatora</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="142"/>
         <source>Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Komórki</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="143"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Linie</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="151"/>
         <source>Peaks</source>
-        <translation type="unfinished">Szczyty</translation>
+        <translation>Szczyty</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="154"/>
         <source>Refresh Rate</source>
-        <translation type="unfinished">Odświeżanie</translation>
+        <translation>Odświeżanie</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="157"/>
         <source>50 fps</source>
-        <translation type="unfinished">50 kl./s</translation>
+        <translation>50 kl./s</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="158"/>
         <source>25 fps</source>
-        <translation type="unfinished">25 kl./s</translation>
+        <translation>25 kl./s</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="159"/>
         <source>10 fps</source>
-        <translation type="unfinished">10 kl./s</translation>
+        <translation>10 kl./s</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="160"/>
         <source>5 fps</source>
-        <translation type="unfinished">5 kl./s</translation>
+        <translation>5 kl./s</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="167"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished">Opadanie Analizatora</translation>
+        <translation>Opadanie Analizatora</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="170"/>
         <location filename="../qsuivisualization.cpp" line="184"/>
         <source>Slowest</source>
-        <translation type="unfinished">Najwolniej</translation>
+        <translation>Najwolniej</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="171"/>
         <location filename="../qsuivisualization.cpp" line="185"/>
         <source>Slow</source>
-        <translation type="unfinished">Wolno</translation>
+        <translation>Wolno</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="172"/>
         <location filename="../qsuivisualization.cpp" line="186"/>
         <source>Medium</source>
-        <translation type="unfinished">Średnio</translation>
+        <translation>Średnia</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="173"/>
         <location filename="../qsuivisualization.cpp" line="187"/>
         <source>Fast</source>
-        <translation type="unfinished">Szybko</translation>
+        <translation>Szybko</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="174"/>
         <location filename="../qsuivisualization.cpp" line="188"/>
         <source>Fastest</source>
-        <translation type="unfinished">Najszybciej</translation>
+        <translation>Najszybciej</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="181"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished">Opadanie szczytów</translation>
+        <translation>Opadanie szczytów</translation>
     </message>
 </context>
 <context>
@@ -1479,7 +1479,7 @@
     <message>
         <location filename="../qsuifactory.cpp" line="32"/>
         <source>Simple User Interface</source>
-        <translation type="unfinished">Prosty interfejs użytkownika</translation>
+        <translation>Prosty interfejs użytkownika</translation>
     </message>
 </context>
 <context>
@@ -1487,32 +1487,32 @@
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished">Domyślne</translation>
+        <translation>Domyślne</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
         <source>16x16</source>
-        <translation type="unfinished">16x16</translation>
+        <translation>16x16</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="44"/>
         <source>22x22</source>
-        <translation type="unfinished">22x22</translation>
+        <translation>22x22</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="45"/>
         <source>32x32</source>
-        <translation type="unfinished">32x32</translation>
+        <translation>32x32</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="46"/>
         <source>48x48</source>
-        <translation type="unfinished">48x48</translation>
+        <translation>48x48</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="47"/>
         <source>64x64</source>
-        <translation type="unfinished">64x64</translation>
+        <translation>64x64</translation>
     </message>
 </context>
 <context>
@@ -1520,76 +1520,76 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="68"/>
         <source>tracks: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>utwory: %1</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="69"/>
         <source>total time: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>czas całkowity: %1</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="87"/>
         <source>Playing</source>
-        <translation type="unfinished">Odtwarzanie</translation>
+        <translation>Odtwarzanie</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="87"/>
         <source>Paused</source>
-        <translation type="unfinished">Wstrzymane</translation>
+        <translation>Wstrzymane</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="102"/>
         <source>Buffering</source>
-        <translation type="unfinished"></translation>
+        <translation>Buforowanie</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="127"/>
         <source>Stopped</source>
-        <translation type="unfinished">Zatrzymane</translation>
+        <translation>Zatrzymane</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="139"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="147"/>
         <source>Buffering: %1%</source>
-        <translation type="unfinished">Buforowanie: %1%</translation>
+        <translation>Buforowanie: %1%</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="152"/>
         <source>%1 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 bity</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="154"/>
         <source>mono</source>
-        <translation type="unfinished"></translation>
+        <translation>mono</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="156"/>
         <source>stereo</source>
-        <translation type="unfinished"></translation>
+        <translation>stereo</translation>
     </message>
     <message numerus="yes">
         <location filename="../qsuistatusbar.cpp" line="158"/>
         <source>%n channels</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n kanał</numerusform>
+            <numerusform>%n kanały</numerusform>
+            <numerusform>%n kanałów</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="159"/>
         <source>%1 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Hz</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="164"/>
         <source>%1 kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kbps</translation>
     </message>
 </context>
 <context>
@@ -1597,13 +1597,13 @@
     <message>
         <location filename="../qsuiwaveformseekbar.cpp" line="325"/>
         <source>2 Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>2 kanały</translation>
     </message>
     <message>
         <location filename="../qsuiwaveformseekbar.cpp" line="328"/>
         <source>RMS</source>
         <extracomment>Root mean square</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Średnia kwadratowa</translation>
     </message>
 </context>
 <context>

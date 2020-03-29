@@ -8,6 +8,7 @@ Búlgaro:
     Kiril Kirilov
 
 Chino Tradicional:
+    Cosmos Chen
     lon <lon83129@126.com>
     Jeff Huang
 
@@ -22,6 +23,7 @@ Checo:
     Karel Volný <kvolny@redhat.com>
 
 Neerlandés:
+    Heimen Stoffels
     Ronald Uitermark <ronald645@gmail.com>
 
 Finlandés:
@@ -51,6 +53,7 @@ Húngaro:
     Németh Gábor <sutee84@freemail.hu>
 
 Indonesio:
+    Andika Triwidada
     Wantoyo <wantoyek@gmail.com>
 
 Italiano:
@@ -69,6 +72,7 @@ Lituano:
 Polaco:
     Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
+    mrerexx
 
 Portugués:
     Sérgio Marques <smarquespt@gmail.com>
@@ -76,6 +80,7 @@ Portugués:
 Ruso:
     Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
 
 Serbio:
     Mladen Pejaković <pejakm@autistici.org>

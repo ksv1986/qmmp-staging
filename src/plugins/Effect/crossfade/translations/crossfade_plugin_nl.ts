@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="30"/>
         <source>Crossfade Plugin</source>
-        <translation>Overlap Module</translation>
+        <translation>Vloeiende overgang-plug-in</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="51"/>
         <source>About Crossfade Plugin</source>
-        <translation>Over de Overlap Module</translation>
+        <translation>Over de Vloeiende overgang-plug-in</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="52"/>
         <source>Qmmp Crossfade Plugin</source>
-        <translation>Overlap Module voor Qmmp</translation>
+        <translation>Vloeiende overgang-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="53"/>
@@ -29,17 +29,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Crossfade Plugin Settings</source>
-        <translation>Overloop Module Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Overlap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Overgang:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
 </context>
 </TS>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="29"/>
         <source>Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>GNOME-sneltoetsplug-in</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="50"/>
         <source>About Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de GNOME-sneltoetsplug-in</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="51"/>
         <source>Qmmp Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>GNOME-sneltoetsplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="52"/>
         <source>This plugin adds support of the GNOME/Cinnamon hotkeys</source>
-        <translation type="unfinished"></translation>
+        <translation>Deze plug-in voegt ondersteuning toe voor GNOME en Cinnamon-sneltoetsen</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="53"/>

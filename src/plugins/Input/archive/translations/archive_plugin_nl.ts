@@ -6,27 +6,27 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="39"/>
         <source>Archive Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Archiefplug-in</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="41"/>
         <source>Archives</source>
-        <translation type="unfinished"></translation>
+        <translation>Archieven</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="168"/>
         <source>About Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de Archieflezer-plug-in</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="169"/>
         <source>Qmmp Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Archieflezer-plug-in</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="170"/>
         <source>Compiled against %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebouwd met %1</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="171"/>

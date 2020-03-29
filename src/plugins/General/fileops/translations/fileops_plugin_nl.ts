@@ -18,14 +18,14 @@
     <message>
         <location filename="../fileops.cpp" line="137"/>
         <source>Move Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestanden verplaatsen</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="138"/>
         <source>Are you sure you want to move %n file(s)?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Weet je zeker dat je %n bestand wilt verplaatsen?</numerusform>
+            <numerusform>Weet je zeker dat je %n bestanden wilt verplaatsen?</numerusform>
         </translation>
     </message>
     <message>
@@ -37,34 +37,34 @@
         <location filename="../fileops.cpp" line="155"/>
         <location filename="../fileops.cpp" line="249"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stoppen</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="200"/>
         <source>Copying file %1/%2</source>
-        <translation>Kopiëer bestand: %1/%2</translation>
+        <translation>Bezig met kopiëren: %1/%2</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="248"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met verplaatsen</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="284"/>
         <source>Moving file %1/%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met verplaatsen: %1/%2</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="109"/>
         <source>Remove Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestanden verwijderen</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="110"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
         <translation>
-            <numerusform>Weet u zeker dat u dit bestand wilt verwijderen?</numerusform>
-            <numerusform>Weet u zeker dat u deze %n bestanden wilt verwijderen?</numerusform>
+            <numerusform>Weet je zeker dat je %n bestand wilt verwijderen?</numerusform>
+            <numerusform>Weet je zeker dat je %n bestanden wilt verwijderen?</numerusform>
         </translation>
     </message>
 </context>
@@ -73,17 +73,17 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="30"/>
         <source>File Operations Plugin</source>
-        <translation>Bestands Beheer Module</translation>
+        <translation>Bestandsbeheer-plug-in</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="50"/>
         <source>About File Operations Plugin</source>
-        <translation>Over de Bestands Beheer Module</translation>
+        <translation>Over de Bestandsbeheer-plug-in</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="51"/>
         <source>Qmmp File Operations Plugin</source>
-        <translation>Bestands Beheer Module voor Qmmp</translation>
+        <translation>Bestandsbeheer-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="52"/>
@@ -96,17 +96,17 @@
     <message>
         <location filename="../hotkeydialog.ui" line="14"/>
         <source>Modify Shortcut</source>
-        <translation>Sneltoets Aanpassen</translation>
+        <translation>Sneltoets aanpassen</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="29"/>
         <source>Press the key combination you want to assign</source>
-        <translation>Druk de toetscombinatie die u wilt toewijzen</translation>
+        <translation>Druk op de toetscombinatie die je wilt toewijzen</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="43"/>
         <source>Clear</source>
-        <translation>Leeghalen</translation>
+        <translation>Wissen</translation>
     </message>
 </context>
 <context>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Operations Settings</source>
-        <translation>Instellingen van Bestandsbeheer</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
@@ -146,7 +146,7 @@
         <location filename="../settingsdialog.cpp" line="54"/>
         <location filename="../settingsdialog.cpp" line="134"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="116"/>
@@ -162,25 +162,25 @@
     <message>
         <location filename="../settingsdialog.ui" line="133"/>
         <source>File name pattern:</source>
-        <translation>Bestandsnaam patroon:</translation>
+        <translation>Bestandsnaampatroon:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="51"/>
         <location filename="../settingsdialog.cpp" line="131"/>
         <source>Copy</source>
-        <translation>Kopiëer</translation>
+        <translation>Kopiëren</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>Rename</source>
-        <translation>Hernoem</translation>
+        <translation>Naam wijzigen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>
         <location filename="../settingsdialog.cpp" line="133"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Verplaatsen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="137"/>

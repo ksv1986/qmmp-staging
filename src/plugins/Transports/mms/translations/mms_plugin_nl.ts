@@ -6,17 +6,17 @@
     <message>
         <location filename="../mmsinputfactory.cpp" line="32"/>
         <source>MMS Plugin</source>
-        <translation>MMS Module</translation>
+        <translation>MMS-plug-in</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="52"/>
         <source>About MMS Transport Plugin</source>
-        <translation>Over de MMS Transport Module</translation>
+        <translation>Over de MMS-overdrachtsplug-in</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="53"/>
         <source>Qmmp MMS Transport Plugin</source>
-        <translation>MMS Transport Module voor Qmmp</translation>
+        <translation>MMS-overdrachtsplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="54"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MMS Plugin Settings</source>
-        <translation>MMS Module Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>KB</translation>
     </message>
 </context>
 </TS>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectstereofactory.cpp" line="30"/>
         <source>Extra Stereo Plugin</source>
-        <translation>Extra Stereo Module</translation>
+        <translation>Extra Stereo-plug-in</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="50"/>
         <source>About Extra Stereo Plugin</source>
-        <translation>Over de Extra Stereo Module</translation>
+        <translation>Over de Extra Stereo-plug-in</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="51"/>
         <source>Qmmp Extra Stereo Plugin</source>
-        <translation>Extra Stereo Module voor Qmmp</translation>
+        <translation>Extra Stereo-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="52"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../effectstereofactory.cpp" line="53"/>
         <source>Based on the Extra Stereo Plugin for Xmms by Johan Levin</source>
-        <translation>Gebasseerd op de Extra Stereo Module voor Xmms geschreven door Johan Levin</translation>
+        <translation>Gebaseerd op de Extra Stereo-plug-in voor Xmms, gemaakt door Johan Levin</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Extra Stereo Plugin Settings</source>
-        <translation>Extra Stereo Module Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="31"/>
@@ -44,12 +44,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="54"/>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation>-</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="57"/>
         <source>%1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1</translation>
     </message>
 </context>
 </TS>

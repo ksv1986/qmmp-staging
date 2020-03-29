@@ -6,17 +6,17 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="29"/>
         <source>WASAPI Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>WASAPI-plug-in</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="54"/>
         <source>About WASAPI Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de WASAPI-uitvoerplug-in</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="55"/>
         <source>Qmmp WASAPI Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>WASAPI-uitvoerplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="56"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WASAPI Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="68"/>
         <source>Exclusive mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Exclusieve modus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="58"/>

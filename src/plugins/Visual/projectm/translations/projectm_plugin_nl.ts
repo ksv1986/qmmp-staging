@@ -19,87 +19,87 @@
     <message>
         <location filename="../projectmwidget.cpp" line="150"/>
         <source>F1</source>
-        <translation type="unfinished"></translation>
+        <translation>F1</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="151"/>
         <source>&amp;Show Song Title</source>
-        <translation>&amp;Weergeef Titel van Nummer</translation>
+        <translation>Naam van &amp;nummer tonen</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="151"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
         <source>&amp;Show Preset Name</source>
-        <translation>&amp;Weergeef Naam van Voorinstellingen</translation>
+        <translation>Naam van voorin&amp;stelling tonen</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
         <source>F3</source>
-        <translation type="unfinished"></translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="153"/>
         <source>&amp;Show Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu &amp;tonen</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="153"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="155"/>
         <source>&amp;Next Preset</source>
-        <translation>&amp;Volgende Instelling</translation>
+        <translation>Volge&amp;nde voorinstelling</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="155"/>
         <source>N</source>
-        <translation type="unfinished"></translation>
+        <translation>N</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
         <source>&amp;Previous Preset</source>
-        <translation>&amp;Vorige Instelling</translation>
+        <translation>&amp;Vorige voorinstelling</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation>P</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
         <source>&amp;Random Preset</source>
-        <translation>&amp;Willekeurige Instelling</translation>
+        <translation>Willekeu&amp;rige voorinstelling</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>
         <source>&amp;Lock Preset</source>
-        <translation>&amp;Zet Instelling Vast</translation>
+        <translation>Voorinste&amp;lling vastzetten</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="160"/>
         <source>&amp;Fullscreen</source>
-        <translation>&amp;Volledig scherm</translation>
+        <translation>Beeld&amp;vullend</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="160"/>
         <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation>F</translation>
     </message>
 </context>
 <context>
@@ -112,17 +112,17 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="49"/>
         <source>About ProjectM Visual Plugin</source>
-        <translation>Over de ProjectM Visuele Module</translation>
+        <translation>Over de ProjectM visuele plug-in</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="50"/>
         <source>Qmmp ProjectM Visual Plugin</source>
-        <translation>ProjectM Visuele Module voor Qmmp</translation>
+        <translation>ProjectM visuele plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="51"/>
         <source>This plugin adds projectM visualization</source>
-        <translation>Deze plugin voegt projectM visualisatie toe</translation>
+        <translation>Deze plug-in voegt ProjectM-visualisatie toe</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="52"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="53"/>
         <source>Based on libprojectM-qt library</source>
-        <translation>Gebasseerd op de libprojectM-qt bibliotheek</translation>
+        <translation>Gebaseerd op de libprojectM-qt-bibliotheek</translation>
     </message>
 </context>
 </TS>

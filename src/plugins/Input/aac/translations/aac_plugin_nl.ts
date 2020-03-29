@@ -6,22 +6,22 @@
     <message>
         <location filename="../decoderaacfactory.cpp" line="39"/>
         <source>AAC Plugin</source>
-        <translation>AAC Module</translation>
+        <translation>AAC-plug-in</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="41"/>
         <source>AAC Files</source>
-        <translation>AAC Bestanden</translation>
+        <translation>AAC-bestanden</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="103"/>
         <source>About AAC Audio Plugin</source>
-        <translation>Over de AAC Audio Module</translation>
+        <translation>Over de AAC-audioplug-in</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="104"/>
         <source>Qmmp AAC Audio Plugin</source>
-        <translation>AAC Audio Module voor Qmmp</translation>
+        <translation>AAC-audioplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="105"/>

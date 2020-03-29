@@ -7,7 +7,7 @@
         <location filename="../converter.cpp" line="124"/>
         <location filename="../converter.cpp" line="227"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Afgebroken</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="139"/>
@@ -18,17 +18,17 @@
     <message>
         <location filename="../converter.cpp" line="177"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met converteren</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="238"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met omzetten</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="276"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Afgerond</translation>
     </message>
 </context>
 <context>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio converteren</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
@@ -46,37 +46,37 @@
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
         <source>Output directory:</source>
-        <translation>Uitvoer map:</translation>
+        <translation>Uitvoermap:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="80"/>
         <source>Output file name:</source>
-        <translation>Uitvoer bestandsnaam:</translation>
+        <translation>Uitvoerbestandsnaam:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="97"/>
         <source>Preset:</source>
-        <translation>Profiel:</translation>
+        <translation>Voorinstelling:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="114"/>
         <source>Overwrite existing files</source>
-        <translation>Overschrijv bestaande bestanden</translation>
+        <translation>Bestaande bestanden overschrijven</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation>Converteer</translation>
+        <translation>Converteren</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stoppen</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="108"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="198"/>
         <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopie creëren</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="129"/>
@@ -103,32 +103,32 @@
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
         <source>Waiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met wachten</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="196"/>
         <source>Create</source>
-        <translation>Creëer</translation>
+        <translation>Creëren</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="197"/>
         <source>Edit</source>
-        <translation>Bewerk</translation>
+        <translation>Bewerken</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="199"/>
         <source>Delete</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="353"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan &apos;%1&apos; niet uitvoeren: programma niet aangetroffen.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="359"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Het proces &apos;%1&apos; is afgerond, maar met fouten.</translation>
     </message>
 </context>
 <context>
@@ -136,22 +136,22 @@
     <message>
         <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
-        <translation>Converteer Module</translation>
+        <translation>Converteer-plug-in</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
-        <translation>Over de Converteer Module</translation>
+        <translation>Over de Converteer-plug-in</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
-        <translation>Converteer Module voor Qmmp</translation>
+        <translation>Converteer-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
-        <translation>Deze module converteert ondersteunde audiobestanden naar andere formaten door gebruik van externe commando prompt encoders</translation>
+        <translation>Deze plug-in converteert ondersteunde audiobestanden naar andere formaten door gebruik van externe cli-encoders</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
@@ -164,12 +164,12 @@
     <message>
         <location filename="../converterhelper.cpp" line="33"/>
         <source>Convert</source>
-        <translation>Converteer</translation>
+        <translation>Converteren</translation>
     </message>
     <message>
         <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Super+C</translation>
     </message>
 </context>
 <context>
@@ -177,7 +177,7 @@
     <message>
         <location filename="../preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
-        <translation>Profiel Bewerker</translation>
+        <translation>Voorinstellingen bewerken</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="29"/>
@@ -197,7 +197,7 @@
     <message>
         <location filename="../preseteditor.ui" line="58"/>
         <source>Command</source>
-        <translation>Commando</translation>
+        <translation>Opdracht</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="77"/>
@@ -207,27 +207,27 @@
     <message>
         <location filename="../preseteditor.ui" line="83"/>
         <source>Write tags</source>
-        <translation>Schrijf tags</translation>
+        <translation>Tags wegschrijven</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="90"/>
         <source>Convert to 16 bit</source>
-        <translation>Converteer naar 16bit</translation>
+        <translation>Converteren naar 16-bit</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="37"/>
         <source>%1 (Read Only)</source>
-        <translation>%1 (Alleen Lezen)</translation>
+        <translation>%1 (alleen-lezen)</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="70"/>
         <source>Output file</source>
-        <translation>Uitvoer bestand</translation>
+        <translation>Uitvoerbestand</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="71"/>
         <source>Input file</source>
-        <translation>Invoer bestand</translation>
+        <translation>Invoerbestand</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Track Change Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
@@ -19,32 +19,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Command to run when Qmmp starts new track</source>
-        <translation type="unfinished"></translation>
+        <translation>Opdracht die moet worden uitgevoerd bij het starten van een nieuw nummer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
         <source>Command to run toward to end of a track</source>
-        <translation type="unfinished"></translation>
+        <translation>Opdracht die moet worden uitgevoerd aan het eind van een nummer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="63"/>
         <source>Command to run when Qmmp reaches the end of the playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Opdracht die moet worden uitgevoerd aan het eind van de afspeellijst</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="80"/>
         <source>Command to run when title changes (i.e. network streams title)</source>
-        <translation type="unfinished"></translation>
+        <translation>Opdracht die moet worden uitgevoerd als de titel wijzigt (bijv. bij internetstreams)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="97"/>
         <source>Command to run on application startup:</source>
-        <translation type="unfinished"></translation>
+        <translation>Opdracht die moet worden uitgevoerd bij het opstarten:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="104"/>
         <source>Command to run on application exit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Opdracht die moet worden uitgevoerd bij het afsluiten:</translation>
     </message>
 </context>
 <context>
@@ -52,22 +52,22 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="30"/>
         <source>Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Nummerveranderingsplug-in</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="50"/>
         <source>About Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de Nummerveranderingsplug-in</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="51"/>
         <source>Qmmp Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Nummerveranderingsplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="52"/>
         <source>This plugin executes external command when current track is changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Deze plug-in voert externe opdrachten uit als een nummer verandert</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="53"/>

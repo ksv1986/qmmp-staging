@@ -6,27 +6,27 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="38"/>
         <source>GME Plugin</source>
-        <translation>GME Module</translation>
+        <translation>GME-plug-in</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="41"/>
         <source>Game Music Files</source>
-        <translation>Spel Muziek Bestanden</translation>
+        <translation>Muziekbestanden van spellen</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="103"/>
         <source>About GME Audio Plugin</source>
-        <translation>Over de GME Audio Module</translation>
+        <translation>Over de GME-audioplug-in</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="104"/>
         <source>Qmmp GME Audio Plugin</source>
-        <translation>GME Audio Module voor Qmmp</translation>
+        <translation>GME-audioplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="105"/>
         <source>This plugin uses Game_Music_Emu library to play game music files</source>
-        <translation>Deze module faciliteert in het afspelen van spelmuziek door gebruik van de Game_Music_Emu bibliotheek</translation>
+        <translation>Deze plug-in faciliteert in het afspelen van spelmuziek d.m.v. de Game_Music_Emu-bibliotheek</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="106"/>
@@ -39,22 +39,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>GME Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Fadeout length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitvaagduur:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="44"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="57"/>
         <source>Enable fadeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Vervaging inschakelen</translation>
     </message>
 </context>
 </TS>

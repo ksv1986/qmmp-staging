@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="30"/>
         <source>File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsuitvoer-plug-in</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="51"/>
         <source>About File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over Bestandsuitvoer-plug-in</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="52"/>
         <source>Qmmp File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsuitvoer-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="53"/>
@@ -29,27 +29,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Writer Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation>Uitvoer map:</translation>
+        <translation>Uitvoermap:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>Output file name:</source>
-        <translation>Uitvoer bestandsnaam:</translation>
+        <translation>Uitvoerbestandsnaam:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="109"/>
         <source>Write to single file if possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wegschrijven naar los bestand (indien mogelijk).</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="36"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwaliteit:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>

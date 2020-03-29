@@ -1,31 +1,31 @@
-Thanks to:
+Met dank aan:
 
-    Adria Arrufat <swiftscythe@gmail.com> - bug reports
-    Adrian Knoth <adi@drcomp.erfurt.thur.de> - JACK plugin fixes, bug reports
-    Anton Petrusevich <casus@casus.us> - random playback improvements
-    Avihay Baratz <avihayb@gmail.com> - auto stop feature, bug fixes
-    Brice Videau <brice.videau@gmail.com> - bug fixes
-    Cristian Rodríguez <judas.iscariote@gmail.com> - scrobbler fixes
-    Csaba Hruska <csaba.hruska@gmail.com> - FFmpeg plugin fixes
-    Dmitry Kostin <kostindima@gmail.com> - iso.wv support
-    Dmitry Misharov <Dmitry.Misharov@gmail.com> - album artist tag support
-    Evgeny Gleyzerman <evgley@gmail.com> - cue parsing improvements
-    Ferdinand Vesely <erdofves@gmail.com> - scrobbler improvements
-    Gennadi Motsyo <drool@altlinux.ru> - bug reports
-    Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - optimization
-    Vadim Kalinnikov <moose@ylsoftware.com> - project hosting
-    Erik Ölsar <erlk.ozlr@gmail.com> - skinned cursors, ui improvements
-    Funda Wang <fundawang@gmail.com> - cmake files fixes
-    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia output, MacOS X port
-    Karel Volný <kvolny@redhat.com> - various fixes
-    Makis Kalofolias <makskafl@gmail.com> - EAC3, DTS, and Dolby TrueHD support
-    Michail Zheludkov <zheludkovm@mail.ru> - FFmpeg plugin fixes
-    Michał Grosicki <grosik88@o2.pl> - ALSA plugin fixes
-    Panagiotis Papadopoulos <pano_90@gmx.net> - ui fixes, bug reports
-    Pino Toscano <toscano.pino@tiscali.it> - portability patches
-    Ryota Shimamoto <liangtai.s16@gmail.com> - FreeBSD patches
-    Sebastian Pipping <webmaster@hartwork.org> - bs2b patches
-    Stefan Koelling <stefankoelling.ext@googlemail.com> - some build fixes
-    Thomas Perl - gui improvements
-    Ville Skyttä - ModPlug plugin improvements
-    Yaakov Selkowitz <yselkowitz@gmail.com> - cygwin patches
+    Adria Arrufat <swiftscythe@gmail.com> - bugmeldingen
+    Adrian Knoth <adi@drcomp.erfurt.thur.de> - JACK-plug-inreparaties, bugmeldingen
+    Anton Petrusevich <casus@casus.us> - verbeteringen m.b.t. willekeurig afspelen
+    Avihay Baratz <avihayb@gmail.com> - automatisch stoppen-functie, foutoplossingen
+    Brice Videau <brice.videau@gmail.com> - foutoplossingen
+    Cristian Rodríguez <judas.iscariote@gmail.com> - scrobbler-foutoplossingen
+    Csaba Hruska <csaba.hruska@gmail.com> - FFmpeg-plug-in-foutoplossingen
+    Dmitry Kostin <kostindima@gmail.com> - iso.wv-ondersteuning
+    Dmitry Misharov <Dmitry.Misharov@gmail.com> - tagondersteuning voor albumartiesten
+    Evgeny Gleyzerman <evgley@gmail.com> - verbeteringen m.b.t. cue-verwerking
+    Ferdinand Vesely <erdofves@gmail.com> - scrobbler-verbeteringen
+    Gennadi Motsyo <drool@altlinux.ru> - bugmeldingen
+    Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - optimalisaties
+    Vadim Kalinnikov <moose@ylsoftware.com> - projecthosting
+    Erik Ölsar <erlk.ozlr@gmail.com> - themacursors, uiterlijke verbeteringen
+    Funda Wang <fundawang@gmail.com> - foutoplossingen m.b.t. cmake-bestanden
+    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia-uitvoer, macOS-versie
+    Karel Volný <kvolny@redhat.com> - verscheidene foutoplossingen
+    Makis Kalofolias <makskafl@gmail.com> - ondersteuning voor EAC3, DTS en Dolby TrueHD
+    Michail Zheludkov <zheludkovm@mail.ru> - FFmpeg-plug-in-foutoplossingen
+    Michał Grosicki <grosik88@o2.pl> - ALSA-plug-in-foutoplossingen
+    Panagiotis Papadopoulos <pano_90@gmx.net> - uiterlijke verbeteringen, bugmeldingen
+    Pino Toscano <toscano.pino@tiscali.it> - portable-patches
+    Ryota Shimamoto <liangtai.s16@gmail.com> - FreeBSD-patches
+    Sebastian Pipping <webmaster@hartwork.org> - bs2b-patches
+    Stefan Koelling <stefankoelling.ext@googlemail.com> - verscheidene compilatie-oplossingen
+    Thomas Perl - uiterlijke verbeteringen
+    Ville Skyttä - ModPlug-plug-in-verbeteringen
+    Yaakov Selkowitz <yselkowitz@gmail.com> - cygwin-patches

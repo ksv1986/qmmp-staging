@@ -6,27 +6,27 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="38"/>
         <source>WavPack Plugin</source>
-        <translation>WavPack Module</translation>
+        <translation>WavPack-plug-in</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="40"/>
         <source>WavPack Files</source>
-        <translation>WavPack Bestanden</translation>
+        <translation>WavPack-bestanden</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="176"/>
         <source>About WavPack Audio Plugin</source>
-        <translation>Over de WavPack Audio Module</translation>
+        <translation>Over de WavPack-audioplug-in</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="177"/>
         <source>Qmmp WavPack Audio Plugin</source>
-        <translation>WavPack Audio Module voor Qmmp</translation>
+        <translation>WavPack-audioplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="178"/>
         <source>WavPack library version:</source>
-        <translation>WavPack bibliotheek versie:</translation>
+        <translation>WavPack-bibliotheekversie:</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="180"/>

@@ -14,17 +14,17 @@
     <message>
         <location filename="../kdenotifyfactory.cpp" line="29"/>
         <source>KDE notification plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>KDE-meldingsplug-in</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="49"/>
         <source>About KDE Notification Plugin</source>
-        <translation>Over de KDE 4 Notificatie Module</translation>
+        <translation>Over de KDE-meldingsplug-in</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="50"/>
         <source>KDE notification plugin for Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>KDE-meldingsplug-in voor Qmmp</translation>
     </message>
 </context>
 <context>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>KDE 4 Notification Plugin Settings</source>
-        <translation>KDE 4 Notificatie Module Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
@@ -42,37 +42,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Notification delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertraging:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>s</source>
-        <translation type="unfinished"></translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Update visible notification instead create new</source>
-        <translation>Werk huidige notificatie bij i.p.v. het maken van een nieuwe</translation>
+        <translation>Huidige melding bijwerken i.p.v. nieuwe te sturen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="88"/>
         <source>Appearance</source>
-        <translation>Vertoning</translation>
+        <translation>Uiterlijk</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="94"/>
         <source>Show covers</source>
-        <translation>Laat albumhoezen zien</translation>
+        <translation>Hoezen tonen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>Edit template</source>
-        <translation>Bewerk layout</translation>
+        <translation>Sjabloon bewerken</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="75"/>
         <source>Notification Template</source>
-        <translation>Notificatie Layout</translation>
+        <translation>Meldingssjabloon</translation>
     </message>
 </context>
 </TS>

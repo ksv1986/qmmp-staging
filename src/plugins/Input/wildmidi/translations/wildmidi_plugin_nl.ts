@@ -6,27 +6,27 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="49"/>
         <source>WildMidi Plugin</source>
-        <translation>WildMidi Module</translation>
+        <translation>WildMidi-plug-in</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="54"/>
         <source>Midi Files</source>
-        <translation>Midi Bestanden</translation>
+        <translation>Midi-bestanden</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="106"/>
         <source>About WildMidi Audio Plugin</source>
-        <translation>Over de WildMidi Audio Module</translation>
+        <translation>Over de WildMidi-audioplug-in</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>Qmmp WildMidi Audio Plugin</source>
-        <translation>WildMidi Audio Module voor Qmmp</translation>
+        <translation>WildMidi-audioplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="108"/>
         <source>This plugin uses WildMidi library to play midi files</source>
-        <translation>Deze plugin faciliteert in het afspelen van midi bestanden, gebruikmakend van de WildMidi bibliotheek</translation>
+        <translation>Deze plugin faciliteert in het afspelen van midi-bestanden, d.m.v. de WildMidi-bibliotheek</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="109"/>
@@ -39,17 +39,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WildMidi Plugin Settings</source>
-        <translation>WildMidi Module Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Instrument configuration: </source>
-        <translation>Instrument instellingen:</translation>
+        <translation>Instrumentinstellingen:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="43"/>
         <source>Sample rate:</source>
-        <translation>Sample frequentie:</translation>
+        <translation>Samplesnelheid:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="50"/>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>
         <source>44100 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>44100 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="40"/>
         <source>48000 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>48000 Hz</translation>
     </message>
 </context>
 </TS>

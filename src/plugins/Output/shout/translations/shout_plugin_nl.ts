@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputshoutfactory.cpp" line="39"/>
         <source>Icecast Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Icecast-plug-in</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="64"/>
         <source>About Icecast Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de Icecast-uitvoerplug-in</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="65"/>
         <source>Qmmp Icecast Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Icecast-uitvoerplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="66"/>
         <source>Compiled against libshout-%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebouwd met libshout-%1</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="67"/>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Connection Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbindingsinstellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
         <source>Host:</source>
-        <translation type="unfinished"></translation>
+        <translation>Host:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
@@ -49,37 +49,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="56"/>
         <source>Mount point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aankoppelpunt:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
         <source>User:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruiker:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wachtwoord:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="86"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwaliteit:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="106"/>
         <source>Sample rate:</source>
-        <translation>Sample frequentie:</translation>
+        <translation>Samplesnelheid:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="136"/>
         <source>Public</source>
-        <translation type="unfinished"></translation>
+        <translation>Openbaar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="143"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
 </context>
 </TS>

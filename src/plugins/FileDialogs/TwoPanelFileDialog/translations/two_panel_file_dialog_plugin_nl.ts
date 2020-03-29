@@ -40,12 +40,12 @@
         <location filename="../twopanelfiledialog.cpp" line="67"/>
         <location filename="../twopanelfiledialog.cpp" line="77"/>
         <source>Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsvenster met twee panelen</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="76"/>
         <source>About Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Over Bestandsvenster met twee panelen</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="78"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../twopanelfiledialog.cpp" line="79"/>
         <source>Based on code from the Qt library</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebaseerd op code van de Qt-bibliotheek</translation>
     </message>
 </context>
 <context>
@@ -81,7 +81,7 @@
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 bestaat al.
-Wilt u het overschrijven?</translation>
+Wil je het overschrijven?</translation>
     </message>
 </context>
 </TS>

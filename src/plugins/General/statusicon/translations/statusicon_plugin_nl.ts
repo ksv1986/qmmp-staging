@@ -6,68 +6,68 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Status Icon Plugin Settings</source>
-        <translation>Status Icoon Module Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Balloon message</source>
-        <translation>Ballon bericht</translation>
+        <translation>Ballonbericht</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
         <location filename="../settingsdialog.ui" line="105"/>
         <source>Delay, ms:</source>
-        <translation>Vertraging, ms:</translation>
+        <translation>Vertraging, in ms:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="79"/>
         <source>Tooltip</source>
-        <translation>Notificatieballon</translation>
+        <translation>Hulpballon</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="91"/>
         <source>Try to split file name when no tag</source>
-        <translation>Bij geen tag, probeer de bestandsnaam te splitsen</translation>
+        <translation>Probeer de bestandsnaam te splitsen als er geen tag is</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="98"/>
         <source>Show progress bar</source>
-        <translation>Toon Voortgangsindicator</translation>
+        <translation>Voortgangsbalk tonen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="131"/>
         <source>Transparency:</source>
-        <translation>Transparantie:</translation>
+        <translation>Doorzichtigheid:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="165"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="174"/>
         <source>Cover size:</source>
-        <translation>Albumhoesgrootte:</translation>
+        <translation>Hoesgrootte:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="214"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="225"/>
         <source>Edit template</source>
-        <translation>Bewerk layout</translation>
+        <translation>Sjabloon bewerken</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="250"/>
         <source>Use standard icons</source>
-        <translation>Gebruik standaard iconen</translation>
+        <translation>Standaardpictogrammen gebruiken</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="80"/>
         <source>Tooltip Template</source>
-        <translation>Tooltip Layout</translation>
+        <translation>Hulpballon-sjabloon</translation>
     </message>
 </context>
 <context>
@@ -80,12 +80,12 @@
     <message>
         <location filename="../statusicon.cpp" line="72"/>
         <source>Pause</source>
-        <translation>Pauze</translation>
+        <translation>Pauzeren</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="73"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stoppen</translation>
     </message>
     <message>
         <location filename="../statusicon.cpp" line="75"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../statusicon.cpp" line="145"/>
         <source>Now Playing</source>
-        <translation>Huidig nummer</translation>
+        <translation>Huidige nummer</translation>
     </message>
 </context>
 <context>
@@ -118,17 +118,17 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="29"/>
         <source>Status Icon Plugin</source>
-        <translation>Status Icoon Module</translation>
+        <translation>Statuspictogram-plug-in</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="49"/>
         <source>About Status Icon Plugin</source>
-        <translation>Over de Status Icoon Module</translation>
+        <translation>Over de Statuspictogram-plug-in</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="50"/>
         <source>Qmmp Status Icon Plugin</source>
-        <translation>Status Icoon Module voor Qmmp</translation>
+        <translation>Statuspictogram-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="51"/>

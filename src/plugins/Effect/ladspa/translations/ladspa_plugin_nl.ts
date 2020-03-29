@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectladspafactory.cpp" line="30"/>
         <source>LADSPA Plugin</source>
-        <translation>LADSPA Module</translation>
+        <translation>LADSPA-plug-in</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="50"/>
         <source>About LADSPA Host for Qmmp</source>
-        <translation>Over de LADSPA Module voor Qmmp</translation>
+        <translation>Over de LADSPA-hostplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="51"/>
         <source>LADSPA Host for Qmmp</source>
-        <translation>LADSPA Host voor Qmmp</translation>
+        <translation>LADSPA-host voor Qmmp</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="52"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../effectladspafactory.cpp" line="53"/>
         <source>Based on the LADSPA Host for BMP</source>
-        <translation>Gebasseerd op de LADSPA Host voor BMP</translation>
+        <translation>Gebaseerd op de LADSPA-host voor BMP</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="54"/>
         <source>BMP-ladspa developers:</source>
-        <translation>BMP-ladspa ontwikkelaars:</translation>
+        <translation>BMP-ladspa-ontwikkelaars:</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="55"/>
@@ -49,17 +49,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>LADSPA Plugin Catalog</source>
-        <translation>LADSPA Module Catalogus</translation>
+        <translation>LADSPA-plug-incatalogus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&gt;</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="59"/>
         <source>&lt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="94"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="47"/>
         <source>UID</source>
-        <translation type="unfinished"></translation>
+        <translation>UID</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="48"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>This LADSPA plugin has no user controls</source>
-        <translation>Deze LADSPA module heeft geen instellingen</translation>
+        <translation>Deze LADSPA-plug-in heeft geen instellingen</translation>
     </message>
 </context>
 </TS>

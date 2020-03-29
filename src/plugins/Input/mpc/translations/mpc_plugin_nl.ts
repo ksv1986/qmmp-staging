@@ -6,22 +6,22 @@
     <message>
         <location filename="../decodermpcfactory.cpp" line="47"/>
         <source>Musepack Plugin</source>
-        <translation>Musepack Module</translation>
+        <translation>Musepack-plug-in</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="49"/>
         <source>Musepack Files</source>
-        <translation>Musepack Bestanden</translation>
+        <translation>Musepack-bestanden</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="112"/>
         <source>About Musepack Audio Plugin</source>
-        <translation>Over de Musepack Audio Module</translation>
+        <translation>Over de Musepack-audioplug-in</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="113"/>
         <source>Qmmp Musepack Audio Plugin</source>
-        <translation>Musepack Audio Module voor Qmmp</translation>
+        <translation>Musepack-audioplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="114"/>

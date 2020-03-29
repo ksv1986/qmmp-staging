@@ -6,22 +6,22 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="46"/>
         <source>ModPlug Plugin</source>
-        <translation>ModPlug Module</translation>
+        <translation>ModPlug-plug-in</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="52"/>
         <source>ModPlug Files</source>
-        <translation>ModPlug Bestanden</translation>
+        <translation>ModPlug-bestanden</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="136"/>
         <source>About ModPlug Audio Plugin</source>
-        <translation>Over de ModPlug Audio Module</translation>
+        <translation>Over de ModPlug-audioplug-in</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="137"/>
         <source>Qmmp ModPlug Audio Plugin</source>
-        <translation>Modplug Audio Module voor Qmmp</translation>
+        <translation>ModPlug-audioplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="138"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="139"/>
         <source>Based on the Modplug Plugin for Xmms</source>
-        <translation>Gebasseerd op de Modplug Module voor Xmms</translation>
+        <translation>Gebaseerd op de Modplug-plug-in voor Xmms</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="140"/>
         <source>Modplug Plugin developers:</source>
-        <translation>Modplug Module ontwikkelaars:</translation>
+        <translation>Modplug-plug-inontwikkelaars:</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="141"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="72"/>
         <source>Tempo</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="73"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="108"/>
         <source>Comment</source>
-        <translation>Commentaar</translation>
+        <translation>Opmerking</translation>
     </message>
 </context>
 <context>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>ModPlug Plugin Settings</source>
-        <translation>ModPlug Module Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
@@ -114,12 +114,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="51"/>
         <source>16 bit</source>
-        <translation type="unfinished"></translation>
+        <translation>16-bit</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="58"/>
         <source>8 bit</source>
-        <translation type="unfinished"></translation>
+        <translation>8-bit</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="74"/>
@@ -129,7 +129,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="80"/>
         <source>Stereo</source>
-        <translation type="unfinished"></translation>
+        <translation>Stereo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="87"/>
@@ -139,12 +139,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>Resampling</source>
-        <translation type="unfinished"></translation>
+        <translation>Hersamplen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="109"/>
         <source>Nearest (fastest)</source>
-        <translation>Dichstbij (snelst)</translation>
+        <translation>Dichtstbij (snelst)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="116"/>
@@ -164,27 +164,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="146"/>
         <source>Sampling Rate</source>
-        <translation>Sampling frequentie</translation>
+        <translation>Samplesnelheid</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="152"/>
         <source>48000 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>48000 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="159"/>
         <source>44100 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>44100 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="166"/>
         <source>22050 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>22050 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="173"/>
         <source>11025 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>11025 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="184"/>
@@ -208,7 +208,7 @@
         <location filename="../settingsdialog.ui" line="499"/>
         <location filename="../settingsdialog.ui" line="618"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="260"/>
@@ -219,12 +219,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="292"/>
         <source>40</source>
-        <translation type="unfinished"></translation>
+        <translation>40</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="324"/>
         <source>Bass Boost</source>
-        <translation type="unfinished"></translation>
+        <translation>Basversterking</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="336"/>
@@ -239,17 +239,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="426"/>
         <source>10</source>
-        <translation type="unfinished"></translation>
+        <translation>10</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="458"/>
         <source>Surround</source>
-        <translation type="unfinished"></translation>
+        <translation>Surround</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="551"/>
         <source>5</source>
-        <translation type="unfinished"></translation>
+        <translation>5</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="577"/>
@@ -259,20 +259,20 @@
     <message>
         <location filename="../settingsdialog.ui" line="586"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="656"/>
         <source>Note: Setting the preamp
 too high may cause clipping!</source>
-        <translation>Notitie: Het te hoog instellen van
-de voorverstelling kan veel
-stotteringen veroorzaken!</translation>
+        <translation>Let op: het te hoog instellen van
+de voorverstelling kan haperingen
+veroorzaken!</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="671"/>
         <source>Misc</source>
-        <translation>Overige</translation>
+        <translation>Overig</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="677"/>
@@ -282,22 +282,22 @@ stotteringen veroorzaken!</translation>
     <message>
         <location filename="../settingsdialog.ui" line="683"/>
         <source>Use filename as song title</source>
-        <translation>Gebruik bestandsnaam als nummertitel</translation>
+        <translation>Bestandsnaam gebruiken als naam van nummer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="690"/>
         <source>Noise reduction</source>
-        <translation>Noise verlaging</translation>
+        <translation>Ruisonderdrukking</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="700"/>
         <source>Fast playlist info</source>
-        <translation>Snelle afspeellijst informatie</translation>
+        <translation>Snelle afspeellijstinformatie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="710"/>
         <source>Play Amiga MOD</source>
-        <translation>Speel Amiga MOD af</translation>
+        <translation>Amiga MOD afspelen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="720"/>
@@ -312,17 +312,17 @@ stotteringen veroorzaken!</translation>
     <message>
         <location filename="../settingsdialog.ui" line="733"/>
         <source>Loop</source>
-        <translation>Herhaal</translation>
+        <translation>Herhaling</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="750"/>
         <source>time(s)</source>
-        <translation>aantal</translation>
+        <translation>aantal keer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="770"/>
         <source>Loop forever</source>
-        <translation>Altijd herhalen</translation>
+        <translation>Oneindig herhalen</translation>
     </message>
 </context>
 </TS>

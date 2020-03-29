@@ -6,32 +6,32 @@
     <message>
         <location filename="../copypaste.cpp" line="41"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Kn&amp;ippen</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="42"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="43"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopiëren</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="44"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="45"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Plakken</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="46"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
 </context>
 <context>
@@ -39,22 +39,22 @@
     <message>
         <location filename="../copypastefactory.cpp" line="29"/>
         <source>Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiëren/Plakken-plug-in</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="49"/>
         <source>About Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de Kopiëren/Plakken-plug-in</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="50"/>
         <source>Qmmp Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiëren/Plakken-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="51"/>
         <source>This plugin allows one to copy selected tracks from one playlist to another</source>
-        <translation type="unfinished"></translation>
+        <translation>Deze plug-in stelt je in staat om geselecteerde nummers te kopiëren van de ene naar de andere afspeellijst</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="52"/>

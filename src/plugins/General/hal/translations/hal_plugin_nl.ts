@@ -6,22 +6,22 @@
     <message>
         <location filename="../halfactory.cpp" line="30"/>
         <source>HAL Plugin</source>
-        <translation>HAL Module</translation>
+        <translation>HAL-plug-in</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="50"/>
         <source>About HAL Plugin</source>
-        <translation>Over de HAL Module</translation>
+        <translation>Over de HAL-plug-in</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="51"/>
         <source>Qmmp HAL Plugin</source>
-        <translation>HAL Module voor Qmmp</translation>
+        <translation>HAL-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using HAL</source>
-        <translation>Deze module faciliteert detectie van verwisselbare apparaten, gebruikmakend van HAL (Verouderd, gebruik UDisks module)</translation>
+        <translation>Deze plug-in faciliteert detectie van verwisselbare apparaten via HAL</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="53"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../halfactory.cpp" line="54"/>
         <source>Based on Solid (KDE hardware library)</source>
-        <translation>Gebasseerd op Solid (KDE hardware bibliotheek)</translation>
+        <translation>Gebaseerd op Solid (KDE-hardwarebibliotheek)</translation>
     </message>
 </context>
 <context>
@@ -39,12 +39,12 @@
     <message>
         <location filename="../halplugin.cpp" line="165"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation>Voeg CD &quot;%1&quot; toe</translation>
+        <translation>CD &quot;%1&quot; toevoegen</translation>
     </message>
     <message>
         <location filename="../halplugin.cpp" line="171"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation>Voeg Station &quot;%1&quot; toe</translation>
+        <translation>Apparaat &quot;%1&quot; toevoegen</translation>
     </message>
 </context>
 <context>
@@ -52,37 +52,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="13"/>
         <source>HAL Plugin Settings</source>
-        <translation>HAL Module Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="28"/>
         <source>CD Audio Detection</source>
-        <translation>CD Audio Detectie</translation>
+        <translation>CD-audiodetectie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="37"/>
         <source>Add tracks to playlist automatically</source>
-        <translation>Voeg nummers automatisch toe aan speellijst</translation>
+        <translation>Nummers automatisch toevoegen aan afspeellijst</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="44"/>
         <source>Remove tracks from playlist automatically</source>
-        <translation>Verwijder nummers automatisch van speellijst</translation>
+        <translation>Nummers automatisch verwijderen van afspeellijst</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="54"/>
         <source>Removable Device Detection</source>
-        <translation>Detectie van Verwisselbare Stations</translation>
+        <translation>Detectie van verwisselbare apparaten</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="63"/>
         <source>Add files to playlist automatically</source>
-        <translation>Voeg bestanden automatisch toe aan afspeellijst</translation>
+        <translation>Bestanden automatisch toevoegen aan afspeellijst</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="70"/>
         <source>Remove files from playlist automatically</source>
-        <translation>Verwijder bestanden automatisch van afspeellijst</translation>
+        <translation>Bestanden automatisch verwijderen van afspeellijst</translation>
     </message>
 </context>
 </TS>

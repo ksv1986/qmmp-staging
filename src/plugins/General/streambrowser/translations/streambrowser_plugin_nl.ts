@@ -6,12 +6,12 @@
     <message>
         <location filename="../editstreamdialog.ui" line="14"/>
         <source>Edit Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Stream bewerken</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="34"/>
         <source>URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
         <source>Genre:</source>
-        <translation type="unfinished"></translation>
+        <translation>Genre:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="64"/>
         <source>Bitrate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitsnelheid:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="74"/>
@@ -39,12 +39,12 @@
     <message>
         <location filename="../streambrowser.cpp" line="33"/>
         <source>Add Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Stream toevoegen</translation>
     </message>
     <message>
         <location filename="../streambrowser.cpp" line="35"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
 </context>
 <context>
@@ -52,22 +52,22 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="29"/>
         <source>Stream Browser Plugin</source>
-        <translation>Radio Navigator Module</translation>
+        <translation>Streamverkenner-plug-in</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="50"/>
         <source>About Stream Browser Plugin</source>
-        <translation>Over de Radio Navigator Module</translation>
+        <translation>Over de Streamverkenner-plug-in</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>Qmmp Stream Browser Plugin</source>
-        <translation>Radio Navigator Module voor Qmmp</translation>
+        <translation>Streamverkenner-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>This plugin allows one to add stream from IceCast stream directory</source>
-        <translation>Deze module faciliteert in het toevoegen van radiostations uit de IceCast verzameling</translation>
+        <translation>Deze module faciliteert in het toevoegen van streams uit de IceCast-verzameling</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="53"/>
@@ -80,12 +80,12 @@
     <message>
         <location filename="../streamwindow.ui" line="14"/>
         <source>Stream Browser</source>
-        <translation>Radio Navigator</translation>
+        <translation>Streamverkenner</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter:</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="47"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../streamwindow.ui" line="102"/>
         <source>Add</source>
-        <translation>Voeg to</translation>
+        <translation>Toevoegen</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="109"/>
@@ -134,27 +134,27 @@
     <message>
         <location filename="../streamwindow.cpp" line="134"/>
         <source>&amp;Add to favorites</source>
-        <translation>&amp;Voeg toe aan favorieten</translation>
+        <translation>Toevoegen &amp;aan favorieten</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="137"/>
         <source>&amp;Add to playlist</source>
-        <translation>&amp;Voeg toe aan afspeellijst</translation>
+        <translation>Toevoegen &amp;aan afspeellijst</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="140"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Creëren</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="142"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Bewerk</translation>
+        <translation>B&amp;ewerken</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="145"/>
         <source>&amp;Remove</source>
-        <translation>&amp;Verwijder</translation>
+        <translation>Verwijde&amp;ren</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="155"/>
@@ -170,12 +170,12 @@
     <message>
         <location filename="../streamwindow.cpp" line="178"/>
         <source>Receiving</source>
-        <translation>Bezig met ontvangen</translation>
+        <translation>Bezig met ontvangen...</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="281"/>
         <source>Edit Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Stream bewerken</translation>
     </message>
 </context>
 </TS>

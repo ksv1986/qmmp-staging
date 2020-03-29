@@ -6,7 +6,7 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="33"/>
         <source>Mplayer Plugin</source>
-        <translation>MPlayer Module</translation>
+        <translation>MPlayer-plug-in</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="36"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="83"/>
         <source>About MPlayer Plugin</source>
-        <translation>Over de MPlayer Module</translation>
+        <translation>Over de MPlayer-plug-in</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="84"/>
         <source>Qmmp MPlayer Plugin</source>
-        <translation>MPlayer Module voor Qmmp</translation>
+        <translation>MPlayer-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="85"/>
         <source>This plugin uses MPlayer as backend</source>
-        <translation>Deze plugin gebruikt MPlayer</translation>
+        <translation>Deze plug-in gebruikt MPlayer voor het afspelen van bestanden</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="86"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="39"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="65"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="68"/>
         <source>FPS</source>
-        <translation type="unfinished"></translation>
+        <translation>FPS</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="69"/>
@@ -69,18 +69,18 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="70"/>
         <source>Aspect ratio</source>
-        <translation>Verhouding</translation>
+        <translation>Beeldverhouding</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <source>Video bitrate</source>
-        <translation>Video bitrate</translation>
+        <translation>Bitsnelheid van video</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>kbps</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="74"/>
@@ -90,17 +90,17 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Sample rate</source>
-        <translation>Sample frequentie</translation>
+        <translation>Samplesnelheid</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>Audio bitrate</source>
-        <translation>Audio bitrate</translation>
+        <translation>Bitsnelheid van audio</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="77"/>
@@ -118,37 +118,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPlayer Settings</source>
-        <translation>MPlayer Instellingen</translation>
+        <translation>MPlayer-instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Video:</source>
-        <translation type="unfinished"></translation>
+        <translation>Video:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>Audio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Audio/video auto synchronization</source>
-        <translation>Automatische audio/video synchronisatie</translation>
+        <translation>Automatische audio-/videosynchronisatie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="72"/>
         <source>Synchronization factor:</source>
-        <translation>Synchronisatie factor:</translation>
+        <translation>Synchronisatiefactor:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
         <source>Extra options:</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra opties:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>
         <source>Extra command line options</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra opdrachtregelopties</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>

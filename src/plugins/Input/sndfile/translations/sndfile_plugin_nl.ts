@@ -6,27 +6,27 @@
     <message>
         <location filename="../decodersndfilefactory.cpp" line="119"/>
         <source>Sndfile Plugin</source>
-        <translation>Sndfile Module</translation>
+        <translation>Sndfile-plug-in</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="122"/>
         <source>PCM Files</source>
-        <translation>PCM Bestanden</translation>
+        <translation>PCM-bestanden</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="225"/>
         <source>About Sndfile Audio Plugin</source>
-        <translation>Over de Sndfile Audio Module</translation>
+        <translation>Over de Sndfile-audioplug-in</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="226"/>
         <source>Qmmp Sndfile Audio Plugin</source>
-        <translation>Sndfile Audio Module voor Qmmp</translation>
+        <translation>Sndfile-audioplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="227"/>
         <source>Compiled against</source>
-        <translation>Gecompileerd tegen</translation>
+        <translation>Gebouwd met</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="228"/>

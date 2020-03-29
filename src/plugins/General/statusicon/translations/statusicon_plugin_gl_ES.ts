@@ -138,7 +138,7 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="52"/>
         <source>Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="53"/>

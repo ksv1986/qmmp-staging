@@ -291,7 +291,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="170"/>
         <source>Read tags while loading a playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver etiquetas mentres carga a playlist</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="180"/>
@@ -359,7 +359,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="381"/>
         <source>Display average bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Amosala media do bitrate</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="391"/>
@@ -424,7 +424,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="550"/>
         <source>Proxy type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Typo de proxy:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="560"/>
@@ -500,7 +500,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="878"/>
         <source>Use two passes for equalizer</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar dóus pases para o ecualizador</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="821"/>
@@ -535,12 +535,12 @@
     <message>
         <location filename="../configdialog.cpp" line="72"/>
         <source>HTTP</source>
-        <translation type="unfinished"></translation>
+        <translation>HTTP</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="73"/>
         <source>SOCKS5</source>
-        <translation type="unfinished"></translation>
+        <translation>SOCKS5</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="86"/>
@@ -645,7 +645,7 @@
     <message>
         <location filename="../configdialog.cpp" line="344"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Grego</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="345"/>
@@ -660,7 +660,7 @@
     <message>
         <location filename="../configdialog.cpp" line="347"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesio</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="348"/>
@@ -700,7 +700,7 @@
     <message>
         <location filename="../configdialog.cpp" line="355"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbio</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="356"/>
@@ -738,7 +738,7 @@
     <message>
         <location filename="../forms/covereditor.ui" line="22"/>
         <source>Image source:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonte da imaxe:</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
@@ -753,17 +753,17 @@
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
         <source>Save as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gardar como...</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="33"/>
         <source>External file</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheiro externo</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="34"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta</translation>
     </message>
 </context>
 <context>
@@ -787,7 +787,7 @@
     <message>
         <location filename="../coverviewer.cpp" line="81"/>
         <source>Open Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir Imaxe</translation>
     </message>
 </context>
 <context>
@@ -905,17 +905,17 @@
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>Sample size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño do sample</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="273"/>
         <source>bits</source>
-        <translation type="unfinished"></translation>
+        <translation>bits</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="274"/>
         <source>Format name</source>
-        <translation type="unfinished"></translation>
+        <translation>Formatear nome</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
@@ -925,7 +925,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
@@ -1054,17 +1054,17 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Sample Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa do Sample</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Number of Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de Canles</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Sample Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño do Sample</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
@@ -1079,7 +1079,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="66"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño do arquivo</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="42"/>
@@ -1114,7 +1114,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="54"/>
         <source>Artist - [Year] Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Artista - [Ano] Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="56"/>
@@ -1318,7 +1318,8 @@
         <location filename="../uihelper.cpp" line="231"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 xa existe
+Quere reemplazalo?</translation>
     </message>
 </context>
 <context>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="28"/>
         <source>Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido Barra de tarefas</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="49"/>
         <source>About Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca do engadido Barra de tarefas</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="50"/>
         <source>Qmmp Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido Barra de tarefas Qmmp</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="51"/>
         <source>This plugin adds support for progress indicator in the Windows taskbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Este engadido engade soporte de indicación de progreso na barra de tarefas de Windows</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="52"/>

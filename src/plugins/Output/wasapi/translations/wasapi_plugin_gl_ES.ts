@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WASAPI Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>WASAPI Configuración do Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="68"/>
         <source>Exclusive mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo exclusivo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="58"/>

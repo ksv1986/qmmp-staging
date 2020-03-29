@@ -39,12 +39,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="97"/>
         <source>Command to run on application startup:</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando a executar ao iniciar a aplicação:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="104"/>
         <source>Command to run on application exit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando a executar ao sair da aplicação:</translation>
     </message>
 </context>
 <context>

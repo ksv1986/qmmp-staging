@@ -40,6 +40,7 @@ QList<PlayListTrack *> M3UPlaylistFormat::decode(const QByteArray &contents)
         return out;
 
     QRegExp extInfRegExp("#EXTINF:(-{0,1}\\d+),(.*) - (.*)");
+    QRegExp extInfRegExp2("#EXTINF:(-{0,1}\\d+),(.*)");
     int length = 0;
     QString artist, title;
     bool hasExtInf = false;
@@ -55,6 +56,12 @@ QList<PlayListTrack *> M3UPlaylistFormat::decode(const QByteArray &contents)
             length = extInfRegExp.cap(1).toInt();
             artist = extInfRegExp.cap(2);
             title =  extInfRegExp.cap(3);
+            hasExtInf = true;
+        }
+        else if(extInfRegExp2.indexIn(str) > -1)
+        {
+            length = extInfRegExp.cap(1).toInt();
+            title =  extInfRegExp.cap(2);
             hasExtInf = true;
         }
 

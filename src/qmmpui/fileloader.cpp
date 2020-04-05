@@ -136,28 +136,24 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
         QList<PlayListTrack *>::iterator it = tracks.begin();
         while(it != tracks.end())
         {
-            if((*it)->path().contains("://") &&
-                    !protocols.contains((*it)->path().section("://", 0, 0)) &&
-                    !MetaDataManager::hasMatch(regExps, (*it)->path()))
+            if((*it)->path().contains("://"))
             {
+                if(!protocols.contains((*it)->path().section("://", 0, 0)) &&
+                        !MetaDataManager::hasMatch(regExps, (*it)->path()))
+                {
+                    delete (*it);
+                    it = tracks.erase(it);
+                    continue;
+                }
+            }
+            else if(!QFile::exists((*it)->path()) || !MetaDataManager::hasMatch(filters, (*it)->path()))
+            {
+                delete (*it);
+                it = tracks.erase(it);
+                continue;
+            }
 
-                delete (*it);
-                it = tracks.erase(it);
-            }
-            else if(!QFile::exists((*it)->path()))
-            {
-                delete (*it);
-                it = tracks.erase(it);
-            }
-            else if(!MetaDataManager::hasMatch(filters, (*it)->path()))
-            {
-                delete (*it);
-                it = tracks.erase(it);
-            }
-            else
-            {
-                ++it;
-            }
+            ++it;
         }
         if(!m_finished && !tracks.isEmpty())
         {

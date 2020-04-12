@@ -126,15 +126,12 @@ QByteArray PLSPlaylistFormat::encode(const QList<PlayListTrack *> &contents, con
     int counter = 1;
     for(const PlayListTrack *f : qAsConst(contents))
     {
-        QString begin = "File" + QString::number(counter) + "=";
-        out.append(begin + f->path());
-        begin = "Title" + QString::number(counter) + "=";
-        out.append(begin + formatter.format(f));
-        begin = "Length" + QString::number(counter) + "=";
-        out.append(begin + QString::number(f->duration() / 1000));
+        out.append(QString("File%1=%2").arg(counter).arg(f->path()));
+        out.append(QString("Title%1=%2").arg(counter).arg(formatter.format(f)));
+        out.append(QString("Length%1=%2").arg(counter).arg(f->duration() / 1000));
         counter++;
     }
-    out << "NumberOfEntries=" + QString::number(contents.count());
+    out << QString("NumberOfEntries=%1").arg(contents.count());
     out << "Version=2";
     return out.join("\n").toUtf8();
 }

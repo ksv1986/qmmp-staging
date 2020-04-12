@@ -23,7 +23,7 @@
 #include <qmmpui/metadataformatter.h>
 #include "m3uplaylistformat.h"
 
-const PlayListFormatProperties M3UPlaylistFormat::properties() const
+PlayListFormatProperties M3UPlaylistFormat::properties() const
 {
     PlayListFormatProperties p;
     p.filters << "*.m3u" << "*.m3u8";

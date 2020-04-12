@@ -36,7 +36,7 @@ class XSPFPlaylistFormat : public QObject, public PlayListFormat
     Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.PlayListFormatInterface.1.0")
     Q_INTERFACES(PlayListFormat)
 public:
-    const PlayListFormatProperties properties() const override;
+    PlayListFormatProperties properties() const override;
     QList<PlayListTrack*> decode(const QByteArray &contents) override;
     QByteArray encode(const QList<PlayListTrack*> &contents, const QString &path) override;
 };

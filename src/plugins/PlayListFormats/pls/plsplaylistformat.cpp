@@ -23,7 +23,7 @@
 #include <qmmpui/metadataformatter.h>
 #include "plsplaylistformat.h"
 
-const PlayListFormatProperties PLSPlaylistFormat::properties() const
+PlayListFormatProperties PLSPlaylistFormat::properties() const
 {
     PlayListFormatProperties p;
     p.filters << "*.pls";

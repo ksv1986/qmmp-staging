@@ -49,7 +49,7 @@ public:
     /*!
      * Returns playlist format properties.
      */
-    virtual const PlayListFormatProperties properties() const = 0;
+    virtual PlayListFormatProperties properties() const = 0;
     /*!
      * Takes raw contents of playlist file, should return string list of
      * ready file pathes to fill the playlist.

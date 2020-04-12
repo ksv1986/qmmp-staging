@@ -28,7 +28,7 @@
 
 // Needs more work - it's better use libSpiff there and put it as plugin.
 
-const PlayListFormatProperties XSPFPlaylistFormat::XSPFPlaylistFormat::properties() const
+PlayListFormatProperties XSPFPlaylistFormat::XSPFPlaylistFormat::properties() const
 {
     PlayListFormatProperties p;
     p.filters << "*.xspf";

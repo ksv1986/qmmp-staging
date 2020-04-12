@@ -99,31 +99,53 @@ void AddUrlDialog::accept()
          return;
     }
 
-    QString s = urlComboBox->currentText().trimmed();
+    QString path = urlComboBox->currentText().trimmed();
 
-    if(!s.startsWith("http://") && !s.contains("://"))
-        s.prepend("http://");
-
-    if(!MetaDataManager::instance()->protocols().contains(QUrl(s).scheme()))
+    if(QFile::exists(path)) //is local file
     {
-        qWarning("AddUrlDialog: unsupported protocol");
+        m_model->add(path);
+        addToHistory(path);
         QDialog::accept();
         return;
     }
 
-    m_history.removeAll(s);
-    m_history.prepend(s);
+    if(!path.startsWith("http://") && !path.contains("://"))
+        path.prepend("http://");
 
-    if (s.startsWith("http://") || s.startsWith("https://")) //try to download playlist
+    if(MetaDataManager::hasMatch(MetaDataManager::instance()->regExps(), path))
     {
-        m_downloader->start(QUrl(s), m_model);
+        addToHistory(path);
+        m_model->add(path);
+        QDialog::accept();
         return;
     }
-    m_model->add(s);
+
+    if (path.startsWith("http://") || path.startsWith("https://")) //try to download playlist
+    {
+        m_downloader->start(QUrl(path), m_model);
+        addToHistory(path);
+        return;
+    }
+
+    if(!MetaDataManager::instance()->protocols().contains(QUrl(path).scheme()))
+    {
+        qWarning("AddUrlDialog: unsupported protocol");
+        QDialog::reject();
+        return;
+    }
+
+    addToHistory(path);
+    m_model->add(path);
     QDialog::accept();
 }
 
 void AddUrlDialog::setModel(PlayListModel *m)
 {
     m_model = m;
+}
+
+void AddUrlDialog::addToHistory(const QString &path)
+{
+    m_history.removeAll(path);
+    m_history.prepend(path);
 }

@@ -59,12 +59,14 @@ public slots:
     void start(const QUrl &url, PlayListModel *model);
 
 private slots:
+    void onDownloadProgress(qint64 bytesReceived, qint64 bytesTotal);
     void readResponse(QNetworkReply *reply);
 
 private:
     QNetworkAccessManager *m_manager;
     QUrl m_redirect_url, m_url;
-    QNetworkReply *m_getReply;
+    QNetworkReply *m_downloadReply = nullptr;
+    QNetworkReply *m_checkReply = nullptr;
     QByteArray m_ua;
     QPointer<PlayListModel> m_model;
 };

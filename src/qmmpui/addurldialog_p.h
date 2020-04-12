@@ -48,6 +48,7 @@ private:
     ~AddUrlDialog();
     void accept() override;
     void setModel(PlayListModel*);
+    void addToHistory(const QString &path);
     static QPointer<AddUrlDialog> m_instance;
     PlayListModel *m_model;
     PlayListDownloader *m_downloader;

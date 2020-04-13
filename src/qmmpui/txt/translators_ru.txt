@@ -23,6 +23,7 @@
     Karel Volný <kvolny@redhat.com>
 
 Голландский:
+    Heimen Stoffels
     Ronald Uitermark <ronald645@gmail.com>
 
 Финский:
@@ -52,6 +53,7 @@
     Németh Gábor <sutee84@freemail.hu>
 
 Индонезийский:
+    Andika Triwidada
     Wantoyo <wantoyek@gmail.com>
 
 Итальянский:

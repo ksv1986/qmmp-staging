@@ -359,7 +359,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="381"/>
         <source>Display average bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Отображать среднюю битовую частоту</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="391"/>
@@ -424,7 +424,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="550"/>
         <source>Proxy type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип прокси:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="560"/>
@@ -500,7 +500,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="878"/>
         <source>Use two passes for equalizer</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать два прохода для эквалайзера</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="821"/>
@@ -535,12 +535,12 @@
     <message>
         <location filename="../configdialog.cpp" line="72"/>
         <source>HTTP</source>
-        <translation type="unfinished"></translation>
+        <translation>HTTP</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="73"/>
         <source>SOCKS5</source>
-        <translation type="unfinished"></translation>
+        <translation>SOCKS5</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="86"/>
@@ -1318,7 +1318,8 @@
         <location filename="../uihelper.cpp" line="231"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 уже существует.
+Заменить?</translation>
     </message>
 </context>
 <context>

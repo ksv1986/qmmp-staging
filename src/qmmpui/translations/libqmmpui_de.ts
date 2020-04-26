@@ -424,7 +424,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="550"/>
         <source>Proxy type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Proxy-Typ:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="560"/>
@@ -535,12 +535,12 @@
     <message>
         <location filename="../configdialog.cpp" line="72"/>
         <source>HTTP</source>
-        <translation type="unfinished"></translation>
+        <translation>HTTP</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="73"/>
         <source>SOCKS5</source>
-        <translation type="unfinished"></translation>
+        <translation>SOCKS5</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="86"/>
@@ -1318,7 +1318,8 @@
         <location filename="../uihelper.cpp" line="231"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 existiert bereits.
+Möchten Sie es ersetzen?</translation>
     </message>
 </context>
 <context>

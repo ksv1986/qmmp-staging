@@ -291,7 +291,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="170"/>
         <source>Read tags while loading a playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Baca tag ketika memuat suatu daftar putar</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="180"/>
@@ -424,7 +424,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="550"/>
         <source>Proxy type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipe proksi:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="560"/>
@@ -500,7 +500,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="878"/>
         <source>Use two passes for equalizer</source>
-        <translation type="unfinished"></translation>
+        <translation>Gunakan dua kali proses untuk ekualizer</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="821"/>
@@ -535,12 +535,12 @@
     <message>
         <location filename="../configdialog.cpp" line="72"/>
         <source>HTTP</source>
-        <translation type="unfinished"></translation>
+        <translation>HTTP</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="73"/>
         <source>SOCKS5</source>
-        <translation type="unfinished"></translation>
+        <translation>SOCKS5</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="86"/>
@@ -645,7 +645,7 @@
     <message>
         <location filename="../configdialog.cpp" line="344"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Yunani:</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="345"/>
@@ -660,7 +660,7 @@
     <message>
         <location filename="../configdialog.cpp" line="347"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesian</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="348"/>
@@ -700,7 +700,7 @@
     <message>
         <location filename="../configdialog.cpp" line="355"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbia:</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="356"/>
@@ -738,7 +738,7 @@
     <message>
         <location filename="../forms/covereditor.ui" line="22"/>
         <source>Image source:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sumber citra:</translation>
     </message>
     <message>
         <location filename="../forms/covereditor.ui" line="76"/>
@@ -753,17 +753,17 @@
     <message>
         <location filename="../forms/covereditor.ui" line="90"/>
         <source>Save as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Simpan sebagai...</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="33"/>
         <source>External file</source>
-        <translation type="unfinished"></translation>
+        <translation>File eksternal</translation>
     </message>
     <message>
         <location filename="../covereditor.cpp" line="34"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag</translation>
     </message>
 </context>
 <context>
@@ -787,7 +787,7 @@
     <message>
         <location filename="../coverviewer.cpp" line="81"/>
         <source>Open Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Buka citra</translation>
     </message>
 </context>
 <context>
@@ -1318,7 +1318,8 @@
         <location filename="../uihelper.cpp" line="231"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 sudah ada.
+Apakah kamu ingin menggantinya?</translation>
     </message>
 </context>
 <context>
@@ -1336,7 +1337,7 @@ Do you want to replace it?</source>
     <message>
         <location filename="../forms/winfileassocpage.ui" line="56"/>
         <source>Select None</source>
-        <translation>Pilih Tak Satupun</translation>
+        <translation>Pilih Nihil</translation>
     </message>
     <message>
         <location filename="../winfileassocpage.cpp" line="125"/>

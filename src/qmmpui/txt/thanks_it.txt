@@ -5,15 +5,15 @@ Ringraziamenti:
     Anton Petrusevich <casus@casus.us> - miglioramenti alla riproduzione casuale
     Avihay Baratz <avihayb@gmail.com> - funzione di fine riproduzione automatica, correzione di bug
     Brice Videau <brice.videau@gmail.com> - correzione di bug
-    Cristian Rodríguez <judas.iscariote@gmail.com> - scrobbler fixes
+    Cristian Rodríguez <judas.iscariote@gmail.com> - correzioni a scrobbler
     Csaba Hruska <csaba.hruska@gmail.com> - correzioni all'estensione FFmpeg
     Dmitry Kostin <kostindima@gmail.com> - supporto per iso.wv
     Dmitry Misharov <Dmitry.Misharov@gmail.com> - album artist tag support
     Evgeny Gleyzerman <evgley@gmail.com> - miglioramenti all'analisi di file cue
-    Ferdinand Vesely <erdofves@gmail.com> - scrobbler improvements
+    Ferdinand Vesely <erdofves@gmail.com> - miglioramenti a scrobbler
     Gennadi Motsyo <drool@altlinux.ru> - segnalazione di bug
     Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - ottimizzazione
-    Vadim Kalinnikov <moose@ylsoftware.com> - project hosting
+    Vadim Kalinnikov <moose@ylsoftware.com> - hosting del progetto
     Erik Ölsar <erlk.ozlr@gmail.com> - cursori nei temi, miglioramenti all'interfaccia
     Funda Wang <fundawang@gmail.com> - correzioni ai file cmake
     Ivan Ponomarev ivantrue@gmail.com - uscita QtMultimedia, conversione a MacOS X

@@ -124,7 +124,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
         <source>&amp;Record</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rekam</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
@@ -598,7 +598,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="95"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencarian Cepat</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="169"/>
@@ -641,7 +641,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="68"/>
         <source>Playback</source>
-        <translation>Pemainan</translation>
+        <translation>Pemutaran</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="74"/>
@@ -695,7 +695,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="55"/>
         <source>&amp;Playback</source>
-        <translation>&amp;Pemainan</translation>
+        <translation>&amp;Pemutaran</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="60"/>
@@ -857,7 +857,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="435"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencarian Cepat</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="492"/>
@@ -1091,27 +1091,27 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="206"/>
         <source>Visualization Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna Visualisasi</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="212"/>
         <source>Color #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna #1:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="279"/>
         <source>Color #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna #2:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="343"/>
         <source>Color #3:</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna #3:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="432"/>
         <source>Reset colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Reset warna</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="873"/>
@@ -1298,32 +1298,32 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="766"/>
         <source>Override current track background</source>
-        <translation type="unfinished"></translation>
+        <translation>Timpa latar belakang trek saat ini</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="734"/>
         <source>Current track background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Latar belakang trek saat ini:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="821"/>
         <source>Override group background</source>
-        <translation type="unfinished"></translation>
+        <translation>Timpa latar belakang grup</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1279"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>BilahAlat</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1287"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran ikon:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1312"/>
         <source>Customize...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustomisasikan...</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="450"/>
@@ -1343,7 +1343,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="710"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pembelah:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1249"/>
@@ -1371,107 +1371,107 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="126"/>
         <source>Cover</source>
-        <translation type="unfinished">Sampul</translation>
+        <translation>Sampul</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="129"/>
         <source>Visualization Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Visualisasi</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="132"/>
         <source>Analyzer</source>
-        <translation type="unfinished"></translation>
+        <translation>Analyzer</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="133"/>
         <source>Scope</source>
-        <translation type="unfinished"></translation>
+        <translation>Scope</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="140"/>
         <source>Analyzer Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Analyzer</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="142"/>
         <source>Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Sel</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="143"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Baris</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="151"/>
         <source>Peaks</source>
-        <translation type="unfinished">Puncak</translation>
+        <translation>Puncak</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="154"/>
         <source>Refresh Rate</source>
-        <translation type="unfinished">Segarkan Rate</translation>
+        <translation>Segarkan Laju</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="157"/>
         <source>50 fps</source>
-        <translation type="unfinished">50 fps</translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="158"/>
         <source>25 fps</source>
-        <translation type="unfinished">25 fps</translation>
+        <translation>25 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="159"/>
         <source>10 fps</source>
-        <translation type="unfinished">10 fps</translation>
+        <translation>10 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="160"/>
         <source>5 fps</source>
-        <translation type="unfinished">5 fps</translation>
+        <translation>5 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="167"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished">Analyzer Merosot</translation>
+        <translation>Analyzer Merosot</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="170"/>
         <location filename="../qsuivisualization.cpp" line="184"/>
         <source>Slowest</source>
-        <translation type="unfinished">Agak Lambat</translation>
+        <translation>Agak Lambat</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="171"/>
         <location filename="../qsuivisualization.cpp" line="185"/>
         <source>Slow</source>
-        <translation type="unfinished">Lambat</translation>
+        <translation>Lambat</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="172"/>
         <location filename="../qsuivisualization.cpp" line="186"/>
         <source>Medium</source>
-        <translation type="unfinished">Sedang</translation>
+        <translation>Sedang</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="173"/>
         <location filename="../qsuivisualization.cpp" line="187"/>
         <source>Fast</source>
-        <translation type="unfinished">Cepat</translation>
+        <translation>Cepat</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="174"/>
         <location filename="../qsuivisualization.cpp" line="188"/>
         <source>Fastest</source>
-        <translation type="unfinished">Agak Cepat</translation>
+        <translation>Agak Cepat</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="181"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished">Puncak Merosot</translation>
+        <translation>Puncak Merosot</translation>
     </message>
 </context>
 <context>
@@ -1479,7 +1479,7 @@
     <message>
         <location filename="../qsuifactory.cpp" line="32"/>
         <source>Simple User Interface</source>
-        <translation type="unfinished">Antarmuka Pengguna Sederhana</translation>
+        <translation>Antarmuka Pengguna Sederhana</translation>
     </message>
 </context>
 <context>
@@ -1487,32 +1487,32 @@
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished">Baku</translation>
+        <translation>Baku</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
         <source>16x16</source>
-        <translation type="unfinished"></translation>
+        <translation>16x16</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="44"/>
         <source>22x22</source>
-        <translation type="unfinished"></translation>
+        <translation>22x22</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="45"/>
         <source>32x32</source>
-        <translation type="unfinished"></translation>
+        <translation>32x32</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="46"/>
         <source>48x48</source>
-        <translation type="unfinished"></translation>
+        <translation>48x48</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="47"/>
         <source>64x64</source>
-        <translation type="unfinished"></translation>
+        <translation>64x64</translation>
     </message>
 </context>
 <context>
@@ -1530,12 +1530,12 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="87"/>
         <source>Playing</source>
-        <translation type="unfinished">Memainkan</translation>
+        <translation>Memainkan</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="87"/>
         <source>Paused</source>
-        <translation type="unfinished">Dijeda</translation>
+        <translation>Dijeda</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="102"/>
@@ -1545,17 +1545,17 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="127"/>
         <source>Stopped</source>
-        <translation type="unfinished">Dihentikan</translation>
+        <translation>Dihentikan</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="139"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Galat</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="147"/>
         <source>Buffering: %1%</source>
-        <translation type="unfinished">Buffering: %1%</translation>
+        <translation>Buffering: %1%</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="152"/>

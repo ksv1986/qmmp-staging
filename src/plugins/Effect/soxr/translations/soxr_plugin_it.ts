@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Sample Rate Converter Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni dell&apos;estensione di conversione campionamento</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="20"/>

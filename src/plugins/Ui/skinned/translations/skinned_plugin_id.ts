@@ -533,7 +533,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="58"/>
         <source>Playback</source>
-        <translation>Pemainan</translation>
+        <translation>Pemutaran</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="64"/>
@@ -1179,7 +1179,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="69"/>
         <source>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</translation>
     </message>
 </context>
 <context>
@@ -1252,7 +1252,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="428"/>
         <source>Player:</source>
-        <translation>Pemain:</translation>
+        <translation>Pemutar:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="450"/>

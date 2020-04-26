@@ -999,7 +999,7 @@
     <message>
         <location filename="../playlistheader.cpp" line="92"/>
         <source>Show Queue/Protocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra coda/protocollo</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="94"/>
@@ -1179,7 +1179,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="69"/>
         <source>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>sixsixfive &lt;http://sixsixfive.deviantart.com/&gt;</translation>
     </message>
 </context>
 <context>
@@ -1259,7 +1259,7 @@
         <location filename="../forms/skinnedsettings.ui" line="492"/>
         <location filename="../forms/skinnedsettings.ui" line="519"/>
         <source>???</source>
-        <translation type="unfinished"></translation>
+        <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="134"/>
@@ -1407,7 +1407,7 @@
     <message>
         <location filename="../textscroller.cpp" line="130"/>
         <source>Buffering: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Riempimento buffer: %1%</translation>
     </message>
 </context>
 <context>

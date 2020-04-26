@@ -94,7 +94,7 @@
     <message>
         <location filename="../historywindow.ui" line="83"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegui</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="129"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../historywindow.ui" line="143"/>
         <source>Distribution</source>
-        <translation type="unfinished"></translation>
+        <translation>Distribuzione</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="156"/>
@@ -123,17 +123,17 @@
         <location filename="../historywindow.ui" line="215"/>
         <location filename="../historywindow.ui" line="242"/>
         <source>Play counts</source>
-        <translation type="unfinished"></translation>
+        <translation>Totali riproduzioni</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="170"/>
         <source>Top Songs</source>
-        <translation type="unfinished"></translation>
+        <translation>Canzoni principali</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="197"/>
         <source>Top Artists</source>
-        <translation type="unfinished"></translation>
+        <translation>Artisti principali</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="210"/>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../historywindow.ui" line="224"/>
         <source>Top Genres</source>
-        <translation type="unfinished"></translation>
+        <translation>Generi principali</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="237"/>
@@ -153,22 +153,22 @@
     <message>
         <location filename="../historywindow.cpp" line="124"/>
         <source>dd MMMM yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMMM yyyy</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="125"/>
         <source>hh:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="200"/>
         <source>MM-yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>MM/yyyy</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="201"/>
         <source>dd MMMM</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMMM</translation>
     </message>
 </context>
 </TS>

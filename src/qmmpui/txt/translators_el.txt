@@ -8,6 +8,7 @@
     Kiril Kirilov
 
 Κινέζικα παραδοσιακά
+    Cosmos Chen
     lon <lon83129@126.com>
     Jeff Huang
 
@@ -22,6 +23,7 @@
     Karel Volný <kvolny@redhat.com>
 
 Ολλανδικά
+    Heimen Stoffels
     Ronald Uitermark <ronald645@gmail.com>
 
 Φιλανδικά:
@@ -51,6 +53,7 @@
     Németh Gábor <sutee84@freemail.hu>
 
 Ινδονησιακά:
+    Andika Triwidada
     Wantoyo <wantoyek@gmail.com>
 
 Ιταλικά
@@ -69,6 +72,7 @@
 Πολωνικά
     Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
+    mrerexx
 
 Πορτογαλικά
     Sérgio Marques <smarquespt@gmail.com>
@@ -76,6 +80,7 @@
 Ρωσικά
     Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
 
 Σέρβικα
     Mladen Pejaković <pejakm@autistici.org>

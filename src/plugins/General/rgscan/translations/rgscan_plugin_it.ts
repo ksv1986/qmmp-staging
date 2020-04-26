@@ -11,7 +11,7 @@
     <message>
         <location filename="../rgscandialog.ui" line="84"/>
         <source>Write track gain/peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Scrivi guadagno/picco della traccia</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="42"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../rgscandialog.ui" line="62"/>
         <source>Track Peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Picco traccia</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="67"/>
         <source>Album Peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Picco album</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="77"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../rgscandialog.ui" line="91"/>
         <source>Write album gain/peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Scrivi guadagno/picco dell&apos;album</translation>
     </message>
     <message>
         <location filename="../rgscandialog.cpp" line="124"/>

@@ -41,7 +41,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="78"/>
         <source>Set playback volume (example: qmmp --volume 20)</source>
-        <translation>Setel volume pemainan (contohnya: qmmp --volume 20)</translation>
+        <translation>Setel volume pemutaran (contohnya: qmmp --volume 20)</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>

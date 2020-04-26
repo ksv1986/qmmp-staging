@@ -41,12 +41,12 @@
     <message>
         <location filename="../playlistoption.cpp" line="40"/>
         <source>Toggle playlist repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Attiva/disattiva ripetizione scaletta</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="41"/>
         <source>Toggle playlist shuffle</source>
-        <translation type="unfinished"></translation>
+        <translation>Attiva/disattiva ordine casuale scaletta</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="42"/>

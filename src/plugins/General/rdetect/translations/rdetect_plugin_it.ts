@@ -6,22 +6,22 @@
     <message>
         <location filename="../rdetectfactory.cpp" line="30"/>
         <source>Volume Detection Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione rilevamento volume</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="50"/>
         <source>About Volume Detection Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sull&apos;estensione rilevamento volume</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="51"/>
         <source>Qmmp Removable Volume Detection Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione rilevamento del volume rimovibile per Qmmp</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="52"/>
         <source>This plugin provides removable volume detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione che permette il rilevamento del volume rimovibile</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="53"/>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Volume Detection Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni dell&apos;estensione di rilevamento del volume</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>

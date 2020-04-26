@@ -21,7 +21,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="397"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>MPEG 1.0/2.0/2.5 couche 1/2/3 décodeur audio</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="398"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="407"/>
         <source>mpg123, API version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>mpg123, API version: %1</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="411"/>
@@ -80,17 +80,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Décodeur</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>MAD</source>
-        <translation type="unfinished"></translation>
+        <translation>MAD</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>MPG123</source>
-        <translation type="unfinished"></translation>
+        <translation>MPG123</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="77"/>

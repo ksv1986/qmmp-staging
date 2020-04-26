@@ -128,7 +128,7 @@
     <message>
         <location filename="../ultimatelyricsparser.cpp" line="119"/>
         <source>%1 (line: %2)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (рядок: %2)</translation>
     </message>
 </context>
 </TS>

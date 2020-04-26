@@ -204,7 +204,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
         <source>&amp;Transit between playlists</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Перехід між списками</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
@@ -873,7 +873,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="135"/>
         <source>Waveform Seek Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Полоса прокрутки з формою хвилі</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="149"/>
@@ -1117,7 +1117,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="873"/>
         <source>Waveform Seekbar Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Кольори полоси прокрутки з формою хвилі</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="879"/>
@@ -1128,12 +1128,12 @@
         <location filename="../forms/qsuisettings.ui" line="968"/>
         <source>RMS:</source>
         <extracomment>Root mean square</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Середньоквадратичне:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1013"/>
         <source>Waveform:</source>
-        <translation type="unfinished"></translation>
+        <translation>Форма хвилі:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1054"/>
@@ -1383,27 +1383,27 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="132"/>
         <source>Analyzer</source>
-        <translation type="unfinished"></translation>
+        <translation>Аналізатор</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="133"/>
         <source>Scope</source>
-        <translation type="unfinished"></translation>
+        <translation>Осцилограф</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="140"/>
         <source>Analyzer Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим аналізатора</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="142"/>
         <source>Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Клітини</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="143"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Лінії</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="151"/>
@@ -1522,76 +1522,76 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="68"/>
         <source>tracks: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>треків: %1</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="69"/>
         <source>total time: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>загальний час: %1</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="87"/>
         <source>Playing</source>
-        <translation type="unfinished">Відтворюється</translation>
+        <translation>Відтворюється</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="87"/>
         <source>Paused</source>
-        <translation type="unfinished">Призупинено</translation>
+        <translation>Призупинено</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="102"/>
         <source>Buffering</source>
-        <translation type="unfinished"></translation>
+        <translation>Буферизація</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="127"/>
         <source>Stopped</source>
-        <translation type="unfinished">Зупинено</translation>
+        <translation>Зупинено</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="139"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="147"/>
         <source>Buffering: %1%</source>
-        <translation type="unfinished">Буферизація: %1%</translation>
+        <translation>Буферизація: %1%</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="152"/>
         <source>%1 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 біт</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="154"/>
         <source>mono</source>
-        <translation type="unfinished"></translation>
+        <translation>моно</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="156"/>
         <source>stereo</source>
-        <translation type="unfinished"></translation>
+        <translation>стерео</translation>
     </message>
     <message numerus="yes">
         <location filename="../qsuistatusbar.cpp" line="158"/>
         <source>%n channels</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n канал</numerusform>
+            <numerusform>%n канала</numerusform>
+            <numerusform>%n каналів</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="159"/>
         <source>%1 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Гц</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="164"/>
         <source>%1 kbps</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Кб/с</translation>
     </message>
 </context>
 <context>
@@ -1599,13 +1599,13 @@
     <message>
         <location filename="../qsuiwaveformseekbar.cpp" line="325"/>
         <source>2 Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>2 канала</translation>
     </message>
     <message>
         <location filename="../qsuiwaveformseekbar.cpp" line="328"/>
         <source>RMS</source>
         <extracomment>Root mean square</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Середньоквадратичне</translation>
     </message>
 </context>
 <context>

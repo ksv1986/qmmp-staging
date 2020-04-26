@@ -153,7 +153,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="243"/>
         <source>Merge selected tag types</source>
-        <translation type="unfinished"></translation>
+        <translation>Об&apos;єднувати вибрані типи тегів</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="262"/>

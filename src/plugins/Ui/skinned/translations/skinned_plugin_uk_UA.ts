@@ -126,7 +126,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
         <source>&amp;Transit between playlists</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Перехід між списками</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>

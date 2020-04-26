@@ -99,7 +99,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="152"/>
         <source>Direct Stream Digital (DSD)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="14"/>

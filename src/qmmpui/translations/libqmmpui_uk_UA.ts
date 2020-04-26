@@ -359,7 +359,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="381"/>
         <source>Display average bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Відображати середній бітрейт</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="391"/>

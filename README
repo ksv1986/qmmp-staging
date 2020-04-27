@@ -57,15 +57,15 @@ Other features:
 - MPRIS
 - removable device detection (via HAL or UDisks)
 - video playback via Mplayer
-- lyrics (using lyrics.wikia.com and other providers)
+- lyrics (using LyricWiki and other providers)
 - cover art support
 - CUE sheet support
-- embedded CUE support (for FLAC and WavPack)
+- embedded CUE support (for FLAC, WavPack and Monkey's Audio)
 - multiple playlists
 - automatic charset detection for cue files and ShoutCast metadata
 - playlist formats: m3u, pls, xspf
 - ReplayGain support
-- sending listening history to Last.fm, Libre.fm и ListenBrainz
+- sending listening history to Last.fm, Libre.fm and ListenBrainz
 - CDDB support
 - audio converter
 - stream browser

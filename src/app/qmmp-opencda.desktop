@@ -5,5 +5,11 @@ Actions=open;
 
 [Desktop Action open]
 Name=Open with Qmmp
+Name[es]=Abrir con Qmmp
+Name[gl_ES]=Abrir con Qmmp
+Name[nl]=Openen met Qmmp
+Name[pl_PL]=Otwórz za pomocą Qmmp
+Name[pt]=Abrir com Qmmp
+Name[ru]=Открыть с помощью Qmmp
 Exec=qmmp cdda://%d
 Icon=qmmp

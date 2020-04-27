@@ -76,7 +76,7 @@ void QSUiWaveformSeekBar::onStateChanged(Qmmp::State state)
     {
     case Qmmp::Playing:
     {
-        if(!m_scanner && isVisible())
+        if(!m_scanner && isVisible() && m_data.isEmpty())
         {
             m_scanner = new QSUiWaveformScanner(this);
             connect(m_scanner, SIGNAL(finished()), SLOT(onScanFinished()));

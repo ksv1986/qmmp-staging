@@ -1550,7 +1550,7 @@ Version 1.3.7
 
 Version 1.4.0
 * added sleep mode inhibition plugin
-* added ListenBrainz submission plugin
+* added separate ListenBrainz submission plugin
 * added feature to auto-hide empty service menus
 * added option to disable two passes for equalizer
 * added fast mute function for most output plugins
@@ -1600,3 +1600,9 @@ Version 1.4.0
 * updated Galician translation (Delio Docampo Cordeiro)
 * updated Spanish translation (Joel Barrios)
 * updated Russian translation (Alexey Loginov)
+* updated Ukrainian translation (Gennady Motsyo)
+* updated French translation (Adrien Vigneron)
+* updated Indonesian translation (Andika Triwidada)
+* updated Greek translation (Dimitrios Glentadakis)
+* updated Italian translation (Luigi Toscano)
+* updated German translation (Ettore Atalan)

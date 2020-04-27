@@ -67,7 +67,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_ui.takCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_TAK));
     m_ui.takCheckBox->setChecked(filters.contains("*.tak") && avcodec_find_decoder(AV_CODEC_ID_TAK));
     m_ui.dsdCheckBox->setEnabled(avcodec_find_decoder(AV_CODEC_ID_DSD_LSBF));
-    m_ui.dsdCheckBox->setChecked(filters.contains("*.dsd") && avcodec_find_decoder(AV_CODEC_ID_DSD_LSBF));
+    m_ui.dsdCheckBox->setChecked(filters.contains("*.dsdiff") && avcodec_find_decoder(AV_CODEC_ID_DSD_LSBF));
 }
 
 SettingsDialog::~SettingsDialog()

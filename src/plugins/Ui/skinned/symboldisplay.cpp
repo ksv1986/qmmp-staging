@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,11 +31,11 @@ SymbolDisplay::SymbolDisplay (QWidget *parent, int digits)
     m_max = 0;
     connect (m_skin, SIGNAL (skinChanged()), this, SLOT (draw()));
     draw();
-    for (int i=0; i<m_digits; ++i)
-#if defined(Q_OS_FREEBSD) || defined(Q_OS_WIN) || defined (Q_OS_MAC)
-        m_max += 9 * (int) pow(10,i);
-#else
+    for (int i = 0; i < m_digits; ++i)
+#if defined(Q_OS_LINUX)
         m_max += 9 * (int) exp10(i);
+#else
+        m_max += 9 * (int) pow(10,i);
 #endif
 }
 

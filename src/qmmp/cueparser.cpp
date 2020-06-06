@@ -173,7 +173,7 @@ QString CueParser::file(int track) const
     if(track < 1 || track > m_tracks.count())
     {
         qWarning("CueParser: invalid track number: %d", track);
-        return 0;
+        return nullptr;
     }
     return m_tracks.at(track - 1)->file;
 }

@@ -39,7 +39,6 @@ JumpToTrackDialog::JumpToTrackDialog(PlayListModel *model, QWidget* parent)
     m_model = model;
     m_pl_manager = PlayListManager::instance();
     m_listModel = new QStringListModel(this);
-    m_titleFormatter.setPattern("%if(%p,%p - %t,%t)");
 
     m_proxyModel = new QSortFilterProxyModel(this);
     m_proxyModel->setDynamicSortFilter(true);
@@ -111,7 +110,21 @@ void JumpToTrackDialog::refresh()
     {
         if(items[i]->isGroup())
             continue;
-        titles.append(m_titleFormatter.format(dynamic_cast<PlayListTrack *>(items[i])));
+
+        PlayListTrack *track = dynamic_cast<PlayListTrack *>(items[i]);
+        QString title = track->value(Qmmp::TITLE);
+        if(title.isEmpty()) //using file name if title is empty
+        {
+            title = track->path().section('/',-1);
+            title = title.left(title.lastIndexOf('.'));
+        }
+        QString artist = track->value(Qmmp::ARTIST);
+
+        if(artist.isEmpty())
+            titles.append(title);
+        else
+            titles.append(artist + " - " + title);
+
         m_indexes.append(i);
     }
     m_listModel->setStringList(titles);

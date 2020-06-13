@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -59,7 +59,6 @@ private:
     PlayListManager *m_pl_manager;
     PlayListModel *m_model;
     QList<int> m_indexes;
-    MetaDataFormatter m_titleFormatter;
 };
 
 #endif //JUMPTOTRACKDIALOG_P_H

@@ -22,7 +22,7 @@
 #define METADATAFORMATTER_H
 
 #include <QString>
-#include <QMap>
+#include <QHash>
 #include <QList>
 #include <qmmpui/playlisttrack.h>
 #include <qmmp/qmmp.h>
@@ -159,8 +159,8 @@ private:
     QList<MetaDataFormatter::Node> compile(const QString &expr);
     QString m_pattern;
     QList<MetaDataFormatter::Node> m_nodes;
-    QMap<QString, int> m_fieldNames;
-    QMap<QString, int> m_propertyNames;
+    QHash<QString, int> m_fieldNames;
+    QHash<QString, int> m_propertyNames;
 };
 
 #endif // METADATAFORMATTER2_H

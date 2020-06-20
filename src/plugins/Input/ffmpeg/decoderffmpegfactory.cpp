@@ -74,7 +74,7 @@ bool DecoderFFmpegFactory::canDecode(QIODevice *i) const
         return true;
     else if(filters.contains("*.dts") && formats.contains("dts"))
         return true;
-    else if(filters.contains("*.mka") && formats.contains("mka"))
+    else if(filters.contains("*.mka") && (formats.contains("mka") || formats.contains("matroska")))
         return true;
     else if(filters.contains("*.vqf") && formats.contains("vqf"))
         return true;
@@ -85,6 +85,8 @@ bool DecoderFFmpegFactory::canDecode(QIODevice *i) const
     else if(filters.contains("*.m4a") && (formats.contains("m4a") || formats.contains("mp4")))
         return true;
     else if(filters.contains("*.tak") && formats.contains("tak"))
+        return true;
+    else if(formats.contains("matroska") && avcodec_find_decoder(AV_CODEC_ID_OPUS) && i->isSequential()) //audio from YouTube
         return true;
     return false;
 }

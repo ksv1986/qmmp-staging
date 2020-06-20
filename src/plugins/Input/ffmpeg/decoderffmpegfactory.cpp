@@ -84,7 +84,7 @@ bool DecoderFFmpegFactory::canDecode(QIODevice *i) const
         return true;
     else if(filters.contains("*.m4a") && (formats.contains("m4a") || formats.contains("mp4")))
         return true;
-    else if(filters.contains("*.tak"))
+    else if(filters.contains("*.tak") && formats.contains("tak"))
         return true;
     return false;
 }

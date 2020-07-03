@@ -260,7 +260,7 @@ void EqWidget::readEq()
 void EqWidget::writeEq()
 {
     m_eqg->clear();
-    EqSettings eqSettings;
+    EqSettings eqSettings = SoundCore::instance()->eqSettings();
     eqSettings.setPreamp(m_preamp->value());
     for (int i=0; i<10; ++i)
     {

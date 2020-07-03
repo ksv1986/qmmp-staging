@@ -169,7 +169,7 @@ void Equalizer::loadPresets()
 
 void Equalizer::applySettings()
 {
-    EqSettings settings(EqSettings::EQ_BANDS_15);
+    EqSettings settings = QmmpSettings::instance()->eqSettings();
     settings.setPreamp(m_sliders.at(0)->value());
     settings.setEnabled(m_enabled->isChecked());
     for(int i = 0; i < EqSettings::EQ_BANDS_15; ++i)

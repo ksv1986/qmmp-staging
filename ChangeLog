@@ -1606,3 +1606,11 @@ Version 1.4.0
 * updated Greek translation (Dimitrios Glentadakis)
 * updated Italian translation (Luigi Toscano)
 * updated German translation (Ettore Atalan)
+
+Version 1.4.1
+* fixed NetBSD build
+* fixed 'jump to track' dialog delay
+* fixed feature to disable formats in the ffmpeg plugin
+* fixed some streams detection in the mpeg plugin
+* fixed losing of equalizer settings
+* fixed codec and bitrate displaying for IceCast streams

@@ -16,7 +16,7 @@
     <message>
         <location filename="../playlistoption.cpp" line="35"/>
         <source>Show playlist content</source>
-        <translation type="unfinished"></translation>
+        <translation>Oynatma listesi içeriğini göster</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="36"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../playlistoption.cpp" line="37"/>
         <source>Clear playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Çalma listesini temizle</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="38"/>
@@ -51,7 +51,7 @@
     <message>
         <location filename="../playlistoption.cpp" line="42"/>
         <source>Show playlist options</source>
-        <translation type="unfinished"></translation>
+        <translation>Oynatma listesi seçeneklerini göster</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="110"/>

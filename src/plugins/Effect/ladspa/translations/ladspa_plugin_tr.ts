@@ -74,7 +74,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="132"/>

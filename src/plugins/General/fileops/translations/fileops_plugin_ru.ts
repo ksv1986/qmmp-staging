@@ -25,7 +25,7 @@
         <source>Are you sure you want to move %n file(s)?</source>
         <translation>
             <numerusform>Вы уверены, что хотите переместить %n файл?</numerusform>
-            <numerusform>Вы уверены, что хотите переместить %n файла?</numerusform>
+            <numerusform>Вы уверены, что хотите переместить %n файлов?</numerusform>
             <numerusform>Вы уверены, что хотите переместить %n файлов?</numerusform>
         </translation>
     </message>

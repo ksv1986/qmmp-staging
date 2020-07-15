@@ -51,7 +51,7 @@
     <message>
         <location filename="../fileops.cpp" line="284"/>
         <source>Moving file %1/%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya taşınıyor %1/%2 </translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="109"/>
@@ -144,7 +144,7 @@
         <location filename="../settingsdialog.cpp" line="54"/>
         <location filename="../settingsdialog.cpp" line="134"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaldır</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="116"/>
@@ -166,13 +166,13 @@
         <location filename="../settingsdialog.cpp" line="51"/>
         <location filename="../settingsdialog.cpp" line="131"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopyala</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden adlandır</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>

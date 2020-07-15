@@ -44,7 +44,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="53"/>
         <source>Based on Ultimate Lyrics script by Vladimir Brkic &lt;vladimir_brkic@yahoo.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Vladimir Brkic&apos;in Ultimate Lyrics tabanlı betiği &lt;vladimir_brkic@yahoo.com&gt;</translation>
     </message>
 </context>
 <context>
@@ -57,17 +57,17 @@
     <message>
         <location filename="../lyricswindow.ui" line="31"/>
         <source>Provider:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sağlayıcı:</translation>
     </message>
     <message>
         <location filename="../lyricswindow.ui" line="122"/>
         <source>Album:</source>
-        <translation type="unfinished"></translation>
+        <translation>Albüm:</translation>
     </message>
     <message>
         <location filename="../lyricswindow.ui" line="139"/>
         <source>Track:</source>
-        <translation type="unfinished"></translation>
+        <translation>Parça:</translation>
     </message>
     <message>
         <location filename="../lyricswindow.ui" line="146"/>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../lyricswindow.ui" line="161"/>
         <source>Year:</source>
-        <translation type="unfinished"></translation>
+        <translation>Yıl:</translation>
     </message>
     <message>
         <location filename="../lyricswindow.ui" line="115"/>
@@ -87,17 +87,17 @@
     <message>
         <location filename="../lyricswindow.cpp" line="115"/>
         <source>&lt;h2&gt;%1 - %2&lt;/h2&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;%1 - %2&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../lyricswindow.cpp" line="126"/>
         <source>Not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Bulunamadı</translation>
     </message>
     <message>
         <location filename="../lyricswindow.cpp" line="136"/>
         <source>Error: %1 - %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata: %1 - %2</translation>
     </message>
     <message>
         <location filename="../lyricswindow.cpp" line="149"/>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../lyricswindow.cpp" line="204"/>
         <source>cache</source>
-        <translation type="unfinished"></translation>
+        <translation>önbellek</translation>
     </message>
 </context>
 <context>
@@ -115,12 +115,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Lyrics Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Lyrics Eklentisi Ayarları</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Lyrics providers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lyrics sağlayıcıları:</translation>
     </message>
 </context>
 <context>
@@ -128,7 +128,7 @@
     <message>
         <location filename="../ultimatelyricsparser.cpp" line="119"/>
         <source>%1 (line: %2)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (satır: %2)</translation>
     </message>
 </context>
 </TS>

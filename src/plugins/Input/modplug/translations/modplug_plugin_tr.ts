@@ -36,7 +36,7 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="140"/>
         <source>Modplug Plugin developers:</source>
-        <translation type="unfinished"></translation>
+        <translation>ModPlug Eklentisi geliştiricileri:</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="141"/>
@@ -59,29 +59,29 @@
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="71"/>
         <source>Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Hız</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="72"/>
         <source>Tempo</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="73"/>
         <location filename="../modplugmetadatamodel.cpp" line="94"/>
         <source>Samples</source>
-        <translation type="unfinished"></translation>
+        <translation>Örnekler</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="74"/>
         <location filename="../modplugmetadatamodel.cpp" line="103"/>
         <source>Instruments</source>
-        <translation type="unfinished"></translation>
+        <translation>Müzik aletleri</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="75"/>
         <source>Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenler</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="76"/>
@@ -194,7 +194,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="190"/>
         <source>Reverb</source>
-        <translation type="unfinished"></translation>
+        <translation>Yankı</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="202"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="324"/>
         <source>Bass Boost</source>
-        <translation type="unfinished"></translation>
+        <translation>Bas Kuvvetlendirme</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="336"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="458"/>
         <source>Surround</source>
-        <translation type="unfinished"></translation>
+        <translation>Çevreleyici ses</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="551"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="577"/>
         <source>Preamp</source>
-        <translation type="unfinished"></translation>
+        <translation>Önamfi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="586"/>
@@ -265,7 +265,8 @@
         <location filename="../settingsdialog.ui" line="656"/>
         <source>Note: Setting the preamp
 too high may cause clipping!</source>
-        <translation type="unfinished"></translation>
+        <translation>Not: Önamfiyi ayarlayın
+çok yüksek kırpmaya neden olabilir!</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="671"/>
@@ -290,7 +291,7 @@ too high may cause clipping!</source>
     <message>
         <location filename="../settingsdialog.ui" line="700"/>
         <source>Fast playlist info</source>
-        <translation type="unfinished"></translation>
+        <translation>Hızlı oynatma listesi bilgisi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="710"/>

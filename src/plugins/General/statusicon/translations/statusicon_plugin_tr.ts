@@ -37,7 +37,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="131"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Saydamlık:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="165"/>

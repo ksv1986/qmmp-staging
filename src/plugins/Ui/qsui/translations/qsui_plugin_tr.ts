@@ -54,7 +54,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
         <source>&amp;Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Duraklat</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="43"/>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>&amp;Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Durdur</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Boşluk</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
@@ -553,7 +553,7 @@
     <message>
         <location filename="../equalizer.cpp" line="87"/>
         <source>Preamp</source>
-        <translation type="unfinished"></translation>
+        <translation>Önamfi</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="104"/>
@@ -670,7 +670,7 @@
         <location filename="../forms/mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="900"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="32"/>
@@ -1058,7 +1058,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="115"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Saydamlık:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="145"/>
@@ -1068,7 +1068,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
 </context>
 <context>
@@ -1376,22 +1376,22 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="129"/>
         <source>Visualization Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Görselleştirme Modu</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="132"/>
         <source>Analyzer</source>
-        <translation type="unfinished"></translation>
+        <translation>Çözümleyici</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="133"/>
         <source>Scope</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapsam</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="140"/>
         <source>Analyzer Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Çözümleyici Modu</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="142"/>
@@ -1401,77 +1401,77 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="143"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Satırlar</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="151"/>
         <source>Peaks</source>
-        <translation type="unfinished">Tepeler</translation>
+        <translation>Tepeler</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="154"/>
         <source>Refresh Rate</source>
-        <translation type="unfinished">Tazeleme Oranı</translation>
+        <translation>Tazeleme Oranı</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="157"/>
         <source>50 fps</source>
-        <translation type="unfinished">50 fps</translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="158"/>
         <source>25 fps</source>
-        <translation type="unfinished">25 fps</translation>
+        <translation>25 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="159"/>
         <source>10 fps</source>
-        <translation type="unfinished">10 fps</translation>
+        <translation>10 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="160"/>
         <source>5 fps</source>
-        <translation type="unfinished">5 fps</translation>
+        <translation>5 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="167"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished">Çözümleyici Düşüşü</translation>
+        <translation>Çözümleyici Düşüşü</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="170"/>
         <location filename="../qsuivisualization.cpp" line="184"/>
         <source>Slowest</source>
-        <translation type="unfinished">En yavaş</translation>
+        <translation>En yavaş</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="171"/>
         <location filename="../qsuivisualization.cpp" line="185"/>
         <source>Slow</source>
-        <translation type="unfinished">Yavaş</translation>
+        <translation>Yavaş</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="172"/>
         <location filename="../qsuivisualization.cpp" line="186"/>
         <source>Medium</source>
-        <translation type="unfinished">Orta</translation>
+        <translation>Orta</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="173"/>
         <location filename="../qsuivisualization.cpp" line="187"/>
         <source>Fast</source>
-        <translation type="unfinished">Hızlı</translation>
+        <translation>Hızlı</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="174"/>
         <location filename="../qsuivisualization.cpp" line="188"/>
         <source>Fastest</source>
-        <translation type="unfinished">En  hızlı</translation>
+        <translation>En  hızlı</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="181"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished">Tepe Düşüşü</translation>
+        <translation>Tepe Düşüşü</translation>
     </message>
 </context>
 <context>
@@ -1487,7 +1487,7 @@
     <message>
         <location filename="../qsuisettings.cpp" line="42"/>
         <source>Default</source>
-        <translation type="unfinished">Öntanımlı</translation>
+        <translation>Öntanımlı</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
@@ -1550,7 +1550,7 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="139"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="147"/>

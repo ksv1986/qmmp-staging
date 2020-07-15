@@ -64,7 +64,7 @@
         <location filename="../fileops.cpp" line="110"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
         <translation>
-            <numerusform>Czy napewno chcesz usunąć %n plik z dysku?</numerusform>
+            <numerusform>Czy na pewno chcesz usunąć %n plik z dysku?</numerusform>
             <numerusform>Czy na pewno chcesz usunąć %n pliki z dysku?</numerusform>
             <numerusform>Czy na pewno chcesz usunąć %n plików z dysku?</numerusform>
         </translation>

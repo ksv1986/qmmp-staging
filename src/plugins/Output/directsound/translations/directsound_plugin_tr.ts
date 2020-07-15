@@ -6,17 +6,17 @@
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="28"/>
         <source>DirectSound Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>DirectSound Eklentisi</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="52"/>
         <source>About DirectSound Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>DirectSound Çıktı Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="53"/>
         <source>Qmmp DirectSound Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp DirectSound Çıktı Eklentisi</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="54"/>

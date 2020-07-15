@@ -39,12 +39,12 @@
     <message>
         <location filename="../wavpackmetadatamodel.cpp" line="70"/>
         <source>Ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Orantı</translation>
     </message>
     <message>
         <location filename="../wavpackmetadatamodel.cpp" line="71"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Uyarlama</translation>
     </message>
 </context>
 </TS>

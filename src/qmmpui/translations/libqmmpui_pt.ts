@@ -172,7 +172,7 @@
     <message>
         <location filename="../columneditor.cpp" line="100"/>
         <source>Track Index</source>
-        <translation>Índice da faixa</translation>
+        <translation>Índice de faixa</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="87"/>

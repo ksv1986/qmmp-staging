@@ -16,7 +16,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
         <source>&amp;Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Duraklat</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="40"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>&amp;Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Durdur</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="41"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Boşluk</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="45"/>
@@ -211,7 +211,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
@@ -822,7 +822,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="555"/>
         <source>Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp</translation>
     </message>
 </context>
 <context>
@@ -981,7 +981,7 @@
     <message>
         <location filename="../playlistbrowser.cpp" line="42"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden adlandır</translation>
     </message>
 </context>
 <context>
@@ -1070,7 +1070,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="115"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Saydamlık:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="145"/>
@@ -1080,7 +1080,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="178"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
 </context>
 <context>
@@ -1349,7 +1349,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="300"/>
         <source>Show playlists</source>
-        <translation type="unfinished"></translation>
+        <translation>Oynatma listesini göster</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="368"/>
@@ -1402,7 +1402,7 @@
     <message>
         <location filename="../textscroller.cpp" line="59"/>
         <source>Transparent Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Saydam Arkaplan</translation>
     </message>
     <message>
         <location filename="../textscroller.cpp" line="130"/>

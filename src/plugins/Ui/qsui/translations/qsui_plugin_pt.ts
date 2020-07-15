@@ -575,7 +575,7 @@
     <message>
         <location filename="../equalizer.cpp" line="224"/>
         <source>Overwrite Request</source>
-        <translation>Substituição</translation>
+        <translation>Confirmar substituição</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="225"/>
@@ -800,7 +800,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="244"/>
         <source>&amp;Remove Unselected</source>
-        <translation>Remover &amp;não selecionados</translation>
+        <translation>&amp;Remover não selecionados</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="84"/>
@@ -1172,7 +1172,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="52"/>
         <source>Window title format:</source>
-        <translation>Formato de título da janela:</translation>
+        <translation>Formato do título da janela:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="74"/>

@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodersndfilefactory.cpp" line="227"/>
         <source>Compiled against</source>
-        <translation>Derlendi</translation>
+        <translation>Dayanarak derlendi</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="228"/>

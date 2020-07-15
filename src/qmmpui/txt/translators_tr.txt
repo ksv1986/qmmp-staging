@@ -8,6 +8,7 @@ Bulgarian:
     Kiril Kirilov
 
 Chinese Traditional:
+    Cosmos Chen
     lon <lon83129@126.com>
     Jeff Huang
 
@@ -22,12 +23,13 @@ Czech:
     Karel Volný <kvolny@redhat.com>
 
 Dutch:
+    Heimen Stoffels
     Ronald Uitermark <ronald645@gmail.com>
 
-Finnish:
+Fince:
     Jiri Grönroos
 
-French:
+Fransızca:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>
     Sébastien Aperghis-Tramoni (maddingue)
     Stanislas Zeller <uncensored.assault@gmail.com>
@@ -36,7 +38,7 @@ Galician:
     Delio Docampo Cordeiro
     Óscar Pereira <oscarpereira1989@gmail.com>
 
-German:
+Almanca:
     Ettore Atalan
     Stefan Koelling <stefankoelling.ext@googlemail.com>
     Panagiotis Papadopoulos <pano_90@gmx.net>
@@ -51,13 +53,14 @@ Hungarian:
     Németh Gábor <sutee84@freemail.hu>
 
 Indonesian:
+    Andika Triwidada
     Wantoyo <wantoyek@gmail.com>
 
 Italian:
     Gian Paolo Renello <emmerkar@gmail.com>
     Luigi Toscano
 
-Japanese:
+Japonca:
     Ryota Shimamoto <liangtai.s16@gmail.com>
 
 Kazakh:
@@ -69,6 +72,7 @@ Lithuanian:
 Polish:
     Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
+    mrerexx
 
 Portuguese:
     Sérgio Marques <smarquespt@gmail.com>
@@ -76,6 +80,7 @@ Portuguese:
 Russian:
     Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
 
 Serbian:
     Mladen Pejaković <pejakm@autistici.org>

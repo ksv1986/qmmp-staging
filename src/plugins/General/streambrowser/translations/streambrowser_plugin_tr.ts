@@ -16,7 +16,7 @@
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
@@ -111,7 +111,7 @@
         <location filename="../streamwindow.cpp" line="56"/>
         <location filename="../streamwindow.cpp" line="74"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="57"/>
@@ -129,7 +129,7 @@
         <location filename="../streamwindow.cpp" line="59"/>
         <location filename="../streamwindow.cpp" line="77"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Biçim</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="134"/>

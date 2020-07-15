@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="30"/>
         <source>File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Yazma Eklentisi</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="51"/>
         <source>About File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Yazma Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="52"/>
         <source>Qmmp File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Dosya Yazma Eklentisi</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="53"/>
@@ -29,27 +29,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Writer Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Yazma Eklentisi Ayarları</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıktı dizini:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıktı dosyası adı:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="109"/>
         <source>Write to single file if possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mümkünse tek dosyaya yazın.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="36"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nitelik:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>

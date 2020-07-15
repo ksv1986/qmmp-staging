@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Giriş kapısı:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="56"/>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="86"/>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nitelik:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="106"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Örnekleme oranı:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="136"/>

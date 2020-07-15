@@ -51,12 +51,12 @@
     <message>
         <location filename="../converterdialog.ui" line="63"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıktı dizini:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="80"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıktı dosyası adı:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="97"/>
@@ -187,7 +187,7 @@
     <message>
         <location filename="../preseteditor.ui" line="35"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="45"/>
@@ -202,7 +202,7 @@
     <message>
         <location filename="../preseteditor.ui" line="77"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçenekler</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="83"/>

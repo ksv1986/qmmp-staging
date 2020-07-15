@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="38"/>
         <source>GME Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>GME Eklentisi</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="41"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="44"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="57"/>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../decoderopusfactory.cpp" line="42"/>
         <source>Opus Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Opus Eklentisi</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="45"/>
         <source>Ogg Opus Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogg Opus Dosyaları</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="123"/>
         <source>About Opus Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Opus Ses Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="124"/>
         <source>Qmmp Opus Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Opus Ses Eklentisi</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="125"/>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../opusmetadatamodel.cpp" line="59"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Uyarlama</translation>
     </message>
 </context>
 </TS>

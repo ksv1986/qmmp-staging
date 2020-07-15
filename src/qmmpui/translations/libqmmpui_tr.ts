@@ -41,7 +41,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="67"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Uyarlama: %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="68"/>
@@ -112,12 +112,12 @@
     <message>
         <location filename="../forms/columneditor.ui" line="36"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="76"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Biçim:</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="64"/>
@@ -162,7 +162,7 @@
     <message>
         <location filename="../columneditor.cpp" line="96"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation>Süre</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="101"/>
@@ -354,7 +354,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="348"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dil:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="381"/>
@@ -490,7 +490,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="805"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="838"/>
@@ -875,7 +875,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="267"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation>Süre</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="270"/>
@@ -925,7 +925,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
@@ -1044,7 +1044,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="46"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation>Süre</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="58"/>
@@ -1069,12 +1069,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Biçim</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodlayıcı</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="66"/>
@@ -1206,7 +1206,7 @@
     <message>
         <location filename="../forms/tageditor.ui" line="90"/>
         <source>Album:</source>
-        <translation type="unfinished"></translation>
+        <translation>Albüm:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="113"/>
@@ -1226,7 +1226,7 @@
     <message>
         <location filename="../forms/tageditor.ui" line="169"/>
         <source>Track:</source>
-        <translation type="unfinished"></translation>
+        <translation>Parça:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="190"/>
@@ -1238,7 +1238,7 @@
     <message>
         <location filename="../forms/tageditor.ui" line="203"/>
         <source>Year:</source>
-        <translation type="unfinished"></translation>
+        <translation>Yıl:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="250"/>
@@ -1318,7 +1318,8 @@
         <location filename="../uihelper.cpp" line="231"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 zaten var.
+Bunu değiştirmek istiyor musunuz?</translation>
     </message>
 </context>
 <context>

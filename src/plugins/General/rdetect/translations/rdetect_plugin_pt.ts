@@ -21,7 +21,7 @@
     <message>
         <location filename="../rdetectfactory.cpp" line="52"/>
         <source>This plugin provides removable volume detection</source>
-        <translation>Este suplemento disponibiliza a deteção de volumes removidos</translation>
+        <translation>Este suplemento disponibiliza a deteção de volumes amovíveis</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="53"/>

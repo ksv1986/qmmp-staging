@@ -34,7 +34,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
         <source>&amp;Show Preset Name</source>
-        <translation>&amp;Preset Adını Göster</translation>
+        <translation>&amp;Önayar Adını Göster</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
@@ -44,17 +44,17 @@
     <message>
         <location filename="../projectmwidget.cpp" line="153"/>
         <source>&amp;Show Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Menüyü Göster</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="153"/>
         <source>M</source>
-        <translation type="unfinished"></translation>
+        <translation>M</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="155"/>
         <source>&amp;Next Preset</source>
-        <translation>&amp;Sonraki Preset</translation>
+        <translation>&amp;Sonraki Önayar</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="155"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
         <source>&amp;Previous Preset</source>
-        <translation>&amp;Önceki Preset</translation>
+        <translation>&amp;Önceki Önayar</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
         <source>&amp;Random Preset</source>
-        <translation>&amp;Rastgele Preset</translation>
+        <translation>&amp;Rastgele Önayar</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>
         <source>&amp;Lock Preset</source>
-        <translation>Preset &amp;Kilitle</translation>
+        <translation>&amp;Önayarı Kilitle</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>

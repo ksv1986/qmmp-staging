@@ -16,7 +16,7 @@
     <message>
         <location filename="../effectmonotostereofactory.cpp" line="49"/>
         <source>Qmmp Mono to Stereo Converter Plugin</source>
-        <translation>Engadido Conversor de Mono a Stereo Qmmp</translation>
+        <translation>Engadido conversor de Mono a Stereo Qmmp</translation>
     </message>
     <message>
         <location filename="../effectmonotostereofactory.cpp" line="50"/>

@@ -126,7 +126,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
         <source>&amp;Transit between playlists</source>
-        <translation>&amp;Transición entre listas de reproducción</translation>
+        <translation>&amp;Transición entre listas de reprodución</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>

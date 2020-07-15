@@ -22,22 +22,22 @@
     <message>
         <location filename="../historyfactory.cpp" line="31"/>
         <source>Listening History Plugin</source>
-        <translation>Afspeelgeschiedenis-plug-in</translation>
+        <translation>Luistergeschiedenis-plug-in</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="51"/>
         <source>About Listening History Plugin</source>
-        <translation>Over de Afspeelgeschiedenis-plug-in</translation>
+        <translation>Over de Luistergeschiedenis-plug-in</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="52"/>
         <source>Qmmp Listening History Plugin</source>
-        <translation>Afspeelgeschiedenis-plug-in voor Qmmp</translation>
+        <translation>Luistergeschiedenis-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="53"/>
         <source>This plugin collects information about listened tracks</source>
-        <translation>Deze plug-in verzamelt informatie over afgespeelde nummers</translation>
+        <translation>Deze plug-in verzamelt informatie over beluisterde nummers</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="54"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../historysettingsdialog.ui" line="31"/>
         <source>Title format:</source>
-        <translation>Titelopmaak:</translation>
+        <translation>Titel formaat:</translation>
     </message>
 </context>
 <context>

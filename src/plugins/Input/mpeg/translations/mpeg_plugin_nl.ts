@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="179"/>
         <source>MPEG Plugin</source>
-        <translation>MPEG-plug-in</translation>
+        <translation>MPEG Module</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="182"/>
         <source>MPEG Files</source>
-        <translation>MPEG-bestanden</translation>
+        <translation>MPEG Bestanden</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="400"/>
         <source>About MPEG Audio Plugin</source>
-        <translation>Over de MPEG-audioplug-in</translation>
+        <translation>Over de MPEG Audio Module</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="401"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="402"/>
         <source>Compiled against:</source>
-        <translation>Gebouwd met:</translation>
+        <translation>Gebouwd met</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="411"/>
         <source>mpg123, API version: %1</source>
-        <translation>mpg123, API-versie: %1</translation>
+        <translation>mpg123, API version: %1</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="415"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="416"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation>De broncode is gebaseerd op de projecten &apos;mq3&apos; en &apos;madplay&apos;</translation>
+        <translation>Broncode gebasseerd op &apos;mq3&apos; en &apos;madplay&apos; projecten</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
         <location filename="../mpegmetadatamodel.cpp" line="71"/>
         <location filename="../mpegmetadatamodel.cpp" line="74"/>
         <source>Mode</source>
-        <translation>Modus</translation>
+        <translation>Stand</translation>
     </message>
     <message>
         <location filename="../mpegmetadatamodel.cpp" line="77"/>
@@ -75,7 +75,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPEG Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>MPEG Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="77"/>
         <source>Tag Priority</source>
-        <translation>Tagprioriteit</translation>
+        <translation>Tag prioriteit</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
@@ -153,12 +153,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="274"/>
         <source>ID3v1 encoding:</source>
-        <translation>ID3v1-codering:</translation>
+        <translation>ID3v1 codering:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="300"/>
         <source>ID3v2 encoding:</source>
-        <translation>ID3v2-codering:</translation>
+        <translation>ID3v2 codering:</translation>
     </message>
 </context>
 </TS>

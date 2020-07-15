@@ -24,7 +24,7 @@
     <message>
         <location filename="../qmmpfiledialog.ui" line="190"/>
         <source>List view</source>
-        <translation>Lijstweergave</translation>
+        <translation>Weergave modus</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="209"/>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../qmmpfiledialog.ui" line="234"/>
         <source>Close dialog on add</source>
-        <translation>Venster sluiten na toevoegen</translation>
+        <translation>Sluit venster na toevoegen</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="106"/>
@@ -63,12 +63,12 @@
         <location filename="../qmmpfiledialog.cpp" line="69"/>
         <location filename="../qmmpfiledialog.cpp" line="79"/>
         <source>Qmmp File Dialog</source>
-        <translation>Qmmp-bestandsvenster</translation>
+        <translation>Qmmp Bestandsdialoog</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="78"/>
         <source>About Qmmp File Dialog</source>
-        <translation>Over het Qmmp-bestandsvenster</translation>
+        <translation>Over de Qmmp Bestandsdialoog</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="80"/>
@@ -82,7 +82,7 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="83"/>
         <source>Some code is copied from the Qt library</source>
-        <translation>Sommige code is gekopiëerd van de Qt-bibliotheek</translation>
+        <translation>Sommige code is gekopiëerd van de Qt bibliotheek</translation>
     </message>
 </context>
 <context>
@@ -95,7 +95,7 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     <message>
         <location filename="../qmmpfiledialogimpl.cpp" line="275"/>
         <source>Save</source>
-        <translation>Opslaan</translation>
+        <translation>Bewaren</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialogimpl.cpp" line="289"/>
@@ -107,7 +107,7 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 bestaat al.
-Wil je het overschrijven?</translation>
+Wilt u het overschrijven?</translation>
     </message>
 </context>
 </TS>

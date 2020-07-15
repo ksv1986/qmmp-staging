@@ -24,7 +24,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="151"/>
         <source>&amp;Show Song Title</source>
-        <translation>Naam van &amp;nummer tonen</translation>
+        <translation>&amp;Weergeef Titel van Nummer</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="151"/>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
         <source>&amp;Show Preset Name</source>
-        <translation>Naam van voorin&amp;stelling tonen</translation>
+        <translation>&amp;Weergeef Naam van Voorinstellingen</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="155"/>
         <source>&amp;Next Preset</source>
-        <translation>Volge&amp;nde voorinstelling</translation>
+        <translation>&amp;Volgende Instelling</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="155"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
         <source>&amp;Previous Preset</source>
-        <translation>&amp;Vorige voorinstelling</translation>
+        <translation>&amp;Vorige Instelling</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
         <source>&amp;Random Preset</source>
-        <translation>Willekeu&amp;rige voorinstelling</translation>
+        <translation>&amp;Willekeurige Instelling</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="157"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>
         <source>&amp;Lock Preset</source>
-        <translation>Voorinste&amp;lling vastzetten</translation>
+        <translation>&amp;Zet Instelling Vast</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="158"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="160"/>
         <source>&amp;Fullscreen</source>
-        <translation>Beeld&amp;vullend</translation>
+        <translation>&amp;Volledig scherm</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="160"/>
@@ -112,17 +112,17 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="49"/>
         <source>About ProjectM Visual Plugin</source>
-        <translation>Over de ProjectM visuele plug-in</translation>
+        <translation>Over de ProjectM Visuele Module</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="50"/>
         <source>Qmmp ProjectM Visual Plugin</source>
-        <translation>ProjectM visuele plug-in voor Qmmp</translation>
+        <translation>ProjectM Visuele Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="51"/>
         <source>This plugin adds projectM visualization</source>
-        <translation>Deze plug-in voegt ProjectM-visualisatie toe</translation>
+        <translation>Deze plugin voegt projectM visualisatie toe</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="52"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="53"/>
         <source>Based on libprojectM-qt library</source>
-        <translation>Gebaseerd op de libprojectM-qt-bibliotheek</translation>
+        <translation>Gebasseerd op de libprojectM-qt bibliotheek</translation>
     </message>
 </context>
 </TS>

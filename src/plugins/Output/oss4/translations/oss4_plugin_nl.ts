@@ -6,17 +6,17 @@
     <message>
         <location filename="../outputoss4factory.cpp" line="36"/>
         <source>OSS4 Plugin</source>
-        <translation>OSS4-plug-in</translation>
+        <translation>OSS4 Module</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="56"/>
         <source>About OSS4 Output Plugin</source>
-        <translation>Over de OSS4-uitvoerplug-in</translation>
+        <translation>Over de OSS4 Uitvoer Module</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="57"/>
         <source>Qmmp OSS4 Output Plugin</source>
-        <translation>OSS4-uitvoerplug-in voor Qmmp</translation>
+        <translation>OSS4 Uitvoer Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="58"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>OSS4 Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>OSS4 Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../notifierfactory.cpp" line="29"/>
         <source>Notifier Plugin</source>
-        <translation>Meldingsplug-in</translation>
+        <translation>Notificatie Module</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="49"/>
         <source>About Notifier Plugin</source>
-        <translation>Over de Meldingsplug-in</translation>
+        <translation>Over de Notificatie Module</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="50"/>
         <source>Qmmp Notifier Plugin</source>
-        <translation>Meldingsplug-in voor Qmmp</translation>
+        <translation>Notificatie Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="51"/>
@@ -37,12 +37,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Notifier Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Notificatie Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Desktop Notification</source>
-        <translation>Bureaubladmelding</translation>
+        <translation>Bureaublad Notificatie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="51"/>
@@ -63,7 +63,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="85"/>
         <source>Transparency:</source>
-        <translation>Doorzichtigheid:</translation>
+        <translation>Transparantie:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="229"/>
@@ -73,17 +73,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="251"/>
         <source>Edit template</source>
-        <translation>Sjabloon aanpassen</translation>
+        <translation>Bewerk layout</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="299"/>
         <source>Cover size:</source>
-        <translation>Hoesgrootte:</translation>
+        <translation>Albumhoesgrootte:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="325"/>
         <source>Volume change notification</source>
-        <translation>Melding bij volume-aanpassingen</translation>
+        <translation>Notificatie bij verandering van volume</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="332"/>
@@ -98,12 +98,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="368"/>
         <source>Song change notification</source>
-        <translation>Melding bij afspelen van ander nummer</translation>
+        <translation>Notificatie bij verandering van lied</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="375"/>
         <source>Disable notifications when another application is in the Full Screen Mode</source>
-        <translation>Meldingen uitschakelen als een ander programma in volledig scherm-modus staat</translation>
+        <translation>Meldingen uitschakelen als een andere toepassing in volledig scherm-modus is</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="378"/>
@@ -113,17 +113,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="388"/>
         <source>Psi Notification</source>
-        <translation>Psi-melding</translation>
+        <translation>Psi Notificatie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="400"/>
         <source>Enable Psi notification</source>
-        <translation>Psi-melding inschakelen</translation>
+        <translation>Psi notificatie Inschakelen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="109"/>
         <source>Notification Template</source>
-        <translation>Meldingssjabloon</translation>
+        <translation>Notificatie Layout</translation>
     </message>
 </context>
 </TS>

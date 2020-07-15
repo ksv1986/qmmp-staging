@@ -49,7 +49,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Sample rate:</source>
-        <translation>Samplesnelheid:</translation>
+        <translation>Sample frequentie:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>

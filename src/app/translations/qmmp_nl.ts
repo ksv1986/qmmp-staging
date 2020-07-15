@@ -6,42 +6,42 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="71"/>
         <source>Don&apos;t clear the playlist</source>
-        <translation>Afspeellijst niet legen</translation>
+        <translation>Niet de afspeellijst leeghalen</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="72"/>
         <source>Start playing current song</source>
-        <translation>Huidig nummer afspelen</translation>
+        <translation>Begin met afspelen van huidig nummer</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="73"/>
         <source>Pause current song</source>
-        <translation>Huidig nummer pauzeren</translation>
+        <translation>Pauzeer huidig nummer</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="74"/>
         <source>Pause if playing, play otherwise</source>
-        <translation>Pauzeren als er iets wordt afgespeeld; anders afspelen</translation>
+        <translation>Pauzeer als er wordt gespeeld, anders spelen</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="75"/>
         <source>Stop current song</source>
-        <translation>Huidig nummer stopzetten</translation>
+        <translation>Stop huidig nummer</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="76"/>
         <source>Display Jump to File dialog</source>
-        <translation>Bestandskeuzevenster tonen</translation>
+        <translation>Weergeef bestandskeuze venster</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="77"/>
         <source>Quit application</source>
-        <translation>Toepassing afsluiten</translation>
+        <translation>Sluit applicatie</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="78"/>
         <source>Set playback volume (example: qmmp --volume 20)</source>
-        <translation>Afspeelvolume instellen (voorbeeld: qmmp --volume 20)</translation>
+        <translation>Verander afspeelvolume (voorbeeld: qmmp --volume 20)</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>
@@ -61,17 +61,17 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="82"/>
         <source>Skip forward in playlist</source>
-        <translation>Vooruitspoelen door afspeellijst</translation>
+        <translation>Naar voren schuiven in afspeellijst</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="83"/>
         <source>Skip backwards in playlist</source>
-        <translation>Terugspoelen door afspeellijst</translation>
+        <translation>Naar achteren schuiven in afspeellijst</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="84"/>
         <source>Show/hide application</source>
-        <translation>Toepassing tonen/verbergen</translation>
+        <translation>Toon/verberg programma</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="85"/>
@@ -81,12 +81,12 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="86"/>
         <source>Display Add File dialog</source>
-        <translation>Venster om bestanden toe te voegen tonen</translation>
+        <translation>Toon venster om bestanden toe te voegen</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="87"/>
         <source>Display Add Directory dialog</source>
-        <translation>Venster om mappen toe te voegen tonen</translation>
+        <translation>Toon venster om mappen toe te voegen</translation>
     </message>
 </context>
 <context>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="108"/>
         <source>Unknown command</source>
-        <translation>Onbekende opdracht</translation>
+        <translation>Onbekend commando</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="408"/>
@@ -109,27 +109,27 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="415"/>
         <source>Start qmmp with the specified user interface</source>
-        <translation>Qmmp starten met het opgegeven uiterlijk</translation>
+        <translation>Qmmp starten met opgegeven uiterlijk</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="416"/>
         <source>List all available user interfaces</source>
-        <translation>Alle uiterlijke varianten tonen</translation>
+        <translation>Alle varianten van uiterlijk tonen</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="417"/>
         <source>Don&apos;t start the application</source>
-        <translation>Programma niet starten</translation>
+        <translation>Niet de applicatie starten</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="418"/>
         <source>Display this text and exit</source>
-        <translation>Deze tekst tonen en afsluiten</translation>
+        <translation>Toon deze tekst en sluit</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="419"/>
         <source>Print version number and exit</source>
-        <translation>Versienummer printen en afsluiten</translation>
+        <translation>Print versienummer en sluit</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="421"/>
@@ -155,17 +155,17 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="441"/>
         <source>QMMP version: %1</source>
-        <translation>QMMP-versie: %1</translation>
+        <translation>QMMP versie: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="442"/>
         <source>Compiled with Qt version: %1</source>
-        <translation>Gebouwd met Qt-versie: %1</translation>
+        <translation>Gecompileerd met QT versie: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="443"/>
         <source>Using Qt version: %1</source>
-        <translation>Gebruikte Qt-versie: %1</translation>
+        <translation>Gebruikt QT versie: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="446"/>
@@ -175,7 +175,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="463"/>
         <source>User Interfaces</source>
-        <translation>Uiterlijk</translation>
+        <translation>GebruikersInterfaces</translation>
     </message>
 </context>
 </TS>

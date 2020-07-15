@@ -6,27 +6,27 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="135"/>
         <source>FFmpeg Plugin</source>
-        <translation>FFmpeg-plug-in</translation>
+        <translation>FFmpeg Module</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="137"/>
         <source>FFmpeg Formats</source>
-        <translation>FFmpeg-formaten</translation>
+        <translation>FFmpeg Formaat</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="310"/>
         <source>About FFmpeg Audio Plugin</source>
-        <translation>Over de FFmpeg-audioplug-in</translation>
+        <translation>Over de FFmpeg Audio Module</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="311"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
-        <translation>FFmpeg-audioplug-in voor Qmmp</translation>
+        <translation>FFmpeg Audio Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="312"/>
         <source>Compiled against:</source>
-        <translation>Gebouwd met:</translation>
+        <translation>Gebouwd met</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="325"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>FFmpeg Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>FFmpeg Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>

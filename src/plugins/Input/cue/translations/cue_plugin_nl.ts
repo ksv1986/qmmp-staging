@@ -6,22 +6,22 @@
     <message>
         <location filename="../decodercuefactory.cpp" line="38"/>
         <source>CUE Plugin</source>
-        <translation>CUE-plug-in</translation>
+        <translation>CUE Module</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="41"/>
         <source>CUE Files</source>
-        <translation>CUE-bestanden</translation>
+        <translation>CUE Bestanden</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="85"/>
         <source>About CUE Audio Plugin</source>
-        <translation>Over de CUE-audioplug-in</translation>
+        <translation>Over de CUE Audio Module</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="86"/>
         <source>Qmmp CUE Audio Plugin</source>
-        <translation>CUE-audioplug-in voor Qmmp</translation>
+        <translation>CUE Audio Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="87"/>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>CUE Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>CUE Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Common settings</source>
-        <translation>Algemene instellingen</translation>
+        <translation>Algemene Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -49,12 +49,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>CUE encoding</source>
-        <translation>CUE-codering</translation>
+        <translation>CUE codering</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="51"/>
         <source>Automatic charset detection</source>
-        <translation>Automatische tekensetdetectie</translation>
+        <translation>Automatische tekenset detectie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="81"/>
         <source>Default encoding:</source>
-        <translation>Standaardcodering:</translation>
+        <translation>Standaard codering:</translation>
     </message>
 </context>
 </TS>

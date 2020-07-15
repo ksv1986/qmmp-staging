@@ -6,7 +6,7 @@
     <message>
         <location filename="../covermanager.cpp" line="35"/>
         <source>Show Cover</source>
-        <translation>Albumhoes tonen</translation>
+        <translation>Toon albumhoes</translation>
     </message>
     <message>
         <location filename="../covermanager.cpp" line="36"/>
@@ -19,17 +19,17 @@
     <message>
         <location filename="../covermanagerfactory.cpp" line="30"/>
         <source>Cover Manager Plugin</source>
-        <translation>Albumhoes-plug-in</translation>
+        <translation>Albumhoes Module</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="50"/>
         <source>About Cover Manager Plugin</source>
-        <translation>Over de Albumhoes-plug-in</translation>
+        <translation>Over de Albumhoes Module</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="51"/>
         <source>Qmmp Cover Manager Plugin</source>
-        <translation>Albumhoes-plug-in voor Qmmp</translation>
+        <translation>Albumhoes Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="52"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../coverwidget.cpp" line="37"/>
         <source>&amp;Save As...</source>
-        <translation>Op&amp;slaan als...</translation>
+        <translation>&amp;Bewaar als...</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="37"/>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../coverwidget.cpp" line="47"/>
         <source>&amp;Close</source>
-        <translation>Sl&amp;uiten</translation>
+        <translation>&amp;Sluiten</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="47"/>
@@ -92,7 +92,7 @@
     <message>
         <location filename="../coverwidget.cpp" line="90"/>
         <source>Save Cover As</source>
-        <translation>Albumhoes opslaan als</translation>
+        <translation>Bewaar Albumhoes Als</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="92"/>

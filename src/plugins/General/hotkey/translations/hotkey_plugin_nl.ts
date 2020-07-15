@@ -6,17 +6,17 @@
     <message>
         <location filename="../hotkeydialog.ui" line="14"/>
         <source>Modify Shortcut</source>
-        <translation>Sneltoets aanpassen</translation>
+        <translation>Bewerk Sneltoets</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="32"/>
         <source>Press the key combination you want to assign</source>
-        <translation>Druk op de toetscombinatie die je wilt toewijzen</translation>
+        <translation>Druk de toetscombinatie die u wilt toewijzen</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="52"/>
         <source>Clear</source>
-        <translation>Wissen</translation>
+        <translation>Leeghalen</translation>
     </message>
 </context>
 <context>
@@ -24,22 +24,22 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="31"/>
         <source>Global Hotkey Plugin</source>
-        <translation>Globale sneltoetsplug-in</translation>
+        <translation>Globale Sneltoets Module</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="57"/>
         <source>About Global Hotkey Plugin</source>
-        <translation>Over de Globale sneltoetsplug-in</translation>
+        <translation>Over de Globale Sneltoets Module</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="58"/>
         <source>Qmmp Global Hotkey Plugin</source>
-        <translation>Globale sneltoetsplug-in voor Qmmp</translation>
+        <translation>Globale Sneltoets Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="59"/>
         <source>This plugin adds support for multimedia keys or global key combinations</source>
-        <translation>Deze plug-in voegt ondersteuning toe voor multimediatoetsen of globale toetscombinaties</translation>
+        <translation>Deze module voegt ondersteuning toe voor multimedia toetsen of globale toetscombinaties</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="60"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Global Hotkey Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Globale Sneltoets Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Reset</source>
-        <translation>Herstellen</translation>
+        <translation>Leeghalen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
@@ -82,12 +82,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>
         <source>Pause</source>
-        <translation>Pauzeren</translation>
+        <translation>Pause</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="40"/>
         <source>Play/Pause</source>
-        <translation>Afspelen/Pauzeren</translation>
+        <translation>Speel/Pause</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Show/Hide</source>
-        <translation>Tonen/Verbergen</translation>
+        <translation>Toon/Verberg</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="44"/>
@@ -117,17 +117,17 @@
     <message>
         <location filename="../settingsdialog.cpp" line="46"/>
         <source>Forward 5 seconds</source>
-        <translation>5 seconden vooruitspoelen</translation>
+        <translation>5 Seconden Verder</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="47"/>
         <source>Rewind 5 seconds</source>
-        <translation>5 seconden terugspoelen</translation>
+        <translation>5 Seconden Terug</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="48"/>
         <source>Jump to track</source>
-        <translation>Ga naar nummer</translation>
+        <translation>Ga naar Nummer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="49"/>

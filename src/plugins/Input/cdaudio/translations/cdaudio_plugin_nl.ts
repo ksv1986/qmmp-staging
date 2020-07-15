@@ -6,22 +6,22 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="50"/>
         <source>CD Audio Plugin</source>
-        <translation>Audio-CD-plug-in</translation>
+        <translation>Audio CD Module</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="97"/>
         <source>About CD Audio Plugin</source>
-        <translation>Over de Audio-CD-plug-in</translation>
+        <translation>Over de Audio CD Module</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="98"/>
         <source>Qmmp CD Audio Plugin</source>
-        <translation>Audio-CD-plug-in voor Qmmp</translation>
+        <translation>Audio CD Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="99"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
-        <translation>Gebouwd met libcdio-%1 en libcddb-%2</translation>
+        <translation>Gecompileerd tegen libcdio-%1 en libcddb-%2</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="101"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="102"/>
         <source>Usage: open cdda:/// using Add URL dialog or command line</source>
-        <translation>Gebruiksaanwijzing: open cdda:/// via het veld &quot;URL toevoegen&quot; of als argument in de opdrachtprompt</translation>
+        <translation>Gebruik: Voeg cdda:/// in het &quot;Voeg URL toe&quot; dialoog of als argument op de command prompt</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>CD Audio Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Audio CD Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -49,12 +49,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Limit cd speed:</source>
-        <translation>CD-snelheid inperken:</translation>
+        <translation>Beperk CD snelheid:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Use cd-text</source>
-        <translation>CD-tekst gebruiken</translation>
+        <translation>Gebruik cd-text</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Use HTTP instead of CDDBP</source>
-        <translation>HTTP gebruiken i.p.v. CDDBP</translation>
+        <translation>Gebruik HTTP i.p.v. CDDBP</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="88"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="117"/>
         <source>Clear CDDB cache</source>
-        <translation>CDDB-cache opschonen</translation>
+        <translation>Leeg CDDB cache</translation>
     </message>
 </context>
 </TS>

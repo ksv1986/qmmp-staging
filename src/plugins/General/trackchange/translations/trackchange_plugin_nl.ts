@@ -19,7 +19,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Command to run when Qmmp starts new track</source>
-        <translation>Opdracht die moet worden uitgevoerd bij het starten van een nieuw nummer</translation>
+        <translation>Opdracht die moet worden uitgevoerd als er een nieuw nummer wordt afgespeeld</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../copypaste.cpp" line="41"/>
         <source>Cu&amp;t</source>
-        <translation>Kn&amp;ippen</translation>
+        <translation>Kni&amp;ppen</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="42"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../copypastefactory.cpp" line="51"/>
         <source>This plugin allows one to copy selected tracks from one playlist to another</source>
-        <translation>Deze plug-in stelt je in staat om geselecteerde nummers te kopiëren van de ene naar de andere afspeellijst</translation>
+        <translation>Kopiëren/Plakken-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="52"/>

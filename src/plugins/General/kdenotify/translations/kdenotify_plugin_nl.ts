@@ -19,7 +19,7 @@
     <message>
         <location filename="../kdenotifyfactory.cpp" line="49"/>
         <source>About KDE Notification Plugin</source>
-        <translation>Over de KDE-meldingsplug-in</translation>
+        <translation>Over de KDE 4 Notificatie Module</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="50"/>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>KDE 4 Notification Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>KDE 4 Notificatie Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
@@ -52,27 +52,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Update visible notification instead create new</source>
-        <translation>Huidige melding bijwerken i.p.v. nieuwe te sturen</translation>
+        <translation>Werk huidige notificatie bij i.p.v. het maken van een nieuwe</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="88"/>
         <source>Appearance</source>
-        <translation>Uiterlijk</translation>
+        <translation>Vertoning</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="94"/>
         <source>Show covers</source>
-        <translation>Hoezen tonen</translation>
+        <translation>Laat albumhoezen zien</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>Edit template</source>
-        <translation>Sjabloon bewerken</translation>
+        <translation>Bewerk layout</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="75"/>
         <source>Notification Template</source>
-        <translation>Meldingssjabloon</translation>
+        <translation>Notificatie Layout</translation>
     </message>
 </context>
 </TS>

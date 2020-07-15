@@ -6,17 +6,17 @@
     <message>
         <location filename="../statusoption.cpp" line="30"/>
         <source>Print playback status</source>
-        <translation>Afspeelstatus tonen</translation>
+        <translation>Weergeef speelstatus</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="31"/>
         <source>Print formatted track name (example: qmmp --nowplaying &quot;%t - %a&quot;)</source>
-        <translation>Opgemaakte naam van nummer tonen (voorbeeld: qmmp --nowplaying &quot;%t - %a&quot;)</translation>
+        <translation>Weergeef geformateerde nummertitel (voorbeeld: qmmp --nowplaying &quot;%t - %a&quot;)</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="33"/>
         <source>Print --nowplaying syntax</source>
-        <translation>--nowplaying-syntax tonen</translation>
+        <translation>Weergeef --nowplaying syntax</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="94"/>
@@ -46,12 +46,12 @@
     <message>
         <location filename="../statusoption.cpp" line="99"/>
         <source>%n - track</source>
-        <translation>%n - cd-nummer</translation>
+        <translation>%n - liednummer</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="100"/>
         <source>%NN - 2-digit track</source>
-        <translation>%NN - cd-nummer (tweecijferig)</translation>
+        <translation>%NN - liednummer (twee cijfer formaat)</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="101"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../statusoption.cpp" line="102"/>
         <source>%c - comment</source>
-        <translation>%c - opmerking</translation>
+        <translation>%c - commentaar</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="103"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../statusoption.cpp" line="104"/>
         <source>%D - disc number</source>
-        <translation>%D - schijfnummer</translation>
+        <translation>%D - CD nummer</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="105"/>
@@ -116,7 +116,7 @@
     <message>
         <location filename="../statusoption.cpp" line="113"/>
         <source>%{format} - format name</source>
-        <translation>%{format} - naaw van bestandsformaat</translation>
+        <translation>%{format} - naaw van bestandformaat</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="114"/>

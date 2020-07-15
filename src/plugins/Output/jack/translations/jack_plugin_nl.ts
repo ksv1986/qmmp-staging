@@ -6,17 +6,17 @@
     <message>
         <location filename="../outputjackfactory.cpp" line="30"/>
         <source>JACK Plugin</source>
-        <translation>JACK-plug-in</translation>
+        <translation>JACK Module</translation>
     </message>
     <message>
         <location filename="../outputjackfactory.cpp" line="53"/>
         <source>About Jack Output Plugin</source>
-        <translation>Over de JACK-uitvoerplug-in</translation>
+        <translation>Over de Jack Output Module</translation>
     </message>
     <message>
         <location filename="../outputjackfactory.cpp" line="54"/>
         <source>Qmmp Jack Output Plugin</source>
-        <translation>JACK-uitvoerplug-in voor Qmmp</translation>
+        <translation>JACK Output Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../outputjackfactory.cpp" line="55"/>

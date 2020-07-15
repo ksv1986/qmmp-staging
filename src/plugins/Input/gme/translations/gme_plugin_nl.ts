@@ -6,27 +6,27 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="38"/>
         <source>GME Plugin</source>
-        <translation>GME-plug-in</translation>
+        <translation>GME Module</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="41"/>
         <source>Game Music Files</source>
-        <translation>Muziekbestanden van spellen</translation>
+        <translation>Spel Muziek Bestanden</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="103"/>
         <source>About GME Audio Plugin</source>
-        <translation>Over de GME-audioplug-in</translation>
+        <translation>Over de GME Audio Module</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="104"/>
         <source>Qmmp GME Audio Plugin</source>
-        <translation>GME-audioplug-in voor Qmmp</translation>
+        <translation>GME Audio Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="105"/>
         <source>This plugin uses Game_Music_Emu library to play game music files</source>
-        <translation>Deze plug-in faciliteert in het afspelen van spelmuziek d.m.v. de Game_Music_Emu-bibliotheek</translation>
+        <translation>Deze module faciliteert in het afspelen van spelmuziek door gebruik van de Game_Music_Emu bibliotheek</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="106"/>

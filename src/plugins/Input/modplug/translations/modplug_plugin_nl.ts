@@ -6,22 +6,22 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="46"/>
         <source>ModPlug Plugin</source>
-        <translation>ModPlug-plug-in</translation>
+        <translation>ModPlug Module</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="52"/>
         <source>ModPlug Files</source>
-        <translation>ModPlug-bestanden</translation>
+        <translation>ModPlug Bestanden</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="136"/>
         <source>About ModPlug Audio Plugin</source>
-        <translation>Over de ModPlug-audioplug-in</translation>
+        <translation>Over de ModPlug Audio Module</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="137"/>
         <source>Qmmp ModPlug Audio Plugin</source>
-        <translation>ModPlug-audioplug-in voor Qmmp</translation>
+        <translation>Modplug Audio Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="138"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="139"/>
         <source>Based on the Modplug Plugin for Xmms</source>
-        <translation>Gebaseerd op de Modplug-plug-in voor Xmms</translation>
+        <translation>Gebasseerd op de Modplug Module voor Xmms</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="140"/>
         <source>Modplug Plugin developers:</source>
-        <translation>Modplug-plug-inontwikkelaars:</translation>
+        <translation>Modplug Module ontwikkelaars:</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="141"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="108"/>
         <source>Comment</source>
-        <translation>Opmerking</translation>
+        <translation>Commentaar</translation>
     </message>
 </context>
 <context>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>ModPlug Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>ModPlug Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
@@ -139,12 +139,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>Resampling</source>
-        <translation>Hersamplen</translation>
+        <translation>Resampling</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="109"/>
         <source>Nearest (fastest)</source>
-        <translation>Dichtstbij (snelst)</translation>
+        <translation>Dichstbij (snelst)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="116"/>
@@ -164,7 +164,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="146"/>
         <source>Sampling Rate</source>
-        <translation>Samplesnelheid</translation>
+        <translation>Sampling frequentie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="152"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="324"/>
         <source>Bass Boost</source>
-        <translation>Basversterking</translation>
+        <translation>Bas versterken</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="336"/>
@@ -265,14 +265,14 @@
         <location filename="../settingsdialog.ui" line="656"/>
         <source>Note: Setting the preamp
 too high may cause clipping!</source>
-        <translation>Let op: het te hoog instellen van
-de voorverstelling kan haperingen
-veroorzaken!</translation>
+        <translation>Notitie: Het te hoog instellen van
+de voorverstelling kan veel
+stotteringen veroorzaken!</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="671"/>
         <source>Misc</source>
-        <translation>Overig</translation>
+        <translation>Overige</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="677"/>
@@ -282,22 +282,22 @@ veroorzaken!</translation>
     <message>
         <location filename="../settingsdialog.ui" line="683"/>
         <source>Use filename as song title</source>
-        <translation>Bestandsnaam gebruiken als naam van nummer</translation>
+        <translation>Gebruik bestandsnaam als nummertitel</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="690"/>
         <source>Noise reduction</source>
-        <translation>Ruisonderdrukking</translation>
+        <translation>Noise verlaging</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="700"/>
         <source>Fast playlist info</source>
-        <translation>Snelle afspeellijstinformatie</translation>
+        <translation>Snelle afspeellijst informatie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="710"/>
         <source>Play Amiga MOD</source>
-        <translation>Amiga MOD afspelen</translation>
+        <translation>Speel Amiga MOD af</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="720"/>
@@ -312,17 +312,17 @@ veroorzaken!</translation>
     <message>
         <location filename="../settingsdialog.ui" line="733"/>
         <source>Loop</source>
-        <translation>Herhaling</translation>
+        <translation>Herhaal</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="750"/>
         <source>time(s)</source>
-        <translation>aantal keer</translation>
+        <translation>aantal</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="770"/>
         <source>Loop forever</source>
-        <translation>Oneindig herhalen</translation>
+        <translation>Altijd herhalen</translation>
     </message>
 </context>
 </TS>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../analyzer.cpp" line="44"/>
         <source>Qmmp Analyzer</source>
-        <translation>Qmmp-analyse</translation>
+        <translation>Qmmp Analysator</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="332"/>
         <source>Peaks</source>
-        <translation>Pieken</translation>
+        <translation>Toppen</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="335"/>
         <source>Refresh Rate</source>
-        <translation>Verversingssnelheid</translation>
+        <translation>Vernieuw Frequentie</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="338"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../analyzer.cpp" line="348"/>
         <source>Analyzer Falloff</source>
-        <translation>Analyse-uitval</translation>
+        <translation>Analysator Uitval</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="351"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../analyzer.cpp" line="362"/>
         <source>Peaks Falloff</source>
-        <translation>Piekuitval</translation>
+        <translation>Toppen Uitval</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Analyzer Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Analysator Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -122,12 +122,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="107"/>
         <source>Peaks:</source>
-        <translation>Pieken:</translation>
+        <translation>Toppen:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="139"/>
         <source>Analyzer #1:</source>
-        <translation>Analyse #1:</translation>
+        <translation>Analysator #1:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="171"/>
@@ -137,12 +137,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="203"/>
         <source>Analyzer #2:</source>
-        <translation>Analyse #2:</translation>
+        <translation>Analysator #2:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="248"/>
         <source>Analyzer #3:</source>
-        <translation>Analyse #3:</translation>
+        <translation>Analysator #3:</translation>
     </message>
 </context>
 <context>
@@ -150,17 +150,17 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="30"/>
         <source>Analyzer Plugin</source>
-        <translation>Analyseplug-in</translation>
+        <translation>Analysator Module</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="49"/>
         <source>About Analyzer Visual Plugin</source>
-        <translation>Over de Visuele Analyse-plug-in</translation>
+        <translation>Over de Visuele Analysator Module</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="50"/>
         <source>Qmmp Analyzer Visual Plugin</source>
-        <translation>Visuele Analyse-plug-in voor Qmmp</translation>
+        <translation>Visuele Analysator Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="51"/>

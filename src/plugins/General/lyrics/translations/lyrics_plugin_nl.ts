@@ -6,7 +6,7 @@
     <message>
         <location filename="../lyrics.cpp" line="33"/>
         <source>View Lyrics</source>
-        <translation>Songtekst bekijken</translation>
+        <translation>Laat Liedtekst zien</translation>
     </message>
     <message>
         <location filename="../lyrics.cpp" line="34"/>
@@ -19,22 +19,22 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="29"/>
         <source>Lyrics Plugin</source>
-        <translation>Songtekstplug-in</translation>
+        <translation>Liedtekst Module</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="49"/>
         <source>About Lyrics Plugin</source>
-        <translation>Over de Songtekstplug-in</translation>
+        <translation>Over de Liedtekst Module</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="50"/>
         <source>Qmmp Lyrics Plugin</source>
-        <translation>Songtekstplug-in voor Qmmp</translation>
+        <translation>Liedtekst Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="51"/>
         <source>This plugin retrieves lyrics from LyricWiki</source>
-        <translation>Deze plug-in haalt songteksten op van LyricWiki</translation>
+        <translation>Deze module haalt liedteksten van LyricWiki</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="52"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../lyricswindow.ui" line="14"/>
         <source>Lyrics Plugin</source>
-        <translation>Songtekstplug-in</translation>
+        <translation>Liedtekst Module</translation>
     </message>
     <message>
         <location filename="../lyricswindow.ui" line="31"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../lyricswindow.cpp" line="149"/>
         <source>Receiving</source>
-        <translation>Bezig met ophalen...</translation>
+        <translation>Bezig met ontvangen</translation>
     </message>
     <message>
         <location filename="../lyricswindow.cpp" line="204"/>

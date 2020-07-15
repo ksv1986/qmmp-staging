@@ -946,45 +946,45 @@
         <translation>Siirry kappaleeseen</translation>
     </message>
     <message>
-        <location filename="../forms/jumptotrackdialog.ui" line="37"/>
+        <location filename="../forms/jumptotrackdialog.ui" line="46"/>
         <source>Filter:</source>
         <translation>Suodata:</translation>
     </message>
     <message>
-        <location filename="../forms/jumptotrackdialog.ui" line="73"/>
-        <location filename="../jumptotrackdialog.cpp" line="91"/>
-        <location filename="../jumptotrackdialog.cpp" line="138"/>
+        <location filename="../forms/jumptotrackdialog.ui" line="85"/>
+        <location filename="../jumptotrackdialog.cpp" line="90"/>
+        <location filename="../jumptotrackdialog.cpp" line="151"/>
         <source>Queue</source>
         <translation>Aseta jonoon</translation>
     </message>
     <message>
-        <location filename="../forms/jumptotrackdialog.ui" line="89"/>
+        <location filename="../forms/jumptotrackdialog.ui" line="101"/>
         <source>Refresh</source>
         <translation>Päivitä</translation>
     </message>
     <message>
-        <location filename="../forms/jumptotrackdialog.ui" line="105"/>
+        <location filename="../forms/jumptotrackdialog.ui" line="117"/>
         <source>Jump To</source>
         <translation>Siirry</translation>
     </message>
     <message>
-        <location filename="../jumptotrackdialog.cpp" line="58"/>
+        <location filename="../jumptotrackdialog.cpp" line="57"/>
         <source>Q</source>
         <translation>Q</translation>
     </message>
     <message>
-        <location filename="../jumptotrackdialog.cpp" line="59"/>
+        <location filename="../jumptotrackdialog.cpp" line="58"/>
         <source>J</source>
         <translation>J</translation>
     </message>
     <message>
-        <location filename="../jumptotrackdialog.cpp" line="60"/>
+        <location filename="../jumptotrackdialog.cpp" line="59"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="../jumptotrackdialog.cpp" line="89"/>
-        <location filename="../jumptotrackdialog.cpp" line="136"/>
+        <location filename="../jumptotrackdialog.cpp" line="88"/>
+        <location filename="../jumptotrackdialog.cpp" line="149"/>
         <source>Unqueue</source>
         <translation>Poista jonosta</translation>
     </message>

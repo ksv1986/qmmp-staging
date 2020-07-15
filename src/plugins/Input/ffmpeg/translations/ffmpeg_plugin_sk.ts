@@ -4,32 +4,32 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="133"/>
+        <location filename="../decoderffmpegfactory.cpp" line="135"/>
         <source>FFmpeg Plugin</source>
         <translation>FFmpeg plugin</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="135"/>
+        <location filename="../decoderffmpegfactory.cpp" line="137"/>
         <source>FFmpeg Formats</source>
         <translation>FFmpeg formáty</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="308"/>
+        <location filename="../decoderffmpegfactory.cpp" line="310"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>O FFmpeg audio plugine</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="309"/>
+        <location filename="../decoderffmpegfactory.cpp" line="311"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>Qmmp FFmpeg audio plugin</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="310"/>
+        <location filename="../decoderffmpegfactory.cpp" line="312"/>
         <source>Compiled against:</source>
         <translation>Skompilovaný oproti:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="323"/>
+        <location filename="../decoderffmpegfactory.cpp" line="325"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

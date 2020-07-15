@@ -4,42 +4,42 @@
 <context>
     <name>DecoderMPEGFactory</name>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="175"/>
+        <location filename="../decodermpegfactory.cpp" line="179"/>
         <source>MPEG Plugin</source>
         <translation>Estensione MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="178"/>
+        <location filename="../decodermpegfactory.cpp" line="182"/>
         <source>MPEG Files</source>
         <translation>File MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="396"/>
+        <location filename="../decodermpegfactory.cpp" line="400"/>
         <source>About MPEG Audio Plugin</source>
         <translation>Informazioni sull&apos;estensione audio MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="397"/>
+        <location filename="../decodermpegfactory.cpp" line="401"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
         <translation>Decodificatore per audio MPEG 1.0/2.0/2.5 layer 1/2/3</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="398"/>
+        <location filename="../decodermpegfactory.cpp" line="402"/>
         <source>Compiled against:</source>
         <translation>Compilato con:</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="407"/>
+        <location filename="../decodermpegfactory.cpp" line="411"/>
         <source>mpg123, API version: %1</source>
         <translation>mpg123, versione API: %1</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="411"/>
+        <location filename="../decodermpegfactory.cpp" line="415"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Autori: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="412"/>
+        <location filename="../decodermpegfactory.cpp" line="416"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Codice sorgente basato sui progetti mq3 e madplay</translation>
     </message>

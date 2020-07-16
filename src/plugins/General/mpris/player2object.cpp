@@ -283,42 +283,19 @@ void Player2Object::Stop()
 
 void Player2Object::emitPropertiesChanged()
 {
-    QList<QByteArray> changedProps;
-    if(m_props["CanGoNext"] != canGoNext())
-        changedProps << "CanGoNext";
-    if(m_props["CanGoPrevious"] != canGoPrevious())
-        changedProps << "CanGoPrevious";
-    if(m_props["CanPause"] != canPause())
-        changedProps << "CanPause";
-    if(m_props["CanPlay"] != canPlay())
-        changedProps << "CanPlay";
-    if(m_props["CanSeek"] != canSeek())
-        changedProps << "CanSeek";
-    if(m_props["LoopStatus"] != loopStatus())
-        changedProps << "LoopStatus";
-    if(m_props["MaximumRate"] != maximumRate())
-        changedProps << "MaximumRate";
-    if(m_props["MinimumRate"] != minimumRate())
-        changedProps << "MinimumRate";
-    if(m_props["PlaybackStatus"] != playbackStatus())
-        changedProps << "PlaybackStatus";
-    if(m_props["Rate"] != rate())
-        changedProps << "Rate";
-    if(m_props["Shuffle"] != shuffle())
-        changedProps << "Shuffle";
-    if(m_props["Volume"] != volume())
-        changedProps << "Volume";
-    if(m_props["Metadata"] != metadata())
-        changedProps << "Metadata";
-
-    if(changedProps.isEmpty())
-        return;
-
+    QMap<QString, QVariant> prevProps = m_props;
     syncProperties();
 
     QVariantMap map;
-    for(const QByteArray &name : qAsConst(changedProps))
-        map.insert(name, m_props.value(name));
+    QMap<QString, QVariant>::const_iterator it;
+    for (it = m_props.constBegin(); it != m_props.constEnd(); ++it)
+    {
+        if(it.value() != prevProps.value(it.key()))
+            map.insert(it.key(), it.value());
+    }
+
+    if(map.isEmpty())
+        return;
 
     QDBusMessage msg = QDBusMessage::createSignal("/org/mpris/MediaPlayer2",
                                                   "org.freedesktop.DBus.Properties", "PropertiesChanged");

@@ -1614,6 +1614,7 @@ Version 1.4.1
 * fixed some streams detection in the mpeg plugin
 * fixed losing of equalizer settings
 * fixed codec and bitrate displaying for IceCast streams
+* fixed playback startup detection in the mpris plugin
 * updated Russian translation
 * updated Dutch translation (Heimen Stoffels)
 * updated Galician translation (Delio Docampo Cordeiro)

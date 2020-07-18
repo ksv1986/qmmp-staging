@@ -99,7 +99,7 @@ Qmmp - Qt-based multimedia player
 - libenca >= 1.9 (Опціонально)
 - mplayer (Опціонально)
 - libx11, libxcb, xorgproto (Опціонально)
-- cmake >= 2.8.6 (тільки для компіляції)
+- cmake >= 3.5.0 (тільки для компіляції)
 
 Увага! Для компіляції Qmmp потрібна утиліта lrelease. Дуже часто вона знаходиться в пакеті libqt4-devel.
 

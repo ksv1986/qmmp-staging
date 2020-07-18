@@ -112,7 +112,7 @@ Qmmp - Qt-based multimedia player
 - libshout (опционально)
 - mplayer (опционально)
 - libx11, libxcb, xorgproto (опционально)
-- cmake >= 2.8.11 (только для сборки)
+- cmake >= 3.5.0 (только для сборки)
 
 Внимание! Для сборки Qmmp нужна утилита lrelease.
 

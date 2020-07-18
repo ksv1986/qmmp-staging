@@ -113,7 +113,7 @@ Requirements:
 - libshout (optional)
 - mplayer (optional)
 - libx11, libxcb, xorgproto (optional)
-- cmake >= 2.8.11 (for build only)
+- cmake >= 3.5.0 (for build only)
 
 Attention! Qmmp build needs lrelease installed.
 

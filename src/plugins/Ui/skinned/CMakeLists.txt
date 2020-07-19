@@ -62,6 +62,7 @@ SET(skinned_SRCS
     hotkeyeditor.cpp
     playlistheader.cpp
     horizontalslider.cpp
+    colorwidget.cpp
 )
 
 SET(skinned_HDRS

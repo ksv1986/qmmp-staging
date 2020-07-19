@@ -83,20 +83,21 @@ public:
     ~ListWidgetDrawer();
 
     void readSettings();
-    void loadColors();
+    void loadSkinColors();
     int rowHeight() const;
     int numberWidth() const;
     void calculateNumberWidth(int count);
     void setSingleColumnMode(int enabled);
     void prepareRow(ListWidgetRow *row);
     void fillBackground(QPainter *painter, int width, int height);
-    void drawBackground(QPainter *painter, ListWidgetRow *row);
+    void drawBackground(QPainter *painter, ListWidgetRow *row, int index);
     void drawSeparator(QPainter *painter, ListWidgetRow *row, bool rtl);
     void drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl);
     void drawDropLine(QPainter *painter, int row_number, int width, int header_height);
 
 private:
-    QColor m_normal, m_current, m_normal_bg, m_selected_bg;
+    QColor m_normal, m_current, m_normal_bg, m_selected_bg, m_alternate, m_highlighted, m_splitter;
+    QColor m_group_bg, m_group_alt_bg, m_group_text, m_current_bg, m_current_alt_bg;
     Skin *m_skin;
     QFontMetrics *m_metrics;
     QFontMetrics *m_extra_metrics;
@@ -106,6 +107,7 @@ private:
     bool m_show_anchor;
     bool m_align_numbers;
     bool m_show_lengths;
+    bool m_use_skin_colors;
     bool m_single_column;
     bool m_show_splitters;
     bool m_alternate_splitter_color;

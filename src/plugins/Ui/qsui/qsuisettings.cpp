@@ -209,7 +209,7 @@ void QSUiSettings::readSettings()
     m_ui.plCurrentTrackBgColor->setColor(settings.value("pl_current_bg_color", normal_bg).toString());
     m_ui.plOverrideGroupBgCheckBox->setChecked(settings.value("pl_override_group_bg", false).toBool());
     m_ui.plOverrideCurrentBgCheckBox->setChecked(settings.value("pl_override_current_bg", false).toBool());
-    //waveform seekbar color
+    //waveform seekbar colors
     m_ui.wfsbBgColor->setColor(settings.value("wfsb_bg_color", "Black").toString());
     m_ui.wfsbRmsColor->setColor(settings.value("wfsb_rms_color", "#DDDDDD").toString());
     m_ui.wfsbWaveFormColor->setColor(settings.value("wfsb_waveform_color", "#BECBFF").toString());

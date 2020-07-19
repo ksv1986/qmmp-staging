@@ -160,7 +160,7 @@ void ListWidget::paintEvent(QPaintEvent *)
 
     for (int i = 0; i < m_rows.size(); ++i )
     {
-        m_drawer.drawBackground(&painter, m_rows[i]);
+        m_drawer.drawBackground(&painter, m_rows[i], i);
 
         if(m_rows[i]->flags & ListWidgetRow::GROUP)
         {
@@ -495,7 +495,7 @@ void ListWidget::setViewPosition(int sc)
 
 void ListWidget::updateSkin()
 {
-    m_drawer.loadColors();
+    m_drawer.loadSkinColors();
     update();
 }
 

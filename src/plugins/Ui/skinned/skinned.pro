@@ -53,7 +53,8 @@ HEADERS += mainwindow.h \
     hotkeyeditor.h \
     listwidgetdrawer.h \
     playlistheader.h \
-    horizontalslider.h
+    horizontalslider.h \
+    colorwidget.h
 
 SOURCES += mainwindow.cpp \
     button.cpp \
@@ -105,7 +106,8 @@ SOURCES += mainwindow.cpp \
     hotkeyeditor.cpp \
     listwidgetdrawer.cpp \
     playlistheader.cpp \
-    horizontalslider.cpp
+    horizontalslider.cpp \
+    colorwidget.cpp
 
 FORMS += \
     forms/preseteditor.ui \

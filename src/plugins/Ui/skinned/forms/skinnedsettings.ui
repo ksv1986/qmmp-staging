@@ -1055,12 +1055,12 @@
    <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>385</x>
-     <y>284</y>
+     <x>433</x>
+     <y>236</y>
     </hint>
     <hint type="destinationlabel">
-     <x>393</x>
-     <y>283</y>
+     <x>464</x>
+     <y>236</y>
     </hint>
    </hints>
   </connection>
@@ -1071,12 +1071,12 @@
    <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>385</x>
-     <y>310</y>
+     <x>433</x>
+     <y>262</y>
     </hint>
     <hint type="destinationlabel">
-     <x>416</x>
-     <y>310</y>
+     <x>464</x>
+     <y>262</y>
     </hint>
    </hints>
   </connection>
@@ -1087,12 +1087,12 @@
    <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>373</x>
-     <y>334</y>
+     <x>433</x>
+     <y>288</y>
     </hint>
     <hint type="destinationlabel">
-     <x>395</x>
-     <y>334</y>
+     <x>464</x>
+     <y>288</y>
     </hint>
    </hints>
   </connection>
@@ -1103,12 +1103,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>172</x>
-     <y>238</y>
+     <x>182</x>
+     <y>398</y>
     </hint>
     <hint type="destinationlabel">
-     <x>117</x>
-     <y>270</y>
+     <x>128</x>
+     <y>439</y>
     </hint>
    </hints>
   </connection>
@@ -1119,12 +1119,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>148</x>
-     <y>103</y>
+     <x>166</x>
+     <y>98</y>
     </hint>
     <hint type="destinationlabel">
-     <x>151</x>
-     <y>118</y>
+     <x>169</x>
+     <y>154</y>
     </hint>
    </hints>
   </connection>
@@ -1135,12 +1135,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>201</x>
-     <y>161</y>
+     <x>211</x>
+     <y>246</y>
     </hint>
     <hint type="destinationlabel">
-     <x>266</x>
-     <y>215</y>
+     <x>263</x>
+     <y>369</y>
     </hint>
    </hints>
   </connection>
@@ -1151,12 +1151,28 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>95</x>
-     <y>162</y>
+     <x>105</x>
+     <y>246</y>
     </hint>
     <hint type="destinationlabel">
-     <x>95</x>
-     <y>181</y>
+     <x>105</x>
+     <y>330</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plSkinColorsCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>widget_2</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>133</x>
+     <y>105</y>
     </hint>
    </hints>
   </connection>

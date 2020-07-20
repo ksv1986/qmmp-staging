@@ -48,7 +48,6 @@ ListWidgetDrawer::ListWidgetDrawer()
     m_metrics = nullptr;
     m_extra_metrics = nullptr;
     readSettings();
-    loadSkinColors();
 }
 
 ListWidgetDrawer::~ListWidgetDrawer()
@@ -78,7 +77,7 @@ void ListWidgetDrawer::readSettings()
     if(!m_use_skin_colors)
     {
         m_normal_bg.setNamedColor(settings.value("pl_bg1_color", m_normal_bg.name()).toString());
-        m_alternate.setNamedColor(settings.value("pl_bg2_color", m_alternate.name()).toString());
+        m_alternate_bg.setNamedColor(settings.value("pl_bg2_color", m_alternate_bg.name()).toString());
         m_selected_bg.setNamedColor(settings.value("pl_highlight_color", m_selected_bg.name()).toString());
         m_normal.setNamedColor(settings.value("pl_normal_text_color", m_normal.name()).toString());
         m_current.setNamedColor(settings.value("pl_current_text_color",m_current.name()).toString());
@@ -93,7 +92,7 @@ void ListWidgetDrawer::readSettings()
         else
         {
             m_group_bg = m_normal_bg;
-            m_group_alt_bg = m_alternate;
+            m_group_alt_bg = m_alternate_bg;
         }
         if(settings.value("pl_override_current_bg", false).toBool())
         {
@@ -103,9 +102,11 @@ void ListWidgetDrawer::readSettings()
         else
         {
             m_current_bg = m_normal_bg;
-            m_current_alt_bg = m_alternate;
+            m_current_alt_bg = m_alternate_bg;
         }
     }
+
+    settings.endGroup();
 
     if (m_update)
     {
@@ -125,7 +126,7 @@ void ListWidgetDrawer::loadSkinColors()
     m_current.setNamedColor(m_skin->getPLValue("current"));
     m_normal_bg.setNamedColor(m_skin->getPLValue("normalbg"));
     m_selected_bg.setNamedColor(m_skin->getPLValue("selectedbg"));
-    m_alternate = m_normal_bg;
+    m_alternate_bg = m_normal_bg;
     m_highlighted = m_normal;
     m_splitter = m_alternate_splitter_color ? m_current : m_normal;
     m_group_bg = m_normal_bg;
@@ -265,8 +266,8 @@ void ListWidgetDrawer::drawBackground(QPainter *painter, ListWidgetRow *row, int
     {
         if(index % 2)
         {
-            painter->setBrush(QBrush(m_alternate));
-            painter->setPen(m_alternate);
+            painter->setBrush(QBrush(m_alternate_bg));
+            painter->setPen(m_alternate_bg);
         }
         else
         {

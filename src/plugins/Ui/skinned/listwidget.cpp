@@ -495,7 +495,7 @@ void ListWidget::setViewPosition(int sc)
 
 void ListWidget::updateSkin()
 {
-    m_drawer.loadSkinColors();
+    m_drawer.readSettings();
     update();
 }
 

@@ -1176,5 +1176,69 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>plOverrideGroupBgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_15</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>229</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>90</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plOverrideGroupBgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plGrBgColor</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>257</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plOverrideCurrentBgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_20</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plOverrideCurrentBgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plCurrentTrackBgColor</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
 </ui>

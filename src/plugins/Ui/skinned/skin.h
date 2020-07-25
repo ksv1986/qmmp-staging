@@ -67,7 +67,7 @@ public:
     const QColor &getVisColor(int n) const;
     const QRegion getRegion(uint r) const;
 
-    enum Buttons
+    enum Button
     {
         BT_PREVIOUS_N = 0,
         BT_PREVIOUS_P,
@@ -161,14 +161,14 @@ public:
         BT_BAL_N,
         BT_BAL_P,
     };
-    enum TitleBar
+    enum TitleBarPart
     {
         TITLEBAR_A = 0,
         TITLEBAR_I,
         TITLEBAR_SHADED_A,
         TITLEBAR_SHADED_I
     };
-    enum PlayList
+    enum PlayListPart
     {
         PL_CORNER_UL_A = 0,
         PL_CORNER_UL_I,
@@ -192,7 +192,7 @@ public:
         PL_TITLEBAR_SHADED2,
         PL_TFILL_SHADED
     };
-    enum Equalizer
+    enum EqualizerPart
     {
         EQ_MAIN = 0,
         EQ_TITLEBAR_A,
@@ -207,14 +207,14 @@ public:
         EQ_BALANCE2,
         EQ_BALANCE3
     };
-    enum MonoSter
+    enum MonoSterPart
     {
         MONO_A = 0,
         MONO_I,
         STEREO_A,
         STEREO_I
     };
-    enum OtherParts
+    enum OtherPart
     {
         PLAY = 0,
         PAUSE,
@@ -227,7 +227,7 @@ public:
         WINDOW_SHADE,
         EQUALIZER_WS
     };
-    enum Cursors
+    enum Cursor
     {
         CUR_NORMAL = 0,
         CUR_CLOSE,
@@ -262,9 +262,9 @@ public:
         CUR_WSMIN,
         CUR_WSWINBUT
     };
-    enum Colors
+    enum Color
     {
-        MW_BACKGROUND,
+        MW_BACKGROUND = 0,
         MW_FOREGROUND
     };
 

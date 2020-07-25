@@ -36,100 +36,36 @@ class Skin : public QObject
     Q_OBJECT
 public:
     Skin(QObject *parent = nullptr);
-
     ~Skin();
 
     static Skin *instance();
     static QPixmap getPixmap(const QString &name, QDir dir);
-    int ratio()
-    {
-        return m_double_size ? 2 : 1;
-    }
-    const QPixmap getMain() const
-    {
-        return m_main;
-    }
-    const QPixmap getButton(uint bt) const
-    {
-        return m_buttons[bt];
-    }
-    const QCursor getCursor(uint cu) const
-    {
-        return m_cursors[cu];
-    }
-    const QPixmap getTitleBar(uint tb) const
-    {
-        return m_titlebar[tb];
-    }
-    const QPixmap getPosBar() const
-    {
-        return posbar;
-    }
-    const QPixmap getNumber(uint n) const
-    {
-        return m_numbers[n];
-    }
+    int ratio() const;
+    const QPixmap &getMain() const;
+    const QPixmap getButton(uint bt) const;
+    const QCursor getCursor(uint cu) const;
+    const QPixmap getTitleBar(uint tb) const;
+    const QPixmap &getPosBar() const;
+    const QPixmap &getNumber(uint n) const;
     /*!
      * Returns count of numbers in number list.
      * We need this to check if we have "-" in pixmaps.
      * if no we should draw it manually.
      */
-    uint getNumCount(void) const
-    {
-        return m_numbers.count();
-    }
-    const QPixmap getPlPart(uint p) const
-    {
-        return m_pl_parts[p];
-    }
-    const QPixmap getEqPart(uint p) const
-    {
-        return m_eq_parts[p];
-    }
-    const QPixmap getEqSlider(uint n) const
-    {
-        return m_eq_bar[n];
-    }
-    const QPixmap getEqSpline(uint n) const
-    {
-        return m_eq_spline[n];
-    }
-    const QPixmap getMSPart(uint n) const
-    {
-        return m_ms_parts[n];
-    }
-    const QPixmap getLetter(const QChar& ch) const
-    {
-        return m_letters[ch];
-    }
-    const QPixmap getItem(uint n) const
-    {
-        return m_parts[n];
-    }
-    const QPixmap getVolumeBar(int n) const
-    {
-        return m_volume[n];
-    }
-    const QPixmap getBalanceBar(int n) const
-    {
-        return m_balance[n];
-    }
-    const QByteArray getPLValue (QByteArray c) const
-    {
-        return m_pledit_txt[c];
-    }
-    const QColor getMainColor(int n) const
-    {
-        return m_main_colors[n];
-    }
-    const QColor getVisColor(int n) const
-    {
-        return m_vis_colors[n];
-    }
-    const QRegion getRegion(uint r) const
-    {
-        return m_regions[r];
-    }
+    uint getNumCount(void) const;
+    const QPixmap getPlPart(uint p) const;
+    const QPixmap getEqPart(uint p) const;
+    const QPixmap &getEqSlider(uint n) const;
+    const QPixmap &getEqSpline(uint n) const;
+    const QPixmap getMSPart(uint n) const;
+    const QPixmap getLetter(const QChar& ch) const;
+    const QPixmap getItem(uint n) const;
+    const QPixmap &getVolumeBar(int n) const;
+    const QPixmap &getBalanceBar(int n) const;
+    const QByteArray getPLValue (QByteArray c) const;
+    const QColor getMainColor(int n) const;
+    const QColor &getVisColor(int n) const;
+    const QRegion getRegion(uint r) const;
 
     enum Buttons
     {

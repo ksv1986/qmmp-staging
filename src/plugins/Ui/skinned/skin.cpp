@@ -39,24 +39,7 @@
 
 Skin *Skin::m_instance = nullptr;
 
-Skin *Skin::instance()
-{
-    if (!m_instance)
-        m_instance = new Skin();
-    return m_instance;
-}
-
-QPixmap Skin::getPixmap (const QString &name, QDir dir)
-{
-    dir.setFilter (QDir::Files | QDir::Hidden | QDir::NoSymLinks);
-    dir.setNameFilters(QStringList() << name + ".*");
-    QFileInfoList f = dir.entryInfoList();
-    if(!f.isEmpty())
-        return QPixmap(f.first().filePath());
-    return QPixmap();
-}
-
-Skin::Skin (QObject *parent) : QObject (parent)
+Skin::Skin(QObject *parent) : QObject (parent)
 {
     m_instance = this;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
@@ -79,6 +62,128 @@ Skin::Skin (QObject *parent) : QObject (parent)
 
 Skin::~Skin()
 {}
+
+Skin *Skin::instance()
+{
+    if (!m_instance)
+        m_instance = new Skin();
+    return m_instance;
+}
+
+QPixmap Skin::getPixmap (const QString &name, QDir dir)
+{
+    dir.setFilter (QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+    dir.setNameFilters(QStringList() << name + ".*");
+    QFileInfoList f = dir.entryInfoList();
+    if(!f.isEmpty())
+        return QPixmap(f.first().filePath());
+    return QPixmap();
+}
+
+int Skin::ratio() const
+{
+    return m_double_size ? 2 : 1;
+}
+
+const QPixmap &Skin::getMain() const
+{
+    return m_main;
+}
+
+const QPixmap Skin::getButton(uint bt) const
+{
+    return m_buttons[bt];
+}
+
+const QCursor Skin::getCursor(uint cu) const
+{
+    return m_cursors[cu];
+}
+
+const QPixmap Skin::getTitleBar(uint tb) const
+{
+    return m_titlebar[tb];
+}
+
+const QPixmap &Skin::getPosBar() const
+{
+    return posbar;
+}
+
+const QPixmap &Skin::getNumber(uint n) const
+{
+    return m_numbers[n];
+}
+
+uint Skin::getNumCount() const
+{
+    return m_numbers.count();
+}
+
+const QPixmap Skin::getPlPart(uint p) const
+{
+    return m_pl_parts[p];
+}
+
+const QPixmap Skin::getEqPart(uint p) const
+{
+    return m_eq_parts[p];
+}
+
+const QPixmap &Skin::getEqSlider(uint n) const
+{
+    return m_eq_bar[n];
+}
+
+const QPixmap &Skin::getEqSpline(uint n) const
+{
+    return m_eq_spline[n];
+}
+
+const QPixmap Skin::getMSPart(uint n) const
+{
+    return m_ms_parts[n];
+}
+
+const QPixmap Skin::getLetter(const QChar &ch) const
+{
+    return m_letters[ch];
+}
+
+const QPixmap Skin::getItem(uint n) const
+{
+    return m_parts[n];
+}
+
+const QPixmap &Skin::getVolumeBar(int n) const
+{
+    return m_volume[n];
+}
+
+const QPixmap &Skin::getBalanceBar(int n) const
+{
+    return m_balance[n];
+}
+
+const QByteArray Skin::getPLValue(QByteArray c) const
+{
+    return m_pledit_txt[c];
+}
+
+const QColor Skin::getMainColor(int n) const
+{
+    return m_main_colors[n];
+}
+
+const QColor &Skin::getVisColor(int n) const
+{
+    return m_vis_colors[n];
+}
+
+const QRegion Skin::getRegion(uint r) const
+{
+    return m_regions[r];
+}
 
 void Skin::setSkin (const QString& path)
 {

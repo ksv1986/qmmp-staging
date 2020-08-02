@@ -265,7 +265,7 @@ void SkinnedSettings::readSettings()
     m_ui.plHlColor->setColor(settings.value("pl_highlight_color", "#2a2a2a").toString());
     m_ui.plTextNormalColor->setColor(settings.value("pl_normal_text_color", "#5a5a5a").toString());
     m_ui.plTextCurrentColor->setColor(settings.value("pl_current_text_color", "#407dec").toString());
-    m_ui.plTextHlCurrentColor->setColor(settings.value("pl_hl_text_color", "#5a5a5a").toString());
+    m_ui.plTextHlColor->setColor(settings.value("pl_hl_text_color", "#5a5a5a").toString());
     m_ui.plGrBgColor->setColor(settings.value("pl_group_bg", "#0d0d0d").toString());
     m_ui.plSplitterColor->setColor(settings.value("pl_splitter_color", "#5a5a5a").toString());
     m_ui.plGrTextColor->setColor(settings.value("pl_group_text", "#5a5a5a").toString());
@@ -309,7 +309,7 @@ void SkinnedSettings::writeSettings()
     settings.setValue("pl_highlight_color", m_ui.plHlColor->colorName());
     settings.setValue("pl_normal_text_color", m_ui.plTextNormalColor->colorName());
     settings.setValue("pl_current_text_color", m_ui.plTextCurrentColor->colorName());
-    settings.setValue("pl_hl_text_color", m_ui.plTextHlCurrentColor->colorName());
+    settings.setValue("pl_hl_text_color", m_ui.plTextHlColor->colorName());
     settings.setValue("pl_group_bg", m_ui.plGrBgColor->colorName());
     settings.setValue("pl_splitter_color", m_ui.plSplitterColor->colorName());
     settings.setValue("pl_group_text", m_ui.plGrTextColor->colorName());
@@ -326,7 +326,7 @@ void SkinnedSettings::on_loadSkinColorsButton_clicked()
     m_ui.plHlColor->setColor(m_skin->getPLValue("selectedbg"));
     m_ui.plTextNormalColor->setColor(m_skin->getPLValue("normal"));
     m_ui.plTextCurrentColor->setColor(m_skin->getPLValue("current"));
-    m_ui.plTextHlCurrentColor->setColor(m_skin->getPLValue("normal"));
+    m_ui.plTextHlColor->setColor(m_skin->getPLValue("normal"));
     m_ui.plGrBgColor->setColor(m_skin->getPLValue("normalbg"));
     m_ui.plSplitterColor->setColor(m_skin->getPLValue("normal"));
     m_ui.plGrTextColor->setColor(m_skin->getPLValue("normal"));

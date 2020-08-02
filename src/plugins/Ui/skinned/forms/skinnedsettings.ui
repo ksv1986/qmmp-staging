@@ -631,7 +631,7 @@
               </widget>
              </item>
              <item row="2" column="4">
-              <widget class="ColorWidget" name="plTextHlCurrentColor">
+              <widget class="ColorWidget" name="plTextHlColor">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>

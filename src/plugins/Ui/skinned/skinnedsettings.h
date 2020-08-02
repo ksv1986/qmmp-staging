@@ -46,8 +46,7 @@ private slots:
     void loadSkins();
     void on_popupTemplateButton_clicked();
     void addWindowTitleString(const QString &str);
-
-
+    void on_loadSkinColorsButton_clicked();
 
 private:
     void showEvent(QShowEvent *) override;

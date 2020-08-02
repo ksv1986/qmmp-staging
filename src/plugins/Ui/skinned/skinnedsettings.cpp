@@ -318,3 +318,19 @@ void SkinnedSettings::writeSettings()
     settings.setValue("pl_override_current_bg", m_ui.plOverrideCurrentBgCheckBox->isChecked());
     settings.endGroup();
 }
+
+void SkinnedSettings::on_loadSkinColorsButton_clicked()
+{
+    m_ui.plBg1Color->setColor(m_skin->getPLValue("normalbg"));
+    m_ui.plBg2Color->setColor(m_skin->getPLValue("normalbg"));
+    m_ui.plHlColor->setColor(m_skin->getPLValue("selectedbg"));
+    m_ui.plTextNormalColor->setColor(m_skin->getPLValue("normal"));
+    m_ui.plTextCurrentColor->setColor(m_skin->getPLValue("current"));
+    m_ui.plTextHlCurrentColor->setColor(m_skin->getPLValue("normal"));
+    m_ui.plGrBgColor->setColor(m_skin->getPLValue("normalbg"));
+    m_ui.plSplitterColor->setColor(m_skin->getPLValue("normal"));
+    m_ui.plGrTextColor->setColor(m_skin->getPLValue("normal"));
+    m_ui.plCurrentTrackBgColor->setColor(m_skin->getPLValue("normalbg"));
+    m_ui.plOverrideGroupBgCheckBox->setChecked(false);
+    m_ui.plOverrideCurrentBgCheckBox->setChecked(false);
+}

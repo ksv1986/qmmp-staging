@@ -942,17 +942,17 @@
         <translation>Ações</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="595"/>
+        <location filename="../playlist.cpp" line="597"/>
         <source>Rename Playlist</source>
         <translation>Renomear lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="595"/>
+        <location filename="../playlist.cpp" line="597"/>
         <source>Playlist name:</source>
         <translation>Nome da lista de reprodução:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="616"/>
+        <location filename="../playlist.cpp" line="618"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Nova lista de reprodução</translation>
     </message>
@@ -995,50 +995,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="80"/>
         <source>Add Column</source>
         <translation>Adicionar coluna</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="91"/>
+        <location filename="../playlistheader.cpp" line="81"/>
         <source>Edit Column</source>
         <translation>Editar coluna</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="92"/>
+        <location filename="../playlistheader.cpp" line="82"/>
         <source>Show Queue/Protocol</source>
         <translation>Mostrar fila/protocolo</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="94"/>
+        <location filename="../playlistheader.cpp" line="84"/>
         <source>Auto-resize</source>
         <translation>Redimensionar automaticamente</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="97"/>
+        <location filename="../playlistheader.cpp" line="87"/>
         <source>Alignment</source>
         <translation>Alinhamento</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="98"/>
+        <location filename="../playlistheader.cpp" line="88"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>Esquerda</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="99"/>
+        <location filename="../playlistheader.cpp" line="89"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>Direita</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="100"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="110"/>
+        <location filename="../playlistheader.cpp" line="100"/>
         <source>Remove Column</source>
         <translation>Remover coluna</translation>
     </message>
@@ -1258,107 +1258,112 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="607"/>
+        <location filename="../forms/skinnedsettings.ui" line="533"/>
         <source>Background #2:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="652"/>
+        <location filename="../forms/skinnedsettings.ui" line="597"/>
         <source>Highlighted background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="659"/>
+        <location filename="../forms/skinnedsettings.ui" line="501"/>
         <source>Normal text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="700"/>
+        <location filename="../forms/skinnedsettings.ui" line="664"/>
         <source>Splitter:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="707"/>
+        <location filename="../forms/skinnedsettings.ui" line="565"/>
         <source>Current text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="714"/>
+        <location filename="../forms/skinnedsettings.ui" line="629"/>
         <source>Highlighted text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="724"/>
+        <location filename="../forms/skinnedsettings.ui" line="772"/>
         <source>Current track background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="756"/>
+        <location filename="../forms/skinnedsettings.ui" line="874"/>
         <source>Override current track background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="804"/>
+        <location filename="../forms/skinnedsettings.ui" line="737"/>
         <source>Group background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="811"/>
+        <location filename="../forms/skinnedsettings.ui" line="867"/>
         <source>Override group background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="818"/>
+        <location filename="../forms/skinnedsettings.ui" line="705"/>
         <source>Group text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="850"/>
+        <location filename="../forms/skinnedsettings.ui" line="456"/>
         <source>Background #1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="877"/>
+        <location filename="../forms/skinnedsettings.ui" line="832"/>
+        <source>Load skin colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/skinnedsettings.ui" line="901"/>
         <source>Fonts</source>
         <translation>Tipo de letra</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="931"/>
+        <location filename="../forms/skinnedsettings.ui" line="955"/>
         <source>Playlist:</source>
         <translation>Lista de reprodução:</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="967"/>
+        <location filename="../forms/skinnedsettings.ui" line="991"/>
         <source>Column headers:</source>
         <translation>Cabeçalho de colunas:</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="889"/>
+        <location filename="../forms/skinnedsettings.ui" line="913"/>
         <source>Player:</source>
         <translation>Reprodutor:</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="911"/>
-        <location filename="../forms/skinnedsettings.ui" line="953"/>
-        <location filename="../forms/skinnedsettings.ui" line="980"/>
+        <location filename="../forms/skinnedsettings.ui" line="935"/>
+        <location filename="../forms/skinnedsettings.ui" line="977"/>
+        <location filename="../forms/skinnedsettings.ui" line="1004"/>
         <source>???</source>
         <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="142"/>
-        <location filename="../forms/skinnedsettings.ui" line="918"/>
-        <location filename="../forms/skinnedsettings.ui" line="960"/>
-        <location filename="../forms/skinnedsettings.ui" line="987"/>
+        <location filename="../forms/skinnedsettings.ui" line="942"/>
+        <location filename="../forms/skinnedsettings.ui" line="984"/>
+        <location filename="../forms/skinnedsettings.ui" line="1011"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="1009"/>
+        <location filename="../forms/skinnedsettings.ui" line="1033"/>
         <source>Reset fonts</source>
         <translation>Restaurar tipo de letra</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="1018"/>
+        <location filename="../forms/skinnedsettings.ui" line="1042"/>
         <source>Use bitmap font if available</source>
         <translation>Utilizar letras bitmap se disponíveis</translation>
     </message>

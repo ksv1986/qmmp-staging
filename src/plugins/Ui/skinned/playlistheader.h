@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2015-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,7 +31,6 @@ class QMouseEvent;
 class QContextMenuEvent;
 class QMenu;
 class QAction;
-class Skin;
 class PlayListHeaderModel;
 
 /**
@@ -61,7 +60,6 @@ public slots:
     void hideSortIndicator();
 
 private slots:
-    void updateSkin();
     void addColumn();
     void editColumn();
     void removeColumn();
@@ -78,7 +76,6 @@ private:
     void resizeEvent(QResizeEvent *e) override;
     void contextMenuEvent(QContextMenuEvent *e) override;
     void paintEvent(QPaintEvent *) override;
-    void loadColors();
     void adjustColumn(int index);
     int autoResizeColumn() const;
     int findColumn(QPoint pos);
@@ -98,27 +95,26 @@ private:
         ALIGNMENT
     };
 
-    Skin *m_skin;
-    QFontMetrics *m_metrics;
+    QFontMetrics *m_metrics = nullptr;
     QMenu *m_menu, *m_alignmentMenu;
     QFont m_font;
     QColor m_normal, m_normal_bg, m_current;
     QPoint m_pressed_pos;
     QPoint m_mouse_pos;
     PlayListHeaderModel *m_model;
-    QAction *m_trackStateAction;
-    QAction *m_autoResizeAction;
+    QAction *m_trackStateAction = nullptr;
+    QAction *m_autoResizeAction = nullptr;
     QPixmap m_arrow_up, m_arrow_down;
-    bool m_reverted;
-    bool m_auto_resize;
-    int m_number_width;
-    int m_pressed_column;
-    int m_old_size;
-    int m_press_offset;
-    int m_padding;
-    int m_pl_padding;
-    int m_sorting_column;
-    int m_offset;
+    bool m_reverted = false;
+    bool m_auto_resize = false;
+    int m_number_width = 0;
+    int m_pressed_column = -1;
+    int m_old_size = 0;
+    int m_press_offset = 0;
+    int m_padding = 0;
+    int m_pl_padding = 0;
+    int m_sorting_column = -1;
+    int m_offset = 0;
 
 
     enum
@@ -127,7 +123,7 @@ private:
         RESIZE,
         MOVE,
         SORT
-    } m_task;
+    } m_task = NO_TASK;
 
 
 };

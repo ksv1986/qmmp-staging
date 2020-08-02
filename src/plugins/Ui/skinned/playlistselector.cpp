@@ -40,17 +40,8 @@
 
 PlayListSelector::PlayListSelector(PlayListManager *manager, QWidget *parent) : QWidget(parent)
 {
-    m_scrollable = false;
-    m_moving = false;
-    m_offset = 0;
-    m_offset_max = 0;
-    m_metrics = nullptr;
-    m_pressed_button = BUTTON_UNKNOWN;
-    m_skin = Skin::instance();
     m_pl_manager = manager;
     connect(m_pl_manager, SIGNAL(playListsChanged()), SLOT(updateTabs()));
-    connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
-    loadColors();
     readSettings();
     m_menu = new QMenu(this);
     m_menu->addAction(ACTION(ActionManager::PL_LOAD));
@@ -70,18 +61,49 @@ PlayListSelector::~PlayListSelector()
 void PlayListSelector::readSettings()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    m_font.fromString(settings.value("Skinned/pl_font", QApplication::font().toString()).toString());
+    settings.beginGroup("Skinned");
+    m_font.fromString(settings.value("pl_font", QApplication::font().toString()).toString());
     if (m_metrics)
     {
         delete m_metrics;
         m_metrics = nullptr;
     }
     m_metrics = new QFontMetrics(m_font);
-    m_pl_separator = settings.value("Skinned/pl_separator", "::").toString();
-    m_show_new_pl_button = settings.value("Skinned/pl_show_create_button", false).toBool();
+    m_pl_separator = settings.value("pl_separator", "::").toString();
+    m_show_new_pl_button = settings.value("pl_show_create_button", false).toBool();
+
+    if(settings.value("pl_use_skin_colors", true).toBool())
+    {
+        Skin *skin = Skin::instance();
+        m_normal.setNamedColor(skin->getPLValue("normal"));
+        m_current.setNamedColor(skin->getPLValue("current"));
+        m_normal_bg.setNamedColor(skin->getPLValue("normalbg"));
+        m_selected_bg.setNamedColor(skin->getPLValue("selectedbg"));
+        m_selected_text = m_normal;
+        m_current_bg = m_normal_bg;
+    }
+    else
+    {
+        m_normal_bg.setNamedColor(settings.value("pl_bg1_color", m_normal_bg.name()).toString());
+        m_selected_bg.setNamedColor(settings.value("pl_highlight_color", m_selected_bg.name()).toString());
+        m_normal.setNamedColor(settings.value("pl_normal_text_color", m_normal.name()).toString());
+        m_current.setNamedColor(settings.value("pl_current_text_color",m_current.name()).toString());
+        m_selected_text.setNamedColor(settings.value("pl_hl_text_color",m_selected_text.name()).toString());
+        if(settings.value("pl_override_current_bg", false).toBool())
+        {
+            m_current_bg.setNamedColor(settings.value("pl_current_bg_color", m_normal_bg.name()).toString());
+        }
+        else
+        {
+            m_current_bg = m_normal_bg;
+        }
+    }
+
+    settings.endGroup();
     m_pl_button = "[+]";
     m_pl_separator.append(" ");
     m_pl_separator.prepend(" ");
+
     resize(width(), m_metrics->height () +1);
     drawButtons();
     updateTabs();
@@ -117,52 +139,55 @@ void PlayListSelector::updateTabs()
     update();
 }
 
-void PlayListSelector::updateSkin()
-{
-    loadColors();
-    drawButtons();
-    updateTabs();
-}
-
 void PlayListSelector::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
-    painter.setFont(m_font);
-    painter.setBrush(QBrush(m_normal_bg));
-    painter.drawRect(-1,-1,width()+1,height()+1);
     QStringList names = m_pl_manager->playListNames();
     int current = m_pl_manager->indexOf(m_pl_manager->currentPlayList());
     int selected = m_pl_manager->indexOf(m_pl_manager->selectedPlayList());
+    painter.setFont(m_font);
+    painter.setBrush(QBrush(m_normal_bg));
+    painter.drawRect(-1,-1,width()+1,height()+1);
+
 
     if(m_moving)
     {
         painter.setBrush(QBrush(m_normal_bg));
         painter.setPen(m_current);
-        painter.drawRect(m_rects.at(selected).x() - 2 - m_offset, 0,
-                         m_rects.at(selected).width() + 3, height()-1);
+        painter.drawRect(m_rects.at(selected).x() - 2 - m_offset, 0, m_rects.at(selected).width() + 3, height()-1);
     }
     else
     {
         painter.setBrush(QBrush(m_selected_bg));
         painter.setPen(m_selected_bg);
-        painter.drawRect(m_rects.at(selected).x() - 2 - m_offset, 0,
-                         m_rects.at(selected).width() + 3, height()-1);
+        painter.drawRect(m_rects.at(selected).x() - 2 - m_offset, 0, m_rects.at(selected).width() + 3, height()-1);
     }
 
     for (int i = 0; i < m_rects.size(); ++i)
     {
-        if(i == current)
-             painter.setPen(m_current);
-        else
-             painter.setPen(m_normal);
-
         if(!m_moving || i != selected)
+        {
+            if(i == current && i != selected) //draw current playlist background
+            {
+                painter.setBrush(QBrush(m_current_bg));
+                painter.setPen(m_current_bg);
+                painter.drawRect(m_rects.at(i).x() - 2 - m_offset, 0, m_rects.at(i).width() + 3, height() - 1);
+            }
+
+            if(i == current)
+                painter.setPen(m_current);
+            else if(i == selected)
+                painter.setPen(m_selected_text);
+            else
+                painter.setPen(m_normal);
+
             painter.drawText(m_rects[i].x() - m_offset, m_metrics->ascent(), names.at(i));
+        }
+
         if(i < m_rects.size() - 1)
         {
             painter.setPen(m_normal);
-            painter.drawText(m_rects[i].x() + m_rects[i].width() - m_offset, m_metrics->ascent(),
-                             m_pl_separator);
+            painter.drawText(m_rects[i].x() + m_rects[i].width() - m_offset, m_metrics->ascent(), m_pl_separator);
         }
     }
 
@@ -181,7 +206,7 @@ void PlayListSelector::paintEvent(QPaintEvent *)
         painter.drawRect(m_mouse_pos.x() - m_press_offset - 2, 0,
                          m_rects.at(selected).width() + 3, height());
 
-        painter.setPen(selected == current ? m_current : m_normal);
+        painter.setPen(selected == current ? m_current : m_selected_text);
         painter.drawText(m_mouse_pos.x() - m_press_offset,
                          m_metrics->ascent(), names.at(selected));
     }
@@ -314,14 +339,6 @@ void PlayListSelector::mouseMoveEvent(QMouseEvent *e)
 void PlayListSelector::resizeEvent (QResizeEvent *)
 {
     updateScrollers();
-}
-
-void PlayListSelector::loadColors()
-{
-    m_normal.setNamedColor(m_skin->getPLValue("normal"));
-    m_current.setNamedColor(m_skin->getPLValue("current"));
-    m_normal_bg.setNamedColor(m_skin->getPLValue("normalbg"));
-    m_selected_bg.setNamedColor(m_skin->getPLValue("selectedbg"));
 }
 
 void PlayListSelector::drawButtons()

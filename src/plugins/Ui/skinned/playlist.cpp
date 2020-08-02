@@ -577,6 +577,8 @@ void PlayList::keyPressEvent (QKeyEvent *ke)
 
 void PlayList::updateSkin()
 {
+    if(m_pl_selector)
+        m_pl_selector->readSettings();
     setCursor(m_skin->getCursor(Skin::CUR_PNORMAL)); // TODO shaded
     m_resizeWidget->setCursor(m_skin->getCursor (Skin::CUR_PSIZE));
     m_ratio = m_skin->ratio();

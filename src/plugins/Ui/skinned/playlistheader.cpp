@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2015-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -73,17 +73,7 @@ PlayListHeader::PlayListHeader(QWidget *parent) :
     QWidget(parent)
 {
     setMouseTracking(true);
-    m_metrics = nullptr;
-    m_padding = 0;
-    m_pl_padding = 0;
-    m_number_width = 0;
-    m_offset = 0;
-    m_sorting_column = -1;
-    m_reverted = false;
-    m_auto_resize = false;
-    m_task = NO_TASK;
     m_model = PlayListManager::instance()->headerModel();
-    m_skin = Skin::instance();
 
     //menus
     m_menu = new QMenu(this);
@@ -109,12 +99,10 @@ PlayListHeader::PlayListHeader(QWidget *parent) :
     m_menu->addSeparator();
     m_menu->addAction(QIcon::fromTheme("list-remove"), tr("Remove Column"), this, SLOT(removeColumn()));
 
-    connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
     connect(m_model, SIGNAL(columnAdded(int)), SLOT(onColumnAdded(int)));
     connect(m_model, SIGNAL(columnRemoved(int)), SLOT(onColumnRemoved()));
     connect(m_model, SIGNAL(columnMoved(int,int)), SLOT(updateColumns()));
     connect(m_model, SIGNAL(columnChanged(int)), SLOT(updateColumns()));
-    loadColors();
     readSettings();
 }
 
@@ -171,6 +159,29 @@ void PlayListHeader::readSettings()
                 m_model->setData(i,TRACK_STATE, true);
         }
     }
+
+    if(settings.value("pl_use_skin_colors", true).toBool())
+    {
+        Skin *skin = Skin::instance();
+        m_normal.setNamedColor(skin->getPLValue("normal"));
+        m_current.setNamedColor(skin->getPLValue("current"));
+        m_normal_bg.setNamedColor(skin->getPLValue("normalbg"));
+    }
+    else
+    {
+        m_normal_bg.setNamedColor(settings.value("pl_bg1_color", m_normal_bg.name()).toString());
+        m_normal.setNamedColor(settings.value("pl_normal_text_color", m_normal.name()).toString());
+        m_current.setNamedColor(settings.value("pl_current_text_color",m_current.name()).toString());
+    }
+
+    QPixmap px1(skinned_arrow_up_xpm);
+    QPixmap px2(skinned_arrow_down_xpm);
+    m_arrow_up = px1;
+    m_arrow_down = px2;
+    m_arrow_up.fill(m_normal_bg);
+    m_arrow_down.fill(m_normal_bg);
+    m_arrow_up.setMask(px1.createMaskFromColor(Qt::transparent));
+    m_arrow_down.setMask(px2.createMaskFromColor(Qt::transparent));
 
     settings.endGroup();
 
@@ -316,12 +327,6 @@ void PlayListHeader::hideSortIndicator()
         m_sorting_column = -1;
         updateColumns();
     }
-}
-
-void PlayListHeader::updateSkin()
-{
-    loadColors();
-    update();
 }
 
 void PlayListHeader::addColumn()
@@ -802,22 +807,6 @@ void PlayListHeader::paintEvent(QPaintEvent *)
                              m_metrics->ascent(), m_model->data(m_pressed_column, NAME).toString());
         }
     }
-}
-
-void PlayListHeader::loadColors()
-{
-    m_normal.setNamedColor(m_skin->getPLValue("normal"));
-    m_normal_bg.setNamedColor(m_skin->getPLValue("normalbg"));
-    m_current.setNamedColor(m_skin->getPLValue("current"));
-
-    QPixmap px1(skinned_arrow_up_xpm);
-    QPixmap px2(skinned_arrow_down_xpm);
-    m_arrow_up = px1;
-    m_arrow_down = px2;
-    m_arrow_up.fill(m_normal_bg);
-    m_arrow_down.fill(m_normal_bg);
-    m_arrow_up.setMask(px1.createMaskFromColor(Qt::transparent));
-    m_arrow_down.setMask(px2.createMaskFromColor(Qt::transparent));
 }
 
 void PlayListHeader::adjustColumn(int index)

@@ -496,6 +496,7 @@ void ListWidget::setViewPosition(int sc)
 void ListWidget::updateSkin()
 {
     m_drawer.readSettings();
+    m_header->readSettings();
     update();
 }
 

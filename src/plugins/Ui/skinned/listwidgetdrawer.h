@@ -93,7 +93,7 @@ public:
     void drawDropLine(QPainter *painter, int row_number, int width, int header_height);
 
 private:
-    QColor m_normal, m_current, m_normal_bg, m_selected_bg, m_alternate_bg, m_highlighted, m_splitter;
+    QColor m_normal, m_current, m_normal_bg, m_selected_bg, m_alternate_bg, m_selected_text, m_splitter;
     QColor m_group_bg, m_group_alt_bg, m_group_text, m_current_bg, m_current_alt_bg;
     QFontMetrics *m_metrics = nullptr;
     QFontMetrics *m_extra_metrics = nullptr;
@@ -102,7 +102,6 @@ private:
     bool m_show_anchor = false;
     bool m_align_numbers = false;
     bool m_show_lengths = false;
-    bool m_use_skin_colors = false;
     bool m_single_column = false;
     bool m_show_splitters = false;
     int m_padding = 0;

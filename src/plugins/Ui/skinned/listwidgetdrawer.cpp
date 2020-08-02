@@ -33,20 +33,6 @@
 
 ListWidgetDrawer::ListWidgetDrawer()
 {
-    m_skin = Skin::instance();
-    m_update = false;
-    m_show_anchor = false;
-    m_show_numbers = false;
-    m_align_numbers = false;
-    m_show_lengths = false;
-    m_single_column = true;
-    m_row_height = 0;
-    m_number_width = 0;
-    m_show_splitters = false;
-    m_alternate_splitter_color = false;
-    m_padding = 0;
-    m_metrics = nullptr;
-    m_extra_metrics = nullptr;
     readSettings();
 }
 
@@ -65,16 +51,31 @@ void ListWidgetDrawer::readSettings()
     m_show_anchor = settings.value("pl_show_anchor", false).toBool();
     m_show_numbers = settings.value ("pl_show_numbers", true).toBool();
     m_show_splitters = settings.value("pl_show_splitters", true).toBool();
-    m_alternate_splitter_color = settings.value("pl_alt_splitter_color", false).toBool();
     m_show_lengths = settings.value ("pl_show_lengths", true).toBool();
     m_align_numbers = settings.value ("pl_align_numbers", false).toBool();
     m_font.fromString(settings.value ("pl_font", qApp->font().toString()).toString());
     m_extra_font = m_font;
     m_extra_font.setPointSize(m_font.pointSize() - 1);
     m_use_skin_colors = settings.value("pl_use_skin_colors", true).toBool();
-    loadSkinColors();
 
-    if(!m_use_skin_colors)
+    if(m_use_skin_colors)
+    {
+        Skin *skin = Skin::instance();
+        bool alternate_splitter_color = settings.value("pl_alt_splitter_color", false).toBool();
+        m_normal.setNamedColor(skin->getPLValue("normal"));
+        m_current.setNamedColor(skin->getPLValue("current"));
+        m_normal_bg.setNamedColor(skin->getPLValue("normalbg"));
+        m_selected_bg.setNamedColor(skin->getPLValue("selectedbg"));
+        m_alternate_bg = m_normal_bg;
+        m_highlighted = m_normal;
+        m_splitter = alternate_splitter_color ? m_current : m_normal;
+        m_group_bg = m_normal_bg;
+        m_group_alt_bg = m_normal_bg;
+        m_group_text = m_normal;
+        m_current_bg = m_normal_bg;
+        m_current_alt_bg = m_normal_bg;
+    }
+    else
     {
         m_normal_bg.setNamedColor(settings.value("pl_bg1_color", m_normal_bg.name()).toString());
         m_alternate_bg.setNamedColor(settings.value("pl_bg2_color", m_alternate_bg.name()).toString());
@@ -108,32 +109,16 @@ void ListWidgetDrawer::readSettings()
 
     settings.endGroup();
 
-    if (m_update)
-    {
+    if(m_metrics)
         delete m_metrics;
+
+    if(m_extra_metrics)
         delete m_extra_metrics;
-    }
-    m_update = true;
+
     m_metrics = new QFontMetrics(m_font);
     m_extra_metrics = new QFontMetrics(m_extra_font);
     m_padding = m_metrics->horizontalAdvance("9")/2;
     m_row_height = m_metrics->lineSpacing() + 1;
-}
-
-void ListWidgetDrawer::loadSkinColors()
-{
-    m_normal.setNamedColor(m_skin->getPLValue("normal"));
-    m_current.setNamedColor(m_skin->getPLValue("current"));
-    m_normal_bg.setNamedColor(m_skin->getPLValue("normalbg"));
-    m_selected_bg.setNamedColor(m_skin->getPLValue("selectedbg"));
-    m_alternate_bg = m_normal_bg;
-    m_highlighted = m_normal;
-    m_splitter = m_alternate_splitter_color ? m_current : m_normal;
-    m_group_bg = m_normal_bg;
-    m_group_alt_bg = m_normal_bg;
-    m_group_text = m_normal;
-    m_current_bg = m_normal_bg;
-    m_current_alt_bg = m_normal_bg;
 }
 
 int ListWidgetDrawer::rowHeight() const

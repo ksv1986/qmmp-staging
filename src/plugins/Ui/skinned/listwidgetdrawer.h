@@ -27,9 +27,7 @@
 #include <QRect>
 #include <QFontMetrics>
 
-
 class QPainter;
-class Skin;
 class PlayListHeaderModel;
 
 struct ListWidgetRow
@@ -83,7 +81,6 @@ public:
     ~ListWidgetDrawer();
 
     void readSettings();
-    void loadSkinColors();
     int rowHeight() const;
     int numberWidth() const;
     void calculateNumberWidth(int count);
@@ -98,22 +95,19 @@ public:
 private:
     QColor m_normal, m_current, m_normal_bg, m_selected_bg, m_alternate_bg, m_highlighted, m_splitter;
     QColor m_group_bg, m_group_alt_bg, m_group_text, m_current_bg, m_current_alt_bg;
-    Skin *m_skin;
-    QFontMetrics *m_metrics;
-    QFontMetrics *m_extra_metrics;
+    QFontMetrics *m_metrics = nullptr;
+    QFontMetrics *m_extra_metrics = nullptr;
     QFont m_font, m_extra_font;
-    bool m_update;
-    bool m_show_numbers;
-    bool m_show_anchor;
-    bool m_align_numbers;
-    bool m_show_lengths;
-    bool m_use_skin_colors;
-    bool m_single_column;
-    bool m_show_splitters;
-    bool m_alternate_splitter_color;
-    int m_padding;
-    int m_number_width;
-    int m_row_height;
+    bool m_show_numbers = false;
+    bool m_show_anchor = false;
+    bool m_align_numbers = false;
+    bool m_show_lengths = false;
+    bool m_use_skin_colors = false;
+    bool m_single_column = false;
+    bool m_show_splitters = false;
+    int m_padding = 0;
+    int m_number_width = 0;
+    int m_row_height = 0;
 };
 
 #endif // LISTWIDGETDRAWER_H

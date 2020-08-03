@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2016 The Qt Company Ltd.                                *
- *   Copyright (C) 2016 by Ilya Kotov                                      *
+ *   Copyright (C) 2016-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -215,25 +215,13 @@ void QSUiTabWidget::initStyleOption(QStyleOptionTabWidgetFrame *option) const
 
 
     option->shape = QTabBar::RoundedNorth;
-
     option->tabBarSize = t;
 
-#if QT_VERSION >= 0x050000
     QRect tbRect = m_tabBar->geometry();
     QRect selectedTabRect = tabBar()->tabRect(tabBar()->currentIndex());
     option->tabBarRect = tbRect;
     selectedTabRect.moveTopLeft(selectedTabRect.topLeft() + tbRect.topLeft());
     option->selectedTabRect = selectedTabRect;
-#else
-    if(QStyleOptionTabWidgetFrameV2 *tabframe = qstyleoption_cast<QStyleOptionTabWidgetFrameV2*>(option))
-    {
-        QRect tbRect = tabBar()->geometry();
-        QRect selectedTabRect = tabBar()->tabRect(tabBar()->currentIndex());
-        tabframe->tabBarRect = tbRect;
-        selectedTabRect.moveTopLeft(selectedTabRect.topLeft() + tbRect.topLeft());
-        tabframe->selectedTabRect = selectedTabRect;
-    }
-#endif
 }
 
 void QSUiTabWidget::setUpLayout()

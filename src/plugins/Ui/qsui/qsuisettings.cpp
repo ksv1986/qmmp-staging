@@ -21,6 +21,7 @@
 #include <QSettings>
 #include <QDir>
 #include <QFontDialog>
+#include <QTabBar>
 #include <qmmp/qmmp.h>
 #include <qmmpui/filedialog.h>
 #include <qmmpui/uihelper.h>
@@ -46,6 +47,10 @@ QSUiSettings::QSUiSettings(QWidget *parent) : QWidget(parent)
     m_ui.toolBarIconSizeComboBox->addItem(tr("48x48"), 48);
     m_ui.toolBarIconSizeComboBox->addItem(tr("64x64"), 64);
     //other settings
+    m_ui.tabPositionComboBox->addItem(tr("Top"), QTabBar::RoundedNorth);
+    m_ui.tabPositionComboBox->addItem(tr("Bottom"), QTabBar::RoundedSouth);
+    m_ui.tabPositionComboBox->addItem(tr("Left"), QTabBar::RoundedWest);
+    m_ui.tabPositionComboBox->addItem(tr("Right"),  QTabBar::RoundedEast);
     m_ui.wfsbProgressBarColor->setOptions(QColorDialog::ShowAlphaChannel);
     //load settings
     readSettings();
@@ -178,6 +183,8 @@ void QSUiSettings::readSettings()
     m_ui.tabsClosableCheckBox->setChecked(settings.value("pl_tabs_closable", false).toBool());
     m_ui.showNewPLCheckBox->setChecked(settings.value("pl_show_new_pl_button", false).toBool());
     m_ui.showTabListMenuCheckBox->setChecked(settings.value("pl_show_tab_list_menu", false).toBool());
+    int index = m_ui.tabPositionComboBox->findData(settings.value("pl_tab_position", QTabBar::RoundedNorth).toInt());
+    m_ui.tabPositionComboBox->setCurrentIndex(index);
     //view
     m_ui.hiddenCheckBox->setChecked(settings.value("start_hidden", false).toBool());
     m_ui.hideOnCloseCheckBox->setChecked(settings.value("hide_on_close", false).toBool());
@@ -215,7 +222,7 @@ void QSUiSettings::readSettings()
     m_ui.wfsbWaveFormColor->setColor(settings.value("wfsb_waveform_color", "#BECBFF").toString());
     m_ui.wfsbProgressBarColor->setColor(settings.value("wfsb_progressbar_color", "#9633CA10").toString());
     //toolbar
-    int index = m_ui.toolBarIconSizeComboBox->findData(settings.value("toolbar_icon_size", -1).toInt());
+    index = m_ui.toolBarIconSizeComboBox->findData(settings.value("toolbar_icon_size", -1).toInt());
     m_ui.toolBarIconSizeComboBox->setCurrentIndex(index > 0 ? index : 0);
     settings.endGroup();
 }
@@ -234,6 +241,7 @@ void QSUiSettings::writeSettings()
     settings.setValue("pl_tabs_closable", m_ui.tabsClosableCheckBox->isChecked());
     settings.setValue("pl_show_new_pl_button", m_ui.showNewPLCheckBox->isChecked());
     settings.setValue("pl_show_tab_list_menu", m_ui.showTabListMenuCheckBox->isChecked());
+    settings.setValue("pl_tab_position", m_ui.tabPositionComboBox->currentData().toInt());
     settings.setValue("start_hidden", m_ui.hiddenCheckBox->isChecked());
     settings.setValue("hide_on_close", m_ui.hideOnCloseCheckBox->isChecked());
     settings.setValue("window_title_format", m_ui.windowTitleLineEdit->text());

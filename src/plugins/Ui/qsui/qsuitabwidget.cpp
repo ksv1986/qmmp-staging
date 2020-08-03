@@ -97,6 +97,7 @@ void QSUiTabWidget::readSettings()
         tab_font.fromString(settings.value("pl_tabs_font", tab_font.toString()).toString());
     }
     m_tabBar->setFont(tab_font);
+    m_tabBar->setShape(static_cast<QTabBar::Shape>(settings.value("pl_tab_position", QTabBar::RoundedNorth).toInt()));
     settings.endGroup();
     m_tabBar->updateGeometry();
     setUpLayout();
@@ -184,6 +185,7 @@ void QSUiTabWidget::initStyleOption(QStyleOptionTabWidgetFrame *option) const
         return;
 
     option->initFrom(this);
+    option->shape = m_tabBar->shape();
     option->lineWidth = style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, this);
 
     int exth = style()->pixelMetric(QStyle::PM_TabBarBaseHeight, nullptr, this);
@@ -213,8 +215,6 @@ void QSUiTabWidget::initStyleOption(QStyleOptionTabWidgetFrame *option) const
         option->leftCornerWidgetSize = QSize(0, 0);
     }
 
-
-    option->shape = QTabBar::RoundedNorth;
     option->tabBarSize = t;
 
     QRect tbRect = m_tabBar->geometry();

@@ -48,6 +48,7 @@ ListWidget::ListWidget(PlayListModel *model, QWidget *parent) : QWidget(parent),
     m_model(model)
 {
     setFocusPolicy(Qt::StrongFocus);
+    m_ui_settings = QmmpUiSettings::instance();
     m_timer = new QTimer(this);
     m_timer->setInterval(50);
     m_header = new PlayListHeader(this);

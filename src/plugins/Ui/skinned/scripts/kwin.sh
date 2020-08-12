@@ -30,8 +30,6 @@ do
     i=$((i+1))
 done
 
-echo $found
-
 
 qmmp_create_rule(){
 	id=$1

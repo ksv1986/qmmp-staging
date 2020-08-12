@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -129,7 +129,7 @@ void SettingsDialog::on_configureButton_clicked()
     }
     if (effect->controls.isEmpty())
     {
-        QLabel *label = new QLabel(tr("This LADSPA plugin has no user controls"), dialog);
+        label = new QLabel(tr("This LADSPA plugin has no user controls"), dialog);
         formLayout->addRow(label);
     }
     dialog->setLayout(formLayout);

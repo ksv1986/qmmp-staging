@@ -1,7 +1,7 @@
 /***************************************************************************
  *   Copyright (C) 2002,2003 Nick Lamb <njl195@zepler.org.uk>              *
  *   Copyright (C) 2005 Giacomo Lozito <city_hunter@users.sf.net>          *
- *   Copyright (C) 2009-2015 by Ilya Kotov <forkotov02@ya.ru>         *
+ *   Copyright (C) 2009-2020 by Ilya Kotov <forkotov02@ya.ru>         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -102,8 +102,8 @@ private:
     QList <LADSPAEffect *> m_effects;
 
     static LADSPAHost *m_instance;
-    int m_chan;
-    quint32 m_freq;
+    int m_chan = 2;
+    quint32 m_freq = 44100;
     QList<void *> m_modules;
     LADSPA_Data m_buf[9][MAX_SAMPLES];
 };

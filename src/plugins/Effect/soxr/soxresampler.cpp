@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 by Ilya Kotov                                      *
+ *   Copyright (C) 2016-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,9 +26,6 @@
 
 SoXResampler::SoXResampler() : Effect()
 {
-    m_soxr = nullptr;
-    m_out = nullptr;
-    m_out_samples = 0;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_overSamplingFs = settings.value("SOXR/sample_rate", 48000).toInt();
     m_quality = soxr_quality_spec(settings.value("SOXR/quality", SOXR_HQ).toInt(), 0);

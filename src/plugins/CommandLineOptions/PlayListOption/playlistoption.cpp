@@ -104,8 +104,8 @@ QString PlayListOption::executeCommand(int id, const QStringList &args)
     case PL_DUMP:
     {
         MetaDataFormatter formatter("%p%if(%p&%t, - ,)%t%if(%p,,%if(%t,,%f))%if(%l, - %l,)");
-        int id = args.isEmpty() ? pl_manager->currentPlayListIndex() : args.at(0).toInt() - 1;
-        PlayListModel *model = pl_manager->playListAt(id);
+        int pl_id = args.isEmpty() ? pl_manager->currentPlayListIndex() : args.at(0).toInt() - 1;
+        PlayListModel *model = pl_manager->playListAt(pl_id);
         if(!model)
             return tr("Invalid playlist ID") + "\n";
         for(int i = 0; i < model->count(); ++i)
@@ -165,8 +165,8 @@ QString PlayListOption::executeCommand(int id, const QStringList &args)
         break;
     case PL_CLEAR:
     {
-        int id = args.isEmpty() ? pl_manager->currentPlayListIndex() : args.at(0).toInt() - 1;
-        PlayListModel *model = pl_manager->playListAt(id);
+        int pl_id= args.isEmpty() ? pl_manager->currentPlayListIndex() : args.at(0).toInt() - 1;
+        PlayListModel *model = pl_manager->playListAt(pl_id);
         if(!model)
             return tr("Invalid playlist ID") + "\n";
         model->clear();

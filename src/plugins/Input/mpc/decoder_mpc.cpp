@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-
 #include <QObject>
 #include <QIODevice>
 #include <qmmp/buffer.h>
@@ -30,44 +29,38 @@
 
 static mpc_int32_t mpc_callback_read (mpc_reader *reader, void *buffer, mpc_int32_t size)
 {
-    DecoderMPC *dmpc = (DecoderMPC *) reader->data;
+    DecoderMPC *dmpc = static_cast<DecoderMPC *>(reader->data);
     return dmpc->input()->read((char *)buffer, size);
 }
 
 static mpc_bool_t mpc_callback_seek (mpc_reader *reader, mpc_int32_t offset)
 {
-    DecoderMPC *dmpc = (DecoderMPC *) reader->data;
+    DecoderMPC *dmpc = static_cast<DecoderMPC *>(reader->data);
     return dmpc->input()->seek(offset);
 }
 
 static mpc_int32_t mpc_callback_tell (mpc_reader *reader)
 {
-    DecoderMPC *dmpc = (DecoderMPC *) reader->data;
+    DecoderMPC *dmpc = static_cast<DecoderMPC *>(reader->data);
     return dmpc->input()->pos ();
 }
 
 static mpc_bool_t  mpc_callback_canseek (mpc_reader *reader)
 {
-    DecoderMPC *dmpc = (DecoderMPC *) reader->data;
+    DecoderMPC *dmpc = static_cast<DecoderMPC *>(reader->data);
     return !dmpc->input()->isSequential () ;
 }
 
 static mpc_int32_t mpc_callback_get_size (mpc_reader *reader)
 {
-    DecoderMPC *dmpc = (DecoderMPC *) reader->data;
+    DecoderMPC *dmpc = static_cast<DecoderMPC *>(reader->data);
     return dmpc->input()->size();
 }
 
 // Decoder class
 
-DecoderMPC::DecoderMPC(QIODevice *i)
-        : Decoder(i)
-{
-    m_len = 0;
-    m_bitrate = 0;
-    m_totalTime = 0.0;
-    m_data = nullptr;
-}
+DecoderMPC::DecoderMPC(QIODevice *i) : Decoder(i)
+{}
 
 DecoderMPC::~DecoderMPC()
 {
@@ -164,5 +157,4 @@ qint64 DecoderMPC::read(unsigned char *audio, qint64 maxSize)
 void DecoderMPC::seek(qint64 pos)
 {
     mpc_demux_seek_second(data()->demuxer, (double)pos/1000);
-
 }

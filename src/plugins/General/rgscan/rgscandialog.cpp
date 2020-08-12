@@ -26,6 +26,7 @@
 #include <qmmpui/metadataformatter.h>
 #include <qmmpui/filedialog.h>
 #include <qmmp/metadatamanager.h>
+#include <algorithm>
 #include <taglib/mpegfile.h>
 #include <taglib/apetag.h>
 #include <taglib/flacfile.h>
@@ -147,7 +148,7 @@ void RGScanDialog::on_calculateButton_clicked()
     }
 }
 
-void RGScanDialog::onScanFinished(QString url)
+void RGScanDialog::onScanFinished(const QString &url)
 {
     for(int i = 0; i < m_ui.tableWidget->rowCount(); ++i)
     {
@@ -161,13 +162,7 @@ void RGScanDialog::onScanFinished(QString url)
         break;
     }
 
-    bool stopped = true;
-
-    for(const RGScanner *scanner : qAsConst(m_scanners))
-    {
-        if(scanner->isRunning() || scanner->isPending())
-            stopped = false;
-    }
+    bool stopped = std::all_of(m_scanners.cbegin(), m_scanners.cend(), [](RGScanner *scanner) { return !scanner->isRunning() && !scanner->isPending(); });
 
     if(stopped)
     {
@@ -218,11 +213,11 @@ void RGScanDialog::onScanFinished(QString url)
         m_replayGainItemList = itemGroupMap.values();
         for(int i = 0; i < m_ui.tableWidget->rowCount(); ++i)
         {
-            QString url = m_ui.tableWidget->item(i, 0)->data(Qt::UserRole).toString();
+            QString itemUrl = m_ui.tableWidget->item(i, 0)->data(Qt::UserRole).toString();
             bool found = false;
             for(const ReplayGainInfoItem *item : qAsConst(m_replayGainItemList))
             {
-                if(item->url == url)
+                if(item->url == itemUrl)
                 {
                     found = true;
                     double album_gain = item->info[Qmmp::REPLAYGAIN_ALBUM_GAIN];
@@ -267,12 +262,8 @@ void RGScanDialog::stop()
 
 RGScanner *RGScanDialog::findScannerByUrl(const QString &url)
 {
-    for(RGScanner *scanner : qAsConst(m_scanners))
-    {
-        if(scanner->url() == url)
-            return scanner;
-    }
-    return nullptr;
+    auto it = std::find_if(m_scanners.cbegin(), m_scanners.cend(), [url](RGScanner *scanner){ return scanner->url() == url; });
+    return it == m_scanners.cend() ? nullptr : *it;
 }
 
 QString RGScanDialog::getAlbumName(const QString &url)

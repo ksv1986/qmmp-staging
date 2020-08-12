@@ -25,6 +25,7 @@
 #include <QCloseEvent>
 #include <QInputDialog>
 #include <QScreen>
+#include <algorithm>
 #include <qmmpui/playlistitem.h>
 #include <qmmpui/playlistmodel.h>
 #include <qmmpui/playlistmanager.h>
@@ -55,11 +56,8 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
     setWindowTitle(tr("Playlist"));
     m_pl_manager = manager;
     m_ui_settings = QmmpUiSettings::instance();
-    m_update = false;
-    m_resize = false;
     m_skin = Skin::instance();
     m_ratio = m_skin->ratio();
-    m_shaded = false;
     m_pl_browser = nullptr;
     m_pl_selector = nullptr;
 
@@ -470,19 +468,15 @@ void PlayList::readSettings()
     }
     else
     {
-        QScreen *screen = QGuiApplication::primaryScreen();
-        QRect availableGeometry = screen->availableGeometry();
+        QScreen *primaryScreen = QGuiApplication::primaryScreen();
+        QRect availableGeometry = primaryScreen->availableGeometry();
         QPoint pos = settings.value ("Skinned/pl_pos", QPoint (100, 332)).toPoint();
         m_ratio = m_skin->ratio();
         //TODO QGuiApplication::screenAt
-        for(const QScreen *screen : QGuiApplication::screens())
-        {
-            if(screen->availableGeometry().contains(pos))
-            {
-               availableGeometry = screen->availableGeometry();
-               break;
-            }
-        }
+        const QList<QScreen *> screens = QGuiApplication::screens();
+        auto it = std::find_if(screens.cbegin(), screens.cend(), [pos](QScreen *screen){ return screen->availableGeometry().contains(pos); });
+        if(it != screens.cend())
+            availableGeometry = (*it)->availableGeometry();
         pos.setX(qBound(availableGeometry.left(), pos.x(), availableGeometry.right() - m_ratio*275));
         pos.setY(qBound(availableGeometry.top(), pos.y(), availableGeometry.bottom() - m_ratio*116));
         move(pos); //position

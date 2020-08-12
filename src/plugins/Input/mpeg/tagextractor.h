@@ -40,7 +40,7 @@ class QByteArray;
 class TagExtractor
 {
 public:
-    TagExtractor(QIODevice *d);
+    explicit TagExtractor(QIODevice *d);
 
     ~TagExtractor();
 
@@ -56,9 +56,10 @@ class ID3v2Tag : public TagLib::ID3v2::Tag
 {
 public:
     ID3v2Tag(QByteArray *array, long offset);
+    ~ID3v2Tag();
 
 protected:
-    void read ();
+    void read();
 
 private:
     QBuffer *m_buf;

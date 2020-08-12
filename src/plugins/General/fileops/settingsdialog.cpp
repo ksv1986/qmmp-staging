@@ -109,7 +109,7 @@ void SettingsDialog::accept()
         QComboBox *comboBox = qobject_cast<QComboBox *>(m_ui.tableWidget->cellWidget (i, 1));
         settings.setValue (QString("action_%1").arg(i), comboBox->itemData (comboBox->currentIndex()));
 
-        ActionItem *item = (ActionItem *) m_ui.tableWidget->item(i,2);
+        ActionItem *item = dynamic_cast<ActionItem *>(m_ui.tableWidget->item(i,2));
         settings.setValue (QString("name_%1").arg(i), item->text());
         settings.setValue (QString("pattern_%1").arg(i), item->pattern());
         settings.setValue (QString("destination_%1").arg(i), item->destination());
@@ -158,7 +158,7 @@ void SettingsDialog::updateLineEdits()
 {
     if (m_ui.tableWidget->currentRow () >= 0)
     {
-        ActionItem *item = (ActionItem *) m_ui.tableWidget->item(m_ui.tableWidget->currentRow (), 2);
+        ActionItem *item = dynamic_cast<ActionItem *>(m_ui.tableWidget->item(m_ui.tableWidget->currentRow (), 2));
         m_ui.destinationEdit->setText(item->destination());
         m_ui.patternEdit->setText(item->pattern());
 
@@ -200,7 +200,7 @@ void SettingsDialog::on_destinationEdit_textChanged(QString dest)
 {
     if (m_ui.tableWidget->currentRow () >= 0)
     {
-        ActionItem *item = (ActionItem *) m_ui.tableWidget->item(m_ui.tableWidget->currentRow (), 2);
+        ActionItem *item = dynamic_cast<ActionItem *>(m_ui.tableWidget->item(m_ui.tableWidget->currentRow (), 2));
         item->setDestination(dest);
     }
 }
@@ -209,7 +209,7 @@ void SettingsDialog::on_patternEdit_textChanged(QString pattern)
 {
     if (m_ui.tableWidget->currentRow () >= 0)
     {
-        ActionItem *item = (ActionItem *) m_ui.tableWidget->item(m_ui.tableWidget->currentRow (), 2);
+        ActionItem *item = dynamic_cast<ActionItem *>(m_ui.tableWidget->item(m_ui.tableWidget->currentRow (), 2));
         item->setPattern(pattern);
     }
 }

@@ -30,14 +30,8 @@
 
 static int adts_sample_rates[] = {96000,88200,64000,48000,44100,32000,24000,22050,16000,12000,11025,8000,7350,0,0,0};
 
-AACFile::AACFile(QIODevice *input, bool metaData, bool adts)
+AACFile::AACFile(QIODevice *input, bool metaData, bool adts) : m_input(input)
 {
-    m_isValid = false;
-    m_duration = 0;
-    m_bitrate = 0;
-    m_samplerate = 0;
-    m_input = input;
-    m_offset = 0;
     char buf[AAC_BUFFER_SIZE];
     qint64 buf_at = input->peek((char *) buf, AAC_BUFFER_SIZE);
 
@@ -257,9 +251,8 @@ void AACFile::parseID3v2(const QByteArray &data)
     m_metaData.insert(Qmmp::TRACK, QString::number(taglib_tag.track()));
 }
 
-ID3v2Tag::ID3v2Tag(const QByteArray &array) : TagLib::ID3v2::Tag()
+ID3v2Tag::ID3v2Tag(const QByteArray &array) : TagLib::ID3v2::Tag(), m_buf(array)
 {
-    m_buf = array;
     read();
 }
 

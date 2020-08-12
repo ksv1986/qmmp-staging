@@ -71,11 +71,14 @@ void SettingsDialog::enumDevices()
     IPropertyStore *pProps = nullptr;
     UINT count = 0;
 
-    result = pEnumerator->EnumAudioEndpoints(eRender, DEVICE_STATE_ACTIVE, &pEndpoints);
-    if(result != S_OK)
+    if(pEnumerator)
     {
-        qWarning("SettingsDialog: IMMDeviceEnumerator::EnumAudioEndpoints failed, error code = 0x%lx", result);
-        pEndpoints = nullptr;
+        result = pEnumerator->EnumAudioEndpoints(eRender, DEVICE_STATE_ACTIVE, &pEndpoints);
+        if(result != S_OK)
+        {
+            qWarning("SettingsDialog: IMMDeviceEnumerator::EnumAudioEndpoints failed, error code = 0x%lx", result);
+            pEndpoints = nullptr;
+        }
     }
 
     if(pEndpoints)

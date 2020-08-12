@@ -66,7 +66,7 @@ public:
 
 private slots:
     void on_calculateButton_clicked();
-    void onScanFinished(QString url);
+    void onScanFinished(const QString &url);
     void reject() override;
     void on_writeButton_clicked();
 

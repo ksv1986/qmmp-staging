@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Copyright (C) 2006 by Kevin Ottens <ervin@kde.org>                    *
@@ -46,12 +46,12 @@ class HalDevice : public QObject
 {
     Q_OBJECT
 public:
-    HalDevice(const QString &udi, QObject *parent = nullptr);
+    explicit HalDevice(const QString &udi, QObject *parent = nullptr);
 
     ~HalDevice();
 
     QVariant property (const QString &key);
-    QString udi() const;
+    const QString &udi() const;
 
 signals:
     void propertyModified(int count, const QList<ChangeDescription> &changes);

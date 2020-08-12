@@ -24,12 +24,8 @@
 #include "archivetagreader.h"
 #include "decoder_archive.h"
 
-DecoderArchive::DecoderArchive(const QString &url)
-{
-    m_url = url;
-    m_decoder = nullptr;
-    m_input = nullptr;
-}
+DecoderArchive::DecoderArchive(const QString &url) : m_url(url)
+{}
 
 DecoderArchive::~DecoderArchive()
 {

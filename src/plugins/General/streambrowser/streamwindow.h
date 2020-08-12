@@ -42,7 +42,7 @@ class StreamWindow : public QWidget
 {
 Q_OBJECT
 public:
-    StreamWindow(QWidget *parent = nullptr);
+    explicit StreamWindow(QWidget *parent = nullptr);
 
     ~StreamWindow();
 
@@ -81,7 +81,7 @@ class StreamsProxyModel: public QSortFilterProxyModel
 {
 Q_OBJECT
 public:
-    StreamsProxyModel(QObject *parent) : QSortFilterProxyModel(parent){}
+    explicit StreamsProxyModel(QObject *parent) : QSortFilterProxyModel(parent){}
 
 protected:
     bool lessThan (const QModelIndex &left, const QModelIndex &right) const override

@@ -61,16 +61,12 @@ uint SongInfo::timeStamp() const
     return m_start_ts;
 }
 
-ListenCache::ListenCache(const QString &filePath)
-{
-    m_filePath = filePath;
-}
+ListenCache::ListenCache(const QString &filePath) : m_filePath(filePath)
+{}
 
 QList<SongInfo> ListenCache::load()
 {
     QList<SongInfo> songs;
-    int s = 0;
-    QString line, param, value;
     QFile file(m_filePath);
 
     if(!file.open(QIODevice::ReadOnly))
@@ -78,12 +74,13 @@ QList<SongInfo> ListenCache::load()
 
     while (!file.atEnd())
     {
-        line = QString::fromUtf8(file.readLine()).trimmed();
+        int s;
+        QString line = QString::fromUtf8(file.readLine()).trimmed();
         if ((s = line.indexOf("=")) < 0)
             continue;
 
-        param = line.left(s);
-        value = line.right(line.size() - s - 1);
+        QString param = line.left(s);
+        QString value = line.right(line.size() - s - 1);
 
         if (param == "title")
         {

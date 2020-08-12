@@ -112,22 +112,20 @@ private:
     bool updateRowCount();
     void restoreFirstVisible();
 
-    bool m_update;
-    int m_pressed_index;
+    bool m_update = false;
+    int m_pressed_index, m_anchor_index, m_drop_index;
     QMenu *m_menu;
     PlayListModel *m_model;
-    int m_row_count, m_first, m_count; //visible rows, first visible index, total item count
-    PlayListItem *m_firstItem; //first visible item
+    int m_row_count = 0, m_first = 0, m_count = 0; //visible rows, first visible index, total item count
+    PlayListItem *m_firstItem = nullptr; //first visible item
     Skin *m_skin;
-    int m_anchor_index;
     /*!
      * Scroll direction that is performing in current moment.
      */
-    ScrollDirection m_scroll_direction;
-    int m_prev_y;
-    bool m_select_on_release;
-    bool m_show_protocol;
-    int m_drop_index;
+    ScrollDirection m_scroll_direction = NONE;
+    int m_prev_y = 0;
+    bool m_select_on_release = false;
+    bool m_show_protocol = false;
     QList<ListWidgetRow *> m_rows;
     QmmpUiSettings *m_ui_settings;
     PlayListPopup::PopupWidget *m_popupWidget;

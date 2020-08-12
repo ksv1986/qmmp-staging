@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2009 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -56,17 +56,15 @@ void EQGraph::clear ()
 
 void EQGraph::init_spline (double * x, double * y, int n, double * y2)
 {
-    int i, k;
-    double p, qn, sig, un, *u;
-
-    u = new double[n];
+    double qn, un;
+    double *u = new double[n];
 
     y2[0] = u[0] = 0.0;
 
-    for (i = 1; i < n - 1; i++)
+    for(int i = 1; i < n - 1; i++)
     {
-        sig = ((double) x[i] - x[i - 1]) / ((double) x[i + 1] - x[i - 1]);
-        p = sig * y2[i - 1] + 2.0;
+        double sig = ((double) x[i] - x[i - 1]) / ((double) x[i + 1] - x[i - 1]);
+        double p = sig * y2[i - 1] + 2.0;
         y2[i] = (sig - 1.0) / p;
         u[i] =
             (((double) y[i + 1] - y[i]) / (x[i + 1] - x[i])) -
@@ -76,29 +74,25 @@ void EQGraph::init_spline (double * x, double * y, int n, double * y2)
     qn = un = 0.0;
 
     y2[n - 1] = (un - qn * u[n - 2]) / (qn * y2[n - 2] + 1.0);
-    for (k = n - 2; k >= 0; k--)
+    for(int k = n - 2; k >= 0; k--)
         y2[k] = y2[k] * y2[k + 1] + u[k];
     delete[] u;
 }
 
 double EQGraph::eval_spline (double xa[], double ya[], double y2a[], int n, double x)
 {
-    int klo, khi, k;
-    double h, b, a;
-
-    klo = 0;
-    khi = n - 1;
+    int klo = 0, khi = n - 1;
     while (khi - klo > 1)
     {
-        k = (khi + klo) >> 1;
+        int k = (khi + klo) >> 1;
         if (xa[k] > x)
             khi = k;
         else
             klo = k;
     }
-    h = xa[khi] - xa[klo];
-    a = (xa[khi] - x) / h;
-    b = (x - xa[klo]) / h;
+    double h = xa[khi] - xa[klo];
+    double a = (xa[khi] - x) / h;
+    double b = (x - xa[klo]) / h;
     return (a * ya[klo] + b * ya[khi] +
             ((a * a * a - a) * y2a[klo] +
              (b * b * b - b) * y2a[khi]) * (h * h) / 6.0);
@@ -116,7 +110,6 @@ void EQGraph::draw()
         return;
     }
 
-    int i, y;
     double x[] = { 0, 11, 23, 35, 47, 59, 71, 83, 97, 109 }, yf[10];
     double *bands = new double[10];
 
@@ -126,13 +119,10 @@ void EQGraph::draw()
     }
 
     init_spline (x, bands, 10, yf);
-    for (i = 0; i < 113; i++)
+    for (int i = 0; i < 113; i++)
     {
-        y = 9 - (int) ((eval_spline (x, bands, yf, 10, i) * 9.0) / 20.0);
-        if (y < 0)
-            y = 0;
-        if (y > 18)
-            y = 18;
+        int y = 9 - (int) ((eval_spline (x, bands, yf, 10, i) * 9.0) / 20.0);
+        y = qBound(0, y, 18);
 
         QPainter paint (&pixmap);
         paint.drawPixmap (i*m_ratio, y*m_ratio, m_skin->getEqSpline (y));

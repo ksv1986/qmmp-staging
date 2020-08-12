@@ -33,12 +33,12 @@
 
 FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly)
 #ifdef HAS_PICTURE_LIST
-    : MetaDataModel(true, MetaDataModel::IsCoverEditable)
+    : MetaDataModel(true, MetaDataModel::IsCoverEditable),
 #else
-    : MetaDataModel(true)
+    : MetaDataModel(true),
 #endif
+      m_path(path)
 {
-    m_path = path;
     if(path.startsWith("flac://"))
     {
         m_path.remove("flac://");

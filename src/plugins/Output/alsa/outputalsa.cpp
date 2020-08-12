@@ -26,36 +26,31 @@
 #include <stdlib.h>
 #include <string.h>
 #include <iostream>
-
 #include <qmmp/buffer.h>
 #include <qmmp/visual.h>
 #include <qmmp/statehandler.h>
 #include "outputalsa.h"
 
 
-OutputALSA::OutputALSA() : m_inited(false)
+OutputALSA::OutputALSA()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     QString dev_name = settings.value("ALSA/device","default").toString();
     m_use_mmap = settings.value("ALSA/use_mmap", false).toBool();
     pcm_name = strdup(dev_name.toLatin1().data());
-    pcm_handle = nullptr;
-    m_prebuf = nullptr;
-    m_prebuf_size = 0;
-    m_prebuf_fill = 0;
-    m_can_pause = false;
-    m_chunk_size = 0;
-    m_alsa_channels[SND_CHMAP_NA]   = Qmmp::CHAN_NULL;
-    m_alsa_channels[SND_CHMAP_MONO] = Qmmp::CHAN_FRONT_CENTER;
-    m_alsa_channels[SND_CHMAP_FL]   = Qmmp::CHAN_FRONT_LEFT;
-    m_alsa_channels[SND_CHMAP_FR]   = Qmmp::CHAN_FRONT_RIGHT;
-    m_alsa_channels[SND_CHMAP_RL]   = Qmmp::CHAN_REAR_LEFT;
-    m_alsa_channels[SND_CHMAP_RR]   = Qmmp::CHAN_REAR_RIGHT;
-    m_alsa_channels[SND_CHMAP_FC]   = Qmmp::CHAN_FRONT_CENTER;
-    m_alsa_channels[SND_CHMAP_LFE]  = Qmmp::CHAN_LFE;
-    m_alsa_channels[SND_CHMAP_SL]   = Qmmp::CHAN_SIDE_LEFT;
-    m_alsa_channels[SND_CHMAP_SR]   = Qmmp::CHAN_SIDE_RIGHT;
-    m_alsa_channels[SND_CHMAP_RC]   = Qmmp::CHAN_REAR_CENTER;
+    m_alsa_channels = {
+        { SND_CHMAP_NA, Qmmp::CHAN_NULL },
+        { SND_CHMAP_MONO, Qmmp::CHAN_FRONT_CENTER },
+        { SND_CHMAP_FL, Qmmp::CHAN_FRONT_LEFT },
+        { SND_CHMAP_FR, Qmmp::CHAN_FRONT_RIGHT },
+        { SND_CHMAP_RL, Qmmp::CHAN_REAR_LEFT },
+        { SND_CHMAP_RR, Qmmp::CHAN_REAR_RIGHT },
+        { SND_CHMAP_FC, Qmmp::CHAN_FRONT_CENTER },
+        { SND_CHMAP_LFE, Qmmp::CHAN_LFE },
+        { SND_CHMAP_SL, Qmmp::CHAN_SIDE_LEFT },
+        { SND_CHMAP_SR, Qmmp::CHAN_SIDE_RIGHT },
+        { SND_CHMAP_RC, Qmmp::CHAN_REAR_CENTER }
+    };
 }
 
 OutputALSA::~OutputALSA()
@@ -252,11 +247,11 @@ qint64 OutputALSA::latency()
 
 void OutputALSA::drain()
 {
-    long m = 0;
     snd_pcm_uframes_t l = snd_pcm_bytes_to_frames(pcm_handle, m_prebuf_fill);
     while (l > 0)
     {
-        if ((m = alsa_write(m_prebuf, l)) >= 0)
+        long m = alsa_write(m_prebuf, l);
+        if (m >= 0)
         {
             l -= m;
             m = snd_pcm_frames_to_bytes(pcm_handle, m); // convert frames to bytes

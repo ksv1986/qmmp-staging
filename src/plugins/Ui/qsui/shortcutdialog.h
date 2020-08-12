@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,7 +32,7 @@ class ShortcutDialog : public QDialog
 {
     Q_OBJECT
 public:
-    ShortcutDialog(const QString &key, QWidget *parent = nullptr);
+    explicit ShortcutDialog(const QString &key, QWidget *parent = nullptr);
 
     ~ShortcutDialog();
 

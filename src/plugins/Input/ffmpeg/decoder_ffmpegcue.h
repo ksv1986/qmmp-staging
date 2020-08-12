@@ -33,7 +33,7 @@ class CueParser;
 class DecoderFFmpegCue : public Decoder
 {
 public:
-    DecoderFFmpegCue(const QString &url);
+    explicit DecoderFFmpegCue(const QString &url);
     virtual ~DecoderFFmpegCue();
 
     // Standard Decoder API

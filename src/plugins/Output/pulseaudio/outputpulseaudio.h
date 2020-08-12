@@ -66,9 +66,9 @@ private:
     static void context_success_cb(pa_context *, int success, void *data);
     static void stream_success_cb(pa_stream *, int success, void *data);
 
-    pa_mainloop *m_loop;
-    pa_context *m_ctx;
-    pa_stream *m_stream;
+    pa_mainloop *m_loop = nullptr;
+    pa_context *m_ctx = nullptr;
+    pa_stream *m_stream = nullptr;
     QHash <Qmmp::ChannelPosition, pa_channel_position_t> m_pa_channels;
 };
 

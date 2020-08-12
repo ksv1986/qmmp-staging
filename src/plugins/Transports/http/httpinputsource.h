@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,7 +32,7 @@ class HTTPInputSource : public InputSource
 {
 Q_OBJECT
 public:
-    HTTPInputSource(const QString &path, QObject *parent = nullptr);
+    explicit HTTPInputSource(const QString &path, QObject *parent = nullptr);
 
     QIODevice *ioDevice() override;
     bool initialize() override;

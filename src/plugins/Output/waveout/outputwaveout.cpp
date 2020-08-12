@@ -74,10 +74,7 @@ free_memory (void)
 }
 
 OutputWaveOut::OutputWaveOut() : Output()
-{
-    m_totalWritten = 0;
-    m_frameSize = 0;
-}
+{}
 
 OutputWaveOut::~OutputWaveOut()
 {

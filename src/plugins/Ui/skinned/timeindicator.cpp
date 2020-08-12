@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,12 +26,7 @@
 #include "timeindicator.h"
 
 
-TimeIndicatorModel::TimeIndicatorModel(QObject *parent)
-    : QObject (parent)
-    , m_position (0)
-    , m_duration (0)
-    , m_elapsed (true)
-    , m_visible (false)
+TimeIndicatorModel::TimeIndicatorModel(QObject *parent) : QObject (parent)
 {
     readSettings();
 }

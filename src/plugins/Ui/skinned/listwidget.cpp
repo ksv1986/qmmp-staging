@@ -43,8 +43,10 @@
 
 #define INVALID_INDEX -1
 
-ListWidget::ListWidget(QWidget *parent)
-        : QWidget(parent)
+ListWidget::ListWidget(QWidget *parent) : QWidget(parent),
+    m_pressed_index(INVALID_INDEX),
+    m_anchor_index(INVALID_INDEX),
+    m_drop_index(INVALID_INDEX)
 {
     m_popupWidget = nullptr;
 
@@ -56,17 +58,6 @@ ListWidget::ListWidget(QWidget *parent)
 
     m_header = new PlayListHeader(this);
     m_hslider = new HorizontalSlider(this);
-    m_update = false;
-    m_drop_index = INVALID_INDEX;
-    m_scroll_direction = NONE;
-    m_prev_y = 0;
-    m_anchor_index = INVALID_INDEX;
-    m_pressed_index = INVALID_INDEX;
-    m_first = 0;
-    m_row_count = 0;
-    m_count = 0;
-    m_firstItem = nullptr;
-    m_select_on_release = false;
 
     setAcceptDrops(true);
     setMouseTracking(true);

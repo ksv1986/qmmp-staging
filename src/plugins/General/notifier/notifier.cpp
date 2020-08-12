@@ -41,10 +41,6 @@
 
 Notifier::Notifier(QObject *parent) : QObject(parent)
 {
-    m_popupWidget = nullptr;
-    m_l = -1;
-    m_r = -1;
-    m_isPaused = false;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Notifier");
     m_desktop = settings.value("song_notification", true).toBool();

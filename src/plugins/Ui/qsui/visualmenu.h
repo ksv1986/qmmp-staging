@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,7 +32,7 @@ class VisualMenu : public QMenu
 {
     Q_OBJECT
 public:
-    VisualMenu(QWidget *parent = nullptr);
+    explicit VisualMenu(QWidget *parent = nullptr);
 
     ~VisualMenu();
 
@@ -44,7 +44,7 @@ class VisualAction : public QAction
 {
     Q_OBJECT
 public:
-    VisualAction(VisualFactory *factory, QWidget *parent = nullptr);
+    explicit VisualAction(VisualFactory *factory, QWidget *parent = nullptr);
 
 private slots:
     void select(bool);

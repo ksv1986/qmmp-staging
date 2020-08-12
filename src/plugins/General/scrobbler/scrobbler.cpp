@@ -79,15 +79,16 @@ void ScrobblerResponse::parse(QIODevice *device)
 }
 
 Scrobbler::Scrobbler(const QString &scrobblerUrl, const QString &name, QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+      m_ua(QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toLatin1()),
+      m_http(new QNetworkAccessManager(this)),
+      m_core(SoundCore::instance()),
+      m_time(new QElapsedTimer()),
+      m_cache(new ListenCache(Qmmp::configDir() + "/scrobbler_" + name + ".cache")),
+      m_scrobblerUrl(scrobblerUrl),
+      m_name(name)
 {
-    m_scrobblerUrl = scrobblerUrl;
-    m_name = name;
-    m_time = new QElapsedTimer();
-    m_cache = new ListenCache(Qmmp::configDir() +"/scrobbler_"+name+".cache");
-    m_ua = QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toLatin1();
-    m_http = new QNetworkAccessManager(this);
-    m_core = SoundCore::instance();
+
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_session = settings.value("Scrobbler/"+name+"_session").toString();
 
@@ -380,15 +381,13 @@ void Scrobbler::sendNotification(const SongInfo &info)
 }
 
 ScrobblerAuth::ScrobblerAuth(const QString &scrobblerUrl, const QString &authUrl,
-                             const QString &name, QObject *parent) : QObject(parent)
+                             const QString &name, QObject *parent) : QObject(parent),
+    m_ua(QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toLatin1()),
+    m_http(new QNetworkAccessManager(this)),
+    m_scrobblerUrl(scrobblerUrl),
+    m_authUrl(authUrl),
+    m_name(name)
 {
-    m_getTokenReply = nullptr;
-    m_getSessionReply = nullptr;
-    m_scrobblerUrl = scrobblerUrl;
-    m_authUrl = authUrl;
-    m_name = name;
-    m_ua = QString("qmmp-plugins/%1").arg(Qmmp::strVersion().toLower()).toLatin1();
-    m_http = new QNetworkAccessManager(this);
     connect(m_http, SIGNAL(finished (QNetworkReply *)), SLOT(processResponse(QNetworkReply *)));
 
     QmmpSettings *gs = QmmpSettings::instance();

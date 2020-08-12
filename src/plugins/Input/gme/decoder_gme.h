@@ -32,7 +32,7 @@ class GmeHelper;
 class DecoderGme : public Decoder
 {
 public:
-    DecoderGme(const QString &path);
+    explicit DecoderGme(const QString &path);
     virtual ~DecoderGme();
 
     // Standard Decoder API
@@ -44,7 +44,7 @@ public:
 
 private:
     GmeHelper m_helper;
-    Music_Emu *m_emu;
+    Music_Emu *m_emu = nullptr;
     qint64 m_totalTime;
     QString m_path;
 };

@@ -26,13 +26,12 @@
 
 Bs2bPlugin *Bs2bPlugin::m_instance = nullptr;
 
-Bs2bPlugin::Bs2bPlugin() : Effect()
+Bs2bPlugin::Bs2bPlugin() : Effect(),
+    m_bs2b_handler(bs2b_open())
 {
     m_instance = this;
-    m_bs2b_handler = bs2b_open();
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     bs2b_set_level(m_bs2b_handler, settings.value("bs2b/level", BS2B_DEFAULT_CLEVEL).toUInt());
-    m_chan = 0;
 }
 
 Bs2bPlugin::~Bs2bPlugin()

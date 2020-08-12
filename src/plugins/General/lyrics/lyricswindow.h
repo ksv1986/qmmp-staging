@@ -37,7 +37,7 @@ class LyricsWindow : public QWidget
 {
 Q_OBJECT
 public:
-    LyricsWindow(const TrackInfo *info, QWidget *parent = nullptr);
+    explicit LyricsWindow(const TrackInfo *info, QWidget *parent = nullptr);
 
     ~LyricsWindow();
 

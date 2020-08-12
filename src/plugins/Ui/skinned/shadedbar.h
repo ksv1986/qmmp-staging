@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2009 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -36,11 +36,11 @@ public:
     ShadedBar(QWidget *parent = nullptr, uint slider1 = 0, uint slider2 = 0, uint slider3 = 0);
 
     ~ShadedBar();
-    int value()
+    inline int value()
     {
         return m_value;
     }
-    int isPressed()
+    inline int isPressed()
     {
         return m_moving;
     }
@@ -57,9 +57,9 @@ private slots:
 
 private:
     Skin *m_skin;
-    bool m_moving;
-    int press_pos;
-    int m_max, m_min, m_pos, m_value, m_old, m_x;
+    bool m_moving = false;
+    int m_press_pos = 0;
+    int m_max = 100, m_min = 0, m_pos = 0, m_value = 0, m_old;
     QPixmap m_pixmap;
     int convert(int);   // value = convert(position);
     void draw();

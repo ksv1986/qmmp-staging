@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 by Ilya Kotov                                      *
+ *   Copyright (C) 2016-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,8 +30,8 @@ class ArchiveInputDevice : public QIODevice
 {
     Q_OBJECT
 public:
-    ArchiveInputDevice(const QString &url, QObject *parent = nullptr);
-    ArchiveInputDevice(struct archive *a, struct archive_entry *e, QObject *parent = nullptr);
+    explicit ArchiveInputDevice(const QString &url, QObject *parent = nullptr);
+    explicit ArchiveInputDevice(struct archive *a, struct archive_entry *e, QObject *parent = nullptr);
     virtual ~ArchiveInputDevice();
 
     bool seek(qint64 pos) override;
@@ -42,10 +42,10 @@ protected:
     virtual qint64 writeData(const char *, qint64) override;
 
 private:
-    struct archive *m_archive;
-    struct archive_entry *m_entry;
+    struct archive *m_archive = nullptr;
+    struct archive_entry *m_entry = nullptr;
     QBuffer m_buffer;
-    bool m_close_libarchive;
+    bool m_close_libarchive = true;
 };
 
 #endif // ARCHIVEINPUTDEVICE_H

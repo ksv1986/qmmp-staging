@@ -22,6 +22,7 @@
 #include <QActionGroup>
 #include <QApplication>
 #include <QStyle>
+#include <algorithm>
 #include <qmmpui/uihelper.h>
 #include <qmmpui/mediaplayer.h>
 #include <qmmpui/playlistmanager.h>
@@ -83,11 +84,9 @@ void HalPlugin::removeDevice(const QString &udi)
 
 void HalPlugin::addDevice(const QString &udi)
 {
-    for(const HalDevice *device : qAsConst(m_devices)) //is it already exists?
-    {
-        if (device->udi() == udi)
-            return;
-    }
+    if(std::any_of(m_devices.cbegin(), m_devices.cend(), [udi](const HalDevice *device) { return device->udi() == udi; }))
+        return;
+
     HalDevice *device = new HalDevice(udi, this);
     QStringList caps = device->property("info.capabilities").toStringList();
     if (!caps.contains("block") || !caps.contains("volume") ||

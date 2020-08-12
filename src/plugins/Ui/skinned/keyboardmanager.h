@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,7 +37,7 @@ public:
     /*!
      * Constructor. Takes \b PlayList object as an argument.
      */
-    KeyboardManager (ListWidget *l);
+    explicit KeyboardManager (ListWidget *l);
     /*!
      * Handles key press events from \b PlayList object. Returns \b true
      * if the key was handled, otherwise \b false.

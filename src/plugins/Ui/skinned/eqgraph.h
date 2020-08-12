@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2009 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -30,7 +30,7 @@ class EQGraph : public PixmapWidget
 {
    Q_OBJECT
 public:
-    EQGraph (QWidget *parent = nullptr);
+    explicit EQGraph (QWidget *parent = nullptr);
 
    ~EQGraph();
 

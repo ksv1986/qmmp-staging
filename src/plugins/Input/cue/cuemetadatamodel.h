@@ -28,7 +28,7 @@ class CueFile;
 class CUEMetaDataModel : public MetaDataModel
 {
 public:
-    CUEMetaDataModel(const QString &url);
+    explicit CUEMetaDataModel(const QString &url);
     ~CUEMetaDataModel();
     QList<MetaDataItem> extraProperties() const override;
     QString coverPath() const override;

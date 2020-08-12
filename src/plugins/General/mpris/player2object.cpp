@@ -32,8 +32,6 @@
 
 Player2Object::Player2Object(QObject *parent) : QDBusAbstractAdaptor(parent)
 {
-    m_prev_track = nullptr;
-    m_previous_pos = 0;
     m_core = SoundCore::instance();
     m_player = MediaPlayer::instance();
     m_pl_manager =  m_player->playListManager();
@@ -334,9 +332,10 @@ void Player2Object::checkSeeking(qint64 elapsed)
 
 void Player2Object::playTrack(PlayListTrack *item)
 {
-    m_pl_manager->selectPlayList((PlayListModel*)sender());
-    m_pl_manager->activatePlayList((PlayListModel*)sender());
-    disconnect(sender(), SIGNAL(trackAdded(PlayListTrack*)), this, SLOT(playTrack(PlayListTrack*)));
+    PlayListModel *model = qobject_cast<PlayListModel*>(sender());
+    m_pl_manager->selectPlayList(model);
+    m_pl_manager->activatePlayList(model);
+    disconnect(model, SIGNAL(trackAdded(PlayListTrack*)), this, SLOT(playTrack(PlayListTrack*)));
     if(!m_pl_manager->currentPlayList()->setCurrent(item))
         return;
     m_core->stop();

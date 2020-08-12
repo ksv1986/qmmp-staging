@@ -39,7 +39,7 @@ class PlayListSelector : public QWidget
 {
 Q_OBJECT
 public:
-    PlayListSelector(PlayListManager *manager, QWidget *parent = nullptr);
+    explicit PlayListSelector(PlayListManager *manager, QWidget *parent = nullptr);
     ~PlayListSelector();
     void readSettings();
 

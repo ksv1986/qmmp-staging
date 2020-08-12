@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -28,29 +28,29 @@
 PresetEditor::PresetEditor(QWidget *parent)
         : QDialog(parent)
 {
-    ui.setupUi(this);
+    m_ui.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
-    connect(ui.loadButton,SIGNAL(clicked()),SLOT(loadPreset()));
-    connect(ui.deleteButton,SIGNAL(clicked()),SLOT(deletePreset()));
-    ui.loadButton->setIcon(QIcon::fromTheme("document-open"));
-    ui.deleteButton->setIcon(QIcon::fromTheme("edit-delete"));
+    connect(m_ui.loadButton,SIGNAL(clicked()),SLOT(loadPreset()));
+    connect(m_ui.deleteButton,SIGNAL(clicked()),SLOT(deletePreset()));
+    m_ui.loadButton->setIcon(QIcon::fromTheme("document-open"));
+    m_ui.deleteButton->setIcon(QIcon::fromTheme("edit-delete"));
 }
 
 
 PresetEditor::~PresetEditor()
 {
-    while (ui.presetListWidget->count () !=0)
-        ui.presetListWidget->takeItem (0);
+    while (m_ui.presetListWidget->count () !=0)
+        m_ui.presetListWidget->takeItem (0);
 
-    while (ui.autoPresetListWidget->count () !=0)
-        ui.autoPresetListWidget->takeItem (0);
+    while (m_ui.autoPresetListWidget->count () !=0)
+        m_ui.autoPresetListWidget->takeItem (0);
 }
 
 void PresetEditor::addPresets(const QList<EQPreset*> &presets)
 {
     for(QListWidgetItem *item : qAsConst(presets))
     {
-        ui.presetListWidget->addItem(item);
+        m_ui.presetListWidget->addItem(item);
     }
 }
 
@@ -58,17 +58,17 @@ void PresetEditor::addAutoPresets(const QList<EQPreset*> &presets)
 {
     for(QListWidgetItem *item : qAsConst(presets))
     {
-        ui.autoPresetListWidget->addItem(item);
+        m_ui.autoPresetListWidget->addItem(item);
     }
 }
 
 void PresetEditor::loadPreset()
 {
     EQPreset* preset = nullptr;
-    if (ui.tabWidget->currentIndex () == 0)
-        preset = (EQPreset *) ui.presetListWidget->currentItem ();
-    if (ui.tabWidget->currentIndex () == 1)
-        preset = (EQPreset *) ui.autoPresetListWidget->currentItem ();
+    if (m_ui.tabWidget->currentIndex () == 0)
+        preset = static_cast<EQPreset *>(m_ui.presetListWidget->currentItem());
+    if (m_ui.tabWidget->currentIndex () == 1)
+        preset = static_cast<EQPreset *>(m_ui.autoPresetListWidget->currentItem());
     if (preset)
         emit presetLoaded(preset);
 }
@@ -76,10 +76,10 @@ void PresetEditor::loadPreset()
 void PresetEditor::deletePreset()
 {
     EQPreset* preset = nullptr;
-    if (ui.tabWidget->currentIndex () == 0)
-        preset = (EQPreset *) ui.presetListWidget->currentItem ();
-    if (ui.tabWidget->currentIndex () == 1)
-        preset = (EQPreset *) ui.autoPresetListWidget->currentItem ();
+    if (m_ui.tabWidget->currentIndex () == 0)
+        preset = static_cast<EQPreset *>(m_ui.presetListWidget->currentItem());
+    if (m_ui.tabWidget->currentIndex () == 1)
+        preset = static_cast<EQPreset *>(m_ui.autoPresetListWidget->currentItem());
     if (preset)
         emit presetDeleted(preset);
 }

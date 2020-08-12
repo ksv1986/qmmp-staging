@@ -22,11 +22,8 @@
 #include <sidplayfp/SidDatabase.h>
 #include "sidhelper.h"
 
-SIDHelper::SIDHelper(SidDatabase *db)
-{
-    m_tune = nullptr;
-    m_db = db;
-}
+SIDHelper::SIDHelper(SidDatabase *db) : m_db(db)
+{}
 
 SIDHelper::~SIDHelper()
 {

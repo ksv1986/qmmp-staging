@@ -463,7 +463,7 @@ void QSUiWaveformScanner::run()
                 if(counter >= samplesPerValue)
                 {
                     m_mutex.lock();
-                    for(int ch = 0; ch < channels; ++ch)
+                    for(ch = 0; ch < channels; ++ch)
                     {
                         m_data << max[ch] * 1000;
                         m_data << min[ch] * 1000;

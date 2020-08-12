@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -29,7 +29,7 @@
 class ShoutOutput : public Output
 {
 public:
-    ShoutOutput(ShoutClient *m);
+    explicit ShoutOutput(ShoutClient *m);
     ~ShoutOutput();
 
     bool initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat) override;
@@ -49,10 +49,10 @@ private:
     vorbis_comment   m_vc; //struct that stores all the user comments
     vorbis_dsp_state m_vd; //central working state for the packet->PCM decoder
     vorbis_block     m_vb; //local working space for packet->PCM decode
-    soxr_t m_soxr;
-    float *m_soxr_buf;
-    size_t m_soxr_buf_frames;
-    double m_ratio;
+    soxr_t m_soxr = nullptr;
+    float *m_soxr_buf = nullptr;
+    size_t m_soxr_buf_frames = 0;
+    double m_ratio = 0;
 };
 
 #endif // SHOUTOUTPUT_H

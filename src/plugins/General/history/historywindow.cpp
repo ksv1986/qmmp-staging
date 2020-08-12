@@ -192,19 +192,10 @@ void HistoryWindow::loadDistribution()
         QString dayStr = date.toString(tr("dd MMMM"));
         int topLevelCount = m_ui->distributionTreeWidget->topLevelItemCount();
 
-        if(!topLevelCount)
+        if(!topLevelCount || m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->text(0) != monthStr)
         {
             m_ui->distributionTreeWidget->addTopLevelItem(new QTreeWidgetItem());
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount++)->setText(0,  monthStr);
-            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setFirstColumnSpanned(true);
-            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setTextAlignment(0, Qt::AlignCenter);
-            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setBackground(0, bgColor);
-            m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setForeground(0, textColor);
-        }
-        else if(m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->text(0) != monthStr)
-        {
-            m_ui->distributionTreeWidget->addTopLevelItem(new QTreeWidgetItem());
-            m_ui->distributionTreeWidget->topLevelItem(topLevelCount++)->setText(0, monthStr);
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setFirstColumnSpanned(true);
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setTextAlignment(0, Qt::AlignCenter);
             m_ui->distributionTreeWidget->topLevelItem(topLevelCount - 1)->setBackground(0, bgColor);

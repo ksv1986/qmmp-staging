@@ -45,11 +45,11 @@ QList<TagModel* > MPCMetaDataModel::tags() const
     return m_tags;
 }
 
-MPCFileTagModel::MPCFileTagModel(TagLib::MPC::File *file, TagLib::MPC::File::TagTypes tagType)
-        : TagModel()
+MPCFileTagModel::MPCFileTagModel(TagLib::MPC::File *file, TagLib::MPC::File::TagTypes tagType): TagModel(),
+    m_file(file),
+    m_tagType(tagType)
 {
-    m_tagType = tagType;
-    m_file = file;
+
     if (m_tagType == TagLib::MPC::File::ID3v1)
     {
         m_tag = m_file->ID3v1Tag();

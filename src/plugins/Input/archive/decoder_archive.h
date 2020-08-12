@@ -30,7 +30,7 @@
 class DecoderArchive : public Decoder
 {
 public:
-    DecoderArchive(const QString &url);
+    explicit DecoderArchive(const QString &url);
 
     virtual ~DecoderArchive();
 
@@ -42,8 +42,8 @@ public:
 
 private:
     QString m_url;
-    Decoder *m_decoder;
-    QIODevice *m_input;
+    Decoder *m_decoder = nullptr;
+    QIODevice *m_input = nullptr;
 
 };
 

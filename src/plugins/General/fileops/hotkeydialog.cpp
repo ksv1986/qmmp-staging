@@ -24,8 +24,8 @@
 HotkeyDialog::HotkeyDialog(const QString &key, QWidget *parent)
         : QDialog(parent)
 {
-    ui.setupUi(this);
-    ui.keyLineEdit->setText(key);
+    m_ui.setupUi(this);
+    m_ui.keyLineEdit->setText(key);
 }
 
 HotkeyDialog::~HotkeyDialog()
@@ -47,16 +47,16 @@ void HotkeyDialog::keyPressEvent (QKeyEvent *event)
     case Qt::Key_Menu:
     case 0:
     case Qt::Key_unknown:
-        ui.keyLineEdit->clear();
+        m_ui.keyLineEdit->clear();
         QWidget::keyPressEvent(event);
         return;
     }
     QKeySequence seq(event->modifiers() + event->key());
-    ui.keyLineEdit->setText(seq.toString());
+    m_ui.keyLineEdit->setText(seq.toString());
     QWidget::keyPressEvent(event);
 }
 
 const QString HotkeyDialog::key()
 {
-    return ui.keyLineEdit->text();
+    return m_ui.keyLineEdit->text();
 }

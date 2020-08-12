@@ -23,6 +23,7 @@
 #include <QAction>
 #include <QMenu>
 #include <QScreen>
+#include <algorithm>
 #include <math.h>
 #include <qmmp/soundcore.h>
 #include <qmmp/visual.h>
@@ -275,18 +276,14 @@ void MainWindow::readSettings()
     }
     else
     {
-        QScreen *screen = QGuiApplication::primaryScreen();
-        QRect availableGeometry = screen->availableGeometry();
+        QScreen *primaryScreen = QGuiApplication::primaryScreen();
+        QRect availableGeometry = primaryScreen->availableGeometry();
         QPoint pos = settings.value("mw_pos", QPoint(100, 100)).toPoint();
         int r = m_skin->ratio();
-        for(const QScreen *screen : QGuiApplication::screens())
-        {
-            if(screen->availableGeometry().contains(pos))
-            {
-               availableGeometry = screen->availableGeometry();
-               break;
-            }
-        }
+        const QList<QScreen *> screens = QGuiApplication::screens();
+        auto it = std::find_if(screens.cbegin(), screens.cend(), [pos](QScreen *screen){ return screen->availableGeometry().contains(pos); });
+        if(it != screens.cend())
+            availableGeometry = (*it)->availableGeometry();
         pos.setX(qBound(availableGeometry.left(), pos.x(), availableGeometry.right() - r*275));
         pos.setY(qBound(availableGeometry.top(), pos.y(), availableGeometry.bottom() - r*116));
         move(pos); //geometry

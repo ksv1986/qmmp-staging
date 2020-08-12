@@ -675,7 +675,7 @@ void MainWindow::readSettings()
                 toolBars.erase(it);
                 break;
             }
-            it++;
+            ++it;
         }
 
         if(!found)

@@ -25,10 +25,9 @@
 #include "mplayermetadatamodel.h"
 
 MplayerMetaDataModel::MplayerMetaDataModel(const QString &path)
-    : MetaDataModel(true, MetaDataModel::CompletePropertyList)
-{
-    m_path = path;
-}
+    : MetaDataModel(true, MetaDataModel::CompletePropertyList),
+      m_path(path)
+{}
 
 MplayerMetaDataModel::~MplayerMetaDataModel()
 {}

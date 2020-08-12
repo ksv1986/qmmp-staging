@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,13 +35,13 @@ class Skin;
 class TimeIndicatorModel : public QObject {
     Q_OBJECT
 public:
-    TimeIndicatorModel(QObject *parent = nullptr);
+    explicit TimeIndicatorModel(QObject *parent = nullptr);
     ~TimeIndicatorModel();
 
-    int position() { return m_position; }
-    int duration() { return m_duration; }
-    bool elapsed() { return m_elapsed; }
-    bool visible() { return m_visible; }
+    inline int position() const { return m_position; }
+    inline int duration() const { return m_duration; }
+    inline bool elapsed() const { return m_elapsed; }
+    inline bool visible() const { return m_visible; }
 
     void setPosition(int position);
     void setDuration(int duration);
@@ -60,10 +60,10 @@ private:
     void readSettings();
     void writeSettings();
 
-    int m_position;
-    int m_duration;
-    bool m_elapsed;
-    bool m_visible;
+    int m_position = 0;
+    int m_duration = 0;
+    bool m_elapsed = true;
+    bool m_visible = false;
 };
 
 
@@ -77,7 +77,7 @@ class TimeIndicator : public PixmapWidget
 {
     Q_OBJECT
 public:
-    TimeIndicator(TimeIndicatorModel *model, QWidget *parent = nullptr);
+    explicit TimeIndicator(TimeIndicatorModel *model, QWidget *parent = nullptr);
     ~TimeIndicator();
 
 protected:

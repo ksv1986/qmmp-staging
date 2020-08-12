@@ -49,7 +49,7 @@ class PlayList : public QWidget
 {
         Q_OBJECT
     public:
-        PlayList (PlayListManager *manager, QWidget *parent = nullptr);
+        explicit PlayList(PlayListManager *manager, QWidget *parent = nullptr);
         virtual ~PlayList();
 
         void readSettings();
@@ -126,16 +126,16 @@ class PlayList : public QWidget
         ListWidget *m_listWidget;
         PlayListTitleBar *m_titleBar;
         PlayListSlider *m_plslider;
-        bool m_resize;
-        bool m_update;
+        bool m_resize = false;
+        bool m_update = false;
         int m_ratio;
         int m_height;
-        bool m_shaded;
+        bool m_shaded = false;
         PlayListManager *m_pl_manager;
         QmmpUiSettings *m_ui_settings;
         KeyboardManager* m_keyboardManager;
         QPointer <PlayListBrowser> m_pl_browser;
-        PlayListSelector *m_pl_selector;
+        PlayListSelector *m_pl_selector = nullptr;
 #ifdef QMMP_WS_X11
         bool m_compiz;
 #endif

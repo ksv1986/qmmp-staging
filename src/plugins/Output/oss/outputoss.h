@@ -45,7 +45,7 @@ private:
     void sync();
     QString m_audio_device;
 
-    int m_audio_fd;
+    int m_audio_fd = -1;
 };
 
 class VolumeOSS : public Volume
@@ -61,9 +61,9 @@ private:
     //oss mixer
     QString m_audio_device;
     void openMixer();
-    int m_mixer_fd;
+    int m_mixer_fd = -1;
     QString m_mixer_device;
-    bool m_master;
+    bool m_master = true;
 };
 
 

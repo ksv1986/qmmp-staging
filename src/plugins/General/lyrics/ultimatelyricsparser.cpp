@@ -24,6 +24,7 @@
 #include <QXmlStreamReader>
 #include <QFile>
 #include <QtDebug>
+#include <algorithm>
 #if (QT_VERSION < QT_VERSION_CHECK(5, 7, 0)) //qAsConst template
 #include <qmmp/qmmp.h>
 #endif
@@ -135,17 +136,13 @@ const QList<LyricsProvider *> &UltimateLyricsParser::providers()
 
 LyricsProvider *UltimateLyricsParser::provider(const QString &name) const
 {
-    for(LyricsProvider *provider : qAsConst(m_providers))
-    {
-        if(provider->name() == name)
-            return provider;
-    }
-    return nullptr;
+    auto it = std::find_if(m_providers.cbegin(), m_providers.cend(), [name](LyricsProvider *provider){ return provider->name() == name; });
+    return it == m_providers.cend() ? nullptr : *it;
 }
 
-QStringList UltimateLyricsParser::defaultProviders()
+const QStringList &UltimateLyricsParser::defaultProviders()
 {
-    QStringList out = {
+    static const QStringList out = {
         "lyrics.wikia.com",
         "Encyclopaedia Metallum",
         "letras.mus.br",

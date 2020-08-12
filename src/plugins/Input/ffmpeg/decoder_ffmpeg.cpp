@@ -35,12 +35,12 @@ static int ffmpeg_read(void *data, uint8_t *buf, int size)
     if(d->input()->atEnd())
         return AVERROR_EOF;
 #endif
-    return (int)d->input()->read((char*)buf, size);
+    return static_cast<int>(d->input()->read((char*)buf, size));
 }
 
 static int64_t ffmpeg_seek(void *data, int64_t offset, int whence)
 {
-    DecoderFFmpeg *d = (DecoderFFmpeg*)data;
+    DecoderFFmpeg *d = static_cast<DecoderFFmpeg*>(data);
     int64_t absolute_pos = 0;
     /*if(d->input()->isSequential())
         return -1;*/
@@ -66,10 +66,10 @@ static int64_t ffmpeg_seek(void *data, int64_t offset, int whence)
 }
 
 // Decoder class
-DecoderFFmpeg::DecoderFFmpeg(const QString &path, QIODevice *i)
-        : Decoder(i)
+DecoderFFmpeg::DecoderFFmpeg(const QString &path, QIODevice *i) : Decoder(i),
+    m_path(path)
+
 {
-    m_path = path;
     m_pkt = av_packet_alloc();
 }
 
@@ -410,9 +410,9 @@ void DecoderFFmpeg::fillBuffer()
 
         if((m_eof || send_error < 0) && recv_error < 0)
         {
-            char errbuf[AV_ERROR_MAX_STRING_SIZE] = { 0 };
             if(!m_eof)
             {
+                char errbuf[AV_ERROR_MAX_STRING_SIZE] = { 0 };
                 av_strerror(send_error, errbuf, sizeof(errbuf));
                 qWarning("DecoderFFmpeg: avcodec_send_packet error: %s", errbuf);
                 av_strerror(recv_error, errbuf, sizeof(errbuf));

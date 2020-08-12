@@ -25,12 +25,9 @@
 #include "decoder_ffmpeg.h"
 #include "decoder_ffmpegcue.h"
 
-
-DecoderFFmpegCue::DecoderFFmpegCue(const QString &url)
-    : Decoder()
-{
-    m_url = url;
-}
+DecoderFFmpegCue::DecoderFFmpegCue(const QString &url) : Decoder(),
+    m_url(url)
+{}
 
 DecoderFFmpegCue::~DecoderFFmpegCue()
 {

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2014 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -54,7 +54,7 @@ private:
     void post();
     void sync();
     QString m_audio_device;
-    int m_audio_fd;
+    int m_audio_fd = -1;
     static OutputOSS4 *m_instance;
     static Qmmp::ChannelPosition m_oss_pos[16];
 

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -94,11 +94,11 @@ Equalizer::Equalizer(QWidget *parent) : QDialog(parent)
         slider->setRange(-20, 20);
         slider->setTickPosition(QSlider::TicksLeft);
         slider->setTickInterval(10);
-        QLabel *label = new QLabel(this);
-        label->setFrameShape(QFrame::Box);
-        label->setText(names.at(i));
+        QLabel *eqLabel = new QLabel(this);
+        eqLabel->setFrameShape(QFrame::Box);
+        eqLabel->setText(names.at(i));
         slidersLayout->addWidget(slider, 1, i, Qt::AlignHCenter);
-        slidersLayout->addWidget(label, 2, i, Qt::AlignHCenter);
+        slidersLayout->addWidget(eqLabel, 2, i, Qt::AlignHCenter);
 
         QLabel *label2 = new QLabel(this);
         label2->setText(tr("%1dB").arg(0));

@@ -32,15 +32,12 @@
 #include "decoder_sid.h"
 
 // Decoder class
-DecoderSID::DecoderSID(SidDatabase *db, const QString &url) : Decoder(), m_tune(nullptr)
-{
-    m_db = db;
-    m_url = url;
-    m_player = new sidplayfp();
-    m_length = 0;
-    m_length_in_bytes = 0;
-    m_read_bytes = 0;
-}
+DecoderSID::DecoderSID(SidDatabase *db, const QString &url) : Decoder(),
+    m_url(url),
+    m_player(new sidplayfp()),
+    m_db(db),
+    m_tune(nullptr)
+{}
 
 DecoderSID::~DecoderSID()
 {

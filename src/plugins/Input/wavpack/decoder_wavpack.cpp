@@ -31,11 +31,9 @@
 
 // Decoder class
 
-DecoderWavPack::DecoderWavPack(const QString &path)
-        : Decoder()
-{
-    m_path = path;
-}
+DecoderWavPack::DecoderWavPack(const QString &path) : Decoder(),
+    m_path(path)
+{}
 
 DecoderWavPack::~DecoderWavPack()
 {

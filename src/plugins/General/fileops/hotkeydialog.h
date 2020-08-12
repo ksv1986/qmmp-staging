@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -33,7 +33,7 @@ class HotkeyDialog : public QDialog
 {
     Q_OBJECT
 public:
-    HotkeyDialog(const QString &key, QWidget *parent = nullptr);
+    explicit HotkeyDialog(const QString &key, QWidget *parent = nullptr);
 
     ~HotkeyDialog();
 
@@ -43,7 +43,7 @@ protected:
     virtual void keyPressEvent (QKeyEvent *event) override;
 
 private:
-    Ui::HotkeyDialog ui;
+    Ui::HotkeyDialog m_ui;
 
 };
 

@@ -279,13 +279,14 @@ void StreamWindow::editStream()
 
     EditStreamDialog dialog(this);
     dialog.setWindowTitle(tr("Edit Stream"));
-    QMap<EditStreamDialog::Key, QString> values;
-    values[EditStreamDialog::URL] = m_favoritesModel->item(row, 0)->data().toString();
-    values[EditStreamDialog::NAME] = m_favoritesModel->item(row, 0)->text();
-    values[EditStreamDialog::GENRE] = m_favoritesModel->item(row, 1)->text();
-    values[EditStreamDialog::BITRATE] = m_favoritesModel->item(row, 2)->text();
-    values[EditStreamDialog::TYPE] = m_favoritesModel->item(row, 3)->text();
-    dialog.setValues(values);
+    QMap<EditStreamDialog::Key, QString> initialValues = {
+        { EditStreamDialog::URL, m_favoritesModel->item(row, 0)->data().toString() },
+        { EditStreamDialog::NAME, m_favoritesModel->item(row, 0)->text() },
+        { EditStreamDialog::GENRE, m_favoritesModel->item(row, 1)->text() },
+        { EditStreamDialog::BITRATE, m_favoritesModel->item(row, 2)->text() },
+        { EditStreamDialog::TYPE, m_favoritesModel->item(row, 3)->text() }
+    };
+    dialog.setValues(initialValues);
 
     if(dialog.exec() == QDialog::Accepted)
     {

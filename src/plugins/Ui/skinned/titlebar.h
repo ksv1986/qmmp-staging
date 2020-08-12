@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,7 +22,6 @@
 
 #include <QMainWindow>
 #include <QPoint>
-
 #include "pixmapwidget.h"
 #include "playlist.h"
 
@@ -42,7 +41,7 @@ class TitleBar : public PixmapWidget
 {
 Q_OBJECT
 public:
-    TitleBar(TimeIndicatorModel *model, QWidget *parent = nullptr);
+    explicit TitleBar(TimeIndicatorModel *model, QWidget *parent = nullptr);
 
     ~TitleBar();
 
@@ -61,14 +60,14 @@ private:
     Button *m_menu;
     Button *m_minimize;
     Button *m_shade;
-    Button *m_shade2;
+    Button *m_shade2 = nullptr;
     Button *m_close;
-    SymbolDisplay *m_currentTime;
+    SymbolDisplay *m_currentTime = nullptr;
     QString formatTime (int);
-    bool m_shaded;
-    bool m_align;
-    TitleBarControl *m_control;
-    ShadedVisual *m_visual;
+    bool m_shaded = false;
+    bool m_align = false;
+    TitleBarControl *m_control = nullptr;
+    ShadedVisual *m_visual = nullptr;
     TimeIndicatorModel *m_model;
     void updatePositions();
 

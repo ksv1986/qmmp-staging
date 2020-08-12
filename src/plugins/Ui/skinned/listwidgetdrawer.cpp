@@ -203,7 +203,6 @@ void ListWidgetDrawer::prepareRow(ListWidgetRow *row)
         {
             row->titles[i] = m_metrics->elidedText (row->titles[i], Qt::ElideRight, size - 2 * m_padding);
         }
-        visible_width -= size;
     }
 }
 
@@ -277,7 +276,7 @@ void ListWidgetDrawer::drawSeparator(QPainter *painter, ListWidgetRow *row, bool
     int sy = row->rect.y() + m_metrics->overlinePos() - 1;
 
     painter->setFont(m_font);
-    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_selected_text : m_group_text);
+    painter->setPen((row->flags & ListWidgetRow::SELECTED) ? m_selected_text : m_group_text);
 
     if(rtl)
         sx = row->rect.right() - sx - m_metrics->horizontalAdvance(row->titles[0]);
@@ -343,7 +342,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
                 painter->drawText(sx + m_padding, sy, number);
                 if(m_show_splitters)
                 {
-                    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_selected_text : m_splitter);
+                    painter->setPen((row->flags & ListWidgetRow::SELECTED) ? m_selected_text : m_splitter);
                     painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
                     painter->setPen(textColor);
                 }
@@ -405,7 +404,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
 
                 if(m_show_splitters && (!row->autoResize || i < row->sizes.count() - 1)) //do not draw last vertical line
                 {
-                    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_selected_text : m_splitter);
+                    painter->setPen((row->flags & ListWidgetRow::SELECTED) ? m_selected_text : m_splitter);
                     painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
                 }
             }
@@ -419,12 +418,12 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
             if(row->numberColumnWidth)
             {
                 sx += row->numberColumnWidth;
-                painter->setPen(row->flags & ListWidgetRow::CURRENT ? m_current : m_normal);
+                painter->setPen((row->flags & ListWidgetRow::CURRENT) ? m_current : m_normal);
                 QString number = QString("%1").arg(row->number);
                 painter->drawText(sx - m_padding - m_metrics->horizontalAdvance(number), sy, number);
                 if(m_show_splitters)
                 {
-                    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_selected_text : m_splitter);
+                    painter->setPen((row->flags & ListWidgetRow::SELECTED) ? m_selected_text : m_splitter);
                     painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
                     painter->setPen(textColor);
                 }
@@ -486,7 +485,7 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
 
                 if(m_show_splitters && (!row->autoResize || i < row->sizes.count() - 1)) //do not draw last vertical line
                 {
-                    painter->setPen(row->flags & ListWidgetRow::SELECTED ? m_selected_text : m_splitter);
+                    painter->setPen((row->flags & ListWidgetRow::SELECTED) ? m_selected_text : m_splitter);
                     painter->drawLine(sx, row->rect.top(), sx, row->rect.bottom() + 1);
                 }
             }

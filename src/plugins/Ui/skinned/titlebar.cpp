@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,18 +37,12 @@
 
 // TODO skin cursor with shade mode
 TitleBar::TitleBar(TimeIndicatorModel *model, QWidget *parent)
-        : PixmapWidget(parent)
-        , m_model(model)
+        : PixmapWidget(parent),
+          m_model(model)
 {
-    m_align = false;
     m_skin = Skin::instance();
     setPixmap(m_skin->getTitleBar(Skin::TITLEBAR_A));
     m_mw = qobject_cast<MainWindow*>(parent->parent());
-    m_shaded = false;
-    m_shade2 = nullptr;
-    m_currentTime = nullptr;
-    m_control = nullptr;
-    m_visual = nullptr;
     //buttons
     m_menu = new Button(this,Skin::BT_MENU_N,Skin::BT_MENU_P, Skin::CUR_MAINMENU);
     connect(m_menu,SIGNAL(clicked()),this,SLOT(showMainMenu()));

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,9 +24,9 @@
 #include <sidplayfp/SidConfig.h>
 #include "settingsdialog.h"
 
-SettingsDialog::SettingsDialog(SidDatabase *db, QWidget *parent) : QDialog(parent)
+SettingsDialog::SettingsDialog(SidDatabase *db, QWidget *parent) : QDialog(parent),
+    m_db(db)
 {
-    m_db = db;
     m_ui.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
 

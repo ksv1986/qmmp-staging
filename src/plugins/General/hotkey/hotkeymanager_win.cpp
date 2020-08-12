@@ -76,21 +76,22 @@ quint32 Hotkey::defaultKey()
 quint32 Hotkey::defaultKey(int act)
 {
     //default key bindings
-    QMap<int, quint32> keyMap;
-    keyMap[PLAY] = 0;
-    keyMap[STOP] = VK_MEDIA_STOP;
-    keyMap[PAUSE] = 0;
-    keyMap[PLAY_PAUSE] = VK_MEDIA_PLAY_PAUSE;
-    keyMap[NEXT] = VK_MEDIA_NEXT_TRACK;
-    keyMap[PREVIOUS] = VK_MEDIA_PREV_TRACK;
-    keyMap[SHOW_HIDE] = 0;
-    keyMap[VOLUME_UP] = VK_VOLUME_UP;
-    keyMap[VOLUME_DOWN] = VK_VOLUME_DOWN;
-    keyMap[FORWARD] = 0;
-    keyMap[REWIND] = 0;
-    keyMap[JUMP_TO_TRACK] = 0;
-    keyMap[VOLUME_MUTE] = VK_VOLUME_MUTE;
-    return keyMap[act];
+    static const QMap<int, quint32> defaultKeys = {
+        { PLAY, 0 },
+        { STOP, VK_MEDIA_STOP },
+        { PAUSE, 0 },
+        { PLAY_PAUSE, VK_MEDIA_PLAY_PAUSE },
+        { NEXT, VK_MEDIA_NEXT_TRACK },
+        { PREVIOUS, VK_MEDIA_PREV_TRACK },
+        { SHOW_HIDE, 0 },
+        { VOLUME_UP, VK_VOLUME_UP },
+        { VOLUME_DOWN, VK_VOLUME_DOWN },
+        { FORWARD, 0 },
+        { REWIND, 0 },
+        { JUMP_TO_TRACK, 0 },
+        { VOLUME_MUTE, VK_VOLUME_MUTE },
+    };
+    return defaultKeys[act];
 }
 
 HotkeyManager::HotkeyManager(QObject *parent) : QObject(parent)

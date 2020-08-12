@@ -30,19 +30,8 @@
 
 // Decoder class
 
-DecoderAAC::DecoderAAC(QIODevice *i)
-        : Decoder(i)
-{
-    m_bitrate = 0;
-    m_totalTime = 0;
-    m_data = nullptr;
-    m_input_buf = nullptr;
-    m_input_at = 0;
-    m_sample_buf = nullptr;
-    m_sample_buf_at = 0;
-    m_sample_buf_size = 0;
-}
-
+DecoderAAC::DecoderAAC(QIODevice *i) : Decoder(i)
+{}
 
 DecoderAAC::~DecoderAAC()
 {

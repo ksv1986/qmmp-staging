@@ -29,16 +29,9 @@
 #include "decoder_cue.h"
 
 
-DecoderCUE::DecoderCUE(const QString &url)
-        : Decoder()
-{
-    m_path = url;
-    m_decoder = nullptr;
-    m_cueFile = nullptr;
-    m_track = 0;
-    m_buf = nullptr;
-    m_input = nullptr;
-}
+DecoderCUE::DecoderCUE(const QString &url) : Decoder(),
+    m_path(url)
+{}
 
 DecoderCUE::~DecoderCUE()
 {

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2019 by Ilya Kotov                                      *
+ *   Copyright (C) 2019-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -61,16 +61,12 @@ uint TrackMetaData::timeStamp() const
     return m_start_ts;
 }
 
-PayloadCache::PayloadCache(const QString &filePath)
-{
-    m_filePath = filePath;
-}
+PayloadCache::PayloadCache(const QString &filePath) : m_filePath(filePath)
+{}
 
 QList<TrackMetaData> PayloadCache::load()
 {
     QList<TrackMetaData> songs;
-    int s = 0;
-    QString line, param, value;
     QFile file(m_filePath);
 
     if(!file.open(QIODevice::ReadOnly))
@@ -78,12 +74,13 @@ QList<TrackMetaData> PayloadCache::load()
 
     while (!file.atEnd())
     {
-        line = QString::fromUtf8(file.readLine()).trimmed();
+        int s = 0;
+        QString line = QString::fromUtf8(file.readLine()).trimmed();
         if ((s = line.indexOf("=")) < 0)
             continue;
 
-        param = line.left(s);
-        value = line.right(line.size() - s - 1);
+        QString param = line.left(s);
+        QString value = line.right(line.size() - s - 1);
 
         if (param == "title")
         {

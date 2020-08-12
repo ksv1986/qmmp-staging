@@ -41,33 +41,19 @@
 
 #define INVALID_INDEX -1
 
-ListWidget::ListWidget(PlayListModel *model, QWidget *parent)
-        : QWidget(parent)
+ListWidget::ListWidget(PlayListModel *model, QWidget *parent) : QWidget(parent),
+    m_pressed_index(INVALID_INDEX),
+    m_drop_index(INVALID_INDEX),
+    m_anchor_index(INVALID_INDEX),
+    m_model(model)
 {
     setFocusPolicy(Qt::StrongFocus);
-    m_popupWidget = nullptr;
-    m_ui_settings = QmmpUiSettings::instance();
-    m_menu = nullptr;
-    m_filterMode = false;
-    m_model = model;
     m_timer = new QTimer(this);
     m_timer->setInterval(50);
-
     m_header = new PlayListHeader(this);
     m_scrollBar = new QScrollBar(Qt::Vertical, this);
     m_hslider = new QScrollBar(Qt::Horizontal, this);
     m_hslider->setPageStep(50);
-    m_update = false;
-    m_drop_index = INVALID_INDEX;
-    m_scroll_direction = NONE;
-    m_prev_y = 0;
-    m_anchor_index = INVALID_INDEX;
-    m_pressed_index = INVALID_INDEX;
-    m_first = 0;
-    m_row_count = 0;
-    m_select_on_release = false;
-    m_count = 0;
-    m_firstItem = nullptr;
 
     setAcceptDrops(true);
     setMouseTracking(true);

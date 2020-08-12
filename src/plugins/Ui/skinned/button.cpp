@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
+ *   Copyright(C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *
@@ -25,57 +25,56 @@
 #include "skin.h"
 #include <QMouseEvent>
 
-Button::Button (QWidget *parent, uint normal, uint pressed, uint cursor)
-        : PixmapWidget (parent)
+Button::Button(QWidget *parent, uint normal, uint pressed, uint cursor)
+        : PixmapWidget(parent),
+          m_name_normal(normal),
+          m_name_pressed(pressed),
+          m_name_cursor(cursor)
 {
-    name_normal = normal;
-    name_pressed = pressed;
-    name_cursor = cursor;
     m_skin = Skin::instance();
     setON (false);
-    setCursor (m_skin->getCursor (name_cursor));
-    connect (m_skin, SIGNAL (skinChanged()), this, SLOT (updateSkin()));
+    setCursor(m_skin->getCursor (m_name_cursor));
+    connect(m_skin, SIGNAL (skinChanged()), SLOT(updateSkin()));
 }
-
 
 Button::~Button()
 {}
 
 void Button::updateSkin()
 {
-    setPixmap (m_skin->getButton (name_normal));
-    setCursor (m_skin->getCursor (name_cursor));
+    setPixmap (m_skin->getButton(m_name_normal));
+    setCursor (m_skin->getCursor(m_name_cursor));
 }
 
-void Button::setON (bool on)
+void Button::setON(bool on)
 {
     if (on)
-        setPixmap (m_skin->getButton (name_pressed));
+        setPixmap(m_skin->getButton(m_name_pressed));
     else
-        setPixmap (m_skin->getButton (name_normal));
+        setPixmap(m_skin->getButton(m_name_normal));
 }
-void Button::mousePressEvent (QMouseEvent *e)
+void Button::mousePressEvent(QMouseEvent *e)
 {
     if(e->button() != Qt::LeftButton)
         return;
-    setON (true);
+    setON(true);
     m_pressed = true;
     QWidget::mousePressEvent(e);
 }
 
-void Button::mouseReleaseEvent (QMouseEvent *e)
+void Button::mouseReleaseEvent(QMouseEvent *e)
 {
-    if (!m_pressed)
+    if(!m_pressed)
         return;
     m_pressed = false;
     if(rect().contains(e->pos()))
     {
-        setON (false);
+        setON(false);
         emit clicked();
     }
 }
 
-void Button::mouseMoveEvent (QMouseEvent *e)
+void Button::mouseMoveEvent(QMouseEvent *e)
 {
-    setON (m_pressed && rect().contains(e->pos()));
+    setON(m_pressed && rect().contains(e->pos()));
 }

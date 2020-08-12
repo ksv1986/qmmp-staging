@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -51,8 +51,8 @@ private:
     QPointer<PopupWidget> m_popupWidget;
     bool m_desktop, m_showVolume;
     bool m_psi;
-    int m_l, m_r;
-    bool m_isPaused;
+    int m_l = -1, m_r = -1;
+    bool m_isPaused = false;
     bool m_resumeNotification;
     bool m_disableForFullScreen;
     SoundCore *m_core;

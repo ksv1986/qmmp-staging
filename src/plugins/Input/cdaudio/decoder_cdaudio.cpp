@@ -79,11 +79,10 @@ static void cddb_log_handler(cddb_log_level_t level, const char *message)
 
 // Decoder class
 
-DecoderCDAudio::DecoderCDAudio(const QString &url) : Decoder()
-{
-    m_url = url;
-    m_buffer = new char[CDDA_BUFFER_SIZE];
-}
+DecoderCDAudio::DecoderCDAudio(const QString &url) : Decoder(),
+    m_url(url),
+    m_buffer(new char[CDDA_BUFFER_SIZE])
+{}
 
 DecoderCDAudio::~DecoderCDAudio()
 {
@@ -233,8 +232,7 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
         qDebug("DecoderCDAudio: reading CDDB...");
         cddb_log_set_handler(cddb_log_handler);
         cddb_conn_t *cddb_conn = cddb_new ();
-        cddb_disc_t *cddb_disc = NULL;
-        cddb_track_t *cddb_track = NULL;
+        cddb_disc_t *cddb_disc = nullptr;
         lba_t lba;
         if (!cddb_conn)
             qWarning ("DecoderCDAudio: unable to create cddb connection");
@@ -270,7 +268,7 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
 
             for (int i = first_track_number; i <= last_track_number; ++i)
             {
-                cddb_track = cddb_track_new ();
+                cddb_track_t *cddb_track = cddb_track_new ();
                 cddb_track_set_frame_offset (cddb_track, cdio_get_track_lba (cdio, i));
                 cddb_disc_add_track (cddb_disc, cddb_track);
             }

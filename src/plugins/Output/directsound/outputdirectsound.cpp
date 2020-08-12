@@ -47,13 +47,6 @@ OutputDirectSound::DSoundChannels OutputDirectSound::m_dsound_pos[10]  = {
 
 OutputDirectSound::OutputDirectSound() : Output()
 {
-    m_ds = nullptr;
-    m_primaryBuffer = nullptr;
-    m_dsBuffer = nullptr;
-    m_dsBufferAt = 0;
-    m_latency = 0;
-    m_bytesPerSecond = 0;
-    m_reset = false;
     instance = this;
 }
 
@@ -277,7 +270,7 @@ void OutputDirectSound::resume()
     HRESULT result = m_dsBuffer->Play(0,0,DSBPLAY_LOOPING);
     if(result == DSERR_BUFFERLOST)
     {
-        result = m_dsBuffer->Play(0,0,DSBPLAY_LOOPING);
+        m_dsBuffer->Play(0,0,DSBPLAY_LOOPING);
         m_dsBuffer->Restore();
     }
 }

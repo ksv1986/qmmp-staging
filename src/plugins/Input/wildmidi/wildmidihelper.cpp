@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,8 +31,6 @@ WildMidiHelper *WildMidiHelper::m_instance = nullptr;
 WildMidiHelper::WildMidiHelper(QObject *parent) :
     QObject(parent)
 {
-    m_inited = false;
-    m_sample_rate = 0;
     m_instance = this;
 }
 

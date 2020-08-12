@@ -22,10 +22,9 @@
 #include <qmmp/metadatamanager.h>
 #include "wavpackmetadatamodel.h"
 
-WavPackMetaDataModel::WavPackMetaDataModel(const QString &path, bool readOnly)
-    : MetaDataModel(readOnly)
+WavPackMetaDataModel::WavPackMetaDataModel(const QString &path, bool readOnly) : MetaDataModel(readOnly),
+    m_path(path)
 {
-    m_path = path;
     if(m_path.contains("://"))
     {
         m_path.remove("wvpack://");
@@ -82,10 +81,9 @@ QString WavPackMetaDataModel::coverPath() const
     return MetaDataManager::instance()->findCoverFile(m_path);
 }
 
-WavPackFileTagModel::WavPackFileTagModel(WavpackContext *ctx) : TagModel(TagModel::Save)
-{
-    m_ctx  = ctx;
-}
+WavPackFileTagModel::WavPackFileTagModel(WavpackContext *ctx) : TagModel(TagModel::Save),
+    m_ctx(ctx)
+{}
 
 WavPackFileTagModel::~WavPackFileTagModel()
 {}

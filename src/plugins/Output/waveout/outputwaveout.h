@@ -49,8 +49,8 @@ private:
     // helper functions
     void status();
     void uninitialize();
-    qint64 m_totalWritten;
-    qint32 m_frameSize;
+    qint64 m_totalWritten = 0;
+    qint32 m_frameSize = 0;
 };
 
 class VolumeWaveOut : public Volume

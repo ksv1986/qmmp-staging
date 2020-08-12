@@ -58,24 +58,24 @@ private:
 class ActionItem: public QTableWidgetItem
 {
 public:
-    ActionItem (const QString &text): QTableWidgetItem(text){}
+    explicit ActionItem (const QString &text): QTableWidgetItem(text){}
 
-    QString pattern()
+    inline const QString &pattern() const
     {
         return m_pattern;
     }
 
-    QString destination()
+    inline const QString &destination() const
     {
         return m_destination;
     }
 
-    void setPattern(const QString &pattern)
+    inline void setPattern(const QString &pattern)
     {
         m_pattern = pattern;
     }
 
-    void setDestination(const QString &dest)
+    inline void setDestination(const QString &dest)
     {
         m_destination = dest;
     }

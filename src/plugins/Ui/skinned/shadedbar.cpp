@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2009 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,12 +25,11 @@
 #include "skin.h"
 #include "shadedbar.h"
 
-ShadedBar::ShadedBar(QWidget *parent, uint slider1, uint slider2, uint slider3)
- : QWidget(parent)
+ShadedBar::ShadedBar(QWidget *parent, uint slider1, uint slider2, uint slider3) : QWidget(parent),
+    m_slider1(slider1),
+    m_slider2(slider2),
+    m_slider3(slider3)
 {
-    m_slider1 = slider1;
-    m_slider2 = slider2;
-    m_slider3 = slider3;
     m_skin = Skin::instance();
     m_ratio = m_skin->ratio();
     if(slider1 == Skin::EQ_VOLUME1)
@@ -38,13 +37,8 @@ ShadedBar::ShadedBar(QWidget *parent, uint slider1, uint slider2, uint slider3)
     else
         resize(m_ratio*42,m_ratio*7);
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
-    m_moving = false;
-    m_min = 0;
-    m_max = 100;
-    m_old = m_value = 0;
     draw();
 }
-
 
 ShadedBar::~ShadedBar()
 {
@@ -53,16 +47,16 @@ ShadedBar::~ShadedBar()
 void ShadedBar::mousePressEvent(QMouseEvent *e)
 {
     m_moving = true;
-    press_pos = e->x();
-    if(m_pos<e->x() && e->x()<m_pos+3)
+    m_press_pos = e->x();
+    if(m_pos < e->x() && e->x() < m_pos+3)
     {
-        press_pos = e->x()-m_pos;
+        m_press_pos = e->x() - m_pos;
     }
     else
     {
-        m_value = convert(qMax(qMin(width()-3,e->x()-1),0));
-        press_pos = 1;
-        if (m_value!=m_old)
+        m_value = convert(qMax(qMin(width() - 3, e->x() - 1), 0));
+        m_press_pos = 1;
+        if (m_value != m_old)
         {
             emit sliderMoved(m_value);
         }
@@ -75,9 +69,9 @@ void ShadedBar::mouseMoveEvent (QMouseEvent *e)
     if(m_moving)
     {
         int po = e->x();
-        po = po - press_pos;
+        po = po - m_press_pos;
 
-        if(0<=po && po<=width()-3)
+        if(0 <= po && po <= width() - 3)
         {
             m_value = convert(po);
             draw();

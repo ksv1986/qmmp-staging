@@ -15,7 +15,7 @@
 class DecoderVorbis : public Decoder
 {
 public:
-    DecoderVorbis(QIODevice *i);
+    explicit DecoderVorbis(QIODevice *i);
     virtual ~DecoderVorbis();
 
     // Standard Decoder API
@@ -34,11 +34,11 @@ private:
 
     // OggVorbis Decoder
     OggVorbis_File oggfile;
-    qint64 m_totalTime;
-    long len;
-    int m_last_section;
-    int m_bitrate;
-    bool m_inited;
+    qint64 m_totalTime = 0;
+    long len = 0;
+    int m_last_section = -1;
+    int m_bitrate = 0;
+    bool m_inited = false;
 };
 
 

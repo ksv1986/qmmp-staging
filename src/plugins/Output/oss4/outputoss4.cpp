@@ -69,7 +69,6 @@ Qmmp::ChannelPosition OutputOSS4::m_oss_pos[16] =
 
 OutputOSS4::OutputOSS4() : Output()
 {
-    m_audio_fd = -1;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_audio_device = settings.value("OSS4/device", DEFAULT_DEV).toString();
     m_instance = this;

@@ -34,7 +34,6 @@ ShadedVisual::ShadedVisual(QWidget *parent) : Visual(parent)
     m_timer = new QTimer(this);
     connect(m_timer, SIGNAL (timeout()), this, SLOT (timeout()));
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
-    m_running = false;
     m_timer->setInterval(50);
     m_timer->start();
     clear();
@@ -84,21 +83,17 @@ void ShadedVisual::process ()
     int pos = 0;
     int l = 0;
     int r = 0;
-    int j_l = 0, j_r = 0;
 
     for (int i = 0; i < 75; ++i)
     {
         pos += step;
 
-        j_l = abs(m_left_buffer[pos >> 8] * 8.0);
-
-        if (j_l > 15)
-            j_l = 15;
+        int j_l = abs(m_left_buffer[pos >> 8] * 8.0);
+        j_l = qMin(j_l, 15);
         l = qMax(l, j_l);
 
-        j_r = abs(m_right_buffer[pos >> 8] * 8.0);
-        if (j_r > 15)
-            j_r = 15;
+        int j_r = abs(m_right_buffer[pos >> 8] * 8.0);
+        j_r = qMin(j_r, 15);
         r = qMax(r, j_r);
     }
     m_l -= 0.5;

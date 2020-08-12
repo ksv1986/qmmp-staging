@@ -54,7 +54,7 @@ private:
 class VorbisCommentModel : public TagModel
 {
 public:
-    VorbisCommentModel(TagLib::Ogg::Opus::File *file);
+    explicit VorbisCommentModel(TagLib::Ogg::Opus::File *file);
     ~VorbisCommentModel();
     QString name() const override;
     QString value(Qmmp::MetaData key) const override;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -36,7 +36,7 @@ class PlayListBrowser : public QDialog
 {
 Q_OBJECT
 public:
-    PlayListBrowser(PlayListManager *manager, QWidget *parent = nullptr);
+    explicit PlayListBrowser(PlayListManager *manager, QWidget *parent = nullptr);
     ~PlayListBrowser();
 
 private slots:

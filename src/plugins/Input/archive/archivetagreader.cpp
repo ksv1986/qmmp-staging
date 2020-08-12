@@ -24,15 +24,13 @@
 class IODeviceStream : public TagLib::IOStream
 {
 public:
-    IODeviceStream(QIODevice *input, const QString &url)
-    {
-        m_input = input;
+    IODeviceStream(QIODevice *input, const QString &url) : m_input(input),
 #ifdef Q_OS_WIN
-        m_fileName = url.section("/", -1);
+          m_fileName(url.section("/", -1))
 #else
-        m_fileName = url.section("/", -1).toLocal8Bit();
+          m_fileName(url.section("/", -1).toLocal8Bit())
 #endif
-    }
+    {}
 
     virtual ~IODeviceStream() {}
 

@@ -45,7 +45,7 @@ class MplayerEngine : public AbstractEngine
 {
     Q_OBJECT
 public:
-    MplayerEngine(QObject *parent);
+    explicit MplayerEngine(QObject *parent);
     virtual ~MplayerEngine();
 
     // Engine API

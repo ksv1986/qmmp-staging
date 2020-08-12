@@ -31,7 +31,7 @@ class CueParser;
 class DecoderWavPack : public Decoder
 {
 public:
-    DecoderWavPack(const QString &);
+    explicit DecoderWavPack(const QString &);
     virtual ~DecoderWavPack();
 
     // Standard Decoder API

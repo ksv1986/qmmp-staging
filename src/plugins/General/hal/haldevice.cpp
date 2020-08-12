@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Copyright (C) 2006 by Kevin Ottens <ervin@kde.org>                    *
@@ -88,7 +88,7 @@ HalDevice::~HalDevice()
 {
 }
 
-QString HalDevice::udi() const
+const QString &HalDevice::udi() const
 {
     return m_udi;
 }

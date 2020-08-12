@@ -56,11 +56,6 @@ OutputWASAPI::DWASAPIChannels OutputWASAPI::m_wasapi_pos[10]  = {
 
 OutputWASAPI::OutputWASAPI() : Output()
 {
-    m_pEnumerator = nullptr;
-    m_pDevice = nullptr;
-    m_pAudioClient = nullptr;
-    m_pRenderClient = nullptr;
-    m_pSimpleAudioVolume = nullptr;
     instance = this;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_id = settings.value("WASAPI/device", "default").toString();

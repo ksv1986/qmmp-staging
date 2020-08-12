@@ -25,13 +25,8 @@
 #include <qmmp/qmmp.h>
 #include "shoutoutput.h"
 
-ShoutOutput::ShoutOutput(ShoutClient *m)
+ShoutOutput::ShoutOutput(ShoutClient *m) : m_client(m)
 {
-    m_client = m;
-    m_soxr = nullptr;
-    m_ratio = 0;
-    m_soxr_buf = nullptr;
-    m_soxr_buf_frames = 0;
     qsrand(time(nullptr));
 }
 

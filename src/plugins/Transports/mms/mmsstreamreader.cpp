@@ -27,18 +27,14 @@
 #include "mmsinputsource.h"
 #include "mmsstreamreader.h"
 
-MMSStreamReader::MMSStreamReader(const QString &url, MMSInputSource *parent) : QIODevice(parent)
+MMSStreamReader::MMSStreamReader(const QString &url, MMSInputSource *parent) : QIODevice(parent),
+    m_url(url),
+    m_parent(parent)
 {
-    m_parent = parent;
-    m_url = url;
-    m_handle = nullptr;
-    m_aborted = false;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_prebuf_size = settings.value("MMS/buffer_size",384).toInt() * 1024;
     m_buffer_size = m_prebuf_size;
     m_buffer = (char *)malloc(m_buffer_size);
-    m_ready = false;
-    m_buffer_at = 0;
     m_thread = new DownloadThread(this);
 }
 

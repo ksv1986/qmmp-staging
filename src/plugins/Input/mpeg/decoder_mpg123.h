@@ -30,7 +30,7 @@ class QIODevice;
 class DecoderMPG123 : public Decoder
 {
 public:
-    DecoderMPG123(QIODevice *i);
+    explicit DecoderMPG123(QIODevice *i);
     virtual ~DecoderMPG123();
 
     // standard decoder API
@@ -43,12 +43,12 @@ public:
 private:
     void cleanup(mpg123_handle *handle);
     void setMPG123Format(int encoding);
-    mpg123_handle *m_handle;
+    mpg123_handle *m_handle = nullptr;
     mpg123_frameinfo m_frame_info;
-    qint64 m_totalTime;
-    long m_rate;
-    int m_mpg123_encoding;
-    int m_errors;
+    qint64 m_totalTime = 0;
+    long m_rate = 0;
+    int m_mpg123_encoding = MPG123_ENC_SIGNED_16;
+    int m_errors = 0;
 };
 
 

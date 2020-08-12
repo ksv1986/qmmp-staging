@@ -118,7 +118,7 @@ private:
     QString m_token, m_session;
     QByteArray m_ua;
     QNetworkAccessManager *m_http;
-    QNetworkReply *m_getTokenReply, *m_getSessionReply, *m_checkSessionReply;
+    QNetworkReply *m_getTokenReply = nullptr, *m_getSessionReply = nullptr, *m_checkSessionReply = nullptr;
     QString m_scrobblerUrl, m_authUrl, m_name;
 };
 

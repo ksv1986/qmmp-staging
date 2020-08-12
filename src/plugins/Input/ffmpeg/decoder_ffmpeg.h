@@ -36,7 +36,7 @@ extern "C"{
 class DecoderFFmpeg : public Decoder
 {
 public:
-    DecoderFFmpeg(const QString &, QIODevice *i);
+    explicit DecoderFFmpeg(const QString &, QIODevice *i);
     virtual ~DecoderFFmpeg();
 
     // Standard Decoder API

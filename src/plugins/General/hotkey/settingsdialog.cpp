@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,6 +22,7 @@
 #include <QHeaderView>
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
+#include <algorithm>
 #include "hotkeydialog.h"
 #include "settingsdialog.h"
 
@@ -63,7 +64,6 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     settings.endGroup();
 }
 
-
 SettingsDialog::~SettingsDialog()
 {
     while (!m_hotkeys.isEmpty())
@@ -86,18 +86,11 @@ void SettingsDialog::accept()
 
 void SettingsDialog::on_tableWidget_itemDoubleClicked (QTableWidgetItem *item)
 {
-    Hotkey *key = nullptr;
-    for(Hotkey *k : m_hotkeys)
-    {
-        if (k->action == item->type())
-        {
-            key = k;
-            break;
-        }
-    }
-    if (!key)
+    auto it = std::find_if(m_hotkeys.cbegin(), m_hotkeys.cend(), [item](Hotkey *k) { return k->action == item->type(); });
+    if(it == m_hotkeys.cend())
         return;
 
+    Hotkey *key = *it;
     HotkeyDialog *dialog = new HotkeyDialog(key->key, key->mod, this);
     if (item->type() >= QTableWidgetItem::UserType &&
             dialog->exec() == QDialog::Accepted)

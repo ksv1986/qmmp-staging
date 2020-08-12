@@ -29,11 +29,8 @@
 
 #include "tagextractor.h"
 
-TagExtractor::TagExtractor(QIODevice *d)
-{
-    m_d = d;
-}
-
+TagExtractor::TagExtractor(QIODevice *d) : m_d(d)
+{}
 
 TagExtractor::~TagExtractor()
 {
@@ -100,12 +97,17 @@ const QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag()
     return m_tag;
 }
 
-ID3v2Tag::ID3v2Tag(QByteArray *array, long offset) : TagLib::ID3v2::Tag()
+ID3v2Tag::ID3v2Tag(QByteArray *array, long offset) : TagLib::ID3v2::Tag(),
+    m_offset(offset)
 {
     m_buf = new QBuffer(array);
     m_buf->open(QIODevice::ReadOnly);
-    m_offset = offset;
     read();
+}
+
+ID3v2Tag::~ID3v2Tag()
+{
+    delete m_buf;
 }
 
 void ID3v2Tag::read ()

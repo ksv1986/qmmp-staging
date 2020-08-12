@@ -31,7 +31,7 @@ class SongInfo : public TrackInfo
 {
 public:
     SongInfo();
-    SongInfo(const TrackInfo &info);
+    explicit SongInfo(const TrackInfo &info);
     SongInfo(const SongInfo &other);
 
     ~SongInfo();

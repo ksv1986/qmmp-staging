@@ -174,14 +174,14 @@ Decoder *DecoderFFmpegFactory::create(const QString &path, QIODevice *input)
 
 QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    int track = -1; //cue track
+    int cueTrack = -1; //cue track
     QString filePath = path;
 
     if(path.contains("://")) //is it cue track?
     {
         filePath.remove("ffmpeg://");
         filePath.remove(QRegExp("#\\d+$"));
-        track = path.section("#", -1).toInt();
+        cueTrack = path.section("#", -1).toInt();
         parts = TrackInfo::AllParts; //extract all metadata for single cue track
     }
 
@@ -240,7 +240,7 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
 
             avformat_close_input(&in);
             delete info;
-            return (track > 0) ? parser.createPlayList(track) : parser.createPlayList();
+            return (cueTrack > 0) ? parser.createPlayList(cueTrack) : parser.createPlayList();
         }
 
         AVDictionaryEntry *album = av_dict_get(in->metadata,"album",nullptr,0);

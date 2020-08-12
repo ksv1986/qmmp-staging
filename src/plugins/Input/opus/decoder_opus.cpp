@@ -27,13 +27,13 @@
 // ic functions for libopusfile
 static int opusread (void *src, unsigned char *buf,int size)
 {
-    DecoderOpus *d = (DecoderOpus *) src;
+    DecoderOpus *d = static_cast<DecoderOpus *>(src);
     return d->input()->read((char *) buf, size);
 }
 
 static int opusseek(void *src, opus_int64 offset, int whence)
 {
-    DecoderOpus *d = (DecoderOpus *) src;
+    DecoderOpus *d = static_cast<DecoderOpus *>(src);
     if (d->input()->isSequential())
         return -1;
     long start = 0;
@@ -57,21 +57,16 @@ static int opusseek(void *src, opus_int64 offset, int whence)
     return -1;
 }
 
-static opus_int64  opustell(void *src)
+static opus_int64 opustell(void *src)
 {
-    DecoderOpus *dogg = (DecoderOpus *) src;
-    return (long) dogg->input()->pos();
+    DecoderOpus *d = static_cast<DecoderOpus *>(src);
+    return (opus_int64)d->input()->pos();
 }
 
 // Decoder class
-DecoderOpus::DecoderOpus(const QString &url, QIODevice *i) : Decoder(i)
-{
-    m_totalTime = 0;
-    m_opusfile = nullptr;
-    m_chan = 0;
-    m_bitrate = 0;
-    m_url = url;
-}
+DecoderOpus::DecoderOpus(const QString &url, QIODevice *i) : Decoder(i),
+    m_url(url)
+{}
 
 DecoderOpus::~DecoderOpus()
 {

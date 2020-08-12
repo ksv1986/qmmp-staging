@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,7 +38,7 @@ class PlayListBrowser : public QWidget
 {
 Q_OBJECT
 public:
-    PlayListBrowser(PlayListManager *manager, QWidget *parent = nullptr);
+    explicit PlayListBrowser(PlayListManager *manager, QWidget *parent = nullptr);
     ~PlayListBrowser();
 
 private slots:
@@ -52,8 +52,8 @@ private:
     QLineEdit *m_lineEdit;
     QListView *m_listView;
     PlayListManager *m_pl_manager;
-    QStandardItemModel* m_listModel;
-    QSortFilterProxyModel* m_proxyModel;
+    QStandardItemModel *m_listModel;
+    QSortFilterProxyModel *m_proxyModel;
 };
 
 #endif // PLAYLISTBROWSER_H

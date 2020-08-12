@@ -50,7 +50,7 @@ private:
     QAudioOutput *m_output = nullptr;
     OutputControl *m_control = nullptr;
     QIODevice *m_buffer;
-    qint64 m_bytes_per_second;
+    qint64 m_bytes_per_second = 0;
 };
 
 class OutputControl : public QObject
@@ -58,7 +58,7 @@ class OutputControl : public QObject
     Q_OBJECT
 
 public:
-    OutputControl(QAudioOutput *o);
+    explicit OutputControl(QAudioOutput *o);
 
 public slots:
     void suspend();

@@ -30,12 +30,12 @@
 
 OpusMetaDataModel::OpusMetaDataModel(const QString &path, bool readOnly)
 #ifdef HAS_PICTURE_LIST
-    : MetaDataModel(readOnly, MetaDataModel::IsCoverEditable)
+    : MetaDataModel(readOnly, MetaDataModel::IsCoverEditable),
 #else
-    : MetaDataModel(readOnly)
+    : MetaDataModel(readOnly),
 #endif
+      m_path(path)
 {
-    m_path = path;
     m_stream = new TagLib::FileStream(QStringToFileName(path), readOnly);
     m_file = new TagLib::Ogg::Opus::File(m_stream);
     m_tags << new VorbisCommentModel(m_file);

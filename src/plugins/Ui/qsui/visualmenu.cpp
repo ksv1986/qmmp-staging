@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2012 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QAction>
-
 #include <qmmp/visual.h>
 #include <qmmp/visualfactory.h>
 #include "visualmenu.h"
@@ -45,12 +44,11 @@ void VisualMenu::updateActions()
     }
 }
 
-VisualAction::VisualAction(VisualFactory *factory, QWidget *parent) :
-        QAction(factory->properties().name, parent)
+VisualAction::VisualAction(VisualFactory *factory, QWidget *parent) : QAction(factory->properties().name, parent),
+    m_factory(factory)
 {
     setCheckable (true);
     setChecked (Visual::isEnabled(factory));
-    m_factory = factory;
     connect(this, SIGNAL(triggered(bool)), SLOT(select(bool)));
 }
 

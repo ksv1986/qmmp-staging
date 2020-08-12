@@ -16,16 +16,14 @@
 // ic functions for OggVorbis
 static size_t oggread (void *buf, size_t size, size_t nmemb, void *src)
 {
-    if (! src) return 0;
-
-    DecoderVorbis *dogg = (DecoderVorbis *) src;
+    DecoderVorbis *dogg = static_cast<DecoderVorbis *>(src);
     int len = dogg->input()->read((char *) buf, (size * nmemb));
     return len / size;
 }
 
 static int oggseek(void *src, ogg_int64_t offset, int whence)
 {
-    DecoderVorbis *dogg = (DecoderVorbis *) src;
+    DecoderVorbis *dogg = static_cast<DecoderVorbis *>(src);
 
     if ( dogg->input()->isSequential ())
         return -1;
@@ -60,7 +58,7 @@ static int oggclose(void *)
 
 static long oggtell(void *src)
 {
-    DecoderVorbis *dogg = (DecoderVorbis *) src;
+    DecoderVorbis *dogg = static_cast<DecoderVorbis *>(src);
     long t = dogg->input()->pos();
     return t;
 }
@@ -68,14 +66,8 @@ static long oggtell(void *src)
 
 // Decoder class
 
-DecoderVorbis::DecoderVorbis(QIODevice *i)
-        : Decoder(i)
+DecoderVorbis::DecoderVorbis(QIODevice *i) : Decoder(i)
 {
-    m_inited = false;
-    m_totalTime = 0;
-    m_last_section = -1;
-    m_bitrate = 0;
-    len = 0;
     memset(&oggfile, 0, sizeof(OggVorbis_File));
 }
 
@@ -149,7 +141,6 @@ int DecoderVorbis::bitrate() const
 {
     return m_bitrate;
 }
-
 
 void DecoderVorbis::deinit()
 {

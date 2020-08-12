@@ -95,11 +95,11 @@ CueFile::CueFile(const QString &path) : CueParser()
         }
     }
 
-    for(const QString &path : m_dataFiles.values())
+    for(const QString &p : m_dataFiles.values())
     {
-        if(!QFile::exists(path))
+        if(!QFile::exists(p))
         {
-            qDebug("CueFile: unable to find file: %s", qPrintable(path));
+            qDebug("CueFile: unable to find file: %s", qPrintable(p));
             clear();
             return;
         }

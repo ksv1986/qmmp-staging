@@ -37,7 +37,7 @@
 class FileSystemFilterProxyModel : public QSortFilterProxyModel
 {
 public:
-    FileSystemFilterProxyModel(QObject *parent) : QSortFilterProxyModel(parent) {}
+    explicit FileSystemFilterProxyModel(QObject *parent) : QSortFilterProxyModel(parent) {}
 
 protected:
     virtual bool filterAcceptsRow(

@@ -24,6 +24,7 @@
 #include <QCloseEvent>
 #include <QFile>
 #include <QScreen>
+#include <algorithm>
 #include <qmmpui/filedialog.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmp/soundcore.h>
@@ -146,19 +147,15 @@ void EqWidget::setMimimalMode(bool b)
 void EqWidget::readSettings()
 {
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    QScreen *screen = QGuiApplication::primaryScreen();
-    QRect availableGeometry = screen->availableGeometry();
+    QScreen *primaryScreen = QGuiApplication::primaryScreen();
+    QRect availableGeometry = primaryScreen->availableGeometry();
     QPoint pos = settings.value("Skinned/eq_pos", QPoint(100, 216)).toPoint();
     int r = m_skin->ratio();
     //TODO QGuiApplication::screenAt
-    for(const QScreen *screen : QGuiApplication::screens())
-    {
-        if(screen->availableGeometry().contains(pos))
-        {
-           availableGeometry = screen->availableGeometry();
-           break;
-        }
-    }
+    const QList<QScreen *> screens = QGuiApplication::screens();
+    auto it = std::find_if(screens.cbegin(), screens.cend(), [pos](QScreen *screen){ return screen->availableGeometry().contains(pos); });
+    if(it != screens.cend())
+        availableGeometry = (*it)->availableGeometry();
     pos.setX(qBound(availableGeometry.left(), pos.x(), availableGeometry.right() - r*275));
     pos.setY(qBound(availableGeometry.top(), pos.y(), availableGeometry.bottom() - r*116));
     move(pos); //geometry
@@ -396,19 +393,14 @@ void EqWidget::loadPreset(const QString &name)
 
 EQPreset *EqWidget::findPreset(const QString &name)
 {
-    for(EQPreset *preset : qAsConst(m_autoPresets))
-    {
-        if (preset->text() == name)
-            return preset;
-    }
-    return nullptr;
+    auto it = std::find_if(m_autoPresets.cbegin(), m_autoPresets.cend(), [name](EQPreset *preset){ return preset->text() == name; });
+    return it == m_autoPresets.cend() ? nullptr : *it;
 }
 
 void EqWidget::importWinampEQF()
 {
     char header[31];
-    char name[257];
-    char bands[11];
+
     QString path = FileDialog::getOpenFileName(this, tr("Import Preset"),
                    QDir::homePath(),
                    QString("Winamp EQF (*.q1)"));
@@ -418,6 +410,8 @@ void EqWidget::importWinampEQF()
     file.read (header, 31);
     if (QString::fromLatin1(header).contains("Winamp EQ library file v1.1"))
     {
+        char name[257];
+        char bands[11];
         while (file.read (name, 257))
         {
             EQPreset* preset = new EQPreset;

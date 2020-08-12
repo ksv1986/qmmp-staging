@@ -35,7 +35,7 @@
 class CueFile : public CueParser
 {
 public:
-    CueFile(const QString &path);
+    explicit CueFile(const QString &path);
     ~CueFile();
 
     QString dataFilePath(int track) const;

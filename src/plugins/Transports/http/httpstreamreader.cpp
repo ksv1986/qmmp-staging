@@ -37,7 +37,7 @@
 static size_t curl_write_data(void *data, size_t size, size_t nmemb,
                               void *pointer)
 {
-    HttpStreamReader *dl = (HttpStreamReader *)pointer;
+    HttpStreamReader *dl = static_cast<HttpStreamReader *>(pointer);
     dl->mutex()->lock();
 
     if(dl->stream()->buf_fill > MAX_BUFFER_SIZE)
@@ -77,7 +77,7 @@ static size_t curl_write_data(void *data, size_t size, size_t nmemb,
 static size_t curl_header(void *data, size_t size, size_t nmemb,
                           void *pointer)
 {
-    HttpStreamReader *dl = (HttpStreamReader *)pointer;
+    HttpStreamReader *dl = static_cast<HttpStreamReader *>(pointer);
     dl->mutex()->lock ();
     size_t data_size = size * nmemb;
     if (data_size < 3)
@@ -126,7 +126,7 @@ int curl_progress(void *pointer, double dltotal, double dlnow, double ultotal, d
     Q_UNUSED(dlnow);
     Q_UNUSED(ultotal);
     Q_UNUSED(ulnow);
-    HttpStreamReader *dl = (HttpStreamReader *)pointer;
+    HttpStreamReader *dl = static_cast<HttpStreamReader *>(pointer);
     dl->mutex()->lock ();
     bool aborted = dl->stream()->aborted;
     dl->mutex()->unlock();
@@ -135,21 +135,11 @@ int curl_progress(void *pointer, double dltotal, double dlnow, double ultotal, d
     return 0;
 }
 
-HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) : QIODevice(parent)
+HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) : QIODevice(parent),
+    m_url(url),
+    m_parent(parent)
 {
-    m_parent = parent;
-    m_url = url;
     curl_global_init(CURL_GLOBAL_ALL);
-    m_stream.buf_fill = 0;
-    m_stream.buf_size = 0;
-    m_stream.buf = nullptr;
-    m_stream.icy_meta_data = false;
-    m_stream.aborted = true;
-    m_stream.icy_metaint = 0;
-    m_handle = nullptr;
-    m_metacount = 0;
-    m_meta_sent = false;
-    m_ready = false;
     m_thread = new DownloadThread(this);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("HTTP");
@@ -162,8 +152,6 @@ HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) 
     if (!m_codec)
         m_codec = QTextCodec::codecForName ("UTF-8");
 #ifdef WITH_ENCA
-    m_analyser = nullptr;
-    m_prevCodec = nullptr;
     if(settings.value("use_enca", false).toBool())
         m_analyser = enca_analyser_alloc(settings.value("enca_lang").toByteArray ().constData());
     if(m_analyser)

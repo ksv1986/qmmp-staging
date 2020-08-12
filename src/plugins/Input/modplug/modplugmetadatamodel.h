@@ -29,14 +29,14 @@ class ModPlugMetaDataModel : public MetaDataModel
 {
     Q_DECLARE_TR_FUNCTIONS(ModPlugMetaDataModel)
 public:
-    ModPlugMetaDataModel(const QString &path);
+    explicit ModPlugMetaDataModel(const QString &path);
     ~ModPlugMetaDataModel();
     QList<MetaDataItem> extraProperties() const override;
     QList<MetaDataItem> descriptions() const override;
     static QString getTypeName(quint32 type);
 
 private:
-    CSoundFile* m_soundFile;
+    CSoundFile* m_soundFile = nullptr;
     QByteArray m_buffer;
     QString m_path;
 };

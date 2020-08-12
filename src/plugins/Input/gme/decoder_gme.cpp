@@ -23,11 +23,9 @@
 #include "decoder_gme.h"
 
 // Decoder class
-DecoderGme::DecoderGme(const QString &path) : Decoder()
-{
-    m_path = path;
-    m_emu = nullptr;
-}
+DecoderGme::DecoderGme(const QString &path) : Decoder(),
+    m_path(path)
+{}
 
 DecoderGme::~DecoderGme()
 {}

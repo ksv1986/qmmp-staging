@@ -29,7 +29,7 @@
 #include <unistd.h>
 
 
-OutputQtMultimedia::OutputQtMultimedia() : Output(), m_buffer(nullptr), m_bytes_per_second(0)
+OutputQtMultimedia::OutputQtMultimedia() : Output(), m_buffer(nullptr)
 {
 }
 
@@ -154,10 +154,8 @@ void OutputQtMultimedia::resume()
     QMetaObject::invokeMethod(m_control, "resume", Qt::QueuedConnection);
 }
 
-OutputControl::OutputControl(QAudioOutput *o)
-{
-    m_output = o;
-}
+OutputControl::OutputControl(QAudioOutput *o) : m_output(o)
+{}
 
 void OutputControl::suspend()
 {

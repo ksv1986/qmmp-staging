@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,7 +31,8 @@
 #include "actionmanager.h"
 #include "playlistbrowser.h"
 
-PlayListBrowser::PlayListBrowser(PlayListManager *manager, QWidget *parent) : QWidget(parent)
+PlayListBrowser::PlayListBrowser(PlayListManager *manager, QWidget *parent) : QWidget(parent),
+    m_pl_manager(manager)
 {
     m_lineEdit = new QLineEdit(this);
     m_lineEdit->installEventFilter(this);
@@ -47,7 +48,6 @@ PlayListBrowser::PlayListBrowser(PlayListManager *manager, QWidget *parent) : QW
     layout->addWidget(m_listView);
     setLayout(layout);
 
-    m_pl_manager = manager;
     connect(m_pl_manager, SIGNAL(playListsChanged()), SLOT(updateList()));
     //actions
     m_listView->setContextMenuPolicy(Qt::ActionsContextMenu);

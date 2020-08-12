@@ -24,7 +24,7 @@
 #include <QGuiApplication>
 #include <QWindow>
 #include <qmmp/soundcore.h>
-
+#include <algorithm>
 #include "qmmptrayicon.h"
 #ifdef QMMP_WS_X11
 #include "statusiconpopupwidget.h"
@@ -61,7 +61,7 @@ bool QmmpTrayIcon::event(QEvent *e)
 {
     if (e->type() == QEvent::Wheel )
     {
-        wheelEvent((QWheelEvent *) e);
+        wheelEvent(dynamic_cast<QWheelEvent *>(e));
         e->accept();
         return true;
     }
@@ -78,12 +78,8 @@ bool QmmpTrayIcon::hasToolTipEvent()
 {
     //checking for XEmbed system tray implementation
     //only this implementation is able to send QHelpEvent
-    for(const QWindow *w : qApp->allWindows())
-    {
-        if(w->objectName() == "QSystemTrayIconSysWindow")
-            return true;
-    }
-    return false;
+    const QWindowList windowList = qApp->allWindows();
+    return std::any_of(windowList.cbegin(), windowList.cend(), [](QWindow *w){ return w->objectName() == "QSystemTrayIconSysWindow"; });
 }
 
 void QmmpTrayIcon::wheelEvent(QWheelEvent *e)

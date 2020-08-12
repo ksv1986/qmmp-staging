@@ -142,7 +142,7 @@ bool TrackChange::executeCommand(const TrackInfo &info, const QString &format)
 #else
         it.value() = it.value().replace("'", "'\\''");
 #endif
-        it++;
+        ++it;
     }
     tmp.setValues(metaData);
     MetaDataFormatter formatter(format);

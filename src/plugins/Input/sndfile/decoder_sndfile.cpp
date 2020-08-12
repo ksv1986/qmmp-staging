@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -29,7 +29,7 @@
 
 sf_count_t sndfile_sf_vio_get_filelen(void *data)
 {
-    return ((QIODevice*) data)->size();
+    return static_cast<QIODevice*>(data)->size();
 }
 
 sf_count_t sndfile_sf_vio_seek(sf_count_t offset, int whence, void *data)
@@ -59,7 +59,7 @@ sf_count_t sndfile_sf_vio_seek(sf_count_t offset, int whence, void *data)
 
 sf_count_t sndfile_sf_vio_read(void *ptr, sf_count_t count, void *data)
 {
-    return ((QIODevice*) data)->read((char *)ptr, count);
+    return static_cast<QIODevice*>(data)->read((char *)ptr, count);
 }
 
 sf_count_t sndfile_sf_vio_write(const void *, sf_count_t, void *)
@@ -69,19 +69,13 @@ sf_count_t sndfile_sf_vio_write(const void *, sf_count_t, void *)
 
 sf_count_t sndfile_sf_vio_tell(void *data)
 {
-    return ((QIODevice*) data)->pos();
+   return static_cast<QIODevice*>(data)->pos();
 }
 
 // Decoder class
 
 DecoderSndFile::DecoderSndFile(QIODevice *input) : Decoder(input)
-{
-    //m_path = input;
-    m_bitrate = 0;
-    m_totalTime = 0;
-    m_sndfile = nullptr;
-    m_freq = 0;
-}
+{}
 
 DecoderSndFile::~DecoderSndFile()
 {

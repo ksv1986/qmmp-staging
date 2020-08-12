@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -111,8 +111,8 @@ private:
     QmmpUiSettings *m_ui_settings;
     QMap<QString, QVariant> m_props;
     QDBusObjectPath m_trackID;
-    PlayListTrack *m_prev_track;
-    qint64 m_previous_pos;
+    PlayListTrack *m_prev_track = nullptr;
+    qint64 m_previous_pos = 0;
 
 };
 

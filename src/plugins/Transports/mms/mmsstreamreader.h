@@ -75,12 +75,12 @@ private:
 
     QMutex m_mutex;
     QString m_url;
-    mmsx_t *m_handle;
-    bool m_aborted;
+    mmsx_t *m_handle = nullptr;
+    bool m_aborted = false;
     qint64 m_buffer_size, m_prebuf_size;
     char *m_buffer;
-    qint64 m_buffer_at;
-    bool m_ready;
+    qint64 m_buffer_at = 0;
+    bool m_ready = false;
     DownloadThread *m_thread;
     MMSInputSource *m_parent;
 };
@@ -89,7 +89,7 @@ class DownloadThread : public QThread
 {
     Q_OBJECT
 public:
-    DownloadThread(MMSStreamReader *parent);
+    explicit DownloadThread(MMSStreamReader *parent);
     virtual ~DownloadThread ();
     static void usleep(unsigned long usecs)
         {

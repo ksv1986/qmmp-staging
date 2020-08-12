@@ -101,7 +101,7 @@ QString LyricsProvider::getUrl(const TrackInfo &track) const
 
         url.replace(it.key(), it.value());
 
-        it++;
+        ++it;
     }
 
     return url;
@@ -139,7 +139,7 @@ QString LyricsProvider::format(const QByteArray &data, const TrackInfo &track) c
             {
                 item.begin.replace(it.key(), it.value());
                 item.url.replace(it.key(), it.value());
-                it++;
+                ++it;
             }
         }
 
@@ -197,7 +197,7 @@ QString LyricsProvider::fixCase(const QString &title) const
         else
             out.append(*it);
 
-        it++;
+        ++it;
     }
 
     return out;

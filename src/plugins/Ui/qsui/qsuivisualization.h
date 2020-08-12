@@ -36,7 +36,7 @@ class QSUIVisualization : public Visual
 {
     Q_OBJECT
 public:
-    QSUIVisualization(QWidget *parent = nullptr);
+    explicit QSUIVisualization(QWidget *parent = nullptr);
     virtual ~QSUIVisualization();
 
     void setCover(const QPixmap &pixmap);
@@ -140,8 +140,8 @@ private:
     QColor m_peakColor;
     QSize m_cell_size;
     QBrush m_brush;
-    double m_peaks_falloff;
-    double m_analyzer_falloff;
+    double m_peaks_falloff = 0;
+    double m_analyzer_falloff = 0;
     bool m_show_peaks = false;
     double *m_intern_vis_data = nullptr;
     double *m_peaks = nullptr;

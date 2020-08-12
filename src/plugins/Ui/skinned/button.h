@@ -45,8 +45,7 @@ private:
     //bool m_cursorin;
     bool m_pressed = false;
     void setON(bool);
-    uint name_normal, name_pressed;
-    uint name_cursor;
+    uint m_name_normal, m_name_pressed, m_name_cursor;
 
 protected:
     void mousePressEvent(QMouseEvent*) override;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -42,14 +42,14 @@ class HTTPInputSource;
  */
 struct HttpStreamData
 {
-    char *buf;
-    size_t buf_fill;
-    size_t buf_size;
+    char *buf = nullptr;
+    size_t buf_fill = 0;
+    size_t buf_size = 0;
     QString content_type;
-    bool aborted;
+    bool aborted = true;
     QHash <QString, QByteArray> header;
-    bool icy_meta_data;
-    size_t icy_metaint;
+    bool icy_meta_data = false;
+    size_t icy_metaint = 0;
 };
 
 /*! @internal
@@ -97,22 +97,22 @@ private:
     void readICYMetaData();
     void parseICYMetaData(char *data, qint64 size);
     void sendStreamInfo(QTextCodec *codec);
-    CURL *m_handle;
+    CURL *m_handle = nullptr;
     QMutex m_mutex;
     HttpStreamData m_stream;
     QString m_url;
     QString m_userAgent;
-    size_t m_metacount;
+    size_t m_metacount = 0;
     QString m_title;
-    bool m_ready;
-    bool m_meta_sent;
+    bool m_ready = false;
+    bool m_meta_sent = false;
     size_t m_prebuffer_size;
     QTextCodec *m_codec;
     DownloadThread *m_thread;
     HTTPInputSource *m_parent;
 #ifdef WITH_ENCA
-    EncaAnalyser m_analyser;
-    QTextCodec *m_prevCodec;
+    EncaAnalyser m_analyser = nullptr;
+    QTextCodec *m_prevCodec = nullptr;
 #endif
 };
 
@@ -120,7 +120,7 @@ class DownloadThread : public QThread
 {
     Q_OBJECT
 public:
-    DownloadThread(HttpStreamReader *parent);
+    explicit DownloadThread(HttpStreamReader *parent);
     virtual ~DownloadThread ();
 
 private:

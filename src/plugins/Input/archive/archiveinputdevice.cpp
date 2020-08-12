@@ -23,14 +23,11 @@
 
 ArchiveInputDevice::ArchiveInputDevice(const QString &url, QObject *parent)  : QIODevice(parent)
 {
-    m_archive = nullptr;
-    m_entry = nullptr;
     QString filePath = url.section("#", -1);
     QString archivePath = url;
     archivePath.remove(QRegExp("^.+://"));
     archivePath.remove(QRegExp("#.+$"));
 
-    m_close_libarchive = true;
     m_archive = archive_read_new();
     archive_read_support_filter_all(m_archive);
     archive_read_support_format_all(m_archive);

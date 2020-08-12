@@ -47,7 +47,7 @@ class ListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    ListWidget(PlayListModel *model, QWidget *parent = nullptr);
+    explicit ListWidget(PlayListModel *model, QWidget *parent = nullptr);
 
     ~ListWidget();
 
@@ -120,24 +120,22 @@ private:
     void restoreFirstVisible();
     void updateScrollBars();
 
-    bool m_update;
-    int m_pressed_index;
-    QMenu *m_menu;
+    bool m_update = false;
+    int m_pressed_index, m_drop_index, m_anchor_index;
+    QMenu *m_menu = nullptr;
     PlayListModel *m_model;
-    int m_row_count, m_first, m_count; //visible rows, first visible index, total item count
-    PlayListItem *m_firstItem; //first visible item
-    int m_anchor_index;
+    int m_row_count = 0, m_first = 0, m_count = 0; //visible rows, first visible index, total item count
+    PlayListItem *m_firstItem = nullptr; //first visible item
     /*!
      * Scroll direction that is performing in current moment.
      */
-    ScrollDirection m_scroll_direction;
-    int m_prev_y;
-    bool m_select_on_release;
+    ScrollDirection m_scroll_direction = NONE;
+    int m_prev_y = 0;
+    bool m_select_on_release = false;
     bool m_show_protocol;
-    int m_drop_index;
     QList<ListWidgetRow *> m_rows;
     QmmpUiSettings *m_ui_settings;
-    PlayListPopup::PopupWidget *m_popupWidget;
+    PlayListPopup::PopupWidget *m_popupWidget = nullptr;
     QTimer *m_timer;
     QScrollBar *m_scrollBar;
     ListWidgetDrawer m_drawer;
@@ -145,7 +143,7 @@ private:
     QScrollBar *m_hslider;
 
     QString m_filterString;
-    bool m_filterMode;
+    bool m_filterMode = false;
     QList<PlayListItem *> m_filteredItems;
 
 };

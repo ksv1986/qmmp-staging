@@ -146,11 +146,11 @@ void MPEGMetaDataModel::removeCover()
 }
 
 MpegFileTagModel::MpegFileTagModel(bool using_rusxmms, TagLib::MPEG::File *file, TagLib::MPEG::File::TagTypes tagType)
-        : TagModel()
+        : TagModel(),
+          m_using_rusxmms(using_rusxmms),
+          m_file(file),
+          m_tagType(tagType)
 {
-    m_tagType = tagType;
-    m_file = file;
-    m_using_rusxmms = using_rusxmms;
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("MPEG");
     if (m_tagType == TagLib::MPEG::File::ID3v1)

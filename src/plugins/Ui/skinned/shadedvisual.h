@@ -35,7 +35,7 @@ class ShadedVisual : public Visual
 {
     Q_OBJECT
 public:
-    ShadedVisual(QWidget *parent = nullptr);
+    explicit ShadedVisual(QWidget *parent = nullptr);
 
     ~ShadedVisual();
 
@@ -62,7 +62,7 @@ private:
     float m_right_buffer[QMMP_VISUAL_NODE_SIZE];
     double m_l, m_r;
     int m_ratio;
-    bool m_running;
+    bool m_running = false;
 
 };
 

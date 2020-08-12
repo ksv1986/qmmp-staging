@@ -32,6 +32,7 @@
 #include <QIcon>
 #include <QHash>
 #include <QActionGroup>
+#include <algorithm>
 #include <qmmp/qmmp.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/playlistheadermodel.h>
@@ -144,7 +145,7 @@ void PlayListHeader::readSettings()
         {
             m_model->setData(i, SIZE, INITAL_SIZE);
             m_model->setData(i, ALIGNMENT, (layoutDirection() == Qt::RightToLeft) ?
-                                 ListWidgetRow::ALIGN_LEFT : ListWidgetRow::ALIGN_LEFT);
+                                 ListWidgetRow::ALIGN_RIGHT : ListWidgetRow::ALIGN_LEFT);
 
             if(i < sizes.count())
                 m_model->setData(i, SIZE, sizes.at(i).toInt());
@@ -286,11 +287,8 @@ int PlayListHeader::maxScrollValue() const
     if(m_model->count() == 1)
         return 0;
 
-    int row_width = 0;
-    for(int size : sizes())
-    {
-        row_width += size;
-    }
+    const QList<int> sizeList = sizes();
+    int row_width = std::accumulate(sizeList.cbegin(), sizeList.cend(), 0);
     return qMax(0, row_width - width() + 10);
 }
 

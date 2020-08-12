@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2019 by Ilya Kotov                                      *
+ *   Copyright (C) 2019-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,7 +31,7 @@ class TrackMetaData : public TrackInfo
 {
 public:
     TrackMetaData();
-    TrackMetaData(const TrackInfo &info);
+    explicit TrackMetaData(const TrackInfo &info);
     TrackMetaData(const TrackMetaData &other);
 
     ~TrackMetaData();

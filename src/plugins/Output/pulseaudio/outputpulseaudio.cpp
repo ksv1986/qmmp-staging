@@ -30,21 +30,19 @@ VolumePulseAudio *OutputPulseAudio::volumeControl = nullptr;
 
 OutputPulseAudio::OutputPulseAudio(): Output()
 {
-    m_loop = nullptr;
-    m_ctx = nullptr;
-    m_stream = nullptr;
-
-    m_pa_channels[Qmmp::CHAN_NULL] = PA_CHANNEL_POSITION_INVALID;
-    m_pa_channels[Qmmp::CHAN_FRONT_CENTER] = PA_CHANNEL_POSITION_MONO;
-    m_pa_channels[Qmmp::CHAN_FRONT_LEFT] = PA_CHANNEL_POSITION_FRONT_LEFT;
-    m_pa_channels[Qmmp::CHAN_FRONT_RIGHT] = PA_CHANNEL_POSITION_FRONT_RIGHT;
-    m_pa_channels[Qmmp::CHAN_REAR_LEFT] = PA_CHANNEL_POSITION_REAR_LEFT;
-    m_pa_channels[Qmmp::CHAN_REAR_RIGHT] = PA_CHANNEL_POSITION_REAR_RIGHT;
-    m_pa_channels[Qmmp::CHAN_FRONT_CENTER] = PA_CHANNEL_POSITION_FRONT_CENTER;
-    m_pa_channels[Qmmp::CHAN_LFE] = PA_CHANNEL_POSITION_LFE;
-    m_pa_channels[Qmmp::CHAN_SIDE_LEFT] = PA_CHANNEL_POSITION_SIDE_LEFT;
-    m_pa_channels[Qmmp::CHAN_SIDE_RIGHT] = PA_CHANNEL_POSITION_SIDE_RIGHT;
-    m_pa_channels[Qmmp::CHAN_REAR_CENTER] = PA_CHANNEL_POSITION_REAR_CENTER;
+    m_pa_channels = {
+        { Qmmp::CHAN_NULL, PA_CHANNEL_POSITION_INVALID  },
+        { Qmmp::CHAN_FRONT_CENTER, PA_CHANNEL_POSITION_MONO  },
+        { Qmmp::CHAN_FRONT_LEFT, PA_CHANNEL_POSITION_FRONT_LEFT  },
+        { Qmmp::CHAN_FRONT_RIGHT, PA_CHANNEL_POSITION_FRONT_RIGHT  },
+        { Qmmp::CHAN_REAR_LEFT, PA_CHANNEL_POSITION_REAR_LEFT  },
+        { Qmmp::CHAN_REAR_RIGHT, PA_CHANNEL_POSITION_REAR_RIGHT  },
+        { Qmmp::CHAN_FRONT_CENTER, PA_CHANNEL_POSITION_FRONT_CENTER  },
+        { Qmmp::CHAN_LFE, PA_CHANNEL_POSITION_LFE  },
+        { Qmmp::CHAN_SIDE_LEFT, PA_CHANNEL_POSITION_SIDE_LEFT  },
+        { Qmmp::CHAN_SIDE_RIGHT, PA_CHANNEL_POSITION_SIDE_RIGHT  },
+        { Qmmp::CHAN_REAR_CENTER, PA_CHANNEL_POSITION_REAR_CENTER  }
+    };
 
     instance = this;
 }
@@ -323,19 +321,19 @@ void OutputPulseAudio::info_cb(pa_context *ctx, const pa_sink_input_info *info, 
         volumeControl->updateVolume(info->volume, info->mute > 0);
 
     if(data)
-        *(bool *) data = true;
+        *static_cast<bool *>(data) = true;
 }
 
 void OutputPulseAudio::context_success_cb(pa_context *, int success, void *data)
 {
     if(data)
-        *(bool *)data = success != 0;
+        *static_cast<bool *>(data) = success != 0;
 }
 
 void OutputPulseAudio::stream_success_cb(pa_stream *, int success, void *data)
 {
     if(data)
-        *(bool *)data = success != 0;
+        *static_cast<bool *>(data) = success != 0;
 }
 
 //volume control

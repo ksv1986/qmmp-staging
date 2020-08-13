@@ -959,7 +959,7 @@ void PlayListModel::onTaskFinished()
             || m_task->type() == PlayListTask::REFRESH)
     {
         PlayListTrack *prev_current_track = m_current_track;
-        bool prev_count = m_container->count();
+        int prev_count = m_container->count();
 
         m_container->replaceTracks(m_task->takeResults(&m_current_track));
 

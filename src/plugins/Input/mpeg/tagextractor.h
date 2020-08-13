@@ -56,6 +56,7 @@ class ID3v2Tag : public TagLib::ID3v2::Tag
 {
 public:
     ID3v2Tag(QByteArray *array, long offset);
+    ~ID3v2Tag();
 
 protected:
     void read ();

@@ -108,6 +108,11 @@ ID3v2Tag::ID3v2Tag(QByteArray *array, long offset) : TagLib::ID3v2::Tag()
     read();
 }
 
+ID3v2Tag::~ID3v2Tag()
+{
+    delete m_buf;
+}
+
 void ID3v2Tag::read ()
 {
     m_buf->seek(m_offset);

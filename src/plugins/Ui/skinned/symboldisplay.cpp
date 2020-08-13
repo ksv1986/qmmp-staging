@@ -22,13 +22,10 @@
 #include "skin.h"
 #include "symboldisplay.h"
 
-SymbolDisplay::SymbolDisplay (QWidget *parent, int digits)
-        : PixmapWidget (parent)
+SymbolDisplay::SymbolDisplay (QWidget *parent, int digits) : PixmapWidget (parent),
+    m_digits(digits)
 {
-    m_alignment = Qt::AlignRight;
     m_skin = Skin::instance();
-    m_digits  = digits;
-    m_max = 0;
     connect (m_skin, SIGNAL (skinChanged()), this, SLOT (draw()));
     draw();
     for (int i = 0; i < m_digits; ++i)

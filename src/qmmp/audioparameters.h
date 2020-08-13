@@ -132,11 +132,11 @@ public:
     static Qmmp::AudioFormat findAudioFormat(int bits, ByteOrder byteOrder = LittleEndian);
 
 private:
-    quint32 m_srate;
+    quint32 m_srate = 0;
     ChannelMap m_chan_map;
-    Qmmp::AudioFormat m_format;
-    int m_sz;
-    int m_precision;
+    Qmmp::AudioFormat m_format = Qmmp::PCM_S16LE;
+    int m_sz = 2;
+    int m_precision = 16;
 };
 
 #endif // AUDIOPARAMETERS_H

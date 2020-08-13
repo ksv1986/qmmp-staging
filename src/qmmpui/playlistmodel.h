@@ -48,14 +48,6 @@ class PlayListTask;
 struct SimpleSelection
 {
     /*!
-     * Constructs an empty selection model.
-     */
-    SimpleSelection()
-    {
-        m_bottom = -1;
-        m_top = 1;
-    }
-    /*!
      * Returns \p true if this selection is valid; otherwise returns returns \p false.
      */
     inline bool isValid()const
@@ -76,8 +68,8 @@ struct SimpleSelection
     {
         return m_bottom - m_top + 1;
     }
-    int m_bottom;               /*!< Bottom of the selection */
-    int m_top;                  /*!< Top of the selection   */
+    int m_bottom = -1;              /*!< Bottom of the selection */
+    int m_top = 1;                  /*!< Top of the selection   */
     QList<int> m_selected_indexes;  /*!< Selected items numbers */
 };
 /*! @brief The PlayListModel class provides a data model for the playlist.
@@ -109,7 +101,7 @@ public:
      * @param name Playlist name.
      * @param parent QObject parent
      */
-    PlayListModel(const QString &name, QObject *parent = nullptr);
+    explicit PlayListModel(const QString &name, QObject *parent = nullptr);
     /*!
      * Object destructor.
      */
@@ -594,13 +586,13 @@ private slots:
     void onTaskFinished();
 
 private:
-    PlayListTrack* m_current_track;
-    PlayListTrack* m_stop_track;
-    int m_current;
+    PlayListTrack* m_current_track = nullptr;
+    PlayListTrack* m_stop_track = nullptr;
+    int m_current = 0;
     SimpleSelection m_selection;  /*!< This flyweight object represents current selection. */
     QQueue <PlayListTrack*> m_queued_songs; /*!< Songs in play queue. */
     PlayState* m_play_state; /*!< Current playing state (Normal or Shuffle) */
-    qint64 m_total_duration;
+    qint64 m_total_duration = 0;
     FileLoader *m_loader;
     QString m_name;
     PlayListContainer *m_container;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -44,11 +44,7 @@ static inline void stereo_from_multichannel(float *l,
 }
 
 VisualBuffer::VisualBuffer()
-{
-    m_take_index = 0;
-    m_add_index = 0;
-    m_elapsed = 0;
-}
+{}
 
 void VisualBuffer::add(float *pcm, int samples, int channels, qint64 ts, qint64 delay)
 {

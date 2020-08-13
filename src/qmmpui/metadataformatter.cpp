@@ -609,59 +609,59 @@ QList<MetaDataFormatter::Node> MetaDataFormatter::compile(const QString &expr)
     {
         if((*i) == QChar('%'))
         {
-            i++;
+            ++i;
             if(i == expr.constEnd())
                 continue;
 
             if(parseDir(&nodes, &i, expr.constEnd()))
             {
-                i++;
+                ++i;
                 continue;
             }
 
             if(parseField(&nodes, &i, expr.constEnd()))
             {
-                i++;
+                ++i;
                 continue;
             }
 
             if(parseProperty(&nodes, &i, expr.constEnd()))
             {
-                i++;
+                ++i;
                 continue;
             }
 
             if(parseIf(&nodes, &i, expr.constEnd()))
             {
-                i++;
+                ++i;
                 continue;
             }
             continue;
         }
         else if((*i) == QChar('&'))
         {
-            i++;
+            ++i;
             Node node;
             node.command = Node::AND_OPERATOR;
             nodes.append(node);
         }
         else if((*i) == QChar('|'))
         {
-            i++;
+            ++i;
             Node node;
             node.command = Node::OR_OPERATOR;
             nodes.append(node);
         }
         else if((*i) == QChar('\\'))
         {
-            i++;
+            ++i;
             parseEscape(&nodes, &i, expr.constEnd());
-            i++;
+            ++i;
         }
         else
         {
             parseText(&nodes, &i, expr.constEnd());
-            i++;
+            ++i;
         }
     }
 

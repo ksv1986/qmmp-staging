@@ -20,6 +20,7 @@
 
 #include <QDir>
 #include <qmmp/qmmp.h>
+#include <algorithm>
 #include "qmmpuiplugincache_p.h"
 #include "uiloader.h"
 
@@ -74,12 +75,9 @@ QStringList UiLoader::names()
 QString UiLoader::file(UiFactory *factory)
 {
     loadPlugins();
-    for(const QmmpUiPluginCache *item : qAsConst(*m_cache))
-    {
-        if(item->shortName() == factory->properties().shortName)
-            return item->file();
-    }
-    return QString();
+    auto it = std::find_if(m_cache->cbegin(), m_cache->cend(),
+                           [factory](QmmpUiPluginCache *item) { return item->shortName() == factory->properties().shortName; } );
+    return it == m_cache->cend() ? QString() : (*it)->file();
 }
 
 void UiLoader::select(UiFactory* factory)
@@ -90,14 +88,10 @@ void UiLoader::select(UiFactory* factory)
 void UiLoader::select(const QString &name)
 {
     loadPlugins();
-    for(const QmmpUiPluginCache *item : qAsConst(*m_cache))
+    if(std::any_of(m_cache->cbegin(), m_cache->cend(), [name](QmmpUiPluginCache *item) { return item->shortName() == name; } ))
     {
-        if(item->shortName() == name)
-        {
-            QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-            settings.setValue ("Ui/current_plugin", name);
-            break;
-        }
+        QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
+        settings.setValue ("Ui/current_plugin", name);
     }
 }
 

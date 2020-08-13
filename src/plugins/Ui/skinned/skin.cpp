@@ -918,7 +918,7 @@ QRegion Skin::createRegion(const QString &path, const QString &group)
         for (int j = 0; j < numPoints.at(i).toInt() * 2 && n != numbers.constEnd(); j++)
         {
             lp << n->toInt();
-            n ++;
+            ++n;
         }
         QVector<QPoint> points;
 

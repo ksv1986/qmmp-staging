@@ -28,7 +28,7 @@ HTTPInputSource::HTTPInputSource(const QString &url, QObject *parent) : InputSou
     connect(m_reader, SIGNAL(error()),SIGNAL(error()));
 }
 
-QIODevice *HTTPInputSource::ioDevice()
+QIODevice *HTTPInputSource::ioDevice() const
 {
     return m_reader;
 }
@@ -39,12 +39,12 @@ bool HTTPInputSource::initialize()
     return true;
 }
 
-bool HTTPInputSource::isReady()
+bool HTTPInputSource::isReady() const
 {
     return m_reader->isOpen();
 }
 
-bool HTTPInputSource::isWaiting()
+bool HTTPInputSource::isWaiting() const
 {
     return (!m_reader->bytesAvailable() && m_reader->isOpen());
 }

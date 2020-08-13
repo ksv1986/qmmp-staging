@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -69,7 +69,7 @@ private:
     QList<PlayListGroup *> m_groups;
 
     mutable QList<PlayListItem *> m_items;
-    mutable bool m_update;
+    mutable bool m_update = true;
 
 };
 

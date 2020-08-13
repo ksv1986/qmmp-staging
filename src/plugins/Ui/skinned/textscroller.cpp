@@ -42,9 +42,9 @@
 #define SCROLL_SEP "   *** "
 #define TITLE_FORMAT "%p%if(%p&%t, - ,)%t%if(%p,,%if(%t,,%f))%if(%l, - %l,)"
 
-TextScroller::TextScroller (QWidget *parent) : QWidget (parent)
+TextScroller::TextScroller (QWidget *parent) : QWidget (parent),
+    m_defautText(QString("Qmmp ") + Qmmp::strVersion())
 {
-    m_defautText = QString("Qmmp ") + Qmmp::strVersion();
     m_formater.setPattern(TITLE_FORMAT);
     m_core = SoundCore::instance();
     m_skin = Skin::instance();

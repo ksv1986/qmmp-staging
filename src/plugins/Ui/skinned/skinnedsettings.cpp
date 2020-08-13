@@ -201,7 +201,7 @@ void SkinnedSettings::loadSkins()
 #endif
     for(const QString &path : m_reader->skins())
     {
-        QListWidgetItem *item = new QListWidgetItem (path.section('/', -1));
+        item = new QListWidgetItem (path.section('/', -1));
         item->setIcon (m_reader->getPreview(path));
         item->setToolTip(tr("Archived skin") + " " + path);
         m_ui.listWidget->addItem (item);

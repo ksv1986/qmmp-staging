@@ -99,12 +99,12 @@ public:
     {}
 
 private:
+    QIODevice *m_input;
 #ifdef Q_OS_WIN
     QString m_fileName;
 #else
     QByteArray m_fileName;
 #endif
-    QIODevice *m_input;
 };
 
 ArchiveTagReader::ArchiveTagReader(QIODevice *input, const QString &url)

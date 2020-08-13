@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006 by Ilya Kotov                                      *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,10 +31,10 @@ class ToggleButton : public PixmapWidget
 {
 Q_OBJECT
 public:
-   ToggleButton( QWidget *parent, uint on_n, uint on_p, uint off_n, uint off_p );
+   ToggleButton(QWidget *parent, uint on_n, uint on_p, uint off_n, uint off_p);
    ~ToggleButton();
 
-    bool isChecked();
+    bool isChecked() const;
 
 public slots:
     void setChecked(bool);
@@ -47,10 +47,10 @@ private slots:
     void updateSkin();
 
 private:
-    Skin *skin;
+    Skin *m_skin;
     bool m_cursorin, m_old_on;
     uint m_on_n, m_on_p, m_off_n, m_off_p;
-    bool m_on;
+    bool m_on = false;
 
 protected:
     void mousePressEvent(QMouseEvent*) override;

@@ -37,7 +37,7 @@ class Analyzer : public Visual
     Q_OBJECT
 
 public:
-    Analyzer( QWidget *parent = nullptr);
+    explicit Analyzer( QWidget *parent = nullptr);
     virtual ~Analyzer();
 
 public slots:
@@ -61,17 +61,17 @@ private:
     void draw(QPainter *p);
     void createMenu();
     QTimer *m_timer;
-    double *m_intern_vis_data;
-    double *m_peaks;
-    int *m_x_scale;
+    double *m_intern_vis_data = nullptr;
+    double *m_peaks = nullptr;
+    int *m_x_scale = nullptr;
     double m_peaks_falloff;
     double m_analyzer_falloff;
     bool m_show_peaks;
     float m_left_buffer[QMMP_VISUAL_NODE_SIZE];
     float m_right_buffer[QMMP_VISUAL_NODE_SIZE];
-    int m_cols, m_rows;
-    bool m_update;
-    bool m_running;
+    int m_cols = 0, m_rows = 0;
+    bool m_update = false;
+    bool m_running = false;
     //colors
     QColor m_color1;
     QColor m_color2;

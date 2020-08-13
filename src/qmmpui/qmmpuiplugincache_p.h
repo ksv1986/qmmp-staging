@@ -36,7 +36,7 @@ class QmmpUiPluginCache
 {
 public:
     QmmpUiPluginCache(const QString &file, QSettings *settings);
-    QmmpUiPluginCache(QObject *instance);
+    explicit QmmpUiPluginCache(QObject *instance);
 
     const QString shortName() const;
     const QString file() const;
@@ -54,12 +54,12 @@ private:
     void loadTranslation(const QString &translation);
     QString m_path;
     QString m_shortName;
-    bool m_error;
-    QObject *m_instance;
-    GeneralFactory *m_generalFactory;
-    UiFactory *m_uiFactory;
-    FileDialogFactory *m_fileDialogFactory;
-    int m_priority;
+    bool m_error = false;
+    QObject *m_instance = nullptr;
+    GeneralFactory *m_generalFactory = nullptr;
+    UiFactory *m_uiFactory = nullptr;
+    FileDialogFactory *m_fileDialogFactory = nullptr;
+    int m_priority = 0;
 };
 
 #endif // QMMPUIPLUGINCACHE_P_H

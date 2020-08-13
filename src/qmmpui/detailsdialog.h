@@ -48,7 +48,7 @@ public:
      * @param tracks a list of tracks which should be used.
      * @param parent Parent widget.
      */
-    DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent = nullptr);
+    explicit DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent = nullptr);
     /*!
      * Destructor.
      */
@@ -68,10 +68,10 @@ private:
     void printInfo();
     QString formatRow(const QString &key, const QString &value) const;
     QString formatRow(const MetaDataItem &item) const;
-    MetaDataModel *m_metaDataModel;
+    MetaDataModel *m_metaDataModel = nullptr;
     QList<PlayListTrack *> m_tracks;
     TrackInfo m_info;
-    int m_page;
+    int m_page = 0;
 };
 
 #endif

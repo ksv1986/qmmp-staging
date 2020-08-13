@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -62,7 +62,7 @@ public:
     {
         ;
     }
-    PlayState(PlayListModel* model);
+    explicit PlayState(PlayListModel* model);
 
 protected:
     /// Data model
@@ -80,7 +80,7 @@ public:
     virtual bool next() override;
     virtual bool previous() override;
     virtual int nextIndex() override;
-    NormalPlayState(PlayListModel* model);
+    explicit NormalPlayState(PlayListModel* model);
 };
 
 /*! @internal
@@ -94,12 +94,12 @@ public:
     virtual bool previous() override;
     virtual int nextIndex() override;
     virtual void prepare() override;
-    ShufflePlayState(PlayListModel* model);
+    explicit ShufflePlayState(PlayListModel* model);
     virtual void resetState() override;
 private:
 
     /// Current shuffled index.
-    int m_shuffled_current;
+    int m_shuffled_current = 0;
 
     /// List of indexes used for shuffled playing.
     QList<int> m_shuffled_indexes;

@@ -28,7 +28,7 @@ class QMMP_EXPORT ChannelMap : public QList<Qmmp::ChannelPosition>
 {
 public:
     ChannelMap();
-    ChannelMap(int channels);
+    explicit ChannelMap(int channels);
 
     int mask() const;
     const ChannelMap remaped() const;

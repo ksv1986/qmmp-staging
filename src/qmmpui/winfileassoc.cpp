@@ -55,10 +55,8 @@
 #define SHCNE_ASSOCHANGED __MSABI_LONG(0x08000000)
 #endif
 
-WinFileAssoc::WinFileAssoc(const QString AppName)
-{
-    m_AppName = AppName;
-}
+WinFileAssoc::WinFileAssoc(const QString AppName) : m_AppName(AppName)
+{}
 
 // Associates all extensions in the fileExtensions list with current app.
 // Returns number of extensions processed successfully.

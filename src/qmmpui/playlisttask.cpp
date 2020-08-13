@@ -112,24 +112,19 @@ static bool _filenameGreaterComparator(TrackField* s1, TrackField* s2)
 
 PlayListTask::PlayListTask(QObject *parent) : QThread(parent)
 {
-    m_reverted = true;
-    m_align_groups = false;
-    m_current_track = nullptr;
-    m_column = 0;
-    m_task = EMPTY;
-    m_sort_mode = PlayListModel::TITLE;
-
-    m_sort_keys.insert(PlayListModel::TITLE, Qmmp::TITLE);
-    m_sort_keys.insert(PlayListModel::DISCNUMBER, Qmmp::DISCNUMBER);
-    m_sort_keys.insert(PlayListModel::ALBUM, Qmmp::ALBUM);
-    m_sort_keys.insert(PlayListModel::ARTIST, Qmmp::ARTIST);
-    m_sort_keys.insert(PlayListModel::ALBUMARTIST, Qmmp::ALBUMARTIST);
-    m_sort_keys.insert(PlayListModel::FILENAME, Qmmp::UNKNOWN);
-    m_sort_keys.insert(PlayListModel::PATH_AND_FILENAME, Qmmp::UNKNOWN);
-    m_sort_keys.insert(PlayListModel::DATE, Qmmp::YEAR);
-    m_sort_keys.insert(PlayListModel::TRACK, Qmmp::TRACK);
-    m_sort_keys.insert(PlayListModel::FILE_CREATION_DATE, Qmmp::UNKNOWN);
-    m_sort_keys.insert(PlayListModel::FILE_MODIFICATION_DATE, Qmmp::UNKNOWN);
+    m_sort_keys = {
+        { PlayListModel::TITLE, Qmmp::TITLE },
+        { PlayListModel::DISCNUMBER, Qmmp::DISCNUMBER },
+        { PlayListModel::ALBUM, Qmmp::ALBUM },
+        { PlayListModel::ARTIST, Qmmp::ARTIST },
+        { PlayListModel::ALBUMARTIST, Qmmp::ALBUMARTIST },
+        { PlayListModel::FILENAME, Qmmp::UNKNOWN },
+        { PlayListModel::PATH_AND_FILENAME, Qmmp::UNKNOWN },
+        { PlayListModel::DATE, Qmmp::YEAR },
+        { PlayListModel::TRACK, Qmmp::TRACK },
+        { PlayListModel::FILE_CREATION_DATE, Qmmp::UNKNOWN },
+        { PlayListModel::FILE_MODIFICATION_DATE, Qmmp::UNKNOWN }
+    };
 }
 
 PlayListTask::~PlayListTask()
@@ -335,10 +330,9 @@ void PlayListTask::run()
         if(m_align_groups)
         {
             QList<GroupdField *> groups;
-            bool found = false;
             for(int i = 0; i < m_fields.count(); ++i)
             {
-                found = false;
+                bool found = false;
                 for(int j = groups.count() - 1; j >= 0; j--)
                 {
                     if(groups[j]->groupName == m_fields[i]->groupName)
@@ -453,11 +447,11 @@ void PlayListTask::run()
         QList<int> indexes;
         for(int i = 0; i < l.count(); ++i)
         {
-            QFileInfo f = l[i];
-            if(urls.contains(f.canonicalFilePath()))
+            QFileInfo info = l[i];
+            if(urls.contains(info.canonicalFilePath()))
                 indexes.append(i);
             else
-                urls.append(f.canonicalFilePath());
+                urls.append(info.canonicalFilePath());
         }
         //remove existing URLs
         for(int i = indexes.count() - 1; i >= 0; i--)
@@ -466,10 +460,10 @@ void PlayListTask::run()
         //create new playlist tracks
         QStringList ignoredFiles;
         TrackInfo::Parts parts = QmmpUiSettings::instance()->useMetaData() ? TrackInfo::AllParts : TrackInfo::Parts();
-        for(const QFileInfo &f : qAsConst(l))
+        for(const QFileInfo &info : qAsConst(l))
         {
             QStringList ignored;
-            for(TrackInfo *info : mm->createPlayList(f.canonicalFilePath(), parts, &ignored))
+            for(TrackInfo *info : mm->createPlayList(info.canonicalFilePath(), parts, &ignored))
             {
                 m_new_tracks << new PlayListTrack(info);
             }
@@ -522,12 +516,10 @@ QList<PlayListTrack *> PlayListTask::takeResults(PlayListTrack **current_track)
     }
     else if(m_task == REMOVE_INVALID || m_task == REMOVE_DUPLICATES || m_task == REFRESH)
     {
-        int index = 0;
-        PlayListTrack *t = nullptr;
         for (int i = m_indexes.count() - 1; i >= 0; i--)
         {
-            index = m_indexes.at(i);
-            t = m_tracks.takeAt(index);
+            int index = m_indexes.at(i);
+            PlayListTrack *t = m_tracks.takeAt(index);
             if(t == m_current_track)
             {
                 if(m_tracks.isEmpty())

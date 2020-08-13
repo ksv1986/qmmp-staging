@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,30 +22,22 @@
 #include "audioparameters.h"
 
 AudioParameters::AudioParameters()
-{
-    m_srate = 0;
-    m_format = Qmmp::PCM_S16LE;
-    m_sz = 2;
-    m_precision = 16;
-}
+{}
 
-AudioParameters::AudioParameters(const AudioParameters &other)
-{
-    m_srate = other.sampleRate();
-    m_chan_map = other.channelMap();
-    m_format = other.format();
-    m_sz = other.sampleSize();
-    m_precision = other.validBitsPerSample();
-}
+AudioParameters::AudioParameters(const AudioParameters &other) : m_srate(other.sampleRate()),
+    m_chan_map(other.channelMap()),
+    m_format(other.format()),
+    m_sz(other.sampleSize()),
+    m_precision(other.validBitsPerSample())
+{}
 
-AudioParameters::AudioParameters(quint32 srate, const ChannelMap &map, Qmmp::AudioFormat format)
-{
-    m_srate = srate;
-    m_chan_map = map;
-    m_format = format;
-    m_sz = sampleSize(format);
-    m_precision = validBitsPerSample(format);
-}
+AudioParameters::AudioParameters(quint32 srate, const ChannelMap &map, Qmmp::AudioFormat format) :
+    m_srate(srate),
+    m_chan_map(map),
+    m_format(format),
+    m_sz(sampleSize(format)),
+    m_precision(validBitsPerSample(format))
+{}
 
 AudioParameters &AudioParameters::operator=(const AudioParameters &p)
 {

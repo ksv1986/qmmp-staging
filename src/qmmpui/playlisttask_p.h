@@ -76,11 +76,11 @@ private:
     QList<int> m_indexes;
     QList <PlayListTrack *> m_new_tracks;
     PlayListTrack *m_current_track;
-    int m_sort_mode;
-    TaskType m_task;
-    bool m_reverted;
-    bool m_align_groups;
-    int m_column;
+    int m_sort_mode = PlayListModel::TITLE;
+    TaskType m_task = EMPTY;
+    bool m_reverted = true;
+    bool m_align_groups = false;
+    int m_column = 0;
     QHash<int, Qmmp::MetaData> m_sort_keys;
 
 };

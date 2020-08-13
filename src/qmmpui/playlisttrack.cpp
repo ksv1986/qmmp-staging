@@ -26,21 +26,15 @@
 
 PlayListTrack::PlayListTrack() : TrackInfo(), PlayListItem()
 {
-    m_track_index = -1;
     m_settings = QmmpUiSettings::instance();
     m_helper = MetaDataHelper::instance();
-    m_refCount = 0;
-    m_sheduledForDeletion = false;
 }
 
 PlayListTrack::PlayListTrack(const PlayListTrack &other) : TrackInfo(other),
     PlayListItem()
 {
-    m_track_index = -1;
     m_settings = QmmpUiSettings::instance();
     m_helper = MetaDataHelper::instance();
-    m_refCount = 0;
-    m_sheduledForDeletion = false;
 
     m_formattedTitles = other.m_formattedTitles;
     m_group = other.m_group;
@@ -54,11 +48,8 @@ PlayListTrack::PlayListTrack(const PlayListTrack &other) : TrackInfo(other),
 PlayListTrack::PlayListTrack(TrackInfo *info) : TrackInfo(*info),
     PlayListItem()
 {
-    m_track_index = -1;
     m_settings = QmmpUiSettings::instance();
     m_helper = MetaDataHelper::instance();
-    m_refCount = 0;
-    m_sheduledForDeletion = false;
 }
 
 PlayListTrack::~PlayListTrack()

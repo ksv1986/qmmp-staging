@@ -35,7 +35,7 @@
 #include "detailsdialog.h"
 
 DetailsDialog::DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent)
-        : QDialog(parent)
+        : QDialog(parent), m_tracks(tracks)
 {
     m_ui = new Ui::DetailsDialog;
     m_ui->setupUi(this);
@@ -44,9 +44,6 @@ DetailsDialog::DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent)
     m_ui->directoryButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_DirOpenIcon));
     m_ui->nextButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_ArrowRight));
     m_ui->prevButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_ArrowLeft));
-    m_metaDataModel = nullptr;
-    m_page = 0;
-    m_tracks = tracks;
     updatePage();
     on_tabWidget_currentChanged(0);
 }

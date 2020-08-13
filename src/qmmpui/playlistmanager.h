@@ -41,7 +41,7 @@ public:
      * Constructor.
      * @param parent Parent object.
      */
-    PlayListManager(QObject *parent);
+    explicit PlayListManager(QObject *parent);
     /*!
      * Destructor.
      */

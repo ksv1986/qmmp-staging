@@ -44,7 +44,7 @@ private slots:
     void onFinished(bool ok, const QString &message);
 
 private:
-    AddUrlDialog(QWidget *parent);
+    explicit AddUrlDialog(QWidget *parent);
     ~AddUrlDialog();
     void accept() override;
     void setModel(PlayListModel*);

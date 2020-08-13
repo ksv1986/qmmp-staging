@@ -23,6 +23,7 @@
 #include <QList>
 #include <QDir>
 #include <QApplication>
+#include <algorithm>
 #include <qmmp/qmmp.h>
 #include "playlistformat.h"
 #include "playlistparser.h"
@@ -72,12 +73,9 @@ bool PlayListParser::isPlayList(const QString &url)
 PlayListFormat *PlayListParser::findByMime(const QString &mime)
 {
     loadFormats();
-    for(PlayListFormat *format : qAsConst(*m_formats))
-    {
-        if(format->properties().contentTypes.contains(mime))
-            return format;
-    }
-    return nullptr;
+    auto it = std::find_if(m_formats->cbegin(), m_formats->cend(),
+                           [mime](PlayListFormat *format) { return format->properties().contentTypes.contains(mime); } );
+    return it == m_formats->cend() ? nullptr : *it;
 }
 
 PlayListFormat *PlayListParser::findByPath(const QString &filePath)
@@ -161,12 +159,9 @@ QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &f_name)
 
 QList<PlayListTrack *> PlayListParser::loadPlaylist(const QString &fmt, const QByteArray &content)
 {
-    for(PlayListFormat *p : qAsConst(*m_formats))
-    {
-        if(p->properties().shortName == fmt)
-            return p->decode(content);
-    }
-    return QList<PlayListTrack *>();
+    auto it = std::find_if(m_formats->cbegin(), m_formats->cend(),
+                           [fmt](PlayListFormat *format) { return format->properties().shortName == fmt; } );
+    return it == m_formats->cend() ? QList<PlayListTrack *>() : (*it)->decode(content);
 }
 
 void PlayListParser::loadFormats()

@@ -37,7 +37,7 @@ public:
      * Constructor.
      * @param formattedTitle Title of the group.
      */
-    PlayListGroup(const QString &formattedTitle);
+    explicit PlayListGroup(const QString &formattedTitle);
     /*!
      * Object destructor.
      */

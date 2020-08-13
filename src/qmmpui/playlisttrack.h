@@ -43,7 +43,7 @@ public:
     /*!
      * Constructs a new PlayListTrack that is a copy of the given track \b other
      */
-    PlayListTrack(const PlayListTrack &other);
+    explicit PlayListTrack(const PlayListTrack &other);
     /*!
      * Constructs plalist item with given metadata.
      * @param info Media file information.
@@ -129,9 +129,9 @@ private:
     QStringList m_titleFormats;
     QString m_groupFormat;
     QmmpUiSettings *m_settings;
-    int m_refCount;
-    int m_track_index;
-    bool m_sheduledForDeletion;
+    int m_refCount = 0;
+    int m_track_index = -1;
+    bool m_sheduledForDeletion = false;
     MetaDataHelper *m_helper;
 };
 

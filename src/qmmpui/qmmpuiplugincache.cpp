@@ -32,12 +32,6 @@
 
 QmmpUiPluginCache::QmmpUiPluginCache(const QString &file, QSettings *settings)
 {
-    m_error = false;
-    m_instance = nullptr;
-    m_generalFactory = nullptr;
-    m_uiFactory = nullptr;
-    m_fileDialogFactory = nullptr;
-    m_priority = 0;
     bool update = false;
     QFileInfo info(file);
     m_path = info.QFileInfo::canonicalFilePath();
@@ -102,13 +96,8 @@ QmmpUiPluginCache::QmmpUiPluginCache(const QString &file, QSettings *settings)
 }
 
 QmmpUiPluginCache::QmmpUiPluginCache(QObject *instance)
-{
-    m_error = false;
+{   
     m_instance = instance;
-    m_generalFactory = nullptr;
-    m_uiFactory = nullptr;
-    m_fileDialogFactory = nullptr;
-    m_priority = 0;
 
     if(GeneralFactory *factory = generalFactory())
     {

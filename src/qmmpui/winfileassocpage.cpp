@@ -2,7 +2,7 @@
  * Based on smplayer - GUI front-end for mplayer                           *
  *                                                                         *
  * Copyright (C) 2006-2014 Ricardo Villalba <rvm@users.sourceforge.net>    *
- * Copyright (C) 2014 Ilya Kotov forkotov02@ya.ru                          *
+ * Copyright (C) 2014-2020 Ilya Kotov forkotov02@ya.ru                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -98,7 +98,7 @@ void WinFileAssocPage::loadAssociations()
     }
 }
 
-int WinFileAssocPage::ProcessAssociations(QStringList& current)
+int WinFileAssocPage::ProcessAssociations(const QStringList &current)
 {
     WinFileAssoc RegAssoc;
     return RegAssoc.CreateFileAssociations(current);

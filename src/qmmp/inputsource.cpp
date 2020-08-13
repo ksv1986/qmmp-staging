@@ -20,21 +20,18 @@
 
 #include <QFile>
 #include <QDir>
+#include <algorithm>
 #include "qmmpplugincache_p.h"
 #include "qmmp.h"
 #include "fileinputsource_p.h"
 #include "emptyinputsource_p.h"
 #include "inputsource.h"
 
-InputSource::InputSource(const QString &source, QObject *parent) : QObject(parent)
-{
-    m_path = source;
-    m_offset = -1;
-    m_hasMetaData = false;
-    m_hasStreamInfo = false;
-}
+InputSource::InputSource(const QString &source, QObject *parent) : QObject(parent),
+    m_path(source)
+{}
 
-bool InputSource::isWaiting()
+bool InputSource::isWaiting() const
 {
     return false;
 }
@@ -170,12 +167,9 @@ QList<InputSourceFactory *> InputSource::enabledFactories()
 QString InputSource::file(const InputSourceFactory *factory)
 {
     loadPlugins();
-    for(const QmmpPluginCache *item : qAsConst(*m_cache))
-    {
-        if(item->shortName() == factory->properties().shortName)
-            return item->file();
-    }
-    return QString();
+    auto it = std::find_if(m_cache->cbegin(), m_cache->cend(),
+                           [factory](QmmpPluginCache *item) { return item->shortName() == factory->properties().shortName; } );
+    return it == m_cache->cend() ? QString() : (*it)->file();
 }
 
 QStringList InputSource::protocols()

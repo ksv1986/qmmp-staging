@@ -47,23 +47,27 @@ PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
     m_timer->setSingleShot(true);
     connect(m_timer, SIGNAL(timeout()), SLOT(writePlayLists()));
     //key names
-    m_metaKeys.insert("title", Qmmp::TITLE);
-    m_metaKeys.insert("artist", Qmmp::ARTIST);
-    m_metaKeys.insert("albumartist", Qmmp::ALBUMARTIST);
-    m_metaKeys.insert("album", Qmmp::ALBUM);
-    m_metaKeys.insert("comment", Qmmp::COMMENT);
-    m_metaKeys.insert("genre", Qmmp::GENRE);
-    m_metaKeys.insert("composer", Qmmp::COMPOSER);
-    m_metaKeys.insert("year", Qmmp::YEAR);
-    m_metaKeys.insert("track", Qmmp::TRACK);
-    m_metaKeys.insert("disk", Qmmp::DISCNUMBER);
-    m_propKeys.insert("bitrate", Qmmp::BITRATE);
-    m_propKeys.insert("samplerate", Qmmp::SAMPLERATE);
-    m_propKeys.insert("channels", Qmmp::CHANNELS);
-    m_propKeys.insert("bits_per_sample", Qmmp::BITS_PER_SAMPLE);
-    m_propKeys.insert("format_name", Qmmp::FORMAT_NAME);
-    m_propKeys.insert("decoder", Qmmp::DECODER);
-    m_propKeys.insert("file_size", Qmmp::FILE_SIZE);
+    m_metaKeys = {
+        { "title", Qmmp::TITLE },
+        { "artist", Qmmp::ARTIST },
+        { "albumartist", Qmmp::ALBUMARTIST },
+        { "album", Qmmp::ALBUM },
+        { "comment", Qmmp::COMMENT },
+        { "genre", Qmmp::GENRE },
+        { "composer", Qmmp::COMPOSER },
+        { "year", Qmmp::YEAR },
+        { "track", Qmmp::TRACK },
+        { "disk", Qmmp::DISCNUMBER }
+    };
+    m_propKeys = {
+        { "bitrate", Qmmp::BITRATE },
+        { "samplerate", Qmmp::SAMPLERATE },
+        { "channels", Qmmp::CHANNELS },
+        { "bits_per_sample", Qmmp::BITS_PER_SAMPLE },
+        { "format_name", Qmmp::FORMAT_NAME },
+        { "decoder", Qmmp::DECODER },
+        { "file_size", Qmmp::FILE_SIZE }
+    };
     readPlayLists(); //read playlists
 }
 
@@ -266,7 +270,7 @@ void PlayListManager::readPlayLists()
     Qmmp::MetaData metaKey;
     Qmmp::TrackProperty propKey;
     QString line, key, value;
-    int s = 0, current = 0, pl = 0;
+    int current = 0, pl = 0;
     QList <PlayListTrack *> tracks;
     QFile file(Qmmp::configDir() + "/playlist.txt");
     file.open(QIODevice::ReadOnly);
@@ -278,7 +282,8 @@ void PlayListManager::readPlayLists()
     while (!buffer.atEnd())
     {
         line = QString::fromUtf8(buffer.readLine().constData()).trimmed();
-        if ((s = line.indexOf("=")) < 0)
+        int s = line.indexOf("=");
+        if (s < 0)
             continue;
 
         key = line.left(s);

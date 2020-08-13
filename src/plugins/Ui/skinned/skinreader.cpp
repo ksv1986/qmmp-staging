@@ -25,6 +25,7 @@
 #include <QByteArray>
 #include <QApplication>
 #include <QFile>
+#include <algorithm>
 #include <qmmp/qmmp.h>
 #include "skinreader.h"
 
@@ -62,15 +63,9 @@ void SkinReader::generateThumbs()
     //clear removed skins from cache
     for(const QFileInfo &thumbFile : qAsConst(d))
     {
-        bool del = true;
-        for(const QFileInfo &fileInfo : qAsConst(f))
-        {
-            if (fileInfo.baseName () == thumbFile.baseName ())
-            {
-                del = false;
-                break;
-            }
-        }
+        bool del = std::none_of(f.cbegin(), f.cend(),
+                                [thumbFile](const QFileInfo &fileInfo){ return fileInfo.baseName() == thumbFile.baseName(); });
+
         if (del)
         {
             qDebug("SkinReader: deleting %s from cache",
@@ -82,15 +77,9 @@ void SkinReader::generateThumbs()
     //add new skins to cache
     for(const QFileInfo &fileInfo : qAsConst(f))
     {
-        bool create = true;
-        for(const QFileInfo &thumbInfo : qAsConst(d))
-        {
-            if (fileInfo.baseName () == thumbInfo.baseName ())
-            {
-                create = false;
-                break;
-            }
-        }
+        bool create = std::none_of(d.cbegin(), d.cend(),
+                                   [fileInfo](const QFileInfo &thumbInfo){ return fileInfo.baseName() == thumbInfo.baseName(); });
+
         if (create)
         {
             qDebug("SkinReader: adding %s to cache",
@@ -108,15 +97,13 @@ void SkinReader::generateThumbs()
     d = cache_dir.entryInfoList();
     for(const QFileInfo &fileInfo : qAsConst(f))
     {
-         for(const QFileInfo &thumbInfo : qAsConst(d))
-         {
-            if (fileInfo.baseName () == thumbInfo.baseName ())
-            {
-                m_previewMap.insert(fileInfo.absoluteFilePath (),
-                                    thumbInfo.absoluteFilePath ());
-                break;
-            }
-         }
+        auto it = std::find_if(d.cbegin(), d.cend(),
+                               [fileInfo](const QFileInfo &thumbInfo){ return fileInfo.baseName() == thumbInfo.baseName(); });
+
+        if(it != d.cend())
+        {
+            m_previewMap.insert(fileInfo.absoluteFilePath (), (*it).absoluteFilePath());
+        }
     }
 }
 
@@ -153,8 +140,7 @@ void SkinReader::untar(const QString &from, const QString &to, bool preview)
     m_process->start("tar", args);
     m_process->waitForFinished();
     array = m_process->readAllStandardOutput ();
-    QString str = QString(array);
-    const QStringList outputList = str.split("\n", QString::SkipEmptyParts);
+    const QStringList outputList = QString(array).split("\n", QString::SkipEmptyParts);
     for(QString str : qAsConst(outputList))
     {
         str = str.trimmed();

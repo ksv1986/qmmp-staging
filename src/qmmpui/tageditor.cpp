@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,7 +26,6 @@ TagEditor::TagEditor(TagModel *tagModel, QWidget *parent) : QWidget(parent), m_u
 {
     m_ui->setupUi(this);
     m_tagModel = tagModel;
-    m_discs = -1;
     //check available keys
     m_ui->titleLineEdit->setEnabled(m_tagModel->keys().contains(Qmmp::TITLE));
     m_ui->artistLineEdit->setEnabled(m_tagModel->keys().contains(Qmmp::ARTIST));

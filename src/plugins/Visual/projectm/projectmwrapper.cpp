@@ -20,12 +20,12 @@
 
 #include "projectmwrapper.h"
 
-ProjectMWrapper::ProjectMWrapper(std::string config_file, int flags, QObject *parent) :
+ProjectMWrapper::ProjectMWrapper(const std::string &config_file, int flags, QObject *parent) :
     QObject(parent), projectM(config_file, flags)
 {
 }
 
-ProjectMWrapper::ProjectMWrapper(projectM::Settings settings, int flags, QObject *parent) :
+ProjectMWrapper::ProjectMWrapper(const projectM::Settings &settings, int flags, QObject *parent) :
     QObject(parent), projectM(settings, flags)
 {
 }

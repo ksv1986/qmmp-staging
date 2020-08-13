@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -36,7 +36,7 @@ class TagEditor : public QWidget
 {
 Q_OBJECT
 public:
-    TagEditor(TagModel *tagModel, QWidget *parent = nullptr);
+    explicit TagEditor(TagModel *tagModel, QWidget *parent = nullptr);
     ~TagEditor();
 
     void save();
@@ -45,7 +45,7 @@ private:
     void readTag();
     Ui::TagEditor *m_ui;
     TagModel *m_tagModel;
-    int m_discs; //Number of discs
+    int m_discs = -1; //Number of discs
 
 };
 

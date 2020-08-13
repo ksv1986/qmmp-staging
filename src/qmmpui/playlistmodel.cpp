@@ -20,6 +20,7 @@
 #include <QWidget>
 #include <QtAlgorithms>
 #include <QTextStream>
+#include <algorithm>
 #include <time.h>
 #include <qmmp/metadatamanager.h>
 #include "metadatahelper_p.h"
@@ -39,14 +40,11 @@
 #define INVALID_INDEX -1
 
 PlayListModel::PlayListModel(const QString &name, QObject *parent)
-        : QObject(parent) , m_selection()
+    : QObject(parent) , m_name(name)
 {
     qsrand(time(nullptr));
     m_ui_settings = QmmpUiSettings::instance();
-    m_total_duration = 0;
-    m_current = 0;
-    m_stop_track = nullptr;
-    m_name = name;
+
     m_loader = new FileLoader(this);
     m_task = new PlayListTask(this);
     if(m_ui_settings->isGroupsEnabled())
@@ -728,11 +726,8 @@ void PlayListModel::moveItems(int from, int to)
     if(selected_indexes.isEmpty())
         return;
 
-    for(const int &i : qAsConst(selected_indexes)) //do no move groups
-    {
-        if(!isTrack(i))
-            return;
-    }
+    if(std::any_of(selected_indexes.cbegin(), selected_indexes.cend(), [this](int i){ return !isTrack(i); }))
+        return;
 
     if (bottommostInSelection(from) == INVALID_INDEX ||
             from == INVALID_INDEX ||
@@ -959,7 +954,7 @@ void PlayListModel::onTaskFinished()
             || m_task->type() == PlayListTask::REFRESH)
     {
         PlayListTrack *prev_current_track = m_current_track;
-        bool prev_count = m_container->count();
+        int prev_count = m_container->count();
 
         m_container->replaceTracks(m_task->takeResults(&m_current_track));
 

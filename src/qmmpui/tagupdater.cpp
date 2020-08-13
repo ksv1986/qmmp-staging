@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,9 +20,10 @@
 
 #include "tagupdater_p.h"
 
-TagUpdater::TagUpdater(QObject* o, QList<PlayListTrack *> tracks) : m_observable(o)
+TagUpdater::TagUpdater(QObject* o, QList<PlayListTrack *> tracks) :
+    m_observable(o),
+    m_tracks(tracks)
 {
-    m_tracks = tracks;
     for(PlayListTrack *t : qAsConst(m_tracks))
         t->beginUsage();
     connect(m_observable, SIGNAL(destroyed(QObject *)),SLOT(updateTags()));

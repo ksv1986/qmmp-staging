@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,7 +32,7 @@ class SymbolDisplay : public PixmapWidget
 {
     Q_OBJECT
 public:
-    SymbolDisplay(QWidget *parent = nullptr, int digits = 3);
+    explicit SymbolDisplay(QWidget *parent = nullptr, int digits = 3);
 
     virtual ~SymbolDisplay();
 
@@ -49,9 +49,9 @@ private slots:
 private:
     Skin* m_skin;
     QString m_text;
-    Qt::Alignment m_alignment;
+    Qt::Alignment m_alignment = Qt::AlignRight;
     int m_digits;
-    int m_max;
+    int m_max = 0;
 };
 
 #endif

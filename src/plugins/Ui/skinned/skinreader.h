@@ -33,7 +33,7 @@ class SkinReader : public QObject
 {
     Q_OBJECT
 public:
-    SkinReader(QObject *parent = nullptr);
+    explicit SkinReader(QObject *parent = nullptr);
 
     ~SkinReader();
 

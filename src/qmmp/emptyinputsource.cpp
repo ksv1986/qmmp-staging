@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,11 +21,9 @@
 #include "emptyinputsource_p.h"
 
 EmptyInputSource::EmptyInputSource(const QString &url, QObject *parent) : InputSource(url,parent)
-{
-    m_ok = false;
-}
+{}
 
-QIODevice *EmptyInputSource::ioDevice()
+QIODevice *EmptyInputSource::ioDevice() const
 {
     return nullptr;
 }
@@ -38,7 +36,7 @@ bool EmptyInputSource::initialize()
     return m_ok;
 }
 
-bool EmptyInputSource::isReady()
+bool EmptyInputSource::isReady() const
 {
     return m_ok;
 }

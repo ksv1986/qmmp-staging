@@ -34,10 +34,10 @@ Q_OBJECT
 public:
     explicit HTTPInputSource(const QString &path, QObject *parent = nullptr);
 
-    QIODevice *ioDevice() override;
+    QIODevice *ioDevice() const override;
     bool initialize() override;
-    bool isReady() override;
-    bool isWaiting() override;
+    bool isReady() const override;
+    bool isWaiting() const override;
     QString contentType() const override;
 
 private:

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,9 +26,7 @@
 #endif
 
 GroupedContainer::GroupedContainer()
-{
-    m_update = true;
-}
+{}
 
 GroupedContainer::~GroupedContainer()
 {
@@ -70,11 +68,9 @@ void GroupedContainer::addTrack(PlayListTrack *track)
 
 void GroupedContainer::addTracks(const QList<PlayListTrack *> &tracks)
 {
-    bool found = false;
-
     for(int i = 0; i < tracks.count(); ++i)
     {
-        found = false;
+        bool found = false;
         for(int j = m_groups.count() - 1; j >= 0; --j)
         {
             if(m_groups.at(j)->formattedTitle() == tracks.at(i)->groupName())

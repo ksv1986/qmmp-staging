@@ -26,7 +26,7 @@ FileInputSource::FileInputSource(const QString &url, QObject *parent) : InputSou
     m_file = new QFile(url, this);
 }
 
-QIODevice *FileInputSource::ioDevice()
+QIODevice *FileInputSource::ioDevice() const
 {
     return m_file;
 }
@@ -37,7 +37,7 @@ bool FileInputSource::initialize()
     return true;
 }
 
-bool FileInputSource::isReady()
+bool FileInputSource::isReady() const
 {
     return m_file->isOpen();
 }

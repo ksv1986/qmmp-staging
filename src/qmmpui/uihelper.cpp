@@ -26,6 +26,7 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <QFileInfo>
+#include <algorithm>
 #include <qmmp/soundcore.h>
 #include <qmmp/metadatamanager.h>
 #include "filedialog.h"
@@ -46,7 +47,6 @@ UiHelper::UiHelper(QObject *parent)
         : QObject(parent)
 {
     m_instance = this;
-    m_jumpDialog = nullptr;
     General::create(parent);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_lastDir = settings.value("General/last_dir", QDir::homePath()).toString(); //last directory
@@ -60,12 +60,9 @@ UiHelper::~UiHelper()
 
 bool UiHelper::visibilityControl()
 {
-    for(const GeneralFactory *factory : General::enabledFactories())
-    {
-        if (factory->properties().visibilityControl)
-            return true;
-    }
-    return false;
+    const QList<GeneralFactory *> factories = General::enabledFactories();
+    return std::any_of(factories.cbegin(), factories.cend(),
+                       [](GeneralFactory *factory){ return factory->properties().visibilityControl; });
 }
 
 void UiHelper::addAction(QAction *action, MenuType type)
@@ -292,7 +289,7 @@ UiHelper* UiHelper::instance()
 
 void UiHelper::removeAction(QObject *action)
 {
-    removeAction((QAction *) action);
+    removeAction(qobject_cast<QAction *>(action));
 }
 
 void UiHelper::addSelectedFiles(const QStringList &files, bool play)

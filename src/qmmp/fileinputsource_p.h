@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Ilya Kotov                                      *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,11 +32,11 @@ class FileInputSource : public InputSource
 {
 Q_OBJECT
 public:
-    FileInputSource(const QString &path, QObject *parent = nullptr);
+    explicit FileInputSource(const QString &path, QObject *parent = nullptr);
 
-    QIODevice *ioDevice() override;
+    QIODevice *ioDevice() const override;
     bool initialize() override;
-    bool isReady() override;
+    bool isReady() const override;
 
 private:
     QFile *m_file;

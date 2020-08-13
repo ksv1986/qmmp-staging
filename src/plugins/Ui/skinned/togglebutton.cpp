@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2008 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Based on Promoe, an XMMS2 Client                                      *
@@ -25,32 +25,29 @@
 #include "togglebutton.h"
 #include <QMouseEvent>
 
-ToggleButton::ToggleButton ( QWidget *parent,uint on_n,uint on_p,uint off_n,uint off_p )
-      : PixmapWidget ( parent )
+ToggleButton::ToggleButton(QWidget *parent,uint on_n,uint on_p,uint off_n,uint off_p) : PixmapWidget(parent),
+    m_on_n(on_n),
+    m_on_p(on_p),
+    m_off_n(off_n),
+    m_off_p(off_p)
 {
-   m_on_n = on_n;
-   m_on_p = on_p;
-   m_off_n = off_n;
-   m_off_p = off_p;
-   m_on = false;
-   skin = Skin::instance();
-   setChecked ( false );
-   connect ( skin, SIGNAL ( skinChanged() ), this, SLOT ( updateSkin() ) );
+   m_skin = Skin::instance();
+   setChecked(false);
+   connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
 }
-
 
 ToggleButton::~ToggleButton()
 {}
 
-bool ToggleButton::isChecked()
+bool ToggleButton::isChecked() const
 {
    return m_on;
 }
 
 void ToggleButton::updateSkin()
 {
-   //setPixmap ( skin->getButton ( name_normal ) );
-   setChecked ( m_on );
+   //setPixmap(skin->getButton(name_normal));
+   setChecked(m_on);
 }
 
 void ToggleButton::click()
@@ -60,49 +57,49 @@ void ToggleButton::click()
     emit clicked(m_on);
 }
 
-void ToggleButton::setChecked ( bool on )
+void ToggleButton::setChecked(bool on)
 {
    m_on = on;
-   if ( on )
-      setPixmap ( skin->getButton ( m_on_n ) );
+   if(on)
+      setPixmap(m_skin->getButton(m_on_n));
    else
-      setPixmap ( skin->getButton ( m_off_n ) );
+      setPixmap(m_skin->getButton(m_off_n));
 }
-void ToggleButton::mousePressEvent ( QMouseEvent* )
+void ToggleButton::mousePressEvent(QMouseEvent*)
 {
    m_cursorin = true;
    m_old_on = m_on;
-   if ( m_on )
-      setPixmap ( skin->getButton ( m_off_p ) );
+   if(m_on)
+      setPixmap(m_skin->getButton(m_off_p));
    else
-      setPixmap ( skin->getButton ( m_on_p ) );
+      setPixmap(m_skin->getButton(m_on_p));
 }
 
-void ToggleButton::mouseReleaseEvent ( QMouseEvent* )
+void ToggleButton::mouseReleaseEvent(QMouseEvent*)
 {
-   if ( m_cursorin ) {
+   if(m_cursorin) {
        m_on = !m_old_on;
-       setChecked ( m_on );
-       emit clicked( m_on );
+       setChecked(m_on);
+       emit clicked( m_on);
    } else {
        m_on = m_old_on;
-       setChecked ( m_on );
+       setChecked(m_on);
    }
 }
 
 void ToggleButton::mouseMoveEvent (QMouseEvent *e)
 {
-    if ( !m_cursorin && rect().contains(e->pos()) ) {
+    if(!m_cursorin && rect().contains(e->pos())) {
         m_cursorin = true;
-        if ( m_old_on )
-            setPixmap ( skin->getButton ( m_off_p ) );
+        if(m_old_on)
+            setPixmap(m_skin->getButton(m_off_p));
         else
-            setPixmap ( skin->getButton ( m_on_p ) );            
-    } else if ( m_cursorin && !rect().contains(e->pos()) ) {
+            setPixmap(m_skin->getButton(m_on_p));
+    } else if(m_cursorin && !rect().contains(e->pos())) {
         m_cursorin = false;
-        if ( m_old_on )
-            setPixmap ( skin->getButton ( m_on_n ) );
+        if(m_old_on)
+            setPixmap(m_skin->getButton(m_on_n));
         else
-            setPixmap ( skin->getButton ( m_off_n ) );
+            setPixmap(m_skin->getButton(m_off_n));
     }
 }

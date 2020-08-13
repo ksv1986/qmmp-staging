@@ -33,14 +33,6 @@
 
 Analyzer::Analyzer (QWidget *parent) : Visual (parent)
 {
-    m_intern_vis_data = nullptr;
-    m_peaks = nullptr;
-    m_x_scale = nullptr;
-    m_rows = 0;
-    m_cols = 0;
-    m_update = false;
-    m_running = false;
-
     setWindowTitle (tr("Qmmp Analyzer"));
     setMinimumSize(2*300-30,105);
     m_timer = new QTimer (this);
@@ -234,8 +226,6 @@ void Analyzer::process()
 
     short dest_l[256];
     short dest_r[256];
-    short yl, yr;
-    int j, k, magnitude_l, magnitude_r;
 
     calc_freq (dest_l, m_left_buffer);
     calc_freq (dest_r, m_right_buffer);
@@ -244,16 +234,18 @@ void Analyzer::process()
 
     for (int i = 0; i < m_cols; i++)
     {
-        j = m_cols * 2 - i - 1; //mirror index
-        yl = yr = 0;
-        magnitude_l = magnitude_r = 0;
+        int j = m_cols * 2 - i - 1; //mirror index
+        short yl = 0;
+        short yr = 0;
+        int magnitude_l = 0;
+        int magnitude_r = 0;
 
         if(m_x_scale[i] == m_x_scale[i + 1])
         {
             yl = dest_l[i];
             yr = dest_r[i];
         }
-        for (k = m_x_scale[i]; k < m_x_scale[i + 1]; k++)
+        for (int k = m_x_scale[i]; k < m_x_scale[i + 1]; k++)
         {
             yl = qMax(dest_l[k], yl);
             yr = qMax(dest_r[k], yr);
@@ -293,12 +285,11 @@ void Analyzer::process()
 void Analyzer::draw(QPainter *p)
 {
     QBrush brush(Qt::SolidPattern);
-    int x = 0;
     int rdx = qMax(0, width() - 2 * m_cell_size.width() * m_cols);
 
     for (int j = 0; j < m_cols * 2; ++j)
     {
-        x = j * m_cell_size.width() + 1;
+        int x = j * m_cell_size.width() + 1;
         if(j >= m_cols)
             x += rdx; //correct right part position
 

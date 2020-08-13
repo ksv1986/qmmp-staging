@@ -24,6 +24,7 @@
 #include <QPluginLoader>
 #include <QMetaObject>
 #include <QLibrary>
+#include <algorithm>
 #include <qmmp/qmmp.h>
 #include "qmmpuiplugincache_p.h"
 #include "filedialog.h"
@@ -85,12 +86,9 @@ bool FileDialog::isEnabled(const FileDialogFactory *factory)
 QString FileDialog::file(const FileDialogFactory *factory)
 {
     loadPlugins();
-    for(const QmmpUiPluginCache *item : qAsConst(*m_cache))
-    {
-        if(item->shortName() == factory->properties().shortName)
-            return item->file();
-    }
-    return QString();
+    auto it = std::find_if(m_cache->cbegin(), m_cache->cend(),
+                           [factory] (QmmpUiPluginCache *item){ return item->shortName() == factory->properties().shortName; } );
+    return it == m_cache->cend() ? QString() : (*it)->file();
 }
 
 QString FileDialog::getExistingDirectory(QWidget *parent,
@@ -167,14 +165,11 @@ FileDialog* FileDialog::instance()
 
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     QString name = settings.value("FileDialog", "qt_dialog").toString();
-    for(QmmpUiPluginCache *item : qAsConst(*m_cache))
-    {
-        if(item->shortName() == name)
-        {
-            selected = item->fileDialogFactory();
-            break;
-        }
-    }
+
+    auto it = std::find_if(m_cache->cbegin(), m_cache->cend(),
+                           [name] (QmmpUiPluginCache *item){ return item->shortName() == name; } );
+    if(it != m_cache->cend())
+        selected = (*it)->fileDialogFactory();
 
     if(!selected)
         selected = m_cache->at(0)->fileDialogFactory();

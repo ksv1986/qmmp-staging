@@ -28,7 +28,7 @@ MMSInputSource::MMSInputSource(const QString &url, QObject *parent) : InputSourc
     connect(m_reader, SIGNAL(error()),SIGNAL(error()));
 }
 
-QIODevice *MMSInputSource::ioDevice()
+QIODevice *MMSInputSource::ioDevice() const
 {
     return m_reader;
 }
@@ -39,12 +39,12 @@ bool MMSInputSource::initialize()
     return true;
 }
 
-bool MMSInputSource::isReady()
+bool MMSInputSource::isReady() const
 {
     return m_reader->isOpen();
 }
 
-bool MMSInputSource::isWaiting()
+bool MMSInputSource::isWaiting() const
 {
     return (!m_reader->bytesAvailable() && m_reader->isOpen());
 }

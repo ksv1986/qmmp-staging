@@ -66,18 +66,18 @@ const ChannelMap ChannelMap::remaped() const
 const QString ChannelMap::toString() const
 {
     QStringList list;
-    QHash <Qmmp::ChannelPosition, QString> names;
-    names.insert(Qmmp::CHAN_NULL, "NA");
-    names.insert(Qmmp::CHAN_FRONT_LEFT, "FL");
-    names.insert(Qmmp::CHAN_FRONT_RIGHT, "FR");
-    names.insert(Qmmp::CHAN_REAR_LEFT, "RL");
-    names.insert(Qmmp::CHAN_REAR_RIGHT, "RR");
-    names.insert(Qmmp::CHAN_FRONT_CENTER, "FC");
-    names.insert(Qmmp::CHAN_REAR_CENTER, "RC");
-    names.insert(Qmmp::CHAN_LFE, "LFE");
-    names.insert(Qmmp::CHAN_SIDE_LEFT, "SL");
-    names.insert(Qmmp::CHAN_SIDE_RIGHT, "SR");
-
+    QHash <Qmmp::ChannelPosition, QString> names = {
+        { Qmmp::CHAN_NULL, "NA" },
+        { Qmmp::CHAN_FRONT_LEFT, "FL" },
+        { Qmmp::CHAN_FRONT_RIGHT, "FR" },
+        { Qmmp::CHAN_REAR_LEFT, "RL" },
+        { Qmmp::CHAN_REAR_RIGHT, "RR" },
+        { Qmmp::CHAN_FRONT_CENTER, "FC" },
+        { Qmmp::CHAN_REAR_CENTER, "RC" },
+        { Qmmp::CHAN_LFE, "LFE" },
+        { Qmmp::CHAN_SIDE_LEFT, "SL" },
+        { Qmmp::CHAN_SIDE_RIGHT, "SR" }
+    };
 
     for(const Qmmp::ChannelPosition channel : qAsConst(*this))
     {

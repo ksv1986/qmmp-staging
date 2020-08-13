@@ -41,7 +41,7 @@ class JumpToTrackDialog : public QDialog, private Ui::JumpToTrackDialog
     Q_OBJECT
 
 public:
-    JumpToTrackDialog(PlayListModel *model, QWidget* parent = nullptr);
+    explicit JumpToTrackDialog(PlayListModel *model, QWidget* parent = nullptr);
     ~JumpToTrackDialog();
     void refresh();
 

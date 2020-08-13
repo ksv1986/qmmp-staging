@@ -100,12 +100,9 @@ QList<GeneralFactory *> General::enabledFactories()
 QString General::file(const GeneralFactory *factory)
 {
     loadPlugins();
-    for(const QmmpUiPluginCache *item : qAsConst(*m_cache))
-    {
-        if(item->shortName() == factory->properties().shortName)
-            return item->file();
-    }
-    return QString();
+    auto it = std::find_if(m_cache->cbegin(), m_cache->cend(),
+                           [factory] (QmmpUiPluginCache *item){ return item->shortName() == factory->properties().shortName; } );
+    return it == m_cache->cend() ? QString() : (*it)->file();
 }
 
 void General::setEnabled(GeneralFactory* factory, bool enable)

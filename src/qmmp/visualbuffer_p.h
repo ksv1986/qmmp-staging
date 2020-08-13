@@ -30,15 +30,9 @@
 class VisualNode
 {
 public:
-    float data[2][512];
-    bool used;
-    qint64 ts;
-
-    VisualNode()
-    {
-        used = false;
-        ts = 0;
-    }
+    float data[2][512] = { 0 };
+    bool used = false;
+    qint64 ts = 0;
 };
 
 class VisualBuffer
@@ -53,9 +47,9 @@ public:
 
 private:
     VisualNode m_buffer[VISUAL_BUFFER_SIZE];
-    qint64 m_elapsed;
-    int m_take_index;
-    int m_add_index;
+    qint64 m_elapsed = 0;
+    int m_take_index = 0;
+    int m_add_index = 0;
     QElapsedTimer m_time;
     QMutex m_mutex;
 

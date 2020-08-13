@@ -33,14 +33,6 @@
 
 QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
 {
-    m_error = false;
-    m_instance = nullptr;
-    m_decoderFactory = nullptr;
-    m_outputFactory = nullptr;
-    m_engineFactory = nullptr;
-    m_effectFactory = nullptr;
-    m_inputSourceFactory = nullptr;
-    m_priority = 0;
     bool update = false;
     QFileInfo info(file);
     m_path = info.QFileInfo::canonicalFilePath();

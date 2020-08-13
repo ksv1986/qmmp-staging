@@ -2,24 +2,28 @@
 
 #This script adds kwin rules for qmmp windows
 
-if ! type kreadconfig5 &> /dev/null; then
+if ! type kreadconfig5 > /dev/null; then
   exit 1
 fi
 
-if ! type kwriteconfig5 &> /dev/null; then
+if ! type kwriteconfig5 > /dev/null; then
   exit 1
 fi
 
 # get count of rules
 count=`kreadconfig5 --file kwinrulesrc --group General --key count`
 i=1
-found=0;
+found=0
+
+if [ -z $count ]; then
+  count=0
+fi
 
 while [ $i -le $count ];
 do
 	# find qmmp window rule in KWin
     match=`kreadconfig5 --file kwinrulesrc --group $i --key wmclass`
-    if [[ "${match,,}" = *"qmmp"* ]]; then
+    if [ "${match}" = "qmmp" ]; then
         found=$i
         break
     fi

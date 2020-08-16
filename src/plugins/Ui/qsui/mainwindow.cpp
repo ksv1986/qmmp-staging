@@ -578,8 +578,7 @@ void MainWindow::createActions()
     ACTION(ActionManager::PL_GROUP_TRACKS)->setChecked(m_ui_settings->isGroupsEnabled());
     m_ui.menuEdit->addSeparator();
     m_ui.menuEdit->addAction(SET_ACTION(ActionManager::SETTINGS, this, SLOT(showSettings())));
-    //tools
-    m_ui.menuTools->addMenu(m_uiHelper->createMenu(UiHelper::TOOLS_MENU, tr("Actions"), true, this));
+
     //playback menu
     m_ui.menuPlayback->addAction(ACTION(ActionManager::PLAY));
     m_ui.menuPlayback->addAction(ACTION(ActionManager::STOP));
@@ -628,7 +627,7 @@ void MainWindow::createActions()
     m_pl_menu->addAction(SET_ACTION(ActionManager::PL_ENQUEUE, m_pl_manager, SLOT(addToQueue())));
     //tools menu
     m_ui.menuTools->addAction(SET_ACTION(ActionManager::EQUALIZER, this, SLOT(showEqualizer())));
-
+    m_uiHelper->registerMenu(UiHelper::TOOLS_MENU, m_ui.menuTools, false, ACTION(ActionManager::EQUALIZER));
     //tab menu
     m_tab_menu->addAction(ACTION(ActionManager::PL_LOAD));
     m_tab_menu->addAction(ACTION(ActionManager::PL_SAVE));

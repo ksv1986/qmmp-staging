@@ -391,6 +391,11 @@ qint64 DecoderMAD::read(unsigned char *data, qint64 size)
             m_play_bytes -= l;
             return l;
         }
+        else
+        {
+            m_skip_bytes = 0;
+            break;
+        }
     }
 
     if(!decodeFrame())

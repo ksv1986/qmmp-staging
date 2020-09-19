@@ -1628,3 +1628,4 @@ Version 1.4.2
 * fixed memory leak
 * fixed kwin support
 * fixed xing header parsing in the mpeg plugin
+* updated Greek translation (Dimitrios Glentadakis)

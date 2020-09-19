@@ -1111,7 +1111,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="432"/>
         <source>Reset colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Επαναφορά χρωμάτων</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="873"/>
@@ -1121,7 +1121,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="879"/>
         <source>Progress bar:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ράβδος προόδου:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="968"/>
@@ -1520,7 +1520,7 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="68"/>
         <source>tracks: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>κομμάτια: %1</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="69"/>
@@ -1540,7 +1540,7 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="102"/>
         <source>Buffering</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλήρωση ενδιάμεσης μνήμης</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="127"/>
@@ -1560,17 +1560,17 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="152"/>
         <source>%1 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 δυφία</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="154"/>
         <source>mono</source>
-        <translation type="unfinished"></translation>
+        <translation>μονοφωνικό</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="156"/>
         <source>stereo</source>
-        <translation type="unfinished"></translation>
+        <translation>στερεοφωνικό</translation>
     </message>
     <message numerus="yes">
         <location filename="../qsuistatusbar.cpp" line="158"/>
@@ -1596,7 +1596,7 @@
     <message>
         <location filename="../qsuiwaveformseekbar.cpp" line="325"/>
         <source>2 Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>2 Κανάλια</translation>
     </message>
     <message>
         <location filename="../qsuiwaveformseekbar.cpp" line="328"/>

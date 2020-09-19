@@ -137,7 +137,7 @@
     <message>
         <location filename="../columneditor.cpp" line="86"/>
         <source>Album</source>
-        <translation>Δίσκος</translation>
+        <translation>Άλμπουμ</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="90"/>
@@ -177,7 +177,7 @@
     <message>
         <location filename="../columneditor.cpp" line="87"/>
         <source>Artist - Album</source>
-        <translation>Καλλιτέχνης - Δίσκος</translation>
+        <translation>Καλλιτέχνης - Άλμπουμ</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="88"/>
@@ -187,7 +187,7 @@
     <message>
         <location filename="../columneditor.cpp" line="89"/>
         <source>Album Artist</source>
-        <translation>Καλλιτέχνης Δίσκος</translation>
+        <translation>Καλλιτέχνης άλμπουμ</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="91"/>
@@ -525,7 +525,7 @@
     <message>
         <location filename="../configdialog.cpp" line="64"/>
         <source>Album</source>
-        <translation>Δίσκος</translation>
+        <translation>Άλμπουμ</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="65"/>
@@ -835,12 +835,12 @@
     <message>
         <location filename="../detailsdialog.cpp" line="242"/>
         <source>Album artist</source>
-        <translation>Καλλιτέχνης δίσκος</translation>
+        <translation>Καλλιτέχνης άλμπουμ</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="243"/>
         <source>Album</source>
-        <translation>Δίσκος</translation>
+        <translation>Άλμπουμ</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="244"/>
@@ -999,12 +999,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation>Δίσκος</translation>
+        <translation>Άλμπουμ</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
         <source>Album Artist</source>
-        <translation>Καλλιτέχνης δίσκος</translation>
+        <translation>Καλλιτέχνης άλμπουμ</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="31"/>
@@ -1206,12 +1206,12 @@
     <message>
         <location filename="../forms/tageditor.ui" line="90"/>
         <source>Album:</source>
-        <translation>Δίσκος:</translation>
+        <translation>Άλμπουμ:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="113"/>
         <source>Album artist:</source>
-        <translation>Καλλιτέχνης δίσκος:</translation>
+        <translation>Καλλιτέχνης άλμπουμ:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="123"/>

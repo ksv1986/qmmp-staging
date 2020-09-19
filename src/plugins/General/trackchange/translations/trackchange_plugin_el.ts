@@ -39,12 +39,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="97"/>
         <source>Command to run on application startup:</source>
-        <translation type="unfinished"></translation>
+        <translation>Εντολή προς εκτέλεση κατά την έναρξη της εφαρμογής:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="104"/>
         <source>Command to run on application exit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Εντολή προς εκτέλεση κατά την έξοδο της εφαρμογής:</translation>
     </message>
 </context>
 <context>

@@ -23,6 +23,7 @@
 #include <QBuffer>
 #include <QMutexLocker>
 #include <QCoreApplication>
+#include <QImageReader>
 #include "decoder.h"
 #include "decoderfactory.h"
 #include "abstractengine.h"
@@ -250,6 +251,7 @@ QFileInfoList MetaDataManager::findCoverFiles(QDir dir, int depth) const
     dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     dir.setSorting(QDir::Name);
     QFileInfoList file_list = dir.entryInfoList(m_settings->coverNameFilters());
+
     const auto fileListCopy = file_list; //avoid container modification
     for(const QFileInfo &i : qAsConst(fileListCopy))
     {
@@ -261,6 +263,9 @@ QFileInfoList MetaDataManager::findCoverFiles(QDir dir, int depth) const
                 break;
             }
         }
+
+        if(QImageReader::imageFormat(i.fileName()).isEmpty()) //remove unsupported image formats
+            file_list.removeAll(i.fileName());
     }
     if(!depth || !file_list.isEmpty())
         return file_list;

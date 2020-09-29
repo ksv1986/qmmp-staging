@@ -129,7 +129,7 @@ void QmmpSettings::setAudioSettings(bool soft_volume, Qmmp::AudioFormat format, 
     emit audioSettingsChanged();
 }
 
-QStringList QmmpSettings::coverNameFilters(bool include) const
+const QStringList &QmmpSettings::coverNameFilters(bool include) const
 {
     return include ? m_cover_inc : m_cover_exclude;
 }

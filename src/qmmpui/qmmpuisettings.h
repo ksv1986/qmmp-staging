@@ -62,7 +62,7 @@ public:
     /*!
      * Returns playlist group format.
      */
-    const QString groupFormat() const;
+    const QString &groupFormat() const;
     /*!
      * Returns state of "Repeat All" option.
      */
@@ -128,7 +128,7 @@ public:
     /*!
      * Returns a list of filters which should be used for directory scanning.
      */
-    QStringList restrictFilters() const;
+    const QStringList &restrictFilters() const;
     /*!
      * Disables all builtin directory scanning filters and sets them to \b filters (Example: *.mp3,*.ogg).
      */
@@ -136,7 +136,7 @@ public:
     /*!
      * Returns a list of filters which should be excluded from incoming files while directory scanning.
      */
-    QStringList excludeFilters() const;
+    const QStringList &excludeFilters() const;
     /*!
      * Sets a list of filters which should be excluded from incoming files while directory scanning.
      * @param filters A set of filters separated by semicolon (Example: *.cue,*.ogg).
@@ -150,7 +150,7 @@ public:
     /*!
      * Returns default playlist name.
      */
-    QString defaultPlayListName() const;
+    const QString &defaultPlayListName() const;
     /*!
      * Sets default playlist options.
      * @param name Default playlist name.

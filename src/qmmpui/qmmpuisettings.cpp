@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2012-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -73,7 +73,7 @@ QmmpUiSettings::~QmmpUiSettings()
     delete m_helper;
 }
 
-const QString QmmpUiSettings::groupFormat() const
+const QString &QmmpUiSettings::groupFormat() const
 {
     return m_group_format;
 }
@@ -256,7 +256,7 @@ void QmmpUiSettings::setPlayListTransitionEnabled(bool enabled)
     }
 }
 
-QStringList QmmpUiSettings::restrictFilters() const
+const QStringList &QmmpUiSettings::restrictFilters() const
 {
     return m_restrict_filters;
 }
@@ -267,7 +267,7 @@ void QmmpUiSettings::setRestrictFilters(const QString &filters)
     m_timer->start();
 }
 
-QStringList QmmpUiSettings::excludeFilters() const
+const QStringList &QmmpUiSettings::excludeFilters() const
 {
     return m_exclude_filters;
 }
@@ -283,7 +283,7 @@ bool QmmpUiSettings::useDefaultPlayList() const
     return m_use_default_pl;
 }
 
-QString QmmpUiSettings::defaultPlayListName() const
+const QString &QmmpUiSettings::defaultPlayListName() const
 {
     return m_default_pl_name;
 }

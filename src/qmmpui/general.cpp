@@ -66,7 +66,8 @@ void General::create(QObject *parent)
         if (factory)
         {
             QObject *general = factory->create(parent);
-            m_generals->insert(factory, general);
+            if(general)
+                m_generals->insert(factory, general);
         }
     }
 }
@@ -131,12 +132,12 @@ void General::setEnabled(GeneralFactory* factory, bool enable)
     if (enable)
     {
         QObject *general = factory->create(m_parent);
-        m_generals->insert(factory, general);
+        if(general)
+            m_generals->insert(factory, general);
     }
-    else
+    else if(m_generals->value(factory))
     {
-        delete m_generals->value(factory);
-        m_generals->remove(factory);
+        delete m_generals->take(factory);
     }
 }
 
@@ -148,9 +149,10 @@ void General::showSettings(GeneralFactory* factory, QWidget* parentWidget)
 
     if (m_generals && dialog->exec() == QDialog::Accepted && m_generals->keys().contains(factory))
     {
-        delete m_generals->value(factory);
+        delete m_generals->take(factory);
         QObject *general = factory->create(m_parent);
-        m_generals->insert(factory, general);
+        if(general)
+            m_generals->insert(factory, general);
     }
     dialog->deleteLater();
 }

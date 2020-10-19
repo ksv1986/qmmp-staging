@@ -35,9 +35,12 @@ LyricsWindow::LyricsWindow(const TrackInfo *info, QWidget *parent)
         : QWidget(parent)
 {
     m_ui.setupUi(this);
-    setWindowFlags(Qt::Dialog);
-    setAttribute(Qt::WA_DeleteOnClose);
-    setAttribute(Qt::WA_QuitOnClose, false);
+    if(!info)
+        return;
+
+    //setWindowFlags(Qt::Dialog);
+    //setAttribute(Qt::WA_DeleteOnClose);
+    //setAttribute(Qt::WA_QuitOnClose, false);
     m_cachePath = Qmmp::configDir() + "/lyrics/";
     m_ui.editWidget->setVisible(false);
     m_ui.titleLineEdit->setText(info->value(Qmmp::TITLE));
@@ -86,6 +89,7 @@ LyricsWindow::LyricsWindow(const TrackInfo *info, QWidget *parent)
 
 LyricsWindow::~LyricsWindow()
 {
+    qDebug("%s", Q_FUNC_INFO);
 }
 
 void LyricsWindow::onRequestFinished(QNetworkReply *reply)

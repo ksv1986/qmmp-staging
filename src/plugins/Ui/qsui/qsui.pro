@@ -35,7 +35,8 @@ SOURCES += \
     qsuiquicksearch.cpp \
     qsuivisualization.cpp \
     qsuiwaveformseekbar.cpp \
-    qsuistatusbar.cpp
+    qsuistatusbar.cpp \
+    dockwidgetlist.cpp
 HEADERS += mainwindow.h \
     listwidget.h \
     visualmenu.h \
@@ -69,7 +70,8 @@ HEADERS += mainwindow.h \
     qsuiquicksearch.h \
     qsuivisualization.h \
     qsuiwaveformseekbar.h \
-    qsuistatusbar.h
+    qsuistatusbar.h \
+    dockwidgetlist.h
 
 FORMS += forms/mainwindow.ui \
     forms/shortcutdialog.ui \

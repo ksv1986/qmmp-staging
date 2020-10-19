@@ -22,6 +22,7 @@
 #include <QDir>
 #include <QDialog>
 #include <qmmp/qmmp.h>
+#include "uihelper.h"
 #include "qmmpuiplugincache_p.h"
 #include "general.h"
 
@@ -98,6 +99,46 @@ QList<GeneralFactory *> General::enabledFactories()
     return list;
 }
 
+QStringList General::enabledWidgets()
+{
+    QStringList out;
+    for(const GeneralFactory *f : General::enabledFactories())
+    {
+        for(const WidgetDescription &desc : f->properties().widgets)
+            out << QString("%1_%2").arg(f->properties().shortName).arg(desc.id);
+    }
+
+    return out;
+}
+
+WidgetDescription General::widgetDescription(const QString &id)
+{
+    for(const GeneralFactory *f : General::enabledFactories())
+    {
+        for(const WidgetDescription &desc : f->properties().widgets)
+        {
+            if(id == QString("%1_%2").arg(f->properties().shortName).arg(desc.id))
+              return desc;
+        }
+    }
+
+    return { -1, QString(), Qt::NoDockWidgetArea };
+}
+
+QWidget *General::createWidget(const QString &id, QWidget *parent)
+{
+    for(GeneralFactory *f : General::enabledFactories())
+    {
+        for(const WidgetDescription &desc : f->properties().widgets)
+        {
+            if(id == QString("%1_%2").arg(f->properties().shortName).arg(desc.id))
+              return f->createWidget(desc.id, parent);
+        }
+    }
+
+    return nullptr;
+}
+
 QString General::file(const GeneralFactory *factory)
 {
     loadPlugins();
@@ -106,7 +147,7 @@ QString General::file(const GeneralFactory *factory)
     return it == m_cache->cend() ? QString() : (*it)->file();
 }
 
-void General::setEnabled(GeneralFactory* factory, bool enable)
+void General::setEnabled(GeneralFactory *factory, bool enable)
 {
     loadPlugins();
     if (!factories().contains(factory))
@@ -129,30 +170,43 @@ void General::setEnabled(GeneralFactory* factory, bool enable)
 
     if (enable == m_generals->keys().contains(factory))
         return;
+
     if (enable)
     {
         QObject *general = factory->create(m_parent);
         if(general)
             m_generals->insert(factory, general);
+
+        for(const WidgetDescription &d : factory->properties().widgets)
+            UiHelper::instance()->addWidget(QString("%1_%2").arg(factory->properties().shortName).arg(d.id));
     }
-    else if(m_generals->value(factory))
+    else
     {
-        delete m_generals->take(factory);
+        for(const WidgetDescription &d : factory->properties().widgets)
+            UiHelper::instance()->removeWidget(QString("%1_%2").arg(factory->properties().shortName).arg(d.id));
+
+        if(m_generals->value(factory))
+            delete m_generals->take(factory);
     }
 }
 
-void General::showSettings(GeneralFactory* factory, QWidget* parentWidget)
+void General::showSettings(GeneralFactory *factory, QWidget *parentWidget)
 {
     QDialog *dialog = factory->createConfigDialog(parentWidget);
     if (!dialog)
         return;
 
-    if (m_generals && dialog->exec() == QDialog::Accepted && m_generals->keys().contains(factory))
+    if (m_generals && dialog->exec() == QDialog::Accepted)
     {
-        delete m_generals->take(factory);
+        if(m_generals->keys().contains(factory))
+            delete m_generals->take(factory);
+
         QObject *general = factory->create(m_parent);
         if(general)
             m_generals->insert(factory, general);
+
+        for(const WidgetDescription &d : factory->properties().widgets)
+            UiHelper::instance()->updateWidget(QString("%1_%2").arg(factory->properties().shortName).arg(d.id));
     }
     dialog->deleteLater();
 }

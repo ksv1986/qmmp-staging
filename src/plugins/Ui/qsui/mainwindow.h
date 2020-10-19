@@ -44,6 +44,7 @@ class QSUiTabWidget;
 class QSUiQuickSearch;
 class QSUiWaveformSeekBar;
 class QSUiStatusBar;
+class DockWidgetList;
 
 
 /**
@@ -123,6 +124,7 @@ private:
     bool m_update = false;
     bool m_hideOnClose;
     QSUiTabWidget *m_tabWidget;
+    DockWidgetList *m_dockWidgetList;
 
 };
 

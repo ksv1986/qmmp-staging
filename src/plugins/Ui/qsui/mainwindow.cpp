@@ -59,6 +59,7 @@
 #include "qsuiquicksearch.h"
 #include "qsuiwaveformseekbar.h"
 #include "qsuistatusbar.h"
+#include "dockwidgetlist.h"
 #include "equalizer.h"
 
 #define KEY_OFFSET 10000
@@ -156,7 +157,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     m_ui.coverDockWidget->setWidget(new CoverWidget(this));
     //playlists
     m_ui.playlistsDockWidget->setWidget(new PlayListBrowser(m_pl_manager, this));
-
+    //dock widgets (plugins)
+    m_dockWidgetList = new DockWidgetList(this);
+    //other
     createActions();
     readSettings();
     restoreWindowTitle();
@@ -483,7 +486,8 @@ void MainWindow::createActions()
     m_ui.menuView->addAction(m_ui.fileSystemDockWidget->toggleViewAction());
     m_ui.menuView->addAction(m_ui.coverDockWidget->toggleViewAction());
     m_ui.menuView->addAction(m_ui.playlistsDockWidget->toggleViewAction());
-    m_ui.menuView->addSeparator();
+    QAction *separator = m_ui.menuView->addSeparator();
+    m_dockWidgetList->registerMenu(m_ui.menuView, separator);
     m_ui.menuView->addAction(SET_ACTION(ActionManager::UI_SHOW_TABS, m_tabWidget->tabBar(), SLOT(setVisible(bool))));
     m_ui.menuView->addAction(SET_ACTION(ActionManager::UI_SHOW_TITLEBARS, this, SLOT(setTitleBarsVisible(bool))));
     m_ui.menuView->addAction(ACTION(ActionManager::PL_SHOW_HEADER));

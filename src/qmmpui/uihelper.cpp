@@ -129,7 +129,22 @@ void UiHelper::registerMenu(UiHelper::MenuType type, QMenu *menu, bool autoHide,
         m_menus[type].menu->insertActions(before, m_menus[type].actions);
     else
         m_menus[type].menu->addActions(m_menus[type].actions);
-     m_menus[type].menu->menuAction()->setVisible(!autoHide || !m_menus[type].actions.isEmpty());
+    m_menus[type].menu->menuAction()->setVisible(!autoHide || !m_menus[type].actions.isEmpty());
+}
+
+void UiHelper::addWidget(const QString &id)
+{
+    emit widgetAdded(id);
+}
+
+void UiHelper::removeWidget(const QString &id)
+{
+    emit widgetRemoved(id);
+}
+
+void UiHelper::updateWidget(const QString &id)
+{
+    emit widgetUpdated(id);
 }
 
 void UiHelper::addFiles(QWidget *parent, PlayListModel *model)

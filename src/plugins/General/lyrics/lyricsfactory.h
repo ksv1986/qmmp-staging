@@ -37,6 +37,7 @@ Q_INTERFACES(GeneralFactory)
 public:
     GeneralProperties properties() const override;
     QObject *create(QObject *parent) override;
+    QWidget *createWidget(int id, QWidget *parent) override;
     QDialog *createConfigDialog(QWidget *parent) override;
     void showAbout(QWidget *parent) override;
     QString translation() const override;

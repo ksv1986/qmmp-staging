@@ -115,7 +115,8 @@ SOURCES += general.cpp \
     coverviewer.cpp \
     metadataformattermenu.cpp \
     covereditor.cpp \
-    commandlinehandler.cpp
+    commandlinehandler.cpp \
+    generalfactory.cpp
 
 FORMS += forms/detailsdialog.ui \
     forms/tageditor.ui \

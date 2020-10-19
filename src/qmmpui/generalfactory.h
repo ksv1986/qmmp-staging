@@ -29,6 +29,14 @@ class QWidget;
 class Control;
 class General;
 
+struct WidgetDescription
+{
+    int id;
+    QString name;
+    Qt::DockWidgetAreas allowedAreas;
+};
+
+
 /*! @brief Structure to store general plugin properies.
  */
 struct GeneralProperties
@@ -39,11 +47,13 @@ struct GeneralProperties
     bool hasSettings = false;       /*!< Should be \b true if plugin has settings dialog, and \b false otherwise */
     bool visibilityControl = false; /*!< Should be \b true if plugin can show/hide main window of the player,
                                      * and \b false otherwise */
+    QList<WidgetDescription> widgets;
 };
+
 /*! @brief %General plugin interface.
  * @author Ilya Kotov <forkotov02@ya.ru>
  */
-class GeneralFactory
+class QMMPUI_EXPORT GeneralFactory
 {
 public:
     /*!
@@ -58,6 +68,7 @@ public:
      * Creates object of the General class.
      */
     virtual QObject *create(QObject *parent) = 0;
+    virtual QWidget *createWidget(int id, QWidget *parent);
     /*!
      * Creates configuration dialog.
      * @param parent Parent widget.

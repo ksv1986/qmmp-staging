@@ -21,6 +21,7 @@
 #include <QMessageBox>
 #include "settingsdialog.h"
 #include "lyrics.h"
+#include "lyricswindow.h"
 #include "lyricsfactory.h"
 
 GeneralProperties LyricsFactory::properties() const
@@ -31,12 +32,20 @@ GeneralProperties LyricsFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
+    properties.widgets = { { 0, tr("Lyrics"), Qt::AllDockWidgetAreas } };
     return properties;
 }
 
 QObject *LyricsFactory::create(QObject *parent)
 {
     return new Lyrics(parent);
+}
+
+QWidget *LyricsFactory::createWidget(int id, QWidget *parent)
+{
+    if(id == 0)
+        return new LyricsWindow(nullptr, parent);
+    return nullptr;
 }
 
 QDialog *LyricsFactory::createConfigDialog(QWidget *parent)

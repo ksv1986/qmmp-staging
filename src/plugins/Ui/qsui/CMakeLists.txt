@@ -40,6 +40,7 @@ SET(libqsui_SRCS
     qsuiquicksearch.cpp
     qsuiwaveformseekbar.cpp
     qsuistatusbar.cpp
+    dockwidgetlist.cpp
 )
 
 SET(libqsui_HDRS

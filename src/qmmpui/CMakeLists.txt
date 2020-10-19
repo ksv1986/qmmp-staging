@@ -58,6 +58,7 @@ SET(libqmmpui_SRCS
     metadatahelper.cpp
     coverviewer.cpp
     covereditor.cpp
+    generalfactory.cpp
 )
 
 SET(libqmmpui_HDRS

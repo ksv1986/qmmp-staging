@@ -304,7 +304,18 @@ UiHelper* UiHelper::instance()
 
 void UiHelper::removeAction(QObject *action)
 {
-    removeAction(qobject_cast<QAction *>(action));
+    for(MenuType type : m_menus.keys())
+    {
+        for(QList<QAction *>::iterator it = m_menus[type].actions.begin(); it != m_menus[type].actions.end(); ++it)
+        {
+            if(*it == action)
+            {
+                m_menus[type].actions.erase(it);
+                m_menus[type].menu->menuAction()->setVisible(!m_menus[type].autoHide || !m_menus[type].actions.isEmpty());
+                break;
+            }
+        }
+    }
 }
 
 void UiHelper::addSelectedFiles(const QStringList &files, bool play)

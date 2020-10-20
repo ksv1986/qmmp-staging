@@ -33,6 +33,7 @@ struct WidgetDescription
 {
     int id;
     QString name;
+    Qt::DockWidgetArea area;
     Qt::DockWidgetAreas allowedAreas;
 };
 

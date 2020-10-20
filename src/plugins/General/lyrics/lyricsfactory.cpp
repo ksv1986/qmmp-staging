@@ -32,7 +32,7 @@ GeneralProperties LyricsFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
-    properties.widgets = { { 0, tr("Lyrics"), Qt::AllDockWidgetAreas } };
+    properties.widgets = { { 0, tr("Lyrics"), Qt::LeftDockWidgetArea, Qt::AllDockWidgetAreas } };
     return properties;
 }
 

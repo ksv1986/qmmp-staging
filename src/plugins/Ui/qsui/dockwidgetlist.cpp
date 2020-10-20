@@ -18,7 +18,7 @@ DockWidgetList::DockWidgetList(QMainWindow *parent) : QObject(parent), m_mw(pare
         QDockWidget *dockWidget = new QDockWidget(desc.name, m_mw);
         dockWidget->setObjectName(id);
         dockWidget->setAllowedAreas(desc.allowedAreas);
-        m_mw->addDockWidget(Qt::LeftDockWidgetArea, dockWidget, Qt::Vertical);
+        m_mw->addDockWidget(desc.area, dockWidget);
         connect(dockWidget->toggleViewAction(), SIGNAL(toggled(bool)), SLOT(onViewActionToggled(bool)));
         m_dockWidgetList << dockWidget;
     }
@@ -72,7 +72,7 @@ void DockWidgetList::onWidgetAdded(const QString &id)
     dockWidget->setAllowedAreas(desc.allowedAreas);
     if(m_menu && m_beforeAction)
         m_menu->insertAction(m_beforeAction, dockWidget->toggleViewAction());
-    m_mw->addDockWidget(Qt::LeftDockWidgetArea, dockWidget, Qt::Vertical);
+    m_mw->addDockWidget(desc.area, dockWidget);
     connect(dockWidget->toggleViewAction(), SIGNAL(toggled(bool)), SLOT(onViewActionToggled(bool)));
     m_dockWidgetList << dockWidget;
 

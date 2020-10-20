@@ -122,7 +122,7 @@ WidgetDescription General::widgetDescription(const QString &id)
         }
     }
 
-    return { -1, QString(), Qt::NoDockWidgetArea };
+    return { -1, QString(), Qt::LeftDockWidgetArea, Qt::NoDockWidgetArea };
 }
 
 QWidget *General::createWidget(const QString &id, QWidget *parent)

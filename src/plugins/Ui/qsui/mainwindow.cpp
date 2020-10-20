@@ -850,6 +850,8 @@ void MainWindow::showMetaData()
 
 void MainWindow::setTitleBarsVisible(bool visible)
 {
+    m_dockWidgetList->setTitleBarsVisible(visible);
+
     QList<QDockWidget *> widgetList = {
         m_ui.analyzerDockWidget,
         m_ui.fileSystemDockWidget,

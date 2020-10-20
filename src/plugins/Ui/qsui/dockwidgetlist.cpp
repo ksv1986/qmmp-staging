@@ -33,6 +33,32 @@ void DockWidgetList::registerMenu(QMenu *menu, QAction *before)
         menu->insertAction(m_beforeAction, dock->toggleViewAction());
 }
 
+void DockWidgetList::setTitleBarsVisible(bool visible)
+{
+    m_titleBarsVisible = visible;
+
+    if(visible)
+    {
+        for(QDockWidget *w : qAsConst(m_dockWidgetList))
+        {
+            QWidget *widget = w->titleBarWidget();
+            if(widget)
+            {
+                w->setTitleBarWidget(nullptr);
+                delete widget;
+            }
+        }
+    }
+    else
+    {
+        for(QDockWidget *w : qAsConst(m_dockWidgetList))
+        {
+            if(!w->titleBarWidget())
+                w->setTitleBarWidget(new QWidget());
+        }
+    }
+}
+
 void DockWidgetList::onViewActionToggled(bool checked)
 {
     if(!sender() || !sender()->parent())
@@ -75,6 +101,7 @@ void DockWidgetList::onWidgetAdded(const QString &id)
     m_mw->addDockWidget(desc.area, dockWidget);
     connect(dockWidget->toggleViewAction(), SIGNAL(toggled(bool)), SLOT(onViewActionToggled(bool)));
     m_dockWidgetList << dockWidget;
+    setTitleBarsVisible(m_titleBarsVisible);
 
     QWidget *w = General::createWidget(id, m_mw);
     dockWidget->setWidget(w);

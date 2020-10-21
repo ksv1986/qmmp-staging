@@ -11,7 +11,7 @@ SET(liblyrics_SRCS
     lyrics.cpp
     lyricsfactory.cpp
     lyricsprovider.cpp
-    lyricswindow.cpp
+    lyricswidget.cpp
     settingsdialog.cpp
     ultimatelyricsparser.cpp
 )
@@ -26,7 +26,7 @@ QT5_ADD_RESOURCES(liblyrics_RCC_SRCS ${liblyrics_RCCS})
 # user interface
 
 SET(liblyrics_UIS
-    lyricswindow.ui
+    lyricswidget.ui
     settingsdialog.ui
 )
 

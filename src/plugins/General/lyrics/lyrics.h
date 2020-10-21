@@ -21,13 +21,12 @@
 #define LYRICS_H
 
 #include <QPointer>
-
 #include <qmmpui/general.h>
 #include <qmmp/qmmp.h>
 
 class QAction;
-
 class SoundCore;
+class LyricsWidget;
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
@@ -37,7 +36,7 @@ class Lyrics : public QObject
 {
 Q_OBJECT
 public:
-    Lyrics(QObject *parent = nullptr);
+    explicit Lyrics(QPointer<LyricsWidget> *lyricsWidget, QObject *parent = nullptr);
 
     ~Lyrics();
 
@@ -46,6 +45,7 @@ private slots:
 
 private:
     QAction *m_action;
+    QPointer<LyricsWidget> *m_lyricsWidget;
 
 };
 

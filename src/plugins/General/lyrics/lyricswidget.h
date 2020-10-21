@@ -17,8 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef LYRICSWINDOW_H
-#define LYRICSWINDOW_H
+#ifndef LYRICSWIDGET_H
+#define LYRICSWIDGET_H
 
 #include <QWidget>
 #include <QHash>
@@ -33,13 +33,15 @@ class TrackInfo;
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class LyricsWindow : public QWidget
+class LyricsWidget : public QWidget
 {
 Q_OBJECT
 public:
-    explicit LyricsWindow(const TrackInfo *info, QWidget *parent = nullptr);
+    explicit LyricsWidget(bool window, QWidget *parent = nullptr);
 
-    ~LyricsWindow();
+    ~LyricsWidget();
+
+    void fetch(const TrackInfo *info);
 
 private slots:
     void onRequestFinished(QNetworkReply *reply);

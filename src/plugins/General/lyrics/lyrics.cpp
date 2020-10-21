@@ -25,15 +25,16 @@
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/playlistitem.h>
 #include <qmmpui/mediaplayer.h>
-#include "lyricswindow.h"
+#include "lyricswidget.h"
 #include "lyrics.h"
 
-Lyrics::Lyrics(QObject *parent) : QObject(parent)
+Lyrics::Lyrics(QPointer<LyricsWidget> *lyricsWidget, QObject *parent) : QObject(parent)
 {
+    m_lyricsWidget = lyricsWidget;
     m_action = new QAction(tr("View Lyrics"), this);
     m_action->setShortcut(tr("Ctrl+L"));
     UiHelper::instance()->addAction(m_action, UiHelper::PLAYLIST_MENU);
-    connect (m_action, SIGNAL(triggered ()), SLOT(showLyrics()));
+    connect(m_action, SIGNAL(triggered ()), SLOT(showLyrics()));
 }
 
 Lyrics::~Lyrics()
@@ -46,8 +47,17 @@ void Lyrics::showLyrics()
     if (!tracks.isEmpty())
     {
         if (tracks.at(0)->value(Qmmp::ARTIST).isEmpty() || tracks.at(0)->value(Qmmp::TITLE).isEmpty())
-                return;
-            LyricsWindow *w = new LyricsWindow(tracks.first(), qApp->activeWindow ());
+            return;
+
+        if(!m_lyricsWidget->isNull() && m_lyricsWidget->data()->isVisible())
+        {
+            m_lyricsWidget->data()->fetch(tracks.first());
+        }
+        else
+        {
+            LyricsWidget *w = new LyricsWidget(true, qApp->activeWindow());
+            w->fetch(tracks.first());
             w->show();
+        }
     }
 }

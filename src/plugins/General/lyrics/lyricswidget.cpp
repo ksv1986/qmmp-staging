@@ -29,25 +29,25 @@
 #include <QCryptographicHash>
 #include <qmmp/qmmpsettings.h>
 #include <qmmp/qmmp.h>
-#include "lyricswindow.h"
+#include "lyricswidget.h"
 
-LyricsWindow::LyricsWindow(const TrackInfo *info, QWidget *parent)
-        : QWidget(parent)
+LyricsWidget::LyricsWidget(bool dialog, QWidget *parent) : QWidget(parent)
 {
     m_ui.setupUi(this);
-    if(!info)
-        return;
 
-    //setWindowFlags(Qt::Dialog);
-    //setAttribute(Qt::WA_DeleteOnClose);
-    //setAttribute(Qt::WA_QuitOnClose, false);
+    if(dialog)
+    {
+        setWindowFlags(Qt::Dialog);
+        setAttribute(Qt::WA_DeleteOnClose);
+        setAttribute(Qt::WA_QuitOnClose, false);
+    }
+    else
+    {
+        m_ui.buttonBox->hide();
+    }
+
     m_cachePath = Qmmp::configDir() + "/lyrics/";
     m_ui.editWidget->setVisible(false);
-    m_ui.titleLineEdit->setText(info->value(Qmmp::TITLE));
-    m_ui.artistLineEdit->setText(info->value(Qmmp::ARTIST));
-    m_ui.albumLineEdit->setText(info->value(Qmmp::ALBUM));
-    m_ui.trackSpinBox->setValue(info->value(Qmmp::TRACK).toInt());
-    m_ui.yearSpinBox->setValue(info->value(Qmmp::YEAR).toInt());
 
     m_http = new QNetworkAccessManager(this);
      //load global proxy settings
@@ -74,8 +74,10 @@ LyricsWindow::LyricsWindow(const TrackInfo *info, QWidget *parent)
     }
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    restoreGeometry(settings.value("Lyrics/geometry").toByteArray());
     m_enabledProviders = settings.value("Lyrics/enabled_providers", m_parser.defaultProviders()).toStringList();
+
+    if(dialog)
+        restoreGeometry(settings.value("Lyrics/geometry").toByteArray());
 
     QDir cacheDir(m_cachePath);
     if(!cacheDir.exists())
@@ -83,16 +85,26 @@ LyricsWindow::LyricsWindow(const TrackInfo *info, QWidget *parent)
         if(!cacheDir.mkpath(cacheDir.absolutePath()))
             qWarning("LyricsWindow: unable to create cache directory");
     }
-    if(!loadFromCache())
-        on_refreshButton_clicked();
 }
 
-LyricsWindow::~LyricsWindow()
+LyricsWidget::~LyricsWidget()
 {
     qDebug("%s", Q_FUNC_INFO);
 }
 
-void LyricsWindow::onRequestFinished(QNetworkReply *reply)
+void LyricsWidget::fetch(const TrackInfo *info)
+{
+    m_ui.titleLineEdit->setText(info->value(Qmmp::TITLE));
+    m_ui.artistLineEdit->setText(info->value(Qmmp::ARTIST));
+    m_ui.albumLineEdit->setText(info->value(Qmmp::ALBUM));
+    m_ui.trackSpinBox->setValue(info->value(Qmmp::TRACK).toInt());
+    m_ui.yearSpinBox->setValue(info->value(Qmmp::YEAR).toInt());
+
+    if(!loadFromCache())
+        on_refreshButton_clicked();
+}
+
+void LyricsWidget::onRequestFinished(QNetworkReply *reply)
 {
     QString name = m_tasks.take(reply);
     QVariant redirectTarget = reply->attribute(QNetworkRequest::RedirectionTargetAttribute);
@@ -148,7 +160,7 @@ void LyricsWindow::onRequestFinished(QNetworkReply *reply)
     reply->deleteLater();
 }
 
-void LyricsWindow::on_refreshButton_clicked()
+void LyricsWidget::on_refreshButton_clicked()
 {
     m_ui.textBrowser->setHtml(QString("<b>%1</b>").arg(tr("Receiving")));
     m_ui.providerComboBox->clear();
@@ -174,24 +186,24 @@ void LyricsWindow::on_refreshButton_clicked()
     }
 }
 
-void LyricsWindow::on_editButton_clicked(bool checked)
+void LyricsWidget::on_editButton_clicked(bool checked)
 {
     m_ui.editWidget->setVisible(checked);
 }
 
-void LyricsWindow::on_providerComboBox_activated(int index)
+void LyricsWidget::on_providerComboBox_activated(int index)
 {
     m_ui.textBrowser->setHtml(m_ui.providerComboBox->itemData(index).toString());
 }
 
-QString LyricsWindow::cacheFilePath() const
+QString LyricsWidget::cacheFilePath() const
 {
     QString name = m_ui.artistLineEdit->text() + "_" + m_ui.titleLineEdit->text();
     QByteArray hash = QCryptographicHash::hash(name.toUtf8(), QCryptographicHash::Md5);
     return m_cachePath + QString::fromLatin1(hash.toHex()) + ".html";
 }
 
-bool LyricsWindow::loadFromCache()
+bool LyricsWidget::loadFromCache()
 {
     QFile file(cacheFilePath());
     if(!file.exists())
@@ -209,7 +221,7 @@ bool LyricsWindow::loadFromCache()
     return true;
 }
 
-void LyricsWindow::saveToCache(const QString &text)
+void LyricsWidget::saveToCache(const QString &text)
 {
     QFile file(cacheFilePath());
     if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
@@ -221,8 +233,11 @@ void LyricsWindow::saveToCache(const QString &text)
     file.write(text.toUtf8());
 }
 
-void LyricsWindow::closeEvent(QCloseEvent *)
+void LyricsWidget::closeEvent(QCloseEvent *)
 {
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    settings.setValue("Lyrics/geometry", saveGeometry());
+    if(windowFlags() & Qt::Dialog)
+    {
+        QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+        settings.setValue("Lyrics/geometry", saveGeometry());
+    }
 }

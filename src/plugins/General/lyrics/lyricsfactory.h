@@ -25,9 +25,11 @@
 */
 #include <QObject>
 #include <QDialog>
-
+#include <QPointer>
 #include <qmmpui/general.h>
 #include <qmmpui/generalfactory.h>
+
+class LyricsWidget;
 
 class LyricsFactory : public QObject, public GeneralFactory
 {
@@ -41,6 +43,14 @@ public:
     QDialog *createConfigDialog(QWidget *parent) override;
     void showAbout(QWidget *parent) override;
     QString translation() const override;
+
+private:
+    enum WidgetType
+    {
+        LYRICS_WIDGET = 0
+    };
+
+    QPointer<LyricsWidget> m_lyricsWidget;
 };
 
 #endif

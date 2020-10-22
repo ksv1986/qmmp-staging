@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include <QMessageBox>
+#include <qmmp/soundcore.h>
 #include "settingsdialog.h"
 #include "lyrics.h"
 #include "lyricswidget.h"
@@ -46,6 +47,12 @@ QWidget *LyricsFactory::createWidget(int id, QWidget *parent)
     if(id == LYRICS_WIDGET)
     {
         m_lyricsWidget = new LyricsWidget(false, parent);
+        if(SoundCore::instance()->state() == Qmmp::Playing || SoundCore::instance()->state() == Qmmp::Paused)
+        {
+            TrackInfo info = SoundCore::instance()->trackInfo();
+            if (!info.value(Qmmp::ARTIST).isEmpty() && !info.value(Qmmp::TITLE).isEmpty())
+                m_lyricsWidget->fetch(&info);
+        }
         return m_lyricsWidget;
     }
     return nullptr;

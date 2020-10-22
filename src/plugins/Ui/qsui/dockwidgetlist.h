@@ -18,7 +18,8 @@ public:
     void setTitleBarsVisible(bool visible);
 
 private slots:
-    void onViewActionToggled(bool visible);
+    void onViewActionTriggered(bool checked);
+    void onVisibilityChanged(bool visible);
     void onWidgetAdded(const QString &id);
     void onWidgetRemoved(const QString &id);
     void onWidgetUpdated(const QString &id);

@@ -19,7 +19,8 @@ DockWidgetList::DockWidgetList(QMainWindow *parent) : QObject(parent), m_mw(pare
         dockWidget->setObjectName(id);
         dockWidget->setAllowedAreas(desc.allowedAreas);
         m_mw->addDockWidget(desc.area, dockWidget);
-        connect(dockWidget->toggleViewAction(), SIGNAL(toggled(bool)), SLOT(onViewActionToggled(bool)));
+        connect(dockWidget->toggleViewAction(), SIGNAL(triggered(bool)), SLOT(onViewActionTriggered(bool)));
+        connect(dockWidget, SIGNAL(visibilityChanged(bool)), SLOT(onVisibilityChanged(bool)));
         m_dockWidgetList << dockWidget;
     }
 }
@@ -59,17 +60,19 @@ void DockWidgetList::setTitleBarsVisible(bool visible)
     }
 }
 
-void DockWidgetList::onViewActionToggled(bool checked)
+void DockWidgetList::onViewActionTriggered(bool checked)
 {
     if(!sender() || !sender()->parent())
         return;
 
-    QString id = sender()->parent()->objectName();
     QDockWidget *dockWidget = qobject_cast<QDockWidget *>(sender()->parent());
+
     if(!dockWidget)
         return;
 
-    if(checked)
+    QString id = dockWidget->objectName();
+
+    if(checked && !dockWidget->widget())
     {
         QWidget *w = General::createWidget(id, m_mw);
         if(w)
@@ -78,9 +81,29 @@ void DockWidgetList::onViewActionToggled(bool checked)
             w->show();
         }
     }
-    else if(dockWidget->widget())
+    else if(!checked && dockWidget->widget())
     {
         dockWidget->widget()->deleteLater();
+    }
+}
+
+void DockWidgetList::onVisibilityChanged(bool visible)
+{
+    QDockWidget *dockWidget = qobject_cast<QDockWidget *>(sender());
+
+    if(!dockWidget)
+        return;
+
+    QString id = dockWidget->objectName();
+
+    if(visible && !dockWidget->widget())
+    {
+        QWidget *w = General::createWidget(id, m_mw);
+        if(w)
+        {
+            dockWidget->setWidget(w);
+            w->show();
+        }
     }
 }
 
@@ -99,7 +122,7 @@ void DockWidgetList::onWidgetAdded(const QString &id)
     if(m_menu && m_beforeAction)
         m_menu->insertAction(m_beforeAction, dockWidget->toggleViewAction());
     m_mw->addDockWidget(desc.area, dockWidget);
-    connect(dockWidget->toggleViewAction(), SIGNAL(toggled(bool)), SLOT(onViewActionToggled(bool)));
+    connect(dockWidget->toggleViewAction(), SIGNAL(toggled(bool)), SLOT(onViewActionTriggered(bool)));
     m_dockWidgetList << dockWidget;
     setTitleBarsVisible(m_titleBarsVisible);
 

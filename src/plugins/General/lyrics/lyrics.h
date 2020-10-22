@@ -42,6 +42,7 @@ public:
 
 private slots:
     void showLyrics();
+    void onTrackInfoChanged();
 
 private:
     QAction *m_action;

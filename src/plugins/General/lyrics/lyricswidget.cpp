@@ -100,6 +100,8 @@ void LyricsWidget::fetch(const TrackInfo *info)
     m_ui.trackSpinBox->setValue(info->value(Qmmp::TRACK).toInt());
     m_ui.yearSpinBox->setValue(info->value(Qmmp::YEAR).toInt());
 
+    m_ui.providerComboBox->clear();
+
     if(!loadFromCache())
         on_refreshButton_clicked();
 }
@@ -107,6 +109,11 @@ void LyricsWidget::fetch(const TrackInfo *info)
 void LyricsWidget::onRequestFinished(QNetworkReply *reply)
 {
     QString name = m_tasks.take(reply);
+    if(name.isEmpty())
+    {
+        reply->deleteLater();
+        return;
+    }
     QVariant redirectTarget = reply->attribute(QNetworkRequest::RedirectionTargetAttribute);
     int code = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
 
@@ -171,6 +178,12 @@ void LyricsWidget::on_refreshButton_clicked()
     m_info.setValue(Qmmp::ALBUM, m_ui.albumLineEdit->text());
     m_info.setValue(Qmmp::TRACK, m_ui.trackSpinBox->value());
     m_info.setValue(Qmmp::YEAR, m_ui.yearSpinBox->value());
+
+    //abort previous tasks
+    for(QNetworkReply *reply : m_tasks.keys())
+        reply->abort();
+
+    m_tasks.clear();
 
     for(LyricsProvider *provider : m_parser.providers())
     {

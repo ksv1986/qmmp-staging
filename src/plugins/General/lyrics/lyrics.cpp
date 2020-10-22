@@ -35,6 +35,7 @@ Lyrics::Lyrics(QPointer<LyricsWidget> *lyricsWidget, QObject *parent) : QObject(
     m_action->setShortcut(tr("Ctrl+L"));
     UiHelper::instance()->addAction(m_action, UiHelper::PLAYLIST_MENU);
     connect(m_action, SIGNAL(triggered ()), SLOT(showLyrics()));
+    connect(SoundCore::instance(), SIGNAL(trackInfoChanged()), SLOT(onTrackInfoChanged()));
 }
 
 Lyrics::~Lyrics()
@@ -58,6 +59,18 @@ void Lyrics::showLyrics()
             LyricsWidget *w = new LyricsWidget(true, qApp->activeWindow());
             w->fetch(tracks.first());
             w->show();
+        }
+    }
+}
+
+void Lyrics::onTrackInfoChanged()
+{
+    if(!m_lyricsWidget->isNull())
+    {
+        TrackInfo info = SoundCore::instance()->trackInfo();
+        if (!info.value(Qmmp::ARTIST).isEmpty() && !info.value(Qmmp::TITLE).isEmpty())
+        {
+            m_lyricsWidget->data()->fetch(&info);
         }
     }
 }

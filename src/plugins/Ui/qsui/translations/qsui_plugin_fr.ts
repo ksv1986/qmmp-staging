@@ -668,7 +668,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="900"/>
+        <location filename="../mainwindow.cpp" line="905"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -815,159 +815,158 @@
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="259"/>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="280"/>
         <source>Rename Playlist</source>
         <translation>Renommer la liste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="436"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="280"/>
         <source>Playlist name:</source>
         <translation>Nom de la liste :</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="318"/>
+        <location filename="../mainwindow.cpp" line="321"/>
         <source>Appearance</source>
         <translation>Apparence</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="319"/>
+        <location filename="../mainwindow.cpp" line="322"/>
         <source>Shortcuts</source>
         <translation>Raccourcis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="420"/>
+        <location filename="../mainwindow.cpp" line="423"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="426"/>
+        <location filename="../mainwindow.cpp" line="429"/>
         <source>P</source>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="431"/>
+        <location filename="../mainwindow.cpp" line="434"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="435"/>
+        <location filename="../mainwindow.cpp" line="438"/>
         <source>Quick Search</source>
         <translation>Recherche rapideR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="492"/>
+        <location filename="../mainwindow.cpp" line="496"/>
         <source>Edit Toolbars</source>
         <translation>Editer la barre des outils</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="494"/>
+        <location filename="../mainwindow.cpp" line="498"/>
         <source>Sort List</source>
         <translation>Trier la liste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="497"/>
-        <location filename="../mainwindow.cpp" line="538"/>
+        <location filename="../mainwindow.cpp" line="501"/>
+        <location filename="../mainwindow.cpp" line="542"/>
         <source>By Title</source>
         <translation>par titre</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="500"/>
-        <location filename="../mainwindow.cpp" line="541"/>
+        <location filename="../mainwindow.cpp" line="504"/>
+        <location filename="../mainwindow.cpp" line="545"/>
         <source>By Album</source>
         <translation>par album</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="503"/>
-        <location filename="../mainwindow.cpp" line="544"/>
+        <location filename="../mainwindow.cpp" line="507"/>
+        <location filename="../mainwindow.cpp" line="548"/>
         <source>By Artist</source>
         <translation>par artiste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="506"/>
-        <location filename="../mainwindow.cpp" line="547"/>
+        <location filename="../mainwindow.cpp" line="510"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>By Album Artist</source>
         <translation>par artiste d&apos;album</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="509"/>
-        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="513"/>
+        <location filename="../mainwindow.cpp" line="554"/>
         <source>By Filename</source>
         <translation>par no mde fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="512"/>
-        <location filename="../mainwindow.cpp" line="553"/>
+        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="557"/>
         <source>By Path + Filename</source>
         <translation>par chemin et nom de fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="515"/>
-        <location filename="../mainwindow.cpp" line="556"/>
+        <location filename="../mainwindow.cpp" line="519"/>
+        <location filename="../mainwindow.cpp" line="560"/>
         <source>By Date</source>
         <translation>par date</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="518"/>
-        <location filename="../mainwindow.cpp" line="559"/>
+        <location filename="../mainwindow.cpp" line="522"/>
+        <location filename="../mainwindow.cpp" line="563"/>
         <source>By Track Number</source>
         <translation>par numéro de piste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="521"/>
-        <location filename="../mainwindow.cpp" line="562"/>
+        <location filename="../mainwindow.cpp" line="525"/>
+        <location filename="../mainwindow.cpp" line="566"/>
         <source>By Disc Number</source>
         <translation>par numéro de disque</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="524"/>
-        <location filename="../mainwindow.cpp" line="565"/>
+        <location filename="../mainwindow.cpp" line="528"/>
+        <location filename="../mainwindow.cpp" line="569"/>
         <source>By File Creation Date</source>
         <translation>par date de création du fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="527"/>
-        <location filename="../mainwindow.cpp" line="568"/>
+        <location filename="../mainwindow.cpp" line="531"/>
+        <location filename="../mainwindow.cpp" line="572"/>
         <source>By File Modification Date</source>
         <translation>par date de modification du fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="530"/>
+        <location filename="../mainwindow.cpp" line="534"/>
         <source>By Group</source>
         <translation>par groupe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="535"/>
+        <location filename="../mainwindow.cpp" line="539"/>
         <source>Sort Selection</source>
         <translation>trier la sélection</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="573"/>
+        <location filename="../mainwindow.cpp" line="577"/>
         <source>Randomize List</source>
         <translation>Mélanger la liste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="575"/>
+        <location filename="../mainwindow.cpp" line="579"/>
         <source>Reverse List</source>
         <translation>Inverser la lsite</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="582"/>
-        <location filename="../mainwindow.cpp" line="626"/>
+        <location filename="../mainwindow.cpp" line="629"/>
         <source>Actions</source>
         <translation>Actions</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="382"/>
+        <location filename="../mainwindow.cpp" line="385"/>
         <source>Add new playlist</source>
         <translation>Ajouter une nouvelle liste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="388"/>
+        <location filename="../mainwindow.cpp" line="391"/>
         <source>Show all tabs</source>
         <translation>Montrer tous les onglets</translation>
     </message>
@@ -975,50 +974,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="69"/>
+        <location filename="../playlistheader.cpp" line="70"/>
         <source>Add Column</source>
         <translation>Ajouter une colonne</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="70"/>
+        <location filename="../playlistheader.cpp" line="71"/>
         <source>Edit Column</source>
         <translation>Éditer la colonne</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="71"/>
+        <location filename="../playlistheader.cpp" line="72"/>
         <source>Show Queue/Protocol</source>
         <translation>Montrer la file / le protocole</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="73"/>
+        <location filename="../playlistheader.cpp" line="74"/>
         <source>Auto-resize</source>
         <translation>Redimensionnement automatique</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="76"/>
+        <location filename="../playlistheader.cpp" line="77"/>
         <source>Alignment</source>
         <translation>Alignement</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="77"/>
+        <location filename="../playlistheader.cpp" line="78"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>Gauche</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="78"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>Droite</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="79"/>
+        <location filename="../playlistheader.cpp" line="80"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Centre</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="89"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Remove Column</source>
         <translation>Supprimer la colonne</translation>
     </message>
@@ -1710,7 +1709,7 @@
 <context>
     <name>VisualMenu</name>
     <message>
-        <location filename="../visualmenu.cpp" line="27"/>
+        <location filename="../visualmenu.cpp" line="26"/>
         <source>Visualization</source>
         <translation>Visualisation</translation>
     </message>

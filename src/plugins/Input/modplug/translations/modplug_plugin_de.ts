@@ -57,39 +57,39 @@
 <context>
     <name>ModPlugMetaDataModel</name>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="71"/>
+        <location filename="../modplugmetadatamodel.cpp" line="70"/>
         <source>Speed</source>
         <translation>Geschwindigkeit</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="72"/>
+        <location filename="../modplugmetadatamodel.cpp" line="71"/>
         <source>Tempo</source>
         <translation>Tempo</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="73"/>
-        <location filename="../modplugmetadatamodel.cpp" line="94"/>
+        <location filename="../modplugmetadatamodel.cpp" line="72"/>
+        <location filename="../modplugmetadatamodel.cpp" line="93"/>
         <source>Samples</source>
         <translation>Abtastwerte</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="74"/>
-        <location filename="../modplugmetadatamodel.cpp" line="103"/>
+        <location filename="../modplugmetadatamodel.cpp" line="73"/>
+        <location filename="../modplugmetadatamodel.cpp" line="102"/>
         <source>Instruments</source>
         <translation>Instrumente</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="75"/>
+        <location filename="../modplugmetadatamodel.cpp" line="74"/>
         <source>Patterns</source>
         <translation>Pattern</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="76"/>
+        <location filename="../modplugmetadatamodel.cpp" line="75"/>
         <source>Channels</source>
         <translation>Kanäle</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="108"/>
+        <location filename="../modplugmetadatamodel.cpp" line="107"/>
         <source>Comment</source>
         <translation>Kommentar</translation>
     </message>

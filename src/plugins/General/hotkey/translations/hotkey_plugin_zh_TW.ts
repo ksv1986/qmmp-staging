@@ -70,77 +70,77 @@
         <translation>重置</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="37"/>
+        <location filename="../settingsdialog.cpp" line="38"/>
         <source>Play</source>
         <translation>播放</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="38"/>
+        <location filename="../settingsdialog.cpp" line="39"/>
         <source>Stop</source>
         <translation>停止</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="39"/>
+        <location filename="../settingsdialog.cpp" line="40"/>
         <source>Pause</source>
         <translation>暫停</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="40"/>
+        <location filename="../settingsdialog.cpp" line="41"/>
         <source>Play/Pause</source>
         <translation>播放/暫停</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="41"/>
+        <location filename="../settingsdialog.cpp" line="42"/>
         <source>Next</source>
         <translation>下一曲</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="42"/>
+        <location filename="../settingsdialog.cpp" line="43"/>
         <source>Previous</source>
         <translation>上一曲</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="43"/>
+        <location filename="../settingsdialog.cpp" line="44"/>
         <source>Show/Hide</source>
         <translation>察看/隱藏</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="44"/>
+        <location filename="../settingsdialog.cpp" line="45"/>
         <source>Volume +</source>
         <translation>音量 +</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="45"/>
+        <location filename="../settingsdialog.cpp" line="46"/>
         <source>Volume -</source>
         <translation>音量 -</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="46"/>
+        <location filename="../settingsdialog.cpp" line="47"/>
         <source>Forward 5 seconds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="47"/>
+        <location filename="../settingsdialog.cpp" line="48"/>
         <source>Rewind 5 seconds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="48"/>
+        <location filename="../settingsdialog.cpp" line="49"/>
         <source>Jump to track</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="49"/>
+        <location filename="../settingsdialog.cpp" line="50"/>
         <source>Mute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="114"/>
+        <location filename="../settingsdialog.cpp" line="107"/>
         <source>Warning</source>
         <translation>注意</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="114"/>
+        <location filename="../settingsdialog.cpp" line="107"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
         <translation type="unfinished"></translation>
     </message>

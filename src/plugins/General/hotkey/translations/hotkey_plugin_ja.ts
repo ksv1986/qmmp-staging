@@ -70,77 +70,77 @@
         <translation>リセット</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="37"/>
+        <location filename="../settingsdialog.cpp" line="38"/>
         <source>Play</source>
         <translation>再生</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="38"/>
+        <location filename="../settingsdialog.cpp" line="39"/>
         <source>Stop</source>
         <translation>終止</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="39"/>
+        <location filename="../settingsdialog.cpp" line="40"/>
         <source>Pause</source>
         <translation>一時停止</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="40"/>
+        <location filename="../settingsdialog.cpp" line="41"/>
         <source>Play/Pause</source>
         <translation>再生/一時停止</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="41"/>
+        <location filename="../settingsdialog.cpp" line="42"/>
         <source>Next</source>
         <translation>次の曲</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="42"/>
+        <location filename="../settingsdialog.cpp" line="43"/>
         <source>Previous</source>
         <translation>前の曲</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="43"/>
+        <location filename="../settingsdialog.cpp" line="44"/>
         <source>Show/Hide</source>
         <translation>隠す/表に出す</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="44"/>
+        <location filename="../settingsdialog.cpp" line="45"/>
         <source>Volume +</source>
         <translation>音量増加</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="45"/>
+        <location filename="../settingsdialog.cpp" line="46"/>
         <source>Volume -</source>
         <translation>音量減少</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="46"/>
+        <location filename="../settingsdialog.cpp" line="47"/>
         <source>Forward 5 seconds</source>
         <translation>5 秒すすめる</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="47"/>
+        <location filename="../settingsdialog.cpp" line="48"/>
         <source>Rewind 5 seconds</source>
         <translation>5 秒もどす</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="48"/>
+        <location filename="../settingsdialog.cpp" line="49"/>
         <source>Jump to track</source>
         <translation>トラックを指定して移動</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="49"/>
+        <location filename="../settingsdialog.cpp" line="50"/>
         <source>Mute</source>
         <translation>消音</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="114"/>
+        <location filename="../settingsdialog.cpp" line="107"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="114"/>
+        <location filename="../settingsdialog.cpp" line="107"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
         <translation>キーの組み合わせ「%1」は既に他の用途に使われています</translation>
     </message>

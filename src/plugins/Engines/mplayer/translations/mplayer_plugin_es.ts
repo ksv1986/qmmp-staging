@@ -37,78 +37,78 @@
 <context>
     <name>MplayerMetaDataModel</name>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="39"/>
+        <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>Size</source>
         <translation>Tamaño</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="39"/>
+        <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>KiB</source>
         <translation>KiB</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="65"/>
+        <location filename="../mplayermetadatamodel.cpp" line="64"/>
         <source>Demuxer</source>
         <translation>Demultiplexador</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="67"/>
+        <location filename="../mplayermetadatamodel.cpp" line="66"/>
         <source>Video format</source>
         <translation>Formato de vídeo</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="68"/>
+        <location filename="../mplayermetadatamodel.cpp" line="67"/>
         <source>FPS</source>
         <translation>FPS</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="69"/>
+        <location filename="../mplayermetadatamodel.cpp" line="68"/>
         <source>Video codec</source>
         <translation>Códec de vídeo</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="70"/>
+        <location filename="../mplayermetadatamodel.cpp" line="69"/>
         <source>Aspect ratio</source>
         <translation>Proporción de imagen</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="71"/>
+        <location filename="../mplayermetadatamodel.cpp" line="70"/>
         <source>Video bitrate</source>
         <translation>Tasa de bits de vídeo</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="71"/>
-        <location filename="../mplayermetadatamodel.cpp" line="76"/>
+        <location filename="../mplayermetadatamodel.cpp" line="70"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>kbps</source>
         <translation>kbps</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="74"/>
+        <location filename="../mplayermetadatamodel.cpp" line="73"/>
         <source>Audio codec</source>
         <translation>Códec de sonido</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <location filename="../mplayermetadatamodel.cpp" line="74"/>
         <source>Sample rate</source>
         <translation>Frecuencia</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <location filename="../mplayermetadatamodel.cpp" line="74"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="76"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Audio bitrate</source>
         <translation>Tasa de bits de sonido</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="77"/>
+        <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>Channels</source>
         <translation>Canales</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="72"/>
+        <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <source>Resolution</source>
         <translation>Resolución</translation>
     </message>

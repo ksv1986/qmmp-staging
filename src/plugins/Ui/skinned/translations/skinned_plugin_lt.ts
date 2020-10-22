@@ -461,58 +461,58 @@
 <context>
     <name>EqWidget</name>
     <message>
-        <location filename="../eqwidget.cpp" line="175"/>
-        <location filename="../eqwidget.cpp" line="192"/>
+        <location filename="../eqwidget.cpp" line="172"/>
+        <location filename="../eqwidget.cpp" line="189"/>
         <source>preset</source>
         <translation>Nustatymas</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="276"/>
+        <location filename="../eqwidget.cpp" line="273"/>
         <source>&amp;Load/Delete</source>
         <translation>&amp;Įkelti/Pašalinti</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="278"/>
+        <location filename="../eqwidget.cpp" line="275"/>
         <source>&amp;Save Preset</source>
         <translation>&amp;Išsaugoti nustatymus</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="280"/>
+        <location filename="../eqwidget.cpp" line="277"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>&amp;Išsaugoti auto-nustatymą</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="285"/>
+        <location filename="../eqwidget.cpp" line="282"/>
         <source>&amp;Clear</source>
         <translation>&amp;išvalyti</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="314"/>
+        <location filename="../eqwidget.cpp" line="311"/>
         <source>Saving Preset</source>
         <translation>Išsaugojamas nustatymas</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="315"/>
+        <location filename="../eqwidget.cpp" line="312"/>
         <source>Preset name:</source>
         <translation>Nustatymo pavadinimas:</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="316"/>
+        <location filename="../eqwidget.cpp" line="313"/>
         <source>preset #</source>
         <translation>Nustatymas #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="282"/>
+        <location filename="../eqwidget.cpp" line="279"/>
         <source>&amp;Import</source>
         <translation>&amp;Importuoti</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="46"/>
+        <location filename="../eqwidget.cpp" line="47"/>
         <source>Equalizer</source>
         <translation>Glotintuvas</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="412"/>
+        <location filename="../eqwidget.cpp" line="404"/>
         <source>Import Preset</source>
         <translation>Importuoti nustatymus</translation>
     </message>
@@ -799,37 +799,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="362"/>
+        <location filename="../mainwindow.cpp" line="359"/>
         <source>Appearance</source>
         <translation>Išvaizda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="363"/>
+        <location filename="../mainwindow.cpp" line="360"/>
         <source>Shortcuts</source>
         <translation>Trumpiniai</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="430"/>
         <source>View</source>
         <translation>Rodyti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="442"/>
+        <location filename="../mainwindow.cpp" line="439"/>
         <source>Playlist</source>
         <translation>Grojaraštis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="465"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="473"/>
+        <location filename="../mainwindow.cpp" line="470"/>
         <source>Tools</source>
         <translation>Įrankiai</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="555"/>
+        <location filename="../mainwindow.cpp" line="552"/>
         <source>Qmmp</source>
         <translation type="unfinished"></translation>
     </message>
@@ -837,123 +837,123 @@
 <context>
     <name>PlayList</name>
     <message>
-        <location filename="../playlist.cpp" line="201"/>
+        <location filename="../playlist.cpp" line="199"/>
         <source>&amp;Copy Selection To</source>
         <translation>&amp;Kopijuoti pasirinkimą į</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="232"/>
+        <location filename="../playlist.cpp" line="230"/>
         <source>Sort List</source>
         <translation>Rūšiuoti</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="235"/>
-        <location filename="../playlist.cpp" line="275"/>
+        <location filename="../playlist.cpp" line="233"/>
+        <location filename="../playlist.cpp" line="273"/>
         <source>By Title</source>
         <translation>Pagal dainos pavadinimą</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="238"/>
-        <location filename="../playlist.cpp" line="278"/>
+        <location filename="../playlist.cpp" line="236"/>
+        <location filename="../playlist.cpp" line="276"/>
         <source>By Album</source>
         <translation>Pagal albumą</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="259"/>
-        <location filename="../playlist.cpp" line="299"/>
+        <location filename="../playlist.cpp" line="257"/>
+        <location filename="../playlist.cpp" line="297"/>
         <source>By Disc Number</source>
         <translation>Pagal disko numerį</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="241"/>
-        <location filename="../playlist.cpp" line="281"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="279"/>
         <source>By Artist</source>
         <translation>Pagal atlikėją</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="244"/>
-        <location filename="../playlist.cpp" line="284"/>
+        <location filename="../playlist.cpp" line="242"/>
+        <location filename="../playlist.cpp" line="282"/>
         <source>By Album Artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="247"/>
-        <location filename="../playlist.cpp" line="287"/>
+        <location filename="../playlist.cpp" line="245"/>
+        <location filename="../playlist.cpp" line="285"/>
         <source>By Filename</source>
         <translation>Pagal bylos pavadinimą</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="250"/>
-        <location filename="../playlist.cpp" line="290"/>
+        <location filename="../playlist.cpp" line="248"/>
+        <location filename="../playlist.cpp" line="288"/>
         <source>By Path + Filename</source>
         <translation>Pagal kelią iki bylos</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="253"/>
-        <location filename="../playlist.cpp" line="293"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="291"/>
         <source>By Date</source>
         <translation>Pagal datą</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="262"/>
-        <location filename="../playlist.cpp" line="302"/>
+        <location filename="../playlist.cpp" line="260"/>
+        <location filename="../playlist.cpp" line="300"/>
         <source>By File Creation Date</source>
         <translation>Pagal bylų sukūrimo laiką</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="265"/>
-        <location filename="../playlist.cpp" line="305"/>
+        <location filename="../playlist.cpp" line="263"/>
+        <location filename="../playlist.cpp" line="303"/>
         <source>By File Modification Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="268"/>
+        <location filename="../playlist.cpp" line="266"/>
         <source>By Group</source>
         <translation>Pagal grupę</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="273"/>
+        <location filename="../playlist.cpp" line="271"/>
         <source>Sort Selection</source>
         <translation>Rūšiuoti pasirinktus</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="310"/>
+        <location filename="../playlist.cpp" line="308"/>
         <source>Randomize List</source>
         <translation>Sumaišyti sąrašą</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="312"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>Reverse List</source>
         <translation>Apversti</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="597"/>
+        <location filename="../playlist.cpp" line="591"/>
         <source>Rename Playlist</source>
         <translation type="unfinished">Pervadinti grojaraštį</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="597"/>
+        <location filename="../playlist.cpp" line="591"/>
         <source>Playlist name:</source>
         <translation type="unfinished">Grojaraščio pavadinimas:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="618"/>
+        <location filename="../playlist.cpp" line="612"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Naujas grojaraštis</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="256"/>
-        <location filename="../playlist.cpp" line="296"/>
+        <location filename="../playlist.cpp" line="254"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Track Number</source>
         <translation>Pagal takelio numerį</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="55"/>
+        <location filename="../playlist.cpp" line="56"/>
         <source>Playlist</source>
         <translation>Grojaraštis</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="323"/>
+        <location filename="../playlist.cpp" line="321"/>
         <source>Actions</source>
         <translation>Veiksmai</translation>
     </message>
@@ -996,50 +996,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="80"/>
+        <location filename="../playlistheader.cpp" line="81"/>
         <source>Add Column</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="81"/>
+        <location filename="../playlistheader.cpp" line="82"/>
         <source>Edit Column</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="82"/>
+        <location filename="../playlistheader.cpp" line="83"/>
         <source>Show Queue/Protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="84"/>
+        <location filename="../playlistheader.cpp" line="85"/>
         <source>Auto-resize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="87"/>
+        <location filename="../playlistheader.cpp" line="88"/>
         <source>Alignment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="89"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="89"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="91"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="100"/>
+        <location filename="../playlistheader.cpp" line="101"/>
         <source>Remove Column</source>
         <translation type="unfinished"></translation>
     </message>

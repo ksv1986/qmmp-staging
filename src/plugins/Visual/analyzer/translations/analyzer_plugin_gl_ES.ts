@@ -4,87 +4,87 @@
 <context>
     <name>Analyzer</name>
     <message>
-        <location filename="../analyzer.cpp" line="44"/>
+        <location filename="../analyzer.cpp" line="36"/>
         <source>Qmmp Analyzer</source>
         <translation>Analizador de Qmmp</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="332"/>
+        <location filename="../analyzer.cpp" line="323"/>
         <source>Peaks</source>
         <translation>Picos</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="335"/>
+        <location filename="../analyzer.cpp" line="326"/>
         <source>Refresh Rate</source>
         <translation>Taxa de refresco</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="338"/>
+        <location filename="../analyzer.cpp" line="329"/>
         <source>50 fps</source>
         <translation>50 fps</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="339"/>
+        <location filename="../analyzer.cpp" line="330"/>
         <source>25 fps</source>
         <translation>25 fps</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="340"/>
+        <location filename="../analyzer.cpp" line="331"/>
         <source>10 fps</source>
         <translation>10 fps</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="341"/>
+        <location filename="../analyzer.cpp" line="332"/>
         <source>5 fps</source>
         <translation>5 fps</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="348"/>
+        <location filename="../analyzer.cpp" line="339"/>
         <source>Analyzer Falloff</source>
         <translation>Analizador Falloff</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="351"/>
-        <location filename="../analyzer.cpp" line="365"/>
+        <location filename="../analyzer.cpp" line="342"/>
+        <location filename="../analyzer.cpp" line="356"/>
         <source>Slowest</source>
         <translation>O máis lento</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="352"/>
-        <location filename="../analyzer.cpp" line="366"/>
+        <location filename="../analyzer.cpp" line="343"/>
+        <location filename="../analyzer.cpp" line="357"/>
         <source>Slow</source>
         <translation>Lento</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="353"/>
-        <location filename="../analyzer.cpp" line="367"/>
+        <location filename="../analyzer.cpp" line="344"/>
+        <location filename="../analyzer.cpp" line="358"/>
         <source>Medium</source>
         <translation>Medio</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="354"/>
-        <location filename="../analyzer.cpp" line="368"/>
+        <location filename="../analyzer.cpp" line="345"/>
+        <location filename="../analyzer.cpp" line="359"/>
         <source>Fast</source>
         <translation>Rápido</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="355"/>
-        <location filename="../analyzer.cpp" line="369"/>
+        <location filename="../analyzer.cpp" line="346"/>
+        <location filename="../analyzer.cpp" line="360"/>
         <source>Fastest</source>
         <translation>O máis rápido</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="362"/>
+        <location filename="../analyzer.cpp" line="353"/>
         <source>Peaks Falloff</source>
         <translation>Caída de picos</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="376"/>
+        <location filename="../analyzer.cpp" line="367"/>
         <source>&amp;Full Screen</source>
         <translation>&amp;Pantaia completa</translation>
     </message>
     <message>
-        <location filename="../analyzer.cpp" line="376"/>
+        <location filename="../analyzer.cpp" line="367"/>
         <source>F</source>
         <translation>F</translation>
     </message>

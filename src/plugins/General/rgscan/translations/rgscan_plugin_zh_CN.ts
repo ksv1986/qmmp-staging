@@ -64,16 +64,16 @@
         <translation>写专辑的增益/峰值</translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="124"/>
-        <location filename="../rgscandialog.cpp" line="235"/>
+        <location filename="../rgscandialog.cpp" line="125"/>
+        <location filename="../rgscandialog.cpp" line="230"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../rgscandialog.cpp" line="134"/>
         <location filename="../rgscandialog.cpp" line="135"/>
-        <location filename="../rgscandialog.cpp" line="159"/>
-        <location filename="../rgscandialog.cpp" line="230"/>
+        <location filename="../rgscandialog.cpp" line="136"/>
+        <location filename="../rgscandialog.cpp" line="160"/>
+        <location filename="../rgscandialog.cpp" line="225"/>
         <source>%1 dB</source>
         <translation>%1分贝</translation>
     </message>

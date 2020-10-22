@@ -37,78 +37,78 @@
 <context>
     <name>MplayerMetaDataModel</name>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="39"/>
+        <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>Size</source>
         <translation>大小：</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="39"/>
+        <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>KiB</source>
         <translation>KiB</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="65"/>
+        <location filename="../mplayermetadatamodel.cpp" line="64"/>
         <source>Demuxer</source>
         <translation>流分離</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="67"/>
+        <location filename="../mplayermetadatamodel.cpp" line="66"/>
         <source>Video format</source>
         <translation>視頻格式</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="68"/>
+        <location filename="../mplayermetadatamodel.cpp" line="67"/>
         <source>FPS</source>
         <translation>FPS</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="69"/>
+        <location filename="../mplayermetadatamodel.cpp" line="68"/>
         <source>Video codec</source>
         <translation>視頻編碼</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="70"/>
+        <location filename="../mplayermetadatamodel.cpp" line="69"/>
         <source>Aspect ratio</source>
         <translation>寬高比：</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="71"/>
+        <location filename="../mplayermetadatamodel.cpp" line="70"/>
         <source>Video bitrate</source>
         <translation>視頻比特率</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="71"/>
-        <location filename="../mplayermetadatamodel.cpp" line="76"/>
+        <location filename="../mplayermetadatamodel.cpp" line="70"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>kbps</source>
         <translation>kbps</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="74"/>
+        <location filename="../mplayermetadatamodel.cpp" line="73"/>
         <source>Audio codec</source>
         <translation>音頻編碼</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <location filename="../mplayermetadatamodel.cpp" line="74"/>
         <source>Sample rate</source>
         <translation>取樣率</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <location filename="../mplayermetadatamodel.cpp" line="74"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="76"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Audio bitrate</source>
         <translation>音頻比特率</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="77"/>
+        <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>Channels</source>
         <translation>音頻通道</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="72"/>
+        <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <source>Resolution</source>
         <translation>分辨率</translation>
     </message>

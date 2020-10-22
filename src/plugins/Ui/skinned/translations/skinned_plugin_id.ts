@@ -460,58 +460,58 @@
 <context>
     <name>EqWidget</name>
     <message>
-        <location filename="../eqwidget.cpp" line="46"/>
+        <location filename="../eqwidget.cpp" line="47"/>
         <source>Equalizer</source>
         <translation>Equalizer</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="175"/>
-        <location filename="../eqwidget.cpp" line="192"/>
+        <location filename="../eqwidget.cpp" line="172"/>
+        <location filename="../eqwidget.cpp" line="189"/>
         <source>preset</source>
         <translation>preset</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="276"/>
+        <location filename="../eqwidget.cpp" line="273"/>
         <source>&amp;Load/Delete</source>
         <translation>&amp;Muat/Hapus</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="278"/>
+        <location filename="../eqwidget.cpp" line="275"/>
         <source>&amp;Save Preset</source>
         <translation>&amp;Simpan Preset</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="280"/>
+        <location filename="../eqwidget.cpp" line="277"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>&amp;Simpan Auto-muat Preset</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="282"/>
+        <location filename="../eqwidget.cpp" line="279"/>
         <source>&amp;Import</source>
         <translation>&amp;Import</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="285"/>
+        <location filename="../eqwidget.cpp" line="282"/>
         <source>&amp;Clear</source>
         <translation>&amp;Bersihkan</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="314"/>
+        <location filename="../eqwidget.cpp" line="311"/>
         <source>Saving Preset</source>
         <translation>Menyimpan Preset</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="315"/>
+        <location filename="../eqwidget.cpp" line="312"/>
         <source>Preset name:</source>
         <translation>Nama preset:</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="316"/>
+        <location filename="../eqwidget.cpp" line="313"/>
         <source>preset #</source>
         <translation>preset #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="412"/>
+        <location filename="../eqwidget.cpp" line="404"/>
         <source>Import Preset</source>
         <translation>Import Preset</translation>
     </message>
@@ -798,37 +798,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="362"/>
+        <location filename="../mainwindow.cpp" line="359"/>
         <source>Appearance</source>
         <translation>Tampilan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="363"/>
+        <location filename="../mainwindow.cpp" line="360"/>
         <source>Shortcuts</source>
         <translation>Pintasan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="430"/>
         <source>View</source>
         <translation>Tinjau</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="442"/>
+        <location filename="../mainwindow.cpp" line="439"/>
         <source>Playlist</source>
         <translation>Daftarmain</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="465"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="473"/>
+        <location filename="../mainwindow.cpp" line="470"/>
         <source>Tools</source>
         <translation>Alat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="555"/>
+        <location filename="../mainwindow.cpp" line="552"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -836,123 +836,123 @@
 <context>
     <name>PlayList</name>
     <message>
-        <location filename="../playlist.cpp" line="55"/>
+        <location filename="../playlist.cpp" line="56"/>
         <source>Playlist</source>
         <translation>Daftarmain</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="201"/>
+        <location filename="../playlist.cpp" line="199"/>
         <source>&amp;Copy Selection To</source>
         <translation>&amp;Salin Pilihan Ke</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="232"/>
+        <location filename="../playlist.cpp" line="230"/>
         <source>Sort List</source>
         <translation>Daftar Surtir</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="235"/>
-        <location filename="../playlist.cpp" line="275"/>
+        <location filename="../playlist.cpp" line="233"/>
+        <location filename="../playlist.cpp" line="273"/>
         <source>By Title</source>
         <translation>Menurut Judul</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="238"/>
-        <location filename="../playlist.cpp" line="278"/>
+        <location filename="../playlist.cpp" line="236"/>
+        <location filename="../playlist.cpp" line="276"/>
         <source>By Album</source>
         <translation>Menurut Album</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="259"/>
-        <location filename="../playlist.cpp" line="299"/>
+        <location filename="../playlist.cpp" line="257"/>
+        <location filename="../playlist.cpp" line="297"/>
         <source>By Disc Number</source>
         <translation>Menurut Nomor Cakram</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="241"/>
-        <location filename="../playlist.cpp" line="281"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="279"/>
         <source>By Artist</source>
         <translation>Menurut Artist</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="244"/>
-        <location filename="../playlist.cpp" line="284"/>
+        <location filename="../playlist.cpp" line="242"/>
+        <location filename="../playlist.cpp" line="282"/>
         <source>By Album Artist</source>
         <translation>Menurut Album Artist</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="247"/>
-        <location filename="../playlist.cpp" line="287"/>
+        <location filename="../playlist.cpp" line="245"/>
+        <location filename="../playlist.cpp" line="285"/>
         <source>By Filename</source>
         <translation>Menurut Filename</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="250"/>
-        <location filename="../playlist.cpp" line="290"/>
+        <location filename="../playlist.cpp" line="248"/>
+        <location filename="../playlist.cpp" line="288"/>
         <source>By Path + Filename</source>
         <translation>Menurut Alur + Filename</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="253"/>
-        <location filename="../playlist.cpp" line="293"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="291"/>
         <source>By Date</source>
         <translation>Menurut Tanggal</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="256"/>
-        <location filename="../playlist.cpp" line="296"/>
+        <location filename="../playlist.cpp" line="254"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Track Number</source>
         <translation>Menurut Nomor Track</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="262"/>
-        <location filename="../playlist.cpp" line="302"/>
+        <location filename="../playlist.cpp" line="260"/>
+        <location filename="../playlist.cpp" line="300"/>
         <source>By File Creation Date</source>
         <translation>Menurut Tanggal Penciptaan File</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="265"/>
-        <location filename="../playlist.cpp" line="305"/>
+        <location filename="../playlist.cpp" line="263"/>
+        <location filename="../playlist.cpp" line="303"/>
         <source>By File Modification Date</source>
         <translation>Menurut Tanggal Modifikasi File</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="268"/>
+        <location filename="../playlist.cpp" line="266"/>
         <source>By Group</source>
         <translation>Menurut Kelompok</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="273"/>
+        <location filename="../playlist.cpp" line="271"/>
         <source>Sort Selection</source>
         <translation>Pilihan Surtir</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="310"/>
+        <location filename="../playlist.cpp" line="308"/>
         <source>Randomize List</source>
         <translation>Daftar Acakan</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="312"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>Reverse List</source>
         <translation>Daftar Mundur</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="323"/>
+        <location filename="../playlist.cpp" line="321"/>
         <source>Actions</source>
         <translation>Tindakan</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="597"/>
+        <location filename="../playlist.cpp" line="591"/>
         <source>Rename Playlist</source>
         <translation>Ubah-nama Daftarmain</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="597"/>
+        <location filename="../playlist.cpp" line="591"/>
         <source>Playlist name:</source>
         <translation>Nama daftarmain:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="618"/>
+        <location filename="../playlist.cpp" line="612"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Daftarmain Baru</translation>
     </message>
@@ -995,50 +995,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="80"/>
+        <location filename="../playlistheader.cpp" line="81"/>
         <source>Add Column</source>
         <translation>Tambah Kolom</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="81"/>
+        <location filename="../playlistheader.cpp" line="82"/>
         <source>Edit Column</source>
         <translation>Edit Kolom</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="82"/>
+        <location filename="../playlistheader.cpp" line="83"/>
         <source>Show Queue/Protocol</source>
         <translation>Tampakkan Antrian/Protokol</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="84"/>
+        <location filename="../playlistheader.cpp" line="85"/>
         <source>Auto-resize</source>
         <translation>Ubah-ukuran otomatis</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="87"/>
+        <location filename="../playlistheader.cpp" line="88"/>
         <source>Alignment</source>
         <translation>Kesejajaran</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="89"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>Kiri</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="89"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>Kanan</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="91"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Pusat</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="100"/>
+        <location filename="../playlistheader.cpp" line="101"/>
         <source>Remove Column</source>
         <translation>Hapus Kolom</translation>
     </message>

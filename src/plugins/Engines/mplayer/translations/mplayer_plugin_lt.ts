@@ -37,78 +37,78 @@
 <context>
     <name>MplayerMetaDataModel</name>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="39"/>
+        <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>Size</source>
         <translation>Dydis</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="39"/>
+        <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>KiB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="65"/>
+        <location filename="../mplayermetadatamodel.cpp" line="64"/>
         <source>Demuxer</source>
         <translation>Demuxeris</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="67"/>
+        <location filename="../mplayermetadatamodel.cpp" line="66"/>
         <source>Video format</source>
         <translation>Video formatas</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="68"/>
+        <location filename="../mplayermetadatamodel.cpp" line="67"/>
         <source>FPS</source>
         <translation>KPS</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="69"/>
+        <location filename="../mplayermetadatamodel.cpp" line="68"/>
         <source>Video codec</source>
         <translation>Video kodėkas</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="70"/>
+        <location filename="../mplayermetadatamodel.cpp" line="69"/>
         <source>Aspect ratio</source>
         <translation>Kraštinių santykis</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="71"/>
+        <location filename="../mplayermetadatamodel.cpp" line="70"/>
         <source>Video bitrate</source>
         <translation>Video kokybė</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="71"/>
-        <location filename="../mplayermetadatamodel.cpp" line="76"/>
+        <location filename="../mplayermetadatamodel.cpp" line="70"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>kbps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="74"/>
+        <location filename="../mplayermetadatamodel.cpp" line="73"/>
         <source>Audio codec</source>
         <translation>Audio kodėkas</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <location filename="../mplayermetadatamodel.cpp" line="74"/>
         <source>Sample rate</source>
         <translation>Dažnis</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <location filename="../mplayermetadatamodel.cpp" line="74"/>
         <source>Hz</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="76"/>
+        <location filename="../mplayermetadatamodel.cpp" line="75"/>
         <source>Audio bitrate</source>
         <translation>Audio kokybė</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="77"/>
+        <location filename="../mplayermetadatamodel.cpp" line="76"/>
         <source>Channels</source>
         <translation>Kanalai</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="72"/>
+        <location filename="../mplayermetadatamodel.cpp" line="71"/>
         <source>Resolution</source>
         <translation>Rezoliucija</translation>
     </message>

@@ -37,12 +37,12 @@
 <context>
     <name>WavPackMetaDataModel</name>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="70"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="69"/>
         <source>Ratio</source>
         <translation>Размјера</translation>
     </message>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="71"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="70"/>
         <source>Version</source>
         <translation>Издање</translation>
     </message>

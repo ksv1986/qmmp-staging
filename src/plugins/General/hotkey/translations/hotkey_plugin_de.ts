@@ -70,77 +70,77 @@
         <translation>Zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="37"/>
+        <location filename="../settingsdialog.cpp" line="38"/>
         <source>Play</source>
         <translation>Wiedergabe</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="38"/>
+        <location filename="../settingsdialog.cpp" line="39"/>
         <source>Stop</source>
         <translation>Stopp</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="39"/>
+        <location filename="../settingsdialog.cpp" line="40"/>
         <source>Pause</source>
         <translation>Pause</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="40"/>
+        <location filename="../settingsdialog.cpp" line="41"/>
         <source>Play/Pause</source>
         <translation>Wiedergabe/Pause</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="41"/>
+        <location filename="../settingsdialog.cpp" line="42"/>
         <source>Next</source>
         <translation>Nächster Titel</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="42"/>
+        <location filename="../settingsdialog.cpp" line="43"/>
         <source>Previous</source>
         <translation>Vorheriger Titel</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="43"/>
+        <location filename="../settingsdialog.cpp" line="44"/>
         <source>Show/Hide</source>
         <translation>Ein-/Ausblenden</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="44"/>
+        <location filename="../settingsdialog.cpp" line="45"/>
         <source>Volume +</source>
         <translation>Lautstärke +</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="45"/>
+        <location filename="../settingsdialog.cpp" line="46"/>
         <source>Volume -</source>
         <translation>Lautstärke −</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="46"/>
+        <location filename="../settingsdialog.cpp" line="47"/>
         <source>Forward 5 seconds</source>
         <translation>5 Sekunden vorspulen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="47"/>
+        <location filename="../settingsdialog.cpp" line="48"/>
         <source>Rewind 5 seconds</source>
         <translation>5 Sekunden zurückspulen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="48"/>
+        <location filename="../settingsdialog.cpp" line="49"/>
         <source>Jump to track</source>
         <translation>Zu Titel springen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="49"/>
+        <location filename="../settingsdialog.cpp" line="50"/>
         <source>Mute</source>
         <translation>Stumm</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="114"/>
+        <location filename="../settingsdialog.cpp" line="107"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="114"/>
+        <location filename="../settingsdialog.cpp" line="107"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
         <translation>Tastenfolge &apos;%1&apos; wird bereits verwendet</translation>
     </message>

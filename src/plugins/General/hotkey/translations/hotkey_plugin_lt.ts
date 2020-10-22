@@ -50,77 +50,77 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="37"/>
+        <location filename="../settingsdialog.cpp" line="38"/>
         <source>Play</source>
         <translation>Groti</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="38"/>
+        <location filename="../settingsdialog.cpp" line="39"/>
         <source>Stop</source>
         <translation>Stabdyti</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="39"/>
+        <location filename="../settingsdialog.cpp" line="40"/>
         <source>Pause</source>
         <translation>Pauzė</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="40"/>
+        <location filename="../settingsdialog.cpp" line="41"/>
         <source>Play/Pause</source>
         <translation>Groti/Pauzė</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="41"/>
+        <location filename="../settingsdialog.cpp" line="42"/>
         <source>Next</source>
         <translation>Sekantis takelis</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="42"/>
+        <location filename="../settingsdialog.cpp" line="43"/>
         <source>Previous</source>
         <translation>Ankstesnis takelis</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="43"/>
+        <location filename="../settingsdialog.cpp" line="44"/>
         <source>Show/Hide</source>
         <translation>Rodyti/Slėpti</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="44"/>
+        <location filename="../settingsdialog.cpp" line="45"/>
         <source>Volume +</source>
         <translation>Garsas +</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="45"/>
+        <location filename="../settingsdialog.cpp" line="46"/>
         <source>Volume -</source>
         <translation>Garsas -</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="46"/>
+        <location filename="../settingsdialog.cpp" line="47"/>
         <source>Forward 5 seconds</source>
         <translation>Į priekį 5 sekundėmis </translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="47"/>
+        <location filename="../settingsdialog.cpp" line="48"/>
         <source>Rewind 5 seconds</source>
         <translation>Persukti 5 sekundes</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="48"/>
+        <location filename="../settingsdialog.cpp" line="49"/>
         <source>Jump to track</source>
         <translation>Pereiti prie takelio</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="49"/>
+        <location filename="../settingsdialog.cpp" line="50"/>
         <source>Mute</source>
         <translation>Nutildyti</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="114"/>
+        <location filename="../settingsdialog.cpp" line="107"/>
         <source>Warning</source>
         <translation>Įspėjimas</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="114"/>
+        <location filename="../settingsdialog.cpp" line="107"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
         <translation>Klavišo kombinacija &apos;%1&apos; jau naudojama</translation>
     </message>

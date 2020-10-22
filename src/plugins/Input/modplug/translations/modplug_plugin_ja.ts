@@ -57,39 +57,39 @@
 <context>
     <name>ModPlugMetaDataModel</name>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="71"/>
+        <location filename="../modplugmetadatamodel.cpp" line="70"/>
         <source>Speed</source>
         <translation>速さ</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="72"/>
+        <location filename="../modplugmetadatamodel.cpp" line="71"/>
         <source>Tempo</source>
         <translation>テンポ</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="73"/>
-        <location filename="../modplugmetadatamodel.cpp" line="94"/>
+        <location filename="../modplugmetadatamodel.cpp" line="72"/>
+        <location filename="../modplugmetadatamodel.cpp" line="93"/>
         <source>Samples</source>
         <translation>サンプル</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="74"/>
-        <location filename="../modplugmetadatamodel.cpp" line="103"/>
+        <location filename="../modplugmetadatamodel.cpp" line="73"/>
+        <location filename="../modplugmetadatamodel.cpp" line="102"/>
         <source>Instruments</source>
         <translation>楽器</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="75"/>
+        <location filename="../modplugmetadatamodel.cpp" line="74"/>
         <source>Patterns</source>
         <translation>パターン</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="76"/>
+        <location filename="../modplugmetadatamodel.cpp" line="75"/>
         <source>Channels</source>
         <translation>チャンネル</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="108"/>
+        <location filename="../modplugmetadatamodel.cpp" line="107"/>
         <source>Comment</source>
         <translation>コメント</translation>
     </message>

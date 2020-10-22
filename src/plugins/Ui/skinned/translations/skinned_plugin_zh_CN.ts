@@ -460,58 +460,58 @@
 <context>
     <name>EqWidget</name>
     <message>
-        <location filename="../eqwidget.cpp" line="46"/>
+        <location filename="../eqwidget.cpp" line="47"/>
         <source>Equalizer</source>
         <translation>均衡器</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="175"/>
-        <location filename="../eqwidget.cpp" line="192"/>
+        <location filename="../eqwidget.cpp" line="172"/>
+        <location filename="../eqwidget.cpp" line="189"/>
         <source>preset</source>
         <translation>预设</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="276"/>
+        <location filename="../eqwidget.cpp" line="273"/>
         <source>&amp;Load/Delete</source>
         <translation>载入/删除(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="278"/>
+        <location filename="../eqwidget.cpp" line="275"/>
         <source>&amp;Save Preset</source>
         <translation>保存预设(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="280"/>
+        <location filename="../eqwidget.cpp" line="277"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>保存自动载入预设(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="282"/>
+        <location filename="../eqwidget.cpp" line="279"/>
         <source>&amp;Import</source>
         <translation>导入(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="285"/>
+        <location filename="../eqwidget.cpp" line="282"/>
         <source>&amp;Clear</source>
         <translation>清除(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="314"/>
+        <location filename="../eqwidget.cpp" line="311"/>
         <source>Saving Preset</source>
         <translation>保存预设</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="315"/>
+        <location filename="../eqwidget.cpp" line="312"/>
         <source>Preset name:</source>
         <translation>预设名称：</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="316"/>
+        <location filename="../eqwidget.cpp" line="313"/>
         <source>preset #</source>
         <translation>预设 #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="412"/>
+        <location filename="../eqwidget.cpp" line="404"/>
         <source>Import Preset</source>
         <translation>导入预设</translation>
     </message>
@@ -798,37 +798,37 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="362"/>
+        <location filename="../mainwindow.cpp" line="359"/>
         <source>Appearance</source>
         <translation>外观</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="363"/>
+        <location filename="../mainwindow.cpp" line="360"/>
         <source>Shortcuts</source>
         <translation>热键</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="430"/>
         <source>View</source>
         <translation>视图</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="442"/>
+        <location filename="../mainwindow.cpp" line="439"/>
         <source>Playlist</source>
         <translation>播放列表</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="465"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Audio</source>
         <translation>音频</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="473"/>
+        <location filename="../mainwindow.cpp" line="470"/>
         <source>Tools</source>
         <translation>工具</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="555"/>
+        <location filename="../mainwindow.cpp" line="552"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -836,123 +836,123 @@
 <context>
     <name>PlayList</name>
     <message>
-        <location filename="../playlist.cpp" line="55"/>
+        <location filename="../playlist.cpp" line="56"/>
         <source>Playlist</source>
         <translation>播放列表</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="201"/>
+        <location filename="../playlist.cpp" line="199"/>
         <source>&amp;Copy Selection To</source>
         <translation>&amp;复制选项到</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="232"/>
+        <location filename="../playlist.cpp" line="230"/>
         <source>Sort List</source>
         <translation>列表排序</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="235"/>
-        <location filename="../playlist.cpp" line="275"/>
+        <location filename="../playlist.cpp" line="233"/>
+        <location filename="../playlist.cpp" line="273"/>
         <source>By Title</source>
         <translation>按标题</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="238"/>
-        <location filename="../playlist.cpp" line="278"/>
+        <location filename="../playlist.cpp" line="236"/>
+        <location filename="../playlist.cpp" line="276"/>
         <source>By Album</source>
         <translation>按专辑</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="259"/>
-        <location filename="../playlist.cpp" line="299"/>
+        <location filename="../playlist.cpp" line="257"/>
+        <location filename="../playlist.cpp" line="297"/>
         <source>By Disc Number</source>
         <translation>按光盘号</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="241"/>
-        <location filename="../playlist.cpp" line="281"/>
+        <location filename="../playlist.cpp" line="239"/>
+        <location filename="../playlist.cpp" line="279"/>
         <source>By Artist</source>
         <translation>按艺术家</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="244"/>
-        <location filename="../playlist.cpp" line="284"/>
+        <location filename="../playlist.cpp" line="242"/>
+        <location filename="../playlist.cpp" line="282"/>
         <source>By Album Artist</source>
         <translation>按专辑 艺术家</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="247"/>
-        <location filename="../playlist.cpp" line="287"/>
+        <location filename="../playlist.cpp" line="245"/>
+        <location filename="../playlist.cpp" line="285"/>
         <source>By Filename</source>
         <translation>按文件名</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="250"/>
-        <location filename="../playlist.cpp" line="290"/>
+        <location filename="../playlist.cpp" line="248"/>
+        <location filename="../playlist.cpp" line="288"/>
         <source>By Path + Filename</source>
         <translation>按路径+文件名</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="253"/>
-        <location filename="../playlist.cpp" line="293"/>
+        <location filename="../playlist.cpp" line="251"/>
+        <location filename="../playlist.cpp" line="291"/>
         <source>By Date</source>
         <translation>按日期</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="256"/>
-        <location filename="../playlist.cpp" line="296"/>
+        <location filename="../playlist.cpp" line="254"/>
+        <location filename="../playlist.cpp" line="294"/>
         <source>By Track Number</source>
         <translation>按音轨</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="262"/>
-        <location filename="../playlist.cpp" line="302"/>
+        <location filename="../playlist.cpp" line="260"/>
+        <location filename="../playlist.cpp" line="300"/>
         <source>By File Creation Date</source>
         <translation>按文件的创建日期</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="265"/>
-        <location filename="../playlist.cpp" line="305"/>
+        <location filename="../playlist.cpp" line="263"/>
+        <location filename="../playlist.cpp" line="303"/>
         <source>By File Modification Date</source>
         <translation>按文件的修改日期</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="268"/>
+        <location filename="../playlist.cpp" line="266"/>
         <source>By Group</source>
         <translation>按组</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="273"/>
+        <location filename="../playlist.cpp" line="271"/>
         <source>Sort Selection</source>
         <translation>选择排序</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="310"/>
+        <location filename="../playlist.cpp" line="308"/>
         <source>Randomize List</source>
         <translation>随机产生列表</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="312"/>
+        <location filename="../playlist.cpp" line="310"/>
         <source>Reverse List</source>
         <translation>逆序列表</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="323"/>
+        <location filename="../playlist.cpp" line="321"/>
         <source>Actions</source>
         <translation>动作</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="597"/>
+        <location filename="../playlist.cpp" line="591"/>
         <source>Rename Playlist</source>
         <translation>重命名播放列表</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="597"/>
+        <location filename="../playlist.cpp" line="591"/>
         <source>Playlist name:</source>
         <translation>播放列表名称：</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="618"/>
+        <location filename="../playlist.cpp" line="612"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;新播放列表</translation>
     </message>
@@ -995,50 +995,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="80"/>
+        <location filename="../playlistheader.cpp" line="81"/>
         <source>Add Column</source>
         <translation>增加n列</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="81"/>
+        <location filename="../playlistheader.cpp" line="82"/>
         <source>Edit Column</source>
         <translation>编辑n列</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="82"/>
+        <location filename="../playlistheader.cpp" line="83"/>
         <source>Show Queue/Protocol</source>
         <translation>显示排队/协议</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="84"/>
+        <location filename="../playlistheader.cpp" line="85"/>
         <source>Auto-resize</source>
         <translation>自动调整大小</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="87"/>
+        <location filename="../playlistheader.cpp" line="88"/>
         <source>Alignment</source>
         <translation>对齐</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="89"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="89"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="91"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>居中</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="100"/>
+        <location filename="../playlistheader.cpp" line="101"/>
         <source>Remove Column</source>
         <translation>移除n列</translation>
     </message>

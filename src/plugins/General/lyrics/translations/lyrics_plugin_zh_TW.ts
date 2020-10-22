@@ -4,12 +4,12 @@
 <context>
     <name>Lyrics</name>
     <message>
-        <location filename="../lyrics.cpp" line="33"/>
+        <location filename="../lyrics.cpp" line="34"/>
         <source>View Lyrics</source>
         <translation>察看歌詞</translation>
     </message>
     <message>
-        <location filename="../lyrics.cpp" line="34"/>
+        <location filename="../lyrics.cpp" line="35"/>
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -17,95 +17,100 @@
 <context>
     <name>LyricsFactory</name>
     <message>
-        <location filename="../lyricsfactory.cpp" line="29"/>
+        <location filename="../lyricsfactory.cpp" line="31"/>
         <source>Lyrics Plugin</source>
         <translation>歌詞插件</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="49"/>
+        <location filename="../lyricsfactory.cpp" line="36"/>
+        <source>Lyrics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lyricsfactory.cpp" line="68"/>
         <source>About Lyrics Plugin</source>
         <translation>關於歌詞插件</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="50"/>
+        <location filename="../lyricsfactory.cpp" line="69"/>
         <source>Qmmp Lyrics Plugin</source>
         <translation>Qmmp 歌詞插件</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="51"/>
+        <location filename="../lyricsfactory.cpp" line="70"/>
         <source>This plugin retrieves lyrics from LyricWiki</source>
         <translation>此插件歌詞來自於 LyricWiki</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="52"/>
+        <location filename="../lyricsfactory.cpp" line="71"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../lyricsfactory.cpp" line="53"/>
+        <location filename="../lyricsfactory.cpp" line="72"/>
         <source>Based on Ultimate Lyrics script by Vladimir Brkic &lt;vladimir_brkic@yahoo.com&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>LyricsWindow</name>
+    <name>LyricsWidget</name>
     <message>
-        <location filename="../lyricswindow.ui" line="14"/>
+        <location filename="../lyricswidget.ui" line="14"/>
         <source>Lyrics Plugin</source>
-        <translation>歌詞插件</translation>
+        <translation type="unfinished">歌詞插件</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.ui" line="31"/>
+        <location filename="../lyricswidget.ui" line="31"/>
         <source>Provider:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lyricswindow.ui" line="122"/>
+        <location filename="../lyricswidget.ui" line="115"/>
+        <source>Title:</source>
+        <translation type="unfinished">標題：</translation>
+    </message>
+    <message>
+        <location filename="../lyricswidget.ui" line="132"/>
         <source>Album:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lyricswindow.ui" line="139"/>
+        <location filename="../lyricswidget.ui" line="142"/>
+        <source>Artist:</source>
+        <translation type="unfinished">藝術家：</translation>
+    </message>
+    <message>
+        <location filename="../lyricswidget.ui" line="159"/>
         <source>Track:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lyricswindow.ui" line="146"/>
-        <source>Artist:</source>
-        <translation>藝術家：</translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.ui" line="161"/>
+        <location filename="../lyricswidget.ui" line="171"/>
         <source>Year:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lyricswindow.ui" line="115"/>
-        <source>Title:</source>
-        <translation>標題：</translation>
-    </message>
-    <message>
-        <location filename="../lyricswindow.cpp" line="115"/>
+        <location filename="../lyricswidget.cpp" line="138"/>
         <source>&lt;h2&gt;%1 - %2&lt;/h2&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="126"/>
+        <location filename="../lyricswidget.cpp" line="149"/>
         <source>Not found</source>
-        <translation>沒有發現</translation>
+        <translation type="unfinished">沒有發現</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="136"/>
+        <location filename="../lyricswidget.cpp" line="159"/>
         <source>Error: %1 - %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="149"/>
+        <location filename="../lyricswidget.cpp" line="172"/>
         <source>Receiving</source>
-        <translation>接受</translation>
+        <translation type="unfinished">接受</translation>
     </message>
     <message>
-        <location filename="../lyricswindow.cpp" line="204"/>
+        <location filename="../lyricswidget.cpp" line="233"/>
         <source>cache</source>
         <translation type="unfinished"></translation>
     </message>
@@ -126,7 +131,7 @@
 <context>
     <name>UltimateLyricsParser</name>
     <message>
-        <location filename="../ultimatelyricsparser.cpp" line="119"/>
+        <location filename="../ultimatelyricsparser.cpp" line="120"/>
         <source>%1 (line: %2)</source>
         <translation type="unfinished"></translation>
     </message>

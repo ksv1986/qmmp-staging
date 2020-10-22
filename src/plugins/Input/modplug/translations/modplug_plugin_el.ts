@@ -57,39 +57,39 @@
 <context>
     <name>ModPlugMetaDataModel</name>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="71"/>
+        <location filename="../modplugmetadatamodel.cpp" line="70"/>
         <source>Speed</source>
         <translation>Ταχύτητα</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="72"/>
+        <location filename="../modplugmetadatamodel.cpp" line="71"/>
         <source>Tempo</source>
         <translation>Ρυθμός</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="73"/>
-        <location filename="../modplugmetadatamodel.cpp" line="94"/>
+        <location filename="../modplugmetadatamodel.cpp" line="72"/>
+        <location filename="../modplugmetadatamodel.cpp" line="93"/>
         <source>Samples</source>
         <translation>Δείγματα</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="74"/>
-        <location filename="../modplugmetadatamodel.cpp" line="103"/>
+        <location filename="../modplugmetadatamodel.cpp" line="73"/>
+        <location filename="../modplugmetadatamodel.cpp" line="102"/>
         <source>Instruments</source>
         <translation>Όργανα</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="75"/>
+        <location filename="../modplugmetadatamodel.cpp" line="74"/>
         <source>Patterns</source>
         <translation>Σχηματομορφές</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="76"/>
+        <location filename="../modplugmetadatamodel.cpp" line="75"/>
         <source>Channels</source>
         <translation>Κανάλια</translation>
     </message>
     <message>
-        <location filename="../modplugmetadatamodel.cpp" line="108"/>
+        <location filename="../modplugmetadatamodel.cpp" line="107"/>
         <source>Comment</source>
         <translation>Σχόλιο</translation>
     </message>

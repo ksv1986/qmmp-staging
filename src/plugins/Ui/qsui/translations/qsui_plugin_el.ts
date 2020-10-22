@@ -668,7 +668,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="900"/>
+        <location filename="../mainwindow.cpp" line="905"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -815,159 +815,158 @@
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="259"/>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="280"/>
         <source>Rename Playlist</source>
         <translation>Μετονομασία της λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="436"/>
         <source>Volume</source>
         <translation>Ένταση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="280"/>
         <source>Playlist name:</source>
         <translation>Όνομα λίστας αναπαραγωγής:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="318"/>
+        <location filename="../mainwindow.cpp" line="321"/>
         <source>Appearance</source>
         <translation>Εμφάνιση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="319"/>
+        <location filename="../mainwindow.cpp" line="322"/>
         <source>Shortcuts</source>
         <translation>Συντομεύσεις</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="420"/>
+        <location filename="../mainwindow.cpp" line="423"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="426"/>
+        <location filename="../mainwindow.cpp" line="429"/>
         <source>P</source>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="431"/>
+        <location filename="../mainwindow.cpp" line="434"/>
         <source>Position</source>
         <translation>Θέση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="435"/>
+        <location filename="../mainwindow.cpp" line="438"/>
         <source>Quick Search</source>
         <translation>Γρήγορη αναζήτηση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="492"/>
+        <location filename="../mainwindow.cpp" line="496"/>
         <source>Edit Toolbars</source>
         <translation>Επεξεργασία γραμμών εργαλείων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="494"/>
+        <location filename="../mainwindow.cpp" line="498"/>
         <source>Sort List</source>
         <translation>Ταξινόμηση λίστας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="497"/>
-        <location filename="../mainwindow.cpp" line="538"/>
+        <location filename="../mainwindow.cpp" line="501"/>
+        <location filename="../mainwindow.cpp" line="542"/>
         <source>By Title</source>
         <translation>Ανά τίτλο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="500"/>
-        <location filename="../mainwindow.cpp" line="541"/>
+        <location filename="../mainwindow.cpp" line="504"/>
+        <location filename="../mainwindow.cpp" line="545"/>
         <source>By Album</source>
         <translation>Ανά άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="503"/>
-        <location filename="../mainwindow.cpp" line="544"/>
+        <location filename="../mainwindow.cpp" line="507"/>
+        <location filename="../mainwindow.cpp" line="548"/>
         <source>By Artist</source>
         <translation>Ανά καλλιτέχνη</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="506"/>
-        <location filename="../mainwindow.cpp" line="547"/>
+        <location filename="../mainwindow.cpp" line="510"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>By Album Artist</source>
         <translation>Ανά καλλιτέχνη άλμπουμ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="509"/>
-        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="513"/>
+        <location filename="../mainwindow.cpp" line="554"/>
         <source>By Filename</source>
         <translation>Ανά όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="512"/>
-        <location filename="../mainwindow.cpp" line="553"/>
+        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="557"/>
         <source>By Path + Filename</source>
         <translation>Ανά διαδρομή + όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="515"/>
-        <location filename="../mainwindow.cpp" line="556"/>
+        <location filename="../mainwindow.cpp" line="519"/>
+        <location filename="../mainwindow.cpp" line="560"/>
         <source>By Date</source>
         <translation>Ανά ημερομηνία</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="518"/>
-        <location filename="../mainwindow.cpp" line="559"/>
+        <location filename="../mainwindow.cpp" line="522"/>
+        <location filename="../mainwindow.cpp" line="563"/>
         <source>By Track Number</source>
         <translation>Ανά αριθμό κομματιού</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="521"/>
-        <location filename="../mainwindow.cpp" line="562"/>
+        <location filename="../mainwindow.cpp" line="525"/>
+        <location filename="../mainwindow.cpp" line="566"/>
         <source>By Disc Number</source>
         <translation>Ανά αριθμό δίσκου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="524"/>
-        <location filename="../mainwindow.cpp" line="565"/>
+        <location filename="../mainwindow.cpp" line="528"/>
+        <location filename="../mainwindow.cpp" line="569"/>
         <source>By File Creation Date</source>
         <translation>Ανά ημερομηνία δημιουργίας του αρχείου </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="527"/>
-        <location filename="../mainwindow.cpp" line="568"/>
+        <location filename="../mainwindow.cpp" line="531"/>
+        <location filename="../mainwindow.cpp" line="572"/>
         <source>By File Modification Date</source>
         <translation>Ανά ημερομηνία τροποποίησης του αρχείου </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="530"/>
+        <location filename="../mainwindow.cpp" line="534"/>
         <source>By Group</source>
         <translation>Ανά ομάδα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="535"/>
+        <location filename="../mainwindow.cpp" line="539"/>
         <source>Sort Selection</source>
         <translation>Ταξινόμηση επιλογής</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="573"/>
+        <location filename="../mainwindow.cpp" line="577"/>
         <source>Randomize List</source>
         <translation>Τυχαία ταξινόμηση της λίστας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="575"/>
+        <location filename="../mainwindow.cpp" line="579"/>
         <source>Reverse List</source>
         <translation>Αντιστροφή ταξινόμησης της λίστας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="582"/>
-        <location filename="../mainwindow.cpp" line="626"/>
+        <location filename="../mainwindow.cpp" line="629"/>
         <source>Actions</source>
         <translation>Ενέργειες</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="382"/>
+        <location filename="../mainwindow.cpp" line="385"/>
         <source>Add new playlist</source>
         <translation>Προσθήκη νέας λίστας αναπαραγωγής</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="388"/>
+        <location filename="../mainwindow.cpp" line="391"/>
         <source>Show all tabs</source>
         <translation>Εμφάνιση όλων των καρτελών</translation>
     </message>
@@ -975,50 +974,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="69"/>
+        <location filename="../playlistheader.cpp" line="70"/>
         <source>Add Column</source>
         <translation>Προσθήκη στήλης</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="70"/>
+        <location filename="../playlistheader.cpp" line="71"/>
         <source>Edit Column</source>
         <translation>Επεξεργασία στήλης</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="71"/>
+        <location filename="../playlistheader.cpp" line="72"/>
         <source>Show Queue/Protocol</source>
         <translation>Εμφάνιση Ουράς αναμονής/πρωτοκόλλου</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="73"/>
+        <location filename="../playlistheader.cpp" line="74"/>
         <source>Auto-resize</source>
         <translation>Αυτόματη κλιμάκωση</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="76"/>
+        <location filename="../playlistheader.cpp" line="77"/>
         <source>Alignment</source>
         <translation>Στοίχιση</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="77"/>
+        <location filename="../playlistheader.cpp" line="78"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>Αριστερά</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="78"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>Δεξιά</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="79"/>
+        <location filename="../playlistheader.cpp" line="80"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Κέντρο</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="89"/>
+        <location filename="../playlistheader.cpp" line="90"/>
         <source>Remove Column</source>
         <translation>Αφαίρεση στήλης</translation>
     </message>
@@ -1710,7 +1709,7 @@
 <context>
     <name>VisualMenu</name>
     <message>
-        <location filename="../visualmenu.cpp" line="27"/>
+        <location filename="../visualmenu.cpp" line="26"/>
         <source>Visualization</source>
         <translation>Οπτικοποίηση</translation>
     </message>

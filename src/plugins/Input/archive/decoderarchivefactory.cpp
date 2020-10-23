@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QMessageBox>
 #include <archive.h>
 #include <archive_entry.h>
@@ -67,8 +67,8 @@ QList<TrackInfo *> DecoderArchiveFactory::createPlayList(const QString &path, Tr
     {
         requiredFilePath = path.section("#", -1);
         archivePath = path;
-        archivePath.remove(QRegExp("^.+://"));
-        archivePath.remove(QRegExp("#.+$"));
+        archivePath.remove(QRegularExpression("^.+://"));
+        archivePath.remove(QRegularExpression("#.+$"));
     }
     else
     {

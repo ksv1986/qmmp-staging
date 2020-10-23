@@ -18,15 +18,15 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QRegExp>
+#include <QRegularExpression>
 #include "archiveinputdevice.h"
 
 ArchiveInputDevice::ArchiveInputDevice(const QString &url, QObject *parent)  : QIODevice(parent)
 {
     QString filePath = url.section("#", -1);
     QString archivePath = url;
-    archivePath.remove(QRegExp("^.+://"));
-    archivePath.remove(QRegExp("#.+$"));
+    archivePath.remove(QRegularExpression("^.+://"));
+    archivePath.remove(QRegularExpression("#.+$"));
 
     m_archive = archive_read_new();
     archive_read_support_filter_all(m_archive);

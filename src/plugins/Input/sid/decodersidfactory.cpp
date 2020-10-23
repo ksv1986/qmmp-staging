@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QSettings>
-#include <QRegExp>
 #include <QMessageBox>
 #include <QFile>
 #include <sidplayfp/SidTune.h>

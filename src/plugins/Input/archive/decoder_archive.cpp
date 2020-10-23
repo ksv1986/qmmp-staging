@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include <QFile>
+#include <QRegularExpression>
 #include <archive_entry.h>
 #include "archiveinputdevice.h"
 #include "archivetagreader.h"
@@ -45,8 +46,8 @@ bool DecoderArchive::initialize()
 {
     QString filePath = m_url.section("#", -1);
     QString archivePath = m_url;
-    archivePath.remove(QRegExp("^.+://"));
-    archivePath.remove(QRegExp("#.+$"));
+    archivePath.remove(QRegularExpression("^.+://"));
+    archivePath.remove(QRegularExpression("#.+$"));
 
     if(!QFile::exists(archivePath))
     {

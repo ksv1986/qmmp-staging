@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QRegExp>
 #include <QFileInfo>
 #ifdef Q_OS_WIN
 #include <windows.h>

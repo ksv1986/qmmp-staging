@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QRegExp>
+#include <QRegularExpression>
 #include "trackinfo.h"
 
 TrackInfo::TrackInfo()
@@ -154,7 +154,7 @@ void TrackInfo::setValue(Qmmp::ReplayGainKey key, double value)
 void TrackInfo::setValue(Qmmp::ReplayGainKey key, const QString &value)
 {
     QString str = value;
-    str.remove(QRegExp("[\\sA-Za-z]"));
+    str.remove(QRegularExpression("[\\sA-Za-z]"));
     str = str.trimmed();
     bool ok = false;
     double v = str.toDouble(&ok);

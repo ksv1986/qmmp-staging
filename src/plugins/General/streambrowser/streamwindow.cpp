@@ -22,7 +22,6 @@
 #include <QNetworkReply>
 #include <QNetworkProxy>
 #include <QUrl>
-#include <QRegExp>
 #include <QStandardItemModel>
 #include <QSortFilterProxyModel>
 #include <QSettings>

@@ -18,6 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QRegularExpression>
 extern "C" {
 #include <libavformat/avformat.h>
 #include <libavcodec/avcodec.h>
@@ -33,7 +34,7 @@ FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path) : MetaDataModel(tr
     if(path.startsWith("ffmpeg://"))
     {
         filePath.remove("ffmpeg://");
-        filePath.remove(QRegExp("#\\d+$"));
+        filePath.remove(QRegularExpression("#\\d+$"));
     }
 
 #ifdef Q_OS_WIN

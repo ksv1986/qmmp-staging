@@ -20,6 +20,7 @@
 
 #include <QMessageBox>
 #include <QFileInfo>
+#include <QRegularExpression>
 #include <qmmp/cueparser.h>
 #include "wavpackmetadatamodel.h"
 #include "decoder_wavpack.h"
@@ -62,7 +63,7 @@ QList<TrackInfo *> DecoderWavPackFactory::createPlayList(const QString &path, Tr
     if(path.contains("://")) //is it cue track?
     {
         filePath.remove("wvpack://");
-        filePath.remove(QRegExp("#\\d+$"));
+        filePath.remove(QRegularExpression("#\\d+$"));
         track = path.section("#", -1).toInt();
         parts = TrackInfo::AllParts; //extract all metadata for single cue track
     }

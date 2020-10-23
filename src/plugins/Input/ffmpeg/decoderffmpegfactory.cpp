@@ -21,6 +21,7 @@
 #include <QSettings>
 #include <QMessageBox>
 #include <QFileInfo>
+#include <QRegularExpression>
 #include <qmmp/cueparser.h>
 extern "C"{
 #include <libavformat/avformat.h>
@@ -180,7 +181,7 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
     if(path.contains("://")) //is it cue track?
     {
         filePath.remove("ffmpeg://");
-        filePath.remove(QRegExp("#\\d+$"));
+        filePath.remove(QRegularExpression("#\\d+$"));
         cueTrack = path.section("#", -1).toInt();
         parts = TrackInfo::AllParts; //extract all metadata for single cue track
     }

@@ -37,7 +37,7 @@ CueFile::CueFile(const QString &path) : CueParser()
     if(path.contains("://"))
     {
         filePath.remove("cue://");
-        filePath.remove(QRegExp("#\\d+$"));
+        filePath.remove(QRegularExpression("#\\d+$"));
     }
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly))

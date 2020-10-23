@@ -42,7 +42,7 @@ FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly)
     if(path.startsWith("flac://"))
     {
         m_path.remove("flac://");
-        m_path.remove(QRegExp("#\\d+$"));
+        m_path.remove(QRegularExpression("#\\d+$"));
     }
 
     if(m_path.endsWith(".flac", Qt::CaseInsensitive))

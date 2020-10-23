@@ -20,6 +20,7 @@
 
 #include <QFileInfo>
 #include <QSettings>
+#include <QRegularExpression>
 #include <sidplayfp/sidplayfp.h>
 #include <sidplayfp/SidTune.h>
 #include <sidplayfp/sidbuilder.h>
@@ -50,7 +51,7 @@ bool DecoderSID::initialize()
     m_read_bytes = 0;
     QString path = m_url;
     path.remove("sid://");
-    path.remove(QRegExp("#\\d+$"));
+    path.remove(QRegularExpression("#\\d+$"));
     int track = m_url.section("#", -1).toInt();
 
     m_tune.load(qPrintable(path));

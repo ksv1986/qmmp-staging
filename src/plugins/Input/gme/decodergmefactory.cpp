@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 #include <QMessageBox>
-#include <QRegExp>
+#include <QRegularExpression>
 #include "settingsdialog.h"
 #include "gmehelper.h"
 #include "decoder_gme.h"
@@ -62,7 +62,7 @@ QList<TrackInfo *> DecoderGmeFactory::createPlayList(const QString &path, TrackI
     {
         QString filePath = path;
         filePath.remove("gme://");
-        filePath.remove(QRegExp("#\\d+$"));
+        filePath.remove(QRegularExpression("#\\d+$"));
         int track = path.section("#", -1).toInt();
         QList<TrackInfo *> list = createPlayList(filePath, parts, ignoredFiles);
         if (list.isEmpty() || track <= 0 || track > list.count())

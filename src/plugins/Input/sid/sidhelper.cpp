@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QRegExp>
+#include <QRegularExpression>
 #include <sidplayfp/SidDatabase.h>
 #include "sidhelper.h"
 
@@ -44,7 +44,7 @@ SidTune *SIDHelper::load(const QString &url)
     if(url.contains("://"))
     {
         path.remove("sid://");
-        path.remove(QRegExp("#\\d+$"));
+        path.remove(QRegularExpression("#\\d+$"));
         track = url.section("#", -1).toInt();
     }
     m_tune = new SidTune(qPrintable(path));

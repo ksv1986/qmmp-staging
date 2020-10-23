@@ -20,6 +20,7 @@
 
 #include <QMessageBox>
 #include <QFileInfo>
+#include <QRegularExpression>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/flacfile.h>
@@ -76,7 +77,7 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
     if(path.contains("://")) //is it cue track?
     {
         filePath.remove("flac://");
-        filePath.remove(QRegExp("#\\d+$"));
+        filePath.remove(QRegularExpression("#\\d+$"));
         track = path.section("#", -1).toInt();
         parts = TrackInfo::AllParts; //extract all metadata for single cue track
     }

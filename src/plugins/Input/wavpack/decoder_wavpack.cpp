@@ -21,7 +21,7 @@
 #include <QObject>
 #include <QIODevice>
 #include <QFile>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <math.h>
 #include <stdint.h>
 #include <qmmp/cueparser.h>
@@ -53,7 +53,7 @@ bool DecoderWavPack::initialize()
     {
         QString p = m_path;
         p.remove("wvpack://");
-        p.remove(QRegExp("#\\d+$"));
+        p.remove(QRegularExpression("#\\d+$"));
 #if defined(Q_OS_WIN) && defined(OPEN_FILE_UTF8)
         m_context = WavpackOpenFileInput (p.toUtf8().constData(),
                                           err, OPEN_WVC | OPEN_TAGS | OPEN_FILE_UTF8, 0);

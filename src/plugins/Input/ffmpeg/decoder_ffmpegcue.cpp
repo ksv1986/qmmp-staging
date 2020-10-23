@@ -20,7 +20,7 @@
 
 #include <QObject>
 #include <QFile>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <qmmp/cueparser.h>
 #include "decoder_ffmpeg.h"
 #include "decoder_ffmpegcue.h"
@@ -54,7 +54,7 @@ bool DecoderFFmpegCue::initialize()
         return false;
     }
     filePath.remove("ffmpeg://");
-    filePath.remove(QRegExp("#\\d+$"));
+    filePath.remove(QRegularExpression("#\\d+$"));
     m_track = m_url.section("#", -1).toInt();
 
     AVFormatContext *in = nullptr;

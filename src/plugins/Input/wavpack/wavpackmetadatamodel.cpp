@@ -28,7 +28,7 @@ WavPackMetaDataModel::WavPackMetaDataModel(const QString &path, bool readOnly) :
     if(m_path.contains("://"))
     {
         m_path.remove("wvpack://");
-        m_path.remove(QRegExp("#\\d+$"));
+        m_path.remove(QRegularExpression("#\\d+$"));
     }
 
     char err[80] = {0};

@@ -34,6 +34,7 @@
 #include <QObject>
 #include <QFile>
 #include <QIODevice>
+#include <QRegularExpression>
 #include <FLAC/all.h>
 #include <stdint.h>
 #include <qmmp/cueparser.h>
@@ -292,7 +293,7 @@ bool DecoderFLAC::initialize()
         {
             QString p = m_path;
             p.remove("flac://");
-            p.remove(QRegExp("#\\d+$"));
+            p.remove(QRegularExpression("#\\d+$"));
             TagLib::FileStream stream(QStringToFileName(p), true);
             TagLib::FLAC::File fileRef(&stream, TagLib::ID3v2::FrameFactory::instance());
             //looking for cuesheet comment

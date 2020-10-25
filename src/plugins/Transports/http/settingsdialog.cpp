@@ -19,6 +19,7 @@
  ***************************************************************************/
 #include <QTextCodec>
 #include <QSettings>
+#include <QRegularExpression>
 #include <qmmp/qmmp.h>
 #ifdef WITH_ENCA
 #include <enca.h>
@@ -78,7 +79,7 @@ void SettingsDialog::accept()
 void SettingsDialog::findCodecs()
 {
     QMap<QString, QTextCodec *> codecMap;
-    QRegExp iso8859RegExp("ISO[- ]8859-([0-9]+).*");
+    static const QRegularExpression iso8859RegExp("ISO[- ]8859-([0-9]+).*");
 
     for(int mib : QTextCodec::availableMibs())
     {
@@ -86,6 +87,7 @@ void SettingsDialog::findCodecs()
 
         QString sortKey = codec->name().toUpper();
         int rank;
+        QRegularExpressionMatch match;
 
         if (sortKey.startsWith("UTF-8"))
         {
@@ -95,9 +97,9 @@ void SettingsDialog::findCodecs()
         {
             rank = 2;
         }
-        else if (iso8859RegExp.exactMatch(sortKey))
+        else if ((match = iso8859RegExp.match(sortKey)).hasMatch())
         {
-            if (iso8859RegExp.cap(1).size() == 1)
+            if (match.captured(1).size() == 1)
                 rank = 3;
             else
                 rank = 4;

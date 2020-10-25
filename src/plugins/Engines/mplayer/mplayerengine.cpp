@@ -24,10 +24,11 @@
 #include <QAction>
 #include <QKeyEvent>
 #include <QMenu>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QSettings>
 #include <QFileInfo>
 #include <QDebug>
+#include <QDir>
 #include <qmmp/trackinfo.h>
 #include <qmmp/inputsource.h>
 #include <qmmp/volumehandler.h>
@@ -35,30 +36,14 @@
 
 //#define MPLAYER_DEBUG
 
-static QRegExp rx_av("^[AV]: *([0-9,:.-]+)");
-static QRegExp rx_pause("^(.*)=(.*)PAUSE(.*)");
-static QRegExp rx_end("^(.*)End of file(.*)");
-static QRegExp rx_quit("^(.*)Quit(.*)");
-static QRegExp rx_audio("^AUDIO: *([0-9,.]+) *Hz.*([0-9,.]+) *ch.*([0-9]+).* ([0-9,.]+) *kbit.*");
-static QRegExp rx_audio2("^AUDIO: *([0-9,.]+) *Hz.*([0-9,.]+) *ch.*([a-z]+).* ([0-9,.]+) *kbit.*");
-
 TrackInfo *MplayerInfo::createTrackInfo(const QString &path)
 {
-    QRegExp rx_id_length("^ID_LENGTH=([0-9,.]+)*");
-    QRegExp rx_id_audio_bitrate("^ID_AUDIO_BITRATE=([0-9,.]+)*");
-    QRegExp rx_id_audio_rate("^ID_AUDIO_RATE=([0-9,.]+)*");
-    QRegExp rx_id_audio_nch("^ID_AUDIO_NCH=([0-9,.]+)*");
-    QRegExp rx_id_audio_codec("^ID_AUDIO_CODEC=(.*)");
-    QStringList args;
-    args << "-slave";
-    args << "-identify";
-    args << "-frames";
-    args << "0";
-    args << "-vo";
-    args << "null";
-    args << "-ao";
-    args << "null";
-    args << path;
+    QRegularExpression rx_id_length("^ID_LENGTH=([0-9,.]+)*");
+    QRegularExpression rx_id_audio_bitrate("^ID_AUDIO_BITRATE=([0-9,.]+)*");
+    QRegularExpression rx_id_audio_rate("^ID_AUDIO_RATE=([0-9,.]+)*");
+    QRegularExpression rx_id_audio_nch("^ID_AUDIO_NCH=([0-9,.]+)*");
+    QRegularExpression rx_id_audio_codec("^ID_AUDIO_CODEC=(.*)");
+    QStringList args = { "-slave", "-identify", "-frames", "0", "-vo", "null", "-ao", "null", path };
     QProcess mplayer_process;
     mplayer_process.start("mplayer", args);
     mplayer_process.waitForFinished(1500);
@@ -68,16 +53,18 @@ TrackInfo *MplayerInfo::createTrackInfo(const QString &path)
     const QStringList lines = str.split("\n");
     for(const QString &line : qAsConst(lines))
     {
-        if(rx_id_length.indexIn(line) > -1)
-            info->setDuration((qint64) rx_id_length.cap(1).toDouble() * 1000);
-        else if(rx_id_audio_bitrate.indexIn(line) > -1)
-            info->setValue(Qmmp::BITRATE, rx_id_audio_bitrate.cap(1).toDouble());
-        else if(rx_id_audio_rate.indexIn(line) > -1)
-            info->setValue(Qmmp::SAMPLERATE, rx_id_audio_rate.cap(1).toDouble());
-        else if(rx_id_audio_nch.indexIn(line) > -1)
-            info->setValue(Qmmp::CHANNELS, rx_id_audio_nch.cap(1).toInt());
-        else if(rx_id_audio_codec.indexIn(line) > -1)
-            info->setValue(Qmmp::FORMAT_NAME, rx_id_audio_codec.cap(1));
+        QRegularExpressionMatch match;
+
+        if((match = rx_id_length.match(line)).hasMatch())
+            info->setDuration(match.captured(1).toDouble() * 1000);
+        else if((match = rx_id_audio_bitrate.match(line)).hasMatch())
+            info->setValue(Qmmp::BITRATE, match.captured(1).toDouble());
+        else if((match = rx_id_audio_rate.match(line)).hasMatch())
+            info->setValue(Qmmp::SAMPLERATE, match.captured(1).toDouble());
+        else if((match = rx_id_audio_nch.match(line)).hasMatch())
+            info->setValue(Qmmp::CHANNELS, match.captured(1).toInt());
+        else if((match = rx_id_audio_codec.match(line)).hasMatch())
+            info->setValue(Qmmp::FORMAT_NAME, match.captured(1));
     }
     info->setValue(Qmmp::BITS_PER_SAMPLE, 32);
     info->setValue(Qmmp::DECODER, "mplayer");
@@ -88,12 +75,16 @@ TrackInfo *MplayerInfo::createTrackInfo(const QString &path)
     return info;
 }
 
-QStringList MplayerInfo::filters()
+const QStringList &MplayerInfo::filters()
 {
-    QStringList filters;
-    filters << "*.avi" << "*.mpg" << "*.mpeg" << "*.divx" << "*.qt" << "*.mov" << "*.wmv" << "*.asf"
-            << "*.flv" << "*.3gp" << "*.mkv" << "*.mp4" << "*.webm";
+    static const QStringList filters = { "*.avi", "*.mpg", "*.mpeg", "*.divx", "*.qt", "*.mov", "*.wmv", "*.asf",
+                                         "*.flv", "*.3gp", "*.mkv", "*.mp4", "*.webm" };
     return filters;
+}
+
+bool MplayerInfo::supports(const QString &path)
+{
+    return QDir::match(filters(), path.section("/", -1));
 }
 
 MplayerEngine::MplayerEngine(QObject *parent)
@@ -122,16 +113,7 @@ bool MplayerEngine::play()
 
 bool MplayerEngine::enqueue(InputSource *source)
 {
-    const QStringList filters = MplayerInfo::filters();
-    bool supports = false;
-    for(const QString &filter : qAsConst(filters))
-    {
-        QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        supports = regexp.exactMatch(source->path());
-        if(supports)
-            break;
-    }
-    if(!supports)
+    if(!MplayerInfo::supports(source->path()))
         return false;
 
     if(!m_process || m_process->state() == QProcess::NotRunning)
@@ -203,20 +185,29 @@ void MplayerEngine::setMuted(bool muted)
 
 void MplayerEngine::readStdOut()
 {
+    static const QRegularExpression rx_av("^[AV]: *([0-9,:.-]+)");
+    static const QRegularExpression rx_pause("^(.*)=(.*)PAUSE(.*)");
+    static const QRegularExpression rx_end("^(.*)End of file(.*)");
+    static const QRegularExpression rx_quit("^(.*)Quit(.*)");
+    static const QRegularExpression rx_audio("^AUDIO: *([0-9,.]+) *Hz.*([0-9,.]+) *ch.*([0-9]+).* ([0-9,.]+) *kbit.*");
+    static const QRegularExpression rx_audio2("^AUDIO: *([0-9,.]+) *Hz.*([0-9,.]+) *ch.*([a-z]+).* ([0-9,.]+) *kbit.*");
+
     const QStringList lines = QString::fromLocal8Bit(m_process->readAll()).trimmed().split("\n");
-    for(const QString &line : lines)
+    for(const QString &line : qAsConst(lines))
     {
-        if (rx_av.indexIn(line) > -1)
+        QRegularExpressionMatch match;
+
+        if ((match = rx_av.match(line)).hasMatch())
         {
             StateHandler::instance()->dispatch(Qmmp::Playing);
-            m_currentTime = (qint64) rx_av.cap(1).toDouble();
+            m_currentTime = (qint64) match.captured(1).toDouble();
             StateHandler::instance()->dispatch(m_currentTime * 1000, m_bitrate);
         }
-        else if (rx_pause.indexIn(line) > -1)
+        else if ((match = rx_pause.match(line)).hasMatch())
         {
             StateHandler::instance()->dispatch(Qmmp::Paused);
         }
-        else if (rx_end.indexIn(line) > -1)
+        else if ((match = rx_end.match(line)).hasMatch())
         {
             if (m_process->state() == QProcess::Running)
                 m_process->waitForFinished(3500);
@@ -233,7 +224,7 @@ void MplayerEngine::readStdOut()
                 return;
             }
         }
-        else if (rx_quit.indexIn(line) > -1 && !m_user_stop)
+        else if ((match = rx_quit.match(line)).hasMatch() && !m_user_stop)
         {
             if (m_process->state() == QProcess::Running)
             {
@@ -242,21 +233,21 @@ void MplayerEngine::readStdOut()
             }
             StateHandler::instance()->dispatch(Qmmp::Stopped);
         }
-        else if (rx_audio.indexIn(line) > -1)
+        else if ((match = rx_audio.match(line)).hasMatch())
         {
-            m_samplerate = rx_audio.cap(1).toInt();
-            m_channels = rx_audio.cap(2).toInt();
-            m_bitsPerSample = rx_audio.cap(3).toDouble();
-            m_bitrate = rx_audio.cap(4).toDouble();
+            m_samplerate = match.captured(1).toInt();
+            m_channels = match.captured(2).toInt();
+            m_bitsPerSample = match.captured(3).toDouble();
+            m_bitrate = match.captured(4).toDouble();
             AudioParameters ap(m_samplerate, ChannelMap(m_channels), AudioParameters::findAudioFormat(m_bitsPerSample));
             StateHandler::instance()->dispatch(ap);
         }
-        else if (rx_audio2.indexIn(line) > -1)
+        else if ((match = rx_audio2.match(line)).hasMatch())
         {
-            m_samplerate = rx_audio2.cap(1).toInt();
-            m_channels = rx_audio2.cap(2).toInt();
+            m_samplerate = match.captured(1).toInt();
+            m_channels = match.captured(2).toInt();
             m_bitsPerSample = 32;
-            m_bitrate = rx_audio2.cap(4).toDouble();
+            m_bitrate = match.captured(4).toDouble();
             AudioParameters ap(m_samplerate, ChannelMap(m_channels), AudioParameters::findAudioFormat(m_bitsPerSample));
             StateHandler::instance()->dispatch(ap);
         }

@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QFileInfo>
 #include <QStringList>
 #include <QProcess>
@@ -37,28 +37,20 @@ QList<MetaDataItem> MplayerMetaDataModel::extraProperties() const
     QList<MetaDataItem> ep;
     ep << MetaDataItem(tr("Size"), QFileInfo(m_path).size ()/1024, tr("KiB"));
     //prepare and start mplayer process
-    QStringList args;
-    args << "-slave";
-    args << "-identify";
-    args << "-frames";
-    args << "0";
-    args << "-vo";
-    args << "null";
-    args << "-ao";
-    args << "null";
-    args << m_path;
+    QStringList args = { "-slave", "-identify", "-frames", "0", "-vo", "null", "-ao", "null", m_path };
     QProcess mplayer_process;
     mplayer_process.start("mplayer", args);
     mplayer_process.waitForFinished();
     QString str = QString::fromLocal8Bit(mplayer_process.readAll()).trimmed();
     const QStringList lines = str.split("\n");
     //mplayer std output parsing
-    QRegExp rx_id("^(ID_.*)=(.*)");
+    QRegularExpression rx_id("^(ID_.*)=(.*)");
     QMap<QString, QString> params;
     for(const QString &line : qAsConst(lines))
     {
-        if(rx_id.indexIn(line.trimmed()) > -1)
-            params.insert(rx_id.cap(1), rx_id.cap(2));
+        QRegularExpressionMatch match = rx_id.match(line.trimmed());
+        if(match.hasMatch())
+            params.insert(match.captured(1), match.captured(2));
     }
     //general info
     ep << MetaDataItem(tr("Demuxer"), params["ID_DEMUXER"]);
@@ -68,8 +60,7 @@ QList<MetaDataItem> MplayerMetaDataModel::extraProperties() const
     ep << MetaDataItem(tr("Video codec"), params["ID_VIDEO_CODEC"]);
     ep << MetaDataItem(tr("Aspect ratio"), params["ID_VIDEO_ASPECT"]);
     ep << MetaDataItem(tr("Video bitrate"), params["ID_VIDEO_BITRATE"].toInt() / 1000, tr("kbps"));
-    ep << MetaDataItem(tr("Resolution"), QString("%1x%2").arg(params["ID_VIDEO_WIDTH"])
-          .arg(params["ID_VIDEO_HEIGHT"]));
+    ep << MetaDataItem(tr("Resolution"), QString("%1x%2").arg(params["ID_VIDEO_WIDTH"]).arg(params["ID_VIDEO_HEIGHT"]));
     ep << MetaDataItem(tr("Audio codec"), params["ID_AUDIO_CODEC"]);
     ep << MetaDataItem(tr("Sample rate"), params["ID_AUDIO_RATE"], tr("Hz"));
     ep << MetaDataItem(tr("Audio bitrate"), params["ID_AUDIO_BITRATE"].toInt() / 1000, tr("kbps"));

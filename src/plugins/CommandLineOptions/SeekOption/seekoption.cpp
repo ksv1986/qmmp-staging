@@ -20,7 +20,7 @@
 
 #include <QtPlugin>
 #include <QLocale>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <qmmp/soundcore.h>
 #include "seekoption.h"
 
@@ -52,13 +52,14 @@ QString SeekOption::executeCommand(int id, const QStringList &args)
     int seek_pos = -1;
     int elapsed = core->elapsed() / 1000;
 
-    QRegExp seek_regexp1 ("^([0-9]{1,4})$");
-    QRegExp seek_regexp2 ("^([0-9]{1,2}):([0-9]{1,2})$");
+    static const QRegularExpression seek_regexp1 ("^([0-9]{1,4})$");
+    static const QRegularExpression seek_regexp2 ("^([0-9]{1,2}):([0-9]{1,2})$");
 
-    if(seek_regexp1.indexIn(args.first()) != -1)
-        seek_pos = seek_regexp1.cap(1).toInt();
-    else if(seek_regexp2.indexIn(args.first()) != -1)
-        seek_pos = seek_regexp2.cap(1).toInt()*60 + seek_regexp2.cap(2).toInt();
+    QRegularExpressionMatch match;
+    if((match = seek_regexp1.match(args.first())).hasMatch())
+        seek_pos = match.captured(1).toInt();
+    else if((match = seek_regexp2.match(args.first())).hasMatch())
+        seek_pos = match.captured(1).toInt()*60 + match.captured(2).toInt();
 
     switch (id) {
     case SEEK: //seek absolute

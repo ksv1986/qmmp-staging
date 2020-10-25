@@ -43,14 +43,7 @@ EngineProperties MplayerEngineFactory::properties() const
 
 bool MplayerEngineFactory::supports(const QString &source) const
 {
-    const QStringList filters = MplayerInfo::filters();
-    for(const QString &filter : qAsConst(filters))
-    {
-        QRegExp regexp(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        if (regexp.exactMatch(source))
-            return true;
-    }
-    return false;
+    return MplayerInfo::supports(source);
 }
 
 AbstractEngine *MplayerEngineFactory::create(QObject *parent)
@@ -61,9 +54,7 @@ AbstractEngine *MplayerEngineFactory::create(QObject *parent)
 QList<TrackInfo *> MplayerEngineFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
     Q_UNUSED(parts);
-    QList<TrackInfo *> info;
-    info << MplayerInfo::createTrackInfo(path);
-    return info;
+    return { MplayerInfo::createTrackInfo(path) };
 }
 
 MetaDataModel* MplayerEngineFactory::createMetaDataModel(const QString &path, bool readOnly)

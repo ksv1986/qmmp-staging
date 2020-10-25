@@ -38,7 +38,8 @@ class MplayerInfo
 {
 public:
     static TrackInfo *createTrackInfo(const QString &path);
-    static QStringList filters();
+    static const QStringList &filters();
+    static bool supports(const QString &path);
 };
 
 class MplayerEngine : public AbstractEngine

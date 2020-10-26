@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include <QPluginLoader>
-#include <QRegExp>
 #include <QList>
 #include <QDir>
 #include <QApplication>
@@ -61,13 +60,7 @@ QStringList PlayListParser::filters()
 
 bool PlayListParser::isPlayList(const QString &url)
 {
-    for(const QString &filter : nameFilters())
-    {
-        QRegExp r(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        if(r.exactMatch(url))
-            return true;
-    }
-    return false;
+    return QDir::match(nameFilters(), url.section(QChar('/'), -1));
 }
 
 PlayListFormat *PlayListParser::findByMime(const QString &mime)
@@ -83,12 +76,8 @@ PlayListFormat *PlayListParser::findByPath(const QString &filePath)
     loadFormats();
     for(PlayListFormat *format : qAsConst(*m_formats))
     {
-        for(const QString &filter : format->properties().filters)
-        {
-            QRegExp r(filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-            if(r.exactMatch(filePath))
-                return format;
-        }
+        if(QDir::match(format->properties().filters, filePath.section(QChar('/'), -1)))
+            return format;
     }
     return nullptr;
 }

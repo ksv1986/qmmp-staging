@@ -18,11 +18,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <qmmp/metadatamanager.h>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QMetaType>
 #include <QDir>
 #include <QApplication>
+#include <qmmp/metadatamanager.h>
 #include "fileloader_p.h"
 #include "qmmpuisettings.h"
 #include "playlistitem.h"
@@ -128,9 +128,9 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
     {
         QStringList protocols = MetaDataManager::instance()->protocols();
         QList<QRegularExpression> regExps =  MetaDataManager::instance()->regExps();
-        QList<QRegExp> filters;
+        QList<QRegularExpression> filters;
         for(const QString &pattern : MetaDataManager::instance()->nameFilters())
-            filters << QRegExp(pattern, Qt::CaseInsensitive, QRegExp::Wildcard);
+            filters << QRegularExpression(QRegularExpression::wildcardToRegularExpression(pattern), QRegularExpression::CaseInsensitiveOption);
 
 
         QList<PlayListTrack *>::iterator it = tracks.begin();
@@ -146,7 +146,7 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
                     continue;
                 }
             }
-            else if(!QFile::exists((*it)->path()) || !MetaDataManager::hasMatch(filters, (*it)->path()))
+            else if(!QFile::exists((*it)->path()) || !MetaDataManager::hasMatch(filters, (*it)->path().section(QChar('/'), -1)))
             {
                 delete (*it);
                 it = tracks.erase(it);
@@ -346,13 +346,7 @@ bool FileLoader::checkRestrictFilters(const QFileInfo &info)
     if(m_settings->restrictFilters().isEmpty())
         return true;
 
-    for(const QString &filter : m_settings->restrictFilters())
-    {
-        QRegExp regexp (filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        if(regexp.exactMatch(info.absoluteFilePath()))
-            return true;
-    }
-    return false;
+    return QDir::match(m_settings->restrictFilters(), info.fileName());
 }
 
 bool FileLoader::checkExcludeFilters(const QFileInfo &info)
@@ -360,13 +354,7 @@ bool FileLoader::checkExcludeFilters(const QFileInfo &info)
     if(m_settings->excludeFilters().isEmpty())
         return true;
 
-    for(const QString &filter : m_settings->excludeFilters())
-    {
-        QRegExp regexp (filter, Qt::CaseInsensitive, QRegExp::Wildcard);
-        if(regexp.exactMatch(info.absoluteFilePath()))
-            return false;
-    }
-    return true;
+    return !QDir::match(m_settings->excludeFilters() , info.fileName());
 }
 
 void FileLoader::removeIgnoredTracks(QList<PlayListTrack *> *tracks, const QStringList &ignoredPaths)

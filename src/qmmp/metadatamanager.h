@@ -112,10 +112,6 @@ public:
      */
     static bool hasMatch(const QList<QRegularExpression> &regExps, const QString &path);
     /*!
-     * Returns \b true if the one regular expression in the list \b regExps matched against the \b path or \b false otherwise.
-     */
-    static bool hasMatch(const QList<QRegExp> &regExps, const QString &path);
-    /*!
      * Returns a pointer to the MetaDataManager instance.
      */
     static MetaDataManager* instance();

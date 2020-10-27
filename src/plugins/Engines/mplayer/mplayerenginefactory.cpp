@@ -35,7 +35,7 @@ EngineProperties MplayerEngineFactory::properties() const
     properties.filters = MplayerInfo::filters();
     properties.description = tr("Video Files");
     //properties.contentType = "application/ogg;audio/x-vorbis+ogg";
-    properties.protocols << "file";
+    properties.protocols = QStringList { "file" };
     properties.hasAbout = true;
     properties.hasSettings = true;
     return properties;

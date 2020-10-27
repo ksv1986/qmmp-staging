@@ -37,9 +37,9 @@ DecoderProperties DecoderCUEFactory::properties() const
     DecoderProperties properties;
     properties.name = tr("CUE Plugin");
     properties.shortName = "cue";
-    properties.filters << "*.cue";
+    properties.filters = QStringList { "*.cue" };
     properties.description = tr("CUE Files");
-    properties.protocols << "cue";
+    properties.protocols = QStringList { "cue" };
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;

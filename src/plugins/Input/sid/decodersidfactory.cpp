@@ -55,14 +55,14 @@ DecoderProperties DecoderSIDFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("SID Plugin");
-    properties.filters << "*.sid" << "*.mus" << "*.str" << "*.prg" << "*.P00" << "*.c64";
+    properties.filters = QStringList { "*.sid", "*.mus", "*.str", "*.prg", "*.P00", "*.c64" };
     properties.description = tr("SID Files");
     //properties.contentType = ;
     properties.shortName = "sid";
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
-    properties.protocols << "sid";
+    properties.protocols = QStringList { "sid" };
     return properties;
 }
 

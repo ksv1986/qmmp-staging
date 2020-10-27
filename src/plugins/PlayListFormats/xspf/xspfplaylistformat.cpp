@@ -31,9 +31,9 @@
 PlayListFormatProperties XSPFPlaylistFormat::XSPFPlaylistFormat::properties() const
 {
     PlayListFormatProperties p;
-    p.filters << "*.xspf";
+    p.filters = QStringList { "*.xspf" };
     p.shortName = "xspf";
-    p.contentTypes << "application/xspf+xml";
+    p.contentTypes = QStringList { "application/xspf+xml" };
     return p;
 }
 

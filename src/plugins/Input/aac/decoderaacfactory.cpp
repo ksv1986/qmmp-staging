@@ -37,9 +37,9 @@ DecoderProperties DecoderAACFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("AAC Plugin");
-    properties.filters << "*.aac";
+    properties.filters = QStringList { "*.aac" };
     properties.description = tr("AAC Files");
-    properties.contentTypes << "audio/aacp" << "audio/aac";
+    properties.contentTypes = QStringList { "audio/aacp", "audio/aac" };
     properties.shortName = "aac";
     properties.hasAbout = true;
     properties.hasSettings = false;

@@ -37,14 +37,14 @@ DecoderProperties DecoderWavPackFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("WavPack Plugin");
-    properties.filters << "*.wv";
+    properties.filters = QStringList { "*.wv" };
     properties.description = tr("WavPack Files");
-    properties.contentTypes << "audio/x-wavpack";
+    properties.contentTypes = QStringList { "audio/x-wavpack" };
     properties.shortName = "wavpack";
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.noInput = true;
-    properties.protocols << "file" << "wvpack";
+    properties.protocols = QStringList { "file", "wvpack" };
     return properties;
 }
 

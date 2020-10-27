@@ -45,7 +45,7 @@ DecoderProperties DecoderMPCFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("Musepack Plugin");
-    properties.filters << "*.mpc";
+    properties.filters = QStringList { "*.mpc" };
     properties.description = tr("Musepack Files");
     //properties.contentType = ;
     properties.shortName = "mpc";

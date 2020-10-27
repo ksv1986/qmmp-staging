@@ -37,14 +37,14 @@ DecoderProperties DecoderArchiveFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("Archive Plugin");
-    properties.filters << "*.rar" << "*.zip";
+    properties.filters = QStringList { "*.rar", "*.zip" };
     properties.description = tr("Archives");
-    properties.contentTypes << "application/zip" << "application/x-rar-compressed";
+    properties.contentTypes = QStringList { "application/zip", "application/x-rar-compressed" };
     properties.shortName = "archive";
     properties.hasAbout = true;
     properties.hasSettings = false;
     properties.noInput = true;
-    properties.protocols << "rar" << "zip";
+    properties.protocols = QStringList { "rar", "zip" };
     return properties;
 }
 

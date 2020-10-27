@@ -29,7 +29,7 @@
 InputSourceProperties HTTPInputFactory::properties() const
 {
     InputSourceProperties properties;
-    properties.protocols << "http" << "https";
+    properties.protocols = QStringList { "http", "https" };
     properties.name = tr("HTTP Plugin");
     properties.shortName = "http";
     properties.hasAbout = true;

@@ -105,13 +105,10 @@ void ProjectMWidget::initializeGL()
         QString presetPath = QString::fromLocal8Bit(m_projectM->settings().presetURL.c_str());
         QDir presetDir(presetPath);
         presetDir.setFilter(QDir::Files);
-        QStringList filters;
-        filters << "*.prjm" << "*.milk";
+        const QStringList filters = { "*.prjm", "*.milk" };
         const QFileInfoList l = presetDir.entryInfoList(filters);
 
-        RatingList list;
-        list.push_back(3);
-        list.push_back(3);
+        const RatingList list = { 3, 3 };
         for(const QFileInfo &info : qAsConst(l))
         {
             m_projectM->addPresetURL (info.absoluteFilePath().toStdString(), info.fileName().toStdString(), list);

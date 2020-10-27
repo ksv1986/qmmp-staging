@@ -28,7 +28,7 @@
 InputSourceProperties MMSInputFactory::properties() const
 {
     InputSourceProperties properties;
-    properties.protocols << "mms" << "mmsh" << "mmst" << "mmsu";
+    properties.protocols = QStringList { "mms", "mmsh", "mmst", "mmsu" };
     properties.name = tr("MMS Plugin");
     properties.shortName = "mms";
     properties.hasAbout = true;

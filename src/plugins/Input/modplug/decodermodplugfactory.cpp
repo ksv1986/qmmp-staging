@@ -43,18 +43,18 @@ DecoderProperties DecoderModPlugFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("ModPlug Plugin");
-    properties.filters << "*.amf" << "*.ams" << "*.dbm" << "*.dbf" << "*.dsm" << "*.far" << "*.mdl";
-    properties.filters << "*.stm" << "*.ult" << "*.j2b" << "*.mt2" << "*.mdz" << "*.mdr" << "*.mdgz";
-    properties.filters << "*.mdbz" << "*.mod" << "*.s3z" << "*.s3r" << "*.s3gz" << "*.s3m" << "*.xmz";
-    properties.filters << "*.xmr" << "*.xmgz" << "*.itz" << "*.itr" << "*.itgz" << "*.dmf" "*.umx";
-    properties.filters << "*.it" << "*.669" << "*.xm" << "*.mtm" << "*.psm" << "*.ft2" << "*.med";
+    properties.filters = QStringList { "*.amf" , "*.ams" , "*.dbm" , "*.dbf" , "*.dsm" , "*.far" , "*.mdl",
+            "*.stm" , "*.ult" , "*.j2b" , "*.mt2" , "*.mdz" , "*.mdr" , "*.mdgz",
+            "*.mdbz" , "*.mod" , "*.s3z" , "*.s3r" , "*.s3gz" , "*.s3m" , "*.xmz",
+            "*.xmr" , "*.xmgz" , "*.itz" , "*.itr" , "*.itgz" , "*.dmf" "*.umx",
+            "*.it" , "*.669" , "*.xm" , "*.mtm" , "*.psm" , "*.ft2" , "*.med" };
     properties.description = tr("ModPlug Files");
     //properties.contentType = ;
     properties.shortName = "modplug";
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
-    properties.protocols << "file";
+    properties.protocols = QStringList { "file" };
     return properties;
 }
 

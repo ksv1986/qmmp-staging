@@ -47,9 +47,9 @@ DecoderProperties DecoderWildMidiFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("WildMidi Plugin");
-    properties.filters << "*.mid";
+    properties.filters = QStringList { "*.mid" };
 #if defined(LIBWILDMIDI_VERSION) && (LIBWILDMIDI_VERSION >= 0x000400)
-    properties.filters << "*.mus" << "*.xmi";
+    properties.filters << QStringList { "*.mus", "*.xmi" };
 #endif
     properties.description = tr("Midi Files");
     //properties.contentType = ;
@@ -57,7 +57,7 @@ DecoderProperties DecoderWildMidiFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
-    properties.protocols << "file";
+    properties.protocols = QStringList { "file" };
     return properties;
 }
 

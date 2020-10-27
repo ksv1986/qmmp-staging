@@ -27,9 +27,9 @@
 PlayListFormatProperties M3UPlaylistFormat::properties() const
 {
     PlayListFormatProperties p;
-    p.filters << "*.m3u" << "*.m3u8";
+    p.filters = QStringList { "*.m3u", "*.m3u8" };
     p.shortName = "m3u";
-    p.contentTypes << "audio/x-mpegurl";
+    p.contentTypes = QStringList { "audio/x-mpegurl" };
     return p;
 }
 

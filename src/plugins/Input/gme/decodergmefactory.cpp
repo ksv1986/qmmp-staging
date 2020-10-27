@@ -36,15 +36,15 @@ DecoderProperties DecoderGmeFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("GME Plugin");
-    properties.filters << "*.ay" << "*.gbs" << "*.gym" << "*.hes" << "*.kss" << "*.nsf" << "*.nsfe";
-    properties.filters << "*.sap" << "*.spc" << "*.vgm" << "*.vgz";
+    properties.filters = QStringList { "*.ay", "*.gbs", "*.gym", "*.hes", "*.kss", "*.nsf", "*.nsfe",
+            "*.sap", "*.spc", "*.vgm", "*.vgz" };
     properties.description = tr("Game Music Files");
     //properties.contentType = ;
     properties.shortName = "gme";
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.noInput = true;
-    properties.protocols << "gme";
+    properties.protocols = QStringList { "gme" };
     return properties;
 }
 

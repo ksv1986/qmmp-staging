@@ -52,11 +52,11 @@ DecoderProperties DecoderFLACFactory::properties() const
 {
     DecoderProperties properties;
     properties.name = tr("FLAC Plugin");
-    properties.filters << "*.flac" << "*.oga";
+    properties.filters = QStringList { "*.flac", "*.oga" };
     properties.description = tr("FLAC Files");
-    properties.contentTypes << "audio/x-flac" << "audio/flac";
+    properties.contentTypes = QStringList { "audio/x-flac", "audio/flac" };
     properties.shortName = "flac";
-    properties.protocols << "flac";
+    properties.protocols = QStringList { "flac" };
     properties.hasAbout = true;
     properties.hasSettings = false;
     return properties;

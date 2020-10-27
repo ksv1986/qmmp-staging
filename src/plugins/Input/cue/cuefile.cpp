@@ -24,6 +24,7 @@
 #include <QSettings>
 #include <QTextStream>
 #include <QTextCodec>
+#include <QRegularExpression>
 #include <qmmp/decoder.h>
 #include <qmmp/metadatamanager.h>
 #ifdef WITH_ENCA
@@ -182,7 +183,7 @@ QString CueFile::getDirtyPath(const QString &cue_path, const QString &path)
     int dot = cue_path.lastIndexOf('.');
     if (dot != -1)
     {
-        QRegExp r(QRegExp::escape(cue_path.left(dot)) + "\\.[^\\.]+$");
+        QRegularExpression r(QRegularExpression::escape(cue_path.left(dot)) + "\\.[^\\.]+$");
 
         int index = candidates.indexOf(r);
         int rindex = candidates.lastIndexOf(r);
@@ -193,7 +194,7 @@ QString CueFile::getDirtyPath(const QString &cue_path, const QString &path)
     dot = path.lastIndexOf('.');
     if (dot != -1)
     {
-        QRegExp r(QRegExp::escape(path.left(dot)) + "\\.[^\\.]+$");
+        QRegularExpression r(QRegularExpression::escape(path.left(dot)) + "\\.[^\\.]+$");
 
         int index = candidates.indexOf(r);
         int rindex = candidates.lastIndexOf(r);

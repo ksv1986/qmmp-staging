@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 #include <QtPlugin>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <qmmpui/metadataformatter.h>
 #include "plsplaylistformat.h"
 
@@ -49,57 +49,59 @@ QList<PlayListTrack *> PLSPlaylistFormat::decode(const QByteArray &contents)
         return out;
     }
 
-    QRegExp fileRegExp("^File(\\d+)=(.+)");
-    QRegExp fullTitleRegExp("^Title(\\d+)=(.+) - (.+)");
-    QRegExp titleRegExp("^Title(\\d+)=(.+)");
-    QRegExp lengthRegExp("^Length(\\d+)=(-{0,1}\\d+)");
+    const QRegularExpression fileRegExp("^File(\\d+)=(.+)");
+    const QRegularExpression fullTitleRegExp("^Title(\\d+)=(.+) - (.+)");
+    const QRegularExpression titleRegExp("^Title(\\d+)=(.+)");
+    const QRegularExpression lengthRegExp("^Length(\\d+)=(-{0,1}\\d+)");
 
     int number = 0;
     bool error = false;
 
     for(const QString &line : qAsConst(splitted))
     {
-        if(fileRegExp.indexIn(line) > -1)
+        QRegularExpressionMatch match;
+
+        if((match = fileRegExp.match(line)).hasMatch())
         {
-            if((number = fileRegExp.cap(1).toInt()) > 0)
+            if((number = match.captured(1).toInt()) > 0)
             {
                 while(number > out.count())
                     out << new PlayListTrack();
-                out[number - 1]->setPath(fileRegExp.cap(2));
+                out[number - 1]->setPath(match.captured(2));
             }
             else
                 error = true;
         }
-        else if(fullTitleRegExp.indexIn(line) > -1)
+        else if((match = fullTitleRegExp.match(line)).hasMatch())
         {
-            if((number = fullTitleRegExp.cap(1).toInt()) > 0)
+            if((number = match.captured(1).toInt()) > 0)
             {
                 while(number > out.count())
                     out << new PlayListTrack();
-                out[number - 1]->setValue(Qmmp::ARTIST, fullTitleRegExp.cap(2));
-                out[number - 1]->setValue(Qmmp::TITLE, fullTitleRegExp.cap(3));
+                out[number - 1]->setValue(Qmmp::ARTIST, match.captured(2));
+                out[number - 1]->setValue(Qmmp::TITLE, match.captured(3));
             }
             else
                 error = true;
         }
-        else if(titleRegExp.indexIn(line) > -1)
+        else if((match = titleRegExp.match(line)).hasMatch())
         {
-            if((number = titleRegExp.cap(1).toInt()) > 0)
+            if((number = match.captured(1).toInt()) > 0)
             {
                 while(number > out.count())
                     out << new PlayListTrack();
-                out[number - 1]->setValue(Qmmp::TITLE, titleRegExp.cap(2));
+                out[number - 1]->setValue(Qmmp::TITLE, match.captured(2));
             }
             else
                 error = true;
         }
-        else if(lengthRegExp.indexIn(line) > -1)
+        else if((match = lengthRegExp.match(line)).hasMatch())
         {
-            if((number = lengthRegExp.cap(1).toInt()) > 0)
+            if((number = match.captured(1).toInt()) > 0)
             {
                 while(number > out.count())
                     out << new PlayListTrack();
-                out[number - 1]->setDuration(lengthRegExp.cap(2).toInt() * 1000);
+                out[number - 1]->setDuration(match.captured(2).toInt() * 1000);
             }
             else
                 error = true;

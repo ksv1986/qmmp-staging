@@ -25,6 +25,7 @@
 #include <QSettings>
 #include <QMessageBox>
 #include <QHeaderView>
+#include <QRegularExpression>
 #include <qmmp/qmmp.h>
 #include "twopanelfiledialogimpl.h"
 
@@ -45,11 +46,11 @@ const char *qt_file_dialog_filter_reg_exp =
 // Makes a list of filters from a normal filter string "Image Files (*.png *.jpg)"
 static QStringList qt_clean_filter_list(const QString &filter)
 {
-    QRegExp regexp(QString::fromLatin1(qt_file_dialog_filter_reg_exp));
+    QRegularExpression regexp(QString::fromLatin1(qt_file_dialog_filter_reg_exp));
     QString f = filter;
-    int i = regexp.indexIn(f);
-    if (i >= 0)
-        f = regexp.cap(2);
+    QRegularExpressionMatch match = regexp.match(f);
+    if (match.hasMatch())
+        f = match.captured(2);
     return f.split(QLatin1Char(' '), QString::SkipEmptyParts);
 }
 
@@ -430,8 +431,7 @@ void TwoPanelFileDialogImpl::addFiles(const QStringList &list, bool play)
         bool contains = false;
         for(const QString &str : qt_clean_filter_list(m_ui.fileTypeComboBox->currentText()))
         {
-            QRegExp regExp(str);
-            regExp.setPatternSyntax(QRegExp::Wildcard);
+            QRegularExpression regExp(QRegularExpression::wildcardToRegularExpression(str));
             if (f_name.contains(regExp))
             {
                 contains = true;

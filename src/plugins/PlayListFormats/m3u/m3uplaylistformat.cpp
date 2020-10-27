@@ -20,6 +20,7 @@
 
 #include <QFileInfo>
 #include <QtPlugin>
+#include <QRegularExpression>
 #include <qmmpui/metadataformatter.h>
 #include "m3uplaylistformat.h"
 
@@ -39,8 +40,8 @@ QList<PlayListTrack *> M3UPlaylistFormat::decode(const QByteArray &contents)
     if(splitted.isEmpty())
         return out;
 
-    QRegExp extInfRegExp("#EXTINF:(-{0,1}\\d+),(.*) - (.*)");
-    QRegExp extInfRegExp2("#EXTINF:(-{0,1}\\d+),(.*)");
+    QRegularExpression extInfRegExp("#EXTINF:(-{0,1}\\d+),(.*) - (.*)");
+    QRegularExpression extInfRegExp2("#EXTINF:(-{0,1}\\d+),(.*)");
     int length = 0;
     QString artist, title;
     bool hasExtInf = false;
@@ -51,17 +52,19 @@ QList<PlayListTrack *> M3UPlaylistFormat::decode(const QByteArray &contents)
         if(str.startsWith("#EXTM3U") || str.isEmpty())
             continue;
 
-        if(extInfRegExp.indexIn(str) > -1)
+        QRegularExpressionMatch match;
+
+        if((match = extInfRegExp.match(str)).hasMatch())
         {
-            length = extInfRegExp.cap(1).toInt();
-            artist = extInfRegExp.cap(2);
-            title =  extInfRegExp.cap(3);
+            length = match.captured(1).toInt();
+            artist = match.captured(2);
+            title =  match.captured(3);
             hasExtInf = true;
         }
-        else if(extInfRegExp2.indexIn(str) > -1)
+        else if((match = extInfRegExp2.match(str)).hasMatch())
         {
-            length = extInfRegExp.cap(1).toInt();
-            title =  extInfRegExp.cap(2);
+            length = match.captured(1).toInt();
+            title =  match.captured(2);
             hasExtInf = true;
         }
 

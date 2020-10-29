@@ -56,5 +56,5 @@ void HistoryFactory::showAbout(QWidget *parent)
 
 QString HistoryFactory::translation() const
 {
-    return QString(":/history_plugin_");
+    return QLatin1String(":/history_plugin_");
 }

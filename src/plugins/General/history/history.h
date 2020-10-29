@@ -51,8 +51,8 @@ private:
     SoundCore *m_core;
     TrackInfo m_trackInfo;
     QElapsedTimer m_time;
-    Qmmp::State m_previousState;
-    quint64 m_elapsed;
+    Qmmp::State m_previousState = Qmmp::Stopped;
+    quint64 m_elapsed = 0;
     QPointer<HistoryWindow> m_historyWindow;
 
 };

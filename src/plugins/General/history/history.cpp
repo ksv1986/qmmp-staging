@@ -31,9 +31,7 @@
 
 History::History(QObject *parent) : QObject(parent)
 {
-    m_core = SoundCore::instance();
     m_previousState = Qmmp::Stopped;
-    m_elapsed = 0;
     connect(m_core, SIGNAL(trackInfoChanged()), SLOT(onTrackInfoChanged()));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(onStateChanged(Qmmp::State)));
 

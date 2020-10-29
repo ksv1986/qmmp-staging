@@ -11,7 +11,8 @@ SUBDIRS += statusicon \
            copypaste \
            rgscan \
            hotkey \
-           listenbrainz
+           listenbrainz \
+           library
 
 unix:SUBDIRS += mpris \
                 kdenotify \

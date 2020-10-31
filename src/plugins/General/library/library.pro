@@ -4,9 +4,11 @@ TARGET = $$PLUGINS_PREFIX/General/library
 
 QT += sql
 
-HEADERS += libraryfactory.h
+HEADERS += libraryfactory.h \
+    library.h
 
-SOURCES += libraryfactory.cpp
+SOURCES += libraryfactory.cpp \
+    library.cpp
 
 
 #RESOURCES = translations/translations.qrc

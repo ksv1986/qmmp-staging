@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2020 by Ilya Kotov                                      *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,44 +18,36 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMessageBox>
-#include <QtPlugin>
+#ifndef LIBRARY_H
+#define LIBRARY_H
+
+#include <QObject>
+#include <QElapsedTimer>
+#include <QPointer>
+#include <qmmp/trackinfo.h>
 #include <qmmp/qmmp.h>
-#include "library.h"
-//#include "historysettingsdialog.h"
-#include "libraryfactory.h"
 
-GeneralProperties LibraryFactory::properties() const
-{
-    GeneralProperties properties;
-    properties.name = tr("Media Library Plugin");
-    properties.shortName = "library";
-    properties.hasAbout = true;
-    properties.hasSettings = false;
-    properties.visibilityControl = false;
-    return properties;
-}
+#define CONNECTION_NAME "qmmp_library"
 
-QObject *LibraryFactory::create(QObject *parent)
-{
-    return new Library(parent);
-}
+class SoundCore;
+//class HistoryWindow;
 
-QDialog *LibraryFactory::createConfigDialog(QWidget *parent)
+class Library : public QObject
 {
-    Q_UNUSED(parent);
-    return nullptr;
-}
+    Q_OBJECT
+public:
+    explicit Library(QObject *parent = nullptr);
+    ~Library();
 
-void LibraryFactory::showAbout(QWidget *parent)
-{
-    QMessageBox::about (parent, tr("About Media Library Plugin"),
-                        tr("Qmmp Media Library Plugin")+"\n"+
-                        tr("This plugin represents a database to store music files tags for a fast access")+"\n"+
-                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
+private slots:
+    void showLibraryWindow();
 
-QString LibraryFactory::translation() const
-{
-    return QLatin1String(":/library_plugin_");
-}
+private:
+    bool createTables();
+    //void saveTrack();
+
+    //QPointer<HistoryWindow> m_historyWindow;
+
+};
+
+#endif // LIBRARY_H

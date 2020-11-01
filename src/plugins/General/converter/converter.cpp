@@ -265,7 +265,7 @@ void Converter::run()
             if(full_path.endsWith(".mp3", Qt::CaseInsensitive))
             {
                 TagLib::MPEG::File *mpeg_file = dynamic_cast <TagLib::MPEG::File *> (file.file());
-                mpeg_file->save(TagLib::MPEG::File::ID3v2, TagLib::File::StripOthers);
+                mpeg_file->save(TagLib::MPEG::File::ID3v2, true);
             }
             else
                 file.save();

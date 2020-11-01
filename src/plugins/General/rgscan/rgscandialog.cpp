@@ -395,7 +395,7 @@ void RGScanDialog::on_writeButton_clicked()
             TagLib::MPEG::File file(qPrintable(item->url));
             writeAPETag(file.APETag(true), item);
             writeID3v2Tag(file.ID3v2Tag(true), item);
-            file.save(TagLib::MPEG::File::APE | TagLib::MPEG::File::ID3v2, TagLib::File::StripNone);
+            file.save(TagLib::MPEG::File::APE | TagLib::MPEG::File::ID3v2, false);
         }
         else if(ext == "flac") //flac
         {

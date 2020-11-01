@@ -716,8 +716,6 @@ void QmmpAudioEngine::prepareEffects(Decoder *d)
         m_effects << effect;
         tmp_effects.removeAll(effect);
     }
-
-    m_dithering->setFormats(d->audioParameters().format(), m_ap.format());
 }
 
 //static members

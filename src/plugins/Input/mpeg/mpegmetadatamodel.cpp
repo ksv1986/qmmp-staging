@@ -299,12 +299,18 @@ void MpegFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
             else if (m_codec->name().contains("UTF-16BE"))
                 type = TagLib::String::UTF16BE;
 
-            m_codec = QTextCodec::codecForName ("UTF-8");
+
             TagLib::ID3v2::FrameFactory *factory = TagLib::ID3v2::FrameFactory::instance();
             factory->setDefaultTextEncoding(type);
-            m_file->setID3v2FrameFactory(factory);
+            m_codec = QTextCodec::codecForName("UTF-8");
             type = TagLib::String::UTF8;
         }
+        else
+        {
+            TagLib::ID3v2::FrameFactory *factory = TagLib::ID3v2::FrameFactory::instance();
+            factory->setDefaultTextEncoding(TagLib::String::Latin1);
+        }
+
         //save additional tags
         TagLib::ByteVector id3v2_key;
         if(key == Qmmp::ALBUMARTIST)
@@ -403,7 +409,7 @@ void MpegFileTagModel::remove()
 void MpegFileTagModel::save()
 {
     if(m_tag)
-        m_file->save(m_tagType, false);
+        m_file->save(m_tagType, TagLib::File::StripNone);
     else
         m_file->strip(m_tagType);
 }

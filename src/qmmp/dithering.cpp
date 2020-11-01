@@ -2,7 +2,7 @@
  *  Based on madplay project                                               *
  *                                                                         *
  * Copyright (C) 2000-2004 Robert Leslie <rob@mars.org>                    *
- * Copyright (C) 2016-2017 Ilya Kotov forkotov02@ya.ru                     *
+ * Copyright (C) 2016-2020 Ilya Kotov forkotov02@ya.ru                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -112,7 +112,7 @@ float Dithering::audioLinearDither(float sample, AudioDither *dither)
 
     /* dither */
     random = prng(dither->random);
-    output += (float)(random - dither->random) / 0xffffffffL * m_lsb;
+    output += (float)(random - dither->random) * (1.0 / 0xffffffffL) * m_lsb;
     dither->random = random;
 
     /* clip */

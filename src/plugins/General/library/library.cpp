@@ -24,10 +24,17 @@
 #include <QVariant>
 #include <QAction>
 #include <QApplication>
+#include <QFileInfo>
+#include <QDateTime>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QHash>
 #include <qmmpui/uihelper.h>
 #include <qmmp/soundcore.h>
 //#include "historywindow.h"
 #include "library.h"
+
+#define CONNECTION_NAME "qmmp_library"
 
 Library::Library(QObject *parent) : QObject(parent)
 {
@@ -85,7 +92,7 @@ bool Library::createTables()
                          "Timestamp TIMESTAMP NOT NULL,"
                          "Title TEXT, Artist TEXT, AlbumArtist TEXT, Album TEXT, Comment TEXT, Genre TEXT, Composer TEXT,"
                          "Year INTEGER, Track INTEGER, DiscNumer INTEGER, Duration INTEGER, "
-                         "AudioInfo BLOB, URL BLOB, FilePath BLOB)");
+                         "AudioInfo BLOB, URL TEXT, FilePath TEXT)");
 
     if(!ok)
         qWarning("Library: unable to create table, error: %s", qPrintable(query.lastError().text()));
@@ -93,32 +100,73 @@ bool Library::createTables()
     return ok;
 }
 
-/*void Library::saveTrack()
+void Library::addTrack(TrackInfo *track, const QString &filePath)
 {
     QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
-    if(!db.isOpen() || m_trackInfo.isEmpty())
+    if(!db.isOpen())
         return;
 
     QSqlQuery query(db);
-    query.prepare("INSERT INTO track_library VALUES(NULL, CURRENT_TIMESTAMP, :title, :artist, :albumartist, :album, :comment,"
-                  ":genre, :composer, :year, :track, :discnumber, :duration, :url);");
-    query.bindValue(":title", m_trackInfo.value(Qmmp::TITLE));
-    query.bindValue(":artist", m_trackInfo.value(Qmmp::ARTIST));
-    query.bindValue(":albumartist", m_trackInfo.value(Qmmp::ALBUMARTIST));
-    query.bindValue(":album", m_trackInfo.value(Qmmp::ALBUM));
-    query.bindValue(":comment", m_trackInfo.value(Qmmp::COMMENT));
-    query.bindValue(":genre", m_trackInfo.value(Qmmp::GENRE));
-    query.bindValue(":composer", m_trackInfo.value(Qmmp::COMPOSER));
-    query.bindValue(":year", m_trackInfo.value(Qmmp::YEAR));
-    query.bindValue(":track", m_trackInfo.value(Qmmp::TRACK));
-    query.bindValue(":discnumber", m_trackInfo.value(Qmmp::DISCNUMBER));
-    query.bindValue(":duration", m_trackInfo.duration());
-    query.bindValue(":url", m_trackInfo.path());
-    bool ok = query.exec();
+    query.prepare("INSERT INTO track_library VALUES("
+                  "NULL, :timestamp, "
+                  ":title, :artist, :albumartist, :album TEXT, :comment, :genre, :composer, "
+                  ":year, :track, :discnumer INTEGER, :duration, "
+                  ":audioinfo, :url, :filepath)");
 
-    if(!ok)
-        qWarning("Library: unable to save track, error: %s", qPrintable(query.lastError().text()));
-    else
-        qDebug("Library: track '%s' has been added to history",
-               qPrintable(m_trackInfo.value(Qmmp::ARTIST) + " - " + m_trackInfo.value(Qmmp::TITLE)));
-}*/
+    query.bindValue(":timestamp", QFileInfo(filePath).lastModified());
+    query.bindValue(":title", track->value(Qmmp::TITLE));
+    query.bindValue(":artist", track->value(Qmmp::ARTIST));
+    query.bindValue(":albumartist", track->value(Qmmp::ALBUMARTIST));
+    query.bindValue(":album", track->value(Qmmp::ALBUM));
+    query.bindValue(":comment", track->value(Qmmp::COMMENT));
+    query.bindValue(":genre", track->value(Qmmp::GENRE));
+    query.bindValue(":composer", track->value(Qmmp::COMPOSER));
+    query.bindValue(":year", track->value(Qmmp::YEAR));
+    query.bindValue(":track", track->value(Qmmp::TRACK));
+    query.bindValue(":discnumber", track->value(Qmmp::DISCNUMBER));
+    query.bindValue(":duration", track->duration());
+    query.bindValue(":audioinfo", serializeAudioInfo(track->properties()));
+    query.bindValue(":url", track->path());
+    query.bindValue(":filepath", filePath);
+}
+
+QByteArray Library::serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> &properties)
+{
+    QJsonObject obj;
+    QMap<Qmmp::TrackProperty, QString>::const_iterator it = properties.cbegin();
+    while(it != properties.cend())
+    {
+        QString value =  properties[it.key()];
+
+        switch(it.key())
+        {
+        case Qmmp::BITRATE:
+            obj.insert("bitrate", value.toInt());
+            break;
+        case Qmmp::SAMPLERATE:
+            obj.insert("samplerate", value.toInt());
+            break;
+        case Qmmp::CHANNELS:
+            obj.insert("channels", value.toInt());
+            break;
+        case Qmmp::BITS_PER_SAMPLE:
+            obj.insert("bitsPerSample", value.toInt());
+            break;
+        case Qmmp::FORMAT_NAME:
+            obj.insert("formatName", value);
+            break;
+        case Qmmp::DECODER:
+            obj.insert("decoder", value);
+            break;
+        case Qmmp::FILE_SIZE:
+            obj.insert("fileSize", value.toLongLong());
+            break;
+        default:
+            ;
+        }
+
+        ++it;
+    }
+
+    return QJsonDocument(obj).toJson(QJsonDocument::Compact);
+}

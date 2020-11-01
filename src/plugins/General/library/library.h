@@ -27,8 +27,6 @@
 #include <qmmp/trackinfo.h>
 #include <qmmp/qmmp.h>
 
-#define CONNECTION_NAME "qmmp_library"
-
 class SoundCore;
 //class HistoryWindow;
 
@@ -44,9 +42,8 @@ private slots:
 
 private:
     bool createTables();
-    //void saveTrack();
-
-    //QPointer<HistoryWindow> m_historyWindow;
+    void addTrack(TrackInfo *track, const QString &filePath);
+    QByteArray serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> &properties);
 
 };
 

@@ -24,10 +24,13 @@
 #include <QObject>
 #include <QElapsedTimer>
 #include <QPointer>
+#include <QFuture>
+#include <QStringList>
 #include <qmmp/trackinfo.h>
 #include <qmmp/qmmp.h>
 
 class SoundCore;
+class PlayListTrack;
 //class HistoryWindow;
 
 class Library : public QObject
@@ -40,10 +43,20 @@ public:
 private slots:
     void showLibraryWindow();
 
+private slots:
+    void startDirectoryScanning();
+
 private:
     bool createTables();
     void addTrack(TrackInfo *track, const QString &filePath);
     QByteArray serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> &properties);
+    bool scanDirectories(const QStringList &paths);
+    void addDirectory(const QString &s);
+    QList<PlayListTrack *> processFile(const QString &path, QStringList *ignoredPaths);
+
+    QFuture<bool> m_future;
+    QStringList m_filters;
+    bool m_stopped = false;
 
 };
 

@@ -29,7 +29,10 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QHash>
+#include <QtConcurrent>
 #include <qmmpui/uihelper.h>
+#include <qmmpui/playlisttrack.h>
+#include <qmmp/metadatamanager.h>
 #include <qmmp/soundcore.h>
 //#include "historywindow.h"
 #include "library.h"
@@ -80,6 +83,13 @@ void Library::showLibraryWindow()
     m_historyWindow->activateWindow();*/
 }
 
+void Library::startDirectoryScanning()
+{
+    m_filters = MetaDataManager::instance()->nameFilters();
+    QStringList dirs = { "/home/user" };
+    m_future = QtConcurrent::run(this, &Library::scanDirectories, dirs);
+}
+
 bool Library::createTables()
 {
     QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
@@ -110,7 +120,7 @@ void Library::addTrack(TrackInfo *track, const QString &filePath)
     query.prepare("INSERT INTO track_library VALUES("
                   "NULL, :timestamp, "
                   ":title, :artist, :albumartist, :album TEXT, :comment, :genre, :composer, "
-                  ":year, :track, :discnumer INTEGER, :duration, "
+                  ":year, :track, :discnumber INTEGER, :duration, "
                   ":audioinfo, :url, :filepath)");
 
     query.bindValue(":timestamp", QFileInfo(filePath).lastModified());
@@ -136,7 +146,7 @@ QByteArray Library::serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> 
     QMap<Qmmp::TrackProperty, QString>::const_iterator it = properties.cbegin();
     while(it != properties.cend())
     {
-        QString value =  properties[it.key()];
+        QString value = properties[it.key()];
 
         switch(it.key())
         {
@@ -169,4 +179,86 @@ QByteArray Library::serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> 
     }
 
     return QJsonDocument(obj).toJson(QJsonDocument::Compact);
+}
+
+bool Library::scanDirectories(const QStringList &paths)
+{
+    m_stopped = false;
+
+    for(const QString &path : qAsConst(paths))
+    {
+        addDirectory(path);
+        if(m_stopped)
+            return false;
+    }
+
+    return true;
+}
+
+void Library::addDirectory(const QString &s)
+{
+    QList<PlayListTrack *> tracks;
+    QStringList ignoredPaths;
+    QDir dir(s);
+    dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+    dir.setSorting(QDir::Name);
+    QFileInfoList l = dir.entryInfoList(m_filters);
+
+    for(const QFileInfo &info : qAsConst(l))
+    {
+        //if(checkRestrictFilters(info) && checkExcludeFilters(info))
+        {
+            QStringList paths;
+            tracks.append(processFile(info.absoluteFilePath (), &ignoredPaths));
+            ignoredPaths.append(paths);
+        }
+
+        if (m_stopped)
+        {
+            qDeleteAll(tracks);
+            tracks.clear();
+            return;
+        }
+
+        /*if(tracks.count() > 30) //do not send more than 30 tracks at once
+        {
+            removeIgnoredTracks(&tracks, ignoredPaths);
+            emit newTracksToInsert(before, tracks);
+            tracks.clear();
+            ignoredPaths.clear();
+        }*/
+    }
+
+    /*if(!tracks.isEmpty())
+    {
+        removeIgnoredTracks(&tracks, ignoredPaths);
+        emit newTracksToInsert(before, tracks);
+        ignoredPaths.clear();
+    }*/
+
+    dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
+    dir.setSorting(QDir::Name);
+    l.clear();
+    l = dir.entryInfoList();
+
+    for (int i = 0; i < l.size(); ++i)
+    {
+        QFileInfo fileInfo = l.at(i);
+        addDirectory(fileInfo.absoluteFilePath());
+        if (m_stopped)
+            return;
+    }
+}
+
+QList<PlayListTrack *> Library::processFile(const QString &path, QStringList *ignoredPaths)
+{
+    QList<PlayListTrack *> tracks;
+    const QList<TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, TrackInfo::AllParts, ignoredPaths);
+
+    for(TrackInfo *info : qAsConst(infoList))
+    {
+        tracks.append(new PlayListTrack(info));
+    }
+    qDeleteAll(infoList);
+    return tracks;
 }

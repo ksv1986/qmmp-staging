@@ -255,7 +255,7 @@ QList<PlayListTrack *> Library::processFile(const QString &path, QStringList *ig
     QList<PlayListTrack *> tracks;
     const QList<TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, TrackInfo::AllParts, ignoredPaths);
 
-    for(TrackInfo *info : qAsConst(infoList))
+    for(const TrackInfo *info : qAsConst(infoList))
     {
         tracks.append(new PlayListTrack(info));
     }

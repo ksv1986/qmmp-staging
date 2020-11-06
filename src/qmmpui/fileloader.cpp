@@ -47,7 +47,7 @@ QList<PlayListTrack *> FileLoader::processFile(const QString &path, QStringList 
     QList<PlayListTrack *> tracks;
     const QList<TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, m_parts, ignoredPaths);
 
-    for(TrackInfo *info : qAsConst(infoList))
+    for(const TrackInfo *info : qAsConst(infoList))
     {
         tracks.append(new PlayListTrack(info));
     }

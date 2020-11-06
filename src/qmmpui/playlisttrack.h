@@ -48,7 +48,7 @@ public:
      * Constructs plalist item with given metadata.
      * @param info Media file information.
      */
-    PlayListTrack(TrackInfo *info);
+    PlayListTrack(const TrackInfo *info);
     /*!
      * Object destructor.
      */

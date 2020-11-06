@@ -460,12 +460,13 @@ void PlayListTask::run()
         //create new playlist tracks
         QStringList ignoredFiles;
         TrackInfo::Parts parts = QmmpUiSettings::instance()->useMetaData() ? TrackInfo::AllParts : TrackInfo::Parts();
-        for(const QFileInfo &info : qAsConst(l))
+        for(const QFileInfo &i : qAsConst(l))
         {
             QStringList ignored;
-            for(TrackInfo *info : mm->createPlayList(info.canonicalFilePath(), parts, &ignored))
+            for(TrackInfo *info : mm->createPlayList(i.canonicalFilePath(), parts, &ignored))
             {
                 m_new_tracks << new PlayListTrack(info);
+                delete info;
             }
             ignoredFiles.append(ignored);
         }

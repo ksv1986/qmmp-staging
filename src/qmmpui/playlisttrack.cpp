@@ -45,7 +45,7 @@ PlayListTrack::PlayListTrack(const PlayListTrack &other) : TrackInfo(other),
     m_formattedLength = other.m_formattedLength;
 }
 
-PlayListTrack::PlayListTrack(TrackInfo *info) : TrackInfo(*info),
+PlayListTrack::PlayListTrack(const TrackInfo *info) : TrackInfo(*info),
     PlayListItem()
 {
     m_settings = QmmpUiSettings::instance();

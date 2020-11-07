@@ -180,7 +180,7 @@ void FileLoader::addDirectory(const QString& s, PlayListItem *before)
         if(checkRestrictFilters(info) && checkExcludeFilters(info))
         {
             QStringList paths;
-            tracks.append(processFile(info.absoluteFilePath (), &ignoredPaths));
+            tracks.append(processFile(info.absoluteFilePath (), &paths));
             ignoredPaths.append(paths);
         }
 

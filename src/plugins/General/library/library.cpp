@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017-2020 by Ilya Kotov                                 *
+ *   Copyright (C) 2020 by Ilya Kotov                                      *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,7 +31,6 @@
 #include <QHash>
 #include <QtConcurrent>
 #include <qmmpui/uihelper.h>
-#include <qmmpui/playlisttrack.h>
 #include <qmmp/metadatamanager.h>
 #include <qmmp/soundcore.h>
 //#include "historywindow.h"
@@ -68,6 +67,12 @@ Library::Library(QObject *parent) : QObject(parent)
 
 Library::~Library()
 {
+    if(m_future.isRunning())
+    {
+        m_stopped = true;
+        m_future.waitForFinished();
+    }
+
     if(QSqlDatabase::contains(CONNECTION_NAME))
     {
         QSqlDatabase::database(CONNECTION_NAME).close();
@@ -197,8 +202,10 @@ bool Library::scanDirectories(const QStringList &paths)
 
 void Library::addDirectory(const QString &s)
 {
-    QList<PlayListTrack *> tracks;
+    QList<TrackInfo *> tracks;
+    QHash<const TrackInfo *, QString> filePathHash;
     QStringList ignoredPaths;
+
     QDir dir(s);
     dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     dir.setSorting(QDir::Name);
@@ -206,11 +213,18 @@ void Library::addDirectory(const QString &s)
 
     for(const QFileInfo &info : qAsConst(l))
     {
-        //if(checkRestrictFilters(info) && checkExcludeFilters(info))
+        if(!checkFile(info))
         {
             QStringList paths;
-            tracks.append(processFile(info.absoluteFilePath (), &ignoredPaths));
-            ignoredPaths.append(paths);
+            const QList<TrackInfo *> pl = MetaDataManager::instance()->createPlayList(info.absoluteFilePath(), TrackInfo::AllParts, &paths);
+
+            //save local file path
+            for(const TrackInfo *t : qAsConst(pl))
+                filePathHash.insert(t, info.absoluteFilePath());
+
+            tracks << pl;
+            ignoredPaths << paths;
+
         }
 
         if (m_stopped)
@@ -219,23 +233,17 @@ void Library::addDirectory(const QString &s)
             tracks.clear();
             return;
         }
-
-        /*if(tracks.count() > 30) //do not send more than 30 tracks at once
-        {
-            removeIgnoredTracks(&tracks, ignoredPaths);
-            emit newTracksToInsert(before, tracks);
-            tracks.clear();
-            ignoredPaths.clear();
-        }*/
     }
 
-    /*if(!tracks.isEmpty())
-    {
-        removeIgnoredTracks(&tracks, ignoredPaths);
-        emit newTracksToInsert(before, tracks);
-        ignoredPaths.clear();
-    }*/
+    removeIgnoredTracks(&tracks, ignoredPaths);
 
+    for(TrackInfo *info : qAsConst(tracks))
+        addTrack(info, filePathHash.value(info));
+
+    qDeleteAll(tracks);
+    tracks.clear();
+
+    //filter directories
     dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
     dir.setSorting(QDir::Name);
     l.clear();
@@ -250,15 +258,40 @@ void Library::addDirectory(const QString &s)
     }
 }
 
-QList<PlayListTrack *> Library::processFile(const QString &path, QStringList *ignoredPaths)
+bool Library::checkFile(const QFileInfo &info)
 {
-    QList<PlayListTrack *> tracks;
-    const QList<TrackInfo *> infoList = MetaDataManager::instance()->createPlayList(path, TrackInfo::AllParts, ignoredPaths);
+    QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
 
-    for(const TrackInfo *info : qAsConst(infoList))
+    QSqlQuery query(db);
+    query.prepare("SELECT Timestamp FROM track_library WHERE FilePath=:filepath");
+    query.bindValue(":filepath", info.absoluteFilePath());
+    if(!query.exec())
     {
-        tracks.append(new PlayListTrack(info));
+        qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+        return false;
     }
-    qDeleteAll(infoList);
-    return tracks;
+    if(!query.next())
+        return false;
+
+    return info.lastModified() == query.value("Timestamp").toDateTime();
+}
+
+void Library::removeIgnoredTracks(QList<TrackInfo *> *tracks, const QStringList &ignoredPaths)
+{
+    if(ignoredPaths.isEmpty())
+        return;
+
+    QList<TrackInfo *>::iterator it = tracks->begin();
+    while(it != tracks->end())
+    {
+        if(ignoredPaths.contains((*it)->path()))
+        {
+            delete (*it);
+            it = tracks->erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
 }

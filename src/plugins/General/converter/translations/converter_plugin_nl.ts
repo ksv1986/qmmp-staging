@@ -79,7 +79,7 @@
         <translation>Stoppen</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="108"/>
+        <location filename="../converterdialog.cpp" line="113"/>
         <source>Choose a directory</source>
         <translation>Kies een map</translation>
     </message>
@@ -89,44 +89,44 @@
         <translation>Naam</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="198"/>
+        <location filename="../converterdialog.cpp" line="203"/>
         <source>Create a Copy</source>
         <translation>Kopie creëren</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="129"/>
-        <location filename="../converterdialog.cpp" line="353"/>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="134"/>
+        <location filename="../converterdialog.cpp" line="358"/>
+        <location filename="../converterdialog.cpp" line="364"/>
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="134"/>
+        <location filename="../converterdialog.cpp" line="139"/>
         <source>Waiting</source>
         <translation>Bezig met wachten</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="196"/>
+        <location filename="../converterdialog.cpp" line="201"/>
         <source>Create</source>
         <translation>Creëer</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="197"/>
+        <location filename="../converterdialog.cpp" line="202"/>
         <source>Edit</source>
         <translation>Bewerk</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="199"/>
+        <location filename="../converterdialog.cpp" line="204"/>
         <source>Delete</source>
         <translation>Verwijder</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="358"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation>Kan &apos;%1&apos; niet uitvoeren: programma niet aangetroffen.</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="364"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation>Het proces &apos;%1&apos; is afgerond, maar met fouten.</translation>
     </message>

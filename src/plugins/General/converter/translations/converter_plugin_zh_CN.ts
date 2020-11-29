@@ -79,7 +79,7 @@
         <translation>停止</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="108"/>
+        <location filename="../converterdialog.cpp" line="113"/>
         <source>Choose a directory</source>
         <translation>选择文件夹</translation>
     </message>
@@ -89,44 +89,44 @@
         <translation>题头</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="198"/>
+        <location filename="../converterdialog.cpp" line="203"/>
         <source>Create a Copy</source>
         <translation>创建一个副本</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="129"/>
-        <location filename="../converterdialog.cpp" line="353"/>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="134"/>
+        <location filename="../converterdialog.cpp" line="358"/>
+        <location filename="../converterdialog.cpp" line="364"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="134"/>
+        <location filename="../converterdialog.cpp" line="139"/>
         <source>Waiting</source>
         <translation>等待中</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="196"/>
+        <location filename="../converterdialog.cpp" line="201"/>
         <source>Create</source>
         <translation>创建</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="197"/>
+        <location filename="../converterdialog.cpp" line="202"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="199"/>
+        <location filename="../converterdialog.cpp" line="204"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="358"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation>无法执行&quot;%1&quot;。程序未找到。</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="364"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation>进程”%1“完成同时发现错误。</translation>
     </message>

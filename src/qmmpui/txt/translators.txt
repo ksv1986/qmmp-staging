@@ -28,6 +28,7 @@ Dutch:
 
 Finnish:
     Jiri Grönroos
+    Kimmo Kujansuu
 
 French:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>

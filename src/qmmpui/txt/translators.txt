@@ -6,6 +6,7 @@ Brazilian Portuguese:
 
 Bulgarian:
     Kiril Kirilov
+    Miroslav Mihov
 
 Chinese Traditional:
     Cosmos Chen

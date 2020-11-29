@@ -39,12 +39,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
         <source>Device Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка на устройството</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Audio device</source>
-        <translation type="unfinished"></translation>
+        <translation>Звуково устройство</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
@@ -54,22 +54,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="84"/>
         <source>Advanced Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки за напреднали</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>
         <source>Soundcard</source>
-        <translation type="unfinished"></translation>
+        <translation>Звукова карта</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="160"/>
         <source>Buffer time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Време на буфера (ms)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="170"/>
         <source>Period time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Време период (ms)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="200"/>

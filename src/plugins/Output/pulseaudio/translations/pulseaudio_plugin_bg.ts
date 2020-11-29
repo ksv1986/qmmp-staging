@@ -21,7 +21,7 @@
     <message>
         <location filename="../outputpulseaudiofactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Написана от Илия Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

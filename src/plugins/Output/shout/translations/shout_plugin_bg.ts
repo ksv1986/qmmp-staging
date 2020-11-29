@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="bg_BG">
+<TS version="2.1" language="bg">
 <context>
     <name>OutputShoutFactory</name>
     <message>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../outputshoutfactory.cpp" line="67"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Написана от Илия Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

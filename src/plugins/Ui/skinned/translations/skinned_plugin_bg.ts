@@ -1169,7 +1169,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="67"/>
         <source>Artwork:</source>
-        <translation type="unfinished"></translation>
+        <translation>Artwork:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="68"/>

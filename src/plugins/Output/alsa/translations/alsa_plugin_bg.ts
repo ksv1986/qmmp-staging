@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputalsafactory.cpp" line="31"/>
         <source>ALSA Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>ALSA приставка</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="56"/>
         <source>About ALSA Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Относно приставката за изход ALSA</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="57"/>
         <source>Qmmp ALSA Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp приставката за изход ALSA</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Написана от Илия Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,62 +29,62 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>ALSA Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка на приставката ALSA</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
         <source>Device Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка на устройството</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Audio device</source>
-        <translation type="unfinished"></translation>
+        <translation>Звуково устройство</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Mixer</source>
-        <translation type="unfinished"></translation>
+        <translation>Смесител</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Mixer card:</source>
-        <translation type="unfinished"></translation>
+        <translation>Смесителна карта</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="86"/>
         <source>Mixer device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Смесително устройство</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>Advanced Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки за напреднали</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="115"/>
         <source>Soundcard</source>
-        <translation type="unfinished"></translation>
+        <translation>Звукова карта</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="121"/>
         <source>Buffer time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Време на буфера (ms)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="157"/>
         <source>Period time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Време период (ms)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="193"/>
         <source>Use mmap access</source>
-        <translation type="unfinished"></translation>
+        <translation>Използвай mmap достъп</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="213"/>
         <source>Use snd_pcm_pause function</source>
-        <translation type="unfinished"></translation>
+        <translation>Използвай snd_pcm_pause функция</translation>
     </message>
 </context>
 </TS>

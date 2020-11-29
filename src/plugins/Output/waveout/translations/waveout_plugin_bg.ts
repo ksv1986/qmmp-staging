@@ -21,7 +21,7 @@
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="62"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Написана от Илия Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="63"/>

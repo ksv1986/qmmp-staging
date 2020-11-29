@@ -1088,7 +1088,7 @@
     <message>
         <location filename="../forms/preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetettu editori</translation>
     </message>
     <message>
         <location filename="../forms/preseteditor.ui" line="36"/>

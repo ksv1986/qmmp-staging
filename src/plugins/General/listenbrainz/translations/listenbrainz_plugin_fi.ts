@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>ListenBrainzFactory</name>
     <message>
         <location filename="../listenbrainzfactory.cpp" line="30"/>
         <source>ListenBrainz Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>ListenBrainz-liitännäinen</translation>
     </message>
     <message>
         <location filename="../listenbrainzfactory.cpp" line="50"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../listenbrainzfactory.cpp" line="51"/>
         <source>Qmmp ListenBrainz Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp:n ListenBrainz-liitännäinen</translation>
     </message>
     <message>
         <location filename="../listenbrainzfactory.cpp" line="52"/>
         <source>This plugin submits listen history to ListenBrainz server</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä liitännäinen lähettää kuunteluhistorian ListenBrainz-palvelimelle</translation>
     </message>
     <message>
         <location filename="../listenbrainzfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>ListenBrainz Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>ListenBrainz-liitännäisen asetukset</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>ListenBrainz user token:</source>
-        <translation type="unfinished"></translation>
+        <translation>ListenBrainz-käyttäjäpoletti:</translation>
     </message>
 </context>
 </TS>

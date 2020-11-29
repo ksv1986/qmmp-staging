@@ -18,17 +18,17 @@
     <message>
         <location filename="../converter.cpp" line="177"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Muuntaminen</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="238"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Koodaus</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="276"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Valmis</translation>
     </message>
 </context>
 <context>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>Äänimuunnin</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
@@ -46,17 +46,17 @@
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Tila</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallennus kansio:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="80"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallennuksen tiedoston nimi:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="97"/>
@@ -66,12 +66,12 @@
     <message>
         <location filename="../converterdialog.ui" line="114"/>
         <source>Overwrite existing files</source>
-        <translation type="unfinished"></translation>
+        <translation>Korvaa tiedostot</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished"></translation>
+        <translation>Muunna</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
@@ -123,12 +123,12 @@
     <message>
         <location filename="../converterdialog.cpp" line="358"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot; ei voida suorittaa. Ohjelmaa ei löydy.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="364"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prosessi &quot;%1&quot; valmistui virheellisesti.</translation>
     </message>
 </context>
 <context>
@@ -136,22 +136,22 @@
     <message>
         <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Muuntimen liitännäinen</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja muuntimen liitännäisestä</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp muuntimen liitännäinen</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä liitännäinen muuntaa tuetut äänitiedostot muihin tiedostomuotoihin käyttäen komentorivin koodereita</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
@@ -164,12 +164,12 @@
     <message>
         <location filename="../converterhelper.cpp" line="33"/>
         <source>Convert</source>
-        <translation type="unfinished"></translation>
+        <translation>Muunna</translation>
     </message>
     <message>
         <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+C</translation>
     </message>
 </context>
 <context>
@@ -177,7 +177,7 @@
     <message>
         <location filename="../preseteditor.ui" line="14"/>
         <source>Preset Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetettu editori</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="29"/>
@@ -192,7 +192,7 @@
     <message>
         <location filename="../preseteditor.ui" line="45"/>
         <source>Extension:</source>
-        <translation type="unfinished"></translation>
+        <translation>Liitännäinen:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="58"/>
@@ -207,27 +207,27 @@
     <message>
         <location filename="../preseteditor.ui" line="83"/>
         <source>Write tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoita hakusana</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="90"/>
         <source>Convert to 16 bit</source>
-        <translation type="unfinished"></translation>
+        <translation>Muunna 16-bittiseksi</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="37"/>
         <source>%1 (Read Only)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (Vain luku)</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="70"/>
         <source>Output file</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallennuksen tiedosto</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="71"/>
         <source>Input file</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuo tiedosto</translation>
     </message>
 </context>
 </TS>

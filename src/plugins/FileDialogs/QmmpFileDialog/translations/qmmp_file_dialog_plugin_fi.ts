@@ -11,7 +11,7 @@
     <message>
         <location filename="../qmmpfiledialog.ui" line="177"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylös</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="180"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../qmmpfiledialog.ui" line="129"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostot tyyppiä:</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="155"/>

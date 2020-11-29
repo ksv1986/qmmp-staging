@@ -925,7 +925,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="275"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="319"/>
@@ -1069,12 +1069,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Muoto</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Purkaja</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="66"/>
@@ -1318,7 +1318,8 @@
         <location filename="../uihelper.cpp" line="231"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 on jo olemassa.
+Haluatko korvata sen?</translation>
     </message>
 </context>
 <context>

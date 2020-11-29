@@ -21,7 +21,7 @@
     <message>
         <location filename="../statusoption.cpp" line="94"/>
         <source>Syntax:</source>
-        <translation type="unfinished"></translation>
+        <translation>Syntaksi:</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="95"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../statusoption.cpp" line="109"/>
         <source>%{bitrate} - bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>%{bitrate} - bittinopeus</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="110"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../statusoption.cpp" line="111"/>
         <source>%{channels} - number of channels</source>
-        <translation type="unfinished"></translation>
+        <translation>%{channels} - kanavien määrä</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="112"/>
@@ -126,7 +126,7 @@
     <message>
         <location filename="../statusoption.cpp" line="115"/>
         <source>%{filesize} - file size</source>
-        <translation type="unfinished"></translation>
+        <translation>%{filesize} - tiedostokoko</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="116"/>

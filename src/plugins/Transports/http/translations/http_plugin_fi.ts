@@ -11,17 +11,17 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="53"/>
         <source>About HTTP Transport Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja HTTP Transport -liitännäinen</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="54"/>
         <source>Qmmp HTTP Transport Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp HTTP Transport -liitännäinen</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="55"/>
         <source>Compiled against libcurl-%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Käännetty vasten libcurl-%1</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="56"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Metadata encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Metatietojen koodaus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="84"/>
@@ -64,17 +64,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="114"/>
         <source>Default encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oletuksena koodaus:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="137"/>
         <source>User Agent:</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytön suoritin:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="151"/>
         <source>Change User Agent</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaihda käytön suoritin:</translation>
     </message>
 </context>
 </TS>

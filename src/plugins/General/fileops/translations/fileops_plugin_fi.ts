@@ -23,9 +23,9 @@
     <message numerus="yes">
         <location filename="../fileops.cpp" line="138"/>
         <source>Are you sure you want to move %n file(s)?</source>
-        <translation>
-            <numerusform>Haluatko varmasti siirtää %n tiedoston?</numerusform>
-            <numerusform>Haluatko varmasti siirtää %n tiedostoa?</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>

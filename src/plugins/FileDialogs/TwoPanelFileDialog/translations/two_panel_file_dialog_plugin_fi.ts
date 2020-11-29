@@ -16,7 +16,7 @@
     <message>
         <location filename="../twopanelfiledialog.ui" line="80"/>
         <source>Files of type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostot tyyppiä:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="117"/>

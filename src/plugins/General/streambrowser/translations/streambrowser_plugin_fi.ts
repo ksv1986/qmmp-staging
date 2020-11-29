@@ -6,12 +6,12 @@
     <message>
         <location filename="../editstreamdialog.ui" line="14"/>
         <source>Edit Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa suoratoistoa</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="34"/>
         <source>URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>Osoite:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../editstreamdialog.ui" line="64"/>
         <source>Bitrate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bittinopeus:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="74"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../streambrowser.cpp" line="33"/>
         <source>Add Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää suoratoisto</translation>
     </message>
     <message>
         <location filename="../streambrowser.cpp" line="35"/>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../streamwindow.ui" line="14"/>
         <source>Stream Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Suoratoistoselain</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="31"/>
@@ -129,7 +129,7 @@
         <location filename="../streamwindow.cpp" line="59"/>
         <location filename="../streamwindow.cpp" line="77"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Muoto</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="134"/>
@@ -175,7 +175,7 @@
     <message>
         <location filename="../streamwindow.cpp" line="281"/>
         <source>Edit Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa suoratoistoa</translation>
     </message>
 </context>
 </TS>

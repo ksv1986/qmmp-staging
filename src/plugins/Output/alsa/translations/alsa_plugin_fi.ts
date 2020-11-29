@@ -69,17 +69,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="121"/>
         <source>Buffer time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Puskurin aika (ms):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="157"/>
         <source>Period time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarkastelujakso (ms):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="193"/>
         <source>Use mmap access</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä mmap yhteyttä</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="213"/>

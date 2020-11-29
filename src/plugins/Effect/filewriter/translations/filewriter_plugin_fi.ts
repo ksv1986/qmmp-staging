@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallennus kansio:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallennuksen tiedoston nimi:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="109"/>

@@ -64,7 +64,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>
         <source>&amp;Previous Preset</source>
-        <translation>&amp;Edellinen esiasetus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="156"/>

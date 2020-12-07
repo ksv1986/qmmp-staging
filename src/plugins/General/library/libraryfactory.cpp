@@ -22,6 +22,7 @@
 #include <QtPlugin>
 #include <qmmp/qmmp.h>
 #include "library.h"
+#include "settingsdialog.h"
 //#include "historysettingsdialog.h"
 #include "libraryfactory.h"
 
@@ -31,7 +32,7 @@ GeneralProperties LibraryFactory::properties() const
     properties.name = tr("Media Library Plugin");
     properties.shortName = "library";
     properties.hasAbout = true;
-    properties.hasSettings = false;
+    properties.hasSettings = true;
     properties.visibilityControl = false;
     return properties;
 }
@@ -43,8 +44,7 @@ QObject *LibraryFactory::create(QObject *parent)
 
 QDialog *LibraryFactory::createConfigDialog(QWidget *parent)
 {
-    Q_UNUSED(parent);
-    return nullptr;
+    return new SettingsDialog(parent);
 }
 
 void LibraryFactory::showAbout(QWidget *parent)

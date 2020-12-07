@@ -5,10 +5,12 @@ TARGET = $$PLUGINS_PREFIX/General/library
 QT += sql concurrent
 
 HEADERS += libraryfactory.h \
-    library.h
+    library.h \
+    settingsdialog.h
 
 SOURCES += libraryfactory.cpp \
-    library.cpp
+    library.cpp \
+    settingsdialog.cpp
 
 
 #RESOURCES = translations/translations.qrc
@@ -19,3 +21,6 @@ unix {
     target.path = $$PLUGIN_DIR/General
     INSTALLS += target
 }
+
+FORMS += \
+    settingsdialog.ui

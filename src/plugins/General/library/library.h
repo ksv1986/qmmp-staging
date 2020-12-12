@@ -57,7 +57,7 @@ private:
     void removeIgnoredTracks(QList<TrackInfo *> *tracks, const QStringList &ignoredPaths);
 
     QFuture<bool> m_future;
-    QStringList m_filters;
+    QStringList m_filters, m_dirs;
     bool m_stopped = false;
 
 };

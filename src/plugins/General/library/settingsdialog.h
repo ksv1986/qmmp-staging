@@ -15,6 +15,9 @@ public:
     explicit SettingsDialog(QWidget *parent = 0);
     ~SettingsDialog();
 
+public slots:
+    void accept() override;
+
 private slots:
     void on_addDirButton_clicked();
     void on_removeDirButton_clicked();

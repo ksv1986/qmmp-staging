@@ -18,6 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QSettings>
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
@@ -30,9 +31,9 @@
 #include <QJsonObject>
 #include <QHash>
 #include <QtConcurrent>
-#include <qmmpui/uihelper.h>
+#include <qmmp/qmmp.h>
 #include <qmmp/metadatamanager.h>
-#include <qmmp/soundcore.h>
+#include <qmmpui/uihelper.h>
 //#include "historywindow.h"
 #include "library.h"
 
@@ -58,6 +59,9 @@ Library::Library(QObject *parent) : QObject(parent)
             qWarning("Library: plugin is disabled");
         }
     }
+
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    m_dirs = settings.value("Library/dirs").toStringList();
 
 //    QAction *action = new QAction(tr("History"), this);
 //    action->setIcon(QIcon::fromTheme("text-x-generic"));
@@ -91,8 +95,7 @@ void Library::showLibraryWindow()
 void Library::startDirectoryScanning()
 {
     m_filters = MetaDataManager::instance()->nameFilters();
-    QStringList dirs = { "/home/user" };
-    m_future = QtConcurrent::run(this, &Library::scanDirectories, dirs);
+    m_future = QtConcurrent::run(this, &Library::scanDirectories, m_dirs);
 }
 
 bool Library::createTables()

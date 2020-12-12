@@ -271,9 +271,9 @@ private:
     static SoundCore* m_instance;
     StateHandler *m_handler;
     VolumeHandler *m_volumeControl;
-    AbstractEngine *m_engine;
+    AbstractEngine *m_engine = nullptr;
     QQueue<InputSource *> m_sources;
-    int m_nextState;
+    NextEngineState m_nextState = NO_ENGINE;
 };
 
 #endif

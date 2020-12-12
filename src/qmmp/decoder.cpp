@@ -20,9 +20,7 @@ extern "C"
 #include "decoder.h"
 
 Decoder::Decoder(QIODevice *input) : m_input(input)
-{
-    m_hasMetaData = false;
-}
+{}
 
 Decoder::~Decoder()
 {}

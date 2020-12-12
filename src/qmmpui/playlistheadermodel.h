@@ -161,7 +161,7 @@ private:
         QHash<int, QVariant> data;
     };
     QList<ColumnHeader> m_columns;
-    bool m_settings_loaded;
+    bool m_settings_loaded = false;
     MetaDataHelper *m_helper;
 };
 

@@ -90,7 +90,7 @@ private:
     PlayListManager *m_pl_manager;
     SoundCore *m_core;
     static MediaPlayer* m_instance;
-    int m_skips;
+    int m_skips = 0;
     QString m_nextUrl;
     QTimer *m_finishTimer;
 };

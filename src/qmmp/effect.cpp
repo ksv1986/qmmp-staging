@@ -28,11 +28,7 @@
 #include "effect.h"
 
 Effect::Effect()
-{
-    m_freq = 0;
-    m_channels = 0;
-    m_factory = nullptr;
-}
+{}
 
 Effect::~Effect()
 {}

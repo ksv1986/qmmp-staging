@@ -38,19 +38,9 @@
 
 #define TRANSPORT_TIMEOUT 5000 //ms
 
-QmmpAudioEngine::QmmpAudioEngine(QObject *parent)
-        : AbstractEngine(parent), m_factory(nullptr), m_output(nullptr)
+QmmpAudioEngine::QmmpAudioEngine(QObject *parent) : AbstractEngine(parent)
 {
-    m_output_buf = nullptr;
-    m_output_size = 0;
-    m_bks = 0;
-    m_sample_size = 0;
-    m_decoder = nullptr;
-    m_output = nullptr;
-    m_replayGain = nullptr;
-    m_dithering = nullptr;
     m_converter = new AudioConverter;
-
     m_settings = QmmpSettings::instance();
     connect(m_settings,SIGNAL(replayGainSettingsChanged()), SLOT(updateReplayGainSettings()));
     connect(m_settings,SIGNAL(audioSettingsChanged()), SLOT(updateAudioSettings()));

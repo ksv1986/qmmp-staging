@@ -25,10 +25,7 @@
 
 Dithering::Dithering() : Effect()
 {
-    m_lsb = 0.0f;
-    m_required = false;
     m_enabled = QmmpSettings::instance()->useDithering();
-    m_chan = 2;
     clearHistory();
 }
 

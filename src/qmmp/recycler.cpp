@@ -10,15 +10,7 @@
 #include "buffer.h"
 
 Recycler::Recycler ()
-{
-    m_add_index = 0;
-    m_done_index = 0;
-    m_current_count = 0;
-    m_buffer_count = 0;
-    m_blocked = nullptr;
-    m_block_samples = 0;
-    m_buffers = nullptr;
-}
+{}
 
 Recycler::~Recycler()
 {

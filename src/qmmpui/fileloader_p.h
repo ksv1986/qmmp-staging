@@ -100,9 +100,9 @@ private:
     QQueue <LoaderTask> m_tasks;
     QStringList m_filters;
     QmmpUiSettings *m_settings;
-    bool m_finished;
-    bool m_readMetaDataForPlayLists;
-    TrackInfo::Parts m_parts;
+    bool m_finished = false;
+    bool m_readMetaDataForPlayLists = false;
+    TrackInfo::Parts m_parts = TrackInfo::Parts();
     QMutex m_mutex;
 
 };

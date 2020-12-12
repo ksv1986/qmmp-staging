@@ -30,7 +30,6 @@ PlayListHeaderModel::PlayListHeaderModel(QObject *parent) :
     QObject(parent)
 {
     m_helper = MetaDataHelper::instance();
-    m_settings_loaded = false;
 
     ColumnHeader col;
     col.name = tr("Artist - Title");

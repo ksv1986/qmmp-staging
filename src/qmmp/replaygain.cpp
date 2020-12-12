@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,13 +24,7 @@
 
 ReplayGain::ReplayGain()
 {
-    m_scale = 1.0;
     m_mode = QmmpSettings::REPLAYGAIN_DISABLED;
-    m_preamp = 0.0;
-    m_default_gain = 0.0;
-    m_prevent_clipping = false;
-    m_disabled = true;
-    m_update = false;
 }
 
 ReplayGain::~ReplayGain()

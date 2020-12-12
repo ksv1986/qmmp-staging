@@ -268,8 +268,8 @@ private:
     void readPlayLists();
     static PlayListManager* m_instance;
     QList <PlayListModel *> m_models;
-    PlayListModel *m_current;
-    PlayListModel *m_selected;
+    PlayListModel *m_current = nullptr;
+    PlayListModel *m_selected = nullptr;
     QTimer *m_timer;
     PlayListHeaderModel *m_header;
     QmmpUiSettings *m_ui_settings;

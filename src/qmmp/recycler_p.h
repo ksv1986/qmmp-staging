@@ -98,12 +98,12 @@ public:
     bool blocked();
 
 private:
-    unsigned int m_buffer_count, m_add_index, m_done_index, m_current_count;
-    size_t m_block_samples;
-    Buffer **m_buffers;
+    unsigned int m_buffer_count = 0, m_add_index = 0, m_done_index = 0, m_current_count = 0;
+    size_t m_block_samples = 0;
+    Buffer **m_buffers = nullptr;
     QMutex m_mtx;
     QWaitCondition m_cnd;
-    Buffer *m_blocked;
+    Buffer *m_blocked = nullptr;
 };
 
 #endif // __recycler_h

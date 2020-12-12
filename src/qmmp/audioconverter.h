@@ -57,7 +57,7 @@ public:
 
 
 private:
-    Qmmp::AudioFormat m_format;
+    Qmmp::AudioFormat m_format = Qmmp::PCM_UNKNOWN;
 };
 
 #endif // AUDIOCONVERTER_H

@@ -33,9 +33,6 @@ FileLoader::FileLoader(QObject *parent) : QThread(parent)
 {
     qRegisterMetaType<QList<PlayListTrack*> >("QList<PlayListTrack*>");
     m_settings = QmmpUiSettings::instance();
-    m_finished = false;
-    m_readMetaDataForPlayLists = true;
-    m_parts = TrackInfo::Parts();
     connect(qApp, SIGNAL(aboutToQuit()), SLOT(finish()));
 }
 

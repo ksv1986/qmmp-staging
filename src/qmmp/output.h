@@ -139,10 +139,10 @@ protected:
     void configure(quint32 freq, ChannelMap map, Qmmp::AudioFormat format);
 
 private:
-    quint32 m_frequency;
+    quint32 m_frequency = 0;
     ChannelMap m_chan_map;
-    Qmmp::AudioFormat m_format;
-    int m_sample_size;
+    Qmmp::AudioFormat m_format = Qmmp::PCM_UNKNOWN;
+    int m_sample_size = 0;
     static void loadPlugins();
     static QList<QmmpPluginCache*> *m_cache;
 };

@@ -172,9 +172,9 @@ private:
     QMap<Qmmp::MetaData, QString> m_metaData;
     QMap<Qmmp::TrackProperty, QString> m_properties;
     QMap<Qmmp::ReplayGainKey, double> m_replayGainInfo;
-    Parts m_parts;
+    Parts m_parts = Parts();
     QString m_path;
-    qint64 m_duration;
+    qint64 m_duration = 0;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(TrackInfo::Parts)

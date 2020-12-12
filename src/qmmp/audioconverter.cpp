@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2020 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -43,9 +43,7 @@
 }
 
 AudioConverter::AudioConverter()
-{
-    m_format = Qmmp::PCM_UNKNOWN;
-}
+{}
 
 void AudioConverter::configure(Qmmp::AudioFormat f)
 {

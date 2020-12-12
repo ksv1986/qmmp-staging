@@ -78,7 +78,7 @@ public:
     virtual int trackIndex() const;
 
 private:
-    bool m_selected;
+    bool m_selected = false;
 };
 
 #endif

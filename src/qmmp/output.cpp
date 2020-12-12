@@ -15,11 +15,7 @@
 #include "output.h"
 
 Output::Output()
-{
-    m_frequency = 0;
-    m_sample_size = 0;
-    m_format = Qmmp::PCM_UNKNOWN;
-}
+{}
 
 void Output::configure(quint32 freq, ChannelMap map, Qmmp::AudioFormat format)
 {

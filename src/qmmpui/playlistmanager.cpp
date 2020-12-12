@@ -40,8 +40,6 @@ PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
     m_instance = this;
     m_ui_settings = QmmpUiSettings::instance();
     m_header = new PlayListHeaderModel(this);
-    m_current = nullptr;
-    m_selected = nullptr;
     m_timer = new QTimer(this);
     m_timer->setInterval(5000);
     m_timer->setSingleShot(true);

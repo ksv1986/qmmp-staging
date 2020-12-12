@@ -35,17 +35,18 @@ void TagModel::setValue(Qmmp::MetaData key, int value)
 
 QList<Qmmp::MetaData> TagModel::keys() const
 {
-    QList<Qmmp::MetaData> list;
-    list << Qmmp::TITLE;
-    list << Qmmp::ARTIST;
-    list << Qmmp::ALBUMARTIST;
-    list << Qmmp::ALBUM;
-    list << Qmmp::COMMENT;
-    list << Qmmp::GENRE;
-    list << Qmmp::COMPOSER;
-    list << Qmmp::YEAR;
-    list << Qmmp::TRACK;
-    list << Qmmp::DISCNUMBER;
+    static const QList<Qmmp::MetaData> list = {
+        Qmmp::TITLE,
+        Qmmp::ARTIST,
+        Qmmp::ALBUMARTIST,
+        Qmmp::ALBUM,
+        Qmmp::COMMENT,
+        Qmmp::GENRE,
+        Qmmp::COMPOSER,
+        Qmmp::YEAR,
+        Qmmp::TRACK,
+        Qmmp::DISCNUMBER
+    };
     return list;
 }
 

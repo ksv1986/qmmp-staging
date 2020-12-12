@@ -22,16 +22,11 @@
 #include "trackinfo.h"
 
 TrackInfo::TrackInfo()
-{
-    m_duration = 0;
-    m_parts = Parts();
-}
+{}
 
 TrackInfo::TrackInfo(const QString &path)
 {
     m_path = path;
-    m_duration = 0;
-    m_parts = Parts();
 }
 
 TrackInfo::TrackInfo(const TrackInfo &other)

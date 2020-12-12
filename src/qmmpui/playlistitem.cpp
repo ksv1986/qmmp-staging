@@ -23,9 +23,7 @@
 #include "playlistitem.h"
 
 PlayListItem::PlayListItem()
-{
-    m_selected = false;
-}
+{}
 
 PlayListItem::~PlayListItem()
 {}

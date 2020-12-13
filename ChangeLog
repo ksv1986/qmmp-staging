@@ -1637,5 +1637,6 @@ Version 1.4.3
 * fixed ignored files checking
 * fixed cue tracks support in the converter plugin
 * fixed issue with missing disc number in the mpeg plugin
+* fixed possible freezing on playback resume
 * updated Finnish translation (Kimmo Kujansuu)
 * updated Bulgarian translation (Miroslav Mihov)

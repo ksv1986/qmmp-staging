@@ -49,7 +49,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Обработка на сигнали</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>

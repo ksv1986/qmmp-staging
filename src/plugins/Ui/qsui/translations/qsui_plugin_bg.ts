@@ -1416,22 +1416,22 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="157"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="158"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="159"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="160"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="167"/>
@@ -1448,25 +1448,25 @@
         <location filename="../qsuivisualization.cpp" line="171"/>
         <location filename="../qsuivisualization.cpp" line="185"/>
         <source>Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>Бавно</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="172"/>
         <location filename="../qsuivisualization.cpp" line="186"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Средно</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="173"/>
         <location filename="../qsuivisualization.cpp" line="187"/>
         <source>Fast</source>
-        <translation type="unfinished"></translation>
+        <translation>Бързо</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="174"/>
         <location filename="../qsuivisualization.cpp" line="188"/>
         <source>Fastest</source>
-        <translation type="unfinished"></translation>
+        <translation>Много бързо</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="181"/>

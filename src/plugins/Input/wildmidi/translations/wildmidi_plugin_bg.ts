@@ -6,27 +6,27 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="49"/>
         <source>WildMidi Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Плъгин WildMidi</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="54"/>
         <source>Midi Files</source>
-        <translation type="unfinished"></translation>
+        <translation>MIDI-файлове</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="106"/>
         <source>About WildMidi Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>За  WildMidi аудио плъгин</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>Qmmp WildMidi Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp WildMidi аудио приставка</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="108"/>
         <source>This plugin uses WildMidi library to play midi files</source>
-        <translation type="unfinished"></translation>
+        <translation>Тази приставка използва WildMid библиотека за изпълнение на midi файлове</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="109"/>
@@ -39,27 +39,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WildMidi Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка на WildMid приставка</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Instrument configuration: </source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка на инструментите</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="43"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Обработка на сигнали</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="50"/>
         <source>Enhanced resampling</source>
-        <translation type="unfinished"></translation>
+        <translation>Подобрено преизбиране</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="57"/>
         <source>Reverberation</source>
-        <translation type="unfinished"></translation>
+        <translation>Реверберация</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>

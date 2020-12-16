@@ -719,22 +719,22 @@
     <message>
         <location filename="../mainvisual.cpp" line="252"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="253"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 fps</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="254"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 fps</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="255"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 fps</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="262"/>
@@ -751,25 +751,25 @@
         <location filename="../mainvisual.cpp" line="266"/>
         <location filename="../mainvisual.cpp" line="280"/>
         <source>Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>Бавно</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="267"/>
         <location filename="../mainvisual.cpp" line="281"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Средно</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="268"/>
         <location filename="../mainvisual.cpp" line="282"/>
         <source>Fast</source>
-        <translation type="unfinished"></translation>
+        <translation>Бързо</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="269"/>
         <location filename="../mainvisual.cpp" line="283"/>
         <source>Fastest</source>
-        <translation type="unfinished"></translation>
+        <translation>Много бързо</translation>
     </message>
     <message>
         <location filename="../mainvisual.cpp" line="276"/>

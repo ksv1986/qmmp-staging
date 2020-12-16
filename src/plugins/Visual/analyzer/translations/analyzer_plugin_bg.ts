@@ -21,22 +21,22 @@
     <message>
         <location filename="../analyzer.cpp" line="338"/>
         <source>50 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="339"/>
         <source>25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>25 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="340"/>
         <source>10 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>10 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="341"/>
         <source>5 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>5 fps</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="348"/>
@@ -53,25 +53,25 @@
         <location filename="../analyzer.cpp" line="352"/>
         <location filename="../analyzer.cpp" line="366"/>
         <source>Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>Бавно</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="353"/>
         <location filename="../analyzer.cpp" line="367"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Средно</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="354"/>
         <location filename="../analyzer.cpp" line="368"/>
         <source>Fast</source>
-        <translation type="unfinished"></translation>
+        <translation>Бързо</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="355"/>
         <location filename="../analyzer.cpp" line="369"/>
         <source>Fastest</source>
-        <translation type="unfinished"></translation>
+        <translation>Много бързо</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="362"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../analyzer.cpp" line="376"/>
         <source>&amp;Full Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Голям екран</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="376"/>

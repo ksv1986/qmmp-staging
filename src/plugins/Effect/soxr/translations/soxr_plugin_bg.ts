@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Средно</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>

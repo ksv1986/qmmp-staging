@@ -31,6 +31,7 @@
 #include <QJsonObject>
 #include <QHash>
 #include <QtConcurrent>
+#include <QtDebug>
 #include <qmmp/qmmp.h>
 #include <qmmp/metadatamanager.h>
 #include <qmmpui/uihelper.h>
@@ -55,18 +56,19 @@ Library::Library(QObject *parent) : QObject(parent)
         }
         else
         {
-            db.close();
             qWarning("Library: plugin is disabled");
         }
+        db.close();
+        QSqlDatabase::removeDatabase(CONNECTION_NAME);
     }
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_dirs = settings.value("Library/dirs").toStringList();
 
-//    QAction *action = new QAction(tr("History"), this);
-//    action->setIcon(QIcon::fromTheme("text-x-generic"));
-//    UiHelper::instance()->addAction(action, UiHelper::TOOLS_MENU);
-//    connect(action, SIGNAL(triggered()), SLOT(showHistoryWindow()));
+    QAction *action = new QAction(tr("Update library"), this);
+    action->setIcon(QIcon::fromTheme("view-refresh"));
+    UiHelper::instance()->addAction(action, UiHelper::TOOLS_MENU);
+    connect(action, SIGNAL(triggered()), SLOT(startDirectoryScanning()));
 }
 
 Library::~Library()
@@ -94,8 +96,14 @@ void Library::showLibraryWindow()
 
 void Library::startDirectoryScanning()
 {
+    qDebug() << Q_FUNC_INFO << m_dirs;
+
+    if(m_future.isRunning())
+        return;
+
     m_filters = MetaDataManager::instance()->nameFilters();
     m_future = QtConcurrent::run(this, &Library::scanDirectories, m_dirs);
+
 }
 
 bool Library::createTables()
@@ -127,8 +135,8 @@ void Library::addTrack(TrackInfo *track, const QString &filePath)
     QSqlQuery query(db);
     query.prepare("INSERT INTO track_library VALUES("
                   "NULL, :timestamp, "
-                  ":title, :artist, :albumartist, :album TEXT, :comment, :genre, :composer, "
-                  ":year, :track, :discnumber INTEGER, :duration, "
+                  ":title, :artist, :albumartist, :album, :comment, :genre, :composer, "
+                  ":year, :track, :discnumber, :duration, "
                   ":audioinfo, :url, :filepath)");
 
     query.bindValue(":timestamp", QFileInfo(filePath).lastModified());
@@ -146,6 +154,8 @@ void Library::addTrack(TrackInfo *track, const QString &filePath)
     query.bindValue(":audioinfo", serializeAudioInfo(track->properties()));
     query.bindValue(":url", track->path());
     query.bindValue(":filepath", filePath);
+    if(!query.exec())
+        qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
 }
 
 QByteArray Library::serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> &properties)
@@ -191,7 +201,15 @@ QByteArray Library::serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> 
 
 bool Library::scanDirectories(const QStringList &paths)
 {
+    qDebug() << Q_FUNC_INFO << paths;
     m_stopped = false;
+
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
+    db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
+    db.open();
+    QSqlQuery query(db);
+    query.exec("PRAGMA journal_mode = WAL");
+    query.exec("PRAGMA synchronous = NORMAL");
 
     for(const QString &path : qAsConst(paths))
     {
@@ -264,9 +282,11 @@ void Library::addDirectory(const QString &s)
 bool Library::checkFile(const QFileInfo &info)
 {
     QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
+    if(!db.isOpen())
+        return false;
 
     QSqlQuery query(db);
-    query.prepare("SELECT Timestamp FROM track_library WHERE FilePath=:filepath");
+    query.prepare("SELECT Timestamp FROM track_library WHERE FilePath = :filepath");
     query.bindValue(":filepath", info.absoluteFilePath());
     if(!query.exec())
     {

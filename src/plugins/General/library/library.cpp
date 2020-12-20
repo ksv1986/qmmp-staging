@@ -123,6 +123,8 @@ bool Library::createTables()
     if(!ok)
         qWarning("Library: unable to create table, error: %s", qPrintable(query.lastError().text()));
 
+    removeInvalid();
+
     return ok;
 }
 
@@ -133,8 +135,9 @@ void Library::addTrack(TrackInfo *track, const QString &filePath)
         return;
 
     QSqlQuery query(db);
-    query.prepare("INSERT INTO track_library VALUES("
-                  "NULL, :timestamp, "
+    query.prepare("INSERT OR REPLACE INTO track_library VALUES("
+                  "(SELECT ID FROM track_library WHERE URL = :url), "
+                  ":timestamp, "
                   ":title, :artist, :albumartist, :album, :comment, :genre, :composer, "
                   ":year, :track, :discnumber, :duration, "
                   ":audioinfo, :url, :filepath)");
@@ -218,6 +221,9 @@ bool Library::scanDirectories(const QStringList &paths)
             return false;
     }
 
+    removeInvalid();
+    qDebug("Library: directory scan finished");
+
     return true;
 }
 
@@ -276,6 +282,44 @@ void Library::addDirectory(const QString &s)
         addDirectory(fileInfo.absoluteFilePath());
         if (m_stopped)
             return;
+    }
+}
+
+void Library::removeInvalid()
+{
+    QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
+    if(!db.isOpen())
+        return;
+
+    QSqlQuery query(db);
+    if(!query.exec("SELECT FilePath FROM track_library"))
+    {
+        qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+        return;
+    }
+
+    QString previousPath;
+
+    while (query.next())
+    {
+        QString path = query.value(0).toString();
+        if(previousPath == path)
+            continue;
+
+        previousPath = path;
+
+        if(!QFile::exists(path))
+        {
+            qDebug("Library: removing '%s' from library", qPrintable(path));
+            QSqlQuery rmQuery(db);
+            rmQuery.prepare("DELETE FROM track_library WHERE FilePath = :filepath");
+            rmQuery.bindValue(":filepath", path);
+            if(!rmQuery.exec())
+            {
+                qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+                return;
+            }
+        }
     }
 }
 

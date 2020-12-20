@@ -53,8 +53,10 @@ private:
     QByteArray serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> &properties);
     bool scanDirectories(const QStringList &paths);
     void addDirectory(const QString &s);
+    void removeInvalid();
     bool checkFile(const QFileInfo &info);
     void removeIgnoredTracks(QList<TrackInfo *> *tracks, const QStringList &ignoredPaths);
+
 
     QFuture<bool> m_future;
     QStringList m_filters, m_dirs;

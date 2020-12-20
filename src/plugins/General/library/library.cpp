@@ -42,25 +42,19 @@
 
 Library::Library(QObject *parent) : QObject(parent)
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
-    if(db.isValid() && !db.isOpen())
     {
-        db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
-        db.open();
-        if(createTables())
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
+        if(db.isValid() && !db.isOpen())
         {
-            QSqlQuery query(db);
-            query.exec("PRAGMA journal_mode = WAL");
-            query.exec("PRAGMA synchronous = NORMAL");
-            qDebug("Library: database initialization finished");
+            db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
+            db.open();
+            if(createTables())
+                qDebug("Library: database initialization finished");
+            else
+                qWarning("Library: plugin is disabled");
         }
-        else
-        {
-            qWarning("Library: plugin is disabled");
-        }
-        db.close();
-        QSqlDatabase::removeDatabase(CONNECTION_NAME);
     }
+    QSqlDatabase::removeDatabase(CONNECTION_NAME);
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_dirs = settings.value("Library/dirs").toStringList();
@@ -103,7 +97,6 @@ void Library::startDirectoryScanning()
 
     m_filters = MetaDataManager::instance()->nameFilters();
     m_future = QtConcurrent::run(this, &Library::scanDirectories, m_dirs);
-
 }
 
 bool Library::createTables()
@@ -122,8 +115,6 @@ bool Library::createTables()
 
     if(!ok)
         qWarning("Library: unable to create table, error: %s", qPrintable(query.lastError().text()));
-
-    removeInvalid();
 
     return ok;
 }
@@ -207,21 +198,30 @@ bool Library::scanDirectories(const QStringList &paths)
     qDebug() << Q_FUNC_INFO << paths;
     m_stopped = false;
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
-    db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
-    db.open();
-    QSqlQuery query(db);
-    query.exec("PRAGMA journal_mode = WAL");
-    query.exec("PRAGMA synchronous = NORMAL");
-
-    for(const QString &path : qAsConst(paths))
     {
-        addDirectory(path);
-        if(m_stopped)
-            return false;
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
+        db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
+        db.open();
+
+        QSqlQuery query(db);
+        query.exec("PRAGMA journal_mode = WAL");
+        query.exec("PRAGMA synchronous = NORMAL");
+
+        for(const QString &path : qAsConst(paths))
+        {
+            addDirectory(path);
+            if(m_stopped)
+            {
+                db.close();
+                QSqlDatabase::removeDatabase(CONNECTION_NAME);
+                return false;
+            }
+        }
+
+        removeInvalid();
     }
 
-    removeInvalid();
+    QSqlDatabase::removeDatabase(CONNECTION_NAME);
     qDebug("Library: directory scan finished");
 
     return true;

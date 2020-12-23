@@ -23,7 +23,7 @@
 #include <qmmp/qmmp.h>
 #include "library.h"
 #include "settingsdialog.h"
-//#include "historysettingsdialog.h"
+#include "librarywidget.h"
 #include "libraryfactory.h"
 
 GeneralProperties LibraryFactory::properties() const
@@ -34,12 +34,24 @@ GeneralProperties LibraryFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
+    properties.widgets = { { LIBRARY_WIDGET, tr("Media Library"), Qt::RightDockWidgetArea,
+                             Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea } };
     return properties;
 }
 
 QObject *LibraryFactory::create(QObject *parent)
 {
     return new Library(parent);
+}
+
+QWidget *LibraryFactory::createWidget(int id, QWidget *parent)
+{
+    if(id == LIBRARY_WIDGET)
+    {
+        m_libraryWidget = new LibraryWidget(false, parent);
+        return m_libraryWidget;
+    }
+    return nullptr;
 }
 
 QDialog *LibraryFactory::createConfigDialog(QWidget *parent)

@@ -17,13 +17,17 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+
 #ifndef LIBRARYFACTORY_H
 #define LIBRARYFACTORY_H
 
 #include <QObject>
 #include <QDialog>
+#include <QPointer>
 #include <qmmpui/general.h>
 #include <qmmpui/generalfactory.h>
+
+class LibraryWidget;
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
@@ -36,9 +40,18 @@ Q_INTERFACES(GeneralFactory)
 public:
     GeneralProperties properties() const override;
     QObject *create(QObject *parent) override;
+    QWidget *createWidget(int id, QWidget *parent) override;
     QDialog *createConfigDialog(QWidget *parent) override;
     void showAbout(QWidget *parent) override;
     QString translation() const override;
+
+private:
+    enum WidgetType
+    {
+        LIBRARY_WIDGET = 0
+    };
+
+    QPointer<LibraryWidget> m_libraryWidget;
 };
 
 #endif // LIBRARYFACTORY_H

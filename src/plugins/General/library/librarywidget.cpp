@@ -18,55 +18,28 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <qmmp/qmmp.h>
-#include <qmmpui/filedialog.h>
-#include <QDir>
+#include "librarywidget.h"
+#include "ui_librarywidget.h"
 
-#include <QSettings>
-#include "settingsdialog.h"
-#include "ui_settingsdialog.h"
-
-SettingsDialog::SettingsDialog(QWidget *parent) :
-    QDialog(parent),
-    m_ui(new Ui::SettingsDialog)
+LibraryWidget::LibraryWidget(bool dialog, QWidget *parent) :
+    QWidget(parent),
+    m_ui(new Ui::LibraryWidget)
 {
     m_ui->setupUi(this);
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    m_lastPath = settings.value("Library/last_path", QDir::homePath()).toString();
-    QStringList dirs = settings.value("Library/dirs").toStringList();
-    m_ui->dirsListWidget->addItems(dirs);
-}
 
-SettingsDialog::~SettingsDialog()
-{
-    delete m_ui;
-}
-
-void SettingsDialog::accept()
-{
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    settings.setValue("Library/last_path", m_lastPath);
-
-    QStringList dirs;
-    for(int i = 0; i < m_ui->dirsListWidget->count(); ++i)
-        dirs << m_ui->dirsListWidget->item(i)->text();
-
-    settings.setValue("Library/dirs", dirs);
-    QDialog::accept();
-}
-
-void SettingsDialog::on_addDirButton_clicked()
-{
-    QString path = FileDialog::getExistingDirectory(this, tr("Select Directories for Scanning"), m_lastPath);
-    if(!path.isEmpty())
+    if(dialog)
     {
-        m_ui->dirsListWidget->addItem(path);
-        m_lastPath = QFileInfo(path).absolutePath();
+        setWindowFlags(Qt::Dialog);
+        setAttribute(Qt::WA_DeleteOnClose);
+        setAttribute(Qt::WA_QuitOnClose, false);
+    }
+    else
+    {
+        m_ui->buttonBox->hide();
     }
 }
 
-void SettingsDialog::on_removeDirButton_clicked()
+LibraryWidget::~LibraryWidget()
 {
-    QList<QListWidgetItem *> items = m_ui->dirsListWidget->selectedItems();
-    qDeleteAll(items);
+    delete m_ui;
 }

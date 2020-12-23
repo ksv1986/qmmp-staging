@@ -18,55 +18,24 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <qmmp/qmmp.h>
-#include <qmmpui/filedialog.h>
-#include <QDir>
+#ifndef LIBRARYWIDGET_H
+#define LIBRARYWIDGET_H
 
-#include <QSettings>
-#include "settingsdialog.h"
-#include "ui_settingsdialog.h"
+#include <QWidget>
 
-SettingsDialog::SettingsDialog(QWidget *parent) :
-    QDialog(parent),
-    m_ui(new Ui::SettingsDialog)
-{
-    m_ui->setupUi(this);
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    m_lastPath = settings.value("Library/last_path", QDir::homePath()).toString();
-    QStringList dirs = settings.value("Library/dirs").toStringList();
-    m_ui->dirsListWidget->addItems(dirs);
+namespace Ui {
+class LibraryWidget;
 }
 
-SettingsDialog::~SettingsDialog()
+class LibraryWidget : public QWidget
 {
-    delete m_ui;
-}
+    Q_OBJECT
+public:
+    explicit LibraryWidget(bool dialog, QWidget *parent = nullptr);
+    ~LibraryWidget();
 
-void SettingsDialog::accept()
-{
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    settings.setValue("Library/last_path", m_lastPath);
+private:
+    Ui::LibraryWidget *m_ui;
+};
 
-    QStringList dirs;
-    for(int i = 0; i < m_ui->dirsListWidget->count(); ++i)
-        dirs << m_ui->dirsListWidget->item(i)->text();
-
-    settings.setValue("Library/dirs", dirs);
-    QDialog::accept();
-}
-
-void SettingsDialog::on_addDirButton_clicked()
-{
-    QString path = FileDialog::getExistingDirectory(this, tr("Select Directories for Scanning"), m_lastPath);
-    if(!path.isEmpty())
-    {
-        m_ui->dirsListWidget->addItem(path);
-        m_lastPath = QFileInfo(path).absolutePath();
-    }
-}
-
-void SettingsDialog::on_removeDirButton_clicked()
-{
-    QList<QListWidgetItem *> items = m_ui->dirsListWidget->selectedItems();
-    qDeleteAll(items);
-}
+#endif // LIBRARYWIDGET_H

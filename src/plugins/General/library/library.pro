@@ -6,11 +6,13 @@ QT += sql concurrent
 
 HEADERS += libraryfactory.h \
     library.h \
-    settingsdialog.h
+    settingsdialog.h \
+    librarywidget.h
 
 SOURCES += libraryfactory.cpp \
     library.cpp \
-    settingsdialog.cpp
+    settingsdialog.cpp \
+    librarywidget.cpp
 
 
 #RESOURCES = translations/translations.qrc
@@ -23,4 +25,5 @@ unix {
 }
 
 FORMS += \
-    settingsdialog.ui
+    settingsdialog.ui \
+    librarywidget.ui

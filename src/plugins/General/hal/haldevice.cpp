@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009-2020 by Ilya Kotov                                 *
+ *   Copyright (C) 2009-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   Copyright (C) 2006 by Kevin Ottens <ervin@kde.org>                    *

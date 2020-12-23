@@ -79,7 +79,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="108"/>
+        <location filename="../converterdialog.cpp" line="113"/>
         <source>Choose a directory</source>
         <translation>Pasirinkite aplanką</translation>
     </message>
@@ -89,44 +89,44 @@
         <translation>Pavadinimas</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="129"/>
-        <location filename="../converterdialog.cpp" line="353"/>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="134"/>
+        <location filename="../converterdialog.cpp" line="358"/>
+        <location filename="../converterdialog.cpp" line="364"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="134"/>
+        <location filename="../converterdialog.cpp" line="139"/>
         <source>Waiting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="196"/>
+        <location filename="../converterdialog.cpp" line="201"/>
         <source>Create</source>
         <translation>Sukurti</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="197"/>
+        <location filename="../converterdialog.cpp" line="202"/>
         <source>Edit</source>
         <translation>Taisyti</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="198"/>
+        <location filename="../converterdialog.cpp" line="203"/>
         <source>Create a Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="199"/>
+        <location filename="../converterdialog.cpp" line="204"/>
         <source>Delete</source>
         <translation>Ištrinti</translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="353"/>
+        <location filename="../converterdialog.cpp" line="358"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../converterdialog.cpp" line="359"/>
+        <location filename="../converterdialog.cpp" line="364"/>
         <source>Process &quot;%1&quot; finished with error.</source>
         <translation type="unfinished"></translation>
     </message>

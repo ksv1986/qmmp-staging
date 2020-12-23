@@ -14,22 +14,22 @@
         <translation>Videosoubory</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="83"/>
+        <location filename="../mplayerenginefactory.cpp" line="74"/>
         <source>About MPlayer Plugin</source>
         <translation>O modulu MPlayer</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="84"/>
+        <location filename="../mplayerenginefactory.cpp" line="75"/>
         <source>Qmmp MPlayer Plugin</source>
         <translation>Modul Qmmp MPlayer</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="85"/>
+        <location filename="../mplayerenginefactory.cpp" line="76"/>
         <source>This plugin uses MPlayer as backend</source>
         <translation>Tento modul používá jako backend MPlayer</translation>
     </message>
     <message>
-        <location filename="../mplayerenginefactory.cpp" line="86"/>
+        <location filename="../mplayerenginefactory.cpp" line="77"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -47,68 +47,68 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="64"/>
+        <location filename="../mplayermetadatamodel.cpp" line="56"/>
         <source>Demuxer</source>
         <translation>Demultiplexor</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="66"/>
+        <location filename="../mplayermetadatamodel.cpp" line="58"/>
         <source>Video format</source>
         <translation>Formát videa</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="67"/>
+        <location filename="../mplayermetadatamodel.cpp" line="59"/>
         <source>FPS</source>
         <translation>FPS</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="68"/>
+        <location filename="../mplayermetadatamodel.cpp" line="60"/>
         <source>Video codec</source>
         <translation>Videokodek</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="69"/>
+        <location filename="../mplayermetadatamodel.cpp" line="61"/>
         <source>Aspect ratio</source>
         <translation>Poměr stran</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="70"/>
+        <location filename="../mplayermetadatamodel.cpp" line="62"/>
         <source>Video bitrate</source>
         <translation>Datový tok videa</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="70"/>
-        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <location filename="../mplayermetadatamodel.cpp" line="62"/>
+        <location filename="../mplayermetadatamodel.cpp" line="66"/>
         <source>kbps</source>
         <translation>kbps</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="73"/>
+        <location filename="../mplayermetadatamodel.cpp" line="64"/>
         <source>Audio codec</source>
         <translation>Zvukový kodek</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="74"/>
+        <location filename="../mplayermetadatamodel.cpp" line="65"/>
         <source>Sample rate</source>
         <translation>Vzorkovací frekvence</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="74"/>
+        <location filename="../mplayermetadatamodel.cpp" line="65"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="75"/>
+        <location filename="../mplayermetadatamodel.cpp" line="66"/>
         <source>Audio bitrate</source>
         <translation>Datový tok audia</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="76"/>
+        <location filename="../mplayermetadatamodel.cpp" line="67"/>
         <source>Channels</source>
         <translation>Počet kanálů</translation>
     </message>
     <message>
-        <location filename="../mplayermetadatamodel.cpp" line="71"/>
+        <location filename="../mplayermetadatamodel.cpp" line="63"/>
         <source>Resolution</source>
         <translation>Rozlišení</translation>
     </message>

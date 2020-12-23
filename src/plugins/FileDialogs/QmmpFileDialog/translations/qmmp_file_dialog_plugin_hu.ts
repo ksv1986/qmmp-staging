@@ -86,17 +86,17 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
 <context>
     <name>QmmpFileDialogImpl</name>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="262"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="263"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="275"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="276"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="289"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="290"/>
         <source>Directories</source>
         <translation type="unfinished"></translation>
     </message>

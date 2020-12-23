@@ -86,17 +86,17 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
 <context>
     <name>QmmpFileDialogImpl</name>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="262"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="263"/>
         <source>Add</source>
         <translation>添加</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="275"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="276"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="289"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="290"/>
         <source>Directories</source>
         <translation>目录</translation>
     </message>

@@ -1133,17 +1133,17 @@
 <context>
     <name>PlayListHeaderModel</name>
     <message>
-        <location filename="../playlistheadermodel.cpp" line="36"/>
+        <location filename="../playlistheadermodel.cpp" line="35"/>
         <source>Artist - Title</source>
         <translation>アーティスト名 - タイトル</translation>
     </message>
     <message>
-        <location filename="../playlistheadermodel.cpp" line="186"/>
+        <location filename="../playlistheadermodel.cpp" line="185"/>
         <source>Title</source>
         <translation>タイトル</translation>
     </message>
     <message>
-        <location filename="../playlistheadermodel.cpp" line="187"/>
+        <location filename="../playlistheadermodel.cpp" line="186"/>
         <source>Add Column</source>
         <translation>カラムを追加</translation>
     </message>
@@ -1151,8 +1151,8 @@
 <context>
     <name>PlayListManager</name>
     <message>
-        <location filename="../playlistmanager.cpp" line="182"/>
-        <location filename="../playlistmanager.cpp" line="328"/>
+        <location filename="../playlistmanager.cpp" line="180"/>
+        <location filename="../playlistmanager.cpp" line="326"/>
         <source>Playlist</source>
         <translation>プレイリスト</translation>
     </message>

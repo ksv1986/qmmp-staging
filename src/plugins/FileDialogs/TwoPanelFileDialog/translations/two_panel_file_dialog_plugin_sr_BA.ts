@@ -61,18 +61,18 @@
 <context>
     <name>TwoPanelFileDialogImpl</name>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="322"/>
-        <location filename="../twopanelfiledialogimpl.cpp" line="338"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="323"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="339"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="340"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="341"/>
         <source>Directories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="352"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="353"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>

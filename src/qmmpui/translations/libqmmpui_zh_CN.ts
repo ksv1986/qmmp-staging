@@ -1133,17 +1133,17 @@
 <context>
     <name>PlayListHeaderModel</name>
     <message>
-        <location filename="../playlistheadermodel.cpp" line="36"/>
+        <location filename="../playlistheadermodel.cpp" line="35"/>
         <source>Artist - Title</source>
         <translation>艺术家-题头</translation>
     </message>
     <message>
-        <location filename="../playlistheadermodel.cpp" line="186"/>
+        <location filename="../playlistheadermodel.cpp" line="185"/>
         <source>Title</source>
         <translation>题头</translation>
     </message>
     <message>
-        <location filename="../playlistheadermodel.cpp" line="187"/>
+        <location filename="../playlistheadermodel.cpp" line="186"/>
         <source>Add Column</source>
         <translation>增加n列</translation>
     </message>
@@ -1151,8 +1151,8 @@
 <context>
     <name>PlayListManager</name>
     <message>
-        <location filename="../playlistmanager.cpp" line="182"/>
-        <location filename="../playlistmanager.cpp" line="328"/>
+        <location filename="../playlistmanager.cpp" line="180"/>
+        <location filename="../playlistmanager.cpp" line="326"/>
         <source>Playlist</source>
         <translation>播放列表</translation>
     </message>

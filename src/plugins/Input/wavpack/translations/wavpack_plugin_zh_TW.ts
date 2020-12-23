@@ -4,32 +4,32 @@
 <context>
     <name>DecoderWavPackFactory</name>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="38"/>
+        <location filename="../decoderwavpackfactory.cpp" line="39"/>
         <source>WavPack Plugin</source>
         <translation>WavPack 外掛</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="40"/>
+        <location filename="../decoderwavpackfactory.cpp" line="41"/>
         <source>WavPack Files</source>
         <translation>WavPack 檔案</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="176"/>
+        <location filename="../decoderwavpackfactory.cpp" line="177"/>
         <source>About WavPack Audio Plugin</source>
         <translation>關於 WavPack 聲訊插件</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="177"/>
+        <location filename="../decoderwavpackfactory.cpp" line="178"/>
         <source>Qmmp WavPack Audio Plugin</source>
         <translation>Qmmp WavPack 聲訊插件</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="178"/>
+        <location filename="../decoderwavpackfactory.cpp" line="179"/>
         <source>WavPack library version:</source>
         <translation>WavPack 程式庫版本：</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="180"/>
+        <location filename="../decoderwavpackfactory.cpp" line="181"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>撰寫：Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>

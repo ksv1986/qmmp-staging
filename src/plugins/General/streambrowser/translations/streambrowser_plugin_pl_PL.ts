@@ -108,72 +108,72 @@
         <translation>Aktualizuj</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="56"/>
-        <location filename="../streamwindow.cpp" line="74"/>
+        <location filename="../streamwindow.cpp" line="55"/>
+        <location filename="../streamwindow.cpp" line="73"/>
         <source>Name</source>
         <translation>Nazwa</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="57"/>
-        <location filename="../streamwindow.cpp" line="75"/>
+        <location filename="../streamwindow.cpp" line="56"/>
+        <location filename="../streamwindow.cpp" line="74"/>
         <source>Genre</source>
         <translation>Gatunek</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="58"/>
-        <location filename="../streamwindow.cpp" line="76"/>
+        <location filename="../streamwindow.cpp" line="57"/>
+        <location filename="../streamwindow.cpp" line="75"/>
         <source>Bitrate</source>
         <translation>Przepływność</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="59"/>
-        <location filename="../streamwindow.cpp" line="77"/>
+        <location filename="../streamwindow.cpp" line="58"/>
+        <location filename="../streamwindow.cpp" line="76"/>
         <source>Format</source>
         <translation>Format</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="134"/>
+        <location filename="../streamwindow.cpp" line="133"/>
         <source>&amp;Add to favorites</source>
         <translation>&amp;Dodaj do ulubionych</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="137"/>
+        <location filename="../streamwindow.cpp" line="136"/>
         <source>&amp;Add to playlist</source>
         <translation>&amp;Dodaj do listy odtwarzania</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="140"/>
+        <location filename="../streamwindow.cpp" line="139"/>
         <source>&amp;Create</source>
         <translation>&amp;Utwórz</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="142"/>
+        <location filename="../streamwindow.cpp" line="141"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edycja</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="145"/>
+        <location filename="../streamwindow.cpp" line="144"/>
         <source>&amp;Remove</source>
         <translation>&amp;Usuń</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="155"/>
+        <location filename="../streamwindow.cpp" line="154"/>
         <source>Done</source>
         <translation>Gotowe</translation>
     </message>
     <message>
+        <location filename="../streamwindow.cpp" line="157"/>
         <location filename="../streamwindow.cpp" line="158"/>
-        <location filename="../streamwindow.cpp" line="159"/>
         <source>Error</source>
         <translation>Błąd</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="178"/>
+        <location filename="../streamwindow.cpp" line="177"/>
         <source>Receiving</source>
         <translation>Pobieranie</translation>
     </message>
     <message>
-        <location filename="../streamwindow.cpp" line="281"/>
+        <location filename="../streamwindow.cpp" line="280"/>
         <source>Edit Stream</source>
         <translation>Edytuj strumień</translation>
     </message>

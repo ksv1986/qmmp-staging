@@ -57,7 +57,7 @@
     <message>
         <location filename="../lyricswidget.ui" line="14"/>
         <source>Lyrics Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Estensioni testi</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="31"/>

@@ -35,6 +35,12 @@ MediaPlayer::MediaPlayer(QObject *parent)
     if(m_instance)
         qFatal("StateHandler: only one instance is allowed");
     m_instance = this;
+
+    QTranslator *translator = new QTranslator(parent);
+    QString locale = Qmmp::systemLanguageID();
+    translator->load(QString(":/libqmmpui_") + locale);
+    qApp->installTranslator(translator);
+
     m_core = new SoundCore(this);
     m_settings = new QmmpUiSettings(this);
     m_pl_manager = new PlayListManager(this);
@@ -42,11 +48,6 @@ MediaPlayer::MediaPlayer(QObject *parent)
     m_finishTimer->setSingleShot(true);
     m_finishTimer->setInterval(500);
     connect(m_finishTimer, SIGNAL(timeout()), SIGNAL(playbackFinished()));
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/libqmmpui_") + locale);
-    qApp->installTranslator(translator);
-
     connect(m_core, SIGNAL(nextTrackRequest()), SLOT(updateNextUrl()));
     connect(m_core, SIGNAL(finished()), SLOT(playNext()));
     connect(m_core, SIGNAL(stateChanged(Qmmp::State)), SLOT(processState(Qmmp::State)));

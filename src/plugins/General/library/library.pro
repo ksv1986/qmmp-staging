@@ -7,12 +7,14 @@ QT += sql concurrent
 HEADERS += libraryfactory.h \
     library.h \
     settingsdialog.h \
-    librarywidget.h
+    librarywidget.h \
+    librarymodel.h
 
 SOURCES += libraryfactory.cpp \
     library.cpp \
     settingsdialog.cpp \
-    librarywidget.cpp
+    librarywidget.cpp \
+    librarymodel.cpp
 
 
 #RESOURCES = translations/translations.qrc

@@ -17,26 +17,205 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
+
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QtDebug>
+#include <qmmp/qmmp.h>
 #include "librarymodel.h"
+
+class LibraryTreeItem
+{
+public:
+    LibraryTreeItem() {}
+    ~LibraryTreeItem()
+    {
+        clear();
+    }
+
+    void clear()
+    {
+        name.clear();
+        type = Qmmp::UNKNOWN;
+        parent = nullptr;
+        qDeleteAll(children);
+        children.clear();
+    }
+
+    QString name;
+    Qmmp::MetaData type = Qmmp::UNKNOWN;
+    QList<LibraryTreeItem *> children;
+    LibraryTreeItem *parent = nullptr;
+};
 
 LibraryModel::LibraryModel(QObject *parent) : QAbstractItemModel(parent)
 {
+    m_rootItem = new LibraryTreeItem;
+    refresh();
+}
 
+LibraryModel::~LibraryModel()
+{
+    delete m_rootItem;
+}
+
+bool LibraryModel::canFetchMore(const QModelIndex &parent) const
+{
+    if(!parent.isValid())
+        return false;
+
+    LibraryTreeItem *parentItem = static_cast<LibraryTreeItem *>(parent.internalPointer());
+    if(parentItem == m_rootItem || parentItem->type == Qmmp::TITLE)
+        return false;
+    else
+        return parentItem->children.isEmpty();
+}
+
+void LibraryModel::fetchMore(const QModelIndex &parent)
+{
+    if(!parent.isValid())
+        return;
+
+    LibraryTreeItem *parentItem = static_cast<LibraryTreeItem *>(parent.internalPointer());
+
+    QSqlDatabase db = QSqlDatabase::database("qmmp_library_1");
+    if(!db.isOpen())
+        return;
+
+    if(parentItem->type == Qmmp::ARTIST)
+    {
+        QSqlQuery query(db);
+        query.prepare("SELECT DISTINCT Album from track_library WHERE Artist = :artist");
+        query.bindValue(":artist", parentItem->name);
+        bool ok = query.exec();
+
+        if(!ok)
+        {
+            qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+            return;
+        }
+
+        while(query.next())
+        {
+            LibraryTreeItem *item = new LibraryTreeItem;
+            item->name = query.value("Album").toString();
+            item->type = Qmmp::ALBUM;
+            item->parent = parentItem;
+            parentItem->children << item;
+            qDebug() << parentItem->name << item->name;
+        }
+    }
+    else if(parentItem->type == Qmmp::ALBUM)
+    {
+        QSqlQuery query(db);
+        query.prepare("SELECT Title from track_library WHERE Artist = :artist AND Album = :album");
+        query.bindValue(":artist", parentItem->parent->name);
+        query.bindValue(":album", parentItem->name);
+        bool ok = query.exec();
+
+        if(!ok)
+        {
+            qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+            return;
+        }
+
+        while(query.next())
+        {
+            LibraryTreeItem *item = new LibraryTreeItem;
+            item->name = query.value("Title").toString();
+            item->type = Qmmp::TITLE;
+            item->parent = parentItem;
+            parentItem->children << item;
+        }
+
+        qDebug() << parentItem->children.count();
+    }
+}
+
+QVariant LibraryModel::data(const QModelIndex &index, int role) const
+{
+    if(!index.isValid() || role != Qt::DisplayRole)
+        return QVariant();
+
+    QString name = static_cast<LibraryTreeItem *>(index.internalPointer())->name;
+    return name.isEmpty() ? tr("Unknown") : name;
+}
+
+QModelIndex LibraryModel::parent(const QModelIndex &child) const
+{
+    if(!child.isValid())
+        return QModelIndex();
+
+    LibraryTreeItem *childItem = static_cast<LibraryTreeItem *>(child.internalPointer());
+    LibraryTreeItem *parentItem = childItem->parent;
+
+    if(parentItem == m_rootItem || !parentItem || !parentItem->parent)
+        return QModelIndex();
+
+    return createIndex(parentItem->parent->children.indexOf(parentItem), 0, parentItem);
+}
+
+QModelIndex LibraryModel::index(int row, int column, const QModelIndex &parent) const
+{
+    if(parent.isValid() && parent.column() != 0)
+        return QModelIndex();
+
+    LibraryTreeItem *parentItem = parent.isValid() ? static_cast<LibraryTreeItem *>(parent.internalPointer()) :
+                                                     m_rootItem;
+
+    if(row >= 0 && row < parentItem->children.count())
+        return createIndex(row, column, parentItem->children.at(row));
+    else
+        return QModelIndex();
 }
 
 int LibraryModel::columnCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent);
     return 1;
 }
 
 int LibraryModel::rowCount(const QModelIndex &parent) const
 {
-    return m_artists.count();
+    if(!parent.isValid())
+        return m_rootItem->children.count();
+
+    LibraryTreeItem *parentItem = static_cast<LibraryTreeItem *>(parent.internalPointer());
+    if(parentItem->type == Qmmp::TITLE)
+        return 0;
+    else
+        return qMax(1, parentItem->children.count());
 }
 
 void LibraryModel::refresh()
 {
     beginResetModel();
+    m_rootItem->clear();
 
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "qmmp_library_1");
+    db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
+    db.open();
+
+    if(!db.isOpen())
+    {
+        endResetModel();
+        return;
+    }
+
+    QSqlQuery query(db);
+    bool ok = query.exec("SELECT DISTINCT Artist from track_library");
+
+    if(!ok)
+        qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+
+    while(query.next())
+    {
+        LibraryTreeItem *item = new LibraryTreeItem;
+        item->name = query.value("Artist").toString();
+        item->type = Qmmp::ARTIST;
+        item->parent = m_rootItem;
+        m_rootItem->children << item;
+    }
     endResetModel();
 }

@@ -35,13 +35,14 @@
 #include <qmmp/qmmp.h>
 #include <qmmp/metadatamanager.h>
 #include <qmmpui/uihelper.h>
-//#include "historywindow.h"
+#include "librarymodel.h"
 #include "library.h"
 
 #define CONNECTION_NAME "qmmp_library"
 
 Library::Library(QObject *parent) : QObject(parent)
 {
+    qDebug() << Q_FUNC_INFO;
     {
         QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
         if(db.isValid() && !db.isOpen())

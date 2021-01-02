@@ -18,14 +18,18 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include "librarywidget.h"
+#include "librarymodel.h"
 #include "ui_librarywidget.h"
+#include "librarywidget.h"
+
 
 LibraryWidget::LibraryWidget(bool dialog, QWidget *parent) :
     QWidget(parent),
     m_ui(new Ui::LibraryWidget)
 {
     m_ui->setupUi(this);
+    m_model = new LibraryModel(this);
+    m_ui->treeView->setModel(m_model);
 
     if(dialog)
     {

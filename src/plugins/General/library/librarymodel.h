@@ -25,19 +25,29 @@
 #include <QStringList>
 #include <QAbstractItemModel>
 
+class QSqlDatabase;
+class LibraryTreeItem;
+
 class LibraryModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:
     LibraryModel(QObject *parent = nullptr);
+    ~LibraryModel();
 
+    bool canFetchMore(const QModelIndex &parent) const override;
+    void fetchMore(const QModelIndex &parent) override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    QModelIndex parent(const QModelIndex &child) const override;
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     void refresh();
 
 private:
-    QStringList m_artists;
+    LibraryTreeItem *m_rootItem;
+
 };
 
 #endif // LIBRARYMODEL_H

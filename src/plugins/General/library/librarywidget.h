@@ -27,6 +27,8 @@ namespace Ui {
 class LibraryWidget;
 }
 
+class LibraryModel;
+
 class LibraryWidget : public QWidget
 {
     Q_OBJECT
@@ -36,6 +38,7 @@ public:
 
 private:
     Ui::LibraryWidget *m_ui;
+    LibraryModel *m_model;
 };
 
 #endif // LIBRARYWIDGET_H

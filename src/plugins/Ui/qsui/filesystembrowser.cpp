@@ -40,12 +40,12 @@ public:
     explicit FileSystemFilterProxyModel(QObject *parent) : QSortFilterProxyModel(parent) {}
 
 protected:
-    virtual bool filterAcceptsRow(
-            int source_row, const QModelIndex &source_parent) const override {
+    virtual bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override
+    {
         QFileSystemModel *sm = qobject_cast<QFileSystemModel*>(sourceModel());
-        if (source_parent == sm->index(sm->rootPath())) {
+        if (source_parent == sm->index(sm->rootPath()))
             return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
-        }
+
         return true;
     }
 };
@@ -53,8 +53,6 @@ protected:
 FileSystemBrowser::FileSystemBrowser(QWidget *parent) :
     QWidget(parent)
 {
-    m_update = false;
-
     m_listView = new QListView(this);
     m_listView->setFrameStyle(QFrame::NoFrame);
     m_listView->setDragEnabled(true);
@@ -81,7 +79,7 @@ FileSystemBrowser::FileSystemBrowser(QWidget *parent) :
     m_fileSystemModel->setNameFilterDisables(false);
     m_fileSystemModel->setFilter(QDir::AllDirs | QDir::Files | QDir::NoDot);
 
-    m_proxyModel = new  FileSystemFilterProxyModel(this);
+    m_proxyModel = new FileSystemFilterProxyModel(this);
     m_proxyModel->setDynamicSortFilter(true);
     m_proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     m_proxyModel->setSourceModel(m_fileSystemModel);

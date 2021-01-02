@@ -99,24 +99,24 @@ private:
     };
 
     QSize m_size_hint;
-    QFontMetrics *m_metrics;
+    QFontMetrics *m_metrics = nullptr;
     QMenu *m_menu, *m_alignmentMenu;
     QPoint m_pressed_pos;
     QPoint m_mouse_pos;
     PlayListHeaderModel *m_model;
     QAction *m_trackStateAction;
     QAction *m_autoResizeAction;
-    bool m_reverted;
-    bool m_auto_resize;
-    int m_number_width;
-    int m_scrollbar_width;
+    bool m_reverted = false;
+    bool m_auto_resize = false;
+    int m_number_width = 0;
+    int m_scrollbar_width = 0;
     int m_pressed_column;
     int m_old_size;
     int m_press_offset;
-    int m_pl_padding;
-    int m_sorting_column;
+    int m_pl_padding = 0;
+    int m_sorting_column = -1;
 
-    int m_offset;
+    int m_offset = 0;
 
     enum
     {
@@ -124,7 +124,7 @@ private:
         RESIZE,
         MOVE,
         SORT
-    } m_task;
+    } m_task = NO_TASK;
 
 
 };

@@ -42,8 +42,6 @@ QSUiTabWidget::QSUiTabWidget(QWidget *parent) : QWidget(parent)
 
     setFocusPolicy(Qt::TabFocus);
     setFocusProxy(m_tabBar);
-    m_rightCornerWidget = nullptr;
-    m_leftCornerWidget = nullptr;
 
     m_menu = new QMenu(this);
     m_group = new QActionGroup(this);

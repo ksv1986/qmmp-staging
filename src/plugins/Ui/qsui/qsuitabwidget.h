@@ -84,8 +84,8 @@ private:
 
     QSUiTabBar *m_tabBar;
     ListWidget *m_listWidget;
-    QWidget *m_rightCornerWidget;
-    QWidget *m_leftCornerWidget;
+    QWidget *m_rightCornerWidget = nullptr;
+    QWidget *m_leftCornerWidget = nullptr;
     QRect m_panelRect;
     QMenu *m_menu;
     QActionGroup *m_group;

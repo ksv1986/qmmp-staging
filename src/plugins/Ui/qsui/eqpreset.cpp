@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,11 +20,7 @@
 #include "eqpreset.h"
 
 EQPreset::EQPreset()
-{
-    m_preamp = 0;
-    for(int i = 0; i < 10; ++i)
-    m_bands[i] = 0;
-}
+{}
 
 
 EQPreset::~EQPreset()
@@ -42,14 +38,14 @@ void EQPreset::setPreamp(double preamp)
     m_preamp = preamp;
 }
 
-double EQPreset::gain(int n)
+double EQPreset::gain(int n) const
 {
     if(n > 14 || n < 0)
         return 0;
     return m_bands[n];
 }
 
-double EQPreset::preamp()
+double EQPreset::preamp() const
 {
     return m_preamp;
 }

@@ -34,20 +34,6 @@
 ListWidgetDrawer::ListWidgetDrawer()
 {
     m_header_model = PlayListManager::instance()->headerModel();
-    m_update = false;
-    m_show_anchor = false;
-    m_show_number = false;
-    m_align_numbres = false;
-    m_show_lengths = false;
-    m_use_system_colors = false;
-    m_single_column = true;
-    m_show_splitters = true;
-    m_row_height = 0;
-    m_number_width = 0;
-    m_padding = 0;
-    m_metrics = nullptr;
-    m_extra_metrics = nullptr;
-    m_bold_metrics = nullptr;
     readSettings();
 }
 

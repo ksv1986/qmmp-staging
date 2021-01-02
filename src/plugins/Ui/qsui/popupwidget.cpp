@@ -44,7 +44,7 @@ PopupWidget::PopupWidget(QWidget *parent)
     hlayout->addWidget(m_pixlabel);
 
     m_label1 = new QLabel(this);
-    hlayout->addWidget (m_label1);
+    hlayout->addWidget(m_label1);
 
     //settings
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);

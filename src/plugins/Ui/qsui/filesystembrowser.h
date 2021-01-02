@@ -55,7 +55,7 @@ private slots:
 
 private:
     void setCurrentDirectory(const QString &path);
-    bool m_update;
+    bool m_update = false;
     Utils::ElidingLabel *m_label;
     QFileSystemModel *m_fileSystemModel;
     QListView *m_listView;

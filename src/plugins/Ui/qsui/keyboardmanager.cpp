@@ -30,8 +30,6 @@
 KeyboardManager::KeyboardManager(QObject *parent) :
     QObject(parent)
 {
-    m_listWidget = nullptr;
-
     addAction(Qt::Key_Up, SLOT(processUp()));
     addAction(Qt::Key_Up + Qt::ShiftModifier, SLOT(processUp()));
     addAction(Qt::Key_Up + Qt::AltModifier, SLOT(processUp()));

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -33,12 +33,12 @@ public:
     void setGain(int n, double value);
     void setPreamp(double);
 
-    double gain(int n);
-    double preamp();
+    double gain(int n) const;
+    double preamp() const;
 
 private:
-    double m_bands[15];
-    double m_preamp;
+    double m_bands[15] = { 0 };
+    double m_preamp = 0;
 
 };
 

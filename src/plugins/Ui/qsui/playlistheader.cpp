@@ -52,17 +52,6 @@ PlayListHeader::PlayListHeader(QWidget *parent) :
     QWidget(parent)
 {
     setMouseTracking(true);
-
-    m_pl_padding = 0;
-    m_number_width = 0;
-    m_offset = 0;
-    m_sorting_column = -1;
-    m_scrollbar_width = 0;
-    m_reverted = false;
-    m_auto_resize = false;
-    m_metrics = nullptr;
-    m_task = NO_TASK;
-
     m_model = PlayListManager::instance()->headerModel();
 
     //menus

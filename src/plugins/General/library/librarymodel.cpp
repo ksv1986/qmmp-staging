@@ -22,6 +22,7 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QtDebug>
+#include <QMimeData>
 #include <qmmp/qmmp.h>
 #include "librarymodel.h"
 
@@ -58,6 +59,39 @@ LibraryModel::LibraryModel(QObject *parent) : QAbstractItemModel(parent)
 LibraryModel::~LibraryModel()
 {
     delete m_rootItem;
+}
+
+Qt::ItemFlags LibraryModel::flags(const QModelIndex &index) const
+{
+    if(index.isValid())
+        return QAbstractItemModel::flags(index) | Qt::ItemIsDragEnabled;
+    else
+        return QAbstractItemModel::flags(index);
+}
+
+QStringList LibraryModel::mimeTypes() const
+{
+    return QStringList("text/uri-list");
+}
+
+QMimeData *LibraryModel::mimeData(const QModelIndexList &indexes) const
+{
+    QList<QUrl> urls;
+
+    for(const QModelIndex &index : indexes)
+    {
+        if(index.isValid())
+            urls << getUrls(index);
+    }
+
+    if(!urls.isEmpty())
+    {
+        QMimeData *mimeData = new QMimeData;
+        mimeData->setUrls(urls);
+        return mimeData;
+    }
+
+    return nullptr;
 }
 
 bool LibraryModel::canFetchMore(const QModelIndex &parent) const
@@ -128,8 +162,6 @@ void LibraryModel::fetchMore(const QModelIndex &parent)
             item->parent = parentItem;
             parentItem->children << item;
         }
-
-        qDebug() << parentItem->children.count();
     }
 }
 
@@ -218,4 +250,74 @@ void LibraryModel::refresh()
         m_rootItem->children << item;
     }
     endResetModel();
+}
+
+QList<QUrl> LibraryModel::getUrls(const QModelIndex &index) const
+{
+    QSqlDatabase db = QSqlDatabase::database("qmmp_library_1");
+    QList<QUrl> urls;
+    if(!db.isOpen())
+        return urls;
+
+    const LibraryTreeItem *item = static_cast<const LibraryTreeItem *>(index.internalPointer());
+
+    if(item->type == Qmmp::TITLE)
+    {
+        QSqlQuery query(db);
+        query.prepare("SELECT URL from track_library WHERE Artist = :artist AND Album = :album AND Title = :title");
+        query.bindValue(":artist", item->parent->parent->name);
+        query.bindValue(":album", item->parent->name);
+        query.bindValue(":title", item->name);
+
+        if(!query.exec())
+        {
+            qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+            return urls;
+        }
+
+        if(query.next())
+        {
+            QString path = query.value("URL").toString();
+            urls << (path.contains("://") ? QUrl(path) : QUrl::fromLocalFile(path));
+        }
+    }
+    else if(item->type == Qmmp::ALBUM)
+    {
+        QSqlQuery query(db);
+        query.prepare("SELECT URL from track_library WHERE Artist = :artist AND Album = :album");
+        query.bindValue(":artist", item->parent->name);
+        query.bindValue(":album", item->name);
+
+        if(!query.exec())
+        {
+            qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+            return urls;
+        }
+
+        while(query.next())
+        {
+            QString path = query.value("URL").toString();
+            urls << (path.contains("://") ? QUrl(path) : QUrl::fromLocalFile(path));
+        }
+    }
+    else if(item->type == Qmmp::ARTIST)
+    {
+        QSqlQuery query(db);
+        query.prepare("SELECT URL from track_library WHERE Artist = :artist");
+        query.bindValue(":artist", item->name);
+
+        if(!query.exec())
+        {
+            qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+            return urls;
+        }
+
+        while(query.next())
+        {
+            QString path = query.value("URL").toString();
+            urls << (path.contains("://") ? QUrl(path) : QUrl::fromLocalFile(path));
+        }
+    }
+
+    return urls;
 }

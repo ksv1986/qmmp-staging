@@ -23,6 +23,7 @@
 
 #include <QObject>
 #include <QStringList>
+#include <QUrl>
 #include <QAbstractItemModel>
 
 class QSqlDatabase;
@@ -35,6 +36,9 @@ public:
     LibraryModel(QObject *parent = nullptr);
     ~LibraryModel();
 
+    Qt::ItemFlags flags(const QModelIndex &index) const;
+    QStringList mimeTypes() const override;
+    QMimeData *mimeData(const QModelIndexList &indexes) const override;
     bool canFetchMore(const QModelIndex &parent) const override;
     void fetchMore(const QModelIndex &parent) override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -42,12 +46,12 @@ public:
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-
     void refresh();
 
 private:
-    LibraryTreeItem *m_rootItem;
+    QList<QUrl> getUrls(const QModelIndex &index) const;
 
+    LibraryTreeItem *m_rootItem;
 };
 
 #endif // LIBRARYMODEL_H

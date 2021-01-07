@@ -609,13 +609,13 @@ void PlayList::showPlayLists()
 void PlayList::generateCopySelectedMenu()
 {
     m_copySelectedMenu->clear();
-    QAction* action = m_copySelectedMenu->addAction (tr ("&New PlayList"));
+    QAction* action = m_copySelectedMenu->addAction (tr("&New PlayList"));
     action->setIcon(QIcon::fromTheme("document-new"));
     m_copySelectedMenu->addSeparator();
 
     for(QString name : m_pl_manager->playListNames())
     {
-        m_copySelectedMenu->addAction("&"+name.replace("&", "&&"));
+        m_copySelectedMenu->addAction("&" + name.replace("&", "&&"));
     }
 }
 

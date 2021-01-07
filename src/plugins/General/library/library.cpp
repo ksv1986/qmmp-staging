@@ -60,8 +60,7 @@ Library::Library(QObject *parent) : QObject(parent)
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_dirs = settings.value("Library/dirs").toStringList();
 
-    QAction *action = new QAction(tr("Update library"), this);
-    action->setIcon(QIcon::fromTheme("view-refresh"));
+    QAction *action = new QAction(QIcon::fromTheme("view-refresh"), tr("Update library"), this);
     UiHelper::instance()->addAction(action, UiHelper::TOOLS_MENU);
     connect(action, SIGNAL(triggered()), SLOT(startDirectoryScanning()));
 }

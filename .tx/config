@@ -277,6 +277,12 @@ source_lang = en
 source_file = src/plugins/General/notifier/translations/notifier_plugin_en.ts
 type = QT
 
+[qmmp.library]
+file_filter = src/plugins/General/library/translations/library_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/General/library/translations/library_plugin_en.ts
+type = QT
+
 [qmmp.history]
 file_filter = src/plugins/General/history/translations/history_plugin_<lang>.ts
 source_lang = en

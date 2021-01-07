@@ -42,7 +42,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../streambrowser.cpp" line="35"/>
+        <location filename="../streambrowser.cpp" line="34"/>
         <source>Ctrl+U</source>
         <translation>Strg+U</translation>
     </message>

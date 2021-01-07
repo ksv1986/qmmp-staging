@@ -17,7 +17,7 @@ SOURCES += libraryfactory.cpp \
     librarymodel.cpp
 
 
-#RESOURCES = translations/translations.qrc
+RESOURCES = translations/translations.qrc
 
 LIBS += $$QMMPUI_LIB
 

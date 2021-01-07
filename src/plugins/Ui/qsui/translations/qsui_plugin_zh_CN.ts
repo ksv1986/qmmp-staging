@@ -586,22 +586,22 @@
 <context>
     <name>FileSystemBrowser</name>
     <message>
-        <location filename="../filesystembrowser.cpp" line="91"/>
+        <location filename="../filesystembrowser.cpp" line="89"/>
         <source>Add to Playlist</source>
         <translation>添加到播放列表中</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="93"/>
+        <location filename="../filesystembrowser.cpp" line="91"/>
         <source>Change Directory</source>
         <translation>更改文件夹</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="95"/>
+        <location filename="../filesystembrowser.cpp" line="93"/>
         <source>Quick Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="169"/>
+        <location filename="../filesystembrowser.cpp" line="167"/>
         <source>Select Directory</source>
         <translation>选择文件夹</translation>
     </message>
@@ -974,50 +974,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="70"/>
+        <location filename="../playlistheader.cpp" line="59"/>
         <source>Add Column</source>
         <translation>增加n列</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="71"/>
+        <location filename="../playlistheader.cpp" line="60"/>
         <source>Edit Column</source>
         <translation>编辑n列</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="72"/>
+        <location filename="../playlistheader.cpp" line="61"/>
         <source>Show Queue/Protocol</source>
         <translation>显示排队/协议</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="74"/>
+        <location filename="../playlistheader.cpp" line="63"/>
         <source>Auto-resize</source>
         <translation>自动调整大小</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="77"/>
+        <location filename="../playlistheader.cpp" line="66"/>
         <source>Alignment</source>
         <translation>对齐</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="78"/>
+        <location filename="../playlistheader.cpp" line="67"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>左对齐</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="79"/>
+        <location filename="../playlistheader.cpp" line="68"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>右对齐</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="80"/>
+        <location filename="../playlistheader.cpp" line="69"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>居中</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Remove Column</source>
         <translation>移除n列</translation>
     </message>

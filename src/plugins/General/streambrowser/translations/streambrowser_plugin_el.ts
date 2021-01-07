@@ -42,7 +42,7 @@
         <translation>Προσθήκη ροής</translation>
     </message>
     <message>
-        <location filename="../streambrowser.cpp" line="35"/>
+        <location filename="../streambrowser.cpp" line="34"/>
         <source>Ctrl+U</source>
         <translation>Ctrl+U</translation>
     </message>

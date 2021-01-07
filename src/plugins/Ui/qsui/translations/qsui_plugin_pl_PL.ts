@@ -586,22 +586,22 @@
 <context>
     <name>FileSystemBrowser</name>
     <message>
-        <location filename="../filesystembrowser.cpp" line="91"/>
+        <location filename="../filesystembrowser.cpp" line="89"/>
         <source>Add to Playlist</source>
         <translation>Dodaj do listy odtwarzania</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="93"/>
+        <location filename="../filesystembrowser.cpp" line="91"/>
         <source>Change Directory</source>
         <translation>Zmień katalog</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="95"/>
+        <location filename="../filesystembrowser.cpp" line="93"/>
         <source>Quick Search</source>
         <translation>Szybkie wyszukiwanie</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="169"/>
+        <location filename="../filesystembrowser.cpp" line="167"/>
         <source>Select Directory</source>
         <translation>Wybierz katalog</translation>
     </message>
@@ -974,50 +974,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="70"/>
+        <location filename="../playlistheader.cpp" line="59"/>
         <source>Add Column</source>
         <translation>Dodaj kolumnę</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="71"/>
+        <location filename="../playlistheader.cpp" line="60"/>
         <source>Edit Column</source>
         <translation>Edytuj kolumnę</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="72"/>
+        <location filename="../playlistheader.cpp" line="61"/>
         <source>Show Queue/Protocol</source>
         <translation>Pokaż kolejkę/protokół</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="74"/>
+        <location filename="../playlistheader.cpp" line="63"/>
         <source>Auto-resize</source>
         <translation>Automatyczna zmiana rozmiaru</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="77"/>
+        <location filename="../playlistheader.cpp" line="66"/>
         <source>Alignment</source>
         <translation>Wyrównanie</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="78"/>
+        <location filename="../playlistheader.cpp" line="67"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>Lewo</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="79"/>
+        <location filename="../playlistheader.cpp" line="68"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>Prawo</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="80"/>
+        <location filename="../playlistheader.cpp" line="69"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Środek</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Remove Column</source>
         <translation>Usuń kolumnę</translation>
     </message>

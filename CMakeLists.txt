@@ -231,6 +231,7 @@ PRINT_SUMMARY ("Track change .........................." USE_TRACKCHANGE 1)
 PRINT_SUMMARY ("Copy/Paste ............................" USE_COPYPASTE 1)
 PRINT_SUMMARY ("History plugin ........................" USE_HISTORY Qt5Sql_FOUND)
 PRINT_SUMMARY ("Sleep mode inhibition plugin .........." USE_SLEEPINHIBITOR Qt5DBus_FOUND)
+PRINT_SUMMARY ("Media library plugin .................." USE_LIBRARY 1)
 PRINT_SUMMARY ("Taskbar plugin (Windows) .............." USE_TASKBAR Qt5WinExtras_FOUND)
 PRINT_SUMMARY ("Removable device detection (Windows) .." USE_RDETECT Qt5WinExtras_FOUND)
 

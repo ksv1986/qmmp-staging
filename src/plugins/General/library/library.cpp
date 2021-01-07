@@ -32,17 +32,20 @@
 #include <QHash>
 #include <QtConcurrent>
 #include <QtDebug>
+#include <algorithm>
 #include <qmmp/qmmp.h>
 #include <qmmp/metadatamanager.h>
 #include <qmmpui/uihelper.h>
 #include "librarymodel.h"
+#include "librarywidget.h"
 #include "library.h"
 
 #define CONNECTION_NAME "qmmp_library"
 
-Library::Library(QObject *parent) : QObject(parent)
+Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
+    QObject(parent),
+    m_libraryWidget(libraryWidget)
 {
-    qDebug() << Q_FUNC_INFO;
     {
         QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
         if(db.isValid() && !db.isOpen())
@@ -63,6 +66,14 @@ Library::Library(QObject *parent) : QObject(parent)
     QAction *action = new QAction(QIcon::fromTheme("view-refresh"), tr("Update library"), this);
     UiHelper::instance()->addAction(action, UiHelper::TOOLS_MENU);
     connect(action, SIGNAL(triggered()), SLOT(startDirectoryScanning()));
+
+    connect(&m_watcher, &QFutureWatcher<bool>::finished, [=] {
+        if(!m_libraryWidget->isNull())
+        {
+            m_libraryWidget->data()->setEnabled(true);
+            m_libraryWidget->data()->refresh();
+        }
+    });
 }
 
 Library::~Library()
@@ -80,6 +91,11 @@ Library::~Library()
     }
 }
 
+bool Library::isRunning() const
+{
+    return m_future.isRunning();
+}
+
 void Library::showLibraryWindow()
 {
     /*if(!m_historyWindow)
@@ -90,13 +106,14 @@ void Library::showLibraryWindow()
 
 void Library::startDirectoryScanning()
 {
-    qDebug() << Q_FUNC_INFO << m_dirs;
-
     if(m_future.isRunning())
         return;
 
     m_filters = MetaDataManager::instance()->nameFilters();
     m_future = QtConcurrent::run(this, &Library::scanDirectories, m_dirs);
+    m_watcher.setFuture(m_future);
+    if(!m_libraryWidget->isNull())
+        m_libraryWidget->data()->setEnabled(false);
 }
 
 bool Library::createTables()
@@ -195,7 +212,6 @@ QByteArray Library::serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> 
 
 bool Library::scanDirectories(const QStringList &paths)
 {
-    qDebug() << Q_FUNC_INFO << paths;
     m_stopped = false;
 
     {
@@ -218,12 +234,12 @@ bool Library::scanDirectories(const QStringList &paths)
             }
         }
 
-        removeInvalid();
+        removeMissingFiles(paths);
+        db.close();
     }
 
     QSqlDatabase::removeDatabase(CONNECTION_NAME);
     qDebug("Library: directory scan finished");
-
     return true;
 }
 
@@ -285,7 +301,7 @@ void Library::addDirectory(const QString &s)
     }
 }
 
-void Library::removeInvalid()
+void Library::removeMissingFiles(const QStringList &paths)
 {
     QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
     if(!db.isOpen())
@@ -308,7 +324,8 @@ void Library::removeInvalid()
 
         previousPath = path;
 
-        if(!QFile::exists(path))
+        if(!QFile::exists(path) || //remove missing or disabled file paths
+                !std::any_of(paths.cbegin(), paths.cend(), [path](const QString &p){ return path.startsWith(p); } ))
         {
             qDebug("Library: removing '%s' from library", qPrintable(path));
             QSqlQuery rmQuery(db);

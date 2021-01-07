@@ -26,6 +26,8 @@
 #include <qmmp/qmmp.h>
 #include "librarymodel.h"
 
+#define CONNECTION_NAME "qmmp_library_view"
+
 class LibraryTreeItem
 {
 public:
@@ -59,6 +61,12 @@ LibraryModel::LibraryModel(QObject *parent) : QAbstractItemModel(parent)
 LibraryModel::~LibraryModel()
 {
     delete m_rootItem;
+
+    if(QSqlDatabase::contains(CONNECTION_NAME))
+    {
+        QSqlDatabase::database(CONNECTION_NAME).close();
+        QSqlDatabase::removeDatabase(CONNECTION_NAME);
+    }
 }
 
 Qt::ItemFlags LibraryModel::flags(const QModelIndex &index) const
@@ -113,7 +121,7 @@ void LibraryModel::fetchMore(const QModelIndex &parent)
 
     LibraryTreeItem *parentItem = static_cast<LibraryTreeItem *>(parent.internalPointer());
 
-    QSqlDatabase db = QSqlDatabase::database("qmmp_library_1");
+    QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
     if(!db.isOpen())
         return;
 
@@ -225,9 +233,18 @@ void LibraryModel::refresh()
     beginResetModel();
     m_rootItem->clear();
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "qmmp_library_1");
-    db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
-    db.open();
+    QSqlDatabase db;
+
+    if(QSqlDatabase::contains(CONNECTION_NAME))
+    {
+        db = QSqlDatabase::database(CONNECTION_NAME);
+    }
+    else
+    {
+        db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
+        db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
+        db.open();
+    }
 
     if(!db.isOpen())
     {
@@ -254,7 +271,7 @@ void LibraryModel::refresh()
 
 QList<QUrl> LibraryModel::getUrls(const QModelIndex &index) const
 {
-    QSqlDatabase db = QSqlDatabase::database("qmmp_library_1");
+    QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
     QList<QUrl> urls;
     if(!db.isOpen())
         return urls;

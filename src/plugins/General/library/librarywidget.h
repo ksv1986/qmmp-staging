@@ -35,6 +35,7 @@ class LibraryWidget : public QWidget
 public:
     explicit LibraryWidget(bool dialog, QWidget *parent = nullptr);
     ~LibraryWidget();
+    void refresh();
 
 private:
     Ui::LibraryWidget *m_ui;

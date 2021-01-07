@@ -47,3 +47,8 @@ LibraryWidget::~LibraryWidget()
 {
     delete m_ui;
 }
+
+void LibraryWidget::refresh()
+{
+    m_model->refresh();
+}

@@ -41,7 +41,8 @@ GeneralProperties LibraryFactory::properties() const
 
 QObject *LibraryFactory::create(QObject *parent)
 {
-    return new Library(parent);
+    m_library = new Library(&m_libraryWidget, parent);
+    return m_library;
 }
 
 QWidget *LibraryFactory::createWidget(int id, QWidget *parent)
@@ -49,6 +50,8 @@ QWidget *LibraryFactory::createWidget(int id, QWidget *parent)
     if(id == LIBRARY_WIDGET)
     {
         m_libraryWidget = new LibraryWidget(false, parent);
+        if(!m_library.isNull() && m_library->isRunning())
+            m_libraryWidget->setEnabled(false);
         return m_libraryWidget;
     }
     return nullptr;

@@ -28,6 +28,7 @@
 #include <qmmpui/generalfactory.h>
 
 class LibraryWidget;
+class Library;
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
@@ -52,6 +53,7 @@ private:
     };
 
     QPointer<LibraryWidget> m_libraryWidget;
+    QPointer<Library> m_library;
 };
 
 #endif // LIBRARYFACTORY_H

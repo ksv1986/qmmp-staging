@@ -275,11 +275,11 @@ void LibraryModel::refresh()
     QSqlQuery query(db);
     if(m_filter.isEmpty())
     {
-        query.prepare("SELECT DISTINCT Artist from track_library");
+        query.prepare("SELECT DISTINCT Artist from track_library ORDER BY Artist");
     }
     else
     {
-        query.prepare("SELECT DISTINCT Artist from track_library WHERE SearchString LIKE :filter");
+        query.prepare("SELECT DISTINCT Artist from track_library WHERE SearchString LIKE :filter ORDER BY Artist");
         query.bindValue(":filter", QString("%%1%").arg(m_filter.toLower()));
     }
 

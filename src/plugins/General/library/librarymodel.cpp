@@ -128,11 +128,18 @@ void LibraryModel::fetchMore(const QModelIndex &parent)
     if(parentItem->type == Qmmp::ARTIST)
     {
         QSqlQuery query(db);
-        query.prepare("SELECT DISTINCT Album from track_library WHERE Artist = :artist");
+        if(m_filter.isEmpty())
+        {
+            query.prepare("SELECT DISTINCT Album from track_library WHERE Artist = :artist");
+        }
+        else
+        {
+            query.prepare("SELECT DISTINCT Album from track_library WHERE Artist = :artist AND SearchString LIKE :filter");
+            query.bindValue(":filter", QString("%%1%").arg(m_filter.toLower()));
+        }
         query.bindValue(":artist", parentItem->name);
-        bool ok = query.exec();
 
-        if(!ok)
+        if(!query.exec())
         {
             qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
             return;
@@ -151,12 +158,20 @@ void LibraryModel::fetchMore(const QModelIndex &parent)
     else if(parentItem->type == Qmmp::ALBUM)
     {
         QSqlQuery query(db);
-        query.prepare("SELECT Title from track_library WHERE Artist = :artist AND Album = :album");
+        if(m_filter.isEmpty())
+        {
+            query.prepare("SELECT Title from track_library WHERE Artist = :artist AND Album = :album");
+        }
+        else
+        {
+            query.prepare("SELECT Title from track_library WHERE Artist = :artist AND Album = :album "
+                          "AND SearchString LIKE :filter");
+            query.bindValue(":filter", QString("%%1%").arg(m_filter.toLower()));
+        }
         query.bindValue(":artist", parentItem->parent->name);
         query.bindValue(":album", parentItem->name);
-        bool ok = query.exec();
 
-        if(!ok)
+        if(!query.exec())
         {
             qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
             return;
@@ -228,6 +243,11 @@ int LibraryModel::rowCount(const QModelIndex &parent) const
         return qMax(1, parentItem->children.count());
 }
 
+void LibraryModel::setFilter(const QString &filter)
+{
+    m_filter = filter;
+}
+
 void LibraryModel::refresh()
 {
     beginResetModel();
@@ -253,9 +273,17 @@ void LibraryModel::refresh()
     }
 
     QSqlQuery query(db);
-    bool ok = query.exec("SELECT DISTINCT Artist from track_library");
+    if(m_filter.isEmpty())
+    {
+        query.prepare("SELECT DISTINCT Artist from track_library");
+    }
+    else
+    {
+        query.prepare("SELECT DISTINCT Artist from track_library WHERE SearchString LIKE :filter");
+        query.bindValue(":filter", QString("%%1%").arg(m_filter.toLower()));
+    }
 
-    if(!ok)
+    if(!query.exec())
         qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
 
     while(query.next())

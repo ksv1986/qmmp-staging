@@ -50,5 +50,14 @@ LibraryWidget::~LibraryWidget()
 
 void LibraryWidget::refresh()
 {
+    m_ui->filterLineEdit->clear();
     m_model->refresh();
+}
+
+void LibraryWidget::on_filterLineEdit_textChanged(const QString &text)
+{
+    m_model->setFilter(text);
+    m_model->refresh();
+    if(text.count() >= 3)
+        m_ui->treeView->expandAll();
 }

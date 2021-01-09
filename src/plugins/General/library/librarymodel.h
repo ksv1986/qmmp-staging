@@ -46,12 +46,14 @@ public:
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    void setFilter(const QString &filter);
     void refresh();
+
 
 private:
     QList<QUrl> getUrls(const QModelIndex &index) const;
-
     LibraryTreeItem *m_rootItem;
+    QString m_filter;
 };
 
 #endif // LIBRARYMODEL_H

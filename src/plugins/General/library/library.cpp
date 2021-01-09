@@ -128,7 +128,7 @@ bool Library::createTables()
                          "Timestamp TIMESTAMP NOT NULL,"
                          "Title TEXT, Artist TEXT, AlbumArtist TEXT, Album TEXT, Comment TEXT, Genre TEXT, Composer TEXT,"
                          "Year INTEGER, Track INTEGER, DiscNumer INTEGER, Duration INTEGER, "
-                         "AudioInfo BLOB, URL TEXT, FilePath TEXT)");
+                         "AudioInfo BLOB, URL TEXT, FilePath TEXT, SearchString TEXT)");
 
     if(!ok)
         qWarning("Library: unable to create table, error: %s", qPrintable(query.lastError().text()));
@@ -148,7 +148,7 @@ void Library::addTrack(TrackInfo *track, const QString &filePath)
                   ":timestamp, "
                   ":title, :artist, :albumartist, :album, :comment, :genre, :composer, "
                   ":year, :track, :discnumber, :duration, "
-                  ":audioinfo, :url, :filepath)");
+                  ":audioinfo, :url, :filepath, :searchstring)");
 
     query.bindValue(":timestamp", QFileInfo(filePath).lastModified());
     query.bindValue(":title", track->value(Qmmp::TITLE));
@@ -165,6 +165,8 @@ void Library::addTrack(TrackInfo *track, const QString &filePath)
     query.bindValue(":audioinfo", serializeAudioInfo(track->properties()));
     query.bindValue(":url", track->path());
     query.bindValue(":filepath", filePath);
+    query.bindValue(":searchstring", QString("%1|||%2|||%3").arg(track->value(Qmmp::ARTIST))
+                    .arg(track->value(Qmmp::ALBUM)).arg(track->value(Qmmp::TITLE)).toLower());
     if(!query.exec())
         qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
 }

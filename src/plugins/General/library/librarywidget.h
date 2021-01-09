@@ -37,6 +37,9 @@ public:
     ~LibraryWidget();
     void refresh();
 
+private slots:
+    void on_filterLineEdit_textChanged(const QString &text);
+
 private:
     Ui::LibraryWidget *m_ui;
     LibraryModel *m_model;

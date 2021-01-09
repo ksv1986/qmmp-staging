@@ -45,7 +45,7 @@
 <context>
     <name>LibraryModel</name>
     <message>
-        <location filename="../librarymodel.cpp" line="182"/>
+        <location filename="../librarymodel.cpp" line="197"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
@@ -66,22 +66,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="29"/>
+        <location filename="../settingsdialog.ui" line="40"/>
         <source>List of directories for scanning:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="52"/>
+        <location filename="../settingsdialog.ui" line="83"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="63"/>
+        <location filename="../settingsdialog.ui" line="97"/>
+        <source>Show quick search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="29"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="60"/>
+        <location filename="../settingsdialog.cpp" line="62"/>
         <source>Select Directories for Scanning</source>
         <translation type="unfinished"></translation>
     </message>

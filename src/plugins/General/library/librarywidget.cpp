@@ -18,10 +18,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QSettings>
+#include <qmmp/qmmp.h>
 #include "librarymodel.h"
 #include "ui_librarywidget.h"
 #include "librarywidget.h"
-
 
 LibraryWidget::LibraryWidget(bool dialog, QWidget *parent) :
     QWidget(parent),
@@ -41,6 +42,9 @@ LibraryWidget::LibraryWidget(bool dialog, QWidget *parent) :
     {
         m_ui->buttonBox->hide();
     }
+
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    m_ui->filterLineEdit->setVisible(settings.value("Library/quick_search_visible", true).toBool());
 }
 
 LibraryWidget::~LibraryWidget()

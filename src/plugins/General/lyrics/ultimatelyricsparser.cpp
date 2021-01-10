@@ -143,7 +143,6 @@ LyricsProvider *UltimateLyricsParser::provider(const QString &name) const
 const QStringList &UltimateLyricsParser::defaultProviders()
 {
     static const QStringList out = {
-        "lyrics.wikia.com",
         "Encyclopaedia Metallum",
         "letras.mus.br",
         "darklyrics.com"

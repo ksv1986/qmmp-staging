@@ -24,13 +24,36 @@
 #include <QDir>
 #include <QTimer>
 #include <QSettings>
-#include <QMap>
 #include <QSaveFile>
 #include <qmmp/trackinfo.h>
 #include "qmmpuisettings.h"
 #include "playlistmanager.h"
 
 PlayListManager *PlayListManager::m_instance = nullptr;
+
+//key names
+const QHash<QString, Qmmp::MetaData> PlayListManager::m_metaKeys = {
+    { "title", Qmmp::TITLE },
+    { "artist", Qmmp::ARTIST },
+    { "albumartist", Qmmp::ALBUMARTIST },
+    { "album", Qmmp::ALBUM },
+    { "comment", Qmmp::COMMENT },
+    { "genre", Qmmp::GENRE },
+    { "composer", Qmmp::COMPOSER },
+    { "year", Qmmp::YEAR },
+    { "track", Qmmp::TRACK },
+    { "disk", Qmmp::DISCNUMBER }
+};
+
+const QHash<QString, Qmmp::TrackProperty> PlayListManager::m_propKeys = {
+    { "bitrate", Qmmp::BITRATE },
+    { "samplerate", Qmmp::SAMPLERATE },
+    { "channels", Qmmp::CHANNELS },
+    { "bits_per_sample", Qmmp::BITS_PER_SAMPLE },
+    { "format_name", Qmmp::FORMAT_NAME },
+    { "decoder", Qmmp::DECODER },
+    { "file_size", Qmmp::FILE_SIZE }
+};
 
 PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
 {
@@ -44,28 +67,6 @@ PlayListManager::PlayListManager(QObject *parent) : QObject(parent)
     m_timer->setInterval(5000);
     m_timer->setSingleShot(true);
     connect(m_timer, SIGNAL(timeout()), SLOT(writePlayLists()));
-    //key names
-    m_metaKeys = {
-        { "title", Qmmp::TITLE },
-        { "artist", Qmmp::ARTIST },
-        { "albumartist", Qmmp::ALBUMARTIST },
-        { "album", Qmmp::ALBUM },
-        { "comment", Qmmp::COMMENT },
-        { "genre", Qmmp::GENRE },
-        { "composer", Qmmp::COMPOSER },
-        { "year", Qmmp::YEAR },
-        { "track", Qmmp::TRACK },
-        { "disk", Qmmp::DISCNUMBER }
-    };
-    m_propKeys = {
-        { "bitrate", Qmmp::BITRATE },
-        { "samplerate", Qmmp::SAMPLERATE },
-        { "channels", Qmmp::CHANNELS },
-        { "bits_per_sample", Qmmp::BITS_PER_SAMPLE },
-        { "format_name", Qmmp::FORMAT_NAME },
-        { "decoder", Qmmp::DECODER },
-        { "file_size", Qmmp::FILE_SIZE }
-    };
     readPlayLists(); //read playlists
 }
 
@@ -367,16 +368,16 @@ void PlayListManager::writePlayLists()
             PlayListTrack *t = dynamic_cast<PlayListTrack *>(m);
             plFile.write(QString("file=%1\n").arg(t->path()).toUtf8());
 
-            for(const Qmmp::MetaData &metaKey : m_metaKeys.values())
+            for(QHash<QString, Qmmp::MetaData>::const_iterator it = m_metaKeys.constBegin(); it != m_metaKeys.constEnd(); ++it)
             {
-                if(!(value = t->value(metaKey)).isEmpty())
-                    plFile.write(QString("%1=%2\n").arg(m_metaKeys.key(metaKey)).arg(value).toUtf8());
+                if(!(value = t->value(it.value())).isEmpty())
+                    plFile.write(QString("%1=%2\n").arg(it.key()).arg(value).toUtf8());
             }
 
-            for(const Qmmp::TrackProperty &propKey : m_propKeys.values())
+            for(QHash<QString, Qmmp::TrackProperty>::const_iterator it = m_propKeys.constBegin(); it != m_propKeys.constEnd(); ++it)
             {
-                if(!(value = t->value(propKey)).isEmpty())
-                    plFile.write(QString("%1=%2\n").arg(m_propKeys.key(propKey)).arg(value).toLatin1());
+                if(!(value = t->value(it.value())).isEmpty())
+                    plFile.write(QString("%1=%2\n").arg(it.key()).arg(value).toLatin1());
             }
 
             if(t->duration() > 0)

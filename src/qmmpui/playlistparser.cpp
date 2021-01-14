@@ -22,12 +22,39 @@
 #include <QList>
 #include <QDir>
 #include <QApplication>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
 #include <algorithm>
 #include <qmmp/qmmp.h>
 #include "playlistformat.h"
 #include "playlistparser.h"
 
 QList<PlayListFormat*> *PlayListParser::m_formats = nullptr;
+
+//key names
+const QHash<QString, Qmmp::MetaData>  PlayListParser::m_metaKeys = {
+    { "title", Qmmp::TITLE },
+    { "artist", Qmmp::ARTIST },
+    { "albumArtist", Qmmp::ALBUMARTIST },
+    { "album", Qmmp::ALBUM },
+    { "comment", Qmmp::COMMENT },
+    { "genre", Qmmp::GENRE },
+    { "composer", Qmmp::COMPOSER },
+    { "year", Qmmp::YEAR },
+    { "track", Qmmp::TRACK },
+    { "disk", Qmmp::DISCNUMBER }
+};
+
+const QHash<QString, Qmmp::TrackProperty>  PlayListParser::m_propKeys = {
+    { "bitrate", Qmmp::BITRATE },
+    { "samplerate", Qmmp::SAMPLERATE },
+    { "channels", Qmmp::CHANNELS },
+    { "bitsPerSample", Qmmp::BITS_PER_SAMPLE },
+    { "formatName", Qmmp::FORMAT_NAME },
+    { "decoder", Qmmp::DECODER },
+    { "fileSize", Qmmp::FILE_SIZE }
+};
 
 QList<PlayListFormat *> PlayListParser::formats()
 {
@@ -175,4 +202,74 @@ void PlayListParser::loadFormats()
         if (fmt)
             m_formats->append(fmt);
     }
+}
+
+QByteArray PlayListParser::serialize(const QList<PlayListTrack *> &tracks)
+{
+    QJsonArray array;
+    for(const PlayListTrack *t : qAsConst(tracks))
+    {
+        QJsonObject obj;
+        QString value;
+        for(QHash<QString, Qmmp::MetaData>::const_iterator it = m_metaKeys.constBegin(); it != m_metaKeys.constEnd(); ++it)
+        {
+            if(!(value = t->value(it.value())).isEmpty())
+                obj.insert(it.key(), value);
+        }
+
+        for(QHash<QString, Qmmp::TrackProperty>::const_iterator it = m_propKeys.constBegin(); it != m_propKeys.constEnd(); ++it)
+        {
+            if(!(value = t->value(it.value())).isEmpty())
+                obj.insert(it.key(), value);
+        }
+
+        obj.insert("path", t->path());
+        obj.insert("duration", t->duration());
+        array.append(obj);
+    }
+
+    return QJsonDocument(array).toJson(QJsonDocument::Compact);
+}
+
+QList<PlayListTrack *> PlayListParser::deserialize(const QByteArray &json)
+{
+    QList<PlayListTrack *> out;
+
+    QJsonDocument document = QJsonDocument::fromJson(json);
+    if(!document.isArray())
+    {
+        qWarning("PlayListParser: invalid JSON array");
+        return out;
+    }
+
+    QJsonArray array = document.array();
+    for(QJsonArray::const_iterator it = array.cbegin(); it != array.cend(); ++it)
+    {
+        if(!(*it).isObject())
+            continue;
+
+        QJsonObject obj = (*it).toObject();
+
+        if(obj.value("path").isNull())
+            continue;
+
+        PlayListTrack *t = new PlayListTrack();
+        t->setPath(obj.value("path").toString());
+        t->setDuration(obj.value("duration").toDouble());
+
+        Qmmp::MetaData metaKey;
+        Qmmp::TrackProperty propKey;
+
+        for(QJsonObject::const_iterator i = obj.constBegin(); i != obj.constEnd(); ++i)
+        {
+            if((metaKey = m_metaKeys.value(i.key(), Qmmp::UNKNOWN)) != Qmmp::UNKNOWN)
+                t->setValue(metaKey, i.value().toString());
+            else if((propKey = m_propKeys.value(i.key(), Qmmp::UNKNOWN_PROPERTY)) != Qmmp::UNKNOWN_PROPERTY)
+                t->setValue(propKey, i.value().toString());
+        }
+
+        out << t;
+    }
+
+    return out;
 }

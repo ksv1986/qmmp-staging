@@ -22,6 +22,7 @@
 
 #include <QStringList>
 #include <QUrl>
+#include <QHash>
 #include "playlisttrack.h"
 #include "playlistformat.h"
 #include "qmmpui_export.h"
@@ -88,10 +89,15 @@ public:
      */
     static void loadFormats();
 
+    static QByteArray serialize(const QList<PlayListTrack *> &tracks);
+    static QList<PlayListTrack *> deserialize(const QByteArray &json);
+
 private:
     PlayListParser(){}
 
     static QList<PlayListFormat*> *m_formats;
+    static const QHash<QString, Qmmp::MetaData> m_metaKeys;
+    static const QHash<QString, Qmmp::TrackProperty> m_propKeys;
 
 
 };

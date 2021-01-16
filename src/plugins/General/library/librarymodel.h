@@ -26,6 +26,7 @@
 #include <QUrl>
 #include <QAbstractItemModel>
 
+class QWidget;
 class QSqlDatabase;
 class LibraryTreeItem;
 class PlayListTrack;
@@ -50,7 +51,8 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     void setFilter(const QString &filter);
     void refresh();
-
+    void add(const QModelIndexList &indexes);
+    void showInformation(const QModelIndexList &indexes, QWidget *parent);
 
 private:
     QList<PlayListTrack *> getTracks(const QModelIndex &index) const;

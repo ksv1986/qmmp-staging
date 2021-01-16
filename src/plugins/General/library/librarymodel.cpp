@@ -26,8 +26,11 @@
 #include <QHash>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QWidget>
 #include <qmmp/qmmp.h>
 #include <qmmpui/playlistparser.h>
+#include <qmmpui/playlistmanager.h>
+#include <qmmpui/detailsdialog.h>
 #include "librarymodel.h"
 
 #define CONNECTION_NAME "qmmp_library_view"
@@ -301,6 +304,39 @@ void LibraryModel::refresh()
         m_rootItem->children << item;
     }
     endResetModel();
+}
+
+void LibraryModel::add(const QModelIndexList &indexes)
+{
+    QList<PlayListTrack *> tracks;
+
+    for(const QModelIndex &index : indexes)
+    {
+        if(index.isValid())
+        {
+            tracks << getTracks(index);
+        }
+    }
+
+    PlayListManager::instance()->add(tracks);
+}
+
+void LibraryModel::showInformation(const QModelIndexList &indexes, QWidget *parent)
+{
+    QList<PlayListTrack *> tracks;
+
+    for(const QModelIndex &index : indexes)
+    {
+        if(index.isValid())
+        {
+            tracks << getTracks(index);
+        }
+    }
+
+    DetailsDialog *dialog = new DetailsDialog(tracks, parent);
+    dialog->setAttribute(Qt::WA_DeleteOnClose, true);
+    dialog->show();
+    connect(dialog, &QObject::destroyed, [=]() { qDeleteAll(tracks); });
 }
 
 QList<PlayListTrack *> LibraryModel::getTracks(const QModelIndex &index) const

@@ -27,7 +27,9 @@ namespace Ui {
 class LibraryWidget;
 }
 
+class QMenu;
 class LibraryModel;
+class QContextMenuEvent;
 
 class LibraryWidget : public QWidget
 {
@@ -37,12 +39,18 @@ public:
     ~LibraryWidget();
     void refresh();
 
+private:
+    void contextMenuEvent(QContextMenuEvent *e);
+
 private slots:
     void on_filterLineEdit_textChanged(const QString &text);
+    void addSelected();
+    void showInformation();
 
 private:
     Ui::LibraryWidget *m_ui;
     LibraryModel *m_model;
+    QMenu *m_menu;
 };
 
 #endif // LIBRARYWIDGET_H

@@ -26,6 +26,7 @@
 #include <QAction>
 #include <QApplication>
 #include <QLineEdit>
+#include <QIcon>
 #include <qmmp/metadatamanager.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/filedialog.h>
@@ -86,9 +87,9 @@ FileSystemBrowser::FileSystemBrowser(QWidget *parent) :
     m_listView->setModel(m_proxyModel);
 
     setContextMenuPolicy(Qt::ActionsContextMenu);
-    QAction *addToPlaylistAction = new QAction(tr("Add to Playlist"), this);
+    QAction *addToPlaylistAction = new QAction(QIcon::fromTheme("list-add"), tr("Add to Playlist"), this);
     addAction(addToPlaylistAction);
-    QAction *selectDirAction = new QAction(tr("Change Directory"), this);
+    QAction *selectDirAction = new QAction(QIcon::fromTheme("folder"), tr("Change Directory"), this);
     addAction(selectDirAction);
     addAction(m_showFilterAction = new QAction(tr("Quick Search"), this));
     m_showFilterAction->setCheckable(true);

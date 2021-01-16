@@ -40,7 +40,6 @@ DetailsDialog::DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent)
     m_ui = new Ui::DetailsDialog;
     m_ui->setupUi(this);
     setAttribute(Qt::WA_QuitOnClose, false);
-    setAttribute(Qt::WA_DeleteOnClose, true);
     m_ui->directoryButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_DirOpenIcon));
     m_ui->nextButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_ArrowRight));
     m_ui->prevButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_ArrowLeft));

@@ -676,6 +676,7 @@ void PlayListModel::showDetails(QWidget *parent)
     if(!selected_tracks.isEmpty())
     {
         QDialog *d = new DetailsDialog(selected_tracks, parent);
+        d->setAttribute(Qt::WA_DeleteOnClose, true);
         TagUpdater *updater = new TagUpdater(d, selected_tracks);
         connect(updater, SIGNAL(destroyed(QObject *)),SLOT(updateMetaData()));
         d->show();
@@ -689,6 +690,7 @@ void PlayListModel::showDetailsForCurrent(QWidget *parent)
         QList<PlayListTrack *> l;
         l.append(m_current_track);
         QDialog *d = new DetailsDialog(l, parent);
+        d->setAttribute(Qt::WA_DeleteOnClose, true);
         TagUpdater *updater = new TagUpdater(d, l);
         connect(updater, SIGNAL(destroyed(QObject *)),SLOT(updateMetaData()));
         d->show();

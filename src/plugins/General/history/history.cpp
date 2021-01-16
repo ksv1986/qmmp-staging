@@ -120,7 +120,7 @@ bool History::createTables()
     bool ok = query.exec("CREATE TABLE IF NOT EXISTS track_history(ID INTEGER PRIMARY KEY AUTOINCREMENT,"
                          "Timestamp TIMESTAMP NOT NULL,"
                          "Title TEXT, Artist TEXT, AlbumArtist TEXT, Album TEXT, Comment TEXT, Genre TEXT, Composer TEXT,"
-                         "Year INTEGER, Track INTEGER, DiscNumber INTEGER, Duration INTEGER, URL BLOB)");
+                         "Year INTEGER, Track INTEGER, DiscNumber TEXT, Duration INTEGER, URL BLOB)");
 
     if(!ok)
         qWarning("History: unable to create table, error: %s", qPrintable(query.lastError().text()));

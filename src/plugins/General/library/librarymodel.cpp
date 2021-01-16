@@ -159,7 +159,6 @@ void LibraryModel::fetchMore(const QModelIndex &parent)
             item->type = Qmmp::ALBUM;
             item->parent = parentItem;
             parentItem->children << item;
-            qDebug() << parentItem->name << item->name;
         }
     }
     else if(parentItem->type == Qmmp::ALBUM)

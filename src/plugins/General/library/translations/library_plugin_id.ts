@@ -5,6 +5,11 @@
     <name>Library</name>
     <message>
         <location filename="../library.cpp" line="66"/>
+        <source>Library</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../library.cpp" line="72"/>
         <source>Update library</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12,32 +17,32 @@
 <context>
     <name>LibraryFactory</name>
     <message>
-        <location filename="../libraryfactory.cpp" line="32"/>
+        <location filename="../libraryfactory.cpp" line="33"/>
         <source>Media Library Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraryfactory.cpp" line="37"/>
+        <location filename="../libraryfactory.cpp" line="38"/>
         <source>Media Library</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraryfactory.cpp" line="67"/>
+        <location filename="../libraryfactory.cpp" line="84"/>
         <source>About Media Library Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraryfactory.cpp" line="68"/>
+        <location filename="../libraryfactory.cpp" line="85"/>
         <source>Qmmp Media Library Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraryfactory.cpp" line="69"/>
+        <location filename="../libraryfactory.cpp" line="86"/>
         <source>This plugin represents a database to store music files tags for a fast access</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraryfactory.cpp" line="70"/>
+        <location filename="../libraryfactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53,11 +58,6 @@
 <context>
     <name>LibraryWidget</name>
     <message>
-        <location filename="../librarywidget.ui" line="14"/>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../librarywidget.cpp" line="50"/>
         <source>&amp;Add to Playlist</source>
         <translation type="unfinished"></translation>
@@ -70,6 +70,11 @@
     <message>
         <location filename="../librarywidget.cpp" line="53"/>
         <source>Quick Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../librarywidget.ui" line="14"/>
+        <source>Media Library</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

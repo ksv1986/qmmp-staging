@@ -52,9 +52,10 @@ public:
     void setFilter(const QString &filter);
     void refresh();
     void add(const QModelIndexList &indexes);
-    void showInformation(const QModelIndexList &indexes, QWidget *parent);
+    void showInformation(const QModelIndexList &indexes, QWidget *parent = nullptr);
 
 private:
+    QList<PlayListTrack *> getTracks(const QModelIndexList &indexes) const;
     QList<PlayListTrack *> getTracks(const QModelIndex &index) const;
     PlayListTrack *createTrack(const QSqlQuery &query) const;
 

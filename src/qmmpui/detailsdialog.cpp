@@ -34,7 +34,7 @@
 #include "covereditor_p.h"
 #include "detailsdialog.h"
 
-DetailsDialog::DetailsDialog(QList<PlayListTrack *> tracks, QWidget *parent)
+DetailsDialog::DetailsDialog(const QList<PlayListTrack *> &tracks, QWidget *parent)
         : QDialog(parent), m_tracks(tracks)
 {
     m_ui = new Ui::DetailsDialog;

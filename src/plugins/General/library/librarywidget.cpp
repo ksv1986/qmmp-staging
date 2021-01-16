@@ -86,5 +86,5 @@ void LibraryWidget::addSelected()
 
 void LibraryWidget::showInformation()
 {
-    m_model->showInformation(m_ui->treeView->selectionModel()->selectedIndexes(), this);
+    m_model->showInformation(m_ui->treeView->selectionModel()->selectedIndexes());
 }

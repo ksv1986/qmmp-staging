@@ -91,15 +91,7 @@ QStringList LibraryModel::mimeTypes() const
 
 QMimeData *LibraryModel::mimeData(const QModelIndexList &indexes) const
 {
-    QList<PlayListTrack *> tracks;
-
-    for(const QModelIndex &index : indexes)
-    {
-        if(index.isValid())
-        {
-            tracks << getTracks(index);
-        }
-    }
+    QList<PlayListTrack *> tracks = getTracks(indexes);
 
     if(!tracks.isEmpty())
     {
@@ -308,20 +300,20 @@ void LibraryModel::refresh()
 
 void LibraryModel::add(const QModelIndexList &indexes)
 {
-    QList<PlayListTrack *> tracks;
-
-    for(const QModelIndex &index : indexes)
-    {
-        if(index.isValid())
-        {
-            tracks << getTracks(index);
-        }
-    }
-
-    PlayListManager::instance()->add(tracks);
+    PlayListManager::instance()->add(getTracks(indexes));
 }
 
 void LibraryModel::showInformation(const QModelIndexList &indexes, QWidget *parent)
+{
+    QList<PlayListTrack *> tracks = getTracks(indexes);
+
+    DetailsDialog *dialog = new DetailsDialog(tracks, parent);
+    dialog->setAttribute(Qt::WA_DeleteOnClose, true);
+    dialog->show();
+    connect(dialog, &QObject::destroyed, [=]() { qDeleteAll(tracks); });
+}
+
+QList<PlayListTrack *> LibraryModel::getTracks(const QModelIndexList &indexes) const
 {
     QList<PlayListTrack *> tracks;
 
@@ -333,10 +325,7 @@ void LibraryModel::showInformation(const QModelIndexList &indexes, QWidget *pare
         }
     }
 
-    DetailsDialog *dialog = new DetailsDialog(tracks, parent);
-    dialog->setAttribute(Qt::WA_DeleteOnClose, true);
-    dialog->show();
-    connect(dialog, &QObject::destroyed, [=]() { qDeleteAll(tracks); });
+    return tracks;
 }
 
 QList<PlayListTrack *> LibraryModel::getTracks(const QModelIndex &index) const

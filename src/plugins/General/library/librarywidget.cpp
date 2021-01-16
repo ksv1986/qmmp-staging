@@ -56,12 +56,14 @@ LibraryWidget::LibraryWidget(bool dialog, QWidget *parent) :
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_filterAction->setChecked(settings.value("Library/quick_search_visible", true).toBool());
     m_ui->filterLineEdit->setVisible(m_filterAction->isChecked());
+    if(dialog)
+        restoreGeometry(settings.value("Library/geometry").toByteArray());
 }
 
 LibraryWidget::~LibraryWidget()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    settings.value("Library/quick_search_visible", m_filterAction->isChecked());
+    settings.setValue("Library/quick_search_visible", m_filterAction->isChecked());
 
     delete m_ui;
 }
@@ -70,6 +72,15 @@ void LibraryWidget::refresh()
 {
     m_ui->filterLineEdit->clear();
     m_model->refresh();
+}
+
+void LibraryWidget::closeEvent(QCloseEvent *)
+{
+    if(isWindow())
+    {
+        QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+        settings.setValue("Library/geometry", saveGeometry());
+    }
 }
 
 void LibraryWidget::contextMenuEvent(QContextMenuEvent *e)

@@ -63,9 +63,15 @@ Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_dirs = settings.value("Library/dirs").toStringList();
 
-    QAction *action = new QAction(QIcon::fromTheme("view-refresh"), tr("Update library"), this);
-    UiHelper::instance()->addAction(action, UiHelper::TOOLS_MENU);
-    connect(action, SIGNAL(triggered()), SLOT(startDirectoryScanning()));
+    m_showAction = new QAction(QIcon::fromTheme("text-x-generic"), tr("Library"), this);
+    UiHelper::instance()->addAction(m_showAction, UiHelper::TOOLS_MENU);
+    connect(m_showAction, SIGNAL(triggered()), SLOT(showLibraryWindow()));
+    if(!m_libraryWidget->isNull() && !m_libraryWidget->data()->isWindow())
+        m_showAction->setVisible(false);
+
+    QAction *refreshAction = new QAction(QIcon::fromTheme("view-refresh"), tr("Update library"), this);
+    UiHelper::instance()->addAction(refreshAction, UiHelper::TOOLS_MENU);
+    connect(refreshAction, SIGNAL(triggered()), SLOT(startDirectoryScanning()));
 
     connect(&m_watcher, &QFutureWatcher<bool>::finished, [=] {
         if(!m_libraryWidget->isNull())
@@ -96,12 +102,18 @@ bool Library::isRunning() const
     return m_future.isRunning();
 }
 
+QAction *Library::showAction() const
+{
+    return m_showAction;
+}
+
 void Library::showLibraryWindow()
 {
-    /*if(!m_historyWindow)
-        m_historyWindow = new HistoryWindow(QSqlDatabase::database(CONNECTION_NAME), qApp->activeWindow());
-    m_historyWindow->show();
-    m_historyWindow->activateWindow();*/
+    if(m_libraryWidget->isNull())
+        *m_libraryWidget = new LibraryWidget(true, qApp->activeWindow());
+
+    if(m_libraryWidget->data()->isWindow())
+        m_libraryWidget->data()->show();
 }
 
 void Library::startDirectoryScanning()

@@ -31,6 +31,7 @@
 #include <qmmp/qmmp.h>
 
 class QFileInfo;
+class QAction;
 class SoundCore;
 class PlayListTrack;
 class LibraryWidget;
@@ -43,6 +44,8 @@ public:
     ~Library();
 
     bool isRunning() const;
+
+    QAction *showAction() const;
 
 private slots:
     void showLibraryWindow();
@@ -65,6 +68,7 @@ private:
     bool m_stopped = false;
     QPointer<LibraryWidget> *m_libraryWidget;
     QFutureWatcher<bool> m_watcher;
+    QAction *m_showAction;
 
 };
 

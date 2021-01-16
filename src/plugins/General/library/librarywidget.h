@@ -31,6 +31,7 @@ class QMenu;
 class QAction;
 class LibraryModel;
 class QContextMenuEvent;
+class QCloseEvent;
 
 class LibraryWidget : public QWidget
 {
@@ -41,7 +42,8 @@ public:
     void refresh();
 
 private:
-    void contextMenuEvent(QContextMenuEvent *e);
+    void closeEvent(QCloseEvent *) override;
+    void contextMenuEvent(QContextMenuEvent *e) override;
 
 private slots:
     void on_filterLineEdit_textChanged(const QString &text);

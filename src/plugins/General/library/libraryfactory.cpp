@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include <QMessageBox>
+#include <QAction>
 #include <QtPlugin>
 #include <qmmp/qmmp.h>
 #include "library.h"
@@ -49,9 +50,25 @@ QWidget *LibraryFactory::createWidget(int id, QWidget *parent)
 {
     if(id == LIBRARY_WIDGET)
     {
+        if(!m_libraryWidget.isNull() && m_libraryWidget->isWindow())
+        {
+            m_libraryWidget->close();
+            delete m_libraryWidget;
+        }
+
         m_libraryWidget = new LibraryWidget(false, parent);
-        if(!m_library.isNull() && m_library->isRunning())
-            m_libraryWidget->setEnabled(false);
+        if(!m_library.isNull())
+        {
+            if(m_library->isRunning())
+                m_libraryWidget->setEnabled(false);
+
+            m_library->showAction()->setVisible(false);
+        }
+        connect(m_libraryWidget, &QObject::destroyed, [=]() {
+            if(!m_library.isNull())
+                m_library->showAction()->setVisible(true);
+        });
+
         return m_libraryWidget;
     }
     return nullptr;

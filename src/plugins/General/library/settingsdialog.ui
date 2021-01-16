@@ -34,12 +34,18 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>List of directories for scanning:</string>
+   <item row="4" column="1">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
-    </widget>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>68</height>
+      </size>
+     </property>
+    </spacer>
    </item>
    <item row="1" column="1">
     <spacer name="verticalSpacer">
@@ -54,28 +60,8 @@
      </property>
     </spacer>
    </item>
-   <item row="4" column="1">
-    <spacer name="verticalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>68</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="6" column="0" colspan="2">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
+   <item row="1" column="0" rowspan="4">
+    <widget class="QListWidget" name="dirsListWidget"/>
    </item>
    <item row="2" column="1">
     <widget class="QToolButton" name="addDirButton">
@@ -88,13 +74,20 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0" rowspan="4">
-    <widget class="QListWidget" name="dirsListWidget"/>
-   </item>
    <item row="5" column="0" colspan="2">
-    <widget class="QCheckBox" name="quickSearchCheckBox">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
      <property name="text">
-      <string>Show quick search</string>
+      <string>List of directories for scanning:</string>
      </property>
     </widget>
    </item>

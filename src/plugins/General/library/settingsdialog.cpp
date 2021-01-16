@@ -18,11 +18,10 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QDir>
+#include <QSettings>
 #include <qmmp/qmmp.h>
 #include <qmmpui/filedialog.h>
-#include <QDir>
-
-#include <QSettings>
 #include "settingsdialog.h"
 #include "ui_settingsdialog.h"
 
@@ -35,7 +34,6 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     m_lastPath = settings.value("Library/last_path", QDir::homePath()).toString();
     QStringList dirs = settings.value("Library/dirs").toStringList();
     m_ui->dirsListWidget->addItems(dirs);
-    m_ui->quickSearchCheckBox->setChecked(settings.value("Library/quick_search_visible", true).toBool());
 }
 
 SettingsDialog::~SettingsDialog()
@@ -53,7 +51,6 @@ void SettingsDialog::accept()
         dirs << m_ui->dirsListWidget->item(i)->text();
 
     settings.setValue("Library/dirs", dirs);
-    settings.setValue("Library/quick_search_visible", m_ui->quickSearchCheckBox->isChecked());
     QDialog::accept();
 }
 

@@ -48,15 +48,21 @@ LibraryWidget::LibraryWidget(bool dialog, QWidget *parent) :
 
     m_menu = new QMenu(this);
     m_menu->addAction(QIcon::fromTheme("list-add"), tr("&Add to Playlist"), this, SLOT(addSelected()));
-    m_menu->addSeparator();
     m_menu->addAction(QIcon::fromTheme("dialog-information"), tr("&View Track Details"), this, SLOT(showInformation()));
+    m_menu->addSeparator();
+    m_filterAction = m_menu->addAction(tr("Quick Search"), m_ui->filterLineEdit, SLOT(setVisible(bool)));
+    m_filterAction->setCheckable(true);
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    m_ui->filterLineEdit->setVisible(settings.value("Library/quick_search_visible", true).toBool());
+    m_filterAction->setChecked(settings.value("Library/quick_search_visible", true).toBool());
+    m_ui->filterLineEdit->setVisible(m_filterAction->isChecked());
 }
 
 LibraryWidget::~LibraryWidget()
 {
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.value("Library/quick_search_visible", m_filterAction->isChecked());
+
     delete m_ui;
 }
 

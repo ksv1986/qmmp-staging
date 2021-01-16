@@ -28,6 +28,7 @@ class LibraryWidget;
 }
 
 class QMenu;
+class QAction;
 class LibraryModel;
 class QContextMenuEvent;
 
@@ -51,6 +52,7 @@ private:
     Ui::LibraryWidget *m_ui;
     LibraryModel *m_model;
     QMenu *m_menu;
+    QAction *m_filterAction;
 };
 
 #endif // LIBRARYWIDGET_H

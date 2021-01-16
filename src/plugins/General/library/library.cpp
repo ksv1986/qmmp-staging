@@ -127,7 +127,7 @@ bool Library::createTables()
                          "ID INTEGER PRIMARY KEY AUTOINCREMENT,"
                          "Timestamp TIMESTAMP NOT NULL,"
                          "Title TEXT, Artist TEXT, AlbumArtist TEXT, Album TEXT, Comment TEXT, Genre TEXT, Composer TEXT,"
-                         "Year INTEGER, Track INTEGER, DiscNumer INTEGER, Duration INTEGER, "
+                         "Year INTEGER, Track INTEGER, DiscNumber INTEGER, Duration INTEGER, "
                          "AudioInfo BLOB, URL TEXT, FilePath TEXT, SearchString TEXT)");
 
     if(!ok)

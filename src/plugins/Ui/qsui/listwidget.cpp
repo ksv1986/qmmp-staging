@@ -631,7 +631,7 @@ void ListWidget::updateSkin()
 
 void ListWidget::dragEnterEvent(QDragEnterEvent *event)
 {
-    if (event->mimeData()->hasFormat("text/uri-list"))
+    if (event->mimeData()->hasFormat("text/uri-list") || event->mimeData()->hasFormat("application/json"))
         event->acceptProposedAction();
 }
 
@@ -649,6 +649,19 @@ void ListWidget::dropEvent(QDropEvent *event)
             index = qMin(m_first + m_row_count, m_model->count());
         }
         m_model->insert(index, list_urls);
+    }
+    else if (!m_filterMode && event->mimeData()->hasFormat("application/json"))
+    {
+        QByteArray json = event->mimeData()->data("application/json");
+        event->acceptProposedAction();
+        QApplication::restoreOverrideCursor();
+
+        int index = indexAt(event->pos().y());
+        if(index == INVALID_INDEX)
+        {
+            index = qMin(m_first + m_row_count, m_model->count());
+        }
+        m_model->insert(index, json);
     }
     m_drop_index = INVALID_INDEX;
 }

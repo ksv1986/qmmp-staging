@@ -28,6 +28,8 @@
 
 class QSqlDatabase;
 class LibraryTreeItem;
+class PlayListTrack;
+class QSqlQuery;
 
 class LibraryModel : public QAbstractItemModel
 {
@@ -51,7 +53,9 @@ public:
 
 
 private:
-    QList<QUrl> getUrls(const QModelIndex &index) const;
+    QList<PlayListTrack *> getTracks(const QModelIndex &index) const;
+    PlayListTrack *createTrack(const QSqlQuery &query) const;
+
     LibraryTreeItem *m_rootItem;
     QString m_filter;
 };

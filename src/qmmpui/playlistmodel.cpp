@@ -206,6 +206,11 @@ void PlayListModel::insert(int index, const QList<PlayListTrack *> &tracks)
     emit listChanged(flags);
 }
 
+void PlayListModel::insert(int index, const QByteArray &json)
+{
+    insert(index, PlayListParser::deserialize(json));
+}
+
 void PlayListModel::insert(PlayListItem *before, const QList<PlayListTrack *> &tracks)
 {
     if(before)

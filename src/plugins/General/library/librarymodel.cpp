@@ -23,7 +23,11 @@
 #include <QSqlError>
 #include <QtDebug>
 #include <QMimeData>
+#include <QHash>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <qmmp/qmmp.h>
+#include <qmmpui/playlistparser.h>
 #include "librarymodel.h"
 
 #define CONNECTION_NAME "qmmp_library_view"
@@ -79,23 +83,26 @@ Qt::ItemFlags LibraryModel::flags(const QModelIndex &index) const
 
 QStringList LibraryModel::mimeTypes() const
 {
-    return QStringList("text/uri-list");
+    return QStringList("application/json");
 }
 
 QMimeData *LibraryModel::mimeData(const QModelIndexList &indexes) const
 {
-    QList<QUrl> urls;
+    QList<PlayListTrack *> tracks;
 
     for(const QModelIndex &index : indexes)
     {
         if(index.isValid())
-            urls << getUrls(index);
+        {
+            tracks << getTracks(index);
+        }
     }
 
-    if(!urls.isEmpty())
+    if(!tracks.isEmpty())
     {
         QMimeData *mimeData = new QMimeData;
-        mimeData->setUrls(urls);
+        mimeData->setData("application/json", PlayListParser::serialize(tracks));
+        qDeleteAll(tracks);
         return mimeData;
     }
 
@@ -297,19 +304,19 @@ void LibraryModel::refresh()
     endResetModel();
 }
 
-QList<QUrl> LibraryModel::getUrls(const QModelIndex &index) const
+QList<PlayListTrack *> LibraryModel::getTracks(const QModelIndex &index) const
 {
     QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
-    QList<QUrl> urls;
+    QList<PlayListTrack *> tracks;
     if(!db.isOpen())
-        return urls;
+        return tracks;
 
     const LibraryTreeItem *item = static_cast<const LibraryTreeItem *>(index.internalPointer());
 
     if(item->type == Qmmp::TITLE)
     {
         QSqlQuery query(db);
-        query.prepare("SELECT URL from track_library WHERE Artist = :artist AND Album = :album AND Title = :title");
+        query.prepare("SELECT * from track_library WHERE Artist = :artist AND Album = :album AND Title = :title");
         query.bindValue(":artist", item->parent->parent->name);
         query.bindValue(":album", item->parent->name);
         query.bindValue(":title", item->name);
@@ -317,52 +324,86 @@ QList<QUrl> LibraryModel::getUrls(const QModelIndex &index) const
         if(!query.exec())
         {
             qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
-            return urls;
+            return tracks;
         }
 
         if(query.next())
         {
-            QString path = query.value("URL").toString();
-            urls << (path.contains("://") ? QUrl(path) : QUrl::fromLocalFile(path));
+            tracks << createTrack(query);
         }
     }
     else if(item->type == Qmmp::ALBUM)
     {
         QSqlQuery query(db);
-        query.prepare("SELECT URL from track_library WHERE Artist = :artist AND Album = :album");
+        query.prepare("SELECT * from track_library WHERE Artist = :artist AND Album = :album");
         query.bindValue(":artist", item->parent->name);
         query.bindValue(":album", item->name);
 
         if(!query.exec())
         {
             qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
-            return urls;
+            return tracks;
         }
 
         while(query.next())
         {
-            QString path = query.value("URL").toString();
-            urls << (path.contains("://") ? QUrl(path) : QUrl::fromLocalFile(path));
+           tracks << createTrack(query);
         }
     }
     else if(item->type == Qmmp::ARTIST)
     {
         QSqlQuery query(db);
-        query.prepare("SELECT URL from track_library WHERE Artist = :artist");
+        query.prepare("SELECT * from track_library WHERE Artist = :artist");
         query.bindValue(":artist", item->name);
 
         if(!query.exec())
         {
             qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
-            return urls;
+            return tracks;
         }
 
         while(query.next())
         {
-            QString path = query.value("URL").toString();
-            urls << (path.contains("://") ? QUrl(path) : QUrl::fromLocalFile(path));
+            tracks << createTrack(query);
         }
     }
 
-    return urls;
+    return tracks;
+}
+
+PlayListTrack *LibraryModel::createTrack(const QSqlQuery &query) const
+{
+    static const QHash<int, QString> metaColumns = {
+        { Qmmp::TITLE, "Title" },
+        { Qmmp::ARTIST, "Artist" },
+        { Qmmp::ALBUMARTIST, "AlbumArtist" },
+        { Qmmp::ALBUM, "Album" },
+        { Qmmp::COMMENT, "Comment" },
+        { Qmmp::GENRE, "Genre" },
+        { Qmmp::COMPOSER, "Composer" },
+        { Qmmp::YEAR, "Year" },
+        { Qmmp::TRACK, "Track" },
+        { Qmmp::DISCNUMBER, "DiscNumber" }
+    };
+
+    PlayListTrack *track = new PlayListTrack;
+    track->setPath(query.value("URL").toString());
+    track->setDuration(query.value("Duration").toLongLong());
+
+    for(int key = Qmmp::TITLE; key <= Qmmp::DISCNUMBER; ++key)
+    {
+       QString value = query.value(metaColumns.value(key)).toString();
+       track->setValue(static_cast<Qmmp::MetaData>(key), value);
+    }
+
+    QJsonDocument document = QJsonDocument::fromJson(query.value("AudioInfo").toByteArray());
+    QJsonObject obj = document.object();
+    track->setValue(Qmmp::BITRATE, obj.value("bitrate").toInt());
+    track->setValue(Qmmp::SAMPLERATE, obj.value("samplerate").toInt());
+    track->setValue(Qmmp::CHANNELS, obj.value("channels").toInt());
+    track->setValue(Qmmp::BITS_PER_SAMPLE, obj.value("bitsPerSample").toInt());
+    track->setValue(Qmmp::FORMAT_NAME, obj.value("formatName").toString());
+    track->setValue(Qmmp::DECODER, obj.value("decoder").toString());
+    track->setValue(Qmmp::FILE_SIZE, qint64(obj.value("fileSize").toDouble()));
+    return track;
 }

@@ -586,22 +586,22 @@
 <context>
     <name>FileSystemBrowser</name>
     <message>
-        <location filename="../filesystembrowser.cpp" line="89"/>
+        <location filename="../filesystembrowser.cpp" line="90"/>
         <source>Add to Playlist</source>
         <translation>Ajouter à la liste</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="91"/>
+        <location filename="../filesystembrowser.cpp" line="92"/>
         <source>Change Directory</source>
         <translation>Changer le répertoire</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="93"/>
+        <location filename="../filesystembrowser.cpp" line="94"/>
         <source>Quick Search</source>
         <translation>Recherche rapide</translation>
     </message>
     <message>
-        <location filename="../filesystembrowser.cpp" line="167"/>
+        <location filename="../filesystembrowser.cpp" line="168"/>
         <source>Select Directory</source>
         <translation>Sélectionner le répertoire</translation>
     </message>

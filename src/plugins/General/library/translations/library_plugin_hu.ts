@@ -45,7 +45,7 @@
 <context>
     <name>LibraryModel</name>
     <message>
-        <location filename="../librarymodel.cpp" line="197"/>
+        <location filename="../librarymodel.cpp" line="198"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
@@ -57,6 +57,21 @@
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../librarywidget.cpp" line="50"/>
+        <source>&amp;Add to Playlist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../librarywidget.cpp" line="51"/>
+        <source>&amp;View Track Details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../librarywidget.cpp" line="53"/>
+        <source>Quick Search</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialog</name>
@@ -66,18 +81,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="40"/>
+        <location filename="../settingsdialog.ui" line="90"/>
         <source>List of directories for scanning:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="83"/>
+        <location filename="../settingsdialog.ui" line="69"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../settingsdialog.ui" line="97"/>
-        <source>Show quick search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -86,7 +96,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="62"/>
+        <location filename="../settingsdialog.cpp" line="59"/>
         <source>Select Directories for Scanning</source>
         <translation type="unfinished"></translation>
     </message>

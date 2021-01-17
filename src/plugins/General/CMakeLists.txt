@@ -110,6 +110,6 @@ IF(USE_RDETECT AND Qt5WinExtras_FOUND)
 add_subdirectory(rdetect)
 ENDIF(USE_RDETECT AND Qt5WinExtras_FOUND)
 
-IF(USE_LIBRARY AND Qt5Concurrent_FOUND)
+IF(USE_LIBRARY AND Qt5Concurrent_FOUND AND Qt5Sql_FOUND)
 add_subdirectory(library)
-ENDIF(USE_LIBRARY AND Qt5Concurrent_FOUND)
+ENDIF(USE_LIBRARY AND Qt5Concurrent_FOUND AND Qt5Sql_FOUND)

@@ -39,7 +39,7 @@ public:
     LibraryModel(QObject *parent = nullptr);
     ~LibraryModel();
 
-    Qt::ItemFlags flags(const QModelIndex &index) const;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
     QStringList mimeTypes() const override;
     QMimeData *mimeData(const QModelIndexList &indexes) const override;
     bool canFetchMore(const QModelIndex &parent) const override;

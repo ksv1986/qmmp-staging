@@ -253,7 +253,7 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
 
             avformat_close_input(&in);
             delete info;
-            return (trackNumber > 0) ? parser.createPlayList(trackNumber) : parser.createPlayList();
+            return parser.createPlayList(trackNumber);
         }
 
         AVDictionaryEntry *album = av_dict_get(in->metadata,"album",nullptr,0);

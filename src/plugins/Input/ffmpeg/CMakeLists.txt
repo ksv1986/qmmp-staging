@@ -20,6 +20,7 @@ ADD_DEFINITIONS(${FFMPEG_CFLAGS})
 SET(libffmpeg_SRCS
   decoder_ffmpeg.cpp
   decoder_ffmpegcue.cpp
+  decoder_ffmpegm4b.cpp
   decoderffmpegfactory.cpp
   ffmpegmetadatamodel.cpp
   settingsdialog.cpp
@@ -29,6 +30,7 @@ SET(libffmpeg_SRCS
 SET(libffmpeg_HDRS
   decoder_ffmpeg.h
   decoder_ffmpegcue.h
+  decoder_ffmpegm4b.h
   replaygainreader.h
 )
 

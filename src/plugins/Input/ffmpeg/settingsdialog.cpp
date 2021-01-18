@@ -36,7 +36,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     setAttribute(Qt::WA_DeleteOnClose);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     QStringList filters = {
-        "*.wma", "*.ape", "*.tta", "*.m4a", "*.aac", "*.ra", "*.shn", "*.vqf", "*.ac3", "*.tak", "*.dsf", "*.dsdiff"
+        "*.wma", "*.ape", "*.tta", "*.m4a", "*.m4b", "*.aac", "*.ra", "*.shn", "*.vqf", "*.ac3", "*.tak", "*.dsf", "*.dsdiff"
     };
     filters = settings.value("FFMPEG/filters", filters).toStringList();
 
@@ -88,7 +88,7 @@ void SettingsDialog::accept()
     if (m_ui.aacCheckBox->isChecked())
         filters << "*.aac";
     if (m_ui.mp4CheckBox->isChecked())
-        filters << "*.m4a";
+        filters << "*.m4a" << "*.m4b";
     if (m_ui.raCheckBox->isChecked())
         filters << "*.ra";
     if (m_ui.shCheckBox->isChecked())

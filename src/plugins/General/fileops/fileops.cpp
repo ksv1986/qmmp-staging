@@ -371,6 +371,7 @@ void FileOps::execute(const QList<PlayListTrack *> &tracks, const MetaDataFormat
             break;
 
         QString command = formatter->format(track); //generate file name
+        qDebug("FileOps: exec command: %s", qPrintable(command));
 
 #ifdef Q_OS_WIN
         QProcess::startDetached(QString("cmd.exe /C %1").arg(command));

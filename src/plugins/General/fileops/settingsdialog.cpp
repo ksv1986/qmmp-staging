@@ -155,10 +155,14 @@ void SettingsDialog::updateLineEdits()
     {
         QTableWidgetItem *nameItem = m_ui.tableWidget->item(m_ui.tableWidget->currentRow(), 2);
         m_ui.destinationEdit->setText(nameItem->data(DestionationRole).toString());
-        m_ui.patternEdit->setText(nameItem->data(PatternRole).toString());
-
         QComboBox *comboBox = qobject_cast<QComboBox *>(m_ui.tableWidget->cellWidget(m_ui.tableWidget->currentRow(), 1));
         int action = comboBox->itemData(comboBox->currentIndex()).toInt();
+
+        if(action == FileOps::EXECUTE)
+             m_ui.patternEdit->setText(nameItem->data(CommandRole).toString());
+        else
+            m_ui.patternEdit->setText(nameItem->data(PatternRole).toString());
+
         if(action == FileOps::COPY || action == FileOps::MOVE)
         {
             m_ui.destinationEdit->setVisible(true);

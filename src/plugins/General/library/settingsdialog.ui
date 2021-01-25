@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>423</width>
-    <height>292</height>
+    <width>479</width>
+    <height>378</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,48 +23,18 @@
    <property name="bottomMargin">
     <number>6</number>
    </property>
-   <item row="3" column="1">
-    <widget class="QToolButton" name="removeDirButton">
+   <item row="0" column="0" colspan="3">
+    <widget class="QLabel" name="label">
      <property name="text">
-      <string>Remove</string>
-     </property>
-     <property name="icon">
-      <iconset theme="list-remove">
-       <normaloff>.</normaloff>.</iconset>
+      <string>List of directories for scanning:</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
-    <spacer name="verticalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>68</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="1">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>68</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="0" rowspan="4">
+   <item row="1" column="0" colspan="3">
     <widget class="QListWidget" name="dirsListWidget"/>
    </item>
-   <item row="2" column="1">
-    <widget class="QToolButton" name="addDirButton">
+   <item row="2" column="0">
+    <widget class="QPushButton" name="addDirButton">
      <property name="text">
       <string>Add</string>
      </property>
@@ -74,20 +44,37 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="0" colspan="2">
+   <item row="2" column="1">
+    <widget class="QPushButton" name="removeDirButton">
+     <property name="text">
+      <string>Remove</string>
+     </property>
+     <property name="icon">
+      <iconset theme="list-remove">
+       <normaloff>.</normaloff>.</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>267</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="0" colspan="3">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
      <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>List of directories for scanning:</string>
      </property>
     </widget>
    </item>

@@ -45,14 +45,15 @@ Syntax:
 %{decoder} - decoder name,
 %{filesize} - file size,
 %if(A,B,C) or %if(A&B&C,D,E) - condition,
-%dir(n) - Name of the directory located on n levels above.
+%dir(n) - name of the directory located on n levels above,
+%dir - full path of the parent directory.
 */
 
 #include <QStringList>
 #include <QUrl>
 #include "metadataformatter.h"
 
-//#define DUMP_NODES
+#define DUMP_NODES
 
 MetaDataFormatter::MetaDataFormatter(const QString &pattern)
 {
@@ -335,7 +336,7 @@ bool MetaDataFormatter::parseIf(QList<MetaDataFormatter::Node> *nodes, QString::
 
 bool MetaDataFormatter::parseDir(QList<MetaDataFormatter::Node> *nodes, QString::const_iterator *i, QString::const_iterator end)
 {
-    if((*i) + 1 == end || (*i) + 2 == end || (*i) + 3 == end)
+    if((*i) + 1 == end || (*i) + 2 == end)
         return false;
 
     if((**i) != QChar('d') || *((*i)+1) != QChar('i') || *((*i)+2) != QChar('r'))
@@ -343,11 +344,16 @@ bool MetaDataFormatter::parseDir(QList<MetaDataFormatter::Node> *nodes, QString:
 
     (*i)+=3;
 
-    if((**i) != QChar('('))
-        return false;
-
     Node node;
     node.command = Node::DIR_FUNCTION;
+
+    if((**i) == end || (**i) != QChar('(')) // %dir without params
+    {
+        (*i)--;
+        nodes->append(node);
+        return true;
+    }
+
     QString var;
 
     enum {
@@ -486,7 +492,10 @@ QString MetaDataFormatter::evalute(const QList<Node> *nodes, const TrackInfo *in
         }
         else if(node.command == Node::DIR_FUNCTION)
         {
-            out.append(info->path().section('/', -node.params[0].number - 2, -node.params[0].number - 2));
+            if(node.params.isEmpty())
+                out.append(info->path().mid(0, info->path().lastIndexOf('/')));
+            else
+                out.append(info->path().section('/', -node.params[0].number - 2, -node.params[0].number - 2));
         }
     }
     return out;
@@ -574,6 +583,8 @@ QString MetaDataFormatter::dumpNode(MetaDataFormatter::Node node) const
         str += "AND_OPERATOR";
     else if(node.command == Node::OR_OPERATOR)
         str += "OR_OPERATOR";
+    else if(node.command == Node::DIR_FUNCTION)
+        str += "DIR_FUNCTION";
     str += "(";
     for(const Param &p : qAsConst(node.params))
     {

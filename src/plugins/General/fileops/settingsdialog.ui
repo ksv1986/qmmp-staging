@@ -43,6 +43,9 @@
      <property name="cornerButtonEnabled">
       <bool>true</bool>
      </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
      <column>
       <property name="text">
        <string>Enabled</string>
@@ -78,6 +81,10 @@
        <property name="text">
         <string>Add</string>
        </property>
+       <property name="icon">
+        <iconset theme="list-add">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
       </widget>
      </item>
      <item>
@@ -90,6 +97,10 @@
        </property>
        <property name="text">
         <string>Remove</string>
+       </property>
+       <property name="icon">
+        <iconset theme="list-remove">
+         <normaloff>.</normaloff>.</iconset>
        </property>
       </widget>
      </item>
@@ -111,7 +122,7 @@
    <item row="2" column="0" colspan="2">
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="destinationLabel">
        <property name="text">
         <string>Destination:</string>
        </property>
@@ -128,7 +139,7 @@
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="patternLabel">
        <property name="text">
         <string>File name pattern:</string>
        </property>

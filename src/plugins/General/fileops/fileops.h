@@ -47,22 +47,18 @@ public:
         RENAME,
         REMOVE,
         MOVE,
+        EXECUTE
     };
 
 private slots:
-    void execAction(int n);
+    void execAction();
 
 private:
     void copy(const QList<PlayListTrack*> &tracks, const QString &dest, const MetaDataFormatter *formatter);
-    void rename(const QList<PlayListTrack *> &tracks, const MetaDataFormatter *formatter,
-                PlayListModel *model);
-    void move(const QList<PlayListTrack*> &tracks, const QString &dest, const MetaDataFormatter *formatter,
-              PlayListModel *model);
+    void rename(const QList<PlayListTrack *> &tracks, const MetaDataFormatter *formatter, PlayListModel *model);
+    void move(const QList<PlayListTrack*> &tracks, const QString &dest, const MetaDataFormatter *formatter, PlayListModel *model);
+    void execute(const QList<PlayListTrack*> &tracks, const MetaDataFormatter *formatter, PlayListModel *model);
     bool isValid(PlayListTrack *track) const;
-
-    QList <int> m_types;
-    QStringList m_patterns;
-    QStringList m_destinations;
 };
 
 #endif

@@ -26,7 +26,7 @@
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class ActionItem;
+class QComboBox;
 
 class SettingsDialog : public QDialog
 {
@@ -52,37 +52,16 @@ private slots:
 
 private:
     void createMenus();
+    QComboBox *createComboBox();
+
     Ui::SettingsDialog m_ui;
+
+    enum DataTypeRole
+    {
+        PatternRole = Qt::UserRole + 1,
+        DestionationRole,
+        CommandRole
+    };
 };
-
-class ActionItem: public QTableWidgetItem
-{
-public:
-    explicit ActionItem (const QString &text): QTableWidgetItem(text){}
-
-    inline const QString &pattern() const
-    {
-        return m_pattern;
-    }
-
-    inline const QString &destination() const
-    {
-        return m_destination;
-    }
-
-    inline void setPattern(const QString &pattern)
-    {
-        m_pattern = pattern;
-    }
-
-    inline void setDestination(const QString &dest)
-    {
-        m_destination = dest;
-    }
-
-private:
-    QString m_pattern, m_destination;
-};
-
 
 #endif

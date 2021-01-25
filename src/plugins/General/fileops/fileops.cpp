@@ -25,6 +25,7 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QDir>
+#include <QProcess>
 #include <qmmp/soundcore.h>
 #include <qmmpui/uihelper.h>
 #include <qmmpui/playlistmodel.h>
@@ -40,31 +41,39 @@ FileOps::FileOps(QObject *parent) : QObject(parent)
 {
     //separators
     QAction *separator1 = new QAction(this);
-    separator1->setSeparator (true);
+    separator1->setSeparator(true);
     QAction *separator2 = new QAction(this);
-    separator2->setSeparator (true);
+    separator2->setSeparator(true);
     //load settings
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("FileOps");
-    int count = settings.value("count", 0).toInt();
-    if (count > 0)
+    if(!settings.value("name_0").isNull())
         UiHelper::instance()->addAction(separator1, UiHelper::PLAYLIST_MENU);
     else
         return;
 
-    for (int i = 0; i < count; ++i)
+    int i = 0;
+    while(!settings.value(QString("name_%1").arg(i)).isNull())
     {
-        m_types << settings.value(QString("action_%1").arg(i), FileOps::COPY).toInt();
-        QString name = settings.value(QString("name_%1").arg(i), "Action").toString();
-        m_patterns << settings.value(QString("pattern_%1").arg(i)).toString();
-        m_destinations << settings.value(QString("destination_%1").arg(i)).toString();
-        if (settings.value(QString("enabled_%1").arg(i), true).toBool())
+        QString name = settings.value(QString("name_%1").arg(i)).toString();
+        QVariantMap data = {
+            { "action",  settings.value(QString("action_%1").arg(i), FileOps::COPY).toInt() },
+            { "pattern", settings.value(QString("pattern_%1").arg(i)).toString() },
+            { "destination", settings.value(QString("destination_%1").arg(i)).toString() },
+            { "command", settings.value(QString("command_%1").arg(i)).toString() },
+
+        };
+
+        if(settings.value(QString("enabled_%1").arg(i), true).toBool())
         {
             QAction *action = new QAction(name, this);
+            action->setData(data);
             action->setShortcut(settings.value(QString("hotkey_%1").arg(i)).toString());
-            connect(action, &QAction::triggered, [i,this]{ execAction(i); });
+            connect(action, &QAction::triggered, this, &FileOps::execAction);
             UiHelper::instance()->addAction(action, UiHelper::PLAYLIST_MENU);
         }
+
+        ++i;
     }
     settings.endGroup();
     UiHelper::instance()->addAction(separator2, UiHelper::PLAYLIST_MENU);
@@ -73,12 +82,17 @@ FileOps::FileOps(QObject *parent) : QObject(parent)
 FileOps::~FileOps()
 {}
 
-void FileOps::execAction(int n)
+void FileOps::execAction()
 {
-    int type = m_types.at(n);
-    QString pattern = m_patterns.at(n);
-    MetaDataFormatter formatter(pattern);
-    QString destination = m_destinations.at(n);
+    QAction *action = qobject_cast<QAction *>(sender());
+    QVariantMap data = action->data().toMap();
+
+    int type = data["action"].toInt();
+    QString pattern = data["pattern"].toString();
+    QString destination = data["destination"].toString();
+    QString command = data["command"].toString();
+
+    MetaDataFormatter formatter(type == EXECUTE ? command : pattern);
 
     PlayListModel *model = MediaPlayer::instance()->playListManager()->selectedPlayList();
     const QList<PlayListTrack*> tracks = model->selectedTracks();
@@ -88,7 +102,7 @@ void FileOps::execAction(int n)
     case COPY:
     {
         qDebug("FileOps: copy");
-        if (!QDir(destination).exists ())
+        if(!QDir(destination).exists ())
         {
             QMessageBox::critical (qApp->activeWindow (), tr("Error"),
                                    tr("Destination directory doesn't exist"));
@@ -106,21 +120,21 @@ void FileOps::execAction(int n)
     case REMOVE:
     {
         qDebug("FileOps: remove");
-        if (QMessageBox::question (qApp->activeWindow (), tr("Remove Files"),
+        if(QMessageBox::question (qApp->activeWindow (), tr("Remove Files"),
                                    tr("Are you sure you want to remove %n file(s) from disk?",
                                       "",tracks.size()),
                                    QMessageBox::Yes | QMessageBox::No) !=  QMessageBox::Yes)
             break;
 
-        if (PlayListManager::instance()->selectedPlayList() != model)
+        if(PlayListManager::instance()->selectedPlayList() != model)
             break;
 
         for(PlayListTrack *track : qAsConst(tracks))
         {
-            if (PlayListManager::instance()->selectedPlayList() != model)
+            if(PlayListManager::instance()->selectedPlayList() != model)
                 break;
 
-            if (isValid(track) && QFile::exists(track->path()) && QFile::remove(track->path()))
+            if(isValid(track) && QFile::exists(track->path()) && QFile::remove(track->path()))
                 model->removeTrack(track);
         }
         break;
@@ -128,13 +142,13 @@ void FileOps::execAction(int n)
     case MOVE:
     {
         qDebug("FileOps: move");
-        if (!QDir(destination).exists ())
+        if(!QDir(destination).exists ())
         {
             QMessageBox::critical (qApp->activeWindow (), tr("Error"),
                                    tr("Destination directory doesn't exist"));
             break;
         }
-        if (QMessageBox::question (qApp->activeWindow (), tr("Move Files"),
+        if(QMessageBox::question (qApp->activeWindow (), tr("Move Files"),
                                    tr("Are you sure you want to move %n file(s)?",
                                       "",tracks.size()),
                                    QMessageBox::Yes | QMessageBox::No) !=  QMessageBox::Yes)
@@ -142,6 +156,12 @@ void FileOps::execAction(int n)
             break;
         }
         move(tracks, destination, &formatter, model);
+        break;
+    }
+    case EXECUTE:
+    {
+        qDebug("FileOps: execute");
+        execute(tracks, &formatter, model);
         break;
     }
     }
@@ -154,17 +174,17 @@ void FileOps::copy(const QList<PlayListTrack *> &tracks, const QString &dest, co
     progress.setWindowTitle(tr("Copying"));
     progress.setCancelButtonText(tr("Stop"));
     progress.show();
-    progress.setAutoClose (false);
+    progress.setAutoClose(false);
     int i  = 0;
     for(PlayListTrack *track : qAsConst(tracks))
     {
-        if (!isValid(track) || !QFile::exists(track->path()))
+        if(!isValid(track) || !QFile::exists(track->path()))
             continue;
 
         QString fileName = formatter->format(track); //generate file name
 
         QString ext = QString(".") + track->path().section(".", -1).toLower();
-        if (!ext.isEmpty() && !fileName.endsWith(ext, Qt::CaseInsensitive))
+        if(!ext.isEmpty() && !fileName.endsWith(ext, Qt::CaseInsensitive))
             fileName += ext; //append extension
 
         //create destination path
@@ -184,18 +204,18 @@ void FileOps::copy(const QList<PlayListTrack *> &tracks, const QString &dest, co
         //copy file
         QFile in(track->path());
         QFile out(path);
-        if (!in.open(QIODevice::ReadOnly))
+        if(!in.open(QIODevice::ReadOnly))
         {
             qWarning("FileOps: %s", qPrintable(in.errorString ()));
             continue;
         }
-        if (!out.open(QIODevice::WriteOnly))
+        if(!out.open(QIODevice::WriteOnly))
         {
             qWarning("FileOps: %s", qPrintable(out.errorString ()));
             continue;
         }
 
-        progress.setMaximum(int(in.size()/COPY_BLOCK_SIZE));
+        progress.setMaximum(int(in.size() / COPY_BLOCK_SIZE));
         progress.setValue(0);
         progress.setLabelText (QString(tr("Copying file %1/%2")).arg(++i).arg(tracks.size()));
         progress.update();
@@ -203,7 +223,7 @@ void FileOps::copy(const QList<PlayListTrack *> &tracks, const QString &dest, co
         while (!in.atEnd ())
         {
             out.write(in.read(COPY_BLOCK_SIZE));
-            progress.setValue(int(out.size()/COPY_BLOCK_SIZE));
+            progress.setValue(int(out.size() / COPY_BLOCK_SIZE));
             qApp->processEvents();
         }
         if(progress.wasCanceled ())
@@ -216,21 +236,21 @@ void FileOps::rename(const QList<PlayListTrack *> &tracks, const MetaDataFormatt
 {
     for(PlayListTrack *track : qAsConst(tracks))
     {
-        if (!isValid(track) || !QFile::exists(track->path())) //is it file?
+        if(!isValid(track) || !QFile::exists(track->path())) //is it file?
             continue;
 
-        if (PlayListManager::instance()->selectedPlayList() != model)
+        if(PlayListManager::instance()->selectedPlayList() != model)
             break;
 
         QString fileName = formatter->format(track); //generate file name
 
         QString ext = QString(".") + track->path().section(".", -1).toLower();
-        if (!ext.isEmpty() && !fileName.endsWith(ext, Qt::CaseInsensitive))
+        if(!ext.isEmpty() && !fileName.endsWith(ext, Qt::CaseInsensitive))
             fileName += ext; //append extension
         //rename file
         QFile file(track->path());
         QString dest = QFileInfo(track->path()).absolutePath ();
-        if (isValid(track) && file.rename(dest + "/" + fileName) && isValid(track))
+        if(isValid(track) && file.rename(dest + "/" + fileName) && isValid(track))
         {
             track->setPath(dest + "/" + fileName);
             track->updateMetaData();
@@ -252,16 +272,16 @@ void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, co
     int i  = 0;
     for(PlayListTrack *track : qAsConst(tracks))
     {
-        if (!isValid(track) || !QFile::exists(track->path()))
+        if(!isValid(track) || !QFile::exists(track->path()))
             continue;
 
-        if (PlayListManager::instance()->selectedPlayList() != model)
+        if(PlayListManager::instance()->selectedPlayList() != model)
             break;
 
         QString fileName = formatter->format(track); //generate file name
 
         QString ext = QString(".") + track->path().section(".", -1).toLower();
-        if (!ext.isEmpty() && !fileName.endsWith(ext, Qt::CaseInsensitive))
+        if(!ext.isEmpty() && !fileName.endsWith(ext, Qt::CaseInsensitive))
             fileName += ext;  //append extension
         //create destination path
         QString path = dest + "/" + fileName;
@@ -300,18 +320,18 @@ void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, co
         //copy file
         QFile in(track->path());
         QFile out(path);
-        if (!in.open(QIODevice::ReadOnly))
+        if(!in.open(QIODevice::ReadOnly))
         {
             qWarning("FileOps: %s", qPrintable(in.errorString ()));
             continue;
         }
-        if (!out.open(QIODevice::WriteOnly))
+        if(!out.open(QIODevice::WriteOnly))
         {
             qWarning("FileOps: %s", qPrintable(out.errorString ()));
             continue;
         }
 
-        progress.setMaximum(int(in.size()/COPY_BLOCK_SIZE));
+        progress.setMaximum(int(in.size() / COPY_BLOCK_SIZE));
         progress.setValue(0);
         progress.update();
 
@@ -319,7 +339,7 @@ void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, co
         {
             progress.wasCanceled ();
             out.write(in.read(COPY_BLOCK_SIZE));
-            progress.setValue(int(out.size()/COPY_BLOCK_SIZE));
+            progress.setValue(int(out.size() / COPY_BLOCK_SIZE));
             qApp->processEvents();
         }
 
@@ -340,8 +360,29 @@ void FileOps::move(const QList<PlayListTrack *> &tracks, const QString &dest, co
     progress.close();
 }
 
+void FileOps::execute(const QList<PlayListTrack *> &tracks, const MetaDataFormatter *formatter, PlayListModel *model)
+{
+    for(PlayListTrack *track : qAsConst(tracks))
+    {
+        if(!isValid(track) || !QFile::exists(track->path())) //is it file?
+            continue;
+
+        if(PlayListManager::instance()->selectedPlayList() != model)
+            break;
+
+        QString command = formatter->format(track); //generate file name
+
+#ifdef Q_OS_WIN
+        QProcess::startDetached(QString("cmd.exe /C %1").arg(command));
+#else
+        QStringList args = { "-c", command };
+        QProcess::startDetached("sh", args);
+#endif
+    }
+}
+
 bool FileOps::isValid(PlayListTrack *track) const
 {
-    QList<PlayListTrack*> tracks = PlayListManager::instance()->selectedPlayList()->selectedTracks();
+    const QList<PlayListTrack*> tracks = PlayListManager::instance()->selectedPlayList()->selectedTracks();
     return tracks.contains(track);
 }

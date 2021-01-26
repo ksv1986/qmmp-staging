@@ -86,17 +86,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="90"/>
+        <location filename="../settingsdialog.ui" line="29"/>
         <source>List of directories for scanning:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="69"/>
+        <location filename="../settingsdialog.ui" line="39"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="29"/>
+        <location filename="../settingsdialog.ui" line="50"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>

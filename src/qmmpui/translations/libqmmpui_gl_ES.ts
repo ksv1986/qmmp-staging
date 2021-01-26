@@ -216,11 +216,16 @@
     </message>
     <message>
         <location filename="../columneditor.cpp" line="102"/>
-        <source>Parent Directory</source>
-        <translation>Directorio superior</translation>
+        <source>Parent Directory Name</source>
+        <translation type="unfinished">Nome do directorio superior</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
+        <source>Parent Directory Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../columneditor.cpp" line="104"/>
         <source>Custom</source>
         <translation>Persoalizado</translation>
     </message>
@@ -1047,37 +1052,42 @@
         <translation>Duración</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="58"/>
+        <location filename="../metadataformattermenu.cpp" line="57"/>
+        <source>Parent Directory Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="59"/>
         <source>Bitrate</source>
         <translation>Taxa de bits</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="59"/>
+        <location filename="../metadataformattermenu.cpp" line="60"/>
         <source>Sample Rate</source>
         <translation>Taxa do Sample</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="60"/>
+        <location filename="../metadataformattermenu.cpp" line="61"/>
         <source>Number of Channels</source>
         <translation>Número de Canles</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="61"/>
+        <location filename="../metadataformattermenu.cpp" line="62"/>
         <source>Sample Size</source>
         <translation>Tamaño do Sample</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="62"/>
+        <location filename="../metadataformattermenu.cpp" line="63"/>
         <source>Format</source>
         <translation>Formato</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="63"/>
+        <location filename="../metadataformattermenu.cpp" line="64"/>
         <source>Decoder</source>
         <translation>Decodificador</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="66"/>
+        <location filename="../metadataformattermenu.cpp" line="67"/>
         <source>File Size</source>
         <translation>Tamaño do arquivo</translation>
     </message>

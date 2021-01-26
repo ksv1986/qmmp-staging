@@ -4,24 +4,24 @@
 <context>
     <name>FileOps</name>
     <message>
-        <location filename="../fileops.cpp" line="93"/>
-        <location filename="../fileops.cpp" line="133"/>
+        <location filename="../fileops.cpp" line="107"/>
+        <location filename="../fileops.cpp" line="147"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="94"/>
-        <location filename="../fileops.cpp" line="134"/>
+        <location filename="../fileops.cpp" line="108"/>
+        <location filename="../fileops.cpp" line="148"/>
         <source>Destination directory doesn&apos;t exist</source>
         <translation>El directorio de destino no existe</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="137"/>
+        <location filename="../fileops.cpp" line="151"/>
         <source>Move Files</source>
         <translation>Mover archivos</translation>
     </message>
     <message numerus="yes">
-        <location filename="../fileops.cpp" line="138"/>
+        <location filename="../fileops.cpp" line="152"/>
         <source>Are you sure you want to move %n file(s)?</source>
         <translation>
             <numerusform>¿Está usted seguro de querer mover %n archivo(s)?</numerusform>
@@ -29,38 +29,38 @@
         </translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="154"/>
+        <location filename="../fileops.cpp" line="174"/>
         <source>Copying</source>
         <translation>Copiando</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="155"/>
-        <location filename="../fileops.cpp" line="249"/>
+        <location filename="../fileops.cpp" line="175"/>
+        <location filename="../fileops.cpp" line="269"/>
         <source>Stop</source>
         <translation>Detener</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="200"/>
+        <location filename="../fileops.cpp" line="220"/>
         <source>Copying file %1/%2</source>
         <translation>Copiando archivo %1/%2</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="248"/>
+        <location filename="../fileops.cpp" line="268"/>
         <source>Moving</source>
         <translation>Moviendo</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="284"/>
+        <location filename="../fileops.cpp" line="304"/>
         <source>Moving file %1/%2</source>
         <translation>Moviendo archivo %1/%2</translation>
     </message>
     <message>
-        <location filename="../fileops.cpp" line="109"/>
+        <location filename="../fileops.cpp" line="123"/>
         <source>Remove Files</source>
         <translation>Quitar archivos</translation>
     </message>
     <message numerus="yes">
-        <location filename="../fileops.cpp" line="110"/>
+        <location filename="../fileops.cpp" line="124"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
         <translation>
             <numerusform>¿Seguro que quiere eliminar %n archivo(s) del disco?</numerusform>
@@ -117,75 +117,82 @@
         <translation>Configuración de operaciones de archivo</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="48"/>
+        <location filename="../settingsdialog.ui" line="51"/>
         <source>Enabled</source>
         <translation>Habilitado</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="53"/>
+        <location filename="../settingsdialog.ui" line="56"/>
         <source>Operation</source>
         <translation>Operación</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="58"/>
+        <location filename="../settingsdialog.ui" line="61"/>
         <source>Menu text</source>
         <translation>Texto del menú</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="63"/>
+        <location filename="../settingsdialog.ui" line="66"/>
         <source>Shortcut</source>
         <translation>Atajo</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="79"/>
+        <location filename="../settingsdialog.ui" line="82"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="92"/>
-        <location filename="../settingsdialog.cpp" line="54"/>
-        <location filename="../settingsdialog.cpp" line="134"/>
+        <location filename="../settingsdialog.ui" line="99"/>
+        <location filename="../settingsdialog.cpp" line="219"/>
         <source>Remove</source>
         <translation>Eliminar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="116"/>
+        <location filename="../settingsdialog.ui" line="127"/>
         <source>Destination:</source>
         <translation>Destino:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="126"/>
-        <location filename="../settingsdialog.ui" line="143"/>
+        <location filename="../settingsdialog.ui" line="137"/>
+        <location filename="../settingsdialog.ui" line="154"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="133"/>
+        <location filename="../settingsdialog.ui" line="144"/>
+        <location filename="../settingsdialog.cpp" line="152"/>
         <source>File name pattern:</source>
         <translation>Patrón de nombre de archivo:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="51"/>
-        <location filename="../settingsdialog.cpp" line="131"/>
+        <location filename="../settingsdialog.cpp" line="216"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="52"/>
-        <location filename="../settingsdialog.cpp" line="132"/>
+        <location filename="../settingsdialog.cpp" line="217"/>
         <source>Rename</source>
         <translation>Renombrar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="53"/>
-        <location filename="../settingsdialog.cpp" line="133"/>
+        <location filename="../settingsdialog.cpp" line="218"/>
         <source>Move</source>
         <translation>Mover</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="137"/>
+        <location filename="../settingsdialog.cpp" line="124"/>
         <source>New action</source>
         <translation>Nueva acción</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="181"/>
+        <source>Command:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="220"/>
+        <source>Execute</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="232"/>

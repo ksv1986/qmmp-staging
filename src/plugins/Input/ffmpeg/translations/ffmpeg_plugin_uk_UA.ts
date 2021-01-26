@@ -4,32 +4,32 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="311"/>
+        <location filename="../decoderffmpegfactory.cpp" line="331"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>Про аудіо-модуль FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="312"/>
+        <location filename="../decoderffmpegfactory.cpp" line="332"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>Аудіо-модуль FFmpeg для Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="313"/>
+        <location filename="../decoderffmpegfactory.cpp" line="333"/>
         <source>Compiled against:</source>
         <translation>Зібрано з бібліотеками:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="326"/>
+        <location filename="../decoderffmpegfactory.cpp" line="346"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Розробник: Ілля Котов &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="136"/>
+        <location filename="../decoderffmpegfactory.cpp" line="144"/>
         <source>FFmpeg Plugin</source>
         <translation>Модуль FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="138"/>
+        <location filename="../decoderffmpegfactory.cpp" line="146"/>
         <source>FFmpeg Formats</source>
         <translation>Формати FFmpeg</translation>
     </message>

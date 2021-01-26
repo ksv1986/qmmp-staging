@@ -216,11 +216,16 @@
     </message>
     <message>
         <location filename="../columneditor.cpp" line="102"/>
-        <source>Parent Directory</source>
-        <translation>親ディレクトリー</translation>
+        <source>Parent Directory Name</source>
+        <translation type="unfinished">親ディレクトリー名</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
+        <source>Parent Directory Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../columneditor.cpp" line="104"/>
         <source>Custom</source>
         <translation>独自</translation>
     </message>
@@ -1047,37 +1052,42 @@
         <translation>演奏時間</translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="58"/>
-        <source>Bitrate</source>
+        <location filename="../metadataformattermenu.cpp" line="57"/>
+        <source>Parent Directory Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
-        <source>Sample Rate</source>
+        <source>Bitrate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="60"/>
-        <source>Number of Channels</source>
+        <source>Sample Rate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="61"/>
-        <source>Sample Size</source>
+        <source>Number of Channels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="62"/>
-        <source>Format</source>
+        <source>Sample Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="63"/>
+        <source>Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadataformattermenu.cpp" line="64"/>
         <source>Decoder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadataformattermenu.cpp" line="66"/>
+        <location filename="../metadataformattermenu.cpp" line="67"/>
         <source>File Size</source>
         <translation type="unfinished"></translation>
     </message>

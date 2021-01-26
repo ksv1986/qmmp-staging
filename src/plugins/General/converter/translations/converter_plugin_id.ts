@@ -26,7 +26,7 @@
         <translation>Mengenkode</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="276"/>
+        <location filename="../converter.cpp" line="280"/>
         <source>Finished</source>
         <translation>Selesai</translation>
     </message>

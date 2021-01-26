@@ -61,7 +61,8 @@ public:
      * %{decoder} - decoder name,
      * %{filesize} - file size,
      * %if(A,B,C) or %if(A&B&C,D,E) - condition,
-     * %dir(n) - Name of the directory located on \b n levels above.
+     * %dir(n) - name of the directory located on \b n levels above,
+     * %dir - full path of the parent directory.
      */
     MetaDataFormatter(const QString &pattern = QString());
     /*!

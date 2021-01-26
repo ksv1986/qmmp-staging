@@ -99,6 +99,7 @@ void ColumnEditor::fillTypes()
     m_ui->comboBox->addItem(tr("File Path"),"%F");
     m_ui->comboBox->addItem(tr("Track Index"), "%I");
     m_ui->comboBox->addItem(tr("Year"),"%y");
-    m_ui->comboBox->addItem(tr("Parent Directory"),"%dir(0)");
+    m_ui->comboBox->addItem(tr("Parent Directory Name"),"%dir(0)");
+    m_ui->comboBox->addItem(tr("Parent Directory Path"),"%dir");
     m_ui->comboBox->addItem(tr("Custom"),"custom");
 }

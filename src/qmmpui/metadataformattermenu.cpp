@@ -54,6 +54,7 @@ MetaDataFormatterMenu::MetaDataFormatterMenu(Type type, QWidget *parent) :
         addAction(tr("Artist - [Year] Album"))->setData("%p%if(%p&%a, - %if(%y,[%y] ,),)%a");
     }
     addAction(tr("Parent Directory Name"))->setData("%dir(0)");
+    addAction(tr("Parent Directory Path"))->setData("%dir");
     addSeparator();
     addAction(tr("Bitrate"))->setData("%{bitrate}");
     addAction(tr("Sample Rate"))->setData("%{samplerate}");

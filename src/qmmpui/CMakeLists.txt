@@ -59,6 +59,7 @@ SET(libqmmpui_SRCS
     coverviewer.cpp
     covereditor.cpp
     generalfactory.cpp
+    cueeditor.cpp
 )
 
 SET(libqmmpui_HDRS
@@ -115,7 +116,6 @@ SET(libqmmpui_DEVEL_HDRS
     qmmpui_export.h
 )
 
-
 SET(libqmmpui_UIS
     forms/detailsdialog.ui
     forms/tageditor.ui
@@ -126,6 +126,7 @@ SET(libqmmpui_UIS
     forms/addurldialog.ui
     forms/columneditor.ui
     forms/covereditor.ui
+    forms/cueeditor.ui
 )
 
 QT5_WRAP_UI(libqmmpui_UIS_H ${libqmmpui_UIS})

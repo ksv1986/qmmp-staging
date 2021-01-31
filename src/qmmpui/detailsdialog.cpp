@@ -32,6 +32,7 @@
 #include "playlisttrack.h"
 #include "tageditor_p.h"
 #include "covereditor_p.h"
+#include "cueeditor_p.h"
 #include "detailsdialog.h"
 
 DetailsDialog::DetailsDialog(const QList<PlayListTrack *> &tracks, QWidget *parent)
@@ -82,12 +83,17 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
     {
         TagEditor *tagEditor = qobject_cast<TagEditor *>(m_ui->tabWidget->currentWidget());
         CoverEditor *coverEditor = nullptr;
+        CueEditor *cueEditor = nullptr;
         if(tagEditor)
             tagEditor->save();
         else if((coverEditor = qobject_cast<CoverEditor *>(m_ui->tabWidget->currentWidget())))
         {
             coverEditor->save();
             MetaDataManager::instance()->clearCoverCache();
+        }
+        else if((cueEditor = qobject_cast<CueEditor *>(m_ui->tabWidget->currentWidget())))
+        {
+            cueEditor->save();
         }
     }
     else
@@ -204,6 +210,12 @@ void DetailsDialog::updatePage()
     {
         CoverEditor *coverEditor = new CoverEditor(m_metaDataModel, coverPath, this);
         m_ui->tabWidget->addTab(coverEditor, tr("Cover"));
+    }
+
+    if(m_metaDataModel && (m_metaDataModel->dialogHints() & MetaDataModel::IsCueEditable))
+    {
+        CueEditor *cueEditor = new CueEditor(m_metaDataModel, this);
+        m_ui->tabWidget->addTab(cueEditor, "CUE");
     }
 
     if(m_metaDataModel)

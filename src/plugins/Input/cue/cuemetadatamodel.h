@@ -32,10 +32,12 @@ public:
     ~CUEMetaDataModel();
     QList<MetaDataItem> extraProperties() const override;
     QString coverPath() const override;
+    QString cue() const override;
+    void setCue(const QString &content) override;
+    void removeCue() override;
 
 private:
-    CueFile *m_cueFile;
-    QString m_path;
+    QString m_dataFilePath, m_cueFilePath;
 };
 
 #endif // CUEMETADATAMODEL_H

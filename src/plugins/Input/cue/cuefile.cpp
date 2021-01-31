@@ -34,13 +34,16 @@
 
 CueFile::CueFile(const QString &path) : CueParser()
 {
-    QString filePath = path;
+    m_filePath = path;
+
     if(path.contains("://"))
     {
-        filePath.remove("cue://");
-        filePath.remove(QRegularExpression("#\\d+$"));
+        m_filePath.remove("cue://");
+        m_filePath.remove(QRegularExpression("#\\d+$"));
     }
-    QFile file(filePath);
+    qDebug("+%s+", qPrintable(m_filePath));
+
+    QFile file(m_filePath);
     if (!file.open(QIODevice::ReadOnly))
     {
         qDebug("CueFile: error: %s", qPrintable(file.errorString()));
@@ -81,10 +84,10 @@ CueFile::CueFile(const QString &path) : CueParser()
     settings.endGroup();
     //qDebug("CUEParser: using %s encoding", codec->name().constData());
     loadData(data, codec);
-    setUrl("cue", filePath);
+    setUrl("cue", m_filePath);
     for(const QString &dataFileName : files())
     {
-        QString dataFilePath = getDirtyPath(filePath, QFileInfo(filePath).dir().filePath(dataFileName));
+        QString dataFilePath = getDirtyPath(m_filePath, QFileInfo(m_filePath).dir().filePath(dataFileName));
         m_dataFiles.insert(dataFileName, dataFilePath);
         QList<TrackInfo *> pl = MetaDataManager::instance()->createPlayList(dataFilePath, TrackInfo::Properties);
         if(!pl.isEmpty())
@@ -109,6 +112,11 @@ CueFile::CueFile(const QString &path) : CueParser()
 
 CueFile::~CueFile()
 {}
+
+QString CueFile::cueFilePath() const
+{
+    return m_filePath;
+}
 
 QString CueFile::dataFilePath(int track) const
 {

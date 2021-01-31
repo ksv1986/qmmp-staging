@@ -18,31 +18,37 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QFileInfo>
+#include <QtDebug>
 #include <qmmp/metadatamanager.h>
 #include "cuefile.h"
 #include "cuemetadatamodel.h"
 
-CUEMetaDataModel::CUEMetaDataModel(const QString &url) : MetaDataModel(true)
+CUEMetaDataModel::CUEMetaDataModel(const QString &url) : MetaDataModel(false, IsCueEditable)
 {
-    m_cueFile = new CueFile(url);
-    if (m_cueFile->count() == 0)
+    qDebug() << Q_FUNC_INFO << url;
+
+    CueFile file(url);
+    if (file.isEmpty())
     {
         qWarning("CUEMetaDataModel: invalid cue file");
         return;
     }
     int track = url.section("#", -1).toInt();
-    m_path = m_cueFile->dataFilePath(track);
+    m_dataFilePath = file.dataFilePath(track);
+    m_cueFilePath = file.cueFilePath();
+    qDebug() << m_cueFilePath << url;
+    if(!QFileInfo(m_cueFilePath).isWritable())
+        setReadOnly(true);
 }
 
 CUEMetaDataModel::~CUEMetaDataModel()
-{
-    delete m_cueFile;
-}
+{}
 
 QList<MetaDataItem> CUEMetaDataModel::extraProperties() const
 {
     QList<MetaDataItem> ep;
-    MetaDataModel *model = MetaDataManager::instance()->createMetaDataModel(m_path, true);
+    MetaDataModel *model = MetaDataManager::instance()->createMetaDataModel(m_dataFilePath, true);
     if(model)
     {
         ep = model->extraProperties();
@@ -53,5 +59,23 @@ QList<MetaDataItem> CUEMetaDataModel::extraProperties() const
 
 QString CUEMetaDataModel::coverPath() const
 {
-    return MetaDataManager::instance()->findCoverFile(m_path);
+    return MetaDataManager::instance()->findCoverFile(m_dataFilePath);
+}
+
+QString CUEMetaDataModel::cue() const
+{
+    qDebug() << m_cueFilePath;
+    QFile file(m_cueFilePath);
+    file.open(QIODevice::ReadOnly);
+    return QString::fromUtf8(file.readAll());
+}
+
+void CUEMetaDataModel::setCue(const QString &content)
+{
+
+}
+
+void CUEMetaDataModel::removeCue()
+{
+
 }

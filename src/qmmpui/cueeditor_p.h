@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2021 by Ilya Kotov                                 *
+ *   Copyright (C) 2021 by Ilya Kotov                                      *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,38 +17,37 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef CUEFILE_H
-#define CUEFILE_H
 
-#include <QList>
-#include <QMap>
-#include <QString>
-#include <QStringList>
-#include <qmmp/qmmp.h>
-#include <qmmp/trackinfo.h>
-#include <qmmp/cueparser.h>
+#ifndef CUEEDITOR_P_H
+#define CUEEDITOR_P_H
 
+#include <QWidget>
 
-/**
-    @author Ilya Kotov <forkotov02@ya.ru>
-*/
-class CueFile : public CueParser
+namespace Ui {
+class CueEditor;
+}
+
+class MetaDataModel;
+
+class CueEditor : public QWidget
 {
-public:
-    explicit CueFile(const QString &path);
-    ~CueFile();
+    Q_OBJECT
 
-    QString cueFilePath() const;
-    QString dataFilePath(int track) const;
-    QStringList dataFilePaths() const;
+public:
+    explicit CueEditor(MetaDataModel *model, QWidget *parent = nullptr);
+    ~CueEditor();
+
+    void save();
+
+private slots:
+    void on_loadButton_clicked();
+    void on_deleteButton_clicked();
+    void on_saveAsButton_clicked();
 
 private:
-    QStringList splitLine(const QString &line);
-    QString getDirtyPath(const QString &cue_path, const QString &path);
-    QMap<QString, QString> m_dataFiles; //name, full path
-    bool m_dirty;
-    QString m_filePath;
-
+    Ui::CueEditor *m_ui;
+    MetaDataModel *m_model;
+    QString m_lastDir;
 };
 
-#endif //CUEFILE_H
+#endif // CUEEDITOR_P_H

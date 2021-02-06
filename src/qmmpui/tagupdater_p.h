@@ -34,7 +34,7 @@ class TagUpdater : public QObject
     Q_OBJECT
 
 public:
-    TagUpdater(QObject* o, QList<PlayListTrack*> tracks);
+    TagUpdater(QObject* o, const QList<PlayListTrack *> &tracks);
     QObject* m_observable;
     QList<PlayListTrack*> m_tracks;
 

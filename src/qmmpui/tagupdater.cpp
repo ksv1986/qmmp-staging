@@ -20,7 +20,7 @@
 
 #include "tagupdater_p.h"
 
-TagUpdater::TagUpdater(QObject* o, QList<PlayListTrack *> tracks) :
+TagUpdater::TagUpdater(QObject* o, const QList<PlayListTrack *> &tracks) :
     m_observable(o),
     m_tracks(tracks)
 {

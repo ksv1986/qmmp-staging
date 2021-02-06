@@ -26,8 +26,6 @@
 
 CUEMetaDataModel::CUEMetaDataModel(const QString &url) : MetaDataModel(false, IsCueEditable)
 {
-    qDebug() << Q_FUNC_INFO << url;
-
     CueFile file(url);
     if (file.isEmpty())
     {
@@ -37,7 +35,6 @@ CUEMetaDataModel::CUEMetaDataModel(const QString &url) : MetaDataModel(false, Is
     int track = url.section("#", -1).toInt();
     m_dataFilePath = file.dataFilePath(track);
     m_cueFilePath = file.cueFilePath();
-    qDebug() << m_cueFilePath << url;
     if(!QFileInfo(m_cueFilePath).isWritable())
         setReadOnly(true);
 }
@@ -64,7 +61,6 @@ QString CUEMetaDataModel::coverPath() const
 
 QString CUEMetaDataModel::cue() const
 {
-    qDebug() << m_cueFilePath;
     QFile file(m_cueFilePath);
     file.open(QIODevice::ReadOnly);
     return QString::fromUtf8(file.readAll());

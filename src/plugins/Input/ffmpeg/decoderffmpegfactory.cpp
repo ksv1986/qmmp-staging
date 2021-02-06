@@ -185,7 +185,6 @@ Decoder *DecoderFFmpegFactory::create(const QString &path, QIODevice *input)
 
 QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, TrackInfo::Parts parts, QStringList *)
 {
-    qDebug() << path;
     int trackNumber = -1; //cue/m4b track
     QString filePath = path;
 

@@ -41,7 +41,6 @@ CueFile::CueFile(const QString &path) : CueParser()
         m_filePath.remove("cue://");
         m_filePath.remove(QRegularExpression("#\\d+$"));
     }
-    qDebug("+%s+", qPrintable(m_filePath));
 
     QFile file(m_filePath);
     if (!file.open(QIODevice::ReadOnly))

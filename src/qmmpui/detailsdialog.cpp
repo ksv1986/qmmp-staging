@@ -249,7 +249,7 @@ void DetailsDialog::printInfo()
 
     //tags
     metaDataRows += formatRow(tr("Title"), m_info.value(Qmmp::TITLE));
-    metaDataRows += formatRow(tr("Artist"), m_info.value(Qmmp::ARTIST));
+    metaDataRows += formatRow(tr("Artist"), m_info.value (Qmmp::ARTIST));
     metaDataRows += formatRow(tr("Album artist"), m_info.value(Qmmp::ALBUMARTIST));
     metaDataRows += formatRow(tr("Album"), m_info.value(Qmmp::ALBUM));
     metaDataRows += formatRow(tr("Comment"), m_info.value(Qmmp::COMMENT));

@@ -87,7 +87,7 @@ void PlayListTrack::updateMetaData(const TrackInfo *info)
 
 void PlayListTrack::updateMetaData()
 {
-    QList <TrackInfo *> list =  MetaDataManager::instance()->createPlayList(path());
+    QList <TrackInfo *> list = MetaDataManager::instance()->createPlayList(path());
     if(!list.isEmpty() && !list.first()->path().contains("://"))
     {
         TrackInfo *info = list.first();

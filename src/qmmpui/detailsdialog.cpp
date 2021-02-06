@@ -111,10 +111,13 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
 void DetailsDialog::on_tabWidget_currentChanged(int index)
 {
     CoverEditor *coverEditor = nullptr;
+    CueEditor *cueEditor = nullptr;
     if(qobject_cast<TagEditor *>(m_ui->tabWidget->widget(index)))
         m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(m_metaDataModel && !m_metaDataModel->isReadOnly());
     else if((coverEditor = qobject_cast<CoverEditor *>(m_ui->tabWidget->currentWidget())))
         m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(coverEditor->isEditable());
+    else if((cueEditor = qobject_cast<CueEditor *>(m_ui->tabWidget->currentWidget())))
+        m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(cueEditor->isEditable());
     else
         m_ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
 }
@@ -214,7 +217,7 @@ void DetailsDialog::updatePage()
 
     if(m_metaDataModel && (m_metaDataModel->dialogHints() & MetaDataModel::IsCueEditable))
     {
-        CueEditor *cueEditor = new CueEditor(m_metaDataModel, this);
+        CueEditor *cueEditor = new CueEditor(m_metaDataModel, m_info, this);
         m_ui->tabWidget->addTab(cueEditor, "CUE");
     }
 

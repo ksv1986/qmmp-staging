@@ -27,15 +27,17 @@
 #include "filedialog.h"
 #include "ui_cueeditor.h"
 
-CueEditor::CueEditor(MetaDataModel *model, QWidget *parent) :
+CueEditor::CueEditor(MetaDataModel *model, const TrackInfo &info, QWidget *parent) :
     QWidget(parent),
     m_ui(new Ui::CueEditor),
-    m_model(model)
+    m_model(model),
+    m_info(info)
 {
     m_ui->setupUi(this);
     m_ui->plainTextEdit->setPlainText(model->cue());
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_lastDir = settings.value("CueEditor/last_dir",  QDir::homePath()).toString();
+    m_editable = m_model && (m_model->dialogHints() & MetaDataModel::IsCueEditable) && !m_model->isReadOnly();
 }
 
 CueEditor::~CueEditor()
@@ -60,6 +62,11 @@ void CueEditor::save()
     }
 }
 
+bool CueEditor::isEditable() const
+{
+    return m_editable;
+}
+
 void CueEditor::on_loadButton_clicked()
 {
     QString path = FileDialog::getOpenFileName(this, tr("Open CUE File"),
@@ -81,5 +88,19 @@ void CueEditor::on_deleteButton_clicked()
 
 void CueEditor::on_saveAsButton_clicked()
 {
+    QString path = FileDialog::getSaveFileName(this, tr("Save CUE File"),
+                                               m_lastDir + "/" + m_info.value(Qmmp::TITLE) + ".cue",
+                                               tr("CUE Files") +" (*.cue)");
 
+
+    if(!path.isEmpty())
+    {
+        m_lastDir = QFileInfo(path).absoluteDir().path();
+        QString data = m_ui->plainTextEdit->toPlainText().trimmed();
+        data.append(QChar::LineFeed);
+
+        QFile file(path);
+        file.open(QIODevice::WriteOnly);
+        file.write(data.toUtf8());
+    }
 }

@@ -23,6 +23,8 @@
 
 #include <QWidget>
 
+#include <qmmp/trackinfo.h>
+
 namespace Ui {
 class CueEditor;
 }
@@ -34,10 +36,11 @@ class CueEditor : public QWidget
     Q_OBJECT
 
 public:
-    explicit CueEditor(MetaDataModel *model, QWidget *parent = nullptr);
+    explicit CueEditor(MetaDataModel *model, const TrackInfo &info, QWidget *parent = nullptr);
     ~CueEditor();
 
     void save();
+    bool isEditable() const;
 
 private slots:
     void on_loadButton_clicked();
@@ -48,6 +51,8 @@ private:
     Ui::CueEditor *m_ui;
     MetaDataModel *m_model;
     QString m_lastDir;
+    bool m_editable;
+    TrackInfo m_info;
 };
 
 #endif // CUEEDITOR_P_H

@@ -76,7 +76,7 @@ public:
      */
     qint64 duration () const;
     /*!
-     * Returns \b true if stream/file has no infomation and empry path, otherwise returns \b false.
+     * Returns \b true if stream/file has no infomation and empty path, otherwise returns \b false.
      */
     bool isEmpty() const;
     /*!

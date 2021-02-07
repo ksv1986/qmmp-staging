@@ -68,10 +68,12 @@ QString CUEMetaDataModel::cue() const
 
 void CUEMetaDataModel::setCue(const QString &content)
 {
-
+    QFile file(m_cueFilePath);
+    file.open(QIODevice::WriteOnly);
+    file.write(content.toUtf8());
 }
 
 void CUEMetaDataModel::removeCue()
 {
-
+    QFile::remove(m_cueFilePath);
 }

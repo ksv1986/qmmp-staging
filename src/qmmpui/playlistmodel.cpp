@@ -313,7 +313,7 @@ int PlayListModel::currentIndex() const
 
 bool PlayListModel::setCurrent(int index)
 {
-    if (index > count()-1 || index < 0)
+    if(index > count()-1 || index < 0)
         return false;
     PlayListItem *item = m_container->item(index);
     if(item->isGroup())
@@ -336,14 +336,14 @@ bool PlayListModel::setCurrent(PlayListTrack *track)
 
 bool PlayListModel::isTrack(int index) const
 {
-    if (index > count()-1 || index < 0)
+    if(index > count()-1 || index < 0)
         return false;
     return !m_container->item(index)->isGroup();
 }
 
 bool PlayListModel::isGroup(int index) const
 {
-    if (index > count()-1 || index < 0)
+    if(index > count()-1 || index < 0)
         return false;
     return m_container->item(index)->isGroup();
 }
@@ -356,7 +356,7 @@ bool PlayListModel::next()
         emit listChanged(STOP_AFTER);
         return false;
     }
-    if (!m_queued_songs.isEmpty())
+    if(!m_queued_songs.isEmpty())
     {
         m_current_track = m_queued_songs.dequeue();
         m_current = m_container->indexOf(m_current_track);
@@ -371,7 +371,7 @@ bool PlayListModel::next()
 
 bool PlayListModel::previous()
 {
-    if (m_loader->isRunning())
+    if(m_loader->isRunning())
         m_play_state->prepare();
     return m_play_state->previous();
 }
@@ -522,7 +522,7 @@ void PlayListModel::removeTracks(const QList<PlayListItem *> &items)
     while (!m_container->isEmpty() && i < m_container->count())
     {
         PlayListItem *item = m_container->item(i);
-        if (!item->isGroup() && items.contains(item))
+        if(!item->isGroup() && items.contains(item))
         {
             flags |= removeTrackInternal(i);
 
@@ -567,7 +567,7 @@ void PlayListModel::removeSelection(bool inverted)
     while (!m_container->isEmpty() && i < m_container->count())
     {
         PlayListItem *item = m_container->item(i);
-        if (!item->isGroup() && item->isSelected() ^ inverted)
+        if(!item->isGroup() && item->isSelected() ^ inverted)
         {
             flags |= removeTrackInternal(i);
 
@@ -633,7 +633,7 @@ int PlayListModel::removeTrackInternal(int i)
         }
     }
 
-    if (track->isUsed())
+    if(track->isUsed())
         track->deleteLater();
     else
         delete track;
@@ -647,14 +647,14 @@ int PlayListModel::removeTrackInternal(int i)
 
 void PlayListModel::invertSelection()
 {
-    for (int i = 0; i < m_container->count(); ++i)
+    for(int i = 0; i < m_container->count(); ++i)
         m_container->setSelected(i, !m_container->isSelected(i));
     emit listChanged(SELECTION);
 }
 
 void PlayListModel::selectAll()
 {
-    for (int i = 0; i < m_container->count(); ++i)
+    for(int i = 0; i < m_container->count(); ++i)
         m_container->setSelected(i, true);
     emit listChanged(SELECTION);
 }
@@ -663,7 +663,7 @@ void PlayListModel::showDetails(QWidget *parent)
 {
     QList<PlayListTrack *> selected_tracks;
 
-    for (int i = 0; i < m_container->count(); ++i)
+    for(int i = 0; i < m_container->count(); ++i)
     {
         if(!m_container->isSelected(i))
             continue;
@@ -683,11 +683,9 @@ void PlayListModel::showDetails(QWidget *parent)
 
 void PlayListModel::showDetailsForCurrent(QWidget *parent)
 {
-    if (m_current_track)
+    if(m_current_track)
     {
-        QList<PlayListTrack *> l;
-        l.append(m_current_track);
-        QDialog *d = new DetailsDialog(l, parent);
+        QDialog *d = new DetailsDialog(QList<PlayListTrack *>() << m_current_track, parent);
         d->setAttribute(Qt::WA_DeleteOnClose, true);
         connect(d, SIGNAL(destroyed(QObject *)),SLOT(updateMetaData()));
         d->show();
@@ -696,9 +694,9 @@ void PlayListModel::showDetailsForCurrent(QWidget *parent)
 
 int PlayListModel::firstSelectedUpper(int row)
 {
-    for (int i = row - 1;i >= 0;i--)
+    for(int i = row - 1;i >= 0;i--)
     {
-        if (isSelected(i))
+        if(isSelected(i))
             return i;
     }
     return -1;
@@ -706,9 +704,9 @@ int PlayListModel::firstSelectedUpper(int row)
 
 int PlayListModel::firstSelectedLower(int row)
 {
-    for (int i = row + 1;i < count() ;i++)
+    for(int i = row + 1;i < count() ;i++)
     {
-        if (isSelected(i))
+        if(isSelected(i))
             return i;
     }
     return -1;
@@ -722,7 +720,7 @@ qint64 PlayListModel::totalDuration() const
 void PlayListModel::moveItems(int from, int to)
 {
     // Get rid of useless work
-    if (from == to)
+    if(from == to)
         return;
 
     QList<int> selected_indexes = selectedIndexes();
@@ -733,7 +731,7 @@ void PlayListModel::moveItems(int from, int to)
     if(std::any_of(selected_indexes.cbegin(), selected_indexes.cend(), [this](int i){ return !isTrack(i); }))
         return;
 
-    if (bottommostInSelection(from) == INVALID_INDEX ||
+    if(bottommostInSelection(from) == INVALID_INDEX ||
             from == INVALID_INDEX ||
             topmostInSelection(from) == INVALID_INDEX)
         return;
@@ -747,12 +745,12 @@ void PlayListModel::moveItems(int from, int to)
 
 int PlayListModel::topmostInSelection(int row)
 {
-    if (row == 0)
+    if(row == 0)
         return 0;
 
-    for (int i = row - 1;i >= 0;i--)
+    for(int i = row - 1;i >= 0;i--)
     {
-        if (isSelected(i))
+        if(isSelected(i))
             continue;
         else
             return i + 1;
@@ -762,12 +760,12 @@ int PlayListModel::topmostInSelection(int row)
 
 int PlayListModel::bottommostInSelection(int row)
 {
-    if (row >= count() - 1)
+    if(row >= count() - 1)
         return row;
 
-    for (int i = row + 1; i < count(); i++)
+    for(int i = row + 1; i < count(); i++)
     {
-        if (isSelected(i))
+        if(isSelected(i))
             continue;
         else
             return i - 1;
@@ -786,9 +784,9 @@ const SimpleSelection& PlayListModel::getSelection(int row)
 QList<int> PlayListModel::selectedIndexes() const
 {
     QList<int> selected_rows;
-    for (int i = 0; i < m_container->count(); i++)
+    for(int i = 0; i < m_container->count(); i++)
     {
-        if (m_container->item(i)->isSelected())
+        if(m_container->item(i)->isSelected())
         {
             selected_rows.append(i);
         }
@@ -824,7 +822,7 @@ void PlayListModel::addToQueue()
 
 void PlayListModel::setQueued(PlayListTrack *item)
 {
-    if (isQueued(item))
+    if(isQueued(item))
         m_queued_songs.removeAll(item);
     else
         m_queued_songs.enqueue(item);
@@ -903,10 +901,10 @@ void PlayListModel::sortByColumn(int column)
 
 void PlayListModel::prepareForShufflePlaying(bool val)
 {
-    if (m_play_state)
+    if(m_play_state)
         delete m_play_state;
 
-    if (val)
+    if(val)
         m_play_state = new ShufflePlayState(this);
     else
         m_play_state = new NormalPlayState(this);

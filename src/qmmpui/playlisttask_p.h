@@ -31,7 +31,9 @@
 class PlayListTrack;
 struct TrackField;
 
-
+/** @internal
+ * @author Ilya Kotov <forkotov02@ya.ru>
+ */
 class PlayListTask : public QThread
 {
     Q_OBJECT

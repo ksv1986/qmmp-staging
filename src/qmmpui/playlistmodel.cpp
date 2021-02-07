@@ -33,7 +33,6 @@
 #include "fileloader_p.h"
 #include "playstate_p.h"
 #include "detailsdialog.h"
-#include "tagupdater_p.h"
 #include "qmmpuisettings.h"
 #include "playlistmodel.h"
 
@@ -677,8 +676,7 @@ void PlayListModel::showDetails(QWidget *parent)
     {
         QDialog *d = new DetailsDialog(selected_tracks, parent);
         d->setAttribute(Qt::WA_DeleteOnClose, true);
-        TagUpdater *updater = new TagUpdater(d, selected_tracks);
-        connect(updater, SIGNAL(destroyed(QObject *)),SLOT(updateMetaData()));
+        connect(d, SIGNAL(destroyed(QObject *)),SLOT(updateMetaData()));
         d->show();
     }
 }
@@ -691,8 +689,7 @@ void PlayListModel::showDetailsForCurrent(QWidget *parent)
         l.append(m_current_track);
         QDialog *d = new DetailsDialog(l, parent);
         d->setAttribute(Qt::WA_DeleteOnClose, true);
-        TagUpdater *updater = new TagUpdater(d, l);
-        connect(updater, SIGNAL(destroyed(QObject *)),SLOT(updateMetaData()));
+        connect(d, SIGNAL(destroyed(QObject *)),SLOT(updateMetaData()));
         d->show();
     }
 }

@@ -46,16 +46,38 @@ DetailsDialog::DetailsDialog(const QList<PlayListTrack *> &tracks, QWidget *pare
     m_ui->prevButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_ArrowLeft));
     updatePage();
     on_tabWidget_currentChanged(0);
+
+    for(PlayListTrack *t : qAsConst(m_tracks))
+        t->beginUsage();
 }
 
 DetailsDialog::~DetailsDialog()
 {
+    for(PlayListTrack *t : qAsConst(m_tracks))
+    {
+        t->endUsage();
+        if (!t->isUsed() && t->isSheduledForDeletion())
+        {
+            delete t;
+            t = nullptr;
+        }
+        else
+        {
+            t->updateMetaData();
+        }
+    }
+
     if(m_metaDataModel)
     {
         delete m_metaDataModel;
         m_metaDataModel = nullptr;
     }
     delete m_ui;
+}
+
+QStringList DetailsDialog::modifiedPaths() const
+{
+    return m_modifiedPaths.values();
 }
 
 void DetailsDialog:: on_directoryButton_clicked()
@@ -81,19 +103,25 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
 {
     if(m_ui->buttonBox->standardButton(button) == QDialogButtonBox::Save)
     {
-        TagEditor *tagEditor = qobject_cast<TagEditor *>(m_ui->tabWidget->currentWidget());
+        TagEditor *tagEditor = nullptr;
         CoverEditor *coverEditor = nullptr;
         CueEditor *cueEditor = nullptr;
-        if(tagEditor)
+
+        if((tagEditor = qobject_cast<TagEditor *>(m_ui->tabWidget->currentWidget())))
+        {
             tagEditor->save();
+            m_modifiedPaths.insert(m_info.path());
+        }
         else if((coverEditor = qobject_cast<CoverEditor *>(m_ui->tabWidget->currentWidget())))
         {
             coverEditor->save();
+            m_modifiedPaths.insert(m_info.path());
             MetaDataManager::instance()->clearCoverCache();
         }
         else if((cueEditor = qobject_cast<CueEditor *>(m_ui->tabWidget->currentWidget())))
         {
             cueEditor->save();
+            m_modifiedPaths.insert(m_info.path());
         }
     }
     else

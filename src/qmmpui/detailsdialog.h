@@ -22,6 +22,7 @@
 
 #include <QDialog>
 #include <QList>
+#include <QSet>
 #include <qmmp/qmmp.h>
 #include <qmmp/trackinfo.h>
 #include "qmmpui_export.h"
@@ -54,6 +55,8 @@ public:
      */
     ~DetailsDialog();
 
+    QStringList modifiedPaths() const;
+
 private slots:
     void on_buttonBox_clicked(QAbstractButton *button);
     void on_tabWidget_currentChanged(int index);
@@ -72,6 +75,7 @@ private:
     QList<PlayListTrack *> m_tracks;
     TrackInfo m_info;
     int m_page = 0;
+    QSet<QString> m_modifiedPaths;
 };
 
 #endif

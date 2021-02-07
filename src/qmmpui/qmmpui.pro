@@ -59,7 +59,6 @@ HEADERS += general.h \
     playlistdownloader.h \
     addurldialog_p.h \
     qmmpuiplugincache_p.h \
-    tagupdater_p.h \
     playlistgroup.h \
     playlisttrack.h \
     playlistcontainer_p.h \
@@ -88,7 +87,6 @@ SOURCES += general.cpp \
     fileloader.cpp \
     mediaplayer.cpp \
     detailsdialog.cpp \
-    tageditor.cpp \
     playlistmanager.cpp \
     templateeditor.cpp \
     uiloader.cpp \
@@ -102,7 +100,6 @@ SOURCES += general.cpp \
     playlistdownloader.cpp \
     addurldialog.cpp \
     qmmpuiplugincache.cpp \
-    tagupdater.cpp \
     playlistgroup.cpp \
     playlisttrack.cpp \
     groupedcontainer.cpp \
@@ -118,7 +115,8 @@ SOURCES += general.cpp \
     covereditor.cpp \
     commandlinehandler.cpp \
     generalfactory.cpp \
-    cueeditor.cpp
+    cueeditor.cpp \
+    tageditor.cpp
 
 FORMS += forms/detailsdialog.ui \
     forms/tageditor.ui \

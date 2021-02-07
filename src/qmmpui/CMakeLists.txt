@@ -51,7 +51,6 @@ SET(libqmmpui_SRCS
     playlistdownloader.cpp
     addurldialog.cpp
     qmmpuiplugincache.cpp
-    tagupdater.cpp
     playlisttask.cpp
     playlistheadermodel.cpp
     columneditor.cpp

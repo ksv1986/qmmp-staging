@@ -57,6 +57,9 @@ public:
 
     QStringList modifiedPaths() const;
 
+signals:
+    void metaDataChanged(const QStringList &paths);
+
 private slots:
     void on_buttonBox_clicked(QAbstractButton *button);
     void on_tabWidget_currentChanged(int index);

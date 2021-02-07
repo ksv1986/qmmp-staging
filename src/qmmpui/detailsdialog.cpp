@@ -67,6 +67,9 @@ DetailsDialog::~DetailsDialog()
         }
     }
 
+    if(!m_modifiedPaths.isEmpty())
+        emit metaDataChanged(m_modifiedPaths.values());
+
     if(m_metaDataModel)
     {
         delete m_metaDataModel;

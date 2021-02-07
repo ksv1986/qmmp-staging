@@ -586,6 +586,8 @@ private slots:
 
     void onTaskFinished();
 
+    void updateMetaData(const QStringList &paths);
+
 private:
     PlayListTrack* m_current_track = nullptr;
     PlayListTrack* m_stop_track = nullptr;

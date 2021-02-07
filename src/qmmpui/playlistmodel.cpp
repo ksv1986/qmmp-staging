@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 #include <QWidget>
-#include <QtAlgorithms>
 #include <QTextStream>
 #include <algorithm>
 #include <time.h>
@@ -674,9 +673,9 @@ void PlayListModel::showDetails(QWidget *parent)
 
     if(!selected_tracks.isEmpty())
     {
-        QDialog *d = new DetailsDialog(selected_tracks, parent);
+        DetailsDialog *d = new DetailsDialog(selected_tracks, parent);
         d->setAttribute(Qt::WA_DeleteOnClose, true);
-        connect(d, SIGNAL(destroyed(QObject *)),SLOT(updateMetaData()));
+        connect(d, SIGNAL(metaDataChanged(QStringList)), SLOT(updateMetaData(QStringList)));
         d->show();
     }
 }
@@ -687,7 +686,7 @@ void PlayListModel::showDetailsForCurrent(QWidget *parent)
     {
         QDialog *d = new DetailsDialog(QList<PlayListTrack *>() << m_current_track, parent);
         d->setAttribute(Qt::WA_DeleteOnClose, true);
-        connect(d, SIGNAL(destroyed(QObject *)),SLOT(updateMetaData()));
+        connect(d, SIGNAL(metaDataChanged(QStringList)), SLOT(updateMetaData(QStringList)));
         d->show();
     }
 }
@@ -990,6 +989,53 @@ void PlayListModel::onTaskFinished()
             emit listChanged(flags);
         }
     }
+}
+
+void PlayListModel::updateMetaData(const QStringList &paths)
+{
+    if(m_container->isEmpty())
+        return;
+
+    QList<PlayListTrack *> tracksToRemove;
+    QList<PlayListTrack *> tracksToAdd;
+
+    for(const QString &path : qAsConst(paths))
+    {
+        QList<TrackInfo *> list = MetaDataManager::instance()->createPlayList(path);
+
+        for(int i = 0; i < m_container->count(); ++i)
+        {
+            PlayListTrack *track = m_container->track(i);
+            if(!track)
+                continue;
+
+            if(track->path() == path)
+            {
+                if(list.isEmpty()) //track is not available
+                    tracksToRemove << track;
+                else if(list.count() == 1)
+                {
+                    track->updateMetaData(list.first()); //update single track
+                }
+                else //replace single track by multiple tracks
+                {
+                    track->updateMetaData(list.first()); //update existing track
+                    delete list.takeFirst();
+                    for(const TrackInfo *info : qAsConst(list)) //add remaining tracks
+                        tracksToAdd << new PlayListTrack(info);
+                }
+            }
+        }
+
+        qDeleteAll(list);
+    }
+
+    if(!tracksToRemove.isEmpty())
+        removeTracks(tracksToRemove);
+    if(!tracksToAdd.isEmpty())
+        add(tracksToAdd);
+
+    updateMetaData();
 }
 
 void PlayListModel::doCurrentVisibleRequest()

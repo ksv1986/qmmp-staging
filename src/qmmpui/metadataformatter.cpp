@@ -53,7 +53,7 @@ Syntax:
 #include <QUrl>
 #include "metadataformatter.h"
 
-#define DUMP_NODES
+//#define DUMP_NODES
 
 MetaDataFormatter::MetaDataFormatter(const QString &pattern)
 {

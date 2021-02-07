@@ -35,6 +35,7 @@ CueEditor::CueEditor(MetaDataModel *model, const TrackInfo &info, QWidget *paren
 {
     m_ui->setupUi(this);
     m_ui->plainTextEdit->setPlainText(model->cue());
+    m_parser.loadData(model->cue().toUtf8());
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_lastDir = settings.value("CueEditor/last_dir",  QDir::homePath()).toString();
     m_editable = m_model && (m_model->dialogHints() & MetaDataModel::IsCueEditable) && !m_model->isReadOnly();
@@ -54,17 +55,24 @@ void CueEditor::save()
     if(data.isEmpty())
     {
         m_model->removeCue();
+        m_parser.clear();
     }
     else
     {
         data.append(QChar::LineFeed);
         m_model->setCue(data);
+        m_parser.loadData(data.toUtf8());
     }
 }
 
 bool CueEditor::isEditable() const
 {
     return m_editable;
+}
+
+int CueEditor::trackCount() const
+{
+    return m_parser.count();
 }
 
 void CueEditor::on_loadButton_clicked()

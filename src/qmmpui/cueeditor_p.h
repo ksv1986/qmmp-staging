@@ -22,7 +22,7 @@
 #define CUEEDITOR_P_H
 
 #include <QWidget>
-
+#include <qmmp/cueparser.h>
 #include <qmmp/trackinfo.h>
 
 namespace Ui {
@@ -41,6 +41,7 @@ public:
 
     void save();
     bool isEditable() const;
+    int trackCount() const;
 
 private slots:
     void on_loadButton_clicked();
@@ -53,6 +54,7 @@ private:
     QString m_lastDir;
     bool m_editable;
     TrackInfo m_info;
+    CueParser m_parser;
 };
 
 #endif // CUEEDITOR_P_H

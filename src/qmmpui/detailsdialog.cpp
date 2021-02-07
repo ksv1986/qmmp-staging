@@ -123,8 +123,15 @@ void DetailsDialog::on_buttonBox_clicked(QAbstractButton *button)
         }
         else if((cueEditor = qobject_cast<CueEditor *>(m_ui->tabWidget->currentWidget())))
         {
-            cueEditor->save();
+            //update all cue tracks
+            int count = cueEditor->trackCount();
+            QString path = m_info.path();
+            path.remove(QRegularExpression("#\\d+$"));
+            for(int i = 0; i < count; ++i)
+                m_modifiedPaths.insert(QString("%1#%2").arg(path).arg(i + 1));
             m_modifiedPaths.insert(m_info.path());
+
+            cueEditor->save();
         }
     }
     else

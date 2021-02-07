@@ -220,14 +220,14 @@ PlayListTrack *GroupedContainer::track(int index) const
     PlayListItem *i = item(index);
     if(!i || i->isGroup())
         return nullptr;
-    return dynamic_cast<PlayListTrack *> (i);
+    return static_cast<PlayListTrack *> (i);
 }
 
 PlayListGroup *GroupedContainer::group(int index) const
 {
     PlayListItem *i = item(index);
     if(i && i->isGroup())
-        return dynamic_cast<PlayListGroup *> (i);
+        return static_cast<PlayListGroup *> (i);
     return nullptr;
 }
 

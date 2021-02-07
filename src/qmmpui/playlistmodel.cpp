@@ -1106,26 +1106,25 @@ void PlayListModel::clearQueue()
 void PlayListModel::stopAfterSelected()
 {
     QList<PlayListTrack*> selected_tracks = selectedTracks();
-    int flags = STOP_AFTER;
+
     if(!m_queued_songs.isEmpty())
     {
         m_stop_track = m_stop_track != m_queued_songs.last() ? m_queued_songs.last() : nullptr;
+        emit listChanged(STOP_AFTER);
     }
     else if(selected_tracks.count() == 1)
     {
         m_stop_track = m_stop_track != selected_tracks.at(0) ? selected_tracks.at(0) : nullptr;
+        emit listChanged(STOP_AFTER);
     }
     else if(selected_tracks.count() > 1)
     {
         blockSignals(true);
         addToQueue();
         blockSignals(false);
-        flags |= QUEUE;
         m_stop_track = m_queued_songs.last();
+        emit listChanged(STOP_AFTER | QUEUE);
     }
-    else
-        return;
-    emit listChanged(flags);
 }
 
 void PlayListModel::rebuildGroups()

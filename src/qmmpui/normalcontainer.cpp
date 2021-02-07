@@ -74,7 +74,7 @@ QList<PlayListTrack *> NormalContainer::tracks() const
 {
     QList<PlayListTrack *> trackList;
     for(int i = 0; i < m_items.count(); ++i)
-        trackList.append(dynamic_cast<PlayListTrack *>(m_items[i]));
+        trackList.append(static_cast<PlayListTrack *>(m_items[i]));
     return trackList;
 }
 
@@ -142,7 +142,7 @@ PlayListItem *NormalContainer::item(int index) const
 PlayListTrack *NormalContainer::track(int index) const
 {
     PlayListItem *i = item(index);
-    return dynamic_cast<PlayListTrack *> (i);
+    return static_cast<PlayListTrack *> (i);
 }
 
 PlayListGroup *NormalContainer::group(int index) const
@@ -167,7 +167,7 @@ PlayListTrack *NormalContainer::findTrack(int number) const
     {
         return nullptr;
     }
-    return dynamic_cast<PlayListTrack *> (m_items.at(number));
+    return static_cast<PlayListTrack *> (m_items.at(number));
 }
 
 void NormalContainer::removeTrack(PlayListTrack *track)
@@ -220,7 +220,7 @@ QList<PlayListTrack *> NormalContainer::takeAllTracks()
 {
     QList<PlayListTrack *> tracks;
     while(!m_items.isEmpty())
-        tracks.append(dynamic_cast<PlayListTrack *>(m_items.takeFirst()));
+        tracks.append(static_cast<PlayListTrack *>(m_items.takeFirst()));
     return tracks;
 }
 

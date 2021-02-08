@@ -22,10 +22,46 @@
 #include <QSettings>
 #include <QFileInfo>
 #include <QDir>
+#include <QSyntaxHighlighter>
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
+#include <QRegularExpressionMatchIterator>
 #include <qmmp/metadatamodel.h>
 #include "cueeditor_p.h"
 #include "filedialog.h"
 #include "ui_cueeditor.h"
+
+class CueSyntaxHighlighter : public QSyntaxHighlighter
+{
+public:
+    CueSyntaxHighlighter(QTextDocument *parent) :  QSyntaxHighlighter(parent) {}
+
+private:
+    void highlightBlock(const QString &text) override
+    {
+        QTextCharFormat textFormat;
+        textFormat.setForeground(Qt::darkGreen);
+
+        QRegularExpression textExpr("\\\".*\\\"");
+        QRegularExpressionMatchIterator i = textExpr.globalMatch(text);
+        while(i.hasNext())
+        {
+            QRegularExpressionMatch match = i.next();
+            setFormat(match.capturedStart(), match.capturedLength(), textFormat);
+        }
+
+        QTextCharFormat trackFormat;
+        trackFormat.setFontWeight(QFont::Bold);
+
+        QRegularExpression trackExpr("TRACK\\s+\\d+\\s*\\D*");
+        i = trackExpr.globalMatch(text);
+        while(i.hasNext())
+        {
+            QRegularExpressionMatch match = i.next();
+            setFormat(match.capturedStart(), match.capturedLength(), trackFormat);
+        }
+    }
+};
 
 CueEditor::CueEditor(MetaDataModel *model, const TrackInfo &info, QWidget *parent) :
     QWidget(parent),
@@ -39,6 +75,7 @@ CueEditor::CueEditor(MetaDataModel *model, const TrackInfo &info, QWidget *paren
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_lastDir = settings.value("CueEditor/last_dir",  QDir::homePath()).toString();
     m_editable = m_model && (m_model->dialogHints() & MetaDataModel::IsCueEditable) && !m_model->isReadOnly();
+    new CueSyntaxHighlighter(m_ui->plainTextEdit->document());
 }
 
 CueEditor::~CueEditor()

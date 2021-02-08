@@ -17,7 +17,6 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#include <QWidget>
 #include <QTextStream>
 #include <algorithm>
 #include <time.h>
@@ -999,9 +998,48 @@ void PlayListModel::updateMetaData(const QStringList &paths)
     QList<PlayListTrack *> tracksToRemove;
     QList<PlayListTrack *> tracksToAdd;
 
+    QHash<QString, TrackInfo *> cache; //cache for tracks
+    QSet<QString> multiTrackFiles; //files with multiple tracks
+
     for(const QString &path : qAsConst(paths))
     {
-        QList<TrackInfo *> list = MetaDataManager::instance()->createPlayList(path);
+        bool missing = false; //track is missing
+
+        //update cache
+        if(!cache.contains(path))
+        {
+            //is it track of local file?
+            if(path.contains("://") && path.contains("#") && !cache.contains(path))
+            {
+                QString filePath = path;
+                filePath.remove(QRegularExpression("#\\d+$"));
+                filePath.remove(QRegularExpression("^\\D+://"));
+                if(multiTrackFiles.contains(filePath)) //looks like local file has been already scanned, but has not this track
+                {
+                    missing = true;
+                }
+                else if(QFileInfo(filePath).isFile())
+                {
+                    const QList<TrackInfo *> list = MetaDataManager::instance()->createPlayList(filePath);
+                    for(TrackInfo *info : qAsConst(list))
+                        cache.insert(info->path(), info);
+
+                    multiTrackFiles << path;
+                }
+            }
+            else if(QFileInfo(path).isFile()) //is it local file?
+            {
+                const QList<TrackInfo *> list = MetaDataManager::instance()->createPlayList(path);
+                for(TrackInfo *info : qAsConst(list))
+                    cache.insert(info->path(), info);
+            }
+        }
+
+        QList<TrackInfo *> list;
+        if(cache.contains(path)) //using TrackInfo object from cache
+            list << cache.value(path);
+        else if(!missing)
+            list << MetaDataManager::instance()->createPlayList(path);
 
         for(int i = 0; i < m_container->count(); ++i)
         {
@@ -1027,8 +1065,12 @@ void PlayListModel::updateMetaData(const QStringList &paths)
             }
         }
 
-        qDeleteAll(list);
+        if(!cache.contains(path))
+            qDeleteAll(list);
     }
+
+    qDeleteAll(cache.values());
+    cache.clear();
 
     if(!tracksToRemove.isEmpty())
         removeTracks(tracksToRemove);

@@ -61,10 +61,6 @@ DetailsDialog::~DetailsDialog()
             delete t;
             t = nullptr;
         }
-        else
-        {
-            t->updateMetaData();
-        }
     }
 
     if(!m_modifiedPaths.isEmpty())

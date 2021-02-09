@@ -24,10 +24,10 @@
 #include "cuefile.h"
 #include "cuemetadatamodel.h"
 
-CUEMetaDataModel::CUEMetaDataModel(const QString &url) : MetaDataModel(false, IsCueEditable)
+CUEMetaDataModel::CUEMetaDataModel(bool readOnly, const QString &url) : MetaDataModel(readOnly, IsCueEditable)
 {
     CueFile file(url);
-    if (file.isEmpty())
+    if(file.isEmpty())
     {
         qWarning("CUEMetaDataModel: invalid cue file");
         return;

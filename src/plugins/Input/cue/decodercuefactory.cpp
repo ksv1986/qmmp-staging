@@ -70,8 +70,7 @@ QList<TrackInfo *> DecoderCUEFactory::createPlayList(const QString &path, TrackI
 
 MetaDataModel* DecoderCUEFactory::createMetaDataModel(const QString &path, bool readOnly)
 {
-    Q_UNUSED(readOnly);
-    return path.startsWith("cue://") ? new CUEMetaDataModel(path) : nullptr;
+    return path.startsWith("cue://") ? new CUEMetaDataModel(readOnly, path) : nullptr;
 }
 
 void DecoderCUEFactory::showSettings(QWidget *parent)

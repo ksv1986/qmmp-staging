@@ -139,7 +139,7 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
 
     if((parts & TrackInfo::MetaData) && tag && !tag->isEmpty())
     {
-        if (tag->fieldListMap().contains("CUESHEET") && ap)
+        if(tag->fieldListMap().contains("CUESHEET") && ap)
         {
             QByteArray data(tag->fieldListMap()["CUESHEET"].toString().toCString(true));
             QString diskNumber;
@@ -168,6 +168,16 @@ QList<TrackInfo*> DecoderFLACFactory::createPlayList(const QString &path, TrackI
 
             delete info;
             return parser.createPlayList(track);
+        }
+        else if(track > 0) //cue track is not available
+        {
+            if(flacFile)
+                delete flacFile;
+            if(oggFlacFile)
+                delete oggFlacFile;
+
+            delete info;
+            return QList<TrackInfo *>();
         }
 
         info->setValue(Qmmp::ALBUM, TStringToQString(tag->album()));

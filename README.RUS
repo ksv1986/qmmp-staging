@@ -82,7 +82,7 @@ Qmmp - Qt-based multimedia player
 - libvorbis
 - libogg
 - libalsa >= 1.0.22
-- taglib >= 1.10 (рекомендуется 1.11 и выше)
+- taglib >= 1.11
 - curl >= 7.19.4
 - libmpg123 >= 1.13.0 (опционально)
 - qtmultimedia >= 5.4 (опционально)

@@ -249,12 +249,6 @@ void DetailsDialog::updatePage()
         m_ui->tabWidget->addTab(coverEditor, tr("Cover"));
     }
 
-    if(m_metaDataModel && (m_metaDataModel->dialogHints() & MetaDataModel::IsCueEditable))
-    {
-        CueEditor *cueEditor = new CueEditor(m_metaDataModel, m_info, this);
-        m_ui->tabWidget->addTab(cueEditor, "CUE");
-    }
-
     if(m_metaDataModel)
     {
         for(TagModel *tagModel : m_metaDataModel->tags())
@@ -271,7 +265,14 @@ void DetailsDialog::updatePage()
             textEdit->setPlainText(item.value().toString());
             m_ui->tabWidget->addTab(textEdit, item.name());
         }
+
+        if(m_metaDataModel->dialogHints() & MetaDataModel::IsCueEditable)
+        {
+            CueEditor *cueEditor = new CueEditor(m_metaDataModel, m_info, this);
+            m_ui->tabWidget->addTab(cueEditor, "CUE");
+        }
     }
+
     printInfo();
 }
 

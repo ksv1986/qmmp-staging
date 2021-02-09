@@ -76,6 +76,13 @@ CueEditor::CueEditor(MetaDataModel *model, const TrackInfo &info, QWidget *paren
     m_lastDir = settings.value("CueEditor/last_dir",  QDir::homePath()).toString();
     m_editable = m_model && (m_model->dialogHints() & MetaDataModel::IsCueEditable) && !m_model->isReadOnly();
     new CueSyntaxHighlighter(m_ui->plainTextEdit->document());
+
+    if(!m_editable)
+    {
+        m_ui->deleteButton->setEnabled(false);
+        m_ui->loadButton->setEnabled(false);
+        m_ui->plainTextEdit->setReadOnly(true);
+    }
 }
 
 CueEditor::~CueEditor()

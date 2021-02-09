@@ -37,6 +37,9 @@ public:
     QString coverPath() const override;
     void setCover(const QPixmap &pix) override;
     void removeCover() override;
+    QString cue() const override;
+    void setCue(const QString &content) override;
+    void removeCue() override;
 
 private:
     QString m_path;

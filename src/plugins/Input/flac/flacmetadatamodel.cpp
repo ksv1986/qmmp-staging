@@ -29,7 +29,7 @@
 #include "flacmetadatamodel.h"
 
 FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly) :
-    MetaDataModel(true, MetaDataModel::IsCoverEditable),
+    MetaDataModel(readOnly, MetaDataModel::IsCoverEditable),
     m_path(path)
 {
     if(path.startsWith("flac://"))
@@ -44,6 +44,7 @@ FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly) :
         TagLib::FLAC::File *f = new TagLib::FLAC::File(m_stream, TagLib::ID3v2::FrameFactory::instance());
         m_tag = f->xiphComment();
         m_file = f;
+        setDialogHints(dialogHints() | MetaDataModel::IsCueEditable);
     }
     else if(m_path.endsWith(".oga", Qt::CaseInsensitive))
     {
@@ -53,9 +54,11 @@ FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly) :
         m_file = f;
     }
 
+    if(m_file)
+        setReadOnly(m_file->readOnly());
+
     if(m_file && m_file->isValid() && !path.startsWith("flac://"))
     {
-        setReadOnly(readOnly);
         m_tags << new VorbisCommentModel(m_tag, m_file);
     }
 }
@@ -139,6 +142,30 @@ void FLACMetaDataModel::removeCover()
             m_file->save();
         }
     }
+}
+
+QString FLACMetaDataModel::cue() const
+{
+    if (m_tag->fieldListMap().contains("CUESHEET"))
+    {
+        QByteArray data(m_tag->fieldListMap()["CUESHEET"].toString().toCString(true));
+        return QString::fromUtf8(data);
+    }
+
+    return QString();
+}
+
+void FLACMetaDataModel::setCue(const QString &content)
+{
+    m_tag->removeFields("CUESHEET");
+    m_tag->addField("CUESHEET", QStringToTString(content), true);
+    m_file->save();
+}
+
+void FLACMetaDataModel::removeCue()
+{
+    m_tag->removeFields("CUESHEET");
+    m_file->save();
 }
 
 VorbisCommentModel::VorbisCommentModel(TagLib::Ogg::XiphComment *tag, TagLib::File *file) : TagModel(TagModel::Save)

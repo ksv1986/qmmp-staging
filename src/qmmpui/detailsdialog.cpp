@@ -223,17 +223,23 @@ void DetailsDialog::updatePage()
 
     QString coverPath;
     QPixmap coverPixmap;
+    bool readOnly = false;
 
-    if(m_info.path().contains("://")) //URL
+    if(m_info.path().contains("://") && m_info.path().contains("#")) //track of multi-track file
     {
-        m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), false);
+        QString filePath = m_info.path();
+        filePath.remove(QRegularExpression("#\\d+$"));
+        filePath.remove(QRegularExpression("^\\D+://"));
+        if(QFileInfo(filePath).isFile())
+            readOnly = !QFileInfo(filePath).isWritable() || !QFile::exists(filePath);
     }
-    else if(QFile::exists(m_info.path())) //local file
+    else if(!m_info.path().contains("://")) //local file
     {
         coverPath = MetaDataManager::instance()->findCoverFile(m_info.path());
-        bool writable = QFileInfo(m_info.path()).isWritable();
-        m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), !writable);
+        readOnly = !QFileInfo(m_info.path()).isWritable() || !QFile::exists(m_info.path());
     }
+
+    m_metaDataModel = MetaDataManager::instance()->createMetaDataModel(m_info.path(), readOnly);
 
     if(m_metaDataModel)
     {

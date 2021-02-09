@@ -35,8 +35,6 @@ CUEMetaDataModel::CUEMetaDataModel(bool readOnly, const QString &url) : MetaData
     int track = url.section("#", -1).toInt();
     m_dataFilePath = file.dataFilePath(track);
     m_cueFilePath = file.cueFilePath();
-    if(!QFileInfo(m_cueFilePath).isWritable())
-        setReadOnly(true);
 }
 
 CUEMetaDataModel::~CUEMetaDataModel()

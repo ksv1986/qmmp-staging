@@ -25,19 +25,12 @@
 #include <taglib/tmap.h>
 #include <taglib/id3v2framefactory.h>
 #include <taglib/flacpicture.h>
-#ifndef HAS_PICTURE_LIST
-#include <FLAC/all.h>
-#endif
 #include <qmmp/metadatamanager.h>
 #include "flacmetadatamodel.h"
 
-FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly)
-#ifdef HAS_PICTURE_LIST
-    : MetaDataModel(true, MetaDataModel::IsCoverEditable),
-#else
-    : MetaDataModel(true),
-#endif
-      m_path(path)
+FLACMetaDataModel::FLACMetaDataModel(const QString &path, bool readOnly) :
+    MetaDataModel(true, MetaDataModel::IsCoverEditable),
+    m_path(path)
 {
     if(path.startsWith("flac://"))
     {
@@ -87,7 +80,6 @@ QList<TagModel* > FLACMetaDataModel::tags() const
 
 QPixmap FLACMetaDataModel::cover() const
 {
-#ifdef HAS_PICTURE_LIST
     if(!m_tag || m_tag->isEmpty())
         return QPixmap();
 
@@ -102,22 +94,6 @@ QPixmap FLACMetaDataModel::cover() const
         }
     }
     return QPixmap();
-#else
-    //embedded cover
-     QPixmap cover;
-     FLAC__StreamMetadata *metadata;
-     FLAC__metadata_get_picture (qPrintable(m_path),
-                                 &metadata,
-                                 FLAC__STREAM_METADATA_PICTURE_TYPE_FRONT_COVER,
-                                 0,0, -1,-1,-1,-1);
-     if(metadata)
-     {
-         FLAC__StreamMetadata_Picture *pict = &metadata->data.picture;
-         cover.loadFromData(QByteArray((char *)pict->data, (int) pict->data_length));
-         FLAC__metadata_object_delete(metadata);
-     }
-     return cover;
-#endif
 }
 
 QString FLACMetaDataModel::coverPath() const
@@ -125,7 +101,6 @@ QString FLACMetaDataModel::coverPath() const
     return MetaDataManager::instance()->findCoverFile(m_path);
 }
 
-#ifdef HAS_PICTURE_LIST
 void FLACMetaDataModel::setCover(const QPixmap &pix)
 {
     removeCover();
@@ -165,7 +140,6 @@ void FLACMetaDataModel::removeCover()
         }
     }
 }
-#endif
 
 VorbisCommentModel::VorbisCommentModel(TagLib::Ogg::XiphComment *tag, TagLib::File *file) : TagModel(TagModel::Save)
 {

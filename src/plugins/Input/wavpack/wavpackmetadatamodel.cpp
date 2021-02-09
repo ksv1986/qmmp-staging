@@ -19,16 +19,19 @@
  ***************************************************************************/
 
 #include <QMap>
+#include <QFileInfo>
 #include <qmmp/metadatamanager.h>
 #include "wavpackmetadatamodel.h"
 
-WavPackMetaDataModel::WavPackMetaDataModel(const QString &path, bool readOnly) : MetaDataModel(readOnly),
+WavPackMetaDataModel::WavPackMetaDataModel(const QString &path, bool readOnly) :
+    MetaDataModel(readOnly, MetaDataModel::IsCueEditable),
     m_path(path)
 {
     if(m_path.contains("://"))
     {
         m_path.remove("wvpack://");
         m_path.remove(QRegularExpression("#\\d+$"));
+        readOnly = readOnly || !QFileInfo(m_path).isWritable();
     }
 
     char err[80] = {0};
@@ -36,25 +39,29 @@ WavPackMetaDataModel::WavPackMetaDataModel(const QString &path, bool readOnly) :
     if(!readOnly)
         flags |= OPEN_EDIT_TAGS;
 #if defined(Q_OS_WIN) && defined(OPEN_FILE_UTF8)
-    m_ctx = WavpackOpenFileInput (m_path.toUtf8().constData(),
-                                  err, flags | OPEN_FILE_UTF8, 0);
+    m_ctx = WavpackOpenFileInput(m_path.toUtf8().constData(),
+                                 err, flags | OPEN_FILE_UTF8, 0);
 #else
-    m_ctx = WavpackOpenFileInput (m_path.toLocal8Bit().constData(), err,
-                                  flags, 0);
+    m_ctx = WavpackOpenFileInput(m_path.toLocal8Bit().constData(), err,
+                                 flags, 0);
 #endif
     if (!m_ctx)
     {
         qWarning("WavPackMetaDataModel: error: %s", err);
+        setReadOnly(true);
         return;
     }
     if(!path.contains("://"))
         m_tags << new WavPackFileTagModel(m_ctx);
+
+    setReadOnly(!(flags & OPEN_EDIT_TAGS));
 }
 
 WavPackMetaDataModel::~WavPackMetaDataModel()
 {
-    while(!m_tags.isEmpty())
-        delete m_tags.takeFirst();
+    qDeleteAll(m_tags);
+    m_tags.clear();
+
     if(m_ctx)
         WavpackCloseFile(m_ctx);
 }
@@ -79,6 +86,33 @@ QList<TagModel* > WavPackMetaDataModel::tags() const
 QString WavPackMetaDataModel::coverPath() const
 {
     return MetaDataManager::instance()->findCoverFile(m_path);
+}
+
+QString WavPackMetaDataModel::cue() const
+{
+    int len = WavpackGetTagItem(m_ctx, "cuesheet", nullptr, 0);
+    if(len > 0)
+    {
+        char value[len + 1];
+        memset(value, 0, len + 1);
+        WavpackGetTagItem(m_ctx, "cuesheet", value, len + 1);
+        return QString::fromUtf8(value);
+    }
+
+    return QString();
+}
+
+void WavPackMetaDataModel::setCue(const QString &content)
+{
+    QByteArray data = content.toUtf8();
+    WavpackAppendTagItem(m_ctx, "cuesheet", data.data(), data.size());
+    WavpackWriteTag(m_ctx);
+}
+
+void WavPackMetaDataModel::removeCue()
+{
+    WavpackDeleteTagItem(m_ctx, "cuesheet");
+    WavpackWriteTag(m_ctx);
 }
 
 WavPackFileTagModel::WavPackFileTagModel(WavpackContext *ctx) : TagModel(TagModel::Save),

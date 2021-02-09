@@ -35,6 +35,9 @@ public:
     QList<MetaDataItem> extraProperties() const override;
     QList<TagModel* > tags() const override;
     QString coverPath() const override;
+    QString cue() const;
+    void setCue(const QString &content) override;
+    void removeCue() override;
 
 private:
     WavpackContext *m_ctx;

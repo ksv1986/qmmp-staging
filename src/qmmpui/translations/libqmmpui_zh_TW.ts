@@ -796,6 +796,45 @@
     </message>
 </context>
 <context>
+    <name>CueEditor</name>
+    <message>
+        <location filename="../forms/cueeditor.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/cueeditor.ui" line="40"/>
+        <source>Load</source>
+        <translation type="unfinished">載入</translation>
+    </message>
+    <message>
+        <location filename="../forms/cueeditor.ui" line="47"/>
+        <source>Delete</source>
+        <translation type="unfinished">移除</translation>
+    </message>
+    <message>
+        <location filename="../forms/cueeditor.ui" line="54"/>
+        <source>Save as...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../cueeditor.cpp" line="124"/>
+        <source>Open CUE File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../cueeditor.cpp" line="126"/>
+        <location filename="../cueeditor.cpp" line="145"/>
+        <source>CUE Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../cueeditor.cpp" line="143"/>
+        <source>Save CUE File</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DetailsDialog</name>
     <message>
         <location filename="../forms/detailsdialog.ui" line="14"/>
@@ -818,127 +857,127 @@
         <translation>摘要</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="160"/>
+        <location filename="../detailsdialog.cpp" line="203"/>
         <source>%1/%2</source>
         <translation>%1/%2</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="206"/>
+        <location filename="../detailsdialog.cpp" line="255"/>
         <source>Cover</source>
         <translation>封面</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="236"/>
+        <location filename="../detailsdialog.cpp" line="292"/>
         <source>Title</source>
         <translation>標題</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="237"/>
+        <location filename="../detailsdialog.cpp" line="293"/>
         <source>Artist</source>
         <translation>藝術家</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="238"/>
+        <location filename="../detailsdialog.cpp" line="294"/>
         <source>Album artist</source>
         <translation>專輯 演作者</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="239"/>
+        <location filename="../detailsdialog.cpp" line="295"/>
         <source>Album</source>
         <translation>專輯</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="240"/>
+        <location filename="../detailsdialog.cpp" line="296"/>
         <source>Comment</source>
         <translation>備註</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="241"/>
+        <location filename="../detailsdialog.cpp" line="297"/>
         <source>Genre</source>
         <translation>流派</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="242"/>
+        <location filename="../detailsdialog.cpp" line="298"/>
         <source>Composer</source>
         <translation>作曲</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="243"/>
+        <location filename="../detailsdialog.cpp" line="299"/>
         <source>Year</source>
         <translation>年代</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="244"/>
+        <location filename="../detailsdialog.cpp" line="300"/>
         <source>Track</source>
         <translation>音軌</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="245"/>
+        <location filename="../detailsdialog.cpp" line="301"/>
         <source>Disc number</source>
         <translation>光槃編號</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="263"/>
+        <location filename="../detailsdialog.cpp" line="319"/>
         <source>Duration</source>
         <translation>持續時間</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="266"/>
+        <location filename="../detailsdialog.cpp" line="322"/>
         <source>Bitrate</source>
         <translation>取様率</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="266"/>
+        <location filename="../detailsdialog.cpp" line="322"/>
         <source>kbps</source>
         <translation>kbps</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="267"/>
+        <location filename="../detailsdialog.cpp" line="323"/>
         <source>Sample rate</source>
         <translation>取樣率</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="267"/>
+        <location filename="../detailsdialog.cpp" line="323"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="268"/>
+        <location filename="../detailsdialog.cpp" line="324"/>
         <source>Channels</source>
         <translation>音頻通道</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="269"/>
+        <location filename="../detailsdialog.cpp" line="325"/>
         <source>Sample size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="269"/>
+        <location filename="../detailsdialog.cpp" line="325"/>
         <source>bits</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="270"/>
+        <location filename="../detailsdialog.cpp" line="326"/>
         <source>Format name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="271"/>
+        <location filename="../detailsdialog.cpp" line="327"/>
         <source>File size</source>
         <translation>文件大小</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="271"/>
+        <location filename="../detailsdialog.cpp" line="327"/>
         <source>KiB</source>
         <translation>KiB</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="315"/>
+        <location filename="../detailsdialog.cpp" line="371"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="315"/>
+        <location filename="../detailsdialog.cpp" line="371"/>
         <source>No</source>
         <translation>否</translation>
     </message>

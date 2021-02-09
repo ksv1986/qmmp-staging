@@ -796,6 +796,45 @@
     </message>
 </context>
 <context>
+    <name>CueEditor</name>
+    <message>
+        <location filename="../forms/cueeditor.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/cueeditor.ui" line="40"/>
+        <source>Load</source>
+        <translation type="unfinished">Φόρτωση</translation>
+    </message>
+    <message>
+        <location filename="../forms/cueeditor.ui" line="47"/>
+        <source>Delete</source>
+        <translation type="unfinished">Διαγραφή</translation>
+    </message>
+    <message>
+        <location filename="../forms/cueeditor.ui" line="54"/>
+        <source>Save as...</source>
+        <translation type="unfinished">Αποθήκευση ως...</translation>
+    </message>
+    <message>
+        <location filename="../cueeditor.cpp" line="124"/>
+        <source>Open CUE File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../cueeditor.cpp" line="126"/>
+        <location filename="../cueeditor.cpp" line="145"/>
+        <source>CUE Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../cueeditor.cpp" line="143"/>
+        <source>Save CUE File</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DetailsDialog</name>
     <message>
         <location filename="../forms/detailsdialog.ui" line="14"/>
@@ -818,127 +857,127 @@
         <translation>Σύνοψη</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="160"/>
+        <location filename="../detailsdialog.cpp" line="203"/>
         <source>%1/%2</source>
         <translation>%1/%2</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="206"/>
+        <location filename="../detailsdialog.cpp" line="255"/>
         <source>Cover</source>
         <translation>Εξώφυλλο</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="236"/>
+        <location filename="../detailsdialog.cpp" line="292"/>
         <source>Title</source>
         <translation>Τίτλος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="237"/>
+        <location filename="../detailsdialog.cpp" line="293"/>
         <source>Artist</source>
         <translation>Καλλιτέχνης</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="238"/>
+        <location filename="../detailsdialog.cpp" line="294"/>
         <source>Album artist</source>
         <translation>Καλλιτέχνης δίσκος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="239"/>
+        <location filename="../detailsdialog.cpp" line="295"/>
         <source>Album</source>
         <translation>Δίσκος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="240"/>
+        <location filename="../detailsdialog.cpp" line="296"/>
         <source>Comment</source>
         <translation>Σχόλιο</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="241"/>
+        <location filename="../detailsdialog.cpp" line="297"/>
         <source>Genre</source>
         <translation>Είδος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="242"/>
+        <location filename="../detailsdialog.cpp" line="298"/>
         <source>Composer</source>
         <translation>Συνθέτης</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="243"/>
+        <location filename="../detailsdialog.cpp" line="299"/>
         <source>Year</source>
         <translation>Έτος</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="244"/>
+        <location filename="../detailsdialog.cpp" line="300"/>
         <source>Track</source>
         <translation>Κομμάτι</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="245"/>
+        <location filename="../detailsdialog.cpp" line="301"/>
         <source>Disc number</source>
         <translation>Αριθμός δίσκου</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="263"/>
+        <location filename="../detailsdialog.cpp" line="319"/>
         <source>Duration</source>
         <translation>Διάρκεια</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="266"/>
+        <location filename="../detailsdialog.cpp" line="322"/>
         <source>Bitrate</source>
         <translation>Ρυθμός bit</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="266"/>
+        <location filename="../detailsdialog.cpp" line="322"/>
         <source>kbps</source>
         <translation>kbps</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="267"/>
+        <location filename="../detailsdialog.cpp" line="323"/>
         <source>Sample rate</source>
         <translation>Ρυθμός δειγματοληψίας</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="267"/>
+        <location filename="../detailsdialog.cpp" line="323"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="268"/>
+        <location filename="../detailsdialog.cpp" line="324"/>
         <source>Channels</source>
         <translation>Κανάλια</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="269"/>
+        <location filename="../detailsdialog.cpp" line="325"/>
         <source>Sample size</source>
         <translation>Μέγεθος δειγματοληψίας</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="269"/>
+        <location filename="../detailsdialog.cpp" line="325"/>
         <source>bits</source>
         <translation>bit</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="270"/>
+        <location filename="../detailsdialog.cpp" line="326"/>
         <source>Format name</source>
         <translation>Όνομα τύπου</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="271"/>
+        <location filename="../detailsdialog.cpp" line="327"/>
         <source>File size</source>
         <translation>Μέγεθος αρχείου</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="271"/>
+        <location filename="../detailsdialog.cpp" line="327"/>
         <source>KiB</source>
         <translation>KiB</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="315"/>
+        <location filename="../detailsdialog.cpp" line="371"/>
         <source>Yes</source>
         <translation>Ναι</translation>
     </message>
     <message>
-        <location filename="../detailsdialog.cpp" line="315"/>
+        <location filename="../detailsdialog.cpp" line="371"/>
         <source>No</source>
         <translation>Όχι</translation>
     </message>

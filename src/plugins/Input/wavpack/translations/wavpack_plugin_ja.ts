@@ -14,22 +14,22 @@
         <translation>WavPack ファイル</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="177"/>
+        <location filename="../decoderwavpackfactory.cpp" line="183"/>
         <source>About WavPack Audio Plugin</source>
         <translation>WavPack 音響プラグインについて</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="178"/>
+        <location filename="../decoderwavpackfactory.cpp" line="184"/>
         <source>Qmmp WavPack Audio Plugin</source>
         <translation>QMMP WavPack 音響プラグイン</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="179"/>
+        <location filename="../decoderwavpackfactory.cpp" line="185"/>
         <source>WavPack library version:</source>
         <translation>WavPack ライブラリのバージョン:</translation>
     </message>
     <message>
-        <location filename="../decoderwavpackfactory.cpp" line="181"/>
+        <location filename="../decoderwavpackfactory.cpp" line="187"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>制作: Илья Котов (Ilya Kotov) &lt;forkotov02@ya.ru&gt;</translation>
     </message>
@@ -37,12 +37,12 @@
 <context>
     <name>WavPackMetaDataModel</name>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="69"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="72"/>
         <source>Ratio</source>
         <translation>率</translation>
     </message>
     <message>
-        <location filename="../wavpackmetadatamodel.cpp" line="70"/>
+        <location filename="../wavpackmetadatamodel.cpp" line="73"/>
         <source>Version</source>
         <translation>版</translation>
     </message>

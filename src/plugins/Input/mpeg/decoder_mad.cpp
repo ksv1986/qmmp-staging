@@ -74,6 +74,7 @@ bool DecoderMAD::initialize()
     }
 
     mad_stream_init(&m_stream);
+    mad_stream_options(&m_stream, MAD_OPTION_IGNORECRC);
     mad_frame_init(&m_frame);
     mad_synth_init(&m_synth);
 
@@ -519,6 +520,9 @@ bool DecoderMAD::decodeFrame()
             case MAD_ERROR_BUFLEN:
                 if(m_eof)
                     return false;
+                continue;
+            case MAD_ERROR_BADCRC:
+                qDebug("DecoderMAD: CRC check error");
                 continue;
             default:
                 if (!MAD_RECOVERABLE(m_stream.error))

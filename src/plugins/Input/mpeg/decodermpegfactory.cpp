@@ -199,7 +199,8 @@ Decoder *DecoderMPEGFactory::create(const QString &, QIODevice *input)
     else
     {
         qDebug("DecoderMPEGFactory: using MAD decoder");
-        d = new DecoderMAD(input);
+        bool crc = settings.value("MPEG/enable_crc", false).toBool();
+        d = new DecoderMAD(crc, input);
     }
 #elif defined(WITH_MAD)
     d = new DecoderMAD(input);

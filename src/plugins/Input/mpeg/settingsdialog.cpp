@@ -42,6 +42,7 @@ SettingsDialog::SettingsDialog(bool using_rusxmms, QWidget *parent)
     QString decoderName = settings.value("decoder", "mad").toString();
     m_ui.madRadioButton->setChecked(true);
     m_ui.mpg123RadioButton->setChecked(decoderName == "mpg123");
+    m_ui.enableCrcCheckBox->setChecked(settings.value("enable_crc", false).toBool());
 #elif defined(WITH_MAD)
     m_ui.madRadioButton->setChecked(true);
     m_ui.decoderGroupBox->setEnabled(false);
@@ -80,6 +81,7 @@ void SettingsDialog::accept()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("MPEG");
     settings.setValue("decoder", m_ui.mpg123RadioButton->isChecked() ? "mpg123" : "mad");
+    settings.setValue("enable_crc", m_ui.enableCrcCheckBox->isChecked());
     settings.setValue("ID3v1_encoding", m_ui.id3v1EncComboBox->currentText());
     settings.setValue("ID3v2_encoding", m_ui.id3v2EncComboBox->currentText());
     settings.setValue("tag_1", m_ui.firstTagComboBox->currentIndex());

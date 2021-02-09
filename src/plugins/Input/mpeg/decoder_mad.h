@@ -31,7 +31,7 @@
 class DecoderMAD : public Decoder
 {
 public:
-    explicit DecoderMAD(QIODevice *i);
+    explicit DecoderMAD(bool crc, QIODevice *i);
     virtual ~DecoderMAD();
 
     // standard decoder API
@@ -98,6 +98,7 @@ private:
     struct mad_frame m_frame;
     struct mad_synth m_synth;
     qint64 m_skip_bytes = 0, m_play_bytes = -1;
+    bool m_crc;
 };
 
 

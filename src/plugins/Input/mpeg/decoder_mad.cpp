@@ -33,7 +33,7 @@
 #define LAME_MAGIC (('L' << 24) | ('A' << 16) | ('M' << 8) | 'E')
 #define INPUT_BUFFER_SIZE (32*1024)
 
-DecoderMAD::DecoderMAD(QIODevice *i) : Decoder(i)
+DecoderMAD::DecoderMAD(bool crc, QIODevice *i) : Decoder(i), m_crc(crc)
 {}
 
 DecoderMAD::~DecoderMAD()
@@ -74,7 +74,8 @@ bool DecoderMAD::initialize()
     }
 
     mad_stream_init(&m_stream);
-    mad_stream_options(&m_stream, MAD_OPTION_IGNORECRC);
+    if(!m_crc)
+        mad_stream_options(&m_stream, MAD_OPTION_IGNORECRC);
     mad_frame_init(&m_frame);
     mad_synth_init(&m_synth);
 

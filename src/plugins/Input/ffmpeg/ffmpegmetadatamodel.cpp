@@ -36,6 +36,11 @@ FFmpegMetaDataModel::FFmpegMetaDataModel(const QString &path) : MetaDataModel(tr
         filePath.remove("ffmpeg://");
         filePath.remove(QRegularExpression("#\\d+$"));
     }
+    else if(path.startsWith("m4b://"))
+    {
+        filePath.remove("m4b://");
+        filePath.remove(QRegularExpression("#\\d+$"));
+    }
 
 #ifdef Q_OS_WIN
     if (avformat_open_input(&in, filePath.toUtf8().constData(), nullptr, nullptr) < 0)

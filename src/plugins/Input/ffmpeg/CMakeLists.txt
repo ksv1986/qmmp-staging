@@ -17,6 +17,10 @@ include_directories(${FFMPEG_INCLUDE_DIRS})
 link_directories(${FFMPEG_LIBRARY_DIRS})
 ADD_DEFINITIONS(${FFMPEG_CFLAGS})
 
+include_directories(${TAGLIB_INCLUDE_DIRS})
+link_directories(${TAGLIB_LIBRARY_DIRS})
+ADD_DEFINITIONS(${TAGLIB_CFLAGS})
+
 SET(libffmpeg_SRCS
   decoder_ffmpeg.cpp
   decoder_ffmpegcue.cpp
@@ -53,6 +57,6 @@ IF(FFMPEG_FOUND)
 ADD_LIBRARY(ffmpeg MODULE ${libffmpeg_SRCS} ${libffmpeg_UIS_H}
   ${libffmpeg_RCC_SRCS} ${libffmpeg_HDRS})
 add_dependencies(ffmpeg libqmmp)
-target_link_libraries(ffmpeg Qt5::Widgets libqmmp ${FFMPEG_LDFLAGS})
+target_link_libraries(ffmpeg Qt5::Widgets libqmmp ${FFMPEG_LDFLAGS} ${TAGLIB_LDFLAGS})
 install(TARGETS ffmpeg DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(FFMPEG_FOUND)

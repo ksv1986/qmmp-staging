@@ -177,10 +177,16 @@ void ConfigDialog::readSettings()
     QList<int> sizes;
     sizes << var_sizes.first().toInt() << var_sizes.last().toInt();
     m_ui->splitter->setSizes(sizes);
+    //fonts
+    QFont font;
+    font.fromString(settings.value("CueEditor/font", qApp->font("QPlainTextEdit").toString()).toString());
+    m_ui->cueFontLabel->setText(font.family() + " " + QString::number(font.pointSize()));
+    m_ui->cueFontLabel->setFont(font);
+    m_ui->cueSystemFontCheckBox->setChecked(settings.value("CueEditor/use_system_font", true).toBool());
 }
 
-void ConfigDialog::on_contentsWidget_currentItemChanged (QListWidgetItem *current,
-                                                         QListWidgetItem *previous)
+void ConfigDialog::on_contentsWidget_currentItemChanged(QListWidgetItem *current,
+                                                        QListWidgetItem *previous)
 {
     if (!current)
         current = previous;
@@ -442,6 +448,9 @@ void ConfigDialog::saveSettings()
     int index = m_ui->langComboBox->currentIndex();
     if(index >= 0)
         Qmmp::setUiLanguageID(m_ui->langComboBox->itemData(index).toString());
+    //fonts
+    settings.setValue("CueEditor/font", m_ui->cueFontLabel->font().toString());
+    settings.setValue("CueEditor/use_system_font", m_ui->cueSystemFontCheckBox->isChecked());
 }
 
 void ConfigDialog::on_treeWidget_itemChanged (QTreeWidgetItem *item, int column)
@@ -450,7 +459,7 @@ void ConfigDialog::on_treeWidget_itemChanged (QTreeWidgetItem *item, int column)
         dynamic_cast<PluginItem *>(item)->setEnabled(item->checkState(0) == Qt::Checked);
 }
 
-void ConfigDialog::on_treeWidget_currentItemChanged (QTreeWidgetItem *current, QTreeWidgetItem *)
+void ConfigDialog::on_treeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *)
 {
     if(current->type() >= PluginItem::TRANSPORT)
     {
@@ -464,4 +473,16 @@ void ConfigDialog::on_treeWidget_currentItemChanged (QTreeWidgetItem *current, Q
     }
     m_preferencesAction->setEnabled(m_ui->preferencesButton->isEnabled());
     m_informationAction->setEnabled(m_ui->informationButton->isEnabled());
+}
+
+void ConfigDialog::on_cueFontButton_clicked()
+{
+    bool ok = false;
+    QFont font = m_ui->cueFontLabel->font();
+    font = QFontDialog::getFont (&ok, font, this);
+    if(ok)
+    {
+        m_ui->cueFontLabel->setText(font.family () + " " + QString::number(font.pointSize ()));
+        m_ui->cueFontLabel->setFont(font);
+    }
 }

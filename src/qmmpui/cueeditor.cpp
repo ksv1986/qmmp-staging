@@ -74,6 +74,13 @@ CueEditor::CueEditor(MetaDataModel *model, const TrackInfo &info, QWidget *paren
     m_parser.loadData(model->cue().toUtf8());
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     m_lastDir = settings.value("CueEditor/last_dir",  QDir::homePath()).toString();
+    if(!settings.value("CueEditor/use_system_font", true).toBool())
+    {
+        QFont font;
+        font.fromString(settings.value("CueEditor/font", qApp->font("QPlainTextEdit").toString()).toString());
+        m_ui->plainTextEdit->setFont(font);
+    }
+
     m_editable = m_model && (m_model->dialogHints() & MetaDataModel::IsCueEditable) && !m_model->isReadOnly();
     new CueSyntaxHighlighter(m_ui->plainTextEdit->document());
 

@@ -67,6 +67,8 @@ private slots:
     void saveSettings();
     void on_treeWidget_itemChanged (QTreeWidgetItem *item, int column);
     void on_treeWidget_currentItemChanged (QTreeWidgetItem *current, QTreeWidgetItem *);
+    void on_cueFontButton_clicked();
+
 
 private:
     void readSettings();

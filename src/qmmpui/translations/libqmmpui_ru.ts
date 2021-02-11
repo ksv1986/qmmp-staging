@@ -259,7 +259,7 @@
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="94"/>
-        <location filename="../forms/configdialog.ui" line="773"/>
+        <location filename="../forms/configdialog.ui" line="847"/>
         <source>Audio</source>
         <translation>Аудио</translation>
     </message>
@@ -290,6 +290,7 @@
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="160"/>
+        <location filename="../forms/configdialog.ui" line="576"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -331,13 +332,13 @@
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="270"/>
-        <location filename="../configdialog.cpp" line="321"/>
+        <location filename="../configdialog.cpp" line="327"/>
         <source>Preferences</source>
         <translation>Настройки</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="283"/>
-        <location filename="../configdialog.cpp" line="324"/>
+        <location filename="../configdialog.cpp" line="330"/>
         <source>Information</source>
         <translation>Информация</translation>
     </message>
@@ -417,108 +418,128 @@
         <translation>Автоматически вставлять URL из буфера обмена</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="531"/>
+        <location filename="../forms/configdialog.ui" line="514"/>
+        <source>CUE Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="520"/>
+        <source>Use system font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="541"/>
+        <source>Font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="566"/>
+        <source>???</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/configdialog.ui" line="605"/>
         <source>Proxy</source>
         <translation>Прокси</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="543"/>
+        <location filename="../forms/configdialog.ui" line="617"/>
         <source>Enable proxy usage</source>
         <translation>Использовать прокси</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="550"/>
+        <location filename="../forms/configdialog.ui" line="624"/>
         <source>Proxy type:</source>
         <translation>Тип прокси:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="560"/>
+        <location filename="../forms/configdialog.ui" line="634"/>
         <source>Proxy host name:</source>
         <translation>Прокси сервер:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="573"/>
+        <location filename="../forms/configdialog.ui" line="647"/>
         <source>Proxy port:</source>
         <translation>Прокси порт:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="586"/>
+        <location filename="../forms/configdialog.ui" line="660"/>
         <source>Use authentication with proxy</source>
         <translation>Использовать авторизацию на прокси</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="593"/>
+        <location filename="../forms/configdialog.ui" line="667"/>
         <source>Proxy user name:</source>
         <translation>Имя пользователя прокси:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="606"/>
+        <location filename="../forms/configdialog.ui" line="680"/>
         <source>Proxy password:</source>
         <translation>Пароль прокси:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="643"/>
+        <location filename="../forms/configdialog.ui" line="717"/>
         <source>Replay Gain</source>
         <translation>Выравнивание громкости (Replay Gain)</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="649"/>
+        <location filename="../forms/configdialog.ui" line="723"/>
         <source>Replay Gain mode:</source>
         <translation>Режим Replay Gain:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="666"/>
+        <location filename="../forms/configdialog.ui" line="740"/>
         <source>Preamp:</source>
         <translation>Предусиление:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="698"/>
-        <location filename="../forms/configdialog.ui" line="743"/>
+        <location filename="../forms/configdialog.ui" line="772"/>
+        <location filename="../forms/configdialog.ui" line="817"/>
         <source>dB</source>
         <translation>дБ</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="711"/>
+        <location filename="../forms/configdialog.ui" line="785"/>
         <source>Default gain:</source>
         <translation>Усиление по умолчанию:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="763"/>
+        <location filename="../forms/configdialog.ui" line="837"/>
         <source>Use  peak info to prevent clipping</source>
         <translation>Использовать пиковое значение для предотвращения срезания</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="779"/>
+        <location filename="../forms/configdialog.ui" line="853"/>
         <source>Buffer size:</source>
         <translation>Размер буфера:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="805"/>
+        <location filename="../forms/configdialog.ui" line="879"/>
         <source>ms</source>
         <translation>мс</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="838"/>
+        <location filename="../forms/configdialog.ui" line="912"/>
         <source>Use software volume control</source>
         <translation>Использовать программную регулировку громкости</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="878"/>
+        <location filename="../forms/configdialog.ui" line="952"/>
         <source>Use two passes for equalizer</source>
         <translation>Использовать два прохода для эквалайзера</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="821"/>
+        <location filename="../forms/configdialog.ui" line="895"/>
         <source>Volume adjustment step:</source>
         <translation>Шаг регулировки громкости:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="845"/>
+        <location filename="../forms/configdialog.ui" line="919"/>
         <source>Output bit depth:</source>
         <translation>Разрядность вывода:</translation>
     </message>
     <message>
-        <location filename="../forms/configdialog.ui" line="786"/>
+        <location filename="../forms/configdialog.ui" line="860"/>
         <source>Use dithering</source>
         <translation>Использовать дитеринг</translation>
     </message>
@@ -553,187 +574,187 @@
         <translation>Типы файлов</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="196"/>
+        <location filename="../configdialog.cpp" line="202"/>
         <source>Transports</source>
         <translation>Транспорты</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="207"/>
+        <location filename="../configdialog.cpp" line="213"/>
         <source>Decoders</source>
         <translation>Декодеры</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="218"/>
+        <location filename="../configdialog.cpp" line="224"/>
         <source>Engines</source>
         <translation>Внешние проигрыватели</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="229"/>
+        <location filename="../configdialog.cpp" line="235"/>
         <source>Effects</source>
         <translation>Эффекты</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="240"/>
+        <location filename="../configdialog.cpp" line="246"/>
         <source>Visualization</source>
         <translation>Визуализация</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="251"/>
+        <location filename="../configdialog.cpp" line="257"/>
         <source>General</source>
         <translation>Общие</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="262"/>
+        <location filename="../configdialog.cpp" line="268"/>
         <source>Output</source>
         <translation>Вывод</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="273"/>
+        <location filename="../configdialog.cpp" line="279"/>
         <source>File Dialogs</source>
         <translation>Файловые диалоги</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="284"/>
+        <location filename="../configdialog.cpp" line="290"/>
         <source>User Interfaces</source>
         <translation>Пользовательские интерфейсы</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="334"/>
+        <location filename="../configdialog.cpp" line="340"/>
         <source>&lt;Autodetect&gt;</source>
         <translation>&lt;aвтоопределение&gt;</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="335"/>
+        <location filename="../configdialog.cpp" line="341"/>
         <source>Brazilian Portuguese</source>
         <translation>бразильский португальский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="336"/>
+        <location filename="../configdialog.cpp" line="342"/>
         <source>Chinese Simplified</source>
         <translation>китайский упрощённый</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="337"/>
+        <location filename="../configdialog.cpp" line="343"/>
         <source>Chinese Traditional</source>
         <translation>китайский традиционный</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="338"/>
+        <location filename="../configdialog.cpp" line="344"/>
         <source>Czech</source>
         <translation>чешский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="339"/>
+        <location filename="../configdialog.cpp" line="345"/>
         <source>Dutch</source>
         <translation>голландский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="340"/>
+        <location filename="../configdialog.cpp" line="346"/>
         <source>English</source>
         <translation>английский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="341"/>
+        <location filename="../configdialog.cpp" line="347"/>
         <source>French</source>
         <translation>французский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="342"/>
+        <location filename="../configdialog.cpp" line="348"/>
         <source>Galician</source>
         <translation>галисийский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="343"/>
+        <location filename="../configdialog.cpp" line="349"/>
         <source>German</source>
         <translation>немецкий</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="344"/>
+        <location filename="../configdialog.cpp" line="350"/>
         <source>Greek</source>
         <translation>греческий</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="345"/>
+        <location filename="../configdialog.cpp" line="351"/>
         <source>Hebrew</source>
         <translation>иврит</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="346"/>
+        <location filename="../configdialog.cpp" line="352"/>
         <source>Hungarian</source>
         <translation>венгерский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="347"/>
+        <location filename="../configdialog.cpp" line="353"/>
         <source>Indonesian</source>
         <translation>индонезийский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="348"/>
+        <location filename="../configdialog.cpp" line="354"/>
         <source>Italian</source>
         <translation>итальянский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="349"/>
+        <location filename="../configdialog.cpp" line="355"/>
         <source>Japanese</source>
         <translation>японский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="350"/>
+        <location filename="../configdialog.cpp" line="356"/>
         <source>Kazakh</source>
         <translation>казахский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="351"/>
+        <location filename="../configdialog.cpp" line="357"/>
         <source>Lithuanian</source>
         <translation>литовский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="352"/>
+        <location filename="../configdialog.cpp" line="358"/>
         <source>Polish</source>
         <translation>польский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="353"/>
+        <location filename="../configdialog.cpp" line="359"/>
         <source>Portuguese</source>
         <translation>португальский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="354"/>
+        <location filename="../configdialog.cpp" line="360"/>
         <source>Russian</source>
         <translation>русский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="355"/>
+        <location filename="../configdialog.cpp" line="361"/>
         <source>Serbian</source>
         <translation>сербский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="356"/>
+        <location filename="../configdialog.cpp" line="362"/>
         <source>Slovak</source>
         <translation>словацкий</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="357"/>
+        <location filename="../configdialog.cpp" line="363"/>
         <source>Spanish</source>
         <translation>испанский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="358"/>
+        <location filename="../configdialog.cpp" line="364"/>
         <source>Turkish</source>
         <translation>турецкий</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="359"/>
+        <location filename="../configdialog.cpp" line="365"/>
         <source>Ukrainian</source>
         <translation>украинский</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="360"/>
+        <location filename="../configdialog.cpp" line="366"/>
         <source>Serbian (Ijekavian)</source>
         <translation>Сербский (иекавский)</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="361"/>
+        <location filename="../configdialog.cpp" line="367"/>
         <source>Serbian (Ekavian)</source>
         <translation>Сербский (экавский)</translation>
     </message>
@@ -818,18 +839,18 @@
         <translation type="unfinished">Сохранить как...</translation>
     </message>
     <message>
-        <location filename="../cueeditor.cpp" line="124"/>
+        <location filename="../cueeditor.cpp" line="131"/>
         <source>Open CUE File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../cueeditor.cpp" line="126"/>
-        <location filename="../cueeditor.cpp" line="145"/>
+        <location filename="../cueeditor.cpp" line="133"/>
+        <location filename="../cueeditor.cpp" line="152"/>
         <source>CUE Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../cueeditor.cpp" line="143"/>
+        <location filename="../cueeditor.cpp" line="150"/>
         <source>Save CUE File</source>
         <translation type="unfinished"></translation>
     </message>

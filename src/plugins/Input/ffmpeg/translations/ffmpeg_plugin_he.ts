@@ -14,22 +14,22 @@
         <translation>פורמטים של FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="326"/>
+        <location filename="../decoderffmpegfactory.cpp" line="337"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>אודות תוסף שמע FFmpeg</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="327"/>
+        <location filename="../decoderffmpegfactory.cpp" line="338"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>תוסף שמע FFmpeg של Qmmp</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="328"/>
+        <location filename="../decoderffmpegfactory.cpp" line="339"/>
         <source>Compiled against:</source>
         <translation>הודר כנגד:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="341"/>
+        <location filename="../decoderffmpegfactory.cpp" line="352"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>

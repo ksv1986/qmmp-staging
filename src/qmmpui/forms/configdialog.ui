@@ -1133,7 +1133,7 @@
   </connection>
   <connection>
    <sender>cueSystemFontCheckBox</sender>
-   <signal>clicked(bool)</signal>
+   <signal>toggled(bool)</signal>
    <receiver>label_21</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>

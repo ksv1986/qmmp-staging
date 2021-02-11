@@ -97,7 +97,7 @@ public:
     ModelCaps caps() const;
 
 private:
-    ModelCaps m_f;
+    ModelCaps m_f = DefaultCaps;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(TagModel::ModelCaps)

@@ -27,9 +27,9 @@ DEFINES += __STDC_CONSTANT_MACROS
 unix {
     target.path = $$PLUGIN_DIR/Input
     INSTALLS += target
-    PKGCONFIG += libavcodec libavformat libavutil
+    PKGCONFIG += libavcodec libavformat libavutil taglib
 }
 
 win32 {
-    LIBS += -lavcodec.dll -lavformat.dll -lavutil.dll
+    LIBS += -lavcodec.dll -lavformat.dll -lavutil.dll -ltag.dll
 }

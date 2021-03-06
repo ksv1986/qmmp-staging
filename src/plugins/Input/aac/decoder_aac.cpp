@@ -169,7 +169,7 @@ qint64 DecoderAAC::read(unsigned char *audio, qint64 maxSize)
     if(m_sample_buf_size > 0)
     {
         size = qMin(m_sample_buf_size, maxSize);
-        memcpy(audio, m_sample_buf + m_sample_buf_at, size);
+        memcpy(audio, (char *)(m_sample_buf) + m_sample_buf_at, size);
         m_sample_buf_at += size;
         m_sample_buf_size -= size;
     }

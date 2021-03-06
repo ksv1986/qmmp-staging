@@ -98,7 +98,7 @@ void AudioConverter::toFloat(const unsigned char *in, float *out, size_t samples
         break;
     case Qmmp::PCM_FLOAT:
     case Qmmp::PCM_UNKNOWN:
-        memcpy((void*)out, (void*)in, samples * sizeof(float));
+        memcpy(out, in, samples * sizeof(float));
     }
 }
 

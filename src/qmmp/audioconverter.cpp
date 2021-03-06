@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 #include <math.h>
-#include <string.h>
+#include <limits>
 #include <QtGlobal>
 #include <QtEndian>
 #include "audioconverter.h"
@@ -102,7 +102,7 @@ void AudioConverter::toFloat(const unsigned char *in, float *out, size_t samples
     }
 }
 
-void AudioConverter::fromFloat(const float *in, const unsigned char *out, size_t samples)
+void AudioConverter::fromFloat(const float *in, unsigned char *out, size_t samples)
 {
     switch (m_format)
     {
@@ -150,6 +150,6 @@ void AudioConverter::fromFloat(const float *in, const unsigned char *out, size_t
         break;
     case Qmmp::PCM_FLOAT:
     case Qmmp::PCM_UNKNOWN:
-        memcpy((void*)out, (void*)in, samples * sizeof(float));
+        memcpy(out, in, samples * sizeof(float));
     }
 }

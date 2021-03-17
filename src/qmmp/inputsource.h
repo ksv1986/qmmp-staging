@@ -69,6 +69,7 @@ public:
      * Returns content type of the input stream. Default implementation returns empty string.
      */
     virtual QString contentType() const;
+    virtual void stop();
     /*!
      * Returns input source path or url.
      */

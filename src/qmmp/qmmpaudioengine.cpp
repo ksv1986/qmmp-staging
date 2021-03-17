@@ -247,7 +247,12 @@ void QmmpAudioEngine::stop()
         m_output->recycler()->cond()->wakeAll();
 
     if(isRunning())
+    {
+        if(m_decoder && m_inputs[m_decoder])
+            m_inputs[m_decoder]->stop();
+
         wait();
+    }
 
     if (m_output)
     {

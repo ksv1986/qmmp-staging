@@ -235,7 +235,7 @@ void PlayListTrack::formatTitle(int column)
 
 void PlayListTrack::formatGroup()
 {
-    if(duration() <= 0 && path().contains("://"))
+    if(path().contains("://") && !path().contains("#"))
     {
         m_group = qApp->translate("PlayListTrack", "Streams");
         return;

@@ -194,8 +194,7 @@ QVariant LibraryModel::data(const QModelIndex &index, int role) const
     if(!index.isValid() || role != Qt::DisplayRole)
         return QVariant();
 
-    QString name = static_cast<LibraryTreeItem *>(index.internalPointer())->name;
-    return name.isEmpty() ? tr("Unknown") : name;
+    return static_cast<LibraryTreeItem *>(index.internalPointer())->name;
 }
 
 QModelIndex LibraryModel::parent(const QModelIndex &child) const

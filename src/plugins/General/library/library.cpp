@@ -162,11 +162,15 @@ void Library::addTrack(TrackInfo *track, const QString &filePath)
                   ":year, :track, :discnumber, :duration, "
                   ":audioinfo, :url, :filepath, :searchstring)");
 
+    QString title = track->value(Qmmp::TITLE).isEmpty() ? track->path().section("/", -1) : track->value(Qmmp::TITLE);
+    QString album = track->value(Qmmp::ALBUM).isEmpty() ? tr("Unknown") : track->value(Qmmp::ALBUM);
+    QString artist = track->value(Qmmp::ARTIST).isEmpty() ? tr("Unknown") : track->value(Qmmp::ARTIST);
+
     query.bindValue(":timestamp", QFileInfo(filePath).lastModified());
-    query.bindValue(":title", track->value(Qmmp::TITLE));
-    query.bindValue(":artist", track->value(Qmmp::ARTIST));
+    query.bindValue(":title", title);
+    query.bindValue(":artist", artist);
     query.bindValue(":albumartist", track->value(Qmmp::ALBUMARTIST));
-    query.bindValue(":album", track->value(Qmmp::ALBUM));
+    query.bindValue(":album", album);
     query.bindValue(":comment", track->value(Qmmp::COMMENT));
     query.bindValue(":genre", track->value(Qmmp::GENRE));
     query.bindValue(":composer", track->value(Qmmp::COMPOSER));
@@ -177,8 +181,7 @@ void Library::addTrack(TrackInfo *track, const QString &filePath)
     query.bindValue(":audioinfo", serializeAudioInfo(track->properties()));
     query.bindValue(":url", track->path());
     query.bindValue(":filepath", filePath);
-    query.bindValue(":searchstring", QString("%1|||%2|||%3").arg(track->value(Qmmp::ARTIST))
-                    .arg(track->value(Qmmp::ALBUM)).arg(track->value(Qmmp::TITLE)).toLower());
+    query.bindValue(":searchstring", QString("%1|||%2|||%3").arg(artist).arg(album).arg(title).toLower());
     if(!query.exec())
         qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
 }

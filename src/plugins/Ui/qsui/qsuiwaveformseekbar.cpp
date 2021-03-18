@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2020 by Ilya Kotov                                      *
+ *   Copyright (C) 2020-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -339,6 +339,10 @@ QSUiWaveformScanner::~QSUiWaveformScanner()
 
 bool QSUiWaveformScanner::scan(const QString &path)
 {
+    //skip streams
+    if(path.contains("://") && InputSource::findByUrl(path))
+        return false;
+
     InputSource *source = InputSource::create(path, this);
     if(!source->initialize())
     {

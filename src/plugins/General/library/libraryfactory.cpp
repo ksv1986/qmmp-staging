@@ -60,7 +60,7 @@ QWidget *LibraryFactory::createWidget(int id, QWidget *parent)
         if(!m_library.isNull())
         {
             if(m_library->isRunning())
-                m_libraryWidget->setEnabled(false);
+                m_libraryWidget->setBusyMode(true);
 
             m_library->showAction()->setVisible(false);
         }

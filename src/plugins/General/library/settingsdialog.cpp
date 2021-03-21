@@ -20,6 +20,8 @@
 
 #include <QDir>
 #include <QSettings>
+#include <QSqlDatabase>
+#include <QSqlQuery>
 #include <qmmp/qmmp.h>
 #include <qmmpui/filedialog.h>
 #include "settingsdialog.h"
@@ -34,6 +36,8 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     m_lastPath = settings.value("Library/last_path", QDir::homePath()).toString();
     QStringList dirs = settings.value("Library/dirs").toStringList();
     m_ui->dirsListWidget->addItems(dirs);
+    m_ui->showYearCheckBox->setChecked(settings.value("Library/show_year", false).toBool());
+    m_ui->recreateDatabaseCheckBox->setChecked(settings.value("Library/recreate_db", false).toBool());
 }
 
 SettingsDialog::~SettingsDialog()
@@ -51,6 +55,8 @@ void SettingsDialog::accept()
         dirs << m_ui->dirsListWidget->item(i)->text();
 
     settings.setValue("Library/dirs", dirs);
+    settings.setValue("Library/show_year", m_ui->showYearCheckBox->isChecked());
+    settings.setValue("Library/recreate_db", m_ui->recreateDatabaseCheckBox->isChecked());
     QDialog::accept();
 }
 

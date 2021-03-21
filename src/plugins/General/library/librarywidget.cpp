@@ -85,7 +85,7 @@ void LibraryWidget::setBusyMode(bool enabled)
 
     if(enabled)
     {
-        m_busyIndicator = new QLabel(tr("Scanning of directories..."), this);
+        m_busyIndicator = new QLabel(tr("Scanning directories..."), this);
         m_busyIndicator->setFrameShape(QFrame::Box);
         m_busyIndicator->resize(m_busyIndicator->sizeHint());
         m_busyIndicator->move(width() / 2 - m_busyIndicator->width() / 2 , height() / 2 - m_busyIndicator->height() / 2);

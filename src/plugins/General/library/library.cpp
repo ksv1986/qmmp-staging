@@ -55,7 +55,7 @@ Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
             if(createTables())
                 qDebug("Library: database initialization finished");
             else
-                qWarning("Library: plugin is disabled");
+                qWarning("Library: unable to create table");
         }
     }
     QSqlDatabase::removeDatabase(CONNECTION_NAME);
@@ -80,6 +80,20 @@ Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
             m_libraryWidget->data()->refresh();
         }
     });
+
+    if(settings.value("Library/recreate_db", false).toBool())
+    {
+        settings.setValue("Library/recreate_db", false);
+
+        {
+            QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
+            db.open();
+            db.exec("DELETE FROM track_library");
+            db.close();
+        }
+        QSqlDatabase::removeDatabase(CONNECTION_NAME);
+        startDirectoryScanning();
+    }
 }
 
 Library::~Library()
@@ -114,6 +128,9 @@ void Library::showLibraryWindow()
 
     if(m_libraryWidget->data()->isWindow())
         m_libraryWidget->data()->show();
+
+    if(m_future.isRunning())
+        m_libraryWidget->data()->setBusyMode(true);
 }
 
 void Library::startDirectoryScanning()

@@ -4,13 +4,19 @@
 <context>
     <name>Library</name>
     <message>
-        <location filename="../library.cpp" line="66"/>
+        <location filename="../library.cpp" line="65"/>
         <source>Library</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../library.cpp" line="72"/>
+        <location filename="../library.cpp" line="71"/>
         <source>Update library</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../library.cpp" line="181"/>
+        <location filename="../library.cpp" line="182"/>
+        <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -50,26 +56,31 @@
 <context>
     <name>LibraryModel</name>
     <message>
-        <location filename="../librarymodel.cpp" line="198"/>
-        <source>Unknown</source>
+        <location filename="../librarymodel.cpp" line="204"/>
+        <source>%1 - %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LibraryWidget</name>
     <message>
-        <location filename="../librarywidget.cpp" line="50"/>
+        <location filename="../librarywidget.cpp" line="51"/>
         <source>&amp;Add to Playlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../librarywidget.cpp" line="51"/>
+        <location filename="../librarywidget.cpp" line="52"/>
         <source>&amp;View Track Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../librarywidget.cpp" line="53"/>
+        <location filename="../librarywidget.cpp" line="54"/>
         <source>Quick Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../librarywidget.cpp" line="88"/>
+        <source>Scanning directories...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -86,22 +97,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="29"/>
+        <location filename="../settingsdialog.ui" line="39"/>
+        <source>Recreate database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="46"/>
+        <source>Show album year</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="95"/>
         <source>List of directories for scanning:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="39"/>
+        <location filename="../settingsdialog.ui" line="55"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="50"/>
+        <location filename="../settingsdialog.ui" line="66"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="59"/>
+        <location filename="../settingsdialog.cpp" line="65"/>
         <source>Select Directories for Scanning</source>
         <translation type="unfinished"></translation>
     </message>

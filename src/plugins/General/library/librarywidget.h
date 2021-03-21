@@ -29,9 +29,10 @@ class LibraryWidget;
 
 class QMenu;
 class QAction;
-class LibraryModel;
 class QContextMenuEvent;
 class QCloseEvent;
+class QLabel;
+class LibraryModel;
 
 class LibraryWidget : public QWidget
 {
@@ -40,6 +41,8 @@ public:
     explicit LibraryWidget(bool dialog, QWidget *parent = nullptr);
     ~LibraryWidget();
     void refresh();
+
+    void setBusyMode(bool enabled);
 
 private:
     void closeEvent(QCloseEvent *) override;
@@ -55,6 +58,7 @@ private:
     LibraryModel *m_model;
     QMenu *m_menu;
     QAction *m_filterAction;
+    QLabel *m_busyIndicator = nullptr;
 };
 
 #endif // LIBRARYWIDGET_H

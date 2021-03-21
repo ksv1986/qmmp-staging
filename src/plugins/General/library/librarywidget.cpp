@@ -22,6 +22,7 @@
 #include <QMenu>
 #include <QContextMenuEvent>
 #include <QIcon>
+#include <QLabel>
 #include <qmmp/qmmp.h>
 #include "librarymodel.h"
 #include "ui_librarywidget.h"
@@ -72,6 +73,33 @@ void LibraryWidget::refresh()
 {
     m_ui->filterLineEdit->clear();
     m_model->refresh();
+}
+
+void LibraryWidget::setBusyMode(bool enabled)
+{
+    if(m_busyIndicator)
+    {
+        delete m_busyIndicator;
+        m_busyIndicator = nullptr;
+    }
+
+    if(enabled)
+    {
+        m_busyIndicator = new QLabel(tr("Scanning of directories..."), this);
+        m_busyIndicator->setFrameShape(QFrame::Box);
+        m_busyIndicator->resize(m_busyIndicator->sizeHint());
+        m_busyIndicator->move(width() / 2 - m_busyIndicator->width() / 2 , height() / 2 - m_busyIndicator->height() / 2);
+        m_busyIndicator->setAutoFillBackground(true);
+        m_busyIndicator->show();
+
+        m_ui->treeView->setEnabled(false);
+        m_ui->filterLineEdit->setEnabled(false);
+    }
+    else
+    {
+        m_ui->treeView->setEnabled(true);
+        m_ui->filterLineEdit->setEnabled(true);
+    }
 }
 
 void LibraryWidget::closeEvent(QCloseEvent *)

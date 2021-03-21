@@ -76,7 +76,7 @@ Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
     connect(&m_watcher, &QFutureWatcher<bool>::finished, [=] {
         if(!m_libraryWidget->isNull())
         {
-            m_libraryWidget->data()->setEnabled(true);
+            m_libraryWidget->data()->setBusyMode(false);
             m_libraryWidget->data()->refresh();
         }
     });
@@ -125,7 +125,7 @@ void Library::startDirectoryScanning()
     m_future = QtConcurrent::run(this, &Library::scanDirectories, m_dirs);
     m_watcher.setFuture(m_future);
     if(!m_libraryWidget->isNull())
-        m_libraryWidget->data()->setEnabled(false);
+        m_libraryWidget->data()->setBusyMode(true);
 }
 
 bool Library::createTables()

@@ -24,9 +24,9 @@
 #include <QObject>
 #include <QElapsedTimer>
 #include <QPointer>
-#include <QFuture>
-#include <QFutureWatcher>
 #include <QStringList>
+#include <QThread>
+#include <atomic>
 #include <qmmp/trackinfo.h>
 #include <qmmp/qmmp.h>
 
@@ -36,14 +36,12 @@ class SoundCore;
 class PlayListTrack;
 class LibraryWidget;
 
-class Library : public QObject
+class Library : public QThread
 {
     Q_OBJECT
 public:
     explicit Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent = nullptr);
     ~Library();
-
-    bool isRunning() const;
 
     QAction *showAction() const;
 
@@ -54,6 +52,7 @@ private slots:
     void startDirectoryScanning();
 
 private:
+    void run() override;
     bool createTables();
     void addTrack(TrackInfo *track, const QString &filePath);
     QByteArray serializeAudioInfo(const QMap<Qmmp::TrackProperty, QString> &properties);
@@ -63,13 +62,10 @@ private:
     bool checkFile(const QFileInfo &info);
     void removeIgnoredTracks(QList<TrackInfo *> *tracks, const QStringList &ignoredPaths);
 
-    QFuture<bool> m_future;
     QStringList m_filters, m_dirs;
-    bool m_stopped = false;
+    std::atomic_bool m_stopped = ATOMIC_VAR_INIT(false);
     QPointer<LibraryWidget> *m_libraryWidget;
-    QFutureWatcher<bool> m_watcher;
     QAction *m_showAction;
-
 };
 
 #endif // LIBRARY_H

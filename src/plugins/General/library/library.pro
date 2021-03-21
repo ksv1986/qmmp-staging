@@ -2,7 +2,7 @@ include(../../plugins.pri)
 
 TARGET = $$PLUGINS_PREFIX/General/library
 
-QT += sql concurrent
+QT += sql
 
 HEADERS += libraryfactory.h \
     library.h \

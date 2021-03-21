@@ -30,7 +30,6 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QHash>
-#include <QtConcurrent>
 #include <QtDebug>
 #include <algorithm>
 #include <qmmp/qmmp.h>
@@ -43,7 +42,7 @@
 #define CONNECTION_NAME "qmmp_library"
 
 Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
-    QObject(parent),
+    QThread(parent),
     m_libraryWidget(libraryWidget)
 {
     {
@@ -73,7 +72,7 @@ Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
     UiHelper::instance()->addAction(refreshAction, UiHelper::TOOLS_MENU);
     connect(refreshAction, SIGNAL(triggered()), SLOT(startDirectoryScanning()));
 
-    connect(&m_watcher, &QFutureWatcher<bool>::finished, [=] {
+    connect(this, &QThread::finished, [=] {
         if(!m_libraryWidget->isNull())
         {
             m_libraryWidget->data()->setBusyMode(false);
@@ -98,10 +97,10 @@ Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
 
 Library::~Library()
 {
-    if(m_future.isRunning())
+    if(isRunning())
     {
         m_stopped = true;
-        m_future.waitForFinished();
+        wait();
     }
 
     if(QSqlDatabase::contains(CONNECTION_NAME))
@@ -109,11 +108,6 @@ Library::~Library()
         QSqlDatabase::database(CONNECTION_NAME).close();
         QSqlDatabase::removeDatabase(CONNECTION_NAME);
     }
-}
-
-bool Library::isRunning() const
-{
-    return m_future.isRunning();
 }
 
 QAction *Library::showAction() const
@@ -129,20 +123,24 @@ void Library::showLibraryWindow()
     if(m_libraryWidget->data()->isWindow())
         m_libraryWidget->data()->show();
 
-    if(m_future.isRunning())
+    if(isRunning())
         m_libraryWidget->data()->setBusyMode(true);
 }
 
 void Library::startDirectoryScanning()
 {
-    if(m_future.isRunning())
+    if(isRunning())
         return;
 
     m_filters = MetaDataManager::instance()->nameFilters();
-    m_future = QtConcurrent::run(this, &Library::scanDirectories, m_dirs);
-    m_watcher.setFuture(m_future);
+    start(QThread::IdlePriority);
     if(!m_libraryWidget->isNull())
         m_libraryWidget->data()->setBusyMode(true);
+}
+
+void Library::run()
+{
+    scanDirectories(m_dirs);
 }
 
 bool Library::createTables()
@@ -248,6 +246,7 @@ bool Library::scanDirectories(const QStringList &paths)
 {
     m_stopped = false;
 
+    while(!m_stopped)
     {
         QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
         db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
@@ -263,8 +262,7 @@ bool Library::scanDirectories(const QStringList &paths)
             if(m_stopped)
             {
                 db.close();
-                QSqlDatabase::removeDatabase(CONNECTION_NAME);
-                return false;
+                break;
             }
         }
 
@@ -274,7 +272,7 @@ bool Library::scanDirectories(const QStringList &paths)
 
     QSqlDatabase::removeDatabase(CONNECTION_NAME);
     qDebug("Library: directory scan finished");
-    return true;
+    return !m_stopped;
 }
 
 void Library::addDirectory(const QString &s)

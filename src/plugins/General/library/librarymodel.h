@@ -61,6 +61,7 @@ private:
 
     LibraryTreeItem *m_rootItem;
     QString m_filter;
+    bool m_showYear;
 };
 
 #endif // LIBRARYMODEL_H

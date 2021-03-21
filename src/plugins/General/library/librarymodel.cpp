@@ -21,6 +21,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QSettings>
 #include <QtDebug>
 #include <QMimeData>
 #include <QHash>
@@ -54,6 +55,7 @@ public:
     }
 
     QString name;
+    int year = 0;
     Qmmp::MetaData type = Qmmp::UNKNOWN;
     QList<LibraryTreeItem *> children;
     LibraryTreeItem *parent = nullptr;
@@ -62,6 +64,8 @@ public:
 LibraryModel::LibraryModel(QObject *parent) : QAbstractItemModel(parent)
 {
     m_rootItem = new LibraryTreeItem;
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    m_showYear = settings.value("Library/show_year", false).toBool();
     refresh();
 }
 
@@ -132,11 +136,11 @@ void LibraryModel::fetchMore(const QModelIndex &parent)
         QSqlQuery query(db);
         if(m_filter.isEmpty())
         {
-            query.prepare("SELECT DISTINCT Album from track_library WHERE Artist = :artist");
+            query.prepare("SELECT DISTINCT Album, Year from track_library WHERE Artist = :artist");
         }
         else
         {
-            query.prepare("SELECT DISTINCT Album from track_library WHERE Artist = :artist AND SearchString LIKE :filter");
+            query.prepare("SELECT DISTINCT Album, Year from track_library WHERE Artist = :artist AND SearchString LIKE :filter");
             query.bindValue(":filter", QString("%%1%").arg(m_filter.toLower()));
         }
         query.bindValue(":artist", parentItem->name);
@@ -151,6 +155,7 @@ void LibraryModel::fetchMore(const QModelIndex &parent)
         {
             LibraryTreeItem *item = new LibraryTreeItem;
             item->name = query.value("Album").toString();
+            item->year = query.value("Year").toInt();
             item->type = Qmmp::ALBUM;
             item->parent = parentItem;
             parentItem->children << item;
@@ -194,7 +199,11 @@ QVariant LibraryModel::data(const QModelIndex &index, int role) const
     if(!index.isValid() || role != Qt::DisplayRole)
         return QVariant();
 
-    return static_cast<LibraryTreeItem *>(index.internalPointer())->name;
+    LibraryTreeItem *item = static_cast<LibraryTreeItem *>(index.internalPointer());
+    if(item->type == Qmmp::ALBUM && m_showYear && item->year > 0)
+        return tr("%1 - %2").arg(item->year).arg(item->name);
+    else
+        return item->name;
 }
 
 QModelIndex LibraryModel::parent(const QModelIndex &child) const

@@ -31,5 +31,5 @@ QT5_WRAP_UI(liblibrary_UIS_H ${liblibrary_UIS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_LIBRARY(library MODULE ${liblibrary_SRCS} ${liblibrary_UIS_H} ${liblibrary_RCC_SRCS})
-target_link_libraries(library Qt5::Widgets Qt5::Sql Qt5::Concurrent libqmmpui libqmmp)
+target_link_libraries(library Qt5::Widgets Qt5::Sql libqmmpui libqmmp)
 install(TARGETS library DESTINATION ${PLUGIN_DIR}/General)

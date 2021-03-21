@@ -72,13 +72,13 @@ Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
     UiHelper::instance()->addAction(refreshAction, UiHelper::TOOLS_MENU);
     connect(refreshAction, SIGNAL(triggered()), SLOT(startDirectoryScanning()));
 
-    connect(this, &QThread::finished, [=] {
+    connect(this, &QThread::finished, this, [=] {
         if(!m_libraryWidget->isNull())
         {
             m_libraryWidget->data()->setBusyMode(false);
             m_libraryWidget->data()->refresh();
         }
-    });
+    }, Qt::QueuedConnection);
 
     if(settings.value("Library/recreate_db", false).toBool())
     {
@@ -246,7 +246,6 @@ bool Library::scanDirectories(const QStringList &paths)
 {
     m_stopped = false;
 
-    while(!m_stopped)
     {
         QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
         db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
@@ -260,13 +259,12 @@ bool Library::scanDirectories(const QStringList &paths)
         {
             addDirectory(path);
             if(m_stopped)
-            {
-                db.close();
                 break;
-            }
         }
 
-        removeMissingFiles(paths);
+        if(!m_stopped)
+            removeMissingFiles(paths);
+
         db.close();
     }
 

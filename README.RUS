@@ -112,6 +112,7 @@ Qmmp - Qt-based multimedia player
 - libshout (опционально)
 - mplayer (опционально)
 - libx11, libxcb, xorgproto (опционально)
+- librcd >= 0.1.13 (опционально)
 - cmake >= 3.5.0 (только для сборки)
 
 Внимание! Для сборки Qmmp нужна утилита lrelease.
@@ -144,6 +145,7 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 - USE_SKINNED (стандартный пользовательский интерфейс);
 - USE_QSUI (простой интерфейс);
 - USE_DIR_ASSOC (привязка к mime-типу inode/directory);
+- USE_LIBRCD (использование библиотеки LibRCD для определения кодировок ID3v1/v2-тегов, по умолчанию отключено);
 - QMMP_DEFAULT_OUTPUT (модуль вывода по умолчанию, пример использования: -DQMMP_DEFAULT_OUTPUT=pulse);
 - QMMP_DEFAULT_UI (интерфейс пользователя по умолчанию, пример использования: -DQMMP_DEFAULT_UI=qsui).
 

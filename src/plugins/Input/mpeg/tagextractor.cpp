@@ -24,7 +24,6 @@
 #include <QBuffer>
 #include <QTextCodec>
 #include <QSettings>
-#include <QDir>
 #include <QSet>
 #include <stdlib.h>
 #ifdef WITH_LIBRCD
@@ -66,13 +65,11 @@ QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag() const
     if (!codec)
         codec = QTextCodec::codecForName("UTF-8");
 
-#ifdef WITH_LIBRCD
     if(!m_using_rusxmms && settings.value("detect_encoding", false).toBool())
     {
         QTextCodec *detectedCodec = detectCharset(&tag);
         codec = detectedCodec ? detectedCodec : codec;
     }
-#endif
     settings.endGroup();
 
     bool utf = codec->name().contains("UTF");

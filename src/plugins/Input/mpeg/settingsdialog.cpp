@@ -83,6 +83,7 @@ void SettingsDialog::accept()
     settings.setValue("enable_crc", m_ui.enableCrcCheckBox->isChecked());
     settings.setValue("ID3v1_encoding", m_ui.id3v1EncComboBox->currentText());
     settings.setValue("ID3v2_encoding", m_ui.id3v2EncComboBox->currentText());
+    settings.setValue("detect_encoding", m_ui.detectEncodingCheckBox->isChecked());
     settings.setValue("tag_1", m_ui.firstTagComboBox->currentIndex());
     settings.setValue("tag_2", m_ui.secondTagComboBox->currentIndex());
     settings.setValue("tag_3", m_ui.thirdTagComboBox->currentIndex());

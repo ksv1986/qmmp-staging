@@ -64,7 +64,7 @@ private:
     QTextCodec *m_codec;
     TagLib::MPEG::File *m_file;
     TagLib::Tag *m_tag;
-    TagLib::MPEG::File::TagTypes m_tagType;
+    TagLib::MPEG::File::TagTypes m_type;
 };
 
 #endif // MPEGMETADATAMODEL_H

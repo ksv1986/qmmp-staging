@@ -51,17 +51,16 @@ SettingsDialog::SettingsDialog(bool using_rusxmms, QWidget *parent)
     m_ui.decoderGroupBox->setEnabled(false);
 #endif
 
-    int pos = m_ui.id3v1EncComboBox->findText
-        (settings.value("ID3v1_encoding","ISO-8859-1").toString());
+    int pos = m_ui.id3v1EncComboBox->findText(settings.value("ID3v1_encoding","ISO-8859-1").toString());
     m_ui.id3v1EncComboBox->setCurrentIndex(pos);
-    pos = m_ui.id3v2EncComboBox->findText
-        (settings.value("ID3v2_encoding","UTF-8").toString());
+    pos = m_ui.id3v2EncComboBox->findText(settings.value("ID3v2_encoding","UTF-8").toString());
     m_ui.id3v2EncComboBox->setCurrentIndex(pos);
 
     m_ui.firstTagComboBox->setCurrentIndex(settings.value("tag_1", ID3v2).toInt());
     m_ui.secondTagComboBox->setCurrentIndex(settings.value("tag_2", APE).toInt());
     m_ui.thirdTagComboBox->setCurrentIndex(settings.value("tag_3", ID3v1).toInt());
     m_ui.mergeTagsCheckBox->setChecked(settings.value("merge_tags", false).toBool());
+    m_ui.detectEncodingCheckBox->setChecked(settings.value("detect_encoding", false).toBool());
 
     settings.endGroup();
 
@@ -69,9 +68,9 @@ SettingsDialog::SettingsDialog(bool using_rusxmms, QWidget *parent)
     {
         m_ui.id3v1EncComboBox->setEnabled(false);
         m_ui.id3v2EncComboBox->setEnabled(false);
+        m_ui.detectEncodingCheckBox->setEnabled(false);
     }
 }
-
 
 SettingsDialog::~SettingsDialog()
 {}

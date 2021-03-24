@@ -36,6 +36,7 @@
 #include <taglib/id3v2header.h>
 #include <taglib/textidentificationframe.h>
 #include <taglib/id3v2framefactory.h>
+#include "tagextractor.h"
 #include "mpegmetadatamodel.h"
 #include "settingsdialog.h"
 #ifdef WITH_MAD
@@ -46,7 +47,6 @@
 #endif
 #include "decodermpegfactory.h"
 
-
 #define CSTR_TO_QSTR(str,utf) codec->toUnicode(str.toCString(utf)).trimmed()
 
 // DecoderMPEGFactory
@@ -56,12 +56,13 @@ DecoderMPEGFactory::DecoderMPEGFactory()
     //detecting rusxmms patch
     m_using_rusxmms = false;
     char str[] = { char(0xF2), char(0xE5), char(0xF1), char(0xF2), '\0'};
-    QTextCodec *codec = QTextCodec::codecForName ("windows-1251");
+    QTextCodec *codec = QTextCodec::codecForName("windows-1251");
     TagLib::String tstr(str);
     if(codec->toUnicode(str) == QString::fromUtf8(tstr.toCString(true)))
     {
         qDebug("DecoderMADFactory: found taglib with rusxmms patch");
         m_using_rusxmms = true;
+        TagExtractor::setForceUtf8(m_using_rusxmms);
     }
 }
 
@@ -245,7 +246,7 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
                 tag = fileRef.ID3v1Tag();
                 break;
             case SettingsDialog::ID3v2:
-                codecName = settings.value("ID3v2_encoding","UTF-8").toByteArray ();
+                codecName = settings.value("ID3v2_encoding","UTF-8").toByteArray();
                 tag = fileRef.ID3v2Tag();
                 break;
             case SettingsDialog::APE:
@@ -266,7 +267,15 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
 
             if (tag && codec && !tag->isEmpty())
             {
+                if((tag == fileRef.ID3v1Tag() || tag == fileRef.ID3v2Tag()) && !m_using_rusxmms &&
+                        settings.value("detect_encoding", false).toBool())
+                {
+                    QTextCodec *detectedCodec = TagExtractor::detectCharset(tag);
+                    codec = detectedCodec ? detectedCodec : codec;
+                }
+
                 bool utf = codec->name().contains("UTF");
+
                 QMap<Qmmp::MetaData, QString> tags = {
                     { Qmmp::ARTIST, CSTR_TO_QSTR(tag->artist(), utf) },
                     { Qmmp::ALBUM, CSTR_TO_QSTR(tag->album(), utf) },

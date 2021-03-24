@@ -24,6 +24,11 @@ contains(CONFIG, WITH_MPG123){
     DEFINES += WITH_MPG123
 }
 
+contains(CONFIG, WITH_LIBRCD){
+    LIBS += -lrcd
+    DEFINES += WITH_LIBRCD
+}
+
 FORMS += settingsdialog.ui
 
 RESOURCES = translations/translations.qrc

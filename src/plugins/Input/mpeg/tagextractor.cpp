@@ -25,76 +25,116 @@
 #include <QTextCodec>
 #include <QSettings>
 #include <QDir>
+#include <QSet>
 #include <stdlib.h>
-
+#ifdef WITH_LIBRCD
+#include <librcd.h>
+#endif
 #include "tagextractor.h"
 
-TagExtractor::TagExtractor(QIODevice *d) : m_d(d)
+#define CSTR_TO_QSTR(str,utf) codec->toUnicode(str.toCString(utf)).trimmed()
+
+bool TagExtractor::m_using_rusxmms = false;
+
+TagExtractor::TagExtractor(QIODevice *d) : m_input(d)
 {}
 
 TagExtractor::~TagExtractor()
-{
-}
+{}
 
-const QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag()
+QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag() const
 {
-    QByteArray array = m_d->peek(2048);
+    QByteArray array = m_input->peek(2048);
     int offset = array.indexOf("ID3");
     if (offset < 0)
-        return m_tag;
-    ID3v2Tag taglib_tag(&array, offset);
-    if (taglib_tag.isEmpty())
-        return m_tag;
+        return QMap<Qmmp::MetaData, QString>();
 
-    TagLib::String album = taglib_tag.album();
-    TagLib::String artist = taglib_tag.artist();
-    TagLib::String comment = taglib_tag.comment();
-    TagLib::String genre = taglib_tag.genre();
-    TagLib::String title = taglib_tag.title();
+    ID3v2Tag tag(&array, offset);
+    if (tag.isEmpty())
+        return QMap<Qmmp::MetaData, QString>();
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("MPEG");
-    QByteArray name = settings.value("ID3v2_encoding","UTF-8").toByteArray ();
-    bool utf = false;
+    QByteArray codecName = settings.value("ID3v2_encoding","UTF-8").toByteArray ();
     QTextCodec *codec = nullptr;
-    if (name.contains("UTF"))
-    {
-        codec = QTextCodec::codecForName ("UTF-8");
-        utf = true;
-    }
-    else
-        codec = QTextCodec::codecForName(name);
-    settings.endGroup();
+
+    if(m_using_rusxmms || codecName.contains("UTF"))
+        codec = QTextCodec::codecForName("UTF-8");
+    else if(!codecName.isEmpty())
+        codec = QTextCodec::codecForName(codecName);
 
     if (!codec)
-        codec = QTextCodec::codecForName ("UTF-8");
+        codec = QTextCodec::codecForName("UTF-8");
 
-    m_tag.insert(Qmmp::ALBUM,
-                 codec->toUnicode(album.toCString(utf)).trimmed());
-    m_tag.insert(Qmmp::ARTIST,
-                 codec->toUnicode(artist.toCString(utf)).trimmed());
-    m_tag.insert(Qmmp::COMMENT,
-                 codec->toUnicode(comment.toCString(utf)).trimmed());
-    m_tag.insert(Qmmp::GENRE,
-                 codec->toUnicode(genre.toCString(utf)).trimmed());
-    m_tag.insert(Qmmp::TITLE,
-                 codec->toUnicode(title.toCString(utf)).trimmed());
-    m_tag.insert(Qmmp::YEAR,
-                 QString::number(taglib_tag.year()));
-    m_tag.insert(Qmmp::TRACK,
-                 QString::number(taglib_tag.track()));
+#ifdef WITH_LIBRCD
+    if(!m_using_rusxmms && settings.value("detect_encoding", false).toBool())
+    {
+        QTextCodec *detectedCodec = detectCharset(&tag);
+        codec = detectedCodec ? detectedCodec : codec;
+    }
+#endif
+    settings.endGroup();
 
-    if(!taglib_tag.frameListMap()["TCOM"].isEmpty())
+    bool utf = codec->name().contains("UTF");
+
+    QMap<Qmmp::MetaData, QString> tags = {
+        { Qmmp::ARTIST, CSTR_TO_QSTR(tag.artist(), utf) },
+        { Qmmp::ALBUM, CSTR_TO_QSTR(tag.album(), utf) },
+        { Qmmp::COMMENT, CSTR_TO_QSTR(tag.comment(), utf) },
+        { Qmmp::GENRE, CSTR_TO_QSTR(tag.genre(), utf) },
+        { Qmmp::TITLE, CSTR_TO_QSTR(tag.title(), utf) },
+        { Qmmp::YEAR, QString::number(tag.year()) },
+        { Qmmp::TRACK, QString::number(tag.track()) },
+    };
+
+    if(!tag.frameListMap()["TCOM"].isEmpty())
     {
-        TagLib::String composer = taglib_tag.frameListMap()["TCOM"].front()->toString();
-        m_tag.insert(Qmmp::COMPOSER, codec->toUnicode(composer.toCString(utf)).trimmed());
+        TagLib::String composer = tag.frameListMap()["TCOM"].front()->toString();
+        tags.insert(Qmmp::COMPOSER, codec->toUnicode(composer.toCString(utf)).trimmed());
     }
-    if(!taglib_tag.frameListMap()["TPOS"].isEmpty())
+    if(!tag.frameListMap()["TPOS"].isEmpty())
     {
-        TagLib::String disc = taglib_tag.frameListMap()["TPOS"].front()->toString();
-        m_tag.insert(Qmmp::DISCNUMBER, QString(disc.toCString()).trimmed());
+        TagLib::String disc = tag.frameListMap()["TPOS"].front()->toString();
+        tags.insert(Qmmp::DISCNUMBER, QString(disc.toCString()).trimmed());
     }
-    return m_tag;
+    return tags;
+}
+
+void TagExtractor::setForceUtf8(bool enabled)
+{
+    m_using_rusxmms = enabled;
+}
+
+QTextCodec *TagExtractor::detectCharset(const TagLib::Tag *tag)
+{
+    if(tag->title().isLatin1() && tag->album().isLatin1() &&
+            tag->artist().isLatin1() && tag->comment().isLatin1())
+    {
+#ifdef WITH_LIBRCD
+        QTextCodec *codec = nullptr;
+        QSet<int> charsets;
+        charsets << rcdGetRussianCharset(tag->title().toCString(), 0);
+        charsets << rcdGetRussianCharset(tag->artist().toCString(), 0);
+        charsets << rcdGetRussianCharset(tag->album().toCString(), 0);
+        charsets << rcdGetRussianCharset(tag->comment().toCString(), 0);
+
+        if(charsets.contains(RUSSIAN_CHARSET_WIN))
+            codec = QTextCodec::codecForName("WINDOWS-1251");
+        else if(charsets.contains(RUSSIAN_CHARSET_ALT))
+            codec = QTextCodec::codecForName("IBM866");
+        else if(charsets.contains(RUSSIAN_CHARSET_KOI))
+            codec = QTextCodec::codecForName("KOI8-R");
+        else if(charsets.contains(RUSSIAN_CHARSET_UTF8))
+            codec = QTextCodec::codecForName("UTF-8");
+        else if(charsets.contains(RUSSIAN_CHARSET_LATIN))
+            codec = QTextCodec::codecForName("ISO-8859-1");
+
+        return codec;
+#else
+        return nullptr;
+#endif
+    }
+    return QTextCodec::codecForName("UTF-8");
 }
 
 ID3v2Tag::ID3v2Tag(QByteArray *array, long offset) : TagLib::ID3v2::Tag(),

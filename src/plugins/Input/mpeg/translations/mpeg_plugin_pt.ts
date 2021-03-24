@@ -4,42 +4,42 @@
 <context>
     <name>DecoderMPEGFactory</name>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="179"/>
+        <location filename="../decodermpegfactory.cpp" line="180"/>
         <source>MPEG Plugin</source>
         <translation>Suplemento MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="182"/>
+        <location filename="../decodermpegfactory.cpp" line="183"/>
         <source>MPEG Files</source>
         <translation>Ficheiros MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="401"/>
+        <location filename="../decodermpegfactory.cpp" line="410"/>
         <source>About MPEG Audio Plugin</source>
         <translation>Sobre o suplemento MPEG Audio</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="402"/>
+        <location filename="../decodermpegfactory.cpp" line="411"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
         <translation>Descodificador de áudio MPEG 1.0/2.0/2.5 layer 1/2/3</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="403"/>
+        <location filename="../decodermpegfactory.cpp" line="412"/>
         <source>Compiled against:</source>
         <translation>Compilado com:</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="412"/>
+        <location filename="../decodermpegfactory.cpp" line="421"/>
         <source>mpg123, API version: %1</source>
         <translation>mpg123, versão da API: %1</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="416"/>
+        <location filename="../decodermpegfactory.cpp" line="425"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="417"/>
+        <location filename="../decodermpegfactory.cpp" line="426"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Baseado no código fonte dos projetos mq3 e madplay</translation>
     </message>
@@ -47,25 +47,25 @@
 <context>
     <name>MPEGMetaDataModel</name>
     <message>
-        <location filename="../mpegmetadatamodel.cpp" line="65"/>
-        <location filename="../mpegmetadatamodel.cpp" line="68"/>
-        <location filename="../mpegmetadatamodel.cpp" line="71"/>
-        <location filename="../mpegmetadatamodel.cpp" line="74"/>
+        <location filename="../mpegmetadatamodel.cpp" line="66"/>
+        <location filename="../mpegmetadatamodel.cpp" line="69"/>
+        <location filename="../mpegmetadatamodel.cpp" line="72"/>
+        <location filename="../mpegmetadatamodel.cpp" line="75"/>
         <source>Mode</source>
         <translation>Modo</translation>
     </message>
     <message>
-        <location filename="../mpegmetadatamodel.cpp" line="77"/>
+        <location filename="../mpegmetadatamodel.cpp" line="78"/>
         <source>Protection</source>
         <translation>Proteção</translation>
     </message>
     <message>
-        <location filename="../mpegmetadatamodel.cpp" line="78"/>
+        <location filename="../mpegmetadatamodel.cpp" line="79"/>
         <source>Copyright</source>
         <translation>Copyright</translation>
     </message>
     <message>
-        <location filename="../mpegmetadatamodel.cpp" line="79"/>
+        <location filename="../mpegmetadatamodel.cpp" line="80"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
@@ -156,12 +156,17 @@
         <translation>Codificação</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="284"/>
+        <location filename="../settingsdialog.ui" line="333"/>
         <source>ID3v1 encoding:</source>
         <translation>Codificação ID3v1:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="310"/>
+        <location filename="../settingsdialog.ui" line="343"/>
+        <source>Try to detect encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="294"/>
         <source>ID3v2 encoding:</source>
         <translation>Codificação ID3v2:</translation>
     </message>

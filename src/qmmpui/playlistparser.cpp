@@ -243,7 +243,7 @@ QList<PlayListTrack *> PlayListParser::deserialize(const QByteArray &json)
     }
 
     QJsonArray array = document.array();
-    for(QJsonArray::const_iterator it = array.cbegin(); it != array.cend(); ++it)
+    for(QJsonArray::const_iterator it = array.constBegin(); it != array.constEnd(); ++it)
     {
         if(!(*it).isObject())
             continue;

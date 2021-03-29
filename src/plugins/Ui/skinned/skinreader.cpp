@@ -51,9 +51,9 @@ void SkinReader::generateThumbs()
     dir.setFilter( QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     QFileInfoList f = dir.entryInfoList();
 #if defined(Q_OS_WIN) && !defined(Q_OS_CYGWIN)
-    dir.setPath(qApp->applicationDirPath()+"/skins");
+    dir.setPath(qApp->applicationDirPath() + "/skins");
 #else
-    dir.setPath(Qmmp::dataPath());
+    dir.setPath(Qmmp::dataPath() + "/skins");
 #endif
     dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
     f << dir.entryInfoList();

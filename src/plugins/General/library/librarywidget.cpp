@@ -120,7 +120,7 @@ void LibraryWidget::on_filterLineEdit_textChanged(const QString &text)
 {
     m_model->setFilter(text);
     m_model->refresh();
-    if(text.count() >= 3)
+    if(m_model->rowCount() <= 4)
         m_ui->treeView->expandAll();
 }
 

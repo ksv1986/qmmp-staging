@@ -309,10 +309,6 @@ void PlayList::createActions()
                            m_pl_manager, SLOT(randomizeList()));
     m_sortMenu->addAction (QIcon::fromTheme("view-sort-descending"), tr("Reverse List"),
                            m_pl_manager, SLOT(reverseList()));
-
-    m_sortMenu->addAction(SET_ACTION(ActionManager::PL_GROUP_TRACKS, m_ui_settings, SLOT(setGroupsEnabled(bool))));
-    m_sortMenu->addAction(ACTION(ActionManager::PL_SHOW_HEADER));
-    ACTION(ActionManager::PL_GROUP_TRACKS)->setChecked(m_ui_settings->isGroupsEnabled());
     //playlist context menu
     m_listWidget->menu()->addAction(ActionManager::instance()->action(ActionManager::PL_SHOW_INFO));
     m_listWidget->menu()->addSeparator();
@@ -341,6 +337,10 @@ void PlayList::createActions()
     m_playlistMenu->addAction(SET_ACTION(ActionManager::PL_SELECT_PREVIOUS, m_pl_manager,
                                      SLOT(selectPreviousPlayList())));
     m_playlistMenu->addAction(SET_ACTION(ActionManager::PL_SHOW_MANAGER, this, SLOT(showPlayLists())));
+
+    //actions
+    SET_ACTION(ActionManager::PL_GROUP_TRACKS, m_ui_settings, SLOT(setGroupsEnabled(bool)));
+    ACTION(ActionManager::PL_GROUP_TRACKS)->setChecked(m_ui_settings->isGroupsEnabled());
 }
 
 void PlayList::closeEvent (QCloseEvent *e)

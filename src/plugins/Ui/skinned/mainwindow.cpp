@@ -446,8 +446,11 @@ void MainWindow::createActions()
                                  SLOT(setPlayListTransitionEnabled(bool))));
     plMenu->addAction(SET_ACTION(ActionManager::STOP_AFTER_SELECTED, m_pl_manager,
                                  SLOT(stopAfterSelected())));
-
     plMenu->addAction(SET_ACTION(ActionManager::CLEAR_QUEUE, m_pl_manager, SLOT(clearQueue())));
+    plMenu->addSeparator();
+    plMenu->addAction(ACTION(ActionManager::PL_SHOW_HEADER));
+    plMenu->addAction(ACTION(ActionManager::PL_GROUP_TRACKS));
+
     connect(m_ui_settings, SIGNAL(repeatableListChanged(bool)),
             ACTION(ActionManager::REPEAT_ALL), SLOT(setChecked(bool)));
     connect(m_ui_settings, SIGNAL (repeatableTrackChanged(bool)),

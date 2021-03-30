@@ -673,148 +673,148 @@
         <translation>Qmmp</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="32"/>
+        <location filename="../forms/mainwindow.ui" line="35"/>
         <source>&amp;File</source>
         <translation>&amp;Soubor</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="37"/>
+        <location filename="../forms/mainwindow.ui" line="40"/>
         <source>&amp;Tools</source>
         <translation>Nás&amp;troje</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="45"/>
+        <location filename="../forms/mainwindow.ui" line="48"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="50"/>
+        <location filename="../forms/mainwindow.ui" line="53"/>
         <source>&amp;Edit</source>
         <translation>Ú&amp;pravy</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="55"/>
+        <location filename="../forms/mainwindow.ui" line="58"/>
         <source>&amp;Playback</source>
         <translation>&amp;Přehrávání</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="60"/>
+        <location filename="../forms/mainwindow.ui" line="63"/>
         <source>&amp;View</source>
         <translation>Po&amp;hled</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="99"/>
+        <location filename="../forms/mainwindow.ui" line="102"/>
         <source>Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="114"/>
+        <location filename="../forms/mainwindow.ui" line="117"/>
         <source>Cover</source>
         <translation>Obal</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="123"/>
+        <location filename="../forms/mainwindow.ui" line="126"/>
         <source>Playlists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="135"/>
+        <location filename="../forms/mainwindow.ui" line="138"/>
         <source>Waveform Seek Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="149"/>
+        <location filename="../forms/mainwindow.ui" line="152"/>
         <source>Previous</source>
         <translation>Předchozí</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="159"/>
+        <location filename="../forms/mainwindow.ui" line="162"/>
         <source>Play</source>
         <translation>Přehrát</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="169"/>
+        <location filename="../forms/mainwindow.ui" line="172"/>
         <source>Pause</source>
         <translation>Pozastavit</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="179"/>
+        <location filename="../forms/mainwindow.ui" line="182"/>
         <source>Next</source>
         <translation>Další</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="189"/>
+        <location filename="../forms/mainwindow.ui" line="192"/>
         <source>Stop</source>
         <translation>Zastavit</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="194"/>
+        <location filename="../forms/mainwindow.ui" line="197"/>
         <source>&amp;Add File</source>
         <translation>Přidat &amp;soubor</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="199"/>
+        <location filename="../forms/mainwindow.ui" line="202"/>
         <source>&amp;Remove All</source>
         <translation>Odstranit &amp;vše</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="204"/>
+        <location filename="../forms/mainwindow.ui" line="207"/>
         <source>New Playlist</source>
         <translation>Nový seznam skladeb</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="209"/>
+        <location filename="../forms/mainwindow.ui" line="212"/>
         <source>Remove Playlist</source>
         <translation>Odstranit seznam skladeb</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="214"/>
+        <location filename="../forms/mainwindow.ui" line="217"/>
         <source>&amp;Add Directory</source>
         <translation>Přidat &amp;adresář</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="219"/>
+        <location filename="../forms/mainwindow.ui" line="222"/>
         <source>&amp;Exit</source>
         <translation>U&amp;končit</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="224"/>
+        <location filename="../forms/mainwindow.ui" line="227"/>
         <source>About</source>
         <translation>O programu</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="229"/>
+        <location filename="../forms/mainwindow.ui" line="232"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="234"/>
+        <location filename="../forms/mainwindow.ui" line="237"/>
         <source>&amp;Select All</source>
         <translation>&amp;Vybrat vše</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="239"/>
+        <location filename="../forms/mainwindow.ui" line="242"/>
         <source>&amp;Remove Selected</source>
         <translation>&amp;Odstranit vybrané</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="244"/>
+        <location filename="../forms/mainwindow.ui" line="247"/>
         <source>&amp;Remove Unselected</source>
         <translation>Odstranit &amp;nevybrané</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="84"/>
-        <location filename="../forms/mainwindow.ui" line="249"/>
+        <location filename="../forms/mainwindow.ui" line="87"/>
+        <location filename="../forms/mainwindow.ui" line="252"/>
         <source>Visualization</source>
         <translation>Vizualizace</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="254"/>
+        <location filename="../forms/mainwindow.ui" line="257"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="259"/>
+        <location filename="../forms/mainwindow.ui" line="262"/>
         <location filename="../mainwindow.cpp" line="280"/>
         <source>Rename Playlist</source>
         <translation>Přejmenovat seznam skladeb</translation>

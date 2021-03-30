@@ -673,148 +673,148 @@
         <translation>Qmmp</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="32"/>
+        <location filename="../forms/mainwindow.ui" line="35"/>
         <source>&amp;File</source>
         <translation>&amp;Tiedosto</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="37"/>
+        <location filename="../forms/mainwindow.ui" line="40"/>
         <source>&amp;Tools</source>
         <translation>Ty&amp;ökalut</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="45"/>
+        <location filename="../forms/mainwindow.ui" line="48"/>
         <source>&amp;Help</source>
         <translation>&amp;Ohje</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="50"/>
+        <location filename="../forms/mainwindow.ui" line="53"/>
         <source>&amp;Edit</source>
         <translation>&amp;Muokkaa</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="55"/>
+        <location filename="../forms/mainwindow.ui" line="58"/>
         <source>&amp;Playback</source>
         <translation>To&amp;isto</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="60"/>
+        <location filename="../forms/mainwindow.ui" line="63"/>
         <source>&amp;View</source>
         <translation>Nä&amp;ytä</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="99"/>
+        <location filename="../forms/mainwindow.ui" line="102"/>
         <source>Files</source>
         <translation>Tiedostot</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="114"/>
+        <location filename="../forms/mainwindow.ui" line="117"/>
         <source>Cover</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="123"/>
+        <location filename="../forms/mainwindow.ui" line="126"/>
         <source>Playlists</source>
         <translation>Soittolistat</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="135"/>
+        <location filename="../forms/mainwindow.ui" line="138"/>
         <source>Waveform Seek Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="149"/>
+        <location filename="../forms/mainwindow.ui" line="152"/>
         <source>Previous</source>
         <translation>Edellinen</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="159"/>
+        <location filename="../forms/mainwindow.ui" line="162"/>
         <source>Play</source>
         <translation>Toista</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="169"/>
+        <location filename="../forms/mainwindow.ui" line="172"/>
         <source>Pause</source>
         <translation>Keskeytä</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="179"/>
+        <location filename="../forms/mainwindow.ui" line="182"/>
         <source>Next</source>
         <translation>Seuraava</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="189"/>
+        <location filename="../forms/mainwindow.ui" line="192"/>
         <source>Stop</source>
         <translation>Lopeta</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="194"/>
+        <location filename="../forms/mainwindow.ui" line="197"/>
         <source>&amp;Add File</source>
         <translation>Li&amp;sää tiedosto</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="199"/>
+        <location filename="../forms/mainwindow.ui" line="202"/>
         <source>&amp;Remove All</source>
         <translation>Poi&amp;sta kaikki</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="204"/>
+        <location filename="../forms/mainwindow.ui" line="207"/>
         <source>New Playlist</source>
         <translation>Uusi soittolista</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="209"/>
+        <location filename="../forms/mainwindow.ui" line="212"/>
         <source>Remove Playlist</source>
         <translation>Poista soittolista</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="214"/>
+        <location filename="../forms/mainwindow.ui" line="217"/>
         <source>&amp;Add Directory</source>
         <translation>Lis&amp;ää kansio</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="219"/>
+        <location filename="../forms/mainwindow.ui" line="222"/>
         <source>&amp;Exit</source>
         <translation>&amp;Lopeta</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="224"/>
+        <location filename="../forms/mainwindow.ui" line="227"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="229"/>
+        <location filename="../forms/mainwindow.ui" line="232"/>
         <source>About Qt</source>
         <translation>Tietoja Qt:stä</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="234"/>
+        <location filename="../forms/mainwindow.ui" line="237"/>
         <source>&amp;Select All</source>
         <translation>&amp;Valitse kaikki</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="239"/>
+        <location filename="../forms/mainwindow.ui" line="242"/>
         <source>&amp;Remove Selected</source>
         <translation>&amp;Poista valitut</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="244"/>
+        <location filename="../forms/mainwindow.ui" line="247"/>
         <source>&amp;Remove Unselected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="84"/>
-        <location filename="../forms/mainwindow.ui" line="249"/>
+        <location filename="../forms/mainwindow.ui" line="87"/>
+        <location filename="../forms/mainwindow.ui" line="252"/>
         <source>Visualization</source>
         <translation>Visualisointi</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="254"/>
+        <location filename="../forms/mainwindow.ui" line="257"/>
         <source>Settings</source>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="259"/>
+        <location filename="../forms/mainwindow.ui" line="262"/>
         <location filename="../mainwindow.cpp" line="280"/>
         <source>Rename Playlist</source>
         <translation>Nimeä soittolista uudelleen</translation>

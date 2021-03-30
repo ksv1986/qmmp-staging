@@ -419,32 +419,42 @@
         <translation>&amp;Spaltenüberschriften anzeigen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="89"/>
+        <source>Show &amp;Tab Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="89"/>
+        <source>Alt+T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>&amp;Settings</source>
         <translation>Ein&amp;stellungen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>Ctrl+P</source>
         <translation>Strg+P</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="92"/>
         <source>&amp;About</source>
         <translation>Ü&amp;ber</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="92"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>&amp;About Qt</source>
         <translation>Übe&amp;r Qt</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>&amp;Exit</source>
         <translation>Be&amp;enden</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Ctrl+Q</source>
         <translation>Strg+Q</translation>
     </message>
@@ -519,17 +529,17 @@
 <context>
     <name>HotkeyEditor</name>
     <message>
-        <location filename="../forms/hotkeyeditor.ui" line="40"/>
+        <location filename="../forms/hotkeyeditor.ui" line="43"/>
         <source>Reset</source>
         <translation>Zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../forms/hotkeyeditor.ui" line="54"/>
+        <location filename="../forms/hotkeyeditor.ui" line="57"/>
         <source>Action</source>
         <translation>Aktion</translation>
     </message>
     <message>
-        <location filename="../forms/hotkeyeditor.ui" line="59"/>
+        <location filename="../forms/hotkeyeditor.ui" line="62"/>
         <source>Shortcut</source>
         <translation>Kurzbefehl</translation>
     </message>
@@ -539,37 +549,37 @@
         <translation>Kurzbefehl ändern …</translation>
     </message>
     <message>
-        <location filename="../hotkeyeditor.cpp" line="58"/>
+        <location filename="../hotkeyeditor.cpp" line="57"/>
         <source>Playback</source>
         <translation>Wiedergabe</translation>
     </message>
     <message>
-        <location filename="../hotkeyeditor.cpp" line="64"/>
+        <location filename="../hotkeyeditor.cpp" line="63"/>
         <source>View</source>
         <translation>Ansicht</translation>
     </message>
     <message>
-        <location filename="../hotkeyeditor.cpp" line="70"/>
+        <location filename="../hotkeyeditor.cpp" line="69"/>
         <source>Volume</source>
         <translation>Lautstärke</translation>
     </message>
     <message>
-        <location filename="../hotkeyeditor.cpp" line="76"/>
+        <location filename="../hotkeyeditor.cpp" line="75"/>
         <source>Playlist</source>
         <translation>Wiedergabeliste</translation>
     </message>
     <message>
-        <location filename="../hotkeyeditor.cpp" line="82"/>
+        <location filename="../hotkeyeditor.cpp" line="81"/>
         <source>Misc</source>
         <translation>Verschiedenes</translation>
     </message>
     <message>
-        <location filename="../hotkeyeditor.cpp" line="94"/>
+        <location filename="../hotkeyeditor.cpp" line="93"/>
         <source>Reset Shortcuts</source>
         <translation>Kurzbefehle zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../hotkeyeditor.cpp" line="95"/>
+        <location filename="../hotkeyeditor.cpp" line="94"/>
         <source>Do you want to restore default shortcuts?</source>
         <translation>Möchten Sie die Standardkurzbefehle wiederherstellen?</translation>
     </message>
@@ -818,17 +828,17 @@
         <translation>Wiedergabeliste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="462"/>
+        <location filename="../mainwindow.cpp" line="466"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="470"/>
+        <location filename="../mainwindow.cpp" line="474"/>
         <source>Tools</source>
         <translation>Werkzeuge</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="552"/>
+        <location filename="../mainwindow.cpp" line="556"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -937,22 +947,22 @@
         <translation>Wiedergabeliste umkehren</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="321"/>
+        <location filename="../playlist.cpp" line="317"/>
         <source>Actions</source>
         <translation>Aktionen</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="591"/>
+        <location filename="../playlist.cpp" line="592"/>
         <source>Rename Playlist</source>
         <translation>Wiedergabeliste umbenennen</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="591"/>
+        <location filename="../playlist.cpp" line="592"/>
         <source>Playlist name:</source>
         <translation>Wiedergabelistenname:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="612"/>
+        <location filename="../playlist.cpp" line="613"/>
         <source>&amp;New PlayList</source>
         <translation>&amp;Neue Wiedergabeliste</translation>
     </message>
@@ -1233,137 +1243,137 @@
         <translation>Einzelspaltenmodus</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="315"/>
+        <location filename="../forms/skinnedsettings.ui" line="308"/>
         <source>Show splitters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="322"/>
+        <location filename="../forms/skinnedsettings.ui" line="315"/>
         <source>Alternate splitter color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="428"/>
+        <location filename="../forms/skinnedsettings.ui" line="421"/>
         <source>Colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="434"/>
+        <location filename="../forms/skinnedsettings.ui" line="427"/>
         <source>Playlist Colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="440"/>
+        <location filename="../forms/skinnedsettings.ui" line="433"/>
         <source>Use skin colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="533"/>
+        <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>Background #2:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="597"/>
+        <location filename="../forms/skinnedsettings.ui" line="590"/>
         <source>Highlighted background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="501"/>
+        <location filename="../forms/skinnedsettings.ui" line="494"/>
         <source>Normal text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="664"/>
+        <location filename="../forms/skinnedsettings.ui" line="657"/>
         <source>Splitter:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="565"/>
+        <location filename="../forms/skinnedsettings.ui" line="558"/>
         <source>Current text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="629"/>
+        <location filename="../forms/skinnedsettings.ui" line="622"/>
         <source>Highlighted text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="772"/>
+        <location filename="../forms/skinnedsettings.ui" line="765"/>
         <source>Current track background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="874"/>
+        <location filename="../forms/skinnedsettings.ui" line="867"/>
         <source>Override current track background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="737"/>
+        <location filename="../forms/skinnedsettings.ui" line="730"/>
         <source>Group background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="867"/>
+        <location filename="../forms/skinnedsettings.ui" line="860"/>
         <source>Override group background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="705"/>
+        <location filename="../forms/skinnedsettings.ui" line="698"/>
         <source>Group text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="456"/>
+        <location filename="../forms/skinnedsettings.ui" line="449"/>
         <source>Background #1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="832"/>
+        <location filename="../forms/skinnedsettings.ui" line="825"/>
         <source>Load skin colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="901"/>
+        <location filename="../forms/skinnedsettings.ui" line="894"/>
         <source>Fonts</source>
         <translation>Schriftarten</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="955"/>
+        <location filename="../forms/skinnedsettings.ui" line="948"/>
         <source>Playlist:</source>
         <translation>Wiedergabeliste:</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="991"/>
+        <location filename="../forms/skinnedsettings.ui" line="984"/>
         <source>Column headers:</source>
         <translation>Spaltenüberschriften:</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="913"/>
+        <location filename="../forms/skinnedsettings.ui" line="906"/>
         <source>Player:</source>
         <translation>Abspieler:</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="935"/>
-        <location filename="../forms/skinnedsettings.ui" line="977"/>
-        <location filename="../forms/skinnedsettings.ui" line="1004"/>
+        <location filename="../forms/skinnedsettings.ui" line="928"/>
+        <location filename="../forms/skinnedsettings.ui" line="970"/>
+        <location filename="../forms/skinnedsettings.ui" line="997"/>
         <source>???</source>
         <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="142"/>
-        <location filename="../forms/skinnedsettings.ui" line="942"/>
-        <location filename="../forms/skinnedsettings.ui" line="984"/>
-        <location filename="../forms/skinnedsettings.ui" line="1011"/>
+        <location filename="../forms/skinnedsettings.ui" line="935"/>
+        <location filename="../forms/skinnedsettings.ui" line="977"/>
+        <location filename="../forms/skinnedsettings.ui" line="1004"/>
         <source>...</source>
         <translation>…</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="1033"/>
+        <location filename="../forms/skinnedsettings.ui" line="1026"/>
         <source>Reset fonts</source>
         <translation>Schriftarten zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="1042"/>
+        <location filename="../forms/skinnedsettings.ui" line="1035"/>
         <source>Use bitmap font if available</source>
         <translation>Bitmap-Schriftart verwenden, falls verfügbar</translation>
     </message>
@@ -1435,27 +1445,22 @@
         <translation>Anker anzeigen</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="308"/>
-        <source>Show playlists</source>
-        <translation>Wiedergabelisten anzeigen</translation>
-    </message>
-    <message>
-        <location filename="../forms/skinnedsettings.ui" line="376"/>
+        <location filename="../forms/skinnedsettings.ui" line="369"/>
         <source>Show popup information</source>
         <translation>Informationen in einem Aufklapp-Fenster anzeigen</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="388"/>
+        <location filename="../forms/skinnedsettings.ui" line="381"/>
         <source>Edit template</source>
         <translation>Vorlage bearbeiten</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="341"/>
+        <location filename="../forms/skinnedsettings.ui" line="334"/>
         <source>Playlist separator:</source>
         <translation>Wiedergabelisten-Trenner:</translation>
     </message>
     <message>
-        <location filename="../forms/skinnedsettings.ui" line="332"/>
+        <location filename="../forms/skinnedsettings.ui" line="325"/>
         <source>Show &apos;New Playlist&apos; button</source>
         <translation>„Neue Wiedergabeliste“-Knopf zeigen</translation>
     </message>

@@ -673,148 +673,148 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="32"/>
+        <location filename="../forms/mainwindow.ui" line="35"/>
         <source>&amp;File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="37"/>
+        <location filename="../forms/mainwindow.ui" line="40"/>
         <source>&amp;Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="45"/>
+        <location filename="../forms/mainwindow.ui" line="48"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="50"/>
+        <location filename="../forms/mainwindow.ui" line="53"/>
         <source>&amp;Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="55"/>
+        <location filename="../forms/mainwindow.ui" line="58"/>
         <source>&amp;Playback</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="60"/>
+        <location filename="../forms/mainwindow.ui" line="63"/>
         <source>&amp;View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="99"/>
+        <location filename="../forms/mainwindow.ui" line="102"/>
         <source>Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="114"/>
+        <location filename="../forms/mainwindow.ui" line="117"/>
         <source>Cover</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="123"/>
+        <location filename="../forms/mainwindow.ui" line="126"/>
         <source>Playlists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="135"/>
+        <location filename="../forms/mainwindow.ui" line="138"/>
         <source>Waveform Seek Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="149"/>
+        <location filename="../forms/mainwindow.ui" line="152"/>
         <source>Previous</source>
         <translation type="unfinished">Алдыңғысы</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="159"/>
+        <location filename="../forms/mainwindow.ui" line="162"/>
         <source>Play</source>
         <translation type="unfinished">Ойнату</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="169"/>
+        <location filename="../forms/mainwindow.ui" line="172"/>
         <source>Pause</source>
         <translation type="unfinished">Аялдату</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="179"/>
+        <location filename="../forms/mainwindow.ui" line="182"/>
         <source>Next</source>
         <translation type="unfinished">Келесіге өту</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="189"/>
+        <location filename="../forms/mainwindow.ui" line="192"/>
         <source>Stop</source>
         <translation type="unfinished">Тоқтату</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="194"/>
+        <location filename="../forms/mainwindow.ui" line="197"/>
         <source>&amp;Add File</source>
         <translation type="unfinished">Фа&amp;йлды қосу</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="199"/>
+        <location filename="../forms/mainwindow.ui" line="202"/>
         <source>&amp;Remove All</source>
         <translation type="unfinished">&amp;Барлығын өшіру</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="204"/>
+        <location filename="../forms/mainwindow.ui" line="207"/>
         <source>New Playlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="209"/>
+        <location filename="../forms/mainwindow.ui" line="212"/>
         <source>Remove Playlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="214"/>
+        <location filename="../forms/mainwindow.ui" line="217"/>
         <source>&amp;Add Directory</source>
         <translation type="unfinished">Бу&amp;маны қосу</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="219"/>
+        <location filename="../forms/mainwindow.ui" line="222"/>
         <source>&amp;Exit</source>
         <translation>&amp;Шығу</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="224"/>
+        <location filename="../forms/mainwindow.ui" line="227"/>
         <source>About</source>
         <translation type="unfinished">О программе</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="229"/>
+        <location filename="../forms/mainwindow.ui" line="232"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="234"/>
+        <location filename="../forms/mainwindow.ui" line="237"/>
         <source>&amp;Select All</source>
         <translation type="unfinished">&amp;Барлығын таңдау</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="239"/>
+        <location filename="../forms/mainwindow.ui" line="242"/>
         <source>&amp;Remove Selected</source>
         <translation type="unfinished">Таңда&amp;лғанды өшіру</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="244"/>
+        <location filename="../forms/mainwindow.ui" line="247"/>
         <source>&amp;Remove Unselected</source>
         <translation type="unfinished">Таң&amp;далмағанды өшіру</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="84"/>
-        <location filename="../forms/mainwindow.ui" line="249"/>
+        <location filename="../forms/mainwindow.ui" line="87"/>
+        <location filename="../forms/mainwindow.ui" line="252"/>
         <source>Visualization</source>
         <translation type="unfinished">Визуализация</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="254"/>
+        <location filename="../forms/mainwindow.ui" line="257"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="259"/>
+        <location filename="../forms/mainwindow.ui" line="262"/>
         <location filename="../mainwindow.cpp" line="280"/>
         <source>Rename Playlist</source>
         <translation type="unfinished"></translation>

@@ -47,97 +47,97 @@ class QmmpUiSettings;
 */
 class PlayList : public QWidget
 {
-        Q_OBJECT
-    public:
-        explicit PlayList(PlayListManager *manager, QWidget *parent = nullptr);
-        virtual ~PlayList();
+    Q_OBJECT
+public:
+    explicit PlayList(PlayListManager *manager, QWidget *parent = nullptr);
+    virtual ~PlayList();
 
-        void readSettings();
-        void setMinimalMode(bool b = true);
-        void writeSettings();
+    void setMinimalMode(bool b = true);
+    void writeSettings();
 
 #ifdef QMMP_WS_X11
-        bool useCompiz() const;
+    bool useCompiz() const;
 #endif
 
-    signals:
-        void play();
-        void next();
-        void prev();
-        void pause();
-        void stop();
-        void eject();
-        void loadPlaylist();
-        void savePlaylist();
-        void closed();
+signals:
+    void play();
+    void next();
+    void prev();
+    void pause();
+    void stop();
+    void eject();
+    void loadPlaylist();
+    void savePlaylist();
+    void closed();
 
-    public slots:
-        void setTime(qint64 time);
+public slots:
+    void setTime(qint64 time);
+    void readSettings();
 
-    private slots:
-        void showAddMenu();
-        void showSubMenu();
-        void showSelectMenu();
-        void showSortMenu();
-        void showPlaylistMenu();
-        void updateSkin();
-        void deletePlaylist();
-        void renamePlaylist();
-        void showPlayLists();
-        void generateCopySelectedMenu();
-        void copySelectedMenuActionTriggered(QAction *action);
-        void onCurrentPlayListChanged(PlayListModel *current, PlayListModel *previous);
-        void onListChanged(int flags);
+private slots:
+    void showAddMenu();
+    void showSubMenu();
+    void showSelectMenu();
+    void showSortMenu();
+    void showPlaylistMenu();
+    void updateSkin();
+    void deletePlaylist();
+    void renamePlaylist();
+    void showPlayLists();
+    void generateCopySelectedMenu();
+    void copySelectedMenuActionTriggered(QAction *action);
+    void onCurrentPlayListChanged(PlayListModel *current, PlayListModel *previous);
+    void onListChanged(int flags);
 
-    private:
-        void updatePositions();
-        QString formatTime (int sec);
-        void drawPixmap (QPainter *painter, int x, int y, const QPixmap &pix);
-        void createMenus();
-        void createActions();
-        //events
-        void paintEvent (QPaintEvent *) override;
-        void resizeEvent (QResizeEvent *) override;
-        void mouseMoveEvent (QMouseEvent *) override;
-        void mousePressEvent (QMouseEvent *) override;
-        void mouseReleaseEvent (QMouseEvent *) override;
-        void changeEvent (QEvent*) override;
-        void closeEvent (QCloseEvent*) override;
-        void keyPressEvent (QKeyEvent*) override;
+private:
+    void updatePositions();
+    QString formatTime (int sec);
+    void drawPixmap (QPainter *painter, int x, int y, const QPixmap &pix);
+    void createMenus();
+    void createActions();
+    //events
+    void paintEvent (QPaintEvent *) override;
+    void resizeEvent (QResizeEvent *) override;
+    void mouseMoveEvent (QMouseEvent *) override;
+    void mousePressEvent (QMouseEvent *) override;
+    void mouseReleaseEvent (QMouseEvent *) override;
+    void changeEvent (QEvent*) override;
+    void closeEvent (QCloseEvent*) override;
+    void keyPressEvent (QKeyEvent*) override;
 #ifdef QMMP_WS_X11
-        bool event (QEvent *event) override;
+    bool event (QEvent *event) override;
 #endif
-        QMenu *m_addMenu;
-        QMenu *m_subMenu;
-        QMenu *m_selectMenu;
-        QMenu *m_sortMenu;
-        QMenu *m_playlistMenu;
-        QMenu *m_copySelectedMenu;
-        QWidget *m_resizeWidget;
-        Button *m_buttonAdd;
-        Button *m_buttonSub;
-        Button *m_selectButton;
-        Button *m_sortButton;
-        Button* m_playlistButton;
-        PlaylistControl* m_pl_control;
-        SymbolDisplay* m_length_totalLength;
-        SymbolDisplay* m_current_time;
-        Skin *m_skin;
-        ListWidget *m_listWidget;
-        PlayListTitleBar *m_titleBar;
-        PlayListSlider *m_plslider;
-        bool m_resize = false;
-        bool m_update = false;
-        int m_ratio;
-        int m_height;
-        bool m_shaded = false;
-        PlayListManager *m_pl_manager;
-        QmmpUiSettings *m_ui_settings;
-        KeyboardManager* m_keyboardManager;
-        QPointer <PlayListBrowser> m_pl_browser;
-        PlayListSelector *m_pl_selector = nullptr;
+    QMenu *m_addMenu;
+    QMenu *m_subMenu;
+    QMenu *m_selectMenu;
+    QMenu *m_sortMenu;
+    QMenu *m_playlistMenu;
+    QMenu *m_copySelectedMenu;
+    QWidget *m_resizeWidget;
+    Button *m_buttonAdd;
+    Button *m_buttonSub;
+    Button *m_selectButton;
+    Button *m_sortButton;
+    Button* m_playlistButton;
+    PlaylistControl* m_pl_control;
+    SymbolDisplay* m_length_totalLength;
+    SymbolDisplay* m_current_time;
+    Skin *m_skin;
+    ListWidget *m_listWidget;
+    PlayListTitleBar *m_titleBar;
+    PlayListSlider *m_plslider;
+    bool m_resize = false;
+    bool m_update = false;
+    int m_ratio;
+    int m_height;
+    bool m_shaded = false;
+    PlayListManager *m_pl_manager;
+    QmmpUiSettings *m_ui_settings;
+    KeyboardManager* m_keyboardManager;
+    QPointer <PlayListBrowser> m_pl_browser;
+    PlayListSelector *m_pl_selector = nullptr;
 #ifdef QMMP_WS_X11
-        bool m_compiz;
+    bool m_compiz;
 #endif
 };
 

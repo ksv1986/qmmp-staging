@@ -95,6 +95,7 @@ public:
         PL_SHOW_MANAGER,
         PL_GROUP_TRACKS,
         PL_SHOW_HEADER,
+        PL_SHOW_TABBAR,
 
         SETTINGS,
         ABOUT,

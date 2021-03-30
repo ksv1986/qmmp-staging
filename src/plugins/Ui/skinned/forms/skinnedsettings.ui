@@ -303,13 +303,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="playlistsCheckBox">
-         <property name="text">
-          <string>Show playlists</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QCheckBox" name="showSplittersCheckBox">
          <property name="text">
           <string>Show splitters</string>
@@ -1149,38 +1142,6 @@
     <hint type="destinationlabel">
      <x>169</x>
      <y>154</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>playlistsCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>plSeplineEdit</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>211</x>
-     <y>246</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>263</x>
-     <y>369</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>playlistsCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>showNewPLCheckBox</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>105</x>
-     <y>246</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>105</x>
-     <y>330</y>
     </hint>
    </hints>
   </connection>

@@ -242,7 +242,6 @@ void SkinnedSettings::readSettings()
     m_ui.lengthsCheckBox->setChecked(settings.value("pl_show_lengths", true).toBool());
     m_ui.alignCheckBox->setChecked(settings.value("pl_align_numbers", false).toBool());
     m_ui.anchorCheckBox->setChecked(settings.value("pl_show_anchor", false).toBool());
-    m_ui.playlistsCheckBox->setChecked(settings.value("pl_show_plalists", false).toBool());
     m_ui.showSplittersCheckBox->setChecked(settings.value("pl_show_splitters", true).toBool());
     m_ui.alternateSplitterColorCheckBox->setChecked(settings.value("pl_alt_splitter_color", false).toBool());
     m_ui.popupCheckBox->setChecked(settings.value("pl_show_popup", false).toBool());
@@ -284,7 +283,6 @@ void SkinnedSettings::writeSettings()
     settings.setValue("pl_show_lengths", m_ui.lengthsCheckBox->isChecked());
     settings.setValue("pl_align_numbers", m_ui.alignCheckBox->isChecked());
     settings.setValue("pl_show_anchor", m_ui.anchorCheckBox->isChecked());
-    settings.setValue("pl_show_plalists", m_ui.playlistsCheckBox->isChecked());
     settings.setValue("pl_show_splitters", m_ui.showSplittersCheckBox->isChecked());
     settings.setValue("pl_alt_splitter_color", m_ui.alternateSplitterColorCheckBox->isChecked());
     settings.setValue("pl_show_popup", m_ui.popupCheckBox->isChecked());

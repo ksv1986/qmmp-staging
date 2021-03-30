@@ -449,6 +449,7 @@ void MainWindow::createActions()
     plMenu->addAction(SET_ACTION(ActionManager::CLEAR_QUEUE, m_pl_manager, SLOT(clearQueue())));
     plMenu->addSeparator();
     plMenu->addAction(ACTION(ActionManager::PL_SHOW_HEADER));
+    plMenu->addAction(ACTION(ActionManager::PL_SHOW_TABBAR));
     plMenu->addAction(ACTION(ActionManager::PL_GROUP_TRACKS));
 
     connect(m_ui_settings, SIGNAL(repeatableListChanged(bool)),

@@ -30,7 +30,6 @@ HotkeyEditor::HotkeyEditor(QWidget *parent) : QWidget(parent), m_ui(new Ui::Hotk
 {
     m_ui->setupUi(this);
     loadShortcuts();
-    m_ui->changeShortcutButton->setIcon(QIcon::fromTheme("configure"));
 }
 
 HotkeyEditor::~HotkeyEditor()
@@ -74,7 +73,7 @@ void HotkeyEditor::loadShortcuts()
     m_ui->shortcutTreeWidget->addTopLevelItem(item);
     //playlist
     item = new QTreeWidgetItem (m_ui->shortcutTreeWidget, QStringList() << tr("Playlist"));
-    for(int i = ActionManager::PL_ADD_FILE; i <= ActionManager::PL_SHOW_HEADER; ++i)
+    for(int i = ActionManager::PL_ADD_FILE; i <= ActionManager::PL_SHOW_TABBAR; ++i)
         new ShortcutItem(item, i);
     item->setExpanded(true);
     m_ui->shortcutTreeWidget->addTopLevelItem(item);

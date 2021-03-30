@@ -153,7 +153,7 @@ void PlayList::updatePositions()
 {
     int sx = (width()-275*m_ratio)/25;
     int sy = (height()-116*m_ratio)/29;
-    if (sx < 0 || sy < 0 || m_shaded) //skip shaded mode
+    if(sx < 0 || sy < 0 || m_shaded) //skip shaded mode
         return;
 
     m_titleBar->resize (275*m_ratio+25*sx, 20*m_ratio);
@@ -341,11 +341,12 @@ void PlayList::createActions()
     //actions
     SET_ACTION(ActionManager::PL_GROUP_TRACKS, m_ui_settings, SLOT(setGroupsEnabled(bool)));
     ACTION(ActionManager::PL_GROUP_TRACKS)->setChecked(m_ui_settings->isGroupsEnabled());
+    SET_ACTION(ActionManager::PL_SHOW_TABBAR, this, SLOT(readSettings()));
 }
 
 void PlayList::closeEvent (QCloseEvent *e)
 {
-    if (e->spontaneous ())
+    if(e->spontaneous ())
         parentWidget()->close();
 }
 
@@ -383,7 +384,7 @@ void PlayList::resizeEvent (QResizeEvent *)
 void PlayList::mousePressEvent (QMouseEvent *e)
 {
     Q_UNUSED(e);
-    if (m_resizeWidget->underMouse())
+    if(m_resizeWidget->underMouse())
     {
         m_resize = true;
         setCursor (m_skin->getCursor (Skin::CUR_PSIZE));
@@ -394,7 +395,7 @@ void PlayList::mousePressEvent (QMouseEvent *e)
 
 void PlayList::mouseMoveEvent (QMouseEvent *e)
 {
-    if (m_resize)
+    if(m_resize)
     {
         int dx = m_ratio * 25;
         int dy = m_ratio * 29;
@@ -424,7 +425,7 @@ void PlayList::mouseMoveEvent (QMouseEvent *e)
 void PlayList::mouseReleaseEvent (QMouseEvent *)
 {
     setCursor (m_skin->getCursor (Skin::CUR_PNORMAL));
-    /*if (m_resize)
+    /*if(m_resize)
         m_listWidget->updateList();*/
     m_resize = false;
     Dock::instance()->updateDock();
@@ -432,7 +433,7 @@ void PlayList::mouseReleaseEvent (QMouseEvent *)
 
 void PlayList::changeEvent (QEvent * event)
 {
-    if (event->type() == QEvent::ActivationChange)
+    if(event->type() == QEvent::ActivationChange)
     {
         m_titleBar->setActive (isActiveWindow());
     }
@@ -440,8 +441,7 @@ void PlayList::changeEvent (QEvent * event)
 
 void PlayList::readSettings()
 {
-    QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
-    if (settings.value("Skinned/pl_show_plalists", false).toBool())
+    if(ACTION(ActionManager::PL_SHOW_TABBAR)->isChecked())
     {
         if(!m_pl_selector)
             m_pl_selector = new PlayListSelector(m_pl_manager, this);
@@ -458,7 +458,7 @@ void PlayList::readSettings()
         m_pl_selector = nullptr;
     }
 
-    if (m_update)
+    if(m_update)
     {
         m_listWidget->readSettings();
         m_titleBar->readSettings();
@@ -470,6 +470,7 @@ void PlayList::readSettings()
     {
         QScreen *primaryScreen = QGuiApplication::primaryScreen();
         QRect availableGeometry = primaryScreen->availableGeometry();
+        QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
         QPoint pos = settings.value ("Skinned/pl_pos", QPoint (100, 332)).toPoint();
         m_ratio = m_skin->ratio();
         //TODO QGuiApplication::screenAt
@@ -540,7 +541,7 @@ QString PlayList::formatTime (int sec)
 
 void PlayList::setTime(qint64 time)
 {
-    if (time < 0)
+    if(time < 0)
         m_current_time->display("--:--");
     else
         m_current_time->display(formatTime (time/1000));

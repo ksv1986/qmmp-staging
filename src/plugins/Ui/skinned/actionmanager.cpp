@@ -83,9 +83,10 @@ ActionManager::ActionManager(QObject *parent) :
         { PL_RENAME, createAction(tr("&Rename List"), "pl_rename", tr("F2")) },
         { PL_SELECT_NEXT, createAction(tr("&Select Next Playlist"), "next_pl", tr("Ctrl+PgDown"), "go-next") },
         { PL_SELECT_PREVIOUS, createAction(tr("&Select Previous Playlist"), "prev_pl", tr("Ctrl+PgUp"), "go-previous") },
-        { PL_SHOW_MANAGER, createAction(tr("&Show Playlists"), "show_playlists", tr("P"), "view-list-details") },
+        { PL_SHOW_MANAGER, createAction(tr("&Show Playlists"), "show_pl_manager", tr("P"), "view-list-details") },
         { PL_GROUP_TRACKS, createAction2(tr("&Group Tracks"), "group_tracks", tr("Ctrl+G")) },
         { PL_SHOW_HEADER, createAction2(tr("&Show Column Headers"), "show_header", tr("Ctrl+H")) },
+        { PL_SHOW_TABBAR, createAction2(tr("Show &Tab Bar"), "show_pl_tabbar", tr("Alt+T")) },
         //other
         { SETTINGS, createAction(tr("&Settings"), "show_settings", tr("Ctrl+P"), "configure") },
         { ABOUT, createAction(tr("&About"), "about") },
@@ -158,6 +159,7 @@ void ActionManager::readStates()
 {
     m_settings->beginGroup("Skinned");
     m_actions[PL_SHOW_HEADER]->setChecked(m_settings->value("pl_show_header", false).toBool());
+    m_actions[PL_SHOW_TABBAR]->setChecked(m_settings->value("pl_show_tabbar", false).toBool());
     m_settings->endGroup();
 }
 
@@ -166,6 +168,7 @@ void ActionManager::saveStates()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Skinned");
     settings.setValue("pl_show_header", m_actions[PL_SHOW_HEADER]->isChecked());
+    settings.setValue("pl_show_tabbar", m_actions[PL_SHOW_TABBAR]->isChecked());
     settings.endGroup();
 }
 

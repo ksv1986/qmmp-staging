@@ -589,8 +589,8 @@ private slots:
     void updateMetaData(const QStringList &paths);
 
 private:
-    PlayListTrack* m_current_track = nullptr;
-    PlayListTrack* m_stop_track = nullptr;
+    PlayListTrack *m_current_track = nullptr;
+    PlayListTrack *m_stop_track = nullptr;
     int m_current = 0;
     SimpleSelection m_selection;  /*!< This flyweight object represents current selection. */
     QQueue <PlayListTrack*> m_queued_songs; /*!< Songs in play queue. */

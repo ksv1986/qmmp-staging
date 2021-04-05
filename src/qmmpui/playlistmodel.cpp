@@ -987,6 +987,10 @@ void PlayListModel::onTaskFinished()
 
             emit listChanged(flags);
         }
+        else
+        {
+            emit listChanged(METADATA);
+        }
     }
 }
 

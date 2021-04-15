@@ -52,6 +52,9 @@ unix {
   isEmpty(PLUGIN_DIR): PLUGIN_DIR=$$LIB_DIR/qmmp-$${QMMP_VERSION_MAJOR}.$${QMMP_VERSION_MINOR}
 }
 
+#QMAKE_LFLAGS_DEBUG += "-Wl,--as-needed -Wl,--no-undefined -Wl,-z,relro -Wl,--build-id -Wl,--enable-new-dtags"
+#QMAKE_LFLAGS += "-Wl,--as-needed -Wl,--no-undefined -Wl,-z,relro -Wl,--build-id -Wl,--enable-new-dtags"
+
 #*-g++ {
 #  QMAKE_CXXFLAGS += -Werror=zero-as-null-pointer-constant
 #  QMAKE_CXXFLAGS += -Werror=suggest-override

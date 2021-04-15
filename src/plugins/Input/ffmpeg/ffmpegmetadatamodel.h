@@ -34,9 +34,9 @@ public:
     QList<TagModel *> tags() const override;
     QPixmap cover() const override;
     QString coverPath() const override;
-    QString cue() const;
-    void setCue(const QString &content);
-    void removeCue();
+    QString cue() const override;
+    void setCue(const QString &content) override;
+    void removeCue() override;
 
 private:
     QPixmap m_pixmap;

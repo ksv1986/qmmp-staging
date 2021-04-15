@@ -35,7 +35,7 @@ public:
     QList<MetaDataItem> extraProperties() const override;
     QList<TagModel* > tags() const override;
     QString coverPath() const override;
-    QString cue() const;
+    QString cue() const override;
     void setCue(const QString &content) override;
     void removeCue() override;
 

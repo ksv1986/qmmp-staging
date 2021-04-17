@@ -431,7 +431,11 @@ void TwoPanelFileDialogImpl::addFiles(const QStringList &list, bool play)
         bool contains = false;
         for(const QString &str : qt_clean_filter_list(m_ui.fileTypeComboBox->currentText()))
         {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
             QRegularExpression regExp(QRegularExpression::wildcardToRegularExpression(str));
+#else
+            QRegularExpression regExp(Qmmp::wildcardToRegularExpression(str));
+#endif
             if (f_name.contains(regExp))
             {
                 contains = true;

@@ -127,7 +127,11 @@ void FileLoader::insertPlayList(const QString &path, PlayListItem *before)
         QList<QRegularExpression> regExps =  MetaDataManager::instance()->regExps();
         QList<QRegularExpression> filters;
         for(const QString &pattern : MetaDataManager::instance()->nameFilters())
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
             filters << QRegularExpression(QRegularExpression::wildcardToRegularExpression(pattern), QRegularExpression::CaseInsensitiveOption);
+#else
+            filters << QRegularExpression(Qmmp::wildcardToRegularExpression(pattern), QRegularExpression::CaseInsensitiveOption);
+#endif
 
 
         QList<PlayListTrack *>::iterator it = tracks.begin();

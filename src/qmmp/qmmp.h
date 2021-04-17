@@ -197,6 +197,11 @@ public:
     static bool isPortable();
 #endif
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+    QString wildcardToRegularExpression(const QString &pattern);
+    QString anchoredPattern(const QString &expression);
+#endif
+
 private:
     static QString m_configDir;
     static QString m_langID;

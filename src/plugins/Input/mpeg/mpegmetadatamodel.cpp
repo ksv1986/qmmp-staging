@@ -415,7 +415,7 @@ void MpegFileTagModel::save()
 {
     if(m_tag)
 #if((TAGLIB_MAJOR_VERSION == 1) &&(TAGLIB_MINOR_VERSION <= 11))
-        m_file->save(m_tagType, false);
+        m_file->save(m_type, false);
 #else
         m_file->save(m_type, TagLib::File::StripNone, TagLib::ID3v2::Version::v4, TagLib::File::DoNotDuplicate);
 #endif

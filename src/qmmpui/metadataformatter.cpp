@@ -347,7 +347,7 @@ bool MetaDataFormatter::parseDir(QList<MetaDataFormatter::Node> *nodes, QString:
     Node node;
     node.command = Node::DIR_FUNCTION;
 
-    if((**i) == end || (**i) != QChar('(')) // %dir without params
+    if((*i) == end || (**i) != QChar('(')) // %dir without params
     {
         (*i)--;
         nodes->append(node);

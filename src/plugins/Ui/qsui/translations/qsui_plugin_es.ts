@@ -1312,7 +1312,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="1276"/>
         <source>Tab position:</source>
-        <translation type="unfinished"></translation>
+        <translation>Posición pestaña:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1313"/>
@@ -1521,22 +1521,22 @@
     <message>
         <location filename="../qsuisettings.cpp" line="50"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Arriba</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="51"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Abajo</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="52"/>
         <source>Left</source>
-        <translation type="unfinished">Izquierda</translation>
+        <translation>Izquierda</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="53"/>
         <source>Right</source>
-        <translation type="unfinished">Derecha</translation>
+        <translation>Derecha</translation>
     </message>
 </context>
 <context>

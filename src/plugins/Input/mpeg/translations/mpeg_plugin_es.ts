@@ -95,7 +95,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Enable CRC checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar la comprobación de CRC </translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="87"/>
@@ -163,7 +163,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="343"/>
         <source>Try to detect encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Intentar detectar la codificación </translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="294"/>

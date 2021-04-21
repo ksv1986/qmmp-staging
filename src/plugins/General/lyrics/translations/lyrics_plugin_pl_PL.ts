@@ -24,7 +24,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="36"/>
         <source>Lyrics</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst piosenki</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="68"/>
@@ -57,62 +57,62 @@
     <message>
         <location filename="../lyricswidget.ui" line="14"/>
         <source>Lyrics Plugin</source>
-        <translation type="unfinished">Wtyczka Teksty piosenek</translation>
+        <translation>Wtyczka Teksty piosenek</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="31"/>
         <source>Provider:</source>
-        <translation type="unfinished">Dostawca:</translation>
+        <translation>Dostawca:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="115"/>
         <source>Title:</source>
-        <translation type="unfinished">Tytuł:</translation>
+        <translation>Tytuł:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="132"/>
         <source>Album:</source>
-        <translation type="unfinished">Album:</translation>
+        <translation>Album:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="142"/>
         <source>Artist:</source>
-        <translation type="unfinished">Artysta:</translation>
+        <translation>Artysta:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="159"/>
         <source>Track:</source>
-        <translation type="unfinished">Ścieżka:</translation>
+        <translation>Ścieżka:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="171"/>
         <source>Year:</source>
-        <translation type="unfinished">Rok:</translation>
+        <translation>Rok:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="138"/>
         <source>&lt;h2&gt;%1 - %2&lt;/h2&gt;</source>
-        <translation type="unfinished">&lt;h2&gt;%1 - %2&lt;/h2&gt;</translation>
+        <translation>&lt;h2&gt;%1 - %2&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="149"/>
         <source>Not found</source>
-        <translation type="unfinished">Nie znaleziono</translation>
+        <translation>Nie znaleziono</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="159"/>
         <source>Error: %1 - %2</source>
-        <translation type="unfinished">Błąd: %1 - %2</translation>
+        <translation>Błąd: %1 - %2</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="172"/>
         <source>Receiving</source>
-        <translation type="unfinished">Pobieranie</translation>
+        <translation>Pobieranie</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="233"/>
         <source>cache</source>
-        <translation type="unfinished">pamięć podręczna</translation>
+        <translation>pamięć podręczna</translation>
     </message>
 </context>
 <context>

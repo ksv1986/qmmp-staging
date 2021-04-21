@@ -1312,7 +1312,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="1276"/>
         <source>Tab position:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozycja karty:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1313"/>
@@ -1521,22 +1521,22 @@
     <message>
         <location filename="../qsuisettings.cpp" line="50"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Góra</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="51"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dół</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="52"/>
         <source>Left</source>
-        <translation type="unfinished">Lewo</translation>
+        <translation>Lewo</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="53"/>
         <source>Right</source>
-        <translation type="unfinished">Prawo</translation>
+        <translation>Prawo</translation>
     </message>
 </context>
 <context>

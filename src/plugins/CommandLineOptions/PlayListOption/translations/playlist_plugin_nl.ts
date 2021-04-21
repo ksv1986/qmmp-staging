@@ -11,7 +11,7 @@
     <message>
         <location filename="../playlistoption.cpp" line="34"/>
         <source>List all available playlists</source>
-        <translation>Alle beschikbare afspeellijsten lonen</translation>
+        <translation>Alle beschikbare afspeellijsten tonen</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="35"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../playlistoption.cpp" line="37"/>
         <source>Clear playlist</source>
-        <translation>Afspeellijst legen</translation>
+        <translation>Afspeellijst wissen</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="38"/>
@@ -63,7 +63,7 @@
     <message>
         <location filename="../playlistoption.cpp" line="126"/>
         <source>Invalid number of arguments</source>
-        <translation>Ongeldig aantal argumenten</translation>
+        <translation>Ongeldig aantal aanvullende opties</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="136"/>

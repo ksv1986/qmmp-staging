@@ -52,17 +52,17 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="29"/>
         <source>Stream Browser Plugin</source>
-        <translation>Streamverkenner-plug-in</translation>
+        <translation>Streamverkennerplug-in</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="50"/>
         <source>About Stream Browser Plugin</source>
-        <translation>Over de Streamverkenner-plug-in</translation>
+        <translation>Over de streamverkennerplug-in</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>Qmmp Stream Browser Plugin</source>
-        <translation>Streamverkenner-plug-in voor Qmmp</translation>
+        <translation>Streamverkennerplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="52"/>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../streamwindow.cpp" line="139"/>
         <source>&amp;Create</source>
-        <translation>&amp;Creëren</translation>
+        <translation>&amp;Maken</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="141"/>

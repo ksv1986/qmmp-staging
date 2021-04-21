@@ -6,17 +6,17 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="50"/>
         <source>CD Audio Plugin</source>
-        <translation>Audio-CD-plug-in</translation>
+        <translation>Audio-cd-plug-in</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="97"/>
         <source>About CD Audio Plugin</source>
-        <translation>Over de Audio-CD-plug-in</translation>
+        <translation>Over de audio-cd-plug-in</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="98"/>
         <source>Qmmp CD Audio Plugin</source>
-        <translation>Audio-CD-plug-in voor Qmmp</translation>
+        <translation>Audio-cd-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="99"/>

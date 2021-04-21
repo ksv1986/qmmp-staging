@@ -11,12 +11,12 @@
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="51"/>
         <source>About File Writer Plugin</source>
-        <translation>Over Bestandsuitvoer-plug-in</translation>
+        <translation>Over de bestandsuitvoerplug-in</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="52"/>
         <source>Qmmp File Writer Plugin</source>
-        <translation>Bestandsuitvoer-plug-in voor Qmmp</translation>
+        <translation>Bestandsuitvoerplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="53"/>

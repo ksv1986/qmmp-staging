@@ -77,7 +77,7 @@
         <translation>Salva</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="459"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="463"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 esiste già.

@@ -129,7 +129,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="419"/>
         <source>Print version number and exit</source>
-        <translation>Versienummer printen en afsluiten</translation>
+        <translation>Versienummer tonen en afsluiten</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="421"/>

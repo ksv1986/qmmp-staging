@@ -91,7 +91,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="203"/>
         <source>Create a Copy</source>
-        <translation>Kopie creëren</translation>
+        <translation>Kopie maken</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
@@ -108,7 +108,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="201"/>
         <source>Create</source>
-        <translation>Creëren</translation>
+        <translation>Maken</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="202"/>

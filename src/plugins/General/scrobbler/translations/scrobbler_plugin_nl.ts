@@ -11,7 +11,7 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="51"/>
         <source>About Scrobbler Plugin</source>
-        <translation>Over de Scrobbler-plug-in</translation>
+        <translation>Over de scrobbler-plug-in</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="52"/>
@@ -74,12 +74,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="108"/>
         <source>2. Allow Qmmp to scrobble tracks to your %1 account</source>
-        <translation>2. Sta toe dat Qmmp nummers scrobbelt naar je %1-account</translation>
+        <translation>2. Geef Qmmp toestemming om nummers te scrobbelen naar je %1-account</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="109"/>
         <source>3. Press &quot;OK&quot;</source>
-        <translation>3. Druk op &apos;Oké&apos;</translation>
+        <translation>3. Klik op &apos;Oké&apos;</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="114"/>

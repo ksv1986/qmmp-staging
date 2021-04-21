@@ -103,7 +103,7 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
         <translation>Dizinler</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="476"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="480"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 zaten var.

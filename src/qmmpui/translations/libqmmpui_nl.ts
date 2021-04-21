@@ -192,12 +192,12 @@
     <message>
         <location filename="../columneditor.cpp" line="91"/>
         <source>Track Number</source>
-        <translation>CD-nummer</translation>
+        <translation>Volgnummer</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="92"/>
         <source>Two-digit Track Number</source>
-        <translation>2 -cijferig nummer</translation>
+        <translation>Tweecijferig volgnummer</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="97"/>
@@ -217,12 +217,12 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished">Naam van bovenliggende map</translation>
+        <translation>Naam van bovenliggende map</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
         <source>Parent Directory Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Pad naar bovenliggende map</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="104"/>
@@ -334,7 +334,7 @@
         <location filename="../forms/configdialog.ui" line="270"/>
         <location filename="../configdialog.cpp" line="327"/>
         <source>Preferences</source>
-        <translation>Voorkeuren</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="283"/>
@@ -355,7 +355,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="342"/>
         <source>Look and Feel</source>
-        <translation>Uiterlijk</translation>
+        <translation>Vormgeving</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="348"/>
@@ -420,22 +420,22 @@
     <message>
         <location filename="../forms/configdialog.ui" line="514"/>
         <source>CUE Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>CUE-bewerker</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="520"/>
         <source>Use system font</source>
-        <translation type="unfinished"></translation>
+        <translation>Systeemlettertype gebruiken</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="541"/>
         <source>Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettertype:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="566"/>
         <source>???</source>
-        <translation type="unfinished"></translation>
+        <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="605"/>
@@ -445,7 +445,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="617"/>
         <source>Enable proxy usage</source>
-        <translation>Proxy inschakelen</translation>
+        <translation>Proxy gebruiken</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="624"/>
@@ -460,12 +460,12 @@
     <message>
         <location filename="../forms/configdialog.ui" line="647"/>
         <source>Proxy port:</source>
-        <translation>Proxy-poort:</translation>
+        <translation>Proxypoort:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="660"/>
         <source>Use authentication with proxy</source>
-        <translation>Authenticatie gebruiken  bij proxy</translation>
+        <translation>Proxy-authenticatie gebruiken</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="667"/>
@@ -521,7 +521,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="912"/>
         <source>Use software volume control</source>
-        <translation>Softwarematige volumebediening gebruiken</translation>
+        <translation>Softwarematige volumeregeling gebruiken</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="952"/>
@@ -616,7 +616,7 @@
     <message>
         <location filename="../configdialog.cpp" line="290"/>
         <source>User Interfaces</source>
-        <translation>Uiterlijk</translation>
+        <translation>Vormgevingen</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="340"/>
@@ -821,38 +821,38 @@
     <message>
         <location filename="../forms/cueeditor.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulier</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="40"/>
         <source>Load</source>
-        <translation type="unfinished">Laden</translation>
+        <translation>Laden</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="47"/>
         <source>Delete</source>
-        <translation type="unfinished">Verwijderen</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="54"/>
         <source>Save as...</source>
-        <translation type="unfinished">Opslaan als...</translation>
+        <translation>Opslaan als...</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="131"/>
         <source>Open CUE File</source>
-        <translation type="unfinished"></translation>
+        <translation>CUE-bestand openen</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="133"/>
         <location filename="../cueeditor.cpp" line="152"/>
         <source>CUE Files</source>
-        <translation type="unfinished"></translation>
+        <translation>CUE-bestanden</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="150"/>
         <source>Save CUE File</source>
-        <translation type="unfinished"></translation>
+        <translation>CUE-bestand opslaan</translation>
     </message>
 </context>
 <context>
@@ -1079,12 +1079,12 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="32"/>
         <source>Track Number</source>
-        <translation>CD-nummer</translation>
+        <translation>Volgnummer</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="33"/>
         <source>Two-digit Track Number</source>
-        <translation>2 cijferig nummer</translation>
+        <translation>Tweecijferig volgnummer</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="37"/>
@@ -1114,7 +1114,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="57"/>
         <source>Parent Directory Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Pad naar bovenliggende map</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>

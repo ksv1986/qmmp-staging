@@ -915,7 +915,7 @@
         <location filename="../mainwindow.cpp" line="522"/>
         <location filename="../mainwindow.cpp" line="563"/>
         <source>By Track Number</source>
-        <translation>Op cd-nummer</translation>
+        <translation>Op volgnummer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="525"/>
@@ -927,7 +927,7 @@
         <location filename="../mainwindow.cpp" line="528"/>
         <location filename="../mainwindow.cpp" line="569"/>
         <source>By File Creation Date</source>
-        <translation>Op datum van creatie</translation>
+        <translation>Op datum van aanmaken</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="531"/>
@@ -1312,7 +1312,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="1276"/>
         <source>Tab position:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabbladpositie:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1313"/>
@@ -1521,22 +1521,22 @@
     <message>
         <location filename="../qsuisettings.cpp" line="50"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Bovenaan</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="51"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Onderaan</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="52"/>
         <source>Left</source>
-        <translation type="unfinished">Links</translation>
+        <translation>Links</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="53"/>
         <source>Right</source>
-        <translation type="unfinished">Rechts</translation>
+        <translation>Rechts</translation>
     </message>
 </context>
 <context>
@@ -1667,7 +1667,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="222"/>
         <source>&amp;Create</source>
-        <translation>&amp;Creëren</translation>
+        <translation>&amp;Maken</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="238"/>

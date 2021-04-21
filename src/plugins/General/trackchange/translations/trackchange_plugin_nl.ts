@@ -57,7 +57,7 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="50"/>
         <source>About Track Change Plugin</source>
-        <translation>Over de Nummerveranderingsplug-in</translation>
+        <translation>Over de nummerveranderingsplug-in</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="51"/>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="52"/>
         <source>This plugin executes external command when current track is changed</source>
-        <translation>Deze plug-in voert externe opdrachten uit als een nummer verandert</translation>
+        <translation>Deze plug-in voert externe opdrachten uit als er een ander nummer wordt afgespeeld</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="53"/>

@@ -11,12 +11,12 @@
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="49"/>
         <source>About Sleep Mode Inhibit Plugin</source>
-        <translation>Over Slaapstandonderdrukkingsplug-in</translation>
+        <translation>Over de slaapstandonderdrukkingsplug-in</translation>
     </message>
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="50"/>
         <source>Qmmp Sleep Mode Inhibit Plugin</source>
-        <translation>Qmmp Slaapstandonderdrukkingsplug-in</translation>
+        <translation>Slaapstandonderdrukkingsplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="51"/>

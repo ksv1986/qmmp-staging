@@ -30,7 +30,7 @@
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Library</source>
-        <translation type="unfinished">Библиотека</translation>
+        <translation>Библиотека</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="84"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../librarywidget.cpp" line="51"/>
         <source>&amp;Add to Playlist</source>
-        <translation>@Добавить к списку воспроизведения</translation>
+        <translation>&amp;Добавить в список воспроизведения</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="52"/>

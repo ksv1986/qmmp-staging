@@ -29,8 +29,8 @@
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
-        <source>Media Library</source>
-        <translation>Verzameling</translation>
+        <source>Library</source>
+        <translation type="unfinished">Verzameling</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="84"/>

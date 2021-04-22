@@ -35,7 +35,7 @@ GeneralProperties LibraryFactory::properties() const
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
-    properties.widgets = { { LIBRARY_WIDGET, tr("Media Library"), Qt::RightDockWidgetArea,
+    properties.widgets = { { LIBRARY_WIDGET, tr("Library"), Qt::RightDockWidgetArea,
                              Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea } };
     return properties;
 }

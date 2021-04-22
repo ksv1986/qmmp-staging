@@ -29,7 +29,7 @@
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
-        <source>Media Library</source>
+        <source>Library</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

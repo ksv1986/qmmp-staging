@@ -100,7 +100,7 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
     <message>
         <location filename="../qmmpfiledialogimpl.cpp" line="290"/>
         <source>Directories</source>
-        <translation>Директории</translation>
+        <translation>Каталоги</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialogimpl.cpp" line="480"/>

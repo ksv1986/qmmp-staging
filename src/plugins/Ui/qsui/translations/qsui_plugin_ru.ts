@@ -259,7 +259,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>&amp;Add Directory</source>
-        <translation>&amp;Добавить директорию</translation>
+        <translation>&amp;Добавить каталог</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
@@ -593,7 +593,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="92"/>
         <source>Change Directory</source>
-        <translation>Сменить директорию</translation>
+        <translation>Сменить каталог</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="94"/>
@@ -603,7 +603,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="168"/>
         <source>Select Directory</source>
-        <translation>Выберите директорию</translation>
+        <translation>Выберите каталог</translation>
     </message>
 </context>
 <context>
@@ -770,7 +770,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="217"/>
         <source>&amp;Add Directory</source>
-        <translation>&amp;Добавить директорию</translation>
+        <translation>&amp;Добавить каталог</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="222"/>
@@ -1312,7 +1312,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="1276"/>
         <source>Tab position:</source>
-        <translation type="unfinished"></translation>
+        <translation>Расположение вкладок</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1313"/>
@@ -1521,22 +1521,22 @@
     <message>
         <location filename="../qsuisettings.cpp" line="50"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Сверху</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="51"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Снизу</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="52"/>
         <source>Left</source>
-        <translation type="unfinished">По левому краю</translation>
+        <translation>По левому краю</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="53"/>
         <source>Right</source>
-        <translation type="unfinished">По правому краю</translation>
+        <translation>По правому краю</translation>
     </message>
 </context>
 <context>

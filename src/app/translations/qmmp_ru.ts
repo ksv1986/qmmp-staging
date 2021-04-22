@@ -86,7 +86,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="87"/>
         <source>Display Add Directory dialog</source>
-        <translation>Показать диалог добавления директорий</translation>
+        <translation>Показать диалог добавления каталогов</translation>
     </message>
 </context>
 <context>

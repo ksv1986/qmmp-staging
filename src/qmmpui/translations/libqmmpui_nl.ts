@@ -819,11 +819,6 @@
 <context>
     <name>CueEditor</name>
     <message>
-        <location filename="../forms/cueeditor.ui" line="14"/>
-        <source>Form</source>
-        <translation>Formulier</translation>
-    </message>
-    <message>
         <location filename="../forms/cueeditor.ui" line="40"/>
         <source>Load</source>
         <translation>Laden</translation>

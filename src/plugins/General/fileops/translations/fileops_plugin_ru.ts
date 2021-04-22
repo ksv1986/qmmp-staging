@@ -13,7 +13,7 @@
         <location filename="../fileops.cpp" line="108"/>
         <location filename="../fileops.cpp" line="148"/>
         <source>Destination directory doesn&apos;t exist</source>
-        <translation>Директория назначения не существует</translation>
+        <translation>Каталог назначения не существует</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="151"/>
@@ -189,17 +189,17 @@
     <message>
         <location filename="../settingsdialog.cpp" line="181"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>Команда:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="220"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Выполнить</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="232"/>
         <source>Choose a directory</source>
-        <translation>Выберите директорию</translation>
+        <translation>Выберите каталог</translation>
     </message>
 </context>
 </TS>

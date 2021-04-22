@@ -6,6 +6,7 @@
 
 Болгарский:
     Кирил Кирилов
+    Miroslav Mihov
 
 Китайский традиционный:
     Cosmos Chen
@@ -28,6 +29,7 @@
 
 Финский:
     Jiri Grönroos
+    Kimmo Kujansuu
 
 Французский:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>

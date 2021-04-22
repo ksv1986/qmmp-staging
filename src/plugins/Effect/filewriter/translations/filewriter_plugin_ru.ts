@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation>Выходная директория:</translation>
+        <translation>Выходной каталог:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>
         <source>Choose a directory</source>
-        <translation>Выберите директорию</translation>
+        <translation>Выберите каталог</translation>
     </message>
 </context>
 </TS>

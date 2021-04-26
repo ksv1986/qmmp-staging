@@ -46,14 +46,36 @@ OutputPipeWire::OutputPipeWire(): Output()
 OutputPipeWire::~OutputPipeWire()
 {
     uninitialize();
+    pw_deinit();
 }
 
 void OutputPipeWire::onStateChanged (void *data, enum pw_stream_state old,
                        enum pw_stream_state state, const char *error)
 {
-    qDebug() << Q_FUNC_INFO << state << error;
     OutputPipeWire *o = static_cast<OutputPipeWire *>(data);
-    pw_thread_loop_signal(o->m_loop, false);
+
+    if (o->m_ignoreStateChange)
+        return;
+
+    switch (state)
+    {
+    case PW_STREAM_STATE_UNCONNECTED:
+        pw_thread_loop_signal(o->m_loop, false);
+        break;
+    case PW_STREAM_STATE_PAUSED:
+        o->m_streamPaused = true;
+        qDebug("paused");
+        pw_thread_loop_signal(o->m_loop, false);
+        break;
+    case PW_STREAM_STATE_STREAMING:
+        o->m_streamPaused = false;
+        pw_thread_loop_signal(o->m_loop, false);
+        break;
+    default:
+        break;
+    }
+
+    //pw_thread_loop_signal(o->m_loop, false);
 }
 
 bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat format)
@@ -137,7 +159,6 @@ bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat 
 
     pw_thread_loop_lock(m_loop);
 
-    m_stream = pw_stream_new(m_core, "Playback", props);
     if (!(m_stream = pw_stream_new(m_core, "Playback", props)))
     {
         qWarning("OutputPipeWire: unable to create stream");
@@ -249,26 +270,37 @@ qint64 OutputPipeWire::writeAudio(unsigned char *data, qint64 maxSize)
 
 void OutputPipeWire::drain()
 {
-    //pa_operation *op = pa_stream_drain(m_stream, OutputPipeWire::stream_success_cb, nullptr);
-    //process(op);
+    pw_thread_loop_lock(m_loop);
+    if(m_buffer_at > 0)
+        pw_thread_loop_timed_wait(m_loop, 1);
+    pw_thread_loop_unlock(m_loop);
+    pw_stream_flush(m_stream, true);
 }
 
 void OutputPipeWire::reset()
 {
-    //pa_operation *op = pa_stream_flush(m_stream, OutputPipeWire::stream_success_cb, nullptr);
-    //process(op);
+    pw_thread_loop_lock(m_loop);
+    m_buffer_at = 0;
+    pw_thread_loop_unlock(m_loop);
+    pw_stream_flush(m_stream, false);
 }
 
 void OutputPipeWire::suspend()
 {
     //pa_operation *op = pa_stream_cork(m_stream, 1, OutputPipeWire::stream_success_cb, nullptr);
     //process(op);
+    pw_thread_loop_lock(m_loop);
+    pw_stream_set_active(m_stream, false);
+    pw_thread_loop_unlock(m_loop);
 }
 
 void OutputPipeWire::resume()
 {
     //pa_operation *op = pa_stream_cork(m_stream, 0, OutputPipeWire::stream_success_cb, nullptr);
     //process(op);
+    pw_thread_loop_lock(m_loop);
+    pw_stream_set_active(m_stream, true);
+    pw_thread_loop_unlock(m_loop);
 }
 
 void OutputPipeWire::setMuted(bool mute)
@@ -280,21 +312,51 @@ void OutputPipeWire::setMuted(bool mute)
 
 void OutputPipeWire::uninitialize()
 {
+    if(m_stream)
+    {
+
+        pw_thread_loop_lock(m_loop);
+        m_ignoreStateChange = true;
+        pw_stream_disconnect(m_stream);
+        pw_stream_destroy(m_stream);
+        m_ignoreStateChange = false;
+        m_stream = nullptr;
+        pw_thread_loop_unlock(m_loop);
+
+    }
+
+    if(m_loop)
+        pw_thread_loop_stop(m_loop);
+
+    if(m_registry)
+    {
+        pw_proxy_destroy(reinterpret_cast<pw_proxy *>(m_registry));
+        m_registry = nullptr;
+    }
+
+    if(m_core)
+    {
+        pw_core_disconnect(m_core);
+        m_core = nullptr;
+    }
+
+    if(m_context)
+    {
+        pw_context_destroy(m_context);
+        m_context = nullptr;
+    }
+
     if(m_loop)
     {
-        pw_thread_loop_stop(m_loop);
         pw_thread_loop_destroy(m_loop);
         m_loop = nullptr;
     }
 
-    if(m_stream)
+    if(m_buffer)
     {
-        pw_stream_disconnect(m_stream);
-        pw_stream_destroy(m_stream);
-        m_stream = nullptr;
+        delete [] m_buffer;
+        m_buffer = nullptr;
     }
-
-    pw_deinit();
 }
 
 //callbacks

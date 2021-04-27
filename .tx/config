@@ -169,6 +169,12 @@ source_lang = en
 source_file = src/plugins/Output/qtmultimedia/translations/qtmultimedia_plugin_en.ts
 type = QT
 
+[qmmp.pipewire]
+file_filter = src/plugins/Output/pipewire/translations/pipewire_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/Output/pipewire/translations/pipewire_plugin_en.ts
+type = QT
+
 [qmmp.null]
 file_filter = src/plugins/Output/null/translations/null_plugin_<lang>.ts
 source_lang = en

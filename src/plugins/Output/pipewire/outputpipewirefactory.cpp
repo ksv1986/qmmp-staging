@@ -41,10 +41,10 @@ Output* OutputPipeWireFactory::create()
 
 Volume *OutputPipeWireFactory::createVolume()
 {
-    return nullptr;
+    return new VolumePipeWire;
 }
 
-void OutputPipeWireFactory::showSettings(QWidget* parent)
+void OutputPipeWireFactory::showSettings(QWidget *parent)
 {
    Q_UNUSED(parent);
 }

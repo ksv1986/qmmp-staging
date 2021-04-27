@@ -22,7 +22,11 @@
 #include <QSettings>
 #include <QThread>
 #include <QtMath>
+#include <spa/param/props.h>
 #include "outputpipewire.h"
+
+OutputPipeWire *OutputPipeWire::instance = nullptr;
+VolumePipeWire *OutputPipeWire::volumeControl = nullptr;
 
 OutputPipeWire::OutputPipeWire(): Output()
 {
@@ -41,12 +45,14 @@ OutputPipeWire::OutputPipeWire(): Output()
     };
 
    pw_init(nullptr, nullptr);
+   instance = this;
 }
 
 OutputPipeWire::~OutputPipeWire()
 {
     uninitialize();
     pw_deinit();
+    instance = nullptr;
 }
 
 void OutputPipeWire::onStateChanged (void *data, enum pw_stream_state old,
@@ -70,6 +76,8 @@ void OutputPipeWire::onStateChanged (void *data, enum pw_stream_state old,
     case PW_STREAM_STATE_STREAMING:
         o->m_streamPaused = false;
         pw_thread_loop_signal(o->m_loop, false);
+        if(volumeControl)
+            instance->setMuted(volumeControl->isMuted());
         break;
     default:
         break;
@@ -94,6 +102,7 @@ bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat 
         .version = PW_VERSION_STREAM_EVENTS,
         .state_changed = OutputPipeWire::onStateChanged,
         .process = OutputPipeWire::onProcess,
+        .drained = OutputPipeWire::onDrained
     };
 
     if(!(m_loop = pw_thread_loop_new("pipewire-main-loop", nullptr)))
@@ -272,9 +281,11 @@ void OutputPipeWire::drain()
 {
     pw_thread_loop_lock(m_loop);
     if(m_buffer_at > 0)
-        pw_thread_loop_timed_wait(m_loop, 1);
-    pw_thread_loop_unlock(m_loop);
+        pw_thread_loop_timed_wait(m_loop, 2);
+
     pw_stream_flush(m_stream, true);
+    pw_thread_loop_timed_wait(m_loop, 2);
+    pw_thread_loop_unlock(m_loop);
 }
 
 void OutputPipeWire::reset()
@@ -287,8 +298,6 @@ void OutputPipeWire::reset()
 
 void OutputPipeWire::suspend()
 {
-    //pa_operation *op = pa_stream_cork(m_stream, 1, OutputPipeWire::stream_success_cb, nullptr);
-    //process(op);
     pw_thread_loop_lock(m_loop);
     pw_stream_set_active(m_stream, false);
     pw_thread_loop_unlock(m_loop);
@@ -296,8 +305,6 @@ void OutputPipeWire::suspend()
 
 void OutputPipeWire::resume()
 {
-    //pa_operation *op = pa_stream_cork(m_stream, 0, OutputPipeWire::stream_success_cb, nullptr);
-    //process(op);
     pw_thread_loop_lock(m_loop);
     pw_stream_set_active(m_stream, true);
     pw_thread_loop_unlock(m_loop);
@@ -305,9 +312,30 @@ void OutputPipeWire::resume()
 
 void OutputPipeWire::setMuted(bool mute)
 {
-    //pa_operation *op = pa_context_set_sink_input_mute(m_ctx, pa_stream_get_index(m_stream), mute,
-    //                                                  OutputPipeWire::context_success_cb, nullptr);
-    //pa_operation_unref(op);
+    setVolume(mute ? VolumeSettings() : volumeControl->volume());
+}
+
+void OutputPipeWire::setVolume(const VolumeSettings &v)
+{
+    qDebug() << Q_FUNC_INFO << v.left << v.right;
+    pw_thread_loop_lock(m_loop);
+
+    float* values = new float[channels()];
+
+    if(channels() == 2)
+    {
+        values[0] = float(v.left) / 100.0;
+        values[1] = float(v.right) / 100.0;
+    }
+    else
+    {
+        for(int i = 0; i < channels(); ++i)
+            values[i] = float(qMax(v.left, v.right)) / 100.0;
+    }
+
+    pw_stream_set_control(m_stream, SPA_PROP_channelVolumes, channels(), values, 0);
+    delete[] values;
+    pw_thread_loop_unlock(m_loop);
 }
 
 void OutputPipeWire::uninitialize()
@@ -386,6 +414,13 @@ void OutputPipeWire::onProcess(void *data)
     pw_thread_loop_signal(o->m_loop, false);
 }
 
+void OutputPipeWire::onDrained(void *data)
+{
+    OutputPipeWire *o = static_cast<OutputPipeWire *>(data);
+    pw_thread_loop_signal(o->m_loop, false);
+    qDebug("drained");
+}
+
 void OutputPipeWire::onCoreEventDone(void *data, uint32_t id, int seq)
 {
     OutputPipeWire *o = static_cast<OutputPipeWire *>(data);
@@ -421,4 +456,49 @@ void OutputPipeWire::onRegistryEventGlobal(void *data, uint32_t id, uint32_t per
     o->m_hasSinks = true;
 
     o->m_coreInitSeq = pw_core_sync(o->m_core, PW_ID_CORE, o->m_coreInitSeq);
+}
+
+VolumePipeWire::VolumePipeWire()
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    m_volume.left = settings.value("OutputPipeWire/left_volume", 100).toInt();
+    m_volume.right = settings.value("OutputPipeWire/right_volume", 100).toInt();
+    OutputPipeWire::volumeControl = this;
+}
+
+VolumePipeWire::~VolumePipeWire()
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.setValue("OutputPipeWire/left_volume", m_volume.left);
+    settings.setValue("OutputPipeWire/right_volume", m_volume.right);
+    OutputPipeWire::volumeControl = nullptr;
+}
+
+void VolumePipeWire::setVolume(const VolumeSettings &vol)
+{
+    if(OutputPipeWire::instance)
+        OutputPipeWire::instance->setVolume(vol);
+    m_volume = vol;
+}
+
+VolumeSettings VolumePipeWire::volume() const
+{
+    return m_volume;
+}
+
+bool VolumePipeWire::isMuted() const
+{
+    return m_muted;
+}
+
+void VolumePipeWire::setMuted(bool mute)
+{
+    if(OutputPipeWire::instance)
+        OutputPipeWire::instance->setMuted(mute);
+    m_muted = mute;
+}
+
+Volume::VolumeFlags VolumePipeWire::flags() const
+{
+    return Volume::IsMuteSupported | Volume::HasNotifySignal;
 }

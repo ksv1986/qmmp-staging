@@ -29,7 +29,7 @@
 #include <qmmp/output.h>
 #include <qmmp/volume.h>
 
-class VolumePulseAudio;
+class VolumePipeWire;
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
@@ -49,12 +49,17 @@ public:
     void suspend() override;
     void resume() override;
     void setMuted(bool mute);
+    void setVolume(const VolumeSettings &v);
+
+    static OutputPipeWire *instance;
+    static VolumePipeWire *volumeControl;
 
 private:
     // helper functions
     void uninitialize();
     //callbacks
     static void onProcess(void *data);
+    static void onDrained(void *data);
     static void onCoreEventDone(void *data, uint32_t id, int seq);
     static void onRegistryEventGlobal(void *data, uint32_t id,
                                       uint32_t permissions, const char *type, uint32_t version,
@@ -95,6 +100,26 @@ private:
     unsigned char *m_buffer = nullptr;
     uint32_t m_buffer_at = 0;
     QHash <Qmmp::ChannelPosition, spa_audio_channel> m_pw_channels;
+};
+
+class VolumePipeWire : public Volume
+{
+public:
+    VolumePipeWire();
+    ~VolumePipeWire();
+
+    //void updateVolume(const pa_cvolume &v, bool muted);
+    void setVolume(const VolumeSettings &vol) override;
+    VolumeSettings volume() const override;
+    bool isMuted() const override;
+    void setMuted(bool mute) override;
+    VolumeFlags flags() const override;
+    //static VolumeSettings cvolumeToVolumeSettings(const pa_cvolume &v);
+    //static pa_cvolume volumeSettingsToCvolume(const VolumeSettings &v, int channels);
+
+private:
+    VolumeSettings m_volume;
+    bool m_muted = false;
 };
 
 #endif // OUTPUTPIPEWIRE_H

@@ -58,5 +58,5 @@ void OutputPipeWireFactory::showAbout(QWidget *parent)
 
 QString OutputPipeWireFactory::translation() const
 {
-    return QLatin1String(":/pipwire_plugin_");
+    return QLatin1String(":/pipewire_plugin_");
 }

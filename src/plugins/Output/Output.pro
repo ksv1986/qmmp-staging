@@ -32,6 +32,9 @@ contains(CONFIG, OSS4_PLUGIN){
 contains(CONFIG, SHOUT_PLUGIN){
    SUBDIRS += shout
 }
+
+SUBDIRS += pipewire
+
 }
 
 #all platforms

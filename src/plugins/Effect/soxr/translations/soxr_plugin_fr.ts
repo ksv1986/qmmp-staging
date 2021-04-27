@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="20"/>
         <source>Sample Rate (Hz):</source>
-        <translation>Taux d&apos;échantillonnage (Hz) :</translation>
+        <translation>Taux d&apos;échantillonnage (Hz)&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="40"/>

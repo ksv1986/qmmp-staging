@@ -29,7 +29,7 @@
     <message>
         <location filename="../popupwidget.cpp" line="116"/>
         <source>Volume:</source>
-        <translation>Volume :</translation>
+        <translation>Volume&#xa0;:</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="51"/>
         <source>Font:</source>
-        <translation>Police :</translation>
+        <translation>Police&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
@@ -88,7 +88,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="332"/>
         <source>Delay (ms):</source>
-        <translation>Délai (ms) :</translation>
+        <translation>Délai (ms)&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="361"/>

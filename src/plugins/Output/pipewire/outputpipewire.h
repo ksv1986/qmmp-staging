@@ -25,7 +25,6 @@
 #include <QHash>
 #include <pipewire/pipewire.h>
 #include <spa/param/audio/format-utils.h>
-#include <atomic>
 #include <qmmp/output.h>
 #include <qmmp/volume.h>
 
@@ -48,6 +47,7 @@ public:
     void reset() override;
     void suspend() override;
     void resume() override;
+    // helper functions
     void setMuted(bool mute);
     void setVolume(const VolumeSettings &v);
 
@@ -62,12 +62,12 @@ private:
     static void onDrained(void *data);
     static void onCoreEventDone(void *data, uint32_t id, int seq);
     static void onRegistryEventGlobal(void *data, uint32_t id,
-                                      uint32_t permissions, const char *type, uint32_t version,
-                                      const struct spa_dict *props);
+                                      uint32_t permissions, const char *type,
+                                      uint32_t version, const struct spa_dict *props);
+    static void onStateChanged(void *data, enum pw_stream_state old,
+                               enum pw_stream_state state, const char *error);
 
-    static void onStateChanged (void *data, enum pw_stream_state old,
-                           enum pw_stream_state state, const char *error);
-
+    // PipeWire objects
     struct pw_thread_loop *m_loop = nullptr;
     struct pw_stream *m_stream  = nullptr;
     pw_context *m_context = nullptr;
@@ -77,28 +77,17 @@ private:
     spa_hook m_streamListener = {};
     spa_hook m_registryListener = {};
 
-    uint32_t m_stride = 0;
-    uint32_t m_nFrames = 0;
-    uint32_t m_bufferSize = 0;
-    uint32_t m_writeBufferPos = 0;
-
     int m_coreInitSeq = 0;
 
-    std::atomic_bool m_hasSinks {false};
-    std::atomic_bool m_initDone {false};
-    std::atomic_bool m_bufferHasData {false};
-    std::atomic_bool m_processed {false};
-    std::atomic_bool m_paused {false};
-    std::atomic_bool m_silence {false};
-    std::atomic_bool m_streamPaused {false};
-    std::atomic_bool m_ignoreStateChange {false};
-    std::atomic_bool m_err {false};
+    bool m_inited = false;
+    bool m_hasSinks = false;
+    bool m_ignoreStateChange = false;
 
-
-    //uint8_t m_stream_buffer[1024];
-    //unsigned char m_buffer[4096];
     unsigned char *m_buffer = nullptr;
-    uint32_t m_buffer_at = 0;
+    quint32 m_buffer_at = 0;
+    quint32 m_bufferSize = 0;
+    quint32 m_frames = 0;
+    quint32 m_stride = 0;
     QHash <Qmmp::ChannelPosition, spa_audio_channel> m_pw_channels;
 };
 
@@ -108,14 +97,11 @@ public:
     VolumePipeWire();
     ~VolumePipeWire();
 
-    //void updateVolume(const pa_cvolume &v, bool muted);
     void setVolume(const VolumeSettings &vol) override;
     VolumeSettings volume() const override;
     bool isMuted() const override;
     void setMuted(bool mute) override;
     VolumeFlags flags() const override;
-    //static VolumeSettings cvolumeToVolumeSettings(const pa_cvolume &v);
-    //static pa_cvolume volumeSettingsToCvolume(const VolumeSettings &v, int channels);
 
 private:
     VolumeSettings m_volume;

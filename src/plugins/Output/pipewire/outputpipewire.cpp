@@ -56,34 +56,25 @@ OutputPipeWire::~OutputPipeWire()
 }
 
 void OutputPipeWire::onStateChanged (void *data, enum pw_stream_state old,
-                       enum pw_stream_state state, const char *error)
+                                     enum pw_stream_state state, const char *error)
 {
+    Q_UNUSED(old);
+    Q_UNUSED(error);
+
     OutputPipeWire *o = static_cast<OutputPipeWire *>(data);
 
-    if (o->m_ignoreStateChange)
+    if(o->m_ignoreStateChange)
         return;
 
-    switch (state)
+    if(state == PW_STREAM_STATE_UNCONNECTED ||
+            state == PW_STREAM_STATE_PAUSED ||
+            state == PW_STREAM_STATE_STREAMING)
     {
-    case PW_STREAM_STATE_UNCONNECTED:
         pw_thread_loop_signal(o->m_loop, false);
-        break;
-    case PW_STREAM_STATE_PAUSED:
-        o->m_streamPaused = true;
-        qDebug("paused");
-        pw_thread_loop_signal(o->m_loop, false);
-        break;
-    case PW_STREAM_STATE_STREAMING:
-        o->m_streamPaused = false;
-        pw_thread_loop_signal(o->m_loop, false);
-        if(volumeControl)
-            instance->setMuted(volumeControl->isMuted());
-        break;
-    default:
-        break;
-    }
 
-    //pw_thread_loop_signal(o->m_loop, false);
+        if(state == PW_STREAM_STATE_STREAMING && volumeControl)
+            instance->setMuted(volumeControl->isMuted());
+    }
 }
 
 bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat format)
@@ -133,38 +124,37 @@ bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat 
 
     m_coreInitSeq = pw_core_sync(m_core, PW_ID_CORE, m_coreInitSeq);
 
-
-    if (pw_thread_loop_start(m_loop) != 0)
+    if(pw_thread_loop_start(m_loop) != 0)
     {
-        //m_err = true;
+        qWarning("OutputPipeWire: unable to start loop");
         return false;
     }
 
     pw_thread_loop_lock(m_loop);
-    while (!m_initDone)
+    while(!m_inited)
     {
-        if (pw_thread_loop_timed_wait(m_loop, 2) != 0)
+        if(pw_thread_loop_timed_wait(m_loop, 2) != 0)
             break;
     }
     pw_thread_loop_unlock(m_loop);
 
-    if(!m_initDone || !m_hasSinks)
+    if(!m_inited || !m_hasSinks)
+    {
+        qWarning("OutputPipeWire: unable to initialize loop");
         return false;
+    }
 
     m_stride = AudioParameters::sampleSize(format) * map.count();
-    m_nFrames = qBound(64, qCeil((2048.0 / 48000.0) * freq), 8192);
-    m_bufferSize = m_nFrames * m_stride;
-    m_writeBufferPos = 0;
+    m_frames = qBound(64, qCeil(2048.0 * freq / 48000.0), 8192);
+    m_bufferSize = m_frames * m_stride;
     m_buffer = new unsigned char[m_bufferSize];
 
-    auto props = pw_properties_new(
-                PW_KEY_MEDIA_TYPE, "Audio",
-                PW_KEY_MEDIA_CATEGORY, "Playback",
-                PW_KEY_MEDIA_ROLE, "Music",
-                PW_KEY_MEDIA_ICON_NAME, "qmmp",
-                nullptr
-                );
-    pw_properties_setf(props, PW_KEY_NODE_LATENCY, "%u/%u", m_nFrames, freq);
+    pw_properties *props = pw_properties_new(PW_KEY_MEDIA_TYPE, "Audio",
+                                             PW_KEY_MEDIA_CATEGORY, "Playback",
+                                             PW_KEY_MEDIA_ROLE, "Music",
+                                             PW_KEY_MEDIA_ICON_NAME, "qmmp",
+                                             nullptr);
+    pw_properties_setf(props, PW_KEY_NODE_LATENCY, "%u/%u", m_frames, freq);
 
     pw_thread_loop_lock(m_loop);
 
@@ -188,7 +178,7 @@ bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat 
         .format = SPA_AUDIO_FORMAT_F32,
         .flags = SPA_AUDIO_FLAG_NONE,
         .rate = freq,
-        .channels = map.count()
+        .channels = static_cast<unsigned int>(map.count())
     };
 
     switch (format)
@@ -229,16 +219,16 @@ bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat 
 
 
 
-
-    qDebug() << pw_stream_connect(m_stream,
-                                  PW_DIRECTION_OUTPUT,
-                                  PW_ID_ANY,
-                                  static_cast<pw_stream_flags>(PW_STREAM_FLAG_AUTOCONNECT |
+    pw_stream_flags streamFlags = static_cast<pw_stream_flags>(PW_STREAM_FLAG_AUTOCONNECT |
                                                                PW_STREAM_FLAG_MAP_BUFFERS |
-                                                               PW_STREAM_FLAG_RT_PROCESS),
-                      params, 1);
+                                                               PW_STREAM_FLAG_RT_PROCESS);
 
-
+    if(pw_stream_connect(m_stream, PW_DIRECTION_OUTPUT, PW_ID_ANY, streamFlags, params, 1) != 0)
+    {
+        pw_thread_loop_unlock(m_loop);
+        qDebug("OutputPipeWire: unable to connect stream");
+        return false;
+    }
 
     Output::configure(freq, map, format);
     pw_thread_loop_unlock(m_loop);
@@ -248,17 +238,11 @@ bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat 
 
 qint64 OutputPipeWire::latency()
 {
-    /*pa_usec_t usec;
-    int negative;
-
-    int r = pa_stream_get_latency(m_stream, &usec, &negative);
-    return (r == PA_OK && negative == 0) ? (usec / 1000) : 0;*/
-    return 0;
+    return (m_buffer_at / m_stride + m_frames) * 1000 / sampleRate();
 }
 
 qint64 OutputPipeWire::writeAudio(unsigned char *data, qint64 maxSize)
 {
-    //qDebug() << Q_FUNC_INFO;
     pw_thread_loop_lock(m_loop);
 
     if(m_buffer_at == m_bufferSize)
@@ -317,7 +301,6 @@ void OutputPipeWire::setMuted(bool mute)
 
 void OutputPipeWire::setVolume(const VolumeSettings &v)
 {
-    qDebug() << Q_FUNC_INFO << v.left << v.right;
     pw_thread_loop_lock(m_loop);
 
     float* values = new float[channels()];
@@ -334,7 +317,7 @@ void OutputPipeWire::setVolume(const VolumeSettings &v)
     }
 
     pw_stream_set_control(m_stream, SPA_PROP_channelVolumes, channels(), values, 0);
-    delete[] values;
+    delete [] values;
     pw_thread_loop_unlock(m_loop);
 }
 
@@ -430,7 +413,7 @@ void OutputPipeWire::onCoreEventDone(void *data, uint32_t id, int seq)
         spa_hook_remove(&o->m_registryListener);
         spa_hook_remove(&o->m_coreListener);
 
-        o->m_initDone = true;
+        o->m_inited = true;
         pw_thread_loop_signal(o->m_loop, false);
     }
 }
@@ -458,6 +441,7 @@ void OutputPipeWire::onRegistryEventGlobal(void *data, uint32_t id, uint32_t per
     o->m_coreInitSeq = pw_core_sync(o->m_core, PW_ID_CORE, o->m_coreInitSeq);
 }
 
+//volume control
 VolumePipeWire::VolumePipeWire()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);

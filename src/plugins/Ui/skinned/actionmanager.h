@@ -111,8 +111,9 @@ public:
     static ActionManager* instance();
 
 private:
-    QAction *createAction(QString name, QString confKey, QString key = QString(), QString iconName = QString());
-    QAction *createAction2(QString name, QString confKey, QString key = QString());
+    QAction *createAction(const QString &name, const QString &confKey, const QString &key = QString(),
+                          const QString &iconName = QString());
+    QAction *createAction2(const QString &name, const QString &confKey, const QString &key = QString());
     void readStates();
     void saveStates();
 

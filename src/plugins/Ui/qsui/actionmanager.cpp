@@ -137,7 +137,7 @@ ActionManager* ActionManager::instance()
     return m_instance;
 }
 
-QAction *ActionManager::createAction(QString name, QString confKey, QString key, QString iconName)
+QAction *ActionManager::createAction(const QString &name, const QString &confKey, const QString &key, const QString &iconName)
 {
     QAction *action = new QAction(name, this);
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -157,7 +157,7 @@ QAction *ActionManager::createAction(QString name, QString confKey, QString key,
     return action;
 }
 
-QAction *ActionManager::createAction2(QString name, QString confKey, QString key, QString iconName)
+QAction *ActionManager::createAction2(const QString &name, const QString &confKey, const QString &key, const QString &iconName)
 {
     QAction *action = createAction(name, confKey, key);
     action->setCheckable(true);
@@ -205,7 +205,7 @@ void ActionManager::resetShortcuts()
     }
 }
 
-void ActionManager::registerAction(int id, QAction *action, QString confKey, QString key)
+void ActionManager::registerAction(int id, QAction *action, const QString &confKey, const QString &key)
 {
     if(m_actions.value(id))
         qFatal("ActionManager: invalid action id");
@@ -222,7 +222,7 @@ void ActionManager::registerAction(int id, QAction *action, QString confKey, QSt
     settings.endGroup();
 }
 
-void ActionManager::registerWidget(int id, QWidget *w, QString text, QString name)
+void ActionManager::registerWidget(int id, QWidget *w, const QString &text, const QString &name)
 {
     if(m_actions.value(id))
         qFatal("ActionManager: invalid action id");
@@ -233,7 +233,7 @@ void ActionManager::registerWidget(int id, QWidget *w, QString text, QString nam
     m_actions[id] = action;
 }
 
-QToolBar *ActionManager::createToolBar(ActionManager::ToolBarInfo info, QWidget *parent)
+QToolBar *ActionManager::createToolBar(const ToolBarInfo &info, QWidget *parent)
 {
     QToolBar *toolBar = new QToolBar(info.title, parent);
     updateToolBar(toolBar, info);
@@ -243,7 +243,7 @@ QToolBar *ActionManager::createToolBar(ActionManager::ToolBarInfo info, QWidget 
     return toolBar;
 }
 
-void ActionManager::updateToolBar(QToolBar *toolBar, ActionManager::ToolBarInfo info)
+void ActionManager::updateToolBar(QToolBar *toolBar, const ToolBarInfo &info)
 {
     toolBar->clear();
     toolBar->setIconSize(info.iconSize);
@@ -313,7 +313,7 @@ QList<ActionManager::ToolBarInfo> ActionManager::readToolBarSettings() const
     return list;
 }
 
-void ActionManager::writeToolBarSettings(QList<ActionManager::ToolBarInfo> l)
+void ActionManager::writeToolBarSettings(const QList<ToolBarInfo> &l)
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginWriteArray("SimpleUiToolbars");

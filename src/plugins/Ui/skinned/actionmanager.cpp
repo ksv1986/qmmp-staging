@@ -130,7 +130,7 @@ ActionManager* ActionManager::instance()
     return m_instance;
 }
 
-QAction *ActionManager::createAction(QString name, QString confKey, QString key, QString iconName)
+QAction *ActionManager::createAction(const QString &name, const QString &confKey, const QString &key, const QString &iconName)
 {
     QAction *action = new QAction(name, this);
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -148,7 +148,7 @@ QAction *ActionManager::createAction(QString name, QString confKey, QString key,
     return action;
 }
 
-QAction *ActionManager::createAction2(QString name, QString confKey, QString key)
+QAction *ActionManager::createAction2(const QString &name, const QString &confKey, const QString &key)
 {
     QAction *action = createAction(name, confKey, key);
     action->setCheckable(true);

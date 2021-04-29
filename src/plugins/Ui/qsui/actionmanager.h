@@ -129,19 +129,21 @@ public:
     QList<QAction *> actions();
     void saveActions();
     void resetShortcuts();
-    void registerAction(int id, QAction *action, QString confKey, QString key);
-    void registerWidget(int id, QWidget *w, QString text, QString name);
-    QToolBar *createToolBar(ToolBarInfo info, QWidget *parent);
-    void updateToolBar(QToolBar *toolBar, ToolBarInfo info);
+    void registerAction(int id, QAction *action, const QString &confKey, const QString &key);
+    void registerWidget(int id, QWidget *w, const QString &text, const QString &name);
+    QToolBar *createToolBar(const ToolBarInfo &info, QWidget *parent);
+    void updateToolBar(QToolBar *toolBar, const ToolBarInfo &info);
     ActionManager::ToolBarInfo defaultToolBar() const;
     QList<ToolBarInfo> readToolBarSettings() const;
-    void writeToolBarSettings(QList<ToolBarInfo> l);
+    void writeToolBarSettings(const QList<ToolBarInfo> &l);
 
     static ActionManager* instance();
 
 private:
-    QAction *createAction(QString name, QString confKey, QString key = QString(), QString iconName = QString());
-    QAction *createAction2(QString name, QString confKey, QString key = QString(), QString iconName = QString());
+    QAction *createAction(const QString &name, const QString &confKey, const QString &key = QString(),
+                          const QString &iconName = QString());
+    QAction *createAction2(const QString &name, const QString &confKey, const QString &key = QString(),
+                           const QString &iconName = QString());
     void readStates();
     void saveStates();
 

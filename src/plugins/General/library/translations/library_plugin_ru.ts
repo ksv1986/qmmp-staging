@@ -33,6 +33,11 @@
         <translation>Библиотека</translation>
     </message>
     <message>
+        <location filename="../libraryfactory.cpp" line="38"/>
+        <source>Ctrl+1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../libraryfactory.cpp" line="84"/>
         <source>About Media Library Plugin</source>
         <translation>О модуле музыкальной библиотеки</translation>

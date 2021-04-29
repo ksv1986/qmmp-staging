@@ -27,6 +27,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../lyricsfactory.cpp" line="36"/>
+        <source>Ctrl+2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../lyricsfactory.cpp" line="68"/>
         <source>About Lyrics Plugin</source>
         <translation>אודות תוסף מילות שיר</translation>

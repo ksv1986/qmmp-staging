@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include <QAction>
+#include <QDockWidget>
 #include "actionmanager.h"
 #include "shortcutitem.h"
 
@@ -28,6 +29,13 @@ ShortcutItem::ShortcutItem(QTreeWidgetItem *parent, int type) : QTreeWidgetItem(
 {
     m_action = ActionManager::instance()->action(type);
     setIcon(0, m_action->icon());
+}
+
+ShortcutItem::ShortcutItem(QTreeWidgetItem *parent, QDockWidget *w) : QTreeWidgetItem(parent, QStringList()
+        << w->toggleViewAction()->text().remove("&")
+        << w->toggleViewAction()->shortcut().toString())
+{
+    m_action = w->toggleViewAction();
 }
 
 ShortcutItem::~ShortcutItem()

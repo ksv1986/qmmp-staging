@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <qmmpui/general.h>
 #include <qmmpui/uihelper.h>
+#include "actionmanager.h"
 #include "dockwidgetlist.h"
 
 DockWidgetList::DockWidgetList(QMainWindow *parent) : QObject(parent), m_mw(parent)
@@ -23,6 +24,7 @@ DockWidgetList::DockWidgetList(QMainWindow *parent) : QObject(parent), m_mw(pare
         connect(dockWidget->toggleViewAction(), SIGNAL(triggered(bool)), SLOT(onViewActionTriggered(bool)));
         connect(dockWidget, SIGNAL(visibilityChanged(bool)), SLOT(onVisibilityChanged(bool)));
         m_dockWidgetList << dockWidget;
+        ActionManager::instance()->registerDockWidget(dockWidget, id, desc.shortcut);
     }
 }
 
@@ -139,6 +141,7 @@ void DockWidgetList::onWidgetRemoved(const QString &id)
         if(dockWidget->objectName() == id)
         {
             m_dockWidgetList.removeAll(dockWidget);
+            ActionManager::instance()->removeDockWidget(dockWidget);
             if(dockWidget->widget())
                 dockWidget->widget()->deleteLater();
             dockWidget->deleteLater();

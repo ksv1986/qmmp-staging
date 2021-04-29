@@ -25,6 +25,7 @@
 #include <QApplication>
 #include <QStyle>
 #include <QWidgetAction>
+#include <QDockWidget>
 #include <qmmp/qmmp.h>
 #include "actionmanager.h"
 
@@ -127,9 +128,19 @@ QAction *ActionManager::use(int type, const QObject *receiver, const char *membe
     return act;
 }
 
-QList<QAction *> ActionManager::actions()
+QList<QAction *> ActionManager::actions() const
 {
     return m_actions.values();
+}
+
+QList<QDockWidget *> ActionManager::dockWidgtes() const
+{
+    return m_dockWidgets.keys();
+}
+
+bool ActionManager::hasDockWidgets() const
+{
+    return !m_dockWidgets.isEmpty();
 }
 
 ActionManager* ActionManager::instance()
@@ -191,10 +202,21 @@ void ActionManager::saveStates()
 void ActionManager::saveActions()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginGroup("SimpleUiShortcuts");
+
     for(const QAction *action : m_actions.values())
     {
-        settings.setValue(QString("SimpleUiShortcuts/")+action->objectName(), action->shortcut());
+        settings.setValue(action->objectName(), action->shortcut());
     }
+
+    auto it = m_dockWidgets.cbegin();
+    while(it != m_dockWidgets.cend())
+    {
+        settings.setValue(it.value().first, it.key()->toggleViewAction()->shortcut());
+        ++it;
+    }
+
+    settings.endGroup();
 }
 
 void ActionManager::resetShortcuts()
@@ -202,6 +224,13 @@ void ActionManager::resetShortcuts()
     for(QAction *action : m_actions.values())
     {
         action->setShortcut(action->property("defaultShortcut").toString());
+    }
+
+    auto it = m_dockWidgets.cbegin();
+    while(it != m_dockWidgets.cend())
+    {
+        it.key()->toggleViewAction()->setShortcut(it.value().second);
+        ++it;
     }
 }
 
@@ -231,6 +260,20 @@ void ActionManager::registerWidget(int id, QWidget *w, const QString &text, cons
     action->setObjectName(name);
     action->setDefaultWidget(w);
     m_actions[id] = action;
+}
+
+void ActionManager::registerDockWidget(QDockWidget *w, const QString &confKey, const QString &key)
+{
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    settings.beginGroup("SimpleUiShortcuts");
+    w->toggleViewAction()->setShortcut(settings.value(confKey, key).toString());
+    settings.endGroup();
+    m_dockWidgets.insert(w, qMakePair<QString, QString>(confKey, key));
+}
+
+void ActionManager::removeDockWidget(QDockWidget *w)
+{
+    m_dockWidgets.remove(w);
 }
 
 QToolBar *ActionManager::createToolBar(const ToolBarInfo &info, QWidget *parent)

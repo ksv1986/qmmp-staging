@@ -24,6 +24,7 @@
 
 class QWidget;
 class QAction;
+class QDockWidget;
 
 /**
    @author Ilya Kotov <forkotov02@ya.ru>
@@ -31,8 +32,9 @@ class QAction;
 class ShortcutItem : public QTreeWidgetItem
 {
 public:
-
     ShortcutItem(QTreeWidgetItem *parent, int type);
+    ShortcutItem(QTreeWidgetItem *parent, QDockWidget *w);
+
     ~ShortcutItem();
     QAction *action();
 

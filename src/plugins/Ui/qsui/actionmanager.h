@@ -26,9 +26,11 @@
 #include <QHash>
 #include <QList>
 #include <QToolBar>
+#include <QPair>
 
 class QAction;
 class QSettings;
+class QDockWidget;
 
 #define SET_ACTION(type, receiver, member) ActionManager::instance()->use(type, receiver, member)
 #define ACTION(type) ActionManager::instance()->action(type)
@@ -126,11 +128,15 @@ public:
 
     QAction *action(int type);
     QAction *use(int type, const QObject *receiver, const char *member);
-    QList<QAction *> actions();
+    QList<QAction *> actions() const;
+    QList<QDockWidget *> dockWidgtes() const;
+    bool hasDockWidgets() const;
     void saveActions();
     void resetShortcuts();
     void registerAction(int id, QAction *action, const QString &confKey, const QString &key);
     void registerWidget(int id, QWidget *w, const QString &text, const QString &name);
+    void registerDockWidget(QDockWidget *w, const QString &confKey, const QString &key);
+    void removeDockWidget(QDockWidget *w);
     QToolBar *createToolBar(const ToolBarInfo &info, QWidget *parent);
     void updateToolBar(QToolBar *toolBar, const ToolBarInfo &info);
     ActionManager::ToolBarInfo defaultToolBar() const;
@@ -148,7 +154,8 @@ private:
     void saveStates();
 
     QSettings *m_settings;
-    QHash <int, QAction *> m_actions;
+    QHash<int, QAction *> m_actions;
+    QHash<QDockWidget *, QPair<QString, QString>> m_dockWidgets; //widget, key, default shortcut
     static ActionManager *m_instance;
 
 };

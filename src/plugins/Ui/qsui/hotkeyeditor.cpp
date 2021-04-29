@@ -94,6 +94,15 @@ void HotkeyEditor::loadShortcuts()
         new ShortcutItem(item, i);
     item->setExpanded(true);
     m_ui->shortcutTreeWidget->addTopLevelItem(item);
+    //tools
+    if(ActionManager::instance()->hasDockWidgets())
+    {
+        item = new QTreeWidgetItem (m_ui->shortcutTreeWidget, QStringList() << tr("Tools"));
+        for(QDockWidget *w : ActionManager::instance()->dockWidgtes())
+            new ShortcutItem(item, w);
+        item->setExpanded(true);
+        m_ui->shortcutTreeWidget->addTopLevelItem(item);
+    }
 
     m_ui->shortcutTreeWidget->resizeColumnToContents(0);
     m_ui->shortcutTreeWidget->resizeColumnToContents(1);

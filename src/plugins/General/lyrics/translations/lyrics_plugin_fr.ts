@@ -68,7 +68,7 @@
     <message>
         <location filename="../lyricswidget.ui" line="115"/>
         <source>Title:</source>
-        <translation type="unfinished">Titre&#xa0;:</translation>
+        <translation type="unfinished">Titre :</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="132"/>

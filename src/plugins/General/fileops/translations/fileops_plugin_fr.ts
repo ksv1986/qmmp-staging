@@ -24,8 +24,8 @@
         <location filename="../fileops.cpp" line="152"/>
         <source>Are you sure you want to move %n file(s)?</source>
         <translation>
-            <numerusform>Êtes-vous certain-e de vouloir déplacer %n fichier(s)&#xa0;?</numerusform>
-            <numerusform>Êtes-vous certain-e de vouloir déplacer %n fichier(s)&#xa0;?</numerusform>
+            <numerusform>Êtes-vous certain-e de vouloir déplacer %n fichier(s) ?</numerusform>
+            <numerusform>Êtes-vous certain-e de vouloir déplacer %n fichier(s) ?</numerusform>
         </translation>
     </message>
     <message>
@@ -63,8 +63,8 @@
         <location filename="../fileops.cpp" line="124"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
         <translation>
-            <numerusform>Êtes-vous certain-e de vouloir supprimer %n fichier(s) du disque&#xa0;?</numerusform>
-            <numerusform>Êtes-vous certain-e de vouloir supprimer %n fichier(s) du disque&#xa0;?</numerusform>
+            <numerusform>Êtes-vous certain-e de vouloir supprimer %n fichier(s) du disque ?</numerusform>
+            <numerusform>Êtes-vous certain-e de vouloir supprimer %n fichier(s) du disque ?</numerusform>
         </translation>
     </message>
 </context>
@@ -150,7 +150,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="127"/>
         <source>Destination:</source>
-        <translation>Destination&#xa0;:</translation>
+        <translation>Destination :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="137"/>
@@ -162,7 +162,7 @@
         <location filename="../settingsdialog.ui" line="144"/>
         <location filename="../settingsdialog.cpp" line="152"/>
         <source>File name pattern:</source>
-        <translation>Motif de nom de fichier&#xa0;:</translation>
+        <translation>Motif de nom de fichier :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="216"/>

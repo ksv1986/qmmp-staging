@@ -1692,17 +1692,17 @@
     <message>
         <location filename="../toolbareditor.cpp" line="250"/>
         <source>Toolbar %1</source>
-        <translation>工具栏&#x3000;%1</translation>
+        <translation>工具栏　%1</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Rename Toolbar</source>
-        <translation>重命名&#x3000;工具栏</translation>
+        <translation>重命名　工具栏</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="264"/>
         <source>Toolbar name:</source>
-        <translation>工具栏&#x3000;名称：</translation>
+        <translation>工具栏　名称：</translation>
     </message>
 </context>
 <context>

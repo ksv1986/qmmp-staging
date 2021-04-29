@@ -39,12 +39,12 @@
     <message>
         <location filename="../halplugin.cpp" line="164"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation>Ajouter CD «&#xa0;%1&#xa0;»</translation>
+        <translation>Ajouter CD « %1 »</translation>
     </message>
     <message>
         <location filename="../halplugin.cpp" line="170"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation>Ajouter volume «&#xa0;%1&#xa0;»</translation>
+        <translation>Ajouter volume « %1 »</translation>
     </message>
 </context>
 <context>

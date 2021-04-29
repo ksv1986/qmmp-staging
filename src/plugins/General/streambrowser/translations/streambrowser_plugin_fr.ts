@@ -16,7 +16,7 @@
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
         <source>Name:</source>
-        <translation>Nom&#xa0;:</translation>
+        <translation>Nom :</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
@@ -85,12 +85,12 @@
     <message>
         <location filename="../streamwindow.ui" line="31"/>
         <source>Filter:</source>
-        <translation>Filtre&#xa0;:</translation>
+        <translation>Filtre :</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="47"/>
         <source>Favorites</source>
-        <translation>Favoris&#xa0;:</translation>
+        <translation>Favoris :</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="73"/>

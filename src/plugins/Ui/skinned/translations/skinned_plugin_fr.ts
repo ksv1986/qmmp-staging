@@ -581,7 +581,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="94"/>
         <source>Do you want to restore default shortcuts?</source>
-        <translation>Voulez-vous restaurer les raccourcis par défaut&#xa0;?</translation>
+        <translation>Voulez-vous restaurer les raccourcis par défaut ?</translation>
     </message>
 </context>
 <context>
@@ -1172,7 +1172,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="64"/>
         <source>Written by:</source>
-        <translation>Écrit par&#xa0;:</translation>
+        <translation>Écrit par :</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="65"/>
@@ -1345,7 +1345,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="984"/>
         <source>Column headers:</source>
-        <translation>Noms des colonnes&#xa0;:</translation>
+        <translation>Noms des colonnes :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="906"/>
@@ -1380,7 +1380,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="132"/>
         <source>Window title format:</source>
-        <translation>Format du titre de la fenêtre&#xa0;:</translation>
+        <translation>Format du titre de la fenêtre :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="97"/>

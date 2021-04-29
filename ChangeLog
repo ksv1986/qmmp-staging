@@ -1609,6 +1609,7 @@ Version 1.4.0
 
 Version 1.5.0
 * added media library plugin (experimental)
+* added PipeWire plugin (experimental)
 * added builtin CUE editor
 * added m4b support in the ffmpeg plugin
 * added option to enable CRC checking in the mpeg plugin

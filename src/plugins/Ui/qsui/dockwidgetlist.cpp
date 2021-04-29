@@ -16,6 +16,7 @@ DockWidgetList::DockWidgetList(QMainWindow *parent) : QObject(parent), m_mw(pare
     {
         WidgetDescription desc = General::widgetDescription(id);
         QDockWidget *dockWidget = new QDockWidget(desc.name, m_mw);
+        dockWidget->toggleViewAction()->setShortcut(desc.shortcut);
         dockWidget->setObjectName(id);
         dockWidget->setAllowedAreas(desc.allowedAreas);
         m_mw->addDockWidget(desc.area, dockWidget);

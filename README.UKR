@@ -38,7 +38,8 @@ Qmmp - Qt-based multimedia player
 Системи виведення звуку:
 - OSS4 (FreeBSD)
 - ALSA (Linux)
-- Pulse Audio
+- PulseAudio
+- PipeWire
 - JACK
 - WaveOut (Win32)
 - DirectSound (Win32)
@@ -84,6 +85,7 @@ Qmmp - Qt-based multimedia player
 - libsndfile >= 1.0.21 (Опціонально)
 - wavpack >= 4.41 (Опціонально)
 - pulseaudio >= 0.9.15 (Опціонально)
+- pipewire >= 0.3.26 (Опціонально)
 - ffmpeg >= 3.4 (Опціонально)
 - libcdio >= 0.80 (Опціонально)
 - libcdio-paranoia >= 10.2 (починаючи з libcdio 0.90)
@@ -119,7 +121,7 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 - USE_CURL, USE_MMS (транспортні модулі);
 - USE_MAD, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
   USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_OPUS, USE_SID (декодери);
-- USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_NULL, USE_OSS4, USE_WAVEOUT, USE_DSOUND, USE_QTMULTIMEDIA,
+- USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_PIPEWIRE, USE_NULL, USE_OSS4, USE_WAVEOUT, USE_DSOUND, USE_QTMULTIMEDIA,
   USE_WASAPI (модулі  виведення);
 - USE_SOXR, USE_BS2B, USE_LADSPA, USE_CROSSFADE, USE_STEREO, USE_FILEWRITER, USE_MONOTOSTEREO (ефекти);
 - USE_ANALYZER, USE_PROJECTM (візуалізація);

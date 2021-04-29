@@ -40,7 +40,8 @@ Qmmp - Qt-based multimedia player
 Системы вывода звука:
 - OSS4 (FreeBSD)
 - ALSA (Linux)
-- Pulse Audio
+- PulseAudio
+- PipeWire
 - JACK
 - QtMultimedia
 - Icecast
@@ -95,6 +96,7 @@ Qmmp - Qt-based multimedia player
 - libsndfile >= 1.0.22 (опционально)
 - wavpack >= 4.41 (опционально)
 - pulseaudio >= 0.9.15 (опционально)
+- pipewire >= 0.3.26 (опционально)
 - ffmpeg >= 3.4 (опционально)
 - libcdio >= 0.80 (опционально)
 - libcdio-paranoia >= 10.2 (начиная с libcdio 0.90)
@@ -133,7 +135,7 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 - USE_CURL, USE_MMS (транспортные модули);
 - USE_MAD, USE_MPG123, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
   USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_OPUS, USE_SID, USE_ARCHIVE (декодеры);
-- USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_NULL, USE_OSS4, USE_WAVEOUT, USE_DSOUND, USE_QTMULTIMEDIA,
+- USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_PIPEWIRE, USE_NULL, USE_OSS4, USE_WAVEOUT, USE_DSOUND, USE_QTMULTIMEDIA,
   USE_WASAPI, USE_SHOUT (модули  вывода);
 - USE_SOXR, USE_BS2B, USE_LADSPA, USE_CROSSFADE, USE_STEREO, USE_FILEWRITER, USE_MONOTOSTEREO (эффекты);
 - USE_ANALYZER, USE_PROJECTM (визуализация);

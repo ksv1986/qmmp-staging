@@ -40,7 +40,8 @@ Visual effects:
 Output system support:
 - OSS4 (FreeBSD)
 - ALSA (Linux)
-- Pulse Audio
+- PulseAudio
+- PipeWire
 - JACK
 - QtMultimedia
 - Icecast
@@ -96,6 +97,7 @@ Requirements:
 - libsndfile >= 1.0.22 (optional)
 - wavpack >= 4.41 (optional)
 - pulseaudio >= 0.9.15 (optional)
+- pipewire >= 0.3.26 (optional)
 - ffmpeg >= 3.4 (optional)
 - libcdio >= 0.80 (optional)
 - libcdio-paranoia >= 10.2 (since libcdio 0.90)
@@ -135,7 +137,7 @@ Available options:
 - USE_CURL, USE_MMS (transports);
 - USE_MAD, USE_MPG123, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
   USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_OPUS, USE_SID, USE_ARCHIVE (decoders);
-- USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_NULL, USE_OSS4, USE_WAVEOUT, UDE_DSOUND, USE_QTMULTIMEDIA,
+- USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_PIPEWIRE, USE_NULL, USE_OSS4, USE_WAVEOUT, UDE_DSOUND, USE_QTMULTIMEDIA,
   USE_WASAPI, USE_SHOUT (output plugins);
 - USE_SOXR, USE_BS2B, USE_LADSPA, USE_CROSSFADE, USE_STEREO, USE_FILEWRITER, USE_MONOTOSTEREO (effects);
 - USE_ANALYZER, USE_PROJECTM (visualization);

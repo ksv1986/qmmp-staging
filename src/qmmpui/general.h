@@ -47,8 +47,21 @@ public:
      * Returns a list of the enabled general plugin factories.
      */
     static QList<GeneralFactory *> enabledFactories();
+    /*!
+     * Returns a list of the enabled widget IDs.
+     */
     static QStringList enabledWidgets();
+    /*!
+     * Returns widget description.
+     * @param id Widget ID.
+     */
     static WidgetDescription widgetDescription(const QString &id);
+    /*!
+     * Creates widget provided by general plugin. May return \b nullptr
+     * if widget ID is not found.
+     * \param id Widget ID.
+     * \param parent Parent Widget.
+     */
     static QWidget *createWidget(const QString &id, QWidget *parent);
     /*!
      * Returns plugin file path.

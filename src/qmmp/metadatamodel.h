@@ -87,7 +87,7 @@ public:
     {
         IsCoverEditable = 0x1,      /*!< Enable cover editor. */
         CompletePropertyList = 0x2, /*!< Show properties from \b extraProperties() only (ignore other sources) */
-        IsCueEditable = 0x4
+        IsCueEditable = 0x4         /*!< Enable CUE editor. */
     };
     Q_DECLARE_FLAGS(DialogHints, DialogHint)
     /*!
@@ -135,8 +135,17 @@ public:
      * Returns path to cover pixmap.
      */
     virtual QString coverPath() const;
+    /*!
+     * Returns CUE file or tag content if necessary. Default implementation returns empty string.
+     */
     virtual QString cue() const;
+    /*!
+     * Updates CUE file or tag content. Default implementation doesn nothing.
+     */
     virtual void setCue(const QString &content);
+    /*!
+     * Removes CUE file or tag. Default implementation doesn nothing.
+     */
     virtual void removeCue();
     /*!
      * Returns \b true if file is opened in read only mode. Otherwise returns \b false.

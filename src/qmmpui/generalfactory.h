@@ -29,13 +29,15 @@ class QWidget;
 class Control;
 class General;
 
+/*! @brief Structure to store widget description provided by general plugin.
+ */
 struct WidgetDescription
 {
-    int id;
-    QString name;
-    QString shortcut;
-    Qt::DockWidgetArea area;
-    Qt::DockWidgetAreas allowedAreas;
+    int id;                           /*!< Widget ID */
+    QString name;                     /*!< Widget name (translatable) */
+    QString shortcut;                 /*!< Default key shortcut */
+    Qt::DockWidgetArea area;          /*!< Default area */
+    Qt::DockWidgetAreas allowedAreas; /*!< Allowed areas */
 };
 
 
@@ -70,6 +72,11 @@ public:
      * Creates object of the General class.
      */
     virtual QObject *create(QObject *parent) = 0;
+    /*!
+     * Creates widget provided by plugin. Default emplementation returns \b nullptr.
+     * \param id Widget ID.
+     * \param parent Parent Widget.
+     */
     virtual QWidget *createWidget(int id, QWidget *parent);
     /*!
      * Creates configuration dialog.

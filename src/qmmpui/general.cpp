@@ -178,12 +178,12 @@ void General::setEnabled(GeneralFactory *factory, bool enable)
             m_generals->insert(factory, general);
 
         for(const WidgetDescription &d : factory->properties().widgets)
-            UiHelper::instance()->addWidget(QString("%1_%2").arg(factory->properties().shortName).arg(d.id));
+            UiHelper::instance()->widgetAdded(QString("%1_%2").arg(factory->properties().shortName).arg(d.id));
     }
     else
     {
         for(const WidgetDescription &d : factory->properties().widgets)
-            UiHelper::instance()->removeWidget(QString("%1_%2").arg(factory->properties().shortName).arg(d.id));
+            UiHelper::instance()->widgetRemoved(QString("%1_%2").arg(factory->properties().shortName).arg(d.id));
 
         if(m_generals->value(factory))
             delete m_generals->take(factory);
@@ -206,7 +206,7 @@ void General::showSettings(GeneralFactory *factory, QWidget *parentWidget)
             m_generals->insert(factory, general);
 
         for(const WidgetDescription &d : factory->properties().widgets)
-            UiHelper::instance()->updateWidget(QString("%1_%2").arg(factory->properties().shortName).arg(d.id));
+            UiHelper::instance()->widgetUpdated(QString("%1_%2").arg(factory->properties().shortName).arg(d.id));
     }
     dialog->deleteLater();
 }

@@ -54,10 +54,16 @@ public:
      * Destructor.
      */
     ~DetailsDialog();
-
+    /*!
+     * Returns a list of the modified file paths or track URLs.
+     */
     QStringList modifiedPaths() const;
 
 signals:
+    /*!
+     * Emitted when closed dialog has modified file paths or track URLs.
+     * @param paths A list of the modified file paths or track URLs.
+     */
     void metaDataChanged(const QStringList &paths);
 
 private slots:

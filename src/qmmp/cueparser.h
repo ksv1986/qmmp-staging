@@ -57,7 +57,7 @@ public:
     /*!
      * Parses CUE file content.
      * \param data Content of CUE file.
-     * \param codecName Codec.
+     * \param codec Codec.
      */
     void loadData(const QByteArray &data, QTextCodec *codec);
     /*!

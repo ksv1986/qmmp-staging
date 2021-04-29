@@ -98,11 +98,6 @@ public:
      * @param before An action, after which the rest are added.
      */
     void registerMenu(MenuType type, QMenu *menu, bool autoHide = false, QAction *before = nullptr);
-
-    void addWidget(const QString &id);
-    void removeWidget(const QString &id);
-    void updateWidget(const QString &id);
-
     /*!
      * Opens 'Add Files' dialog
      * @param parent Parent widget
@@ -187,9 +182,20 @@ signals:
      * Use it to show player's window and to raise it to the top.
      */
     void showMainWindowCalled();
-
+    /*!
+     * Emitted when some general plugin adds widget.
+     * User interface should create this widget using the given \b id.
+     */
     void widgetAdded(const QString &id);
+    /*!
+     * Emitted when some general plugin removes widget \b id.
+     * User interface should remove widget with the given \b id.
+     */
     void widgetRemoved(const QString &id);
+    /*!
+     * Emitted when some general plugin changes settings of the widget \b id.
+     * User interface should recreate widget with the given \b id.
+     */
     void widgetUpdated(const QString &id);
 
 private slots:

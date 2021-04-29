@@ -414,6 +414,10 @@ public slots:
      * Inserts \b tracks at index position \b index in the playlist.
      */
     void insert(int index, const QList<PlayListTrack *> &tracks);
+    /*!
+     * Inserts serialized content \b json at index position \b index in the playlist.
+     * May be useful for fast drag-and-drop.
+     */
     void insert(int index, const QByteArray &json);
     /*!
      * Inserts \b tracks after item \b before in the playlist.

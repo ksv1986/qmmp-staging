@@ -88,8 +88,15 @@ public:
      * Loads all playlist plugins. Should be called before usage from another thread.
      */
     static void loadFormats();
-
+    /*!
+     * Converts track list \b tracks to JSON.
+     * May be useful for fast drag-and-drop.
+     */
     static QByteArray serialize(const QList<PlayListTrack *> &tracks);
+    /*!
+     * Converts JSON data \b json to track list.
+     * May be useful for fast drag-and-drop.
+     */
     static QList<PlayListTrack *> deserialize(const QByteArray &json);
 
 private:

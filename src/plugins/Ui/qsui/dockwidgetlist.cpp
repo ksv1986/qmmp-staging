@@ -127,6 +127,7 @@ void DockWidgetList::onWidgetAdded(const QString &id)
     m_mw->addDockWidget(desc.area, dockWidget);
     connect(dockWidget->toggleViewAction(), SIGNAL(toggled(bool)), SLOT(onViewActionTriggered(bool)));
     m_dockWidgetList << dockWidget;
+    ActionManager::instance()->registerDockWidget(dockWidget, id, desc.shortcut);
     setTitleBarsVisible(m_titleBarsVisible);
 
     QWidget *w = General::createWidget(id, m_mw);

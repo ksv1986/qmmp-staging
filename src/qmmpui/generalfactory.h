@@ -45,13 +45,13 @@ struct WidgetDescription
  */
 struct GeneralProperties
 {
-    QString name;                   /*!< File dialog plugin full name */
-    QString shortName;              /*!< File dialog short name for internal usage */
-    bool hasAbout = false;          /*!< Should be \b true if plugin has about dialog, and \b false otherwise */
-    bool hasSettings = false;       /*!< Should be \b true if plugin has settings dialog, and \b false otherwise */
-    bool visibilityControl = false; /*!< Should be \b true if plugin can show/hide main window of the player,
-                                     * and \b false otherwise */
-    QList<WidgetDescription> widgets;
+    QString name;                     /*!< File dialog plugin full name */
+    QString shortName;                /*!< File dialog short name for internal usage */
+    bool hasAbout = false;            /*!< Should be \b true if plugin has about dialog, and \b false otherwise */
+    bool hasSettings = false;         /*!< Should be \b true if plugin has settings dialog, and \b false otherwise */
+    bool visibilityControl = false;   /*!< Should be \b true if plugin can show/hide main window of the player,
+                                       * and \b false otherwise */
+    QList<WidgetDescription> widgets; /*!< A list of the available widget descriptions */
 };
 
 /*! @brief %General plugin interface.

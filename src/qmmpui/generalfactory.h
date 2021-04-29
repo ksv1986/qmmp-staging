@@ -20,7 +20,6 @@
 #ifndef GENERALFACTORY_H
 #define GENERALFACTORY_H
 
-#include <QKeySequence>
 #include "qmmpui_export.h"
 
 class QObject;
@@ -34,7 +33,7 @@ struct WidgetDescription
 {
     int id;
     QString name;
-    QKeySequence shortcut;
+    QString shortcut;
     Qt::DockWidgetArea area;
     Qt::DockWidgetAreas allowedAreas;
 };

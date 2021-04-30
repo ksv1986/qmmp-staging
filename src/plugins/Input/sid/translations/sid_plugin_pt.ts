@@ -16,7 +16,7 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="113"/>
         <source>About SID Audio Plugin</source>
-        <translation>Sobre o suplemento SID Audio</translation>
+        <translation>Acerca de suplemento SID Audio</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="114"/>

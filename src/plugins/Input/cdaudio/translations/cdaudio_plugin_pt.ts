@@ -11,7 +11,7 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="97"/>
         <source>About CD Audio Plugin</source>
-        <translation>Sobre o suplemento CD Audio</translation>
+        <translation>Acerca de suplemento CD Audio</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="98"/>

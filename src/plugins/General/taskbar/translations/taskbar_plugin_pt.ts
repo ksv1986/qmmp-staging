@@ -11,7 +11,7 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="49"/>
         <source>About Taskbar Plugin</source>
-        <translation>Sobre o suplemento Taskbar</translation>
+        <translation>Acerca de suplemento Taskbar</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="50"/>

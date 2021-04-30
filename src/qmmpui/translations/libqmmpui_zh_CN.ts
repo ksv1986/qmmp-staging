@@ -1342,45 +1342,45 @@
 <context>
     <name>UiHelper</name>
     <message>
-        <location filename="../uihelper.cpp" line="153"/>
-        <location filename="../uihelper.cpp" line="165"/>
+        <location filename="../uihelper.cpp" line="138"/>
+        <location filename="../uihelper.cpp" line="150"/>
         <source>All Supported Bitstreams</source>
         <translation>所有被支持格式的媒体流</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="159"/>
+        <location filename="../uihelper.cpp" line="144"/>
         <source>Select one or more files to open</source>
         <translation>选择一个或多个文件并打开</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="171"/>
+        <location filename="../uihelper.cpp" line="156"/>
         <source>Select one or more files to play</source>
         <translation>选择一个或多个文件并播放</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="179"/>
+        <location filename="../uihelper.cpp" line="164"/>
         <source>Choose a directory</source>
         <translation>选择文件夹</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="195"/>
-        <location filename="../uihelper.cpp" line="221"/>
+        <location filename="../uihelper.cpp" line="180"/>
+        <location filename="../uihelper.cpp" line="206"/>
         <source>Playlist Files</source>
         <translation>播放列表文件</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="197"/>
+        <location filename="../uihelper.cpp" line="182"/>
         <source>Open Playlist</source>
         <translation>打开播放列表</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="224"/>
-        <location filename="../uihelper.cpp" line="243"/>
+        <location filename="../uihelper.cpp" line="209"/>
+        <location filename="../uihelper.cpp" line="228"/>
         <source>Save Playlist</source>
         <translation>保存播放列表</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="243"/>
+        <location filename="../uihelper.cpp" line="228"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation type="unfinished"></translation>

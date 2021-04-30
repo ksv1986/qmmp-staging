@@ -11,7 +11,7 @@
     <message>
         <location filename="../listenbrainzfactory.cpp" line="50"/>
         <source>About ListenBrainz Plugin</source>
-        <translation>Sobre o suplemento ListenBrainz</translation>
+        <translation>Acerca de suplemento ListenBrainz</translation>
     </message>
     <message>
         <location filename="../listenbrainzfactory.cpp" line="51"/>

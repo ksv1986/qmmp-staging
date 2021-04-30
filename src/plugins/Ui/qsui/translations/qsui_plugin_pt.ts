@@ -6,7 +6,7 @@
     <message>
         <location filename="../forms/aboutqsuidialog.ui" line="14"/>
         <source>About QSUI</source>
-        <translation>Sobre QSUI</translation>
+        <translation>Acerca de QSUI</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="41"/>
@@ -464,17 +464,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
         <source>&amp;About Ui</source>
-        <translation>Sobre &amp;UI</translation>
+        <translation>&amp;Acerca de UI</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
         <source>&amp;About</source>
-        <translation>&amp;Sobre</translation>
+        <translation>&amp;Acerca</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>&amp;About Qt</source>
-        <translation>Sobre &amp;Qt</translation>
+        <translation>&amp;Acerca de Qt</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
@@ -666,7 +666,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="100"/>
         <source>Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferramentas</translation>
     </message>
 </context>
 <context>
@@ -785,12 +785,12 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="227"/>
         <source>About</source>
-        <translation>Sobre</translation>
+        <translation>Acerca</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="232"/>
         <source>About Qt</source>
-        <translation>Sobre Qt</translation>
+        <translation>Acerca de Qt</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="237"/>
@@ -1317,7 +1317,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="1276"/>
         <source>Tab position:</source>
-        <translation type="unfinished"></translation>
+        <translation>Posição do separador:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1313"/>
@@ -1526,22 +1526,22 @@
     <message>
         <location filename="../qsuisettings.cpp" line="50"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Cima</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="51"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Baixo</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="52"/>
         <source>Left</source>
-        <translation type="unfinished">Esquerda</translation>
+        <translation>Esquerda</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="53"/>
         <source>Right</source>
-        <translation type="unfinished">Direita</translation>
+        <translation>Direita</translation>
     </message>
 </context>
 <context>

@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputalsafactory.cpp" line="56"/>
         <source>About ALSA Output Plugin</source>
-        <translation>Sobre o suplemento ALSA</translation>
+        <translation>Acerca de suplemento ALSA</translation>
     </message>
     <message>
         <location filename="../outputalsafactory.cpp" line="57"/>

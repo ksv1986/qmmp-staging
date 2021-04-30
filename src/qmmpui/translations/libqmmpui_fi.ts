@@ -1342,45 +1342,45 @@
 <context>
     <name>UiHelper</name>
     <message>
-        <location filename="../uihelper.cpp" line="153"/>
-        <location filename="../uihelper.cpp" line="165"/>
+        <location filename="../uihelper.cpp" line="138"/>
+        <location filename="../uihelper.cpp" line="150"/>
         <source>All Supported Bitstreams</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="159"/>
+        <location filename="../uihelper.cpp" line="144"/>
         <source>Select one or more files to open</source>
         <translation>Valitse yksi tai useampi tiedosto avausta varten</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="171"/>
+        <location filename="../uihelper.cpp" line="156"/>
         <source>Select one or more files to play</source>
         <translation>Valitse yksi tai useampi toistettava tiedosto</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="179"/>
+        <location filename="../uihelper.cpp" line="164"/>
         <source>Choose a directory</source>
         <translation>Valitse kansio</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="195"/>
-        <location filename="../uihelper.cpp" line="221"/>
+        <location filename="../uihelper.cpp" line="180"/>
+        <location filename="../uihelper.cpp" line="206"/>
         <source>Playlist Files</source>
         <translation>Soittolistatiedostot</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="197"/>
+        <location filename="../uihelper.cpp" line="182"/>
         <source>Open Playlist</source>
         <translation>Avaa soittolista</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="224"/>
-        <location filename="../uihelper.cpp" line="243"/>
+        <location filename="../uihelper.cpp" line="209"/>
+        <location filename="../uihelper.cpp" line="228"/>
         <source>Save Playlist</source>
         <translation>Tallenna soittolista</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="243"/>
+        <location filename="../uihelper.cpp" line="228"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation type="unfinished"></translation>

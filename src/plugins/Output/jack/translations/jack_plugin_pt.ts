@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputjackfactory.cpp" line="53"/>
         <source>About Jack Output Plugin</source>
-        <translation>Sobre o suplemento Jack Output</translation>
+        <translation>Acerca de suplemento Jack Output</translation>
     </message>
     <message>
         <location filename="../outputjackfactory.cpp" line="54"/>

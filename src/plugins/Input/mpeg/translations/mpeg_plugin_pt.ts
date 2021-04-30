@@ -16,7 +16,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="410"/>
         <source>About MPEG Audio Plugin</source>
-        <translation>Sobre o suplemento MPEG Audio</translation>
+        <translation>Acerca de suplemento MPEG Audio</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="411"/>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Enable CRC checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Ativar verificação CRC</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="87"/>
@@ -163,7 +163,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="343"/>
         <source>Try to detect encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentar detetar codificação</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="294"/>

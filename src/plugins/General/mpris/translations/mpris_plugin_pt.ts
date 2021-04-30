@@ -11,7 +11,7 @@
     <message>
         <location filename="../mprisfactory.cpp" line="50"/>
         <source>About MPRIS Plugin</source>
-        <translation>Sobre o suplemento MPRIS</translation>
+        <translation>Acerca de suplemento MPRIS</translation>
     </message>
     <message>
         <location filename="../mprisfactory.cpp" line="51"/>

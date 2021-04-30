@@ -88,7 +88,7 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="49"/>
         <source>About ReplayGain Scanner Plugin</source>
-        <translation>Sobre o suplemento ReplayGain</translation>
+        <translation>Acerca de suplemento ReplayGain</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="50"/>

@@ -112,7 +112,7 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="49"/>
         <source>About ProjectM Visual Plugin</source>
-        <translation>Sobre o suplemento ProjectM</translation>
+        <translation>Acerca de suplemento ProjectM</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="50"/>

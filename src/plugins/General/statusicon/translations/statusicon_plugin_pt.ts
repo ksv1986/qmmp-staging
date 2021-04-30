@@ -123,7 +123,7 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="49"/>
         <source>About Status Icon Plugin</source>
-        <translation>Sobre o suplemento Status Icon</translation>
+        <translation>Acerca de suplemento Status Icon</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="50"/>

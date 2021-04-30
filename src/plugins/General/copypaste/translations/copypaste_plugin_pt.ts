@@ -44,7 +44,7 @@
     <message>
         <location filename="../copypastefactory.cpp" line="49"/>
         <source>About Copy/Paste Plugin</source>
-        <translation>Sobre o suplemento Copy/Paste</translation>
+        <translation>Acerca de suplemento Copy/Paste</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="50"/>

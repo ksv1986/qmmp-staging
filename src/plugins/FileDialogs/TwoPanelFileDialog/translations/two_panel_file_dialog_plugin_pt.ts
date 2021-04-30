@@ -45,7 +45,7 @@
     <message>
         <location filename="../twopanelfiledialog.cpp" line="76"/>
         <source>About Two-panel File Dialog</source>
-        <translation>Sobre o Two-panel File</translation>
+        <translation>Acerca de Two-panel File</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="78"/>

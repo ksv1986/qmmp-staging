@@ -11,7 +11,7 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="51"/>
         <source>About SoX Resampler Plugin</source>
-        <translation>Sobre o suplemento SoX Resampler</translation>
+        <translation>Acerca de suplemento SoX Resampler</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="52"/>

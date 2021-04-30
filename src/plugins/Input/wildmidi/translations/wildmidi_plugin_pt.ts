@@ -16,7 +16,7 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="106"/>
         <source>About WildMidi Audio Plugin</source>
-        <translation>Sobre o suplemento WildMidi Audio</translation>
+        <translation>Acerca de suplemento WildMidi Audio</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="107"/>

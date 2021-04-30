@@ -30,7 +30,7 @@
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Library</source>
-        <translation type="unfinished">Biblioteca</translation>
+        <translation>Biblioteca</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>

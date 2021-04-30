@@ -16,7 +16,7 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="183"/>
         <source>About WavPack Audio Plugin</source>
-        <translation>Sobre o suplemento WavPack Audio</translation>
+        <translation>Acerca de suplemento WavPack Audio</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="184"/>

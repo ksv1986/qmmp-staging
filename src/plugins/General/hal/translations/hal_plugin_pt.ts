@@ -11,7 +11,7 @@
     <message>
         <location filename="../halfactory.cpp" line="50"/>
         <source>About HAL Plugin</source>
-        <translation>Sobre o suplemento HAL</translation>
+        <translation>Acerca de suplemento HAL</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="51"/>

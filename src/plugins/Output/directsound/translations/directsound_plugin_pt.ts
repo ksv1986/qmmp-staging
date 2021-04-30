@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="52"/>
         <source>About DirectSound Output Plugin</source>
-        <translation>Sobre  o suplemento DirectSound</translation>
+        <translation>Acerca de suplemento DirectSound</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="53"/>

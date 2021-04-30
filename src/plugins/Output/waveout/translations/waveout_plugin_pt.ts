@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="60"/>
         <source>About WaveOut Output Plugin</source>
-        <translation>Sobre o suplemento WaveOut</translation>
+        <translation>Acerca de suplemento WaveOut</translation>
     </message>
     <message>
         <location filename="../outputwaveoutfactory.cpp" line="61"/>

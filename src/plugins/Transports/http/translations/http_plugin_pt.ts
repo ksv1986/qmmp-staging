@@ -11,7 +11,7 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="53"/>
         <source>About HTTP Transport Plugin</source>
-        <translation>Sobre o suplemento HTTP Transport</translation>
+        <translation>Acerca de suplemento HTTP Transport</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="54"/>

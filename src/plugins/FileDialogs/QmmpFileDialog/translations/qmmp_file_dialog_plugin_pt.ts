@@ -68,7 +68,7 @@
     <message>
         <location filename="../qmmpfiledialog.cpp" line="78"/>
         <source>About Qmmp File Dialog</source>
-        <translation>Sobre o Qmmp File Dialog</translation>
+        <translation>Acerca de Qmmp File Dialog</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="80"/>

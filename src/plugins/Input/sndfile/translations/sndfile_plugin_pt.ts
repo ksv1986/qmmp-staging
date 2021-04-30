@@ -16,7 +16,7 @@
     <message>
         <location filename="../decodersndfilefactory.cpp" line="223"/>
         <source>About Sndfile Audio Plugin</source>
-        <translation>Sobre o suplemento Sndfile Audio</translation>
+        <translation>Acerca de suplemento Sndfile Audio</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="224"/>

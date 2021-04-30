@@ -24,7 +24,7 @@
     <message>
         <location filename="../covermanagerfactory.cpp" line="50"/>
         <source>About Cover Manager Plugin</source>
-        <translation>Sobre o suplemento Cover Manager</translation>
+        <translation>Acerca de suplemento Cover Manager</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="51"/>

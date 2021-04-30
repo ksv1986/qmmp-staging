@@ -11,7 +11,7 @@
     <message>
         <location filename="../notifierfactory.cpp" line="49"/>
         <source>About Notifier Plugin</source>
-        <translation>Sobre o suplemento Notifier</translation>
+        <translation>Acerca de suplemento Notifier</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="50"/>

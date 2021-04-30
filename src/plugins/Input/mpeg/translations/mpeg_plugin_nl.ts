@@ -36,7 +36,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="425"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Maker: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="426"/>

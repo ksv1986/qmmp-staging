@@ -16,7 +16,7 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="103"/>
         <source>About GME Audio Plugin</source>
-        <translation>Sobre o suplemento GME Audio</translation>
+        <translation>Acerca de suplemento GME Audio</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="104"/>

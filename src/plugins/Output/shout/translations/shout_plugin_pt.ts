@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputshoutfactory.cpp" line="64"/>
         <source>About Icecast Output Plugin</source>
-        <translation>Sobre o suplemento Icecast</translation>
+        <translation>Acerca de suplemento Icecast</translation>
     </message>
     <message>
         <location filename="../outputshoutfactory.cpp" line="65"/>

@@ -666,7 +666,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="100"/>
         <source>Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Herramientas</translation>
     </message>
 </context>
 <context>

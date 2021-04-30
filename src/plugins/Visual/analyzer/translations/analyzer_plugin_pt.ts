@@ -155,7 +155,7 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="49"/>
         <source>About Analyzer Visual Plugin</source>
-        <translation>Sobre o suplemento Analyzer</translation>
+        <translation>Acerca de suplemento Analyzer</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="50"/>

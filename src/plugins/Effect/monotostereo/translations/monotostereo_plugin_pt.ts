@@ -11,7 +11,7 @@
     <message>
         <location filename="../effectmonotostereofactory.cpp" line="48"/>
         <source>About Mono to Stereo Converter Plugin</source>
-        <translation>Sobre o suplemento Mono to Stereo Converter</translation>
+        <translation>Acerca de suplemento Mono to Stereo Converter</translation>
     </message>
     <message>
         <location filename="../effectmonotostereofactory.cpp" line="49"/>

@@ -29,7 +29,7 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="57"/>
         <source>About Global Hotkey Plugin</source>
-        <translation>Sobre o suplemento Global Hotkey</translation>
+        <translation>Acerca de suplemento Global Hotkey</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="58"/>

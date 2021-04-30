@@ -16,7 +16,7 @@
     <message>
         <location filename="../decoderaacfactory.cpp" line="103"/>
         <source>About AAC Audio Plugin</source>
-        <translation>Sobre o suplemento AAC Audio</translation>
+        <translation>Acerca de suplemento AAC Audio</translation>
     </message>
     <message>
         <location filename="../decoderaacfactory.cpp" line="104"/>

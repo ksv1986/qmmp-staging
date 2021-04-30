@@ -11,7 +11,7 @@
     <message>
         <location filename="../effectladspafactory.cpp" line="50"/>
         <source>About LADSPA Host for Qmmp</source>
-        <translation>Sobre o suplemento Qmmp LADSPA Host</translation>
+        <translation>Acerca de suplemento Qmmp LADSPA Host</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="51"/>

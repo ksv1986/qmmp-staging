@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="57"/>
         <source>About Qt Multimedia Output Plugin</source>
-        <translation>Sobre o suplemento Qt Multimedia</translation>
+        <translation>Acerca de suplemento Qt Multimedia</translation>
     </message>
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="58"/>

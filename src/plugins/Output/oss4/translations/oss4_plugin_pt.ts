@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputoss4factory.cpp" line="56"/>
         <source>About OSS4 Output Plugin</source>
-        <translation>Sobre o suplemento OSS4</translation>
+        <translation>Acerca de suplemento OSS4</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="57"/>

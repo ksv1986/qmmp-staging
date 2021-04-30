@@ -11,7 +11,7 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="51"/>
         <source>About Scrobbler Plugin</source>
-        <translation>Sobre o suplemento Scrobbler</translation>
+        <translation>Acerca de suplemento Scrobbler</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="52"/>

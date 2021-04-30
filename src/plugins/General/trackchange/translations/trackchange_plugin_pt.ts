@@ -57,7 +57,7 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="50"/>
         <source>About Track Change Plugin</source>
-        <translation>Sobre o suplemento Track Change</translation>
+        <translation>Acerca de suplemento Track Change</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="51"/>

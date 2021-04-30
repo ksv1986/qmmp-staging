@@ -11,7 +11,7 @@
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="51"/>
         <source>About File Writer Plugin</source>
-        <translation>Sobre o suplemento File Writer</translation>
+        <translation>Acerca de suplemento File Writer</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="52"/>

@@ -49,7 +49,7 @@
     <message>
         <location filename="../udisks2factory.cpp" line="50"/>
         <source>About UDisks2 Plugin</source>
-        <translation>Sobre o suplemento UDisks2</translation>
+        <translation>Acerca de suplemento UDisks2</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="51"/>

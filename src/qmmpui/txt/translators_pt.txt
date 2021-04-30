@@ -6,6 +6,7 @@ Português do Brasil
 
 Búlgaro:
     Kiril Kirilov
+    Miroslav Mihov
 
 Mandarim tradicional:
     Cosmos Chen
@@ -28,6 +29,7 @@ Holandês:
 
 Finlandês:
     Jiri Grönroos
+    Kimmo Kujansuu
 
 Francês:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>

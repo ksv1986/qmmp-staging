@@ -141,7 +141,7 @@
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
-        <translation>Sobre o suplemento Converter</translation>
+        <translation>Acerca de suplemento Converter</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="50"/>

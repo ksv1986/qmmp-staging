@@ -27,7 +27,7 @@
     <message>
         <location filename="../historyfactory.cpp" line="51"/>
         <source>About Listening History Plugin</source>
-        <translation>Sobre o suplemento Listening History</translation>
+        <translation>Acerca de suplemento Listening History</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="52"/>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../historyfactory.cpp" line="53"/>
         <source>This plugin collects information about listened tracks</source>
-        <translation>Este suplemento recolhe informações sobre as faixas reproduzidas</translation>
+        <translation>Este suplemento recolhe informações das faixas reproduzidas</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="54"/>

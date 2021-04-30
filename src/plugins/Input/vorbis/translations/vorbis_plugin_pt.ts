@@ -16,7 +16,7 @@
     <message>
         <location filename="../decodervorbisfactory.cpp" line="126"/>
         <source>About Ogg Vorbis Audio Plugin</source>
-        <translation>Sobre o suplemento Ogg Vorbis</translation>
+        <translation>Acerca de suplemento Ogg Vorbis</translation>
     </message>
     <message>
         <location filename="../decodervorbisfactory.cpp" line="127"/>

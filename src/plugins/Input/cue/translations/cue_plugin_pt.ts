@@ -16,7 +16,7 @@
     <message>
         <location filename="../decodercuefactory.cpp" line="84"/>
         <source>About CUE Audio Plugin</source>
-        <translation>Sobre o suplemento CUE Audio</translation>
+        <translation>Acerca de suplemento CUE Audio</translation>
     </message>
     <message>
         <location filename="../decodercuefactory.cpp" line="85"/>

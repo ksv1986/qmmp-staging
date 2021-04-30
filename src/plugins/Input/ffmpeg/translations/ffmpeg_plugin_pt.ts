@@ -16,7 +16,7 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="337"/>
         <source>About FFmpeg Audio Plugin</source>
-        <translation>Sobre o suplemento FFmpeg</translation>
+        <translation>Acerca de suplemento FFmpeg</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="338"/>

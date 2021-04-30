@@ -16,7 +16,7 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="168"/>
         <source>About Archive Reader Plugin</source>
-        <translation>Sobre o suplemento Archive Reader</translation>
+        <translation>Acerca de suplemento Archive Reader</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="169"/>

@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="54"/>
         <source>About WASAPI Output Plugin</source>
-        <translation>Sobre o suplemento Wasabi</translation>
+        <translation>Acerca de suplemento Wasabi</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="55"/>

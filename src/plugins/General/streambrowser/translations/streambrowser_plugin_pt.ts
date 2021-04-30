@@ -57,7 +57,7 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="50"/>
         <source>About Stream Browser Plugin</source>
-        <translation>Sobre o suplemento Stream Browser</translation>
+        <translation>Acerca de suplemento Stream Browser</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="51"/>

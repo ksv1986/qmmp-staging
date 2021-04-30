@@ -30,12 +30,12 @@
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Library</source>
-        <translation type="unfinished">Verzameling</translation>
+        <translation>Verzameling</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="84"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../libraryfactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Maker: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

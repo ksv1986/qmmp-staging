@@ -11,7 +11,7 @@
     <message>
         <location filename="../effectstereofactory.cpp" line="50"/>
         <source>About Extra Stereo Plugin</source>
-        <translation>Sobre o suplemento Extra Stereo</translation>
+        <translation>Acerca de suplemento Extra Stereo</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="51"/>

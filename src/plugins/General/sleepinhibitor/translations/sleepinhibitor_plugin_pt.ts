@@ -11,7 +11,7 @@
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="49"/>
         <source>About Sleep Mode Inhibit Plugin</source>
-        <translation>Sobre o suplemento Sleep Mode Inhibit</translation>
+        <translation>Acerca de suplemento Sleep Mode Inhibit</translation>
     </message>
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="50"/>

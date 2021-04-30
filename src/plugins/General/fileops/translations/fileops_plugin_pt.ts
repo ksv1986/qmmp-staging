@@ -78,7 +78,7 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="50"/>
         <source>About File Operations Plugin</source>
-        <translation>Sobre o suplemento File Operations</translation>
+        <translation>Acerca de suplemento File Operations</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="51"/>
@@ -187,12 +187,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="181"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="220"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Executar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="232"/>

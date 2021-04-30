@@ -11,7 +11,7 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="51"/>
         <source>About BS2B Effect Plugin</source>
-        <translation>Sobre o suplemento BS2B</translation>
+        <translation>Acerca de suplemento BS2B</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="52"/>

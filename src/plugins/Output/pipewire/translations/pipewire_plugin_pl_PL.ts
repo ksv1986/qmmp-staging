@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputpipewirefactory.cpp" line="30"/>
         <source>PipeWire Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Wtyczka PipeWire</translation>
     </message>
     <message>
         <location filename="../outputpipewirefactory.cpp" line="54"/>
         <source>About PipeWire Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>O wtyczce wyjściowej PipeWire</translation>
     </message>
     <message>
         <location filename="../outputpipewirefactory.cpp" line="55"/>
         <source>Qmmp PipeWireo Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Wtyczka wyjściowa PipeWire dla Qmmp</translation>
     </message>
     <message>
         <location filename="../outputpipewirefactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Napisana przez: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

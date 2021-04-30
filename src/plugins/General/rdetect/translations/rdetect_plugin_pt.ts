@@ -11,7 +11,7 @@
     <message>
         <location filename="../rdetectfactory.cpp" line="50"/>
         <source>About Volume Detection Plugin</source>
-        <translation>Sobre o suplemento Volume Detection</translation>
+        <translation>Acerca de suplemento Volume Detection</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="51"/>

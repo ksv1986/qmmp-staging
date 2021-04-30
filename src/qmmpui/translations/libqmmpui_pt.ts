@@ -6,12 +6,12 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="14"/>
         <source>About Qmmp</source>
-        <translation>Sobre o Qmmp</translation>
+        <translation>Acerca de Qmmp</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="49"/>
         <source>About</source>
-        <translation>Sobre</translation>
+        <translation>Acerca</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="63"/>
@@ -217,12 +217,12 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished">Nome do diretório superior</translation>
+        <translation>Nome do diretório superior</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
         <source>Parent Directory Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminho do diretório superior</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="104"/>
@@ -420,22 +420,22 @@
     <message>
         <location filename="../forms/configdialog.ui" line="514"/>
         <source>CUE Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor de ficheiros CUE</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="520"/>
         <source>Use system font</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar tipo de letra do sistema</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="541"/>
         <source>Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo de letra:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="566"/>
         <source>???</source>
-        <translation type="unfinished"></translation>
+        <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="605"/>
@@ -821,33 +821,33 @@
     <message>
         <location filename="../forms/cueeditor.ui" line="40"/>
         <source>Load</source>
-        <translation type="unfinished">Carregar</translation>
+        <translation>Carregar</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="47"/>
         <source>Delete</source>
-        <translation type="unfinished">Eliminar</translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="54"/>
         <source>Save as...</source>
-        <translation type="unfinished">Guardar como...</translation>
+        <translation>Guardar como...</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="131"/>
         <source>Open CUE File</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir ficheiro CUE</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="133"/>
         <location filename="../cueeditor.cpp" line="152"/>
         <source>CUE Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheiros CUE</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="150"/>
         <source>Save CUE File</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar ficheiro CUE</translation>
     </message>
 </context>
 <context>
@@ -1109,7 +1109,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="57"/>
         <source>Parent Directory Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminho do diretório superior</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>
@@ -1342,45 +1342,45 @@
 <context>
     <name>UiHelper</name>
     <message>
-        <location filename="../uihelper.cpp" line="153"/>
-        <location filename="../uihelper.cpp" line="165"/>
+        <location filename="../uihelper.cpp" line="138"/>
+        <location filename="../uihelper.cpp" line="150"/>
         <source>All Supported Bitstreams</source>
         <translation>Todas as emissões suportadas</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="159"/>
+        <location filename="../uihelper.cpp" line="144"/>
         <source>Select one or more files to open</source>
         <translation>Selecione um ou mais ficheiros a abrir</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="171"/>
+        <location filename="../uihelper.cpp" line="156"/>
         <source>Select one or more files to play</source>
         <translation>Selecione um ou mais ficheiros a reproduzir</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="179"/>
+        <location filename="../uihelper.cpp" line="164"/>
         <source>Choose a directory</source>
         <translation>Selecione um diretório</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="195"/>
-        <location filename="../uihelper.cpp" line="221"/>
+        <location filename="../uihelper.cpp" line="180"/>
+        <location filename="../uihelper.cpp" line="206"/>
         <source>Playlist Files</source>
         <translation>Ficheiros de lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="197"/>
+        <location filename="../uihelper.cpp" line="182"/>
         <source>Open Playlist</source>
         <translation>Abrir lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="224"/>
-        <location filename="../uihelper.cpp" line="243"/>
+        <location filename="../uihelper.cpp" line="209"/>
+        <location filename="../uihelper.cpp" line="228"/>
         <source>Save Playlist</source>
         <translation>Guardar lista de reprodução</translation>
     </message>
     <message>
-        <location filename="../uihelper.cpp" line="243"/>
+        <location filename="../uihelper.cpp" line="228"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 já existe.

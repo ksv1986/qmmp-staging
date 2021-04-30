@@ -11,7 +11,7 @@
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="51"/>
         <source>About Crossfade Plugin</source>
-        <translation>Sobre o suplemento Crossfade</translation>
+        <translation>Acerca de suplemento Crossfade</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="52"/>

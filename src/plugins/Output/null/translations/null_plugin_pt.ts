@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputnullfactory.cpp" line="54"/>
         <source>About Null Output Plugin</source>
-        <translation>Sobre o suplemento Null Output</translation>
+        <translation>Acerca de suplemento Null Output</translation>
     </message>
     <message>
         <location filename="../outputnullfactory.cpp" line="55"/>

@@ -16,7 +16,7 @@
     <message>
         <location filename="../decodermpcfactory.cpp" line="112"/>
         <source>About Musepack Audio Plugin</source>
-        <translation>Sobre o suplemento Musepack Audio</translation>
+        <translation>Acerca de suplemento Musepack Audio</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="113"/>

@@ -16,7 +16,7 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="74"/>
         <source>About MPlayer Plugin</source>
-        <translation>Sobre o suplemento Mplayer</translation>
+        <translation>Acerca de suplemento Mplayer</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="75"/>

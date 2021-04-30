@@ -11,7 +11,7 @@
     <message>
         <location filename="../outputpulseaudiofactory.cpp" line="54"/>
         <source>About PulseAudio Output Plugin</source>
-        <translation>Sobre o suplemento PulseAudio</translation>
+        <translation>Acerca de suplemento PulseAudio</translation>
     </message>
     <message>
         <location filename="../outputpulseaudiofactory.cpp" line="55"/>

@@ -29,7 +29,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="36"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="68"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="71"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Maker: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="72"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../lyricswidget.cpp" line="172"/>
         <source>Receiving</source>
-        <translation>Bezig met ophalen...</translation>
+        <translation>Bezig met ophalen…</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="233"/>

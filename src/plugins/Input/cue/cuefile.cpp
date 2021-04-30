@@ -23,7 +23,7 @@
 #include <QDirIterator>
 #include <QSettings>
 #include <QTextStream>
-#include <QTextCodec>
+//#include <QTextCodec>
 #include <QRegularExpression>
 #include <qmmp/decoder.h>
 #include <qmmp/metadatamanager.h>
@@ -54,7 +54,7 @@ CueFile::CueFile(const QString &path) : CueParser()
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("CUE");
     m_dirty = settings.value("dirty_cue", false).toBool();
-    QTextCodec *codec = nullptr;
+    //QTextCodec *codec = nullptr;
 #ifdef WITH_ENCA
     EncaAnalyser analyser = nullptr;
     if(settings.value("use_enca", false).toBool())
@@ -76,13 +76,13 @@ CueFile::CueFile(const QString &path) : CueParser()
         }
     }
 #endif
-    if(!codec)
-        codec = QTextCodec::codecForName(settings.value("encoding","UTF-8").toByteArray ());
-    if(!codec)
-        codec = QTextCodec::codecForName("UTF-8");
+    //if(!codec)
+    //    codec = QTextCodec::codecForName(settings.value("encoding","UTF-8").toByteArray ());
+    //if(!codec)
+    //    codec = QTextCodec::codecForName("UTF-8");
     settings.endGroup();
     //qDebug("CUEParser: using %s encoding", codec->name().constData());
-    loadData(data, codec);
+    loadData(data/*, codec*/);
     setUrl("cue", m_filePath);
     for(const QString &dataFileName : files())
     {

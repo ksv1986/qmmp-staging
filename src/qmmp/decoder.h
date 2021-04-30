@@ -10,6 +10,7 @@
 #include <QStringList>
 #include <QList>
 #include <QMap>
+#include <QVariant>
 #include <QIODevice>
 #include "qmmp.h"
 #include "audioparameters.h"

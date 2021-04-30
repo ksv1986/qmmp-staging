@@ -17,7 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#include <QTextCodec>
+//#include <QTextCodec>
 #include <QSettings>
 #include <QRegularExpression>
 #include <qmmp/qmmp.h>
@@ -34,8 +34,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     ui.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
     findCodecs();
-    for(const QTextCodec *codec : qAsConst(codecs))
-        ui.cueEncComboBox->addItem(codec->name());
+    //for(const QTextCodec *codec : qAsConst(codecs))
+    //    ui.cueEncComboBox->addItem(codec->name());
 
 #ifdef WITH_ENCA
     size_t n = 0;
@@ -77,7 +77,7 @@ void SettingsDialog::accept()
 
 void SettingsDialog::findCodecs()
 {
-    QMap<QString, QTextCodec *> codecMap;
+    /*QMap<QString, QTextCodec *> codecMap;
     static const QRegularExpression iso8859RegExp("ISO[- ]8859-([0-9]+).*");
 
     for(int mib : QTextCodec::availableMibs())
@@ -111,5 +111,5 @@ void SettingsDialog::findCodecs()
 
         codecMap.insert(sortKey, codec);
     }
-    codecs = codecMap.values();
+    codecs = codecMap.values();*/
 }

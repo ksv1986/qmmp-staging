@@ -36,10 +36,11 @@ MediaPlayer::MediaPlayer(QObject *parent)
         qFatal("StateHandler: only one instance is allowed");
     m_instance = this;
 
-    QTranslator *translator = new QTranslator(parent);
-    QString locale = Qmmp::systemLanguageID();
-    translator->load(QString(":/libqmmpui_") + locale);
-    qApp->installTranslator(translator);
+    QTranslator *translator = new QTranslator(qApp);
+    if(translator->load(QString(":/libqmmpui_") + Qmmp::systemLanguageID()))
+        qApp->installTranslator(translator);
+    else
+        delete translator;
 
     m_core = new SoundCore(this);
     m_settings = new QmmpUiSettings(this);

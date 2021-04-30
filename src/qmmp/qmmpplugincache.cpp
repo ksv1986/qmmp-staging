@@ -204,8 +204,10 @@ void QmmpPluginCache::loadTranslation(const QString &translation)
     if(!translation.isEmpty())
     {
         QTranslator *translator = new QTranslator(qApp);
-        translator->load(translation + Qmmp::systemLanguageID());
-        qApp->installTranslator(translator);
+        if(translator->load(translation + Qmmp::systemLanguageID()))
+            qApp->installTranslator(translator);
+        else
+            delete translator;
     }
 }
 

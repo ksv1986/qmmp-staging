@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2008-2016 by Ilya Kotov                                 *
+*   Copyright (C) 2008-2021 by Ilya Kotov                                 *
 *   forkotov02@ya.ru                                                      *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -19,8 +19,6 @@
 ***************************************************************************/
 
 #include "qmmpfiledialogimpl.h"
-
-#include <QDirModel>
 #include <QApplication>
 #include <QFileInfo>
 #include <QStyle>
@@ -54,7 +52,7 @@ static QStringList qt_clean_filter_list(const QString &filter)
     QRegularExpressionMatch match = regexp.match(f);
     if (match.hasMatch())
         f = match.captured(2);
-    return f.split(QLatin1Char(' '), QString::SkipEmptyParts);
+    return f.split(QLatin1Char(' '), Qt::SkipEmptyParts);
 }
 
 QmmpFileDialogImpl::QmmpFileDialogImpl(QWidget * parent, Qt::WindowFlags f) : QDialog(parent,f)

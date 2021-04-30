@@ -51,7 +51,7 @@ private slots:
 private:
     QList<QAction*> m_actions;
     ListWidget *m_listWidget = nullptr;
-    void addAction(int keys, const char * method);
+    void addAction(QKeyCombination keys, const char * method);
 
     enum SelectMode
     {

@@ -345,7 +345,7 @@ QString ConverterDialog::uniqueName(const QString &name)
 
 bool ConverterDialog::checkPreset(const QVariantMap &preset)
 {
-    QStringList programAndArgs = preset["command"].toString().split(" ", QString::SkipEmptyParts);
+    QStringList programAndArgs = preset["command"].toString().split(" ", Qt::SkipEmptyParts);
     if(programAndArgs.isEmpty())
         return false;
 

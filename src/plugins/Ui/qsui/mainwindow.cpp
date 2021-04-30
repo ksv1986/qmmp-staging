@@ -78,7 +78,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     connect(m_uiHelper, SIGNAL(toggleVisibilityCalled()), SLOT(toggleVisibility()));
     connect(m_uiHelper, SIGNAL(showMainWindowCalled()), SLOT(showAndRaise()));
     m_visMenu = new VisualMenu(this); //visual menu
-    m_ui.actionVisualization->setMenu(m_visMenu);
+    //m_ui.actionVisualization->setMenu(m_visMenu);
     m_pl_menu = new QMenu(this); //playlist menu
     new ActionManager(this); //action manager
     createWidgets(); //widgets

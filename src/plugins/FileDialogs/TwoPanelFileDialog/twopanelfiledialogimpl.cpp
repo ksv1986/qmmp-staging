@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2016 by Ilya Kotov                                      *
+*   Copyright (C) 2016-2021 by Ilya Kotov                                 *
 *   forkotov02@ya.ru                                                      *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -18,7 +18,6 @@
 *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
 ***************************************************************************/
 
-#include <QDirModel>
 #include <QApplication>
 #include <QFileInfo>
 #include <QStyle>
@@ -26,6 +25,7 @@
 #include <QMessageBox>
 #include <QHeaderView>
 #include <QRegularExpression>
+#include <QAbstractFileIconProvider>
 #include <qmmp/qmmp.h>
 #include "twopanelfiledialogimpl.h"
 
@@ -51,7 +51,7 @@ static QStringList qt_clean_filter_list(const QString &filter)
     QRegularExpressionMatch match = regexp.match(f);
     if (match.hasMatch())
         f = match.captured(2);
-    return f.split(QLatin1Char(' '), QString::SkipEmptyParts);
+    return f.split(QLatin1Char(' '), Qt::SkipEmptyParts);
 }
 
 TwoPanelFileDialogImpl::TwoPanelFileDialogImpl(QWidget * parent) : QDialog(parent)

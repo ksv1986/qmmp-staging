@@ -28,6 +28,9 @@ PopupSettings::PopupSettings(QWidget *parent)
         : QDialog(parent)
 {
     m_ui.setupUi(this);
+    connect(m_ui.transparencySlider, &QSlider::valueChanged, m_ui.transparencyLabel, qOverload<int>(&QLabel::setNum));
+    connect(m_ui.coverSizeSlider, &QSlider::valueChanged, m_ui.coverSizeLabel, qOverload<int>(&QLabel::setNum));
+
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Simple");
     m_ui.transparencySlider->setValue(100 - settings.value("popup_opacity", 1.0).toDouble()*100);

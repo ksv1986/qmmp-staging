@@ -20,15 +20,13 @@
 
 #include <QFile>
 #include <QSettings>
+#include <QRandomGenerator>
 #include <stdlib.h>
-#include <time.h>
 #include <qmmp/qmmp.h>
 #include "shoutoutput.h"
 
 ShoutOutput::ShoutOutput(ShoutClient *m) : m_client(m)
-{
-    qsrand(time(nullptr));
-}
+{}
 
 ShoutOutput::~ShoutOutput()
 {
@@ -70,7 +68,7 @@ bool ShoutOutput::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat)
     vorbis_analysis_init(&m_vd, &m_vi);
     vorbis_block_init(&m_vd,&m_vb);
 
-    ogg_stream_init(&m_os,qrand());
+    ogg_stream_init(&m_os, QRandomGenerator::system()->generate());
 
     configure(freq, map, Qmmp::PCM_FLOAT);
     return m_client->open();
@@ -184,7 +182,7 @@ qint64 ShoutOutput::writeAudio(unsigned char *data, qint64 maxSize)
             return -1;
 
         ogg_stream_reset(&m_os);
-        ogg_stream_init(&m_os,qrand());
+        ogg_stream_init(&m_os, QRandomGenerator::system()->generate());
 
         sendHeader();
     }

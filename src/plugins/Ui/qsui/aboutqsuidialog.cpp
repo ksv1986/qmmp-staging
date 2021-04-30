@@ -72,7 +72,6 @@ QString AboutQSUIDialog::getStringFromResource(const QString& res_file)
         if (file.open(QIODevice::ReadOnly))
         {
             QTextStream ts(&file);
-            ts.setCodec("UTF-8");
             ret_string = ts.readAll();
             file.close();
             return ret_string;

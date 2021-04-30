@@ -21,8 +21,7 @@
 #define SETTINGSDIALOG_H
 
 #include <QDialog>
-
-
+#include <QObject>
 #include "ui_settingsdialog.h"
 
 /**

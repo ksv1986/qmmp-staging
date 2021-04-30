@@ -42,11 +42,11 @@ void PositionSlider::mousePressEvent (QMouseEvent *event)
     {
         int val;
         if (orientation() == Qt::Vertical)
-            val = minimum() + ((maximum() - minimum()) * (height() - event->y())) / height();
+            val = minimum() + ((maximum() - minimum()) * (height() - event->position().y())) / height();
         else if(layoutDirection() == Qt::RightToLeft)
-            val = maximum() - ((maximum() - minimum()) * event->x()) / width();
+            val = maximum() - ((maximum() - minimum()) * event->position().y()) / width();
         else
-            val = minimum() + ((maximum() - minimum()) * event->x()) / width();
+            val = minimum() + ((maximum() - minimum()) * event->position().y()) / width();
 
         if (invertedAppearance() == true)
         {
@@ -73,7 +73,7 @@ void PositionSlider::mouseReleaseEvent (QMouseEvent *event)
 
 void PositionSlider::wheelEvent(QWheelEvent *event)
 {
-    setValue(value() + event->delta() / 20);
+    setValue(value() + event->pixelDelta().y() / 20);
     sliderReleased();
 }
 

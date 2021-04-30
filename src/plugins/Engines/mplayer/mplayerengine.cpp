@@ -141,7 +141,7 @@ bool MplayerEngine::initialize()
     if (settings.value("autosync", false).toBool())
         m_args << "-autosync" << QString("%1").arg(settings.value("autosync_factor", 100).toInt());
 
-    m_args << settings.value("cmd_options").toString().split(" ", QString::SkipEmptyParts);
+    m_args << settings.value("cmd_options").toString().split(" ", Qt::SkipEmptyParts);
 
     if(m_source->offset() > 0)
         m_args << "-ss" << QString("%1").arg(m_source->offset()/1000);

@@ -163,8 +163,8 @@ void Logo::processPreset2()
         while(line.contains("X"))
         {
             at++;
-            line.replace(line.indexOf("X"), 1, QString("%1").arg(str.at(at % str.size()),
-                                                                 0, 16).toUpper());
+            //line.replace(line.indexOf("X"), 1, QString("%1").arg(str.at(at % str.size()),
+            //                                                     0, 16).toUpper());
         }
 
         m_lines.append(line);
@@ -183,8 +183,8 @@ void Logo::processPreset3()
         while(line.contains("X"))
         {
             at++;
-            line.replace(line.indexOf("X"), 1, QString("%1").arg(str.at(at % str.size()),
-                                                                 0, 16).toUpper());
+            //line.replace(line.indexOf("X"), 1, QString("%1").arg(str.at(at % str.size()),
+            //                                                     0, 16).toUpper());
         }
 
         m_lines.append(line);

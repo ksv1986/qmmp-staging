@@ -268,7 +268,7 @@ void ActionManager::registerDockWidget(QDockWidget *w, const QString &confKey, c
     settings.beginGroup("SimpleUiShortcuts");
     w->toggleViewAction()->setShortcut(settings.value(confKey, key).toString());
     settings.endGroup();
-    m_dockWidgets.insert(w, qMakePair<QString, QString>(confKey, key));
+    m_dockWidgets.insert(w, std::make_pair(confKey, key));
 }
 
 void ActionManager::removeDockWidget(QDockWidget *w)

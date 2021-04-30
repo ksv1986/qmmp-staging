@@ -313,7 +313,7 @@ void QSUiTabWidget::tabRemoved(int index)
 
 void QSUiTabWidget::mousePressEvent(QMouseEvent *e)
 {
-    if((e->button() == Qt::MidButton) &&
+    if((e->button() == Qt::MiddleButton) &&
             (childAt(e->pos()) == nullptr))
     {
         e->accept();

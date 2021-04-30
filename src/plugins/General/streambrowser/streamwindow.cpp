@@ -340,7 +340,6 @@ void StreamWindow::closeEvent(QCloseEvent *)
     QFile file(Qmmp::configDir() + "/streambrowser/icecast.xml");
     file.open(QIODevice::WriteOnly);
     QXmlStreamWriter writer(&file);
-    writer.setCodec("UTF-8");
     writer.setAutoFormatting(true);
     writer.writeStartDocument();
     writer.writeStartElement("directory");
@@ -361,7 +360,6 @@ void StreamWindow::closeEvent(QCloseEvent *)
     QFile file2(Qmmp::configDir() + "/streambrowser/favorites.xml");
     file2.open(QIODevice::WriteOnly);
     QXmlStreamWriter writer2(&file2);
-    writer2.setCodec("UTF-8");
     writer2.setAutoFormatting(true);
     writer2.writeStartDocument();
     writer2.writeStartElement("directory");
@@ -394,7 +392,7 @@ void StreamWindow::readXml(QIODevice *input, QStandardItemModel *model)
         }
         else if (xml.isEndElement())
         {
-            if (xml.name() == "entry")
+            if (xml.name() == QLatin1String("entry"))
             {
                 if(server_name == "Unspecified name" || server_name.isEmpty())
                     server_name = listen_url.section("/", -1);

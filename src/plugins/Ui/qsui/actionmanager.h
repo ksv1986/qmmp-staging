@@ -26,7 +26,7 @@
 #include <QHash>
 #include <QList>
 #include <QToolBar>
-#include <QPair>
+#include <utility>
 
 class QAction;
 class QSettings;
@@ -155,7 +155,7 @@ private:
 
     QSettings *m_settings;
     QHash<int, QAction *> m_actions;
-    QHash<QDockWidget *, QPair<QString, QString>> m_dockWidgets; //widget, key, default shortcut
+    QHash<QDockWidget *, std::pair<QString, QString>> m_dockWidgets; //widget, key, default shortcut
     static ActionManager *m_instance;
 
 };

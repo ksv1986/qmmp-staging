@@ -31,24 +31,24 @@ KeyboardManager::KeyboardManager(QObject *parent) :
     QObject(parent)
 {
     addAction(Qt::Key_Up, SLOT(processUp()));
-    addAction(Qt::Key_Up + Qt::ShiftModifier, SLOT(processUp()));
-    addAction(Qt::Key_Up + Qt::AltModifier, SLOT(processUp()));
-    addAction(Qt::Key_Up + Qt::ControlModifier, SLOT(processUp()));
+    addAction(Qt::Key_Up | Qt::ShiftModifier, SLOT(processUp()));
+    addAction(Qt::Key_Up | Qt::AltModifier, SLOT(processUp()));
+    addAction(Qt::Key_Up | Qt::ControlModifier, SLOT(processUp()));
 
     addAction(Qt::Key_Down, SLOT(processDown()));
-    addAction(Qt::Key_Down + Qt::ShiftModifier, SLOT(processDown()));
-    addAction(Qt::Key_Down + Qt::AltModifier, SLOT(processDown()));
-    addAction(Qt::Key_Down + Qt::ControlModifier, SLOT(processDown()));
+    addAction(Qt::Key_Down | Qt::ShiftModifier, SLOT(processDown()));
+    addAction(Qt::Key_Down | Qt::AltModifier, SLOT(processDown()));
+    addAction(Qt::Key_Down | Qt::ControlModifier, SLOT(processDown()));
 
     addAction(Qt::Key_Return, SLOT(processEnter()));
     addAction(Qt::Key_PageUp, SLOT(processPgUp()));
-    addAction(Qt::Key_PageUp + Qt::ShiftModifier, SLOT(processPgUp()));
+    addAction(Qt::Key_PageUp | Qt::ShiftModifier, SLOT(processPgUp()));
     addAction(Qt::Key_PageDown, SLOT(processPgDown()));
-    addAction(Qt::Key_PageDown + Qt::ShiftModifier, SLOT(processPgDown()));
+    addAction(Qt::Key_PageDown | Qt::ShiftModifier, SLOT(processPgDown()));
     addAction(Qt::Key_Home, SLOT(processHome()));
-    addAction(Qt::Key_Home + Qt::ShiftModifier, SLOT(processHome()));
+    addAction(Qt::Key_Home | Qt::ShiftModifier, SLOT(processHome()));
     addAction(Qt::Key_End, SLOT(processEnd()));
-    addAction(Qt::Key_End + Qt::ShiftModifier, SLOT(processEnd()));
+    addAction(Qt::Key_End | Qt::ShiftModifier, SLOT(processEnd()));
 }
 
 QList<QAction *> KeyboardManager::actions()
@@ -61,7 +61,7 @@ void KeyboardManager::processUp()
     if(!m_listWidget || m_listWidget->filterMode())
         return;
 
-    int keys = qobject_cast<QAction *>(sender())->shortcut()[0];
+    QKeyCombination keys = qobject_cast<QAction *>(sender())->shortcut()[0];
 
     QList<int> rows = m_listWidget->model()->selectedIndexes();
 
@@ -72,7 +72,8 @@ void KeyboardManager::processUp()
         return;
     }
 
-    if (!(keys & Qt::ShiftModifier || keys & Qt::AltModifier || keys & Qt::ControlModifier))
+    if (!(keys.keyboardModifiers() & Qt::ShiftModifier || keys.keyboardModifiers() & Qt::AltModifier ||
+          keys.keyboardModifiers() & Qt::ControlModifier))
     {
         m_listWidget->model()->clearSelection();
         m_listWidget->setAnchorIndex(-1);
@@ -88,14 +89,14 @@ void KeyboardManager::processUp()
     else if(rows.first() > last_visible)
         s = SELECT_BOTTOM;
 
-    if (keys & Qt::AltModifier)
+    if (keys.keyboardModifiers() & Qt::AltModifier)
     {
         if(rows.first() == 0)
             return;
         m_listWidget->model()->moveItems (rows.first(), rows.first() - 1);
         m_listWidget->setAnchorIndex (rows.first() - 1);
     }
-    else if(keys & Qt::ControlModifier)
+    else if(keys.keyboardModifiers() & Qt::ControlModifier)
     {
         m_listWidget->setAnchorIndex (qMax(m_listWidget->anchorIndex() - 1, 0));
     }
@@ -138,7 +139,7 @@ void KeyboardManager::processDown()
     if(!m_listWidget || m_listWidget->filterMode())
         return;
 
-    int keys = qobject_cast<QAction *>(sender())->shortcut()[0];
+    QKeyCombination keys = qobject_cast<QAction *>(sender())->shortcut()[0];
 
     QList<int> rows = m_listWidget->model()->selectedIndexes();
 
@@ -149,7 +150,8 @@ void KeyboardManager::processDown()
         return;
     }
 
-    if (!(keys & Qt::ShiftModifier || keys & Qt::AltModifier || keys & Qt::ControlModifier))
+    if(!(keys.keyboardModifiers() & Qt::ShiftModifier || keys.keyboardModifiers() & Qt::AltModifier ||
+         keys.keyboardModifiers() & Qt::ControlModifier))
     {
         m_listWidget->model()->clearSelection();
         m_listWidget->setAnchorIndex(-1);
@@ -165,14 +167,14 @@ void KeyboardManager::processDown()
     else if(rows.first() > last_visible)
         s = SELECT_BOTTOM;
 
-    if (keys & Qt::AltModifier)
+    if (keys.keyboardModifiers() & Qt::AltModifier)
     {
         if(rows.last() == m_listWidget->model()->count() - 1)
             return;
         m_listWidget->model()->moveItems (rows.last(), rows.last() + 1);
         m_listWidget->setAnchorIndex (rows.last() + 1);
     }
-    else if(keys & Qt::ControlModifier)
+    else if(keys.keyboardModifiers() & Qt::ControlModifier)
     {
         m_listWidget->setAnchorIndex (qMin(m_listWidget->anchorIndex() + 1,
                                            m_listWidget->model()->count() - 1));
@@ -268,9 +270,9 @@ void KeyboardManager::processHome()
 {
     if(!m_listWidget || m_listWidget->filterMode())
         return;
-    int keys = qobject_cast<QAction *>(sender())->shortcut()[0];
+    QKeyCombination keys = qobject_cast<QAction *>(sender())->shortcut()[0];
     m_listWidget->setViewPosition (0);
-    if(keys & Qt::ShiftModifier)
+    if(keys.keyboardModifiers() & Qt::ShiftModifier)
     {
         m_listWidget->model()->setSelected (0, m_listWidget->anchorIndex(), true);
     }
@@ -287,12 +289,12 @@ void KeyboardManager::processEnd()
     if(!m_listWidget || m_listWidget->filterMode())
         return;
 
-    int keys = qobject_cast<QAction *>(sender())->shortcut()[0];
+    QKeyCombination keys = qobject_cast<QAction *>(sender())->shortcut()[0];
     int scroll_to = m_listWidget->model()->count() - m_listWidget->visibleRows();
     if(scroll_to >= 0)
         m_listWidget->setViewPosition(scroll_to);
 
-    if(keys & Qt::ShiftModifier)
+    if(keys.keyboardModifiers() & Qt::ShiftModifier)
     {
         m_listWidget->model()->setSelected (m_listWidget->anchorIndex(), m_listWidget->model()->count() - 1, true);
     }
@@ -304,7 +306,7 @@ void KeyboardManager::processEnd()
     }
 }
 
-void KeyboardManager::addAction(int keys, const char *method)
+void KeyboardManager::addAction(QKeyCombination keys, const char *method)
 {
     QAction *action = new QAction(this);
     action->setShortcut(QKeySequence(keys));

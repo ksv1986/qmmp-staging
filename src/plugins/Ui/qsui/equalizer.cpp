@@ -45,7 +45,7 @@ Equalizer::Equalizer(QWidget *parent) : QDialog(parent)
     m_layout = new QVBoxLayout(this);
     setLayout(m_layout);
     m_layout->setSpacing(5);
-    m_layout->setMargin(5);
+    m_layout->setContentsMargins(5,5,5,5);
 
     QHBoxLayout *buttonsLayout = new QHBoxLayout;
     buttonsLayout->setSpacing(5);
@@ -103,7 +103,7 @@ Equalizer::Equalizer(QWidget *parent) : QDialog(parent)
         QLabel *label2 = new QLabel(this);
         label2->setText(tr("%1dB").arg(0));
         label2->setFrameShape(QFrame::Box);
-        label2->setMinimumWidth(fontMetrics().horizontalAdvance(tr("+%1dB").arg(20) + 5));
+        label2->setMinimumWidth(fontMetrics().horizontalAdvance(tr("+%1dB").arg(20)) + 5);
         label2->setAlignment(Qt::AlignCenter);
         slidersLayout->addWidget(label2, 0, i, Qt::AlignHCenter);
         connect(slider, SIGNAL(valueChanged(int)), SLOT(updateLabel()));

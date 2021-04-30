@@ -55,7 +55,7 @@ void ShortcutDialog::keyPressEvent (QKeyEvent *event)
         QWidget::keyPressEvent(event);
         return;
     }
-    QKeySequence seq(event->modifiers() + event->key());
+    QKeySequence seq(event->keyCombination());
     m_ui.keyLineEdit->setText(seq.toString());
     QWidget::keyPressEvent(event);
 }

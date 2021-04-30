@@ -37,7 +37,7 @@ QSUiQuickSearch::QSUiQuickSearch(ListWidget *listWidget, QWidget *parent) :
     m_lineEdit = new QLineEdit(this);
     QHBoxLayout *layout = new QHBoxLayout;
     layout->setSpacing(0);
-    layout->setMargin(0);
+    layout->setContentsMargins(0,0,0,0);
     setLayout(layout);
     layout->addWidget(m_lineEdit);
     m_lineEdit->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);

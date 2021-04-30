@@ -159,7 +159,7 @@ bool OutputALSA::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat form
     }
     if (c != (uint)map.count())
     {
-        qWarning("OutputALSA: The channel number %d is not supported by your hardware", map.count());
+        qWarning("OutputALSA: The channel number %lld is not supported by your hardware", map.count());
         qWarning("==> Using %d instead.", c);
     }
     if ((err = snd_pcm_hw_params_set_period_time_near(pcm_handle, hwparams, &period_time, nullptr)) < 0)

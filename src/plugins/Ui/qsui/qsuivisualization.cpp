@@ -213,7 +213,7 @@ void QSUIVisualization::updateCover()
 void QSUIVisualization::mousePressEvent (QMouseEvent *e)
 {
     if (e->button() == Qt::RightButton)
-        m_menu->exec(e->globalPos());
+        m_menu->exec(e->globalPosition().toPoint());
 }
 
 void QSUIVisualization::readSettings()

@@ -48,7 +48,7 @@ QStringList TwoPanelFileDialog::exec(QWidget *parent, const QString &dir, FileDi
 {
     TwoPanelFileDialogImpl *dialog = new TwoPanelFileDialogImpl(parent);
     dialog->setWindowTitle(caption);
-    dialog->setModeAndMask(dir, mode, filter.split(";;", QString::SkipEmptyParts));
+    dialog->setModeAndMask(dir, mode, filter.split(";;", Qt::SkipEmptyParts));
     QStringList l;
     if (dialog->exec() == QDialog::Accepted)
         l = dialog->selectedFiles();

@@ -26,7 +26,7 @@ QSUiTabBar::QSUiTabBar(QWidget *parent) : QTabBar(parent)
 
 void QSUiTabBar::mouseReleaseEvent(QMouseEvent *e)
 {
-    if(e->button() == Qt::MidButton)
+    if(e->button() == Qt::MiddleButton)
     {
         int i = tabAt(e->pos());
         if(i >= 0)

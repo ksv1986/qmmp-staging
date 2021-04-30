@@ -3,7 +3,7 @@ CONFIG += ordered
 include (qmmp.pri)
 
 TEMPLATE = subdirs
-SUBDIRS = src/qmmp src/qmmpui src/app #src/plugins
+SUBDIRS = src/qmmp src/qmmpui src/app src/plugins
 
 
 unix:exists($$[QT_INSTALL_BINS]/lrelease){

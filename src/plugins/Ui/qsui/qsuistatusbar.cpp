@@ -30,7 +30,7 @@
 QSUiStatusBar::QSUiStatusBar(QWidget *parent) : QWidget(parent)
 {
     QHBoxLayout *layout = new QHBoxLayout;
-    layout->setMargin(0);
+    layout->setContentsMargins(0,0,0,0);
 
     for(int i = StatusLabel; i <= TimeLabel; ++i)
     {

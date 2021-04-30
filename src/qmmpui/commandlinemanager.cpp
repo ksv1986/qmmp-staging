@@ -62,8 +62,10 @@ void CommandLineManager::checkOptions()
                 if(!option->translation().isEmpty())
                 {
                     QTranslator *translator = new QTranslator(qApp);
-                    translator->load(option->translation() + Qmmp::systemLanguageID());
-                    qApp->installTranslator(translator);
+                    if(translator->load(option->translation() + Qmmp::systemLanguageID()))
+                        qApp->installTranslator(translator);
+                    else
+                        delete translator;
                 }
                 option->registerOprions();
             }

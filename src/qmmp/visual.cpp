@@ -269,8 +269,10 @@ void Visual::checkFactories()
                 if(!factory->translation().isEmpty())
                 {
                     QTranslator *translator = new QTranslator(qApp);
-                    translator->load(factory->translation() + Qmmp::systemLanguageID());
-                    qApp->installTranslator(translator);
+                    if(translator->load(factory->translation() + Qmmp::systemLanguageID()))
+                        qApp->installTranslator(translator);
+                    else
+                        delete translator;
                 }
             }
         }

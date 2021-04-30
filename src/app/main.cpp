@@ -57,12 +57,12 @@ int main(int argc, char *argv[])
 #endif
     QTranslator translator;
     QString locale = Qmmp::systemLanguageID();
-    translator.load(QString(":/qmmp_") + locale);
-    a.installTranslator(&translator);
+    if(translator.load(QString(":/qmmp_") + locale))
+        a.installTranslator(&translator);
 
     QTranslator qt_translator;
-    qt_translator.load(QLibraryInfo::location (QLibraryInfo::TranslationsPath) + "/qtbase_" + locale);
-    a.installTranslator(&qt_translator);
+    if(qt_translator.load(QLibraryInfo::path(QLibraryInfo::TranslationsPath) + "/qtbase_" + locale))
+        a.installTranslator(&qt_translator);
 
     QMMPStarter starter;
 

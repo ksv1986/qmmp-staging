@@ -27,7 +27,6 @@
 #include "qmmpuisettings.h"
 #include "playlistitem.h"
 #include "playlistparser.h"
-#include "playlisttrack.h"
 
 FileLoader::FileLoader(QObject *parent) : QThread(parent)
 {

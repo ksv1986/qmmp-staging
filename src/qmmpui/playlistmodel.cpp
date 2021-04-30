@@ -19,7 +19,6 @@
  ***************************************************************************/
 #include <QTextStream>
 #include <algorithm>
-#include <time.h>
 #include <qmmp/metadatamanager.h>
 #include "metadatahelper_p.h"
 #include "playlistparser.h"
@@ -39,7 +38,6 @@
 PlayListModel::PlayListModel(const QString &name, QObject *parent)
     : QObject(parent) , m_name(name)
 {
-    qsrand(time(nullptr));
     m_ui_settings = QmmpUiSettings::instance();
 
     m_loader = new FileLoader(this);

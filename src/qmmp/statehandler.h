@@ -23,7 +23,7 @@
 #include <QObject>
 #include <QMap>
 #include <QHash>
-#include <QMutex>
+#include <QRecursiveMutex>
 #include "abstractengine.h"
 #include "audioparameters.h"
 #include "qmmp.h"
@@ -144,7 +144,7 @@ private:
     QHash <QString, QString> m_streamInfo;
     Qmmp::State m_state;
     AudioParameters m_audioParameters;
-    mutable QMutex m_mutex;
+    mutable QRecursiveMutex m_mutex;
 };
 
 #endif

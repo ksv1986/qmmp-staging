@@ -25,7 +25,7 @@
 #include <QStringList>
 #include <QPixmap>
 #include <QDir>
-#include <QMutex>
+#include <QRecursiveMutex>
 #include <QRegularExpression>
 #include "trackinfo.h"
 #include "metadatamodel.h"
@@ -132,7 +132,7 @@ private:
     CoverCacheItem *createCoverCacheItem(const QString &url) const;
     mutable QList <CoverCacheItem *> m_cover_cache;
     QmmpSettings *m_settings;
-    mutable QMutex m_mutex;
+    mutable QRecursiveMutex m_mutex;
 
     static MetaDataManager* m_instance;
 };

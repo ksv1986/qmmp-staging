@@ -93,7 +93,7 @@ void PlayListDownloader::readResponse(QNetworkReply *reply)
 
         if(reply->error() != QNetworkReply::NoError)
         {
-            emit finished(false, reply->errorString() + " (" + reply->error() + ")");
+            emit finished(false, reply->errorString() + " (" + QString::number(reply->error()) + ")");
             reply->deleteLater();
             return;
         }

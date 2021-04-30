@@ -27,8 +27,8 @@
 #include <QMutex>
 #include <QThread>
 #include <qmmp/trackinfo.h>
+#include "playlisttrack.h"
 
-class PlayListTrack;
 class PlayListItem;
 class QmmpUiSettings;
 

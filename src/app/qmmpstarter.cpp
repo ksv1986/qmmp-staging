@@ -236,7 +236,7 @@ int QMMPStarter::exitCode() const
 void QMMPStarter::startPlayer()
 {
     connect(m_server, SIGNAL(newConnection()), SLOT(readCommand()));
-    QStringList args = argString.split("|||", QString::SkipEmptyParts);
+    QStringList args = argString.split("|||", Qt::SkipEmptyParts);
 
 #ifdef Q_OS_WIN
     QIcon::setThemeSearchPaths(QStringList() << qApp->applicationDirPath() + "/themes/");
@@ -350,7 +350,7 @@ void QMMPStarter::readCommand()
         socket->deleteLater();
         return;
     }
-    QStringList slist = QString::fromUtf8(inputArray.data()).split("|||",QString::SkipEmptyParts);
+    QStringList slist = QString::fromUtf8(inputArray.data()).split("|||",Qt::SkipEmptyParts);
     QString cwd = slist.takeAt(0);
     QString out = processCommandArgs(slist, cwd);
     if(!out.isEmpty())

@@ -19,7 +19,6 @@
 ***************************************************************************/
 
 #include <QFile>
-#include <QTextStream>
 #include <qmmp/decoder.h>
 #include <qmmp/decoderfactory.h>
 #include <qmmp/output.h>
@@ -141,7 +140,6 @@ QString AboutDialog::getStringFromResource(const QString &res_file)
         if (file.open(QIODevice::ReadOnly))
         {
             QTextStream ts(&file);
-            ts.setCodec("UTF-8");
             ret_string = ts.readAll();
             file.close();
             return ret_string;

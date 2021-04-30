@@ -18,6 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QRandomGenerator>
 #include "qmmpuisettings.h"
 #include "playstate_p.h"
 
@@ -93,6 +94,8 @@ bool ShufflePlayState::previous()
 
 void ShufflePlayState::prepare()
 {
+    QRandomGenerator *rg = QRandomGenerator::global();
+
     resetState();
     for(int i = 0; i < m_model->count(); i++)
     {
@@ -101,7 +104,7 @@ void ShufflePlayState::prepare()
     }
 
     for (int i = 0; i < m_shuffled_indexes.count(); i++)
-        m_shuffled_indexes.swapItemsAt(i, qrand()%m_shuffled_indexes.size());
+        m_shuffled_indexes.swapItemsAt(i, rg->generate() % m_shuffled_indexes.size());
 
     m_shuffled_indexes.prepend(m_model->currentIndex());
 }

@@ -18,6 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QRandomGenerator>
 #include "playlistmodel.h"
 #include "groupedcontainer_p.h"
 
@@ -397,18 +398,20 @@ void GroupedContainer::reverseList()
 
 void GroupedContainer::randomizeList()
 {
+    QRandomGenerator *rg = QRandomGenerator::global();
+
     for(int i = 0; i < m_groups.count(); ++i)
     {
         for (int j = 0; j < m_groups[i]->trackList.size(); j++)
         {
-            m_groups[i]->trackList.swapItemsAt(qrand() % m_groups[i]->trackList.size(),
-                                               qrand() % m_groups[i]->trackList.size());
+            m_groups[i]->trackList.swapItemsAt(rg->generate() % m_groups[i]->trackList.size(),
+                                               rg->generate() % m_groups[i]->trackList.size());
         }
     }
 
     for(int i = 0; i < m_groups.count(); ++i)
     {
-        m_groups.swapItemsAt(qrand() % m_groups.size(), qrand() % m_groups.size());
+        m_groups.swapItemsAt(rg->generate() % m_groups.size(), rg->generate() % m_groups.size());
     }
 
     m_update = true;

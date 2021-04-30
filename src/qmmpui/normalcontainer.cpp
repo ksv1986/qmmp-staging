@@ -18,6 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QRandomGenerator>
 #include "normalcontainer_p.h"
 
 
@@ -241,8 +242,10 @@ void NormalContainer::reverseList()
 
 void NormalContainer::randomizeList()
 {
+    QRandomGenerator *rg = QRandomGenerator::global();
+
     for (int i = 0; i < m_items.size(); i++)
-        m_items.swapItemsAt(qrand()%m_items.size(), qrand()%m_items.size());
+        m_items.swapItemsAt(rg->generate() % m_items.size(), rg->generate() % m_items.size());
 
     for(int i = 0; i < m_items.count(); ++i)
         m_items[i]->setTrackIndex(i);

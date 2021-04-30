@@ -32,7 +32,7 @@
 StateHandler* StateHandler::m_instance = nullptr;
 
 StateHandler::StateHandler(QObject *parent)
-        : QObject(parent), m_mutex(QMutex::Recursive)
+        : QObject(parent)
 {
     if(m_instance)
         qFatal("StateHandler: only one instance is allowed");

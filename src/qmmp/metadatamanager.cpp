@@ -35,7 +35,7 @@
 
 MetaDataManager* MetaDataManager::m_instance = nullptr;
 
-MetaDataManager::MetaDataManager() : m_mutex(QMutex::Recursive)
+MetaDataManager::MetaDataManager()
 {
     m_settings = QmmpSettings::instance();
 }
@@ -259,7 +259,7 @@ QFileInfoList MetaDataManager::findCoverFiles(QDir dir, int depth) const
             file_list.removeAll(i);
 
         if(QImageReader::imageFormat(i.fileName()).isEmpty()) //remove unsupported image formats
-            file_list.removeAll(i.fileName());
+            file_list.removeAll(i);
     }
     if(!depth || !file_list.isEmpty())
         return file_list;

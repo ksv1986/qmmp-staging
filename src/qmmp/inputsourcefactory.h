@@ -24,9 +24,9 @@
 #include <QObject>
 #include <QRegularExpression>
 #include <QList>
+#include <QStringList>
 #include "qmmp_export.h"
 
-class QStringList;
 class InputSource;
 
 /*! @brief Structure to store transport plugin properies.

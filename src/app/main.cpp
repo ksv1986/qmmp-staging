@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
         a.installTranslator(&translator);
 
     QTranslator qt_translator;
-    if(qt_translator.load(QLibraryInfo::path(QLibraryInfo::TranslationsPath) + "/qtbase_" + locale))
+    if(qt_translator.load(QLibraryInfo::location(QLibraryInfo::TranslationsPath) + "/qtbase_" + locale))
         a.installTranslator(&qt_translator);
 
     QMMPStarter starter;

@@ -21,7 +21,6 @@
 #define TAGEXTRACTOR_H
 
 #include <QMap>
-#include <QTextCodec>
 #include <taglib/tag.h>
 #include <taglib/fileref.h>
 #include <taglib/id3v1tag.h>
@@ -45,7 +44,7 @@ public:
 
     QMap<Qmmp::MetaData, QString> id3v2tag() const;
     static void setForceUtf8(bool enabled);
-    static QTextCodec *detectCharset(const TagLib::Tag *tag);
+    static QString detectCharset(const TagLib::Tag *tag);
 
 private:
     QMap<Qmmp::MetaData, QString> m_tag;

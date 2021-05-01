@@ -4,7 +4,7 @@ TEMPLATE = subdirs
 SUBDIRS += vorbis sndfile wavpack cue
 
 contains(CONFIG, WITH_MAD)|contains(CONFIG, WITH_MPG123){
-    #SUBDIRS += mpeg
+    SUBDIRS += mpeg
 }
 
 contains(CONFIG, FLAC_PLUGIN){

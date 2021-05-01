@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QTextCodec>
 #include <QSettings>
 #include <QByteArray>
 #include <QBuffer>
@@ -152,7 +151,7 @@ MpegFileTagModel::MpegFileTagModel(bool using_rusxmms, TagLib::MPEG::File *file,
           m_file(file),
           m_type(type)
 {
-    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    /*QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("MPEG");
     if(m_type == TagLib::MPEG::File::ID3v1)
     {
@@ -181,7 +180,7 @@ MpegFileTagModel::MpegFileTagModel(bool using_rusxmms, TagLib::MPEG::File *file,
         m_codec = detectedCodec ? detectedCodec : m_codec;
     }
 
-    settings.endGroup();
+    settings.endGroup();*/
 }
 
 MpegFileTagModel::~MpegFileTagModel()
@@ -214,7 +213,7 @@ QList<Qmmp::MetaData> MpegFileTagModel::keys() const
 
 QString MpegFileTagModel::value(Qmmp::MetaData key) const
 {
-    QTextCodec *codec = m_codec;
+    /*QTextCodec *codec = m_codec;
 
     if(m_tag)
     {
@@ -274,13 +273,13 @@ QString MpegFileTagModel::value(Qmmp::MetaData key) const
                 str = m_file->ID3v2Tag()->frameListMap()["TPOS"].front()->toString();
         }
         return codec->toUnicode(str.toCString(utf)).trimmed();
-    }
+    }*/
     return QString();
 }
 
 void MpegFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
 {
-    if(!m_tag)
+    /*if(!m_tag)
         return;
     TagLib::String::Type type = TagLib::String::Latin1;
 
@@ -386,7 +385,7 @@ void MpegFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
         break;
     case Qmmp::TRACK:
         m_tag->setTrack(value.toInt());
-    }
+    }*/
 }
 
 bool MpegFileTagModel::exists() const
@@ -414,11 +413,7 @@ void MpegFileTagModel::remove()
 void MpegFileTagModel::save()
 {
     if(m_tag)
-#if((TAGLIB_MAJOR_VERSION == 1) &&(TAGLIB_MINOR_VERSION <= 11))
-        m_file->save(m_type, false);
-#else
         m_file->save(m_type, TagLib::File::StripNone, TagLib::ID3v2::Version::v4, TagLib::File::DoNotDuplicate);
-#endif
     else
         m_file->strip(m_type);
 }

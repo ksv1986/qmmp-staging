@@ -25,8 +25,6 @@
 #include <taglib/mpegfile.h>
 #include <taglib/tfilestream.h>
 
-class QTextCodec;
-
 class MPEGMetaDataModel : public MetaDataModel
 {
     Q_DECLARE_TR_FUNCTIONS(MPEGMetaDataModel)
@@ -61,7 +59,6 @@ public:
 
 private:
     bool m_using_rusxmms;
-    QTextCodec *m_codec;
     TagLib::MPEG::File *m_file;
     TagLib::Tag *m_tag;
     TagLib::MPEG::File::TagTypes m_type;

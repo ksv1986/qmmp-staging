@@ -22,7 +22,6 @@
 #include <QSettings>
 #include <QByteArray>
 #include <QBuffer>
-#include <QTextCodec>
 #include <QSettings>
 #include <QSet>
 #include <stdlib.h>
@@ -43,7 +42,7 @@ TagExtractor::~TagExtractor()
 
 QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag() const
 {
-    QByteArray array = m_input->peek(2048);
+    /*QByteArray array = m_input->peek(2048);
     int offset = array.indexOf("ID3");
     if (offset < 0)
         return QMap<Qmmp::MetaData, QString>();
@@ -94,7 +93,8 @@ QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag() const
         TagLib::String disc = tag.frameListMap()["TPOS"].front()->toString();
         tags.insert(Qmmp::DISCNUMBER, QString(disc.toCString()).trimmed());
     }
-    return tags;
+    return tags;*/
+    return QMap<Qmmp::MetaData, QString>();
 }
 
 void TagExtractor::setForceUtf8(bool enabled)
@@ -102,7 +102,7 @@ void TagExtractor::setForceUtf8(bool enabled)
     m_using_rusxmms = enabled;
 }
 
-QTextCodec *TagExtractor::detectCharset(const TagLib::Tag *tag)
+QString TagExtractor::detectCharset(const TagLib::Tag *tag)
 {
     if(tag->title().isLatin1() && tag->album().isLatin1() &&
             tag->artist().isLatin1() && tag->comment().isLatin1())
@@ -116,22 +116,22 @@ QTextCodec *TagExtractor::detectCharset(const TagLib::Tag *tag)
         charsets << rcdGetRussianCharset(tag->comment().toCString(), 0);
 
         if(charsets.contains(RUSSIAN_CHARSET_WIN))
-            codec = QTextCodec::codecForName("WINDOWS-1251");
+            return "WINDOWS-1251";
         else if(charsets.contains(RUSSIAN_CHARSET_ALT))
-            codec = QTextCodec::codecForName("IBM866");
+            return "IBM866";
         else if(charsets.contains(RUSSIAN_CHARSET_KOI))
-            codec = QTextCodec::codecForName("KOI8-R");
+            return "KOI8-R";
         else if(charsets.contains(RUSSIAN_CHARSET_UTF8))
-            codec = QTextCodec::codecForName("UTF-8");
+            return "UTF-8";
         else if(charsets.contains(RUSSIAN_CHARSET_LATIN))
-            codec = QTextCodec::codecForName("ISO-8859-1");
+            return "ISO-8859-1";
 
         return codec;
 #else
         return nullptr;
 #endif
     }
-    return QTextCodec::codecForName("UTF-8");
+    return "UTF-8";
 }
 
 ID3v2Tag::ID3v2Tag(QByteArray *array, long offset) : TagLib::ID3v2::Tag(),

@@ -42,7 +42,8 @@ HEADERS += \
     qmmp_export.h \
     trackinfo.h \
     volumehandler.h \
-    cueparser.h
+    cueparser.h \
+    qmmptextcodec.h
 SOURCES += recycler.cpp \
     decoder.cpp \
     output.cpp \
@@ -77,7 +78,8 @@ SOURCES += recycler.cpp \
     visualbuffer.cpp \
     trackinfo.cpp \
     volumehandler.cpp \
-    cueparser.cpp
+    cueparser.cpp \
+    qmmptextcodec.cpp
 
 unix:TARGET = ../../lib/qmmp$$APP_NAME_SUFFIX
 win32:TARGET = ../../../bin/qmmp

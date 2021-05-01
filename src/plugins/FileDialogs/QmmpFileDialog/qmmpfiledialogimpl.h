@@ -43,7 +43,7 @@ public:
 
 protected slots:
     void on_mountPointsListWidget_itemClicked(QListWidgetItem *item);
-    void on_lookInComboBox_activated(const QString&);
+    void on_lookInComboBox_textActivated(const QString&);
     void on_upToolButton_clicked();
     void on_fileListView_doubleClicked(const QModelIndex&);
     void on_treeView_doubleClicked(const QModelIndex&);

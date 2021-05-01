@@ -125,10 +125,10 @@ QStringList QmmpFileDialogImpl::selectedFiles ()
 void QmmpFileDialogImpl::on_mountPointsListWidget_itemClicked(QListWidgetItem *item)
 {
     lookInComboBox->setEditText(item->data(Qt::UserRole).toString());
-    on_lookInComboBox_activated(item->data(Qt::UserRole).toString());
+    on_lookInComboBox_textActivated(item->data(Qt::UserRole).toString());
 }
 
-void QmmpFileDialogImpl::on_lookInComboBox_activated(const QString &path)
+void QmmpFileDialogImpl::on_lookInComboBox_textActivated(const QString &path)
 {
     if (QDir(path).exists ())
     {

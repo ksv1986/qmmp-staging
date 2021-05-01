@@ -69,7 +69,7 @@ bool UltimateLyricsParser::load(const QString &path)
                 provider->setName(attrs.value("name").toString());
                 provider->setTitle(attrs.value("title").toString());
                 provider->setUrl(attrs.value("url").toString());
-                provider->setCharset(attrs.value("charser").toString());
+                provider->setCharset(attrs.value("charset").toString());
                 m_providers << provider;
             }
             else if(reader.name() == "urlFormat" && !m_providers.isEmpty())

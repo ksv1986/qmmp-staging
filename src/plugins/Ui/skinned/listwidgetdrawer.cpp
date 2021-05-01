@@ -25,10 +25,6 @@
 #include "skin.h"
 #include "listwidgetdrawer.h"
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
-#define horizontalAdvance width
-#endif
-
 // |= number=|=row1=|=row2=|=extra= duration=|
 
 ListWidgetDrawer::ListWidgetDrawer()

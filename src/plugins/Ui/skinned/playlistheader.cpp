@@ -40,10 +40,6 @@
 #include "playlistheader.h"
 #include "listwidgetdrawer.h"
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
-#define horizontalAdvance width
-#endif
-
 #define INITAL_SIZE 150
 #define MAX_COLUMNS 7
 #define MIN_SIZE 30

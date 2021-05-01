@@ -35,9 +35,6 @@
 #include "actionmanager.h"
 #include "textscroller.h"
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
-#define horizontalAdvance width
-#endif
 
 #define SCROLL_SEP "   *** "
 #define TITLE_FORMAT "%p%if(%p&%t, - ,)%t%if(%p,,%if(%t,,%f))%if(%l, - %l,)"

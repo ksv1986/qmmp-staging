@@ -133,9 +133,7 @@ ActionManager* ActionManager::instance()
 QAction *ActionManager::createAction(const QString &name, const QString &confKey, const QString &key, const QString &iconName)
 {
     QAction *action = new QAction(name, this);
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     action->setShortcutVisibleInContextMenu(true);
-#endif
     action->setShortcut(m_settings->value(confKey, key).toString());
     action->setProperty("defaultShortcut", key);
     action->setObjectName(confKey);

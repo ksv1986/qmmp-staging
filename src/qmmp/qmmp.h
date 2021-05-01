@@ -39,15 +39,6 @@
 #define QStringToFileName(s) s.toLocal8Bit().constData()
 #endif
 
-#if (QT_VERSION < QT_VERSION_CHECK(5, 7, 0))
-// this adds const to non-const objects (like std::as_const)
-template <typename T>
-Q_DECL_CONSTEXPR typename std::add_const<T>::type &qAsConst(T &t) noexcept { return t; }
-// prevent rvalue arguments:
-template <typename T>
-void qAsConst(const T &&) = delete;
-#endif
-
 
 /*! @brief The Qmmp class stores global settings and enums.
  * @author Ilya Kotov <forkotov02@ya.ru>
@@ -195,11 +186,6 @@ public:
      * Returns \b true if portable mode is enabled. Otherwise returns \b false.
      */
     static bool isPortable();
-#endif
-
-#if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
-    static QString wildcardToRegularExpression(const QString &pattern);
-    static QString anchoredPattern(const QString &expression);
 #endif
 
 private:

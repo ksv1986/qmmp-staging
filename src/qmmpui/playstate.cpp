@@ -22,10 +22,6 @@
 #include "qmmpuisettings.h"
 #include "playstate_p.h"
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 13, 0)
-#define swapItemsAt swap
-#endif
-
 PlayState::PlayState(PlayListModel *model) : m_model(model)
 {
     m_ui_settings = QmmpUiSettings::instance();

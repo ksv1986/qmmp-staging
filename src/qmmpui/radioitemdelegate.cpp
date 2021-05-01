@@ -102,11 +102,8 @@ bool RadioItemDelegate::editorEvent(QEvent *event, QAbstractItemModel *model,
                 QModelIndex parentItem = index.parent();
                 for (int i = 0; i < model->rowCount(parentItem); ++i)
                 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 8, 0)
                     QModelIndex childIndex = model->index(i, 0, parentItem);
-#else
-                    QModelIndex childIndex = parentItem.child(i, 0);
-#endif
+
                     if (childIndex != index)
                         model->setData(childIndex, Qt::Unchecked, Qt::CheckStateRole);
                 }

@@ -19,9 +19,6 @@
  ***************************************************************************/
 
 #include <QIcon>
-#if (QT_VERSION < QT_VERSION_CHECK(5, 7, 0)) //qAsConst template
-#include <qmmp/qmmp.h>
-#endif
 #include "eqpreset.h"
 #include "preseteditor.h"
 

@@ -167,11 +167,7 @@ void QSUiStatusBar::onBitrateChanged(int bitrate)
     {
         QString tmp = text;
         tmp.replace(QRegularExpression("\\d"), "4");
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 11, 0))
         int width = label->fontMetrics().horizontalAdvance(tmp);
-#else
-        int width = label->fontMetrics().width(tmp);
-#endif
         label->setMinimumWidth(width);
     }
     label->setText(text);
@@ -191,11 +187,7 @@ void QSUiStatusBar::onElapsedChanged(qint64 elapsed)
     {
         QString tmp = elapsedText;
         tmp.replace(QRegularExpression("\\d"), "4");
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 11, 0))
         int width = label->fontMetrics().horizontalAdvance(tmp + plDurationText);
-#else
-        int width = label->fontMetrics().width(tmp + plDurationText);
-#endif
         label->setMinimumWidth(width);
     }
     label->setText(elapsedText + plDurationText);

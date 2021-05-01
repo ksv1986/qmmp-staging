@@ -5,7 +5,7 @@ SUBDIRS += statusicon \
            \#lyrics \
            \#scrobbler \
            \#fileops \
-           \#covermanager \
+           covermanager \
            streambrowser \
            trackchange \
            copypaste \

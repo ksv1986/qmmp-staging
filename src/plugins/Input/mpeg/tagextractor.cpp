@@ -102,13 +102,12 @@ void TagExtractor::setForceUtf8(bool enabled)
     m_using_rusxmms = enabled;
 }
 
-QString TagExtractor::detectCharset(const TagLib::Tag *tag)
+QByteArray TagExtractor::detectCharset(const TagLib::Tag *tag)
 {
     if(tag->title().isLatin1() && tag->album().isLatin1() &&
             tag->artist().isLatin1() && tag->comment().isLatin1())
     {
 #ifdef WITH_LIBRCD
-        QTextCodec *codec = nullptr;
         QSet<int> charsets;
         charsets << rcdGetRussianCharset(tag->title().toCString(), 0);
         charsets << rcdGetRussianCharset(tag->artist().toCString(), 0);
@@ -125,10 +124,8 @@ QString TagExtractor::detectCharset(const TagLib::Tag *tag)
             return "UTF-8";
         else if(charsets.contains(RUSSIAN_CHARSET_LATIN))
             return "ISO-8859-1";
-
-        return codec;
 #else
-        return nullptr;
+        return QByteArray();
 #endif
     }
     return "UTF-8";

@@ -2,17 +2,18 @@
 #include <QtDebug>
 #include "qmmptextcodec.h"
 
-QmmpTextCodec::QmmpTextCodec(const QString &charset) : m_name(charset.toUpper())
+QmmpTextCodec::QmmpTextCodec(const QByteArray &charset) : m_name(charset.toUpper())
 {
-    qDebug() << Q_FUNC_INFO << charset;
+    if(m_name == "UTF-8" || m_name == "UTF-16")
+        return;
 
-    if((m_to = iconv_open(charset.toLatin1().constData(), "UTF-16")) == (iconv_t)(-1))
+    if((m_to = iconv_open(m_name.constData(), "UTF-16")) == (iconv_t)(-1))
     {
         qWarning("QmmpTextCodec: error: %s", strerror(errno));
         m_to = nullptr;
     }
 
-    if((m_from = iconv_open("UTF-16", charset.toUpper().toLatin1().constData())) == (iconv_t)(-1))
+    if((m_from = iconv_open("UTF-16", m_name.constData())) == (iconv_t)(-1))
     {
         qWarning("QmmpTextCodec: error: %s", strerror(errno));
         m_from = nullptr;
@@ -27,18 +28,18 @@ QmmpTextCodec::~QmmpTextCodec()
         iconv_close(m_from);
 }
 
-const QString &QmmpTextCodec::name() const
+const QByteArray &QmmpTextCodec::name() const
 {
     return m_name;
 }
 
 QString QmmpTextCodec::toUnicode(const QByteArray &a) const
 {
-    if(!m_from)
+    if(m_name == "UTF-16")
+        return QString::fromUtf16(reinterpret_cast<const char16_t *>(a.data()), a.size() / 2);
+    else if(!m_from || m_name == "UTF-8")
         return QString::fromUtf8(a);
 
-    int invalidCount = 0;
-    int remainingCount = 0;
     size_t inBytesLeft = 0;
     size_t outBytesLeft = 0;
 
@@ -52,17 +53,13 @@ QString QmmpTextCodec::toUnicode(const QByteArray &a) const
     char *outBytes = ba.data();
     outBytesLeft = ba.size();
 
-    qDebug() << inBytesLeft << outBytesLeft;
-
     while(inBytesLeft > 0)
     {
         size_t ret = iconv(m_from,  &inBytes, &inBytesLeft, &outBytes, &outBytesLeft);
 
         if(ret == (size_t) -1)
         {
-
-
-            if(errno == E2BIG)
+            if(errno == E2BIG) //increase buffer size
             {
                 int offset = ba.size() - outBytesLeft;
                 ba.resize(ba.size() * 2);
@@ -71,21 +68,9 @@ QString QmmpTextCodec::toUnicode(const QByteArray &a) const
                 continue;
             }
 
-            if(errno == EILSEQ)
-            {
-                // conversion stopped because of an invalid character in the sequence
-                ++invalidCount;
-            }
-            else if (errno == EINVAL)
-            {
-                // conversion stopped because the remaining inBytesLeft make up
-                // an incomplete multi-byte sequence; save them for later
-                //state->saveChars(inBytes, inBytesLeft);
-                remainingCount = inBytesLeft;
+            if(errno == EINVAL)
                 break;
-            }
-
-            if (errno == EILSEQ || errno == EINVAL)
+            else if(errno == EILSEQ)
             {
                 // skip the next character
                 ++inBytes;
@@ -98,14 +83,68 @@ QString QmmpTextCodec::toUnicode(const QByteArray &a) const
         }
     }
 
-    qDebug() << "!" << inBytesLeft << (ba.size() - outBytesLeft) / 2;
-
-    return QString::fromUtf16((const char16_t *)ba.constData(), (ba.size() - outBytesLeft) / 2);
+    return QString::fromUtf16(reinterpret_cast<const char16_t *>(ba.constData()), (ba.size() - outBytesLeft) / 2);
 }
 
 QString QmmpTextCodec::toUnicode(const char *chars) const
 {
     return toUnicode(QByteArray(chars));
+}
+
+QByteArray QmmpTextCodec::fromUnicode(const QString &str) const
+{
+    if(m_name == "UTF-16")
+        return QByteArray(reinterpret_cast<const char*>(str.utf16()), str.size() * 2);
+    else if(!m_from || m_name == "UTF-8")
+        return str.toUtf8();
+
+    size_t inBytesLeft = 0;
+    size_t outBytesLeft = 0;
+
+    // reset state
+    iconv(m_to, nullptr, &inBytesLeft, nullptr, &outBytesLeft);
+
+    char *inBytes =  const_cast<char *>(reinterpret_cast<const char*>(str.utf16()));
+    inBytesLeft = str.size() * 2;
+    outBytesLeft = str.size() * 2;
+
+    QByteArray ba(outBytesLeft, Qt::Uninitialized);
+    char *outBytes = ba.data();
+    outBytesLeft = ba.size();
+
+    while(inBytesLeft > 0)
+    {
+        size_t ret = iconv(m_to,  &inBytes, &inBytesLeft, &outBytes, &outBytesLeft);
+
+        if(ret == (size_t) -1)
+        {
+            if(errno == E2BIG) //increase buffer size
+            {
+                int offset = ba.size() - outBytesLeft;
+                ba.resize(ba.size() * 2);
+                outBytes = ba.data() + offset;
+                outBytesLeft = ba.size() - offset;
+                continue;
+            }
+
+            if(errno == EINVAL)
+                break;
+            else if(errno == EILSEQ)
+            {
+                // skip the next character
+                ++inBytes;
+                --inBytesLeft;
+                continue;
+            }
+
+            //fallback
+            return str.toLatin1();
+        }
+    }
+
+    ba.resize(ba.size() - outBytesLeft);
+
+    return ba;
 }
 
 const QStringList &QmmpTextCodec::availableCharsets()
@@ -154,5 +193,6 @@ const QStringList &QmmpTextCodec::availableCharsets()
         "WINDOWS-1258",
         "WINDOWS-874"
     };
+
     return charsets;
 }

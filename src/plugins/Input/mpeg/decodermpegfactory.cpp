@@ -235,7 +235,6 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
 
         for (int i = 0; i < 3; ++i)
         {
-            QmmpTextCodec *codec = nullptr;
             TagLib::Tag *tag = nullptr;
             QByteArray codecName;
 
@@ -258,25 +257,22 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
             }
 
             if(m_using_rusxmms || codecName.contains("UTF"))
-                codec = new QmmpTextCodec("UTF-8");
-            else if(!codecName.isEmpty())
-                codec = new QmmpTextCodec(codecName);
+                codecName = "UTF-8";
 
-            if (!codec)
-                codec = new QmmpTextCodec("UTF-8");
+            if(codecName.isEmpty())
+                codecName = "UTF-8";
 
-            if (tag && codec && !tag->isEmpty())
+            if (tag && !tag->isEmpty())
             {
                 if((tag == fileRef.ID3v1Tag() || tag == fileRef.ID3v2Tag()) && !m_using_rusxmms &&
                         settings.value("detect_encoding", false).toBool())
                 {
-                    QString detectedCharset = TagExtractor::detectCharset(tag);
-                    if(!detectedCharset.isEmpty() && codec->name() != detectedCharset)
-                    {
-                        delete codec;
-                        codec = new QmmpTextCodec(detectedCharset);
-                    }
+                    QByteArray detectedCharset = TagExtractor::detectCharset(tag);
+                    if(!detectedCharset.isEmpty())
+                        codecName = detectedCharset;
                 }
+
+                QmmpTextCodec *codec = new QmmpTextCodec(codecName);
 
                 bool utf = codec->name().contains("UTF");
 
@@ -319,16 +315,11 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
 
                 metaData << tags;
 
-                if(!merge)
-                {
-                    if(codec)
-                        delete codec;
-                    break;
-                }
-            }
-
-            if(codec)
                 delete codec;
+
+                if(!merge)
+                    break;
+            }
         }
         settings.endGroup();
 

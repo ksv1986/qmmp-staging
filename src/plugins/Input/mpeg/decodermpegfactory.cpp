@@ -256,10 +256,7 @@ QList<TrackInfo *> DecoderMPEGFactory::createPlayList(const QString &path, Track
                 break;
             }
 
-            if(m_using_rusxmms || codecName.contains("UTF"))
-                codecName = "UTF-8";
-
-            if(codecName.isEmpty())
+            if(m_using_rusxmms || codecName.contains("UTF") || codecName.isEmpty())
                 codecName = "UTF-8";
 
             if (tag && !tag->isEmpty())

@@ -33,6 +33,7 @@
 #include <taglib/textidentificationframe.h>
 #include <taglib/attachedpictureframe.h>
 #include <taglib/id3v2framefactory.h>
+#include <qmmp/qmmptextcodec.h>
 #include "tagextractor.h"
 #include "mpegmetadatamodel.h"
 
@@ -151,40 +152,48 @@ MpegFileTagModel::MpegFileTagModel(bool using_rusxmms, TagLib::MPEG::File *file,
           m_file(file),
           m_type(type)
 {
-    /*QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    QByteArray codecName;
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("MPEG");
     if(m_type == TagLib::MPEG::File::ID3v1)
     {
         m_tag = m_file->ID3v1Tag();
-        if(!(m_codec = QTextCodec::codecForName(settings.value("ID3v1_encoding", "ISO-8859-1").toByteArray())))
-            m_codec = QTextCodec::codecForName("ISO-8859-1");
+        if((codecName = settings.value("ID3v1_encoding", "ISO-8859-1").toByteArray()).isEmpty())
+            codecName = "ISO-8859-1";
     }
     else if(m_type == TagLib::MPEG::File::ID3v2)
     {
         m_tag = m_file->ID3v2Tag();
-        if(!(m_codec = QTextCodec::codecForName(settings.value("ID3v2_encoding", "UTF-8").toByteArray())))
-            m_codec = QTextCodec::codecForName("UTF-8");
+        if((codecName = settings.value("ID3v2_encoding", "UTF-8").toByteArray()).isEmpty())
+            codecName = "UTF-8";
     }
     else
     {
         m_tag = m_file->APETag();
-        m_codec = QTextCodec::codecForName("UTF-8");
+        codecName = "UTF-8";
     }
-    if(m_using_rusxmms || !m_codec || m_codec->name().startsWith("UTF"))
-        m_codec = QTextCodec::codecForName("UTF-8");
 
-    if(!m_using_rusxmms && (m_type == TagLib::MPEG::File::ID3v1 || m_type == TagLib::MPEG::File::ID3v2) &&
+    if(m_using_rusxmms || codecName.contains("UTF") || codecName.isEmpty())
+        codecName = "UTF-8";
+
+    if(m_tag && !m_using_rusxmms && (m_type == TagLib::MPEG::File::ID3v1 || m_type == TagLib::MPEG::File::ID3v2) &&
             settings.value("detect_encoding", false).toBool())
     {
-        QTextCodec *detectedCodec = TagExtractor::detectCharset(m_tag);
-        m_codec = detectedCodec ? detectedCodec : m_codec;
+        QByteArray detectedCharset = TagExtractor::detectCharset(m_tag);
+        if(!detectedCharset.isEmpty())
+            codecName = detectedCharset;
     }
 
-    settings.endGroup();*/
+    m_codec = new QmmpTextCodec(codecName);
+
+    settings.endGroup();
 }
 
 MpegFileTagModel::~MpegFileTagModel()
-{}
+{
+    if(m_codec)
+        delete m_codec;
+}
 
 QString MpegFileTagModel::name() const
 {
@@ -213,73 +222,69 @@ QList<Qmmp::MetaData> MpegFileTagModel::keys() const
 
 QString MpegFileTagModel::value(Qmmp::MetaData key) const
 {
-    /*QTextCodec *codec = m_codec;
+    if(!m_tag)
+        return QString();
 
-    if(m_tag)
+    bool utf = m_codec->name().contains("UTF");
+
+    TagLib::String str;
+    switch((int) key)
     {
-        bool utf = codec->name().contains("UTF");
-        if(utf)
-            codec = QTextCodec::codecForName("UTF-8");
-
-        TagLib::String str;
-        switch((int) key)
+    case Qmmp::TITLE:
+        str = m_tag->title();
+        break;
+    case Qmmp::ARTIST:
+        str = m_tag->artist();
+        break;
+    case Qmmp::ALBUMARTIST:
+        if(m_type == TagLib::MPEG::File::ID3v2 &&
+                !m_file->ID3v2Tag()->frameListMap()["TPE2"].isEmpty())
         {
-        case Qmmp::TITLE:
-            str = m_tag->title();
-            break;
-        case Qmmp::ARTIST:
-            str = m_tag->artist();
-            break;
-        case Qmmp::ALBUMARTIST:
-            if(m_type == TagLib::MPEG::File::ID3v2 &&
-                    !m_file->ID3v2Tag()->frameListMap()["TPE2"].isEmpty())
-            {
-                str = m_file->ID3v2Tag()->frameListMap()["TPE2"].front()->toString();
-            }
-            else if(m_type == TagLib::MPEG::File::APE &&
-                    !m_file->APETag()->itemListMap()["ALBUM ARTIST"].isEmpty())
-            {
-                str = m_file->APETag()->itemListMap()["ALBUM ARTIST"].toString();
-            }
-            break;
-        case Qmmp::ALBUM:
-            str = m_tag->album();
-            break;
-        case Qmmp::COMMENT:
-            str = m_tag->comment();
-            break;
-        case Qmmp::GENRE:
-            str = m_tag->genre();
-            break;
-        case Qmmp::COMPOSER:
-            if(m_type == TagLib::MPEG::File::ID3v2 &&
-                    !m_file->ID3v2Tag()->frameListMap()["TCOM"].isEmpty())
-            {
-                str = m_file->ID3v2Tag()->frameListMap()["TCOM"].front()->toString();
-            }
-            else if(m_type == TagLib::MPEG::File::APE &&
-                    !m_file->APETag()->itemListMap()["COMPOSER"].isEmpty())
-            {
-                str = m_file->APETag()->itemListMap()["COMPOSER"].toString();
-            }
-            break;
-        case Qmmp::YEAR:
-            return QString::number(m_tag->year());
-        case Qmmp::TRACK:
-            return QString::number(m_tag->track());
-        case  Qmmp::DISCNUMBER:
-            if(m_type == TagLib::MPEG::File::ID3v2
-               && !m_file->ID3v2Tag()->frameListMap()["TPOS"].isEmpty())
-                str = m_file->ID3v2Tag()->frameListMap()["TPOS"].front()->toString();
+            str = m_file->ID3v2Tag()->frameListMap()["TPE2"].front()->toString();
         }
-        return codec->toUnicode(str.toCString(utf)).trimmed();
-    }*/
-    return QString();
+        else if(m_type == TagLib::MPEG::File::APE &&
+                !m_file->APETag()->itemListMap()["ALBUM ARTIST"].isEmpty())
+        {
+            str = m_file->APETag()->itemListMap()["ALBUM ARTIST"].toString();
+        }
+        break;
+    case Qmmp::ALBUM:
+        str = m_tag->album();
+        break;
+    case Qmmp::COMMENT:
+        str = m_tag->comment();
+        break;
+    case Qmmp::GENRE:
+        str = m_tag->genre();
+        break;
+    case Qmmp::COMPOSER:
+        if(m_type == TagLib::MPEG::File::ID3v2 &&
+                !m_file->ID3v2Tag()->frameListMap()["TCOM"].isEmpty())
+        {
+            str = m_file->ID3v2Tag()->frameListMap()["TCOM"].front()->toString();
+        }
+        else if(m_type == TagLib::MPEG::File::APE &&
+                !m_file->APETag()->itemListMap()["COMPOSER"].isEmpty())
+        {
+            str = m_file->APETag()->itemListMap()["COMPOSER"].toString();
+        }
+        break;
+    case Qmmp::YEAR:
+        return QString::number(m_tag->year());
+    case Qmmp::TRACK:
+        return QString::number(m_tag->track());
+    case  Qmmp::DISCNUMBER:
+        if(m_type == TagLib::MPEG::File::ID3v2
+                && !m_file->ID3v2Tag()->frameListMap()["TPOS"].isEmpty())
+            str = m_file->ID3v2Tag()->frameListMap()["TPOS"].front()->toString();
+    }
+    return m_codec->toUnicode(str.toCString(utf)).trimmed();
 }
 
 void MpegFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
 {
-    /*if(!m_tag)
+    if(!m_tag)
+
         return;
     TagLib::String::Type type = TagLib::String::Latin1;
 
@@ -296,18 +301,8 @@ void MpegFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
         if(m_codec->name().contains("UTF"))
         {
             type = TagLib::String::UTF8;
-            if(m_codec->name().contains("UTF-16"))
-                type = TagLib::String::UTF16;
-            else if(m_codec->name().contains("UTF-16LE"))
-                type = TagLib::String::UTF16LE;
-            else if(m_codec->name().contains("UTF-16BE"))
-                type = TagLib::String::UTF16BE;
-
-
             TagLib::ID3v2::FrameFactory *factory = TagLib::ID3v2::FrameFactory::instance();
             factory->setDefaultTextEncoding(type);
-            m_codec = QTextCodec::codecForName("UTF-8");
-            type = TagLib::String::UTF8;
         }
         else
         {
@@ -385,7 +380,7 @@ void MpegFileTagModel::setValue(Qmmp::MetaData key, const QString &value)
         break;
     case Qmmp::TRACK:
         m_tag->setTrack(value.toInt());
-    }*/
+    }
 }
 
 bool MpegFileTagModel::exists() const

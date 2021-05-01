@@ -25,6 +25,8 @@
 #include <taglib/mpegfile.h>
 #include <taglib/tfilestream.h>
 
+class QmmpTextCodec;
+
 class MPEGMetaDataModel : public MetaDataModel
 {
     Q_DECLARE_TR_FUNCTIONS(MPEGMetaDataModel)
@@ -62,6 +64,7 @@ private:
     TagLib::MPEG::File *m_file;
     TagLib::Tag *m_tag;
     TagLib::MPEG::File::TagTypes m_type;
+    QmmpTextCodec *m_codec = nullptr;
 };
 
 #endif // MPEGMETADATAMODEL_H

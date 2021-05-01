@@ -28,6 +28,7 @@
 #ifdef WITH_LIBRCD
 #include <librcd.h>
 #endif
+#include <qmmp/qmmptextcodec.h>
 #include "tagextractor.h"
 
 #define CSTR_TO_QSTR(str,utf) codec->toUnicode(str.toCString(utf)).trimmed()
@@ -42,7 +43,7 @@ TagExtractor::~TagExtractor()
 
 QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag() const
 {
-    /*QByteArray array = m_input->peek(2048);
+    QByteArray array = m_input->peek(2048);
     int offset = array.indexOf("ID3");
     if (offset < 0)
         return QMap<Qmmp::MetaData, QString>();
@@ -53,23 +54,20 @@ QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag() const
 
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("MPEG");
-    QByteArray codecName = settings.value("ID3v2_encoding","UTF-8").toByteArray ();
-    QTextCodec *codec = nullptr;
+    QByteArray codecName = settings.value("ID3v2_encoding","UTF-8").toByteArray();
 
-    if(m_using_rusxmms || codecName.contains("UTF"))
-        codec = QTextCodec::codecForName("UTF-8");
-    else if(!codecName.isEmpty())
-        codec = QTextCodec::codecForName(codecName);
-
-    if (!codec)
-        codec = QTextCodec::codecForName("UTF-8");
+    if(m_using_rusxmms || codecName.contains("UTF") || codecName.isEmpty())
+        codecName = "UTF-8";
 
     if(!m_using_rusxmms && settings.value("detect_encoding", false).toBool())
     {
-        QTextCodec *detectedCodec = detectCharset(&tag);
-        codec = detectedCodec ? detectedCodec : codec;
+        QByteArray detectedCharset = TagExtractor::detectCharset(&tag);
+        if(!detectedCharset.isEmpty())
+            codecName = detectedCharset;
     }
     settings.endGroup();
+
+    QmmpTextCodec *codec = new QmmpTextCodec(codecName);
 
     bool utf = codec->name().contains("UTF");
 
@@ -93,8 +91,10 @@ QMap<Qmmp::MetaData, QString> TagExtractor::id3v2tag() const
         TagLib::String disc = tag.frameListMap()["TPOS"].front()->toString();
         tags.insert(Qmmp::DISCNUMBER, QString(disc.toCString()).trimmed());
     }
-    return tags;*/
-    return QMap<Qmmp::MetaData, QString>();
+
+    delete codec;
+
+    return tags;
 }
 
 void TagExtractor::setForceUtf8(bool enabled)

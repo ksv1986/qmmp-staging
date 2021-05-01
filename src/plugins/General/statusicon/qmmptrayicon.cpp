@@ -88,7 +88,7 @@ bool QmmpTrayIcon::hasToolTipEvent()
 
 void QmmpTrayIcon::wheelEvent(QWheelEvent *e)
 {
-    SoundCore::instance()->changeVolume(e->delta()/20);
+    SoundCore::instance()->changeVolume(e->angleDelta().y() / 20);
 }
 
 void QmmpTrayIcon::showToolTip()

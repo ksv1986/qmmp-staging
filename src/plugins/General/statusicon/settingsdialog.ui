@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>302</width>
-    <height>321</height>
+    <width>304</width>
+    <height>355</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -310,38 +310,6 @@
     <hint type="destinationlabel">
      <x>27</x>
      <y>106</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>transparencySlider</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>niceTooltipOpacityValueLabel</receiver>
-   <slot>setNum(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>252</x>
-     <y>187</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>284</x>
-     <y>188</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>coverSizeSlider</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>niceTooltipOpacityValueLabel_2</receiver>
-   <slot>setNum(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>184</x>
-     <y>203</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>261</x>
-     <y>205</y>
     </hint>
    </hints>
   </connection>

@@ -1,6 +1,6 @@
 include(../../../qmmp.pri)
 
-SUBDIRS += \#statusicon \
+SUBDIRS += statusicon \
            \#notifier \
            \#lyrics \
            \#scrobbler \
@@ -14,7 +14,7 @@ SUBDIRS += \#statusicon \
            \#listenbrainz \
            library
 
-unix:SUBDIRS += \#mpris \
+unix:SUBDIRS += mpris \
                 kdenotify \
                 converter
                 \#gnomehotkey

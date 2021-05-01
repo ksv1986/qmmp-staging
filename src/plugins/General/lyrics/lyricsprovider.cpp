@@ -23,7 +23,6 @@
 
 #include <QtDebug>
 #include <QRegularExpression>
-#include <QTextCodec>
 #include <qmmp/trackinfo.h>
 #include "lyricsprovider.h"
 

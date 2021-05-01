@@ -29,6 +29,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         : QDialog(parent)
 {
     m_ui.setupUi(this);
+    connect(m_ui.transparencySlider, &QSlider::valueChanged, m_ui.niceTooltipOpacityValueLabel, qOverload<int>(&QLabel::setNum));
+    connect(m_ui.coverSizeSlider, &QSlider::valueChanged, m_ui.niceTooltipOpacityValueLabel_2, qOverload<int>(&QLabel::setNum));
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("Tray");
     m_ui.messageGroupBox->setChecked(settings.value("show_message",false).toBool());

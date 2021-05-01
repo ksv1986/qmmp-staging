@@ -23,6 +23,7 @@
 #include <QDBusArgument>
 #include <QDBusMessage>
 #include <QDBusConnection>
+#include <QRandomGenerator>
 #include <qmmp/soundcore.h>
 #include <qmmp/metadatamanager.h>
 #include <qmmpui/mediaplayer.h>
@@ -307,7 +308,8 @@ void Player2Object::updateId()
 {
     if(m_prev_track != m_pl_manager->currentPlayList()->currentTrack())
     {
-        m_trackID = QDBusObjectPath(QString("%1/Track/%2").arg("/org/qmmp/MediaPlayer2").arg(qrand()));
+        m_trackID = QDBusObjectPath(QString("%1/Track/%2").arg("/org/qmmp/MediaPlayer2")
+                                    .arg(QRandomGenerator::global()->generate()));
         m_prev_track = m_pl_manager->currentPlayList()->currentTrack();
     }
 }

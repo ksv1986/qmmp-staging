@@ -26,7 +26,7 @@
 #include <taglib/mpcfile.h>
 #include <taglib/tfilestream.h>
 
-class QTextCodec;
+class QmmpTextCodec;
 
 class MPCMetaDataModel : public MetaDataModel
 {
@@ -56,7 +56,7 @@ public:
     void save() override;
 
 private:
-    QTextCodec *m_codec;
+    QmmpTextCodec *m_codec;
     TagLib::MPC::File *m_file;
     TagLib::Tag *m_tag;
     TagLib::MPC::File::TagTypes m_tagType;

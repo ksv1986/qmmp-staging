@@ -46,7 +46,7 @@ QList<PlayListTrack*> XSPFPlaylistFormat::decode(const QByteArray &contents)
     //remove control symbols to avoid xml errors
     for(int i = 0; i < contents_copy.size(); ++i)
     {
-        if(contents_copy[i] <= 0x1F)
+        if(contents_copy[i] <= QChar(0x1F))
         {
             contents_copy.replace(i, 1, "");
             i--;
@@ -92,7 +92,7 @@ QList<PlayListTrack*> XSPFPlaylistFormat::decode(const QByteArray &contents)
             {
                 out.last()->setValue(Qmmp::ALBUM, xml.text().toString());
             }
-            else if(currentTag == "meta" && xml.attributes().value("rel") == "year")
+            else if(currentTag == "meta" && xml.attributes().value("rel") == QLatin1String("year"))
             {
                 out.last()->setValue(Qmmp::YEAR, xml.text().toString());
             }
@@ -116,7 +116,6 @@ QByteArray XSPFPlaylistFormat::encode(const QList<PlayListTrack*> &files, const 
     QString xspfDir = QFileInfo(path).canonicalPath();
     QByteArray out;
     QXmlStreamWriter xml(&out);
-    xml.setCodec("UTF-8");
     xml.setAutoFormatting(true);
     xml.writeStartDocument();
     xml.writeStartElement("playlist");

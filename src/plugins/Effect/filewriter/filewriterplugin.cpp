@@ -20,15 +20,13 @@
 
 #include <QSettings>
 #include <QStandardPaths>
-#include <time.h>
+#include <QRandomGenerator>
 #include <qmmp/soundcore.h>
 #include <qmmpui/metadataformatter.h>
 #include "filewriterplugin.h"
 
 FileWriterPlugin::FileWriterPlugin()
-{
-    qsrand(time(nullptr));
-}
+{}
 
 FileWriterPlugin::~FileWriterPlugin()
 {
@@ -150,7 +148,7 @@ void FileWriterPlugin::init(const TrackInfo &info)
     vorbis_comment_init(&m_vc);
     vorbis_analysis_init(&m_vd, &m_vi);
     vorbis_block_init(&m_vd,&m_vb);
-    ogg_stream_init(&m_os,qrand());
+    ogg_stream_init(&m_os, QRandomGenerator::global()->generate());
     vorbis_comment_clear(&m_vc);
 
     static const struct

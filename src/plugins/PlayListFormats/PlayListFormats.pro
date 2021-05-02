@@ -1,6 +1,6 @@
 TEMPLATE = subdirs
 
-SUBDIRS += m3u pls #xspf
+SUBDIRS += m3u pls xspf
 
 
 

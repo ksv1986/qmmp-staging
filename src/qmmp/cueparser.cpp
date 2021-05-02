@@ -26,7 +26,7 @@ CueParser::CueParser()
 
 CueParser::CueParser(const QByteArray &data, const QByteArray &codecName)
 {
-    loadData(data/*, codecName*/);
+    loadData(data, codecName);
 }
 
 CueParser::~CueParser()
@@ -34,20 +34,20 @@ CueParser::~CueParser()
     clear();
 }
 
-/*void CueParser::loadData(const QByteArray &data, const QByteArray &codecName = QByteArray())
+void CueParser::loadData(const QByteArray &data, const QByteArray &codecName)
 {
-    loadData(data, QTextCodec::codecForName(codecName));
-}*/
+    QmmpTextCodec codec(codecName);
+    loadData(data, &codec);
+}
 
-void CueParser::loadData(const QByteArray &data/*, QTextCodec *codec*/)
+void CueParser::loadData(const QByteArray &data, QmmpTextCodec *codec)
 {
     clear();
 
     QString artist, album, genre, date, comment, file;
     double album_peak = 0.0, album_gain = 0.0;
-    QTextStream textStream(data);
-
-    //textStream.setCodec(codec ? codec : QTextCodec::codecForName("UTF-8"));
+    QString str = codec->toUnicode(data);
+    QTextStream textStream(&str, QIODeviceBase::ReadOnly);
 
     while (!textStream.atEnd())
     {

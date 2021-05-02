@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011-2016 by Ilya Kotov                                 *
+ *   Copyright (C) 2011-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -44,9 +44,9 @@ void PositionSlider::mousePressEvent (QMouseEvent *event)
         if (orientation() == Qt::Vertical)
             val = minimum() + ((maximum() - minimum()) * (height() - event->position().y())) / height();
         else if(layoutDirection() == Qt::RightToLeft)
-            val = maximum() - ((maximum() - minimum()) * event->position().y()) / width();
+            val = maximum() - ((maximum() - minimum()) * event->position().x()) / width();
         else
-            val = minimum() + ((maximum() - minimum()) * event->position().y()) / width();
+            val = minimum() + ((maximum() - minimum()) * event->position().x()) / width();
 
         if (invertedAppearance() == true)
         {

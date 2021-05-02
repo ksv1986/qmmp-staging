@@ -144,6 +144,7 @@ unix {
         volume.h \
         volumehandler.h \
         cueparser.h \
+        qmmptextcodec.h \
         qmmp_export.h
 
     isEmpty(APP_NAME_SUFFIX) {

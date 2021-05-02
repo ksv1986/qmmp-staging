@@ -97,7 +97,7 @@ void TitleBar::mousePressEvent(QMouseEvent* event)
         Dock::instance()->updateDock();
         break;
     case Qt::RightButton:
-        m_mw->menu()->exec(event->globalPos());
+        m_mw->menu()->exec(event->globalPosition().toPoint());
     }
 }
 
@@ -109,7 +109,7 @@ void TitleBar::mouseMoveEvent(QMouseEvent* event)
 {
     if (m_pos.x() < width() - m_skin->ratio() * 37)
     {
-        QPoint npos = (event->globalPos()-m_pos);
+        QPoint npos = (event->globalPosition().toPoint() - m_pos);
         Dock::instance()->move(m_mw, npos);
     }
 }

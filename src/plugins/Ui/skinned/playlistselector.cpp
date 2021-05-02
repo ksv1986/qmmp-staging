@@ -242,10 +242,10 @@ void PlayListSelector::mousePressEvent (QMouseEvent *e)
     if(e->button() == Qt::RightButton)
     {
         update();
-        m_menu->exec(e->globalPos());
+        m_menu->exec(e->globalPosition().toPoint());
         return;
     }
-    else if(e->button() == Qt::MidButton && selected)
+    else if(e->button() == Qt::MiddleButton && selected)
     {
         m_pl_manager->removePlayList(m_pl_manager->selectedPlayList());
     }
@@ -290,7 +290,7 @@ void PlayListSelector::mouseReleaseEvent (QMouseEvent *e)
 
 void PlayListSelector::mouseDoubleClickEvent (QMouseEvent *e)
 {
-    if(e->button() == Qt::LeftButton && !(m_scrollable && (e->x() > width() - 40)))
+    if(e->button() == Qt::LeftButton && !(m_scrollable && (e->position().x() > width() - 40)))
         ACTION(ActionManager::PL_RENAME)->trigger();
     else
         QWidget::mouseDoubleClickEvent(e);

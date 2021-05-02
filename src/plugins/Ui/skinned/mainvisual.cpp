@@ -120,7 +120,7 @@ void MainVisual::showEvent (QShowEvent *)
 void MainVisual::mousePressEvent (QMouseEvent *e)
 {
     if (e->button() == Qt::RightButton)
-        m_menu->exec(e->globalPos());
+        m_menu->exec(e->globalPosition().toPoint());
     else
     {
         m_pixmap = m_bg;

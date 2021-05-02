@@ -47,14 +47,14 @@ ShadedBar::~ShadedBar()
 void ShadedBar::mousePressEvent(QMouseEvent *e)
 {
     m_moving = true;
-    m_press_pos = e->x();
-    if(m_pos < e->x() && e->x() < m_pos+3)
+    m_press_pos = e->position().x();
+    if(m_pos < e->position().x() && e->position().x() < m_pos+3)
     {
-        m_press_pos = e->x() - m_pos;
+        m_press_pos = e->position().x() - m_pos;
     }
     else
     {
-        m_value = convert(qMax(qMin(width() - 3, e->x() - 1), 0));
+        m_value = convert(qMax(qMin(width() - 3, qRound(e->position().x()) - 1), 0));
         m_press_pos = 1;
         if (m_value != m_old)
         {
@@ -68,7 +68,7 @@ void ShadedBar::mouseMoveEvent (QMouseEvent *e)
 {
     if(m_moving)
     {
-        int po = e->x();
+        int po = e->position().x();
         po = po - m_press_pos;
 
         if(0 <= po && po <= width() - 3)

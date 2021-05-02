@@ -171,7 +171,7 @@ void ListWidget::paintEvent(QPaintEvent *)
 
 void ListWidget::mouseDoubleClickEvent (QMouseEvent *e)
 {
-    int y = e->y();
+    int y = e->position().y();
     int index = indexAt(y);
     if (INVALID_INDEX != index)
     {
@@ -186,7 +186,7 @@ void ListWidget::mousePressEvent(QMouseEvent *e)
     if(m_popupWidget)
         m_popupWidget->hide();
 
-    int index = indexAt(e->y());
+    int index = indexAt(e->position().y());
 
     if (INVALID_INDEX != index && m_model->count() > index)
     {
@@ -249,14 +249,14 @@ void ListWidget::resizeEvent(QResizeEvent *e)
     QWidget::resizeEvent(e);
 }
 
-void ListWidget::wheelEvent (QWheelEvent *e)
+void ListWidget::wheelEvent(QWheelEvent *e)
 {
     if (m_model->count() <= m_row_count)
         return;
-    if ((m_first == 0 && e->delta() > 0) ||
-            ((m_first == m_model->count() - m_row_count) && e->delta() < 0))
+    if ((m_first == 0 && e->angleDelta().y() > 0) ||
+            ((m_first == m_model->count() - m_row_count) && e->angleDelta().y() < 0))
         return;
-    m_first -= e->delta()/40;  //40*3 TODO: add step to config
+    m_first -= e->angleDelta().y() / 40;  //40*3 TODO: add step to config
     if (m_first < 0)
         m_first = 0;
 
@@ -504,7 +504,7 @@ void ListWidget::dropEvent(QDropEvent *event)
         event->acceptProposedAction();
         QApplication::restoreOverrideCursor();
 
-        int index = indexAt(event->pos().y());
+        int index = indexAt(event->position().y());
         if(index == INVALID_INDEX)
             index = qMin(m_first + m_row_count, m_model->count());
 
@@ -530,7 +530,7 @@ void ListWidget::dragLeaveEvent(QDragLeaveEvent *)
 
 void ListWidget::dragMoveEvent(QDragMoveEvent *event)
 {
-    int index = indexAt(event->pos().y());
+    int index = indexAt(event->position().y());
     if(index == INVALID_INDEX)
         index = qMin(m_first + m_row_count, m_model->count());
     if(index != m_drop_index)
@@ -621,14 +621,14 @@ void ListWidget::mouseMoveEvent(QMouseEvent *e)
 {
     if(e->buttons() == Qt::LeftButton)
     {
-        if (m_prev_y > e->y())
+        if (m_prev_y > e->position().y())
             m_scroll_direction = TOP;
-        else if (m_prev_y < e->y())
+        else if (m_prev_y < e->position().y())
             m_scroll_direction = DOWN;
         else
             m_scroll_direction = NONE;
 
-        if(e->y() < 0 || e->y() > height())
+        if(e->position().y() < 0 || e->position().y() > height())
         {
             if(!m_timer->isActive())
                 m_timer->start();
@@ -636,7 +636,7 @@ void ListWidget::mouseMoveEvent(QMouseEvent *e)
         }
         m_timer->stop();
 
-        int index = indexAt(e->y());
+        int index = indexAt(e->position().y());
 
         if (INVALID_INDEX != index)
         {
@@ -654,13 +654,13 @@ void ListWidget::mouseMoveEvent(QMouseEvent *e)
             }
             m_model->moveItems(m_pressed_index,index);
 
-            m_prev_y = e->y();
+            m_prev_y = e->position().y();
             m_pressed_index = index;
         }
     }
     else if(m_popupWidget)
     {
-        int index = indexAt(e->y());
+        int index = indexAt(e->position().y());
         if(index < 0 || !m_model->isTrack(index) || m_popupWidget->url() != m_model->track(index)->path())
             m_popupWidget->deactivate();
     }

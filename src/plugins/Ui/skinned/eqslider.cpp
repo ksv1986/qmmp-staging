@@ -43,22 +43,22 @@ EqSlider::~EqSlider()
 void EqSlider::mousePressEvent(QMouseEvent *e)
 {
     m_moving = true;
-    press_pos = e->y();
-    if (e->button() == Qt::MidButton)
+    press_pos = e->position().y();
+    if (e->button() == Qt::MiddleButton)
     {
         m_value = 0;
         emit sliderMoved(m_value);
         m_old = m_value;
     }
-    else if (m_pos<e->y() && e->y()<m_pos+11*m_skin->ratio())
+    else if (m_pos<e->position().y() && e->position().y()<m_pos+11*m_skin->ratio())
     {
-        press_pos = e->y()-m_pos;
+        press_pos = e->position().y()-m_pos;
     }
     else
     {
-        m_value = convert(qMax(qMin(height()-12*m_skin->ratio(),e->y()-6*m_skin->ratio()),0));
+        m_value = convert(qMax(qMin(height() - 12 * m_skin->ratio(), qRound(e->position().y()) - 6 * m_skin->ratio()),0));
         press_pos = 6*m_skin->ratio();
-        if (m_value!=m_old)
+        if (m_value != m_old)
         {
             emit sliderMoved(m_value);
             m_old = m_value;
@@ -77,7 +77,7 @@ void EqSlider::mouseMoveEvent(QMouseEvent* e)
 {
     if (m_moving)
     {
-        int po = e->y();
+        int po = e->position().y();
         po = po - press_pos;
 
         if (0<=po && po<=height()-12*m_skin->ratio())
@@ -141,7 +141,7 @@ double EqSlider::convert(int p)
 
 void EqSlider::wheelEvent(QWheelEvent *e)
 {
-    m_value -= double(e->delta())/60;
+    m_value -= double(e->angleDelta().y()) / 60;
     m_value = m_value > m_max ? m_max : m_value;
     m_value = m_value < m_min ? m_min : m_value;
     draw(false);

@@ -751,13 +751,13 @@ void Skin::loadLetters(void)
     /* alphabet */
     for (uint i = 97; i < 123; i++)
     {
-        m_letters.insert(i, letters[0][i-97]);
+        m_letters.insert(QChar(i), letters[0][i-97]);
     }
 
     /* digits */
     for (uint i = 0; i <= 9; i++)
     {
-        m_letters.insert (i+48, letters[1][i]);
+        m_letters.insert (QChar(i + 48), letters[1][i]);
     }
 
     /* special characters */
@@ -785,9 +785,9 @@ void Skin::loadLetters(void)
     m_letters.insert('$',  letters[1][29]);
     m_letters.insert('#',  letters[1][30]);
 
-    m_letters.insert(229, letters[2][0]);
-    m_letters.insert(246, letters[2][1]);
-    m_letters.insert(228, letters[2][2]);
+    m_letters.insert(QChar(229), letters[2][0]);
+    m_letters.insert(QChar(246), letters[2][1]);
+    m_letters.insert(QChar(228), letters[2][2]);
     m_letters.insert('?', letters[2][3]);
     m_letters.insert('*', letters[2][4]);
     m_letters.insert(' ', letters[2][5]);
@@ -908,7 +908,7 @@ QRegion Skin::createRegion(const QString &path, const QString &group)
     settings.endGroup();
     QStringList numbers;
     for(const QString &str : qAsConst(value))
-        numbers << str.split(" ", QString::SkipEmptyParts);
+        numbers << str.split(" ", Qt::SkipEmptyParts);
 
     QList<QString>::const_iterator n = numbers.constBegin();
     int r = m_double_size ? 2 : 1;

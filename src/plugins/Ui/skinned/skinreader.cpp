@@ -140,7 +140,7 @@ void SkinReader::untar(const QString &from, const QString &to, bool preview)
     m_process->start("tar", args);
     m_process->waitForFinished();
     array = m_process->readAllStandardOutput ();
-    const QStringList outputList = QString(array).split("\n", QString::SkipEmptyParts);
+    const QStringList outputList = QString(array).split("\n", Qt::SkipEmptyParts);
     for(QString str : qAsConst(outputList))
     {
         str = str.trimmed();

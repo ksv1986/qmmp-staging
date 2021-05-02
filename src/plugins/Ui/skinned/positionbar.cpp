@@ -48,18 +48,18 @@ void PositionBar::mousePressEvent(QMouseEvent *e)
     if(m_max <= 0)
         return;
     m_moving = true;
-    press_pos = e->x();
-    if (m_pos<e->x() && e->x()<m_pos+29*m_skin->ratio())
+    press_pos = e->position().x();
+    if (m_pos < e->position().x() && e->position().x() < m_pos+29*m_skin->ratio())
     {
-        press_pos = e->x()-m_pos;
+        press_pos = e->position().x() - m_pos;
         emit sliderPressed();
     }
     else
     {
-        m_value = convert(qMax(qMin(width()-30*m_skin->ratio(),e->x()-15*m_skin->ratio()),0));
+        m_value = convert(qMax(qMin(width() - 30 * m_skin->ratio(), qRound(e->position().x()) - 15 * m_skin->ratio()), 0));
         press_pos = 15*m_skin->ratio();
         emit sliderPressed();
-        if (m_value!=m_old)
+        if (m_value != m_old)
         {
             emit sliderMoved(m_value);
 
@@ -72,10 +72,10 @@ void PositionBar::mouseMoveEvent (QMouseEvent *e)
 {
     if (m_moving)
     {
-        qint64 po = e->x();
+        qint64 po = e->position().x();
         po = po - press_pos;
 
-        if (0<=po && po<=width()-30*m_skin->ratio())
+        if (0<=po && po <= width() - 30*m_skin->ratio())
         {
             m_value = convert(po);
             draw();
@@ -89,7 +89,7 @@ void PositionBar::wheelEvent(QWheelEvent *e)
     if(m_max == 0)
         return;
 
-    if(e->delta() > 0)
+    if(e->angleDelta().y() > 0)
         m_value += 5000;
     else
         m_value -= 5000;

@@ -37,6 +37,9 @@ SkinnedSettings::SkinnedSettings(QWidget *parent) : QWidget(parent)
     m_skin = Skin::instance();
     m_reader = new SkinReader(this);
     connect(m_ui.skinReloadButton, SIGNAL (clicked()), SLOT(loadSkins()));
+    connect(m_ui.plTransparencySlider, &QSlider::valueChanged, m_ui.plTransparencyLabel, qOverload<int>(&QLabel::setNum));
+    connect(m_ui.mwTransparencySlider, &QSlider::valueChanged, m_ui.mwTransparencyLabel, qOverload<int>(&QLabel::setNum));
+    connect(m_ui.eqTransparencySlider, &QSlider::valueChanged, m_ui.eqTransparencyLabel, qOverload<int>(&QLabel::setNum));
     readSettings();
     loadSkins();
     loadFonts();

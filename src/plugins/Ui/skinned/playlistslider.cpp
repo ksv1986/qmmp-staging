@@ -65,16 +65,16 @@ void PlayListSlider::mousePressEvent(QMouseEvent *e)
 {
     m_moving = true;
     m_pressed = true;
-    m_press_pos = e->y();
-    if (m_pos<e->y() && e->y()<m_pos+18*m_skin->ratio())
+    m_press_pos = e->position().y();
+    if (m_pos < e->position().y() && e->position().y() < m_pos + 18 * m_skin->ratio())
     {
-        m_press_pos = e->y()-m_pos;
+        m_press_pos = e->position().y()-m_pos;
     }
     else
     {
-        m_value = convert(qMax(qMin(height()-18*m_skin->ratio(),e->y()-9*m_skin->ratio()),0));
-        m_press_pos = 9*m_skin->ratio();
-        if (m_value!=m_old)
+        m_value = convert(qMax(qMin(height() - 18 * m_skin->ratio(), qRound(e->position().y()) - 9 * m_skin->ratio()),0));
+        m_press_pos = 9 * m_skin->ratio();
+        if (m_value != m_old)
         {
             emit sliderMoved(m_value);
             m_old = m_value;
@@ -95,7 +95,7 @@ void PlayListSlider::mouseMoveEvent(QMouseEvent* e)
 {
     if (m_moving)
     {
-        int po = e->y();
+        int po = e->position().y();
         po = po - m_press_pos;
 
         if (0 <= po && po <= height() - 18*m_skin->ratio())

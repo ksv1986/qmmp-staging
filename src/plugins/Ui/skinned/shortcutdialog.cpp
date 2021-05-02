@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2010-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -56,7 +56,7 @@ void ShortcutDialog::keyPressEvent (QKeyEvent *event)
         QWidget::keyPressEvent(event);
         return;
     }
-    QKeySequence seq(event->modifiers() + event->key());
+    QKeySequence seq(event->modifiers() | event->key());
     m_ui.keyLineEdit->setText(seq.toString());
     QWidget::keyPressEvent(event);
 }

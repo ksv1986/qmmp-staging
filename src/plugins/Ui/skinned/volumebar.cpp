@@ -45,15 +45,15 @@ VolumeBar::~VolumeBar()
 void VolumeBar::mousePressEvent(QMouseEvent *e)
 {
     m_moving = true;
-    press_pos = e->x();
-    if(m_pos<e->x() && e->x()<m_pos+11*m_skin->ratio())
+    press_pos = e->position().x();
+    if(m_pos<e->position().x() && e->position().x()<m_pos+11*m_skin->ratio())
     {
-        press_pos = e->x()-m_pos;
+        press_pos = e->position().x()-m_pos;
         emit sliderPressed();
     }
     else
     {
-        m_value = convert(qMax(qMin(width()-18*m_skin->ratio(),e->x()-6*m_skin->ratio()),0));
+        m_value = convert(qMax(qMin(width() - 18 * m_skin->ratio(), qRound(e->position().x()) - 6 * m_skin->ratio()), 0));
         press_pos = 6*m_skin->ratio();
         emit sliderPressed();
         if (m_value != m_old)
@@ -66,10 +66,10 @@ void VolumeBar::mouseMoveEvent (QMouseEvent *e)
 {
     if(m_moving)
     {
-        int po = e->x();
+        int po = e->position().x();
         po = po - press_pos;
 
-        if(0<=po && po<=width()-18*m_skin->ratio())
+        if(0 <= po && po <= width() - 18 * m_skin->ratio())
         {
             m_value = convert(po);
             draw();

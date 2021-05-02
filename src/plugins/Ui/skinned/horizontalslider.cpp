@@ -63,17 +63,17 @@ void HorizontalSlider::paintEvent(QPaintEvent *)
 
 void HorizontalSlider::mousePressEvent(QMouseEvent *e)
 {
-    m_press_pos = e->x();
-    if (m_slider_pos < e->x() && e->x() < m_slider_pos + sliderSize())
+    m_press_pos = e->position().x();
+    if (m_slider_pos < e->position().x() && e->position().x() < m_slider_pos + sliderSize())
     {
-        m_press_pos = e->x() - m_slider_pos;
+        m_press_pos = e->position().x() - m_slider_pos;
     }
     update();
 }
 
 void HorizontalSlider::mouseMoveEvent(QMouseEvent* e)
 {
-    int po = e->x() - m_press_pos;
+    int po = e->position().x() - m_press_pos;
     bool rtl = (layoutDirection() == Qt::RightToLeft);
 
     if (0 <= po && po <= width() - sliderSize())

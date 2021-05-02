@@ -171,11 +171,11 @@ void TextScroller::paintEvent (QPaintEvent *)
 void TextScroller::mousePressEvent (QMouseEvent *e)
 {
     if (e->button() == Qt::RightButton)
-        m_menu->exec(e->globalPos());
+        m_menu->exec(e->globalPosition().toPoint());
     else if (e->button() == Qt::LeftButton && m_scroll)
     {
         m_timer->stop();
-        m_press_pos = e->x() - m_x1;
+        m_press_pos = e->position().x() - m_x1;
         m_pressed = true;
     }
     else
@@ -185,7 +185,7 @@ void TextScroller::mousePressEvent (QMouseEvent *e)
 void TextScroller::mouseReleaseEvent (QMouseEvent *e)
 {
    if(e->button() == Qt::RightButton)
-        m_menu->exec(e->globalPos());
+        m_menu->exec(e->globalPosition().toPoint());
     else if (e->button() == Qt::LeftButton && m_scroll)
         m_timer->start();
     else
@@ -198,7 +198,7 @@ void TextScroller::mouseMoveEvent (QMouseEvent *e)
     if (m_pressed)
     {
         int bound = m_pixmap.width();
-        m_x1 = (e->x() - m_press_pos) % bound;
+        m_x1 = (qRound(e->position().x()) - m_press_pos) % bound;
         if (m_x1 > 0)
             m_x1 -= bound;
         m_x2 = m_x1 + m_pixmap.width();

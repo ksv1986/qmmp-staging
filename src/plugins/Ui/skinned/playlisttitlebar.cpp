@@ -173,7 +173,7 @@ void PlayListTitleBar::mousePressEvent(QMouseEvent* event)
         }
         break;
     case Qt::RightButton:
-        m_mw->menu()->exec(event->globalPos());
+        m_mw->menu()->exec(event->globalPosition().toPoint());
     }
 }
 
@@ -186,7 +186,7 @@ void PlayListTitleBar::mouseReleaseEvent(QMouseEvent*)
 
 void PlayListTitleBar::mouseMoveEvent(QMouseEvent* event)
 {
-    QPoint npos = event->globalPos()-pos;
+    QPoint npos = event->globalPosition().toPoint() - pos;
     if (m_shaded && m_resize)
     {
 #ifdef QMMP_WS_X11
@@ -196,7 +196,7 @@ void PlayListTitleBar::mouseMoveEvent(QMouseEvent* event)
 #endif
 
         int dx = 25 * m_ratio;
-        int sx = ((event->x() - 275 * m_ratio) + 14) / dx;
+        int sx = ((event->position().x() - 275 * m_ratio) + 14) / dx;
         sx = qMax(sx, 0);
         resize(275 * m_ratio + dx * sx, height());
 

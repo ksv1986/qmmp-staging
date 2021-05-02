@@ -315,9 +315,9 @@ void MainDisplay::updatePosition()
     m_core->seek(m_posbar->value());
 }
 
-void MainDisplay::wheelEvent (QWheelEvent *e)
+void MainDisplay::wheelEvent(QWheelEvent *e)
 {
-    m_core->changeVolume(e->delta()/10);
+    m_core->changeVolume(e->angleDelta().y() / 10);
 }
 
 bool MainDisplay::isRepeatable() const
@@ -343,7 +343,7 @@ void MainDisplay::setIsShuffle(bool yes)
 void MainDisplay::mousePressEvent(QMouseEvent *e)
 {
     if (e->button() == Qt::RightButton)
-        m_mw->menu()->exec(e->globalPos());
+        m_mw->menu()->exec(e->globalPosition().toPoint());
     else if(e->button() == Qt::LeftButton && m_aboutWidget->underMouse())
         m_mw->about();
     PixmapWidget::mousePressEvent(e);

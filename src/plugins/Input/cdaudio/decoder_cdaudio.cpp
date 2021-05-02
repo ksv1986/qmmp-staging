@@ -25,11 +25,7 @@
 #include <QFileInfo>
 #include <QDir>
 #include <cdio/cdio.h>
-#if LIBCDIO_VERSION_NUM <= 83
-#include <cdio/cdda.h>
-#else
 #include <cdio/paranoia/cdda.h>
-#endif
 #include <cdio/audio.h>
 #include <cdio/cd_types.h>
 #include <cdio/logging.h>
@@ -197,18 +193,6 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
             return tracks;
         }
         //cd text
-#if LIBCDIO_VERSION_NUM <= 83
-        cdtext_t *cdtext = use_cd_text ? cdio_get_cdtext(pcdrom_drive->p_cdio, i) : nullptr;
-        if (cdtext && cdtext->field[CDTEXT_TITLE])
-        {
-            t.info.setValue(Qmmp::TITLE, QString::fromLocal8Bit(cdtext->field[CDTEXT_TITLE]));
-            t.info.setValue(Qmmp::ARTIST, QString::fromLocal8Bit(cdtext->field[CDTEXT_PERFORMER]));
-            t.info.setValue(Qmmp::GENRE, QString::fromLocal8Bit(cdtext->field[CDTEXT_GENRE]));
-            t.info.setValue(Qmmp::COMMENT, QString::fromLocal8Bit(cdtext->field[CDTEXT_MESSAGE]));
-            t.info.setValue(Qmmp::COMPOSER, QString::fromLocal8Bit(cdtext->field[CDTEXT_COMPOSER]));
-            use_cddb = false;
-        }
-#else
         cdtext_t *cdtext = use_cd_text ? cdio_get_cdtext(pcdrom_drive->p_cdio) : nullptr;
         if (cdtext)
         {
@@ -219,7 +203,6 @@ QList<CDATrack> DecoderCDAudio::generateTrackList(const QString &device, TrackIn
             t.info.setValue(Qmmp::COMPOSER, QString::fromUtf8(cdtext_get_const(cdtext,CDTEXT_FIELD_COMPOSER,i)));
             use_cddb = false;
         }
-#endif
         else
             t.info.setValue(Qmmp::TITLE, QString("CDA Track %1").arg(i, 2, 10, QChar('0')));
         tracks  << t;

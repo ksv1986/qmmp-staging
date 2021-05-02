@@ -1,23 +1,23 @@
 include(../../../qmmp.pri)
 
 SUBDIRS += statusicon \
-           \#notifier \
-           \#lyrics \
-           \#scrobbler \
-           \#fileops \
+           notifier \
+           lyrics \
+           scrobbler \
+           fileops \
            covermanager \
            streambrowser \
            trackchange \
            copypaste \
            rgscan \
            \#hotkey \
-           \#listenbrainz \
+           listenbrainz \
            library
 
 unix:SUBDIRS += mpris \
                 kdenotify \
-                converter
-                \#gnomehotkey
+                converter \
+                gnomehotkey
 
 contains(CONFIG, UDISKS2_PLUGIN){
     unix:SUBDIRS += udisks2

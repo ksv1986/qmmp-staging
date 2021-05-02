@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>310</width>
+    <width>322</width>
     <height>512</height>
    </rect>
   </property>
@@ -268,7 +268,7 @@
        </layout>
       </item>
       <item row="7" column="2">
-       <widget class="QLabel" name="trasparencyLabel">
+       <widget class="QLabel" name="transparencyLabel">
         <property name="minimumSize">
          <size>
           <width>18</width>
@@ -450,38 +450,6 @@
     <hint type="destinationlabel">
      <x>95</x>
      <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>transparencySlider</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>trasparencyLabel</receiver>
-   <slot>setNum(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>263</x>
-     <y>208</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>293</x>
-     <y>210</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>coverSizeSlider</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>coverSizeLabel</receiver>
-   <slot>setNum(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>263</x>
-     <y>186</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>293</x>
-     <y>188</y>
     </hint>
    </hints>
   </connection>

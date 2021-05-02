@@ -31,6 +31,9 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 {
     m_ui.setupUi(this);
 
+    connect(m_ui.transparencySlider, &QSlider::valueChanged, m_ui.transparencyLabel, qOverload<int>(&QLabel::setNum));
+    connect(m_ui.coverSizeSlider, &QSlider::valueChanged, m_ui.coverSizeLabel, qOverload<int>(&QLabel::setNum));
+
     m_buttons.insert(PopupWidget::TOPLEFT, m_ui.topLeftButton);
     m_buttons.insert(PopupWidget::TOP, m_ui.topButton);
     m_buttons.insert(PopupWidget::TOPRIGHT, m_ui.topRightButton);

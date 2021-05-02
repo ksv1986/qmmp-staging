@@ -46,7 +46,7 @@ MediaKeys::MediaKeys(QObject *parent) :
                                      QDBusConnection::sessionBus(), this);
 
     QDBusPendingReply<> reply = grabMediaPlayerKeys(QCoreApplication::applicationName(),
-                                                    QDateTime::currentDateTime().toTime_t());
+                                                    QDateTime::currentDateTime().toSecsSinceEpoch());
 
     QDBusPendingCallWatcher* watcher = new QDBusPendingCallWatcher(reply, this);
     connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)), SLOT(onRegisterFinished(QDBusPendingCallWatcher*)));

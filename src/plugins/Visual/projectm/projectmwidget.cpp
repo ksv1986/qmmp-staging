@@ -139,7 +139,7 @@ void ProjectMWidget::paintGL()
 void ProjectMWidget::mousePressEvent (QMouseEvent *event)
 {
     if (event->button () == Qt::RightButton)
-        m_menu->exec(event->globalPos());
+        m_menu->exec(event->globalPosition().toPoint());
 }
 
 void ProjectMWidget::createActions()

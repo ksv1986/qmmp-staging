@@ -10,30 +10,16 @@ SET(libcrossfade_SRCS
     crossfadeplugin.cpp
     settingsdialog.cpp
     effectcrossfadefactory.cpp
-)
-
-SET(libcrossfade_HDRS
-    crossfadeplugin.h
-)
-
-SET(libcrossfade_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libcrossfade_RCC_SRCS ${libcrossfade_RCCS})
-
-# user interface
-
-SET(libcrossfade_UIS
     settingsdialog.ui
+    translations/translations.qrc
 )
 
-QT5_WRAP_UI(libcrossfade_UIS_H ${libcrossfade_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 
-ADD_LIBRARY(crossfade MODULE ${libcrossfade_SRCS} ${libcrossfade_UIS_H} ${libcrossfade_RCC_SRCS}
-${libcrossfade_HDRS})
+ADD_LIBRARY(crossfade MODULE ${libcrossfade_SRCS})
 add_dependencies(crossfade libqmmp)
-target_link_libraries(crossfade Qt5::Widgets libqmmp)
+target_link_libraries(crossfade PRIVATE Qt6::Widgets libqmmp)
 install(TARGETS crossfade DESTINATION ${PLUGIN_DIR}/Effect)

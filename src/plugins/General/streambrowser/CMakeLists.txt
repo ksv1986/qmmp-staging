@@ -12,26 +12,16 @@ SET(libstreambrowser_SRCS
     streambrowserfactory.cpp
     streamwindow.cpp
     editstreamdialog.cpp
-)
-
-SET(libstreambrowser_RCCS
-    translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libstreambrowser_RCC_SRCS ${libstreambrowser_RCCS})
-
-# user interface
-
-SET(libstreambrowser_UIS
     streamwindow.ui
     editstreamdialog.ui
+    translations/translations.qrc
 )
 
-QT5_WRAP_UI(libstreambrowser_UIS_H ${libstreambrowser_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(streambrowser MODULE ${libstreambrowser_SRCS} ${libstreambrowser_UIS_H} ${libstreambrowser_RCC_SRCS})
+ADD_LIBRARY(streambrowser MODULE ${libstreambrowser_SRCS})
 add_dependencies(streambrowser libqmmpui)
-target_link_libraries(streambrowser Qt5::Widgets Qt5::Network libqmmpui libqmmp)
+target_link_libraries(streambrowser PRIVATE Qt6::Widgets Qt6::Network libqmmpui libqmmp)
 install(TARGETS streambrowser DESTINATION ${PLUGIN_DIR}/General)

@@ -18,25 +18,16 @@ SET(libmms_SRCS
     mmsinputfactory.cpp
     mmsinputsource.cpp
     settingsdialog.cpp
-)
-
-# resources
-SET(libmms_RCCS translations/translations.qrc)
-QT5_ADD_RESOURCES(libmms_RCC_SRCS ${libmms_RCCS})
-
-# user interface
-SET(libmms_UIS
     settingsdialog.ui
+    translations/translations.qrc
 )
-QT5_WRAP_UI(libmms_UIS_H ${libmms_UIS})
-
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 IF(MMS_FOUND)
-ADD_LIBRARY(mms MODULE ${libmms_SRCS} ${libmms_UIS_H} ${libmms_RCC_SRCS})
-target_link_libraries(mms Qt5::Widgets libqmmp ${MMS_LDFLAGS})
+ADD_LIBRARY(mms MODULE ${libmms_SRCS})
+target_link_libraries(mms PRIVATE Qt6::Widgets libqmmp ${MMS_LDFLAGS})
 add_dependencies(mms libqmmp)
 install(TARGETS mms DESTINATION ${PLUGIN_DIR}/Transports)
 ENDIF(MMS_FOUND)

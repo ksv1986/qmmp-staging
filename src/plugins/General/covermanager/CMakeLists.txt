@@ -13,28 +13,15 @@ SET(libcovermanager_SRCS
     coverwidget.cpp
     covermanager.cpp
     covermanagerfactory.cpp
-)
-
-SET(libcovermanager_RCCS
     translations/translations.qrc
     images/cm_images.qrc
 )
 
-QT5_ADD_RESOURCES(libcovermanager_RCC_SRCS ${libcovermanager_RCCS})
-
-# user interface
-
-
-SET(libcovermanager_UIS
-)
-
-QT5_WRAP_UI(libcovermanager_UIS_H ${libcovermanager_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(covermanager MODULE ${libcovermanager_SRCS} ${libcovermanager_UIS_H}
-  ${libcovermanager_RCC_SRCS})
+ADD_LIBRARY(covermanager MODULE ${libcovermanager_SRCS})
 add_dependencies(covermanager libqmmpui)
-target_link_libraries(covermanager Qt5::Widgets libqmmpui libqmmp)
+target_link_libraries(covermanager PRIVATE Qt6::Widgets libqmmpui libqmmp)
 install(TARGETS covermanager DESTINATION ${PLUGIN_DIR}/General)

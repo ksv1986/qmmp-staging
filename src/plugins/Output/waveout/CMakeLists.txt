@@ -14,21 +14,13 @@ CHECK_INCLUDE_FILE(windows.h WINDOWS_H_FOUND)
 SET(libwaveout_SRCS
   outputwaveout.cpp
   outputwaveoutfactory.cpp
+  translations/translations.qrc
 )
-
-SET(libwaveout_HDRS
-  outputwaveout.h
-)
-
-SET(libwaveout_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libwaveout_RCC_SRCS ${libwaveout_RCCS})
-
 
 IF(WINDOWS_H_FOUND)
 ADD_LIBRARY(waveout MODULE ${libwaveout_SRCS} ${libwaveout_RCC_SRCS} ${libwaveout_HDRS})
 add_dependencies(waveout libqmmp)
-target_link_libraries(waveout Qt5::Widgets libqmmp -lwinmm)
+target_link_libraries(waveout PRIVATE Qt6::Widgets libqmmp -lwinmm)
 install(TARGETS waveout DESTINATION ${PLUGIN_DIR}/Output)
 ENDIF(WINDOWS_H_FOUND)
 

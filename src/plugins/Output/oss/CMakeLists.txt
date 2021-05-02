@@ -19,24 +19,11 @@ SET(liboss_SRCS
   outputossfactory.cpp
   outputoss.cpp
   settingsdialog.cpp
+  settingsdialog.ui
+  translations/translations.qrc
 )
 
-SET(liboss_HDRS
-  outputoss.h
-)
-
-SET(liboss_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(liboss_RCC_SRCS ${liboss_RCCS})
-
-SET(liboss_UIS
-    settingsdialog.ui
-)
-
-QT5_WRAP_UI(liboss_UIS_H ${liboss_UIS})
-
-ADD_LIBRARY(oss MODULE ${liboss_SRCS} ${liboss_UIS_H}
-  ${liboss_RCC_SRCS} ${liboss_HDRS})
+ADD_LIBRARY(oss MODULE ${liboss_SRCS})
 add_dependencies(oss libqmmp)
-target_link_libraries(oss Qt5::Widgets libqmmp)
+target_link_libraries(oss PRIVATE Qt6::Widgets libqmmp)
 install(TARGETS oss DESTINATION ${PLUGIN_DIR}/Output)

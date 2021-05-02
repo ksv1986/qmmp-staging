@@ -7,7 +7,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
 link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
 # libcdaudio
-pkg_check_modules(CDIO libcdio libcdio_cdda libcdio_paranoia libcddb)
+pkg_check_modules(CDIO libcdio>=1.0.0 libcdio_cdda libcdio_paranoia libcddb)
 
 include_directories(${CDIO_INCLUDE_DIRS})
 link_directories(${CDIO_LIBRARY_DIRS})
@@ -17,31 +17,17 @@ SET(libcdaudio_SRCS
   decoder_cdaudio.cpp
   decodercdaudiofactory.cpp
   settingsdialog.cpp
+  settingsdialog.ui
+  translations/translations.qrc
 )
 
-SET(libcdaudio_HDRS
-  decoder_cdaudio.h
-)
-
-SET(libcdaudio_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libcdaudio_RCC_SRCS ${libcdaudio_RCCS})
-
-# user interface
-
-SET(libcdaudio_UIS
-    settingsdialog.ui
-)
-
-QT5_WRAP_UI(libcdaudio_UIS_H ${libcdaudio_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(CDIO_FOUND)
-ADD_LIBRARY(cdaudio MODULE ${libcdaudio_SRCS} ${libcdaudio_UIS_H} ${libcdaudio_RCC_SRCS}
-${libcdaudio_HDRS})
+ADD_LIBRARY(cdaudio MODULE ${libcdaudio_SRCS})
 add_dependencies(cdaudio libqmmp)
-target_link_libraries(cdaudio Qt5::Widgets libqmmp ${CDIO_LDFLAGS})
+target_link_libraries(cdaudio PRIVATE Qt6::Widgets libqmmp ${CDIO_LDFLAGS})
 install(TARGETS cdaudio DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(CDIO_FOUND)

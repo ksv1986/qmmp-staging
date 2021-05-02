@@ -9,19 +9,10 @@ link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
 SET(libincdecvolumeoption_SRCS
     incdecvolumeoption.cpp
+    translations/translations.qrc
 )
 
-SET(libincdecvolumeoption_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libincdecvolumeoption_RCC_SRCS ${libincdecvolumeoption_RCCS})
-
-
-# Don't forget to include output directory, otherwise
-# the UI file won't be wrapped!
-include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-ADD_LIBRARY(incdecvolumeoption MODULE ${libincdecvolumeoption_SRCS}
-           ${libincdecvolumeoption_RCC_SRCS})
+ADD_LIBRARY(incdecvolumeoption MODULE ${libincdecvolumeoption_SRCS})
 add_dependencies(incdecvolumeoption libqmmpui)
-target_link_libraries(incdecvolumeoption Qt5::Widgets libqmmpui libqmmp)
+target_link_libraries(incdecvolumeoption PRIVATE Qt6::Widgets libqmmpui libqmmp)
 install(TARGETS incdecvolumeoption DESTINATION ${PLUGIN_DIR}/CommandLineOptions)

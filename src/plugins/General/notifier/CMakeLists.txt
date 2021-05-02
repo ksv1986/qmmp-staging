@@ -12,22 +12,11 @@ SET(libnotifier_SRCS
     notifier.cpp
     notifierfactory.cpp
     popupwidget.cpp
-)
-
-SET(libnotifier_RCCS
-    translations/translations.qrc
-    notifier_images.qrc)
-
-QT5_ADD_RESOURCES(libnotifier_RCC_SRCS ${libnotifier_RCCS})
-
-# user interface
-
-
-SET(libnotifier_UIS
     settingsdialog.ui
+    translations/translations.qrc
+    notifier_images.qrc
 )
 
-QT5_WRAP_UI(libnotifier_UIS_H ${libnotifier_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -39,8 +28,8 @@ IF(X11_FOUND AND Qt5X11Extras_FOUND)
   link_directories(${X11_LIBRARY_DIRS})
   ADD_DEFINITIONS(${X11_CFLAGS})
   ADD_DEFINITIONS(-DX11_FOUND)
-  target_link_libraries(notifier Qt5::X11Extras Qt5::Widgets ${X11_LDFLAGS} libqmmpui libqmmp)
+  target_link_libraries(notifier Qt6::X11Extras PRIVATE Qt6::Widgets ${X11_LDFLAGS} libqmmpui libqmmp)
 ELSE(X11_FOUND AND Qt5X11Extras_FOUND)
-  target_link_libraries(notifier Qt5::Widgets libqmmpui libqmmp)
+  target_link_libraries(notifier PRIVATE Qt6::Widgets libqmmpui libqmmp)
 ENDIF(X11_FOUND AND Qt5X11Extras_FOUND)
 install(TARGETS notifier DESTINATION ${PLUGIN_DIR}/General)

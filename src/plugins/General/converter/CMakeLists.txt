@@ -19,26 +19,17 @@ SET(libconverter_SRCS
     converterhelper.cpp
     converterdialog.cpp
     preseteditor.cpp
-)
-
-SET(libconverter_RCCS 
-    translations/translations.qrc presets.qrc)
-
-QT5_ADD_RESOURCES(libconverter_RCC_SRCS ${libconverter_RCCS})
-
-# user interface
-
-SET(libconverter_UIS
     converterdialog.ui
     preseteditor.ui
+    translations/translations.qrc
+    presets.qrc
 )
 
-QT5_WRAP_UI(libconverter_UIS_H ${libconverter_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(converter MODULE ${libconverter_SRCS} ${libconverter_UIS_H} ${libconverter_RCC_SRCS})
+ADD_LIBRARY(converter MODULE ${libconverter_SRCS})
 add_dependencies(converter libqmmpui)
-target_link_libraries(converter Qt5::Widgets libqmmpui libqmmp ${TAGLIB_LDFLAGS})
+target_link_libraries(converter PRIVATE Qt6::Widgets libqmmpui libqmmp ${TAGLIB_LDFLAGS})
 install(TARGETS converter DESTINATION ${PLUGIN_DIR}/General)

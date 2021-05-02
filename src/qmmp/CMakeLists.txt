@@ -64,39 +64,7 @@ SET(libqmmp_SRCS
     dithering.cpp
     visualbuffer.cpp
     cueparser.cpp
-)
-
-SET(libqmmp_HDRS
-    qmmpevents_p.h
-    outputfactory.h
-    decoderfactory.h
-    effectfactory.h
-    equ/iir_cfs.h
-    equ/iir_fpu.h
-    equ/iir.h
-    visualfactory.h
-    recycler_p.h
-    buffer.h
-    effect.h
-    qmmp.h
-    replaygain_p.h
-    trackinfo.h
-    audioconverter.h
-    qmmpplugincache_p.h
-    eqsettings.h
-    decoder.h
-    tagmodel.h
-    audioparameters.h
-    inputsourcefactory.h
-    enginefactory.h
-    metadatamanager.h
-    output.h
-    channelmap.h
-    channelconverter_p.h
-    dithering_p.h
-    visualbuffer_p.h
-    cueparser.h
-    qmmp_export.h
+    qmmptextcodec.cpp
 )
 
 SET(libqmmp_DEVEL_HDRS
@@ -129,6 +97,7 @@ SET(libqmmp_DEVEL_HDRS
     volume.h
     volumehandler.h
     cueparser.h
+    qmmptextcodec.h
     qmmp_export.h
 )
 
@@ -136,8 +105,8 @@ SET(libqmmp_DEVEL_HDRS
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(libqmmp SHARED ${libqmmp_SRCS} ${libqmmp_HDRS})
-target_link_libraries(libqmmp Qt5::Widgets)
+ADD_LIBRARY(libqmmp SHARED ${libqmmp_SRCS})
+target_link_libraries(libqmmp PUBLIC Qt6::Widgets)
 SET_TARGET_PROPERTIES(libqmmp PROPERTIES VERSION ${QMMP_VERSION} SOVERSION ${QMMP_SOVERSION} OUTPUT_NAME qmmp${APP_NAME_SUFFIX})
 target_compile_definitions(libqmmp PRIVATE ${libqmmp_DEFINES})
 install(TARGETS libqmmp LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}

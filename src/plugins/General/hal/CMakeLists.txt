@@ -13,24 +13,15 @@ SET(libhal_SRCS
     halplugin.cpp
     haldevice.cpp
     settingsdialog.cpp
-)
-
-SET(libhal_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libhal_RCC_SRCS ${libhal_RCCS})
-
-# user interface
-
-SET(libhal_UIS
     settingsdialog.ui
+    translations/translations.qrc
 )
 
-QT5_WRAP_UI(libhal_UIS_H ${libhal_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(hal MODULE ${libhal_SRCS} ${libhal_UIS_H} ${libhal_RCC_SRCS})
+ADD_LIBRARY(hal MODULE ${libhal_SRCS})
 add_dependencies(hal libqmmpui)
-target_link_libraries(hal Qt5::Widgets Qt5::DBus libqmmpui libqmmp)
+target_link_libraries(hal PRIVATE Qt6::Widgets Qt6::DBus libqmmpui libqmmp)
 install(TARGETS hal DESTINATION ${PLUGIN_DIR}/General)

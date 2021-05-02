@@ -19,30 +19,15 @@ SET(librgscan_SRCS
     rgscandialog.cpp
     rgscanner.cpp
     gain_analysis.c
-)
-
-SET(librgscan_HDRS
-   gain_analysis.h
-)
-
-SET(librgscan_RCCS
+    rgscandialog.ui
     translations/translations.qrc
 )
 
-QT5_ADD_RESOURCES(librgscan_RCC_SRCS ${librgscan_RCCS})
-
-# user interface
-
-SET(librgscan_UIS
-    rgscandialog.ui
-)
-
-QT5_WRAP_UI(librgscan_UIS_H ${librgscan_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(rgscan MODULE ${librgscan_SRCS} ${librgscan_UIS_H} ${librgscan_HDRS} ${librgscan_RCC_SRCS})
+ADD_LIBRARY(rgscan MODULE ${librgscan_SRCS} ${librgscan_UIS_H})
 add_dependencies(rgscan libqmmpui)
-target_link_libraries(rgscan Qt5::Widgets libqmmpui libqmmp ${TAGLIB_LDFLAGS})
+target_link_libraries(rgscan PRIVATE Qt6::Widgets libqmmpui libqmmp ${TAGLIB_LDFLAGS})
 install(TARGETS rgscan DESTINATION ${PLUGIN_DIR}/General)

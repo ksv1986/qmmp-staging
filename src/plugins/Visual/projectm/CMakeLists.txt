@@ -8,12 +8,12 @@ link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
 # projectM
 MESSAGE(STATUS "Found OpenGL implementation: ${Qt5Gui_OPENGL_IMPLEMENTATION}")
-IF(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL GL)
+#IF(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL GL)
   pkg_search_module(PROJECTM libprojectM>=2.0.0)
   ADD_DEFINITIONS(${PROJECTM_CFLAGS})
-ELSE(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL GL)
-  MESSAGE(WARNING "Unsuppoted OpenGL implementation, projectM disabled")
-ENDIF(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL GL)
+#ELSE(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL GL)
+#  MESSAGE(WARNING "Unsuppoted OpenGL implementation, projectM disabled")
+#ENDIF(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL GL)
 
 pkg_search_module(PROJECTM_31 libprojectM>=3.1.0)
 
@@ -34,19 +34,16 @@ SET(libprojectm_SRCS
     projectmplugin.cpp
     visualprojectmfactory.cpp
     projectmwrapper.cpp
+    translations/translations.qrc
 )
-
-SET(libprojectm_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libprojectm_RCC_SRCS ${libprojectm_RCCS})
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 IF(PROJECTM_FOUND)
-ADD_LIBRARY(projectm MODULE ${libprojectm_SRCS} ${libprojectm_RCC_SRCS})
+ADD_LIBRARY(projectm MODULE ${libprojectm_SRCS})
 target_compile_definitions(projectm PRIVATE ${libprojectm_DEFINES})
 add_dependencies(projectm libqmmp)
-target_link_libraries(projectm Qt5::Widgets libqmmp ${PROJECTM_LDFLAGS} -lGL)
+target_link_libraries(projectm PRIVATE Qt6::OpenGLWidgets libqmmp ${PROJECTM_LDFLAGS} -lGL)
 install(TARGETS projectm DESTINATION ${PLUGIN_DIR}/Visual)
 ENDIF(PROJECTM_FOUND)

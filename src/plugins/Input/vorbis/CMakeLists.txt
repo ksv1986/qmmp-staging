@@ -17,26 +17,16 @@ SET(libvorbis_SRCS
   decoder_vorbis.cpp
   decodervorbisfactory.cpp
   vorbismetadatamodel.cpp
+  translations/translations.qrc
 )
 
-SET(libvorbis_HDRS
-  decoder_vorbis.h
-)
-
-SET(libvorbis_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libvorbis_RCC_SRCS ${libvorbis_RCCS})
-
-# user interface
-
-QT5_WRAP_UI(libvorbis_UIS_H ${libvorbis_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(VORBIS_FOUND)
-ADD_LIBRARY(vorbis MODULE ${libvorbis_SRCS} ${libvorbis_RCC_SRCS} ${libvorbis_HDRS})
+ADD_LIBRARY(vorbis MODULE ${libvorbis_SRCS})
 add_dependencies(vorbis libqmmp)
-target_link_libraries(vorbis Qt5::Widgets libqmmp ${VORBIS_LDFLAGS} ${TAGLIB_LDFLAGS})
+target_link_libraries(vorbis PRIVATE Qt6::Widgets libqmmp ${VORBIS_LDFLAGS} ${TAGLIB_LDFLAGS})
 install(TARGETS vorbis DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(VORBIS_FOUND)

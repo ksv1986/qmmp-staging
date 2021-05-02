@@ -53,25 +53,13 @@ SET(liboss4_SRCS
   outputoss4factory.cpp
   outputoss4.cpp
   settingsdialog.cpp
-)
-
-SET(liboss4_HDRS
-  outputoss4.h
-)
-
-SET(liboss4_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(liboss4_RCC_SRCS ${liboss4_RCCS})
-
-SET(liboss4_UIS
-    settingsdialog.ui
+  settingsdialog.ui
+  translations/translations.qrc
 )
 
 IF(OSS4_FOUND)
-QT5_WRAP_UI(liboss4_UIS_H ${liboss4_UIS})
-
-ADD_LIBRARY(oss4 MODULE ${liboss4_SRCS} ${liboss4_UIS_H} ${liboss4_RCC_SRCS} ${liboss4_HDRS})
+ADD_LIBRARY(oss4 MODULE ${liboss4_SRCS})
 add_dependencies(oss4 libqmmp)
-target_link_libraries(oss4 Qt5::Widgets libqmmp)
+target_link_libraries(oss4 PRIVATE Qt6::Widgets libqmmp)
 install(TARGETS oss4 DESTINATION ${PLUGIN_DIR}/Output)
 ENDIF(OSS4_FOUND)

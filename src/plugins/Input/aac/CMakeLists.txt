@@ -48,24 +48,16 @@ SET(libaac_SRCS
   decoder_aac.cpp
   decoderaacfactory.cpp
   aacfile.cpp
+  translations/translations.qrc
 )
-
-SET(libaac_HDRS
-  decoder_aac.h
-  aacfile.h
-)
-
-SET(libaac_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libaac_RCC_SRCS ${libaac_RCCS})
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(FAAD_FOUND)
-ADD_LIBRARY(aac MODULE ${libaac_SRCS} ${libaac_RCC_SRCS} ${libaac_HDRS})
+ADD_LIBRARY(aac MODULE ${libaac_SRCS} ${libaac_RCC_SRCS})
 add_dependencies(aac libqmmp)
-target_link_libraries(aac Qt5::Widgets libqmmp -lfaad ${TAGLIB_LDFLAGS})
+target_link_libraries(aac PRIVATE Qt6::Widgets libqmmp -lfaad ${TAGLIB_LDFLAGS})
 install(TARGETS aac DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(FAAD_FOUND)

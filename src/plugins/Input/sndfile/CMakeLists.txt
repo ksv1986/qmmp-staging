@@ -16,25 +16,17 @@ ADD_DEFINITIONS(${SNDFILE_CFLAGS})
 SET(libsndfile_SRCS
   decoder_sndfile.cpp
   decodersndfilefactory.cpp
+  translations/translations.qrc
 )
-
-SET(libsndfile_HDRS
-  decoder_sndfile.h
-)
-
-SET(libsndfile_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libsndfile_RCC_SRCS ${libsndfile_RCCS})
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(SNDFILE_FOUND)
-ADD_LIBRARY(sndfile MODULE ${libsndfile_SRCS} ${libsndfile_UIS_H}
-  ${libsndfile_RCC_SRCS} ${libsndfile_HDRS})
+ADD_LIBRARY(sndfile MODULE ${libsndfile_SRCS})
 add_dependencies(sndfile libqmmp)
-target_link_libraries(sndfile Qt5::Widgets libqmmp ${SNDFILE_LDFLAGS})
+target_link_libraries(sndfile PRIVATE Qt6::Widgets libqmmp ${SNDFILE_LDFLAGS})
 install(TARGETS sndfile DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(SNDFILE_FOUND)
 

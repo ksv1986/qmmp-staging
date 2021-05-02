@@ -40,10 +40,8 @@ SET(libmpeg_SRCS
   settingsdialog.cpp
   tagextractor.cpp
   mpegmetadatamodel.cpp
-)
-
-SET(libmpeg_HDRS
-  tagextractor.h
+  settingsdialog.ui
+  translations/translations.qrc
 )
 
 IF(MAD_FOUND)
@@ -51,7 +49,6 @@ IF(MAD_FOUND)
   link_directories(${MAD_LIBRARY_DIRS})
   ADD_DEFINITIONS(${MAD_CFLAGS} -DWITH_MAD)
   SET(libmpeg_SRCS ${libmpeg_SRCS} decoder_mad.cpp)
-  SET(libmpeg_HDRS ${libmpeg_HDRS} decoder_mad.h)
 ENDIF(MAD_FOUND)
 
 IF(MPG123_FOUND)
@@ -59,27 +56,15 @@ IF(MPG123_FOUND)
   link_directories(${MPG123_LIBRARY_DIRS})
   ADD_DEFINITIONS(${MPG123_CFLAGS} -DWITH_MPG123)
   SET(libmpeg_SRCS ${libmpeg_SRCS} decoder_mpg123.cpp)
-  SET(libmpeg_HDRS ${libmpeg_HDRS} decoder_mpg123.h)
 ENDIF(MPG123_FOUND)
 
-SET(libmpeg_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libmpeg_RCC_SRCS ${libmpeg_RCCS})
-
-# user interface
-
-SET(libmpeg_UIS
-    settingsdialog.ui
-)
-
-QT5_WRAP_UI(libmpeg_UIS_H ${libmpeg_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(MAD_FOUND OR MPG123_FOUND)
-ADD_LIBRARY(mpeg MODULE ${libmpeg_SRCS} ${libmpeg_UIS_H} ${libmpeg_RCC_SRCS} ${libmpeg_HDRS})
+ADD_LIBRARY(mpeg MODULE ${libmpeg_SRCS})
 add_dependencies(mpeg libqmmp)
-target_link_libraries(mpeg Qt5::Widgets libqmmp ${TAGLIB_LDFLAGS} ${MAD_LDFLAGS} ${MPG123_LDFLAGS} ${LIBRCD_LDFLAGS})
+target_link_libraries(mpeg PRIVATE Qt6::Widgets libqmmp ${TAGLIB_LDFLAGS} ${MAD_LDFLAGS} ${MPG123_LDFLAGS} ${LIBRCD_LDFLAGS})
 install(TARGETS mpeg DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(MAD_FOUND OR MPG123_FOUND)

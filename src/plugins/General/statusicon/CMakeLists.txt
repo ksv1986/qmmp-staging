@@ -14,27 +14,16 @@ SET(libstatusicon_SRCS
     qmmptrayicon.cpp
     statusiconpopupwidget.cpp
     coverwidget.cpp
-)
-
-SET(libstatusicon_RCCS 
-    translations/translations.qrc
-    images/tray_images.qrc)
-
-QT5_ADD_RESOURCES(libstatusicon_RCC_SRCS ${libstatusicon_RCCS})
-
-# user interface
-
-
-SET(libstatusicon_UIS
     settingsdialog.ui
+    translations/translations.qrc
+    images/tray_images.qrc
 )
 
-QT5_WRAP_UI(libstatusicon_UIS_H ${libstatusicon_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(statusicon MODULE ${libstatusicon_SRCS} ${libstatusicon_UIS_H} ${libstatusicon_RCC_SRCS})
+ADD_LIBRARY(statusicon MODULE ${libstatusicon_SRCS})
 add_dependencies(statusicon libqmmpui libqmmp)
-target_link_libraries(statusicon Qt5::Widgets libqmmpui libqmmp)
+target_link_libraries(statusicon PRIVATE Qt6::Widgets libqmmpui libqmmp)
 install(TARGETS statusicon DESTINATION ${PLUGIN_DIR}/General)

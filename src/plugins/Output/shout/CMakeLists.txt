@@ -17,25 +17,17 @@ SET(libshout_SRCS
   outputshoutfactory.cpp
   shoutclient.cpp
   settingsdialog.cpp
+  settingsdialog.ui
+  translations/translations.qrc
 )
 
-SET(libshout_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libshout_RCC_SRCS ${libshout_RCCS})
-
-# user interface
-SET(libshout_UIS
-    settingsdialog.ui
-)
-
-QT5_WRAP_UI(libshout_UIS_H ${libshout_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(SHOUT_FOUND)
-ADD_LIBRARY(shout MODULE ${libshout_SRCS} ${libshout_UIS_H} ${libshout_RCC_SRCS})
+ADD_LIBRARY(shout MODULE ${libshout_SRCS})
 add_dependencies(shout libqmmp)
-target_link_libraries(shout Qt5::Widgets libqmmp ${SHOUT_LDFLAGS})
+target_link_libraries(shout PRIVATE Qt6::Widgets libqmmp ${SHOUT_LDFLAGS})
 install(TARGETS shout DESTINATION ${PLUGIN_DIR}/Output)
 ENDIF(SHOUT_FOUND)

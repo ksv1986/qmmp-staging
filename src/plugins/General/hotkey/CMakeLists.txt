@@ -21,31 +21,19 @@ SET(libhotkey_SRCS
     hotkeymanager_x11.cpp
     hotkeymanager_win.cpp
     hotkeydialog.cpp
-)
-
-SET(libhotkey_RCCS
+    settingsdialog.ui
+    hotkeydialog.ui
     translations/translations.qrc
 )
 
-QT5_ADD_RESOURCES(libhotkey_RCC_SRCS ${libhotkey_RCCS})
-
-# user interface
-
-
-SET(libhotkey_UIS
-    settingsdialog.ui
-    hotkeydialog.ui
-)
-
-QT5_WRAP_UI(libhotkey_UIS_H ${libhotkey_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(X11_FOUND AND XCB_H_FOUND)
 set_property(SOURCE hotkeymanager_x11.cpp PROPERTY SKIP_AUTOMOC ON)
-ADD_LIBRARY(hotkey MODULE ${libhotkey_SRCS} ${libhotkey_UIS_H} ${libhotkey_RCC_SRCS})
+ADD_LIBRARY(hotkey MODULE ${libhotkey_SRCS})
 add_dependencies(hotkey libqmmpui)
-target_link_libraries(hotkey Qt5::Widgets Qt5::X11Extras libqmmpui libqmmp ${X11_LDFLAGS})
+target_link_libraries(hotkey PRIVATE Qt6::Widgets Qt6::X11Extras libqmmpui libqmmp ${X11_LDFLAGS})
 install(TARGETS hotkey DESTINATION ${PLUGIN_DIR}/General)
 ENDIF(X11_FOUND AND XCB_H_FOUND)

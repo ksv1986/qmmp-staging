@@ -41,23 +41,6 @@ SET(libqsui_SRCS
     qsuiwaveformseekbar.cpp
     qsuistatusbar.cpp
     dockwidgetlist.cpp
-)
-
-SET(libqsui_HDRS
-    shortcutitem.h
-    inlines.h
-    fft.h
-    eqpreset.h
-    listwidgetdrawer.h
-)
-
-SET(libqsui_RCCS translations/translations.qrc txt/qsui_txt.qrc resources/qsui_resources.qrc)
-
-QT5_ADD_RESOURCES(libqsui_RCC_SRCS ${libqsui_RCCS})
-
-# user interface
-
-SET(libqsui_UIS
     forms/mainwindow.ui
     forms/popupsettings.ui
     forms/shortcutdialog.ui
@@ -65,14 +48,16 @@ SET(libqsui_UIS
     forms/aboutqsuidialog.ui
     forms/toolbareditor.ui
     forms/hotkeyeditor.ui
+    translations/translations.qrc
+    txt/qsui_txt.qrc
+    resources/qsui_resources.qrc
 )
 
-QT5_WRAP_UI(libqsui_UIS_H ${libqsui_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(qsui MODULE ${libqsui_SRCS} ${libqsui_UIS_H} ${libqsui_RCC_SRCS} ${libqsui_HDRS})
+ADD_LIBRARY(qsui MODULE ${libqsui_SRCS})
 add_dependencies(qsui libqmmpui libqmmp)
-target_link_libraries(qsui Qt5::Widgets libqmmpui libqmmp)
+target_link_libraries(qsui PRIVATE Qt6::Widgets libqmmpui libqmmp)
 install(TARGETS qsui DESTINATION ${PLUGIN_DIR}/Ui)

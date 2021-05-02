@@ -17,22 +17,15 @@ SET(libwavpack_SRCS
   decoder_wavpack.cpp
   decoderwavpackfactory.cpp
   wavpackmetadatamodel.cpp
+  translations/translations.qrc
 )
-
-SET(libwavpack_HDRS
-  decoder_wavpack.h
-)
-
-SET(libwavpack_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libwavpack_RCC_SRCS ${libwavpack_RCCS})
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(WAVPACK_FOUND)
-ADD_LIBRARY(wavpack MODULE ${libwavpack_SRCS} ${libwavpack_RCC_SRCS} ${libwavpack_HDRS})
+ADD_LIBRARY(wavpack MODULE ${libwavpack_SRCS})
 add_dependencies(wavpack libqmmp)
-target_link_libraries(wavpack Qt5::Widgets libqmmp ${WAVPACK_LDFLAGS})
+target_link_libraries(wavpack PRIVATE Qt6::Widgets libqmmp ${WAVPACK_LDFLAGS})
 install(TARGETS wavpack DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(WAVPACK_FOUND)
 

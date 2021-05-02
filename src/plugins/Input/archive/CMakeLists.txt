@@ -18,22 +18,14 @@ SET(libarchive_SRCS
   decoder_archive.cpp
   archivetagreader.cpp
   decoderarchivefactory.cpp
+  translations/translations.qrc
 )
-
-SET(libarchive_HDRS
-  archivetagreader.h
-  decoder_archive.h
-)
-
-SET(libarchive_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libarchive_RCC_SRCS ${libarchive_RCCS})
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(LIBARCHIVE_FOUND)
-ADD_LIBRARY(archive MODULE ${libarchive_SRCS} ${libarchive_RCC_SRCS} ${libarchive_HDRS})
+ADD_LIBRARY(archive MODULE ${libarchive_SRCS})
 add_dependencies(archive libqmmp)
-target_link_libraries(archive Qt5::Widgets libqmmp ${LIBARCHIVE_LDFLAGS} ${TAGLIB_LDFLAGS})
+target_link_libraries(archive PRIVATE Qt6::Widgets libqmmp ${LIBARCHIVE_LDFLAGS} ${TAGLIB_LDFLAGS})
 install(TARGETS archive DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(LIBARCHIVE_FOUND)

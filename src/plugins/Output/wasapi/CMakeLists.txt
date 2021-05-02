@@ -20,26 +20,17 @@ SET(libwasapi_SRCS
   outputwasapi.cpp
   outputwasapifactory.cpp
   settingsdialog.cpp
+  settingsdialog.ui
+  translations/translations.qrc
 )
 
-SET(libwasapi_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libwasapi_RCC_SRCS ${libwasapi_RCCS})
-
-# user interface
-
-SET(libwasapi_UIS
-    settingsdialog.ui
-)
-
-QT5_WRAP_UI(libwasapi_UIS_H ${libwasapi_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(WASAPI_FOUND)
-ADD_LIBRARY(wasapi MODULE ${libwasapi_SRCS} ${libwasapi_RCC_SRCS} ${libwasapi_HDRS} ${libwasapi_UIS_H})
+ADD_LIBRARY(wasapi MODULE ${libwasapi_SRCS})
 add_dependencies(wasapi libqmmp)
-target_link_libraries(wasapi Qt5::Widgets libqmmp -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -lksuser)
+target_link_libraries(wasapi PRIVATE Qt6::Widgets libqmmp -lstrmiids -ldmoguids -lmsdmo -lole32 -loleaut32 -luuid -lgdi32 -lksuser)
 install(TARGETS wasapi DESTINATION ${PLUGIN_DIR}/Output)
 ENDIF(WASAPI_FOUND)

@@ -12,26 +12,16 @@ SET(libfileops_SRCS
     fileopsfactory.cpp
     settingsdialog.cpp
     hotkeydialog.cpp
-)
-
-SET(libfileops_RCCS 
-    translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libfileops_RCC_SRCS ${libfileops_RCCS})
-
-# user interface
-
-SET(libfileops_UIS
     settingsdialog.ui
     hotkeydialog.ui
+    translations/translations.qrc
 )
 
-QT5_WRAP_UI(libfileops_UIS_H ${libfileops_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(fileops MODULE ${libfileops_SRCS} ${libfileops_UIS_H} ${libfileops_RCC_SRCS})
+ADD_LIBRARY(fileops MODULE ${libfileops_SRCS})
 add_dependencies(fileops libqmmpui)
-target_link_libraries(fileops Qt5::Widgets libqmmpui libqmmp)
+target_link_libraries(fileops PRIVATE Qt6::Widgets libqmmpui libqmmp)
 install(TARGETS fileops DESTINATION ${PLUGIN_DIR}/General)

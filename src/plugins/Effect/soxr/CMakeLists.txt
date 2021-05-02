@@ -21,30 +21,17 @@ SET(libsoxr_SRCS
     soxresampler.cpp
     settingsdialog.cpp
     effectsoxrfactory.cpp
-)
-
-SET(libsoxr_HDRS
-    soxresampler.h
-)
-
-SET(libsoxr_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libsoxr_RCC_SRCS ${libsoxr_RCCS})
-
-# user interface
-
-SET(libsoxr_UIS
     settingsdialog.ui
+    translations/translations.qrc
 )
 
-QT5_WRAP_UI(libsoxr_UIS_H ${libsoxr_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(SOXR_FOUND)
-ADD_LIBRARY(soxr MODULE ${libsoxr_SRCS} ${libsoxr_UIS_H} ${libsoxr_RCC_SRCS} ${libsoxr_HDRS})
+ADD_LIBRARY(soxr MODULE ${libsoxr_SRCS})
 add_dependencies(soxr libqmmp)
-target_link_libraries(soxr Qt5::Widgets libqmmp ${SOXR_LDFLAGS})
+target_link_libraries(soxr PRIVATE Qt6::Widgets libqmmp ${SOXR_LDFLAGS})
 install(TARGETS soxr DESTINATION ${PLUGIN_DIR}/Effect)
 ENDIF(SOXR_FOUND)

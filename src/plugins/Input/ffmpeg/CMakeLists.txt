@@ -29,34 +29,17 @@ SET(libffmpeg_SRCS
   ffmpegmetadatamodel.cpp
   settingsdialog.cpp
   replaygainreader.cpp
-)
-
-SET(libffmpeg_HDRS
-  decoder_ffmpeg.h
-  decoder_ffmpegcue.h
-  decoder_ffmpegm4b.h
-  replaygainreader.h
-)
-
-SET(libffmpeg_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libffmpeg_RCC_SRCS ${libffmpeg_RCCS})
-
-# user interface
-
-SET(libffmpeg_UIS
   settingsdialog.ui
+  translations/translations.qrc
 )
 
-QT5_WRAP_UI(libffmpeg_UIS_H ${libffmpeg_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(FFMPEG_FOUND)
-ADD_LIBRARY(ffmpeg MODULE ${libffmpeg_SRCS} ${libffmpeg_UIS_H}
-  ${libffmpeg_RCC_SRCS} ${libffmpeg_HDRS})
+ADD_LIBRARY(ffmpeg MODULE ${libffmpeg_SRCS})
 add_dependencies(ffmpeg libqmmp)
-target_link_libraries(ffmpeg Qt5::Widgets libqmmp ${FFMPEG_LDFLAGS} ${TAGLIB_LDFLAGS})
+target_link_libraries(ffmpeg PRIVATE Qt6::Widgets libqmmp ${FFMPEG_LDFLAGS} ${TAGLIB_LDFLAGS})
 install(TARGETS ffmpeg DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(FFMPEG_FOUND)

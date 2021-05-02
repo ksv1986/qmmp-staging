@@ -14,10 +14,8 @@ SET(libwildmidi_SRCS
   decoderwildmidifactory.cpp
   settingsdialog.cpp
   wildmidihelper.cpp
-)
-
-SET(libwildmidi_HDRS
-  decoder_wildmidi.h
+  settingsdialog.ui
+  translations/translations.qrc
 )
 
 # libwildmidi
@@ -31,24 +29,13 @@ ELSE(WILDMIDI_HEADER_FOUND AND (NOT WILDMIDI_LIB MATCHES "^.*-NOTFOUND"))
 MESSAGE(STATUS "Could not find WildMidi library")
 ENDIF(WILDMIDI_HEADER_FOUND AND (NOT WILDMIDI_LIB MATCHES "^.*-NOTFOUND"))
 
-SET(libwildmidi_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libwildmidi_RCC_SRCS ${libwildmidi_RCCS})
-
-# user interface
-SET(libwildmidi_UIS
-    settingsdialog.ui
-)
-
-QT5_WRAP_UI(libwildmidi_UIS_H ${libwildmidi_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(WILDMIDI_FOUND)
-ADD_LIBRARY(wildmidi MODULE ${libwildmidi_SRCS} ${libwildmidi_UIS_H} ${libwildmidi_RCC_SRCS}
-${libwildmidi_HDRS})
+ADD_LIBRARY(wildmidi MODULE ${libwildmidi_SRCS})
 add_dependencies(wildmidi libqmmp)
-target_link_libraries(wildmidi Qt5::Widgets libqmmp ${WILDMIDI_LIB})
+target_link_libraries(wildmidi Qt6::Widgets libqmmp ${WILDMIDI_LIB})
 install(TARGETS wildmidi DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(WILDMIDI_FOUND)

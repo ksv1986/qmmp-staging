@@ -25,32 +25,17 @@ SET(libgme_SRCS
   decodergmefactory.cpp
   gmehelper.cpp
   settingsdialog.cpp
+  settingsdialog.ui
+  translations/translations.qrc
 )
-
-SET(libgme_HDRS
-  decoder_gme.h
-  gmehelper.h
-)
-
-SET(libgme_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libgme_RCC_SRCS ${libgme_RCCS})
-
-# user interface
-
-SET(libgme_UIS
-    settingsdialog.ui
-)
-
-QT5_WRAP_UI(libgme_UIS_H ${libgme_UIS})
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(GME_FOUND)
-ADD_LIBRARY(gme MODULE ${libgme_SRCS} ${libgme_RCC_SRCS} ${libgme_HDRS} ${libgme_UIS_H})
+ADD_LIBRARY(gme MODULE ${libgme_SRCS} ${libgme_RCC_SRCS})
 add_dependencies(gme libqmmp)
-target_link_libraries(gme Qt5::Widgets libqmmp ${GME_LIB})
+target_link_libraries(gme PRIVATE Qt6::Widgets libqmmp ${GME_LIB})
 install(TARGETS gme DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(GME_FOUND)

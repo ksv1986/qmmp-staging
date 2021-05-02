@@ -25,21 +25,14 @@ SET(libmpc_SRCS
   decoder_mpc.cpp
   decodermpcfactory.cpp
   mpcmetadatamodel.cpp
+  translations/translations.qrc
 )
-
-SET(libmpc_HDRS
-  decoder_mpc.h
-)
-
-SET(libmpc_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libmpc_RCC_SRCS ${libmpc_RCCS})
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(MPC_FOUND)
-ADD_LIBRARY(mpc MODULE ${libmpc_SRCS} ${libmpc_RCC_SRCS} ${libmpc_HDRS})
+ADD_LIBRARY(mpc MODULE ${libmpc_SRCS})
 add_dependencies(mpc libqmmp)
-target_link_libraries(mpc Qt5::Widgets libqmmp ${MPC_LIB} ${TAGLIB_LDFLAGS})
+target_link_libraries(mpc PRIVATE Qt6::Widgets libqmmp ${MPC_LIB} ${TAGLIB_LDFLAGS})
 install(TARGETS mpc DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(MPC_FOUND)

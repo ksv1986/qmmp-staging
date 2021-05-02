@@ -59,31 +59,19 @@ SET(libqmmpui_SRCS
     covereditor.cpp
     generalfactory.cpp
     cueeditor.cpp
-)
-
-SET(libqmmpui_HDRS
-    generalfactory.h
-    playlistformat.h
-    commandlinemanager.h
-    commandlinehandler.h
-    filedialogfactory.h
-    playstate_p.h
-    playlistitem.h
-    playlistgroup.h
-    playlisttrack.h
-    playlistcontainer_p.h
-    normalcontainer_p.h
-    groupedcontainer_p.h
-    metadataformatter.h
-    metadataformattermenu.h
-    uiloader.h
-    uifactory.h
-    pluginitem_p.h
-    general.h
-    playlistparser.h
-    qmmpuiplugincache_p.h
-    metadatahelper_p.h
-    qmmpui_export.h
+    forms/detailsdialog.ui
+    forms/tageditor.ui
+    forms/templateeditor.ui
+    forms/jumptotrackdialog.ui
+    forms/configdialog.ui
+    forms/aboutdialog.ui
+    forms/addurldialog.ui
+    forms/columneditor.ui
+    forms/covereditor.ui
+    forms/cueeditor.ui
+    translations/libqmmpui_locales.qrc
+    txt/txt.qrc
+    images/qmmpui_images.qrc
 )
 
 SET(libqmmpui_DEVEL_HDRS
@@ -115,28 +103,11 @@ SET(libqmmpui_DEVEL_HDRS
     qmmpui_export.h
 )
 
-SET(libqmmpui_UIS
-    forms/detailsdialog.ui
-    forms/tageditor.ui
-    forms/templateeditor.ui
-    forms/jumptotrackdialog.ui
-    forms/configdialog.ui
-    forms/aboutdialog.ui
-    forms/addurldialog.ui
-    forms/columneditor.ui
-    forms/covereditor.ui
-    forms/cueeditor.ui
-)
-
-QT5_WRAP_UI(libqmmpui_UIS_H ${libqmmpui_UIS})
-
-QT5_ADD_RESOURCES(libqmmpui_RCC_SRCS translations/libqmmpui_locales.qrc txt/txt.qrc images/qmmpui_images.qrc)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+SET(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_AUTOUIC_SEARCH_PATHS} ${CMAKE_CURRENT_SOURCE_DIR}/forms)
 
-
-ADD_LIBRARY(libqmmpui SHARED ${libqmmpui_SRCS} ${libqmmpui_RCC_SRCS} ${libqmmpui_UIS_H} ${libqmmpui_HDRS})
-target_link_libraries(libqmmpui Qt5::Widgets Qt5::Network libqmmp)
+ADD_LIBRARY(libqmmpui SHARED ${libqmmpui_SRCS})
+target_link_libraries(libqmmpui PUBLIC Qt6::Widgets Qt6::Network libqmmp)
 add_dependencies(libqmmpui libqmmp)
 SET_TARGET_PROPERTIES(libqmmpui PROPERTIES VERSION ${QMMP_VERSION} SOVERSION ${QMMP_SOVERSION} OUTPUT_NAME qmmpui${APP_NAME_SUFFIX})
 target_compile_definitions(libqmmpui PRIVATE ${libqmmpui_DEFINES})

@@ -12,21 +12,14 @@ SET(libmpris_SRCS
     mprisfactory.cpp
     root2object.cpp
     player2object.cpp
+    translations/translations.qrc
 )
 
-SET(libmpris_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libmpris_RCC_SRCS ${libmpris_RCCS})
-
-# user interface
-
-
-# QT5_WRAP_UI(libmpris_UIS_H ${libmpris_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(mpris MODULE ${libmpris_SRCS} ${libmpris_RCC_SRCS})
+ADD_LIBRARY(mpris MODULE ${libmpris_SRCS})
 add_dependencies(mpris libqmmpui)
-target_link_libraries(mpris Qt5::Widgets Qt5::DBus libqmmpui libqmmp)
+target_link_libraries(mpris PRIVATE Qt6::Widgets Qt6::DBus libqmmpui libqmmp)
 install(TARGETS mpris DESTINATION ${PLUGIN_DIR}/General)

@@ -10,26 +10,15 @@ link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 SET(libqmmpfiledialog_SRCS
     qmmpfiledialogimpl.cpp
     qmmpfiledialog.cpp
-)
-
-SET(libqmmpfiledialog_RCCS
-    translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libqmmpfiledialog_RCC_SRCS ${libqmmpfiledialog_RCCS})
-
-# user interface
-
-
-SET(libqmmpfiledialog_UIS
     qmmpfiledialog.ui
+    translations/translations.qrc
 )
 
-QT5_WRAP_UI(libqmmpfiledialog_UIS_H ${libqmmpfiledialog_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(qmmpfiledialog MODULE ${libqmmpfiledialog_SRCS} ${libqmmpfiledialog_UIS_H} ${libqmmpfiledialog_RCC_SRCS})
+ADD_LIBRARY(qmmpfiledialog MODULE ${libqmmpfiledialog_SRCS})
 add_dependencies(qmmpfiledialog libqmmpui)
-target_link_libraries(qmmpfiledialog Qt5::Widgets libqmmpui libqmmp)
+target_link_libraries(qmmpfiledialog PRIVATE Qt6::Widgets libqmmpui libqmmp)
 install(TARGETS qmmpfiledialog DESTINATION ${PLUGIN_DIR}/FileDialogs)

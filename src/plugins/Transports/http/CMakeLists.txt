@@ -24,30 +24,21 @@ SET(libhttp_SRCS
     httpinputfactory.cpp
     httpinputsource.cpp
     settingsdialog.cpp
-)
-
-# resources
-SET(libhttp_RCCS translations/translations.qrc)
-QT5_ADD_RESOURCES(libhttp_RCC_SRCS ${libhttp_RCCS})
-
-# user interface
-SET(libhttp_UIS
     settingsdialog.ui
+    translations/translations.qrc
 )
-QT5_WRAP_UI(libhttp_UIS_H ${libhttp_UIS})
-
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(CURL_FOUND)
-ADD_LIBRARY(http MODULE ${libhttp_SRCS} ${libhttp_UIS_H} ${libhttp_RCC_SRCS})
+ADD_LIBRARY(http MODULE ${libhttp_SRCS})
 
 IF(USE_ENCA AND ENCA_FOUND)
-target_link_libraries(http Qt5::Widgets libqmmp ${CURL_LDFLAGS} ${CURL_CFLAGS} ${ENCA_LDFLAGS} ${ENCA_CFLAGS})
+target_link_libraries(http PRIVATE Qt6::Widgets libqmmp ${CURL_LDFLAGS} ${CURL_CFLAGS} ${ENCA_LDFLAGS} ${ENCA_CFLAGS})
 ELSE(USE_ENCA AND ENCA_FOUND)
-target_link_libraries(http Qt5::Widgets libqmmp ${CURL_LDFLAGS})
+target_link_libraries(http PRIVATE Qt6::Widgets libqmmp ${CURL_LDFLAGS})
 ENDIF(USE_ENCA AND ENCA_FOUND)
 
 add_dependencies(http libqmmp)

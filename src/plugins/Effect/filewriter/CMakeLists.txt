@@ -18,30 +18,17 @@ SET(libfilewriter_SRCS
     filewriterplugin.cpp
     settingsdialog.cpp
     effectfilewriterfactory.cpp
-)
-
-SET(libfilewriter_HDRS
-    filewriterplugin.h
-)
-
-SET(libfilewriter_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libfilewriter_RCC_SRCS ${libfilewriter_RCCS})
-
-# user interface
-
-SET(libfilewriter_UIS
     settingsdialog.ui
+    translations/translations.qrc
 )
 
-QT5_WRAP_UI(libfilewriter_UIS_H ${libfilewriter_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(VORBISENC_FOUND)
-    ADD_LIBRARY(filewriter MODULE ${libfilewriter_SRCS} ${libfilewriter_UIS_H} ${libfilewriter_RCC_SRCS} ${libfilewriter_HDRS})
+    ADD_LIBRARY(filewriter MODULE ${libfilewriter_SRCS})
     add_dependencies(filewriter libqmmp libqmmpui)
-    target_link_libraries(filewriter Qt5::Widgets libqmmp libqmmpui ${VORBISENC_LDFLAGS})
+    target_link_libraries(filewriter PRIVATE Qt6::Widgets libqmmp libqmmpui ${VORBISENC_LDFLAGS})
     install(TARGETS filewriter DESTINATION ${PLUGIN_DIR}/Effect)
 ENDIF(VORBISENC_FOUND)

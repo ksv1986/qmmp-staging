@@ -19,31 +19,21 @@ include_directories(${JACK_INCLUDE_DIRS})
 link_directories(${JACK_LIBRARY_DIRS})
 ADD_DEFINITIONS(${JACK_CFLAGS})
 
-
 SET(libjack_SRCS
   outputjackfactory.cpp
   outputjack.cpp
   bio2jack.c
+  translations/translations.qrc
 )
-
-SET(libjack_HDRS
-  bio2jack.h
-  outputjack.h
-)
-
-SET(libjack_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libjack_RCC_SRCS ${libjack_RCCS})
-
 
 IF(JACK_FOUND)
-ADD_LIBRARY(jack MODULE ${libjack_SRCS} ${libjack_RCC_SRCS} ${libjack_HDRS})
+ADD_LIBRARY(jack MODULE ${libjack_SRCS})
 add_dependencies(jack libqmmp)
 set_target_properties(jack PROPERTIES
                            COMPILE_FLAGS -pthread
                            LINK_FLAGS -pthread
 )
-target_link_libraries(jack Qt5::Widgets libqmmp ${JACK_LDFLAGS})
+target_link_libraries(jack PRIVATE Qt6::Widgets libqmmp ${JACK_LDFLAGS})
 install(TARGETS jack DESTINATION ${PLUGIN_DIR}/Output)
 ENDIF(JACK_FOUND)
 

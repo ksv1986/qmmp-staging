@@ -63,43 +63,25 @@ SET(skinned_SRCS
     playlistheader.cpp
     horizontalslider.cpp
     colorwidget.cpp
-)
-
-SET(skinned_HDRS
-    eqpreset.h
-    fft.h
-    inlines.h
-    keyboardmanager.h
-    listwidgetdrawer.h
-    cursorimage.h
-    windowsystem.h
-    shortcutitem.h
-)
-
-SET(skinned_RCCS glare/glare.qrc resources/resources.qrc translations/translations.qrc)
-
-QT5_ADD_RESOURCES(skinned_RCC_SRCS ${skinned_RCCS})
-
-# user interface
-
-SET(skinned_UIS
     forms/skinnedsettings.ui
     forms/preseteditor.ui
     forms/playlistbrowser.ui
     forms/popupsettings.ui
     forms/shortcutdialog.ui
     forms/hotkeyeditor.ui
+    glare/glare.qrc
+    resources/resources.qrc
+    translations/translations.qrc
 )
 
-QT5_WRAP_UI(skinned_UIS_H ${skinned_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(X11_FOUND)
-ADD_LIBRARY(skinned MODULE ${skinned_SRCS} ${skinned_UIS_H} ${skinned_RCC_SRCS} ${skinned_HDRS})
+ADD_LIBRARY(skinned MODULE ${skinned_SRCS} ${skinned_UIS_H})
 add_dependencies(skinned libqmmpui libqmmp)
-target_link_libraries(skinned Qt5::Widgets Qt5::X11Extras libqmmpui libqmmp ${X11_LDFLAGS})
+target_link_libraries(skinned PRIVATE Qt6::Widgets Qt6::X11Extras libqmmpui libqmmp ${X11_LDFLAGS})
 install(TARGETS skinned DESTINATION ${PLUGIN_DIR}/Ui)
 install(FILES scripts/kwin.sh DESTINATION ${CMAKE_INSTALL_DATADIR}/qmmp${APP_NAME_SUFFIX}/scripts)
 ENDIF(X11_FOUND)

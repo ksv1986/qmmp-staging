@@ -9,18 +9,10 @@ link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
 SET(seekoption_SRCS
     seekoption.cpp
+    translations/translations.qrc
 )
 
-SET(seekoption_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(seekoption_RCC_SRCS ${seekoption_RCCS})
-
-
-# Don't forget to include output directory, otherwise
-# the UI file won't be wrapped!
-include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-ADD_LIBRARY(seekoption MODULE ${seekoption_SRCS} ${seekoption_RCC_SRCS})
+ADD_LIBRARY(seekoption MODULE ${seekoption_SRCS})
 add_dependencies(seekoption libqmmpui)
-target_link_libraries(seekoption Qt5::Widgets libqmmpui libqmmp)
+target_link_libraries(seekoption PRIVATE Qt6::Widgets libqmmpui libqmmp)
 install(TARGETS seekoption DESTINATION ${PLUGIN_DIR}/CommandLineOptions)

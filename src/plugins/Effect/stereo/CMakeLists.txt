@@ -10,29 +10,15 @@ SET(libstereo_SRCS
     stereoplugin.cpp
     settingsdialog.cpp
     effectstereofactory.cpp
-)
-
-SET(libstereo_HDRS
-    stereoplugin.h
-)
-
-SET(libstereo_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libstereo_RCC_SRCS ${libstereo_RCCS})
-
-# user interface
-
-SET(libstereo_UIS
     settingsdialog.ui
+    translations/translations.qrc
 )
 
-QT5_WRAP_UI(libstereo_UIS_H ${libstereo_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-
-ADD_LIBRARY(stereo MODULE ${libstereo_SRCS} ${libstereo_UIS_H} ${libstereo_RCC_SRCS} ${libstereo_HDRS})
+ADD_LIBRARY(stereo MODULE ${libstereo_SRCS})
 add_dependencies(stereo libqmmp)
-target_link_libraries(stereo Qt5::Widgets libqmmp)
+target_link_libraries(stereo Qt6::Widgets libqmmp)
 install(TARGETS stereo DESTINATION ${PLUGIN_DIR}/Effect)

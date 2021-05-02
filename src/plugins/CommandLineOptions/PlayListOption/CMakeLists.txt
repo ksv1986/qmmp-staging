@@ -9,19 +9,10 @@ link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
 SET(libplaylistoption_SRCS
     playlistoption.cpp
+    translations/translations.qrc
 )
 
-SET(libplaylistoption_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libplaylistoption_RCC_SRCS ${libplaylistoption_RCCS})
-
-
-# Don't forget to include output directory, otherwise
-# the UI file won't be wrapped!
-include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-ADD_LIBRARY(playlistoption MODULE ${libplaylistoption_SRCS}
-           ${libplaylistoption_RCC_SRCS})
+ADD_LIBRARY(playlistoption MODULE ${libplaylistoption_SRCS})
 add_dependencies(playlistoption libqmmpui)
-target_link_libraries(playlistoption Qt5::Widgets libqmmpui libqmmp)
+target_link_libraries(playlistoption PRIVATE Qt6::Widgets libqmmpui libqmmp)
 install(TARGETS playlistoption DESTINATION ${PLUGIN_DIR}/CommandLineOptions)

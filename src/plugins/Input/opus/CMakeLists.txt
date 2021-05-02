@@ -17,26 +17,16 @@ SET(libopus_SRCS
   decoder_opus.cpp
   decoderopusfactory.cpp
   opusmetadatamodel.cpp
+  translations/translations.qrc
 )
 
-SET(libopus_HDRS
-  decoder_opus.h
-)
-
-SET(libopus_RCCS translations/translations.qrc)
-
-QT5_ADD_RESOURCES(libopus_RCC_SRCS ${libopus_RCCS})
-
-# user interface
-
-QT5_WRAP_UI(libopus_UIS_H ${libopus_UIS})
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(OPUS_FOUND)
-ADD_LIBRARY(opus MODULE ${libopus_SRCS} ${libopus_RCC_SRCS} ${libopus_HDRS})
+ADD_LIBRARY(opus MODULE ${libopus_SRCS})
 add_dependencies(opus libqmmp)
-target_link_libraries(opus Qt5::Widgets libqmmp ${OPUS_LDFLAGS} ${TAGLIB_LDFLAGS})
+target_link_libraries(opus PRIVATE Qt6::Widgets libqmmp ${OPUS_LDFLAGS} ${TAGLIB_LDFLAGS})
 install(TARGETS opus DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(OPUS_FOUND)

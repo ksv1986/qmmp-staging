@@ -2,12 +2,7 @@ project(app)
 
 INCLUDE(UsePkgConfig)
 
-ADD_DEFINITIONS( -Wall )
-ADD_DEFINITIONS(-DQT_NO_DEBUG)
-ADD_DEFINITIONS(-DQT_THREAD)
-
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-
 
 # libqmmp & libqmmpui
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../)
@@ -20,18 +15,16 @@ SET(app_SRCS
     builtincommandlineoption.cpp
     main.cpp
     qmmpstarter.cpp
+    images/images.qrc
+    translations/qmmp_locales.qrc
 )
-
-SET(app_RCCS images/images.qrc translations/qmmp_locales.qrc)
-
-QT5_ADD_RESOURCES(app_RCC_SRCS ${app_RCCS})
 
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_EXECUTABLE(qmmp ${app_SRCS} ${app_RCC_SRCS})
-target_link_libraries(qmmp Qt5::Widgets libqmmp libqmmpui)
+ADD_EXECUTABLE(qmmp ${app_SRCS})
+target_link_libraries(qmmp PRIVATE Qt6::Widgets libqmmp libqmmpui)
 SET_TARGET_PROPERTIES(qmmp PROPERTIES OUTPUT_NAME qmmp${APP_NAME_SUFFIX})
 add_dependencies(qmmp libqmmpui libqmmp)
 

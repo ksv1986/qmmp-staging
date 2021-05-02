@@ -79,7 +79,7 @@ public:
     static quint32 keycodeToKeysym(quint32 keycode);
 
 private:
-    bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
+    bool nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result) override;
     QList <Hotkey *> m_grabbedKeys;
 };
 

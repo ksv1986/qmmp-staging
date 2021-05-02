@@ -10,7 +10,7 @@ SUBDIRS += statusicon \
            trackchange \
            copypaste \
            rgscan \
-           \#hotkey \
+           hotkey \
            listenbrainz \
            library
 

@@ -21,13 +21,13 @@
 #include <QStringList>
 #include <QDir>
 #include <QSettings>
-#include <QTextCodec>
 #include <stdint.h>
 #include <stdlib.h>
 #include <qmmp/qmmpsettings.h>
 #include <qmmp/qmmp.h>
 #include <qmmp/statehandler.h>
 #include <qmmp/inputsource.h>
+#include <qmmp/qmmptextcodec.h>
 #include "httpinputsource.h"
 #include "httpstreamreader.h"
 
@@ -143,14 +143,12 @@ HttpStreamReader::HttpStreamReader(const QString &url, HTTPInputSource *parent) 
     m_thread = new DownloadThread(this);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
     settings.beginGroup("HTTP");
-    m_codec = QTextCodec::codecForName(settings.value("icy_encoding","UTF-8").toByteArray ());
+    m_codec = new QmmpTextCodec(settings.value("icy_encoding","UTF-8").toByteArray ());
     m_prebuffer_size = settings.value("buffer_size",384).toInt() * 1000;
     if(settings.value("override_user_agent",false).toBool())
         m_userAgent = settings.value("user_agent").toString();
     if(m_userAgent.isEmpty())
         m_userAgent = QString("qmmp/%1").arg(Qmmp::strVersion());;
-    if (!m_codec)
-        m_codec = QTextCodec::codecForName ("UTF-8");
 #ifdef WITH_ENCA
     if(settings.value("use_enca", false).toBool())
         m_analyser = enca_analyser_alloc(settings.value("enca_lang").toByteArray ().constData());
@@ -175,6 +173,8 @@ HttpStreamReader::~HttpStreamReader()
     if(m_analyser)
         enca_analyser_free(m_analyser);
 #endif
+    if(m_codec)
+        delete m_codec;
 }
 
 bool HttpStreamReader::atEnd () const
@@ -472,27 +472,21 @@ void HttpStreamReader::parseICYMetaData(char *data, qint64 size)
 {
     if(!size)
         return;
-    QTextCodec *codec = m_codec;
 #ifdef WITH_ENCA
     if(m_analyser)
     {
         EncaEncoding encoding = enca_analyse(m_analyser, (uchar *) data, size);
         if(encoding.charset != ENCA_CS_UNKNOWN)
         {
-            codec = QTextCodec::codecForName(enca_charset_name(encoding.charset,ENCA_NAME_STYLE_ENCA));
             qDebug("HttpStreamReader: detected charset: %s",
                    enca_charset_name(encoding.charset,ENCA_NAME_STYLE_ENCA));
-            if(!codec)
-                codec = m_codec;
-
-             m_prevCodec = codec;
+            delete m_codec;
+            m_codec = new QmmpTextCodec(enca_charset_name(encoding.charset,ENCA_NAME_STYLE_ENCA));
         }
-        else if(m_prevCodec)
-            codec = m_prevCodec;
     }
 #endif
-    QString str = codec->toUnicode(data).trimmed();
-    const QStringList list(str.split(";", QString::SkipEmptyParts));
+    QString str = m_codec->toUnicode(data).trimmed();
+    const QStringList list(str.split(";", Qt::SkipEmptyParts));
     for(QString line : qAsConst(list))
     {
         if (line.contains("StreamTitle="))
@@ -512,17 +506,17 @@ void HttpStreamReader::parseICYMetaData(char *data, qint64 size)
                     metaData.insert(Qmmp::TITLE, m_title);
             }
             else
-                metaData.insert(Qmmp::TITLE, codec->toUnicode(m_stream.header.value("icy-name")));
-            metaData.insert(Qmmp::GENRE, codec->toUnicode(m_stream.header.value("icy-genre")));
+                metaData.insert(Qmmp::TITLE, m_codec->toUnicode(m_stream.header.value("icy-name")));
+            metaData.insert(Qmmp::GENRE, m_codec->toUnicode(m_stream.header.value("icy-genre")));
             m_parent->addMetaData(metaData);
-            sendStreamInfo(codec);
+            sendStreamInfo(m_codec);
             m_meta_sent = true;
             break;
         }
     }
 }
 
-void HttpStreamReader::sendStreamInfo(QTextCodec *codec)
+void HttpStreamReader::sendStreamInfo(QmmpTextCodec *codec)
 {
     QHash<QString, QString> info;
     for(const QString &key : m_stream.header.keys())

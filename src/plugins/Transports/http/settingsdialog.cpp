@@ -17,22 +17,20 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#include <QTextCodec>
 #include <QSettings>
 #include <QRegularExpression>
 #include <qmmp/qmmp.h>
 #ifdef WITH_ENCA
 #include <enca.h>
 #endif
+#include <qmmp/qmmptextcodec.h>
 #include "settingsdialog.h"
 
 SettingsDialog::SettingsDialog(QWidget *parent) : QDialog(parent)
 {
     m_ui.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
-    findCodecs();
-    for(const QTextCodec *codec : qAsConst(codecs))
-        m_ui.icyEncodingComboBox->addItem(codec->name());
+    m_ui.icyEncodingComboBox->addItems(QmmpTextCodec::availableCharsets());
 #ifdef WITH_ENCA
     size_t n = 0;
     const char **langs = enca_get_languages(&n);
@@ -74,43 +72,4 @@ void SettingsDialog::accept()
 #endif
     settings.endGroup();
     QDialog::accept();
-}
-
-void SettingsDialog::findCodecs()
-{
-    QMap<QString, QTextCodec *> codecMap;
-    static const QRegularExpression iso8859RegExp("ISO[- ]8859-([0-9]+).*");
-
-    for(int mib : QTextCodec::availableMibs())
-    {
-        QTextCodec *codec = QTextCodec::codecForMib(mib);
-
-        QString sortKey = codec->name().toUpper();
-        int rank;
-        QRegularExpressionMatch match;
-
-        if (sortKey.startsWith("UTF-8"))
-        {
-            rank = 1;
-        }
-        else if (sortKey.startsWith("UTF-16"))
-        {
-            rank = 2;
-        }
-        else if ((match = iso8859RegExp.match(sortKey)).hasMatch())
-        {
-            if (match.captured(1).size() == 1)
-                rank = 3;
-            else
-                rank = 4;
-        }
-        else
-        {
-            rank = 5;
-        }
-        sortKey.prepend(QChar('0' + rank));
-
-        codecMap.insert(sortKey, codec);
-    }
-    codecs = codecMap.values();
 }

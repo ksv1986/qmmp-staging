@@ -22,7 +22,8 @@ ENDIF()
 SET(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /home/user/qt6)
 
 #installation paths
-include(GNUInstallDirs)
+INCLUDE(GNUInstallDirs)
+INCLUDE(FindPkgConfig)
 
 #extract version from qmmp.h
 FILE(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/src/qmmp/qmmp.h"
@@ -51,8 +52,6 @@ CONFIGURE_FILE(
 
 ADD_CUSTOM_TARGET(uninstall
   "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
-
-INCLUDE(FindPkgConfig)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

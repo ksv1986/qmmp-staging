@@ -56,6 +56,7 @@ SET(libqsui_SRCS
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+SET(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_AUTOUIC_SEARCH_PATHS} ${CMAKE_CURRENT_SOURCE_DIR}/forms)
 
 ADD_LIBRARY(qsui MODULE ${libqsui_SRCS})
 add_dependencies(qsui libqmmpui libqmmp)

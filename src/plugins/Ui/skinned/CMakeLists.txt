@@ -77,11 +77,12 @@ SET(skinned_SRCS
 # Don't forget to include output directory, otherwise
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+SET(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_AUTOUIC_SEARCH_PATHS} ${CMAKE_CURRENT_SOURCE_DIR}/forms)
 
 IF(X11_FOUND)
 ADD_LIBRARY(skinned MODULE ${skinned_SRCS} ${skinned_UIS_H})
 add_dependencies(skinned libqmmpui libqmmp)
-target_link_libraries(skinned PRIVATE Qt6::Widgets Qt6::X11Extras libqmmpui libqmmp ${X11_LDFLAGS})
+target_link_libraries(skinned PRIVATE Qt6::Widgets Qt6::GuiPrivate libqmmpui libqmmp ${X11_LDFLAGS})
 install(TARGETS skinned DESTINATION ${PLUGIN_DIR}/Ui)
 install(FILES scripts/kwin.sh DESTINATION ${CMAKE_INSTALL_DATADIR}/qmmp${APP_NAME_SUFFIX}/scripts)
 ENDIF(X11_FOUND)

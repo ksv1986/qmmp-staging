@@ -13,7 +13,6 @@ SET(liblibrary_SRCS
     librarymodel.cpp
     librarywidget.cpp
     settingsdialog.cpp
-    liblibrary_UIS
     librarywidget.ui
     settingsdialog.ui
     translations/translations.qrc
@@ -23,6 +22,6 @@ SET(liblibrary_SRCS
 # the UI file won't be wrapped!
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ADD_LIBRARY(library MODULE ${liblibrary_SRCS} ${liblibrary_UIS_H} ${liblibrary_RCC_SRCS})
+ADD_LIBRARY(library MODULE ${liblibrary_SRCS})
 target_link_libraries(library PRIVATE Qt6::Widgets Qt6::Sql libqmmpui libqmmp)
 install(TARGETS library DESTINATION ${PLUGIN_DIR}/General)

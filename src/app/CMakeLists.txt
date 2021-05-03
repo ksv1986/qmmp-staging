@@ -24,7 +24,7 @@ SET(app_SRCS
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ADD_EXECUTABLE(qmmp ${app_SRCS})
-target_link_libraries(qmmp PRIVATE Qt6::Widgets libqmmp libqmmpui)
+target_link_libraries(qmmp PRIVATE Qt6::Widgets Qt6::Network libqmmp libqmmpui)
 SET_TARGET_PROPERTIES(qmmp PROPERTIES OUTPUT_NAME qmmp${APP_NAME_SUFFIX})
 add_dependencies(qmmp libqmmpui libqmmp)
 

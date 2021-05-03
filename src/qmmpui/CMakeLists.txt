@@ -107,7 +107,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 SET(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_AUTOUIC_SEARCH_PATHS} ${CMAKE_CURRENT_SOURCE_DIR}/forms)
 
 ADD_LIBRARY(libqmmpui SHARED ${libqmmpui_SRCS})
-target_link_libraries(libqmmpui PUBLIC Qt6::Widgets Qt6::Network libqmmp)
+target_link_libraries(libqmmpui PRIVATE Qt6::Widgets Qt6::Network libqmmp)
 add_dependencies(libqmmpui libqmmp)
 SET_TARGET_PROPERTIES(libqmmpui PROPERTIES VERSION ${QMMP_VERSION} SOVERSION ${QMMP_SOVERSION} OUTPUT_NAME qmmpui${APP_NAME_SUFFIX})
 target_compile_definitions(libqmmpui PRIVATE ${libqmmpui_DEFINES})

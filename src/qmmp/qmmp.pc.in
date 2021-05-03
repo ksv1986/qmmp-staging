@@ -7,6 +7,5 @@ plugindir=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LIBDIR@/qmmp-@QMMP_VERSION_MAJOR
 Name: qmmp@APP_NAME_SUFFIX@
 Description: qmmp core library
 Version: @QMMP_VERSION@
-Requires: Qt5Core Qt5Gui Qt5Widgets
 Libs: -L${libdir} -lqmmp@APP_NAME_SUFFIX@
 Cflags: -I${includedir}

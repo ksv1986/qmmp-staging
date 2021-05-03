@@ -24,5 +24,5 @@ unix {
     target.path = $$PLUGIN_DIR/General
     INSTALLS += target
     PKGCONFIG += x11
-    QT += x11extras
+    QT += gui-private
 }

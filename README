@@ -78,16 +78,16 @@ Other features:
 - listening history
 
 Requirements:
-- Qt >= 5.4 (qtbase, qtx11extras/qtwinextras and qttools for build)
+- Qt >= 6.1 (qtbase and qttools for build)
 - tar, unzip, bzip2, gzip
 - libmad
 - libvorbis
 - libogg
 - libalsa >= 1.0.22
-- taglib >= 1.11
+- taglib >= 1.12
 - curl >= 7.19.4
 - libmpg123 >= 1.13.0 (optional)
-- qtmultimedia >= 5.4 (optional)
+- qtmultimedia >= 6.1 (optional)
 - libmms >= 0.4 (optional)
 - flac >= 1.1.3 (optional)
 - libmpcdec >= 1.3.0 (optional)
@@ -99,8 +99,8 @@ Requirements:
 - pulseaudio >= 0.9.15 (optional)
 - pipewire >= 0.3.26 (optional)
 - ffmpeg >= 3.4 (optional)
-- libcdio >= 0.80 (optional)
-- libcdio-paranoia >= 10.2 (since libcdio 0.90)
+- libcdio >= 1.0 (optional)
+- libcdio-paranoia >= 10.2+0.90 (optional)
 - libcddb >= 1.3.1 (optional)
 - faad2 >= 2.6.1 (optional)
 - game-music-emu >= 0.5.5 (optional)
@@ -116,7 +116,7 @@ Requirements:
 - mplayer (optional)
 - libx11, libxcb, xorgproto (optional)
 - librcd >= 0.1.13 (optional)
-- cmake >= 3.5.0 (for build only)
+- cmake >= 3.18.0 (for build only)
 
 Attention! Qmmp build needs lrelease installed.
 

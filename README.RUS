@@ -77,16 +77,16 @@ Qmmp - Qt-based multimedia player
 - история прослушивания
 
 Требования:
-- Qt >= 5.4 (qtbase, qtx11extras/qtwinextras и qttools для сборки)
+- Qt >= 6.1 (qtbase и qttools для сборки)
 - tar, unzip, bzip2, gzip
 - libmad
 - libvorbis
 - libogg
 - libalsa >= 1.0.22
-- taglib >= 1.11
+- taglib >= 1.12
 - curl >= 7.19.4
 - libmpg123 >= 1.13.0 (опционально)
-- qtmultimedia >= 5.4 (опционально)
+- qtmultimedia >= 6.1 (опционально)
 - libmms >= 0.4 (опционально)
 - flac >= 1.1.3 (опционально)
 - libmpcdec >= 1.3.0 (опционально)
@@ -98,8 +98,8 @@ Qmmp - Qt-based multimedia player
 - pulseaudio >= 0.9.15 (опционально)
 - pipewire >= 0.3.26 (опционально)
 - ffmpeg >= 3.4 (опционально)
-- libcdio >= 0.80 (опционально)
-- libcdio-paranoia >= 10.2 (начиная с libcdio 0.90)
+- libcdio >= 1.0 (опционально)
+- libcdio-paranoia >= 10.2+0.90 (опционально)
 - libcddb >= 1.3.1 (опционально)
 - faad2 >= 2.6.1 (опционально)
 - game-music-emu >= 0.5.5 (опционально)
@@ -115,7 +115,7 @@ Qmmp - Qt-based multimedia player
 - mplayer (опционально)
 - libx11, libxcb, xorgproto (опционально)
 - librcd >= 0.1.13 (опционально)
-- cmake >= 3.5.0 (только для сборки)
+- cmake >= 3.18.0 (только для сборки)
 
 Внимание! Для сборки Qmmp нужна утилита lrelease.
 

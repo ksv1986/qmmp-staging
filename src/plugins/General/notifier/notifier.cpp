@@ -174,7 +174,7 @@ void Notifier::removePsiTuneFiles()
 #ifdef X11_FOUND
 bool Notifier::hasFullscreenWindow() const
 {
-    if(!m_disableForFullScreen)
+    if(!m_disableForFullScreen || !QX11Info::isPlatformX11())
         return false;
     Atom type = None;
     int format = 0;

@@ -75,6 +75,7 @@ Qmmp - Qt-based multimedia player
 - чтение архивов (RAR и 7z)
 - запись аудио
 - история прослушивания
+- музыкальная библиотека
 
 Требования:
 - Qt >= 5.4 (qtbase, qtx11extras/qtwinextras и qttools для сборки)
@@ -141,7 +142,7 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 - USE_ANALYZER, USE_PROJECTM (визуализация);
 - USE_MPRIS, USE_SCROBBLER, USE_LISTENBRAINZ, USE_STATICON, USE_NOTIFIER, USE_LYRICS, USE_HAL, USE_HOTKEY, USE_FILEOPS,
   USE_COVER, USE_KDENOTIFY, USE_UDISKS2, USE_CONVERTER, USE_RGSCAN, USE_SB, USE_TRACKCHANGE, USE_COPYPASTE,
-  USE_GNOMEHOTKEY (модули общего назначения);
+  USE_GNOMEHOTKEY, USE_LIBRARY (модули общего назначения);
 - USE_QMMP_DIALOG, USE_TWO_PANEL_DIALOG (файловые диалоги);
 - USE_ENCA (автоматическое определение кодировки);
 - USE_SKINNED (стандартный пользовательский интерфейс);

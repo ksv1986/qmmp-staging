@@ -95,7 +95,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Enable CRC checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita la verifica del CRC</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="87"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="253"/>
         <source>Merge selected tag types</source>
-        <translation type="unfinished"></translation>
+        <translation>Unisci i tipi di etichette selezionati</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="272"/>

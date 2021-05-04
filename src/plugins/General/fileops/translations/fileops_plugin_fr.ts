@@ -192,7 +192,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="220"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Exécuter </translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="232"/>

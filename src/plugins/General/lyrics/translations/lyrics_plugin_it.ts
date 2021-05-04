@@ -24,7 +24,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="36"/>
         <source>Lyrics</source>
-        <translation type="unfinished"></translation>
+        <translation>Testi</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="36"/>
@@ -62,62 +62,62 @@
     <message>
         <location filename="../lyricswidget.ui" line="14"/>
         <source>Lyrics Plugin</source>
-        <translation type="unfinished">Estensioni testi</translation>
+        <translation>Estensione testi</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="31"/>
         <source>Provider:</source>
-        <translation type="unfinished">Fornitore:</translation>
+        <translation>Fornitore:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="115"/>
         <source>Title:</source>
-        <translation type="unfinished">Titolo:</translation>
+        <translation>Titolo:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="132"/>
         <source>Album:</source>
-        <translation type="unfinished">Album:</translation>
+        <translation>Album:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="142"/>
         <source>Artist:</source>
-        <translation type="unfinished">Artista:</translation>
+        <translation>Artista:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="159"/>
         <source>Track:</source>
-        <translation type="unfinished">Traccia:</translation>
+        <translation>Traccia:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="171"/>
         <source>Year:</source>
-        <translation type="unfinished">Anno:</translation>
+        <translation>Anno:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="138"/>
         <source>&lt;h2&gt;%1 - %2&lt;/h2&gt;</source>
-        <translation type="unfinished">&lt;h2&gt;%1 - %2&lt;/h2&gt;</translation>
+        <translation>&lt;h2&gt;%1 - %2&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="149"/>
         <source>Not found</source>
-        <translation type="unfinished">Non trovato</translation>
+        <translation>Non trovato</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="159"/>
         <source>Error: %1 - %2</source>
-        <translation type="unfinished">Errore: %1 - %2</translation>
+        <translation>Errore: %1 - %2</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="172"/>
         <source>Receiving</source>
-        <translation type="unfinished">Ricezione</translation>
+        <translation>Ricezione</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="233"/>
         <source>cache</source>
-        <translation type="unfinished">cache</translation>
+        <translation>cache</translation>
     </message>
 </context>
 <context>

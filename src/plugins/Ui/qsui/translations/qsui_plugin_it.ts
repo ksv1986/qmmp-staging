@@ -169,7 +169,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="56"/>
         <source>&amp;Transit between playlists</source>
-        <translation type="unfinished"></translation>
+        <translation>Passaggio &amp;tra scalette</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="57"/>
@@ -314,7 +314,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>&amp;Queue Toggle</source>
-        <translation type="unfinished"></translation>
+        <translation>Attiva/disattiva co&amp;da</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
@@ -666,7 +666,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="100"/>
         <source>Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Strumenti</translation>
     </message>
 </context>
 <context>
@@ -1095,22 +1095,22 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="206"/>
         <source>Visualization Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Colori della visualizzazione</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="212"/>
         <source>Color #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Colore #1:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="279"/>
         <source>Color #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Colore #2:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="343"/>
         <source>Color #3:</source>
-        <translation type="unfinished"></translation>
+        <translation>Colore #3:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="432"/>
@@ -1125,7 +1125,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="879"/>
         <source>Progress bar:</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra di avanzamento</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="968"/>
@@ -1206,7 +1206,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="87"/>
         <source>Show anchor</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra ancora</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="101"/>
@@ -1302,17 +1302,17 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="766"/>
         <source>Override current track background</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovrascrivi sfondo della traccia corrente</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="734"/>
         <source>Current track background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sfondo della traccia corrente:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="821"/>
         <source>Override group background</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovrascrivi sfondo di gruppo</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1276"/>
@@ -1536,12 +1536,12 @@
     <message>
         <location filename="../qsuisettings.cpp" line="52"/>
         <source>Left</source>
-        <translation type="unfinished">A sinistra</translation>
+        <translation>A sinistra</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="53"/>
         <source>Right</source>
-        <translation type="unfinished">A destra</translation>
+        <translation>A destra</translation>
     </message>
 </context>
 <context>
@@ -1549,12 +1549,12 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="68"/>
         <source>tracks: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>tracce: %1</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="69"/>
         <source>total time: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>tempo totale: %1</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="87"/>
@@ -1589,24 +1589,24 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="152"/>
         <source>%1 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 bit</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="154"/>
         <source>mono</source>
-        <translation type="unfinished"></translation>
+        <translation>mono</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="156"/>
         <source>stereo</source>
-        <translation type="unfinished"></translation>
+        <translation>stereo</translation>
     </message>
     <message numerus="yes">
         <location filename="../qsuistatusbar.cpp" line="158"/>
         <source>%n channels</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n canale</numerusform>
+            <numerusform>%n canali</numerusform>
         </translation>
     </message>
     <message>
@@ -1625,7 +1625,7 @@
     <message>
         <location filename="../qsuiwaveformseekbar.cpp" line="325"/>
         <source>2 Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>2 canali</translation>
     </message>
     <message>
         <location filename="../qsuiwaveformseekbar.cpp" line="328"/>

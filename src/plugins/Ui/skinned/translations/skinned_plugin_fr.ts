@@ -464,7 +464,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="47"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner couleur</translation>
     </message>
 </context>
 <context>
@@ -1255,12 +1255,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="421"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Couleurs</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="427"/>
         <source>Playlist Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Couleurs des listes</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="433"/>
@@ -1270,62 +1270,62 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>Background #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrière-plan n°2 :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="590"/>
         <source>Highlighted background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrière-plan en surbrillance :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="494"/>
         <source>Normal text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte normal :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="657"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Séparateur:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="558"/>
         <source>Current text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte actuel :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="622"/>
         <source>Highlighted text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte en surbrillance :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="765"/>
         <source>Current track background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fond de la piste courante</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="867"/>
         <source>Override current track background</source>
-        <translation type="unfinished"></translation>
+        <translation>Remplacer le fond de la piste courante</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="730"/>
         <source>Group background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrière-plan de groupe :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="860"/>
         <source>Override group background</source>
-        <translation type="unfinished"></translation>
+        <translation>Remplacer le fond du groupe</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="698"/>
         <source>Group text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte de groupe :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="449"/>
         <source>Background #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrière-plan n°1 :</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="825"/>

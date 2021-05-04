@@ -217,12 +217,12 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished">Nome della cartella superiore</translation>
+        <translation>Nome della cartella superiore</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
         <source>Parent Directory Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Percorso cartella superiore</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="104"/>
@@ -420,22 +420,22 @@
     <message>
         <location filename="../forms/configdialog.ui" line="514"/>
         <source>CUE Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor CUE</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="520"/>
         <source>Use system font</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa carattere di sistema</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="541"/>
         <source>Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Carattere;</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="566"/>
         <source>???</source>
-        <translation type="unfinished"></translation>
+        <translation>???</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="605"/>
@@ -821,33 +821,33 @@
     <message>
         <location filename="../forms/cueeditor.ui" line="40"/>
         <source>Load</source>
-        <translation type="unfinished">Carica</translation>
+        <translation>Carica</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="47"/>
         <source>Delete</source>
-        <translation type="unfinished">Elimina</translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="54"/>
         <source>Save as...</source>
-        <translation type="unfinished">Salva come...</translation>
+        <translation>Salva come...</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="131"/>
         <source>Open CUE File</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri file CUE</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="133"/>
         <location filename="../cueeditor.cpp" line="152"/>
         <source>CUE Files</source>
-        <translation type="unfinished"></translation>
+        <translation>File CUE</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="150"/>
         <source>Save CUE File</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva file CUE</translation>
     </message>
 </context>
 <context>
@@ -1109,7 +1109,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="57"/>
         <source>Parent Directory Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Percorso cartella superiore</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="59"/>

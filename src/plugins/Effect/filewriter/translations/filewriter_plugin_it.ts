@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="109"/>
         <source>Write to single file if possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Scrivi in un unico file se possibile.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="36"/>

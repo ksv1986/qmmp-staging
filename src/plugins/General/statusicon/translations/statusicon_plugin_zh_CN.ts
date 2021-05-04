@@ -65,7 +65,7 @@
         <translation>使用标准图标</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="80"/>
+        <location filename="../settingsdialog.cpp" line="82"/>
         <source>Tooltip Template</source>
         <translation>工具提示模板</translation>
     </message>

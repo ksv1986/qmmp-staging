@@ -26,7 +26,7 @@
         <translation>Codificação</translation>
     </message>
     <message>
-        <location filename="../converter.cpp" line="280"/>
+        <location filename="../converter.cpp" line="276"/>
         <source>Finished</source>
         <translation>Terminada</translation>
     </message>

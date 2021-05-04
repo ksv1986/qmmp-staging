@@ -487,7 +487,7 @@
         <translation>Strg+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="326"/>
+        <location filename="../actionmanager.cpp" line="322"/>
         <source>Toolbar</source>
         <translation>Werkzeugleiste</translation>
     </message>
@@ -521,64 +521,64 @@
 <context>
     <name>Equalizer</name>
     <message>
-        <location filename="../equalizer.cpp" line="43"/>
+        <location filename="../equalizer.cpp" line="39"/>
         <source>Equalizer</source>
         <translation>Equalizer</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="52"/>
+        <location filename="../equalizer.cpp" line="48"/>
         <source>Enable equalizer</source>
         <translation>Equalizer aktivieren</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="58"/>
+        <location filename="../equalizer.cpp" line="54"/>
         <source>Preset:</source>
         <translation>Voreinstellung:</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="66"/>
+        <location filename="../equalizer.cpp" line="62"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="70"/>
+        <location filename="../equalizer.cpp" line="66"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="74"/>
+        <location filename="../equalizer.cpp" line="70"/>
         <source>Reset</source>
         <translation>Zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="87"/>
+        <location filename="../equalizer.cpp" line="83"/>
         <source>Preamp</source>
         <translation>Vorverstärker</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="104"/>
-        <location filename="../equalizer.cpp" line="201"/>
+        <location filename="../equalizer.cpp" line="100"/>
+        <location filename="../equalizer.cpp" line="197"/>
         <source>%1dB</source>
         <translation>%1dB</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="106"/>
-        <location filename="../equalizer.cpp" line="199"/>
+        <location filename="../equalizer.cpp" line="102"/>
+        <location filename="../equalizer.cpp" line="195"/>
         <source>+%1dB</source>
         <translation>+%1dB</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="154"/>
+        <location filename="../equalizer.cpp" line="150"/>
         <source>preset</source>
         <translation>Voreinstellung</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="224"/>
+        <location filename="../equalizer.cpp" line="220"/>
         <source>Overwrite Request</source>
         <translation>Überschreiben nachfragen</translation>
     </message>
     <message>
-        <location filename="../equalizer.cpp" line="225"/>
+        <location filename="../equalizer.cpp" line="221"/>
         <source>Preset &apos;%1&apos; already exists. Overwrite?</source>
         <translation>Voreinstellung &apos;%1&apos; ist bereits vorhanden. Überschreiben?</translation>
     </message>
@@ -979,50 +979,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="59"/>
+        <location filename="../playlistheader.cpp" line="55"/>
         <source>Add Column</source>
         <translation>Spalte hinzufügen</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="60"/>
+        <location filename="../playlistheader.cpp" line="56"/>
         <source>Edit Column</source>
         <translation>Spalte bearbeiten</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="61"/>
+        <location filename="../playlistheader.cpp" line="57"/>
         <source>Show Queue/Protocol</source>
         <translation>Warteschlange/Protokoll anzeigen</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="63"/>
+        <location filename="../playlistheader.cpp" line="59"/>
         <source>Auto-resize</source>
         <translation>Automatische Größenänderung</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="66"/>
+        <location filename="../playlistheader.cpp" line="62"/>
         <source>Alignment</source>
         <translation>Ausrichtung</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="67"/>
+        <location filename="../playlistheader.cpp" line="63"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>Links</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="68"/>
+        <location filename="../playlistheader.cpp" line="64"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>Rechts</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="69"/>
+        <location filename="../playlistheader.cpp" line="65"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Mitte</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="79"/>
+        <location filename="../playlistheader.cpp" line="75"/>
         <source>Remove Column</source>
         <translation>Spalte entfernen</translation>
     </message>

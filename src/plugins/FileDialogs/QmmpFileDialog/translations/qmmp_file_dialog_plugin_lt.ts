@@ -9,50 +9,50 @@
         <translation>Įdėti bylas</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="177"/>
+        <location filename="../qmmpfiledialog.ui" line="198"/>
         <source>Up</source>
         <translation>Į viršų</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="180"/>
-        <location filename="../qmmpfiledialog.ui" line="193"/>
-        <location filename="../qmmpfiledialog.ui" line="212"/>
-        <location filename="../qmmpfiledialog.ui" line="237"/>
+        <location filename="../qmmpfiledialog.ui" line="201"/>
+        <location filename="../qmmpfiledialog.ui" line="214"/>
+        <location filename="../qmmpfiledialog.ui" line="233"/>
+        <location filename="../qmmpfiledialog.ui" line="258"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="190"/>
+        <location filename="../qmmpfiledialog.ui" line="211"/>
         <source>List view</source>
         <translation>Sąrašo peržiūra</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="209"/>
+        <location filename="../qmmpfiledialog.ui" line="230"/>
         <source>Detailed view</source>
         <translation>Detali peržiūra</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="234"/>
+        <location filename="../qmmpfiledialog.ui" line="255"/>
         <source>Close dialog on add</source>
         <translation>Užverti pridėjus</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="106"/>
+        <location filename="../qmmpfiledialog.ui" line="124"/>
         <source>File name:</source>
         <translation>Bylos pavadinimas:</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="122"/>
+        <location filename="../qmmpfiledialog.ui" line="140"/>
         <source>Add</source>
         <translation>Pridėti</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="129"/>
+        <location filename="../qmmpfiledialog.ui" line="147"/>
         <source>Files of type:</source>
         <translation>Bylų tipai:</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialog.ui" line="155"/>
+        <location filename="../qmmpfiledialog.ui" line="173"/>
         <source>Close</source>
         <translation>Užverti</translation>
     </message>
@@ -88,22 +88,22 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
 <context>
     <name>QmmpFileDialogImpl</name>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="263"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="261"/>
         <source>Add</source>
         <translation>Pridėti</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="276"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="274"/>
         <source>Save</source>
         <translation>Išsaugoti</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="290"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="288"/>
         <source>Directories</source>
         <translation>Aplankai</translation>
     </message>
     <message>
-        <location filename="../qmmpfiledialogimpl.cpp" line="480"/>
+        <location filename="../qmmpfiledialogimpl.cpp" line="474"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 jau yra.

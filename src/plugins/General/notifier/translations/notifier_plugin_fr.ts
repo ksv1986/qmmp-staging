@@ -121,7 +121,7 @@
         <translation>Activer les notifications Psi</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="109"/>
+        <location filename="../settingsdialog.cpp" line="112"/>
         <source>Notification Template</source>
         <translation>Patron de notification</translation>
     </message>

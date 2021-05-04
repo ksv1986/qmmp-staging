@@ -1005,50 +1005,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="81"/>
+        <location filename="../playlistheader.cpp" line="77"/>
         <source>Add Column</source>
         <translation>Adicionar coluna</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="82"/>
+        <location filename="../playlistheader.cpp" line="78"/>
         <source>Edit Column</source>
         <translation>Editar coluna</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="83"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Show Queue/Protocol</source>
         <translation>Mostrar fila/protocolo</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="85"/>
+        <location filename="../playlistheader.cpp" line="81"/>
         <source>Auto-resize</source>
         <translation>Redimensionar automaticamente</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="84"/>
         <source>Alignment</source>
         <translation>Alinhamento</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="89"/>
+        <location filename="../playlistheader.cpp" line="85"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>Esquerda</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="86"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>Direita</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="91"/>
+        <location filename="../playlistheader.cpp" line="87"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="101"/>
+        <location filename="../playlistheader.cpp" line="97"/>
         <source>Remove Column</source>
         <translation>Remover coluna</translation>
     </message>
@@ -1465,22 +1465,22 @@
         <translation>Mostrar botão &apos;Nova lista de reprodução&apos;</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="116"/>
+        <location filename="../skinnedsettings.cpp" line="119"/>
         <source>Select Skin Files</source>
         <translation>Selecione os ficheiros de tema</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="117"/>
+        <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Skin files</source>
         <translation>Ficheiros de tema</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="169"/>
+        <location filename="../skinnedsettings.cpp" line="172"/>
         <source>Unarchived skin</source>
         <translation>Tema não arquivado</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="206"/>
+        <location filename="../skinnedsettings.cpp" line="209"/>
         <source>Archived skin</source>
         <translation>Tema arquivado</translation>
     </message>
@@ -1488,17 +1488,17 @@
 <context>
     <name>TextScroller</name>
     <message>
-        <location filename="../textscroller.cpp" line="58"/>
+        <location filename="../textscroller.cpp" line="55"/>
         <source>Autoscroll Songname</source>
         <translation>Deslocação automática do nome da faixa</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="59"/>
+        <location filename="../textscroller.cpp" line="56"/>
         <source>Transparent Background</source>
         <translation>Fundo transparente</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="130"/>
+        <location filename="../textscroller.cpp" line="127"/>
         <source>Buffering: %1%</source>
         <translation>Processamento: %1%</translation>
     </message>

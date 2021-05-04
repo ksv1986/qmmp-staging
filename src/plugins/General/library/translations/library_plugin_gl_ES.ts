@@ -6,18 +6,18 @@
     <message>
         <location filename="../library.cpp" line="65"/>
         <source>Library</source>
-        <translation type="unfinished"></translation>
+        <translation>Biblioteca</translation>
     </message>
     <message>
         <location filename="../library.cpp" line="71"/>
         <source>Update library</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar biblioteca</translation>
     </message>
     <message>
         <location filename="../library.cpp" line="181"/>
         <location filename="../library.cpp" line="182"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Descoñecido</translation>
     </message>
 </context>
 <context>
@@ -25,12 +25,12 @@
     <message>
         <location filename="../libraryfactory.cpp" line="33"/>
         <source>Media Library Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido de Biblioteca de Medios</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Library</source>
-        <translation type="unfinished"></translation>
+        <translation>Biblioteca</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
@@ -40,22 +40,22 @@
     <message>
         <location filename="../libraryfactory.cpp" line="84"/>
         <source>About Media Library Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca do Engadido de Biblioteca de Medios</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="85"/>
         <source>Qmmp Media Library Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido Biblioteca de Medios Qmmp</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="86"/>
         <source>This plugin represents a database to store music files tags for a fast access</source>
-        <translation type="unfinished"></translation>
+        <translation>Este engadido representa unha base de datos para almacenar etiquetas de arquivos de música para un acceso rápido</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Escrito por: LLya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -63,7 +63,7 @@
     <message>
         <location filename="../librarymodel.cpp" line="204"/>
         <source>%1 - %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - %2</translation>
     </message>
 </context>
 <context>
@@ -71,27 +71,27 @@
     <message>
         <location filename="../librarywidget.cpp" line="51"/>
         <source>&amp;Add to Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Engadir a Lista de reprodución</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="52"/>
         <source>&amp;View Track Details</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ver detalles da pista</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="54"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Búsqueda Rápida</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="88"/>
         <source>Scanning directories...</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscando directorios...</translation>
     </message>
     <message>
         <location filename="../librarywidget.ui" line="14"/>
         <source>Media Library</source>
-        <translation type="unfinished"></translation>
+        <translation>Biblioteca de Medios</translation>
     </message>
 </context>
 <context>
@@ -99,37 +99,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Media Library Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuración da Biblioteca de Medios</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
         <source>Recreate database</source>
-        <translation type="unfinished"></translation>
+        <translation>Recrear a base de datos</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
         <source>Show album year</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver ano do album</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>List of directories for scanning:</source>
-        <translation type="unfinished"></translation>
+        <translation>Listado de directorios a escanear:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadir</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="65"/>
         <source>Select Directories for Scanning</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona os Directorios a Escanear</translation>
     </message>
 </context>
 </TS>

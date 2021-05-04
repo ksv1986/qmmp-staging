@@ -1005,50 +1005,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="81"/>
+        <location filename="../playlistheader.cpp" line="77"/>
         <source>Add Column</source>
         <translation>增加n列</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="82"/>
+        <location filename="../playlistheader.cpp" line="78"/>
         <source>Edit Column</source>
         <translation>编辑n列</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="83"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Show Queue/Protocol</source>
         <translation>显示排队/协议</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="85"/>
+        <location filename="../playlistheader.cpp" line="81"/>
         <source>Auto-resize</source>
         <translation>自动调整大小</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="84"/>
         <source>Alignment</source>
         <translation>对齐</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="89"/>
+        <location filename="../playlistheader.cpp" line="85"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="86"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="91"/>
+        <location filename="../playlistheader.cpp" line="87"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>居中</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="101"/>
+        <location filename="../playlistheader.cpp" line="97"/>
         <source>Remove Column</source>
         <translation>移除n列</translation>
     </message>
@@ -1465,22 +1465,22 @@
         <translation>显示’新播放列表中‘按钮</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="116"/>
+        <location filename="../skinnedsettings.cpp" line="119"/>
         <source>Select Skin Files</source>
         <translation>选择皮肤文件</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="117"/>
+        <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Skin files</source>
         <translation>皮肤文件</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="169"/>
+        <location filename="../skinnedsettings.cpp" line="172"/>
         <source>Unarchived skin</source>
         <translation>未存档皮肤</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="206"/>
+        <location filename="../skinnedsettings.cpp" line="209"/>
         <source>Archived skin</source>
         <translation>存档的皮肤</translation>
     </message>
@@ -1488,17 +1488,17 @@
 <context>
     <name>TextScroller</name>
     <message>
-        <location filename="../textscroller.cpp" line="58"/>
+        <location filename="../textscroller.cpp" line="55"/>
         <source>Autoscroll Songname</source>
         <translation>自动滚动曲目名</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="59"/>
+        <location filename="../textscroller.cpp" line="56"/>
         <source>Transparent Background</source>
         <translation>透明的背景</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="130"/>
+        <location filename="../textscroller.cpp" line="127"/>
         <source>Buffering: %1%</source>
         <translation>缓冲中：%1%</translation>
     </message>

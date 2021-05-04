@@ -77,7 +77,7 @@
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="463"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="460"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 が既にあります。

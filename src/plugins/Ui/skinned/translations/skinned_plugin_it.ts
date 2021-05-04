@@ -126,7 +126,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
         <source>&amp;Transit between playlists</source>
-        <translation type="unfinished"></translation>
+        <translation>Passaggio &amp;tra scalette</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
@@ -281,7 +281,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>&amp;Queue Toggle</source>
-        <translation type="unfinished"></translation>
+        <translation>Attiva co&amp;da</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
@@ -464,7 +464,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="47"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona colore</translation>
     </message>
 </context>
 <context>
@@ -1005,50 +1005,50 @@
 <context>
     <name>PlayListHeader</name>
     <message>
-        <location filename="../playlistheader.cpp" line="81"/>
+        <location filename="../playlistheader.cpp" line="77"/>
         <source>Add Column</source>
         <translation>Aggiungi colonna</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="82"/>
+        <location filename="../playlistheader.cpp" line="78"/>
         <source>Edit Column</source>
         <translation>Modifica colonna</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="83"/>
+        <location filename="../playlistheader.cpp" line="79"/>
         <source>Show Queue/Protocol</source>
         <translation>Mostra coda/protocollo</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="85"/>
+        <location filename="../playlistheader.cpp" line="81"/>
         <source>Auto-resize</source>
         <translation>Ridimensionamento automatico</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="88"/>
+        <location filename="../playlistheader.cpp" line="84"/>
         <source>Alignment</source>
         <translation>Allineamento</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="89"/>
+        <location filename="../playlistheader.cpp" line="85"/>
         <source>Left</source>
         <comment>alignment</comment>
         <translation>A sinistra</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="90"/>
+        <location filename="../playlistheader.cpp" line="86"/>
         <source>Right</source>
         <comment>alignment</comment>
         <translation>A destra</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="91"/>
+        <location filename="../playlistheader.cpp" line="87"/>
         <source>Center</source>
         <comment>alignment</comment>
         <translation>Al centro</translation>
     </message>
     <message>
-        <location filename="../playlistheader.cpp" line="101"/>
+        <location filename="../playlistheader.cpp" line="97"/>
         <source>Remove Column</source>
         <translation>Rimuovi colonna</translation>
     </message>
@@ -1255,82 +1255,82 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="421"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Colori</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="427"/>
         <source>Playlist Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Colori della scaletta</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="433"/>
         <source>Use skin colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa i colori del tema</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>Background #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sfondo n° 2:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="590"/>
         <source>Highlighted background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sfondo evidenziato:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="494"/>
         <source>Normal text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo normale:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="657"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Separatore:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="558"/>
         <source>Current text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo attuale:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="622"/>
         <source>Highlighted text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo evidenziato:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="765"/>
         <source>Current track background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sfondo della traccia corrente:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="867"/>
         <source>Override current track background</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovrascrivi sfondo della traccia corrente</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="730"/>
         <source>Group background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sfondo di gruppo:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="860"/>
         <source>Override group background</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovrascrivi sfondo di gruppo</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="698"/>
         <source>Group text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo di gruppo:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="449"/>
         <source>Background #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sfondo n° 1:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="825"/>
         <source>Load skin colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Carica colori del tema</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="894"/>
@@ -1442,7 +1442,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="301"/>
         <source>Show anchor</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra ancora</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="369"/>
@@ -1465,22 +1465,22 @@
         <translation>Mostra pulsante «Nuova scaletta»</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="116"/>
+        <location filename="../skinnedsettings.cpp" line="119"/>
         <source>Select Skin Files</source>
         <translation>Seleziona un file di tema</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="117"/>
+        <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Skin files</source>
         <translation>File dei temi</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="169"/>
+        <location filename="../skinnedsettings.cpp" line="172"/>
         <source>Unarchived skin</source>
         <translation>Tema non archiviato</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="206"/>
+        <location filename="../skinnedsettings.cpp" line="209"/>
         <source>Archived skin</source>
         <translation>Tema archiviato</translation>
     </message>
@@ -1488,17 +1488,17 @@
 <context>
     <name>TextScroller</name>
     <message>
-        <location filename="../textscroller.cpp" line="58"/>
+        <location filename="../textscroller.cpp" line="55"/>
         <source>Autoscroll Songname</source>
         <translation>Scorrimento automatico del titolo del brano</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="59"/>
+        <location filename="../textscroller.cpp" line="56"/>
         <source>Transparent Background</source>
         <translation>Sfondo trasparente</translation>
     </message>
     <message>
-        <location filename="../textscroller.cpp" line="130"/>
+        <location filename="../textscroller.cpp" line="127"/>
         <source>Buffering: %1%</source>
         <translation>Riempimento buffer: %1%</translation>
     </message>

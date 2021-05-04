@@ -40,62 +40,62 @@
 <context>
     <name>CoverWidget</name>
     <message>
-        <location filename="../coverwidget.cpp" line="37"/>
+        <location filename="../coverwidget.cpp" line="38"/>
         <source>&amp;Save As...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="37"/>
+        <location filename="../coverwidget.cpp" line="38"/>
         <source>Ctrl+S</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="38"/>
+        <location filename="../coverwidget.cpp" line="39"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="40"/>
+        <location filename="../coverwidget.cpp" line="41"/>
         <source>Actual Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="41"/>
+        <location filename="../coverwidget.cpp" line="42"/>
         <source>128x128</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="42"/>
+        <location filename="../coverwidget.cpp" line="43"/>
         <source>256x256</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="43"/>
+        <location filename="../coverwidget.cpp" line="44"/>
         <source>512x512</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="44"/>
+        <location filename="../coverwidget.cpp" line="45"/>
         <source>1024x1024</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="47"/>
+        <location filename="../coverwidget.cpp" line="48"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="47"/>
+        <location filename="../coverwidget.cpp" line="48"/>
         <source>Alt+F4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="90"/>
+        <location filename="../coverwidget.cpp" line="91"/>
         <source>Save Cover As</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../coverwidget.cpp" line="92"/>
+        <location filename="../coverwidget.cpp" line="93"/>
         <source>Images</source>
         <translation type="unfinished"></translation>
     </message>

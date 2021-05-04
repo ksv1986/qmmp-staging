@@ -29,7 +29,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="36"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="68"/>
@@ -136,7 +136,7 @@
 <context>
     <name>UltimateLyricsParser</name>
     <message>
-        <location filename="../ultimatelyricsparser.cpp" line="120"/>
+        <location filename="../ultimatelyricsparser.cpp" line="117"/>
         <source>%1 (line: %2)</source>
         <translation>%1 (linha: %2)</translation>
     </message>

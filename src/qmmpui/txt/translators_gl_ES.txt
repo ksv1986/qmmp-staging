@@ -6,6 +6,7 @@ Portugués brasileiro:
 
 Búlgaro:
     Kiril Kirilov
+    Miroslav Mihov
 
 Chinés tradicional:
     Cosmos Chen
@@ -28,6 +29,7 @@ Holandés:
 
 Rematado:
     Jiri Grönroos
+    Kimmo Kujansuu
 
 Francés:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>

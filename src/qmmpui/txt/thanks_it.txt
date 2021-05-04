@@ -8,7 +8,7 @@ Ringraziamenti:
     Cristian Rodríguez <judas.iscariote@gmail.com> - correzioni a scrobbler
     Csaba Hruska <csaba.hruska@gmail.com> - correzioni all'estensione FFmpeg
     Dmitry Kostin <kostindima@gmail.com> - supporto per iso.wv
-    Dmitry Misharov <Dmitry.Misharov@gmail.com> - album artist tag support
+    Dmitry Misharov <Dmitry.Misharov@gmail.com> - supporto per l'etichetta "album artisti"
     Evgeny Gleyzerman <evgley@gmail.com> - miglioramenti all'analisi di file cue
     Ferdinand Vesely <erdofves@gmail.com> - miglioramenti a scrobbler
     Gennadi Motsyo <drool@altlinux.ru> - segnalazione di bug

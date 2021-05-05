@@ -29,12 +29,11 @@ MPRIS::MPRIS(QObject *parent) : QObject(parent)
     //MPRISv2.0
     new Root2Object(this);
     new Player2Object(this);
-    connection.registerObject("/org/mpris/MediaPlayer2", this);
     connection.registerService("org.mpris.MediaPlayer2.qmmp");
+    connection.registerObject("/org/mpris/MediaPlayer2", this);
 }
 
 MPRIS::~MPRIS()
 {
-    QDBusConnection::sessionBus().unregisterService("org.mpris.qmmp");
     QDBusConnection::sessionBus().unregisterService("org.mpris.MediaPlayer2.qmmp");
 }

@@ -61,7 +61,7 @@ bool DecoderFFmpegFactory::canDecode(QIODevice *i) const
     pd.buf = buf;
     if(pd.buf_size < PROBE_BUFFER_SIZE)
         return false;
-    AVInputFormat *fmt = av_probe_input_format(&pd, 1);
+    const AVInputFormat *fmt = av_probe_input_format(&pd, 1);
     if(!fmt)
         return false;
 
@@ -228,7 +228,7 @@ QList<TrackInfo *> DecoderFFmpegFactory::createPlayList(const QString &path, Tra
             info->setValue(Qmmp::CHANNELS, c->channels);
             info->setValue(Qmmp::BITS_PER_SAMPLE, c->bits_per_raw_sample);
 
-            AVCodec *codec = avcodec_find_decoder(c->codec_id);
+            const AVCodec *codec = avcodec_find_decoder(c->codec_id);
             if(codec)
                 info->setValue(Qmmp::FORMAT_NAME, QString::fromLatin1(codec->name));
             info->setValue(Qmmp::FILE_SIZE, QFileInfo(filePath).size()); //adds file size for cue tracks

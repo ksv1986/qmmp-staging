@@ -51,8 +51,8 @@ void OutputPipeWireFactory::showSettings(QWidget *parent)
 
 void OutputPipeWireFactory::showAbout(QWidget *parent)
 {
-   QMessageBox::about (parent, tr("About PipeWire Output Plugin"),
-                        tr("Qmmp PipeWire Output Plugin")+"\n"+
+    QMessageBox::about(parent, tr("About PipeWire Output Plugin"),
+                       tr("Qmmp PipeWire Output Plugin")+"\n"+
                        tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 

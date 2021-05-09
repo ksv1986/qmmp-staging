@@ -65,12 +65,11 @@ CueFile::CueFile(const QString &path) : CueParser()
         {
             enca_set_threshold(analyser, 1.38);
             EncaEncoding encoding = enca_analyse(analyser, (uchar *)data.constData(), data.size());
-            file.reset();
             if(encoding.charset != ENCA_CS_UNKNOWN)
             {
                 codec = new QmmpTextCodec(enca_charset_name(encoding.charset,ENCA_NAME_STYLE_ENCA));
                 //qDebug("CUEParser: detected charset: %s",
-                  //     enca_charset_name(encoding.charset,ENCA_NAME_STYLE_ENCA));
+                //       enca_charset_name(encoding.charset,ENCA_NAME_STYLE_ENCA));
             }
             enca_analyser_free(analyser);
         }

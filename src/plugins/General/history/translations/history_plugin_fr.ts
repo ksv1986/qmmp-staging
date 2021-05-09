@@ -16,6 +16,11 @@
         <source>History</source>
         <translation>Historique</translation>
     </message>
+    <message>
+        <location filename="../history.cpp" line="58"/>
+        <source>Alt+H</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HistoryFactory</name>

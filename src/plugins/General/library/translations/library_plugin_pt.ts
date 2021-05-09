@@ -9,13 +9,18 @@
         <translation>Coleção</translation>
     </message>
     <message>
-        <location filename="../library.cpp" line="71"/>
+        <location filename="../library.cpp" line="66"/>
+        <source>Alt+L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../library.cpp" line="72"/>
         <source>Update library</source>
         <translation>Atualizar biblioteca</translation>
     </message>
     <message>
-        <location filename="../library.cpp" line="181"/>
         <location filename="../library.cpp" line="182"/>
+        <location filename="../library.cpp" line="183"/>
         <source>Unknown</source>
         <translation>Desconhecido</translation>
     </message>

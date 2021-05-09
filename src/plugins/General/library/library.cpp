@@ -63,6 +63,7 @@ Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
     m_dirs = settings.value("Library/dirs").toStringList();
 
     m_showAction = new QAction(QIcon::fromTheme("text-x-generic"), tr("Library"), this);
+    m_showAction->setShortcut(tr("Alt+L"));
     UiHelper::instance()->addAction(m_showAction, UiHelper::TOOLS_MENU);
     connect(m_showAction, SIGNAL(triggered()), SLOT(showLibraryWindow()));
     if(!m_libraryWidget->isNull() && !m_libraryWidget->data()->isWindow())

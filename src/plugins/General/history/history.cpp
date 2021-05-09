@@ -55,6 +55,7 @@ History::History(QObject *parent) : QObject(parent)
     }
 
     QAction *action = new QAction(tr("History"), this);
+    action->setShortcut(tr("Alt+H"));
     action->setIcon(QIcon::fromTheme("text-x-generic"));
     UiHelper::instance()->addAction(action, UiHelper::TOOLS_MENU);
     connect(action, SIGNAL(triggered()), SLOT(showHistoryWindow()));

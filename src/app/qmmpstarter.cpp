@@ -239,18 +239,23 @@ void QMMPStarter::startPlayer()
     QStringList args = argString.split("|||", Qt::SkipEmptyParts);
 
 #ifdef Q_OS_WIN
-    QIcon::setThemeSearchPaths(QStringList() << qApp->applicationDirPath() + "/themes/");
+    QIcon::setThemeSearchPaths(QStringList() << qApp->applicationDirPath() + QLatin1String("/themes/"));
     QIcon::setThemeName("oxygen");
 #else
     //add extra theme path;
     QStringList theme_paths = QIcon::themeSearchPaths();
     QString share_path = qgetenv("XDG_DATA_HOME");
     if(share_path.isEmpty())
-        share_path = QDir::homePath() + "/.local/share";
-    theme_paths << share_path + "/icons";
+        share_path = QDir::homePath() + QLatin1String("/.local/share");
+    theme_paths << share_path + QLatin1String("/icons");
     theme_paths.removeDuplicates();
     QIcon::setThemeSearchPaths(theme_paths);
 #endif
+
+    //copy config from previous version
+    QString oldConfig = Qmmp::configDir() + QLatin1String("/qmmprc");
+    if(!QFile::exists(Qmmp::configFile()) && QFile::exists(oldConfig))
+        QFile::copy(oldConfig, Qmmp::configFile());
 
     //prepare libqmmp and libqmmpui libraries for usage
     m_player = new MediaPlayer(this);

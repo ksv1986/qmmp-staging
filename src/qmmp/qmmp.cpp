@@ -39,7 +39,7 @@ QString Qmmp::m_appDir;
 
 QString Qmmp::configFile()
 {
-    return configDir() + "/qmmprc";
+    return configDir() + QLatin1String("/qmmp2rc");
 }
 
 QString Qmmp::configDir()
@@ -55,7 +55,7 @@ QString Qmmp::configDir()
     else
         return m_configDir;
 #else
-    return m_configDir.isEmpty() ? QDir::homePath() +"/.qmmp" : m_configDir;
+    return m_configDir.isEmpty() ? QDir::homePath() + QLatin1String("/.qmmp") : m_configDir;
 #endif
 }
 

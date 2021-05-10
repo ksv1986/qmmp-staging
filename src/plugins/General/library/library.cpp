@@ -135,6 +135,7 @@ void Library::startDirectoryScanning()
     if(isRunning())
         return;
 
+    MetaDataManager::instance()->prepareForAnotherThread();
     m_filters = MetaDataManager::instance()->nameFilters();
     start(QThread::IdlePriority);
     if(!m_libraryWidget->isNull())
@@ -161,7 +162,15 @@ bool Library::createTables()
                          "AudioInfo BLOB, URL TEXT, FilePath TEXT, SearchString TEXT)");
 
     if(!ok)
+    {
         qWarning("Library: unable to create table, error: %s", qPrintable(query.lastError().text()));
+        return false;
+    }
+
+    ok = query.exec("CREATE TABLE IF NOT EXISTS ignored_files(ID INTEGER PRIMARY KEY AUTOINCREMENT, FilePath TEXT UNIQUE)");
+
+    if(!ok)
+        qWarning("Library: unable to create ignored file list, error: %s", qPrintable(query.lastError().text()));
 
     return ok;
 }
@@ -254,6 +263,8 @@ bool Library::scanDirectories(const QStringList &paths)
         db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
         db.open();
 
+        readIgnoredFiles();
+
         QSqlQuery query(db);
         query.exec("PRAGMA journal_mode = WAL");
         query.exec("PRAGMA synchronous = NORMAL");
@@ -289,7 +300,7 @@ void Library::addDirectory(const QString &s)
 
     for(const QFileInfo &info : qAsConst(l))
     {
-        if(!checkFile(info))
+        if(!checkFile(info) && !m_ignoredFiles.contains(info.filePath()))
         {
             QStringList paths;
             const QList<TrackInfo *> pl = MetaDataManager::instance()->createPlayList(info.absoluteFilePath(), TrackInfo::AllParts, &paths);
@@ -313,11 +324,13 @@ void Library::addDirectory(const QString &s)
 
     removeIgnoredTracks(&tracks, ignoredPaths);
 
-    for(TrackInfo *info : qAsConst(tracks))
+    for(TrackInfo *info : qAsConst(tracks))    
         addTrack(info, filePathHash.value(info));
 
     qDeleteAll(tracks);
     tracks.clear();
+
+    updateIgnoredFiles(ignoredPaths);
 
     //filter directories
     dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
@@ -325,10 +338,9 @@ void Library::addDirectory(const QString &s)
     l.clear();
     l = dir.entryInfoList();
 
-    for (int i = 0; i < l.size(); ++i)
+    for(const QFileInfo &i : qAsConst(l))
     {
-        QFileInfo fileInfo = l.at(i);
-        addDirectory(fileInfo.absoluteFilePath());
+        addDirectory(i.absoluteFilePath());
         if (m_stopped)
             return;
     }
@@ -349,7 +361,7 @@ void Library::removeMissingFiles(const QStringList &paths)
 
     QString previousPath;
 
-    while (query.next())
+    while(query.next())
     {
         QString path = query.value(0).toString();
         if(previousPath == path)
@@ -363,6 +375,31 @@ void Library::removeMissingFiles(const QStringList &paths)
             qDebug("Library: removing '%s' from library", qPrintable(path));
             QSqlQuery rmQuery(db);
             rmQuery.prepare("DELETE FROM track_library WHERE FilePath = :filepath");
+            rmQuery.bindValue(":filepath", path);
+            if(!rmQuery.exec())
+            {
+                qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+                return;
+            }
+        }
+    }
+
+    if(!query.exec("SELECT FilePath FROM ignored_files"))
+    {
+        qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+        return;
+    }
+
+    while(query.next())
+    {
+        QString path = query.value(0).toString();
+
+        if(!QFile::exists(path) || //remove missing or disabled file paths
+                !std::any_of(paths.cbegin(), paths.cend(), [path](const QString &p){ return path.startsWith(p); } ))
+        {
+            qDebug("Library: removing '%s' from ignored files", qPrintable(path));
+            QSqlQuery rmQuery(db);
+            rmQuery.prepare("DELETE FROM ignored_files WHERE FilePath = :filepath");
             rmQuery.bindValue(":filepath", path);
             if(!rmQuery.exec())
             {
@@ -411,4 +448,42 @@ void Library::removeIgnoredTracks(QList<TrackInfo *> *tracks, const QStringList 
             ++it;
         }
     }
+}
+
+void Library::updateIgnoredFiles(const QStringList &paths)
+{
+    QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
+    if(!db.isOpen())
+        return;
+
+    for(const QString &path : qAsConst(paths))
+    {
+        QSqlQuery query(db);
+        query.prepare("INSERT OR REPLACE INTO ignored_files VALUES((SELECT ID FROM track_library WHERE FilePath = :filepath), :filepath)");
+        query.bindValue(":filepath", path);
+        if(!query.exec())
+        {
+            qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+            break;
+        }
+    }
+}
+
+void Library::readIgnoredFiles()
+{
+    m_ignoredFiles.clear();
+
+    QSqlDatabase db = QSqlDatabase::database(CONNECTION_NAME);
+    if(!db.isOpen())
+        return;
+
+    QSqlQuery query(db);
+    if(!query.exec("SELECT FilePath FROM ignored_files"))
+    {
+        qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
+        return;
+    }
+
+    while(query.next())
+        m_ignoredFiles.insert(query.value(0).toString());
 }

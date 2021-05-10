@@ -26,6 +26,7 @@
 #include <QPointer>
 #include <QStringList>
 #include <QThread>
+#include <QSet>
 #include <atomic>
 #include <qmmp/trackinfo.h>
 #include <qmmp/qmmp.h>
@@ -61,11 +62,14 @@ private:
     void removeMissingFiles(const QStringList &paths);
     bool checkFile(const QFileInfo &info);
     void removeIgnoredTracks(QList<TrackInfo *> *tracks, const QStringList &ignoredPaths);
+    void updateIgnoredFiles(const QStringList &paths);
+    void readIgnoredFiles();
 
     QStringList m_filters, m_dirs;
     std::atomic_bool m_stopped = ATOMIC_VAR_INIT(false);
     QPointer<LibraryWidget> *m_libraryWidget;
     QAction *m_showAction;
+    QSet<QString> m_ignoredFiles;
 };
 
 #endif // LIBRARY_H

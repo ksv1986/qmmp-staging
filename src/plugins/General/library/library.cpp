@@ -84,11 +84,13 @@ Library::Library(QPointer<LibraryWidget> *libraryWidget, QObject *parent) :
     if(settings.value("Library/recreate_db", false).toBool())
     {
         settings.setValue("Library/recreate_db", false);
-
         {
             QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION_NAME);
+            db.setDatabaseName(Qmmp::configDir() + "/" + "library.sqlite");
             db.open();
             db.exec("DELETE FROM track_library");
+            db.exec("REINDEX track_library");
+            db.exec("VACUUM");
             db.close();
         }
         QSqlDatabase::removeDatabase(CONNECTION_NAME);

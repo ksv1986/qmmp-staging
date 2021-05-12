@@ -11,7 +11,7 @@
     <message>
         <location filename="../library.cpp" line="66"/>
         <source>Alt+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+l</translation>
     </message>
     <message>
         <location filename="../library.cpp" line="72"/>
@@ -19,8 +19,8 @@
         <translation>Atualizar biblioteca</translation>
     </message>
     <message>
-        <location filename="../library.cpp" line="182"/>
-        <location filename="../library.cpp" line="183"/>
+        <location filename="../library.cpp" line="193"/>
+        <location filename="../library.cpp" line="194"/>
         <source>Unknown</source>
         <translation>Desconhecido</translation>
     </message>

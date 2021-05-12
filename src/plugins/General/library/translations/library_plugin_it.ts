@@ -19,8 +19,8 @@
         <translation>Aggiorna libreria</translation>
     </message>
     <message>
-        <location filename="../library.cpp" line="182"/>
-        <location filename="../library.cpp" line="183"/>
+        <location filename="../library.cpp" line="193"/>
+        <location filename="../library.cpp" line="194"/>
         <source>Unknown</source>
         <translation>Sconosciuto</translation>
     </message>

@@ -58,7 +58,7 @@ Other features:
 - MPRIS
 - removable device detection (via HAL or UDisks)
 - video playback via Mplayer
-- lyrics (using LyricWiki and other providers)
+- lyrics
 - cover art support
 - CUE sheet support
 - embedded CUE support (for FLAC, WavPack and Monkey's Audio)

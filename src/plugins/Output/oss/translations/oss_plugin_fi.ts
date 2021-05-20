@@ -64,17 +64,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="160"/>
         <source>Buffer time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Puskurin aika (ms):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="170"/>
         <source>Period time (ms):</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarkastelujakso (ms):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="200"/>
         <source>PCM over Master</source>
-        <translation type="unfinished"></translation>
+        <translation>PCM masterin yli</translation>
     </message>
 </context>
 </TS>

@@ -64,7 +64,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="81"/>
         <source>Default encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oletuksena koodaus:</translation>
     </message>
 </context>
 </TS>

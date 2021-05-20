@@ -16,6 +16,11 @@
         <source>History</source>
         <translation>Histórico</translation>
     </message>
+    <message>
+        <location filename="../history.cpp" line="58"/>
+        <source>Alt+H</source>
+        <translation>Alt+H</translation>
+    </message>
 </context>
 <context>
     <name>HistoryFactory</name>
@@ -32,7 +37,7 @@
     <message>
         <location filename="../historyfactory.cpp" line="52"/>
         <source>Qmmp Listening History Plugin</source>
-        <translation>Suplemento Listening History</translation>
+        <translation>Suplemento Qmmp Listening History</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="53"/>

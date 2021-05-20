@@ -62,62 +62,62 @@
     <message>
         <location filename="../lyricswidget.ui" line="14"/>
         <source>Lyrics Plugin</source>
-        <translation type="unfinished">Πρόσθετο στίχων</translation>
+        <translation>Πρόσθετο στίχων</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="31"/>
         <source>Provider:</source>
-        <translation type="unfinished">Πάροχος</translation>
+        <translation>Πάροχος</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="115"/>
         <source>Title:</source>
-        <translation type="unfinished">Τίτλος:</translation>
+        <translation>Τίτλος:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="132"/>
         <source>Album:</source>
-        <translation type="unfinished">Δίσκος:</translation>
+        <translation>Δίσκος:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="142"/>
         <source>Artist:</source>
-        <translation type="unfinished">Καλλιτέχνης:</translation>
+        <translation>Καλλιτέχνης:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="159"/>
         <source>Track:</source>
-        <translation type="unfinished">Κομμάτι:</translation>
+        <translation>Κομμάτι:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="171"/>
         <source>Year:</source>
-        <translation type="unfinished">Έτος:</translation>
+        <translation>Έτος:</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="138"/>
         <source>&lt;h2&gt;%1 - %2&lt;/h2&gt;</source>
-        <translation type="unfinished">&lt;h2&gt;%1 - %2&lt;/h2&gt;</translation>
+        <translation>&lt;h2&gt;%1 - %2&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="149"/>
         <source>Not found</source>
-        <translation type="unfinished">Δεν βρέθηκε</translation>
+        <translation>Δεν βρέθηκε</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="159"/>
         <source>Error: %1 - %2</source>
-        <translation type="unfinished">Σφάλμα: %1 - %2</translation>
+        <translation>Σφάλμα: %1 - %2</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="172"/>
         <source>Receiving</source>
-        <translation type="unfinished">Γίνεται λήψη</translation>
+        <translation>Γίνεται λήψη</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="233"/>
         <source>cache</source>
-        <translation type="unfinished">κρυφή μνήμη</translation>
+        <translation>κρυφή μνήμη</translation>
     </message>
 </context>
 <context>

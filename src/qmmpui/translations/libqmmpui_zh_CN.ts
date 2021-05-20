@@ -217,7 +217,7 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished">上级目录名</translation>
+        <translation>上级目录名</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
@@ -430,12 +430,12 @@
     <message>
         <location filename="../forms/configdialog.ui" line="541"/>
         <source>Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>字体：</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="566"/>
         <source>???</source>
-        <translation type="unfinished"></translation>
+        <translation>？？？</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="605"/>
@@ -821,12 +821,12 @@
     <message>
         <location filename="../forms/cueeditor.ui" line="40"/>
         <source>Load</source>
-        <translation type="unfinished">载入</translation>
+        <translation>载入</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="47"/>
         <source>Delete</source>
-        <translation type="unfinished">删除</translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="54"/>
@@ -842,7 +842,7 @@
         <location filename="../cueeditor.cpp" line="133"/>
         <location filename="../cueeditor.cpp" line="152"/>
         <source>CUE Files</source>
-        <translation type="unfinished"></translation>
+        <translation>CUE 文件</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="150"/>
@@ -1383,7 +1383,8 @@
         <location filename="../uihelper.cpp" line="226"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 早已存在。
+你想要替换它吗？</translation>
     </message>
 </context>
 <context>

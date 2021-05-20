@@ -148,7 +148,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="253"/>
         <source>Merge selected tag types</source>
-        <translation type="unfinished"></translation>
+        <translation>Συγχώνευση των επιλεγμένων τύπων ετικετών</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="272"/>

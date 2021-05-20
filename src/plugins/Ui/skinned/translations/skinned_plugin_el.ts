@@ -464,7 +464,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="47"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή χρώματος</translation>
     </message>
 </context>
 <context>
@@ -1235,7 +1235,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="123"/>
         <source>Use skin cursors</source>
-        <translation>Χρήση θεματοποιημένων δρομέων</translation>
+        <translation>Χρήση των δρομέων του θέματος</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="261"/>
@@ -1255,47 +1255,47 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="421"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρώματα</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="427"/>
         <source>Playlist Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρώματα λίστας αναπαραγωγής</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="433"/>
         <source>Use skin colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση των χρωμάτων του θέματος</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>Background #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Παρασκήνιο #2:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="590"/>
         <source>Highlighted background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Τονισμένο παρασκήνιο:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="494"/>
         <source>Normal text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Κανονικό κείμενο:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="657"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Διαχωριστής:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="558"/>
         <source>Current text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Τρέχον κείμενο:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="622"/>
         <source>Highlighted text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Τονισμένο κείμενο:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="765"/>
@@ -1310,7 +1310,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="730"/>
         <source>Group background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Παρασκήνιο ομάδας:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="860"/>
@@ -1320,17 +1320,17 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="698"/>
         <source>Group text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Κείμενο ομάδας:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="449"/>
         <source>Background #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Παρασκήνιο #1:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="825"/>
         <source>Load skin colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Φόρτωση των χρωμάτων του θέματος</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="894"/>

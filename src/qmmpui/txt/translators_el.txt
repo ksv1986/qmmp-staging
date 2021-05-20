@@ -6,6 +6,7 @@
 
 Βουλγαρικά:
     Kiril Kirilov
+    Miroslav Mihov
 
 Κινέζικα παραδοσιακά
     Cosmos Chen
@@ -28,6 +29,7 @@
 
 Φιλανδικά:
     Jiri Grönroos
+    Kimmo Kujansuu
 
 Γαλλικά
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>

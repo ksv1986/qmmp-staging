@@ -666,7 +666,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="100"/>
         <source>Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>工具</translation>
     </message>
 </context>
 <context>
@@ -1380,27 +1380,27 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="126"/>
         <source>Cover</source>
-        <translation type="unfinished">封面</translation>
+        <translation>封面</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="129"/>
         <source>Visualization Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>可视化模式</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="132"/>
         <source>Analyzer</source>
-        <translation type="unfinished"></translation>
+        <translation>分析器</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="133"/>
         <source>Scope</source>
-        <translation type="unfinished"></translation>
+        <translation>示波器</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="140"/>
         <source>Analyzer Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>分析模式</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="142"/>
@@ -1410,77 +1410,77 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="143"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>线形</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="151"/>
         <source>Peaks</source>
-        <translation type="unfinished">峰</translation>
+        <translation>峰</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="154"/>
         <source>Refresh Rate</source>
-        <translation type="unfinished">刷新率</translation>
+        <translation>刷新率</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="157"/>
         <source>50 fps</source>
-        <translation type="unfinished">50 fps</translation>
+        <translation>50 fps</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="158"/>
         <source>25 fps</source>
-        <translation type="unfinished">25 帧每秒</translation>
+        <translation>25 帧每秒</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="159"/>
         <source>10 fps</source>
-        <translation type="unfinished">10 帧每秒</translation>
+        <translation>10 帧每秒</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="160"/>
         <source>5 fps</source>
-        <translation type="unfinished">5 帧每秒</translation>
+        <translation>5 帧每秒</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="167"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished">分析器坠落</translation>
+        <translation>分析器坠落</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="170"/>
         <location filename="../qsuivisualization.cpp" line="184"/>
         <source>Slowest</source>
-        <translation type="unfinished">最慢</translation>
+        <translation>最慢</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="171"/>
         <location filename="../qsuivisualization.cpp" line="185"/>
         <source>Slow</source>
-        <translation type="unfinished">慢</translation>
+        <translation>慢</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="172"/>
         <location filename="../qsuivisualization.cpp" line="186"/>
         <source>Medium</source>
-        <translation type="unfinished">中等</translation>
+        <translation>中等</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="173"/>
         <location filename="../qsuivisualization.cpp" line="187"/>
         <source>Fast</source>
-        <translation type="unfinished">快</translation>
+        <translation>快</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="174"/>
         <location filename="../qsuivisualization.cpp" line="188"/>
         <source>Fastest</source>
-        <translation type="unfinished">最快</translation>
+        <translation>最快</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="181"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished">顶峰坠落</translation>
+        <translation>顶峰坠落</translation>
     </message>
 </context>
 <context>
@@ -1488,7 +1488,7 @@
     <message>
         <location filename="../qsuifactory.cpp" line="32"/>
         <source>Simple User Interface</source>
-        <translation type="unfinished">简单用户界面</translation>
+        <translation>简单用户界面</translation>
     </message>
 </context>
 <context>
@@ -1496,7 +1496,7 @@
     <message>
         <location filename="../qsuisettings.cpp" line="43"/>
         <source>Default</source>
-        <translation type="unfinished">默认</translation>
+        <translation>默认</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="44"/>
@@ -1536,12 +1536,12 @@
     <message>
         <location filename="../qsuisettings.cpp" line="52"/>
         <source>Left</source>
-        <translation type="unfinished">左对齐</translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../qsuisettings.cpp" line="53"/>
         <source>Right</source>
-        <translation type="unfinished">右对齐</translation>
+        <translation>右</translation>
     </message>
 </context>
 <context>
@@ -1559,12 +1559,12 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="87"/>
         <source>Playing</source>
-        <translation type="unfinished">播放中</translation>
+        <translation>播放中</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="87"/>
         <source>Paused</source>
-        <translation type="unfinished">被暂停</translation>
+        <translation>被暂停</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="102"/>
@@ -1574,17 +1574,17 @@
     <message>
         <location filename="../qsuistatusbar.cpp" line="127"/>
         <source>Stopped</source>
-        <translation type="unfinished">被停止</translation>
+        <translation>被停止</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="139"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>错误</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="147"/>
         <source>Buffering: %1%</source>
-        <translation type="unfinished">缓冲中：%1%</translation>
+        <translation>缓冲中：%1%</translation>
     </message>
     <message>
         <location filename="../qsuistatusbar.cpp" line="152"/>

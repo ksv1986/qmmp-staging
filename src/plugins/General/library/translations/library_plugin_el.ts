@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="el_GR">
+<TS version="2.1" language="el">
 <context>
     <name>Library</name>
     <message>
@@ -9,13 +9,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../library.cpp" line="71"/>
+        <location filename="../library.cpp" line="66"/>
+        <source>Alt+L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../library.cpp" line="72"/>
         <source>Update library</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../library.cpp" line="181"/>
-        <location filename="../library.cpp" line="182"/>
+        <location filename="../library.cpp" line="193"/>
+        <location filename="../library.cpp" line="194"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
@@ -55,7 +60,7 @@
     <message>
         <location filename="../libraryfactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -63,7 +68,7 @@
     <message>
         <location filename="../librarymodel.cpp" line="204"/>
         <source>%1 - %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - %2</translation>
     </message>
 </context>
 <context>
@@ -76,12 +81,12 @@
     <message>
         <location filename="../librarywidget.cpp" line="52"/>
         <source>&amp;View Track Details</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Προβολή λεπτομερειών κομματιού</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="54"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Γρήγορη αναζήτηση</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="88"/>
@@ -119,12 +124,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσθήκη</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Αφαίρεση</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="65"/>

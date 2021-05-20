@@ -44,7 +44,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="56"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="58"/>
         <source>Video format</source>
-        <translation type="unfinished"></translation>
+        <translation>Videomuoto</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="59"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="63"/>
         <source>Resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Resoluutio</translation>
     </message>
 </context>
 <context>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
         <source>Extra options:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisävalinnat:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>

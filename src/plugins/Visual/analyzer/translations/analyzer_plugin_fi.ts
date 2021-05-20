@@ -6,12 +6,12 @@
     <message>
         <location filename="../analyzer.cpp" line="36"/>
         <source>Qmmp Analyzer</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Analysaattori</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="323"/>
         <source>Peaks</source>
-        <translation type="unfinished"></translation>
+        <translation>Piikki</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="326"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Analyzer Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Analysaattorin laajennuksen asetukset </translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -122,12 +122,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="107"/>
         <source>Peaks:</source>
-        <translation type="unfinished"></translation>
+        <translation>Piikki:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="139"/>
         <source>Analyzer #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Analysaattori #1:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="171"/>
@@ -137,12 +137,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="203"/>
         <source>Analyzer #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Analysaattori #2:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="248"/>
         <source>Analyzer #3:</source>
-        <translation type="unfinished"></translation>
+        <translation>Analysaattori #3:</translation>
     </message>
 </context>
 <context>
@@ -150,7 +150,7 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="30"/>
         <source>Analyzer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Analysaattorin laajennus</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="49"/>

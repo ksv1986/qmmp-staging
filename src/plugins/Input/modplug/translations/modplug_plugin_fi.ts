@@ -109,7 +109,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Resoluutio</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="51"/>

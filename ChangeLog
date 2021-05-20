@@ -1701,3 +1701,16 @@ Version 1.5.0
 * removed some deprecated API usage
 * removed obsolete code
 * changed minimal FFmpeg version to 3.4
+* updated Portuguese translation (Sérgio Marques)
+* updated Dutch translation (Heimen Stoffels)
+* updated Polish translation (mrerexx)
+* updated Galician translation (Delio Docampo Cordeiro)
+* updated Spanish translation (Joel Barrios)
+* updated Russian translation (Ilya Kotov)
+* updated Ukrainian translation (Gennady Motsyo)
+* updated French translation (Adrien Vigneron)
+* updated Indonesian translation (Andika Triwidada)
+* updated Greek translation (Dimitrios Glentadakis)
+* updated Italian translation (Luigi Toscano)
+* updated German translation (Ettore Atalan)
+* updated Finnish translation (Jiri Grönroos, Kimmo Kujansuu)

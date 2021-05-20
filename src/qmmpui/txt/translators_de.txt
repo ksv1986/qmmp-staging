@@ -6,6 +6,7 @@ Brasilianisches Portugiesisch:
 
 Bulgarisch:
     Kiril Kirilov
+    Miroslav Mihov
 
 Chinesisch traditionell
     Cosmos Chen
@@ -28,6 +29,7 @@ Niederländisch:
 
 Finnish:
     Jiri Grönroos
+    Kimmo Kujansuu
 
 Französisch:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>

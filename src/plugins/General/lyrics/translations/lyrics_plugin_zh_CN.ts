@@ -62,7 +62,7 @@
     <message>
         <location filename="../lyricswidget.ui" line="14"/>
         <source>Lyrics Plugin</source>
-        <translation type="unfinished">歌词插件</translation>
+        <translation>歌词插件</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="31"/>
@@ -72,27 +72,27 @@
     <message>
         <location filename="../lyricswidget.ui" line="115"/>
         <source>Title:</source>
-        <translation type="unfinished">标题：</translation>
+        <translation>标题：</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="132"/>
         <source>Album:</source>
-        <translation type="unfinished"></translation>
+        <translation>专辑：</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="142"/>
         <source>Artist:</source>
-        <translation type="unfinished">艺术家：</translation>
+        <translation>艺术家：</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="159"/>
         <source>Track:</source>
-        <translation type="unfinished"></translation>
+        <translation>音轨：</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="171"/>
         <source>Year:</source>
-        <translation type="unfinished"></translation>
+        <translation>年代：</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="138"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../lyricswidget.cpp" line="149"/>
         <source>Not found</source>
-        <translation type="unfinished">没有发现</translation>
+        <translation>没有发现</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="159"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../lyricswidget.cpp" line="172"/>
         <source>Receiving</source>
-        <translation type="unfinished">接受</translation>
+        <translation>接收中</translation>
     </message>
     <message>
         <location filename="../lyricswidget.cpp" line="233"/>

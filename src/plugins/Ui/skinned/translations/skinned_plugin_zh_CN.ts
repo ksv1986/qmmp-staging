@@ -464,7 +464,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="47"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>选择颜色</translation>
     </message>
 </context>
 <context>
@@ -1255,12 +1255,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="421"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>颜色</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="427"/>
         <source>Playlist Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>播放列表颜色</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="433"/>
@@ -1270,17 +1270,17 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>Background #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>背景#2：</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="590"/>
         <source>Highlighted background:</source>
-        <translation type="unfinished"></translation>
+        <translation>高亮显示的背景：</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="494"/>
         <source>Normal text:</source>
-        <translation type="unfinished"></translation>
+        <translation>正常文本：</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="657"/>
@@ -1290,12 +1290,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="558"/>
         <source>Current text:</source>
-        <translation type="unfinished"></translation>
+        <translation>当前文本：</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="622"/>
         <source>Highlighted text:</source>
-        <translation type="unfinished"></translation>
+        <translation>高亮显示的文本：</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="765"/>
@@ -1310,7 +1310,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="730"/>
         <source>Group background:</source>
-        <translation type="unfinished"></translation>
+        <translation>分组背景：</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="860"/>
@@ -1320,12 +1320,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="698"/>
         <source>Group text:</source>
-        <translation type="unfinished"></translation>
+        <translation>分组文本：</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="449"/>
         <source>Background #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>背景#1：</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="825"/>

@@ -68,7 +68,7 @@
     <message>
         <location filename="../librarymodel.cpp" line="204"/>
         <source>%1 - %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - %2</translation>
     </message>
 </context>
 <context>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../librarywidget.cpp" line="52"/>
         <source>&amp;View Track Details</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;查看曲目详细内容</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="54"/>
@@ -124,12 +124,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>添加</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="65"/>

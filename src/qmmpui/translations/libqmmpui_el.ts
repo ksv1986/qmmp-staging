@@ -217,7 +217,7 @@
     <message>
         <location filename="../columneditor.cpp" line="102"/>
         <source>Parent Directory Name</source>
-        <translation type="unfinished">Όνομα γονικού καταλόγου</translation>
+        <translation>Όνομα γονικού καταλόγου</translation>
     </message>
     <message>
         <location filename="../columneditor.cpp" line="103"/>
@@ -430,12 +430,12 @@
     <message>
         <location filename="../forms/configdialog.ui" line="541"/>
         <source>Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Γραμματοσειρά:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="566"/>
         <source>???</source>
-        <translation type="unfinished"></translation>
+        <translation>;;;</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="605"/>
@@ -821,17 +821,17 @@
     <message>
         <location filename="../forms/cueeditor.ui" line="40"/>
         <source>Load</source>
-        <translation type="unfinished">Φόρτωση</translation>
+        <translation>Φόρτωση</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="47"/>
         <source>Delete</source>
-        <translation type="unfinished">Διαγραφή</translation>
+        <translation>Διαγραφή</translation>
     </message>
     <message>
         <location filename="../forms/cueeditor.ui" line="54"/>
         <source>Save as...</source>
-        <translation type="unfinished">Αποθήκευση ως...</translation>
+        <translation>Αποθήκευση ως...</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="131"/>
@@ -842,7 +842,7 @@
         <location filename="../cueeditor.cpp" line="133"/>
         <location filename="../cueeditor.cpp" line="152"/>
         <source>CUE Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Αρχεία CUE</translation>
     </message>
     <message>
         <location filename="../cueeditor.cpp" line="150"/>

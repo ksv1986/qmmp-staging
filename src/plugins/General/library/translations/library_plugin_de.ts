@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.1" language="de">
 <context>
     <name>Library</name>
     <message>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../libraryfactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -68,7 +68,7 @@
     <message>
         <location filename="../librarymodel.cpp" line="204"/>
         <source>%1 - %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - %2</translation>
     </message>
 </context>
 <context>
@@ -81,12 +81,12 @@
     <message>
         <location filename="../librarywidget.cpp" line="52"/>
         <source>&amp;View Track Details</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Titeldetails anzeigen</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="54"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Schnellsuche</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="88"/>
@@ -124,12 +124,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Hinzufügen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Entfernen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="65"/>

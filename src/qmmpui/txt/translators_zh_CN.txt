@@ -6,8 +6,10 @@
 
 保加利亚语：
     Kiril Kirilov
+    Miroslav Mihov
 
 繁体中文：
+    Cosmos Chen
     艾昂<Ion83129@126.com>
     杰夫.黄
 
@@ -22,10 +24,12 @@
     Karel Volný <kvolny@redhat.com>
 
 荷兰语：
+    Heimen Stoffels
     罗纳德.尤特马克
 
 Finnish:
     Jiri Grönroos
+    Kimmo Kujansuu
 
 法语：
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>
@@ -51,6 +55,7 @@ Finnish:
     Németh Gábor <sutee84@freemail.hu>
 
 印度尼西亚语：
+    Andika Triwidada
     Wantoyo <wantoyek@gmail.com>
 
 意大利语：
@@ -69,6 +74,7 @@ Finnish:
 波兰语：
     Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
+    mrerexx
 
 葡萄牙语：
     Sérgio Marques <smarquespt@gmail.com>
@@ -76,6 +82,7 @@ Finnish:
 俄语：
     Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
 
 塞尔维亚语：
     Mladen Pejaković <pejakm@autistici.org>

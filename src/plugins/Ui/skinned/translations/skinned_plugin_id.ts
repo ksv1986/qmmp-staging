@@ -464,7 +464,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="47"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilih Warna</translation>
     </message>
 </context>
 <context>
@@ -1255,12 +1255,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="421"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="427"/>
         <source>Playlist Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna Daftarmain</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="433"/>
@@ -1270,62 +1270,62 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>Background #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Background #2:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="590"/>
         <source>Highlighted background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Background tersorot:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="494"/>
         <source>Normal text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teks normal:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="657"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pembelah:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="558"/>
         <source>Current text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teks saat ini:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="622"/>
         <source>Highlighted text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teks tersorot:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="765"/>
         <source>Current track background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Latar belakang trek saat ini:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="867"/>
         <source>Override current track background</source>
-        <translation type="unfinished"></translation>
+        <translation>Timpa latar belakang trek saat ini</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="730"/>
         <source>Group background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Background kelompok:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="860"/>
         <source>Override group background</source>
-        <translation type="unfinished"></translation>
+        <translation>Timpa latar belakang grup</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="698"/>
         <source>Group text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teks kelompok:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="449"/>
         <source>Background #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Background #1:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="825"/>

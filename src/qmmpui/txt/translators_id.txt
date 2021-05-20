@@ -6,6 +6,7 @@ Portugis Brasilia:
 
 Bulgaria:
     Kiril Kirilov
+    Miroslav Mihov
 
 Cina Tradisional:
     Cosmos Chen
@@ -28,6 +29,7 @@ Belanda:
 
 Finlandia:
     Jiri Grönroos
+    Kimmo Kujansuu
 
 Perancis:
     Adrien Vigneron - VRad <adrienvigneron@ml1.net>

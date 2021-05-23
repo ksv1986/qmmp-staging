@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PROJECT_NAME=qmmp
+PROJECT_NAME=qmmp-stable
 TX_CONFIG="../.tx/config"
 
 echo "[main]" > ${TX_CONFIG}

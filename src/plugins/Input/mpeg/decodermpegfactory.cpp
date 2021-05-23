@@ -204,7 +204,9 @@ Decoder *DecoderMPEGFactory::create(const QString &, QIODevice *input)
         d = new DecoderMAD(crc, input);
     }
 #elif defined(WITH_MAD)
-    d = new DecoderMAD(input);
+    QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
+    bool crc = settings.value("MPEG/enable_crc", false).toBool();
+    d = new DecoderMAD(crc, input);
 #elif defined(WITH_MPG123)
     d = new DecoderMPG123(input);
 #endif

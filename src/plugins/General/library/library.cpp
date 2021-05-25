@@ -353,7 +353,7 @@ void Library::removeMissingFiles(const QStringList &paths)
         return;
 
     QSqlQuery query(db);
-    if(!query.exec("SELECT FilePath FROM track_library"))
+    if(!query.exec("SELECT FilePath,URL FROM track_library"))
     {
         qWarning("Library: exec error: %s", qPrintable(query.lastError().text()));
         return;
@@ -364,13 +364,15 @@ void Library::removeMissingFiles(const QStringList &paths)
     while(query.next())
     {
         QString path = query.value(0).toString();
+        QString url = query.value(1).toString();
         if(previousPath == path)
             continue;
 
         previousPath = path;
 
         if(!QFile::exists(path) || //remove missing or disabled file paths
-                !std::any_of(paths.cbegin(), paths.cend(), [path](const QString &p){ return path.startsWith(p); } ))
+                !std::any_of(paths.cbegin(), paths.cend(), [path](const QString &p){ return path.startsWith(p); } ) ||
+                (!url.contains("://") && m_ignoredFiles.contains(url))) //remove ignored files
         {
             qDebug("Library: removing '%s' from library", qPrintable(path));
             QSqlQuery rmQuery(db);

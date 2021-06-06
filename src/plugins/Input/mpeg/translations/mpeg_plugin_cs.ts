@@ -14,32 +14,32 @@
         <translation>Soubory MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="409"/>
+        <location filename="../decodermpegfactory.cpp" line="411"/>
         <source>About MPEG Audio Plugin</source>
         <translation>O modulu MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="410"/>
+        <location filename="../decodermpegfactory.cpp" line="412"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="411"/>
+        <location filename="../decodermpegfactory.cpp" line="413"/>
         <source>Compiled against:</source>
         <translation>Kompilováno s:</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="420"/>
+        <location filename="../decodermpegfactory.cpp" line="422"/>
         <source>mpg123, API version: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="424"/>
+        <location filename="../decodermpegfactory.cpp" line="426"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="425"/>
+        <location filename="../decodermpegfactory.cpp" line="427"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Zdrojový kód je založen na projektech mq3 a madplay</translation>
     </message>

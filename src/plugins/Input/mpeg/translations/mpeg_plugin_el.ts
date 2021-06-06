@@ -14,32 +14,32 @@
         <translation>Αρχεία MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="410"/>
+        <location filename="../decodermpegfactory.cpp" line="412"/>
         <source>About MPEG Audio Plugin</source>
         <translation>Σχετικά με το πρόσθετο ήχου MPEG</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="411"/>
+        <location filename="../decodermpegfactory.cpp" line="413"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
         <translation>MPEG 1.0/2.0/2.5 στρώση 1/2/3 αποκωδικοποιητής ήχου</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="412"/>
+        <location filename="../decodermpegfactory.cpp" line="414"/>
         <source>Compiled against:</source>
         <translation>Μεταγλωττίστηκε χρησιμοποιώντας:</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="421"/>
+        <location filename="../decodermpegfactory.cpp" line="423"/>
         <source>mpg123, API version: %1</source>
         <translation>mpg123, API έκδοση: %1</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="425"/>
+        <location filename="../decodermpegfactory.cpp" line="427"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>Γράφτηκε από τον: Ilya Kotov &lt;forkotov02@hotmail.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../decodermpegfactory.cpp" line="426"/>
+        <location filename="../decodermpegfactory.cpp" line="428"/>
         <source>Source code based on mq3 and madplay projects</source>
         <translation>Ο πηγαίος κώδικας έχει βασιστεί στα έργα mq3 και madplay</translation>
     </message>

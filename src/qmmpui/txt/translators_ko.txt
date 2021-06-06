@@ -1,0 +1,104 @@
+브라질 포르투갈어:
+    Bruno Gonçalves
+    Klaos Lacerda
+    Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
+
+불가리어:
+    Kiril Kirilov
+    Miroslav Mihov
+
+중국어 번체:
+    Cosmos Chen
+    lon <lon83129@126.com>
+    Jeff Huang
+
+중국어 간체:
+    lon <lon83129@126.com>
+    mabier
+    Mingcong Bai
+    Mingye Wang
+
+체코어:
+    Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
+
+네덜란드어:
+    Heimen Stoffels
+    Ronald Uitermark <ronald645@gmail.com>
+
+핀란드어:
+    Jiri Grönroos
+    Kimmo Kujansuu
+
+프랑스어:
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
+    Sébastien Aperghis-Tramoni (maddingue)
+    Stanislas Zeller <uncensored.assault@gmail.com>
+
+갈리시아어:
+    Delio Docampo Cordeiro
+    Óscar Pereira <oscarpereira1989@gmail.com>
+
+독일어:
+    Ettore Atalan
+    Stefan Koelling <stefankoelling.ext@googlemail.com>
+    Panagiotis Papadopoulos <pano_90@gmx.net>
+
+그리스어:
+    Dimitrios Glentadakis
+
+히브리어:
+    Genghis Khan <genghiskhan@gmx.ca>
+
+헝가리어:
+    Németh Gábor <sutee84@freemail.hu>
+
+인도네시아어:
+    Andika Triwidada
+    Wantoyo <wantoyek@gmail.com>
+
+이탈리아어:
+    Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
+
+일본어:
+    Ryota Shimamoto <liangtai.s16@gmail.com>
+
+카자흐스탄어:
+    Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+
+리투아니아어:
+    Algirdas Butkus <butkus.algirdas@gmail.com>
+
+폴란드어:
+    Daniel Krawczyk
+    Grzegorz Gibas <amigib@gmail.com>
+    mrerexx
+
+포르투갈어:
+    Sérgio Marques <smarquespt@gmail.com>
+
+러시아어:
+    Alexey Loginov <loginov.alex.valer.gmail.com>
+    Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
+
+세르비아어:
+    Mladen Pejaković <pejakm@autistici.org>
+
+슬로바키아어:
+    Ján Ďanovský <dagsoftware@yahoo.com>
+
+스페인어:
+    Bohdan Shuba
+    Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
+
+터키어:
+    Mustafa GUNAY <mustafagunay@pgmail.com>
+    Bilgesu Güngör <h.ibrahim.gungor@gmail.com>
+    Uğur KUYU
+
+우크라이나어:
+    Gennadi Motsyo <drool@altlinux.ru>

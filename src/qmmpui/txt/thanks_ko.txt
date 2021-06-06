@@ -1,0 +1,31 @@
+도움을 주신 분들:
+
+    Adria Arrufat <swiftscythe@gmail.com> - 버그 리포트
+    Adrian Knoth <adi@drcomp.erfurt.thur.de> - JACK 플러그인 수정, 버그 리포트
+    Anton Petrusevich <casus@casus.us> - 무작위 재생 개선
+    Avihay Baratz <avihayb@gmail.com> - 자동 정지 기능, 버그 수정
+    Brice Videau <brice.videau@gmail.com> - 버그 수정
+    Cristian Rodríguez <judas.iscariote@gmail.com> - scrobbler 수정
+    Csaba Hruska <csaba.hruska@gmail.com> - FFmpeg 플러그인 수정
+    Dmitry Kostin <kostindima@gmail.com> - iso.wv 지원
+    Dmitry Misharov <Dmitry.Misharov@gmail.com> - 앨범 아티스트 태그 지원
+    Evgeny Gleyzerman <evgley@gmail.com> - cue 구문분석 개선
+    Ferdinand Vesely <erdofves@gmail.com> - scrobbler 개선
+    Gennadi Motsyo <drool@altlinux.ru> - 버그 리포트
+    Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - 최적화
+    Vadim Kalinnikov <moose@ylsoftware.com> - 프로젝트 진행
+    Erik Ölsar <erlk.ozlr@gmail.com> - 스킨 커서, ui 개선
+    Funda Wang <fundawang@gmail.com> - cmake 파일 수정
+    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia 출력, MacOS X 포트
+    Karel Volný <kvolny@redhat.com> - 다양한 수정
+    Makis Kalofolias <makskafl@gmail.com> - EAC3, DTS, 및 Dolby TrueHD 지원
+    Michail Zheludkov <zheludkovm@mail.ru> - FFmpeg 플러그인 수정
+    Michał Grosicki <grosik88@o2.pl> - ALSA 플러그인 수정
+    Panagiotis Papadopoulos <pano_90@gmx.net> - ui 수정, 버그 리포트
+    Pino Toscano <toscano.pino@tiscali.it> - 이식성 패치
+    Ryota Shimamoto <liangtai.s16@gmail.com> - FreeBSD 패치
+    Sebastian Pipping <webmaster@hartwork.org> - bs2b 패치
+    Stefan Koelling <stefankoelling.ext@googlemail.com> - 일부 빌드 수정
+    Thomas Perl - GUI 개선
+    Ville Skyttä - ModPlug 플러그인 개선
+    Yaakov Selkowitz <yselkowitz@gmail.com> - cygwin 패치

@@ -58,6 +58,11 @@
     <file>thanks_nl.txt</file>
     <file>translators_nl.txt</file>
 
+    <file>description_ko.txt</file>
+    <file>authors_ko.txt</file>
+    <file>thanks_ko.txt</file>
+    <file>translators_ko.txt</file>
+
     <file>description_de.txt</file>
     <file>authors_de.txt</file>
     <file>thanks_de.txt</file>

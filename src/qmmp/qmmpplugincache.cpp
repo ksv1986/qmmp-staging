@@ -43,18 +43,18 @@ QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
     key.remove(0,1);
 #endif
     if(settings->allKeys().contains(key))
-
     {
         QStringList values = settings->value(m_path).toStringList();
-        if(values.count() != 5)
+        if(values.count() != 6)
             update = true;
         else
         {
             m_shortName = values.at(0);
             m_priority = values.at(1).toInt();
-            m_filters = values.at(2).split(";");
-            m_contentTypes = values.at(3).split(";");
-            update = (info.lastModified().toString(Qt::ISODate) != values.at(4));
+            m_protocols = values.at(2).split(";");
+            m_filters = values.at(3).split(";");
+            m_contentTypes = values.at(4).split(";");
+            update = (info.lastModified().toString(Qt::ISODate) != values.at(5));
         }
     }
     else
@@ -67,6 +67,7 @@ QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
         {
             m_shortName = factory->properties().shortName;
             m_priority = factory->properties().priority;
+            m_protocols = factory->properties().protocols;
             m_filters = factory->properties().filters;
             m_contentTypes = factory->properties().contentTypes;
         }
@@ -79,6 +80,7 @@ QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
         {
             m_shortName = factory->properties().shortName;
             m_priority = 0;
+            m_protocols = factory->properties().protocols;
             m_filters = factory->properties().filters;
             m_contentTypes = factory->properties().contentTypes;
         }
@@ -91,6 +93,7 @@ QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
         {
             m_shortName = factory->properties().shortName;
             m_priority = 0;
+            m_protocols = factory->properties().protocols;
         }
         else
         {
@@ -103,6 +106,7 @@ QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
             QStringList values;
             values << m_shortName;
             values << QString::number(m_priority);
+            values << m_protocols.join(";");
             values << m_filters.join(";");
             values << m_contentTypes.join(";");
             values << info.lastModified().toString(Qt::ISODate);
@@ -132,6 +136,11 @@ const QStringList &QmmpPluginCache::filters() const
 const QStringList &QmmpPluginCache::contentTypes() const
 {
     return m_contentTypes;
+}
+
+const QStringList &QmmpPluginCache::protocols() const
+{
+    return m_protocols;
 }
 
 int QmmpPluginCache::priority() const

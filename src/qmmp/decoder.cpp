@@ -157,17 +157,17 @@ QString Decoder::file(const DecoderFactory *factory)
 QStringList Decoder::protocols()
 {
     loadPlugins();
-    QStringList protocolsList;
+    QStringList protocolList;
 
     for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(m_disabledNames.contains(item->shortName()))
             continue;
-        if(item->decoderFactory())
-            protocolsList << item->decoderFactory()->properties().protocols;
+
+        protocolList << item->protocols();
     }
-    protocolsList.removeDuplicates();
-    return protocolsList;
+    protocolList.removeDuplicates();
+    return protocolList;
 }
 
 DecoderFactory *Decoder::findByFilePath(const QString &path, bool useContent)

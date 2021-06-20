@@ -29,9 +29,8 @@ SET(libsid_SRCS
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(SIDPLAYFP_FOUND)
-ADD_LIBRARY(sid MODULE ${libsid_SRCS} ${libsid_UIS_H}
-  ${libsid_RCC_SRCS} ${libsid_HDRS})
+ADD_LIBRARY(sid MODULE ${libsid_SRCS})
 add_dependencies(sid libqmmp)
-target_link_libraries(sid PRIVATE Qt6::Widgets libqmmp)
+target_link_libraries(sid PRIVATE Qt6::Widgets libqmmp ${SIDPLAYFP_LDFLAGS})
 install(TARGETS sid DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(SIDPLAYFP_FOUND)

@@ -300,7 +300,10 @@ void MetaDataManager::clearCoverCache()
 
 void MetaDataManager::prepareForAnotherThread()
 {
-    protocols(); //this hack should load all required plugins
+    //this hack should load all required plugins
+    InputSource::enabledFactories();
+    Decoder::enabledFactories();
+    AbstractEngine::enabledFactories();
 }
 
 bool MetaDataManager::hasMatch(const QList<QRegularExpression> &regExps, const QString &path)

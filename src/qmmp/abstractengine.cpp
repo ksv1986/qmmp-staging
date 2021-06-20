@@ -64,6 +64,7 @@ void AbstractEngine::loadPlugins()
         m_cache->append(item);
     }
     m_disabledNames = settings.value("Engine/disabled_plugins").toStringList();
+    QmmpPluginCache::cleanup(&settings);
 }
 
 AbstractEngine *AbstractEngine::create(InputSource *s, QObject *parent)

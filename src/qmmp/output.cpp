@@ -89,6 +89,7 @@ void Output::loadPlugins()
         }
         m_cache->append(item);
     }
+    QmmpPluginCache::cleanup(&settings);
 }
 
 Output *Output::create ()

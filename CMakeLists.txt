@@ -64,7 +64,7 @@ set(CMAKE_AUTOUIC ON)
 ADD_DEFINITIONS(-DQMMP_WS_X11 -DQT_DISABLE_DEPRECATED_BEFORE=0x060100 -DQT_DEPRECATED_WARNINGS)
 
 find_package(Qt6 6.1.0 CONFIG REQUIRED COMPONENTS Widgets LinguistTools Network)
-find_package(Qt6 6.1.0 CONFIG OPTIONAL_COMPONENTS DBus Multimedia OpenGLWidgets Sql BuildInternals)
+find_package(Qt6 6.1.0 CONFIG OPTIONAL_COMPONENTS DBus OpenGLWidgets Sql BuildInternals)
 
 get_target_property(QT_LRELEASE_EXECUTABLE Qt6::lrelease IMPORTED_LOCATION)
 
@@ -184,10 +184,10 @@ PRINT_SUMMARY ("JACK support .........................." USE_JACK JACK_FOUND)
 PRINT_SUMMARY ("PulseAudio support ...................." USE_PULSE PULSE_FOUND)
 PRINT_SUMMARY ("PipeWire support ......................" USE_PIPEWIRE PIPEWIRE_FOUND)
 PRINT_SUMMARY ("Null output support ..................." USE_NULL 1)
-PRINT_SUMMARY ("Waveout support (Windows) ............." USE_WAVEOUT WINDOWS_H_FOUND)
-PRINT_SUMMARY ("DirectSound support (Windows) ........." USE_DSOUND DSOUND_H_FOUND)
-PRINT_SUMMARY ("WASAPI support (Windows) .............." USE_WASAPI WASAPI_FOUND)
-PRINT_SUMMARY ("Qt Multimedia support ................." USE_QTMULTIMEDIA Qt6Multimedia_FOUND)
+#PRINT_SUMMARY ("Waveout support (Windows) ............." USE_WAVEOUT WINDOWS_H_FOUND)
+#PRINT_SUMMARY ("DirectSound support (Windows) ........." USE_DSOUND DSOUND_H_FOUND)
+#PRINT_SUMMARY ("WASAPI support (Windows) .............." USE_WASAPI WASAPI_FOUND)
+#PRINT_SUMMARY ("Qt Multimedia support ................." USE_QTMULTIMEDIA Qt6Multimedia_FOUND)
 PRINT_SUMMARY ("Icecast support ......................." USE_SHOUT SHOUT_FOUND)
 
 MESSAGE("")

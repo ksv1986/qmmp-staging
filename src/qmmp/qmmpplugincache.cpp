@@ -46,14 +46,15 @@ QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
 
     {
         QStringList values = settings->value(m_path).toStringList();
-        if(values.count() != 4)
+        if(values.count() != 5)
             update = true;
         else
         {
             m_shortName = values.at(0);
             m_priority = values.at(1).toInt();
             m_filters = values.at(2).split(";");
-            update = (info.lastModified().toString(Qt::ISODate) != values.at(3));
+            m_contentTypes = values.at(3).split(";");
+            update = (info.lastModified().toString(Qt::ISODate) != values.at(4));
         }
     }
     else
@@ -67,6 +68,7 @@ QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
             m_shortName = factory->properties().shortName;
             m_priority = factory->properties().priority;
             m_filters = factory->properties().filters;
+            m_contentTypes = factory->properties().contentTypes;
         }
         else if(OutputFactory *factory = outputFactory())
         {
@@ -78,6 +80,7 @@ QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
             m_shortName = factory->properties().shortName;
             m_priority = 0;
             m_filters = factory->properties().filters;
+            m_contentTypes = factory->properties().contentTypes;
         }
         else if(EffectFactory *factory = effectFactory())
         {
@@ -101,6 +104,7 @@ QmmpPluginCache::QmmpPluginCache(const QString &file, QSettings *settings)
             values << m_shortName;
             values << QString::number(m_priority);
             values << m_filters.join(";");
+            values << m_contentTypes.join(";");
             values << info.lastModified().toString(Qt::ISODate);
             settings->setValue(m_path, values);
             qDebug("QmmpPluginCache: added cache item \"%s=%s\"",
@@ -123,6 +127,11 @@ const QString QmmpPluginCache::file() const
 const QStringList &QmmpPluginCache::filters() const
 {
     return m_filters;
+}
+
+const QStringList &QmmpPluginCache::contentTypes() const
+{
+    return m_contentTypes;
 }
 
 int QmmpPluginCache::priority() const

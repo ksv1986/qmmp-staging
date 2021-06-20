@@ -139,6 +139,20 @@ QStringList AbstractEngine::nameFilters()
     return filters;
 }
 
+QStringList AbstractEngine::contentTypes()
+{
+    loadPlugins();
+    QStringList types;
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
+    {
+        if(m_disabledNames.contains(item->shortName()))
+            continue;
+
+        types << item->contentTypes();
+    }
+    return types;
+}
+
 EngineFactory *AbstractEngine::findByFilePath(const QString& source)
 {
     loadPlugins();

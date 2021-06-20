@@ -357,3 +357,17 @@ QStringList Decoder::nameFilters()
     }
     return filters;
 }
+
+QStringList Decoder::contentTypes()
+{
+    loadPlugins();
+    QStringList types;
+    for(QmmpPluginCache *item : qAsConst(*m_cache))
+    {
+        if(m_disabledNames.contains(item->shortName()))
+            continue;
+
+        types << item->contentTypes();
+    }
+    return types;
+}

@@ -24,8 +24,8 @@ Translators:
 
     Bulgarian:
         Kiril Kirilov
-        Miroslav Mihov 
-        
+        Miroslav Mihov
+
 
     Chinese Traditional:
         Cosmos Chen
@@ -86,6 +86,9 @@ Translators:
 
     Kazakh:
         Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+
+    Korean:
+        Jung Hee Lee <daemul72@gmail.com>
 
     Lithuanian:
         Algirdas Butkus <butkus.algirdas@gmail.com>
@@ -218,11 +221,6 @@ BMP-ladspa - LADSPA Host for BMP (c) 2002-2003
 Licq - an instant messaging client for UNIX (C) 2006-2009
 
     Licq developers
-
-TagLib - audio meta-data library (C) 2002-2012
-
-    Lukáš Lalinský <wheeler@kde.org>
-    Scott Wheeler <wheeler@kde.org>
 
 ReplayGainAnalysis (from MP3Gain) - analyzes input samples and give the recommended dB change (C) 2001-2009
 

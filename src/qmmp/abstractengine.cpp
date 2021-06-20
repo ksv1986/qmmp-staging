@@ -215,15 +215,15 @@ QString AbstractEngine::file(const EngineFactory *factory)
 QStringList AbstractEngine::protocols()
 {
     loadPlugins();
-    QStringList protocolsList;
+    QStringList protocolList;
 
     for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(m_disabledNames.contains(item->shortName()))
             continue;
-        if(item->engineFactory())
-            protocolsList << item->engineFactory()->properties().protocols;
+
+         protocolList << item->protocols();
     }
-    protocolsList.removeDuplicates();
-    return protocolsList;
+    protocolList.removeDuplicates();
+    return protocolList;
 }

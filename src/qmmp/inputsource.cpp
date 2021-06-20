@@ -178,17 +178,17 @@ QString InputSource::file(const InputSourceFactory *factory)
 QStringList InputSource::protocols()
 {
     loadPlugins();
-    QStringList protocolsList;
+    QStringList protocolList;
 
     for(QmmpPluginCache *item : qAsConst(*m_cache))
     {
         if(m_disabledNames.contains(item->shortName()))
             continue;
-        if(item->inputSourceFactory())
-            protocolsList << item->inputSourceFactory()->properties().protocols;
+
+        protocolList << item->protocols();
     }
-    protocolsList.removeDuplicates();
-    return protocolsList;
+    protocolList.removeDuplicates();
+    return protocolList;
 }
 
 QList<QRegularExpression> InputSource::regExps()

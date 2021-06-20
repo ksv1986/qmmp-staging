@@ -221,6 +221,9 @@ QObject *QmmpPluginCache::instance()
     else
     {
         m_error = true;
+        m_filters.clear();
+        m_contentTypes.clear();
+        m_protocols.clear();
         qWarning("QmmpPluginCache: error: %s", qPrintable(loader.errorString ()));
     }
     return m_instance;

@@ -165,6 +165,7 @@ void Effect::setEnabled(EffectFactory *factory, bool enable)
 
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
     settings.setValue("Effect/enabled_plugins", m_enabledNames);
+    QmmpPluginCache::cleanup(&settings);
 }
 
 bool Effect::isEnabled(const EffectFactory *factory)

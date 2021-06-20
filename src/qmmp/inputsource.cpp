@@ -279,4 +279,5 @@ void InputSource::loadPlugins()
         m_cache->append(item);
     }
     m_disabledNames = settings.value("Transports/disabled_plugins").toStringList();
+    QmmpPluginCache::cleanup(&settings);
 }

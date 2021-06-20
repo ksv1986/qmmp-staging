@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2017 by Ilya Kotov                                      *
+ *   Copyright (C) 2017-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,6 +20,7 @@
 
 #include <QApplication>
 #include <QMouseEvent>
+#include <QPainter>
 #include "progressbaritemdelegate.h"
 
 ProgressBarItemDelegate::ProgressBarItemDelegate(QObject *parent) : QStyledItemDelegate(parent)
@@ -46,6 +47,8 @@ void ProgressBarItemDelegate::paint(QPainter *painter,
         progressBarOption.progress = index.data(ProgressBarValueRole).toInt();
         progressBarOption.textVisible = true;
         progressBarOption.palette = opt.palette;
+        progressBarOption.state = QStyle::State_Horizontal;
+        progressBarOption.textAlignment = Qt::AlignHCenter;
         qApp->style()->drawControl(QStyle::CE_ProgressBar, &progressBarOption, painter);
     }
     else

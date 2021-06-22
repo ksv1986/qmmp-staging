@@ -215,22 +215,6 @@
     </exclude>
     <invalidIndicator value="These lyrics are missing"/>
   </provider>
-  <provider name="mp3lyrics.org" title="{artist} &amp;quot;{title}&amp;quot; Lyrics" charset="utf-8" url="http://www.mp3lyrics.org/{a}/{artist}/{title}/">
-    <urlFormat replace=" _@,;&amp;\/&quot;" with="-"/>
-    <urlFormat replace="'." with=""/>
-    <extract>
-      <item tag="&lt;span id=gn_lyricsB&gt;"/>
-    </extract>
-    <extract>
-      <item tag="&lt;div class=&quot;KonaBody&quot; id=&quot;EchoTopic&quot;&gt;"/>
-    </extract>
-    <exclude>
-      <item tag="&lt;font size=2&gt;"/>
-      <item begin="&lt;b&gt;&lt;i&gt;" end="&lt;/u&gt;&lt;/b&gt;:"/>
-      <item begin="&lt;b&gt;Lyrics" end="&lt;/b&gt;"/>
-    </exclude>
-    <invalidIndicator value="Something went wrong"/>
-  </provider>
   <provider name="musixmatch.com" title="{artist} - {title} lyrics | Musixmatch" charset="utf-8" url="https://www.musixmatch.com/lyrics/{Artist}/{Title}">
     <urlFormat replace=" _@;\/&quot;'()[]" with="-"/>
     <urlFormat replace="?" with=""/>

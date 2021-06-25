@@ -1715,7 +1715,7 @@ Version 1.5.0
 * updated German translation (Ettore Atalan)
 * updated Finnish translation (Jiri Grönroos, Kimmo Kujansuu)
 
-Version 2.0
+Version 2.0.0
 * switched to Qt6
 * added application startup optimization
 * added Korean translation (Jung Hee Lee)

@@ -59,12 +59,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Language:</source>
-        <translation>Langue :</translation>
+        <translation>Langue&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="81"/>
         <source>Default encoding:</source>
-        <translation>Encodage par défaut :</translation>
+        <translation>Encodage par défaut&#xa0;:</translation>
     </message>
 </context>
 </TS>

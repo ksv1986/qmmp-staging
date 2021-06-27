@@ -11,7 +11,7 @@
     <message>
         <location filename="../statusoption.cpp" line="31"/>
         <source>Print formatted track name (example: qmmp --nowplaying &quot;%t - %a&quot;)</source>
-        <translation>Afficher le nom de piste formaté (par exemple : qmmp --nowplaying &quot;%t - %a&quot;)</translation>
+        <translation>Afficher le nom de piste formaté (par exemple&#xa0;: qmmp --nowplaying &quot;%t - %a&quot;)</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="33"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../statusoption.cpp" line="94"/>
         <source>Syntax:</source>
-        <translation>Syntaxe :</translation>
+        <translation>Syntaxe&#xa0;:</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="95"/>

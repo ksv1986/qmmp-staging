@@ -39,7 +39,7 @@
     <message>
         <location filename="../qmmpfiledialog.ui" line="124"/>
         <source>File name:</source>
-        <translation>Nom du fichier :</translation>
+        <translation>Nom du fichier&#xa0;:</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="140"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../qmmpfiledialog.ui" line="147"/>
         <source>Files of type:</source>
-        <translation>Fichiers de type :</translation>
+        <translation>Fichiers de type&#xa0;:</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="173"/>
@@ -107,7 +107,7 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 existe déjà.
-Voulez-vous le remplacer ?</translation>
+Voulez-vous le remplacer&#xa0;?</translation>
     </message>
 </context>
 </TS>

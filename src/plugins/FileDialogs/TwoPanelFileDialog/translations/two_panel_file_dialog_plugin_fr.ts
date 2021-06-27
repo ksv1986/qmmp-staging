@@ -11,12 +11,12 @@
     <message>
         <location filename="../twopanelfiledialog.ui" line="70"/>
         <source>File name:</source>
-        <translation>Nom du fichier :</translation>
+        <translation>Nom du fichier&#xa0;:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="80"/>
         <source>Files of type:</source>
-        <translation>Fichiers de type :</translation>
+        <translation>Fichiers de type&#xa0;:</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.ui" line="117"/>
@@ -81,7 +81,7 @@
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 existe déjà.
-Voulez-vous le remplacer ?</translation>
+Voulez-vous le remplacer&#xa0;?</translation>
     </message>
 </context>
 </TS>

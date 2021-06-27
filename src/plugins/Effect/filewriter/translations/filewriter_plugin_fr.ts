@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation>Répertoire destination :</translation>
+        <translation>Répertoire destination&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>Output file name:</source>
-        <translation>Fichier destination :</translation>
+        <translation>Fichier destination&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="109"/>

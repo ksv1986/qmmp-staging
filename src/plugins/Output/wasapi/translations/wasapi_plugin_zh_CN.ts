@@ -6,7 +6,7 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="29"/>
         <source>WASAPI Plugin</source>
-        <translation>WASAP　I插件</translation>
+        <translation>WASAP&#x3000;I插件</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="54"/>

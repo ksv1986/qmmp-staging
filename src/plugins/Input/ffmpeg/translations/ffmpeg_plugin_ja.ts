@@ -4,32 +4,32 @@
 <context>
     <name>DecoderFFmpegFactory</name>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="144"/>
+        <location filename="../decoderffmpegfactory.cpp" line="145"/>
         <source>FFmpeg Plugin</source>
         <translation>FFmpeg プラグイン</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="146"/>
+        <location filename="../decoderffmpegfactory.cpp" line="147"/>
         <source>FFmpeg Formats</source>
         <translation>FFmpeg 用の形式</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="337"/>
+        <location filename="../decoderffmpegfactory.cpp" line="338"/>
         <source>About FFmpeg Audio Plugin</source>
         <translation>FFmpeg 音響プラグインについて</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="338"/>
+        <location filename="../decoderffmpegfactory.cpp" line="339"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
         <translation>QMMP FFmpeg 音響プラグイン</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="339"/>
+        <location filename="../decoderffmpegfactory.cpp" line="340"/>
         <source>Compiled against:</source>
         <translation>コンパイルに使用したライブラリ:</translation>
     </message>
     <message>
-        <location filename="../decoderffmpegfactory.cpp" line="352"/>
+        <location filename="../decoderffmpegfactory.cpp" line="353"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
         <translation>制作: Илья Котов (Ilya Kotov) &lt;forkotov02@ya.ru&gt;</translation>
     </message>

@@ -581,7 +581,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="94"/>
         <source>Do you want to restore default shortcuts?</source>
-        <translation>Voulez-vous restaurer les raccourcis par défaut ?</translation>
+        <translation>Voulez-vous restaurer les raccourcis par défaut&#xa0;?</translation>
     </message>
 </context>
 <context>
@@ -1172,7 +1172,7 @@
     <message>
         <location filename="../skinnedfactory.cpp" line="64"/>
         <source>Written by:</source>
-        <translation>Écrit par :</translation>
+        <translation>Écrit par&#xa0;:</translation>
     </message>
     <message>
         <location filename="../skinnedfactory.cpp" line="65"/>
@@ -1275,12 +1275,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="590"/>
         <source>Highlighted background:</source>
-        <translation>Arrière-plan en surbrillance :</translation>
+        <translation>Arrière-plan en surbrillance&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="494"/>
         <source>Normal text:</source>
-        <translation>Texte normal :</translation>
+        <translation>Texte normal&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="657"/>
@@ -1290,12 +1290,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="558"/>
         <source>Current text:</source>
-        <translation>Texte actuel :</translation>
+        <translation>Texte actuel&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="622"/>
         <source>Highlighted text:</source>
-        <translation>Texte en surbrillance :</translation>
+        <translation>Texte en surbrillance&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="765"/>
@@ -1310,7 +1310,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="730"/>
         <source>Group background:</source>
-        <translation>Arrière-plan de groupe :</translation>
+        <translation>Arrière-plan de groupe&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="860"/>
@@ -1320,12 +1320,12 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="698"/>
         <source>Group text:</source>
-        <translation>Texte de groupe :</translation>
+        <translation>Texte de groupe&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="449"/>
         <source>Background #1:</source>
-        <translation>Arrière-plan n°1 :</translation>
+        <translation>Arrière-plan n°1&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="825"/>
@@ -1345,7 +1345,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="984"/>
         <source>Column headers:</source>
-        <translation>Noms des colonnes :</translation>
+        <translation>Noms des colonnes&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="906"/>
@@ -1380,7 +1380,7 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="132"/>
         <source>Window title format:</source>
-        <translation>Format du titre de la fenêtre :</translation>
+        <translation>Format du titre de la fenêtre&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="97"/>

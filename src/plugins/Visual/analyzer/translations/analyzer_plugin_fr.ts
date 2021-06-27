@@ -112,7 +112,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>Cells size:</source>
-        <translation>Taille des cellules :</translation>
+        <translation>Taille des cellules&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="101"/>
@@ -122,27 +122,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="107"/>
         <source>Peaks:</source>
-        <translation>Pics :</translation>
+        <translation>Pics&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="139"/>
         <source>Analyzer #1:</source>
-        <translation>Analyseur n°1 :</translation>
+        <translation>Analyseur n°1&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="171"/>
         <source>Background:</source>
-        <translation>Arrière-plan :</translation>
+        <translation>Arrière-plan&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="203"/>
         <source>Analyzer #2:</source>
-        <translation>Analyseur n°2 :</translation>
+        <translation>Analyseur n°2&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="248"/>
         <source>Analyzer #3:</source>
-        <translation>Analyseur n°3 :</translation>
+        <translation>Analyseur n°3&#xa0;:</translation>
     </message>
 </context>
 <context>

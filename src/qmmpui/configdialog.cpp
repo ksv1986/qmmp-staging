@@ -336,35 +336,37 @@ void ConfigDialog::createMenus()
 
 void ConfigDialog::loadLanguages()
 {
-    QMap<QString, QString> l;
-    l["auto"] = tr("<Autodetect>");
-    l["pt_BR"] = tr("Brazilian Portuguese");
-    l["zh_CN"] = tr("Chinese Simplified");
-    l["zh_TW"] = tr("Chinese Traditional");
-    l["cs"] = tr("Czech");
-    l["nl"] = tr("Dutch");
-    l["en_US"] = tr("English");
-    l["fr"] = tr("French");
-    l["gl_ES"] = tr("Galician");
-    l["de"] = tr("German");
-    l["el"] = tr("Greek");
-    l["he"] = tr("Hebrew");
-    l["hu"] = tr("Hungarian");
-    l["id"] = tr("Indonesian");
-    l["it"] = tr("Italian");
-    l["ja"] = tr("Japanese");
-    l["kk"] = tr("Kazakh");
-    l["lt"] = tr("Lithuanian");
-    l["pl_PL"] = tr("Polish");
-    l["pt"] = tr("Portuguese");
-    l["ru_RU"] = tr("Russian");
-    l["sr_RS"] = tr("Serbian");
-    l["sk"] = tr("Slovak");
-    l["es"] = tr("Spanish");
-    l["tr"] = tr("Turkish");
-    l["uk_UA"] = tr("Ukrainian");
-    l["sr_BA"] = tr("Serbian (Ijekavian)");
-    l["sr_RS"] = tr("Serbian (Ekavian)");
+    QMap<QString, QString> l = {
+        { "auto", tr("<Autodetect>") },
+        { "pt_BR", tr("Brazilian Portuguese") },
+        { "zh_CN", tr("Chinese Simplified") },
+        { "zh_TW", tr("Chinese Traditional") },
+        { "cs", tr("Czech") },
+        { "nl", tr("Dutch") },
+        { "en_US", tr("English") },
+        { "fr", tr("French") },
+        { "gl_ES", tr("Galician") },
+        { "de", tr("German") },
+        { "el", tr("Greek") },
+        { "he", tr("Hebrew") },
+        { "hu", tr("Hungarian") },
+        { "id", tr("Indonesian") },
+        { "it", tr("Italian") },
+        { "ja", tr("Japanese") },
+        { "kk", tr("Kazakh") },
+        { "ko", tr("Korean") },
+        { "lt", tr("Lithuanian") },
+        { "pl_PL", tr("Polish") },
+        { "pt", tr("Portuguese") },
+        { "ru_RU", tr("Russian") },
+        { "sr_RS", tr("Serbian") },
+        { "sk", tr("Slovak") },
+        { "es", tr("Spanish") },
+        { "tr", tr("Turkish") },
+        { "uk_UA", tr("Ukrainian") },
+        { "sr_BA", tr("Serbian (Ijekavian)") },
+        { "sr_RS", tr("Serbian (Ekavian)") },
+    };
 
     for(const QString &code : l.keys())
     {

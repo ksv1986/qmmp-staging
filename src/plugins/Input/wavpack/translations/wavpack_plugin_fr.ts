@@ -26,7 +26,7 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="185"/>
         <source>WavPack library version:</source>
-        <translation>Version de la bibliothèque WavPack :</translation>
+        <translation>Version de la bibliothèque WavPack&#xa0;:</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="187"/>

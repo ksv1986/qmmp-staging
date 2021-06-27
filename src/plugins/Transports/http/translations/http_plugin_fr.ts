@@ -69,7 +69,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="137"/>
         <source>User Agent:</source>
-        <translation>Agent utilisateur :</translation>
+        <translation>Agent utilisateur&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="151"/>

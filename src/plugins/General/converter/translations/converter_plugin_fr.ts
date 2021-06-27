@@ -52,17 +52,17 @@
     <message>
         <location filename="../converterdialog.ui" line="63"/>
         <source>Output directory:</source>
-        <translation>Répertoire destination :</translation>
+        <translation>Répertoire destination&#xa0;:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="80"/>
         <source>Output file name:</source>
-        <translation>Fichier destination :</translation>
+        <translation>Fichier destination&#xa0;:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="97"/>
         <source>Preset:</source>
-        <translation>Préréglage :</translation>
+        <translation>Préréglage&#xa0;:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="114"/>
@@ -188,12 +188,12 @@
     <message>
         <location filename="../preseteditor.ui" line="35"/>
         <source>Name:</source>
-        <translation>Nom :</translation>
+        <translation>Nom&#xa0;:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="45"/>
         <source>Extension:</source>
-        <translation>Extension :</translation>
+        <translation>Extension&#xa0;:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="58"/>

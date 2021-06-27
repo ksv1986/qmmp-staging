@@ -112,7 +112,7 @@
     <message>
         <location filename="../forms/columneditor.ui" line="36"/>
         <source>Name:</source>
-        <translation>Nom :</translation>
+        <translation>Nom&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="76"/>
@@ -430,7 +430,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="541"/>
         <source>Font:</source>
-        <translation>Police :</translation>
+        <translation>Police&#xa0;:</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="566"/>
@@ -705,56 +705,61 @@
     </message>
     <message>
         <location filename="../configdialog.cpp" line="357"/>
+        <source>Korean</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../configdialog.cpp" line="358"/>
         <source>Lithuanian</source>
         <translation>Lituanien</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="358"/>
+        <location filename="../configdialog.cpp" line="359"/>
         <source>Polish</source>
         <translation>Polonais</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="359"/>
+        <location filename="../configdialog.cpp" line="360"/>
         <source>Portuguese</source>
         <translation>Portugais</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="360"/>
+        <location filename="../configdialog.cpp" line="361"/>
         <source>Russian</source>
         <translation>Russe</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="361"/>
+        <location filename="../configdialog.cpp" line="362"/>
         <source>Serbian</source>
         <translation>Serbe</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="362"/>
+        <location filename="../configdialog.cpp" line="363"/>
         <source>Slovak</source>
         <translation>Slovaque</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="363"/>
+        <location filename="../configdialog.cpp" line="364"/>
         <source>Spanish</source>
         <translation>Espagnol</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="364"/>
+        <location filename="../configdialog.cpp" line="365"/>
         <source>Turkish</source>
         <translation>Turque</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="365"/>
+        <location filename="../configdialog.cpp" line="366"/>
         <source>Ukrainian</source>
         <translation>Ukrainien</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="366"/>
+        <location filename="../configdialog.cpp" line="367"/>
         <source>Serbian (Ijekavian)</source>
         <translation>Serbe (Ijekavien)</translation>
     </message>
     <message>
-        <location filename="../configdialog.cpp" line="367"/>
+        <location filename="../configdialog.cpp" line="368"/>
         <source>Serbian (Ekavian)</source>
         <translation>Serbe (Ekavien)</translation>
     </message>
@@ -1384,7 +1389,7 @@
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 existe déjà.
-Voulez-vous le remplacer ?</translation>
+Voulez-vous le remplacer&#xa0;?</translation>
     </message>
 </context>
 <context>

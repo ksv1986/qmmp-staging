@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Port:</source>
-        <translation>Port :</translation>
+        <translation>Port&#xa0;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="56"/>

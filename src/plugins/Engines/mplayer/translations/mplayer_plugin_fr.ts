@@ -123,27 +123,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Video:</source>
-        <translation>Vidéo&#xa0;:</translation>
+        <translation>Vidéo :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>Audio:</source>
-        <translation>Audio&#xa0;:</translation>
+        <translation>Audio :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Audio/video auto synchronization</source>
-        <translation>Synchronisation audio/vidéo auto&#xa0;:</translation>
+        <translation>Synchronisation audio/vidéo auto :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="72"/>
         <source>Synchronization factor:</source>
-        <translation>Facteur de synchronisation&#xa0;:</translation>
+        <translation>Facteur de synchronisation :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
         <source>Extra options:</source>
-        <translation>Options additionnelles&#xa0;:</translation>
+        <translation>Options additionnelles :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>

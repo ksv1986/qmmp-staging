@@ -1405,37 +1405,27 @@ Do you want to replace it?</source>
         <translation>Επιλογή όλων</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="56"/>
-        <source>Select None</source>
-        <translation>Επιλογή κανενός</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="125"/>
+        <location filename="../winfileassocpage.cpp" line="116"/>
         <source>Warning</source>
         <translation>Προειδοποίηση</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="126"/>
+        <location filename="../winfileassocpage.cpp" line="117"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>Δεν μπορούν να συσχετιστούν όλα τα αρχεία. Παρακαλώ ελέγξτε τις άδεις ασφαλείας σας και προσπαθήστε ξανά.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="133"/>
+        <location filename="../winfileassocpage.cpp" line="124"/>
         <source>Check all file types in the list</source>
         <translation>Επιλογή όλων των τύπων αρχείων στη λίστα</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="134"/>
-        <source>Uncheck all file types in the list</source>
-        <translation>Αποεπιλογή όλων των τύπων αρχείων στη λίστα</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="135"/>
+        <location filename="../winfileassocpage.cpp" line="125"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>Επιλογή όλων των επεκτάσεων αρχείων πολυμέσων που επιθυμείτε να διαχειρίζεται το Qmmp. Όταν κάνετε κλικ στο Εφαρμογή, τα επιλεγμένα αρχεία θα συσχετιστούν με το Qmmp. Αν αποεπιλέξετε έναν τύπο πολυμέσων, η συσχέτιση θα αποκατασταθεί.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="139"/>
+        <location filename="../winfileassocpage.cpp" line="129"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;Σημείωση:&lt;/b&gt; Η αποκατάσταση δεν λειτουργεί στα Windows Vista/7.</translation>
     </message>

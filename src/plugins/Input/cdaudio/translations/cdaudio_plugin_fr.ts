@@ -31,7 +31,7 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="102"/>
         <source>Usage: open cdda:/// using Add URL dialog or command line</source>
-        <translation>Utilisation&#xa0;: ouvrir cdda:/// avec le dialogue «&#xa0;Ajouter URL&#xa0;» ou en ligne de commande</translation>
+        <translation>Utilisation : ouvrir cdda:/// avec le dialogue « Ajouter URL » ou en ligne de commande</translation>
     </message>
 </context>
 <context>
@@ -44,17 +44,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Override device:</source>
-        <translation>Surcharger le périphérique&#xa0;:</translation>
+        <translation>Surcharger le périphérique :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Limit cd speed:</source>
-        <translation>Limiter la vitesse du CD&#xa0;:</translation>
+        <translation>Limiter la vitesse du CD :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Use cd-text</source>
-        <translation>Utiliser CD-Text&#xa0;:</translation>
+        <translation>Utiliser CD-Text :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>
@@ -69,17 +69,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="88"/>
         <source>Server:</source>
-        <translation>Serveur&#xa0;:</translation>
+        <translation>Serveur :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>Path:</source>
-        <translation>Chemin&#xa0;:</translation>
+        <translation>Chemin :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="105"/>
         <source>Port:</source>
-        <translation>Port&#xa0;:</translation>
+        <translation>Port :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="117"/>

@@ -40,7 +40,7 @@
         <location filename="../settingsdialog.ui" line="31"/>
         <location filename="../settingsdialog.ui" line="104"/>
         <source>Session:</source>
-        <translation>Session&#xa0;:</translation>
+        <translation>Session :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="109"/>
         <source>3. Press &quot;OK&quot;</source>
-        <translation>3. Appuyez sur «&#xa0;OK&#xa0;»</translation>
+        <translation>3. Appuyez sur « OK »</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="114"/>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="3">
+   <item row="0" column="0" colspan="2">
     <widget class="QLabel" name="textLabel">
      <property name="text">
       <string>Media files handled by Qmmp:</string>
@@ -24,7 +24,7 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0" colspan="3">
+   <item row="1" column="0" colspan="2">
     <widget class="QListWidget" name="listWidget">
      <property name="editTriggers">
       <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
@@ -51,13 +51,6 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="QPushButton" name="selectNone">
-     <property name="text">
-      <string>Select None</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="2">
     <spacer>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>

@@ -1719,6 +1719,7 @@ Version 2.0.0
 * switched to Qt6
 * added application startup optimization
 * added Korean translation (Jung Hee Lee)
+* enabled Matroska container by default in the ffmpeg plugin
 * using libiconv for charset conversion
 * removed mp3lyrics.org lyrics provider (service was closed)
 * fixed plugin cache cleanup

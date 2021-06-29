@@ -34,5 +34,5 @@ unix {
 }
 
 win32 {
-    LIBS += -lprojectM.dll
+    LIBS += -lprojectM.dll -lopengl32
 }

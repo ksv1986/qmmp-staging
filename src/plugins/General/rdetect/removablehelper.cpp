@@ -57,7 +57,7 @@ RemovableHelper::~RemovableHelper()
     qApp->removeNativeEventFilter(this);
 }
 
-bool RemovableHelper::nativeEventFilter(const QByteArray &eventType, void *message, long *result)
+bool RemovableHelper::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
 {
     Q_UNUSED(result);
 

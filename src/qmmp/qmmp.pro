@@ -109,6 +109,7 @@ win32 {
   !isEmpty(SVN_REVISION) {
     DEFINES += SVN_REVISION=\\\"$$SVN_REVISION\\\"
   }
+  LIBS += -liconv
 }
 
 unix {

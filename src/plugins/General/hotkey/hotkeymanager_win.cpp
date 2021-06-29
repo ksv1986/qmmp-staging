@@ -218,7 +218,7 @@ quint32 HotkeyManager::keycodeToKeysym(quint32 keycode)
     return MapVirtualKey(keycode, 1);
 }
 
-bool HotkeyManager::nativeEventFilter(const QByteArray &eventType, void *message, long *result)
+bool HotkeyManager::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
 {
     Q_UNUSED(eventType);
     Q_UNUSED(result);

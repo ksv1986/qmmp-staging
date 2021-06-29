@@ -2,7 +2,7 @@
  * Based on smplayer - GUI front-end for mplayer                           *
  *                                                                         *
  * Copyright (C) 2006-2014 Ricardo Villalba <rvm@users.sourceforge.net>    *
- * Copyright (C) 2014-2020 Ilya Kotov forkotov02@ya.ru                     *
+ * Copyright (C) 2014-2021 Ilya Kotov forkotov02@ya.ru                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -32,12 +32,6 @@ WinFileAssocPage::WinFileAssocPage(QWidget *parent): QWidget(parent)
 {
     m_ui = new Ui::WinFileAssocPage;
     m_ui->setupUi(this);
-
-    if (QSysInfo::WindowsVersion >= QSysInfo::WV_VISTA)
-    {
-        //Hide Select None - One cannot restore an association in Vista. Go figure.
-        m_ui->selectNone->hide();
-    }
 
     for(QString ext : MetaDataManager::instance()->nameFilters())
     {
@@ -83,12 +77,7 @@ void WinFileAssocPage::loadAssociations()
             if (m_regExtensions.contains(pItem->text()))
             {
                 pItem->setCheckState(Qt::Checked);
-                //Don't allow de-selection in windows VISTA if extension is registered.
-                //VISTA doesn't seem to support extension 'restoration' in the API.
-                if (QSysInfo::WindowsVersion >= QSysInfo::WV_VISTA)
-                {
-                    pItem->setFlags(Qt::NoItemFlags);
-                }
+                pItem->setFlags(Qt::NoItemFlags);
             }
             else
             {
@@ -131,7 +120,6 @@ void WinFileAssocPage::saveAssociations()
 void WinFileAssocPage::createHelp()
 {
     m_ui->selectAll->setToolTip(tr("Check all file types in the list"));
-    m_ui->selectNone->setToolTip(tr("Uncheck all file types in the list"));
     m_ui->listWidget->setToolTip(tr("Check the media file extensions you would like Qmmp to handle. "
                                     "When you click Apply, the checked files will be associated with "
                                     "Qmmp. If you uncheck a media type, the file association will "

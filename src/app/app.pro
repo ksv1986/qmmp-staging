@@ -63,7 +63,7 @@ unix {
 }
 
 win32 {
-    LIBS += -lqmmp1 -lqmmpui1
+    LIBS += -lqmmp2 -lqmmpui2
     QMAKE_LIBDIR += ../../bin
     RC_FILE = qmmp.rc
 }

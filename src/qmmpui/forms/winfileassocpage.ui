@@ -11,20 +11,14 @@
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="3">
-    <widget class="QLabel" name="textLabel">
+   <item row="2" column="0">
+    <widget class="QPushButton" name="selectAll">
      <property name="text">
-      <string>Media files handled by Qmmp:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignVCenter</set>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
+      <string>Select All</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="0" colspan="3">
+   <item row="1" column="0" colspan="2">
     <widget class="QListWidget" name="listWidget">
      <property name="editTriggers">
       <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
@@ -43,21 +37,20 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
-    <widget class="QPushButton" name="selectAll">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="textLabel">
      <property name="text">
-      <string>Select All</string>
+      <string>Media files handled by Qmmp:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignVCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="QPushButton" name="selectNone">
-     <property name="text">
-      <string>Select None</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="2">
     <spacer>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>

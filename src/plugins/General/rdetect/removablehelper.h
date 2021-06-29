@@ -33,7 +33,7 @@ public:
     explicit RemovableHelper(QObject *parent = nullptr);
     ~RemovableHelper();
 
-    bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
+    bool nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result) override;
 
 private slots:
     void processAction(QAction *action);

@@ -1723,5 +1723,4 @@ Version 2.0.0
 * removed mp3lyrics.org lyrics provider (service was closed)
 * fixed plugin cache cleanup
 * fixed build without mpg123
-* disabled unsupported plugins: taskbar, rdetect, waveout,
-  dsound, wasapi, qtmultimedia
+* disabled unsupported plugins: taskbar, qtmultimedia

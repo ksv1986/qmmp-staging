@@ -1714,3 +1714,11 @@ Version 1.5.0
 * updated Italian translation (Luigi Toscano)
 * updated German translation (Ettore Atalan)
 * updated Finnish translation (Jiri Grönroos, Kimmo Kujansuu)
+
+Version 1.5.1
+* added application startup optimization
+* added Korean translation (Jung Hee Lee)
+* enabled Matroska container by default in the ffmpeg plugin
+* removed mp3lyrics.org lyrics provider (service was closed)
+* fixed plugin cache cleanup
+* fixed build without mpg123

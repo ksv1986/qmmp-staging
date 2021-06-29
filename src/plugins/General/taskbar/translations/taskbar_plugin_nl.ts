@@ -11,7 +11,7 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="49"/>
         <source>About Taskbar Plugin</source>
-        <translation>Over de taakbalkplug-in</translation>
+        <translation>Over de Taakbalkplug-in</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="50"/>

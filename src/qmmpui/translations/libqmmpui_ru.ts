@@ -302,7 +302,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="180"/>
         <source>Directory Scanning Options</source>
-        <translation>Опции сканирования каталогов</translation>
+        <translation>Опции сканирования директорий</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="186"/>
@@ -706,7 +706,7 @@
     <message>
         <location filename="../configdialog.cpp" line="357"/>
         <source>Korean</source>
-        <translation type="unfinished"></translation>
+        <translation>Корейский</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="358"/>
@@ -865,7 +865,7 @@
     <message>
         <location filename="../forms/detailsdialog.ui" line="44"/>
         <source>Open the directory containing this file</source>
-        <translation>Открыть каталог, содержащий файл</translation>
+        <translation>Открыть директорию, содержащую файл</translation>
     </message>
     <message>
         <location filename="../forms/detailsdialog.ui" line="47"/>
@@ -1365,7 +1365,7 @@
     <message>
         <location filename="../uihelper.cpp" line="164"/>
         <source>Choose a directory</source>
-        <translation>Выберите каталог</translation>
+        <translation>Выберите директорию</translation>
     </message>
     <message>
         <location filename="../uihelper.cpp" line="180"/>

@@ -426,7 +426,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>Alt+T</source>
-        <translation>Alt+T</translation>
+        <translation>Alt+t</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>

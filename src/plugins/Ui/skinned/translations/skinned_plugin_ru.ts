@@ -226,7 +226,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
         <source>&amp;Add Directory</source>
-        <translation>&amp;Добавить каталог</translation>
+        <translation>&amp;Добавить директорию</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="66"/>

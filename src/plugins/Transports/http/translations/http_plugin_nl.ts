@@ -6,22 +6,22 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="33"/>
         <source>HTTP Plugin</source>
-        <translation>HTTP-plug-in</translation>
+        <translation>HTTP Module</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="53"/>
         <source>About HTTP Transport Plugin</source>
-        <translation>Over de HTTP-overdrachtsplug-in</translation>
+        <translation>Over de HTTP Transport Module</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="54"/>
         <source>Qmmp HTTP Transport Plugin</source>
-        <translation>HTTP-overdrachtsplug-in voor Qmmp</translation>
+        <translation>HTTP Transport Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="55"/>
         <source>Compiled against libcurl-%1</source>
-        <translation>Gebouwd met libcurl-%1</translation>
+        <translation>Gecompileerd tegen libcurl-%1</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="56"/>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>HTTP Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>HTTP Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -49,12 +49,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Metadata encoding</source>
-        <translation>Codering van metagegevens</translation>
+        <translation>Metadata codering</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="84"/>
         <source>Automatic charset detection</source>
-        <translation>Automatische tekensetdetectie</translation>
+        <translation>Automatische tekenset detectie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="94"/>

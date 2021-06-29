@@ -11,12 +11,12 @@
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="51"/>
         <source>About File Writer Plugin</source>
-        <translation>Over de bestandsuitvoerplug-in</translation>
+        <translation>Over Bestandsuitvoer-plug-in</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="52"/>
         <source>Qmmp File Writer Plugin</source>
-        <translation>Bestandsuitvoerplug-in voor Qmmp</translation>
+        <translation>Bestandsuitvoer-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="53"/>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Output directory:</source>
-        <translation>Uitvoermap:</translation>
+        <translation>Uitvoer map:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>Output file name:</source>
-        <translation>Uitvoerbestandsnaam:</translation>
+        <translation>Uitvoer bestandsnaam:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="109"/>

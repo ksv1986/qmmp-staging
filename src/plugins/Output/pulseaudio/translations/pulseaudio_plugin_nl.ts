@@ -6,17 +6,17 @@
     <message>
         <location filename="../outputpulseaudiofactory.cpp" line="30"/>
         <source>PulseAudio Plugin</source>
-        <translation>PulseAudio-plug-in</translation>
+        <translation>PulseAudio Module</translation>
     </message>
     <message>
         <location filename="../outputpulseaudiofactory.cpp" line="54"/>
         <source>About PulseAudio Output Plugin</source>
-        <translation>Over de PulseAudio-uitvoerplug-in</translation>
+        <translation>Over de PulseAudio Uitvoer Module</translation>
     </message>
     <message>
         <location filename="../outputpulseaudiofactory.cpp" line="55"/>
         <source>Qmmp PulseAudio Output Plugin</source>
-        <translation>PulseAudio-uitvoerplug-in voor Qmmp</translation>
+        <translation>PulseAudio Audio Uitvoer Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../outputpulseaudiofactory.cpp" line="56"/>

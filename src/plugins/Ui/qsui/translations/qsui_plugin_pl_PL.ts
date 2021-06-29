@@ -1032,7 +1032,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="14"/>
         <source>Popup Information Settings</source>
-        <translation>Ustawienia informacji popup</translation>
+        <translation>Ustawienia inforamcji popup</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="29"/>
@@ -1400,7 +1400,7 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="140"/>
         <source>Analyzer Mode</source>
-        <translation>Tryb Analizatora</translation>
+        <translation>Tryb analizatora</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="142"/>
@@ -1445,7 +1445,7 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="167"/>
         <source>Analyzer Falloff</source>
-        <translation>Opadanie Analizatora</translation>
+        <translation>Opadanie analizatora</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="170"/>

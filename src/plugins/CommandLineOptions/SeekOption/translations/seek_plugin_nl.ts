@@ -6,17 +6,17 @@
     <message>
         <location filename="../seekoption.cpp" line="29"/>
         <source>Seek to position in the current track</source>
-        <translation>Doorspoelen naar positie in huidig nummer</translation>
+        <translation>Verplaats naar positie in huidige nummer</translation>
     </message>
     <message>
         <location filename="../seekoption.cpp" line="30"/>
         <source>Seek forward</source>
-        <translation>Vooruitspoelen</translation>
+        <translation>Verplaats naar voren</translation>
     </message>
     <message>
         <location filename="../seekoption.cpp" line="31"/>
         <source>Seek backwards</source>
-        <translation>Terugspoelen</translation>
+        <translation>Verplaats naar achteren</translation>
     </message>
 </context>
 </TS>

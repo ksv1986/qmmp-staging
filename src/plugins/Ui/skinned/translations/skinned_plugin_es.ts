@@ -36,7 +36,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>&amp;Previous</source>
-        <translation>&amp;Previo</translation>
+        <translation>&amp;Anterior</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>

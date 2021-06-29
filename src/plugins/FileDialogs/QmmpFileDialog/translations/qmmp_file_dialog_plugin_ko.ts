@@ -34,7 +34,7 @@
     <message>
         <location filename="../qmmpfiledialog.ui" line="234"/>
         <source>Close dialog on add</source>
-        <translation>추가할 때 대화상자 닫기</translation>
+        <translation>추가할 때 입력창 닫기</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="106"/>
@@ -63,12 +63,12 @@
         <location filename="../qmmpfiledialog.cpp" line="69"/>
         <location filename="../qmmpfiledialog.cpp" line="79"/>
         <source>Qmmp File Dialog</source>
-        <translation>Qmmp 파일 대화상자</translation>
+        <translation>Qmmp 파일 입력창</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="78"/>
         <source>About Qmmp File Dialog</source>
-        <translation>Qmmp 파일 대화상자 정보</translation>
+        <translation>Qmmp 파일 대화창 정보</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="80"/>

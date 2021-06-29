@@ -68,6 +68,9 @@
 카자흐스탄어:
     Baurzhan Muftakhidinov <baurthefirst@gmail.com>
 
+한국어:
+   이정희 <daemul72@gmail.com>
+
 리투아니아어:
     Algirdas Butkus <butkus.algirdas@gmail.com>
 

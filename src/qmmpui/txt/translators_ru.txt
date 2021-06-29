@@ -9,14 +9,14 @@
     Miroslav Mihov
 
 Китайский традиционный:
-    Cosmos Chen
+    Космос Чен
     lon <lon83129@126.com>
-    Jeff Huang
+    Джефф Хуанг
 
 Китайский упрощённый:
     lon <lon83129@126.com>
     mabier
-    Mingcong Bai
+    Мингконг Бай
     Mingye Wang
 
 Чешский:
@@ -68,6 +68,9 @@
 Казахский:
     Бауржан Муфтахидинов <baurthefirst@gmail.com>
 
+Корейский:
+   Jung Hee Lee <daemul72@gmail.com>
+
 Литовский:
     Algirdas Butkus <butkus.algirdas@gmail.com>
 
@@ -80,7 +83,7 @@
     Sérgio Marques <smarquespt@gmail.com>
 
 Русский:
-    Алексей Логинов <loginov.alex.valer.gmail.com>
+    Alexey Loginov <loginov.alex.valer.gmail.com>
     Илья Котов <forkotov02@ya.ru>
     Виктор Ерухин
 

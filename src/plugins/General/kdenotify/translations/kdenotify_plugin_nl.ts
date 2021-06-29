@@ -6,7 +6,7 @@
     <message>
         <location filename="../kdenotify.cpp" line="122"/>
         <source>Qmmp now playing:</source>
-        <translation>Qmmp speelt nu af:</translation>
+        <translation>Je luistert naar:</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../kdenotifyfactory.cpp" line="49"/>
         <source>About KDE Notification Plugin</source>
-        <translation>Over de KDE-meldingsplug-in</translation>
+        <translation>Over de KDE 4-meldingsplug-in</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="50"/>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>KDE 4 Notification Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Meldingsinstellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
@@ -52,22 +52,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Update visible notification instead create new</source>
-        <translation>Huidige melding bijwerken i.p.v. nieuwe te sturen</translation>
+        <translation>Huidige melding bijwerken i.p.v. nieuwe te tonen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="88"/>
         <source>Appearance</source>
-        <translation>Uiterlijk</translation>
+        <translation>Vormgeving</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="94"/>
         <source>Show covers</source>
-        <translation>Hoezen tonen</translation>
+        <translation>Albumhoezen tonen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>Edit template</source>
-        <translation>Sjabloon bewerken</translation>
+        <translation>Sjabloon aanpassen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="75"/>

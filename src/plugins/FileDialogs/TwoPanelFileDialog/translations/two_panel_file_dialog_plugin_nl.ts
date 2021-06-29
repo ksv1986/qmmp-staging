@@ -81,7 +81,7 @@
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 bestaat al.
-Wil je het overschrijven?</translation>
+Wilt u het overschrijven?</translation>
     </message>
 </context>
 </TS>

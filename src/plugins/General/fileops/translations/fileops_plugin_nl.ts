@@ -42,7 +42,7 @@
     <message>
         <location filename="../fileops.cpp" line="220"/>
         <source>Copying file %1/%2</source>
-        <translation>Bezig met kopiëren: %1/%2</translation>
+        <translation>Kopiëer bestand: %1/%2</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="268"/>
@@ -63,8 +63,8 @@
         <location filename="../fileops.cpp" line="124"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
         <translation>
-            <numerusform>Weet je zeker dat je %n bestand wilt verwijderen?</numerusform>
-            <numerusform>Weet je zeker dat je %n bestanden wilt verwijderen?</numerusform>
+            <numerusform>Weet u zeker dat u dit bestand wilt verwijderen?</numerusform>
+            <numerusform>Weet u zeker dat u deze %n bestanden wilt verwijderen?</numerusform>
         </translation>
     </message>
 </context>
@@ -73,17 +73,17 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="30"/>
         <source>File Operations Plugin</source>
-        <translation>Bestandsbeheer-plug-in</translation>
+        <translation>Bestands Beheer Module</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="50"/>
         <source>About File Operations Plugin</source>
-        <translation>Over de Bestandsbeheer-plug-in</translation>
+        <translation>Over de Bestands Beheer Module</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="51"/>
         <source>Qmmp File Operations Plugin</source>
-        <translation>Bestandsbeheer-plug-in voor Qmmp</translation>
+        <translation>Bestands Beheer Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="52"/>
@@ -96,17 +96,17 @@
     <message>
         <location filename="../hotkeydialog.ui" line="14"/>
         <source>Modify Shortcut</source>
-        <translation>Sneltoets aanpassen</translation>
+        <translation>Sneltoets Aanpassen</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="29"/>
         <source>Press the key combination you want to assign</source>
-        <translation>Druk op de toetscombinatie die je wilt toewijzen</translation>
+        <translation>Druk de toetscombinatie die u wilt toewijzen</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="43"/>
         <source>Clear</source>
-        <translation>Wissen</translation>
+        <translation>Leeghalen</translation>
     </message>
 </context>
 <context>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Operations Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Instellingen van Bestandsbeheer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="51"/>
@@ -145,7 +145,7 @@
         <location filename="../settingsdialog.ui" line="99"/>
         <location filename="../settingsdialog.cpp" line="219"/>
         <source>Remove</source>
-        <translation>Verwijderen</translation>
+        <translation>Verwijder</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="127"/>
@@ -162,17 +162,17 @@
         <location filename="../settingsdialog.ui" line="144"/>
         <location filename="../settingsdialog.cpp" line="152"/>
         <source>File name pattern:</source>
-        <translation>Bestandsnaampatroon:</translation>
+        <translation>Bestandsnaam patroon:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="216"/>
         <source>Copy</source>
-        <translation>Kopiëren</translation>
+        <translation>Kopiëer</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="217"/>
         <source>Rename</source>
-        <translation>Naam wijzigen</translation>
+        <translation>Hernoem</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="218"/>

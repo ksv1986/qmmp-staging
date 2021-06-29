@@ -76,7 +76,7 @@
     <message>
         <location filename="../converterdialog.ui" line="131"/>
         <source>Stop</source>
-        <translation>Stoppen</translation>
+        <translation>Afbreken</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="113"/>
@@ -136,22 +136,22 @@
     <message>
         <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
-        <translation>Converteer-plug-in</translation>
+        <translation>Converteerplug-in</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
-        <translation>Over de Converteer-plug-in</translation>
+        <translation>Over de converteerplug-in</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
-        <translation>Converteer-plug-in voor Qmmp</translation>
+        <translation>Converteerplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
-        <translation>Deze plug-in converteert ondersteunde audiobestanden naar andere formaten door gebruik van externe cli-encoders</translation>
+        <translation>Deze module converteert ondersteunde audiobestanden naar andere formaten middels externe opdrachtregel-encoders</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
@@ -207,7 +207,7 @@
     <message>
         <location filename="../preseteditor.ui" line="83"/>
         <source>Write tags</source>
-        <translation>Tags wegschrijven</translation>
+        <translation>Tags toekennen</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="90"/>

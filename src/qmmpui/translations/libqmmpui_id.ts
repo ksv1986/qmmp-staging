@@ -1395,47 +1395,37 @@ Apakah kamu ingin menggantinya?</translation>
 <context>
     <name>WinFileAssocPage</name>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="17"/>
+        <location filename="../forms/winfileassocpage.ui" line="43"/>
         <source>Media files handled by Qmmp:</source>
         <translation>File media yang ditangani oleh Qmmp:</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="49"/>
+        <location filename="../forms/winfileassocpage.ui" line="17"/>
         <source>Select All</source>
         <translation>Pilih Semua</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="56"/>
-        <source>Select None</source>
-        <translation>Pilih Nihil</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="125"/>
+        <location filename="../winfileassocpage.cpp" line="114"/>
         <source>Warning</source>
         <translation>Peringatan</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="126"/>
+        <location filename="../winfileassocpage.cpp" line="115"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>Tidak semua file bisa dicampur-baurkan. Silakan periksa perizinan keamananmu dan cobalah kembali.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="133"/>
+        <location filename="../winfileassocpage.cpp" line="122"/>
         <source>Check all file types in the list</source>
         <translation>Centang semua tipe file dalam daftar</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="134"/>
-        <source>Uncheck all file types in the list</source>
-        <translation>Tak centang semua tipe file dalam daftar</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="135"/>
+        <location filename="../winfileassocpage.cpp" line="123"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>Centang ekstensi file media yang kamu inginkan Qmmp untuk tangani. Kemudian kamu klik Terapkan, file-file yang tercentang akan dicampur-baurkan dengan Qmmp. Jika kamu tak centang sebuah tipe media, pencampur-bauran file akan dipulihkan.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="139"/>
+        <location filename="../winfileassocpage.cpp" line="127"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;Catatan:&lt;/b&gt; Pemulihan tidak bekerja pada Windows Vista/7.</translation>
     </message>

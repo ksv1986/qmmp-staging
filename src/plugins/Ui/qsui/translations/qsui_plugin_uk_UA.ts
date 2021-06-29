@@ -673,159 +673,159 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="436"/>
+        <location filename="../mainwindow.cpp" line="437"/>
         <source>Volume</source>
         <translation>Гучність</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="280"/>
+        <location filename="../mainwindow.cpp" line="281"/>
         <source>Playlist name:</source>
         <translation>Назва списку:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="321"/>
+        <location filename="../mainwindow.cpp" line="322"/>
         <source>Appearance</source>
         <translation>Зовнішній вигляд</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="322"/>
+        <location filename="../mainwindow.cpp" line="323"/>
         <source>Shortcuts</source>
         <translation>Комбінації клавіш</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="423"/>
+        <location filename="../mainwindow.cpp" line="424"/>
         <source>Ctrl+0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="429"/>
+        <location filename="../mainwindow.cpp" line="430"/>
         <source>P</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="434"/>
+        <location filename="../mainwindow.cpp" line="435"/>
         <source>Position</source>
         <translation>Позиція</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="438"/>
+        <location filename="../mainwindow.cpp" line="439"/>
         <source>Quick Search</source>
         <translation>Швидкий пошук</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="496"/>
+        <location filename="../mainwindow.cpp" line="497"/>
         <source>Edit Toolbars</source>
         <translation>Редагувати панель інструментів</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="498"/>
+        <location filename="../mainwindow.cpp" line="499"/>
         <source>Sort List</source>
         <translation>Сортувати</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="501"/>
-        <location filename="../mainwindow.cpp" line="542"/>
+        <location filename="../mainwindow.cpp" line="502"/>
+        <location filename="../mainwindow.cpp" line="543"/>
         <source>By Title</source>
         <translation>За назвою</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="504"/>
-        <location filename="../mainwindow.cpp" line="545"/>
+        <location filename="../mainwindow.cpp" line="505"/>
+        <location filename="../mainwindow.cpp" line="546"/>
         <source>By Album</source>
         <translation>За альбомом</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="507"/>
-        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.cpp" line="508"/>
+        <location filename="../mainwindow.cpp" line="549"/>
         <source>By Artist</source>
         <translation>За виконавцем</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="510"/>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="511"/>
+        <location filename="../mainwindow.cpp" line="552"/>
         <source>By Album Artist</source>
         <translation>За альбомом виконавця</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="513"/>
-        <location filename="../mainwindow.cpp" line="554"/>
+        <location filename="../mainwindow.cpp" line="514"/>
+        <location filename="../mainwindow.cpp" line="555"/>
         <source>By Filename</source>
         <translation>За ім&apos;ям файлу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
-        <location filename="../mainwindow.cpp" line="557"/>
+        <location filename="../mainwindow.cpp" line="517"/>
+        <location filename="../mainwindow.cpp" line="558"/>
         <source>By Path + Filename</source>
         <translation>За шляхом та файлом</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="519"/>
-        <location filename="../mainwindow.cpp" line="560"/>
+        <location filename="../mainwindow.cpp" line="520"/>
+        <location filename="../mainwindow.cpp" line="561"/>
         <source>By Date</source>
         <translation>За датою</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="522"/>
-        <location filename="../mainwindow.cpp" line="563"/>
+        <location filename="../mainwindow.cpp" line="523"/>
+        <location filename="../mainwindow.cpp" line="564"/>
         <source>By Track Number</source>
         <translation>За номером треку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="525"/>
-        <location filename="../mainwindow.cpp" line="566"/>
+        <location filename="../mainwindow.cpp" line="526"/>
+        <location filename="../mainwindow.cpp" line="567"/>
         <source>By Disc Number</source>
         <translation>За номером диску</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="528"/>
-        <location filename="../mainwindow.cpp" line="569"/>
+        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="570"/>
         <source>By File Creation Date</source>
         <translation>За датою створення файлу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="531"/>
-        <location filename="../mainwindow.cpp" line="572"/>
+        <location filename="../mainwindow.cpp" line="532"/>
+        <location filename="../mainwindow.cpp" line="573"/>
         <source>By File Modification Date</source>
         <translation>За датою модифікації файлу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="534"/>
+        <location filename="../mainwindow.cpp" line="535"/>
         <source>By Group</source>
         <translation>За групою</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="539"/>
+        <location filename="../mainwindow.cpp" line="540"/>
         <source>Sort Selection</source>
         <translation>Сортувати вибране</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="577"/>
+        <location filename="../mainwindow.cpp" line="578"/>
         <source>Randomize List</source>
         <translation>Перемішати</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="579"/>
+        <location filename="../mainwindow.cpp" line="580"/>
         <source>Reverse List</source>
         <translation>Перевернути</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="629"/>
+        <location filename="../mainwindow.cpp" line="630"/>
         <source>Actions</source>
         <translation>Дії</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="385"/>
+        <location filename="../mainwindow.cpp" line="386"/>
         <source>Add new playlist</source>
         <translation>Додати новий список</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="391"/>
+        <location filename="../mainwindow.cpp" line="392"/>
         <source>Show all tabs</source>
         <translation>Показати всі вкладки</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="905"/>
+        <location filename="../mainwindow.cpp" line="906"/>
         <source>Qmmp</source>
         <translation></translation>
     </message>
@@ -840,139 +840,139 @@
         <translation>&amp;Інструменти</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="48"/>
+        <location filename="../forms/mainwindow.ui" line="45"/>
         <source>&amp;Help</source>
         <translation>&amp;Довідка</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="53"/>
+        <location filename="../forms/mainwindow.ui" line="50"/>
         <source>&amp;Edit</source>
         <translation>&amp;Правка</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="58"/>
+        <location filename="../forms/mainwindow.ui" line="55"/>
         <source>&amp;Playback</source>
         <translation>&amp;Відтворення</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="63"/>
+        <location filename="../forms/mainwindow.ui" line="60"/>
         <source>&amp;View</source>
         <translation>&amp;Вигляд</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="102"/>
+        <location filename="../forms/mainwindow.ui" line="99"/>
         <source>Files</source>
         <translation>Файли</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="117"/>
+        <location filename="../forms/mainwindow.ui" line="114"/>
         <source>Cover</source>
         <translation>Обкладинка</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="126"/>
+        <location filename="../forms/mainwindow.ui" line="123"/>
         <source>Playlists</source>
         <translation>Списки</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="138"/>
+        <location filename="../forms/mainwindow.ui" line="135"/>
         <source>Waveform Seek Bar</source>
         <translation>Полоса прокрутки з формою хвилі</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="152"/>
+        <location filename="../forms/mainwindow.ui" line="149"/>
         <source>Previous</source>
         <translation>Назад</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="162"/>
+        <location filename="../forms/mainwindow.ui" line="159"/>
         <source>Play</source>
         <translation>Відтворити</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="172"/>
+        <location filename="../forms/mainwindow.ui" line="169"/>
         <source>Pause</source>
         <translation>Пауза</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="182"/>
+        <location filename="../forms/mainwindow.ui" line="179"/>
         <source>Next</source>
         <translation>Вперед</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="192"/>
+        <location filename="../forms/mainwindow.ui" line="189"/>
         <source>Stop</source>
         <translation>Стоп</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="197"/>
+        <location filename="../forms/mainwindow.ui" line="194"/>
         <source>&amp;Add File</source>
         <translation>&amp;Додати файл</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="202"/>
+        <location filename="../forms/mainwindow.ui" line="199"/>
         <source>&amp;Remove All</source>
         <translation>&amp;Видалити все</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="207"/>
+        <location filename="../forms/mainwindow.ui" line="204"/>
         <source>New Playlist</source>
         <translation>Новий список</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="212"/>
+        <location filename="../forms/mainwindow.ui" line="209"/>
         <source>Remove Playlist</source>
         <translation>Видалити список</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="217"/>
+        <location filename="../forms/mainwindow.ui" line="214"/>
         <source>&amp;Add Directory</source>
         <translation>&amp;Додати теку</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="222"/>
+        <location filename="../forms/mainwindow.ui" line="219"/>
         <source>&amp;Exit</source>
         <translation>&amp;Вихід</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="227"/>
+        <location filename="../forms/mainwindow.ui" line="224"/>
         <source>About</source>
         <translation>Про програму</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="232"/>
+        <location filename="../forms/mainwindow.ui" line="229"/>
         <source>About Qt</source>
         <translation>Про Qt</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="237"/>
+        <location filename="../forms/mainwindow.ui" line="234"/>
         <source>&amp;Select All</source>
         <translation>&amp;Вибрати все</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="242"/>
+        <location filename="../forms/mainwindow.ui" line="239"/>
         <source>&amp;Remove Selected</source>
         <translation>&amp;Видалити вибране</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="247"/>
+        <location filename="../forms/mainwindow.ui" line="244"/>
         <source>&amp;Remove Unselected</source>
         <translation>&amp;Видалити не вибране</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="87"/>
-        <location filename="../forms/mainwindow.ui" line="252"/>
+        <location filename="../forms/mainwindow.ui" line="84"/>
+        <location filename="../forms/mainwindow.ui" line="249"/>
         <source>Visualization</source>
         <translation>Візуалізація</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="257"/>
+        <location filename="../forms/mainwindow.ui" line="254"/>
         <source>Settings</source>
         <translation>Налаштування</translation>
     </message>
     <message>
-        <location filename="../forms/mainwindow.ui" line="262"/>
-        <location filename="../mainwindow.cpp" line="280"/>
+        <location filename="../forms/mainwindow.ui" line="259"/>
+        <location filename="../mainwindow.cpp" line="281"/>
         <source>Rename Playlist</source>
         <translation>Переіменувати список</translation>
     </message>

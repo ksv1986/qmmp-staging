@@ -1395,47 +1395,37 @@ Do you want to replace it?</source>
 <context>
     <name>WinFileAssocPage</name>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="17"/>
+        <location filename="../forms/winfileassocpage.ui" line="43"/>
         <source>Media files handled by Qmmp:</source>
         <translation>Qmmp에서 처리한 미디어 파일:</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="49"/>
+        <location filename="../forms/winfileassocpage.ui" line="17"/>
         <source>Select All</source>
         <translation>모두 선택</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="56"/>
-        <source>Select None</source>
-        <translation>없음 선택</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="125"/>
+        <location filename="../winfileassocpage.cpp" line="114"/>
         <source>Warning</source>
         <translation>경고</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="126"/>
+        <location filename="../winfileassocpage.cpp" line="115"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>일부 파일을 연결할 수 없습니다. 보안 사용 권한을 확인한 후 다시 시도하십시오.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="133"/>
+        <location filename="../winfileassocpage.cpp" line="122"/>
         <source>Check all file types in the list</source>
         <translation>목록의 모든 파일 유형 확인</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="134"/>
-        <source>Uncheck all file types in the list</source>
-        <translation>목록의 모든 파일 유형 선택 취소</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="135"/>
+        <location filename="../winfileassocpage.cpp" line="123"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>Qmmp에서 처리할 미디어 파일 확장자를 확인합니다. 적용을 클릭하면 선택한 파일이 Qmmp와 연결됩니다. 미디어 유형을 선택 해제하면 파일 연결이 복원됩니다.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="139"/>
+        <location filename="../winfileassocpage.cpp" line="127"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;참고:&lt;/b&gt; Windows Vista/7에서는 복원이 작동하지 않습니다.</translation>
     </message>

@@ -1394,47 +1394,37 @@ Do you want to replace it?</source>
 <context>
     <name>WinFileAssocPage</name>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="17"/>
+        <location filename="../forms/winfileassocpage.ui" line="43"/>
         <source>Media files handled by Qmmp:</source>
         <translation>Media bylos, kurias atvers qmmp:</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="49"/>
+        <location filename="../forms/winfileassocpage.ui" line="17"/>
         <source>Select All</source>
         <translation>Pasirinkti visus</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="56"/>
-        <source>Select None</source>
-        <translation>Nepasirinkti nieko</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="125"/>
+        <location filename="../winfileassocpage.cpp" line="114"/>
         <source>Warning</source>
         <translation>Įspėjimas</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="126"/>
+        <location filename="../winfileassocpage.cpp" line="115"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>Ne visi bylų tipai galėjo būti priskirti. Pasitikrink leidimus ir bandyk dar kartą.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="133"/>
+        <location filename="../winfileassocpage.cpp" line="122"/>
         <source>Check all file types in the list</source>
         <translation>Pažymėti visus media bylų tipus sąraše</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="134"/>
-        <source>Uncheck all file types in the list</source>
-        <translation>Atžymėti visus bylų tipus sąraše</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="135"/>
+        <location filename="../winfileassocpage.cpp" line="123"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>Pažymėk media bylų tipus, kuriuos turėtų atverti qmmp. Jei atžymėsi, media bylų asociacijos bus atkurtos. </translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="139"/>
+        <location filename="../winfileassocpage.cpp" line="127"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;Pastaba:&lt;/b&gt; Atkūrimas neveikia Windows Vista/7.</translation>
     </message>

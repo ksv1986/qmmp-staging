@@ -31,7 +31,7 @@
     <message>
         <location filename="../effectladspafactory.cpp" line="54"/>
         <source>BMP-ladspa developers:</source>
-        <translation>Développeurs BMP-ladspa&#xa0;:</translation>
+        <translation>Développeurs BMP-ladspa :</translation>
     </message>
     <message>
         <location filename="../effectladspafactory.cpp" line="55"/>

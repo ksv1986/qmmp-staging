@@ -49,42 +49,42 @@
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Sample rate:</source>
-        <translation>Taux d’échantillonnage&#xa0;:</translation>
+        <translation>Taux d’échantillonnage :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>
         <source>HVSC database file:</source>
-        <translation>Fichier de base HVSC&#xa0;:</translation>
+        <translation>Fichier de base HVSC :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Resampling method:</source>
-        <translation>Méthode de ré-échantillonnage&#xa0;:</translation>
+        <translation>Méthode de ré-échantillonnage :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="93"/>
         <source>Defaults song length, sec:</source>
-        <translation>Durée de musique par défaut, en secondes&#xa0;:</translation>
+        <translation>Durée de musique par défaut, en secondes :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="100"/>
         <source>Enable HVSC song length database</source>
-        <translation>Activer la base de durée des musiques HVSC&#xa0;:</translation>
+        <translation>Activer la base de durée des musiques HVSC :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="107"/>
         <source>Emulation:</source>
-        <translation>Émulation&#xa0;:</translation>
+        <translation>Émulation :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
         <source>44100 Hz</source>
-        <translation>44&#xa0;100&#xa0;Hz</translation>
+        <translation>44 100 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="42"/>
         <source>48000 Hz</source>
-        <translation>48&#xa0;000&#xa0;Hz</translation>
+        <translation>48 000 Hz</translation>
     </message>
 </context>
 </TS>

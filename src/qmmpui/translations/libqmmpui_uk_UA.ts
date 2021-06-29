@@ -1395,47 +1395,37 @@ Do you want to replace it?</source>
 <context>
     <name>WinFileAssocPage</name>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="17"/>
+        <location filename="../forms/winfileassocpage.ui" line="43"/>
         <source>Media files handled by Qmmp:</source>
         <translation>Медіа-файли, асоційовані з Qmmp:</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="49"/>
+        <location filename="../forms/winfileassocpage.ui" line="17"/>
         <source>Select All</source>
         <translation>Виділити все</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="56"/>
-        <source>Select None</source>
-        <translation>Нічого не вибирати</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="125"/>
+        <location filename="../winfileassocpage.cpp" line="114"/>
         <source>Warning</source>
         <translation>Попередження</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="126"/>
+        <location filename="../winfileassocpage.cpp" line="115"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>Не всі файли можуть бути асоційованими. Перевірте свої права та спробуйте знову.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="133"/>
+        <location filename="../winfileassocpage.cpp" line="122"/>
         <source>Check all file types in the list</source>
         <translation>Перевірити всі типи файлів у списку</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="134"/>
-        <source>Uncheck all file types in the list</source>
-        <translation>Нічого не вибирати в списку</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="135"/>
+        <location filename="../winfileassocpage.cpp" line="123"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>Вкажіть типи файлів, яки Ви бажаєте асоціювати з Qmmp. Після застосування вибрані типи файлів будуть асоційовані з Qmmp. Якщо зняти відмтку - файлова асоціація буде відновлена.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="139"/>
+        <location filename="../winfileassocpage.cpp" line="127"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;Примітка:&lt;/b&gt; Відновлення асоціацій не працює в Windows Vista/7.</translation>
     </message>

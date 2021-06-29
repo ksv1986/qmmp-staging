@@ -39,9 +39,6 @@
     <property name="title">
      <string>&amp;Tools</string>
     </property>
-    <addaction name="separator"/>
-    <addaction name="actionVisualization"/>
-    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">

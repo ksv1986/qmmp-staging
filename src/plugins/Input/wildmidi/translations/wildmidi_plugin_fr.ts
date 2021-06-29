@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Instrument configuration: </source>
-        <translation>Configuration d&apos;instrument&#xa0;:</translation>
+        <translation>Configuration d&apos;instrument :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="43"/>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>
         <source>44100 Hz</source>
-        <translation>44&#xa0;100&#xa0;Hz</translation>
+        <translation>44 100 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="40"/>
         <source>48000 Hz</source>
-        <translation>48&#xa0;000&#xa0;Hz</translation>
+        <translation>48 000 Hz</translation>
     </message>
 </context>
 </TS>

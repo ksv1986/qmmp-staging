@@ -1404,37 +1404,27 @@ Do you want to replace it?</source>
         <translation>すべて選択</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="56"/>
-        <source>Select None</source>
-        <translation>選択を解除</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="125"/>
+        <location filename="../winfileassocpage.cpp" line="116"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="126"/>
+        <location filename="../winfileassocpage.cpp" line="117"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>一部に関連づけのできないファイルがありました。 ご使用のコンピューターのセキュリティ上の許可設定についてお確かめのうえやりなおしてみてください。</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="133"/>
+        <location filename="../winfileassocpage.cpp" line="124"/>
         <source>Check all file types in the list</source>
         <translation>リスト上のすべてのファイル形式にチェックを入れる</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="134"/>
-        <source>Uncheck all file types in the list</source>
-        <translation>リスト上のすべてのファイル形式のチェックをはずす</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="135"/>
+        <location filename="../winfileassocpage.cpp" line="125"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>QMMP で扱わせたいメディアファイルの拡張子にチェックを入れます。 適用ボタンをクリックすればチェックの入ったファイルと QMMP の関連づけが行なわれます。 チェックを外せばメディアの形式の関連づけが以前の状態に戻ります。</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="139"/>
+        <location filename="../winfileassocpage.cpp" line="129"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;ご注意&lt;/b&gt; Windows Vista/7 の場合はチェックを外しても元の関連づけに戻りません。</translation>
     </message>

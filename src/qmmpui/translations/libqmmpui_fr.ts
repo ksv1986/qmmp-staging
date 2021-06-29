@@ -112,7 +112,7 @@
     <message>
         <location filename="../forms/columneditor.ui" line="36"/>
         <source>Name:</source>
-        <translation>Nom&#xa0;:</translation>
+        <translation>Nom :</translation>
     </message>
     <message>
         <location filename="../forms/columneditor.ui" line="76"/>
@@ -430,7 +430,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="541"/>
         <source>Font:</source>
-        <translation>Police&#xa0;:</translation>
+        <translation>Police :</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="566"/>
@@ -1389,7 +1389,7 @@
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 existe déjà.
-Voulez-vous le remplacer&#xa0;?</translation>
+Voulez-vous le remplacer ?</translation>
     </message>
 </context>
 <context>
@@ -1405,37 +1405,27 @@ Voulez-vous le remplacer&#xa0;?</translation>
         <translation>Tout sélectionner</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="56"/>
-        <source>Select None</source>
-        <translation>Ne rien sélectionner</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="125"/>
+        <location filename="../winfileassocpage.cpp" line="116"/>
         <source>Warning</source>
         <translation>Attention</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="126"/>
+        <location filename="../winfileassocpage.cpp" line="117"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>Tous les fichiers ne peuvent être associés. Merci de vérifier vos permissions de sécurité et réessayer.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="133"/>
+        <location filename="../winfileassocpage.cpp" line="124"/>
         <source>Check all file types in the list</source>
         <translation>Cocher tous les types de fichier dans la liste</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="134"/>
-        <source>Uncheck all file types in the list</source>
-        <translation>Décocher tous les types de fichier dans la liste</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="135"/>
+        <location filename="../winfileassocpage.cpp" line="125"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>Cocher les fichiers d&quot;extensions multimédias que vous voulez que Qmmp prenne en charge. Lorsque vous cliquez sur Appliquer, les fichiers cochés vont être associés avec Qmmp. Si vous décocher un type de média, l&apos;association de fichier sera restauré.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="139"/>
+        <location filename="../winfileassocpage.cpp" line="129"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;Note:&lt;/b&gt; La réstauration ne fonctionne pas sur Windows Vista/7</translation>
     </message>

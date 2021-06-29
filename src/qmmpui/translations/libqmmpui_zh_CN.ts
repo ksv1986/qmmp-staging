@@ -1405,37 +1405,27 @@ Do you want to replace it?</source>
         <translation>选择所有</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="56"/>
-        <source>Select None</source>
-        <translation>一个都不选</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="125"/>
+        <location filename="../winfileassocpage.cpp" line="116"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="126"/>
+        <location filename="../winfileassocpage.cpp" line="117"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>不是所有的文件均可被关联。请检查您的安全允许权限后重试。</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="133"/>
+        <location filename="../winfileassocpage.cpp" line="124"/>
         <source>Check all file types in the list</source>
         <translation>选中列表中所有的文件类型</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="134"/>
-        <source>Uncheck all file types in the list</source>
-        <translation>取消对此列表中所有的文件类型的选中</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="135"/>
+        <location filename="../winfileassocpage.cpp" line="125"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>选择您希望使用Qmmp播放器播放的媒体文件类型。当您点击应用后，您所选中的文件类型将会被Qmmp关联。如果您取消对某一媒体类型的勾选，则该文件类型的关联将会被还原到之前的状态。</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="139"/>
+        <location filename="../winfileassocpage.cpp" line="129"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;备注&lt;/b&gt; 还原功能将无法在Windows Vista/7操作系统中使用。</translation>
     </message>

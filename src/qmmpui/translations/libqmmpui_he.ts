@@ -1404,37 +1404,27 @@ Do you want to replace it?</source>
         <translation>בחר הכל</translation>
     </message>
     <message>
-        <location filename="../forms/winfileassocpage.ui" line="56"/>
-        <source>Select None</source>
-        <translation>בחר כלום</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="125"/>
+        <location filename="../winfileassocpage.cpp" line="116"/>
         <source>Warning</source>
         <translation>אזהרה</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="126"/>
+        <location filename="../winfileassocpage.cpp" line="117"/>
         <source>Not all files could be associated. Please check your security permissions and retry.</source>
         <translation>לא  התה אפשרות לשייך את כל הקבצים. אנא בדוק את הרשאות האבטחה שלך ונסה שוב.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="133"/>
+        <location filename="../winfileassocpage.cpp" line="124"/>
         <source>Check all file types in the list</source>
         <translation>סמן את כל טיפוסי הקובץ בתוך הרשימה</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="134"/>
-        <source>Uncheck all file types in the list</source>
-        <translation>בטל את סימון כל טיפוסי הקובץ ברשימה</translation>
-    </message>
-    <message>
-        <location filename="../winfileassocpage.cpp" line="135"/>
+        <location filename="../winfileassocpage.cpp" line="125"/>
         <source>Check the media file extensions you would like Qmmp to handle. When you click Apply, the checked files will be associated with Qmmp. If you uncheck a media type, the file association will be restored.</source>
         <translation>סמן את סיומות הקובץ אשר ברצונך מן Qmmp לנהל. כאשר אתה לוחץ החל, הקבצים המסומנים ישוייכו עם Qmmp. אם אתה מבטל סימון של טיפוס מדיה, השיוך של הקובץ ישוחזר.</translation>
     </message>
     <message>
-        <location filename="../winfileassocpage.cpp" line="139"/>
+        <location filename="../winfileassocpage.cpp" line="129"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Restoration doesn&apos;t work on Windows Vista/7.</source>
         <translation>&lt;b&gt;הערה:&lt;/b&gt; שחזור לא פועל תחת חלונות Vista/7.</translation>
     </message>

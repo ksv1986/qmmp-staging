@@ -17,7 +17,7 @@
         <location filename="../settingsdialog.ui" line="38"/>
         <location filename="../settingsdialog.ui" line="105"/>
         <source>Delay, ms:</source>
-        <translation>Délai, en ms&#xa0;:</translation>
+        <translation>Délai, en ms :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="79"/>
@@ -133,7 +133,7 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="51"/>
         <source>Written by:</source>
-        <translation>Écrit par&#xa0;:</translation>
+        <translation>Écrit par :</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="52"/>

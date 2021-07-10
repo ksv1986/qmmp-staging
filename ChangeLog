@@ -1720,5 +1720,9 @@ Version 1.5.1
 * added Korean translation (Jung Hee Lee)
 * enabled Matroska container by default in the ffmpeg plugin
 * removed mp3lyrics.org lyrics provider (service was closed)
+* improved qsui plugin:
+  - added waveform seekbar optimization (Linearithmik)
+  - fixed waveform generation for 16-bit samples (Linearithmik)
 * fixed plugin cache cleanup
 * fixed build without mpg123
+* fixed ladspa plugin regression (Linearithmik)

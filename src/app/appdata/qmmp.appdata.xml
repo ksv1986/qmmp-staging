@@ -61,23 +61,23 @@
     <keyword xml:lang="ru">видео</keyword>
   </keywords>
   <url type="bugtracker">https://sourceforge.net/p/qmmp-dev/tickets/</url>
-  <url type="donation">http://qmmp.ylsoftware.com/index.php</url>
+  <url type="donation">https://qmmp.ylsoftware.com/index.php</url>
   <url type="help">https://sourceforge.net/p/qmmp-dev/tickets/</url>
-  <url type="homepage">http://qmmp.ylsoftware.com/index.php</url>
+  <url type="homepage">https://qmmp.ylsoftware.com/index.php</url>
   <url type="translate">https://www.transifex.com/qmmp-development-team/</url>
   <project_group>none</project_group>
   <screenshots>
     <screenshot type="default">
-      <image type="source">http://qmmp.ylsoftware.com/images/qmmp-0.9_full_2.png</image>  
+      <image type="source">https://qmmp.ylsoftware.com/images/qmmp-0.9_full_2.png</image>  
     </screenshot>
     <screenshot>
       <image type="source">https://screenshots.debian.net/screenshots/000/014/320/large.png</image>
     </screenshot>
     <screenshot>
-      <image type="source">http://qmmp.ylsoftware.com/images/qmmp-0.9_full_3.png</image>
+      <image type="source">https://qmmp.ylsoftware.com/images/qmmp-0.9_full_3.png</image>
     </screenshot>
     <screenshot>
-	  <image type="source">http://qmmp.ylsoftware.com/images/qmmp-0.9_full_4.png</image>
+	  <image type="source">https://qmmp.ylsoftware.com/images/qmmp-0.9_full_4.png</image>
     </screenshot>
   </screenshots>
   <launchable type="desktop-id">qmmp.desktop</launchable>

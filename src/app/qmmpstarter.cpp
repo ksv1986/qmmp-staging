@@ -418,7 +418,7 @@ void QMMPStarter::printUsage()
     extraHelp << QString("-h, --help") + "||" + tr("Display this text and exit");
     extraHelp << QString("-v, --version") + "||" + tr("Print version number and exit");
     extraHelp << "";
-    extraHelp << tr("Home page: %1").arg("http://qmmp.ylsoftware.com");
+    extraHelp << tr("Home page: %1").arg("https://qmmp.ylsoftware.com");
     extraHelp << tr("Development page: %1").arg("https://sourceforge.net/p/qmmp-dev");
     extraHelp << tr("Bug tracker: %1").arg("https://sourceforge.net/p/qmmp-dev/tickets");
     for(const QString &line : qAsConst(extraHelp))

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,13 +32,6 @@
 EqTitleBar::EqTitleBar(QWidget *parent)
         : PixmapWidget(parent)
 {
-    m_volumeBar = nullptr;
-    m_balanceBar = nullptr;
-    m_shade2 = nullptr;
-    m_left = 0;
-    m_right = 0;
-    m_shaded = false;
-    m_align = false;
     m_skin = Skin::instance();
     m_eq = parentWidget();
     m_mw = qobject_cast<MainWindow*>(m_eq->parent());

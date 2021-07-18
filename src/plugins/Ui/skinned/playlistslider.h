@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -46,9 +46,9 @@ private slots:
 private:
     Skin *m_skin;
     int m_old;
-    bool m_moving, m_pressed;
-    int m_press_pos;
-    int m_min, m_max, m_value, m_pos;
+    bool m_moving = false, m_pressed = false;
+    int m_press_pos = 0;
+    int m_min = 0, m_max = 0, m_value = 0, m_pos = 0;
     int convert(int);   // value = convert(position);
 
 protected:

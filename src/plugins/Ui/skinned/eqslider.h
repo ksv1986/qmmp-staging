@@ -51,9 +51,9 @@ private slots:
 
 private:
     Skin *m_skin;
-    bool m_moving;
+    bool m_moving = false;
     int press_pos;
-    double m_max, m_min, m_pos, m_value, m_old;
+    double m_max = 20, m_min = -20, m_pos = 0, m_value = 0, m_old = 0;
     QPixmap m_pixmap;
     double convert(int);   // value = convert(position);
     void draw(bool pressed = true);

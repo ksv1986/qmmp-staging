@@ -135,14 +135,14 @@ signals:
 
 
 private:
-    qint64 m_elapsed;
-    qint64 m_duration;
-    bool m_sendAboutToFinish;
-    int m_bitrate;
+    qint64 m_elapsed = -1;
+    qint64 m_duration = 0;
+    bool m_sendAboutToFinish = true;
+    int m_bitrate = 0;
     static StateHandler* m_instance;
     TrackInfo m_info;
     QHash <QString, QString> m_streamInfo;
-    Qmmp::State m_state;
+    Qmmp::State m_state = Qmmp::Stopped;
     AudioParameters m_audioParameters;
     mutable QMutex m_mutex;
 };

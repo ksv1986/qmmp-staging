@@ -53,9 +53,9 @@ private:
     int sliderSize() const;
 
     Skin *m_skin;
-    int m_old_value, m_value;
-    int m_press_pos;
-    int m_min, m_max, m_slider_pos;
+    int m_old_value = -1, m_value = 0;
+    int m_press_pos = 0;
+    int m_min = 0, m_max = 100, m_slider_pos = 0;
     QColor m_normal, m_normal_bg;
 
 };

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2007-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -48,17 +48,17 @@ private slots:
 private:
     void updatePositions();
     Skin* m_skin;
-    int m_left;
-    int m_right;
+    int m_left = 0;
+    int m_right = 0;
     QPoint m_pos;
     QWidget* m_eq;
     MainWindow* m_mw;
     Button* m_close;
     Button* m_shade;
-    Button* m_shade2;
-    bool m_shaded, m_align;
-    ShadedBar* m_volumeBar;
-    ShadedBar* m_balanceBar;
+    Button* m_shade2 = nullptr;
+    bool m_shaded = false, m_align = false;
+    ShadedBar* m_volumeBar = nullptr;
+    ShadedBar* m_balanceBar = nullptr;
 
 protected:
     void mousePressEvent(QMouseEvent*) override;

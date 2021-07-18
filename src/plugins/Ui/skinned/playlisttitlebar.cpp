@@ -35,13 +35,7 @@
 PlayListTitleBar::PlayListTitleBar(QWidget *parent)
         : PixmapWidget(parent)
 {
-    m_active = false;
-    m_resize = false;
     m_formatter.setPattern(TITLE_FORMAT);
-    m_shade2 = nullptr;
-    m_model = nullptr;
-    m_shaded = false;
-    m_align = false;
     m_skin = Skin::instance();
     m_ratio = m_skin->ratio();
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));

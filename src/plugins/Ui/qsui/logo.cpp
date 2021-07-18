@@ -29,30 +29,32 @@
 Logo::Logo(QWidget *parent) : Visual(parent)
 {
     QPixmap pixmap(":/qsui/terminus.png");
-    m_letters.insert('0', pixmap.copy(0, 0, 8, 14));
-    m_letters.insert('1', pixmap.copy(8, 0, 8, 14));
-    m_letters.insert('2', pixmap.copy(16, 0, 8, 14));
-    m_letters.insert('3', pixmap.copy(24, 0, 8, 14));
-    m_letters.insert('4', pixmap.copy(32, 0, 8, 14));
-    m_letters.insert('5', pixmap.copy(40, 0, 8, 14));
-    m_letters.insert('6', pixmap.copy(48, 0, 8, 14));
-    m_letters.insert('7', pixmap.copy(56, 0, 8, 14));
-    m_letters.insert('8', pixmap.copy(64, 0, 8, 14));
-    m_letters.insert('9', pixmap.copy(72, 0, 8, 14));
-    m_letters.insert('A', pixmap.copy(80, 0, 8, 14));
-    m_letters.insert('B', pixmap.copy(88, 0, 8, 14));
-    m_letters.insert('C', pixmap.copy(96, 0, 8, 14));
-    m_letters.insert('D', pixmap.copy(104, 0, 8, 14));
-    m_letters.insert('E', pixmap.copy(112, 0, 8, 14));
-    m_letters.insert('F', pixmap.copy(120, 0, 8, 14));
-    m_letters.insert('/', pixmap.copy(128, 0, 8, 14));
-    m_letters.insert('|', pixmap.copy(136, 0, 8, 14));
-    m_letters.insert('\\', pixmap.copy(144, 0, 8, 14));
-    m_letters.insert('_', pixmap.copy(152, 0, 8, 14));
-    m_letters.insert('-', pixmap.copy(160, 0, 8, 14));
-    m_letters.insert('X', pixmap.copy(168, 0, 8, 14));
-    m_letters.insert('.', pixmap.copy(176, 0, 8, 14));
-    m_letters.insert(' ', pixmap.copy(184, 0, 8, 14));
+    m_letters = {
+        { '0', pixmap.copy(0, 0, 8, 14) },
+        { '1', pixmap.copy(8, 0, 8, 14) },
+        { '2', pixmap.copy(16, 0, 8, 14) },
+        { '3', pixmap.copy(24, 0, 8, 14) },
+        { '4', pixmap.copy(32, 0, 8, 14) },
+        { '5', pixmap.copy(40, 0, 8, 14) },
+        { '6', pixmap.copy(48, 0, 8, 14) },
+        { '7', pixmap.copy(56, 0, 8, 14) },
+        { '8', pixmap.copy(64, 0, 8, 14) },
+        { '9', pixmap.copy(72, 0, 8, 14) },
+        { 'A', pixmap.copy(80, 0, 8, 14) },
+        { 'B', pixmap.copy(88, 0, 8, 14) },
+        { 'C', pixmap.copy(96, 0, 8, 14) },
+        { 'D', pixmap.copy(104, 0, 8, 14) },
+        { 'E', pixmap.copy(112, 0, 8, 14) },
+        { 'F', pixmap.copy(120, 0, 8, 14) },
+        { '/', pixmap.copy(128, 0, 8, 14) },
+        { '|', pixmap.copy(136, 0, 8, 14) },
+        { '\\', pixmap.copy(144, 0, 8, 14) },
+        { '_', pixmap.copy(152, 0, 8, 14) },
+        { '-', pixmap.copy(160, 0, 8, 14) },
+        { 'X', pixmap.copy(168, 0, 8, 14) },
+        { '.', pixmap.copy(176, 0, 8, 14) },
+        { ' ', pixmap.copy(184, 0, 8, 14) }
+    };
 
     QFile file(":/ascii_logo.txt");
     file.open(QIODevice::ReadOnly | QIODevice::Text);

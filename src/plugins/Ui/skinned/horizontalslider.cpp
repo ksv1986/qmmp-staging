@@ -30,9 +30,6 @@ HorizontalSlider::HorizontalSlider(QWidget *parent)
         : QWidget(parent)
 {
     m_skin = Skin::instance();
-    m_min = 0;
-    m_max = 100;
-    m_value = 0;
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
     updateSkin();
 }

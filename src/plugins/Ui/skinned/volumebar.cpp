@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2013 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -32,10 +32,6 @@ VolumeBar::VolumeBar(QWidget *parent) : PixmapWidget(parent)
     m_skin = Skin::instance();
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
     setPixmap(m_skin->getVolumeBar(0));
-    m_moving = false;
-    m_min = 0;
-    m_max = 100;
-    m_old = m_value = 0;
     draw(false);
 }
 

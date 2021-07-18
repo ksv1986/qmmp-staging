@@ -23,9 +23,7 @@
 #include "replaygain_p.h"
 
 ReplayGain::ReplayGain()
-{
-    m_mode = QmmpSettings::REPLAYGAIN_DISABLED;
-}
+{}
 
 ReplayGain::~ReplayGain()
 {}

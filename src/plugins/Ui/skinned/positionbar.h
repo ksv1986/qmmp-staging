@@ -56,9 +56,9 @@ private:
     void mouseMoveEvent(QMouseEvent*) override;
     void wheelEvent(QWheelEvent *e) override;
     Skin *m_skin;
-    bool m_moving;
+    bool m_moving = false;
     qint64 press_pos;
-    qint64 m_max, m_min, m_pos, m_value, m_old;
+    qint64 m_max = 0, m_min = 0, m_pos, m_value = 0, m_old = 0;
     QPixmap m_pixmap;
     qint64 convert(qint64);   // value = convert(position);
     void draw(bool pressed = true);

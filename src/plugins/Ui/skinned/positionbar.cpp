@@ -31,10 +31,6 @@ PositionBar::PositionBar(QWidget *parent) : PixmapWidget(parent)
     m_skin = Skin::instance();
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
     setPixmap(m_skin->getPosBar());
-    m_moving = false;
-    m_min = 0;
-    m_max = 0;
-    m_old = m_value = 0;
     draw(false);
     setCursor(m_skin->getCursor(Skin::CUR_POSBAR));
 }

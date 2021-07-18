@@ -95,7 +95,7 @@ private:
     QMenu *m_presetsMenu;
     QList<EQPreset*> m_presets;
     QList<EQPreset*> m_autoPresets;
-    bool m_shaded;
+    bool m_shaded = false;
 };
 
 #endif

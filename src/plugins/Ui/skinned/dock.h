@@ -51,7 +51,7 @@ private:
     bool isDocked(QWidget*, QWidget*);
     bool isUnder(QWidget*, QWidget*, int);
     static Dock *m_instance;
-    QWidget *m_mainWidget;
+    QWidget *m_mainWidget = nullptr;
     QList <QWidget *> m_widgetList;
     QList <bool> m_dockedList;
     QList <QPoint> m_delta_list;

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2006-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -29,15 +29,9 @@ PlayListSlider::PlayListSlider(QWidget *parent)
         : QWidget(parent)
 {
     m_skin = Skin::instance();
-    m_moving = false;
-    m_pressed = false;
-    m_min = 0;
-    m_max = 0;
-    m_value = 0;
     connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
     setCursor(m_skin->getCursor(Skin::CUR_PVSCROLL));
 }
-
 
 PlayListSlider::~PlayListSlider()
 {}

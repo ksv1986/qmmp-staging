@@ -38,11 +38,6 @@ StateHandler::StateHandler(QObject *parent)
         qFatal("StateHandler: only one instance is allowed");
     qRegisterMetaType<AudioParameters>("AudioParameters");
     m_instance = this;
-    m_elapsed = -1;
-    m_duration = 0;
-    m_bitrate = 0;
-    m_sendAboutToFinish = true;
-    m_state = Qmmp::Stopped;
 }
 
 StateHandler::~StateHandler()

@@ -39,8 +39,8 @@ public:
     double preamp();
 
 private:
-    double m_bands[10];
-    double m_preamp;
+    double m_bands[10] = { 0 };
+    double m_preamp = 0;
 
 };
 

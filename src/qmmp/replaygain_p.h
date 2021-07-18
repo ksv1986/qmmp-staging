@@ -44,7 +44,7 @@ public:
 private:
     void updateScale();
     QMap<Qmmp::ReplayGainKey, double> m_info;
-    QmmpSettings::ReplayGainMode m_mode;
+    QmmpSettings::ReplayGainMode m_mode = QmmpSettings::REPLAYGAIN_DISABLED;
     double m_scale = 1.0;
     double m_preamp = 0.0;
     double m_default_gain = 0.0;

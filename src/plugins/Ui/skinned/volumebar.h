@@ -23,7 +23,6 @@
 #include "pixmapwidget.h"
 
 class Skin;
-class MainWindow;
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
@@ -59,11 +58,10 @@ private slots:
 
 private:
     Skin *m_skin;
-    bool m_moving;
-    int press_pos;
-    int m_max, m_min, m_pos, m_value, m_old;
+    bool m_moving = false;
+    int press_pos = -1;
+    int m_max = 100, m_min = 0, m_pos, m_value = 0, m_old = 0;
     QPixmap m_pixmap;
-    MainWindow *mw;
     int convert(int);   // value = convert(position);
     void draw(bool pressed = true);
 

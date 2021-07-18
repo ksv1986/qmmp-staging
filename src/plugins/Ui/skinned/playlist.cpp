@@ -58,8 +58,6 @@ PlayList::PlayList (PlayListManager *manager, QWidget *parent)
     m_ui_settings = QmmpUiSettings::instance();
     m_skin = Skin::instance();
     m_ratio = m_skin->ratio();
-    m_pl_browser = nullptr;
-    m_pl_selector = nullptr;
 
 #ifdef QMMP_WS_X11
     QString wm_name = WindowSystem::netWindowManagerName();

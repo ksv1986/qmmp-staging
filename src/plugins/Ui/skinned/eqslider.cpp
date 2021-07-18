@@ -27,12 +27,8 @@
 EqSlider::EqSlider(QWidget *parent): PixmapWidget(parent)
 {
     m_skin = Skin::instance();
-    connect(m_skin, SIGNAL(skinChanged()), this, SLOT(updateSkin()));
+    connect(m_skin, SIGNAL(skinChanged()), SLOT(updateSkin()));
     setPixmap(m_skin->getEqSlider(0));
-    m_moving = false;
-    m_min = -20;
-    m_max = 20;
-    m_old = m_value = 0;
     draw(false);
     setCursor(m_skin->getCursor(Skin::CUR_EQSLID));
 }

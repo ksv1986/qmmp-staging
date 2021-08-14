@@ -1,0 +1,104 @@
+Πορτογαλικά Βραζιλίας
+    Bruno Gonçalves
+    Klaos Lacerda
+    Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
+
+Βουλγαρικά:
+    Kiril Kirilov
+    Miroslav Mihov
+
+Κινέζικα παραδοσιακά
+    Cosmos Chen
+    lon <lon83129@126.com>
+    Jeff Huang
+
+Κινέζικα απλά
+    lon <lon83129@126.com>
+    mabier
+    Mingcong Bai
+    Mingye Wang
+
+Τσέχικα
+    Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
+
+Ολλανδικά
+    Heimen Stoffels
+    Ronald Uitermark <ronald645@gmail.com>
+
+Φιλανδικά:
+    Jiri Grönroos
+    Kimmo Kujansuu
+
+Γαλλικά
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
+    Sébastien Aperghis-Tramoni (maddingue)
+    Stanislas Zeller <uncensored.assault@gmail.com>
+
+Γαλικιανά
+    Delio Docampo Cordeiro
+    Óscar Pereira <oscarpereira1989@gmail.com>
+
+Γερμανικά
+    Ettore Atalan
+    Stefan Koelling <stefankoelling.ext@googlemail.com>
+    Panagiotis Papadopoulos <pano_90@gmx.net>
+
+Ελληνικά:
+    Δημήτριος Γλενταδάκης
+
+Εβραϊκά
+    Genghis Khan <genghiskhan@gmx.ca>
+
+Ουγγρικά
+    Németh Gábor <sutee84@freemail.hu>
+
+Ινδονησιακά:
+    Andika Triwidada
+    Wantoyo <wantoyek@gmail.com>
+
+Ιταλικά
+    Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
+
+Ιαπωνικά
+    Ryota Shimamoto <liangtai.s16@gmail.com>
+
+Καζακικά
+    Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+
+Λιθουανικά
+    Algirdas Butkus <butkus.algirdas@gmail.com>
+
+Πολωνικά
+    Daniel Krawczyk
+    Grzegorz Gibas <amigib@gmail.com>
+    mrerexx
+
+Πορτογαλικά
+    Sérgio Marques <smarquespt@gmail.com>
+
+Ρωσικά
+    Alexey Loginov <loginov.alex.valer.gmail.com>
+    Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
+
+Σέρβικα
+    Mladen Pejaković <pejakm@autistici.org>
+
+Σλοβακικά
+    Ján Ďanovský <dagsoftware@yahoo.com>
+
+Ισπανικά
+    Bohdan Shuba
+    Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
+
+Τουρκικά
+    Mustafa GUNAY <mustafagunay@pgmail.com>
+    Bilgesu Güngör <h.ibrahim.gungor@gmail.com>
+    Uğur KUYU
+
+Ουκρανικά
+    Gennadi Motsyo <drool@altlinux.ru>

@@ -1,0 +1,14 @@
+Desarrolladores Principales:
+
+    Ilya Kotov <forkotov02@ya.ru> - idea y código base
+
+Antiguos Desarrolladores
+
+    Artur Guzik <aguzik88@gmail.com> - módulo de notificación para kde4, mejoras en icono de bandeja de estado
+    Vladimir Kuznetsov <vovanec@gmail.com> - comportamiento y apariencia y muchas otras mejoras
+    Yuriy Zhuravlev <stalkerg@gmail.com> - Módulos JACK y OSS
+
+Arte:
+
+    Andrey Adreev <andreev00@gmail.com> - iconos y piel predeterminada (para versiones 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - piel predeterminada

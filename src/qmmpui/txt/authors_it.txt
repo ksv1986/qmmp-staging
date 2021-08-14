@@ -1,0 +1,14 @@
+Sviluppatori principali:
+
+    Ilya Kotov <forkotov02@ya.ru> - idea e codice iniziale
+
+Sviluppatori precedenti:
+
+    Artur Guzik <aguzik88@gmail.com> - estensione di notifica per kde4, miglioramenti all'icona del vassoio di sistema
+    Vladimir Kuznetsov <vovanec@gmail.com> - aspetto e vari miglioramenti
+    Yuriy Zhuravlev <stalkerg@gmail.com> - estensioni JACK e OSS
+
+Grafica
+
+    Andrey Adreev <andreev00@gmail.com> - icone e tema predefinito (per le versioni 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - tema predefinito

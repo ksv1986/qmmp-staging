@@ -1,0 +1,14 @@
+Ensisijaiset kehittäjät:
+
+    Ilya Kotov <forkotov02@ya.ru> - idea and base code
+
+Aiemmat kehittäjät:
+
+    Artur Guzik <aguzik88@gmail.com> - kde4 notification plugin, tray icon improvements
+    Vladimir Kuznetsov <vovanec@gmail.com> - look&feel and many improvements
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - JACK and OSS plugins
+
+Kuvitus:
+
+    Andrey Adreev <andreev00@gmail.com> - icons and default skin (for versions 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - default skin

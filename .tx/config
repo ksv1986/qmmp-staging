@@ -259,6 +259,12 @@ source_lang = en
 source_file = src/plugins/General/scrobbler/translations/scrobbler_plugin_en.ts
 type = QT
 
+[qmmp.udisks]
+file_filter = src/plugins/General/udisks/translations/udisks_plugin_<lang>.ts
+source_lang = en
+source_file = src/plugins/General/udisks/translations/udisks_plugin_en.ts
+type = QT
+
 [qmmp.gnomehotkey]
 file_filter = src/plugins/General/gnomehotkey/translations/gnomehotkey_plugin_<lang>.ts
 source_lang = en
@@ -341,12 +347,6 @@ type = QT
 file_filter = src/plugins/General/lyrics/translations/lyrics_plugin_<lang>.ts
 source_lang = en
 source_file = src/plugins/General/lyrics/translations/lyrics_plugin_en.ts
-type = QT
-
-[qmmp.udisks2]
-file_filter = src/plugins/General/udisks2/translations/udisks2_plugin_<lang>.ts
-source_lang = en
-source_file = src/plugins/General/udisks2/translations/udisks2_plugin_en.ts
 type = QT
 
 [qmmp.sleepinhibitor]

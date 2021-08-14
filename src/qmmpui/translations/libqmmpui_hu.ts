@@ -34,47 +34,67 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="63"/>
+        <location filename="../aboutdialog.cpp" line="71"/>
         <source>Qt-based Multimedia Player (Qmmp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="67"/>
+        <location filename="../aboutdialog.cpp" line="75"/>
         <source>Version: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="68"/>
+        <location filename="../aboutdialog.cpp" line="76"/>
         <source>Using Qt %1 (compiled with Qt %2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="71"/>
+        <location filename="../aboutdialog.cpp" line="79"/>
         <source>(c) %1-%2 Qmmp Development Team</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="76"/>
-        <source>Input plugins:</source>
+        <location filename="../aboutdialog.cpp" line="84"/>
+        <source>Transports:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="85"/>
+        <location filename="../aboutdialog.cpp" line="93"/>
+        <source>Decoders:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="104"/>
+        <source>Engines:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="115"/>
+        <source>Effects:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="153"/>
+        <source>File dialogs:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="165"/>
+        <source>User interfaces:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="142"/>
         <source>Output plugins:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="94"/>
+        <location filename="../aboutdialog.cpp" line="124"/>
         <source>Visual plugins:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="103"/>
-        <source>Effect plugins:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="112"/>
+        <location filename="../aboutdialog.cpp" line="133"/>
         <source>General plugins:</source>
         <translation type="unfinished"></translation>
     </message>

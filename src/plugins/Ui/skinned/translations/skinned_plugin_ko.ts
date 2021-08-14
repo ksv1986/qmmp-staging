@@ -475,53 +475,53 @@
         <translation>이퀄라이저</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="172"/>
-        <location filename="../eqwidget.cpp" line="189"/>
+        <location filename="../eqwidget.cpp" line="171"/>
+        <location filename="../eqwidget.cpp" line="188"/>
         <source>preset</source>
         <translation>프리셋</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="273"/>
+        <location filename="../eqwidget.cpp" line="272"/>
         <source>&amp;Load/Delete</source>
         <translation>불러오기/삭제(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="275"/>
+        <location filename="../eqwidget.cpp" line="274"/>
         <source>&amp;Save Preset</source>
         <translation>프리셋 저장하기(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="277"/>
+        <location filename="../eqwidget.cpp" line="276"/>
         <source>&amp;Save Auto-load Preset</source>
         <translation>자동 불러오기 프리셋 저장(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="279"/>
+        <location filename="../eqwidget.cpp" line="278"/>
         <source>&amp;Import</source>
         <translation>가져오기(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="282"/>
+        <location filename="../eqwidget.cpp" line="281"/>
         <source>&amp;Clear</source>
         <translation>지우기(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="311"/>
+        <location filename="../eqwidget.cpp" line="310"/>
         <source>Saving Preset</source>
         <translation>프리셋 저장 중</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="312"/>
+        <location filename="../eqwidget.cpp" line="311"/>
         <source>Preset name:</source>
         <translation>프리셋 이름:</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="313"/>
+        <location filename="../eqwidget.cpp" line="312"/>
         <source>preset #</source>
         <translation>프리셋 #</translation>
     </message>
     <message>
-        <location filename="../eqwidget.cpp" line="404"/>
+        <location filename="../eqwidget.cpp" line="403"/>
         <source>Import Preset</source>
         <translation>프리셋 가져오기</translation>
     </message>
@@ -851,118 +851,118 @@
         <translation>재생목록</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="199"/>
+        <location filename="../playlist.cpp" line="197"/>
         <source>&amp;Copy Selection To</source>
         <translation>선택 영역 복사(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="230"/>
+        <location filename="../playlist.cpp" line="228"/>
         <source>Sort List</source>
         <translation>목록 정렬</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="233"/>
-        <location filename="../playlist.cpp" line="273"/>
+        <location filename="../playlist.cpp" line="231"/>
+        <location filename="../playlist.cpp" line="271"/>
         <source>By Title</source>
         <translation>제목별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="236"/>
-        <location filename="../playlist.cpp" line="276"/>
+        <location filename="../playlist.cpp" line="234"/>
+        <location filename="../playlist.cpp" line="274"/>
         <source>By Album</source>
         <translation>앨범별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="257"/>
-        <location filename="../playlist.cpp" line="297"/>
+        <location filename="../playlist.cpp" line="255"/>
+        <location filename="../playlist.cpp" line="295"/>
         <source>By Disc Number</source>
         <translation>CD 번호별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="239"/>
-        <location filename="../playlist.cpp" line="279"/>
+        <location filename="../playlist.cpp" line="237"/>
+        <location filename="../playlist.cpp" line="277"/>
         <source>By Artist</source>
         <translation>아티스트별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="242"/>
-        <location filename="../playlist.cpp" line="282"/>
+        <location filename="../playlist.cpp" line="240"/>
+        <location filename="../playlist.cpp" line="280"/>
         <source>By Album Artist</source>
         <translation>앨범 아티스트별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="245"/>
-        <location filename="../playlist.cpp" line="285"/>
+        <location filename="../playlist.cpp" line="243"/>
+        <location filename="../playlist.cpp" line="283"/>
         <source>By Filename</source>
         <translation>파일이름별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="248"/>
-        <location filename="../playlist.cpp" line="288"/>
+        <location filename="../playlist.cpp" line="246"/>
+        <location filename="../playlist.cpp" line="286"/>
         <source>By Path + Filename</source>
         <translation>경로 + 파일이름별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="251"/>
-        <location filename="../playlist.cpp" line="291"/>
+        <location filename="../playlist.cpp" line="249"/>
+        <location filename="../playlist.cpp" line="289"/>
         <source>By Date</source>
         <translation>날짜별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="254"/>
-        <location filename="../playlist.cpp" line="294"/>
+        <location filename="../playlist.cpp" line="252"/>
+        <location filename="../playlist.cpp" line="292"/>
         <source>By Track Number</source>
         <translation>트랙 번호별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="260"/>
-        <location filename="../playlist.cpp" line="300"/>
+        <location filename="../playlist.cpp" line="258"/>
+        <location filename="../playlist.cpp" line="298"/>
         <source>By File Creation Date</source>
         <translation>파일 생성 날짜별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="263"/>
-        <location filename="../playlist.cpp" line="303"/>
+        <location filename="../playlist.cpp" line="261"/>
+        <location filename="../playlist.cpp" line="301"/>
         <source>By File Modification Date</source>
         <translation>파일 수정 날짜별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="266"/>
+        <location filename="../playlist.cpp" line="264"/>
         <source>By Group</source>
         <translation>그룹별</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="271"/>
+        <location filename="../playlist.cpp" line="269"/>
         <source>Sort Selection</source>
         <translation>선택 항목 정렬</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="308"/>
+        <location filename="../playlist.cpp" line="306"/>
         <source>Randomize List</source>
         <translation>목록 무작위화</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="310"/>
+        <location filename="../playlist.cpp" line="308"/>
         <source>Reverse List</source>
         <translation>역방향 목록</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="317"/>
+        <location filename="../playlist.cpp" line="315"/>
         <source>Actions</source>
         <translation>동작</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="592"/>
+        <location filename="../playlist.cpp" line="590"/>
         <source>Rename Playlist</source>
         <translation>재생목록 이름변경</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="592"/>
+        <location filename="../playlist.cpp" line="590"/>
         <source>Playlist name:</source>
         <translation>재생목록 이름:</translation>
     </message>
     <message>
-        <location filename="../playlist.cpp" line="613"/>
+        <location filename="../playlist.cpp" line="611"/>
         <source>&amp;New PlayList</source>
         <translation>새 재생목록(&amp;N)</translation>
     </message>

@@ -40,44 +40,44 @@
     </message>
 </context>
 <context>
-    <name>UDisks2Factory</name>
+    <name>UDisksFactory</name>
     <message>
-        <location filename="../udisks2factory.cpp" line="30"/>
-        <source>UDisks2 Plugin</source>
-        <translation>UDisks2-Modul</translation>
+        <location filename="../udisksfactory.cpp" line="30"/>
+        <source>UDisks Plugin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="50"/>
-        <source>About UDisks2 Plugin</source>
-        <translation>Über UDisks2-Modul</translation>
+        <location filename="../udisksfactory.cpp" line="50"/>
+        <source>About UDisks Plugin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="51"/>
-        <source>Qmmp UDisks2 Plugin</source>
-        <translation>Qmmp UDisks2-Modul</translation>
+        <location filename="../udisksfactory.cpp" line="51"/>
+        <source>Qmmp UDisks Plugin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="52"/>
-        <source>This plugin provides removable devices detection using UDisks2</source>
-        <translation>Dieses Modul bietet Wechsellaufwerkerkennung unter Verwendung von UDisks2</translation>
+        <location filename="../udisksfactory.cpp" line="52"/>
+        <source>This plugin provides removable devices detection using UDisks</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../udisks2factory.cpp" line="53"/>
+        <location filename="../udisksfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation type="unfinished">Geschrieben von: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
-    <name>UDisks2Plugin</name>
+    <name>UDisksPlugin</name>
     <message>
-        <location filename="../udisks2plugin.cpp" line="134"/>
+        <location filename="../udisksplugin.cpp" line="134"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation>CD „%1“ hinzufügen</translation>
+        <translation type="unfinished">CD „%1“ hinzufügen</translation>
     </message>
     <message>
-        <location filename="../udisks2plugin.cpp" line="142"/>
+        <location filename="../udisksplugin.cpp" line="142"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation>Datenträger „%1“ hinzufügen</translation>
+        <translation type="unfinished">Datenträger „%1“ hinzufügen</translation>
     </message>
 </context>
 </TS>

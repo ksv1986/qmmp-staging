@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,29 +17,49 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef SETTINGSDIALOG_H
-#define SETTINGSDIALOG_H
+#ifndef UDISKS2PLUGIN_H
+#define UDISKS2PLUGIN_H
 
-#include <QDialog>
-#include "ui_settingsdialog.h"
+#include <QDBusObjectPath>
+#include <qmmpui/general.h>
+
+class UDisksManager;
+class UDisksDevice;
+class QActionGroup;
+class QAction;
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class SettingsDialog : public QDialog
+
+class UDisksPlugin : public QObject
 {
 Q_OBJECT
 public:
-    SettingsDialog(QWidget *parent = nullptr);
+    UDisksPlugin(QObject *parent = nullptr);
 
-    ~SettingsDialog();
+    ~UDisksPlugin();
 
-
-public slots:
-    virtual void accept() override;
+private slots:
+    void removeDevice(QDBusObjectPath);
+    void addDevice(QDBusObjectPath);
+    void processAction(QAction *action);
+    void updateActions();
 
 private:
-    Ui::SettingsDialog m_ui;
+    QAction *findAction(const QString &dev_path);
+    UDisksDevice *findDevice(QAction *action);
+    void addPath(const QString &path);
+    void removePath(const QString &path);
+    UDisksManager *m_manager;
+    QList <UDisksDevice *> m_devices;
+    QActionGroup *m_actions;
+    bool m_detectCDA;
+    bool m_addTracks;
+    bool m_removeTracks;
+    bool m_detectRemovable;
+    bool m_addFiles;
+    bool m_removeFiles;
 };
 
-#endif
+#endif //UDISKS2PLUGIN_H

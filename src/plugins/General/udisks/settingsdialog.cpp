@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,7 +26,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 {
     m_ui.setupUi(this);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    settings.beginGroup("UDisks2");
+    settings.beginGroup("UDisks");
     m_ui.cdGroupBox->setChecked(settings.value("cda", true).toBool());
     m_ui.addTracksCheckBox->setChecked(settings.value("add_tracks", false).toBool());
     m_ui.removeTracksCheckBox->setChecked(settings.value("remove_tracks", false).toBool());
@@ -43,7 +43,7 @@ SettingsDialog::~SettingsDialog()
 void SettingsDialog::accept()
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    settings.beginGroup("UDisks2");
+    settings.beginGroup("UDisks");
     settings.setValue("cda", m_ui.cdGroupBox->isChecked());
     settings.setValue("add_tracks", m_ui.addTracksCheckBox->isChecked());
     settings.setValue("remove_tracks", m_ui.removeTracksCheckBox->isChecked());

@@ -25,9 +25,9 @@
 #if (QT_VERSION < QT_VERSION_CHECK(5, 7, 0)) //qAsConst template
 #include <qmmp/qmmp.h>
 #endif
-#include "udisks2device.h"
+#include "udisksdevice.h"
 
-UDisks2Device::UDisks2Device(QDBusObjectPath o, QObject *parent) : QObject(parent)
+UDisksDevice::UDisksDevice(QDBusObjectPath o, QObject *parent) : QObject(parent)
 {
     m_block_interface = new QDBusInterface("org.freedesktop.UDisks2", o.path(),
                                            "org.freedesktop.UDisks2.Block", QDBusConnection::systemBus(),
@@ -45,41 +45,41 @@ UDisks2Device::UDisks2Device(QDBusObjectPath o, QObject *parent) : QObject(paren
     m_path = o;
 }
 
-UDisks2Device::~UDisks2Device()
+UDisksDevice::~UDisksDevice()
 {
 }
 
-QVariant UDisks2Device::property(const QString &key) const
+QVariant UDisksDevice::property(const QString &key) const
 {
     return m_block_interface->property(key.toLatin1().data());
 }
 
-bool UDisks2Device::isRemovable() const
+bool UDisksDevice::isRemovable() const
 {
     return m_drive_interface->property("Removable").toBool();
 }
 
-bool UDisks2Device::isMediaRemovable() const
+bool UDisksDevice::isMediaRemovable() const
 {
     return m_drive_interface->property("MediaRemovable").toBool();
 }
 
-bool UDisks2Device::isAudio() const
+bool UDisksDevice::isAudio() const
 {
     return m_drive_interface->property("OpticalNumAudioTracks").toInt() > 0;
 }
 
-bool UDisks2Device::isMounted() const
+bool UDisksDevice::isMounted() const
 {
     return !mountPoints().isEmpty();
 }
 
-bool UDisks2Device::isOptical() const
+bool UDisksDevice::isOptical() const
 {
     return m_drive_interface->property("Optical").toBool();
 }
 
-QStringList UDisks2Device::mountPoints() const
+QStringList UDisksDevice::mountPoints() const
 {
     QStringList points;
     QDBusMessage message = QDBusMessage::createMethodCall("org.freedesktop.UDisks2", m_path.path(),
@@ -107,12 +107,12 @@ QStringList UDisks2Device::mountPoints() const
     return points;
 }
 
-QString UDisks2Device::deviceFile() const
+QString UDisksDevice::deviceFile() const
 {
     return QString::fromLatin1(m_block_interface->property("Device").toByteArray());
 }
 
-QDBusObjectPath UDisks2Device::objectPath() const
+QDBusObjectPath UDisksDevice::objectPath() const
 {
     return m_path;
 }

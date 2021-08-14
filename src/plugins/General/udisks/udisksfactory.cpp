@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,39 +21,39 @@
 #include <QMessageBox>
 #include <qmmp/qmmp.h>
 #include "settingsdialog.h"
-#include "udisks2plugin.h"
-#include "udisks2factory.h"
+#include "udisksplugin.h"
+#include "udisksfactory.h"
 
-GeneralProperties UDisks2Factory::properties() const
+GeneralProperties UDisksFactory::properties() const
 {
     GeneralProperties properties;
-    properties.name = tr("UDisks2 Plugin");
-    properties.shortName = "udisks2";
+    properties.name = tr("UDisks Plugin");
+    properties.shortName = "udisks";
     properties.hasAbout = true;
     properties.hasSettings = true;
     properties.visibilityControl = false;
     return properties;
 }
 
-QObject *UDisks2Factory::create(QObject *parent)
+QObject *UDisksFactory::create(QObject *parent)
 {
-    return new UDisks2Plugin(parent);
+    return new UDisksPlugin(parent);
 }
 
-QDialog *UDisks2Factory::createConfigDialog(QWidget *parent)
+QDialog *UDisksFactory::createConfigDialog(QWidget *parent)
 {
     return new SettingsDialog(parent);
 }
 
-void UDisks2Factory::showAbout(QWidget *parent)
+void UDisksFactory::showAbout(QWidget *parent)
 {
-    QMessageBox::about (parent, tr("About UDisks2 Plugin"),
-                        tr("Qmmp UDisks2 Plugin") + "\n" +
-                        tr("This plugin provides removable devices detection using UDisks2") + "\n" +
+    QMessageBox::about (parent, tr("About UDisks Plugin"),
+                        tr("Qmmp UDisks Plugin") + "\n" +
+                        tr("This plugin provides removable devices detection using UDisks") + "\n" +
                         tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
 }
 
-QString UDisks2Factory::translation() const
+QString UDisksFactory::translation() const
 {
-    return QLatin1String(":/udisks2_plugin_");
+    return QLatin1String(":/udisks_plugin_");
 }

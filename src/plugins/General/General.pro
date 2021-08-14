@@ -19,8 +19,8 @@ unix:SUBDIRS += mpris \
                 converter \
                 gnomehotkey
 
-contains(CONFIG, UDISKS2_PLUGIN){
-    unix:SUBDIRS += udisks2
+contains(CONFIG, UDISKS_PLUGIN){
+    unix:SUBDIRS += udisks
 }
 
 contains(CONFIG, HAL_PLUGIN){

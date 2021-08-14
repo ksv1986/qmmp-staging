@@ -143,7 +143,7 @@ Available options:
 - USE_SOXR, USE_BS2B, USE_LADSPA, USE_CROSSFADE, USE_STEREO, USE_FILEWRITER, USE_MONOTOSTEREO (effects);
 - USE_ANALYZER, USE_PROJECTM (visualization);
 - USE_MPRIS, USE_SCROBBLER, USE_LISTENBRAINZ, USE_STATICON, USE_NOTIFIER, USE_LYRICS, USE_HAL, USE_HOTKEY, USE_FILEOPS,
-  USE_COVER, USE_KDENOTIFY, USE_UDISKS2, USE_CONVERTER, USE_SB, USE_RGSCAN, USE_TRACKCHANGE, USE_COPYPASTE,
+  USE_COVER, USE_KDENOTIFY, USE_UDISKS, USE_CONVERTER, USE_SB, USE_RGSCAN, USE_TRACKCHANGE, USE_COPYPASTE,
   USE_GNOMEHOTKEY, USE_LIBRARY (general plugins);
 - USE_QMMP_DIALOG, USE_TWO_PANEL_DIALOG (file dialogs);
 - USE_ENCA (automatic charset detection);
@@ -165,9 +165,9 @@ OSS3 support.
 OSS3 plugin is deprecated and disabled by default.
 To enable it, run 'cmake ./ -DUSE_OSS:BOOL=TRUE' before compilation.
 
-UDisks2 support and FreeBSD.
-Under FreeBSD you are able to use UDisks2 plugin. Also, you should install port sysutils/bsdisks.
-Bsdisks is an implementation of UDisks2 service for FreeBSD.
+UDisks support and FreeBSD.
+Under FreeBSD you are able to use UDisks plugin. Also, you should install port sysutils/bsdisks.
+Bsdisks is an implementation of UDisks service for FreeBSD.
 
 In some cases, you can use qmake for building and installation.
 

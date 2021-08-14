@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,49 +17,28 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef UDISKS2PLUGIN_H
-#define UDISKS2PLUGIN_H
-
-#include <QDBusObjectPath>
-#include <qmmpui/general.h>
-
-class UDisks2Manager;
-class UDisks2Device;
-class QActionGroup;
-class QAction;
+#ifndef UDISKS2FACTORY_H
+#define UDISKS2FACTORY_H
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
+#include <QObject>
 
-class UDisks2Plugin : public QObject
+#include <qmmpui/general.h>
+#include <qmmpui/generalfactory.h>
+
+class UDisksFactory : public QObject, public GeneralFactory
 {
 Q_OBJECT
+Q_PLUGIN_METADATA(IID "org.qmmp.qmmpui.GeneralFactoryInterface.1.0")
+Q_INTERFACES(GeneralFactory)
 public:
-    UDisks2Plugin(QObject *parent = nullptr);
-
-    ~UDisks2Plugin();
-
-private slots:
-    void removeDevice(QDBusObjectPath);
-    void addDevice(QDBusObjectPath);
-    void processAction(QAction *action);
-    void updateActions();
-
-private:
-    QAction *findAction(const QString &dev_path);
-    UDisks2Device *findDevice(QAction *action);
-    void addPath(const QString &path);
-    void removePath(const QString &path);
-    UDisks2Manager *m_manager;
-    QList <UDisks2Device *> m_devices;
-    QActionGroup *m_actions;
-    bool m_detectCDA;
-    bool m_addTracks;
-    bool m_removeTracks;
-    bool m_detectRemovable;
-    bool m_addFiles;
-    bool m_removeFiles;
+    GeneralProperties properties() const override;
+    QObject *create(QObject *parent) override;
+    QDialog *createConfigDialog(QWidget *parent) override;
+    void showAbout(QWidget *parent) override;
+    QString translation() const override;
 };
 
-#endif //UDISKS2PLUGIN_H
+#endif

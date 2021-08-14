@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,75 +17,43 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef UDISKS2DEVICE_H
-#define UDISKS2DEVICE_H
+#ifndef UDISKS2MANAGER_H
+#define UDISKS2MANAGER_H
 
 #include <QObject>
-#include <QDBusObjectPath>
-#include <QDBusMetaType>
-#include <QDBusArgument>
-#include <QByteArray>
 #include <QList>
-#include <QVariant>
+#include <QVariantMap>
+#include <QDBusObjectPath>
 
 class QDBusInterface;
 
-typedef QList<QByteArray> QByteArrayList;
-Q_DECLARE_METATYPE(QByteArrayList)
-
-inline const QDBusArgument &operator>>(const QDBusArgument &arg, QByteArrayList &list)
-{
-    arg.beginArray();
-    list.clear();
-
-    while (!arg.atEnd())
-    {
-        QByteArray element;
-        arg >> element;
-        list.append( element );
-    }
-    arg.endArray();
-    return arg;
-}
-
-inline QDBusArgument &operator<<(QDBusArgument &arg, const QByteArrayList &list)
-{
-    arg.beginArray(qMetaTypeId<QByteArrayList>());
-    for (int i = 0; i < list.count(); ++i)
-        arg << list[i];
-    arg.endArray();
-    return arg;
-}
-
+typedef QMap<QString,QVariantMap> QVariantMapMap;
+Q_DECLARE_METATYPE(QVariantMapMap)
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class UDisks2Device : public QObject
+class UDisksManager : public QObject
 {
-    Q_OBJECT
+Q_OBJECT
 public:
-    UDisks2Device(QDBusObjectPath o, QObject *parent = nullptr);
+    UDisksManager(QObject *parent = nullptr);
 
-    ~UDisks2Device();
+    ~UDisksManager();
 
-    QVariant property(const QString &key) const;
-    bool isRemovable() const;
-    bool isMediaRemovable() const;
-    bool isAudio() const;
-    bool isMounted() const;
-    bool isOptical() const;
-    QStringList mountPoints() const;
-    QString deviceFile() const;
-    QDBusObjectPath objectPath() const;
+    QList<QDBusObjectPath> findAllDevices();
 
 signals:
-    void changed();
+    void deviceAdded(QDBusObjectPath);
+    void deviceRemoved(QDBusObjectPath);
+
+private slots:
+    void onInterfacesAdded(const QDBusObjectPath &object_path, const QVariantMapMap &);
+    void onInterfacesRemoved(const QDBusObjectPath &object_path, const QStringList &);
 
 private:
-    QDBusInterface *m_block_interface;
-    QDBusInterface *m_drive_interface;
-    QDBusObjectPath m_path;
+    QDBusInterface *m_interface;
+
 };
 
 #endif

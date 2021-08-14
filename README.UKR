@@ -126,7 +126,7 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 - USE_SOXR, USE_BS2B, USE_LADSPA, USE_CROSSFADE, USE_STEREO, USE_FILEWRITER, USE_MONOTOSTEREO (ефекти);
 - USE_ANALYZER, USE_PROJECTM (візуалізація);
 - USE_MPRIS, USE_SCROBBLER, USE_LISTENBRAINZ, USE_STATICON, USE_NOTIFIER, USE_LYRICS, USE_HAL, USE_HOTKEY, USE_FILEOPS,
-  USE_COVER, USE_KDENOTIFY, USE_UDISKS2, USE_CONVERTER, USE_RGSCAN, USE_TRACKCHANGE, USE_COPYPASTE,
+  USE_COVER, USE_KDENOTIFY, USE_UDISKS, USE_CONVERTER, USE_RGSCAN, USE_TRACKCHANGE, USE_COPYPASTE,
   USE_GNOMEHOTKEY, USE_LIBRARY (модулі загального призначення);
 - USE_QMMP_DIALOG (файловий діалог);
 - USE_ENCA (автоматичне визначення кодування);
@@ -140,14 +140,14 @@ cmake ./ -DUSE_JACK:BOOL=FALSE
 cmake ./ -DCMAKE_INSTALL_PREFIX=інший_шлях
 
 Підтримка OSS3 та Udisks.
-Модулі OSS3 та UDisks2 застаріли і вимкнені за замовчанням.
-Для їх увімкнення виконайте 'cmake ./ -DUSE_OSS:BOOL=TRUE' чи 'cmake ./ -DUSE_OSS:UDISKS2=TRUE' перед компіляцією.
+Модулі OSS3 та UDisks застаріли і вимкнені за замовчанням.
+Для їх увімкнення виконайте 'cmake ./ -DUSE_OSS:BOOL=TRUE' чи 'cmake ./ -DUSE_OSS:UDISKS=TRUE' перед компіляцією.
 
-Підтримка HAL та UDisks2.
+Підтримка HAL та UDisks.
 Більшість дистрибутивів Linux більше не підтримують HAL. Для відключення модуля HAL виконайте перед компіляцією наступну команду:
 cmake ./ -DUSE_HAL:BOOL=FALSE
-Проект UDisks не підтримує FreeBSD, тому під FreeBSD рекомендується вимикати модуль Udisks2 з компіляції наступною командою:
-cmake ./ -DUSE_UDISKS2:BOOL=FALSE
+Проект UDisks не підтримує FreeBSD, тому під FreeBSD рекомендується вимикати модуль Udisks з компіляції наступною командою:
+cmake ./ -DUSE_UDISKS:BOOL=FALSE
 
 У деяких випадках ви можете використовувати qmake для компіляції та встановлення.
 

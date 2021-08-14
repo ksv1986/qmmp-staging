@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,9 +24,9 @@
 #include <QDBusArgument>
 #include <QDBusMetaType>
 #include <QXmlStreamReader>
-#include "udisks2manager.h"
+#include "udisksmanager.h"
 
-UDisks2Manager::UDisks2Manager(QObject *parent)
+UDisksManager::UDisksManager(QObject *parent)
         : QObject(parent)
 {
     m_interface = new QDBusInterface("org.freedesktop.UDisks2", "/org/freedesktop/UDisks2",
@@ -43,11 +43,11 @@ UDisks2Manager::UDisks2Manager(QObject *parent)
 }
 
 
-UDisks2Manager::~UDisks2Manager()
+UDisksManager::~UDisksManager()
 {
 }
 
-QList<QDBusObjectPath> UDisks2Manager::findAllDevices()
+QList<QDBusObjectPath> UDisksManager::findAllDevices()
 {
     QList<QDBusObjectPath> paths;
     QDBusMessage call = QDBusMessage::createMethodCall("org.freedesktop.UDisks2",
@@ -76,14 +76,14 @@ QList<QDBusObjectPath> UDisks2Manager::findAllDevices()
     return paths;
 }
 
-void UDisks2Manager::onInterfacesAdded(const QDBusObjectPath &object_path, const QVariantMapMap &)
+void UDisksManager::onInterfacesAdded(const QDBusObjectPath &object_path, const QVariantMapMap &)
 {
     if(object_path.path().startsWith("/org/freedesktop/UDisks2/jobs"))
         return;
     emit deviceAdded(object_path);
 }
 
-void UDisks2Manager::onInterfacesRemoved(const QDBusObjectPath &object_path, const QStringList &)
+void UDisksManager::onInterfacesRemoved(const QDBusObjectPath &object_path, const QStringList &)
 {
     if(object_path.path().startsWith("/org/freedesktop/UDisks2/jobs"))
         return;

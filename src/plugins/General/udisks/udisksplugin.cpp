@@ -26,16 +26,16 @@
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/playlistitem.h>
 #include <qmmp/qmmp.h>
-#include "udisks2device.h"
-#include "udisks2manager.h"
-#include "udisks2plugin.h"
+#include "udisksdevice.h"
+#include "udisksmanager.h"
+#include "udisksplugin.h"
 
-UDisks2Plugin::UDisks2Plugin(QObject *parent) : QObject(parent)
+UDisksPlugin::UDisksPlugin(QObject *parent) : QObject(parent)
 {
     qDBusRegisterMetaType<QVariantMapMap>();
     qDBusRegisterMetaType<QByteArrayList>();
 
-    m_manager = new UDisks2Manager(this);
+    m_manager = new UDisksManager(this);
     m_actions = new QActionGroup(this);
     connect(m_manager,SIGNAL(deviceAdded(QDBusObjectPath)), SLOT(addDevice(QDBusObjectPath)));
     connect(m_manager,SIGNAL(deviceRemoved(QDBusObjectPath)), SLOT(removeDevice(QDBusObjectPath)));
@@ -59,20 +59,20 @@ UDisks2Plugin::UDisks2Plugin(QObject *parent) : QObject(parent)
     settings.endGroup();
 }
 
-UDisks2Plugin::~UDisks2Plugin()
+UDisksPlugin::~UDisksPlugin()
 {
 }
 
-void UDisks2Plugin::removeDevice(QDBusObjectPath o)
+void UDisksPlugin::removeDevice(QDBusObjectPath o)
 {
-    QList<UDisks2Device *>::iterator it = m_devices.begin();
+    QList<UDisksDevice *>::iterator it = m_devices.begin();
     while(it != m_devices.end())
     {
         if((*it)->objectPath() == o)
         {
             delete (*it);
             it = m_devices.erase(it);
-            qDebug("UDisks2Plugin: removed device: \"%s\"", qPrintable(o.path()));
+            qDebug("UDisksPlugin: removed device: \"%s\"", qPrintable(o.path()));
             updateActions();
             break;
         }
@@ -83,18 +83,18 @@ void UDisks2Plugin::removeDevice(QDBusObjectPath o)
     }
 }
 
-void UDisks2Plugin::addDevice(QDBusObjectPath o)
+void UDisksPlugin::addDevice(QDBusObjectPath o)
 {
-    for(const UDisks2Device *device : qAsConst(m_devices)) //is it already exists?
+    for(const UDisksDevice *device : qAsConst(m_devices)) //is it already exists?
     {
         if (device->objectPath() == o)
             return;
     }
-    UDisks2Device *device = new UDisks2Device(o, this);
+    UDisksDevice *device = new UDisksDevice(o, this);
 
     if(device->isRemovable()) //detect removable devices only
     {
-        qDebug("UDisks2Plugin: added device: \"%s\"", qPrintable(o.path()));
+        qDebug("UDisksPlugin: added device: \"%s\"", qPrintable(o.path()));
         m_devices << device;
         updateActions();
         connect(device, SIGNAL(changed()), SLOT(updateActions()));
@@ -103,10 +103,10 @@ void UDisks2Plugin::addDevice(QDBusObjectPath o)
         delete device;
 }
 
-void UDisks2Plugin::updateActions()
+void UDisksPlugin::updateActions()
 {
     // add action for cd audio or mounted volume
-    for(const UDisks2Device *device : qAsConst(m_devices))
+    for(const UDisksDevice *device : qAsConst(m_devices))
     {
         QString dev_path;
         if (m_detectCDA && device->isAudio()) //cd audio
@@ -152,7 +152,7 @@ void UDisks2Plugin::updateActions()
             else
                 action->setIcon(qApp->style()->standardIcon(QStyle::SP_DriveHDIcon));
 
-            qDebug("UDisks2Plugin: added menu item: \"%s\"", qPrintable(dev_path));
+            qDebug("UDisksPlugin: added menu item: \"%s\"", qPrintable(dev_path));
 
             action->setText(actionText);
             action->setData(dev_path);
@@ -166,7 +166,7 @@ void UDisks2Plugin::updateActions()
     {
         if (!findDevice(action))
         {
-            qDebug("UDisks2Plugin: removed menu item: \"%s\"", qPrintable(action->data().toString()));
+            qDebug("UDisksPlugin: removed menu item: \"%s\"", qPrintable(action->data().toString()));
             m_actions->removeAction(action);
             UiHelper::instance()->removeAction(action);
             removePath(action->data().toString());
@@ -175,14 +175,14 @@ void UDisks2Plugin::updateActions()
     }
 }
 
-void UDisks2Plugin::processAction(QAction *action)
+void UDisksPlugin::processAction(QAction *action)
 {
-    qDebug("UDisks2Plugin: action triggered: %s", qPrintable(action->data().toString()));
+    qDebug("UDisksPlugin: action triggered: %s", qPrintable(action->data().toString()));
     QString path = action->data().toString();
     PlayListManager::instance()->selectedPlayList()->add(path);
 }
 
-QAction *UDisks2Plugin::findAction(const QString &dev_path)
+QAction *UDisksPlugin::findAction(const QString &dev_path)
 {
     for(QAction *action : m_actions->actions())
     {
@@ -192,9 +192,9 @@ QAction *UDisks2Plugin::findAction(const QString &dev_path)
     return nullptr;
 }
 
-UDisks2Device *UDisks2Plugin::findDevice(QAction *action)
+UDisksDevice *UDisksPlugin::findDevice(QAction *action)
 {
-    for(UDisks2Device *device : qAsConst(m_devices))
+    for(UDisksDevice *device : qAsConst(m_devices))
     {
         QString dev_path;
         if (device->isAudio())
@@ -213,7 +213,7 @@ UDisks2Device *UDisks2Plugin::findDevice(QAction *action)
     return nullptr;
 }
 
-void UDisks2Plugin::addPath(const QString &path)
+void UDisksPlugin::addPath(const QString &path)
 {
     PlayListModel *model = PlayListManager::instance()->selectedPlayList();
 
@@ -234,7 +234,7 @@ void UDisks2Plugin::addPath(const QString &path)
         PlayListManager::instance()->selectedPlayList()->add(path);
 }
 
-void UDisks2Plugin::removePath(const QString &path)
+void UDisksPlugin::removePath(const QString &path)
 {
     if ((path.startsWith("cdda://") && !m_removeTracks) ||
             (!path.startsWith("cdda://") && !m_removeFiles)) //process settings

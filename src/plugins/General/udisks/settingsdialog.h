@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Ilya Kotov                                      *
+ *   Copyright (C) 2013-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,43 +17,29 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef UDISKS2MANAGER_H
-#define UDISKS2MANAGER_H
+#ifndef SETTINGSDIALOG_H
+#define SETTINGSDIALOG_H
 
-#include <QObject>
-#include <QList>
-#include <QVariantMap>
-#include <QDBusObjectPath>
-
-class QDBusInterface;
-
-typedef QMap<QString,QVariantMap> QVariantMapMap;
-Q_DECLARE_METATYPE(QVariantMapMap)
+#include <QDialog>
+#include "ui_settingsdialog.h"
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>
 */
-class UDisks2Manager : public QObject
+class SettingsDialog : public QDialog
 {
 Q_OBJECT
 public:
-    UDisks2Manager(QObject *parent = nullptr);
+    SettingsDialog(QWidget *parent = nullptr);
 
-    ~UDisks2Manager();
+    ~SettingsDialog();
 
-    QList<QDBusObjectPath> findAllDevices();
 
-signals:
-    void deviceAdded(QDBusObjectPath);
-    void deviceRemoved(QDBusObjectPath);
-
-private slots:
-    void onInterfacesAdded(const QDBusObjectPath &object_path, const QVariantMapMap &);
-    void onInterfacesRemoved(const QDBusObjectPath &object_path, const QStringList &);
+public slots:
+    virtual void accept() override;
 
 private:
-    QDBusInterface *m_interface;
-
+    Ui::SettingsDialog m_ui;
 };
 
 #endif

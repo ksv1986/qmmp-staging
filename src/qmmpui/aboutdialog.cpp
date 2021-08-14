@@ -28,6 +28,14 @@
 #include <qmmp/visualfactory.h>
 #include <qmmp/effect.h>
 #include <qmmp/effectfactory.h>
+#include <qmmp/inputsource.h>
+#include <qmmp/inputsourcefactory.h>
+#include <qmmp/abstractengine.h>
+#include <qmmp/enginefactory.h>
+#include <qmmpui/filedialog.h>
+#include <qmmpui/filedialogfactory.h>
+#include <qmmpui/uiloader.h>
+#include <qmmpui/uifactory.h>
 #include <qmmp/qmmp.h>
 #include "general.h"
 #include "generalfactory.h"
@@ -73,7 +81,16 @@ QString AboutDialog::loadAbout()
     text.append("<a href=\"https://sourceforge.net/projects/qmmp-dev/\">https://sourceforge.net/projects/qmmp-dev/</a>");
     text.append("</p>");
 
-    text.append("<h5>"+tr("Input plugins:")+"</h5>");
+    text.append("<h5>"+tr("Transports:")+"</h5>");
+    text.append("<ul type=\"square\">");
+    for(const InputSourceFactory *fact : InputSource::factories())
+    {
+        text.append("<li>");
+        text.append(fact->properties().name);
+        text.append("</li>");
+    }
+    text.append("</ul>");
+    text.append("<h5>"+tr("Decoders:")+"</h5>");
     text.append("<ul type=\"square\">");
     for(const DecoderFactory *fact : Decoder::factories())
     {
@@ -82,9 +99,22 @@ QString AboutDialog::loadAbout()
         text.append("</li>");
     }
     text.append("</ul>");
-    text.append("<h5>"+tr("Output plugins:")+"</h5>");
+    if(!AbstractEngine::factories().isEmpty())
+    {
+        text.append("<h5>"+tr("Engines:")+"</h5>");
+        text.append("<ul type=\"square\">");
+        for(const EngineFactory *fact : AbstractEngine::factories())
+        {
+            text.append("<li>");
+            text.append(fact->properties().name);
+            text.append("</li>");
+        }
+        text.append("</ul>");
+    }
+
+    text.append("<h5>"+tr("Effects:")+"</h5>");
     text.append("<ul type=\"square\">");
-    for(const OutputFactory *fact : Output::factories())
+    for(const EffectFactory *fact : Effect::factories())
     {
         text.append("<li>");
         text.append(fact->properties().name);
@@ -100,15 +130,6 @@ QString AboutDialog::loadAbout()
         text.append("</li>");
     }
     text.append("</ul>");
-    text.append("<h5>"+tr("Effect plugins:")+"</h5>");
-    text.append("<ul type=\"square\">");
-    for(const EffectFactory *fact : Effect::factories())
-    {
-        text.append("<li>");
-        text.append(fact->properties().name);
-        text.append("</li>");
-    }
-    text.append("</ul>");
     text.append("<h5>"+tr("General plugins:")+"</h5>");
     text.append("<ul type=\"square\">");
     for(const GeneralFactory *fact : General::factories())
@@ -118,6 +139,39 @@ QString AboutDialog::loadAbout()
         text.append("</li>");
     }
     text.append("</ul>");
+    text.append("<h5>"+tr("Output plugins:")+"</h5>");
+    text.append("<ul type=\"square\">");
+    for(const OutputFactory *fact : Output::factories())
+    {
+        text.append("<li>");
+        text.append(fact->properties().name);
+        text.append("</li>");
+    }
+    text.append("</ul>");
+    if(!FileDialog::factories().isEmpty())
+    {
+        text.append("<h5>"+tr("File dialogs:")+"</h5>");
+        text.append("<ul type=\"square\">");
+        for(const FileDialogFactory *fact : FileDialog::factories())
+        {
+            text.append("<li>");
+            text.append(fact->properties().name);
+            text.append("</li>");
+        }
+        text.append("</ul>");
+    }
+    if(!UiLoader::factories().isEmpty())
+    {
+        text.append("<h5>"+tr("User interfaces:")+"</h5>");
+        text.append("<ul type=\"square\">");
+        for(const UiFactory *fact :UiLoader::factories())
+        {
+            text.append("<li>");
+            text.append(fact->properties().name);
+            text.append("</li>");
+        }
+        text.append("</ul>");
+    }
     text.append("<div>");
 
     return text;

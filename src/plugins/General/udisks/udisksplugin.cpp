@@ -42,7 +42,7 @@ UDisksPlugin::UDisksPlugin(QObject *parent) : QObject(parent)
     connect(m_actions,SIGNAL(triggered (QAction *)), SLOT(processAction(QAction *)));
     //load settings
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    settings.beginGroup("UDisks2");
+    settings.beginGroup("UDisks");
     m_detectCDA = settings.value("cda", true).toBool();
     m_detectRemovable = settings.value("removable", true).toBool();
     m_addTracks = false; //do not load tracks on startup

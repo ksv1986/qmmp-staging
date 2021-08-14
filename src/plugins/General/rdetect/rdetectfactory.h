@@ -17,8 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef UDISKS2FACTORY_H
-#define UDISKS2FACTORY_H
+#ifndef RDETECTFACTORY_H
+#define RDETECTFACTORY_H
 
 /**
     @author Ilya Kotov <forkotov02@ya.ru>

@@ -17,8 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef UDISKS2DEVICE_H
-#define UDISKS2DEVICE_H
+#ifndef UDISKSDEVICE_H
+#define UDISKSDEVICE_H
 
 #include <QObject>
 #include <QDBusObjectPath>

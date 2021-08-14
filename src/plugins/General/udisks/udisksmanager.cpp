@@ -59,7 +59,7 @@ QList<QDBusObjectPath> UDisksManager::findAllDevices()
 
     if (!reply.isValid())
     {
-        qWarning("UDisks2Manager: error: %s", qPrintable(reply.error().name()));
+        qWarning("UDisksManager: error: %s", qPrintable(reply.error().name()));
         return paths;
     }
     QXmlStreamReader xml(reply.value());

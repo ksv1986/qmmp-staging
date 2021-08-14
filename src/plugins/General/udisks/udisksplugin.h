@@ -17,8 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
-#ifndef UDISKS2PLUGIN_H
-#define UDISKS2PLUGIN_H
+#ifndef UDISKSPLUGIN_H
+#define UDISKSPLUGIN_H
 
 #include <QDBusObjectPath>
 #include <qmmpui/general.h>
@@ -62,4 +62,4 @@ private:
     bool m_removeFiles;
 };
 
-#endif //UDISKS2PLUGIN_H
+#endif //UDISKSPLUGIN_H

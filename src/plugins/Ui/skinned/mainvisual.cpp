@@ -120,28 +120,29 @@ void MainVisual::showEvent (QShowEvent *)
 void MainVisual::mousePressEvent (QMouseEvent *e)
 {
     if (e->button() == Qt::RightButton)
-        m_menu->exec(e->globalPos());
-    else
     {
-        m_pixmap = m_bg;
-        if (!m_vis)
-            setVisual(new mainvisual::Analyzer);
-        else if (m_vis->name() == "Analyzer")
-            setVisual(new mainvisual::Scope);
-        else if (m_vis->name() == "Scope")
-            setVisual(nullptr);
-
-        QString str = m_vis ? m_vis->name() : "Off";
-        for(QAction *act : m_visModeGroup->actions())
-        {
-            if (str == act->data().toString())
-            {
-                act->setChecked(true);
-                break;
-            }
-        }
-        writeSettings();
+        m_menu->exec(e->globalPos());
+        return;
     }
+
+    m_pixmap = m_bg;
+    if (!m_vis)
+        setVisual(new mainvisual::Analyzer);
+    else if (m_vis->name() == "Analyzer")
+        setVisual(new mainvisual::Scope);
+    else if (m_vis->name() == "Scope")
+        setVisual(nullptr);
+
+    QString str = m_vis ? m_vis->name() : "Off";
+    for(QAction *act : m_visModeGroup->actions())
+    {
+        if (str == act->data().toString())
+        {
+            act->setChecked(true);
+            break;
+        }
+    }
+    writeSettings();
 }
 
 void MainVisual::start()

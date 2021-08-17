@@ -144,7 +144,11 @@ DecoderProperties DecoderFFmpegFactory::properties() const
 
     DecoderProperties properties;
     properties.name = tr("FFmpeg Plugin");
+#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
     properties.filters = QStringList(filters.cbegin(), filters.cend());
+#else
+    properties.filters = filters.toList();
+#endif
     properties.description = tr("FFmpeg Formats");
     if(filters.contains("*.wma"))
         properties.contentTypes << "audio/x-ms-wma";

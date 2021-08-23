@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008 by Ilya Kotov                                      *
+ *   Copyright (C) 2008-2021 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -21,8 +21,6 @@
 #define SETTINGSDIALOG_H
 
 #include <QDialog>
-
-
 #include "ui_settingsdialog.h"
 
 /**
@@ -39,10 +37,10 @@ public:
 private slots:
     void writeSettings();
     void setPreamp(int);
-    void exec(QAbstractButton *);
+    void on_buttonBox_clicked(QAbstractButton *);
 
 private: 
-     Ui::SettingsDialog ui;
+     Ui::SettingsDialog m_ui;
 
 };
 

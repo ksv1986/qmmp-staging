@@ -66,8 +66,15 @@ ADD_DEFINITIONS(-DQMMP_WS_X11 -DQT_DISABLE_DEPRECATED_BEFORE=0x060100 -DQT_DEPRE
 ADD_COMPILE_OPTIONS(-Wall -Wextra)
 
 find_package(Qt6 6.1.0 CONFIG REQUIRED COMPONENTS Widgets LinguistTools Network)
-find_package(Qt6 6.1.0 CONFIG OPTIONAL_COMPONENTS DBus OpenGLWidgets Sql BuildInternals)
+find_package(Qt6 6.1.0 CONFIG OPTIONAL_COMPONENTS DBus OpenGLWidgets Sql)
 find_package(Qt6 6.2.0 CONFIG OPTIONAL_COMPONENTS Multimedia)
+
+IF(Qt6Widgets_VERSION VERSION_LESS 6.2.0)
+    MESSAGE(STATUS checking for private headers ...)
+    find_package(Qt6 6.1.0 CONFIG OPTIONAL_COMPONENTS BuildInternals)
+ELSE()
+    SET(Qt6BuildInternals_FOUND ON)
+ENDIF()
 
 get_target_property(QT_LRELEASE_EXECUTABLE Qt6::lrelease IMPORTED_LOCATION)
 

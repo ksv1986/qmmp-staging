@@ -21,7 +21,6 @@
 #define SETTINGSDIALOG_H
 
 #include <QDialog>
-#include <QObject>
 #include "ui_settingsdialog.h"
 
 /**
@@ -38,7 +37,7 @@ public:
 private slots:
     void writeSettings();
     void setPreamp(int);
-    void exec(QAbstractButton *);
+    void on_buttonBox_clicked(QAbstractButton *);
 
 private: 
      Ui::SettingsDialog m_ui;

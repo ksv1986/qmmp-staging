@@ -20,11 +20,9 @@
 
 #include <QSettings>
 #include <QDir>
-
 #include <libmodplug/stdafx.h>
 #include <libmodplug/it_defs.h>
 #include <libmodplug/sndfile.h>
-
 #include "decoder_modplug.h"
 #include "settingsdialog.h"
 
@@ -108,7 +106,6 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         m_ui.loopSpinBox->setValue(l);
     }
     settings.endGroup();
-    connect(m_ui.buttonBox, SIGNAL(clicked (QAbstractButton *)), SLOT(exec(QAbstractButton *)));
 }
 
 
@@ -186,7 +183,7 @@ void SettingsDialog::setPreamp(int preamp)
     m_ui.preampLabel->setText(QString("%1").arg((double) preamp/10));
 }
 
-void SettingsDialog::exec(QAbstractButton *button)
+void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button)
 {
     switch ((int) m_ui.buttonBox->buttonRole(button))
     {

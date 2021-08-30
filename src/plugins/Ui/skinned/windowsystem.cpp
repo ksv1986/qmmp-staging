@@ -27,7 +27,9 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #undef CursorShape
+#if (QT_VERSION < QT_VERSION_CHECK(6, 2, 0))
 #include <qpa/qplatformnativeinterface.h>
+#endif
 
 void WindowSystem::ghostWindow(WId win)
 {
@@ -246,12 +248,21 @@ Display *WindowSystem::display()
 {
     if(!qApp)
         return nullptr;
+
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 2, 0))
+    QNativeInterface::QX11Application *app = qApp->nativeInterface<QNativeInterface::QX11Application>();
+    if(!app)
+        return nullptr;
+
+    return app->display();
+#else
     QPlatformNativeInterface *native = qApp->platformNativeInterface();
     if (!native)
         return nullptr;
 
     void *display = native->nativeResourceForIntegration(QByteArray("display"));
     return reinterpret_cast<Display *>(display);
+#endif
 }
 
 bool WindowSystem::isPlatformX11()

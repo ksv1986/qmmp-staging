@@ -32,7 +32,9 @@
 #include <X11/Xatom.h>
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
+#if (QT_VERSION < QT_VERSION_CHECK(6, 2, 0))
 #include <qpa/qplatformnativeinterface.h>
+#endif
 #elif defined(Q_OS_WIN)
 #include <windows.h>
 #endif
@@ -216,12 +218,21 @@ Display *Notifier::display()
 {
     if(!qApp)
         return nullptr;
+
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 2, 0))
+    QNativeInterface::QX11Application *app = qApp->nativeInterface<QNativeInterface::QX11Application>();
+    if(!app)
+        return nullptr;
+
+    return app->display();
+#else
     QPlatformNativeInterface *native = qApp->platformNativeInterface();
     if (!native)
         return nullptr;
 
     void *display = native->nativeResourceForIntegration(QByteArray("display"));
     return reinterpret_cast<Display *>(display);
+#endif
 }
 
 bool Notifier::isPlatformX11()

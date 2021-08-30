@@ -130,5 +130,5 @@ unix {
     INSTALLS += target
     PKGCONFIG += x11
     DEFINES += QMMP_WS_X11
-    QT += gui-private
+    lessThan(QT_MINOR_VERSION, 2):QT += gui-private
 }

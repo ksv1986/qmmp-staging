@@ -18,7 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 #include <QSettings>
-#include <QAudioDeviceInfo>
+#include <QAudioDevice>
+#include <QMediaDevices>
 #include <QDebug>
 #include <qmmp/qmmp.h>
 
@@ -30,19 +31,18 @@ SettingsDialog::SettingsDialog (QWidget *parent) : QDialog (parent)
     setAttribute(Qt::WA_DeleteOnClose);
 
 	const QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-	const QString default_device = settings.value("QTMULTIMEDIA/device").toString();
+    const QByteArray default_device = settings.value("QTMULTIMEDIA/device").toByteArray();
 
 	//Default item always has index = 0
     ui.deviceComboBox->addItem(tr("Default"));
     ui.deviceComboBox->setCurrentIndex(0);
 
-    const QList<QAudioDeviceInfo> devices = QAudioDeviceInfo::availableDevices(QAudio::AudioOutput);
+    const QList<QAudioDevice> devices = QMediaDevices::audioOutputs();
 	int index = 1;
-    for(const QAudioDeviceInfo &info : devices)
+    for(const QAudioDevice &info : devices)
 	{
-    	const QString device_name = info.deviceName();
-		ui.deviceComboBox->addItem(device_name);
-		if (device_name==default_device)
+        ui.deviceComboBox->addItem(info.description(), info.id());
+        if (info.id() == default_device)
 			ui.deviceComboBox->setCurrentIndex(index);
 		++index;
 	}
@@ -56,7 +56,6 @@ void SettingsDialog::accept()
 {
     qDebug("%s", Q_FUNC_INFO);
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
-    //0 index means default value, we save empty string for it.
-    settings.setValue("QTMULTIMEDIA/device", ui.deviceComboBox->currentIndex() ? ui.deviceComboBox->currentText() : QString());
+    settings.setValue("QTMULTIMEDIA/device", ui.deviceComboBox->currentData().toByteArray());
     QDialog::accept();
 }

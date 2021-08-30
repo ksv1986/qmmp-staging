@@ -189,7 +189,7 @@ PRINT_SUMMARY ("Null output support ..................." USE_NULL 1)
 PRINT_SUMMARY ("Waveout support (Windows) ............." USE_WAVEOUT WINDOWS_H_FOUND)
 PRINT_SUMMARY ("DirectSound support (Windows) ........." USE_DSOUND DSOUND_H_FOUND)
 PRINT_SUMMARY ("WASAPI support (Windows) .............." USE_WASAPI WASAPI_FOUND)
-#PRINT_SUMMARY ("Qt Multimedia support ................." USE_QTMULTIMEDIA Qt6Multimedia_FOUND)
+PRINT_SUMMARY ("Qt Multimedia support ................." USE_QTMULTIMEDIA Qt6Multimedia_FOUND)
 PRINT_SUMMARY ("Icecast support ......................." USE_SHOUT SHOUT_FOUND)
 
 MESSAGE("")

@@ -286,6 +286,7 @@ void ActionManager::updateToolBar(QToolBar *toolBar, const ToolBarInfo &info)
 {
     toolBar->clear();
     toolBar->setIconSize(info.iconSize);
+    toolBar->setWindowTitle(info.title);
     for(const QString &name : qAsConst(info.actionNames))
     {
         if(name == "separator")

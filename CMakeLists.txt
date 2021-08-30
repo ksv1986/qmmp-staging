@@ -67,6 +67,7 @@ ADD_COMPILE_OPTIONS(-Wall -Wextra)
 
 find_package(Qt6 6.1.0 CONFIG REQUIRED COMPONENTS Widgets LinguistTools Network)
 find_package(Qt6 6.1.0 CONFIG OPTIONAL_COMPONENTS DBus OpenGLWidgets Sql BuildInternals)
+find_package(Qt6 6.2.0 CONFIG OPTIONAL_COMPONENTS Multimedia)
 
 get_target_property(QT_LRELEASE_EXECUTABLE Qt6::lrelease IMPORTED_LOCATION)
 

@@ -791,9 +791,9 @@ void MainWindow::readSettings()
     }
 }
 
-void MainWindow::showTabMenu(QPoint pos)
+void MainWindow::showTabMenu(const QPoint &pos)
 {
-    int index = m_tabWidget->tabBar()->tabAt(pos);
+    int index = m_tabWidget->tabBar()->tabAt(m_tabWidget->tabBar()->mapFromParent(pos));
     if(index == -1)
         return;
 

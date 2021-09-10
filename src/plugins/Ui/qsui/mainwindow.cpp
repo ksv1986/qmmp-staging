@@ -794,10 +794,16 @@ void MainWindow::showTabMenu(const QPoint &pos)
 {
     int index = m_tabWidget->tabBar()->tabAt(m_tabWidget->tabBar()->mapFromParent(pos));
     if(index == -1)
-        return;
-
-    m_pl_manager->selectPlayList(index);
-    m_tab_menu->popup(m_tabWidget->mapToGlobal(pos));
+    {
+        QMenu *menu = createPopupMenu();
+        menu->setAttribute(Qt::WA_DeleteOnClose, true);
+        menu->popup(m_tabWidget->mapToGlobal(pos));
+    }
+    else
+    {
+        m_pl_manager->selectPlayList(index);
+        m_tab_menu->popup(m_tabWidget->mapToGlobal(pos));
+    }
 }
 
 void MainWindow::writeSettings()

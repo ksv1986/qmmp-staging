@@ -370,6 +370,17 @@ void MainWindow::hideEvent(QHideEvent *)
     m_wasMaximized = isMaximized();
 }
 
+QMenu *MainWindow::createPopupMenu()
+{
+    QMenu *menu = QMainWindow::createPopupMenu();
+    menu->addSeparator();
+    QAction *menuBarAction = menu->addAction(tr("Menu Bar"));
+    menuBarAction->setCheckable(true);
+    menuBarAction->setChecked(menuBar()->isVisible());
+    connect(menuBarAction, &QAction::toggled, menuBar(), &QMenuBar::setVisible);
+    return menu;
+}
+
 void MainWindow::createWidgets()
 {
     m_tabWidget = new QSUiTabWidget(this);
@@ -712,6 +723,8 @@ void MainWindow::readSettings()
     else
     {
         restoreGeometry(settings.value("mw_geometry").toByteArray());
+        menuBar()->setVisible(settings.value("show_menubar", true).toBool());
+
         QByteArray wstate = settings.value("mw_state").toByteArray();
         if(wstate.isEmpty())
         {
@@ -816,6 +829,7 @@ void MainWindow::writeSettings()
     settings.setValue("Simple/show_tabs", ACTION(ActionManager::UI_SHOW_TABS)->isChecked());
     settings.setValue("Simple/show_titlebars", ACTION(ActionManager::UI_SHOW_TITLEBARS)->isChecked());
     settings.setValue("Simple/block_toolbars", ACTION(ActionManager::UI_BLOCK_TOOLBARS)->isChecked());
+    settings.setValue("Simple/show_menubar", menuBar()->isVisible());
 }
 
 void MainWindow::savePlayList()

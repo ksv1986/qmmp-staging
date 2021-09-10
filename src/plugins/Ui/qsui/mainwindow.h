@@ -98,6 +98,7 @@ private slots:
 private:
     void closeEvent(QCloseEvent *) override;
     void hideEvent(QHideEvent *) override;
+    QMenu *createPopupMenu() override;
     void createWidgets();
     void createActions();
     void writeSettings();

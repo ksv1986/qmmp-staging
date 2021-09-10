@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include <QDir>
+#include <QApplication>
 #include <qmmp/qmmp.h>
 #include <algorithm>
 #include "qmmpuiplugincache_p.h"
@@ -101,7 +102,7 @@ UiFactory *UiLoader::selected()
     QSettings settings (Qmmp::configFile(), QSettings::IniFormat);
 #ifdef Q_OS_UNIX
     QString defaultUi = QMMP_DEFAULT_UI;
-    if(defaultUi == QLatin1String("skinned") && qgetenv("XDG_SESSION_TYPE") == "wayland")
+    if(defaultUi == QLatin1String("skinned") && qApp->platformName() == QLatin1String("wayland"))
         defaultUi = "qsui";
     QString name = settings.value("Ui/current_plugin", defaultUi).toString();
 #else

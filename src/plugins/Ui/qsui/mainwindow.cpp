@@ -26,7 +26,6 @@
 #include <QSettings>
 #include <QInputDialog>
 #include <QGridLayout>
-#include <QtDebug>
 #include <qmmp/soundcore.h>
 #include <qmmp/decoder.h>
 #include <qmmp/metadatamanager.h>

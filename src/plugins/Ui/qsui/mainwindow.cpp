@@ -26,6 +26,7 @@
 #include <QSettings>
 #include <QInputDialog>
 #include <QGridLayout>
+#include <QtDebug>
 #include <qmmp/soundcore.h>
 #include <qmmp/decoder.h>
 #include <qmmp/metadatamanager.h>
@@ -327,6 +328,30 @@ void MainWindow::showSettings()
     ActionManager::instance()->saveActions();
     m_analyzer->readSettings();
     m_seekBar->readSettings();
+}
+
+void MainWindow::showAppMenu()
+{
+    QAction *action = qobject_cast<QAction *>(sender());
+    if(!action)
+        return;
+
+    QPoint menuPos = pos();
+
+    for(QWidget *w : action->associatedWidgets())
+    {
+        QToolButton *toolButton = qobject_cast<QToolButton *>(w);
+        if(toolButton && toolButton->parentWidget())
+        {
+            menuPos = toolButton->parentWidget()->mapToGlobal(toolButton->geometry().bottomLeft());
+            break;
+        }
+    }
+
+    QMenu *appMenu = new QMenu(this);
+    appMenu->setAttribute(Qt::WA_DeleteOnClose, true);
+    appMenu->addActions(menuBar()->actions());
+    appMenu->popup(menuPos);
 }
 
 void MainWindow::updateVolumeIcon()
@@ -656,6 +681,8 @@ void MainWindow::createActions()
     QAction* backward = new QAction(this);
     backward->setShortcut(QKeySequence(Qt::Key_Left));
     connect(backward,SIGNAL(triggered(bool)),this,SLOT(backward()));
+    //application menu
+    SET_ACTION(ActionManager::APPLICATION_MENU, this, SLOT(showAppMenu()));
 
     addActions(QList<QAction*>() << forward << backward);
     addActions(ActionManager::instance()->actions());

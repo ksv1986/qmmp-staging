@@ -77,6 +77,7 @@ private slots:
     void toggleVisibility();
     void showAndRaise();
     void showSettings();
+    void showAppMenu();
     void updateVolumeIcon();
     void jumpTo();
     void playPause();

@@ -106,6 +106,7 @@ public:
 
         EQUALIZER,
         SETTINGS,
+        APPLICATION_MENU,
         ABOUT_UI,
         ABOUT,
         ABOUT_QT,

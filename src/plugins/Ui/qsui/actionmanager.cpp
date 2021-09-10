@@ -98,6 +98,7 @@ ActionManager::ActionManager(QObject *parent) :
         //other
         { EQUALIZER, createAction(tr("&Equalizer"), "equalizer", tr("Ctrl+E")) },
         { SETTINGS, createAction(tr("&Settings"), "show_settings", tr("Ctrl+P"), "configure") },
+        { APPLICATION_MENU, createAction(tr("Application Menu"), "app_menu", "", "format-justify-fill") },
         { ABOUT_UI, createAction(tr("&About Ui"), "about_ui") },
         { ABOUT, createAction(tr("&About"), "about") },
         { ABOUT_QT, createAction(tr("&About Qt"), "about_qt") },

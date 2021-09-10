@@ -861,6 +861,12 @@ void MainWindow::setTitleBarsVisible(bool visible)
         m_ui.waveformSeekBarDockWidget
     };
 
+    if(qApp->platformName() == QLatin1String("wayland"))
+    {
+        for(QDockWidget *w : qAsConst(widgetList))
+            w->setFeatures(QDockWidget::DockWidgetClosable | QDockWidget::DockWidgetMovable);
+    }
+
     if(visible)
     {
         for(QDockWidget *w : qAsConst(widgetList))

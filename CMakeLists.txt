@@ -168,7 +168,7 @@ PRINT_SUMMARY ("MPEG support .........................." 1 MAD_FOUND OR MPG123_F
 PRINT_SUMMARY ("FLAC support .........................." USE_FLAC FLAC_FOUND)
 PRINT_SUMMARY ("Ogg Vorbis support ...................." USE_VORBIS VORBIS_FOUND)
 PRINT_SUMMARY ("Musepack support ......................" USE_MPC MPC_FOUND)
-PRINT_SUMMARY ("MOD support ..........................." USE_MODPLUG MODPLUG_FOUND)
+PRINT_SUMMARY ("MOD support ..........................." USE_XMP XMP_FOUND)
 PRINT_SUMMARY ("Wave support .........................." USE_SNDFILE SNDFILE_FOUND)
 PRINT_SUMMARY ("WavPack support ......................." USE_WAVPACK WAVPACK_FOUND)
 PRINT_SUMMARY ("FFmpeg support ........................" USE_FFMPEG FFMPEG_FOUND)

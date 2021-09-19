@@ -1,8 +1,8 @@
 project(libxmp)
 
 # libqmmp
-include_directories(${QMMP_INCLUDE_DIRS})
-link_directories(${QMMP_LIBRARY_DIRS})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
+link_directories(${CMAKE_CURRENT_BINARY_DIR}/../../../qmmp)
 
 # xmp
 pkg_search_module(XMP libxmp)
@@ -40,6 +40,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 IF(XMP_FOUND)
 ADD_LIBRARY(xmp MODULE ${libxmp_SRCS} ${libxmp_UIS_H} ${libxmp_RCC_SRCS} ${libxmp_HDRS})
-target_link_libraries(xmp Qt5::Widgets ${QMMP_LDFLAGS} ${XMP_LDFLAGS})
+add_dependencies(xmp libqmmp)
+target_link_libraries(xmp Qt5::Widgets libqmmp ${XMP_LDFLAGS})
 install(TARGETS xmp DESTINATION ${PLUGIN_DIR}/Input)
 ENDIF(XMP_FOUND)

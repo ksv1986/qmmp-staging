@@ -121,10 +121,10 @@ source_lang = en
 source_file = src/plugins/Input/aac/translations/aac_plugin_en.ts
 type = QT
 
-[qmmp.modplug]
-file_filter = src/plugins/Input/modplug/translations/modplug_plugin_<lang>.ts
+[qmmp.xmp]
+file_filter = src/plugins/Input/xmp/translations/xmp_plugin_<lang>.ts
 source_lang = en
-source_file = src/plugins/Input/modplug/translations/modplug_plugin_en.ts
+source_file = src/plugins/Input/xmp/translations/xmp_plugin_en.ts
 type = QT
 
 [qmmp.cdaudio]

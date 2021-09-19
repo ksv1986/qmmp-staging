@@ -15,8 +15,8 @@ contains(CONFIG, MUSEPACK_PLUGIN){
     SUBDIRS += mpc
 }
 
-contains(CONFIG, MODPLUG_PLUGIN){
-    SUBDIRS += modplug
+contains(CONFIG, XMP_PLUGIN){
+    SUBDIRS += xmp
 }
 
 contains(CONFIG, FFMPEG_PLUGIN){

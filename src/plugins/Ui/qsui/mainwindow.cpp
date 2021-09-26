@@ -217,15 +217,20 @@ CoverWidget* MainWindow::coverWidget() const
 }
 
 namespace {
-    QPixmap getCover(QString path)
+    QPixmap getCover(const QString &path)
     {
         return MetaDataManager::instance()->getCover(path);
     }
+
+    QString getCoverPath(const QString &path)
+    {
+        return MetaDataManager::instance()->getCoverPath(path);
+    }
 }
 
-void MainWindow::setCover(QString path)
+void MainWindow::setCover(const QString &path)
 {
-    coverWidget()->setCover(getCover(path));
+    coverWidget()->setCover(getCover(path), getCoverPath(path));
 }
 
 void MainWindow::showState(Qmmp::State state)

@@ -105,7 +105,7 @@ private:
     void createActions();
     void writeSettings();
     CoverWidget* coverWidget() const;
-    void setCover(QString path);
+    void setCover(const QString &path);
     bool m_wasMaximized = false;
     PlayListManager *m_pl_manager;
     Ui::MainWindow m_ui;

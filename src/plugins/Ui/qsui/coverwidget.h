@@ -34,7 +34,8 @@ Q_OBJECT
 public:
     CoverWidget(QWidget *parent = nullptr);
 
-    void setCover(const QPixmap&);
+    void setCover(const QPixmap&, const QString&);
+    void openCoverLocation();
     void clearCover();
 
 private slots:
@@ -43,6 +44,7 @@ private slots:
 private:
     void paintEvent (QPaintEvent *) override;
     QPixmap m_pixmap;
+    QString m_path;
 };
 
 #endif

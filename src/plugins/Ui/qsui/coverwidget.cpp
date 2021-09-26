@@ -18,9 +18,12 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
+#include <QAction>
+#include <QDesktopServices>
+#include <QFileInfo>
 #include <QPainter>
 #include <QPaintEvent>
-#include <QAction>
+#include <QUrl>
 #include <qmmp/qmmp.h>
 #include <qmmp/qmmpsettings.h>
 #include <qmmpui/filedialog.h>
@@ -46,21 +49,28 @@ CoverWidget::CoverWidget(QWidget *parent)
         : QWidget(parent)
 {
     setContextMenuPolicy(Qt::ActionsContextMenu);
+
+    QAction *openLocation = new QAction(tr("Open the directory containing this file"), this);
+    connect(openLocation, &QAction::triggered, this, &CoverWidget::openCoverLocation);
+    addAction(openLocation);
+
     QAction *saveAsAction = new QAction(tr("&Save As..."), this);
-    connect(saveAsAction, SIGNAL(triggered()), SLOT(saveAs()));
+    connect(saveAsAction, &QAction::triggered, this, &CoverWidget::saveAs);
     addAction(saveAsAction);
+
     m_pixmap = defaultCover();
 }
 
-void CoverWidget::setCover(const QPixmap &pixmap)
+void CoverWidget::setCover(const QPixmap &pixmap, const QString &path)
 {
     m_pixmap = pixmap.isNull() ? defaultCover() : pixmap;
+    m_path = path;
     update();
 }
 
 void CoverWidget::clearCover()
 {
-    setCover(QPixmap());
+    setCover(QPixmap(), QString());
     update();
 }
 
@@ -82,4 +92,10 @@ void CoverWidget::saveAs()
 
     if (!path.isEmpty())
         m_pixmap.save(path);
+}
+
+void CoverWidget::openCoverLocation()
+{
+    if (!m_path.isEmpty())
+        QDesktopServices::openUrl(QUrl::fromLocalFile(QFileInfo(m_path).absolutePath()));
 }

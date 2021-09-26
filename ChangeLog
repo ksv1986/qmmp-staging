@@ -1729,3 +1729,14 @@ Version 2.0.0
 * fixed build without mpg123
 * fixed ladspa plugin regression (Linearithmik)
 * disabled unsupported plugins: taskbar, qtmultimedia
+
+Version 2.0.1
+* fixed default settings in the ffmpeg pugin
+* fixed build warnings
+* fixed transition between http tracks
+* improved qsui plugin:
+  - fixed toolbar renaming
+  - fixed Wayland support
+  - fixed tab bar context menu
+* enabled QtMultimedia support under Qt 6.2 or higher
+* removed private API usage Qt 6.2 or higher

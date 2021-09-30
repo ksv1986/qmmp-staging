@@ -6,7 +6,7 @@
     <message>
         <location filename="../seekoption.cpp" line="29"/>
         <source>Seek to position in the current track</source>
-        <translation>Siirry sijaintiin nykyisessä kappaleessa</translation>
+        <translation>Kelaa nykyisellä raidalla</translation>
     </message>
     <message>
         <location filename="../seekoption.cpp" line="30"/>

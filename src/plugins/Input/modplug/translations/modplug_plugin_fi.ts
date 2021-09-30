@@ -6,37 +6,37 @@
     <message>
         <location filename="../decodermodplugfactory.cpp" line="45"/>
         <source>ModPlug Plugin</source>
-        <translation>ModPlug-liitännäinen</translation>
+        <translation>ModPlug Plugin</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="51"/>
         <source>ModPlug Files</source>
-        <translation>ModPlug-tiedostot</translation>
+        <translation>Tiedostot ModPlug</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="135"/>
         <source>About ModPlug Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: ModPlug Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="136"/>
         <source>Qmmp ModPlug Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp ModPlug Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="137"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="138"/>
         <source>Based on the Modplug Plugin for Xmms</source>
-        <translation type="unfinished"></translation>
+        <translation>Perustuu Xmms Modplug Plugin</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="139"/>
         <source>Modplug Plugin developers:</source>
-        <translation>Modplug-liitännäisen kehittäjät:</translation>
+        <translation>Modplug Plugin kehittäjät:</translation>
     </message>
     <message>
         <location filename="../decodermodplugfactory.cpp" line="140"/>
@@ -59,29 +59,29 @@
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="70"/>
         <source>Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Nopeus</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="71"/>
         <source>Tempo</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="72"/>
         <location filename="../modplugmetadatamodel.cpp" line="93"/>
         <source>Samples</source>
-        <translation type="unfinished"></translation>
+        <translation>Samplet</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="73"/>
         <location filename="../modplugmetadatamodel.cpp" line="102"/>
         <source>Instruments</source>
-        <translation type="unfinished"></translation>
+        <translation>Soittimet</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="74"/>
         <source>Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>Mallit</translation>
     </message>
     <message>
         <location filename="../modplugmetadatamodel.cpp" line="75"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>ModPlug Plugin Settings</source>
-        <translation>ModPlug-liitännäisen asetukset</translation>
+        <translation>Asetukset ModPlug Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>
@@ -134,37 +134,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="87"/>
         <source>Mono (downmix)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mono (mixattu)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>Resampling</source>
-        <translation type="unfinished"></translation>
+        <translation>Korjattu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="109"/>
         <source>Nearest (fastest)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähin (nopein)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="116"/>
         <source>Linear (fast)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lineaarinen (nopea)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="123"/>
         <source>Spline (good quality)</source>
-        <translation type="unfinished"></translation>
+        <translation>Spline (hyvä laatu)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="130"/>
         <source>8-tap Fir (extremely high quality)</source>
-        <translation type="unfinished"></translation>
+        <translation>FIR8 (erittäin korkealaatuinen)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="146"/>
         <source>Sampling Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taajuus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="152"/>
@@ -194,13 +194,13 @@
     <message>
         <location filename="../settingsdialog.ui" line="190"/>
         <source>Reverb</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaiku</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="202"/>
         <location filename="../settingsdialog.ui" line="467"/>
         <source>Depth (%)</source>
-        <translation type="unfinished"></translation>
+        <translation>Syvyys (%)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="234"/>
@@ -224,53 +224,54 @@
     <message>
         <location filename="../settingsdialog.ui" line="324"/>
         <source>Bass Boost</source>
-        <translation type="unfinished"></translation>
+        <translation>Basso boosti</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="336"/>
         <source>Amount (%)</source>
-        <translation type="unfinished"></translation>
+        <translation>Määrä (%)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="394"/>
         <source>Range (Hz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Alue (Hz)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="426"/>
         <source>10</source>
-        <translation type="unfinished">10</translation>
+        <translation>10</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="458"/>
         <source>Surround</source>
-        <translation type="unfinished"></translation>
+        <translation>Surround</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="551"/>
         <source>5</source>
-        <translation type="unfinished">5</translation>
+        <translation>5</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="577"/>
         <source>Preamp</source>
-        <translation type="unfinished"></translation>
+        <translation>Esivahvistus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="586"/>
         <source>Volume</source>
-        <translation>Äänenvoimakkuus</translation>
+        <translation>Voimakkuus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="656"/>
         <source>Note: Setting the preamp
 too high may cause clipping!</source>
-        <translation type="unfinished"></translation>
+        <translation>Huomautus: Korkea esivahvistus
+voi aiheuttaa äänen leikkaantumisen!</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="671"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Muut</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="677"/>
@@ -280,47 +281,47 @@ too high may cause clipping!</source>
     <message>
         <location filename="../settingsdialog.ui" line="683"/>
         <source>Use filename as song title</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä tiedostonimeä kappaleen nimenä</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="690"/>
         <source>Noise reduction</source>
-        <translation type="unfinished"></translation>
+        <translation>Taustamelun vähennys</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="700"/>
         <source>Fast playlist info</source>
-        <translation type="unfinished"></translation>
+        <translation>Nopea soittolistan tieto</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="710"/>
         <source>Play Amiga MOD</source>
-        <translation type="unfinished"></translation>
+        <translation>Toista Amiga MOD</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="720"/>
         <source>Looping</source>
-        <translation type="unfinished"></translation>
+        <translation>Uusinta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="726"/>
         <source>Don&apos;t loop</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei uusintaa</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="733"/>
         <source>Loop</source>
-        <translation type="unfinished"></translation>
+        <translation>Uusinta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="750"/>
         <source>time(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>aika</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="770"/>
         <source>Loop forever</source>
-        <translation type="unfinished"></translation>
+        <translation>Uusinta loputtomasti</translation>
     </message>
 </context>
 </TS>

@@ -37,7 +37,7 @@
     <message>
         <location filename="../historyfactory.cpp" line="52"/>
         <source>Qmmp Listening History Plugin</source>
-        <translation>Suplemento Qmmp Listening History</translation>
+        <translation>Suplemento Listening History</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="53"/>

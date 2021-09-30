@@ -6,22 +6,22 @@
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="30"/>
         <source>File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>File Writer Plugin</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="51"/>
         <source>About File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: File Writer Plugin</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="52"/>
         <source>Qmmp File Writer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp File Writer Plugin</translation>
     </message>
     <message>
         <location filename="../effectfilewriterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Writer Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset Writer Plugin Settings</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="109"/>
         <source>Write to single file if possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoita samaan tiedostoon, jos mahdollista.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="36"/>

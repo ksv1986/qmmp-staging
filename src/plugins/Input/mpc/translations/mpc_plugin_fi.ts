@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodermpcfactory.cpp" line="47"/>
         <source>Musepack Plugin</source>
-        <translation>Musepack-liitännäinen</translation>
+        <translation>Musepack Plugin</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="49"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../decodermpcfactory.cpp" line="112"/>
         <source>About Musepack Audio Plugin</source>
-        <translation>Tietoja - Musepack-ääniliitännäinen</translation>
+        <translation>Tietoja: Musepack Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="113"/>
         <source>Qmmp Musepack Audio Plugin</source>
-        <translation>Qmmp:n Musepack-ääniliitännäinen</translation>
+        <translation>Qmmp Musepack Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodermpcfactory.cpp" line="114"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

@@ -487,7 +487,7 @@
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="322"/>
+        <location filename="../actionmanager.cpp" line="323"/>
         <source>Toolbar</source>
         <translation>Barra de ferramentas</translation>
     </message>
@@ -673,7 +673,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="906"/>
+        <location filename="../mainwindow.cpp" line="912"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -1605,7 +1605,7 @@
         <location filename="../qsuistatusbar.cpp" line="158"/>
         <source>%n channels</source>
         <translation>
-            <numerusform>%n canles</numerusform>
+            <numerusform>%n canle</numerusform>
             <numerusform>%n canles</numerusform>
         </translation>
     </message>

@@ -37,7 +37,7 @@
         <translation>Пристрій:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="36"/>
+        <location filename="../settingsdialog.cpp" line="37"/>
         <source>Default</source>
         <translation>За замовчанням</translation>
     </message>

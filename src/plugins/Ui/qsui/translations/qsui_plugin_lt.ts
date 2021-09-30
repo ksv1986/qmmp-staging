@@ -488,7 +488,7 @@
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="322"/>
+        <location filename="../actionmanager.cpp" line="323"/>
         <source>Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
@@ -825,7 +825,7 @@
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="906"/>
+        <location filename="../mainwindow.cpp" line="912"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>

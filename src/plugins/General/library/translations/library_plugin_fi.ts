@@ -6,12 +6,12 @@
     <message>
         <location filename="../library.cpp" line="65"/>
         <source>Library</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjasto</translation>
     </message>
     <message>
         <location filename="../library.cpp" line="66"/>
         <source>Alt+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+L</translation>
     </message>
     <message>
         <location filename="../library.cpp" line="72"/>
@@ -35,32 +35,32 @@
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Library</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjasto</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="84"/>
         <source>About Media Library Plugin</source>
-        <translation>Tietoja mediakirjastoliitännäisestä</translation>
+        <translation>Tietoja: Media Library Plugin</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="85"/>
         <source>Qmmp Media Library Plugin</source>
-        <translation>Qmmp:n mediakirjastoliitännäinen</translation>
+        <translation>Qmmp Media Library Plugin</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="86"/>
         <source>This plugin represents a database to store music files tags for a fast access</source>
-        <translation>Tämä liitännäinen on sidoksissa musiikkitiedostojen tunnisteiden varastointitietokantaan nopeaa käyttöä varten </translation>
+        <translation>Tämä laajennus edustaa tietokantaa musiikkitiedostojen tunnisteiden nopeaa käyttöä varten</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../librarywidget.cpp" line="51"/>
         <source>&amp;Add to Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lisää soittolistaan</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="52"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../librarywidget.cpp" line="88"/>
         <source>Scanning directories...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kartoitetaan kansioita...</translation>
     </message>
     <message>
         <location filename="../librarywidget.ui" line="14"/>
@@ -104,17 +104,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Media Library Settings</source>
-        <translation>Mediakirjaston asetukset</translation>
+        <translation>Asetukset Media Library</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
         <source>Recreate database</source>
-        <translation type="unfinished"></translation>
+        <translation>Luo tietokanta uudelleen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
         <source>Show album year</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä albumin vuosi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>

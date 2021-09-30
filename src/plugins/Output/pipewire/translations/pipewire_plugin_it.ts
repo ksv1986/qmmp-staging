@@ -6,17 +6,17 @@
     <message>
         <location filename="../outputpipewirefactory.cpp" line="30"/>
         <source>PipeWire Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione PipeWire</translation>
     </message>
     <message>
         <location filename="../outputpipewirefactory.cpp" line="54"/>
         <source>About PipeWire Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sull&apos;estensione d&apos;uscita PipeWire</translation>
     </message>
     <message>
         <location filename="../outputpipewirefactory.cpp" line="55"/>
         <source>Qmmp PipeWire Output Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Estensione d&apos;uscita PipeWire per Qmmp</translation>
     </message>
     <message>
         <location filename="../outputpipewirefactory.cpp" line="56"/>

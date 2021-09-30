@@ -6,37 +6,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>UDisks Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>UDisks Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>CD Audio Detection</source>
-        <translation>CD-audiodetectie</translation>
+        <translation>CD Audio Detectie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
         <source>Add tracks to playlist automatically</source>
-        <translation>Nummers automatisch toevoegen aan afspeellijst</translation>
+        <translation>Voeg nummers automatisch toe aan speellijst</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Remove tracks from playlist automatically</source>
-        <translation>Nummers automatisch verwijderen van afspeellijst</translation>
+        <translation>Verwijder nummers automatisch uit afspeellijst</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Removable Device Detection</source>
-        <translation>Detectie van verwisselbare apparaten</translation>
+        <translation>Detectie van Verwisselbare Stations</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="64"/>
         <source>Add files to playlist automatically</source>
-        <translation>Bestanden automatisch toevoegen aan afspeellijst</translation>
+        <translation>Voeg bestanden automatisch toe aan afspeellijst</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Remove files from playlist automatically</source>
-        <translation>Bestanden automatisch verwijderen van afspeellijst</translation>
+        <translation>Verwijder bestanden automatisch uit afspeellijst</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisks2plugin.cpp" line="134"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation>CD &quot;%1&quot; toevoegen</translation>
+        <translation>Voeg CD &quot;%1&quot; toe</translation>
     </message>
     <message>
         <location filename="../udisks2plugin.cpp" line="142"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation>Apparaat &quot;%1&quot; toevoegen</translation>
+        <translation>Voeg Station &quot;%1&quot; toe</translation>
     </message>
 </context>
 </TS>

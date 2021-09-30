@@ -6,22 +6,22 @@
     <message>
         <location filename="../decoderflacfactory.cpp" line="54"/>
         <source>FLAC Plugin</source>
-        <translation>FLAC-plug-in</translation>
+        <translation>FLAC Module</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="56"/>
         <source>FLAC Files</source>
-        <translation>FLAC-bestanden</translation>
+        <translation>FLAC Bestanden</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="221"/>
         <source>About FLAC Audio Plugin</source>
-        <translation>Over de FLAC-audioplug-in</translation>
+        <translation>Over de FLAC Audio Module</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="222"/>
         <source>Qmmp FLAC Audio Plugin</source>
-        <translation>FLAC-plug-in voor Qmmp</translation>
+        <translation>FLAC Audio Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="223"/>

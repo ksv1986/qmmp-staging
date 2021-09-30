@@ -5,7 +5,7 @@ Ringraziamenti:
     Anton Petrusevich <casus@casus.us> - miglioramenti alla riproduzione casuale
     Avihay Baratz <avihayb@gmail.com> - funzione di fine riproduzione automatica, correzione di bug
     Brice Videau <brice.videau@gmail.com> - correzione di bug
-    Cristian Rodríguez <judas.iscariote@gmail.com> - correzioni a scrobbler
+    Cristian Rodríguez <judas.iscariote@gmail.com> - correzioni per scrobbler
     Csaba Hruska <csaba.hruska@gmail.com> - correzioni all'estensione FFmpeg
     Dmitry Kostin <kostindima@gmail.com> - supporto per iso.wv
     Dmitry Misharov <Dmitry.Misharov@gmail.com> - supporto per l'etichetta "album artisti"

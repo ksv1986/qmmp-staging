@@ -487,7 +487,7 @@
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="322"/>
+        <location filename="../actionmanager.cpp" line="323"/>
         <source>Toolbar</source>
         <translation>Pasek narzędziowy</translation>
     </message>
@@ -673,7 +673,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="906"/>
+        <location filename="../mainwindow.cpp" line="912"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -1032,7 +1032,7 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="14"/>
         <source>Popup Information Settings</source>
-        <translation>Ustawienia informacji popup</translation>
+        <translation>Ustawienia inforamcji popup</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="29"/>
@@ -1400,7 +1400,7 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="140"/>
         <source>Analyzer Mode</source>
-        <translation>Tryb Analizatora</translation>
+        <translation>Tryb analizatora</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="142"/>
@@ -1445,7 +1445,7 @@
     <message>
         <location filename="../qsuivisualization.cpp" line="167"/>
         <source>Analyzer Falloff</source>
-        <translation>Opadanie Analizatora</translation>
+        <translation>Opadanie analizatora</translation>
     </message>
     <message>
         <location filename="../qsuivisualization.cpp" line="170"/>

@@ -69,7 +69,7 @@
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="341"/>
         <source>Directories</source>
-        <translation>Каталоги</translation>
+        <translation>Директории</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialogimpl.cpp" line="353"/>

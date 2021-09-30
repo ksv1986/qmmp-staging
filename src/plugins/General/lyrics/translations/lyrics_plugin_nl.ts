@@ -6,7 +6,7 @@
     <message>
         <location filename="../lyrics.cpp" line="34"/>
         <source>View Lyrics</source>
-        <translation>Songtekst bekijken</translation>
+        <translation>Laat Liedtekst zien</translation>
     </message>
     <message>
         <location filename="../lyrics.cpp" line="35"/>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="31"/>
         <source>Lyrics Plugin</source>
-        <translation>Songtekstplug-in</translation>
+        <translation>Liedtekst Module</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="36"/>
@@ -34,22 +34,22 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="68"/>
         <source>About Lyrics Plugin</source>
-        <translation>Over de songtekstplug-in</translation>
+        <translation>Over de Liedtekst Module</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="69"/>
         <source>Qmmp Lyrics Plugin</source>
-        <translation>Songtekstplug-in voor Qmmp</translation>
+        <translation>Liedtekst Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="70"/>
         <source>This plugin retrieves lyrics from LyricWiki</source>
-        <translation>Deze plug-in haalt songteksten op van LyricWiki</translation>
+        <translation>Deze module haalt liedteksten van LyricWiki</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="71"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Maker: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="72"/>

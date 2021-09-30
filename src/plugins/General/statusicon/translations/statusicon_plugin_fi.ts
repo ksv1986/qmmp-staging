@@ -6,28 +6,28 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Status Icon Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset Status Icon Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Balloon message</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilmoituskupla</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
         <location filename="../settingsdialog.ui" line="105"/>
         <source>Delay, ms:</source>
-        <translation type="unfinished"></translation>
+        <translation>Viive, ms:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="79"/>
         <source>Tooltip</source>
-        <translation type="unfinished"></translation>
+        <translation>Työkaluvihje</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="91"/>
         <source>Try to split file name when no tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Yritä jakaa tiedoston nimi, kun päätettä ei ole</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="98"/>
@@ -57,17 +57,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="225"/>
         <source>Edit template</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa mallia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="250"/>
         <source>Use standard icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä vakiokuvakkeita</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="82"/>
         <source>Tooltip Template</source>
-        <translation type="unfinished"></translation>
+        <translation>Työkaluvihjeen malli</translation>
     </message>
 </context>
 <context>
@@ -118,22 +118,22 @@
     <message>
         <location filename="../statusiconfactory.cpp" line="29"/>
         <source>Status Icon Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Status Icon Plugin</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="49"/>
         <source>About Status Icon Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Status Icon Plugin</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="50"/>
         <source>Qmmp Status Icon Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Status Icon Plugin</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="51"/>
         <source>Written by:</source>
-        <translation>Toteutus:</translation>
+        <translation>Kirjoittaneet:</translation>
     </message>
     <message>
         <location filename="../statusiconfactory.cpp" line="52"/>

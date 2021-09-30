@@ -51,7 +51,7 @@
     <message>
         <location filename="../converterdialog.ui" line="63"/>
         <source>Output directory:</source>
-        <translation>Выходной каталог:</translation>
+        <translation>Выходная директория:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="80"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="113"/>
         <source>Choose a directory</source>
-        <translation>Выберите каталог</translation>
+        <translation>Выберите директорию</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="39"/>

@@ -59,7 +59,7 @@
     <message>
         <location filename="../projectmwidget.cpp" line="152"/>
         <source>N</source>
-        <translation type="unfinished"></translation>
+        <translation>N</translation>
     </message>
     <message>
         <location filename="../projectmwidget.cpp" line="153"/>
@@ -112,22 +112,22 @@
     <message>
         <location filename="../visualprojectmfactory.cpp" line="49"/>
         <source>About ProjectM Visual Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: ProjectM Visual Plugin</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="50"/>
         <source>Qmmp ProjectM Visual Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp ProjectM Visual Plugin</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="51"/>
         <source>This plugin adds projectM visualization</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä laajennus lisää projectM visualisoinnin</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../visualprojectmfactory.cpp" line="53"/>

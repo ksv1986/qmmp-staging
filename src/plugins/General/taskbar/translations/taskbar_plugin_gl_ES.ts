@@ -21,7 +21,7 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="51"/>
         <source>This plugin adds support for progress indicator in the Windows taskbar</source>
-        <translation>Este engadido engade soporte de indicación de progreso na barra de tarefas de Windows</translation>
+        <translation>Este engadido engade soporte de indicación de progreso na barra de tarefas da xanela</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="52"/>

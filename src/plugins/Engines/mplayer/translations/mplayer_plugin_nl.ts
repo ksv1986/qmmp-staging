@@ -6,7 +6,7 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="33"/>
         <source>Mplayer Plugin</source>
-        <translation>MPlayer-plug-in</translation>
+        <translation>MPlayer Module</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="36"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="74"/>
         <source>About MPlayer Plugin</source>
-        <translation>Over de MPlayer-plug-in</translation>
+        <translation>Over de MPlayer Module</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="75"/>
         <source>Qmmp MPlayer Plugin</source>
-        <translation>MPlayer-plug-in voor Qmmp</translation>
+        <translation>MPlayer Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="76"/>
         <source>This plugin uses MPlayer as backend</source>
-        <translation>Deze plug-in gebruikt MPlayer voor het afspelen van bestanden</translation>
+        <translation>Deze plugin gebruikt MPlayer</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="77"/>
@@ -69,12 +69,12 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="61"/>
         <source>Aspect ratio</source>
-        <translation>Beeldverhouding</translation>
+        <translation>Verhouding</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="62"/>
         <source>Video bitrate</source>
-        <translation>Bitsnelheid van video</translation>
+        <translation>Video bitrate</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="62"/>
@@ -90,7 +90,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="65"/>
         <source>Sample rate</source>
-        <translation>Samplesnelheid</translation>
+        <translation>Sample frequentie</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="65"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="66"/>
         <source>Audio bitrate</source>
-        <translation>Bitsnelheid van audio</translation>
+        <translation>Audio bitrate</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="67"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPlayer Settings</source>
-        <translation>MPlayer-instellingen</translation>
+        <translation>MPlayer Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
@@ -133,12 +133,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Audio/video auto synchronization</source>
-        <translation>Automatische audio-/videosynchronisatie</translation>
+        <translation>Automatische audio/video synchronisatie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="72"/>
         <source>Synchronization factor:</source>
-        <translation>Synchronisatiefactor:</translation>
+        <translation>Synchronisatie factor:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="89"/>

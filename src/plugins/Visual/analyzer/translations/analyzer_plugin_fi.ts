@@ -16,7 +16,7 @@
     <message>
         <location filename="../analyzer.cpp" line="326"/>
         <source>Refresh Rate</source>
-        <translation>Päivitystaajuus:</translation>
+        <translation>Virkistystaajuus</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="329"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../analyzer.cpp" line="339"/>
         <source>Analyzer Falloff</source>
-        <translation type="unfinished"></translation>
+        <translation>Analysaattorin pudotus</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="342"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../analyzer.cpp" line="353"/>
         <source>Peaks Falloff</source>
-        <translation type="unfinished"></translation>
+        <translation>Huipun pudotus</translation>
     </message>
     <message>
         <location filename="../analyzer.cpp" line="367"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Analyzer Plugin Settings</source>
-        <translation>Analysaattorin laajennuksen asetukset </translation>
+        <translation>Asetukset Analyzer Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -150,22 +150,22 @@
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="30"/>
         <source>Analyzer Plugin</source>
-        <translation>Analysaattorin laajennus</translation>
+        <translation>Analyzer Plugin</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="49"/>
         <source>About Analyzer Visual Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Analyzer Visual Plugin</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="50"/>
         <source>Qmmp Analyzer Visual Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Analyzer Visual Plugin</translation>
     </message>
     <message>
         <location filename="../visualanalyzerfactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

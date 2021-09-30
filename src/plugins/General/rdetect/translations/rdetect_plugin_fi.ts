@@ -6,27 +6,27 @@
     <message>
         <location filename="../rdetectfactory.cpp" line="30"/>
         <source>Volume Detection Plugin</source>
-        <translation>Taltioiden havaitsemisen liitännäinen</translation>
+        <translation>Volume Detection Plugin</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="50"/>
         <source>About Volume Detection Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Volume Detection Plugin</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="51"/>
         <source>Qmmp Removable Volume Detection Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Removable Volume Detection Plugin</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="52"/>
         <source>This plugin provides removable volume detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä laajennus havaitsee voimakkuuden tunnistuksen</translation>
     </message>
     <message>
         <location filename="../rdetectfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../removablehelper.cpp" line="138"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää asema &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -47,12 +47,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Volume Detection Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset Volume Detection Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>CD Audio Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio CD:n tunnistus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>

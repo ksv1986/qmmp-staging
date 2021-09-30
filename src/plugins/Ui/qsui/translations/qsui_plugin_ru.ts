@@ -259,7 +259,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
         <source>&amp;Add Directory</source>
-        <translation>&amp;Добавить каталог</translation>
+        <translation>&amp;Добавить директорию</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
@@ -487,7 +487,7 @@
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="322"/>
+        <location filename="../actionmanager.cpp" line="323"/>
         <source>Toolbar</source>
         <translation>Панель инструментов</translation>
     </message>
@@ -593,7 +593,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="92"/>
         <source>Change Directory</source>
-        <translation>Сменить каталог</translation>
+        <translation>Сменить директорию</translation>
     </message>
     <message>
         <location filename="../filesystembrowser.cpp" line="94"/>
@@ -603,7 +603,7 @@
     <message>
         <location filename="../filesystembrowser.cpp" line="168"/>
         <source>Select Directory</source>
-        <translation>Выберите каталог</translation>
+        <translation>Выберите директорию</translation>
     </message>
 </context>
 <context>
@@ -673,7 +673,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="906"/>
+        <location filename="../mainwindow.cpp" line="912"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -775,7 +775,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="214"/>
         <source>&amp;Add Directory</source>
-        <translation>&amp;Добавить каталог</translation>
+        <translation>&amp;Добавить директорию</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="219"/>

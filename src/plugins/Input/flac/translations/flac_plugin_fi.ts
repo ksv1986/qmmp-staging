@@ -6,7 +6,7 @@
     <message>
         <location filename="../decoderflacfactory.cpp" line="54"/>
         <source>FLAC Plugin</source>
-        <translation>FLAC-liitännäinen</translation>
+        <translation>FLAC Plugin</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="56"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../decoderflacfactory.cpp" line="221"/>
         <source>About FLAC Audio Plugin</source>
-        <translation>Tietoja - FLAC-ääniliitännäinen</translation>
+        <translation>Tietoja: FLAC Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="222"/>
         <source>Qmmp FLAC Audio Plugin</source>
-        <translation>Qmmp:n FLAC-ääniliitännäinen</translation>
+        <translation>Qmmp FLAC Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decoderflacfactory.cpp" line="223"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

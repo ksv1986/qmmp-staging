@@ -6,22 +6,22 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="31"/>
         <source>Scrobbler Plugin</source>
-        <translation>Scrobbler-plug-in</translation>
+        <translation>Scrobbler Module</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="51"/>
         <source>About Scrobbler Plugin</source>
-        <translation>Over de scrobbler-plug-in</translation>
+        <translation>Over de Scrobbler Module</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="52"/>
         <source>Qmmp AudioScrobbler Plugin</source>
-        <translation>AudioScrobbler-plug-in voor Qmmp</translation>
+        <translation>AudioScrobbler Module voor Qmmp</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Maker: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Scrobbler Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Scrobbler Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="20"/>
@@ -52,7 +52,7 @@
         <location filename="../settingsdialog.ui" line="63"/>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>Register new session</source>
-        <translation>Nieuwe sessie registreren</translation>
+        <translation>Registreer nieuwe sessie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="73"/>
@@ -74,12 +74,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="108"/>
         <source>2. Allow Qmmp to scrobble tracks to your %1 account</source>
-        <translation>2. Geef Qmmp toestemming om nummers te scrobbelen naar je %1-account</translation>
+        <translation>2. Sta toe dat Qmmp nummers scrobbelt naar je %1-account</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="109"/>
         <source>3. Press &quot;OK&quot;</source>
-        <translation>3. Klik op &apos;Oké&apos;</translation>
+        <translation>3. Druk op &apos;Oké&apos;</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="114"/>

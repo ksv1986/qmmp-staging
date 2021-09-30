@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Use cd-text</source>
-        <translation>Usa CD Text</translation>
+        <translation>Usa CD-Text</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>

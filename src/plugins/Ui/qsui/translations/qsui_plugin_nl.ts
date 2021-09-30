@@ -11,12 +11,12 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="41"/>
         <source>Qmmp Simple User Interface (QSUI)</source>
-        <translation>Qmmp vereenvoudigd uiterlijk (QSUI)</translation>
+        <translation>Qmmp Simpele Gebruikersinterface (QSUI)</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="42"/>
         <source>Qmmp version: &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation>Qmmp-versie: &lt;b&gt;%1&lt;/b&gt;</translation>
+        <translation>Qmmp versie: &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="46"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="44"/>
         <source>Simple user interface based on standard widgets set.</source>
-        <translation>Vereenvoudigd uiterlijk, gebaseerd op de set van standaard widgets.</translation>
+        <translation>Simpele gebruikersinterface gebasseerd op de set van standaard widgets.</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
         <source>&amp;Pause</source>
-        <translation>&amp;Pauzeren</translation>
+        <translation>&amp;Pauze</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="44"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>&amp;Next</source>
-        <translation>Volge&amp;nde</translation>
+        <translation>&amp;Volgende</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
@@ -94,17 +94,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
         <source>&amp;Play/Pause</source>
-        <translation>Afs&amp;pelen/Pauzeren</translation>
+        <translation>&amp;Afspelen/Pauze</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="48"/>
         <source>Space</source>
-        <translation>Spatiebalk</translation>
+        <translation>Spatie</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="49"/>
         <source>&amp;Jump to Track</source>
-        <translation>&amp;Ga naar nummer</translation>
+        <translation>&amp;Ga naar Nummer</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="49"/>
@@ -129,7 +129,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
         <source>&amp;Repeat Playlist</source>
-        <translation>Afspeellijst he&amp;rhalen</translation>
+        <translation>&amp;Herhaal Afspeellijst</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
@@ -139,7 +139,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="53"/>
         <source>&amp;Repeat Track</source>
-        <translation>Numme&amp;r herhalen</translation>
+        <translation>&amp;Herhaal Nummer</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="53"/>
@@ -159,7 +159,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
         <source>&amp;No Playlist Advance</source>
-        <translation>&amp;Niet verschuiven binnen afspeellijst</translation>
+        <translation>&amp;Niet verschuiven in afspellinsg</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="55"/>
@@ -174,7 +174,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="57"/>
         <source>&amp;Stop After Selected</source>
-        <translation>&amp;Stoppen na selectie</translation>
+        <translation>&amp;Stop na Geselecteerde</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="57"/>
@@ -184,7 +184,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="58"/>
         <source>&amp;Clear Queue</source>
-        <translation>Wa&amp;chtrij legen</translation>
+        <translation>&amp;Afspeellijst leeghalen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="58"/>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="61"/>
         <source>Put on All Workspaces</source>
-        <translation>Op alle werkbladen tonen</translation>
+        <translation>Plaats op alle werkbladen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>&amp;Add File</source>
-        <translation>Best&amp;and toevoegen</translation>
+        <translation>&amp;Voeg Bestand Toe</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
         <source>&amp;Add Directory</source>
-        <translation>M&amp;ap toevoegen</translation>
+        <translation>&amp;Voeg Map toe</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="76"/>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>&amp;Add Url</source>
-        <translation>&amp;URL toevoegen</translation>
+        <translation>&amp;Voeg URL toe</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>&amp;Remove Selected</source>
-        <translation>Selectie ve&amp;rwijderen</translation>
+        <translation>&amp;Verwijder Geselecteerd</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
@@ -289,32 +289,32 @@
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
         <source>&amp;Remove All</source>
-        <translation>Alles ve&amp;rwijderen</translation>
+        <translation>&amp;Verwijder Alles</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>&amp;Remove Unselected</source>
-        <translation>Niet-geselectee&amp;rde verwijderen</translation>
+        <translation>&amp;Verwijder Gedeselecteerde</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="81"/>
         <source>Remove unavailable files</source>
-        <translation>Niet-beschikbare bestanden verwijderen</translation>
+        <translation>Verwijder afwezige bestanden</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="82"/>
         <source>Remove duplicates</source>
-        <translation>Duplicaten verwijderen</translation>
+        <translation>Verwijder duplicaten</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Refresh</source>
-        <translation>Verversen</translation>
+        <translation>Herlaad</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>&amp;Queue Toggle</source>
-        <translation>&amp;Wachtrij tonen/verbergen</translation>
+        <translation>&amp;Rij schakelaar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
@@ -324,17 +324,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
         <source>Invert Selection</source>
-        <translation>Selectie omkeren</translation>
+        <translation>Draai Selectie Om</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>&amp;Select None</source>
-        <translation>Niet&amp;s selecteren</translation>
+        <translation>&amp;Selecteer Niets</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
         <source>&amp;Select All</source>
-        <translation>Alle&amp;s selecteren</translation>
+        <translation>&amp;Selecteer Alles</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="87"/>
@@ -344,7 +344,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;View Track Details</source>
-        <translation>Details &amp;van nummer bekijken</translation>
+        <translation>&amp;Bekijk Nummer Details</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
@@ -354,7 +354,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>&amp;New List</source>
-        <translation>&amp;Nieuwe lijst</translation>
+        <translation>&amp;Nieuwe Lijst</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
@@ -364,7 +364,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>&amp;Delete List</source>
-        <translation>Lijst verwij&amp;deren</translation>
+        <translation>&amp;Verwijder Lijst</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
@@ -374,7 +374,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
         <source>&amp;Load List</source>
-        <translation>&amp;Lijst laden</translation>
+        <translation>&amp;Laad Lijst</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
@@ -384,7 +384,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
         <source>&amp;Save List</source>
-        <translation>Lij&amp;st opslaan</translation>
+        <translation>&amp;Bewaar Lijst</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
@@ -394,7 +394,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
         <source>&amp;Rename List</source>
-        <translation>&amp;Lijstnaam wijzigen</translation>
+        <translation>&amp;Hernoem Lijst</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
@@ -404,7 +404,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>&amp;Select Next Playlist</source>
-        <translation>Volgende af&amp;speellijst selecteren</translation>
+        <translation>&amp;Selecteer Volgende Afspeellijst</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
@@ -414,7 +414,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
         <source>&amp;Select Previous Playlist</source>
-        <translation>Vorige af&amp;speellijst selecteren</translation>
+        <translation>&amp;Selecteer Vorige Afspeellijst</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
@@ -454,7 +454,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>&amp;Settings</source>
-        <translation>In&amp;stellingen</translation>
+        <translation>&amp;Instellingen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
@@ -479,7 +479,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
         <source>&amp;Exit</source>
-        <translation>Afsluit&amp;en</translation>
+        <translation>&amp;Sluit</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
@@ -487,7 +487,7 @@
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="322"/>
+        <location filename="../actionmanager.cpp" line="323"/>
         <source>Toolbar</source>
         <translation>Werkbalk</translation>
     </message>
@@ -505,12 +505,12 @@
     <message>
         <location filename="../coverwidget.cpp" line="32"/>
         <source>&amp;Save As...</source>
-        <translation>Op&amp;slaan als...</translation>
+        <translation>&amp;Bewaar als...</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="65"/>
         <source>Save Cover As</source>
-        <translation>Hoes opslaan als</translation>
+        <translation>Bewaar Albumhoes Als</translation>
     </message>
     <message>
         <location filename="../coverwidget.cpp" line="67"/>
@@ -528,27 +528,27 @@
     <message>
         <location filename="../equalizer.cpp" line="48"/>
         <source>Enable equalizer</source>
-        <translation>Equalizer inschakelen</translation>
+        <translation>Schakel equalizer in</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="54"/>
         <source>Preset:</source>
-        <translation>Voorinstelling:</translation>
+        <translation>Profiel:</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="62"/>
         <source>Save</source>
-        <translation>Opslaan</translation>
+        <translation>Bewaren</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="66"/>
         <source>Delete</source>
-        <translation>Verwijderen</translation>
+        <translation>Verwijder</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="70"/>
         <source>Reset</source>
-        <translation>Herstellen</translation>
+        <translation>Terugzetten</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="83"/>
@@ -570,7 +570,7 @@
     <message>
         <location filename="../equalizer.cpp" line="150"/>
         <source>preset</source>
-        <translation>voorinstelling</translation>
+        <translation>Profiel</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="220"/>
@@ -611,7 +611,7 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="40"/>
         <source>Reset</source>
-        <translation>Herstellen</translation>
+        <translation>Terugzetten</translation>
     </message>
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="54"/>
@@ -626,7 +626,7 @@
     <message>
         <location filename="../forms/hotkeyeditor.ui" line="33"/>
         <source>Change shortcut...</source>
-        <translation>Sneltoets aanpassen...</translation>
+        <translation>Verander sneltoets...</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="55"/>
@@ -656,7 +656,8 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="86"/>
         <source>Playlist</source>
-        <translation>Afspeellijst</translation>
+        <translation>
+Afspeellijst</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="92"/>
@@ -673,7 +674,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="906"/>
+        <location filename="../mainwindow.cpp" line="912"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -685,7 +686,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="40"/>
         <source>&amp;Tools</source>
-        <translation>H&amp;ulpmiddelen</translation>
+        <translation>&amp;Gereedschappen</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="45"/>
@@ -695,17 +696,17 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="50"/>
         <source>&amp;Edit</source>
-        <translation>B&amp;ewerken</translation>
+        <translation>&amp;Bewerk</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="55"/>
         <source>&amp;Playback</source>
-        <translation>Afs&amp;pelen</translation>
+        <translation>&amp;Afspelen</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="60"/>
         <source>&amp;View</source>
-        <translation>&amp;Beeld</translation>
+        <translation>&amp;Weergave</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="99"/>
@@ -740,7 +741,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="169"/>
         <source>Pause</source>
-        <translation>Pauzeren</translation>
+        <translation>Pauze</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="179"/>
@@ -755,32 +756,32 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="194"/>
         <source>&amp;Add File</source>
-        <translation>Best&amp;and toevoegen</translation>
+        <translation>&amp;Voeg Bestand Toe</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="199"/>
         <source>&amp;Remove All</source>
-        <translation>Alles ve&amp;rwijderen</translation>
+        <translation>&amp;Verwijder Alles</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="204"/>
         <source>New Playlist</source>
-        <translation>Nieuwe afspeellijst</translation>
+        <translation>Nieuwe Afspeellijst</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="209"/>
         <source>Remove Playlist</source>
-        <translation>Afspeellijst verwijderen</translation>
+        <translation>Verwijder Afspeellijst</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="214"/>
         <source>&amp;Add Directory</source>
-        <translation>M&amp;ap toevoegen</translation>
+        <translation>&amp;Voeg Map toe</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="219"/>
         <source>&amp;Exit</source>
-        <translation>&amp;Afsluiten</translation>
+        <translation>&amp;Sluit</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="224"/>
@@ -795,17 +796,17 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="234"/>
         <source>&amp;Select All</source>
-        <translation>Alle&amp;s selecteren</translation>
+        <translation>&amp;Selecteer Alles</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="239"/>
         <source>&amp;Remove Selected</source>
-        <translation>Selectie ve&amp;rwijderen</translation>
+        <translation>&amp;Verwijder Geselecteerd</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="244"/>
         <source>&amp;Remove Unselected</source>
-        <translation>Niet-geselectee&amp;rde verwijderen</translation>
+        <translation>&amp;Verwijder Gedeselecteerde</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="84"/>
@@ -816,13 +817,14 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="254"/>
         <source>Settings</source>
-        <translation>Instellingen</translation>
+        <translation>
+Instellingen</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="259"/>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Rename Playlist</source>
-        <translation>Afspeellijstnaam wijzigen</translation>
+        <translation>Hernoem Afspeellijst</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="437"/>
@@ -832,12 +834,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Playlist name:</source>
-        <translation>Naam van de afspeellijst:</translation>
+        <translation>Naam van de Afspeellijst:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="322"/>
         <source>Appearance</source>
-        <translation>Uiterlijk</translation>
+        <translation>Vertoning</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
@@ -872,25 +874,25 @@
     <message>
         <location filename="../mainwindow.cpp" line="499"/>
         <source>Sort List</source>
-        <translation>Lijst sorteren</translation>
+        <translation>Sorteer Lijst</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="502"/>
         <location filename="../mainwindow.cpp" line="543"/>
         <source>By Title</source>
-        <translation>Op titel</translation>
+        <translation>Op Titel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="505"/>
         <location filename="../mainwindow.cpp" line="546"/>
         <source>By Album</source>
-        <translation>Op album</translation>
+        <translation>Op Album</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="508"/>
         <location filename="../mainwindow.cpp" line="549"/>
         <source>By Artist</source>
-        <translation>Op artiest</translation>
+        <translation>Op Artiest</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="511"/>
@@ -902,19 +904,19 @@
         <location filename="../mainwindow.cpp" line="514"/>
         <location filename="../mainwindow.cpp" line="555"/>
         <source>By Filename</source>
-        <translation>Op bestandsnaam</translation>
+        <translation>Op Bestandsnaam</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="517"/>
         <location filename="../mainwindow.cpp" line="558"/>
         <source>By Path + Filename</source>
-        <translation>Op pad en bestandsnaam</translation>
+        <translation>Op Pad + Bestandsnaam</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="520"/>
         <location filename="../mainwindow.cpp" line="561"/>
         <source>By Date</source>
-        <translation>Op datum</translation>
+        <translation>Op Datum</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="523"/>
@@ -932,7 +934,7 @@
         <location filename="../mainwindow.cpp" line="529"/>
         <location filename="../mainwindow.cpp" line="570"/>
         <source>By File Creation Date</source>
-        <translation>Op datum van aanmaken</translation>
+        <translation>Op datum van creatie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="532"/>
@@ -948,17 +950,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="540"/>
         <source>Sort Selection</source>
-        <translation>Selectie sorteren</translation>
+        <translation>Sorteer Selectie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="578"/>
         <source>Randomize List</source>
-        <translation>Lijst willekeurig indelen</translation>
+        <translation>Schud Lijst</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="580"/>
         <source>Reverse List</source>
-        <translation>Lijst omkeren</translation>
+        <translation>Draai Lijst Om</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="630"/>
@@ -986,7 +988,7 @@
     <message>
         <location filename="../playlistheader.cpp" line="56"/>
         <source>Edit Column</source>
-        <translation>Kolom aanpassen</translation>
+        <translation>Wijzig kolom</translation>
     </message>
     <message>
         <location filename="../playlistheader.cpp" line="57"/>
@@ -1032,17 +1034,17 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="14"/>
         <source>Popup Information Settings</source>
-        <translation>Pop-up-instellingen</translation>
+        <translation>Popup Informatie Instellingen</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="29"/>
         <source>Template</source>
-        <translation>Sjabloon</translation>
+        <translation>Layout</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="58"/>
         <source>Reset</source>
-        <translation>Herstellen</translation>
+        <translation>Terugzetten</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="65"/>
@@ -1052,17 +1054,17 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="75"/>
         <source>Show cover</source>
-        <translation>Hoes tonen</translation>
+        <translation>Toon albumhoes</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="89"/>
         <source>Cover size:</source>
-        <translation>Hoesgrootte:</translation>
+        <translation>Albumhoesgrootte:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="115"/>
         <source>Transparency:</source>
-        <translation>Doorzichtigheid:</translation>
+        <translation>Transparantie:</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="145"/>
@@ -1085,12 +1087,12 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="36"/>
         <source>Hide on close</source>
-        <translation>Minimaliseren i.p.v. sluiten</translation>
+        <translation>Verberg bij sluit</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="43"/>
         <source>Start hidden</source>
-        <translation>Geminimaliseerd opstarten</translation>
+        <translation>Start verborgen</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="206"/>
@@ -1181,17 +1183,17 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="74"/>
         <source>Song Display</source>
-        <translation>Nummerweergave</translation>
+        <translation>Nummer Weergave</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="80"/>
         <source>Show protocol</source>
-        <translation>Protocol tonen</translation>
+        <translation>Laad protocol</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="144"/>
         <source>Show song numbers</source>
-        <translation>CD-nummers tonen</translation>
+        <translation>Toon liednummers</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="151"/>
@@ -1201,22 +1203,22 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="161"/>
         <source>Align song numbers</source>
-        <translation>CD-nummers uitlijnen</translation>
+        <translation>Liednummers uitlijnen</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="87"/>
         <source>Show anchor</source>
-        <translation>Verankering tonen</translation>
+        <translation>Toon verankering</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="101"/>
         <source>Show popup information</source>
-        <translation>Pop-up tonen</translation>
+        <translation>Toon popup informatie</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="113"/>
         <source>Edit template</source>
-        <translation>Sjabloon bewerken</translation>
+        <translation>Bewerk layout</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1201"/>
@@ -1256,7 +1258,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="247"/>
         <source>Peaks:</source>
-        <translation>Pieken:</translation>
+        <translation>Toppen:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="311"/>
@@ -1277,7 +1279,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="669"/>
         <source>Normal text:</source>
-        <translation>Normale tekst:</translation>
+        <translation>Normale tekst</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="617"/>
@@ -1287,7 +1289,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="717"/>
         <source>Current text:</source>
-        <translation>Huidige tekst:</translation>
+        <translation>Huidige tekst</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="662"/>
@@ -1372,7 +1374,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="1269"/>
         <source>Show &apos;New Playlist&apos; button</source>
-        <translation>Knop &apos;Nieuwe afspeellijst&apos; tonen</translation>
+        <translation>Toon &apos;Nieuwe Afspeellijst&apos; knop</translation>
     </message>
 </context>
 <context>
@@ -1639,17 +1641,17 @@
     <message>
         <location filename="../forms/shortcutdialog.ui" line="14"/>
         <source>Change Shortcut</source>
-        <translation>Sneltoets aanpassen</translation>
+        <translation>Verander sneltoets</translation>
     </message>
     <message>
         <location filename="../forms/shortcutdialog.ui" line="29"/>
         <source>Press the key combination you want to assign</source>
-        <translation>Druk op de toetscombinatie die je wilt toewijzen</translation>
+        <translation>Druk de gewenste sneltoetscombinatie</translation>
     </message>
     <message>
         <location filename="../forms/shortcutdialog.ui" line="52"/>
         <source>Clear</source>
-        <translation>Wissen</translation>
+        <translation>Leeghalen</translation>
     </message>
 </context>
 <context>
@@ -1662,7 +1664,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="62"/>
         <source>Reset</source>
-        <translation>Herstellen</translation>
+        <translation>Terugzetten</translation>
     </message>
     <message>
         <location filename="../forms/toolbareditor.ui" line="199"/>
@@ -1682,7 +1684,7 @@
     <message>
         <location filename="../forms/toolbareditor.ui" line="254"/>
         <source>&amp;Remove</source>
-        <translation>Ve&amp;rwijderen</translation>
+        <translation>&amp;Verwijder</translation>
     </message>
     <message>
         <location filename="../toolbareditor.cpp" line="100"/>

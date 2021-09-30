@@ -551,7 +551,7 @@
     <message>
         <location filename="../configdialog.cpp" line="64"/>
         <source>Album</source>
-        <translation>Álbum</translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="65"/>
@@ -875,7 +875,7 @@
     <message>
         <location filename="../forms/detailsdialog.ui" line="63"/>
         <source>Summary</source>
-        <translation>Resumen</translation>
+        <translation>Sumario</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="203"/>
@@ -905,7 +905,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="295"/>
         <source>Album</source>
-        <translation>Álbum</translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="296"/>
@@ -1064,7 +1064,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation>Álbum</translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
@@ -1276,7 +1276,7 @@
     <message>
         <location filename="../forms/tageditor.ui" line="90"/>
         <source>Album:</source>
-        <translation>Álbum:</translation>
+        <translation>Album:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="113"/>

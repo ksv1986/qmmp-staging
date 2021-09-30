@@ -16,7 +16,7 @@
     <message>
         <location filename="../decoderopusfactory.cpp" line="123"/>
         <source>About Opus Audio Plugin</source>
-        <translation>Over de opus-audioplug-in</translation>
+        <translation>Over de Opus-audioplug-in</translation>
     </message>
     <message>
         <location filename="../decoderopusfactory.cpp" line="124"/>

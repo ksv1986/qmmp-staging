@@ -52,27 +52,27 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="29"/>
         <source>Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Stream Browser Plugin</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="50"/>
         <source>About Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Stream Browser Plugin</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>Qmmp Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Stream Browser Plugin</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>This plugin allows one to add stream from IceCast stream directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Laajennuksen avulla voit lisätä IceCast-hakemiston suoratoistolle</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

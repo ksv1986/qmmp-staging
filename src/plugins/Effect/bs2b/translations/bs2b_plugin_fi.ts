@@ -6,27 +6,27 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="31"/>
         <source>BS2B Plugin</source>
-        <translation>BS2B-liitännäinen</translation>
+        <translation>BS2B Plugin</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="51"/>
         <source>About BS2B Effect Plugin</source>
-        <translation>Tietoja - BS2B-tehosteliitännäinen</translation>
+        <translation>Tietoja: BS2B Effect Plugin</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="52"/>
         <source>This is the Qmmp plugin version of Boris Mikhaylov&apos;s headphone DSP effect &quot;Bauer stereophonic-to-binaural&quot;, abbreviated bs2b.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä Qmmp-plugin versio on Boris Mikhaylovin kuulokkeiden DSP-efekti &quot;Bauer stereophonic-to-binaural&quot;, lyhyesti bs2b.</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="54"/>
         <source>Visit %1 for more details</source>
-        <translation type="unfinished"></translation>
+        <translation>Käy %1 saadaksesi lisätietoja</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="56"/>
         <source>Compiled against libbs2b-%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Koostettu libbs2b-%1</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="57"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../effectbs2bfactory.cpp" line="58"/>
         <source>Ilya Kotov &amp;lt;forkotov02@ya.ru&amp;gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilya Kotov &amp;lt;forkotov02@ya.ru&amp;gt;</translation>
     </message>
     <message>
         <location filename="../effectbs2bfactory.cpp" line="59"/>
         <source>Sebastian Pipping &amp;lt;sebastian@pipping.org&amp;gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Sebastian Pipping &amp;lt;sebastian@pipping.org&amp;gt;</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="32"/>
         <source>Crossfeed level</source>
-        <translation type="unfinished"></translation>
+        <translation>Ristisyöttö</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
@@ -70,17 +70,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>C.Moy</source>
-        <translation type="unfinished"></translation>
+        <translation>C.Moy</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="85"/>
         <source>J. Meier</source>
-        <translation type="unfinished"></translation>
+        <translation>J. Meier</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="60"/>
         <source>%1 Hz, %2 us</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Hz, %2 meille</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="67"/>

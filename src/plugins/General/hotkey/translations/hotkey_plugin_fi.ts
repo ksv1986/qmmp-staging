@@ -11,7 +11,7 @@
     <message>
         <location filename="../hotkeydialog.ui" line="32"/>
         <source>Press the key combination you want to assign</source>
-        <translation type="unfinished"></translation>
+        <translation>Paina näppäinyhdistelmä, jonka haluat käyttöön</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="52"/>
@@ -24,27 +24,27 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="31"/>
         <source>Global Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Global Hotkey Plugin</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="57"/>
         <source>About Global Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Global Hotkey Plugin</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="58"/>
         <source>Qmmp Global Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Global Hotkey Plugin</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="59"/>
         <source>This plugin adds support for multimedia keys or global key combinations</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä laajennus lisää tuen multimedia-näppäimistön näppäinyhdistelmille</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="60"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Global Hotkey Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset Global Hotkey Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyhjennä</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
@@ -107,27 +107,27 @@
     <message>
         <location filename="../settingsdialog.cpp" line="45"/>
         <source>Volume +</source>
-        <translation>Äänenvoimakkuus +</translation>
+        <translation>Voimakkuus +</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="46"/>
         <source>Volume -</source>
-        <translation>Äänenvoimakkuus -</translation>
+        <translation>Voimakkuus -</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="47"/>
         <source>Forward 5 seconds</source>
-        <translation>Eteenpäin 5 sekuntia</translation>
+        <translation>Eteen 5 sekuntia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="48"/>
         <source>Rewind 5 seconds</source>
-        <translation>Taaksepäin 5 sekuntia</translation>
+        <translation>Taakse 5 sekuntia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="49"/>
         <source>Jump to track</source>
-        <translation type="unfinished"></translation>
+        <translation>Hyppää raitaan</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="50"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="107"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
-        <translation type="unfinished"></translation>
+        <translation>Yhdistelmä &apos;%1&apos; on jo käytössä</translation>
     </message>
 </context>
 </TS>

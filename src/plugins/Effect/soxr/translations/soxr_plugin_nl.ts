@@ -29,12 +29,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Sample Rate Converter Plugin Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Sample Rate Converter Module Instellingen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="20"/>
         <source>Sample Rate (Hz):</source>
-        <translation>Samplesnelheid (Hz):</translation>
+        <translation>Sample frequentie (Hz):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="40"/>

@@ -14,7 +14,7 @@
     <message>
         <location filename="../kdenotifyfactory.cpp" line="29"/>
         <source>KDE notification plugin</source>
-        <translation>Suplemento KDE4 notification</translation>
+        <translation>Suplemento KDE notification</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="49"/>

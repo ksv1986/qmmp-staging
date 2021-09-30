@@ -79,7 +79,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="109"/>
         <source>3. Press &quot;OK&quot;</source>
-        <translation>3. Premi «OK»</translation>
+        <translation>Premi «OK»</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="114"/>

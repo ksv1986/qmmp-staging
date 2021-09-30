@@ -487,7 +487,7 @@
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="322"/>
+        <location filename="../actionmanager.cpp" line="323"/>
         <source>Toolbar</source>
         <translation>Barra de ferramentas</translation>
     </message>
@@ -575,7 +575,7 @@
     <message>
         <location filename="../equalizer.cpp" line="220"/>
         <source>Overwrite Request</source>
-        <translation>Substituição</translation>
+        <translation>Confirmar substituição</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="221"/>
@@ -673,7 +673,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="../forms/mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="906"/>
+        <location filename="../mainwindow.cpp" line="912"/>
         <source>Qmmp</source>
         <translation>Qmmp</translation>
     </message>
@@ -805,7 +805,7 @@
     <message>
         <location filename="../forms/mainwindow.ui" line="244"/>
         <source>&amp;Remove Unselected</source>
-        <translation>Remover &amp;não selecionados</translation>
+        <translation>&amp;Remover não selecionados</translation>
     </message>
     <message>
         <location filename="../forms/mainwindow.ui" line="84"/>
@@ -1176,7 +1176,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="52"/>
         <source>Window title format:</source>
-        <translation>Formato de título da janela:</translation>
+        <translation>Formato do título da janela:</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="74"/>

@@ -276,7 +276,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="129"/>
         <source>Load metadata from files</source>
-        <translation>Carica i metadati dai file</translation>
+        <translation>Carica i metadati dai brani</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="136"/>
@@ -365,7 +365,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="381"/>
         <source>Display average bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra bit al secondo medi</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="391"/>
@@ -410,7 +410,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="498"/>
         <source>URL Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Finestra URL</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="504"/>
@@ -501,7 +501,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="785"/>
         <source>Default gain:</source>
-        <translation>Normalizzazione predefinita:</translation>
+        <translation>Normalizzazione predefinita</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="837"/>
@@ -541,7 +541,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="860"/>
         <source>Use dithering</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa dithering</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="63"/>
@@ -706,7 +706,7 @@
     <message>
         <location filename="../configdialog.cpp" line="357"/>
         <source>Korean</source>
-        <translation type="unfinished"></translation>
+        <translation>Coreano:</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="358"/>
@@ -1313,7 +1313,7 @@
     <message>
         <location filename="../forms/tageditor.ui" line="250"/>
         <source>Disc number:</source>
-        <translation>Numero disco: </translation>
+        <translation>Disco numero: </translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="275"/>

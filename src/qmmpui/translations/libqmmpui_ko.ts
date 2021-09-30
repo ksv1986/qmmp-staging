@@ -576,7 +576,7 @@
     <message>
         <location filename="../configdialog.cpp" line="202"/>
         <source>Transports</source>
-        <translation>전송</translation>
+        <translation>트랜스포트</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="213"/>

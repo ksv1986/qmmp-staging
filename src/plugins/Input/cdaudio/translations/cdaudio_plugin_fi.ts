@@ -6,32 +6,32 @@
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="50"/>
         <source>CD Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>CD Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="97"/>
         <source>About CD Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: CD Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="98"/>
         <source>Qmmp CD Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp CD Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="99"/>
         <source>Compiled against libcdio-%1 and libcddb-%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Käännetty libcdio-%1 ja libcddb-%2</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="101"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodercdaudiofactory.cpp" line="102"/>
         <source>Usage: open cdda:/// using Add URL dialog or command line</source>
-        <translation type="unfinished"></translation>
+        <translation>Käyttö: avaa käyttäen cdda:/// lisää URL valintaan tai komentorivillä</translation>
     </message>
 </context>
 <context>
@@ -39,22 +39,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>CD Audio Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset CD Audio Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Override device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohita laite:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
         <source>Limit cd speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rajoita cd:n nopeutta:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Use cd-text</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä cd-tekstiä</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Use HTTP instead of CDDBP</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä HTTP:tä CDDBP:n sijaan</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="88"/>

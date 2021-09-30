@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodervorbisfactory.cpp" line="44"/>
         <source>Ogg Vorbis Plugin</source>
-        <translation>Ogg Vorbis -liitännäinen</translation>
+        <translation>Ogg Vorbis Plugin</translation>
     </message>
     <message>
         <location filename="../decodervorbisfactory.cpp" line="47"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../decodervorbisfactory.cpp" line="126"/>
         <source>About Ogg Vorbis Audio Plugin</source>
-        <translation>Tietoja - Ogg Vorbis -ääniliitännäinen</translation>
+        <translation>Tietoja: Ogg Vorbis Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodervorbisfactory.cpp" line="127"/>
         <source>Qmmp Ogg Vorbis Audio Plugin</source>
-        <translation>Qmmp:n Ogg Vorbis -ääniliitännäinen</translation>
+        <translation>Qmmp Ogg Vorbis Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodervorbisfactory.cpp" line="128"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodervorbisfactory.cpp" line="129"/>

@@ -6,32 +6,32 @@
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="145"/>
         <source>FFmpeg Plugin</source>
-        <translation>FFmpeg-liitännäinen</translation>
+        <translation>FFmpeg Plugin</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="147"/>
         <source>FFmpeg Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>FFmpeg formaatit</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="338"/>
         <source>About FFmpeg Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: FFmpeg Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="339"/>
         <source>Qmmp FFmpeg Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp FFmpeg Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="340"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Koostettu:</translation>
     </message>
     <message>
         <location filename="../decoderffmpegfactory.cpp" line="353"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>FFmpeg Plugin Settings</source>
-        <translation>FFmpeg-liitännäisen asetukset</translation>
+        <translation>Asetukset FFmpeg Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="110"/>
         <source>Shorten</source>
-        <translation type="unfinished"></translation>
+        <translation>Lyhennä</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="117"/>
@@ -109,12 +109,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="145"/>
         <source>Tom&apos;s lossless Audio Kompressor (TAK)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tom&apos;s lossless Audio Kompressor (TAK)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="152"/>
         <source>Direct Stream Digital (DSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Direct Stream Digital (DSD)</translation>
     </message>
 </context>
 </TS>

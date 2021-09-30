@@ -19,7 +19,7 @@
     <message>
         <location filename="../history.cpp" line="58"/>
         <source>Alt+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+H</translation>
     </message>
 </context>
 <context>
@@ -27,27 +27,27 @@
     <message>
         <location filename="../historyfactory.cpp" line="31"/>
         <source>Listening History Plugin</source>
-        <translation>Kuunteluhistorialiitännäinen</translation>
+        <translation>Listening History Plugin</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="51"/>
         <source>About Listening History Plugin</source>
-        <translation>Tietoja - Kuunteluhistorialiitännäinen</translation>
+        <translation>Tietoja: Listening History Plugin</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="52"/>
         <source>Qmmp Listening History Plugin</source>
-        <translation>Qmmp:n kuunteluhistorialiitännäinen</translation>
+        <translation>Qmmp Listening History Plugin</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="53"/>
         <source>This plugin collects information about listened tracks</source>
-        <translation>Tämä liitännäinen kerää tietoja kuunnelluista kappaleista</translation>
+        <translation>Tämä laajennus kerää tietoja kuunnelluista kappaleista</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -55,12 +55,12 @@
     <message>
         <location filename="../historysettingsdialog.ui" line="14"/>
         <source>Listening History Plugin Settings</source>
-        <translation>Kuunteluhistorialiitännäisen asetukset</translation>
+        <translation>Asetukset Listening History Plugin</translation>
     </message>
     <message>
         <location filename="../historysettingsdialog.ui" line="31"/>
         <source>Title format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Otsikon muoto:</translation>
     </message>
 </context>
 <context>
@@ -99,23 +99,23 @@
     <message>
         <location filename="../historywindow.ui" line="83"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Suorita</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="129"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Aika</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="134"/>
         <location filename="../historywindow.ui" line="183"/>
         <source>Song</source>
-        <translation type="unfinished"></translation>
+        <translation>Kappale</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="143"/>
         <source>Distribution</source>
-        <translation type="unfinished"></translation>
+        <translation>Jakelu</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="156"/>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../historywindow.cpp" line="124"/>
         <source>dd MMMM yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMMM yyyy</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="125"/>
@@ -168,12 +168,12 @@
     <message>
         <location filename="../historywindow.cpp" line="191"/>
         <source>MM-yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>MM-yyyy</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="192"/>
         <source>dd MMMM</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMMM</translation>
     </message>
 </context>
 </TS>

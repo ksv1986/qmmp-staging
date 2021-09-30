@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="57"/>
         <source>SID Plugin</source>
-        <translation>SID-liitännäinen</translation>
+        <translation>SID Plugin</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="59"/>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="113"/>
         <source>About SID Audio Plugin</source>
-        <translation>Tietoja - SID-ääniliitännäinen</translation>
+        <translation>Tietoja: SID Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="114"/>
         <source>Qmmp SID Audio Plugin</source>
-        <translation>Qmmp:n SID-ääniliitännäinen</translation>
+        <translation>Qmmp SID Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="115"/>
         <source>This plugin plays Commodore 64 music files using libsidplayfp library</source>
-        <translation>Tämä liitännäinen toistaa Commodore 64 -musiikkitiedostoja libsidplayfp-kirjastoa käyttäen</translation>
+        <translation>Tämä liitännäinen toistaa Commodore 64 musiikkia käyttäen libsidplayfp kirjastoa</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="116"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,42 +39,42 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>SID Plugin Settings</source>
-        <translation>SID-liitännäisen asetukset</translation>
+        <translation>Asetukset SID Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Fast resampling</source>
-        <translation type="unfinished"></translation>
+        <translation>Nopea sampleri</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Sample rate:</source>
-        <translation>Näytteenottotaajuus:</translation>
+        <translation>Taajuus:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>
         <source>HVSC database file:</source>
-        <translation>HVSC-tietokantatiedosto:</translation>
+        <translation>Tietokanta HVSC-tiedosto:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Resampling method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Samplerin menetelmä:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="93"/>
         <source>Defaults song length, sec:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kappaleen oletuspituus, sekuntia:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="100"/>
         <source>Enable HVSC song length database</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä kappaleen HVSC pituustietokantaa</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="107"/>
         <source>Emulation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Emulointi:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>

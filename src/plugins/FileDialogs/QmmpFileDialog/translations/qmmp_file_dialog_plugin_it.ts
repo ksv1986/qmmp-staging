@@ -49,7 +49,7 @@
     <message>
         <location filename="../qmmpfiledialog.ui" line="147"/>
         <source>Files of type:</source>
-        <translation>Tipo brani:</translation>
+        <translation>File di tipo:</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.ui" line="173"/>
@@ -106,7 +106,8 @@ Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
         <location filename="../qmmpfiledialogimpl.cpp" line="474"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
-        <translation>%1 esiste già. Vuoi sostituirlo?</translation>
+        <translation>%1 esiste già.
+Vuoi sostituirlo?</translation>
     </message>
 </context>
 </TS>

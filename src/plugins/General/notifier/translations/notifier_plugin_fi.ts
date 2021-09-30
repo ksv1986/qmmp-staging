@@ -6,22 +6,22 @@
     <message>
         <location filename="../notifierfactory.cpp" line="29"/>
         <source>Notifier Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Notifier Plugin</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="49"/>
         <source>About Notifier Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Notifier Plugin</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="50"/>
         <source>Qmmp Notifier Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Notifier Plugin</translation>
     </message>
     <message>
         <location filename="../notifierfactory.cpp" line="51"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../popupwidget.cpp" line="116"/>
         <source>Volume:</source>
-        <translation>Äänenvoimakkuus:</translation>
+        <translation>Voimakkuus:</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Notifier Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset Notifier Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="251"/>
         <source>Edit template</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa mallia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="299"/>
@@ -83,7 +83,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="325"/>
         <source>Volume change notification</source>
-        <translation>Äänenvoimakkuuden muutoksen ilmoitus</translation>
+        <translation>Ilmoitus voimakkuuden muutoksesta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="332"/>
@@ -98,32 +98,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="368"/>
         <source>Song change notification</source>
-        <translation>Kappaleenvaihtumisilmoitus</translation>
+        <translation>Kappaleen vaihtumisen ilmoitus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="375"/>
         <source>Disable notifications when another application is in the Full Screen Mode</source>
-        <translation>Poista ilmoitukset käytöstä, kun jokin toinen sovellus on koko näytön tilassa</translation>
+        <translation>Poista ilmoitukset käytöstä, kun jokin toinen sovellus on koko näytössä</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="378"/>
         <source>Disable for full screen windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista käytöstä koko näytössä</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="388"/>
         <source>Psi Notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjautumisen ilmoitus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="400"/>
         <source>Enable Psi notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä kirjautumisen ilmoitusta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="112"/>
         <source>Notification Template</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilmoituksen malli</translation>
     </message>
 </context>
 </TS>

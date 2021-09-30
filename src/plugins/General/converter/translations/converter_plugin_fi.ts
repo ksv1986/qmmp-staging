@@ -146,17 +146,17 @@
     <message>
         <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
-        <translation>Qmmp muuntimen liitännäinen</translation>
+        <translation>Qmmp Converter Plugin</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
-        <translation>Tämä liitännäinen muuntaa tuetut äänitiedostot muihin tiedostomuotoihin käyttäen komentorivin koodereita</translation>
+        <translation>Tämä laajennus muuntaa tuetut äänitiedostot muihin tiedostomuotoihin käyttäen komentorivin koodereita</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -207,7 +207,7 @@
     <message>
         <location filename="../preseteditor.ui" line="83"/>
         <source>Write tags</source>
-        <translation>Kirjoita hakusanat</translation>
+        <translation>Kirjoita hakusana</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="90"/>

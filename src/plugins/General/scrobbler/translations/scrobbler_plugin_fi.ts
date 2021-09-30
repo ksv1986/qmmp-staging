@@ -6,22 +6,22 @@
     <message>
         <location filename="../scrobblerfactory.cpp" line="31"/>
         <source>Scrobbler Plugin</source>
-        <translation>Scrobbler-liitännäinen</translation>
+        <translation>Scrobbler Plugin</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="51"/>
         <source>About Scrobbler Plugin</source>
-        <translation>Tietoja - Scrobbler-liitännäinen</translation>
+        <translation>Tietoja: Scrobbler Plugin</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="52"/>
         <source>Qmmp AudioScrobbler Plugin</source>
-        <translation>Qmmp:n AudioScrobbler-liitännäinen</translation>
+        <translation>Qmmp AudioScrobbler Plugin</translation>
     </message>
     <message>
         <location filename="../scrobblerfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Scrobbler Plugin Settings</source>
-        <translation>Scrobbler-liitännäisen asetukset</translation>
+        <translation>Asetukset Scrobbler Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="20"/>

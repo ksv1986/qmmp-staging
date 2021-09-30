@@ -13,7 +13,7 @@
         <location filename="../fileops.cpp" line="108"/>
         <location filename="../fileops.cpp" line="148"/>
         <source>Destination directory doesn&apos;t exist</source>
-        <translation>Каталог назначения не существует</translation>
+        <translation>Директория назначения не существует</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="151"/>
@@ -25,7 +25,7 @@
         <source>Are you sure you want to move %n file(s)?</source>
         <translation>
             <numerusform>Вы уверены, что хотите переместить %n файл?</numerusform>
-            <numerusform>Вы уверены, что хотите переместить %n файла?</numerusform>
+            <numerusform>Вы уверены, что хотите переместить %n файлов?</numerusform>
             <numerusform>Вы уверены, что хотите переместить %n файлов?</numerusform>
         </translation>
     </message>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="232"/>
         <source>Choose a directory</source>
-        <translation>Выберите каталог</translation>
+        <translation>Выберите директорию</translation>
     </message>
 </context>
 </TS>

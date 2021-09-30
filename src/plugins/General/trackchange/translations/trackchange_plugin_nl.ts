@@ -19,7 +19,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Command to run when Qmmp starts new track</source>
-        <translation>Opdracht die moet worden uitgevoerd bij het starten van een nieuw nummer</translation>
+        <translation>Opdracht die moet worden uitgevoerd als er een nieuw nummer wordt afgespeeld</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="50"/>
         <source>About Track Change Plugin</source>
-        <translation>Over de nummerveranderingsplug-in</translation>
+        <translation>Over de Nummerveranderingsplug-in</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="51"/>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="52"/>
         <source>This plugin executes external command when current track is changed</source>
-        <translation>Deze plug-in voert externe opdrachten uit als er een ander nummer wordt afgespeeld</translation>
+        <translation>Deze plug-in voert externe opdrachten uit als een nummer verandert</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="53"/>

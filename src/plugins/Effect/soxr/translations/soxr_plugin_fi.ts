@@ -6,22 +6,22 @@
     <message>
         <location filename="../effectsoxrfactory.cpp" line="30"/>
         <source>SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>SoX Resampler Plugin</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="51"/>
         <source>About SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: SoX Resampler Plugin</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="52"/>
         <source>Qmmp SoX Resampler Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp SoX Resampler Plugin</translation>
     </message>
     <message>
         <location filename="../effectsoxrfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Sample Rate Converter Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset Sample Rate Converter Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="20"/>
         <source>Sample Rate (Hz):</source>
-        <translation>Näytteenottotaajuus (Hz):</translation>
+        <translation>Taajuus (Hz):</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="40"/>

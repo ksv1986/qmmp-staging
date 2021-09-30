@@ -11,7 +11,7 @@
     <message>
         <location filename="../library.cpp" line="66"/>
         <source>Alt+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+L</translation>
     </message>
     <message>
         <location filename="../library.cpp" line="72"/>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="84"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../librarywidget.cpp" line="88"/>
         <source>Scanning directories...</source>
-        <translation type="unfinished"></translation>
+        <translation>Analisi delle cartelle...</translation>
     </message>
     <message>
         <location filename="../librarywidget.ui" line="14"/>
@@ -109,12 +109,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
         <source>Recreate database</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricrea banca dati</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
         <source>Show album year</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra anno dell&apos;album</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>

@@ -163,7 +163,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="343"/>
         <source>Try to detect encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Prova a identificare la codifica</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="294"/>

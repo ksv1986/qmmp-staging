@@ -74,7 +74,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="62"/>
         <source>Video bitrate</source>
-        <translation>bit al secondo video</translation>
+        <translation>Bit al secondo video</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="62"/>

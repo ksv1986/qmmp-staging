@@ -6,22 +6,22 @@
     <message>
         <location filename="../mmsinputfactory.cpp" line="32"/>
         <source>MMS Plugin</source>
-        <translation>MMS-liitännäinen</translation>
+        <translation>MMS Plugin</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="52"/>
         <source>About MMS Transport Plugin</source>
-        <translation>Tietoja MMS Transport -liitännäinen</translation>
+        <translation>Tietoja: MMS Transport Plugin</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="53"/>
         <source>Qmmp MMS Transport Plugin</source>
-        <translation>Qmmp MMS Transport -liitännäinen</translation>
+        <translation>Qmmp MMS Transport Plugin</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MMS Plugin Settings</source>
-        <translation>MMS-liitännäisen asetukset</translation>
+        <translation>Asetukset MMS Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Buffer size:</source>
-        <translation>Bufferin koko:</translation>
+        <translation>Puskurin koko:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="64"/>

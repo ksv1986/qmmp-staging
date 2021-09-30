@@ -54,7 +54,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="72"/>
         <source>Based on Ultimate Lyrics script by Vladimir Brkic &lt;vladimir_brkic@yahoo.com&gt;</source>
-        <translation>Baseado no script Ultimate Lyrics de Vladimir Brkic &lt;vladimir_brkic@yahoo.com&gt;</translation>
+        <translation>Baseado em script Ultimate Lyrics de Vladimir Brkic &lt;vladimir_brkic@yahoo.com&gt;</translation>
     </message>
 </context>
 <context>

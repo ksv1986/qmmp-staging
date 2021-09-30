@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="32"/>
         <source>Qt Multimedia Plugin</source>
-        <translation>Qt Multimedia -liitännäinen</translation>
+        <translation>Qt Multimedia Plugin</translation>
     </message>
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="57"/>
         <source>About Qt Multimedia Output Plugin</source>
-        <translation>Tietoja - Qt Multimedia -ulostuloliitännäinen</translation>
+        <translation>Tietoja: Qt Multimedia Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="58"/>
         <source>Qmmp Qt Multimedia Output Plugin</source>
-        <translation>Qmmp:n Qt Multimedia -ulostuloliitännäinen</translation>
+        <translation>Qmmp Qt Multimedia Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputqtmultimediafactory.cpp" line="59"/>
         <source>Written by: Ivan Ponomarev &lt;ivantrue@gmail.com&gt;</source>
-        <translation>Toteutus: Ivan Ponomarev &lt;ivantrue@gmail.com&gt;</translation>
+        <translation>Kirjoittanut: Ivan Ponomarev &lt;ivantrue@gmail.com&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Qt Multimedia Plugin Settings</source>
-        <translation>Qt Multimedia -liitännäisen asetukset</translation>
+        <translation>Asetukset Qt Multimedia Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
@@ -37,7 +37,7 @@
         <translation>Laite:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="36"/>
+        <location filename="../settingsdialog.cpp" line="37"/>
         <source>Default</source>
         <translation>Oletus</translation>
     </message>

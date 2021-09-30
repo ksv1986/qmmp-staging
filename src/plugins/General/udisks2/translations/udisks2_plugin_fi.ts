@@ -6,12 +6,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>UDisks Plugin Settings</source>
-        <translation>UDisks-liitännäisen asetukset</translation>
+        <translation>Asetukset UDisks Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>CD Audio Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio CD:n tunnistus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="38"/>
@@ -44,27 +44,27 @@
     <message>
         <location filename="../udisks2factory.cpp" line="30"/>
         <source>UDisks2 Plugin</source>
-        <translation>UDisks2-liitännäinen</translation>
+        <translation>UDisks2 Plugin</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="50"/>
         <source>About UDisks2 Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: UDisks2 Plugin</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="51"/>
         <source>Qmmp UDisks2 Plugin</source>
-        <translation>Qmmp:n UDisks2-liitännäinen</translation>
+        <translation>Qmmp UDisks2 Plugin</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks2</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä laajennus havaitsee UDisks2 avulla irrotettavat laitteet</translation>
     </message>
     <message>
         <location filename="../udisks2factory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../udisks2plugin.cpp" line="142"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää asema &quot;%1&quot;</translation>
     </message>
 </context>
 </TS>

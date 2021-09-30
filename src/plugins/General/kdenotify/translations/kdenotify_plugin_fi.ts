@@ -6,7 +6,7 @@
     <message>
         <location filename="../kdenotify.cpp" line="122"/>
         <source>Qmmp now playing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp toistaa:</translation>
     </message>
 </context>
 <context>
@@ -14,17 +14,17 @@
     <message>
         <location filename="../kdenotifyfactory.cpp" line="29"/>
         <source>KDE notification plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>KDE notification plugin</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="49"/>
         <source>About KDE Notification Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: KDE Notification Plugin</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="50"/>
         <source>KDE notification plugin for Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>KDE notification plugin for Qmmp</translation>
     </message>
 </context>
 <context>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>KDE 4 Notification Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset KDE 4 Notification Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
@@ -42,17 +42,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Notification delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilmoituksen viive:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>s</source>
-        <translation type="unfinished"></translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Update visible notification instead create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Päivitä ilmoitus ja luo uusi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="88"/>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>Edit template</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa mallia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="75"/>
         <source>Notification Template</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilmoituksen malli</translation>
     </message>
 </context>
 </TS>

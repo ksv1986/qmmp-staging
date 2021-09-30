@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputossfactory.cpp" line="36"/>
         <source>OSS Plugin</source>
-        <translation>OSS-liitännäinen</translation>
+        <translation>OSS Plugin</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="56"/>
         <source>About OSS Output Plugin</source>
-        <translation>Tietoja - OSS-ulostuloliitännäinen</translation>
+        <translation>Tietoja: OSS Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="57"/>
         <source>Qmmp OSS Output Plugin</source>
-        <translation>Qmmp:n OSS-ulostuloliitännäinen</translation>
+        <translation>Qmmp OSS Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="58"/>
         <source>Written by: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</source>
-        <translation>Toteutus: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</translation>
+        <translation>Kirjoittanut: Yuriy Zhuravlev &lt;slalkerg@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../outputossfactory.cpp" line="59"/>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>OSS Plugin Settings</source>
-        <translation>OSS-liitännäisen asetukset</translation>
+        <translation>Asetukset OSS Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="33"/>

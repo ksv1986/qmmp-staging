@@ -1740,3 +1740,6 @@ Version 2.0.1
   - fixed tab bar context menu
 * enabled QtMultimedia support under Qt 6.2 or higher
 * removed private API usage Qt 6.2 or higher
+* updated Finnish translation (Kimmo Kujansuu, Jiri Grönroos)
+* updated Galician translation (Delio Docampo Cordeiro)
+* updated Italian translation (Luigi Toscano)

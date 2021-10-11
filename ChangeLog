@@ -1731,7 +1731,7 @@ Version 2.0.0
 * disabled unsupported plugins: taskbar, qtmultimedia
 
 Version 2.0.1
-* fixed default settings in the ffmpeg pugin
+* fixed default settings in the ffmpeg plugin
 * fixed build warnings
 * fixed transition between http tracks
 * improved qsui plugin:

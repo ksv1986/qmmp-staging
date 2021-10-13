@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="28"/>
         <source>DirectSound Plugin</source>
-        <translation>DirectSound-liitännäinen</translation>
+        <translation>DirectSound Plugin</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="52"/>
         <source>About DirectSound Output Plugin</source>
-        <translation>Tietoja - DirectSound-ulostuloliitännäinen</translation>
+        <translation>Tietoja: DirectSound Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="53"/>
         <source>Qmmp DirectSound Output Plugin</source>
-        <translation>Qmmp:n DirectSound-ulostuloliitännäinen</translation>
+        <translation>Qmmp DirectSound Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputdirectsoundfactory.cpp" line="54"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

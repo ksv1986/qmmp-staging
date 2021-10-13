@@ -99,12 +99,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>Linear</source>
-        <translation>Liniowy</translation>
+        <translation>Liniowe</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
         <source>Cubic spline</source>
-        <translation>Cubic spline</translation>
+        <translation>Sklejana sześcienna</translation>
     </message>
 </context>
 <context>

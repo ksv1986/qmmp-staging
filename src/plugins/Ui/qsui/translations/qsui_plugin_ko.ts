@@ -464,7 +464,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
         <source>Application Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>응용프로그램 메뉴</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
@@ -852,7 +852,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="401"/>
         <source>Menu Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>메뉴 표시줄</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="458"/>

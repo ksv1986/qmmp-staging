@@ -6,32 +6,32 @@
     <message>
         <location filename="../halfactory.cpp" line="30"/>
         <source>HAL Plugin</source>
-        <translation>HAL-liitännäinen</translation>
+        <translation>HAL Plugin</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="50"/>
         <source>About HAL Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: HAL Plugin</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="51"/>
         <source>Qmmp HAL Plugin</source>
-        <translation>Qmmp:n HAL-liitännäinen</translation>
+        <translation>Qmmp HAL Plugin</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using HAL</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä laajennus havaitsee HAL:n avulla irrotettavat laitteet</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../halfactory.cpp" line="54"/>
         <source>Based on Solid (KDE hardware library)</source>
-        <translation type="unfinished"></translation>
+        <translation>Perustuu Solid (KDE hardware library)</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../halplugin.cpp" line="170"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää asema &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -52,12 +52,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="13"/>
         <source>HAL Plugin Settings</source>
-        <translation>HAL-liitännäisen asetukset</translation>
+        <translation>Asetukset HAL Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="28"/>
         <source>CD Audio Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio CD:n tunnistus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="37"/>

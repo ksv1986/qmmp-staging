@@ -6,17 +6,17 @@
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="28"/>
         <source>Sleep Mode Inhibition Plugin</source>
-        <translation>Qmmp:n lepotilan estävä liitännäinen</translation>
+        <translation>Sleep Mode Inhibition Plugin</translation>
     </message>
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="49"/>
         <source>About Sleep Mode Inhibit Plugin</source>
-        <translation>Tietoja - Qmmp:n lepotilan estävä liitännäinen</translation>
+        <translation>Tietoja: Sleep Mode Inhibit Plugin</translation>
     </message>
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="50"/>
         <source>Qmmp Sleep Mode Inhibit Plugin</source>
-        <translation>Qmmp:n lepotilan estävä liitännäinen</translation>
+        <translation>Qmmp Sleep Mode Inhibit Plugin</translation>
     </message>
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="51"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../sleepinhibitorfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

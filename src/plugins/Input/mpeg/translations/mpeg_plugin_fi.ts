@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="180"/>
         <source>MPEG Plugin</source>
-        <translation>MPEG-liitännäinen</translation>
+        <translation>MPEG Plugin</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="183"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="412"/>
         <source>About MPEG Audio Plugin</source>
-        <translation>Tietoja - MPEG-ääniliitännäinen</translation>
+        <translation>Tietoja: MPEG Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="413"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>MPEG 1.0/2.0/2.5 taso 1/2/3 audio dekooderi</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="414"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Koostettu:</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="423"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="427"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="428"/>
@@ -52,7 +52,7 @@
         <location filename="../mpegmetadatamodel.cpp" line="72"/>
         <location filename="../mpegmetadatamodel.cpp" line="75"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Moodi</translation>
     </message>
     <message>
         <location filename="../mpegmetadatamodel.cpp" line="78"/>
@@ -75,7 +75,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>MPEG Plugin Settings</source>
-        <translation>MPEG-liitännäisen asetukset</translation>
+        <translation>Asetukset MPEG Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
@@ -95,17 +95,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Enable CRC checking</source>
-        <translation type="unfinished"></translation>
+        <translation>CRC-tarkistus käyttöön</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="87"/>
         <source>Tag Priority</source>
-        <translation type="unfinished"></translation>
+        <translation>Prioriteetti </translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="99"/>
         <source>First:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensin:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="119"/>
@@ -138,37 +138,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="148"/>
         <source>Second:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seuraava:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="197"/>
         <source>Third:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolmas:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="253"/>
         <source>Merge selected tag types</source>
-        <translation type="unfinished"></translation>
+        <translation>Yhdistä valitut tunnistetyypit</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="272"/>
         <source>Encodings</source>
-        <translation type="unfinished"></translation>
+        <translation>Koodauksia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="333"/>
         <source>ID3v1 encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID3v1-koodaus:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="343"/>
         <source>Try to detect encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Yritä tunnistaa koodaus</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="294"/>
         <source>ID3v2 encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID3v2-koodaus:</translation>
     </message>
 </context>
 </TS>

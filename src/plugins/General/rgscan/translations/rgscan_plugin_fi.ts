@@ -6,12 +6,12 @@
     <message>
         <location filename="../rgscandialog.ui" line="14"/>
         <source>ReplayGain Scanner</source>
-        <translation type="unfinished"></translation>
+        <translation>ReplayGain Scanner</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="84"/>
         <source>Write track gain/peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoita raidan vahvistus/huippu</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="42"/>
@@ -26,42 +26,42 @@
     <message>
         <location filename="../rgscandialog.ui" line="52"/>
         <source>Track Gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Seuraa vahvistusta</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="57"/>
         <source>Album Gain</source>
-        <translation type="unfinished"></translation>
+        <translation>Albumin vahvistus</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="62"/>
         <source>Track Peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Seuraa huippua</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="67"/>
         <source>Album Peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Albumin huippu</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="77"/>
         <source>Skip already scanned files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohita jo tarkistetut tiedostot</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="113"/>
         <source>Calculate</source>
-        <translation type="unfinished"></translation>
+        <translation>Laske</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="120"/>
         <source>Write Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoita hakusanat</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="91"/>
         <source>Write album gain/peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoita albumin vahvistus/huippu</translation>
     </message>
     <message>
         <location filename="../rgscandialog.cpp" line="125"/>
@@ -83,32 +83,32 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="28"/>
         <source>ReplayGain Scanner Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>ReplayGain Scanner Plugin</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="49"/>
         <source>About ReplayGain Scanner Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: ReplayGain Scanner Plugin</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="50"/>
         <source>ReplayGain Scanner Plugin for Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp ReplayGain Scanner Plugin</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="51"/>
         <source>This plugin scans audio files and gives information for volume normalization</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä laajennus tarkistaa äänitiedostot ja antaa tietoja voimakkuuden normalisoimiseksi</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="53"/>
         <source>Based on source code by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Perustuu lähdekoodiin:</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="54"/>
@@ -131,12 +131,12 @@
     <message>
         <location filename="../rgscanhelper.cpp" line="32"/>
         <source>ReplayGain Scanner</source>
-        <translation type="unfinished"></translation>
+        <translation>ReplayGain Scanner</translation>
     </message>
     <message>
         <location filename="../rgscanhelper.cpp" line="33"/>
         <source>Meta+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+R</translation>
     </message>
 </context>
 </TS>

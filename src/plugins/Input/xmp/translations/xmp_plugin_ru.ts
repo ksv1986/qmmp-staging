@@ -157,7 +157,7 @@
     <message>
         <location filename="../xmpmetadatamodel.cpp" line="79"/>
         <source>Samples</source>
-        <translation>Сэмплы</translation>
+        <translation>Сэмплов</translation>
     </message>
     <message>
         <location filename="../xmpmetadatamodel.cpp" line="87"/>

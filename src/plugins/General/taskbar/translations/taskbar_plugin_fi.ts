@@ -6,17 +6,17 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="28"/>
         <source>Taskbar Plugin</source>
-        <translation>Tehtäväpalkkiliitännäinen</translation>
+        <translation>Taskbar Plugin</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="49"/>
         <source>About Taskbar Plugin</source>
-        <translation>Tietoja - Tehtäväpalkkiliitännäinen</translation>
+        <translation>Tietoja: Taskbar Plugin</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="50"/>
         <source>Qmmp Taskbar Plugin</source>
-        <translation>Qmmp:n tehtäväpalkkiliitännäinen</translation>
+        <translation>Qmmp Taskbar Plugin</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="51"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

@@ -11,7 +11,7 @@
     <message>
         <location filename="../decoderxmpfactory.cpp" line="52"/>
         <source>Module Files</source>
-        <translation>Ficheiros MOD</translation>
+        <translation>Ficheiros Module</translation>
     </message>
     <message>
         <location filename="../decoderxmpfactory.cpp" line="109"/>
@@ -79,17 +79,17 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>22050 Hz</source>
-        <translation>22050 Hz</translation>
+        <translation>22 050 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>44100 Hz</source>
-        <translation>44100 Hz</translation>
+        <translation>44 100 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="35"/>
         <source>48000 Hz</source>
-        <translation>48000 Hz</translation>
+        <translation>48 000 Hz</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>

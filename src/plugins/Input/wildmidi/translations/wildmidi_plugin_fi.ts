@@ -6,7 +6,7 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="49"/>
         <source>WildMidi Plugin</source>
-        <translation>WildMidi-liitännäinen</translation>
+        <translation>WildMidi Plugin</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="54"/>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="106"/>
         <source>About WildMidi Audio Plugin</source>
-        <translation>Tietoja - WildMidi-ääniliitännäinen</translation>
+        <translation>Tietoja: WildMidi Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>Qmmp WildMidi Audio Plugin</source>
-        <translation>Qmmp:n WildMidi-ääniliitännäinen</translation>
+        <translation>Qmmp WildMidi Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="108"/>
         <source>This plugin uses WildMidi library to play midi files</source>
-        <translation>Tämä liitännäinen käyttää WildMidi-kirjastoa midi-tiedostojen toistamiseksi</translation>
+        <translation>Tämä laajennus käyttää WildMidi-kirjastoa midi-tiedostojen toistamiseen</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="109"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -39,27 +39,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WildMidi Plugin Settings</source>
-        <translation>WildMidi-liitännäisen asetukset</translation>
+        <translation>Asetukset WildMidi Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Instrument configuration: </source>
-        <translation type="unfinished"></translation>
+        <translation>Instrumentin kokoonpano:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="43"/>
         <source>Sample rate:</source>
-        <translation>Näytteenottotaajuus:</translation>
+        <translation>Taajuus:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="50"/>
         <source>Enhanced resampling</source>
-        <translation type="unfinished"></translation>
+        <translation>Parannettu näytteenotto</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="57"/>
         <source>Reverberation</source>
-        <translation type="unfinished"></translation>
+        <translation>Jälkikaiku</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>

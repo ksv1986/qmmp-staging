@@ -19,22 +19,22 @@
     <message>
         <location filename="../covermanagerfactory.cpp" line="30"/>
         <source>Cover Manager Plugin</source>
-        <translation>Kansikuvien hallinta -liitännäinen</translation>
+        <translation>Cover Manager Plugin</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="50"/>
         <source>About Cover Manager Plugin</source>
-        <translation>Tietoja - Kansikuvien hallinta -liitännäinen</translation>
+        <translation>Tietoja: Cover Manager Plugin</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="51"/>
         <source>Qmmp Cover Manager Plugin</source>
-        <translation>Qmmp:n kansikuvien hallinta -liitännäinen</translation>
+        <translation>Qmmp Cover Manager Plugin</translation>
     </message>
     <message>
         <location filename="../covermanagerfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

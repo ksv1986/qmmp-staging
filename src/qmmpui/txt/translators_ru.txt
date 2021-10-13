@@ -68,6 +68,9 @@
 Казахский:
     Бауржан Муфтахидинов <baurthefirst@gmail.com>
 
+Корейский:
+   Jung Hee Lee <daemul72@gmail.com>
+
 Литовский:
     Algirdas Butkus <butkus.algirdas@gmail.com>
 

@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Track Change Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset Track Change Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
@@ -19,32 +19,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Command to run when Qmmp starts new track</source>
-        <translation>Suoritettava komento, kun Qmmp aloittaa uuden kappaleen</translation>
+        <translation>Komento, joka suoritetaan kun Qmmp aloittaa uuden kappaleen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
         <source>Command to run toward to end of a track</source>
-        <translation type="unfinished"></translation>
+        <translation>Komento, joka suoritetaan kappaleen lopussa</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="63"/>
         <source>Command to run when Qmmp reaches the end of the playlist</source>
-        <translation>Suoritettava komento, kun Qmmp tavoittaa soittolistan lopun</translation>
+        <translation>Komento, joka suoritetaan kun Qmmp tavoittaa soittolistan lopun</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="80"/>
         <source>Command to run when title changes (i.e. network streams title)</source>
-        <translation type="unfinished"></translation>
+        <translation>Komento, joka suoritetaan kun otsikko muuttuu (mm. suoratoistossa)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="97"/>
         <source>Command to run on application startup:</source>
-        <translation type="unfinished"></translation>
+        <translation>Komento, joka suoritetaan sovelluksen käynnistyksen yhteydessä:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="104"/>
         <source>Command to run on application exit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Komento, joka suoritetaan sovelluksen sulkeutuessa:</translation>
     </message>
 </context>
 <context>
@@ -52,27 +52,27 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="30"/>
         <source>Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Track Change Plugin</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="50"/>
         <source>About Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Track Change Plugin</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="51"/>
         <source>Qmmp Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Track Change Plugin</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="52"/>
         <source>This plugin executes external command when current track is changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä laajennus suorittaa komennon, kun nykyinen kappale vaihtuu</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

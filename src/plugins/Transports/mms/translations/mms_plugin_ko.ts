@@ -11,12 +11,12 @@
     <message>
         <location filename="../mmsinputfactory.cpp" line="52"/>
         <source>About MMS Transport Plugin</source>
-        <translation>MMS 전송 플러그인 정보</translation>
+        <translation>MMS 트랜스포트 플러그인 정보</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="53"/>
         <source>Qmmp MMS Transport Plugin</source>
-        <translation>Qmmp MMS 전송 플러그인</translation>
+        <translation>Qmmp MMS 트랜스포트 플러그인</translation>
     </message>
     <message>
         <location filename="../mmsinputfactory.cpp" line="54"/>

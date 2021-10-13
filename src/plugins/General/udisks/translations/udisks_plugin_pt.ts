@@ -44,27 +44,27 @@
     <message>
         <location filename="../udisksfactory.cpp" line="30"/>
         <source>UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Suplemento UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="50"/>
         <source>About UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca de suplemento UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="51"/>
         <source>Qmmp UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Suplemento Qmmp UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks</source>
-        <translation type="unfinished"></translation>
+        <translation>Este suplemento permite a deteção de discos amovíveis através do serviço UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Desenvolvido por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Desenvolvido por: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisksplugin.cpp" line="134"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">Adicionar CD %1</translation>
+        <translation>Adicionar CD %1</translation>
     </message>
     <message>
         <location filename="../udisksplugin.cpp" line="142"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">Adicionar volume %1</translation>
+        <translation>Adicionar volume %1</translation>
     </message>
 </context>
 </TS>

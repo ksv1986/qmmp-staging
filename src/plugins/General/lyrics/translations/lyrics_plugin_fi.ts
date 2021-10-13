@@ -19,7 +19,7 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="31"/>
         <source>Lyrics Plugin</source>
-        <translation>Sanoitusliitännäinen</translation>
+        <translation>Lyrics Plugin</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="36"/>
@@ -29,27 +29,27 @@
     <message>
         <location filename="../lyricsfactory.cpp" line="36"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="68"/>
         <source>About Lyrics Plugin</source>
-        <translation>Tietoja - Sanoitusliitännäinen</translation>
+        <translation>Tietoja: Lyrics Plugin</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="69"/>
         <source>Qmmp Lyrics Plugin</source>
-        <translation>Qmmp-sanoitusliitännäinen</translation>
+        <translation>Qmmp Lyrics Plugin</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="70"/>
         <source>This plugin retrieves lyrics from LyricWiki</source>
-        <translation>Tämä liitännäinen noutaa sanoituksia LyricWikistä</translation>
+        <translation>Tämä laajennus noutaa sanoituksia LyricWiki:stä</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="71"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../lyricsfactory.cpp" line="72"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../lyricswidget.ui" line="14"/>
         <source>Lyrics Plugin</source>
-        <translation>Sanoitusliitännäinen</translation>
+        <translation>Lyrics Plugin</translation>
     </message>
     <message>
         <location filename="../lyricswidget.ui" line="31"/>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Lyrics Plugin Settings</source>
-        <translation>Sanoitukset liitännäisen asetukset</translation>
+        <translation>Asetukset Lyrics Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>

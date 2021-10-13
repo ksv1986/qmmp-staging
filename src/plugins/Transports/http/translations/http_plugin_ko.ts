@@ -11,12 +11,12 @@
     <message>
         <location filename="../httpinputfactory.cpp" line="53"/>
         <source>About HTTP Transport Plugin</source>
-        <translation>HTTP 전송 플러그인 정보</translation>
+        <translation>HTTP 트랜스포트 플러그인 정보</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="54"/>
         <source>Qmmp HTTP Transport Plugin</source>
-        <translation>Qmmp HTTP 전송 플러그인</translation>
+        <translation>Qmmp HTTP 트랜스포트 플러그인</translation>
     </message>
     <message>
         <location filename="../httpinputfactory.cpp" line="55"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../playlistoption.cpp" line="33"/>
         <source>Show playlist manipulation commands</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä soittolistan käsittelykomennot</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="34"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../playlistoption.cpp" line="36"/>
         <source>Play track &lt;track&gt; in playlist &lt;id&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Toista kappale &lt;track&gt; soittolistalta &lt;id&gt;</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="37"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../playlistoption.cpp" line="40"/>
         <source>Toggle playlist repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaihda soittolistan uusinta</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="41"/>
         <source>Toggle playlist shuffle</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaihda soittolistan satunnaistoisto</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="42"/>
@@ -58,17 +58,17 @@
         <location filename="../playlistoption.cpp" line="132"/>
         <location filename="../playlistoption.cpp" line="171"/>
         <source>Invalid playlist ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Virheellinen soittolistan tunnus</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="126"/>
         <source>Invalid number of arguments</source>
-        <translation type="unfinished"></translation>
+        <translation>Virheellinen argumenttien määrä</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="136"/>
         <source>Invalid track ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Virheellinen kappaleen tunnus</translation>
     </message>
 </context>
 </TS>

@@ -44,27 +44,27 @@
     <message>
         <location filename="../udisksfactory.cpp" line="30"/>
         <source>UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>UDisks 플러그인</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="50"/>
         <source>About UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>UDisks 플러그인 정보</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="51"/>
         <source>Qmmp UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp UDisks 플러그인</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks</source>
-        <translation type="unfinished"></translation>
+        <translation>이 플러그인은 UDisk를 사용하여 이동식 장치 탐지를 제공합니다</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">작성자: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>작성자: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisksplugin.cpp" line="134"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">CD &quot;%1&quot; 추가</translation>
+        <translation>CD &quot;%1&quot; 추가</translation>
     </message>
     <message>
         <location filename="../udisksplugin.cpp" line="142"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">볼륨 &quot;%1&quot; 추가</translation>
+        <translation>볼륨 &quot;%1&quot; 추가</translation>
     </message>
 </context>
 </TS>

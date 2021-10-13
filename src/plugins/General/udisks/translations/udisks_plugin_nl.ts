@@ -44,27 +44,27 @@
     <message>
         <location filename="../udisksfactory.cpp" line="30"/>
         <source>UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>UDisks-plug-in</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="50"/>
         <source>About UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Over de UDisks-plug-in</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="51"/>
         <source>Qmmp UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>UDisks-plug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks</source>
-        <translation type="unfinished"></translation>
+        <translation>Deze plug-in faciliteert detectie van verwisselbare apparaten via UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisksplugin.cpp" line="134"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">CD &quot;%1&quot; toevoegen</translation>
+        <translation>CD &quot;%1&quot; toevoegen</translation>
     </message>
     <message>
         <location filename="../udisksplugin.cpp" line="142"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">Apparaat &quot;%1&quot; toevoegen</translation>
+        <translation>Apparaat &quot;%1&quot; toevoegen</translation>
     </message>
 </context>
 </TS>

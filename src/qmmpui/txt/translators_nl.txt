@@ -68,6 +68,9 @@ Japans:
 Kazachs:
     Baurzhan Muftakhidinov <baurthefirst@gmail.com>
 
+Koreaans:
+   Jung Hee Lee <daemul72@gmail.com>
+
 Litouws:
     Algirdas Butkus <butkus.algirdas@gmail.com>
 

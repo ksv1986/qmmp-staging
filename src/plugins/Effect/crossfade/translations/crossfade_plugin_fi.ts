@@ -6,22 +6,22 @@
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="30"/>
         <source>Crossfade Plugin</source>
-        <translation>Ristiinhäivytysliitännäinen</translation>
+        <translation>Crossfade Plugin</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="51"/>
         <source>About Crossfade Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Crossfade Plugin</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="52"/>
         <source>Qmmp Crossfade Plugin</source>
-        <translation>Qmmp-ristiinhäivytysliitännäinen</translation>
+        <translation>Qmmp Crossfade Plugin</translation>
     </message>
     <message>
         <location filename="../effectcrossfadefactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Crossfade Plugin Settings</source>
-        <translation>Ristiinhäivytysliitännäisen asetukset</translation>
+        <translation>Ristiinhäivytys laajennuksen asetukset</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Overlap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Päällekkäisyys:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>

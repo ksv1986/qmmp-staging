@@ -44,27 +44,27 @@
     <message>
         <location filename="../udisksfactory.cpp" line="30"/>
         <source>UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="50"/>
         <source>About UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o engadido UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="51"/>
         <source>Qmmp UDisks Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Engadido UDisks de Qmmp</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="52"/>
         <source>This plugin provides removable devices detection using UDisks</source>
-        <translation type="unfinished"></translation>
+        <translation>Este engadido provén detección de dispositivos extraíbles usando UDisks</translation>
     </message>
     <message>
         <location filename="../udisksfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished">Escrito por: LLya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Escrito por: LLya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisksplugin.cpp" line="134"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">Engadir CD &quot;%1&quot;</translation>
+        <translation>Engadir CD &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../udisksplugin.cpp" line="142"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">Engadir volume &quot;%1&quot;</translation>
+        <translation>Engadir volume &quot;%1&quot;</translation>
     </message>
 </context>
 </TS>

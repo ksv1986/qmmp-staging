@@ -56,32 +56,32 @@
     <message>
         <location filename="../aboutdialog.cpp" line="84"/>
         <source>Transports:</source>
-        <translation type="unfinished"></translation>
+        <translation>Transporty:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="93"/>
         <source>Decoders:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekodery:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="104"/>
         <source>Engines:</source>
-        <translation type="unfinished"></translation>
+        <translation>Silniki:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="115"/>
         <source>Effects:</source>
-        <translation type="unfinished"></translation>
+        <translation>Efekty:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="153"/>
         <source>File dialogs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Okna dialogowe plików:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="165"/>
         <source>User interfaces:</source>
-        <translation type="unfinished"></translation>
+        <translation>Interfejsy użytkownika:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
@@ -726,7 +726,7 @@
     <message>
         <location filename="../configdialog.cpp" line="357"/>
         <source>Korean</source>
-        <translation type="unfinished"></translation>
+        <translation>Koreański</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="358"/>

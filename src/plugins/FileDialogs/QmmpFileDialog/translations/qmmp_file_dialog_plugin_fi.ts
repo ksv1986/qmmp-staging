@@ -63,19 +63,21 @@
         <location filename="../qmmpfiledialog.cpp" line="69"/>
         <location filename="../qmmpfiledialog.cpp" line="79"/>
         <source>Qmmp File Dialog</source>
-        <translation>Qmmp-tiedostoikkuna</translation>
+        <translation>Qmmp File Dialog</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="78"/>
         <source>About Qmmp File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Qmmp File Dialog</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="80"/>
         <source>Written by:
 Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
 Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoittaneet:
+Vladimir Kuznetsov &lt;vovanec@gmail.com&gt;
+Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../qmmpfiledialog.cpp" line="83"/>

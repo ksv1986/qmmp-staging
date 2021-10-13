@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputoss4factory.cpp" line="36"/>
         <source>OSS4 Plugin</source>
-        <translation>OSS4-liitännäinen</translation>
+        <translation>OSS4 Plugin</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="56"/>
         <source>About OSS4 Output Plugin</source>
-        <translation>Tietoja - OSS4-ulostuloliitännäinen</translation>
+        <translation>Tietoja: OSS4 Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="57"/>
         <source>Qmmp OSS4 Output Plugin</source>
-        <translation>Qmmp:n OSS4-ulostuloliitännäinen</translation>
+        <translation>Qmmp OSS4 Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputoss4factory.cpp" line="58"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>OSS4 Plugin Settings</source>
-        <translation>OSS4-liitännäisen asetukset</translation>
+        <translation>Asetukset OSS4 Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>

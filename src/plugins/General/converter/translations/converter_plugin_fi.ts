@@ -136,27 +136,27 @@
     <message>
         <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
-        <translation>Muuntimen liitännäinen</translation>
+        <translation>Converter Plugin</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
-        <translation>Tietoja muuntimen liitännäisestä</translation>
+        <translation>Tietoja: Converter Plugin</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
-        <translation>Qmmp muuntimen liitännäinen</translation>
+        <translation>Qmmp Converter Plugin</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
-        <translation>Tämä liitännäinen muuntaa tuetut äänitiedostot muihin tiedostomuotoihin käyttäen komentorivin koodereita</translation>
+        <translation>Tämä laajennus muuntaa tuetut äänitiedostot muihin tiedostomuotoihin käyttäen komentorivin koodereita</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -192,7 +192,7 @@
     <message>
         <location filename="../preseteditor.ui" line="45"/>
         <source>Extension:</source>
-        <translation>Liitännäinen:</translation>
+        <translation>Laajennus:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="58"/>
@@ -217,12 +217,12 @@
     <message>
         <location filename="../preseteditor.cpp" line="37"/>
         <source>%1 (Read Only)</source>
-        <translation>%1 (Vain luku)</translation>
+        <translation>%1 (vain luku)</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="70"/>
         <source>Output file</source>
-        <translation>Tallennuksen tiedosto</translation>
+        <translation>Tallennus tiedosto</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="71"/>

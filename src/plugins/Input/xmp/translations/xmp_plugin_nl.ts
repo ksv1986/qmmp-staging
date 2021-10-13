@@ -21,12 +21,12 @@
     <message>
         <location filename="../decoderxmpfactory.cpp" line="110"/>
         <source>Qmmp XMP Audio Plugin</source>
-        <translation>Qmmp XMP-audioplug-in</translation>
+        <translation>XMP-audioplug-in voor Qmmp</translation>
     </message>
     <message>
         <location filename="../decoderxmpfactory.cpp" line="111"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Auteur: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Maker: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
     <message>
         <location filename="../decoderxmpfactory.cpp" line="112"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="99"/>
         <source>Sample rate:</source>
-        <translation>Samplesnelheid:</translation>
+        <translation>Samplefrequentie:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
@@ -157,7 +157,7 @@
     <message>
         <location filename="../xmpmetadatamodel.cpp" line="79"/>
         <source>Samples</source>
-        <translation>Samples</translation>
+        <translation>Voorbeelden</translation>
     </message>
     <message>
         <location filename="../xmpmetadatamodel.cpp" line="87"/>

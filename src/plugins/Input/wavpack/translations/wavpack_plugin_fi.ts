@@ -6,7 +6,7 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="39"/>
         <source>WavPack Plugin</source>
-        <translation>WavPack-liitännäinen</translation>
+        <translation>WavPack Plugin</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="41"/>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="183"/>
         <source>About WavPack Audio Plugin</source>
-        <translation>Tietoja - WavPack-ääniliitännäinen</translation>
+        <translation>Tietoja: WavPack Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="184"/>
         <source>Qmmp WavPack Audio Plugin</source>
-        <translation>Qmmp:n WavPack-ääniliitännäinen</translation>
+        <translation>Qmmp WavPack Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="185"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../decoderwavpackfactory.cpp" line="187"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>

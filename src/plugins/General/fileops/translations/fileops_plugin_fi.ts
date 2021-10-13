@@ -62,9 +62,9 @@
     <message numerus="yes">
         <location filename="../fileops.cpp" line="124"/>
         <source>Are you sure you want to remove %n file(s) from disk?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Haluatko varmasti poistaa kiintolevyltä %n tiedostoa?</numerusform>
+            <numerusform>Haluatko varmasti poistaa kiintolevyltä (%n) tiedostoa?</numerusform>
         </translation>
     </message>
 </context>
@@ -73,22 +73,22 @@
     <message>
         <location filename="../fileopsfactory.cpp" line="30"/>
         <source>File Operations Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>File Operations Plugin</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="50"/>
         <source>About File Operations Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: File Operations Plugin</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="51"/>
         <source>Qmmp File Operations Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp File Operations Plugin</translation>
     </message>
     <message>
         <location filename="../fileopsfactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../hotkeydialog.ui" line="29"/>
         <source>Press the key combination you want to assign</source>
-        <translation type="unfinished"></translation>
+        <translation>Paina näppäinyhdistelmä, jonka haluat käyttöön</translation>
     </message>
     <message>
         <location filename="../hotkeydialog.ui" line="43"/>
@@ -114,22 +114,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>File Operations Settings</source>
-        <translation>Tiedostotoimintojen asetukset</translation>
+        <translation>Asetukset File Operations</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="51"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytössä</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="56"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Toiminta</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>
         <source>Menu text</source>
-        <translation type="unfinished"></translation>
+        <translation>Valikon teksti</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
@@ -162,7 +162,7 @@
         <location filename="../settingsdialog.ui" line="144"/>
         <location filename="../settingsdialog.cpp" line="152"/>
         <source>File name pattern:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostonimen malli:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="216"/>
@@ -187,12 +187,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="181"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>Komento:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="220"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Suorita</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="232"/>

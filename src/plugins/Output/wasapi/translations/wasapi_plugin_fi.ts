@@ -6,22 +6,22 @@
     <message>
         <location filename="../outputwasapifactory.cpp" line="29"/>
         <source>WASAPI Plugin</source>
-        <translation>WASAPI-liitännäinen</translation>
+        <translation>WASAPI Plugin</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="54"/>
         <source>About WASAPI Output Plugin</source>
-        <translation>Tietoja - WASAPI-ulostuloliitännäinen</translation>
+        <translation>Tietoja: WASAPI Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="55"/>
         <source>Qmmp WASAPI Output Plugin</source>
-        <translation>Qmmp:n WASAPI-ulostuloliitännäinen</translation>
+        <translation>Qmmp WASAPI Output Plugin</translation>
     </message>
     <message>
         <location filename="../outputwasapifactory.cpp" line="56"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WASAPI Plugin Settings</source>
-        <translation>WASAPI-liitännäisen asetukset</translation>
+        <translation>Asetukset WASAPI Plugin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="61"/>

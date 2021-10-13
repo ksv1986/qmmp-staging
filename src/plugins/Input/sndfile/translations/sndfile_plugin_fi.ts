@@ -6,7 +6,7 @@
     <message>
         <location filename="../decodersndfilefactory.cpp" line="118"/>
         <source>Sndfile Plugin</source>
-        <translation>Sndfile-liitännäinen</translation>
+        <translation>Sndfile Plugin</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="120"/>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../decodersndfilefactory.cpp" line="223"/>
         <source>About Sndfile Audio Plugin</source>
-        <translation>Tietoja - Sndfile-ääniliitännäinen</translation>
+        <translation>Tietoja: Sndfile Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="224"/>
         <source>Qmmp Sndfile Audio Plugin</source>
-        <translation>Qmmp:n Sndfile-ääniliitännäinen</translation>
+        <translation>Qmmp Sndfile Audio Plugin</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="225"/>
         <source>Compiled against</source>
-        <translation>Koostettu vasten</translation>
+        <translation>Koostettu</translation>
     </message>
     <message>
         <location filename="../decodersndfilefactory.cpp" line="226"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

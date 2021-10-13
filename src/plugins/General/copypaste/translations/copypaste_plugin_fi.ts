@@ -39,27 +39,27 @@
     <message>
         <location filename="../copypastefactory.cpp" line="29"/>
         <source>Copy/Paste Plugin</source>
-        <translation>Kopioi/liitä-liitännäinen</translation>
+        <translation>Copy/Paste Plugin</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="49"/>
         <source>About Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja: Copy/Paste Plugin</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="50"/>
         <source>Qmmp Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Copy/Paste Plugin</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="51"/>
         <source>This plugin allows one to copy selected tracks from one playlist to another</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämän laajennuksen avulla voit kopioida valitut raidat soittolistasta toiseen</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="52"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation>Toteuttanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
+        <translation>Kirjoittanut: Ilya Kotov &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 </TS>

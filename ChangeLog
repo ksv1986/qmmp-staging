@@ -1743,3 +1743,6 @@ Version 2.0.1
 * updated Finnish translation (Kimmo Kujansuu, Jiri Grönroos)
 * updated Galician translation (Delio Docampo Cordeiro)
 * updated Italian translation (Luigi Toscano)
+
+Version 2.0.2
+* fixed out-of-source build

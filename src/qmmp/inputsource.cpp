@@ -161,7 +161,7 @@ QList<InputSourceFactory *> InputSource::enabledFactories()
     {
         if(m_disabledNames.contains(item->shortName()))
             continue;
-        if(item->decoderFactory())
+        if(item->inputSourceFactory())
             list.append(item->inputSourceFactory());
     }
     return list;

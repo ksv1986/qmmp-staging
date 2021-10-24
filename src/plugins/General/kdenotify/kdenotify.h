@@ -47,7 +47,6 @@ private:
     int m_notifyDuration;
     unsigned int m_currentNotifyId;
     bool m_showCovers;
-    bool m_useFreedesktopSpec;
     bool m_updateNotify;
     QString m_template;
     QString m_imagesDir;

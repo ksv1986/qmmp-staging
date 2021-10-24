@@ -36,24 +36,18 @@
 
 #include "kdenotify.h"
 
-KdeNotify::KdeNotify(QObject *parent) : QObject(parent),m_useFreedesktopSpec(false)
+KdeNotify::KdeNotify(QObject *parent) : QObject(parent)
 {
-    m_notifier = new QDBusInterface("org.kde.VisualNotifications",
-                                      "/VisualNotifications", "org.kde.VisualNotifications",
-                                      QDBusConnection::sessionBus(), this);
-    if(m_notifier->lastError().type() != QDBusError::NoError)
-    {
-        delete(m_notifier);
+
     m_notifier = new QDBusInterface("org.freedesktop.Notifications",
                                   "/org/freedesktop/Notifications","org.freedesktop.Notifications",
                                   QDBusConnection::sessionBus(), this);
-        if(m_notifier->lastError().type() != QDBusError::NoError)
-        {
-            qWarning() << "KdeNotify: Unable to create interface.";
-            return;
-        }
-        m_useFreedesktopSpec = true;
+    if(m_notifier->lastError().type() != QDBusError::NoError)
+    {
+        qWarning() << "KdeNotify: Unable to create interface.";
+        return;
     }
+
     qWarning() << "KdeNotify: DBus interfece created successfully.";
     QDir dir(Qmmp::configDir());
     if(!dir.exists("kdenotifycache"))
@@ -116,8 +110,6 @@ QList<QVariant> KdeNotify::prepareNotification()
     QList<QVariant> args;
     args.append("Qmmp"); //app-name
     args.append(m_currentNotifyId); //replaces-id;
-    if(!m_useFreedesktopSpec)
-        args.append(""); //event-id
     args.append(m_imagesDir + "/app-icon.png");  //app-icon(path to icon on disk)
     args.append(tr("Qmmp now playing:")); //summary (notification title)
 
@@ -137,17 +129,7 @@ QList<QVariant> KdeNotify::prepareNotification()
     if(coverPath.isEmpty())
         coverPath = m_imagesDir + "/empty_cover.png";
 
-    if(m_useFreedesktopSpec)
-        args.append(body); //body
-    else
-    {
-        QString nBody;
-        nBody.append("<table padding=\"3px\"><tr><td width=\"80px\" height=\"80px\" padding=\"3px\">");
-        nBody.append("<img height=\"80\" width=\"80\" src=\"%1\"></td><td width=\"10\"></td><td>%2</td></tr></table>");
-        nBody = nBody.arg(coverPath,body);
-        args.append(nBody);
-    }
-
+    args.append(body); //body
     args.append(QStringList()); //actions
     QVariantMap hints;
     hints.insert("image_path",coverPath);

@@ -47,12 +47,11 @@ private slots:
     void on_fromButton_clicked();
     void on_toButton_clicked();
     void on_historyTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int);
+    void on_historyTreeWidget_customContextMenuRequested(const QPoint &pos);
     void on_topSongsTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int);
     void onSortIndicatorChanged(int index, Qt::SortOrder order);
     void playTrack(PlayListTrack *item);
     void disconnectPl();
-
-
 
 private:
     void loadHistory();
@@ -61,6 +60,7 @@ private:
     void loadTopArtists();
     void loadTopGenres();
     void readSettings();
+    void removeTrack(QTreeWidgetItem *item);
     void closeEvent(QCloseEvent *) override;
 
     Ui::HistoryWindow *m_ui;

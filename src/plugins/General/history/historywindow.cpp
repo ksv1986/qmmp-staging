@@ -26,6 +26,7 @@
 #include <QProgressBar>
 #include <QTreeWidgetItem>
 #include <QFile>
+#include <QMenu>
 #include <QtDebug>
 #include <qmmp/qmmp.h>
 #include <qmmpui/mediaplayer.h>
@@ -36,6 +37,7 @@
 #include "ui_historywindow.h"
 
 #define PathRole (Qt::UserRole + 4)
+#define IdRole (Qt::UserRole + 5)
 
 HistoryWindow::HistoryWindow(QSqlDatabase db, QWidget *parent) :
     QWidget(parent),
@@ -60,6 +62,7 @@ HistoryWindow::HistoryWindow(QSqlDatabase db, QWidget *parent) :
     m_ui->historyTreeWidget->header()->setSortIndicator(0, Qt::AscendingOrder);
     m_ui->historyTreeWidget->header()->setSortIndicatorShown(true);
     m_ui->historyTreeWidget->header()->setSectionsClickable(true);
+    m_ui->historyTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     readSettings();
     connect(m_ui->historyTreeWidget->header(), SIGNAL(sortIndicatorChanged(int, Qt::SortOrder)),
             SLOT(onSortIndicatorChanged(int, Qt::SortOrder)));
@@ -84,12 +87,12 @@ void HistoryWindow::loadHistory()
 
     if(m_ui->historyTreeWidget->header()->sortIndicatorOrder() == Qt::DescendingOrder)
     {
-        query.prepare("SELECT Timestamp,Title,Artist,AlbumArtist,Album,Comment,Genre,Composer,Track,Year,Duration,URL "
+        query.prepare("SELECT Timestamp,Title,Artist,AlbumArtist,Album,Comment,Genre,Composer,Track,Year,Duration,URL,ID "
                       "FROM track_history WHERE Timestamp BETWEEN :from and :to ORDER BY id DESC");
     }
     else
     {
-        query.prepare("SELECT Timestamp,Title,Artist,AlbumArtist,Album,Comment,Genre,Composer,Track,Year,Duration,URL "
+        query.prepare("SELECT Timestamp,Title,Artist,AlbumArtist,Album,Comment,Genre,Composer,Track,Year,Duration,URL,ID "
                       "FROM track_history WHERE Timestamp BETWEEN :from and :to");
     }
     query.bindValue(":from", m_ui->fromDateEdit->dateTime().toUTC().toString("yyyy-MM-dd hh:mm:ss"));
@@ -140,6 +143,7 @@ void HistoryWindow::loadHistory()
         item->setText(0, timeStr);
         item->setText(1, m_formatter.format(info));
         item->setData(1, PathRole, info.path());
+        item->setData(1, IdRole, query.value(12).toLongLong());
         topLevelItem->addChild(item);
     }
 
@@ -360,6 +364,21 @@ void HistoryWindow::readSettings()
     settings.endGroup();
 }
 
+void HistoryWindow::removeTrack(QTreeWidgetItem *item)
+{
+    if(!m_db.isOpen())
+        return;
+
+    qint64 id = item->data(1, IdRole).toLongLong();
+
+    QSqlQuery query(m_db);
+
+    query.prepare("DELETE FROM track_history WHERE ID=:id");
+    query.bindValue(":id", id);
+    if(query.exec())
+        delete item;
+}
+
 void HistoryWindow::closeEvent(QCloseEvent *)
 {
     QSettings settings(Qmmp::configFile(), QSettings::IniFormat);
@@ -424,6 +443,20 @@ void HistoryWindow::on_historyTreeWidget_itemDoubleClicked(QTreeWidgetItem *item
 {
     if(item && item->parent())
         on_topSongsTreeWidget_itemDoubleClicked(item, 0);
+}
+
+void HistoryWindow::on_historyTreeWidget_customContextMenuRequested(const QPoint &pos)
+{
+    QTreeWidgetItem *item = m_ui->historyTreeWidget->itemAt(pos);
+    if(item && item->parent())
+    {
+        QString path = item->data(1, PathRole).toString();
+        QMenu menu(this);
+        menu.addAction(QIcon::fromTheme("list-add"),tr("Add to Playlist"), [=] { PlayListManager::instance()->add(path); } );
+        menu.addSeparator();
+        menu.addAction(QIcon::fromTheme("edit-delete"), tr("Remove from History"), [=] { removeTrack(item); } );
+        menu.exec(m_ui->historyTreeWidget->viewport()->mapToGlobal(pos));
+    }
 }
 
 void HistoryWindow::on_topSongsTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int)

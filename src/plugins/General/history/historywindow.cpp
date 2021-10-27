@@ -31,6 +31,7 @@
 #include <qmmp/qmmp.h>
 #include <qmmpui/mediaplayer.h>
 #include <qmmpui/playlistmanager.h>
+#include <qmmpui/detailsdialog.h>
 #include "historywindow.h"
 #include "dateinputdialog.h"
 #include "progressbaritemdelegate.h"
@@ -242,7 +243,7 @@ void HistoryWindow::loadTopSongs()
 
     int maxCount = 0;
 
-    while (query.next())
+    while(query.next())
     {
         TrackInfo info;
         info.setValue(Qmmp::TITLE,  query.value(2).toString());
@@ -377,6 +378,47 @@ void HistoryWindow::removeTrack(QTreeWidgetItem *item)
     query.bindValue(":id", id);
     if(query.exec())
         delete item;
+    else
+        qWarning("HistoryWindow: query error: %s", qPrintable(query.lastError().text()));
+}
+
+void HistoryWindow::showInformation(QTreeWidgetItem *item)
+{
+    if(!m_db.isOpen())
+        return;
+
+    qint64 id = item->data(1, IdRole).toLongLong();
+
+    QSqlQuery query(m_db);
+
+    query.prepare("SELECT Timestamp,Title,Artist,AlbumArtist,Album,Comment,Genre,Composer,Track,Year,Duration,URL,ID "
+                  "FROM track_history WHERE ID=:id");
+    query.bindValue(":id", id);
+
+    if(!query.exec())
+    {
+        qWarning("HistoryWindow: query error: %s", qPrintable(query.lastError().text()));
+        return;
+    }
+
+    if(query.next())
+    {
+        PlayListTrack track;
+        track.setValue(Qmmp::TITLE,  query.value(1).toString());
+        track.setValue(Qmmp::ARTIST,  query.value(2).toString());
+        track.setValue(Qmmp::ALBUMARTIST,  query.value(3).toString());
+        track.setValue(Qmmp::ALBUM,  query.value(4).toString());
+        track.setValue(Qmmp::COMMENT,  query.value(5).toString());
+        track.setValue(Qmmp::GENRE,  query.value(6).toString());
+        track.setValue(Qmmp::COMPOSER,  query.value(7).toString());
+        track.setValue(Qmmp::TRACK,  query.value(8).toString());
+        track.setValue(Qmmp::YEAR,  query.value(9).toString());
+        track.setDuration(query.value(10).toInt());
+        track.setPath(query.value(11).toString());
+
+        DetailsDialog d(&track, this);
+        d.exec();
+    }
 }
 
 void HistoryWindow::closeEvent(QCloseEvent *)
@@ -453,6 +495,7 @@ void HistoryWindow::on_historyTreeWidget_customContextMenuRequested(const QPoint
         QString path = item->data(1, PathRole).toString();
         QMenu menu(this);
         menu.addAction(QIcon::fromTheme("list-add"),tr("Add to Playlist"), [=] { PlayListManager::instance()->add(path); } );
+        menu.addAction(QIcon::fromTheme("dialog-information"), tr("&View Track Details"), [=] { showInformation(item); });
         menu.addSeparator();
         menu.addAction(QIcon::fromTheme("edit-delete"), tr("Remove from History"), [=] { removeTrack(item); } );
         menu.exec(m_ui->historyTreeWidget->viewport()->mapToGlobal(pos));

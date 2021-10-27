@@ -51,6 +51,9 @@ DetailsDialog::DetailsDialog(const QList<PlayListTrack *> &tracks, QWidget *pare
         t->beginUsage();
 }
 
+DetailsDialog::DetailsDialog(PlayListTrack *track, QWidget *parent) : DetailsDialog(QList<PlayListTrack *>{ track }, parent)
+{}
+
 DetailsDialog::~DetailsDialog()
 {
     for(PlayListTrack *t : qAsConst(m_tracks))

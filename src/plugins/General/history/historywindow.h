@@ -61,6 +61,7 @@ private:
     void loadTopGenres();
     void readSettings();
     void removeTrack(QTreeWidgetItem *item);
+    void showInformation(QTreeWidgetItem *item);
     void closeEvent(QCloseEvent *) override;
 
     Ui::HistoryWindow *m_ui;

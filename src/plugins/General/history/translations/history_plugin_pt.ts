@@ -156,32 +156,37 @@
         <translation>Género</translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="127"/>
+        <location filename="../historywindow.cpp" line="128"/>
         <source>dd MMMM yyyy</source>
         <translation>yyyy-MM-dd</translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="128"/>
+        <location filename="../historywindow.cpp" line="129"/>
         <source>hh:mm:ss</source>
         <translation>hh:mm:ss</translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="195"/>
+        <location filename="../historywindow.cpp" line="196"/>
         <source>MM-yyyy</source>
         <translation>MM-yyyy</translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="196"/>
+        <location filename="../historywindow.cpp" line="197"/>
         <source>dd MMMM</source>
         <translation>dd-MMM-yyyy</translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="455"/>
+        <location filename="../historywindow.cpp" line="497"/>
         <source>Add to Playlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../historywindow.cpp" line="457"/>
+        <location filename="../historywindow.cpp" line="498"/>
+        <source>&amp;View Track Details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../historywindow.cpp" line="500"/>
         <source>Remove from History</source>
         <translation type="unfinished"></translation>
     </message>

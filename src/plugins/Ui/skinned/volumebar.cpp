@@ -113,9 +113,9 @@ void VolumeBar::draw(bool pressed)
     m_pixmap = m_skin->getVolumeBar(27*(m_value-m_min)/(m_max-m_min));
     QPainter paint(&m_pixmap);
     if(pressed)
-        paint.drawPixmap(p,1,m_skin->getButton(Skin::BT_VOL_P));
+        paint.drawPixmap(p, 1 * m_skin->ratio(), m_skin->getButton(Skin::BT_VOL_P));
     else
-        paint.drawPixmap(p,1,m_skin->getButton(Skin::BT_VOL_N));
+        paint.drawPixmap(p, 1 * m_skin->ratio(), m_skin->getButton(Skin::BT_VOL_N));
     setPixmap(m_pixmap);
     m_pos = p;
 }

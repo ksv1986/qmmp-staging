@@ -15,8 +15,6 @@ do
          plug_name=`echo $tr_dir | cut -d '/' -f 3`
      fi
 
-     echo "Updating ${plug_name}"
-
      case $plug_name in
         IncDecVolumeOption)
             plug_name="incdecvolume"
@@ -46,6 +44,8 @@ do
             plug_name="qmmp"
         ;;
      esac
+     
+     echo "Updating ${plug_name}"
 
      ts_files=''
      qm_files=''

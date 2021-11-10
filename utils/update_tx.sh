@@ -16,8 +16,6 @@ do
          plug_name=`echo $tr_dir | cut -d '/' -f 3`
      fi
 
-     echo "Updating ${plug_name}"
-
      case $plug_name in
         IncDecVolumeOption)
             plug_name="incdecvolume"
@@ -47,6 +45,8 @@ do
             plug_name="qmmp"
         ;;
      esac
+     
+     echo "Updating ${plug_name}"
 
      file_filter=`echo ${tr_dir} | sed 's/..\///'`
      echo "[${PROJECT_NAME}.${plug_name}]" >> ${TX_CONFIG}

@@ -4,7 +4,7 @@
 <context>
     <name>KdeNotify</name>
     <message>
-        <location filename="../kdenotify.cpp" line="122"/>
+        <location filename="../kdenotify.cpp" line="128"/>
         <source>Qmmp now playing:</source>
         <translation>Играет:</translation>
     </message>
@@ -45,32 +45,37 @@
         <translation>Задержка уведомления:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="52"/>
+        <location filename="../settingsdialog.ui" line="72"/>
         <source>s</source>
         <translation>с</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="78"/>
+        <location filename="../settingsdialog.ui" line="52"/>
         <source>Update visible notification instead create new</source>
         <translation>Обновлять существующее уведомление</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="88"/>
+        <location filename="../settingsdialog.ui" line="85"/>
+        <source>Volume change notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="95"/>
         <source>Appearance</source>
         <translation>Внешний вид</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="94"/>
+        <location filename="../settingsdialog.ui" line="101"/>
         <source>Show covers</source>
         <translation>Показывать обложки</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="103"/>
+        <location filename="../settingsdialog.ui" line="110"/>
         <source>Edit template</source>
         <translation>Редактировать шаблон</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="75"/>
+        <location filename="../settingsdialog.cpp" line="77"/>
         <source>Notification Template</source>
         <translation>Шаблон уведомления</translation>
     </message>

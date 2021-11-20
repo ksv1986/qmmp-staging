@@ -4,7 +4,7 @@
 <context>
     <name>KdeNotify</name>
     <message>
-        <location filename="../kdenotify.cpp" line="122"/>
+        <location filename="../kdenotify.cpp" line="128"/>
         <source>Qmmp now playing:</source>
         <translation>Qmmp 正在播放：</translation>
     </message>
@@ -45,32 +45,37 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="52"/>
+        <location filename="../settingsdialog.ui" line="72"/>
         <source>s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="78"/>
+        <location filename="../settingsdialog.ui" line="52"/>
         <source>Update visible notification instead create new</source>
         <translation>更新現有可見通知而非新建通知</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="88"/>
+        <location filename="../settingsdialog.ui" line="85"/>
+        <source>Volume change notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="95"/>
         <source>Appearance</source>
         <translation>外觀</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="94"/>
+        <location filename="../settingsdialog.ui" line="101"/>
         <source>Show covers</source>
         <translation>顯示封面</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="103"/>
+        <location filename="../settingsdialog.ui" line="110"/>
         <source>Edit template</source>
         <translation>編輯模板</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="75"/>
+        <location filename="../settingsdialog.cpp" line="77"/>
         <source>Notification Template</source>
         <translation>通知模板</translation>
     </message>

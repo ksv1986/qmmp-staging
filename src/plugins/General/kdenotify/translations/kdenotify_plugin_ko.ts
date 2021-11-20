@@ -4,7 +4,7 @@
 <context>
     <name>KdeNotify</name>
     <message>
-        <location filename="../kdenotify.cpp" line="122"/>
+        <location filename="../kdenotify.cpp" line="128"/>
         <source>Qmmp now playing:</source>
         <translation>Qmmp 현재 재생중:</translation>
     </message>
@@ -45,32 +45,37 @@
         <translation>알림 지연:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="52"/>
+        <location filename="../settingsdialog.ui" line="72"/>
         <source>s</source>
         <translation>초</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="78"/>
+        <location filename="../settingsdialog.ui" line="52"/>
         <source>Update visible notification instead create new</source>
         <translation>표시되는 알림 업데이트 대신 새 알림 만들기</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="88"/>
+        <location filename="../settingsdialog.ui" line="85"/>
+        <source>Volume change notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="95"/>
         <source>Appearance</source>
         <translation>모양새</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="94"/>
+        <location filename="../settingsdialog.ui" line="101"/>
         <source>Show covers</source>
         <translation>표지 표시</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="103"/>
+        <location filename="../settingsdialog.ui" line="110"/>
         <source>Edit template</source>
         <translation>템플릿 편집</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="75"/>
+        <location filename="../settingsdialog.cpp" line="77"/>
         <source>Notification Template</source>
         <translation>알림 템플릿</translation>
     </message>

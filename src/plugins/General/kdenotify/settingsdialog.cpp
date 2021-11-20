@@ -28,32 +28,34 @@
 
 SettingsDialog::SettingsDialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::SettingsDialog)
+    m_ui(new Ui::SettingsDialog)
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 
     QSettings settings(Qmmp::configFile(),QSettings::IniFormat);
     settings.beginGroup("Kde_Notifier");
-    ui->notifyDelaySpinBox->setValue(settings.value("notify_duration",5000).toInt()/1000);
-    ui->showCoversCheckBox->setChecked(settings.value("show_covers",true).toBool());
-    ui->updateNotifyCheckBox->setChecked(settings.value("update_notify",true).toBool());
+    m_ui->notifyDelaySpinBox->setValue(settings.value("notify_duration",5000).toInt()/1000);
+    m_ui->showCoversCheckBox->setChecked(settings.value("show_covers",true).toBool());
+    m_ui->updateNotifyCheckBox->setChecked(settings.value("update_notify",true).toBool());
+    m_ui->volumeCheckBox->setChecked(settings.value("volume_notification", false).toBool());
     m_template = settings.value("template", DEFAULT_TEMPLATE).toString();
     settings.endGroup();
 }
 
 SettingsDialog::~SettingsDialog()
 {
-    delete ui;
+    delete m_ui;
 }
 
 void SettingsDialog::accept()
 {
     QSettings settings(Qmmp::configFile(),QSettings::IniFormat);
     settings.beginGroup("Kde_Notifier");
-    settings.setValue("notify_duration",ui->notifyDelaySpinBox->value()*1000);
-    settings.setValue("show_covers",ui->showCoversCheckBox->isChecked());
+    settings.setValue("notify_duration",m_ui->notifyDelaySpinBox->value()*1000);
+    settings.setValue("show_covers",m_ui->showCoversCheckBox->isChecked());
     settings.setValue("template",m_template);
-    settings.setValue("update_notify",ui->updateNotifyCheckBox->isChecked());
+    settings.setValue("update_notify",m_ui->updateNotifyCheckBox->isChecked());
+    settings.setValue("volume_notification", m_ui->volumeCheckBox->isChecked());
     settings.endGroup();
     QDialog::accept();
 }
@@ -63,7 +65,7 @@ void SettingsDialog::changeEvent(QEvent *e)
     QDialog::changeEvent(e);
     switch (e->type()) {
     case QEvent::LanguageChange:
-        ui->retranslateUi(this);
+        m_ui->retranslateUi(this);
         break;
     default:
         break;

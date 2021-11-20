@@ -45,7 +45,7 @@ protected:
     void changeEvent(QEvent *e) override;
 
 private:
-    Ui::SettingsDialog *ui;
+    Ui::SettingsDialog *m_ui;
     QString m_template;
 };
 

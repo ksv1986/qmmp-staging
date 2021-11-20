@@ -29,7 +29,7 @@
 #include <QImage>
 #include <QApplication>
 #include <QVariant>
-
+#include <QStandardPaths>
 #include <qmmpui/metadataformatter.h>
 #include <qmmp/soundcore.h>
 #include <qmmp/metadatamanager.h>
@@ -69,7 +69,6 @@ KdeNotify::KdeNotify(QObject *parent) : QObject(parent),m_useFreedesktopSpec(fal
     m_template = settings.value("template", DEFAULT_TEMPLATE).toString();
     m_template.remove("\n");
     m_updateNotify = settings.value("update_notify",true).toBool();
-    settings.endGroup();
     m_currentNotifyId = 0;
 
     if(m_updateNotify)
@@ -85,6 +84,13 @@ KdeNotify::KdeNotify(QObject *parent) : QObject(parent),m_useFreedesktopSpec(fal
         connect(timer,SIGNAL(timeout()),SLOT(showMetaData()));
         connect(SoundCore::instance(),SIGNAL(trackInfoChanged()),timer, SLOT(start()));
     }
+
+    if(settings.value("volume_notification", false).toBool())
+    {
+        connect(SoundCore::instance(), SIGNAL(volumeChanged(int)), SLOT(onVolumeChanged(int)));
+        connect(SoundCore::instance(), SIGNAL(mutedChanged(bool)), SLOT(onMutedChanged(bool)));
+    }
+    settings.endGroup();
 }
 
 KdeNotify::~KdeNotify()
@@ -117,7 +123,7 @@ QList<QVariant> KdeNotify::prepareNotification()
     args.append("Qmmp"); //app-name
     args.append(m_currentNotifyId); //replaces-id;
     if(!m_useFreedesktopSpec)
-        args.append(""); //event-id
+        args.append(QString()); //event-id
     args.append(m_imagesDir + "/app-icon.png");  //app-icon(path to icon on disk)
     args.append(tr("Qmmp now playing:")); //summary (notification title)
 
@@ -176,4 +182,17 @@ void KdeNotify::notificationClosed(uint id, uint reason)
     Q_UNUSED(reason);
     if(m_currentNotifyId == id)
         m_currentNotifyId = 0;
+}
+
+void KdeNotify::onVolumeChanged(int percent)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"), QStringLiteral("/org/kde/osdService"),
+                                                      QStringLiteral("org.kde.osdService"), QStringLiteral("mediaPlayerVolumeChanged"));
+    msg.setArguments({ percent, "Qmmp", "qmmp-simple" });
+    QDBusConnection::sessionBus().asyncCall(msg);
+}
+
+void KdeNotify::onMutedChanged(bool muted)
+{
+    onVolumeChanged(muted ? 0 : SoundCore::instance()->volume());
 }

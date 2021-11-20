@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>370</width>
-    <height>241</height>
+    <width>413</width>
+    <height>326</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,16 +46,10 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QSpinBox" name="notifyDelaySpinBox">
-        <property name="suffix">
-         <string>s</string>
-        </property>
-        <property name="maximum">
-         <number>100</number>
-        </property>
-        <property name="value">
-         <number>10</number>
+      <item row="1" column="0" colspan="3">
+       <widget class="QCheckBox" name="updateNotifyCheckBox">
+        <property name="text">
+         <string>Update visible notification instead create new</string>
         </property>
        </widget>
       </item>
@@ -72,10 +66,23 @@
         </property>
        </spacer>
       </item>
-      <item row="1" column="0" colspan="3">
-       <widget class="QCheckBox" name="updateNotifyCheckBox">
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="notifyDelaySpinBox">
+        <property name="suffix">
+         <string>s</string>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="value">
+         <number>10</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="3">
+       <widget class="QCheckBox" name="volumeCheckBox">
         <property name="text">
-         <string>Update visible notification instead create new</string>
+         <string>Volume change notification</string>
         </property>
        </widget>
       </item>

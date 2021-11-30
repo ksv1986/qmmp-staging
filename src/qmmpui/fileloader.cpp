@@ -166,7 +166,7 @@ void FileLoader::addDirectory(const QString& s, PlayListItem *before)
     QList<PlayListTrack *> tracks;
     QStringList ignoredPaths;
     QDir dir(s);
-    dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+    dir.setFilter(QDir::Files | QDir::Hidden);
     dir.setSorting(QDir::Name);
     QFileInfoList l = dir.entryInfoList(m_filters);
 

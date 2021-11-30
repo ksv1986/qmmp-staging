@@ -426,7 +426,7 @@ void PlayListTask::run()
         for(const QString &p : qAsConst(dirs))
         {
             QDir dir(p);
-            dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+            dir.setFilter(QDir::Files | QDir::Hidden);
             dir.setSorting(QDir::Name);
             l << dir.entryInfoList(mm->nameFilters());
         }

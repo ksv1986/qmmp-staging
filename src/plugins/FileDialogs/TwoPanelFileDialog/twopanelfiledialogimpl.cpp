@@ -380,7 +380,7 @@ void TwoPanelFileDialogImpl::updateFileList(const QString &path)
 {
     m_ui.fileListWidget->clear();
     QDir dir(path);
-    dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+    dir.setFilter(QDir::Files | QDir::Hidden);
     dir.setSorting(QDir::Name);
 
     for(const QFileInfo &info : dir.entryInfoList(m_filters))

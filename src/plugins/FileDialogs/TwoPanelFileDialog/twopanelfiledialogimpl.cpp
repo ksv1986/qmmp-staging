@@ -1,5 +1,5 @@
 /**************************************************************************
-*   Copyright (C) 2016 by Ilya Kotov                                      *
+*   Copyright (C) 2016-2021 by Ilya Kotov                                 *
 *   forkotov02@ya.ru                                                      *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -277,6 +277,8 @@ void TwoPanelFileDialogImpl::on_playButton_clicked()
     }
 }
 
+#include <QtDebug>
+
 void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mode m, const QStringList& mask)
 {
     m_mode = m;
@@ -284,6 +286,7 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
     m_ui.fileTypeComboBox->clear();
 
     QFileInfo info(path);
+    qDebug() << path;
     QString fileName;
 
     if(info.isFile())
@@ -298,13 +301,25 @@ void TwoPanelFileDialogImpl::setModeAndMask(const QString& path, FileDialog::Mod
         fileName.clear();
     }
 
-    if (m_dirModel->filePath(m_ui.dirListView->rootIndex()) != info.absolutePath())
+    if(m == FileDialog::AddDir || m == FileDialog::AddDirs)
     {
-        m_dirModel->setRootPath(info.path());
-        m_ui.dirListView->setRootIndex(m_dirModel->index(info.absolutePath()));
+        if (m_dirModel->filePath(m_ui.dirListView->rootIndex()) != info.absoluteFilePath())
+        {
+            m_dirModel->setRootPath(info.absoluteFilePath());
+            m_ui.dirListView->setRootIndex(m_dirModel->index(info.absoluteFilePath()));
+        }
+        m_ui.lookInComboBox->setEditText(info.absoluteFilePath());
     }
-    m_ui.dirListView->setCurrentIndex(m_dirModel->index(info.absoluteFilePath()));
-    m_ui.lookInComboBox->setEditText(info.absolutePath());
+    else
+    {
+        if (m_dirModel->filePath(m_ui.dirListView->rootIndex()) != info.absolutePath())
+        {
+            m_dirModel->setRootPath(info.path());
+            m_ui.dirListView->setRootIndex(m_dirModel->index(info.absolutePath()));
+        }
+        m_ui.dirListView->setCurrentIndex(m_dirModel->index(info.absoluteFilePath()));
+        m_ui.lookInComboBox->setEditText(info.absolutePath());
+    }
 
     m_ui.fileNameLineEdit->setText(fileName);
     m_ui.addButton->setEnabled(!fileName.isEmpty());

@@ -32,6 +32,7 @@
 #include "metadatamanager.h"
 
 #include <memory>
+#include <iostream>
 
 #define COVER_CACHE_SIZE 100        // number of cached cover paths
 #define COVER_CACHE_LIMIT 10        // number of cached cover pixmaps
@@ -289,6 +290,26 @@ MetaDataManager::CoverCache::CoverCache(int size, int limit, int maxCoverSize)
     , m_cache(limit)
 {}
 
+class MetaDataManager::CoverCache::CacheDebug {
+public:
+    CacheDebug(CoverCache& owner) : _cache(owner)
+    {}
+
+    ~CacheDebug()
+    {
+        std::cerr << "cache: pixmap.nr=" << _cache.m_cache.size() << "\n";
+        int size = 0;
+        auto keys = _cache.m_cache.keys();
+        for (auto i = keys.begin(); i != keys.end(); ++i) {
+            auto& p = _cache.m_cache[*i]->pixmap;
+            size += p.width() * p.height() * p.depth();
+        }
+        std::cerr << "cache: pixmap.size=" << (size >> 20) << "MB (" << size << ")\n";
+    }
+
+    CoverCache& _cache;
+};
+
 MetaDataManager::CoverCache::Cover* MetaDataManager::CoverCache::createCover(const QString &url)
 {
     auto manager = MetaDataManager::instance();
@@ -320,6 +341,8 @@ MetaDataManager::CoverCache::Cover* MetaDataManager::CoverCache::createCover(con
 
 MetaDataManager::CoverCache::Cover* MetaDataManager::CoverCache::findCover(const QString &url)
 {
+    CacheDebug debug(*this);
+
     const int hash = qHash(url);
     if (auto key = m_lookup.object(hash); key) {
         if (auto cover = m_cache.object(*key); cover)

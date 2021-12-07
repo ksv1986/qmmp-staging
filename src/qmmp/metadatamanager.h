@@ -147,6 +147,9 @@ private:
         QRecursiveMutex m_mutex;
         QCache<int, qint64> m_lookup;
         QCache<qint64, Cover> m_cache;
+
+        class CacheDebug;
+        friend class CacheDebug;
     };
     friend class CoverCache;
     mutable CoverCache m_cover_cache;

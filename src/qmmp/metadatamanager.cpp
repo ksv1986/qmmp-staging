@@ -31,11 +31,15 @@
 #include "qmmpsettings.h"
 #include "metadatamanager.h"
 
-#define COVER_CACHE_SIZE 10
+#include <memory>
+
+#define COVER_CACHE_SIZE 100        // number of cached cover paths
+#define COVER_CACHE_LIMIT 10        // number of cached cover pixmaps
 
 MetaDataManager* MetaDataManager::m_instance = nullptr;
 
 MetaDataManager::MetaDataManager()
+    : m_cover_cache(COVER_CACHE_SIZE, COVER_CACHE_LIMIT, 1024)
 {
     m_settings = QmmpSettings::instance();
 }
@@ -189,36 +193,12 @@ bool MetaDataManager::supports(const QString &fileName) const
 
 QPixmap MetaDataManager::getCover(const QString &url) const
 {
-    QMutexLocker locker(&m_mutex);
-    for(int i = 0; i < m_cover_cache.size(); ++i)
-    {
-        if(m_cover_cache[i]->url == url)
-            return m_cover_cache[i]->coverPixmap;
-    }
-
-    m_cover_cache << createCoverCacheItem(url);
-
-    while(m_cover_cache.size() > COVER_CACHE_SIZE)
-        delete m_cover_cache.takeFirst();
-
-    return m_cover_cache.last()->coverPixmap;
+    return m_cover_cache.getCover(url);
 }
 
 QString MetaDataManager::getCoverPath(const QString &url) const
 {
-    QMutexLocker locker(&m_mutex);
-    for(int i = 0; i < m_cover_cache.size(); ++i)
-    {
-        if(m_cover_cache[i]->url == url)
-            return m_cover_cache[i]->coverPath;
-    }
-
-    m_cover_cache << createCoverCacheItem(url);
-
-    while(m_cover_cache.size() > COVER_CACHE_SIZE)
-        delete m_cover_cache.takeFirst();
-
-    return m_cover_cache.last()->coverPath;
+    return m_cover_cache.getCoverPath(url);
 }
 
 QString MetaDataManager::findCoverFile(const QString &fileName) const
@@ -263,36 +243,8 @@ QFileInfoList MetaDataManager::findCoverFiles(QDir dir, int depth) const
     return file_list;
 }
 
-MetaDataManager::CoverCacheItem *MetaDataManager::createCoverCacheItem(const QString &url) const
-{
-    CoverCacheItem *item = new CoverCacheItem;
-    item->url = url;
-    if(!url.contains("://") && m_settings->useCoverFiles())
-        item->coverPath = findCoverFile(url);
-
-    if(item->coverPath.isEmpty())
-    {
-        MetaDataModel *model = createMetaDataModel(url, true);
-        if(model)
-        {
-            item->coverPath = model->coverPath();
-            item->coverPixmap = model->cover();
-            delete model;
-        }
-    }
-
-    if(!item->coverPath.isEmpty() && item->coverPixmap.isNull())
-        item->coverPixmap = QPixmap(item->coverPath);
-
-    if(item->coverPixmap.width() > 1024 || item->coverPixmap.height() > 1024)
-        item->coverPixmap = item->coverPixmap.scaled(1024, 1024, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-
-    return item;
-}
-
 void MetaDataManager::clearCoverCache()
 {
-    qDeleteAll(m_cover_cache);
     m_cover_cache.clear();
 }
 
@@ -329,4 +281,78 @@ void MetaDataManager::destroy()
     if(m_instance)
         delete m_instance;
     m_instance = nullptr;
+}
+
+MetaDataManager::CoverCache::CoverCache(int size, int limit, int maxCoverSize)
+    : m_maxCoverSize{maxCoverSize}
+    , m_lookup(size)
+    , m_cache(limit)
+{}
+
+MetaDataManager::CoverCache::Cover* MetaDataManager::CoverCache::createCover(const QString &url)
+{
+    auto manager = MetaDataManager::instance();
+    auto cover = std::make_unique<Cover>();
+    auto& pixmap = cover->pixmap;
+    auto& path = cover->path;
+
+    if (!url.contains("://") && QmmpSettings::instance()->useCoverFiles())
+        path = manager->findCoverFile(url);
+
+    if (path.isEmpty())
+    {
+        auto model = std::unique_ptr<MetaDataModel>(manager->createMetaDataModel(url, true));
+        if (model)
+        {
+            path = model->coverPath();
+            pixmap = model->cover();
+        }
+    }
+
+    if (pixmap.isNull() && !path.isEmpty())
+        pixmap = QPixmap(path);
+
+    if (pixmap.width() > m_maxCoverSize || pixmap.height() > m_maxCoverSize)
+        pixmap = pixmap.scaled(m_maxCoverSize, m_maxCoverSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+
+    return cover.release();
+}
+
+MetaDataManager::CoverCache::Cover* MetaDataManager::CoverCache::findCover(const QString &url)
+{
+    const int hash = qHash(url);
+    if (auto key = m_lookup.object(hash); key) {
+        if (auto cover = m_cache.object(*key); cover)
+            return cover;
+    }
+
+    auto cover = createCover(url);
+    auto key = new qint64(cover->pixmap.cacheKey());
+    if (m_cache.insert(*key, cover)) {
+        m_lookup.insert(hash, key);
+        return cover;
+    }
+
+    return nullptr;
+}
+
+QPixmap MetaDataManager::CoverCache::getCover(const QString &url)
+{
+    QMutexLocker locker(&m_mutex);
+    auto cover = findCover(url);
+    return cover ? cover->pixmap : QPixmap();
+}
+
+QString MetaDataManager::CoverCache::getCoverPath(const QString &url)
+{
+    QMutexLocker locker(&m_mutex);
+    auto cover = findCover(url);
+    return cover ? cover->path : QString();
+}
+
+void MetaDataManager::CoverCache::clear()
+{
+    QMutexLocker locker(&m_mutex);
+    m_lookup.clear();
+    m_cache.clear();
 }

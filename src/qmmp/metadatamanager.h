@@ -21,6 +21,7 @@
 #ifndef METADATAMANAGER_H
 #define METADATAMANAGER_H
 
+#include <QCache>
 #include <QList>
 #include <QStringList>
 #include <QPixmap>
@@ -121,18 +122,35 @@ private:
     ~MetaDataManager();
     static void destroy();
 
-    struct CoverCacheItem
-    {
-        QString url;
-        QString coverPath;
-        QPixmap coverPixmap;
-    };
-
     QFileInfoList findCoverFiles(QDir dir, int depth) const;
-    CoverCacheItem *createCoverCacheItem(const QString &url) const;
-    mutable QList <CoverCacheItem *> m_cover_cache;
+
+    class CoverCache
+    {
+    public:
+        CoverCache(int size, int limit, int maxCoverSize);
+
+        QPixmap getCover(const QString &url);
+        QString getCoverPath(const QString &url);
+        void clear();
+
+    private:
+        struct Cover {
+            QString path;
+            QPixmap pixmap;
+        };
+
+    private:
+        Cover* createCover(const QString &url);
+        Cover* findCover(const QString &url);
+
+        const int m_maxCoverSize;
+        QRecursiveMutex m_mutex;
+        QCache<int, qint64> m_lookup;
+        QCache<qint64, Cover> m_cache;
+    };
+    friend class CoverCache;
+    mutable CoverCache m_cover_cache;
     QmmpSettings *m_settings;
-    mutable QRecursiveMutex m_mutex;
 
     static MetaDataManager* m_instance;
 };

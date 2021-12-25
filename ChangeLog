@@ -1746,3 +1746,11 @@ Version 2.0.1
 
 Version 2.0.2
 * fixed out-of-source build
+
+Version 2.0.3
+* fixed build issues
+* fixed transport plugins loading
+* fixed volume bar draw in the double size mode
+* fixed symlinks support
+* fixed some issues in the two-panel file dialog
+* removed KDE4 notifications support

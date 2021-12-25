@@ -6,7 +6,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="71"/>
         <source>Don&apos;t clear the playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Çalma listesini temizleme</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="72"/>
@@ -36,27 +36,27 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="77"/>
         <source>Quit application</source>
-        <translation type="unfinished"></translation>
+        <translation>Uygulamadan çıkış yap</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="78"/>
         <source>Set playback volume (example: qmmp --volume 20)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kayıttan çalma ses seviyesini ayarlayın (örneğin: qmmp --volume 20)</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="79"/>
         <source>Print volume level</source>
-        <translation type="unfinished"></translation>
+        <translation>Ses seviyesini bas</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="80"/>
         <source>Mute/Restore volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Sesi kıs/Eski haline getir</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="81"/>
         <source>Print mute status</source>
-        <translation type="unfinished"></translation>
+        <translation>Ses kısılı durumunu yazdır</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="82"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../builtincommandlineoption.cpp" line="85"/>
         <source>Show main window</source>
-        <translation type="unfinished"></translation>
+        <translation>Ana pencereyi göster</translation>
     </message>
     <message>
         <location filename="../builtincommandlineoption.cpp" line="86"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="108"/>
         <source>Unknown command</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilinmeyen komut</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="413"/>
@@ -109,17 +109,17 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="420"/>
         <source>Start qmmp with the specified user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Belirtilen kullanıcı arabirimiyle qmmp&apos;yi başlatın</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="421"/>
         <source>List all available user interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Mevcut tüm kullanıcı arayüzlerini listele</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="422"/>
         <source>Don&apos;t start the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Uygulamayı başlatmayın</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="423"/>
@@ -134,48 +134,48 @@
     <message>
         <location filename="../qmmpstarter.cpp" line="426"/>
         <source>Home page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ana sayfa: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="427"/>
         <source>Development page: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Geliştirme sayfası: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="428"/>
         <source>Bug tracker: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata izleyici: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="130"/>
         <location filename="../qmmpstarter.cpp" line="433"/>
         <source>Command Line Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Komut Satırı Yardımı</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="446"/>
         <source>QMMP version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>QMMP sürümü: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="447"/>
         <source>Compiled with Qt version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt sürümüyle derlendi: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="448"/>
         <source>Using Qt version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt sürümünü kullanılıyor: %1</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="451"/>
         <source>Qmmp Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Sürümü</translation>
     </message>
     <message>
         <location filename="../qmmpstarter.cpp" line="468"/>
         <source>User Interfaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Kullanıcı Arayüzleri</translation>
     </message>
 </context>
 </TS>

@@ -6,69 +6,69 @@
     <message>
         <location filename="../playlistoption.cpp" line="33"/>
         <source>Show playlist manipulation commands</source>
-        <translation type="unfinished"></translation>
+        <translation>Çalma listesi düzenleme komutlarını göster</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="34"/>
         <source>List all available playlists</source>
-        <translation type="unfinished"></translation>
+        <translation>Mevcut tüm çalma listelerini listele</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="35"/>
         <source>Show playlist content</source>
-        <translation type="unfinished"></translation>
+        <translation>Oynatma listesi içeriğini göster</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="36"/>
         <source>Play track &lt;track&gt; in playlist &lt;id&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Parçayı çal &lt;track&gt; çalma listesinden &lt;id&gt;</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="37"/>
         <source>Clear playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Çalma listesini temizle</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="38"/>
         <source>Activate next playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Sonraki çalma listesini etkinleştir</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="39"/>
         <source>Activate previous playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Önceki oynatma listesini etkinleştir</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="40"/>
         <source>Toggle playlist repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Oynatma listesi tekrarını değiştir</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="41"/>
         <source>Toggle playlist shuffle</source>
-        <translation type="unfinished"></translation>
+        <translation>Çalma listesi kaydırmada geçiş sağla</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="42"/>
         <source>Show playlist options</source>
-        <translation type="unfinished"></translation>
+        <translation>Oynatma listesi seçeneklerini göster</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="110"/>
         <location filename="../playlistoption.cpp" line="132"/>
         <location filename="../playlistoption.cpp" line="171"/>
         <source>Invalid playlist ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Geçersiz çalma listesi kimliği</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="126"/>
         <source>Invalid number of arguments</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağımsız değişkenlerin sayısı geçersiz</translation>
     </message>
     <message>
         <location filename="../playlistoption.cpp" line="136"/>
         <source>Invalid track ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Geçersiz parça kimliği</translation>
     </message>
 </context>
 </TS>

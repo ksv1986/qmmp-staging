@@ -6,17 +6,17 @@
     <message>
         <location filename="../effectstereofactory.cpp" line="30"/>
         <source>Extra Stereo Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>İlave Steryo Eklentisi</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="50"/>
         <source>About Extra Stereo Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>İlave Steryo Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="51"/>
         <source>Qmmp Extra Stereo Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp İlave Steryo Eklentisi</translation>
     </message>
     <message>
         <location filename="../effectstereofactory.cpp" line="52"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../effectstereofactory.cpp" line="53"/>
         <source>Based on the Extra Stereo Plugin for Xmms by Johan Levin</source>
-        <translation type="unfinished"></translation>
+        <translation>Johan Levin&apos;in Xmms için İlave Steryo Eklentisine dayanmaktadır</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Extra Stereo Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>İlave Steryo Eklentisi Ayarları</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="31"/>
         <source>Effect intensity:</source>
-        <translation type="unfinished"></translation>
+        <translation>Etki yoğunluğu:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="54"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="57"/>
         <source>%1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1</translation>
     </message>
 </context>
 </TS>

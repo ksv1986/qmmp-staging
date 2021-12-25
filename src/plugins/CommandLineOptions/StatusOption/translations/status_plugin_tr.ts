@@ -6,7 +6,7 @@
     <message>
         <location filename="../statusoption.cpp" line="30"/>
         <source>Print playback status</source>
-        <translation type="unfinished"></translation>
+        <translation>Kayıttan çalma durumunu bastır</translation>
     </message>
     <message>
         <location filename="../statusoption.cpp" line="31"/>

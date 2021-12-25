@@ -18,7 +18,7 @@
     <message>
         <location filename="../fileops.cpp" line="151"/>
         <source>Move Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosyaları Taşı</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="152"/>
@@ -46,17 +46,17 @@
     <message>
         <location filename="../fileops.cpp" line="268"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Taşınıyor</translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="304"/>
         <source>Moving file %1/%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya taşınıyor %1/%2 </translation>
     </message>
     <message>
         <location filename="../fileops.cpp" line="123"/>
         <source>Remove Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosyaları Kaldır</translation>
     </message>
     <message numerus="yes">
         <location filename="../fileops.cpp" line="124"/>
@@ -143,7 +143,7 @@
         <location filename="../settingsdialog.ui" line="99"/>
         <location filename="../settingsdialog.cpp" line="219"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaldır</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="127"/>
@@ -165,32 +165,32 @@
     <message>
         <location filename="../settingsdialog.cpp" line="216"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopyala</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="217"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden adlandır</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="218"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Taşı</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="124"/>
         <source>New action</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni eylem</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="181"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>Komut:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="220"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Yürüt</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="232"/>

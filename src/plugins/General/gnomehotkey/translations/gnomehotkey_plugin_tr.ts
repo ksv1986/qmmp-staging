@@ -6,22 +6,22 @@
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="29"/>
         <source>Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Gnome Kısayol Eklentisi</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="50"/>
         <source>About Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Gnome Kısayol Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="51"/>
         <source>Qmmp Gnome Hotkey Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Gnome Kısayol Eklentisi</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="52"/>
         <source>This plugin adds support of the GNOME/Cinnamon hotkeys</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti GNOME/Cinnamon kısayol tuşlarının desteğini ekler</translation>
     </message>
     <message>
         <location filename="../gnomehotkeyfactory.cpp" line="53"/>

@@ -7,7 +7,7 @@
         <location filename="../converter.cpp" line="124"/>
         <location filename="../converter.cpp" line="227"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>İptal Edildi</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="139"/>
@@ -18,17 +18,17 @@
     <message>
         <location filename="../converter.cpp" line="177"/>
         <source>Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Dönüştürülüyor</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="238"/>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodlanıyor</translation>
     </message>
     <message>
         <location filename="../converter.cpp" line="276"/>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitirildi</translation>
     </message>
 </context>
 <context>
@@ -36,42 +36,42 @@
     <message>
         <location filename="../converterdialog.ui" line="14"/>
         <source>Audio Converter</source>
-        <translation type="unfinished"></translation>
+        <translation>Ses Dönüştürücü</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="44"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>İlerliyor</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="49"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Durum</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="63"/>
         <source>Output directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıktı dizini:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="80"/>
         <source>Output file name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıktı dosyası adı:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="97"/>
         <source>Preset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tanımlı Ayar:</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="114"/>
         <source>Overwrite existing files</source>
-        <translation type="unfinished"></translation>
+        <translation>Mevcut dosyaların üzerine yaz</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="124"/>
         <source>Convert</source>
-        <translation type="unfinished"></translation>
+        <translation>Dönüştür</translation>
     </message>
     <message>
         <location filename="../converterdialog.ui" line="131"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../converterdialog.cpp" line="203"/>
         <source>Create a Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopyasını Oluştur </translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="134"/>
@@ -103,17 +103,17 @@
     <message>
         <location filename="../converterdialog.cpp" line="139"/>
         <source>Waiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Bekliyor</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="201"/>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Oluştur</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="202"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzenle</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="204"/>
@@ -123,12 +123,12 @@
     <message>
         <location filename="../converterdialog.cpp" line="358"/>
         <source>Unable to execute &quot;%1&quot;. Program not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot; yürütülemiyor. Program bulunamadı.</translation>
     </message>
     <message>
         <location filename="../converterdialog.cpp" line="364"/>
         <source>Process &quot;%1&quot; finished with error.</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot; İşlemesi hatayla tamamlandı.</translation>
     </message>
 </context>
 <context>
@@ -136,22 +136,22 @@
     <message>
         <location filename="../converterfactory.cpp" line="28"/>
         <source>Converter Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Dönüştürücü Eklentisi</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="49"/>
         <source>About Converter Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Dönüştürücü Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="50"/>
         <source>Qmmp Converter Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Dönüştürücü Eklentisi</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="51"/>
         <source>This plugin converts supported audio files to other file formats using external command-line encoders</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti harici komut satırı kodlayıcıları kullanarak desteklenen ses dosyalarını diğer dosya biçimlerine dönüştürür</translation>
     </message>
     <message>
         <location filename="../converterfactory.cpp" line="53"/>
@@ -164,12 +164,12 @@
     <message>
         <location filename="../converterhelper.cpp" line="33"/>
         <source>Convert</source>
-        <translation type="unfinished"></translation>
+        <translation>Dönüştür</translation>
     </message>
     <message>
         <location filename="../converterhelper.cpp" line="34"/>
         <source>Meta+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+C</translation>
     </message>
 </context>
 <context>
@@ -187,47 +187,47 @@
     <message>
         <location filename="../preseteditor.ui" line="35"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="45"/>
         <source>Extension:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzantı:</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="58"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Komut</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="77"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçenekler</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="83"/>
         <source>Write tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiketleri yaz</translation>
     </message>
     <message>
         <location filename="../preseteditor.ui" line="90"/>
         <source>Convert to 16 bit</source>
-        <translation type="unfinished"></translation>
+        <translation>16 bite dönüştür</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="37"/>
         <source>%1 (Read Only)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (Sadece Oku)</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="70"/>
         <source>Output file</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıktı dosyası</translation>
     </message>
     <message>
         <location filename="../preseteditor.cpp" line="71"/>
         <source>Input file</source>
-        <translation type="unfinished"></translation>
+        <translation>Girdi dosyası</translation>
     </message>
 </context>
 </TS>

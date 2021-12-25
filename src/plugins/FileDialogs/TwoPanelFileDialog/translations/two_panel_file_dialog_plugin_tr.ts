@@ -40,12 +40,12 @@
         <location filename="../twopanelfiledialog.cpp" line="67"/>
         <location filename="../twopanelfiledialog.cpp" line="77"/>
         <source>Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>İki Panelli Dosya İletişim Kutusu</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="76"/>
         <source>About Two-panel File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>İki Panelli Dosya İletişim Kutusu Hakkında</translation>
     </message>
     <message>
         <location filename="../twopanelfiledialog.cpp" line="78"/>
@@ -55,29 +55,29 @@
     <message>
         <location filename="../twopanelfiledialog.cpp" line="79"/>
         <source>Based on code from the Qt library</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt kitaplığındaki kodu temel alır</translation>
     </message>
 </context>
 <context>
     <name>TwoPanelFileDialogImpl</name>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="323"/>
-        <location filename="../twopanelfiledialogimpl.cpp" line="339"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="338"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="354"/>
         <source>Add</source>
         <translation>Ekle</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="341"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="356"/>
         <source>Directories</source>
         <translation>Dizinler</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="353"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="368"/>
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="460"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="475"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 zaten var.

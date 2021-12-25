@@ -6,27 +6,27 @@
     <message>
         <location filename="../mplayerenginefactory.cpp" line="33"/>
         <source>Mplayer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Mplayer Eklentisi</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="36"/>
         <source>Video Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Vidyo Dosyaları</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="74"/>
         <source>About MPlayer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>MPlayer Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="75"/>
         <source>Qmmp MPlayer Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp MPlayer Eklentisi</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="76"/>
         <source>This plugin uses MPlayer as backend</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti arka uç olarak MPlayer kullanır</translation>
     </message>
     <message>
         <location filename="../mplayerenginefactory.cpp" line="77"/>
@@ -39,42 +39,42 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="38"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="56"/>
         <source>Demuxer</source>
-        <translation type="unfinished"></translation>
+        <translation>Çözümleyici</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="58"/>
         <source>Video format</source>
-        <translation type="unfinished"></translation>
+        <translation>Vidyo biçimi</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="59"/>
         <source>FPS</source>
-        <translation type="unfinished"></translation>
+        <translation>FPS</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="60"/>
         <source>Video codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Vidyo kodlaması</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="61"/>
         <source>Aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>En boy oranı</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="62"/>
         <source>Video bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Vidyo bit hızı</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="62"/>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="64"/>
         <source>Audio codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Ses kodlaması</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="65"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="66"/>
         <source>Audio bitrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Ses bit hızı</translation>
     </message>
     <message>
         <location filename="../mplayermetadatamodel.cpp" line="67"/>
@@ -123,12 +123,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Video:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vidyo:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>Audio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ses:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
@@ -138,17 +138,17 @@
     <message>
         <location filename="../settingsdialog.ui" line="72"/>
         <source>Synchronization factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Eşleştirme etmeni:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="89"/>
         <source>Extra options:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fazladan Seçenekler:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="96"/>
         <source>Extra command line options</source>
-        <translation type="unfinished"></translation>
+        <translation>Fazladan komut satırı seçenekleri</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>

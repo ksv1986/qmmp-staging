@@ -6,27 +6,27 @@
     <message>
         <location filename="../decodersidfactory.cpp" line="57"/>
         <source>SID Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>SID Eklentisi</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="59"/>
         <source>SID Files</source>
-        <translation type="unfinished"></translation>
+        <translation>SID Dosyaları</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="113"/>
         <source>About SID Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>SID Ses Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="114"/>
         <source>Qmmp SID Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp SID Ses Eklentisi</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="115"/>
         <source>This plugin plays Commodore 64 music files using libsidplayfp library</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti Commodore 64 müzik dosyalarını libsidplayfp kitaplığını kullanarak oynatır</translation>
     </message>
     <message>
         <location filename="../decodersidfactory.cpp" line="116"/>
@@ -39,42 +39,42 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>SID Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>SID Eklenti Ayarları</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Fast resampling</source>
-        <translation type="unfinished"></translation>
+        <translation>Hızlı yeniden örnekleme</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="62"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Örnekleme oranı:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="69"/>
         <source>HVSC database file:</source>
-        <translation type="unfinished"></translation>
+        <translation>HVSC veritabanı dosyası:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="76"/>
         <source>Resampling method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden örnekleme yöntemi:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="93"/>
         <source>Defaults song length, sec:</source>
-        <translation type="unfinished"></translation>
+        <translation>Varsayılan şarkı uzunluğu, sn:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="100"/>
         <source>Enable HVSC song length database</source>
-        <translation type="unfinished"></translation>
+        <translation>HVSC şarkı uzunluğu veritabanını etkinleştir</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="107"/>
         <source>Emulation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Öykünüm:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>

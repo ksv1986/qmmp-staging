@@ -21,17 +21,17 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="412"/>
         <source>MPEG 1.0/2.0/2.5 layer 1/2/3 audio decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>MPEG 1.0 / 2.0 / 2.5 katman 1/2/3 ses kod çözücü</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="413"/>
         <source>Compiled against:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dayanarak derlendi</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="422"/>
         <source>mpg123, API version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>mpg123, API uyarlaması:% 1</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="426"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="427"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynak kodu Mq3 ve madplay projeleri temellidir.</translation>
     </message>
 </context>
 <context>
@@ -52,22 +52,22 @@
         <location filename="../mpegmetadatamodel.cpp" line="72"/>
         <location filename="../mpegmetadatamodel.cpp" line="75"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Kip</translation>
     </message>
     <message>
         <location filename="../mpegmetadatamodel.cpp" line="78"/>
         <source>Protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Korunum</translation>
     </message>
     <message>
         <location filename="../mpegmetadatamodel.cpp" line="79"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Telif hakkı</translation>
     </message>
     <message>
         <location filename="../mpegmetadatamodel.cpp" line="80"/>
         <source>Original</source>
-        <translation type="unfinished"></translation>
+        <translation>Menşe</translation>
     </message>
 </context>
 <context>
@@ -80,22 +80,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="35"/>
         <source>Decoder</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodlayıcı</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <source>MAD</source>
-        <translation type="unfinished"></translation>
+        <translation>MAD</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="48"/>
         <source>MPG123</source>
-        <translation type="unfinished"></translation>
+        <translation>MPG123</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Enable CRC checking</source>
-        <translation type="unfinished"></translation>
+        <translation>CRC denetlemeyi etkinleştir</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="87"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="253"/>
         <source>Merge selected tag types</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçili etiket türlerini birleştir</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="272"/>
@@ -163,7 +163,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="343"/>
         <source>Try to detect encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodlamayı algılamaya çalışın</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="294"/>

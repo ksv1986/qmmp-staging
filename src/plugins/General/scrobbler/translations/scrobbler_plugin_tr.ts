@@ -40,19 +40,19 @@
         <location filename="../settingsdialog.ui" line="31"/>
         <location filename="../settingsdialog.ui" line="104"/>
         <source>Session:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oturum:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="41"/>
         <location filename="../settingsdialog.ui" line="117"/>
         <source>Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Denetle</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="63"/>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>Register new session</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni oturumu kaydettir.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="73"/>
@@ -64,22 +64,22 @@
         <location filename="../settingsdialog.cpp" line="132"/>
         <location filename="../settingsdialog.cpp" line="183"/>
         <source>Message</source>
-        <translation type="unfinished"></translation>
+        <translation>İleti</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="107"/>
         <source>1. Wait for browser startup</source>
-        <translation type="unfinished"></translation>
+        <translation>1. Tarayıcı başlangıcını bekleyin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="108"/>
         <source>2. Allow Qmmp to scrobble tracks to your %1 account</source>
-        <translation type="unfinished"></translation>
+        <translation>2. Qmmp&apos;nin %1 hesabınızdaki parçaları skroplamaya izin verin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="109"/>
         <source>3. Press &quot;OK&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>3.  &quot;OK&quot; &apos;a basın</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="114"/>
@@ -96,28 +96,28 @@
         <location filename="../settingsdialog.cpp" line="147"/>
         <location filename="../settingsdialog.cpp" line="191"/>
         <source>Network error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ağ hatası</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="118"/>
         <location filename="../settingsdialog.cpp" line="151"/>
         <source>Unable to register new session</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni oturumun kaydı yaptırılamıyor.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>New session has been received successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni oturum başarıyla alındı</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="183"/>
         <source>Permission granted</source>
-        <translation type="unfinished"></translation>
+        <translation>Yetki verildi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="195"/>
         <source>Permission denied</source>
-        <translation type="unfinished"></translation>
+        <translation>Yetkilendirme reddedildi</translation>
     </message>
 </context>
 </TS>

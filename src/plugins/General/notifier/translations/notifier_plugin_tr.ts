@@ -63,7 +63,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="85"/>
         <source>Transparency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Saydamlık:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="229"/>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="251"/>
         <source>Edit template</source>
-        <translation type="unfinished"></translation>
+        <translation>Şablonu düzenle</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="299"/>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="361"/>
         <source>Playback resume notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Kayıttan oynatma devam bildirimi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="368"/>
@@ -103,12 +103,12 @@
     <message>
         <location filename="../settingsdialog.ui" line="375"/>
         <source>Disable notifications when another application is in the Full Screen Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Başka bir uygulama Tam Ekran Modunda olduğu zaman bildirimleri devre dışı bırak</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="378"/>
         <source>Disable for full screen windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Tam ekran pencereler için devre dışı</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="388"/>
@@ -123,7 +123,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="112"/>
         <source>Notification Template</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildirim Şablonu</translation>
     </message>
 </context>
 </TS>

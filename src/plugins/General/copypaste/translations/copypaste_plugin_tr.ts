@@ -6,32 +6,32 @@
     <message>
         <location filename="../copypaste.cpp" line="41"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Ke&amp;s</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="42"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="43"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopyala</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="44"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="45"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yapıştır</translation>
     </message>
     <message>
         <location filename="../copypaste.cpp" line="46"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
 </context>
 <context>
@@ -39,22 +39,22 @@
     <message>
         <location filename="../copypastefactory.cpp" line="29"/>
         <source>Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopyala/Yapıştır Eklentisi</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="49"/>
         <source>About Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopyala/Yapıştır Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="50"/>
         <source>Qmmp Copy/Paste Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Kopyala/Yapıştır Eklentisi</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="51"/>
         <source>This plugin allows one to copy selected tracks from one playlist to another</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti, seçilen parçaların bir çalma listesinden diğerine kopyalanmasına izin verir</translation>
     </message>
     <message>
         <location filename="../copypastefactory.cpp" line="52"/>

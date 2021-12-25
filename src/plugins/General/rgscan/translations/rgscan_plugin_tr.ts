@@ -21,7 +21,7 @@
     <message>
         <location filename="../rgscandialog.ui" line="47"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>İlerliyor</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="52"/>
@@ -36,27 +36,27 @@
     <message>
         <location filename="../rgscandialog.ui" line="62"/>
         <source>Track Peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Parça Zirvesi</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="67"/>
         <source>Album Peak</source>
-        <translation type="unfinished"></translation>
+        <translation>Albüm Zirvesi</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="77"/>
         <source>Skip already scanned files</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaten taranmış dosyaları atla</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="113"/>
         <source>Calculate</source>
-        <translation type="unfinished"></translation>
+        <translation>Hesapla</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="120"/>
         <source>Write Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiketleri Yaz</translation>
     </message>
     <message>
         <location filename="../rgscandialog.ui" line="91"/>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="51"/>
         <source>This plugin scans audio files and gives information for volume normalization</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti ses dosyalarını tarar ve ses normalleştirmesi için bilgilendirim verir.</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="52"/>
@@ -108,22 +108,22 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="53"/>
         <source>Based on source code by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynak koduna dayalı:</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="54"/>
         <source>David Robinson &lt;David@Robinson.org&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>David Robinson &lt;David@Robinson.org&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="55"/>
         <source>Glen Sawyer &lt;mp3gain@hotmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Glen Sawyer &lt;mp3gain@hotmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="56"/>
         <source>Frank Klemm</source>
-        <translation type="unfinished"></translation>
+        <translation>Frank Klemm</translation>
     </message>
 </context>
 <context>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../rgscanhelper.cpp" line="33"/>
         <source>Meta+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+R</translation>
     </message>
 </context>
 </TS>

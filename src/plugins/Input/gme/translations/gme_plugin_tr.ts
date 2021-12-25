@@ -6,27 +6,27 @@
     <message>
         <location filename="../decodergmefactory.cpp" line="38"/>
         <source>GME Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>GME Eklentisi</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="41"/>
         <source>Game Music Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Oyun Müzik Dosyaları</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="103"/>
         <source>About GME Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>GME Ses Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="104"/>
         <source>Qmmp GME Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp GME Ses Eklentisi</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="105"/>
         <source>This plugin uses Game_Music_Emu library to play game music files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti oyun müzik dosyalarını oynatmada Game_Music_Emu kitaplığını kullanır</translation>
     </message>
     <message>
         <location filename="../decodergmefactory.cpp" line="106"/>
@@ -39,22 +39,22 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>GME Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>GME Eklenti Ayarları</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Fadeout length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sönme uzunluğu:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="44"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="57"/>
         <source>Enable fadeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Sönmeyi etkinleştir</translation>
     </message>
 </context>
 </TS>

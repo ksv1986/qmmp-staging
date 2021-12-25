@@ -6,32 +6,32 @@
     <message>
         <location filename="../editstreamdialog.ui" line="14"/>
         <source>Edit Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Akışı Düzenle</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="34"/>
         <source>URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="44"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="54"/>
         <source>Genre:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarz:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="64"/>
         <source>Bitrate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bit hızı:</translation>
     </message>
     <message>
         <location filename="../editstreamdialog.ui" line="74"/>
         <source>Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tür:</translation>
     </message>
 </context>
 <context>
@@ -39,12 +39,12 @@
     <message>
         <location filename="../streambrowser.cpp" line="33"/>
         <source>Add Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Akış Ekle</translation>
     </message>
     <message>
         <location filename="../streambrowser.cpp" line="34"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
 </context>
 <context>
@@ -52,22 +52,22 @@
     <message>
         <location filename="../streambrowserfactory.cpp" line="29"/>
         <source>Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Akış Tarayıcısı Eklentisi</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="50"/>
         <source>About Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Akış Tarayıcısı Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="51"/>
         <source>Qmmp Stream Browser Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Akış Tarayıcısı Eklentisi</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="52"/>
         <source>This plugin allows one to add stream from IceCast stream directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti birinin IceCast akış dizininden akış eklemesine izin verir</translation>
     </message>
     <message>
         <location filename="../streambrowserfactory.cpp" line="53"/>
@@ -80,22 +80,22 @@
     <message>
         <location filename="../streamwindow.ui" line="14"/>
         <source>Stream Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Akış Tarayıcısı</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="31"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtre:</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="47"/>
         <source>Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Tercih Edillenler</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="73"/>
         <source>IceCast</source>
-        <translation type="unfinished"></translation>
+        <translation>IceCast</translation>
     </message>
     <message>
         <location filename="../streamwindow.ui" line="102"/>
@@ -105,13 +105,13 @@
     <message>
         <location filename="../streamwindow.ui" line="109"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Güncelle</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="55"/>
         <location filename="../streamwindow.cpp" line="73"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="56"/>
@@ -129,37 +129,37 @@
         <location filename="../streamwindow.cpp" line="58"/>
         <location filename="../streamwindow.cpp" line="76"/>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Biçim</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="133"/>
         <source>&amp;Add to favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Gözdelere ekle</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="136"/>
         <source>&amp;Add to playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Çalma listesine ekle</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="139"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Oluştur</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="141"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Düzenle</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="144"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kaldır</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="154"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamamlandı</translation>
     </message>
     <message>
         <location filename="../streamwindow.cpp" line="157"/>
@@ -175,7 +175,7 @@
     <message>
         <location filename="../streamwindow.cpp" line="280"/>
         <source>Edit Stream</source>
-        <translation type="unfinished"></translation>
+        <translation>Akışı Düzenle</translation>
     </message>
 </context>
 </TS>

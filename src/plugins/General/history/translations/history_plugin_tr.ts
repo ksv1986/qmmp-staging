@@ -6,7 +6,7 @@
     <message>
         <location filename="../dateinputdialog.ui" line="14"/>
         <source>Select Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarih Seçin</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../history.cpp" line="57"/>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarihçe</translation>
     </message>
     <message>
         <location filename="../history.cpp" line="58"/>
         <source>Alt+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+H</translation>
     </message>
 </context>
 <context>
@@ -27,22 +27,22 @@
     <message>
         <location filename="../historyfactory.cpp" line="31"/>
         <source>Listening History Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Dinleme Geçmişi Eklentisi</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="51"/>
         <source>About Listening History Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Dinleme Geçmişi Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="52"/>
         <source>Qmmp Listening History Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Dinleme Geçmişi Eklentisi</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="53"/>
         <source>This plugin collects information about listened tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti, dinlenen parçalar hakkında bilgi toplar</translation>
     </message>
     <message>
         <location filename="../historyfactory.cpp" line="54"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../historysettingsdialog.ui" line="14"/>
         <source>Listening History Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Dinleme Geçmişi Eklentisi Ayarları</translation>
     </message>
     <message>
         <location filename="../historysettingsdialog.ui" line="31"/>
@@ -69,12 +69,12 @@
         <location filename="../historywindow.ui" line="14"/>
         <location filename="../historywindow.ui" line="110"/>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarihçe</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="29"/>
         <source>Time Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaman Aralığı</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="35"/>
@@ -89,38 +89,38 @@
     <message>
         <location filename="../historywindow.ui" line="69"/>
         <source>Last week</source>
-        <translation type="unfinished"></translation>
+        <translation>Son hafta</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="76"/>
         <source>Last month</source>
-        <translation type="unfinished"></translation>
+        <translation>Son ay</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="83"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Yürüt</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="129"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaman</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="134"/>
         <location filename="../historywindow.ui" line="183"/>
         <source>Song</source>
-        <translation type="unfinished"></translation>
+        <translation>Şarkı</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="143"/>
         <source>Distribution</source>
-        <translation type="unfinished"></translation>
+        <translation>Dağıtım</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="156"/>
         <source>Day</source>
-        <translation type="unfinished"></translation>
+        <translation>Gün</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="161"/>
@@ -128,17 +128,17 @@
         <location filename="../historywindow.ui" line="215"/>
         <location filename="../historywindow.ui" line="242"/>
         <source>Play counts</source>
-        <translation type="unfinished"></translation>
+        <translation>Oynatma sayıları</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="170"/>
         <source>Top Songs</source>
-        <translation type="unfinished"></translation>
+        <translation>Zirvedeki Şarkılar</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="197"/>
         <source>Top Artists</source>
-        <translation type="unfinished"></translation>
+        <translation>Zirvedeki Sanatçılar</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="210"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../historywindow.ui" line="224"/>
         <source>Top Genres</source>
-        <translation type="unfinished"></translation>
+        <translation>Zirvedeki Tarzlar</translation>
     </message>
     <message>
         <location filename="../historywindow.ui" line="237"/>
@@ -158,22 +158,22 @@
     <message>
         <location filename="../historywindow.cpp" line="124"/>
         <source>dd MMMM yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>gg AAAA yyyy</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="125"/>
         <source>hh:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>ss:dd:snsn</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="191"/>
         <source>MM-yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>AA-yyyy</translation>
     </message>
     <message>
         <location filename="../historywindow.cpp" line="192"/>
         <source>dd MMMM</source>
-        <translation type="unfinished"></translation>
+        <translation>gg AAAA</translation>
     </message>
 </context>
 </TS>

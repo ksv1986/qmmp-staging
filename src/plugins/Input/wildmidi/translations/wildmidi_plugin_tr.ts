@@ -6,27 +6,27 @@
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="49"/>
         <source>WildMidi Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>WildMidi Eklentisi</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="54"/>
         <source>Midi Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Midi Dosyaları</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="106"/>
         <source>About WildMidi Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>WildMidi Ses Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="107"/>
         <source>Qmmp WildMidi Audio Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp WildMidi Ses Eklentisi</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="108"/>
         <source>This plugin uses WildMidi library to play midi files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti midi dosyalarını oynatmada WildMidi kitaplığını kullanır</translation>
     </message>
     <message>
         <location filename="../decoderwildmidifactory.cpp" line="109"/>
@@ -39,27 +39,27 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>WildMidi Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>WildMidi Eklenti Ayarları</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Instrument configuration: </source>
-        <translation type="unfinished"></translation>
+        <translation>Müzik aleti yapılandırması:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="43"/>
         <source>Sample rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Örnekleme oranı:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="50"/>
         <source>Enhanced resampling</source>
-        <translation type="unfinished"></translation>
+        <translation>Gelişmiş yeniden örnekleme</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="57"/>
         <source>Reverberation</source>
-        <translation type="unfinished"></translation>
+        <translation>Yankılanma</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>

@@ -6,27 +6,27 @@
     <message>
         <location filename="../decoderarchivefactory.cpp" line="39"/>
         <source>Archive Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşiv Eklentisi</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="41"/>
         <source>Archives</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşivler</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="168"/>
         <source>About Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşiv Okuyucu Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="169"/>
         <source>Qmmp Archive Reader Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Arşiv Okuyucu Eklentisi</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="170"/>
         <source>Compiled against %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1&apos;e dayanarak derlendi</translation>
     </message>
     <message>
         <location filename="../decoderarchivefactory.cpp" line="171"/>

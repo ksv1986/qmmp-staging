@@ -6,22 +6,22 @@
     <message>
         <location filename="../taskbarfactory.cpp" line="28"/>
         <source>Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Görev Çubuğu Eklentisi</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="49"/>
         <source>About Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Görev Çubuğu Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="50"/>
         <source>Qmmp Taskbar Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Görev Çubuğu Eklentisi</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="51"/>
         <source>This plugin adds support for progress indicator in the Windows taskbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti Windows Görev çubuğunda ilerleme göstergesi desteği ekler</translation>
     </message>
     <message>
         <location filename="../taskbarfactory.cpp" line="52"/>

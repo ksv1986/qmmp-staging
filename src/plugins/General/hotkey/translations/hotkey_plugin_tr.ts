@@ -24,17 +24,17 @@
     <message>
         <location filename="../hotkeyfactory.cpp" line="31"/>
         <source>Global Hotkey Plugin</source>
-        <translation>Genel Kısayol Eklentisi</translation>
+        <translation>Küresel Kısayol Eklentisi</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="57"/>
         <source>About Global Hotkey Plugin</source>
-        <translation>Genel Kısayol Eklentisi Hakkında</translation>
+        <translation>Küresel Kısayol Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="58"/>
         <source>Qmmp Global Hotkey Plugin</source>
-        <translation>Qmmp Genel Kısayol Eklentisi</translation>
+        <translation>Qmmp Küresel Kısayol Eklentisi</translation>
     </message>
     <message>
         <location filename="../hotkeyfactory.cpp" line="59"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Global Hotkey Plugin Settings</source>
-        <translation>Genel Kısayol Eklentisi Ayarları</translation>
+        <translation>Küresel Kısayol Eklentisi Ayarları</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="42"/>
@@ -107,42 +107,42 @@
     <message>
         <location filename="../settingsdialog.cpp" line="45"/>
         <source>Volume +</source>
-        <translation type="unfinished"></translation>
+        <translation>Ses +</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="46"/>
         <source>Volume -</source>
-        <translation type="unfinished"></translation>
+        <translation>Ses -</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="47"/>
         <source>Forward 5 seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>5 saniye ileri sar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="48"/>
         <source>Rewind 5 seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>5 saniye geri sar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="49"/>
         <source>Jump to track</source>
-        <translation type="unfinished"></translation>
+        <translation>Parçaya atla</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="50"/>
         <source>Mute</source>
-        <translation type="unfinished"></translation>
+        <translation>Sesi Kısık</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="107"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Uyarı</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="107"/>
         <source>Key sequence &apos;%1&apos; is already used</source>
-        <translation type="unfinished"></translation>
+        <translation>Anahtar dizilimi &apos;% 1&apos; zaten kullanılmış</translation>
     </message>
 </context>
 </TS>

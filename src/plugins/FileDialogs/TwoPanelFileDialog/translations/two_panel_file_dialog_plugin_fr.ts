@@ -61,23 +61,23 @@
 <context>
     <name>TwoPanelFileDialogImpl</name>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="323"/>
-        <location filename="../twopanelfiledialogimpl.cpp" line="339"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="338"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="354"/>
         <source>Add</source>
         <translation>Ajouter</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="341"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="356"/>
         <source>Directories</source>
         <translation>Répertoires</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="353"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="368"/>
         <source>Save</source>
         <translation>Sauver</translation>
     </message>
     <message>
-        <location filename="../twopanelfiledialogimpl.cpp" line="460"/>
+        <location filename="../twopanelfiledialogimpl.cpp" line="475"/>
         <source>%1 already exists.
 Do you want to replace it?</source>
         <translation>%1 existe déjà.

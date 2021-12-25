@@ -6,7 +6,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Track Change Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Parça Değiştirme Eklentisi Ayarları</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
@@ -19,32 +19,32 @@
     <message>
         <location filename="../settingsdialog.ui" line="29"/>
         <source>Command to run when Qmmp starts new track</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp yeni parçaya başladığı zaman çalıştırılacak komut</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
         <source>Command to run toward to end of a track</source>
-        <translation type="unfinished"></translation>
+        <translation>Bir parçanın sonuna doğru koşma komutu</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="63"/>
         <source>Command to run when Qmmp reaches the end of the playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp çalma listesinin sonuna ulaştığı zaman çalıştırılacak komut</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="80"/>
         <source>Command to run when title changes (i.e. network streams title)</source>
-        <translation type="unfinished"></translation>
+        <translation>Başlık değiştiği zaman çalıştırılacak komut (ör: ağ akışları başlığı)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="97"/>
         <source>Command to run on application startup:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uygulama başlangıcında çalıştırılacak komut:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="104"/>
         <source>Command to run on application exit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uygulama çıkışında çalıştırılacak komut:</translation>
     </message>
 </context>
 <context>
@@ -52,22 +52,22 @@
     <message>
         <location filename="../trackchangefactory.cpp" line="30"/>
         <source>Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Parça Değiştirme Eklentisi</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="50"/>
         <source>About Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Parça Değiştirme Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="51"/>
         <source>Qmmp Track Change Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp Parça Değiştirme Eklentisi</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="52"/>
         <source>This plugin executes external command when current track is changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu eklenti, geçerli parça değiştirildiğinde harici komut yürütür</translation>
     </message>
     <message>
         <location filename="../trackchangefactory.cpp" line="53"/>

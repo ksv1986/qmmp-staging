@@ -4,9 +4,9 @@
 <context>
     <name>KdeNotify</name>
     <message>
-        <location filename="../kdenotify.cpp" line="122"/>
+        <location filename="../kdenotify.cpp" line="114"/>
         <source>Qmmp now playing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp şimdi çalıyor:</translation>
     </message>
 </context>
 <context>
@@ -14,17 +14,17 @@
     <message>
         <location filename="../kdenotifyfactory.cpp" line="29"/>
         <source>KDE notification plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>KDE bildirim eklentisi</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="49"/>
         <source>About KDE Notification Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>KDE Bildirim Eklentisi Hakkında</translation>
     </message>
     <message>
         <location filename="../kdenotifyfactory.cpp" line="50"/>
         <source>KDE notification plugin for Qmmp</source>
-        <translation type="unfinished"></translation>
+        <translation>Qmmp için KDE Bildirim Eklentisi</translation>
     </message>
 </context>
 <context>
@@ -32,47 +32,47 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>KDE 4 Notification Plugin Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>KDE 4 Bildirim Eklentisi Ayarları</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçenekler</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="45"/>
         <source>Notification delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildirim gecikmesi:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="52"/>
         <source>s</source>
-        <translation type="unfinished"></translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="78"/>
         <source>Update visible notification instead create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni oluşturmak yerine görünür bildirimi güncelleyin</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="88"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Dış görünüş</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="94"/>
         <source>Show covers</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapakları göster</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="103"/>
         <source>Edit template</source>
-        <translation type="unfinished"></translation>
+        <translation>Şablonu düzenle</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="75"/>
         <source>Notification Template</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildirim Şablonu</translation>
     </message>
 </context>
 </TS>

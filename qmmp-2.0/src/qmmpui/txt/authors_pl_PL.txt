@@ -1,0 +1,14 @@
+Główni programiści:
+
+    Ilya Kotov <forkotov02@ya.ru> - pomysł i kod bazowy
+
+Byli programiści:
+
+    Artur Guzik <aguzik88@gmail.com> - wtyczka powiadamiania kde4, ulepszenia ikony w zasobniku
+    Vladimir Kuznetsov <vovanec@gmail.com> - wygląd i wiele ulepszeń
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - wtyczki JACK i OSS 
+
+Grafika:
+
+    Andrey Adreev <andreev00@gmail.com> - ikony i domyślna skórka (w wersjach 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - domyślna skórka

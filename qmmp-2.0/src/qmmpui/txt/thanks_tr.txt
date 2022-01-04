@@ -1,0 +1,31 @@
+Teşekkürler:
+
+    Adria Arrufat <swiftscythe@gmail.com> - hata raporları
+    Adrian Knoth <adi@drcomp.erfurt.thur.de> - JACK eklenti düzeltmeleri, hata raporları
+    Anton Petrusevich <casus@casus.us> - rastgele kayıttan çalma iyileştirmeleri
+    Avihay Baratz <avihayb@gmail.com> - otomatik durdurma özelliği, hata düzeltmeleri
+    Brice Videau <brice.videau@gmail.com> - hata düzeltmeleri
+    Cristian Rodríguez <judas.iscariote@gmail.com> - skroplayıcı düzeltmeleri
+    Csaba Hruska <csaba.hruska@gmail.com> - FFmpeg eklenti düzeltmeleri
+    Dmitry Kostin <kostindima@gmail.com> - iso.wv desteği
+    Dmitry Misharov <Dmitry.Misharov@gmail.com> - albüm sanatçısı etiketi desteği
+    Evgeny Gleyzerman <evgley@gmail.com> - cue ayrıştırma iyileştirmeleri
+    Ferdinand Vesely <erdofves@gmail.com> - skroplayıcı iyileştirmeleri
+    Gennadi Motsyo <drool@altlinux.ru> - hata raporları
+    Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - iyileştirilme
+    Vadim Kalinnikov <moose@ylsoftware.com> - proje barındırma
+    Erik Ölsar <erlk.ozlr@gmail.com> - tenli imleçler, ui geliştirmeleri
+    Funda Wang <fundawang@gmail.com> - cmake dosya düzeltmeleri
+    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia çıktısı, MacOS X taşıması
+    Karel Volný <kvolny@redhat.com> - çeşitli düzeltmeler
+    Makis Kalofolias <makskafl@gmail.com> - EAC3, DTS, ve Dolby TrueHD desteği
+    Michail Zheludkov <zheludkovm@mail.ru> - FFmpeg eklenti düzeltmeleri
+    Michał Grosicki <grosik88@o2.pl> - ALSA eklenti düzeltmeleri
+    Panagiotis Papadopoulos <pano_90@gmx.net> - ui düzeltmeleri, hata raporları
+    Pino Toscano <toscano.pino@tiscali.it> - taşınabilir yamalar
+    Ryota Shimamoto <liangtai.s16@gmail.com> - FreeBSD yamaları
+    Sebastian Pipping <webmaster@hartwork.org> - bs2b yamaları
+    Stefan Koelling <stefankoelling.ext@googlemail.com> - bazı yapı düzeltmeleri
+    Thomas Perl - gka iyileştirmeleri
+    Ville Skyttä - ModPlug eklenti iyleştirmeleri
+    Yaakov Selkowitz <yselkowitz@gmail.com> - cygwin yamaları

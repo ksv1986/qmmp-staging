@@ -1,0 +1,14 @@
+Çekirdek Geliştiricileri
+
+    Ilya Kotov <forkotov02@ya.ru> (fikir ve temel kod)
+
+Eski Geliştiriciler:
+
+    Artur Guzik <aguzik88@gmail.com> (kde4 bildirim eklentisi, tepsi simgesi geliştirimeleri)
+    Vladimir Kuznetsov <vovanec@gmail.com> (bak&hisset ve birçok iyileştirmeler)
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - JACK and OSS eklentileri
+
+Çizim:
+
+    Andrey Adreev <andreev00@gmail.com> - simgeler ve varsayılan deri (0.2-0.8 sürümleri için)
+    sixsixfive <http://sixsixfive.deviantart.com/> - varsayılan deri

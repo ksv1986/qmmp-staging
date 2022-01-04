@@ -1,0 +1,104 @@
+Portugis Brasilia:
+    Bruno Gonçalves
+    Klaos Lacerda
+    Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
+
+Bulgaria:
+    Kiril Kirilov
+    Miroslav Mihov
+
+Cina Tradisional:
+    Cosmos Chen
+    lon <lon83129@126.com>
+    Jeff Huang
+
+Cina Disederhanakan:
+    lon <lon83129@126.com>
+    mabier
+    Mingcong Bai
+    Mingye Wang
+
+Ceko:
+    Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
+
+Belanda:
+    Heimen Stoffels
+    Ronald Uitermark <ronald645@gmail.com>
+
+Finlandia:
+    Jiri Grönroos
+    Kimmo Kujansuu
+
+Perancis:
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
+    Sébastien Aperghis-Tramoni (maddingue)
+    Stanislas Zeller <uncensored.assault@gmail.com>
+
+Galisia:
+    Delio Docampo Cordeiro
+    Óscar Pereira <oscarpereira1989@gmail.com>
+
+Jerman:
+    Ettore Atalan
+    Stefan Koelling <stefankoelling.ext@googlemail.com>
+    Panagiotis Papadopoulos <pano_90@gmx.net>
+
+Yunani:
+    Dimitrios Glentadakis
+
+Ibrani:
+    Genghis Khan <genghiskhan@gmx.ca>
+
+Hungaria:
+    Németh Gábor <sutee84@freemail.hu>
+
+Indonesia:
+    Andika Triwidada
+    Wantoyo <wantoyek@gmail.com>
+
+Italia:
+    Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
+
+Jepang:
+    Ryota Shimamoto <liangtai.s16@gmail.com>
+
+Kazakh:
+    Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+
+Lithuania:
+    Algirdas Butkus <butkus.algirdas@gmail.com>
+
+Polandia:
+    Daniel Krawczyk
+    Grzegorz Gibas <amigib@gmail.com>
+    mrerexx
+
+Portugis:
+    Sérgio Marques <smarquespt@gmail.com>
+
+Rusia:
+    Alexey Loginov <loginov.alex.valer.gmail.com>
+    Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
+
+Serbia:
+    Mladen Pejaković <pejakm@autistici.org>
+
+Slovakia:
+    Ján Ďanovský <dagsoftware@yahoo.com>
+
+Spanyol:
+    Bohdan Shuba
+    Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
+
+Turki:
+    Mustafa GUNAY <mustafagunay@pgmail.com>
+    Bilgesu Güngör <h.ibrahim.gungor@gmail.com>
+    Uğur KUYU
+
+Ukraina:
+    Gennadi Motsyo <drool@altlinux.ru>

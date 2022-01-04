@@ -1,0 +1,31 @@
+Grazas a:
+
+    Adria Arrufat <swiftscythe@gmail.com> - reporte de erros
+    Adrian Knoth <adi@drcomp.erfurt.thur.de> - Arranxos do plugin JACK, reporte de erros
+    Anton Petrusevich <casus@casus.us> - melloras da reproducción aleatoria
+    Avihay Baratz <avihayb@gmail.com> - función de detención automática, solución de erros
+    Brice Videau <brice.videau@gmail.com> - Solución de erros
+    Cristian Rodríguez <judas.iscariote@gmail.com> - correccións no scrobbler
+    Csaba Hruska <csaba.hruska@gmail.com> - Correccións no plugin FFmpeg
+    Dmitry Kostin <kostindima@gmail.com> - Axuda con iso.wv
+    Dmitry Misharov <Dmitry.Misharov@gmail.com> - Axudou coa etiqueta do artista de álbum
+    Evgeny Gleyzerman <evgley@gmail.com> - Melloras no análise de cue
+    Ferdinand Vesely <erdofves@gmail.com> - melloras no scrobbler
+    Gennadi Motsyo <drool@altlinux.ru> - Reporte de erros
+    Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - Optimización
+    Vadim Kalinnikov <moose@ylsoftware.com> - Aloxamento do proxecto
+    Erik Ölsar <erlk.ozlr@gmail.com> - temas dos cursores, melloras na interfaz de usuario
+    Funda Wang <fundawang@gmail.com> - Amaños nos arquivos cmake
+    Ivan Ponomarev ivantrue@gmail.com - Saida QtMultimedia, MacOS X port
+    Karel Volný <kvolny@redhat.com> - Varios amaños
+    Makis Kalofolias <makskafl@gmail.com> - EAC3, DTS e soporte Dolby TrueHD
+    Michail Zheludkov <zheludkovm@mail.ru> - Amaños no plugin FFmpeg
+    Michał Grosicki <grosik88@o2.pl> - Amaños no plugin ALSA
+    Panagiotis Papadopoulos <pano_90@gmx.net> - Amaños na interfaz de usuario, reporte de erros
+    Pino Toscano <toscano.pino@tiscali.it> - parches de portabilidade
+    Ryota Shimamoto <liangtai.s16@gmail.com> - parches FreeBSD
+    Sebastian Pipping <webmaster@hartwork.org> - parches bs2b
+    Stefan Koelling <stefankoelling.ext@googlemail.com> - algúns amaños da construcción do programa
+    Thomas Perl - Melloras da interface de usuario
+    Ville Skyttä - Melloras do plugin ModPlug
+    Yaakov Selkowitz <yselkowitz@gmail.com> - parches cygwin

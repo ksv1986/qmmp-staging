@@ -1,0 +1,207 @@
+Qmmp - Qt-based multimedia player
+
+Программа является аудио-плеером, написанным с использованием библиотеки Qt.
+Официальная домашняя страница: https://qmmp.ylsoftware.com/
+Разработка: https://sourceforge.net/projects/qmmp-dev/
+Перевод: https://www.transifex.com/qmmp-development-team/public/
+
+Поддерживаемые операционные системы:
+- GNU/Linux
+- FreeBSD
+- Microsoft Windows
+
+Поддерживаемые форматы:
+- MPEG1 layer 2/3
+- Ogg Vorbis
+- Ogg Opus
+- Native FLAC, Ogg FLAC
+- Musepack
+- WavePack
+- трекерные форматы (mod, s3m, it, xm и т.д.)
+- ADTS AAC
+- CD Audio
+- WMA, Monkey's Audio (и др. форматы библиотеки FFmpeg)
+- PCM WAVE (и др. форматы библиотеки libsndfile)
+- midi
+- SID
+- форматы звука игровых консолей (AY, GBS, GYM, HES, KSS, NSF, NSFE, SAP, SPC, VGM, VGZ, VTX)
+
+Аудио-эффекты:
+- эффект BS2B
+- Передискретизация
+- эффекты LADSPA
+- расширение стереобазы
+- плавный переход между треками
+
+Визуальные эффекты:
+- визуализация projectM
+- анализатор спектра
+
+Системы вывода звука:
+- OSS4 (FreeBSD)
+- ALSA (Linux)
+- PulseAudio
+- PipeWire
+- JACK
+- QtMultimedia
+- Icecast
+- WaveOut (Win32)
+- DirectSound (Win32)
+- WASAPI (Win32)
+
+Другие возможности:
+- поддержка обложек XMMS и Winamp 2.x
+- альтернативный пользовательский интерфейс с использованием стандартного оформления
+- 10-полосный эквалайзер
+- поддержка потоков MP3, Vorbis, AAC, AAC+
+- поддержка протокола MMS
+- MPRIS
+- автоопределение съёмных устройств (с помощью HAL или UDisks)
+- воспроизведение видео с помощью Mplayer-а
+- получение текстов песен
+- просмотр обложек
+- поддержка CUE
+- поддержка "встроенного" CUE (для файлов FLAC, WavPack и Monkey's Audio)
+- возможность использовать несколько списков воспроизведения
+- автоматическое определение кодировки для cue-файлов и ShoutCast-метаданных
+- поддерживаемые форматы списков воспроизведения: m3u, pls, xspf
+- поддержка ReplayGain
+- отправка истории прослушивания на Last.fm, Libre.fm и ListenBrainz
+- поддержка CDDB
+- обзор потоков
+- преобразователь аудио-форматов
+- запуск внешних программ при смене трека
+- сканер ReplayGain
+- чтение архивов (RAR и 7z)
+- запись аудио
+- история прослушивания
+- музыкальная библиотека
+
+Требования:
+- Qt >= 6.1 (qtbase и qttools для сборки)
+- tar, unzip, bzip2, gzip
+- libmad
+- libvorbis
+- libogg
+- libalsa >= 1.0.22
+- taglib >= 1.12
+- curl >= 7.19.4
+- libmpg123 >= 1.13.0 (опционально)
+- qtmultimedia >= 6.1 (опционально)
+- libmms >= 0.4 (опционально)
+- flac >= 1.1.3 (опционально)
+- libmpcdec >= 1.3.0 (опционально)
+- jackit1 >= 0.121.0 или jackit2 >= 1.9.8 (опционально)
+- soxr >= 0.1.0 (опционально)
+- libmodplug >= 0.8.4 (опционально)
+- libsndfile >= 1.0.22 (опционально)
+- wavpack >= 4.41 (опционально)
+- pulseaudio >= 0.9.15 (опционально)
+- pipewire >= 0.3.26 (опционально)
+- ffmpeg >= 3.4 (опционально)
+- libcdio >= 1.0 (опционально)
+- libcdio-paranoia >= 10.2+0.90 (опционально)
+- libcddb >= 1.3.1 (опционально)
+- faad2 >= 2.6.1 (опционально)
+- game-music-emu >= 0.5.5 (опционально)
+- opus >= 1.0.2 (опционально)
+- opusfile >= 0.2 (опционально)
+- libWildMidi >= 0.2.3.4 (опционально)
+- libsidplayfp >= 1.0.3 (опционально)
+- libbs2b >= 3.0.0 (опционально)
+- libprojectM >= 2.0.0 (опционально)
+- libenca >= 1.9 (опционально)
+- libarchive >= 3.2.0 (опционально)
+- libshout (опционально)
+- mplayer (опционально)
+- libx11, libxcb, xorgproto (опционально)
+- librcd >= 0.1.13 (опционально)
+- cmake >= 3.18.0 (только для сборки)
+
+Внимание! Для сборки Qmmp нужна утилита lrelease.
+
+Конфигурация:
+cmake ./
+
+Сборка:
+make
+
+Установка:
+make install
+
+Если какой-либо модуль (например, Jack) не собирается, или не нужен, то вы можете отключить его командой:
+cmake ./ -DUSE_JACK:BOOL=FALSE
+
+Доступные опции:
+- USE_CURL, USE_MMS (транспортные модули);
+- USE_MAD, USE_MPG123, USE_FLAC, USE_VORBIS, USE_MPC, USE_MODPLUG, USE_SNDFILE, USE_WAVPACK, USE_FFMPEG, USE_AAC, USE_CUE,
+  USE_MPLAYER, USE_CDA, USE_MIDI, USE_GME, USE_OPUS, USE_SID, USE_ARCHIVE (декодеры);
+- USE_ALSA, USE_OSS, USE_JACK, USE_PULSE, USE_PIPEWIRE, USE_NULL, USE_OSS4, USE_WAVEOUT, USE_DSOUND, USE_QTMULTIMEDIA,
+  USE_WASAPI, USE_SHOUT (модули  вывода);
+- USE_SOXR, USE_BS2B, USE_LADSPA, USE_CROSSFADE, USE_STEREO, USE_FILEWRITER, USE_MONOTOSTEREO (эффекты);
+- USE_ANALYZER, USE_PROJECTM (визуализация);
+- USE_MPRIS, USE_SCROBBLER, USE_LISTENBRAINZ, USE_STATICON, USE_NOTIFIER, USE_LYRICS, USE_HAL, USE_HOTKEY, USE_FILEOPS,
+  USE_COVER, USE_KDENOTIFY, USE_UDISKS2, USE_CONVERTER, USE_RGSCAN, USE_SB, USE_TRACKCHANGE, USE_COPYPASTE,
+  USE_GNOMEHOTKEY, USE_LIBRARY (модули общего назначения);
+- USE_QMMP_DIALOG, USE_TWO_PANEL_DIALOG (файловые диалоги);
+- USE_ENCA (автоматическое определение кодировки);
+- USE_SKINNED (стандартный пользовательский интерфейс);
+- USE_QSUI (простой интерфейс);
+- USE_DIR_ASSOC (привязка к mime-типу inode/directory);
+- USE_LIBRCD (использование библиотеки LibRCD для определения кодировок ID3v1/v2-тегов, по умолчанию отключено);
+- QMMP_DEFAULT_OUTPUT (модуль вывода по умолчанию, пример использования: -DQMMP_DEFAULT_OUTPUT=pulse);
+- QMMP_DEFAULT_UI (интерфейс пользователя по умолчанию, пример использования: -DQMMP_DEFAULT_UI=qsui).
+
+Также вы можете использовать ccmake для изменения конфигурации модулей.
+По умолчанию программа будет установлена в /usr/local. Вы можете изменить этот путь командой:
+cmake ./ -DCMAKE_INSTALL_PREFIX=другой_путь
+
+Для получения дополнительной информации смотрите документацию модуля GNUInstallDirs:
+https://cmake.org/cmake/help/latest/module/GNUInstallDirs.html
+
+Поддержка OSS3.
+Модуль OSS3 устарел и отключён по умолчанию.
+Для его включения выполните 'cmake ./ -DUSE_OSS:BOOL=TRUE' перед сборкой.
+
+Поддержка UDisks2 и FreeBSD.
+Под FreeBSD есть возможность использовать модуль Udisks2. Для этого вы также должны установить порт
+sysutils/bsdisks. Bsdisks является реализацией сервиса UDisks2 для FreeBSD.
+
+В некоторых случаях вы можете использовать qmake для сборки и установки.
+
+Конфигурация:
+qmake PREFIX=путь_для_установки (по умолчанию: /usr)
+
+Сборка:
+make
+
+Установка:
+make install
+
+Исполняемый файл:
+./bin/qmmp
+
+Если какой-либо модуль не собирается или не нужен, в файле qmmp.pri можно его отключить.
+Для отключения необходимо закомментировать соответствующую строчку (символ "#").
+Кроме того, отключить модуль можно из командной строки:
+qmake DISABLED_PLUGINS+=JACK_PLUGIN DISABLED_PLUGINS+=OSS_PLUGIN
+
+Внимание! по умолчанию включены все модули.
+
+Изменение пути установки разделяемых библиотек и модулей (для некоторых 64-битных дистрибутивов).
+По умолчанию все библиотеки и модули будут установлены в $(INSTALL PREFIX)/lib. Вы можете сменить "lib"
+на "lib64" запустив qmake или cmake со специальным параметром:
+qmake LIB_DIR=/usr/lib64
+или
+cmake ./ -DCMAKE_INSTALL_LIBDIR=lib64
+
+
+Патчи, багрепорты, идеи и т.п.: https://sourceforge.net/p/qmmp-dev/tickets/ или forkotov02@ya.ru
+
+Автор выражает благодарность Вадиму Калинникову (www.ylsoftware.com) за предоставленный
+хостинг и тестирование программы.
+
+Также выражается благодарность всем, приславшим патчи и багрепорты.
+
+Просьба к присылающим патчи. Во избежание проблем с определением авторства, пожалуйста,
+указывайте также свою контактную информацию.

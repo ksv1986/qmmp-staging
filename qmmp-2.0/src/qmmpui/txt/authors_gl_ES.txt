@@ -1,0 +1,14 @@
+Desenroladores/as do núcleo:
+
+    Ilya Kotov <forkotov02@ya.ru> - idea and base code
+
+Antig@s desenroladores/as:
+
+    Artur Guzik <aguzik88@gmail.com> - kde4 engadido de notificación, melloras na icona da bandexa
+    Vladimir Kuznetsov <vovanec@gmail.com> - aparencia e moitas melloras
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - engadidos JACK e OSS
+
+Ilustracións:
+
+    Andrey Adreev <andreev00@gmail.com> - iconas e tema por defecto (para as versións 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - tema por defecto

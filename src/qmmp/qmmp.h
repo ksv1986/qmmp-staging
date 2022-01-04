@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2021 by Ilya Kotov                                 *
+ *   Copyright (C) 2008-2022 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -25,7 +25,7 @@
 
 #define QMMP_VERSION_MAJOR 2
 #define QMMP_VERSION_MINOR 0
-#define QMMP_VERSION_PATCH 3
+#define QMMP_VERSION_PATCH 4
 #define QMMP_VERSION_STABLE 0
 
 #define QMMP_VERSION_INT (QMMP_VERSION_MAJOR<<16 | QMMP_VERSION_MINOR<<8 | QMMP_VERSION_PATCH)

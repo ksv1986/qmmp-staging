@@ -1754,3 +1754,4 @@ Version 2.0.3
 * fixed symlinks support
 * fixed some issues in the two-panel file dialog
 * removed KDE4 notifications support
+* updated Turkish translation (abcmen)

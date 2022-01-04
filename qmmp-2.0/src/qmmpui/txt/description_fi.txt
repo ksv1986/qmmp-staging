@@ -1,1 +1,0 @@
-Tämä ohjelma on äänisoitin, joka on toteutettu Qt-kirjaston avulla.

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2022 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -38,7 +38,7 @@ void NormalContainer::addTracks(const QList<PlayListTrack *> &tracks)
     }
 }
 
-void NormalContainer::insertTrack(int index, PlayListTrack *track)
+int NormalContainer::insertTrack(int index, PlayListTrack *track)
 {
     if(index >= 0 && index < m_items.count())
     {
@@ -47,11 +47,13 @@ void NormalContainer::insertTrack(int index, PlayListTrack *track)
         //update indexes
         for(int i = index; i < m_items.count(); ++i)
             m_items[i]->setTrackIndex(i);
+        return index;
     }
     else
     {
         m_items.append(track);
         track->setTrackIndex(m_items.count() - 1);
+        return m_items.count() - 1;
     }
 }
 

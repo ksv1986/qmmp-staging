@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2015 by Ilya Kotov                                 *
+ *   Copyright (C) 2013-2022 by Ilya Kotov                                 *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -40,7 +40,7 @@ public:
 
     virtual void addTrack(PlayListTrack *track);
     virtual void addTracks(const QList<PlayListTrack *> &tracks) = 0;
-    virtual void insertTrack(int index, PlayListTrack *track) = 0;
+    virtual int insertTrack(int index, PlayListTrack *track) = 0;
     virtual void replaceTracks(const QList<PlayListTrack *> &tracks) = 0;
     virtual QList<PlayListGroup *> groups() const = 0;
     virtual QList<PlayListItem *> items() const = 0;

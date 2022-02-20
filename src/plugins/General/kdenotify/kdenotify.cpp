@@ -44,7 +44,7 @@ KdeNotify::KdeNotify(QObject *parent) : QObject(parent)
                                   QDBusConnection::sessionBus(), this);
     if(m_notifier->lastError().type() != QDBusError::NoError)
     {
-        qWarning() << "KdeNotify: Unable to create interface.";
+        qWarning() << "KdeNotify: Unable to create interface:" << m_notifier->lastError().message();
         return;
     }
 

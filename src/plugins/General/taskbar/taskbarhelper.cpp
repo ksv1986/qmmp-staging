@@ -21,14 +21,14 @@
 #include <QTimer>
 #include <QApplication>
 #include <QMainWindow>
-#include <QWinTaskbarButton>
-#include <QWinTaskbarProgress>
 #include <QtDebug>
 #include <qmmp/soundcore.h>
 #include <qmmpui/uihelper.h>
 #include <qmmpui/playlistmanager.h>
 #include <qmmpui/playlistitem.h>
 #include <qmmpui/mediaplayer.h>
+#include "qwintaskbarbutton.h"
+#include "qwintaskbarprogress.h"
 #include "taskbarhelper.h"
 
 TaskbarHelper::TaskbarHelper(QObject *parent) : QObject(parent)

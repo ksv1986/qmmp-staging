@@ -6,23 +6,23 @@
     <message>
         <location filename="../library.cpp" line="65"/>
         <source>Library</source>
-        <translation type="unfinished"></translation>
+        <translation>Бібліотека</translation>
     </message>
     <message>
         <location filename="../library.cpp" line="66"/>
         <source>Alt+L</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../library.cpp" line="72"/>
         <source>Update library</source>
-        <translation type="unfinished"></translation>
+        <translation>Оновити бібліотеку</translation>
     </message>
     <message>
         <location filename="../library.cpp" line="193"/>
         <location filename="../library.cpp" line="194"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Невідомий</translation>
     </message>
 </context>
 <context>
@@ -30,37 +30,37 @@
     <message>
         <location filename="../libraryfactory.cpp" line="33"/>
         <source>Media Library Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Модуль музичної бібліотеки</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Library</source>
-        <translation type="unfinished"></translation>
+        <translation>Бібліотека</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="38"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="84"/>
         <source>About Media Library Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Про модуль музичної бібліотеки</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="85"/>
         <source>Qmmp Media Library Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Модуль музичної бібліотеки для Qmmp</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="86"/>
         <source>This plugin represents a database to store music files tags for a fast access</source>
-        <translation type="unfinished"></translation>
+        <translation>Цей модуль являє собою базу даних з теґами музичних файлів для швидкого доступу</translation>
     </message>
     <message>
         <location filename="../libraryfactory.cpp" line="87"/>
         <source>Written by: Ilya Kotov &lt;forkotov02@ya.ru&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Розробник: Ілля Котов  &lt;forkotov02@ya.ru&gt;</translation>
     </message>
 </context>
 <context>
@@ -68,7 +68,7 @@
     <message>
         <location filename="../librarymodel.cpp" line="204"/>
         <source>%1 - %2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -76,27 +76,27 @@
     <message>
         <location filename="../librarywidget.cpp" line="51"/>
         <source>&amp;Add to Playlist</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Додати до списку відтворення</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="52"/>
         <source>&amp;View Track Details</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Інформація про трек</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="54"/>
         <source>Quick Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Швидкий пошук</translation>
     </message>
     <message>
         <location filename="../librarywidget.cpp" line="88"/>
         <source>Scanning directories...</source>
-        <translation type="unfinished"></translation>
+        <translation>Сканування тек...</translation>
     </message>
     <message>
         <location filename="../librarywidget.ui" line="14"/>
         <source>Media Library</source>
-        <translation type="unfinished"></translation>
+        <translation>Музична бібліотека</translation>
     </message>
 </context>
 <context>
@@ -104,37 +104,37 @@
     <message>
         <location filename="../settingsdialog.ui" line="14"/>
         <source>Media Library Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Налаштування музичної бібліотеки</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="39"/>
         <source>Recreate database</source>
-        <translation type="unfinished"></translation>
+        <translation>Перестворити базу даних</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="46"/>
         <source>Show album year</source>
-        <translation type="unfinished"></translation>
+        <translation>Показувати рік альбому</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="95"/>
         <source>List of directories for scanning:</source>
-        <translation type="unfinished"></translation>
+        <translation>Перелік тек для сканування:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="55"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="66"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Вилучити</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="65"/>
         <source>Select Directories for Scanning</source>
-        <translation type="unfinished"></translation>
+        <translation>Оберіть теки для сканування</translation>
     </message>
 </context>
 </TS>

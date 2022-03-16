@@ -41,7 +41,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="427"/>
         <source>Source code based on mq3 and madplay projects</source>
-        <translation>Вихідні коди базуються на проектах mq3 та madplay</translation>
+        <translation>Вихідний код базується на проєктах mq3 і madplay</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="71"/>
         <source>Enable CRC checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Увімкнути перевірку CRC</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="87"/>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="343"/>
         <source>Try to detect encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Спробувати визначити кодування</translation>
     </message>
 </context>
 </TS>

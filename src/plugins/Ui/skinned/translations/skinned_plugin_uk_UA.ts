@@ -421,12 +421,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>Show &amp;Tab Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Показувати панель &amp;вкладок</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>Alt+T</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
@@ -464,7 +464,7 @@
     <message>
         <location filename="../colorwidget.cpp" line="47"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Оберіть колір</translation>
     </message>
 </context>
 <context>
@@ -1255,82 +1255,82 @@
     <message>
         <location filename="../forms/skinnedsettings.ui" line="421"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Кольори</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="427"/>
         <source>Playlist Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Кольори списку</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="433"/>
         <source>Use skin colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Використовувати кольори скіна</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="526"/>
         <source>Background #2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тло #2:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="590"/>
         <source>Highlighted background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Виділене тло:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="494"/>
         <source>Normal text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Звичайний текст:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="657"/>
         <source>Splitter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Розділювач:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="558"/>
         <source>Current text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Поточний текст:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="622"/>
         <source>Highlighted text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Виділений текст:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="765"/>
         <source>Current track background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тло поточної доріжки:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="867"/>
         <source>Override current track background</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевизначити тло поточної доріжки</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="730"/>
         <source>Group background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тло групи:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="860"/>
         <source>Override group background</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевизначити тло групи</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="698"/>
         <source>Group text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст групи:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="449"/>
         <source>Background #1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тло #1:</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="825"/>
         <source>Load skin colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Завантажити кольори скіна</translation>
     </message>
     <message>
         <location filename="../forms/skinnedsettings.ui" line="894"/>

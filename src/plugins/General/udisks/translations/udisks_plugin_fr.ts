@@ -72,12 +72,12 @@
     <message>
         <location filename="../udisksplugin.cpp" line="134"/>
         <source>Add CD &quot;%1&quot;</source>
-        <translation type="unfinished">Ajouter CD «&#xa0;%1&#xa0;»</translation>
+        <translation type="unfinished">Ajouter CD « %1 »</translation>
     </message>
     <message>
         <location filename="../udisksplugin.cpp" line="142"/>
         <source>Add Volume &quot;%1&quot;</source>
-        <translation type="unfinished">Ajouter volume «&#xa0;%1&#xa0;»</translation>
+        <translation type="unfinished">Ajouter volume « %1 »</translation>
     </message>
 </context>
 </TS>

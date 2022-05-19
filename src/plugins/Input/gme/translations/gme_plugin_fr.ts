@@ -44,7 +44,7 @@
     <message>
         <location filename="../settingsdialog.ui" line="34"/>
         <source>Fadeout length:</source>
-        <translation>Délai du fondu&#xa0;:</translation>
+        <translation>Délai du fondu :</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="44"/>

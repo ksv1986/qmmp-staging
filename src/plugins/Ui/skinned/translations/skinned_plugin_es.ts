@@ -36,7 +36,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
         <source>&amp;Previous</source>
-        <translation>&amp;Previo</translation>
+        <translation>&amp;Anterior</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="42"/>
@@ -1465,22 +1465,22 @@
         <translation>Mostrar botón &apos;Nueva Lista de Reproducción&apos;</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="119"/>
+        <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Select Skin Files</source>
         <translation>Seleccionar Archivos de Pieles</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="120"/>
+        <location filename="../skinnedsettings.cpp" line="121"/>
         <source>Skin files</source>
         <translation>Archivos de Pieles</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="172"/>
+        <location filename="../skinnedsettings.cpp" line="173"/>
         <source>Unarchived skin</source>
         <translation>Piel sin archivar</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="209"/>
+        <location filename="../skinnedsettings.cpp" line="221"/>
         <source>Archived skin</source>
         <translation>Piel archivada</translation>
     </message>

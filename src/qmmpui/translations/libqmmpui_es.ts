@@ -56,32 +56,32 @@
     <message>
         <location filename="../aboutdialog.cpp" line="83"/>
         <source>Transports:</source>
-        <translation type="unfinished"></translation>
+        <translation>Transportes:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="92"/>
         <source>Decoders:</source>
-        <translation type="unfinished"></translation>
+        <translation>Decodificadores:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="103"/>
         <source>Engines:</source>
-        <translation type="unfinished"></translation>
+        <translation>Motores:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="114"/>
         <source>Effects:</source>
-        <translation type="unfinished"></translation>
+        <translation>Efectos:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="152"/>
         <source>File dialogs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diálogos de archivo:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="164"/>
         <source>User interfaces:</source>
-        <translation type="unfinished"></translation>
+        <translation>Interfaces de usuario:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
@@ -353,7 +353,7 @@
     <message>
         <location filename="../forms/configdialog.ui" line="229"/>
         <source>Skip already existing tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>Saltar pistas existentes</translation>
     </message>
     <message>
         <location filename="../forms/configdialog.ui" line="277"/>
@@ -576,7 +576,7 @@
     <message>
         <location filename="../configdialog.cpp" line="64"/>
         <source>Album</source>
-        <translation>Álbum</translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../configdialog.cpp" line="65"/>
@@ -900,7 +900,7 @@
     <message>
         <location filename="../forms/detailsdialog.ui" line="63"/>
         <source>Summary</source>
-        <translation>Resumen</translation>
+        <translation>Sumario</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="206"/>
@@ -935,7 +935,7 @@
     <message>
         <location filename="../detailsdialog.cpp" line="307"/>
         <source>Album</source>
-        <translation>Álbum</translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../detailsdialog.cpp" line="308"/>
@@ -1084,7 +1084,7 @@
     <message>
         <location filename="../metadataformattermenu.cpp" line="27"/>
         <source>Album</source>
-        <translation>Álbum</translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../metadataformattermenu.cpp" line="28"/>
@@ -1296,7 +1296,7 @@
     <message>
         <location filename="../forms/tageditor.ui" line="90"/>
         <source>Album:</source>
-        <translation>Álbum:</translation>
+        <translation>Album:</translation>
     </message>
     <message>
         <location filename="../forms/tageditor.ui" line="113"/>

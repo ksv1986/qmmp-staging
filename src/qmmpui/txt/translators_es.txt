@@ -75,9 +75,9 @@ Lituano:
     Algirdas Butkus <butkus.algirdas@gmail.com>
 
 Polaco:
+    Marek Adamski
     Daniel Krawczyk
     Grzegorz Gibas <amigib@gmail.com>
-    mrerexx
 
 Portugués:
     Sérgio Marques <smarquespt@gmail.com>
@@ -85,6 +85,7 @@ Portugués:
 Ruso:
     Alexey Loginov <loginov.alex.valer.gmail.com>
     Ilya Kotov <forkotov02@ya.ru>
+    Andrei Stepanov
     Viktor Eruhin
 
 Serbio:

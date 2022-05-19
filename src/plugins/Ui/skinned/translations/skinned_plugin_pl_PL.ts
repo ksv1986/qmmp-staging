@@ -1465,22 +1465,22 @@
         <translation>Pokaż przycisk &apos;Nowa lista odtwarazania&apos;</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="119"/>
+        <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Select Skin Files</source>
         <translation>Wybierz skórkę</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="120"/>
+        <location filename="../skinnedsettings.cpp" line="121"/>
         <source>Skin files</source>
         <translation>Pliki skórek</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="172"/>
+        <location filename="../skinnedsettings.cpp" line="173"/>
         <source>Unarchived skin</source>
         <translation>Niekompresowana skórka</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="209"/>
+        <location filename="../skinnedsettings.cpp" line="221"/>
         <source>Archived skin</source>
         <translation>Skompresowana skórka</translation>
     </message>

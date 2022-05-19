@@ -1465,22 +1465,22 @@
         <translation>Mostrar botão &apos;Nova lista de reprodução&apos;</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="119"/>
+        <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Select Skin Files</source>
         <translation>Selecione os ficheiros de tema</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="120"/>
+        <location filename="../skinnedsettings.cpp" line="121"/>
         <source>Skin files</source>
         <translation>Ficheiros de tema</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="172"/>
+        <location filename="../skinnedsettings.cpp" line="173"/>
         <source>Unarchived skin</source>
         <translation>Tema não arquivado</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="209"/>
+        <location filename="../skinnedsettings.cpp" line="221"/>
         <source>Archived skin</source>
         <translation>Tema arquivado</translation>
     </message>

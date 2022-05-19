@@ -1465,22 +1465,22 @@
         <translation>Εμφάνιση του κουμπιού «Νέα λίστα αναπαραγωγής»</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="119"/>
+        <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Select Skin Files</source>
         <translation>Επιλογή αρχείων θεμάτων</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="120"/>
+        <location filename="../skinnedsettings.cpp" line="121"/>
         <source>Skin files</source>
         <translation>Αρχεία θεμάτων</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="172"/>
+        <location filename="../skinnedsettings.cpp" line="173"/>
         <source>Unarchived skin</source>
         <translation>Μη αρχειοθετημένο θέμα</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="209"/>
+        <location filename="../skinnedsettings.cpp" line="221"/>
         <source>Archived skin</source>
         <translation>Αρχειοθετημένο θέμα</translation>
     </message>

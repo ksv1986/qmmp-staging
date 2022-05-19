@@ -1465,22 +1465,22 @@
         <translation>Вирівнювати номери фрагментів</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="119"/>
+        <location filename="../skinnedsettings.cpp" line="120"/>
         <source>Select Skin Files</source>
         <translation>Вибрати файли скінів</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="120"/>
+        <location filename="../skinnedsettings.cpp" line="121"/>
         <source>Skin files</source>
         <translation>Файли скінів</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="172"/>
+        <location filename="../skinnedsettings.cpp" line="173"/>
         <source>Unarchived skin</source>
         <translation>Розпакована тема</translation>
     </message>
     <message>
-        <location filename="../skinnedsettings.cpp" line="209"/>
+        <location filename="../skinnedsettings.cpp" line="221"/>
         <source>Archived skin</source>
         <translation>Упакована тема</translation>
     </message>

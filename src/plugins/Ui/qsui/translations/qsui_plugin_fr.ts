@@ -16,12 +16,12 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="42"/>
         <source>Qmmp version: &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation>Version de Qmmp&#xa0;: &lt;b&gt;%1&lt;/b&gt;</translation>
+        <translation>Version de Qmmp : &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="46"/>
         <source>Developers:</source>
-        <translation>Développeurs&#xa0;:</translation>
+        <translation>Développeurs :</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="47"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../aboutqsuidialog.cpp" line="49"/>
         <source>Translators:</source>
-        <translation>Traducteurs&#xa0;:</translation>
+        <translation>Traducteurs :</translation>
     </message>
     <message>
         <location filename="../aboutqsuidialog.cpp" line="44"/>
@@ -538,7 +538,7 @@
     <message>
         <location filename="../equalizer.cpp" line="54"/>
         <source>Preset:</source>
-        <translation>Préréglage&#xa0;:</translation>
+        <translation>Préréglage :</translation>
     </message>
     <message>
         <location filename="../equalizer.cpp" line="62"/>
@@ -585,7 +585,7 @@
     <message>
         <location filename="../equalizer.cpp" line="221"/>
         <source>Preset &apos;%1&apos; already exists. Overwrite?</source>
-        <translation>Le préréglage «&#xa0;%1&#xa0;» existe déjà. Écrire par dessus&#xa0;?</translation>
+        <translation>Le préréglage « %1 » existe déjà. Écrire par dessus ?</translation>
     </message>
 </context>
 <context>
@@ -641,7 +641,7 @@
     <message>
         <location filename="../hotkeyeditor.cpp" line="56"/>
         <source>Do you want to restore default shortcuts?</source>
-        <translation>Voulez-vous restaurer les raccourcis par défaut&#xa0;?</translation>
+        <translation>Voulez-vous restaurer les raccourcis par défaut ?</translation>
     </message>
     <message>
         <location filename="../hotkeyeditor.cpp" line="68"/>
@@ -837,7 +837,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Playlist name:</source>
-        <translation>Nom de la liste&#xa0;:</translation>
+        <translation>Nom de la liste :</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="322"/>
@@ -1075,17 +1075,17 @@
     <message>
         <location filename="../forms/popupsettings.ui" line="89"/>
         <source>Cover size:</source>
-        <translation>Taille de la couverture&#xa0;:</translation>
+        <translation>Taille de la couverture :</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="115"/>
         <source>Transparency:</source>
-        <translation>Transparence&#xa0;:</translation>
+        <translation>Transparence :</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="145"/>
         <source>Delay:</source>
-        <translation>Délai&#xa0;:</translation>
+        <translation>Délai :</translation>
     </message>
     <message>
         <location filename="../forms/popupsettings.ui" line="165"/>
@@ -1169,7 +1169,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="1108"/>
         <source>Playlist:</source>
-        <translation>Liste&#xa0;:</translation>
+        <translation>Liste :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1088"/>
@@ -1194,7 +1194,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="52"/>
         <source>Window title format:</source>
-        <translation>Format du titre de la fenêtre&#xa0;:</translation>
+        <translation>Format du titre de la fenêtre :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="74"/>
@@ -1244,12 +1244,12 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="1216"/>
         <source>Column headers:</source>
-        <translation>Noms des colonnes&#xa0;:</translation>
+        <translation>Noms des colonnes :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1131"/>
         <source>Tab names:</source>
-        <translation>Noms des onglets&#xa0;:</translation>
+        <translation>Noms des onglets :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="1243"/>
@@ -1274,13 +1274,13 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="247"/>
         <source>Peaks:</source>
-        <translation>Pics&#xa0;:</translation>
+        <translation>Pics :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="311"/>
         <location filename="../forms/qsuisettings.ui" line="961"/>
         <source>Background:</source>
-        <translation>Arrière-plan&#xa0;:</translation>
+        <translation>Arrière-plan :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="444"/>
@@ -1290,12 +1290,12 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="860"/>
         <source>Background #1:</source>
-        <translation>Arrière-plan n°1&#xa0;:</translation>
+        <translation>Arrière-plan n°1 :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="669"/>
         <source>Normal text:</source>
-        <translation>Texte normal&#xa0;:</translation>
+        <translation>Texte normal :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="617"/>
@@ -1305,17 +1305,17 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="717"/>
         <source>Current text:</source>
-        <translation>Texte actuel&#xa0;:</translation>
+        <translation>Texte actuel :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="662"/>
         <source>Highlighted background:</source>
-        <translation>Arrière-plan en surbrillance&#xa0;:</translation>
+        <translation>Arrière-plan en surbrillance :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="724"/>
         <source>Highlighted text:</source>
-        <translation>Texte en surbrillance&#xa0;:</translation>
+        <translation>Texte en surbrillance :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="766"/>
@@ -1360,12 +1360,12 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="814"/>
         <source>Group background:</source>
-        <translation>Arrière-plan de groupe&#xa0;:</translation>
+        <translation>Arrière-plan de groupe :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="828"/>
         <source>Group text:</source>
-        <translation>Texte de groupe&#xa0;:</translation>
+        <translation>Texte de groupe :</translation>
     </message>
     <message>
         <location filename="../forms/qsuisettings.ui" line="710"/>
@@ -1390,7 +1390,7 @@
     <message>
         <location filename="../forms/qsuisettings.ui" line="1269"/>
         <source>Show &apos;New Playlist&apos; button</source>
-        <translation>Montrer le bouton «&#xa0;Nouvelle liste&#xa0;»</translation>
+        <translation>Montrer le bouton « Nouvelle liste »</translation>
     </message>
 </context>
 <context>

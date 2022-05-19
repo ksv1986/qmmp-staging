@@ -92,88 +92,88 @@
 <context>
     <name>QMMPStarter</name>
     <message>
-        <location filename="../qmmpstarter.cpp" line="108"/>
+        <location filename="../qmmpstarter.cpp" line="109"/>
         <source>Unknown command</source>
         <translation>Comando desconocido</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="402"/>
+        <location filename="../qmmpstarter.cpp" line="426"/>
         <source>Usage: qmmp [options] [files]</source>
         <translation>Uso: qmmp [opciones] [archivos]</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="403"/>
+        <location filename="../qmmpstarter.cpp" line="427"/>
         <source>Options:</source>
         <translation>Opciones: </translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="409"/>
+        <location filename="../qmmpstarter.cpp" line="433"/>
         <source>Start qmmp with the specified user interface</source>
         <translation>Iniciar qmmp con la interfaz de usuario especificada</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="410"/>
+        <location filename="../qmmpstarter.cpp" line="434"/>
         <source>List all available user interfaces</source>
         <translation>Mostrar lista de todas las interfaces de usuario disponibles</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="411"/>
+        <location filename="../qmmpstarter.cpp" line="435"/>
         <source>Don&apos;t start the application</source>
         <translation>No iniciar la aplicación</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="412"/>
+        <location filename="../qmmpstarter.cpp" line="436"/>
         <source>Display this text and exit</source>
         <translation>Muestra este texto y sale</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="413"/>
+        <location filename="../qmmpstarter.cpp" line="437"/>
         <source>Print version number and exit</source>
         <translation>Mostrar el número de versión y salir</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="415"/>
+        <location filename="../qmmpstarter.cpp" line="439"/>
         <source>Home page: %1</source>
         <translation>Página de inicio: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="416"/>
+        <location filename="../qmmpstarter.cpp" line="440"/>
         <source>Development page: %1</source>
         <translation>Página de desarrollo: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="417"/>
+        <location filename="../qmmpstarter.cpp" line="441"/>
         <source>Bug tracker: %1</source>
         <translation>Reporte de errores: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="130"/>
-        <location filename="../qmmpstarter.cpp" line="422"/>
+        <location filename="../qmmpstarter.cpp" line="131"/>
+        <location filename="../qmmpstarter.cpp" line="446"/>
         <source>Command Line Help</source>
         <translation>Ayuda de Consola</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="435"/>
+        <location filename="../qmmpstarter.cpp" line="459"/>
         <source>QMMP version: %1</source>
         <translation>QMMP versión: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="436"/>
+        <location filename="../qmmpstarter.cpp" line="460"/>
         <source>Compiled with Qt version: %1</source>
         <translation>Compilado con Qt versión: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="437"/>
+        <location filename="../qmmpstarter.cpp" line="461"/>
         <source>Using Qt version: %1</source>
         <translation>Usando Qt versión: %1</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="440"/>
+        <location filename="../qmmpstarter.cpp" line="464"/>
         <source>Qmmp Version</source>
         <translation>Versión de Qmmp</translation>
     </message>
     <message>
-        <location filename="../qmmpstarter.cpp" line="457"/>
+        <location filename="../qmmpstarter.cpp" line="481"/>
         <source>User Interfaces</source>
         <translation>Interfaz de usuario</translation>
     </message>

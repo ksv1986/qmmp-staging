@@ -26,7 +26,7 @@
     <message>
         <location filename="../decodermpegfactory.cpp" line="413"/>
         <source>Compiled against:</source>
-        <translation>Compilé contre&#xa0;:</translation>
+        <translation>Compilé contre :</translation>
     </message>
     <message>
         <location filename="../decodermpegfactory.cpp" line="422"/>

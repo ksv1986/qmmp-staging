@@ -108,7 +108,7 @@
     <message>
         <location filename="../rgscanfactory.cpp" line="53"/>
         <source>Based on source code by:</source>
-        <translation>Basé sur le code source par&#xa0;:</translation>
+        <translation>Basé sur le code source par :</translation>
     </message>
     <message>
         <location filename="../rgscanfactory.cpp" line="54"/>

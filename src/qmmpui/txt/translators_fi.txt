@@ -1,0 +1,107 @@
+Brasilian portugali:
+    Bruno Gonçalves
+    Klaos Lacerda
+    Heitor Thury Barreiros Barbosa <hthury@gmail.com>
+    Vitor Pereira
+
+Bulgaria:
+    Kiril Kirilov
+    Miroslav Mihov
+
+Kiina perinteinen:
+    Cosmos Chen
+    lon <lon83129@126.com>
+    Jeff Huang
+
+Kiina yksinkertaistettu:
+    lon <lon83129@126.com>
+    Mabier
+    Mingcong Bai
+    Mingye Wang
+
+Tšekki:
+    Jaroslav Lichtblau
+    Karel Volný <kvolny@redhat.com>
+
+Hollanti:
+    Heimen Stoffels
+    Ronald Uitermark <ronald645@gmail.com>
+
+Suomi:
+    Jiri Grönroos
+    Kimmo Kujansuu
+
+Ranska:
+    Adrien Vigneron - VRad <adrienvigneron@ml1.net>
+    Sébastien Aperghis-Tramoni (maddingue)
+    Stanislas Zeller <uncensored.assault@gmail.com>
+
+Galician:
+    Delio Docampo Cordeiro
+    Óscar Pereira <oscarpereira1989@gmail.com>
+
+Saksa:
+    Ettore Atalan
+    Stefan Koelling <stefankoelling.ext@googlemail.com>
+    Panagiotis Papadopoulos <pano_90@gmx.net>
+
+Kreikka:
+    Dimitrios Glentadakis
+
+Heprea:
+    Genghis Khan <genghiskhan@gmx.ca>
+
+Unkari:
+    Németh Gábor <sutee84@freemail.hu>
+
+Indonesia:
+    Andika Triwidada
+    Wantoyo <wantoyek@gmail.com>
+
+Italia:
+    Gian Paolo Renello <emmerkar@gmail.com>
+    Luigi Toscano
+
+Japani:
+    Ryota Shimamoto <liangtai.s16@gmail.com>
+
+Kazakstan:
+    Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+
+Korea:
+   Jung Hee Lee <daemul72@gmail.com>
+
+Liettua:
+    Algirdas Butkus <butkus.algirdas@gmail.com>
+
+Puola:
+    Daniel Krawczyk
+    Grzegorz Gibas <amigib@gmail.com>
+    Mrerexx
+
+Portugali:
+    Sérgio Marques <smarquespt@gmail.com>
+
+Venäjä:
+    Alexey Loginov <loginov.alex.valer.gmail.com>
+    Ilya Kotov <forkotov02@ya.ru>
+    Viktor Eruhin
+
+Serbia:
+    Mladen Pejaković <pejakm@autistici.org>
+
+Slovakia:
+    Ján Ďanovský <dagsoftware@yahoo.com>
+
+Espanja:
+    Bohdan Shuba
+    Félix Medrano <xukosky@yahoo.es>
+    Joel Barrios <darkshram@gmail.com>
+
+Turkki:
+    Mustafa GUNAY <mustafagunay@pgmail.com>
+    Bilgesu Güngör <h.ibrahim.gungor@gmail.com>
+    Uğur KUYU
+
+Ukraina:
+    Gennadi Motsyo <drool@altlinux.ru> - bug reports

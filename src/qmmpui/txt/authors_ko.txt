@@ -1,0 +1,14 @@
+핵심 개발자:
+
+    Ilya Kotov <forkotov02@ya.ru> - 아이디어와 기본 코드
+
+이전 개발자:
+
+    Artur Guzik <aguzik88@gmail.com> - kde4 알림 플러그인, 트레이 아이콘 개선
+    Vladimir Kuznetsov <vovanec@gmail.com> - look&feel 및 많은 개선
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - JACK 및 OSS 플러그인
+
+아트워크:
+
+    Andrey Adreev <andreev00@gmail.com> - 아이콘 및 기본 스킨 (0.2-0.8 버전용)
+    sixsixfive <http://sixsixfive.deviantart.com/> - 기본 스킨

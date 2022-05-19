@@ -1,0 +1,14 @@
+Hoofdontwikkelaars:
+
+    Ilya Kotov <forkotov02@ya.ru> - idea and base code
+
+Voormalige ontwikkelaars:
+
+    Artur Guzik <aguzik88@gmail.com> - kde4-meldingsplug-in, verbeteringen aan het systeemvakpictogram
+    Vladimir Kuznetsov <vovanec@gmail.com> - uiterlijk en vele verbeteringen
+    Yuriy Zhuravlev <stalkerg@gmail.com>  - JACK- en OSS-plug-ins
+
+Uiterlijk:
+
+    Andrey Adreev <andreev00@gmail.com> - pictogrammen en standaardthema (van versies 0.2-0.8)
+    sixsixfive <http://sixsixfive.deviantart.com/> - standaardthema

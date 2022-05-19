@@ -1,0 +1,31 @@
+Met dank aan:
+
+    Adria Arrufat <swiftscythe@gmail.com> - bugmeldingen
+    Adrian Knoth <adi@drcomp.erfurt.thur.de> - JACK-plug-inreparaties, bugmeldingen
+    Anton Petrusevich <casus@casus.us> - verbeteringen m.b.t. willekeurig afspelen
+    Avihay Baratz <avihayb@gmail.com> - automatisch stoppen-functie, foutoplossingen
+    Brice Videau <brice.videau@gmail.com> - foutoplossingen
+    Cristian Rodríguez <judas.iscariote@gmail.com> - scrobbler-foutoplossingen
+    Csaba Hruska <csaba.hruska@gmail.com> - FFmpeg-plug-in-foutoplossingen
+    Dmitry Kostin <kostindima@gmail.com> - iso.wv-ondersteuning
+    Dmitry Misharov <Dmitry.Misharov@gmail.com> - tagondersteuning voor albumartiesten
+    Evgeny Gleyzerman <evgley@gmail.com> - verbeteringen m.b.t. cue-verwerking
+    Ferdinand Vesely <erdofves@gmail.com> - scrobbler-verbeteringen
+    Gennadi Motsyo <drool@altlinux.ru> - bugmeldingen
+    Hon Jen Yee (PCMan) <pcman.tw@gmail.com> - optimalisaties
+    Vadim Kalinnikov <moose@ylsoftware.com> - projecthosting
+    Erik Ölsar <erlk.ozlr@gmail.com> - themacursors, uiterlijke verbeteringen
+    Funda Wang <fundawang@gmail.com> - foutoplossingen m.b.t. cmake-bestanden
+    Ivan Ponomarev ivantrue@gmail.com - QtMultimedia-uitvoer, macOS-versie
+    Karel Volný <kvolny@redhat.com> - verscheidene foutoplossingen
+    Makis Kalofolias <makskafl@gmail.com> - ondersteuning voor EAC3, DTS en Dolby TrueHD
+    Michail Zheludkov <zheludkovm@mail.ru> - FFmpeg-plug-in-foutoplossingen
+    Michał Grosicki <grosik88@o2.pl> - ALSA-plug-in-foutoplossingen
+    Panagiotis Papadopoulos <pano_90@gmx.net> - uiterlijke verbeteringen, bugmeldingen
+    Pino Toscano <toscano.pino@tiscali.it> - portable-patches
+    Ryota Shimamoto <liangtai.s16@gmail.com> - FreeBSD-patches
+    Sebastian Pipping <webmaster@hartwork.org> - bs2b-patches
+    Stefan Koelling <stefankoelling.ext@googlemail.com> - verscheidene compilatie-oplossingen
+    Thomas Perl - uiterlijke verbeteringen
+    Ville Skyttä - ModPlug-plug-in-verbeteringen
+    Yaakov Selkowitz <yselkowitz@gmail.com> - cygwin-patches

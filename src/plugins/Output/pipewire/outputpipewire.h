@@ -64,8 +64,11 @@ private:
     static void onRegistryEventGlobal(void *data, uint32_t id,
                                       uint32_t permissions, const char *type,
                                       uint32_t version, const struct spa_dict *props);
+    static void onRegistryEventGlobalRemove(void *data, uint32_t id);
     static void onStateChanged(void *data, enum pw_stream_state old,
                                enum pw_stream_state state, const char *error);
+    pw_stream_flags streamFlags() const;
+    static void setSink(const QString& value, uint32_t id);
 
     // PipeWire objects
     struct pw_thread_loop *m_loop = nullptr;
@@ -88,7 +91,13 @@ private:
     quint32 m_bufferSize = 0;
     quint32 m_frames = 0;
     quint32 m_stride = 0;
+    quint32 m_stream_extra_flags = 0;
+    quint32 m_sink_node = PW_ID_ANY;
+    QString m_preferred_sink = {};
     QHash <Qmmp::ChannelPosition, spa_audio_channel> m_pw_channels;
+    QHash <QString, uint32_t> m_sinks;
+
+    friend class SettingsDialog;
 };
 
 class VolumePipeWire : public Volume

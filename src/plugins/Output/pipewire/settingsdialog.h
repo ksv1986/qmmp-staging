@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2007-2022 by Ilya Kotov                                 *
+ *   Copyright (C) 2017 by Ilya Kotov                                      *
  *   forkotov02@ya.ru                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,47 +18,36 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         *
  ***************************************************************************/
 
-#include <QMessageBox>
-#include <qmmp/qmmp.h>
-#include "outputpipewire.h"
-#include "outputpipewirefactory.h"
-#include "settingsdialog.h"
+#ifndef SETTINGSDIALOG_H
+#define SETTINGSDIALOG_H
 
+#include <QDialog>
 
-OutputProperties OutputPipeWireFactory::properties() const
-{
-    OutputProperties properties;
-    properties.name = tr("PipeWire Plugin");
-    properties.hasAbout = true;
-    properties.hasSettings = true;
-    properties.shortName = "pipewire";
-    return properties;
+namespace Ui {
+class SettingsDialog;
 }
 
-Output* OutputPipeWireFactory::create()
+class SettingsDialog : public QDialog
 {
-    return new OutputPipeWire();
+    Q_OBJECT
+
+public:
+    explicit SettingsDialog(QWidget *parent = nullptr);
+    ~SettingsDialog();
+
+    static SettingsDialog *instance;
+
+public slots:
+    void accept() override;
+
+private:
+    Ui::SettingsDialog *m_ui;
+};
+
+namespace Settings
+{
+    static const char KeySink[] = "OutputPipeWire/sink";
+    static const char KeyPin[] = "OutputPipeWire/sinkpin";
 }
 
-Volume *OutputPipeWireFactory::createVolume()
-{
-    return new VolumePipeWire;
-}
-
-void OutputPipeWireFactory::showSettings(QWidget *parent)
-{
-    if (!SettingsDialog::instance)
-        (new SettingsDialog(parent))->show();
-}
-
-void OutputPipeWireFactory::showAbout(QWidget *parent)
-{
-    QMessageBox::about(parent, tr("About PipeWire Output Plugin"),
-                       tr("Qmmp PipeWire Output Plugin")+"\n"+
-                       tr("Written by: Ilya Kotov <forkotov02@ya.ru>"));
-}
-
-QString OutputPipeWireFactory::translation() const
-{
-    return QLatin1String(":/pipewire_plugin_");
-}
+#endif // SETTINGSDIALOG_H

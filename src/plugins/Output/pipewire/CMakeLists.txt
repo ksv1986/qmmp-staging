@@ -16,6 +16,8 @@ ADD_DEFINITIONS(${PIPEWIRE_CFLAGS})
 SET(libpipewire_SRCS
   outputpipewire.cpp
   outputpipewirefactory.cpp
+  settingsdialog.cpp
+  settingsdialog.ui
   translations/translations.qrc
 )
 

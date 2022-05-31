@@ -24,6 +24,7 @@
 #include <QtMath>
 #include <spa/param/props.h>
 #include "outputpipewire.h"
+#include "settingsdialog.h"
 
 OutputPipeWire *OutputPipeWire::instance = nullptr;
 VolumePipeWire *OutputPipeWire::volumeControl = nullptr;
@@ -45,6 +46,12 @@ OutputPipeWire::OutputPipeWire(): Output()
     };
 
    pw_init(nullptr, nullptr);
+
+   QSettings settings;
+   m_preferred_sink = settings.value(Settings::KeySink, QString{}).toString();
+   m_stream_extra_flags = settings.value(Settings::KeyPin, false).toBool()
+     ? PW_STREAM_FLAG_DONT_RECONNECT
+     : 0;
    instance = this;
 }
 
@@ -216,14 +223,12 @@ bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat 
                                                 SPA_TYPE_OBJECT_ParamBuffers, SPA_PARAM_Buffers,
                                                 SPA_PARAM_BUFFERS_size, m_bufferSize)
                                                 );*/
-
-
-
     pw_stream_flags streamFlags = static_cast<pw_stream_flags>(PW_STREAM_FLAG_AUTOCONNECT |
                                                                PW_STREAM_FLAG_MAP_BUFFERS |
-                                                               PW_STREAM_FLAG_RT_PROCESS);
+                                                               PW_STREAM_FLAG_RT_PROCESS |
+                                                               m_stream_extra_flags);
 
-    if(pw_stream_connect(m_stream, PW_DIRECTION_OUTPUT, PW_ID_ANY, streamFlags, params, 1) != 0)
+    if(pw_stream_connect(m_stream, PW_DIRECTION_OUTPUT, m_sink_node, streamFlags, params, 1) != 0)
     {
         pw_thread_loop_unlock(m_loop);
         qDebug("OutputPipeWire: unable to connect stream");
@@ -232,7 +237,7 @@ bool OutputPipeWire::initialize(quint32 freq, ChannelMap map, Qmmp::AudioFormat 
 
     Output::configure(freq, map, format);
     pw_thread_loop_unlock(m_loop);
-    qDebug("OutputPipeWire: ready");
+    qDebug("OutputPipeWire: ready sink=%d", m_sink_node);
     return true;
 }
 
@@ -437,8 +442,30 @@ void OutputPipeWire::onRegistryEventGlobal(void *data, uint32_t id, uint32_t per
         return;
 
     o->m_hasSinks = true;
+    if (auto description = spa_dict_lookup(props, PW_KEY_NODE_DESCRIPTION); description) {
+        auto key = QString(description);
+        o->m_sinks[key] = id;
+        if (o->m_preferred_sink == key)
+            o->m_sink_node = id;
+        qDebug("OutputPipeWire: %u: %s%s", id, description, o->m_sink_node == id ? " *" : "");
+    } else {
+        qDebug("OutputPipeWire: %u: <no description>", id);
+    }
 
     o->m_coreInitSeq = pw_core_sync(o->m_core, PW_ID_CORE, o->m_coreInitSeq);
+}
+
+void OutputPipeWire::onRegistryEventGlobalRemove(void *data, uint32_t id)
+{
+    auto *o = static_cast<OutputPipeWire *>(data);
+    if (o->m_sink_node == id)
+        o->m_sink_node = PW_ID_ANY;
+    for (auto it = o->m_sinks.cbegin(); it != o->m_sinks.cend(); ++it) {
+        if (it.value() != id)
+            continue;
+
+        o->m_sinks.remove(it.key());
+    }
 }
 
 //volume control

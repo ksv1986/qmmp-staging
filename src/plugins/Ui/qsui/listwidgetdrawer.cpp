@@ -334,10 +334,12 @@ void ListWidgetDrawer::drawTrack(QPainter *painter, ListWidgetRow *row, bool rtl
 
     if(row->flags & ListWidgetRow::CURRENT)
     {
+#if 0
         m_font.setBold(true);
         painter->setFont(m_font);
         m_font.setBold(false);
         metrics = m_bold_metrics;
+#endif
         textColor = m_current;
     }
     else

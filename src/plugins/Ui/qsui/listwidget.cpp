@@ -700,9 +700,26 @@ const QString ListWidget::getExtraString(PlayListItem *item)
     if (track->isQueued())
         extra_string += "|"+QString::number(track->queuedIndex() + 1)+"|";
 
-    if(m_model->currentTrack() == track && m_ui_settings->isRepeatableTrack())
-        extra_string += "|R|";
-    else if(m_model->isStopAfter(track))
+    if (m_model->currentTrack() == track)
+    {
+        switch (SoundCore::instance()->state()) {
+        case Qmmp::Playing:
+        case Qmmp::Buffering:
+            extra_string += "▶";
+            break;
+        case Qmmp::Paused:
+            extra_string += "⏸";
+            break;
+        case Qmmp::Stopped:
+            extra_string += "⏹";
+            break;
+        case Qmmp::NormalError:
+        case Qmmp::FatalError:
+            extra_string += "E";
+        }
+        if (m_ui_settings->isRepeatableTrack())
+            extra_string += "|R|";
+    } else if(m_model->isStopAfter(track))
         extra_string += "|S|";
 
     return extra_string.trimmed(); //remove white space
